@@ -1,0 +1,17 @@
+# Whitelist gitignore: everything is ignored unless named below.
+# To track something new, name it here.
+*
+
+# Repository metadata and project description.
+!/.gitignore
+!/README.md
+
+# Declarative Nix interface.
+!/flake.nix
+!/flake.lock
+
+# Human-readable research summaries only.
+!/summaries/
+!/summaries/**/
+!/summaries/*.md
+!/summaries/**/*.md
