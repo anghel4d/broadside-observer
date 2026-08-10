@@ -15,3 +15,8 @@
 !/summaries/**/
 !/summaries/*.md
 !/summaries/**/*.md
+
+# Complete plain-text sources whose licenses permit republication.
+!/sources/
+!/sources/02-model-or-harness.txt
+!/sources/05-zero-mem.txt
