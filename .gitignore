@@ -29,3 +29,7 @@
 !/radar/*.md
 !/radar/runs/.gitkeep
 !/radar/runs/*.md
+
+# Seed digests from historical prefill.
+!/seeds/
+!/seeds/**
