@@ -1,49 +1,163 @@
 # Version-controlled scope for the Broadside Observer research loop.
+# Informed by standing agent research plus Anoptic engine, ano, and GRID COMMAND / RTS work.
+project_anchors:
+- https://github.com/Anoptic-Games/anoptic-engine
+- https://github.com/anghel4d/ano
+- https://github.com/Anoptic-Games/rts-experiment
 topics:
-  - id: agentic-llm-serving
-    name: Agentic LLM serving systems
-    description: Systems work on serving long-running, tool-using LLM agents, especially stateful front ends, long contexts, and multi-step workloads.
-    arxiv_query_hints:
-      - 'all:"agentic LLM serving"'
-      - 'all:"LLM agent" AND (all:serving OR all:inference)'
-    priority: high
-
-  - id: agent-tokenization-and-caching
-    name: Tokenization and cache reuse for agents
-    description: Exact or incremental tokenization, prefix caching, and KV-cache techniques shaped around append-heavy agent sessions.
-    arxiv_query_hints:
-      - '(all:tokenization OR all:tokenizer) AND (all:agent OR all:agentic)'
-      - '(all:"prefix caching" OR all:"KV cache") AND (all:agent OR all:agentic)'
-    priority: high
-
-  - id: agent-failure-localization
-    name: Model-versus-harness failure localization
-    description: Methods and taxonomies that localize agent failures across models, harnesses, tools, environments, owners, and evaluators.
-    arxiv_query_hints:
-      - 'all:"agent failure" AND (all:localization OR all:taxonomy)'
-      - '(all:model AND all:harness) AND (all:failure OR all:evaluation)'
-    priority: high
-
-  - id: continual-agent-skills
-    name: Continual skills and skill evolution
-    description: Evidence and evaluation for agents that create, revise, retrieve, transfer, or retire durable skills across tasks.
-    arxiv_query_hints:
-      - 'all:"continual learning" AND all:"LLM agent"'
-      - '(all:"skill evolution" OR all:"skill library") AND all:agent'
-    priority: high
-
-  - id: autoresearch-experiment-selection
-    name: Autoresearch, rehearsal, and experiment selection
-    description: Self-improving research loops that propose, rank, rehearse, and select experiments under measured compute or execution budgets.
-    arxiv_query_hints:
-      - '(all:autoresearch OR all:"self-improving research") AND all:agent'
-      - '(all:"experiment selection" OR all:rehearsal) AND (all:agent OR all:LLM)'
-    priority: high
-
-  - id: provenance-first-agent-memory
-    name: Provenance-first agent memory and retrieval
-    description: Agent memory and retrieval systems that preserve authoritative source traces, expose evidence, and minimize unsupported generated intermediates.
-    arxiv_query_hints:
-      - 'all:"agent memory" AND (all:provenance OR all:evidence)'
-      - '(all:"long-term memory" OR all:retrieval) AND all:"LLM agent"'
-    priority: high
+- id: agentic-llm-serving
+  name: Agentic LLM serving systems
+  description: Systems work on serving long-running, tool-using LLM agents, especially stateful front
+    ends, long contexts, and multi-step workloads.
+  arxiv_query_hints:
+  - all:"agentic LLM serving"
+  - all:"LLM agent" AND (all:serving OR all:inference)
+  priority: high
+  cluster: agents
+- id: agent-tokenization-and-caching
+  name: Tokenization and cache reuse for agents
+  description: Exact or incremental tokenization, prefix caching, and KV-cache techniques shaped around
+    append-heavy agent sessions.
+  arxiv_query_hints:
+  - (all:tokenization OR all:tokenizer) AND (all:agent OR all:agentic)
+  - (all:"prefix caching" OR all:"KV cache") AND (all:agent OR all:agentic)
+  priority: high
+  cluster: agents
+- id: agent-failure-localization
+  name: Model-versus-harness failure localization
+  description: Methods and taxonomies that localize agent failures across models, harnesses, tools, environments,
+    owners, and evaluators.
+  arxiv_query_hints:
+  - all:"agent failure" AND (all:localization OR all:taxonomy)
+  - (all:model AND all:harness) AND (all:failure OR all:evaluation)
+  priority: high
+  cluster: agents
+- id: continual-agent-skills
+  name: Continual skills and skill evolution
+  description: Evidence and evaluation for agents that create, revise, retrieve, transfer, or retire durable
+    skills across tasks.
+  arxiv_query_hints:
+  - all:"continual learning" AND all:"LLM agent"
+  - (all:"skill evolution" OR all:"skill library") AND all:agent
+  priority: high
+  cluster: agents
+- id: autoresearch-experiment-selection
+  name: Autoresearch, rehearsal, and experiment selection
+  description: Self-improving research loops that propose, rank, rehearse, and select experiments under
+    measured compute or execution budgets.
+  arxiv_query_hints:
+  - (all:autoresearch OR all:"self-improving research") AND all:agent
+  - (all:"experiment selection" OR all:rehearsal) AND (all:agent OR all:LLM)
+  priority: high
+  cluster: agents
+- id: provenance-first-agent-memory
+  name: Provenance-first agent memory and retrieval
+  description: Agent memory and retrieval systems that preserve authoritative source traces, expose evidence,
+    and minimize unsupported generated intermediates.
+  arxiv_query_hints:
+  - all:"agent memory" AND (all:provenance OR all:evidence)
+  - (all:"long-term memory" OR all:retrieval) AND all:"LLM agent"
+  priority: high
+  cluster: agents
+- id: ecs-data-oriented-simulation
+  name: ECS and data-oriented simulation
+  description: Entity-component systems, SoA layouts, and large-scale simultaneous simulation for 4X,
+    RTS, and complex worlds.
+  arxiv_query_hints:
+  - all:"entity component" OR all:"data-oriented design" OR all:"ECS game"
+  - all:simulation AND (all:RTS OR all:"real-time strategy" OR all:4X)
+  priority: high
+  cluster: engine
+- id: lockfree-game-parallelism
+  name: Lock-free and parallel game loops
+  description: Lock-free interconnects, event buses, job systems, and multithreaded scheduling for game
+    engines and sims.
+  arxiv_query_hints:
+  - all:"lock-free" AND (all:game OR all:ECS OR all:scheduler)
+  - (all:"job system" OR all:"task graph") AND (all:game OR all:engine)
+  priority: high
+  cluster: engine
+- id: vulkan-realtime-rendering
+  name: Vulkan and real-time rendering
+  description: Modern Vulkan mesh pipelines, GPU-driven rendering, and real-time techniques relevant to
+    custom engines.
+  arxiv_query_hints:
+  - all:Vulkan AND (all:rendering OR all:mesh OR all:GPU)
+  - all:"real-time rendering" AND (all:GPU OR all:meshlet OR all:"GPU-driven")
+  priority: high
+  cluster: engine
+- id: game-networking-determinism
+  name: Game networking and determinism
+  description: Peer-to-peer and authoritative networking, lockstep, rollback, and deterministic simulation
+    servers.
+  arxiv_query_hints:
+  - (all:lockstep OR all:rollback) AND (all:game OR all:netcode)
+  - all:determinism AND (all:simulation OR all:"game server")
+  priority: medium
+  cluster: engine
+- id: custom-allocators-runtime
+  name: Allocators and engine runtimes
+  description: High-performance allocators, memory arenas, and runtime services for long-lived game processes.
+  arxiv_query_hints:
+  - (all:allocator OR all:mimalloc OR all:arena) AND (all:game OR all:runtime)
+  priority: medium
+  cluster: engine
+- id: embedded-scripting-dsls
+  name: Embedded scripting languages and DSLs
+  description: Languages and DSLs embedded in engines, especially batched or ECS-oriented scripting.
+  arxiv_query_hints:
+  - all:"embedded scripting" OR (all:"domain-specific language" AND all:game)
+  - all:DSL AND (all:ECS OR all:interpreter OR all:bytecode)
+  priority: high
+  cluster: language
+- id: batched-interpreters-ffi
+  name: Batched interpreters and FFI runtimes
+  description: Vectorized or batched interpreters, bytecode VMs, and FFI into C/native ECS runtimes.
+  arxiv_query_hints:
+  - (all:bytecode OR all:interpreter) AND (all:batch OR all:vectorized OR all:FFI)
+  - all:"scripting language" AND (all:performance OR all:VM)
+  priority: high
+  cluster: language
+- id: computational-linguistics-interfaces
+  name: Computational linguistics and language interfaces
+  description: Grammar-inspired language design, morphology/syntax interfaces, and NL grounding — including
+    Japanese-informed design angles.
+  arxiv_query_hints:
+  - all:"computational linguistics" AND (all:grammar OR all:morphology OR all:Japanese)
+  - all:"natural language" AND (all:command OR all:interface) AND (all:game OR all:agent)
+  priority: high
+  cluster: language
+- id: nl-game-commands
+  name: Natural-language game commands
+  description: Grounded parsing and execution of natural-language orders for units, roles, and squads
+    in interactive games.
+  arxiv_query_hints:
+  - all:"natural language" AND (all:RTS OR all:"real-time strategy" OR all:"game command")
+  - all:grounding AND all:instruction AND all:game
+  priority: high
+  cluster: game-ai
+- id: partial-observability-multiagent
+  name: Partial observability and multi-agent coordination
+  description: Fog-of-war, limited knowledge agents, and coordination under incomplete information.
+  arxiv_query_hints:
+  - all:"partial observability" AND (all:multi-agent OR all:RTS OR all:game)
+  - all:"fog of war" OR (all:MARL AND all:RTS)
+  priority: high
+  cluster: game-ai
+- id: procedural-content-codegen
+  name: Procedural content and code-generated worlds
+  description: Procedural terrain, entities, and fully code-generated game worlds without authored art
+    pipelines.
+  arxiv_query_hints:
+  - all:"procedural content" OR all:PCG AND (all:game OR all:terrain)
+  - all:"code generation" AND all:game AND (all:world OR all:level)
+  priority: medium
+  cluster: game-ai
+- id: strategy-rts-agents
+  name: Strategy and RTS agents
+  description: Game AI for RTS/4X, opponent modeling, and strategy-agent benchmarks.
+  arxiv_query_hints:
+  - all:"real-time strategy" AND (all:agent OR all:AI OR all:bot)
+  - all:4X AND (all:AI OR all:agent) OR all:AIIDE
+  priority: high
+  cluster: game-ai
