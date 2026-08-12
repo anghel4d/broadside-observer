@@ -417,7 +417,7 @@ function renderListRow(
 ): string {
   const active = card.id === selectedId;
   const authors = card.authors.slice(0, 2).join(", ") + (card.authors.length > 2 ? " et al." : "");
-  return `<button type="button" class="card-row${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${count}" aria-posinset="${index + 1}">
+  return `<button type="button" class="card-row${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${count}" aria-posinset="${index + 1}" title="${attr(card.title)}">
           <span class="row-meta">
             <span class="rank">#${card.seed_rank}</span>
             <span class="year">${card.year}</span>
@@ -467,7 +467,7 @@ function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
     const card = visible[i];
     if (card === undefined) continue;
     const active = card.id === selectedId;
-    items.push(`<button type="button" class="seed-card${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${visible.length}" aria-posinset="${i + 1}">
+    items.push(`<button type="button" class="seed-card${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${visible.length}" aria-posinset="${i + 1}" title="${attr(card.title)}">
         <span class="seed-card-meta">
           <span class="rank">#${card.seed_rank}</span>
           <span class="year">${card.year}</span>
@@ -569,11 +569,11 @@ function renderDetail(
     <article class="detail">
       <header class="detail-head">
         ${banner}
-        <p class="detail-id"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.id)}</p>
-        <h2 title="${attr(card.title)}">${escapeHtml(card.title)}</h2>
-        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
+        <h2 title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
       </header>
       <div class="detail-body">
+        <p class="detail-id">${escapeHtml(card.id)}</p>
+        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
         <p class="ids">${identifiers}</p>
         <div class="chips chips-topics">${topicChips}</div>
         <p class="provenance">${provenance}</p>

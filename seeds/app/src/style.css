@@ -515,7 +515,7 @@ button:focus-visible {
   cursor: pointer;
   color: inherit;
   font: inherit;
-  min-height: 9.25rem;
+  min-height: 10.25rem;
   min-width: 0;
 }
 
@@ -576,8 +576,8 @@ button:focus-visible {
   font-weight: 600;
   line-height: 1.3;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   overflow-wrap: anywhere;
@@ -597,8 +597,8 @@ button:focus-visible {
   font-size: 0.78rem;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -616,27 +616,29 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
   background: var(--bg);
-  padding: 0.7rem 1.25rem 0.65rem;
+  padding: 0.4rem 1.15rem 0.38rem;
   border-bottom: 1px solid var(--line);
   box-shadow: 0 10px 14px -12px rgba(0, 0, 0, 0.7);
 }
 
 .detail-head h2 {
-  font-size: 1.08rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.22;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.detail-head .authors {
-  margin-bottom: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.82rem;
+.detail-head .detail-rank {
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .detail-rank {
@@ -646,21 +648,26 @@ button:focus-visible {
 }
 
 .detail-body {
-  padding: 0.85rem 1.25rem 2.2rem;
+  padding: 0.45rem 1.15rem 2.2rem;
 }
 
 .off-filter {
-  margin: 0 0 0.7rem;
-  padding: 0.45rem 0.55rem 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.55rem;
+  margin: 0;
+  padding: 0.28rem 0.45rem;
   border: 1px solid #3d4a3a;
   background: #1c241c;
   color: #c5d4c0;
   border-radius: 6px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
 }
 
 .off-filter-copy {
-  margin: 0 0 0.4rem;
+  margin: 0;
+  flex: 1 1 10rem;
 }
 
 .off-filter-actions {
@@ -686,7 +693,7 @@ button:focus-visible {
 }
 
 .detail-id {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.2rem;
   font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
   font-size: 0.75rem;
 }
@@ -699,7 +706,11 @@ button:focus-visible {
 }
 
 .authors {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.55rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.82rem;
 }
 
 .ids {

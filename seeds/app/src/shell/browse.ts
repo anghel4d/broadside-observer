@@ -68,7 +68,7 @@ export function createBrowseVirtualizer(
       gridPad: 0.5 * rem,
       gridGap: 0.5 * rem,
       gridMinTrack: 14.5 * rem,
-      gridDefaultRow: 10.25 * rem,
+      gridDefaultRow: 10.75 * rem,
     };
   };
 

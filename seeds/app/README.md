@@ -73,7 +73,7 @@ Toggle List/Cards with the segmented control in the top bar. Cards is shareable 
 
 On viewports ≤980px, topic/batch/pool/lineage/year/sort/rank collapse behind a **Filters** disclosure so the panes keep height; search and Reset stay visible. Active facets render as dismissible pills under the chrome (clear one or Reset). If the open card is excluded by the current filter, the detail banner offers **Clear filters** (`c`) and **Show first match** (`Enter`); those buttons are in tab order (browse items use `j`/`k` rather than Tab). **Show first match** scrolls to the card and flashes it.
 
-Detail keeps a sticky mini-header (rank/id, title, authors) at the top of the detail pane while body sections scroll. The out-of-filter banner, when present, is part of that pinned chrome. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
+Detail keeps a compact sticky title (rank + up to 3 lines, full title on hover). File stem and authors sit in the scrolling body so they leave as you read — the pinned chrome no longer eats a sixth of the pane. The out-of-filter banner, when present, stays in that sticky bar (one row). Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`). Cards titles clamp to 3 lines with a `title` tooltip for the rest.
 
 ## Lineage and cites
 
