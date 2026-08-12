@@ -1,0 +1,353 @@
+import type { CardId, SeedCard } from "../domain/schema.ts";
+import type { ViewMode } from "./view.ts";
+import {
+  fillSizes,
+  gridColumns,
+  gridItemBounds,
+  gridSlice,
+  listItemBounds,
+  listSlice,
+  prefixSums,
+  scrollToShow,
+  type Slice,
+} from "./virtualize.ts";
+
+export type BrowseRender = (
+  view: ViewMode,
+  cards: ReadonlyArray<SeedCard>,
+  selectedId: CardId | null,
+  slice: Slice,
+) => string;
+
+export type BrowseVirtualizer = {
+  readonly set: (
+    view: ViewMode,
+    cards: ReadonlyArray<SeedCard>,
+    selectedId: CardId | null,
+  ) => void;
+  readonly reveal: (id: CardId | null) => void;
+  readonly flash: (id: CardId) => void;
+  readonly refresh: () => void;
+  readonly disconnect: () => void;
+};
+
+const LIST_OVERSCAN = 8;
+const GRID_OVERSCAN_ROWS = 3;
+const EDGE_PAD = 6;
+
+function rootRem(): number {
+  const raw = getComputedStyle(document.documentElement).fontSize;
+  const px = Number.parseFloat(raw);
+  return Number.isFinite(px) && px > 0 ? px : 16;
+}
+
+export function createBrowseVirtualizer(
+  pane: HTMLElement,
+  render: BrowseRender,
+): BrowseVirtualizer {
+  let view: ViewMode = "list";
+  let cards: ReadonlyArray<SeedCard> = [];
+  let selectedId: CardId | null = null;
+  let idsKey = "";
+  let listHeights = new Map<number, number>();
+  let prefix: Float64Array = new Float64Array([0]);
+  let prefixDirty = true;
+  let cardRowHeight = 0;
+  let lastSlice: Slice | null = null;
+  let ignoreScroll = false;
+  let raf = 0;
+  let measureDepth = 0;
+  let idToIndex = new Map<string, number>();
+  let lastBox = { width: -1, height: -1 };
+
+  const remMetrics = () => {
+    const rem = rootRem();
+    return {
+      listInset: 0.2 * rem,
+      listDefault: 5.85 * rem,
+      gridPad: 0.5 * rem,
+      gridGap: 0.5 * rem,
+      gridMinTrack: 14.5 * rem,
+      gridDefaultRow: 10.75 * rem,
+    };
+  };
+
+  const reindex = (): void => {
+    const next = new Map<string, number>();
+    for (let i = 0; i < cards.length; i++) {
+      const card = cards[i];
+      if (card !== undefined) next.set(card.id, i);
+    }
+    idToIndex = next;
+  };
+
+  const listPrefix = (count: number, fallback: number): Float64Array => {
+    if (!prefixDirty && prefix.length === count + 1) return prefix;
+    prefix = prefixSums(fillSizes(count, fallback, listHeights));
+    prefixDirty = false;
+    return prefix;
+  };
+
+  const computeSlice = (): Slice => {
+    const m = remMetrics();
+    const viewport = pane.clientHeight;
+    const scrollTop = pane.scrollTop;
+    if (view === "list") {
+      return listSlice(
+        listPrefix(cards.length, m.listDefault),
+        scrollTop,
+        viewport,
+        LIST_OVERSCAN,
+        m.listInset,
+        m.listInset,
+      );
+    }
+    const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
+    const columns = gridColumns(inner, m.gridMinTrack, m.gridGap);
+    const rowHeight = cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow;
+    return gridSlice(
+      cards.length,
+      columns,
+      rowHeight,
+      m.gridGap,
+      scrollTop,
+      viewport,
+      GRID_OVERSCAN_ROWS,
+      m.gridPad,
+      m.gridPad,
+    );
+  };
+
+  const applyPads = (slice: Slice): void => {
+    const plane = pane.querySelector(".virt-plane");
+    if (!(plane instanceof HTMLElement)) return;
+    plane.style.paddingTop = `${slice.padTop}px`;
+    plane.style.paddingBottom = `${slice.padBottom}px`;
+  };
+
+  const measure = (): void => {
+    if (cards.length === 0 || measureDepth > 3) return;
+    measureDepth += 1;
+    try {
+      if (view === "list") {
+        let changed = false;
+        for (const row of pane.querySelectorAll(".card-row")) {
+          if (!(row instanceof HTMLElement) || row.dataset.id === undefined) continue;
+          const index = idToIndex.get(row.dataset.id);
+          if (index === undefined) continue;
+          const host = row.parentElement;
+          const height = host instanceof HTMLElement ? host.offsetHeight : row.offsetHeight;
+          if (height > 0 && listHeights.get(index) !== height) {
+            listHeights.set(index, height);
+            changed = true;
+          }
+        }
+        if (!changed) return;
+        prefixDirty = true;
+        const next = computeSlice();
+        if (lastSlice !== null && (next.start !== lastSlice.start || next.end !== lastSlice.end)) {
+          paint(true);
+        } else {
+          applyPads(next);
+          lastSlice = next;
+        }
+        return;
+      }
+      const card = pane.querySelector(".seed-card");
+      if (!(card instanceof HTMLElement) || card.offsetHeight <= 0) return;
+      if (Math.abs(card.offsetHeight - cardRowHeight) > 1) {
+        cardRowHeight = card.offsetHeight;
+        paint(true);
+      }
+    } finally {
+      measureDepth -= 1;
+    }
+  };
+
+  const paint = (force: boolean): void => {
+    if (cards.length === 0) {
+      if (force || lastSlice !== null || pane.childElementCount === 0) {
+        pane.innerHTML = render(view, cards, selectedId, {
+          start: 0,
+          end: 0,
+          padTop: 0,
+          padBottom: 0,
+          total: 0,
+        });
+        lastSlice = { start: 0, end: 0, padTop: 0, padBottom: 0, total: 0 };
+      }
+      return;
+    }
+    const slice = computeSlice();
+    const sameRange =
+      lastSlice !== null &&
+      lastSlice.start === slice.start &&
+      lastSlice.end === slice.end;
+    if (!force && sameRange) {
+      applyPads(slice);
+      setActive(pane, selectedId);
+      lastSlice = slice;
+      return;
+    }
+    pane.innerHTML = render(view, cards, selectedId, slice);
+    lastSlice = slice;
+    applyPads(slice);
+    measure();
+  };
+
+  const alignChild = (child: HTMLElement): void => {
+    const paneRect = pane.getBoundingClientRect();
+    const childRect = child.getBoundingClientRect();
+    if (childRect.top < paneRect.top + EDGE_PAD) {
+      ignoreScroll = true;
+      pane.scrollTop += childRect.top - paneRect.top - EDGE_PAD;
+      ignoreScroll = false;
+    } else if (childRect.bottom > paneRect.bottom - EDGE_PAD) {
+      ignoreScroll = true;
+      pane.scrollTop += childRect.bottom - paneRect.bottom + EDGE_PAD;
+      ignoreScroll = false;
+    }
+  };
+
+  const reveal = (id: CardId | null): void => {
+    if (id === null || cards.length === 0) {
+      paint(true);
+      return;
+    }
+    const index = idToIndex.get(id);
+    if (index === undefined) {
+      paint(true);
+      return;
+    }
+    const m = remMetrics();
+    const viewport = pane.clientHeight;
+    const bounds =
+      view === "list"
+        ? listItemBounds(listPrefix(cards.length, m.listDefault), index, m.listInset)
+        : gridItemBounds(
+            index,
+            gridColumns(Math.max(0, pane.clientWidth - m.gridPad * 2), m.gridMinTrack, m.gridGap),
+            cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow,
+            m.gridGap,
+            m.gridPad,
+          );
+    if (bounds !== null) {
+      const next = scrollToShow(bounds.top, bounds.bottom, pane.scrollTop, viewport, EDGE_PAD);
+      if (next !== null && Math.abs(next - pane.scrollTop) > 1) {
+        ignoreScroll = true;
+        pane.scrollTop = next;
+        ignoreScroll = false;
+      }
+    }
+    paint(true);
+    const node = pane.querySelector(`[data-id="${CSS.escape(id)}"]`);
+    if (node instanceof HTMLElement) {
+      const before = pane.scrollTop;
+      alignChild(node);
+      if (Math.abs(pane.scrollTop - before) > 1) paint(true);
+    }
+  };
+
+  const flash = (id: CardId): void => {
+    reveal(id);
+    const node = pane.querySelector(`[data-id="${CSS.escape(id)}"]`);
+    if (!(node instanceof HTMLElement)) return;
+    node.classList.remove("is-flash");
+    void node.offsetWidth;
+    node.classList.add("is-flash");
+    const clear = (): void => {
+      node.classList.remove("is-flash");
+      node.removeEventListener("animationend", clear);
+    };
+    node.addEventListener("animationend", clear);
+  };
+
+  const set = (
+    nextView: ViewMode,
+    nextCards: ReadonlyArray<SeedCard>,
+    nextSelected: CardId | null,
+  ): void => {
+    const nextKey = `${nextView}\n${nextCards.map((card) => card.id).join("\n")}`;
+    const idsChanged = nextKey !== idsKey;
+    const viewChanged = nextView !== view;
+    const selChanged = nextSelected !== selectedId;
+    view = nextView;
+    cards = nextCards;
+    selectedId = nextSelected;
+    if (idsChanged) {
+      idsKey = nextKey;
+      listHeights = new Map();
+      prefixDirty = true;
+      lastSlice = null;
+      reindex();
+    }
+    if (viewChanged) lastSlice = null;
+    if (idsChanged || viewChanged) {
+      reveal(selectedId);
+      return;
+    }
+    if (selChanged) {
+      if (selectedId === null) {
+        setActive(pane, null);
+        return;
+      }
+      const node = pane.querySelector(`[data-id="${CSS.escape(selectedId)}"]`);
+      if (node instanceof HTMLElement) {
+        setActive(pane, selectedId);
+        const before = pane.scrollTop;
+        alignChild(node);
+        if (Math.abs(pane.scrollTop - before) > 1) paint(false);
+        return;
+      }
+      reveal(selectedId);
+      return;
+    }
+    paint(false);
+  };
+
+  const onScroll = (): void => {
+    if (ignoreScroll) return;
+    if (raf !== 0) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      paint(false);
+    });
+  };
+
+  const onResize = (): void => {
+    const width = pane.clientWidth;
+    const height = pane.clientHeight;
+    if (width === lastBox.width && height === lastBox.height) return;
+    lastBox = { width, height };
+    lastSlice = null;
+    paint(true);
+  };
+
+  pane.addEventListener("scroll", onScroll, { passive: true });
+  const observer = new ResizeObserver(onResize);
+  observer.observe(pane);
+
+  return {
+    set,
+    reveal,
+    flash,
+    refresh: () => {
+      lastSlice = null;
+      paint(true);
+    },
+    disconnect: () => {
+      pane.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+      if (raf !== 0) cancelAnimationFrame(raf);
+    },
+  };
+}
+
+export function setActive(root: HTMLElement, id: CardId | null): void {
+  for (const node of root.querySelectorAll("[data-id]")) {
+    if (!(node instanceof HTMLElement)) continue;
+    const on = id !== null && node.dataset.id === id;
+    node.classList.toggle("is-active", on);
+    node.setAttribute("aria-current", on ? "true" : "false");
+  }
+}

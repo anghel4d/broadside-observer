@@ -37,10 +37,13 @@ import {
 } from "../domain/schema.ts";
 import type { Corpus } from "../domain/corpus.ts";
 import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
+import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
 import { attr, escapeHtml } from "./html.ts";
+import { readStoredDetailFocus, writeStoredDetailFocus } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
+import type { Slice } from "./virtualize.ts";
 import {
   browserStorage,
   parseViewMode,
@@ -55,6 +58,7 @@ type Model = {
   readonly query: Query;
   readonly route: Route;
   readonly view: ViewMode;
+  readonly detailFocus: boolean;
 };
 
 type Msg =
@@ -67,6 +71,7 @@ type Msg =
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
+  | { readonly _tag: "SetDetailFocus"; readonly value: boolean }
   | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
@@ -87,26 +92,26 @@ type ViewModel = {
   readonly selected: SeedCard | null;
   readonly offFilter: boolean;
   readonly view: ViewMode;
+  readonly detailFocus: boolean;
   readonly corpus: Corpus;
   readonly query: Query;
 };
 
 type Paint = {
-  readonly view: ViewMode;
-  readonly ids: string;
-  readonly highlight: CardId | null;
   readonly detail: CardId | null;
   readonly offFilter: boolean;
   readonly hasVisible: boolean;
   readonly filterKey: string;
+  readonly detailFocus: boolean;
 };
 
-function init(corpus: Corpus, hash: string, view: ViewMode): Model {
+function init(corpus: Corpus, hash: string, view: ViewMode, detailFocus: boolean): Model {
   return {
     corpus,
     query: defaultQuery,
     route: parseRoute(hash),
     view,
+    detailFocus,
   };
 }
 
@@ -130,6 +135,8 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, sort: msg.sort } };
     case "SetView":
       return model.view === msg.view ? model : { ...model, view: msg.view };
+    case "SetDetailFocus":
+      return model.detailFocus === msg.value ? model : { ...model, detailFocus: msg.value };
     case "ClearFilter":
       return { ...model, query: clearFilter(model.query, msg.key) };
     case "Reset":
@@ -177,6 +184,7 @@ function project(model: Model): ViewModel {
     selected: state._tag === "None" ? null : state.card,
     offFilter: state._tag === "OffFilter",
     view: model.view,
+    detailFocus: model.detailFocus,
     corpus: model.corpus,
     query: model.query,
   };
@@ -221,10 +229,6 @@ function plainText(value: string): string {
   return value.replace(/\s+/gu, " ").trim();
 }
 
-function visibleKey(cards: ReadonlyArray<SeedCard>): string {
-  return cards.map((card) => card.id).join("\n");
-}
-
 function filterKey(query: Query): string {
   return activeFilters(query)
     .map((filter) => `${filter.key}:${filter.label}`)
@@ -261,7 +265,7 @@ function lineageSelectValue(filter: LineageFilter): string {
   }
 }
 
-function shellHtml(corpus: Corpus, view: ViewMode): string {
+function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
   const listOn = view === "list";
@@ -269,13 +273,16 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
     <header class="topbar">
       <div class="brand">
         <h1>Seed browser</h1>
-        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> move.</p>
+        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> move · <kbd>Esc</kbd> clear.</p>
       </div>
       <div class="topbar-tools">
         <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
           <button type="button" role="radio" data-view="list" aria-checked="${listOn ? "true" : "false"}">List</button>
           <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
         </div>
+        <button type="button" class="focus-detail" id="focus-detail" aria-pressed="${detailFocus ? "true" : "false"}" aria-keyshortcuts="]" title="Widen the detail pane (])">
+          Focus detail
+        </button>
         <p class="status" id="status"></p>
       </div>
     </header>
@@ -340,7 +347,7 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
       <button type="button" class="reset" id="reset">Reset</button>
     </div>
     <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
-    <div class="workspace" id="workspace" data-view="${attr(view)}">
+    <div class="workspace" id="workspace" data-view="${attr(view)}" data-focus="${detailFocus ? "detail" : "browse"}">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
     </div>
@@ -402,17 +409,15 @@ function renderLineageChip(card: SeedCard, corpus: Corpus): string {
   return `${chip(labelForLineage(card.lineage), "lineage", card.lineage)}${notes}`;
 }
 
-function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
-  if (visible.length === 0) {
-    return `<p class="empty">No cards match the current filters.</p>`;
-  }
-  const items = visible
-    .map((card) => {
-      const active = card.id === selectedId;
-      const authors =
-        card.authors.slice(0, 2).join(", ") + (card.authors.length > 2 ? " et al." : "");
-      return `<li>
-        <button type="button" class="card-row${active ? " is-active" : ""}" data-id="${attr(card.id)}" aria-current="${active ? "true" : "false"}">
+function renderListRow(
+  card: SeedCard,
+  selectedId: CardId | null,
+  index: number,
+  count: number,
+): string {
+  const active = card.id === selectedId;
+  const authors = card.authors.slice(0, 2).join(", ") + (card.authors.length > 2 ? " et al." : "");
+  return `<button type="button" class="card-row${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${count}" aria-posinset="${index + 1}" title="${attr(card.title)}">
           <span class="row-meta">
             <span class="rank">#${card.seed_rank}</span>
             <span class="year">${card.year}</span>
@@ -421,11 +426,24 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
           </span>
           <span class="row-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
           <span class="row-sub">${escapeHtml(authors)}</span>
-        </button>
-      </li>`;
-    })
-    .join("");
-  return `<ul class="card-list">${items}</ul>`;
+        </button>`;
+}
+
+function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null, slice: Slice): string {
+  if (visible.length === 0) {
+    return `<p class="empty">No cards match the current filters.</p>`;
+  }
+  const items: string[] = [
+    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px">`,
+    `<ul class="card-list">`,
+  ];
+  for (let i = slice.start; i < slice.end; i++) {
+    const card = visible[i];
+    if (card === undefined) continue;
+    items.push(`<li>${renderListRow(card, selectedId, i, visible.length)}</li>`);
+  }
+  items.push(`</ul></div>`);
+  return items.join("");
 }
 
 function cardFaceChips(card: SeedCard): string {
@@ -437,14 +455,19 @@ function cardFaceChips(card: SeedCard): string {
   ].join("");
 }
 
-function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
+function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null, slice: Slice): string {
   if (visible.length === 0) {
     return `<p class="empty">No cards match the current filters.</p>`;
   }
-  const items = visible
-    .map((card) => {
-      const active = card.id === selectedId;
-      return `<button type="button" class="seed-card${active ? " is-active" : ""}" data-id="${attr(card.id)}" aria-current="${active ? "true" : "false"}">
+  const items: string[] = [
+    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px">`,
+    `<div class="card-grid">`,
+  ];
+  for (let i = slice.start; i < slice.end; i++) {
+    const card = visible[i];
+    if (card === undefined) continue;
+    const active = card.id === selectedId;
+    items.push(`<button type="button" class="seed-card${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${visible.length}" aria-posinset="${i + 1}" title="${attr(card.title)}">
         <span class="seed-card-meta">
           <span class="rank">#${card.seed_rank}</span>
           <span class="year">${card.year}</span>
@@ -452,15 +475,14 @@ function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
         <span class="seed-card-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
         <span class="seed-card-chips">${cardFaceChips(card)}</span>
         <span class="seed-card-takeaway">${escapeHtml(plainText(card.sections.takeaway))}</span>
-      </button>`;
-    })
-    .join("");
-  return `<div class="card-grid">${items}</div>`;
+      </button>`);
+  }
+  items.push(`</div></div>`);
+  return items.join("");
 }
 
-function renderBrowse(view: ViewMode, visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
-  return view === "list" ? renderList(visible, selectedId) : renderGrid(visible, selectedId);
-}
+const renderBrowse: BrowseRender = (view, visible, selectedId, slice) =>
+  view === "list" ? renderList(visible, selectedId, slice) : renderGrid(visible, selectedId, slice);
 
 function renderFilterPills(query: Query): string {
   const filters = activeFilters(query);
@@ -492,13 +514,13 @@ function renderDetail(
 
   const firstAction =
     visibleCount > 0
-      ? `<button type="button" class="off-filter-btn" data-off="first">Show first match</button>`
+      ? `<button type="button" class="off-filter-btn" data-off="first" title="Shortcut: Enter" aria-keyshortcuts="Enter">Show first match</button>`
       : "";
   const banner = offFilter
     ? `<div class="off-filter" role="status">
         <p class="off-filter-copy">Not in the current filter. Linked card still shown.</p>
         <p class="off-filter-actions">
-          <button type="button" class="off-filter-btn" data-off="clear">Clear filters</button>
+          <button type="button" class="off-filter-btn" data-off="clear" title="Shortcut: c" aria-keyshortcuts="c">Clear filters</button>
           ${firstAction}
         </p>
       </div>`
@@ -547,11 +569,11 @@ function renderDetail(
     <article class="detail">
       <header class="detail-head">
         ${banner}
-        <p class="detail-id"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.id)}</p>
-        <h2 title="${attr(card.title)}">${escapeHtml(card.title)}</h2>
-        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
+        <h2 title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
       </header>
       <div class="detail-body">
+        <p class="detail-id">${escapeHtml(card.id)}</p>
+        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
         <p class="ids">${identifiers}</p>
         <div class="chips chips-topics">${topicChips}</div>
         <p class="provenance">${provenance}</p>
@@ -579,27 +601,6 @@ function syncLocation(route: Route, view: ViewMode): void {
   history.replaceState(null, "", next);
 }
 
-function setActive(root: HTMLElement, id: CardId | null): void {
-  for (const node of root.querySelectorAll("[data-id]")) {
-    if (!(node instanceof HTMLElement)) continue;
-    const on = id !== null && node.dataset.id === id;
-    node.classList.toggle("is-active", on);
-    node.setAttribute("aria-current", on ? "true" : "false");
-  }
-}
-
-/** Scroll `child` inside `pane` only — never the document. */
-function scrollIntoPane(pane: HTMLElement, child: HTMLElement): void {
-  const paneRect = pane.getBoundingClientRect();
-  const childRect = child.getBoundingClientRect();
-  const pad = 6;
-  if (childRect.top < paneRect.top + pad) {
-    pane.scrollTop += childRect.top - paneRect.top - pad;
-  } else if (childRect.bottom > paneRect.bottom - pad) {
-    pane.scrollTop += childRect.bottom - paneRect.bottom + pad;
-  }
-}
-
 function syncViewToggle(root: HTMLElement, view: ViewMode): void {
   for (const node of root.querySelectorAll("#view-toggle [data-view]")) {
     if (!(node instanceof HTMLElement)) continue;
@@ -619,7 +620,8 @@ function isTypingTarget(target: EventTarget | null): boolean {
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
   const initialView = resolveView(location.search, storage);
-  root.innerHTML = shellHtml(corpus, initialView);
+  const initialFocus = readStoredDetailFocus(storage);
+  root.innerHTML = shellHtml(corpus, initialView, initialFocus);
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
@@ -636,12 +638,14 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const jumpRankInput = requireElement<HTMLInputElement>(root, "jump-rank");
   const resetButton = requireElement<HTMLButtonElement>(root, "reset");
   const viewToggle = requireElement<HTMLElement>(root, "view-toggle");
+  const focusDetail = requireElement<HTMLButtonElement>(root, "focus-detail");
   const workspace = requireElement<HTMLElement>(root, "workspace");
   const browse = requireElement<HTMLElement>(root, "browse");
   const detail = requireElement<HTMLElement>(root, "detail");
   const status = requireElement<HTMLParagraphElement>(root, "status");
+  const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  let model = init(corpus, location.hash, initialView);
+  let model = init(corpus, location.hash, initialView, initialFocus);
   let painted: Paint | null = null;
   let filtersOpen = false;
   const narrowFilters = window.matchMedia("(max-width: 980px)");
@@ -674,12 +678,13 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const vm = project(next);
     const highlight = vm.offFilter ? null : (vm.selected?.id ?? null);
     const detailId = vm.selected?.id ?? null;
-    const ids = visibleKey(vm.visible);
     const filters = filterKey(vm.query);
     const hasVisible = vm.visible.length > 0;
     const activeCount = activeFilters(vm.query).length;
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     workspace.dataset.view = vm.view;
+    workspace.dataset.focus = vm.detailFocus ? "detail" : "browse";
+    focusDetail.setAttribute("aria-pressed", vm.detailFocus ? "true" : "false");
     syncViewToggle(root, vm.view);
     syncFilterControls(vm.query);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
@@ -688,10 +693,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
 
     const prev = painted;
-    if (prev === null || prev.view !== vm.view || prev.ids !== ids) {
-      browse.innerHTML = renderBrowse(vm.view, vm.visible, highlight);
-    } else if (prev.highlight !== highlight) {
-      setActive(browse, highlight);
+    virt.set(vm.view, vm.visible, highlight);
+    if (prev !== null && prev.detailFocus !== vm.detailFocus) {
+      requestAnimationFrame(() => {
+        virt.refresh();
+        virt.reveal(highlight);
+      });
     }
 
     if (
@@ -703,17 +710,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       detail.innerHTML = renderDetail(vm.selected, vm.corpus, vm.offFilter, vm.visible.length);
     }
 
-    const active = browse.querySelector(".is-active");
-    if (active instanceof HTMLElement) scrollIntoPane(browse, active);
-
     painted = {
-      view: vm.view,
-      ids,
-      highlight,
       detail: detailId,
       offFilter: vm.offFilter,
       hasVisible,
       filterKey: filters,
+      detailFocus: vm.detailFocus,
     };
   };
 
@@ -723,15 +725,22 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     model = next;
     if (msg._tag !== "Hash") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
+    if (msg._tag === "SetDetailFocus") writeStoredDetailFocus(storage, model.detailFocus);
     patch(model);
   };
 
-  const onSearch = debounce(75, (value: string) => {
-    dispatch({ _tag: "SetSearch", value });
+  const flashFirstMatch = (): void => {
+    dispatch({ _tag: "SelectFirst" });
+    const id = routeId(model.route);
+    if (id !== null) virt.flash(id);
+  };
+
+  const onSearch = debounce(75, () => {
+    dispatch({ _tag: "SetSearch", value: queryInput.value });
   });
 
   queryInput.addEventListener("input", () => {
-    onSearch(queryInput.value);
+    onSearch();
   });
   topicSelect.addEventListener("change", () => {
     if (topicSelect.value === "") {
@@ -805,6 +814,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const view = parseViewMode(button.dataset.view);
     if (view !== null) dispatch({ _tag: "SetView", view });
   });
+  focusDetail.addEventListener("click", () => {
+    dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
+  });
   filtersToggle.addEventListener("click", () => {
     filtersOpen = !filtersOpen;
     syncFilterDisclosure();
@@ -828,7 +840,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const off = (event.target instanceof Element ? event.target : null)?.closest("button[data-off]");
     if (off instanceof HTMLButtonElement) {
       if (off.dataset.off === "clear") dispatch({ _tag: "Reset" });
-      else if (off.dataset.off === "first") dispatch({ _tag: "SelectFirst" });
+      else if (off.dataset.off === "first") flashFirstMatch();
       return;
     }
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-filter]");
@@ -857,12 +869,55 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
   document.addEventListener("keydown", (event) => {
     if (event.metaKey || event.ctrlKey || event.altKey) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      if (isTypingTarget(event.target)) {
+        if (event.target === queryInput && queryInput.value !== "") {
+          queryInput.value = "";
+          dispatch({ _tag: "SetSearch", value: "" });
+          return;
+        }
+        if (event.target instanceof HTMLElement) event.target.blur();
+        return;
+      }
+      if (model.query.search.trim() !== "") {
+        queryInput.value = "";
+        dispatch({ _tag: "SetSearch", value: "" });
+        return;
+      }
+      if (model.detailFocus) {
+        dispatch({ _tag: "SetDetailFocus", value: false });
+        return;
+      }
+      if (filtersOpen) {
+        filtersOpen = false;
+        syncFilterDisclosure();
+      }
+      return;
+    }
     if (isTypingTarget(event.target)) return;
-    if (event.key === "/" ) {
+    if (event.key === "/") {
       event.preventDefault();
       queryInput.focus();
       queryInput.select();
       return;
+    }
+    if (event.key === "]") {
+      event.preventDefault();
+      dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
+      return;
+    }
+    if (painted?.offFilter) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        flashFirstMatch();
+        return;
+      }
+      if (event.key === "c") {
+        event.preventDefault();
+        dispatch({ _tag: "Reset" });
+        return;
+      }
     }
     if (event.key === "ArrowDown" || event.key === "j") {
       event.preventDefault();
