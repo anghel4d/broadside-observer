@@ -1,0 +1,55 @@
+{
+  "lock-free-queues": {
+    "start": 501,
+    "end": 540,
+    "claimed": "2026-08-13",
+    "seed_batch": "lineage-lock-free-queues-2026-08-13",
+    "note": "40-slot block for lock-free-queues lineage expansion"
+  },
+  "work-stealing": {
+    "start": 541,
+    "end": 580
+  },
+  "slab-allocators": {
+    "start": 581,
+    "end": 620,
+    "claimed": "2026-08-13",
+    "seed_batch": "lineage-slab-allocators-2026-08-13",
+    "note": "40-slot block for slab-allocators lineage expansion (size-class / slab / multipool)",
+    "minted": [
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591
+    ]
+  },
+  "ecs-data-oriented": {
+    "start": 621,
+    "end": 660
+  },
+  "radiance-cascades": {
+    "start": 661,
+    "end": 700,
+    "claimed": "2026-08-13",
+    "seed_batch": "lineage-radiance-cascades-2026-08-13",
+    "note": "40-slot block for radiance-cascades lineage expansion (RTGI precursors \u2192 RC \u2192 variants)",
+    "minted": [
+      661,
+      662,
+      663,
+      664
+    ]
+  },
+  "shallow-scan": {
+    "start": 701,
+    "end": 850
+  },
+  "_note": "max existing card was 500; claimed 2026-08-13"
+}

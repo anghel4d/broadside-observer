@@ -15,6 +15,18 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 9
+lineage: work-stealing
+cites:
+  - title: "Dynamic Circular Work-Stealing Deque"
+    url: "https://doi.org/10.1145/1073970.1073974"
+    year: 2005
+    doi: "10.1145/1073970.1073974"
+    card: "367-dynamic-circular-work-stealing-deque"
+  - title: "Correct and Efficient Work-Stealing for Weak Memory Models"
+    url: "https://doi.org/10.1145/2442516.2442524"
+    year: 2013
+    doi: "10.1145/2442516.2442524"
+    card: "545-correct-and-efficient-work-stealing-for-weak-memory-models"
 ---
 
 # Formal Verification of Chase-Lev Deque in Concurrent Separation Logic

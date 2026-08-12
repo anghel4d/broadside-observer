@@ -15,6 +15,32 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "language"
 relevance_score: 10
+lineage: ecs-data-oriented
+cites:
+  - title: "Pitfalls of Object Oriented Programming"
+    url: "https://www.researchgate.net/publication/308689769_Pitfalls_of_object_oriented_programming"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "356-pitfalls-of-object-oriented-programming"
+  - title: "Data-Oriented Design and C++"
+    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "251-data-oriented-design-and-c"
+  - title: "Category Power of ECS architectures / Data-Oriented Design book"
+    url: "https://www.dataorienteddesign.com/dodbook/"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "127-category-power-of-ecs-architectures"
+  - title: "Evolve Your Hierarchy"
+    url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "361-evolve-your-hierarchy"
 ---
 
 # Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)

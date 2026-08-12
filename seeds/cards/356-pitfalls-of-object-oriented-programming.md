@@ -15,6 +15,32 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+lineage: ecs-data-oriented
+cites:
+  - title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)"
+    url: "https://gamesfromwithin.com/data-oriented-design"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
+  - title: "Data-Oriented Design and C++"
+    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "251-data-oriented-design-and-c"
+  - title: "Game Programming Patterns — Data Locality"
+    url: "https://gameprogrammingpatterns.com/data-locality.html"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "622-game-programming-patterns-data-locality"
+  - title: "Evolve Your Hierarchy"
+    url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "361-evolve-your-hierarchy"
 ---
 
 # Pitfalls of Object Oriented Programming

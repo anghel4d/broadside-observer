@@ -16,25 +16,38 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+lineage: radiance-cascades
+cites:
+  - title: "Precomputed Radiance Transfer"
+    url: "https://doi.org/10.1145/566570.566612"
+    year: 2002
+    doi: "10.1145/566570.566612"
+    card: "447-precomputed-radiance-transfer"
+  - title: "The Irradiance Volume"
+    url: "https://doi.org/10.1109/38.656788"
+    year: 1998
+    doi: "10.1109/38.656788"
+    card: "662-the-irradiance-volume"
 ---
 
 # An Efficient Representation for Irradiance Environment Maps
 
 ## One-sentence takeaway
 
-SH irradiance environment maps.
+Order-2 spherical harmonics suffice to represent irradiance environment maps for diffuse shading.
 
 ## Why it matters here
 
-SH irradiance environment maps.
+Angular-basis micro-classic on the RC thread: explains why so many probe/LPV systems store SH irradiance rather than full radiance.
 
 ## Key ideas
 
-- SH irradiance environment maps.
+- Diffuse irradiance from distant illumination is very low-frequency — 9 SH coefficients often suffice.
+- Became the default compact representation inside LPV and many probe GI systems.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Distant/environment lighting assumption; not a full dynamic GI solution.
 
 ## Links
 

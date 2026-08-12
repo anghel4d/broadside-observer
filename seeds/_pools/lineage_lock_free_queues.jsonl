@@ -1,0 +1,34 @@
+{"status": "kept", "stem": "032-michael-scott-lock-free-queue", "title": "Michael & Scott Lock-Free Queue", "year": 1996, "reason": "Root of lineage"}
+{"status": "kept", "stem": "260-linearizability-a-correctness-condition-for-concurrent-objec", "title": "Linearizability", "year": 1990, "reason": "Correctness frame; cited, lineage not stolen"}
+{"status": "kept", "stem": "037-wait-free-synchronization", "title": "Wait-Free Synchronization", "year": 1991, "reason": "Progress frame; cited, lineage not stolen"}
+{"status": "kept", "stem": "501-tsigas-zhang-non-blocking-concurrent-fifo-queue", "title": "Tsigas & Zhang non-blocking FIFO", "year": 2001, "reason": "Early scalable successor"}
+{"status": "kept", "stem": "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-", "title": "Michael SMR 2002", "year": 2002, "reason": "Essential reclamation cite"}
+{"status": "kept", "stem": "502-ladan-mozes-shavit-optimistic-lock-free-fifo-queue", "title": "Optimistic lock-free FIFO", "year": 2004, "reason": "CAS-reduction MS alternative"}
+{"status": "kept", "stem": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object", "title": "Hazard Pointers", "year": 2004, "reason": "Essential reclamation cite; lineage not stolen"}
+{"status": "kept", "stem": "503-moir-elimination-backoff-lock-free-fifo-queues", "title": "Elimination backoff FIFO", "year": 2005, "reason": "Scalability via elimination"}
+{"status": "kept", "stem": "438-scalable-synchronous-queues", "title": "Scalable Synchronous Queues", "year": 2006, "reason": "Industrial hand-off cousin"}
+{"status": "kept", "stem": "504-hoffman-shalev-shavit-baskets-queue", "title": "The Baskets Queue", "year": 2007, "reason": "Classic theoretical successor"}
+{"status": "kept", "stem": "508-vyukov-bounded-mpmc-queue", "title": "Vyukov bounded MPMC", "year": 2010, "reason": "Living industrial MPMC"}
+{"status": "kept", "stem": "509-vyukov-non-intrusive-mpsc-queue", "title": "Vyukov MPSC", "year": 2010, "reason": "Living industrial MPSC"}
+{"status": "kept", "stem": "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers", "title": "Kogan & Petrank wait-free queue", "year": 2011, "reason": "Practical wait-free MPMC"}
+{"status": "kept", "stem": "427-lmax-disruptor", "title": "LMAX Disruptor", "year": 2011, "reason": "Mechanical-sympathy industrial continuation"}
+{"status": "kept", "stem": "506-kogan-petrank-fast-path-slow-path-wait-free", "title": "Fast-path/slow-path methodology", "year": 2012, "reason": "Makes wait-freedom practical"}
+{"status": "kept", "stem": "507-morrison-afek-lcrq-fast-concurrent-queues-x86", "title": "LCRQ", "year": 2013, "reason": "FAA ring breakthrough"}
+{"status": "kept", "stem": "413-cameron314-concurrentqueue-mpmc", "title": "cameron314 concurrentqueue", "year": 2014, "reason": "Widely shipped engine MPMC"}
+{"status": "kept", "stem": "510-yang-mellor-crummey-wait-free-queue-fetch-and-add", "title": "YMC WFQueue", "year": 2016, "reason": "FAA wait-free queue"}
+{"status": "kept", "stem": "511-ramalhete-correia-faaarrayqueue", "title": "FAAArrayQueue", "year": 2016, "reason": "Portable LCRQ-class industrial/academic hybrid"}
+{"status": "kept", "stem": "512-nikolaev-scq-scalable-portable-lock-free-fifo", "title": "SCQ", "year": 2019, "reason": "Portable memory-efficient FAA ring"}
+{"status": "kept", "stem": "327-jiffy-a-fast-memory-efficient-wait-free-multi-producers-sing", "title": "Jiffy", "year": 2020, "reason": "Modern wait-free MPSC"}
+{"status": "kept", "stem": "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage", "title": "wCQ", "year": 2022, "reason": "Wait-free SCQ with bounded memory"}
+{"status": "kept", "stem": "513-romanov-koval-lprq-portable-lcrq", "title": "LPRQ", "year": 2023, "reason": "CAS2-free LCRQ"}
+{"status": "kept", "stem": "289-a-wait-free-queue-with-polylogarithmic-step-complexity", "title": "Polylog wait-free queue", "year": 2023, "reason": "Modern complexity-theoretic wait-free queue"}
+{"status": "kept", "stem": "276-no-cords-attached-coordination-free-concurrent-lock-free-que", "title": "No Cords Attached", "year": 2025, "reason": "Recent coordination-free lock-free queues"}
+{"status": "rejected", "title": "Fatourou & Kallimanis CC-Queue / CC-Synch combining", "year": 2012, "reason": "Flat combining synchronization technique; adjacent but not a FIFO-algorithm successor spine item"}
+{"status": "rejected", "title": "Herlihy universal construction applied as queue", "year": 1991, "reason": "Covered via wait-freedom card; no distinct queue artifact to mint"}
+{"status": "rejected", "title": "java.util.concurrent ConcurrentLinkedQueue source", "year": 2003, "reason": "Direct MS packaging; cite via MS rather than duplicate card"}
+{"status": "rejected", "title": "Boost.lockfree / Folly MPMCQueue", "year": 2010, "reason": "Library packaging of Vyukov-like rings; covered by Vyukov + cameron314 cards"}
+{"status": "rejected", "title": "Ostrovsky & Morrison HTM concurrent queues", "year": 2020, "reason": "HTM-specific acceleration; niche vs living portable family"}
+{"status": "rejected", "title": "Modular Baskets Queue (2025 follow-on)", "year": 2025, "reason": "Interesting but secondary to 2007 baskets classic for this pass"}
+{"status": "rejected", "title": "LLM-agent concurrent queue papers", "year": 2024, "reason": "Out of scope per Broadside instruction (no LLM-agent papers)"}
+{"status": "rejected", "title": "Chase-Lev / Cilk work-stealing deques", "year": 1999, "reason": "Belongs to work-stealing lineage, not FIFO queue spine"}
+{"status": "rejected", "title": "Vyukov unbounded SPSC queue page", "year": 2010, "reason": "SPSC covered implicitly; MPSC+MPMC are the lineage-critical Vyukov artifacts"}

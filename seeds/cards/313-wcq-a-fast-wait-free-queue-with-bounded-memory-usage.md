@@ -15,6 +15,50 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 9
+lineage: lock-free-queues
+cites:
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
+    url: "https://doi.org/10.1145/248052.248106"
+    year: 1996
+    arxiv: null
+    doi: "10.1145/248052.248106"
+    card: "032-michael-scott-lock-free-queue"
+  - title: "A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue"
+    url: "https://arxiv.org/abs/1908.04511"
+    year: 2019
+    arxiv: "1908.04511"
+    doi: "10.4230/LIPIcs.DISC.2019.28"
+    card: "512-nikolaev-scq-scalable-portable-lock-free-fifo"
+  - title: "Fast Concurrent Queues for x86 Processors"
+    url: "https://doi.org/10.1145/2442516.2442527"
+    year: 2013
+    arxiv: null
+    doi: "10.1145/2442516.2442527"
+    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - title: "A Methodology for Creating Fast Wait-Free Data Structures"
+    url: "https://doi.org/10.1145/2145816.2145835"
+    year: 2012
+    arxiv: null
+    doi: "10.1145/2145816.2145835"
+    card: "506-kogan-petrank-fast-path-slow-path-wait-free"
+  - title: "A Wait-Free Queue as Fast as Fetch-and-Add"
+    url: "https://doi.org/10.1145/2851141.2851168"
+    year: 2016
+    arxiv: null
+    doi: "10.1145/2851141.2851168"
+    card: "510-yang-mellor-crummey-wait-free-queue-fetch-and-add"
+  - title: "Wait-Free Synchronization"
+    url: "https://doi.org/10.1145/114005.102808"
+    year: 1991
+    arxiv: null
+    doi: "10.1145/114005.102808"
+    card: "037-wait-free-synchronization"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
+    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # wCQ: A Fast Wait-Free Queue with Bounded Memory Usage

@@ -15,6 +15,32 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+lineage: ecs-data-oriented
+cites:
+  - title: "Data-Oriented Design and C++"
+    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "251-data-oriented-design-and-c"
+  - title: "Entity Systems are the future of MMOG development (T-Machine series)"
+    url: "http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - title: "Our Machinery Component System / data-oriented engine notes"
+    url: "https://ourmachinery.com/post/ecs-and-rendering/"
+    year: 2018
+    arxiv: null
+    doi: null
+    card: "403-our-machinery-component-system-data-oriented-engine-notes"
+  - title: "Evolve Your Hierarchy"
+    url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "361-evolve-your-hierarchy"
 ---
 
 # Bitsquid Data-Driven / Entity system posts

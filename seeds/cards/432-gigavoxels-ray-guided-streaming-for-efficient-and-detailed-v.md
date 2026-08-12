@@ -15,25 +15,33 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+lineage: radiance-cascades
+cites:
+  - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
+    url: "https://doi.org/10.1145/1944745.1944787"
+    year: 2011
+    doi: "10.1145/1944745.1944787"
+    card: "348-interactive-indirect-illumination-using-voxel-cone-tracing"
 ---
 
 # Gigavoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering
 
 ## One-sentence takeaway
 
-Sparse voxel streaming.
+Ray-guided streaming of sparse voxel DAGs/octrees that made detailed voxel rendering practical — substrate for VXGI.
 
 ## Why it matters here
 
-Sparse voxel streaming.
+Voxel pipeline precursor on the RC epistemology: GigaVoxels underpins the Crassin cone-tracing GI line.
 
 ## Key ideas
 
-- Sparse voxel streaming.
+- Stream voxel bricks on demand guided by rays, keeping GPU memory bounded.
+- Enables high-detail volumetric representations used by later interactive GI.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Rendering/streaming paper first; GI application arrives with voxel cone tracing.
 
 ## Links
 

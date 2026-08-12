@@ -20,29 +20,42 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "Dynamic Diffuse Global Illumination Resampling"
+    url: "https://arxiv.org/abs/2108.05263"
+    year: 2021
+    arxiv: "2108.05263"
+    card: "316-dynamic-diffuse-global-illumination-resampling"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination
 
 ## One-sentence takeaway
 
-Real-time global illumination is key to enabling more dynamic and physically realistic worlds in performance-critical applications such as games or any other applications with real-time constraints.Hardware-accelerated ray tracing in modern GPUs allows arbitrary intersection queries against the geometry, making it possible to evaluate indirect lighting entirely at runtime.
+Two-level radiance cache that aims between noisy reservoir GI and blurry probes for console-class real-time budgets.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Glob).
+2023 industrial radiance-caching foil next to Radiance Cascades — another answer to “probes lack detail / path tracing is too noisy.”
 
 ## Key ideas
 
-- Real-time global illumination is key to enabling more dynamic and physically realistic worlds in performance-critical applications such as games or any other applications with real-time constraints.Hardware-accelerated ray tracing in modern GPUs allows arbitrary intersection queries against the geometry, making it possible to evaluate indirect lighting entirely at runtime.
-- However, only a small number of rays can be traced at each pixel to maintain high framerates at ever-increasing image resolutions.
-- Existing solutions, such as probe-based techniques, approximate the irradiance signal at the cost of a few rays per frame but suffer from a lack of details and slow response times to changes in lighting.
-- On the other hand, reservoir-based resampling techniques capture much more details but typically suffer from poorer performance and increased amounts of noise, making them impractical for the current generation of hardware and gaming consoles.
-- To find a balance that achieves high lighting fidelity while maintaining a low runtime cost, we propose a solution that dynamically estimates global illumination without needing any content preprocessing, thus enabling easy integration into existing real-time rendering pipelines.
+- Hardware ray queries plus a hierarchical radiance cache to keep rays-per-pixel tiny at high resolutions.
+- Targets content-preprocess-free integration into existing real-time pipelines.
+- Explicitly positioned against probe blur and reservoir noise.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- AMD/research cache design — compare carefully to RC’s cascade-interval storage; not an RC variant.
 
 ## Links
 

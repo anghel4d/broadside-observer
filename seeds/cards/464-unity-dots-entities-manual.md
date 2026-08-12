@@ -15,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 7
+lineage: ecs-data-oriented
+cites:
+  - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
+    url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
+    year: 2018
+    arxiv: null
+    doi: null
+    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+  - title: "Archetypal ECS storage and iteration (chunked archetypes pattern)"
+    url: "https://docs.rs/bevy_ecs/latest/bevy_ecs/"
+    year: 2020
+    arxiv: null
+    doi: null
+    card: "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
+  - title: "Data-Oriented Design and C++"
+    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "251-data-oriented-design-and-c"
 ---
 
 # Unity DOTS Entities Manual

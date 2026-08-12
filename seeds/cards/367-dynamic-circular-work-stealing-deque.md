@@ -15,6 +15,48 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 9
+lineage: work-stealing
+cites:
+  - title: "Thread Scheduling for Multiprogrammed Multiprocessors"
+    url: "https://doi.org/10.1145/277651.277678"
+    year: 1998
+    doi: "10.1145/277651.277678"
+    card: "542-thread-scheduling-for-multiprogrammed-multiprocessors"
+  - title: "The Implementation of the Cilk-5 Multithreaded Language"
+    url: "https://doi.org/10.1145/277650.277725"
+    year: 1998
+    doi: "10.1145/277650.277725"
+    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - title: "Scheduling Multithreaded Computations by Work Stealing"
+    url: "https://doi.org/10.1145/324133.324234"
+    year: 1999
+    doi: "10.1145/324133.324234"
+    card: "257-scheduling-multithreaded-computations-by-work-stealing"
+  - title: "Idempotent Work Stealing"
+    url: "https://doi.org/10.1145/1504176.1504186"
+    year: 2009
+    doi: "10.1145/1504176.1504186"
+    card: "544-idempotent-work-stealing"
+  - title: "Correct and Efficient Work-Stealing for Weak Memory Models"
+    url: "https://doi.org/10.1145/2442516.2442524"
+    year: 2013
+    doi: "10.1145/2442516.2442524"
+    card: "545-correct-and-efficient-work-stealing-for-weak-memory-models"
+  - title: "Fence-Free Work Stealing on Bounded TSO Processors"
+    url: "https://doi.org/10.1145/2541940.2541987"
+    year: 2014
+    doi: "10.1145/2541940.2541987"
+    card: "546-fence-free-work-stealing-on-bounded-tso-processors"
+  - title: "Formal Verification of Chase-Lev Deque in Concurrent Separation Logic"
+    url: "https://arxiv.org/abs/2309.03642"
+    year: 2023
+    arxiv: "2309.03642"
+    card: "292-formal-verification-of-chase-lev-deque-in-concurrent-separat"
+  - title: "A Lock-Free Work-Stealing Algorithm for Bulk Operations"
+    url: "https://arxiv.org/abs/2603.05766"
+    year: 2026
+    arxiv: "2603.05766"
+    card: "263-a-lock-free-work-stealing-algorithm-for-bulk-operations"
 ---
 
 # Dynamic Circular Work-Stealing Deque

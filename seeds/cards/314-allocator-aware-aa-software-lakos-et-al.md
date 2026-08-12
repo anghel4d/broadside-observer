@@ -18,6 +18,32 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+lineage: slab-allocators
+cites:
+  - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
+    url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+  - title: "Reconsidering Custom Memory Allocation"
+    url: "https://doi.org/10.1145/582419.582421"
+    year: 2002
+    arxiv: null
+    doi: "10.1145/582419.582421"
+    card: "584-reconsidering-custom-memory-allocation"
+  - title: "Composing High-Performance Memory Allocators"
+    url: "https://doi.org/10.1145/378795.378821"
+    year: 2001
+    arxiv: null
+    doi: "10.1145/378795.378821"
+    card: "583-composing-high-performance-memory-allocators"
+  - title: "mimalloc: Free List Sharding in Action"
+    url: "https://arxiv.org/abs/1908.05006"
+    year: 2019
+    arxiv: "1908.05006"
+    doi: null
+    card: "012-mimalloc-free-list-sharding-in-action"
 ---
 
 # Allocator-Aware (AA) Software (Lakos et al.)

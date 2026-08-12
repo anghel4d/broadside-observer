@@ -11,34 +11,56 @@ doi: null
 source: "https://arxiv.org/abs/2505.02041"
 topics:
   - gi
+  - radiance-cascades
+  - holographic-rc
 seed_rank: 270
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - title: "Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer"
+    url: "https://arxiv.org/abs/2408.14425"
+    year: 2024
+    arxiv: "2408.14425"
+    doi: "10.1093/rasti/rzae062"
+    card: "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
+  - title: "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes"
+    url: "https://arxiv.org/abs/2607.20384"
+    year: 2026
+    arxiv: "2607.20384"
+    card: "265-split-radiance-cascades-real-time-global-illumination-via-sp"
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
 # Holographic Radiance Cascades for 2D Global Illumination
 
 ## One-sentence takeaway
 
-Efficiently calculating global illumination has always been one of the greatest challenges in computer graphics.
+Holographic Radiance Cascades keep high spatial resolution perpendicular to sample directions, yielding 2D GI visually matching reference at real-time rates.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Holographic Radiance Cascades for 2D Global Illumination).
+Seeded RC variant on the Anoptic spine: shows how to fix small-penumbra / hard-shadow weaknesses of naive RC while staying single-shot and scene-agnostic in 2D.
 
 ## Key ideas
 
-- Efficiently calculating global illumination has always been one of the greatest challenges in computer graphics.
-- Algorithms for approximating global illumination have always struggled to run in realtime for fully dynamic scenes, and have had to rely heavily on stochastic raytracing, spatialtemporal denoising, or undersampled representations, resulting in much lower quality of lighting compared to reference solutions.
-- Even though the problem of calculating global illumination in 2D is significantly simpler than that of 3D, most contemporary approaches still struggle to accurately approximate 2D global illumination under realtime constraints.
-- We present Holographic Radiance Cascades: a new single-shot scene-agnostic radiance transfer algorithm for global illumination, which is capable of achieving results visually indistinguishable from the 2D reference solution at realtime framerates.
-- Our method uses a multi-level radiance probe system, and computes rays via combining short ray intervals as a replacement for conventional raytracing.
+- Multi-level radiance probes with ray intervals composed instead of full conventional ray traces.
+- Holographic probe layout preserves resolution perpendicular to the march, improving hard shadows and volumetrics.
+- Builds on Sannikov RC and cites bilinear-style fixes from Osborne & Sannikov.
+- Memory scaling O(N×X²) is the stated barrier to naive 3D HRC.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Best understood as a 2D/fluence method; 3D remains open (see Split RC and community Surfel/UV-space variants).
 
 ## Links
 

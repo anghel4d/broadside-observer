@@ -17,6 +17,37 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 9
+lineage: work-stealing
+cites:
+  - title: "Dynamic Circular Work-Stealing Deque"
+    url: "https://doi.org/10.1145/1073970.1073974"
+    year: 2005
+    doi: "10.1145/1073970.1073974"
+    card: "367-dynamic-circular-work-stealing-deque"
+  - title: "Scheduling Multithreaded Computations by Work Stealing"
+    url: "https://doi.org/10.1145/324133.324234"
+    year: 1999
+    doi: "10.1145/324133.324234"
+    card: "257-scheduling-multithreaded-computations-by-work-stealing"
+  - title: "The Implementation of the Cilk-5 Multithreaded Language"
+    url: "https://doi.org/10.1145/277650.277725"
+    year: 1998
+    doi: "10.1145/277650.277725"
+    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - title: "A Java Fork/Join Framework"
+    url: "https://doi.org/10.1145/337449.337465"
+    year: 2000
+    doi: "10.1145/337449.337465"
+    card: "543-a-java-fork-join-framework"
+  - title: "Intel Threading Building Blocks"
+    url: "https://www.oreilly.com/library/view/intel-threading-building/9780596514808/"
+    year: 2007
+    card: "486-intel-threading-building-blocks"
+  - title: "Correct and Efficient Work-Stealing for Weak Memory Models"
+    url: "https://doi.org/10.1145/2442516.2442524"
+    year: 2013
+    doi: "10.1145/2442516.2442524"
+    card: "545-correct-and-efficient-work-stealing-for-weak-memory-models"
 ---
 
 # A Lock-Free Work-Stealing Algorithm for Bulk Operations

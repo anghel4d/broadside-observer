@@ -1,0 +1,63 @@
+---
+title: "Using Elimination to Implement Scalable and Lock-Free FIFO Queues"
+authors:
+  - "Mark Moir"
+  - "Daniel Nussbaum"
+  - "Ori Shalev"
+  - "Nir Shavit"
+year: 2005
+venue: "SPAA"
+arxiv: null
+doi: "10.1145/1073970.1074013"
+source: "https://doi.org/10.1145/1073970.1074013"
+topics:
+  - lockfree
+  - queues
+seed_rank: 503
+seed_batch: "lineage-lock-free-queues-2026-08-13"
+reviewed: "2026-08-13"
+pool: "hpc"
+relevance_score: 8
+lineage: lock-free-queues
+cites:
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
+    url: "https://doi.org/10.1145/248052.248106"
+    year: 1996
+    arxiv: null
+    doi: "10.1145/248052.248106"
+    card: "032-michael-scott-lock-free-queue"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
+    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
+---
+
+# Using Elimination to Implement Scalable and Lock-Free FIFO Queues
+
+## One-sentence takeaway
+
+Shows elimination (pairing concurrent opposite operations) can scale linearizable FIFO queues, not only stacks/counters.
+
+## Why it matters here
+
+Useful when Anoptic producer/consumer bursts cancel each other — backoff via elimination instead of hammering MS head/tail.
+
+## Key ideas
+
+- Transforms non-scalable FIFO implementations (applied to MS-queue) into scalable ones via elimination backoff.
+- Preserves lock-freedom and linearizability while improving high-load scalability.
+- Opposite concurrent enqueue/dequeue pairs can complete without touching the central structure.
+- Empirical CMT multiprocessor results: similar low-load cost, better high-load scaling than plain MS.
+
+## Caveats
+
+- Helps most when concurrent opposite operations are frequent; pure producer storms still hit the queue spine.
+- Implementation complexity and timing windows are non-trivial.
+- Seed card; promote before relying on fine-grained claims.
+
+## Links
+
+- DOI: [10.1145/1073970.1074013](https://doi.org/10.1145/1073970.1074013)
+- PDF: https://people.csail.mit.edu/shanir/publications/SPAA2005.pdf

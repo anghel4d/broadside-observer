@@ -520,3 +520,103 @@ Non-LLM / classical systems haul for Anoptic, GRID COMMAND, and simulation/HPC c
 | 498 | 7 | 1990 | The Algorithmic Beauty of Plants (L-Systems) | engine |
 | 499 | 7 | 1986 | Robin Hood Hashing | hpc |
 | 500 | 7 | 1980 | The Hearsay-II Speech-Understanding System | gameai |
+
+## Lineage mint — ECS / data-oriented (`lineage-ecs-data-oriented-2026-08-13`)
+
+Gap cards minted into reserved block **621–660** (see `_pools/lineage_ranges.json`). Existing spine cards were patched with `lineage: ecs-data-oriented` + `cites` (batch unchanged).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 621 | 9 | 2002 | A Data-Driven Game Object System | engine |
+| 622 | 8 | 2014 | Game Programming Patterns — Data Locality | engine |
+| 623 | 7 | 2011 | Artemis Entity System Framework | engine |
+
+## Lineage: work-stealing
+
+Batch `lineage-work-stealing-2026-08-13`. Deep thread: [`lineages/work-stealing.md`](lineages/work-stealing.md). New cards minted in claimed range 541–580; existing spine cards patched with `lineage` + `cites`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 541 | 10 | 1995 | Cilk: An Efficient Multithreaded Runtime System | hpc |
+| 542 | 10 | 1998 | Thread Scheduling for Multiprogrammed Multiprocessors | hpc |
+| 543 | 9 | 2000 | A Java Fork/Join Framework | hpc |
+| 544 | 8 | 2009 | Idempotent Work Stealing | hpc |
+| 545 | 10 | 2013 | Correct and Efficient Work-Stealing for Weak Memory Models | hpc |
+| 546 | 8 | 2014 | Fence-Free Work Stealing on Bounded TSO Processors | hpc |
+
+## Lineage: slab-allocators
+
+Epistemology thread for size-class / slab / multipool allocation.
+
+- slug: `slab-allocators`
+- seed_batch (mint): `lineage-slab-allocators-2026-08-13`
+- number block: **581–620** (minted **581–591**; 11 new cards)
+- cards in thread: **26**
+- lineage doc: [`lineages/slab-allocators.md`](lineages/slab-allocators.md)
+
+| # | Score | Year | Title | Stem |
+|---|------:|-----:|-------|------|
+| 581 | 9 | 1988 | Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel | `581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd` |
+| 259 | 10 | 1994 | The Slab Allocator: An Object-Caching Kernel Memory Allocator | `259-the-slab-allocator-an-object-caching-kernel-memory-allocator` |
+| 382 | 9 | 1995 | Dynamic Storage Allocation: A Survey and Critical Review | `382-dynamic-storage-allocation-a-survey-and-critical-review` |
+| 377 | 9 | 2000 | Hoard: A Scalable Memory Allocator for Multithreaded Applications | `377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat` |
+| 582 | 10 | 2000 | A Memory Allocator (dlmalloc) | `582-a-memory-allocator-dlmalloc` |
+| 583 | 9 | 2001 | Composing High-Performance Memory Allocators | `583-composing-high-performance-memory-allocators` |
+| 256 | 10 | 2001 | Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources | `256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus` |
+| 584 | 9 | 2002 | Reconsidering Custom Memory Allocation | `584-reconsidering-custom-memory-allocation` |
+| 585 | 9 | 2004 | Scalable Lock-Free Dynamic Memory Allocation | `585-scalable-lock-free-dynamic-memory-allocation` |
+| 442 | 8 | 2004 | An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF) | `442-an-efficient-memory-allocator-for-network-processors-and-mul` |
+| 586 | 9 | 2006 | Scalable Locality-Conscious Multithreaded Memory Allocation (Streamflow) | `586-scalable-locality-conscious-multithreaded-memory-allocatio` |
+| 364 | 9 | 2006 | A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc) | `364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je` |
+| 488 | 7 | 2006 | DieHard: Probabilistic Memory Safety for Unsafe Languages | `488-diehard-probabilistic-memory-safety-for-unsafe-languages` |
+| 587 | 10 | 2007 | TCMalloc: Thread-Caching Malloc | `587-tcmalloc-thread-caching-malloc` |
+| 588 | 9 | 2007 | SLUB: The Unqueued Slab Allocator | `588-slub-the-unqueued-slab-allocator` |
+| 252 | 10 | 2013 | Local Memory Allocators in Large-Scale C++ (Lakos allocator model) | `252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod` |
+| 412 | 8 | 2015 | SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines | `412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac` |
+| 589 | 8 | 2015 | Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc) | `589-fast-multicore-scalable-low-fragmentation-memory-allocatio` |
+| 590 | 8 | 2017 | rpmalloc: Lock-Free Thread-Caching Size-Class Allocator | `590-rpmalloc-lock-free-thread-caching-size-class-allocator` |
+| 399 | 8 | 2019 | Mesh: Compacting Memory Management for C/C++ Applications | `399-mesh-compacting-memory-management-for-c-c-applications` |
+| 401 | 8 | 2019 | snmalloc: A Message Passing Allocator | `401-snmalloc-a-message-passing-allocator` |
+| 12 | 10 | 2019 | mimalloc: Free List Sharding in Action | `012-mimalloc-free-list-sharding-in-action` |
+| 328 | 9 | 2020 | Learning Slab Classes to Alleviate Memory Holes in Memcached | `328-learning-slab-classes-to-alleviate-memory-holes-in-memcached` |
+| 314 | 9 | 2021 | Allocator-Aware (AA) Software (Lakos et al.) | `314-allocator-aware-aa-software-lakos-et-al` |
+| 591 | 9 | 2021 | Beyond malloc efficiency to fleet efficiency: a hugepage-aware memory allocator (Temeraire) | `591-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa` |
+| 286 | 9 | 2024 | StarMalloc: A Formally Verified, Concurrent, Performant, and Security-Oriented Memory Allocator | `286-starmalloc-a-formally-verified-concurrent-performant-and-sec` |
+
+## Lineage expansion — lock-free-queues (`lineage-lock-free-queues-2026-08-13`)
+
+Minted 501–513; patched existing thread cards with `lineage: lock-free-queues` and rich `cites`. Narrative: [`lineages/lock-free-queues.md`](lineages/lock-free-queues.md).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 501 | 8 | 2001 | A Simple, Fast and Scalable Non-Blocking Concurrent FIFO Queue (Tsigas & Zhang) | hpc |
+| 502 | 8 | 2004 | An Optimistic Approach to Lock-Free FIFO Queues | hpc |
+| 503 | 8 | 2005 | Using Elimination to Implement Scalable and Lock-Free FIFO Queues | hpc |
+| 504 | 9 | 2007 | The Baskets Queue | hpc |
+| 505 | 10 | 2011 | Wait-Free Queues with Multiple Enqueuers and Dequeuers | hpc |
+| 506 | 10 | 2012 | A Methodology for Creating Fast Wait-Free Data Structures | hpc |
+| 507 | 10 | 2013 | Fast Concurrent Queues for x86 Processors (LCRQ) | hpc |
+| 508 | 10 | 2010 | Bounded MPMC Queue (Vyukov / 1024cores) | hpc |
+| 509 | 9 | 2010 | Non-Intrusive MPSC Node-Based Queue (Vyukov / 1024cores) | hpc |
+| 510 | 10 | 2016 | A Wait-Free Queue as Fast as Fetch-and-Add | hpc |
+| 511 | 9 | 2016 | FAAArrayQueue (Concurrency Freaks) | hpc |
+| 512 | 10 | 2019 | A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue (SCQ) | hpc |
+| 513 | 9 | 2023 | The State-of-the-Art LCRQ Concurrent Queue Algorithm Does NOT Require CAS2 (LPRQ) | hpc |
+
+## Lineage: radiance-cascades
+
+Deep epistemology pass (`lineage-radiance-cascades-2026-08-13`). Narrative: [`lineages/radiance-cascades.md`](lineages/radiance-cascades.md).  
+Patched existing thread cards with `lineage: radiance-cascades` + `cites`; minted missing spine papers in claimed block **661–700**.
+
+### Minted this pass
+
+| # | Score | Year | Title | Pool |
+|---|-------|------|-------|------|
+| 661 | 10 | 1997 | Instant Radiosity | graphics |
+| 662 | 9 | 1998 | The Irradiance Volume | graphics |
+| 663 | 8 | 2006 | Splatting Indirect Illumination | graphics |
+| 664 | 9 | 2024 | Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer | graphics |
+
+### Thread size
+
+**22** cards currently carry `lineage: radiance-cascades`.

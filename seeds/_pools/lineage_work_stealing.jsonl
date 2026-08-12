@@ -1,0 +1,18 @@
+{"title": "Scheduling Multithreaded Computations by Work Stealing", "year": 1999, "status": "in_thread", "card": "257-scheduling-multithreaded-computations-by-work-stealing", "note": "JACM journal version of FOCS 1994 theory root"}
+{"title": "Scheduling multithreaded computations by work stealing (FOCS)", "year": 1994, "status": "covered_by", "card": "257-scheduling-multithreaded-computations-by-work-stealing", "doi": "10.1109/SFCS.1994.365680", "note": "Conference version; cite via JACM card"}
+{"title": "Cilk: An Efficient Multithreaded Runtime System", "year": 1995, "status": "in_thread", "card": "541-cilk-an-efficient-multithreaded-runtime-system"}
+{"title": "The Implementation of the Cilk-5 Multithreaded Language", "year": 1998, "status": "in_thread", "card": "381-the-implementation-of-the-cilk-5-multithreaded-language"}
+{"title": "Thread Scheduling for Multiprogrammed Multiprocessors", "year": 1998, "status": "in_thread", "card": "542-thread-scheduling-for-multiprogrammed-multiprocessors"}
+{"title": "A Java Fork/Join Framework", "year": 2000, "status": "in_thread", "card": "543-a-java-fork-join-framework"}
+{"title": "Dynamic Circular Work-Stealing Deque", "year": 2005, "status": "in_thread", "card": "367-dynamic-circular-work-stealing-deque"}
+{"title": "Intel Threading Building Blocks", "year": 2007, "status": "in_thread", "card": "486-intel-threading-building-blocks"}
+{"title": "Idempotent Work Stealing", "year": 2009, "status": "in_thread", "card": "544-idempotent-work-stealing"}
+{"title": "Correct and Efficient Work-Stealing for Weak Memory Models", "year": 2013, "status": "in_thread", "card": "545-correct-and-efficient-work-stealing-for-weak-memory-models"}
+{"title": "Fence-Free Work Stealing on Bounded TSO Processors", "year": 2014, "status": "in_thread", "card": "546-fence-free-work-stealing-on-bounded-tso-processors"}
+{"title": "Formal Verification of Chase-Lev Deque in Concurrent Separation Logic", "year": 2023, "status": "in_thread", "card": "292-formal-verification-of-chase-lev-deque-in-concurrent-separat"}
+{"title": "A Lock-Free Work-Stealing Algorithm for Bulk Operations", "year": 2026, "status": "in_thread", "card": "263-a-lock-free-work-stealing-algorithm-for-bulk-operations"}
+{"title": "Space-Efficient Scheduling of Multithreaded Computations", "year": 1998, "status": "related_not_carded", "doi": "10.1137/S0097539793259471", "note": "Blumofe–Leiserson space bounds; folded into theory root narrative"}
+{"title": "OpenMP Application Programming Interface 5.0", "year": 2018, "status": "peripheral", "card": "469-openmp-application-programming-interface-5-0", "note": "Tasking clause surface; implementations may steal but spec is not WS epistemology"}
+{"title": "StarPU: a unified platform for task scheduling on heterogeneous multicore architectures", "year": 2011, "status": "peripheral", "card": "480-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo", "note": "Heterogeneous task scheduling; steal ideas appear but primary lineage differs"}
+{"title": "Hood: A User-Level Threads Library for Multiprogrammed Multiprocessors", "year": 1999, "status": "skipped", "note": "ABP/THE implementation vehicle; less cited than SPAA paper today"}
+{"title": "The Cilk++ Concurrency Platform", "year": 2009, "status": "skipped", "note": "Commercial/Intel Cilk++ bridge; Cilk-5 + OpenCilk cover the living line"}

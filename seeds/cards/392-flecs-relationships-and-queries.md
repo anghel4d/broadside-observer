@@ -15,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 8
+lineage: ecs-data-oriented
+cites:
+  - title: "Flecs: A Fast Entity Component System for C99"
+    url: "https://github.com/SanderMertens/flecs"
+    year: 2019
+    arxiv: null
+    doi: null
+    card: "334-flecs-a-fast-entity-component-system-for-c99"
+  - title: "Entity Systems are the future of MMOG development (T-Machine series)"
+    url: "http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - title: "Using Relational Databases for Entity-Component Systems"
+    url: "https://www.gamedeveloper.com/programming/the-entity-component-system-an-awesome-game-design-pattern-in-c-part-1-"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "474-using-relational-databases-for-entity-component-systems"
 ---
 
 # Flecs Relationships and Queries

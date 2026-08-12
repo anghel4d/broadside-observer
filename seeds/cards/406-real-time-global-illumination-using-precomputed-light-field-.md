@@ -15,26 +15,47 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+lineage: radiance-cascades
+cites:
+  - title: "The Irradiance Volume"
+    url: "https://doi.org/10.1109/38.656788"
+    year: 1998
+    doi: "10.1109/38.656788"
+    card: "662-the-irradiance-volume"
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "Scaling Probe-Based Real-Time Dynamic Global Illumination for Production"
+    url: "https://arxiv.org/abs/2009.10796"
+    year: 2020
+    arxiv: "2009.10796"
+    card: "330-scaling-probe-based-real-time-dynamic-global-illumination-fo"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Real-Time Global Illumination using Precomputed Light Field Probes
 
 ## One-sentence takeaway
 
-DDGI ancestor — probe GI.
+Precomputed light-field probes store radiance + visibility for real-time glossy/diffuse GI — the direct ancestor of DDGI.
 
 ## Why it matters here
 
-DDGI ancestor — probe GI.
+Industrial probe foil on the Radiance Cascades spine: world-space radiance probes that DDGI dynamizes and that Split RC sparsifies against.
 
 ## Key ideas
 
-- DDGI ancestor — probe GI.
+- Place light-field probes in the scene that encode incoming radiance and geometric visibility.
+- Supports dynamic viewers with precomputed or infrequently updated probe content.
+- Sets up the irradiance-field-with-visibility representation refined by DDGI.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
+- Original formulation leans on precomputation; DDGI removes much of that for dynamic lights/geometry.
 
 ## Links
 

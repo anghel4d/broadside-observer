@@ -17,27 +17,41 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
+    url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
+    year: 2017
+    card: "406-real-time-global-illumination-using-precomputed-light-field-"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Scaling Probe-Based Real-Time Dynamic Global Illumination for Production
 
 ## One-sentence takeaway
 
-We contribute several practical extensions to the probe based irradiance-field-with-visibility representation to improve image quality, constant and asymptotic performance, memory efficiency, and artist control.
+Production hardening of DDGI: bias, state machines, cascaded volumes, and engine-integration lessons from RTXGI/Unity/UE4.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Scaling Probe-Based Real-Time Dynamic Global Illumination for Production).
+Shows what industrial probe GI needed to ship — useful checklist when comparing Anoptic RC experiments to DDGI reality.
 
 ## Key ideas
 
-- We contribute several practical extensions to the probe based irradiance-field-with-visibility representation to improve image quality, constant and asymptotic performance, memory efficiency, and artist control.
-- We developed these extensions in the process of incorporating the previous work into the global illumination solutions of the NVIDIA RTXGI SDK, the Unity and Unreal Engine 4 game engines, and proprietary engines for several commercial games.
-- These extensions include: a single, intuitive tuning parameter (the "self-shadow" bias); heuristics to speed transitions in the global illumination; reuse of irradiance data as prefiltered radiance for recursive glossy reflection; a probe state machine to prune work that will not affect the final image; and multiresolution cascaded volumes for large worlds.
+- Single self-shadow bias parameter and probe state machine to prune useless work.
+- Cascaded probe volumes for large worlds; reuse irradiance as prefiltered radiance for glossy recursion.
+- Documents adoption path into NVIDIA RTXGI SDK and major engines.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Engineering paper on DDGI extensions; not a new GI paradigm.
 
 ## Links
 

@@ -10,34 +10,59 @@ doi: null
 source: "https://arxiv.org/abs/2607.20384"
 topics:
   - gi
+  - radiance-cascades
+  - split-rc
 seed_rank: 265
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - title: "Holographic Radiance Cascades for 2D Global Illumination"
+    url: "https://arxiv.org/abs/2505.02041"
+    year: 2025
+    arxiv: "2505.02041"
+    card: "270-holographic-radiance-cascades-for-2d-global-illumination"
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
+    url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
+    year: 2017
+    card: "406-real-time-global-illumination-using-precomputed-light-field-"
+  - title: "GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination"
+    url: "https://arxiv.org/abs/2310.19855"
+    year: 2023
+    arxiv: "2310.19855"
+    card: "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
 ---
 
 # Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes
 
 ## One-sentence takeaway
 
-Radiance probe methods are a popular and well-tested approach for approximating diffuse global illumination for real-time graphics, but they commonly suffer from a lack of detail due to the large spacing between probes.
+Bring Radiance Cascades into accurate real-time 3D diffuse GI via sparse hashmap world-space probes and ray splitting by hit distance.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probe).
+Living 3D RC successor for Anoptic: directly tackles the volumetric storage wall that kept prior RC demos in 2D or screenspace.
 
 ## Key ideas
 
-- Radiance probe methods are a popular and well-tested approach for approximating diffuse global illumination for real-time graphics, but they commonly suffer from a lack of detail due to the large spacing between probes.
-- Radiance Cascade (RC) fixes this by increasing spatial resolution and reducing angular resolution for light and occlusion from closer objects, which allows it to provide details at all scales without noise or aliasing.
-- However, leading implementations of RC either run in 2D or screenspace, due to the prohibitive costs of storing high-detail volumetric radiance information.
-- In this work, we adapt Radiance Cascades for accurate real-time 3D diffuse global illumination using a sparse hashmap to store world-space probes.
-- We introduce ray splitting, a method for calculating radiance intervals used in RC by tracing rays from visible surfaces and calculating their contribution to cascades based on their hit distance.
+- Sparse hashmap stores world-space probes instead of a dense 3D cascade grid.
+- Ray splitting assigns traced hit intervals to the correct cascade levels from visible surfaces.
+- Targets detail at all scales without the noise/aliasing of undersampled path probes.
+- Evaluated in both single-frame and temporally accumulated modes.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- 2026 arXiv preprint — validate against implementation cost on target GPUs before committing engine architecture.
 
 ## Links
 

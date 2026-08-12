@@ -18,29 +18,41 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination"
+    url: "https://arxiv.org/abs/2310.19855"
+    year: 2023
+    arxiv: "2310.19855"
+    card: "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Dynamic Diffuse Global Illumination Resampling
 
 ## One-sentence takeaway
 
-Interactive global illumination remains a challenge in radiometrically- and geometrically-complex scenes.
+Combine screen-space reservoir resampling with sparse world-space probes to raise sample efficiency for multi-bounce diffuse paths.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Dynamic Diffuse Global Illumination Resampling).
+Probe+resampling hybrid foil beside RC: illustrates the noise/detail trade DDGI-family methods accept and RC tries to dodge.
 
 ## Key ideas
 
-- Interactive global illumination remains a challenge in radiometrically- and geometrically-complex scenes.
-- Specialized sampling strategies are effective for specular and near-specular transport because the scattering has relatively low directional variance per scattering event.
-- In contrast, the high variance from transport paths comprising multiple rough glossy or diffuse scattering events remains notoriously difficult to resolve with a small number of samples.
-- We extend unidirectional path tracing to address this by combining screen-space reservoir resampling and sparse world-space probes, significantly improving sample efficiency for transport contributions that terminate on diffuse scattering events.
-- Our experiments demonstrate a clear improvement -- at equal time and equal quality -- over purely path traced and purely probe-based baselines.
+- Reservoir resampling in screen space feeds world-space probes for difficult diffuse multi-bounce transport.
+- Equal-time/quality gains over pure path tracing or pure probes on tested scenes.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Still stochastic; needs temporal stability strategies unlike noiseless RC merges.
 
 ## Links
 

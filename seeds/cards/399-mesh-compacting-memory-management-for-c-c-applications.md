@@ -18,6 +18,32 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 8
+lineage: slab-allocators
+cites:
+  - title: "DieHard: Probabilistic Memory Safety for Unsafe Languages"
+    url: "https://doi.org/10.1145/1133981.1134000"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1133981.1134000"
+    card: "488-diehard-probabilistic-memory-safety-for-unsafe-languages"
+  - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
+    url: "https://doi.org/10.1145/378993.379232"
+    year: 2000
+    arxiv: null
+    doi: "10.1145/378993.379232"
+    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - title: "Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)"
+    url: "https://doi.org/10.1145/2814270.2814294"
+    year: 2015
+    arxiv: "1503.09006"
+    doi: "10.1145/2814270.2814294"
+    card: "589-fast-multicore-scalable-low-fragmentation-memory-allocatio"
+  - title: "mimalloc: Free List Sharding in Action"
+    url: "https://arxiv.org/abs/1908.05006"
+    year: 2019
+    arxiv: "1908.05006"
+    doi: null
+    card: "012-mimalloc-free-list-sharding-in-action"
 ---
 
 # Mesh: Compacting Memory Management for C/C++ Applications

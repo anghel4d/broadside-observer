@@ -19,29 +19,36 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: radiance-cascades
+cites:
+  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
+    url: "https://jcgt.org/published/0008/02/01/"
+    year: 2019
+    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Signed Distance Fields Dynamic Diffuse Global Illumination
 
 ## One-sentence takeaway
 
-Global Illumination (GI) is of utmost importance in the field of photo-realistic rendering.
+Estimate dynamic diffuse GI by combining an SDF scene approx with a discretized irradiance field — multi-bounce without RTX-class probes.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Signed Distance Fields Dynamic Diffuse Global Illumination).
+SDF-domain neighbor of the probe foil branch; relevant when Anoptic already leans on SDFs for gameplay/VFX and wants GI coupling options beside RC.
 
 ## Key ideas
 
-- Global Illumination (GI) is of utmost importance in the field of photo-realistic rendering.
-- However, its computation has always been very complex, especially diffuse GI.
-- State of the art real-time GI methods have limitations of different nature, such as light leaking, performance issues, special hardware requirements, noise corruption, bounce number limitations, among others.
-- To overcome these limitations, we propose a novel approach of computing dynamic diffuse GI with a signed distance fields approximation of the scene and discretizing the space domain of the irradiance function.
-- With this approach, we are able to estimate real-time diffuse GI for dynamic lighting and geometry, without any precomputations and supporting multi-bounce GI, providing good quality lighting and high performance at the same time.
+- SDF approximation of geometry for visibility/occlusion queries.
+- Discretized irradiance field supports dynamic lights/geometry without heavy precomputation.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- SDF fidelity caps lighting accuracy; different failure mode than cascade ringing or probe leaks.
 
 ## Links
 
