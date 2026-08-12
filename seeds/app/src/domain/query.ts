@@ -3,6 +3,7 @@ import type { Corpus } from "./corpus.ts";
 import type {
   BatchFilter,
   CardId,
+  LineageFilter,
   PoolFilter,
   Query,
   SeedCard,
@@ -44,6 +45,17 @@ function matchesPool(filter: PoolFilter, card: SeedCard): boolean {
       return card.pool === null;
     case "One":
       return card.pool === filter.pool;
+  }
+}
+
+function matchesLineage(filter: LineageFilter, card: SeedCard): boolean {
+  switch (filter._tag) {
+    case "All":
+      return true;
+    case "None":
+      return card.lineage === null;
+    case "One":
+      return card.lineage === filter.lineage;
   }
 }
 
@@ -112,6 +124,7 @@ export function applyQuery(corpus: Corpus, query: Query): ReadonlyArray<SeedCard
     if (!matchesTopic(query.topic, card)) continue;
     if (!matchesBatch(query.batch, card)) continue;
     if (!matchesPool(query.pool, card)) continue;
+    if (!matchesLineage(query.lineage, card)) continue;
     if (!matchesYear(query.year, card)) continue;
     const haystack = corpus.haystack.get(card.id) ?? "";
     if (!matchesSearch(tokens, haystack)) continue;

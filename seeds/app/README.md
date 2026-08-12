@@ -37,7 +37,7 @@ Rebuild whenever cards are added or edited. The JSON artifact is generated, not 
 
 The hosted app is at **https://anghel4d.github.io/broadside-observer/**.
 
-After this lands on `main`, every push to `main` that touches `seeds/app/**`, `seeds/cards/**`, or `.github/workflows/deploy-seed-browser.yml` rebuilds the single-file bundle and deploys it via GitHub Actions (Pages source: GitHub Actions, not a branch). You can also run the **Deploy seed browser** workflow manually from the Actions tab.
+After this lands on `main`, every push to `main` that touches `seeds/app/**`, `seeds/cards/**`, `seeds/lineages/**`, or `.github/workflows/deploy-seed-browser.yml` rebuilds the single-file bundle and deploys it via GitHub Actions (Pages source: GitHub Actions, not a branch). You can also run the **Deploy seed browser** workflow manually from the Actions tab.
 
 Deep links stay hash routes, e.g. `https://anghel4d.github.io/broadside-observer/#card/<file-stem>`.
 
@@ -53,9 +53,24 @@ CardFile  →  ParseResult  →  SeedCard
 Corpus × Query  →  [SeedCard]
 ```
 
-- **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` are normalized to `null`, so missing vs empty is not a third state.
-- **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
-- **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, takeaway) with a title-weighted score as tie-breaker.
+- **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` to `[]`, so missing vs empty is not a third state. Each cite is a small struct (`title`, optional `url` / `year` / `arxiv` / `doi`, optional `card` FK).
+- **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
+- **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
 - **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure; rendering is a patch of list + detail.
 
-Deep links: `#card/<file-stem>`.
+Deep links: `#card/<file-stem>`. Cite entries that set `card` to a stem present in the corpus render as the same hash route.
+
+## Lineage and cites
+
+Optional frontmatter on every card (see [`../README.md`](../README.md)):
+
+| Field | Shape | Meaning |
+|-------|--------|---------|
+| `lineage` | one string slug | At most one primary thread (`lock-free-queues`, `work-stealing`, …). Omit if the card is not on a thread. |
+| `cites` | list of objects | Bibliographic edges. `title` is required. `url` should be set when known; `year`, `arxiv`, `doi` are optional. `card` is the stem of a file in `../cards/` (no `.md`) when that work already has a seed. |
+
+Cards without these keys still pack. When present, the packer keeps them in `cards.json`.
+
+The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
+
+Narrative thread pages live at `seeds/lineages/<slug>.md`. The packer records which of those files exist; the detail view links out to the GitHub copy when a matching doc is present.

@@ -51,6 +51,8 @@ assert.equal(parsed.value.title, "Attention Is All You Need");
 assert.equal(parsed.value.arxiv, "1706.03762");
 assert.equal(parsed.value.doi, null);
 assert.equal(parsed.value.sections.takeaway, "Transformers dispense with recurrence.");
+assert.equal(parsed.value.lineage, null);
+assert.deepEqual(parsed.value.cites, []);
 assert.equal(SeedCardSchema.safeParse(parsed.value).success, true);
 
 const missing = parseCard({
@@ -83,5 +85,73 @@ const emptyVenue = parseCard({
   markdown: sample.replace('venue: "NeurIPS"', 'venue: ""').replace("014-attention-is-all-you-need.md", "005-radiance.md"),
 });
 assert.equal(emptyVenue._tag, "Ok");
+
+const withLineage = parseCard({
+  file: "025-hazard-pointers.md",
+  markdown: `---
+title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
+authors:
+  - "Maged M. Michael"
+year: 2004
+venue: "TPDS"
+arxiv: null
+doi: "10.1109/TPDS.2004.8"
+source: "https://doi.org/10.1109/TPDS.2004.8"
+topics:
+  - lockfree
+seed_rank: 25
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "engine"
+relevance_score: 10
+lineage: lock-free-queues
+cites:
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
+    url: "https://doi.org/10.1145/248052.248106"
+    year: 1996
+    arxiv: null
+    doi: "10.1145/248052.248106"
+    card: "032-michael-scott-lock-free-queue"
+  - title: "Wait-Free Synchronization"
+    year: 1991
+    card: "037-wait-free-synchronization.md"
+---
+
+## One-sentence takeaway
+
+Safe reclamation for lock-free structures without GC.
+
+## Why it matters here
+
+Event-bus / logger lineage.
+
+## Key ideas
+
+- Retire lists.
+
+## Caveats
+
+- Seed card.
+
+## Links
+
+- DOI
+`,
+});
+assert.equal(withLineage._tag, "Ok");
+if (withLineage._tag !== "Ok") throw new Error("expected Ok");
+assert.equal(withLineage.value.lineage, "lock-free-queues");
+assert.equal(withLineage.value.cites.length, 2);
+assert.equal(
+  withLineage.value.cites[0]?.title,
+  "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+);
+assert.equal(withLineage.value.cites[0]?.url, "https://doi.org/10.1145/248052.248106");
+assert.equal(withLineage.value.cites[0]?.year, 1996);
+assert.equal(withLineage.value.cites[0]?.doi, "10.1145/248052.248106");
+assert.equal(withLineage.value.cites[0]?.card, "032-michael-scott-lock-free-queue");
+assert.equal(withLineage.value.cites[1]?.url, null);
+assert.equal(withLineage.value.cites[1]?.card, "037-wait-free-synchronization");
+assert.equal(SeedCardSchema.safeParse(withLineage.value).success, true);
 
 console.log("parse.test.ts ok");

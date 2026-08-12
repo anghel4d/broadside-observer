@@ -34,6 +34,9 @@ export type SeedBatch = z.infer<typeof SeedBatchSchema>;
 export const PoolSchema = z.string().min(1).brand<"Pool">();
 export type Pool = z.infer<typeof PoolSchema>;
 
+export const LineageSchema = z.string().min(1).brand<"Lineage">();
+export type Lineage = z.infer<typeof LineageSchema>;
+
 export const YearSchema = z.number().int().min(1000).max(3000).brand<"Year">();
 export type Year = z.infer<typeof YearSchema>;
 
@@ -55,6 +58,18 @@ export const IsoDateSchema = z
   .brand<"IsoDate">();
 export type IsoDate = z.infer<typeof IsoDateSchema>;
 
+/** Bibliographic edge. `url` may be omitted; `card` is an optional FK into the local corpus. */
+export const CiteSchema = z.object({
+  title: z.string().min(1),
+  url: z.string().min(1).nullable().default(null),
+  year: YearSchema.nullable().default(null),
+  arxiv: ArxivIdSchema.nullable().default(null),
+  doi: DoiSchema.nullable().default(null),
+  card: CardIdSchema.nullable().default(null),
+});
+
+export type Cite = z.infer<typeof CiteSchema>;
+
 export const FrontmatterSchema = z.object({
   title: z.string().min(1),
   authors: z.array(z.string().min(1)).min(1),
@@ -69,6 +84,8 @@ export const FrontmatterSchema = z.object({
   reviewed: IsoDateSchema,
   pool: PoolSchema.nullable(),
   relevance_score: RelevanceScoreSchema.nullable(),
+  lineage: LineageSchema.nullable().default(null),
+  cites: z.array(CiteSchema).default([]),
 });
 
 export type Frontmatter = z.infer<typeof FrontmatterSchema>;
@@ -96,6 +113,7 @@ export const CatalogSchema = z
     generatedAt: z.string().min(1),
     count: z.number().int().nonnegative(),
     cards: z.array(SeedCardSchema),
+    lineageDocs: z.array(LineageSchema).default([]),
   })
   .refine((catalog) => catalog.count === catalog.cards.length, {
     message: "count must equal cards.length",
@@ -113,6 +131,11 @@ export type PoolFilter =
   | { readonly _tag: "None" }
   | { readonly _tag: "One"; readonly pool: Pool };
 
+export type LineageFilter =
+  | { readonly _tag: "All" }
+  | { readonly _tag: "None" }
+  | { readonly _tag: "One"; readonly lineage: Lineage };
+
 export type YearRange = {
   readonly min: Year | null;
   readonly max: Year | null;
@@ -123,6 +146,7 @@ export type Query = {
   readonly topic: TopicFilter;
   readonly batch: BatchFilter;
   readonly pool: PoolFilter;
+  readonly lineage: LineageFilter;
   readonly year: YearRange;
   readonly sort: SortKey;
 };
@@ -132,6 +156,7 @@ export const defaultQuery: Query = {
   topic: { _tag: "All" },
   batch: { _tag: "All" },
   pool: { _tag: "All" },
+  lineage: { _tag: "All" },
   year: { min: null, max: null },
   sort: "rank",
 };

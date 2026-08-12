@@ -69,6 +69,35 @@ const cards: ReadonlyArray<SeedCard> = [
       links: "https://example.com/c",
     },
   }),
+  card({
+    id: "025-hazard-pointers",
+    file: "025-hazard-pointers.md",
+    title: "Hazard Pointers",
+    authors: ["Maged M. Michael"],
+    year: 2004,
+    topics: ["lockfree"],
+    seed_rank: 25,
+    pool: "engine",
+    relevance_score: 10,
+    lineage: "lock-free-queues",
+    cites: [
+      {
+        title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+        url: "https://doi.org/10.1145/248052.248106",
+        year: 1996,
+        arxiv: null,
+        doi: "10.1145/248052.248106",
+        card: "032-michael-scott-lock-free-queue",
+      },
+    ],
+    sections: {
+      takeaway: "Safe reclamation.",
+      why: "why",
+      ideas: "- idea",
+      caveats: "caveat",
+      links: "https://example.com/d",
+    },
+  }),
 ];
 
 const corpus = buildCorpus(cards);
@@ -76,7 +105,7 @@ const corpus = buildCorpus(cards);
 const byRank = applyQuery(corpus, defaultQuery);
 assert.deepEqual(
   byRank.map((item) => item.id),
-  ["002-beta", "001-alpha", "003-gamma"],
+  ["002-beta", "001-alpha", "003-gamma", "025-hazard-pointers"],
 );
 
 const memory: Query = {
@@ -102,5 +131,20 @@ const year: Query = {
   year: { min: cards[1]!.year, max: cards[1]!.year },
 };
 assert.equal(applyQuery(corpus, year)[0]?.id, "002-beta");
+
+const lineage: Query = {
+  ...defaultQuery,
+  lineage: { _tag: "One", lineage: cards[3]!.lineage! },
+};
+assert.deepEqual(
+  applyQuery(corpus, lineage).map((item) => item.id),
+  ["025-hazard-pointers"],
+);
+
+const noLineage: Query = { ...defaultQuery, lineage: { _tag: "None" } };
+assert.deepEqual(
+  applyQuery(corpus, noLineage).map((item) => item.id),
+  ["002-beta", "001-alpha", "003-gamma"],
+);
 
 console.log("query.test.ts ok");

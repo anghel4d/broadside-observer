@@ -61,6 +61,38 @@ function asNumber(value: unknown): unknown {
   return value;
 }
 
+function emptyToNull(value: unknown): unknown {
+  return value === "" || value === undefined ? null : value;
+}
+
+function asCardStem(value: unknown): unknown {
+  if (typeof value !== "string") return emptyToNull(value);
+  const trimmed = value.trim();
+  if (trimmed.length === 0) return null;
+  return trimmed.replace(/\.md$/u, "");
+}
+
+function normalizeCite(raw: unknown): unknown {
+  if (raw === null || typeof raw !== "object" || Array.isArray(raw)) return raw;
+  const record = raw as Record<string, unknown>;
+  return {
+    ...record,
+    title: record.title,
+    url: emptyToNull(record.url),
+    year: record.year === undefined || record.year === null || record.year === "" ? null : asNumber(record.year),
+    arxiv: emptyToNull(record.arxiv),
+    doi: emptyToNull(record.doi),
+    card: asCardStem(record.card),
+  };
+}
+
+function normalizeCites(value: unknown): unknown {
+  if (value === undefined || value === null) return [];
+  if (Array.isArray(value)) return value.map(normalizeCite);
+  if (typeof value === "object") return [normalizeCite(value)];
+  return value;
+}
+
 /** Tolerant wire-format cleanup. Does not invent fields; only normalizes encodings. */
 export function normalizeFrontmatter(raw: unknown): unknown {
   if (raw === null || typeof raw !== "object" || Array.isArray(raw)) return raw;
@@ -78,6 +110,8 @@ export function normalizeFrontmatter(raw: unknown): unknown {
     pool: record.pool === "" || record.pool === undefined ? null : record.pool,
     venue: record.venue ?? "",
     source: record.source ?? "",
+    lineage: emptyToNull(record.lineage),
+    cites: normalizeCites(record.cites),
   };
 }
 
