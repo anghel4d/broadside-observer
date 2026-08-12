@@ -1,0 +1,956 @@
+"press space to fire": automatic video game tutorial generation
+"weak ai" is likely to never become "strong ai", so what is its greatest value for us?
+$k$-level policy gradients for multi-agent reinforcement learning
+$λ_a$: a typed lambda calculus for llm agent composition
+*-autonomous categories
+1500 archers on a 28.8: network programming in age of empires and beyond
+<i>starcraft</i> ai competition: a step toward human‐level ai for real‐time strategy games
+a bayesian model for opening prediction in rts games with application to starcraft
+a bayesian model for plan recognition in rts games applied to starcraft
+a calculus for scoped effects & handlers
+a calculus of communicating systems
+a categorical framework for program semantics and semantic abstraction
+a complementary approach to incorrectness typing
+a comprehensive review of multi-agent reinforcement learning in video games
+a computational model for analytic column stores
+a conversation with arthur whitney
+a data-driven approach to solve a production constrained build-order optimization problem
+a dataset for starcraft ai \& an example of armies clustering
+a decomposition storage model
+a diagrammatic calculus for algebraic effects
+a fast voxel traversal algorithm for ray tracing
+a formal description of system/360
+a formalisation of core erlang, a concurrent actor language
+a framework for higher-order effects & handlers
+a framework for understanding and visualizing strategies of rl agents
+a fresh look at software rasterisation
+a math educacional computer game using procedural content generation
+a methodology for implementing highly concurrent data objects
+a mixed linear and non-linear logic: proofs, terms and models
+a multi-objective genetic algorithm for build order optimization in starcraft ii
+a multi-size convolution neural network for rts games winner prediction
+a note on monadic datalog on unranked trees
+a parallel algorithm for construction of bounding volume hierarchies
+a particle model for state estimation in real-time strategy games
+a persistent spatial semantic representation for high-level natural language instruction execution
+a pipelined collaborative speculative decoding framework for efficient edge-cloud llm inference
+a practical investigation of training-free relaxed speculative decoding
+a prehistory of n-categorical physics
+a programming language
+a region inference algorithm
+a relational model of data for large shared data banks
+a shallow embedding of datalog in lean
+a simple and effective $l_2$ norm-based strategy for kv cache compression
+a storage advisor for hybrid-store databases
+a survey of deductive database systems
+a survey of efficient representations for independent unit vectors
+a survey of graphical languages for monoidal categories
+a survey of llm $\times$ data
+a survey of monte carlo tree search methods
+a survey of planning techniques for agents in games
+a survey of real-time soft-shadow algorithms
+a survey of real-time strategy game ai research and competition in starcraft
+a survey on large language model based autonomous agents
+a survey on long-term memory security in llm agents: attacks, defenses, and governance across the memory lifecycle
+a survey on opponent modelling in games
+a syntactic approach to type soundness
+a systematic review of coevolution in real-time strategy games
+a taste of linear logic
+a taxonomy for neural memory networks
+a theory of type polymorphism in programming
+a unified metamodel for nosql and relational databases
+a universal modular actor formalism for artificial intelligence
+a-mem: agentic memory for llm agents
+abstracting effect systems for algebraic effect handlers
+accelerating llm inference with staged speculative decoding
+accelerating mixture-of-experts inference by hiding offloading latency with speculative decoding
+accurate and efficient long-term memory for llm agents
+ace-graphrag: agentic context engineering for hierarchical graphrag
+active retrieval augmented generation
+ad for an array language with nested parallelism
+adaptive and cost-efficient build-order selection scheme for improving performance of artificial intelligence on starcraft
+adaptive command: real-time policy adjustment via language models in starcraft ii
+adaptive functional programming
+adjointness in foundations
+advancements in natural language processing-driven game ai and behavior simulations
+advancing strategic game ai with yolo and large language models
+adversarial attacks on reinforcement learning agents for command and control
+adversarial planning through strategy simulation
+adversary agent reinforcement learning for pursuit-evasion
+aeneas: rust verification by functional translation
+agent s: an open agentic framework that uses computers like a human
+agent vs. parametric world models: hybrid planning for reliable language agents
+agent workflow memory
+agent-temporal attention for reward redistribution in episodic multi-agent reinforcement learning
+agentag: attribution of ai coding agents from behavioral fingerprints
+agentbench: evaluating llms as agents
+agentguard: repurposing agentic orchestrator for safety evaluation of tool orchestration
+agentic social affordance framework (asaf): agent identity design as a collaboration interface in multi-agent systems
+agentless: demystifying llm-based software engineering agents
+agentpoison: red-teaming llm agents via poisoning memory or knowledge bases
+agentraft: automated detection of data over-exposure in llm agents
+agentshap: interpreting llm agent tool importance with monte carlo shapley value estimation
+agentsquare: automatic llm agent search in modular design space
+ai and machine learning assisted customer aware queries: a comprehensive analysis to improve user experience based on natural language processing (nlp), databricks, and oracle apex
+ai and wargaming
+ai assisted prediction of unplanned intensive care admissions using natural language processing in elective neurosurgery
+ai in humanitarian healthcare: a game changer for crisis response
+aiide 2010 starcraft competition
+alfred: a benchmark for interpreting grounded instructions for everyday tasks
+algebraic operations and generic effects
+algebraic semantics of datalog with equality
+algorithm = logic + control
+alias types
+almost symmetric linear arc monadic datalog and transitive tournaments
+an abstract view of programming languages
+an adaptive dynamic replacement approach for a multicast based popularity aware prefix cache memory system
+an amateur's introduction to recursive query processing strategies
+an approach to domain transfer in procedural content generation of two-dimensional videogame levels
+an array-oriented language with static rank polymorphism
+an atomic skill library construction method for data-efficient embodied manipulation
+an effect system for algebraic effects and handlers
+an efficient implementation of guard-based synchronization for an object-oriented programming language
+an elementary theory of the category of sets
+an equational axiomatization of dynamic threads via algebraic effects: presheaves on finite relations, labelled posets, and parameterized algebraic theories
+an evaluation algorithm for datalog with equality
+an experiment in automatic game design
+an improved algorithm for generating database transactions from relational algebra specifications
+an intelligent ide for behavior authoring in real-time strategy games
+an ontology-driven graph rag for legal norms: a structural, temporal, and deterministic approach
+aoad-mat: transformer-based multi-agent deep reinforcement learning model considering agents' order of action decisions
+apigen: automated pipeline for generating verifiable and diverse function-calling datasets
+apl since 1978
+aplicative programming with naperian functors
+applying goal-driven autonomy to starcraft
+applying supervised and reinforcement learning methods to create neural-network-based agents for playing starcraft ii
+approaches to concurrent exception handling
+approximation models of combat in starcraft 2
+are online skill and memory modules always worth their tokens? a budget-constrained study of web agents
+are we ready for an agent-native memory system?
+arena: a toolkit for multi-agent reinforcement learning
+arigraph: learning knowledge graph world models with episodic memory for llm agents
+artificial intelligence and games
+artificial intelligence for adaptive computer games
+asynchronous advantage actor-critic agent for starcraft ii
+attention is all you need
+attractive metadata attack: inducing llm agents to invoke malicious tools
+augmenting game ai with deep reinforcement learning
+auto-configuring scientific simulators with lightweight coding-agent adapters
+auto-dreamer: learning offline memory consolidation for language agents
+autocoderover: autonomous program improvement
+autodev: automated ai-driven development
+autogen: enabling next-gen llm applications via multi-agent conversation
+automated testing and repair for verified compilers generated by a coding agent
+automatic content generation in the galactic arms race video game
+automatic observer script for starcraft: brood war bot games (technical report)
+automatic stance detection using end-to-end memory networks
+automatic task detection and heterogeneous llm speculative decoding
+ava: attentive vlm agent for mastering starcraft ii
+babyai: a platform to study the sample efficiency of grounded language learning
+backpropagation for effectful languages i: finite probability and discrete output algebraic effects
+basic category theory for computer scientists
+basic concepts of enriched category theory
+beautiful differentiation
+behavior learning-based testing of starcraft competition entries
+behavior trees in robotics and ai
+behavioural types for actor systems
+behavioural types for non-uniform memory accesses
+bert: pre-training of deep bidirectional transformers for language understanding
+better static memory management: improving region-based analysis of higher-order languages
+better together: unifying datalog and equality saturation
+beyond adversarial: the case for game ai as storytelling
+bgfx
+bindless deferred shading
+biotic browser: applying streamingllm as a persistent web browsing co-pilot
+bitsquid/stingray foundation blogs
+borrowable fractional ownership types for verification
+bottom-up strategy planning model by applying fuzzy integral in rts game
+braided tensor categories
+brood war api (bwapi)
+build order optimization in starcraft
+build-order optimization in real-time strategy games using evolutionary techniques
+building domain-specific embedded languages
+building extensible program logics through effect handlers
+bullion: a column store for machine learning
+c-store: a column-oriented dbms
+cacheblend: fast large language model serving for rag with cached knowledge fusion
+cacheweaver: cache-aware evidence ordering for efficient grounded rag inference
+cachewise: understanding workloads and optimizing kvcache management for efficiently serving llm coding agents
+call for ai research in rts games
+call-by-name is just call-by-value with delimited control
+call-by-name, call-by-value and the λ-calculus
+call-by-push-value
+can programming be liberated from the von neumann style? a functional style and its algebra of programs
+candidate-constrained retrieval-augmented generation for longeval-rag: system design and empirical analysis
+cartesian closed categories and typed λ-calculi
+case-based planning and execution for real-time strategy games
+cassandra: enabling reasoning llms at edge via self-speculative decoding
+categorical logic and type theory
+categorical quantum mechanics
+categories and computer science
+categories for the working mathematician (2nd ed.)
+categories, allegories
+category power of ecs architectures
+category theory (2nd ed.)
+category theory for computing science
+category theory for programmers
+category theory for the sciences
+category theory in context
+category-graded algebraic theories and effect handlers
+causal intervention-based memory selection for long-horizon llm agents
+centering: a framework for modeling the local coherence of discourse
+certified graph view maintenance with regular datalog
+chain-of-thought prompting elicits reasoning in large language models
+chainworld: composing long-horizon desktop workloads from atomic osworld tasks
+change2task: from repository changes to executable coding agent tasks and environments
+choosing how to remember: adaptive memory structures for llm agents
+clin-jepa: a multi-phase co-training framework for joint-embedding predictive pretraining on ehr patient trajectories
+clin-llm: a safety-constrained hybrid framework for clinical diagnosis and treatment generation
+closed categories
+clustered deferred and forward shading
+co-evolving real-time strategy game micro
+coach-assisted multi-agent reinforcement learning framework for unexpected crashed agents
+codegrep: an rl-trained retrieval agent for llm coding agents
+codenav: beyond tool-use to using real-world codebases with llm agents
+cognitive architectures for language agents
+coherence in closed categories
+collaborative ai teaming in unknown environments via active goal deduction
+column-oriented datalog on the gpu
+column-stores vs. row-stores: how different are they really?
+columnar formats for schemaless lsm-based document stores
+columnar storage and list-based processing for graph database management systems
+combating knowledge corruption in agent systems: a byzantine-tolerant secure collaborative rag framework
+combinatorial and exploratory creativity in procedural content generation
+combining relational algebra, sql, constraint modelling, and local search
+combining search-based procedural content generation and social gaming in the petalz video game
+communicating actor automata -- modelling erlang processes as communicating machines
+communicating sequential processes
+como o game design pode incentivar o comportamento tóxico em jogos online
+comparing parallel functional array languages: programming and performance
+compiling pattern matching
+compiling to categories
+completeness of relational algebra via cylindric algebra
+completion at the boundary (cab): deployable switching with completion-aware control under limited calibration
+comprehending monads
+compresskv: semantic-retrieval-guided kv-cache compression for resource-efficient long-context llm inference
+computational category theory
+computational interpretations of linear logic
+computational lambda-calculus and monads
+compute or load kv cache? why not both?
+computing h-partitions in asp and datalog
+concatenated raptor codes in nand flash memory
+conceptual mathematics: a first introduction to categories (2nd ed.)
+concurrent programming in erlang (2nd edition)
+considerations for comparing video game ai agents with humans
+consort: context- and flow-sensitive ownership refinement types for imperative programs
+containment in monadic disjunctive datalog, mmsnp, and expressive description logics
+contextual modal types for algebraic effects and handlers
+continual online evolutionary planning for in-game build order adaptation in starcraft
+continuing webassembly with effect handlers
+control flow duplication for columnar arrays in a dynamic compiler
+cooperative multi-agent transfer learning with level-adaptive credit assignment
+corrective retrieval augmented generation
+cost-efficient large language model serving for multi-turn conversations with cachedattention
+could the magellanic clouds be tidal dwarves expelled from a past-merger event occurring in andromeda?
+counterfactual multi-agent policy gradients
+coupling planning with episodic memory in llm agents for software issue resolution
+coverage-driven kv cache eviction for efficient and improved inference of llm
+cranimem: cranial inspired gated and bounded memory for agentic systems
+cricinator: an ai-driven cricketer guessing game leveraging reinforcement learning
+criticalkv: optimizing kv cache eviction from an output perturbation perspective
+customizing host ide for non-programming users of pure embedded dsls: a case study
+cyclone: a safe dialect of c
+data migration using datalog program synthesis
+data-driven production constrained build-order optimization in starcraft
+data-oriented design (or why you might be shooting yourself in the foot with oop)
+data-oriented modeling for spacecraft design
+datalog and recursive query processing
+datalog disassembly
+datalog materialisation in distributed rdf stores with dynamic data exchange
+datalog with first-class facts
+datalog-expressibility for monadic and guarded second-order logic
+dcir: dynamic consistency intrinsic reward for multi-agent reinforcement learning
+dear imgui
+debugging parallel programs with instant replay
+declarative statistical modeling with datalog
+decoding speculative decoding
+deductive systems and categories i. syntactic calculus and residuated categories
+deductive systems and categories ii: standard constructions and closed categories
+deep g-buffers for stable global illumination approximation
+deep learning for procedural content generation
+deep rts: a game environment for deep reinforcement learning in real-time strategy games
+definitional interpreters for higher-order programming languages
+defoggan: predicting hidden information in the starcraft fog of war with generative adversarial nets
+demo: new view on plasma fractals -- from the high point of array languages
+dense passage retrieval for open-domain question answering
+deterministic lockstep
+developing and evaluating an ai-assisted prediction model for unplanned intensive care admissions following elective neurosurgery using natural language processing within an electronic healthcare record system
+diagnosing retrieval vs. utilization bottlenecks in llm agent memory
+distserve: disaggregating prefill and decoding for goodput-optimized large language model serving
+do as i can, not as i say: grounding language in robotic affordances
+do be do be do
+do we still need graphrag? benchmarking rag and graphrag for agentic search systems
+docschisel: adaptive tool documentation optimization framework for llm agents
+dota 2 with large scale deep reinforcement learning
+drag: distilling rag for slms from llms to transfer knowledge and mitigate hallucination via evidence and graph-based distillation
+dual intuitionistic linear logic
+dual-numbers reverse ad for functional array languages
+dynamic agent skills: a lifecycle survey and taxonomy of evolving skill libraries
+dynamic depth decoding: faster speculative decoding for llms
+dynamic scripting
+e-mem: multi-agent based episodic context reconstruction for llm agent memory
+eduguard: a safe rag-based llm tutor for programming education
+effect handlers for programmable inference
+effect handlers in scope
+effect handling for composable program transformations in edward2
+effective and stable role-based multi-agent collaboration by structural information principles
+efficient algebraic effect handlers for prolog
+efficient memory management for large language model serving with pagedattention
+efficient reinforcement learning for starcraft by abstract forward models and transfer learning
+elasticmem: latent memory as a learnable resource for llm agents
+emergent natural language with communication games for improving image captioning capabilities without additional data
+end-to-end memory networks
+enhancing datalog reasoning with hypertree decompositions
+entity systems are the future of mmog development
+entropy-aware speculative decoding toward improved llm reasoning
+entt
+ephemeral rollups are all you need
+episodic exploration for deep deterministic policies: an application to starcraft micromanagement tasks
+escaping prisoner's dilemmas: from discord to harmony in the landscape of 2x2 games
+evaluate the stack management in effect handlers using the libseff c library
+evaluation of human-ai teams for learned and rule-based agents in hanabi
+evaluation of starcraft artificial intelligence competition bots by experienced human players
+evicpress: joint kv-cache compression and eviction for efficient llm serving
+evo-memory: benchmarking llm agent test-time learning with self-evolving memory
+evolkv: evolutionary kv cache compression for llm inference
+evolutionary machine learning for rts game starcraft
+evolutionary tabletop game design: a case study in the risk game
+executable code actions elicit better llm agents
+exhaustive and semi-exhaustive procedural content generation
+expanding expressive range: evaluation methodologies for procedural content generation
+expel: llm agents are experiential learners
+experience-driven procedural content generation
+explicit effect subtyping
+exploring advanced large language models with llmsuite
+exploring the theory and practice of concurrency in the entity-component-system pattern
+exponential shadow maps
+expressive power of one-shot control operators and coroutines
+extended magic for negation: efficient demand-driven evaluation of stratified datalog with precise complexity guarantees
+extracting heuristics from large language models for reward shaping in reinforcement learning
+ezblender: efficient 3d editing with plan-and-react agent
+f.a.c.u.l.: language-based interaction with ai companions in gaming
+factorisation systems for logical relations and monadic lifting in type-and-effect system semantics
+factorizing perception and policy for interactive instruction following
+failure as a process: an anatomy of cli coding agent trajectories
+fast inference from transformers via speculative decoding
+fast parallel surface and solid voxelization on gpus
+fc-datalog as a framework for efficient string querying
+fcmnet: full communication memory net for team-level cooperation in multi-agent systems
+federated in-context llm agent learning
+feeders and expellers, two types of animalcules with outboard cilia, have distinct surface interactions
+filesystem-based memory for llm agents: organization, evolution, and sustainability
+fixing incremental computation: derivatives of fixpoints, and the recursive semantics of datalog
+flashattention-2: faster attention with better parallelism and work partitioning
+flashattention-3: fast and accurate attention with asynchrony and low-precision
+flashattention: fast and memory-efficient exact attention with io-awareness
+flecs ecs
+flowlog: efficient and extensible datalog via incrementality
+flowlog: re-thinking datalog for fast and extensible static analysis
+focusagent: simple yet effective ways of trimming the large context of web agents
+fog of war representation for rts agents
+forecasting evolution of clusters in game agents with hebbian learning
+formulog: datalog for smt-based static analysis (extended version)
+formulog: datalog for static analysis involving logical formulae
+forward modeling for partial observation strategy games - a starcraft defogger
+framegraph: extensible rendering architecture in frostbite
+free to move: reachability types with flow-sensitive effects for safe deallocation and ownership transfer
+from chess and atari to starcraft and beyond: how game ai is driving the world of ai
+from documents to dialogue: building kg-rag enhanced ai assistants
+from flat to structural: enhancing automated short answer grading with graphrag
+from local to global: a graph rag approach to query-focused summarization
+from natural language to solver-ready power system optimization: an llm-assisted, validation-in-the-loop framework
+from non-paying to premium: predicting user conversion in video games with ensemble learning
+from region inference to von neumann machines via region representation inference
+from storage to experience: a survey on the evolution of llm agent memory mechanisms
+from time to space: the impact of linearity in higher-order datalog
+from λ-calculus to cartesian closed categories
+frustum culling with simd
+functional array programming in an extended pi-calculus
+functional reactive animation
+functorial semantics of algebraic theories
+gaia: a benchmark for general ai assistants
+game ai competitions: motivation for the imitation game-playing competition
+game generation via large language models
+game programming patterns
+game state learning via game scene augmentation
+games semantics for linear logic
+gated-attention architectures for task-oriented language grounding
+general general game ai
+general theory of natural equivalences
+general video game ai: a multitrack framework for evaluating agents, games, and content generation algorithms
+general video game ai: competition, challenges and opportunities
+generalised graph grammars for natural language processing
+generating real-time strategy game units using search-based procedural content generation and monte carlo tree search
+generative agents: interactive simulacra of human behavior
+generative datalog with stable negation
+generative grammatical studies in the japanese language
+genetic algorithm for planning and scheduling problem – starcraft ii build order case study
+geometry of interaction i: interpretation of system f
+getting to the point. index sets and parallelism-preserving autodiff for pointful array programming
+ghost: a combinatorial optimization framework for real-time problems
+ghost: a combinatorial optimization solver for rts-related problems
+global state evaluation in starcraft
+globality and regions
+glyphs and gpu text (pathfinder/swash)
+goal-oriented action planning
+gorilla: large language model connected with massive apis
+governing evolving memory in llm agents: risks, mechanisms, and the stability and safety governed memory (ssgm) framework
+gpt for games: a scoping review (2020-2023)
+gpt for games: an updated scoping review (2020-2024)
+gpu-driven rendering pipelines
+grandmaster level in starcraft ii using multi-agent reinforcement learning
+graph constrained language-action co-evolution for text games
+graphar: an efficient storage scheme for graph data in data lakes
+grc: unifying reasoning-driven generation, retrieval and compression
+groot: learning to follow instructions by watching gameplay videos
+grounding natural language commands to starcraft ii game states for narration-guided reinforcement learning
+groupmembench: benchmarking llm agent memory in multi-party conversations
+gshard: scaling giant models with conditional computation and automatic sharding
+guard analysis and safe erasure gradual typing: a type system for elixir
+handbook of categorical algebra 1: basic category theory
+handlers of algebraic effects
+handling algebraic effects
+handling bidirectional control flow: technical report
+handling higher-order effects
+handling the selection monad (full version)
+hazard pointers: safe memory reclamation for lock-free objects
+hcattention: extreme kv cache compression via heterogeneous attention computing for llms
+hep_tables: heterogeneous array programming for hep
+heuristic search applied to abstract combat games
+heuristic search exploiting non-additive and unit properties for rts-game unit micromanagement
+hey, you, keep away from my device: remotely implanting a virus expeller to defeat mirai on iot devices
+hierarchical adaptive eviction for kv cache management in multimodal language models
+hierarchical memory for high-efficiency long-term reasoning in llm agents
+hierarchical reinforcement learning in starcraft ii with human expertise in subgoals selection
+hierarchical reinforcement learning in starcraft micromanagement with influence maps and cluster-based scripts
+hierarchical z-buffer visibility
+high-level strategy selection under partial observability in starcraft: brood war
+higher order normal modes
+hiperfact: in-memory high performance fact processing -- rethinking the rete inference algorithm
+hipporag: neurobiologically inspired long-term memory for large language models
+hlsmac: a new starcraft multi-agent challenge for high-level strategic decision-making
+how to make a multiprocessor computer that correctly executes multiprocess programs
+htn planning for games
+human-level control through deep reinforcement learning
+human-like build-order management in starcraft to win against specific opponent's strategies
+hunyuan-gamecraft-2: instruction-following interactive game world model
+hybrid analysis for secure mcp tool use in llm agents
+hyperagent: generalist software engineering agents to solve coding tasks at scale
+hyperagent: planning and acting over tool-schema hypergraphs for tool-use llm agents
+hyperentm: evolving scalable neural turing machines through hyperneat
+implementation of the typed call-by-value λ-calculus using a stack of regions
+implementing a wall-in building placement in starcraft with declarative programming
+implementing neural turing machines
+improved collision detection and response
+improving language models by retrieving from trillions of tokens
+improving the performance of the paisley pattern-matching edsl by staged combinatorial compilation
+in-context kv-cache eviction for llms via attention-gate
+incorporating search algorithms into rts game agents
+incremental computation with names
+inferlog: accelerating llm inference for online log parsing via icl-oriented prefix caching
+inferring algebraic effects
+inferring region types via an abstract notion of environment transformation
+inferring strategies from limited reconnaissance in real-time strategy games
+infini memory: maintainable topic documents for long-term llm agent memory
+influence-based reinforcement learning for intrinsically-motivated agents
+instance-optimized string fingerprints
+instant radiosity
+integrating datalog and constraint solving
+integrating domain knowledge into monte carlo tree search for real-time strategy games
+interaction nets
+interactive fiction games: a colossal adventure
+intercode: standardizing and benchmarking interactive coding with execution feedback
+introducing a calculus of effects and handlers for natural language semantics
+introduction to higher order categorical logic
+introduction to rank-polymorphic programming in remora (draft)
+is parallel programming hard, and, if so, what can you do about it?
+jailbreaks on vision language model via multimodal reasoning
+japanese discourse and the process of centering
+japanese phrase structure grammar: a unification-based approach
+job system and fiber architecture (naughty dog)
+k
+keepkv: achieving periodic lossless kv cache compression for efficient llm inference
+keyformer: kv cache reduction through key tokens selection for efficient generative inference
+keyword search is all you need: achieving rag-level performance without vector databases using agentic tool use
+kimi-dev: agentless training as skill prior for swe-agents
+kvflow: efficient prefix caching for accelerating llm-based multi-agent workflows
+language agent tree search unifies reasoning acting and planning in language models
+language models are few-shot learners
+language primitives and type discipline for structured communication-based programming
+language support for regions
+large language models play starcraft ii: benchmarks and a chain of summarization approach
+latent idiom recognition for a minimalist functional array language using equality saturation
+lea: a learned encoding advisor for column stores
+learn-by-interact: a data-centric framework for self-adaptive agents in realistic environments
+learning a behavioral repertoire from demonstrations
+learning from demonstration for goal-driven autonomy
+learning from good trajectories in offline multi-agent reinforcement learning
+learning macromanagement in starcraft from replays using deep learning
+learning numeracy: binary arithmetic with neural turing machines
+learning to deceive in multi-agent hidden role games
+learning to follow directions in situated environments
+learning to follow instructions in text-based games
+learning to follow navigational directions
+learning to guide multiple heterogeneous actors from a single human demonstration via automatic curriculum learning in starcraft ii
+learning to interpret natural language navigation instructions from observations
+learning to speak and act in a fantasy text adventure game
+learning-based procedural content generation
+least-to-most prompting enables complex reasoning in large language models
+lectures on linear logic
+lehrstuhl für informatik 10 ( systemsimulation ) a multi-objective genetic algorithm for evaluating build order e ectiveness in starcraft ii
+lemur: harmonizing natural language and code for language agents
+leveraging natural language processing and machine learning to characterize psychological stress and life meaning and purpose in pediatric cancer survivors: a preliminary validation study
+leveraging passage retrieval with generative models for open domain question answering
+leveraging transformers for starcraft macromanagement prediction
+lie-access neural turing machines
+light linear logic
+lightweight llm agent memory with small language models
+linear logic
+linear logic and lazy computation
+linear logic propositions as session types
+linear logic, *-autonomous categories and cofree coalgebras
+linear logic: its syntax and semantics
+linear types can change the world!
+listen, attend, and walk: neural mapping of navigational instructions to action sequences
+llama: open and efficient foundation language models
+llm agents for interactive workflow provenance: reference architecture and evaluation methodology
+llm agents making agent tools
+llm-driven provenance forensics for threat investigation and detection
+llm-pysc2: starcraft ii learning environment for large language models
+llmlingua-2: data distillation for efficient and faithful task-agnostic prompt compression
+local algebraic effect theories
+locally cartesian closed categories and type theory
+lococo: dropping in convolutions for long context compression
+logicguard: improving embodied llm agents through temporal logic based critics
+longformer: the long-document transformer
+loongserve: efficiently serving long-context large language models with elastic sequence parallelism
+loop and blinn resolution independent curve rendering using programmable graphics hardware
+loopsbench: from harness engineering to loop engineering in coding agent evaluation
+lost in the middle: how language models use long contexts
+lumen: real-time global illumination in unreal engine 5
+lustre: a declarative language for real-time programming
+macro action selection with deep reinforcement learning in starcraft
+magic sets and other strange ways to implement logic programs
+mainlining databases: supporting fast transactional workloads on universal columnar data file formats
+making formulog fast: an argument for unconventional datalog evaluation (extended version)
+making rdbmss efficient on graph workloads through predefined joins
+making reliable distributed systems in the presence of software errors
+mammography reporting dataset with bi-rads system for natural language processing applications: addressing public data gaps in spanish
+mapping instructions and visual observations to actions with reinforcement learning
+marching cubes: a high resolution 3d surface construction algorithm
+mcp-agentbench: evaluating real-world language agent performance with mcp-mediated tools
+medagents: large language models as collaborators for zero-shot medical reasoning
+membox: weaving topic continuity into long-range memory for llm agents
+memchain: learning interpretable memory traces for memory-augmented llm agents
+memgpt: towards llms as operating systems
+memgym: a long-horizon memory environment for llm agents
+meminsight: autonomous memory augmentation for llm agents
+memlineage: lineage-guided enforcement for llm agent memory
+memophishagent: memory-augmented multi-modal llm agent for phishing url detection
+memorizing transformers
+memory is reconstructed, not retrieved: graph memory for llm agents
+memory networks
+memory provenance laundering in llm agents: a non-amplification firewall for persistent memory
+memorybank: enhancing large language models with long-term memory
+memr$^3$: memory retrieval via reflective reasoning for llm agents
+mesh shaders in the vulkan ecosystem
+meta-policy reflexion: reusable reflective memory and rule admissibility for resource-efficient llm agent
+metagpt: meta programming for a multi-agent collaborative framework
+michael & scott lock-free queue
+micromanagement in starcraft game ai: a case study
+microrts
+mimalloc: free list sharding in action
+minedojo: building open-ended embodied agents with internet-scale knowledge
+minicache: kv cache compression in depth dimension for large language models
+mirror speculative decoding: breaking the serial barrier in llm inference
+mixtral of experts
+mixture-of-agents enhances large language model capabilities
+mm_malloc / jemalloc
+mobile-agent-v3.5: multi-platform fundamental gui agents
+modal effect types
+model-free generative replay for lifelong reinforcement learning: application to starcraft-2
+modeling the h2o submillimeter emission in extragalactic sources
+modular architecture for starcraft ii with deep reinforcement learning
+modular domain specific languages and tools
+modular probabilistic models via algebraic effects
+modular termination for second-order computation rules and application to algebraic effect handlers
+moebius: serving mixture-of-expert models with seamless runtime parallelism switch
+monad transformers and modular interpreters
+monads and effects
+monads for functional programming
+monads on symmetric monoidal closed categories
+monetdb/x100: hyper-pipelining query execution
+monetdb: two decades of research in column-oriented database architectures
+monte carlo tree search for real-time strategy games
+mosaickv: serving long-context llm with dynamic two-d kv cache compression
+mrkl systems: a modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning
+msc: a dataset for macro-management in starcraft ii
+multi-agent collaboration via reward attribution decomposition
+multi-agent reinforcement learning: a selective overview
+multi-frustum lpv
+multi-level advantage credit assignment for cooperative multi-agent reinforcement learning
+multi-paradigm agent interaction in practice:a systematic analysis of generator-evaluator, react loop,and adversarial evaluation in the buddyme framework
+multi-platform version of starcraft: brood war in a docker container: technical report
+multi-relational algebra for multi-granular data analytics
+multi-stream llms: unblocking language models with parallel streams of thoughts, inputs and outputs
+multiagent bidirectionally-coordinated nets for learning to play starcraft combat games
+multihop-rag: benchmarking retrieval-augmented generation for multi-hop queries
+multiset semantics in sparql, relational algebra and datalog
+n-agent ad hoc teamwork
+nanite: a deep dive
+nesl: a nested data-parallel language (version 3.1)
+neural episodic control
+neural turing machines
+neural turing machines: convergence of copy tasks
+neuropal: punctuated anytime learning with neuroevolution for macromanagement in starcraft: brood war
+no more nulls!
+no value restriction is needed for algebraic effects and handlers
+notation as a tool of thought
+notions of computation and monads
+notions of computation as monoids
+notions of computation determine monads
+novelty-guided data reuse for efficient and diversified multi-agent reinforcement learning
+nvlang: unified static typing for actor-based concurrency on the beam
+oasis: object-based analytics storage for intelligent sql query offloading in scientific tabular workloads
+omniact: a dataset and benchmark for enabling multimodal generalist autonomous agents for desktop and web
+omnisec: llm-driven provenance-based intrusion detection via retrieval-augmented behavior prompting
+on complete categorical semantics for effect handlers
+on efficient reinforcement learning for full-length game of starcraft ii
+on model-checking higher-order effectful programs (long version)
+on realization of intelligent decision-making in the real world: a foundation decision model perspective
+on reinforcement learning for full-length game of starcraft
+on reinforcement learning, effect handlers, and the state monad
+on relating ctl to datalog
+on the expressive power of user-defined effects: effect handlers, monadic reflection, delimited control
+on the relationship between shy and warded datalog+/-
+on understanding types, data abstraction, and polymorphism
+one size does not fit all: on the importance of physical representations for datalog evaluation
+open-source reproduction and explainability analysis of corrective retrieval augmented generation
+openhands: an open platform for ai software developers as generalist agents
+openhands: making sign language recognition accessible with pose-based pretrained models across languages
+operating systems: three easy pieces (concurrency chapters)
+operators
+opponent modeling in deep reinforcement learning
+opponent modeling in real-time strategy games
+ops5 user's manual
+optimizing datalog for the gpu
+optimizing relational queries over array-valued data in columnar systems
+optimizing the graphics pipeline with compute
+osworld 2.0: benchmarking computer use agents on long-horizon real-world tasks
+osworld-human: benchmarking the efficiency of computer-use agents
+osworld-mcp: benchmarking mcp tool invocation in computer-use agents
+osworld: benchmarking multimodal agents for open-ended tasks in real computer environments
+our machinery / the machinery ecs notes
+outrageously large neural networks: the sparsely-gated mixture-of-experts layer
+ownership types for flexible alias protection
+ownership types for verification of programs with pointer arithmetic
+paged attention meets flexattention: unlocking long-context efficiency in deployed inference
+pal: program-aided language models
+parallel algebraic effect handlers
+parallel game engine architecture on the ps3
+parallel implementations of soft real-time game systems
+parallel-split shadow maps on programmable gpus
+parallelizable neural turing machines
+parallelizing the naughty dog engine using fibers
+parquetdb: a lightweight python parquet-based database
+pcgrl: procedural content generation via reinforcement learning
+percentage-closer soft shadows
+personalized procedural content generation to minimize frustration and boredom based on ranking algorithm
+personatree: structured lifecycle memory for person understanding in llm agents
+physics, topology, logic and computation: a rosetta stone
+playing a strategy game with knowledge-based reinforcement learning
+plugmem: a task-agnostic plugin memory module for llm agents
+polymorphic effect systems
+portfolio greedy search and simulation for large-scale combat in starcraft
+position: episodic memory is the missing piece for long-term llm agents
+potentials and pitfalls of chatgpt and natural-language artificial intelligence models for the understanding of laboratory medicine test results. an assessment by the european federation of clinical chemistry and laboratory medicine (eflm) working group on artificial intelligence (wg-ai)
+predicate logic as programming language
+predicting army combat outcomes in starcraft
+prediction of early stage opponents strategy for starcraft ai using scouting and machine learning
+premonoidal categories and notions of computation
+preserving admission responsibility in multi-tenant large language model prefix caches
+procedural content generation for game 3d modeling: the investigation of ai-based approaches for improving game experience
+procedural content generation in games
+procedural content generation using neuroevolution and novelty search for diverse video game levels
+procedural content generation via machine learning (pcgml)
+procedural content generation: goals, challenges and actionable steps
+proceedings eighth workshop on mathematically structured functional programming
+processing a trillion cells per mouse click
+processing columnar collider data with gpu-accelerated kernels
+production matching for large learning systems
+program equivalence for algebraic effects via modalities
+programming parallel algorithms
+programming semantics for multiprogrammed computations
+programming with algebraic effects and handlers
+project elements: a computational entity-component-system in a scene-graph pythonic framework, for a neural, geometric computer graphics curriculum
+promoting game accessibility: experiencing an induction on inclusive design practice at the global games jam
+promptable game models: text-guided game simulation via masked diffusion models
+provenance for large-scale datalog
+proximal policy optimization in starcraft
+puppet search: enhancing scripted behavior by look-ahead search in real-time strategy games
+puppet search: enhancing scripted behavior with online planning
+pyramidkv: dynamic kv cache compression based on pyramidal information funneling
+pytag: challenges and opportunities for reinforcement learning in tabletop games
+qet: enhancing quantized llm parameters and kv cache compression through element substitution and residual clustering
+qmix: monotonic value function factorisation for deep multi-agent reinforcement learning
+query containment for highly expressive datalog fragments
+quest: an efficient query evaluation scheme towards scan-intensive cross-model analysis
+ra-gen: a controllable code generation framework using react for multi-agent task execution
+radiance cascades: a novel approach to calculating global illumination
+ragged paged attention: a high-performance and flexible llm inference kernel for tpu
+rarr: researching and revising what language models say, using language models
+reachability is decidable for atm-typable finitary pcf with effect handlers
+react: synergizing reasoning and acting in language models
+reactable: enhancing react for table question answering
+reactive planning idioms for multi-scale game ai
+real-time strategy games: a new ai research challenge
+real-time world crafting: generating structured game behaviors from natural language with large language models
+reconsidering "reconsidering custom memory allocation"
+recplay: a fully integrated practical record/replay system
+recursive speculative decoding: accelerating llm inference via sampling without replacement
+reducing property graph queries to relational algebra for incremental view maintenance
+reference capabilities for flexible memory management: extended version
+reference capabilities for safe parallel array programming
+reflexion: language agents with verbal reinforcement learning
+region-based memory management
+region-based memory management for mercury programs
+region-based memory management in cyclone
+reinforcement learning for build-order production in starcraft ii
+relational algebra and calculus with sql null values
+relational algebra as non-distributive lattice
+relational algebras for subset selection and optimisation
+relational completeness of data base sublanguages
+replay-based strategy prediction and build order adaptation for starcraft ai bots
+replug: retrieval-augmented black-box language models
+representing monads
+residual vector quantization for kv cache compression in large language model
+retain or consolidate? budget-dependent operator selection for language agent memory
+rete: a fast algorithm for the many pattern/many object pattern match problem
+rethinking how to remember: beyond atomic facts in lifelong llm agent memory
+retrieval-augmented generation for knowledge-intensive nlp tasks
+retrofitting effect handlers onto ocaml
+revisiting semiring provenance for datalog
+reward-guided speculative decoding for efficient llm reasoning
+rewritability in monadic disjunctive datalog, mmsnp, and expressive description logics
+rewriting ontological queries into small nonrecursive datalog programs
+right-adjoints for datalog programs, and homomorphism dualities over restricted classes
+robogpt: an intelligent agent of making embodied long-term decisions for daily instruction tasks
+robust continuous build-order optimization in starcraft
+rode: learning roles to decompose multi-agent tasks
+rollback networking explained
+roma: multi-agent reinforcement learning with emergent roles
+rows and capabilities as modal effects
+rts ai problems and techniques
+rule-based explanations for retrieval-augmented llm systems
+sarathi: efficient llm inference by piggybacking decodes with chunked prefills
+sc-phi2: a fine-tuned small language model for starcraft ii build order prediction
+sc2egset: starcraft ii esport replay and game-state dataset
+sc2tools: starcraft ii toolset and dataset api
+scalable ambient obscurance
+scaling laws for neural language models
+scaling llm speculative decoding: non-autoregressive forecasting in large-batch scenarios
+scaling up, speeding up: a benchmark of speculative decoding for efficient llm test-time scaling
+scaling worst-case optimal datalog to gpus
+scaling-up in-memory datalog processing: observations and techniques
+scanline algorithms for geometry processing
+scc: an efficient deep reinforcement learning agent mastering the game of starcraft ii
+schema first tool apis for llm agents: a controlled study of tool misuse, recovery, and budgeted performance
+scissorhands: exploiting the persistence of importance hypothesis for llm kv cache compression at test time
+screen space reflections techniques survey
+search -based procedural content generation for race tracks in video games
+search-based procedural content generation: a taxonomy and survey
+seeding for success: skill and stochasticity in tabletop games
+seeing is not screening: multimodal hidden instruction attacks on agent skill scanners
+self-consistency improves chain of thought reasoning in language models
+self-motivated multi-agent exploration
+self-rag: learning to retrieve, generate, and critique through self-reflection
+separation logic: a logic for shared mutable data structures
+sequel: a structured english query language
+session types as intuitionistic linear propositions
+set-theoretic types for erlang
+seven sketches in compositionality: an invitation to applied category theory
+sglang: efficient execution of structured language model programs
+sheared llama: accelerating language model pre-training via structured pruning
+sheaves in geometry and logic: a first introduction to topos theory
+signal -- the sap signavio analytics query language
+signed distance fields for text
+simple generational garbage collection and fast allocation
+simplifying explicit subtyping coercions in a polymorphic calculus with effects
+simulation-driven balancing of competitive game levels with reinforcement learning
+skillfoundry: building self-evolving agent skill libraries from heterogeneous scientific resources
+sma: who said that? auditing membership leakage in semi-black-box rag controlling
+smac-talk: a natural language extension of the starcraft multi-agent challenge for large language models
+small llms are weak tool learners: a multi-llm agent
+snapkv: llm knows what you are looking for before generation
+snel: sql native execution for llvm
+social distancing versus early detection and contacts tracing in epidemic management
+soft linear logic and polynomial time
+solitons in the yakushevich model of dna beyond the contact approximation
+solving equations in the relational algebra
+soufflé: on synthesis of program analyzers
+soundly handling linearity
+specmemo: speculative decoding is in your pocket
+speculative decoding in decentralized llm inference: turning communication latency into computation throughput
+speculative decoding with ctc-based draft model for llm inference acceleration
+staralgo: a squad movement planning library for starcraft using monte carlo tree search and negamax
+starcraft ai competitions, bots, and tournament manager software
+starcraft bots and competitions
+starcraft ii build order optimization using deep reinforcement learning and monte-carlo tree search
+starcraft ii: a new challenge for reinforcement learning
+starcraft map imbalance prediction based on chosen build order
+starcraft micromanagement with reinforcement learning and curriculum transfer learning
+starcraft+: benchmarking multi-agent algorithms in adversary paradigm
+stardata: a starcraft ai research dataset
+state-of-the-art and open challenges in rts game-ai and starcraft
+strong functors and monoidal monads
+structured memory for neural turing machines
+studying the effects of training data on machine learning-based procedural content generation
+summarizing strategy card game ai competition
+supermalloc: a super fast multithreaded malloc
+surfer 2: the next generation of cross-platform computer use agents
+swarmbrain: embodied agent for real-time strategy game starcraft ii via large language models
+swe-agent: agent-computer interfaces enable automated software engineering
+swe-bench: can language models resolve real-world github issues?
+swe-chat: coding agent interactions from real users in the wild
+swiftspec: ultra-low latency llm decoding by scaling asynchronous speculative decoding
+switch transformers: scaling to trillion parameter models with simple and efficient sparsity
+symmetric linear arc monadic datalog and gadget reductions
+synchrostore: a cost-based fine-grained incremental compaction for hybrid workloads
+syntactic control of interference
+tacticcraft: natural language-driven tactical adaptation for starcraft ii
+taming throughput-latency tradeoff in llm inference with sarathi-serve
+tcmalloc: thread-caching malloc
+team recommendation using order-based fuzzy integral and nsga-ii in starcraft
+temporal anti-aliasing (taa)
+tensorflow eager: a multi-stage, python-embedded dsl for machine learning
+tepa: revoking stale memories for conflict-robust language agents
+term assignment for intuitionistic linear logic
+terrain analysis in starcraft 1 and 2 as combinatorial optimization
+testing autonomous robot control software using procedural content generation
+textworld: a learning environment for text-based games
+the arcade learning environment: an evaluation platform for general agents
+the art of multiprocessor programming
+the browsergym ecosystem for web agent research
+the combinatorial multi-armed bandit problem and its application to real-time strategy games
+the complexity of why-provenance for datalog queries
+the cql continuous query language: semantic foundations and query execution
+the current state of starcraft ai competitions and bots
+the definition of standard ml (revised)
+the design of "stratega": a general strategy games framework
+the design of apl
+the essence of entity component system
+the essence of functional programming
+the esterel synchronous programming language: design, semantics, implementation
+the evolution of apl
+the evolution of tool use in llm agents: from single-tool call to multi-tool orchestration
+the expressive power of higher-order datalog
+the forge multi-platform renderer
+the future of procedural content generation in games
+the geometry of interaction machine
+the geometry of tensor calculus, i
+the icon programming language
+the linear abstract machine
+the mathematics of sentence structure
+the mechanical evaluation of expressions
+the next 700 programming languages
+the openhands software agent sdk: a composable and extensible foundation for production agents
+the partially observable asynchronous multi-agent cooperation challenge
+the real-time strategy game multi-objective build order problem
+the rendering equation
+the semantic ladder: a framework for progressive formalization of natural language content for knowledge graphs and ai systems
+the semantics of predicate logic as a programming language
+the semantics of rank polymorphism
+the starcraft multi-agent challenge
+the starcraft multi-agent challenges+ : learning of multi-stage tasks and environmental factors without precise reward functions
+the structure of the japanese language
+the synchronous data flow programming language lustre
+the text-based adventure ai competition
+the tool decathlon: benchmarking language agents for diverse, realistic, and long-horizon task execution
+the type and effect discipline
+the usability of advanced type systems: rust as a case study
+the vertica analytic database: c-store 7 years later
+the visibility buffer: real-time rendering with visibility buffer
+theorems for free!
+three states and a plan: the ai of f.e.a.r.
+tikick: towards playing multi-agent football full games from single-agent demonstrations
+tiled shading
+time, clocks, and the ordering of events in a distributed system
+tleague: a framework for competitive self-play based distributed multi-agent reinforcement learning
+tokenlake: a unified segment-level prefix cache pool for fine-grained elastic long-context llm serving
+toolformer: language models can teach themselves to use tools
+toolgate: token-efficient pre-call control for tool-augmented vision-language agents
+toolllm: facilitating large language models to master 16000+ real-world apis
+toolqa: a dataset for llm question answering with external tools
+toposes, triples and theories
+torchcraft: a library for machine learning research on real-time strategy games
+toward foraging for understanding of starcraft agents: an empirical study
+toward verified library-level choreographic programming with algebraic effects
+towards a linear-algebraic hypervisor
+towards efficient hash maps in functional array languages
+towards playing full moba games with deep reinforcement learning
+track, rank, crack: epistemic working memory scales multi-hop reasoning in language agents
+tracking captured variables in types
+training compute-optimal large language models
+training language models to follow instructions with human feedback
+transformer-based value function decomposition for cooperative multi-agent reinforcement learning in starcraft
+transformer-xl: attentive language models beyond a fixed-length context
+treat: a better match algorithm for ai production systems
+tree of thoughts: deliberate problem solving with large language models
+trustmem: learning trustworthy memory consolidation for llm agents with long-term memory
+tstarbot-x: an open-sourced and comprehensive study for efficient league training in starcraft ii full game
+tstarbots: defeating the cheating level builtin ai in starcraft ii in the full game
+tutorial proposal: speculative decoding for efficient llm inference
+tv2tv: a unified framework for interleaved language and video generation
+two-bridge: exclusive objectives and extended horizon starcraft ii benchmark
+type directed compilation of row-typed algebraic effects
+typed memory management in a calculus of capabilities
+types and programming languages
+types for dyadic interaction
+types, abstraction and parametric polymorphism
+uav-codeagents: scalable uav mission planning via multi-agent react and vision-language reasoning
+unsupervised hebbian learning on point sets in starcraft ii
+using lanchester attrition laws for combat prediction in starcraft
+using large language models to assess tutors' performance in reacting to students making math errors
+using plan-based reward shaping to learn strategies in starcraft: broodwar
+value functions factorization with latent state information sharing in decentralized multi-agent policy gradients
+value-decomposition networks for cooperative multi-agent learning
+verifying an effect-handler-based define-by-run reverse-mode ad library
+visualwebarena: evaluating multimodal agents on realistic visual web tasks
+vocabtrim: vocabulary pruning for efficient speculative decoding in llms
+vox deorum: a hybrid llm architecture for 4x / grand strategy game ai -- lessons from civilization v
+voxel cone tracing for real-time global illumination
+voyager: an open-ended embodied agent with large language models
+vsgm -- enhance robot task understanding ability through visual semantic graph
+wait-free synchronization
+walk the talk: connecting language, knowledge, and action in route instructions
+walling in starcraft with terrain analysis
+warnings for pattern matching
+wave function collapse
+weakly supervised learning of semantic parsers for mapping instructions to actions
+webarena: a realistic web environment for building autonomous agents
+webgpt: browser-assisted question-answering with human feedback
+webshop: towards scalable real-world web interaction with grounded language agents
+what deserves memory: adaptive memory distillation for llm agents
+what is algebraic about algebraic effects and handlers?
+what you always wanted to know about datalog (and never dared to ask)
+when "correct" is not safe: can we trust functionally correct patches generated by code agents?
+when lifetimes liberate: a type system for arenas with higher-order reachability tracking
+when programs have to watch paint dry
+when types intersect and effects get handled
+wisv: wireless-informed semantic verification for distributed speculative decoding in device-edge llm inference
+working memory networks: augmenting memory networks with a relational reasoning module
+world models
+world models for policy refinement in starcraft ii
+worldcoder, a model-based llm agent: building world models by writing code and interacting with the environment
+yarrow: reconciling effects handlers and region-based memory management
+zero-cost ndv estimation from columnar file metadata

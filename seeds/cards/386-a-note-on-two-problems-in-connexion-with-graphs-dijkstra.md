@@ -1,0 +1,40 @@
+---
+title: "A Note on Two Problems in Connexion with Graphs (Dijkstra)"
+authors:
+  - "E. W. Dijkstra"
+year: 1959
+venue: "Numerische Mathematik"
+arxiv: null
+doi: "10.1007/BF01386390"
+source: "https://doi.org/10.1007/BF01386390"
+topics:
+  - pathfinding
+seed_rank: 386
+seed_batch: "systems-prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "gameai"
+relevance_score: 9
+---
+
+# A Note on Two Problems in Connexion with Graphs (Dijkstra)
+
+## One-sentence takeaway
+
+Shortest paths baseline.
+
+## Why it matters here
+
+Shortest paths baseline.
+
+## Key ideas
+
+- Shortest paths baseline.
+
+## Caveats
+
+- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+
+## Links
+
+- DOI: [10.1007/BF01386390](https://doi.org/10.1007/BF01386390)
+- URL: https://doi.org/10.1007/BF01386390

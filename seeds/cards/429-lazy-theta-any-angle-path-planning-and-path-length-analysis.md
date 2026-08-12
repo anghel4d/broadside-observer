@@ -1,0 +1,42 @@
+---
+title: "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis"
+authors:
+  - "Alex Nash"
+  - "Sven Koenig"
+  - "Craig Tovey"
+year: 2010
+venue: "AAAI"
+arxiv: null
+doi: null
+source: "https://www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/view/1930"
+topics:
+  - pathfinding
+seed_rank: 429
+seed_batch: "systems-prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "gameai"
+relevance_score: 8
+---
+
+# Lazy Theta*: Any-Angle Path Planning and Path Length Analysis
+
+## One-sentence takeaway
+
+Lazy any-angle variant.
+
+## Why it matters here
+
+Lazy any-angle variant.
+
+## Key ideas
+
+- Lazy any-angle variant.
+
+## Caveats
+
+- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
+
+## Links
+
+- URL: https://www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/view/1930

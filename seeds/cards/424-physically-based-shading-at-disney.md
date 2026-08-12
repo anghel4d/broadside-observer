@@ -1,0 +1,40 @@
+---
+title: "Physically Based Shading at Disney"
+authors:
+  - "Brent Burley"
+year: 2012
+venue: "SIGGRAPH Courses"
+arxiv: null
+doi: null
+source: "https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf"
+topics:
+  - pbr
+seed_rank: 424
+seed_batch: "systems-prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "graphics"
+relevance_score: 8
+---
+
+# Physically Based Shading at Disney
+
+## One-sentence takeaway
+
+Disney BRDF principled model.
+
+## Why it matters here
+
+Disney BRDF principled model.
+
+## Key ideas
+
+- Disney BRDF principled model.
+
+## Caveats
+
+- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
+
+## Links
+
+- URL: https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf
