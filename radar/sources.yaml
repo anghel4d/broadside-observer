@@ -1,0 +1,120 @@
+# Version-controlled source registry for the Broadside Observer research loop.
+# Poll each enabled source; adapters may be manual/agent-operated until automated.
+sources:
+  - id: arxiv
+    name: arXiv
+    kind: preprint_api
+    url: "https://arxiv.org"
+    poll: "https://export.arxiv.org/api/query"
+    categories:
+      - cs.AI
+      - cs.LG
+      - cs.CL
+      - cs.GR
+      - cs.PL
+      - cs.DC
+      - cs.SE
+      - cs.CV
+      - cs.MA
+      - cs.GT
+    notes: Primary wide net. Combine category filters with topic query hints.
+    priority: high
+    enabled: true
+
+  - id: hf-daily-papers
+    name: Hugging Face Daily Papers
+    kind: curated_feed
+    url: "https://huggingface.co/papers"
+    notes: Daily curated ML/AI shortlist; strong signal, smaller volume than raw arXiv.
+    priority: high
+    enabled: true
+
+  - id: openreview
+    name: OpenReview
+    kind: conference_preprint
+    url: "https://openreview.net"
+    venues:
+      - ICLR
+      - NeurIPS
+      - ICML
+      - ACL
+    notes: Preprints plus reviews for major ML/NLP venues.
+    priority: high
+    enabled: true
+
+  - id: acm-siggraph-tog
+    name: ACM SIGGRAPH / TOG
+    kind: venue
+    url: "https://www.siggraph.org"
+    also:
+      - "https://dl.acm.org/journal/tog"
+    notes: Flagship computer graphics and interactive techniques.
+    priority: high
+    enabled: true
+
+  - id: eurographics-cgf
+    name: Eurographics / Computer Graphics Forum
+    kind: venue
+    url: "https://www.eg.org"
+    notes: Graphics systems, rendering, geometry processing.
+    priority: high
+    enabled: true
+
+  - id: hpg-jcgt
+    name: High-Performance Graphics + JCGT
+    kind: venue
+    url: "https://www.highperformancegraphics.org"
+    also:
+      - "https://jcgt.org"
+    notes: Real-time and systems graphics; practical engine-relevant techniques.
+    priority: high
+    enabled: true
+
+  - id: acm-sigplan-dblp
+    name: ACM SIGPLAN + DBLP (PL)
+    kind: venue_index
+    url: "https://www.sigplan.org"
+    also:
+      - "https://dblp.org"
+    venues:
+      - PLDI
+      - POPL
+      - ICFP
+      - SPLASH
+    notes: Programming languages, compilers, and runtimes for ano and engine scripting.
+    priority: high
+    enabled: true
+
+  - id: acl-anthology
+    name: ACL Anthology
+    kind: venue_archive
+    url: "https://aclanthology.org"
+    notes: NLP, dialogue, computational linguistics — ano grammar angle and GRID COMMAND NL orders.
+    priority: high
+    enabled: true
+
+  - id: papers-with-code
+    name: Papers with Code
+    kind: code_linked_index
+    url: "https://paperswithcode.com"
+    notes: New code-linked papers; useful systems/reproducibility signal layered on arXiv.
+    priority: medium
+    enabled: true
+
+  - id: aiide-ieee-cog
+    name: AIIDE / IEEE CoG
+    kind: venue
+    url: "https://www.aiide.org"
+    also:
+      - "https://ieee-cog.org"
+    notes: Game AI, RTS/strategy agents, simulation opponents, procedural content.
+    priority: high
+    enabled: true
+
+# Cross-index (not a separate venue quota): Semantic Scholar may be used to search/resolve
+# across the sources above without counting as an 11th primary source.
+cross_index:
+  - id: semantic-scholar
+    name: Semantic Scholar
+    url: "https://www.semanticscholar.org"
+    role: search_and_resolve
