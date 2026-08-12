@@ -72,7 +72,7 @@ Toggle with the segmented control in the top bar. The last mode is stored in `lo
 
 On viewports ≤980px, topic/batch/pool/lineage/year/sort/rank collapse behind a **Filters** disclosure so the panes keep height; search and Reset stay visible. Active facets render as dismissible pills under the chrome (clear one or Reset). If the open card is excluded by the current filter, the detail banner offers **Clear filters** and **Show first match**.
 
-Detail keeps a sticky mini-header (id, title, authors) while the body sections scroll. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
+Detail keeps a sticky mini-header (rank/id, title, authors) at the top of the detail pane while body sections scroll. The out-of-filter banner, when present, is part of that pinned chrome. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
 
 ## Lineage and cites
 

@@ -546,9 +546,9 @@ function renderDetail(
     <article class="detail">
       <header class="detail-head">
         ${banner}
-        <p class="detail-id">${escapeHtml(card.id)}</p>
-        <h2>${escapeHtml(card.title)}</h2>
-        <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
+        <p class="detail-id"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.id)}</p>
+        <h2 title="${attr(card.title)}">${escapeHtml(card.title)}</h2>
+        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
       </header>
       <div class="detail-body">
         <p class="ids">${identifiers}</p>

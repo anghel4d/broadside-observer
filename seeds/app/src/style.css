@@ -527,8 +527,37 @@ button:focus-visible {
   padding: 0;
 }
 
+.detail-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg);
+  padding: 0.7rem 1.25rem 0.65rem;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 14px -12px rgba(0, 0, 0, 0.7);
+}
+
+.detail-head h2 {
+  font-size: 1.08rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .detail-head .authors {
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+.detail-rank {
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.4rem;
 }
 
 .detail-body {
@@ -579,7 +608,6 @@ button:focus-visible {
 
 .detail h2 {
   margin: 0 0 0.35rem;
-  font-size: 1.32rem;
   line-height: 1.25;
   font-weight: 650;
   overflow-wrap: anywhere;
