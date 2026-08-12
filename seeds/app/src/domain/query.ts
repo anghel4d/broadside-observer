@@ -1,3 +1,4 @@
+import { labelForLineage, labelForPool } from "./lineageLabels.ts";
 import { assertNever } from "./never.ts";
 import type { Corpus } from "./corpus.ts";
 import type {
@@ -189,9 +190,11 @@ export function activeFilters(query: Query): ReadonlyArray<ActiveFilter> {
   if (query.topic._tag === "One") out.push({ key: "topic", label: query.topic.topic });
   if (query.batch._tag === "One") out.push({ key: "batch", label: query.batch.batch });
   if (query.pool._tag === "None") out.push({ key: "pool", label: "No pool" });
-  if (query.pool._tag === "One") out.push({ key: "pool", label: query.pool.pool });
+  if (query.pool._tag === "One") out.push({ key: "pool", label: labelForPool(query.pool.pool) });
   if (query.lineage._tag === "None") out.push({ key: "lineage", label: "No lineage" });
-  if (query.lineage._tag === "One") out.push({ key: "lineage", label: query.lineage.lineage });
+  if (query.lineage._tag === "One") {
+    out.push({ key: "lineage", label: labelForLineage(query.lineage.lineage) });
+  }
   if (query.year.min !== null || query.year.max !== null) {
     const lo = query.year.min === null ? "" : String(query.year.min);
     const hi = query.year.max === null ? "" : String(query.year.max);

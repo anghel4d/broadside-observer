@@ -36,6 +36,7 @@ import {
   type Year,
 } from "../domain/schema.ts";
 import type { Corpus } from "../domain/corpus.ts";
+import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { debounce } from "./debounce.ts";
 import { attr, escapeHtml } from "./html.ts";
 import { renderMarkdown } from "./markdown.ts";
@@ -43,7 +44,8 @@ import { displayTopics } from "./tags.ts";
 import {
   browserStorage,
   parseViewMode,
-  readStoredView,
+  printViewSearch,
+  resolveView,
   writeStoredView,
   type ViewMode,
 } from "./view.ts";
@@ -305,7 +307,7 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
           <select id="pool">
             ${option("", "All pools", true)}
             ${corpus.hasUnpooled ? option("__none__", "No pool", false) : ""}
-            ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
+            ${corpus.pools.map((pool) => option(pool, labelForPool(pool), false)).join("")}
           </select>
         </label>
         <label>
@@ -313,7 +315,7 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
           <select id="lineage">
             ${option("", "All lineages", true)}
             ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
-            ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
+            ${corpus.lineages.map((lineage) => option(lineage, labelForLineage(lineage), false)).join("")}
           </select>
         </label>
         <div class="year-fields">
@@ -397,7 +399,7 @@ function renderLineageChip(card: SeedCard, corpus: Corpus): string {
   const notes = corpus.lineageDocs.has(card.lineage)
     ? `<a class="chip chip-lineage-doc" href="${attr(lineageDocHref(card.lineage))}" target="_blank" rel="noopener noreferrer">lineage notes</a>`
     : "";
-  return `${chip(card.lineage, "lineage", card.lineage)}${notes}`;
+  return `${chip(labelForLineage(card.lineage), "lineage", card.lineage)}${notes}`;
 }
 
 function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
@@ -414,8 +416,8 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
           <span class="row-meta">
             <span class="rank">#${card.seed_rank}</span>
             <span class="year">${card.year}</span>
-            ${card.pool === null ? "" : `<span class="pool">${escapeHtml(card.pool)}</span>`}
-            ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(card.lineage)}</span>`}
+            ${card.pool === null ? "" : `<span class="pool">${escapeHtml(labelForPool(card.pool))}</span>`}
+            ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(labelForLineage(card.lineage))}</span>`}
           </span>
           <span class="row-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
           <span class="row-sub">${escapeHtml(authors)}</span>
@@ -430,7 +432,7 @@ function cardFaceChips(card: SeedCard): string {
   const topics = displayTopics(card);
   const topicLimit = card.lineage === null ? 3 : 2;
   return [
-    ...(card.lineage === null ? [] : [chip(card.lineage, "lineage")]),
+    ...(card.lineage === null ? [] : [chip(labelForLineage(card.lineage), "lineage")]),
     ...topics.slice(0, topicLimit).map((topic) => chip(topic, "topic")),
   ].join("");
 }
@@ -514,7 +516,7 @@ function renderDetail(
     ...(card.pool === null
       ? []
       : [
-          `<button type="button" class="prov-filter" data-filter="pool" data-value="${attr(card.pool)}">${escapeHtml(card.pool)}</button>`,
+          `<button type="button" class="prov-filter" data-filter="pool" data-value="${attr(card.pool)}">${escapeHtml(labelForPool(card.pool))}</button>`,
         ]),
     ...(card.relevance_score === null ? [] : [`<span class="prov-item">relevance ${card.relevance_score}</span>`]),
     ...(card.venue.length > 0 ? [`<span class="prov-item prov-venue">${escapeHtml(card.venue)}</span>`] : []),
@@ -545,9 +547,9 @@ function renderDetail(
     <article class="detail">
       <header class="detail-head">
         ${banner}
-        <p class="detail-id">${escapeHtml(card.id)}</p>
-        <h2>${escapeHtml(card.title)}</h2>
-        <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
+        <p class="detail-id"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.id)}</p>
+        <h2 title="${attr(card.title)}">${escapeHtml(card.title)}</h2>
+        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
       </header>
       <div class="detail-body">
         <p class="ids">${identifiers}</p>
@@ -567,12 +569,14 @@ function requireElement<T extends HTMLElement>(root: HTMLElement, id: string): T
   return node as T;
 }
 
-function syncHash(route: Route): void {
-  const next = printRoute(route);
-  if (next === "" && (location.hash === "" || location.hash === "#")) return;
-  if (location.hash !== next) {
-    history.replaceState(null, "", next === "" ? `${location.pathname}${location.search}` : next);
-  }
+function syncLocation(route: Route, view: ViewMode): void {
+  const hash = printRoute(route);
+  const search = printViewSearch(location.search, view);
+  const next = `${location.pathname}${search}${hash}`;
+  const currentHash = location.hash === "#" ? "" : location.hash;
+  const current = `${location.pathname}${location.search}${currentHash}`;
+  if (next === current) return;
+  history.replaceState(null, "", next);
 }
 
 function setActive(root: HTMLElement, id: CardId | null): void {
@@ -614,7 +618,7 @@ function isTypingTarget(target: EventTarget | null): boolean {
 
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
-  const initialView = readStoredView(storage);
+  const initialView = resolveView(location.search, storage);
   root.innerHTML = shellHtml(corpus, initialView);
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
@@ -717,7 +721,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const next = update(model, msg);
     if (next === model) return;
     model = next;
-    if (msg._tag !== "Hash") syncHash(model.route);
+    if (msg._tag !== "Hash") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
     patch(model);
   };
@@ -879,5 +883,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   }
 
   syncFilterDisclosure();
+  syncLocation(model.route, model.view);
   patch(model);
 }

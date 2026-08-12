@@ -39,7 +39,7 @@ The hosted app is at **https://anghel4d.github.io/broadside-observer/**.
 
 After this lands on `main`, every push to `main` that touches `seeds/app/**`, `seeds/cards/**`, `seeds/lineages/**`, or `.github/workflows/deploy-seed-browser.yml` rebuilds the single-file bundle and deploys it via GitHub Actions (Pages source: GitHub Actions, not a branch). You can also run the **Deploy seed browser** workflow manually from the Actions tab.
 
-Deep links stay hash routes, e.g. `https://anghel4d.github.io/broadside-observer/#card/<file-stem>`.
+Deep links stay hash routes, e.g. `https://anghel4d.github.io/broadside-observer/#card/<file-stem>`. Cards view: `https://anghel4d.github.io/broadside-observer/?view=cards#card/<file-stem>`.
 
 The Pages build sets `GITHUB_PAGES=true` so Vite uses `base: '/broadside-observer/'`. Local `npm run build` keeps `base: './'` so `file://` still works.
 
@@ -54,24 +54,25 @@ Corpus × Query  →  [SeedCard]
 ```
 
 - **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` to `[]`, so missing vs empty is not a third state. Each cite is a small struct (`title`, optional `url` / `year` / `arxiv` / `doi`, optional `card` FK).
+- **`src/domain/lineageLabels.ts`** — display titles for known lineage (and pool) slugs. Filter values stay the raw slug; unknown slugs get a light prettify.
 - **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
 - **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
-- **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`).
+- **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`, with `?view=cards` in the URL when Cards is active).
 
-Deep links: `#card/<file-stem>`. Cite entries that set `card` to a stem present in the corpus render as the same hash route.
+Deep links: `#card/<file-stem>`. Cards mode is `?view=cards` (omitted for List). Cite entries that set `card` to a stem present in the corpus render as the same hash route.
 
 ## Views
 
 The app is a locked viewport (`100dvh`, no document scroll). Header + search stay in the shell; the browse pane and the detail pane each scroll on their own. Selecting a row never moves the detail pane off-screen.
 
 - **List** — master-detail rows + preview (default).
-- **Cards** — dense `auto-fill` grid (title, year, topics/lineage, takeaway, rank) with the same pinned detail pane on the right. The browse pane is the wider column so a half-width laptop layout lands **2–3 card columns** (`minmax(15.5rem, 1fr)`), not one stretched tile.
+- **Cards** — dense `auto-fill` grid (title, year, topics/lineage, takeaway, rank) with a narrower pinned detail pane on the right (`minmax(16rem, 18rem)`). At ~1042px that leaves ~754px for browse, so `minmax(14.5rem, 1fr)` lands **3 card columns**.
 
-Toggle with the segmented control in the top bar. The last mode is stored in `localStorage` (`broadside.seed-browser.view`). Keyboard: `j`/`k` or arrows move the selection; `/` focuses search. **Rank** in the filter row jumps to that `seed_rank` (Enter).
+Toggle with the segmented control in the top bar. Cards is shareable as `?view=cards` (works with `#card/<file-stem>`). The last mode is also stored in `localStorage` (`broadside.seed-browser.view`); a URL `view` param wins on load. Keyboard: `j`/`k` or arrows move the selection; `/` focuses search. **Rank** in the filter row jumps to that `seed_rank` (Enter).
 
 On viewports ≤980px, topic/batch/pool/lineage/year/sort/rank collapse behind a **Filters** disclosure so the panes keep height; search and Reset stay visible. Active facets render as dismissible pills under the chrome (clear one or Reset). If the open card is excluded by the current filter, the detail banner offers **Clear filters** and **Show first match**.
 
-Detail keeps a sticky mini-header (id, title, authors) while the body sections scroll. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
+Detail keeps a sticky mini-header (rank/id, title, authors) at the top of the detail pane while body sections scroll. The out-of-filter banner, when present, is part of that pinned chrome. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
 
 ## Lineage and cites
 
@@ -84,6 +85,6 @@ Optional frontmatter on every card (see [`../README.md`](../README.md)):
 
 Cards without these keys still pack. When present, the packer keeps them in `cards.json`.
 
-The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
+The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Known slugs show a human title from `src/domain/lineageLabels.ts` (e.g. `concurrent-data-structures` → “Concurrent data structures”); unknown slugs still work as filter values and get a light prettify. Pool options use a smaller title map the same way. Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
 
 Narrative thread pages live at `seeds/lineages/<slug>.md`. The packer records which of those files exist; the detail view links out to the GitHub copy when a matching doc is present.

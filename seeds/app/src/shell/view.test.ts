@@ -2,8 +2,11 @@ import assert from "node:assert/strict";
 import {
   DEFAULT_VIEW,
   VIEW_STORAGE_KEY,
+  parseViewFromSearch,
   parseViewMode,
+  printViewSearch,
   readStoredView,
+  resolveView,
   writeStoredView,
 } from "./view.ts";
 
@@ -47,5 +50,28 @@ writeStoredView(
   },
   "list",
 );
+
+assert.equal(parseViewFromSearch("?view=cards"), "cards");
+assert.equal(parseViewFromSearch("view=list"), "list");
+assert.equal(parseViewFromSearch("?view=grid"), null);
+assert.equal(parseViewFromSearch(""), null);
+assert.equal(parseViewFromSearch("?q=foo"), null);
+assert.equal(printViewSearch("", "cards"), "?view=cards");
+assert.equal(printViewSearch("?view=cards", "list"), "");
+assert.equal(printViewSearch("?view=cards", "cards"), "?view=cards");
+assert.equal(printViewSearch("?foo=1", "cards"), "?foo=1&view=cards");
+assert.equal(printViewSearch("?view=cards&foo=1", "list"), "?foo=1");
+
+const memory = new Map<string, string>([[VIEW_STORAGE_KEY, "list"]]);
+const memoryStorage = {
+  getItem: (key: string) => memory.get(key) ?? null,
+  setItem: (key: string, value: string) => {
+    memory.set(key, value);
+  },
+};
+assert.equal(resolveView("?view=cards", memoryStorage), "cards");
+assert.equal(memory.get(VIEW_STORAGE_KEY), "cards");
+assert.equal(resolveView("", memoryStorage), "cards");
+assert.equal(resolveView("", null), DEFAULT_VIEW);
 
 console.log("view.test.ts ok");
