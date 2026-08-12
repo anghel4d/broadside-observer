@@ -60,4 +60,4 @@ Body sections (exact headings):
 
 ## Browsing
 
-`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). Building that app is welcome; do not wait on it to keep adding cards.
+`INDEX.md` is the current human surface. The static app in [`app/`](app/) parses `cards/*.md` through a schema, packs them into JSON, and filters in the browser. See [`app/README.md`](app/README.md) to run it. Keep adding cards in this format regardless.

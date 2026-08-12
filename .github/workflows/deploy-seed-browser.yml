@@ -1,0 +1,63 @@
+# Build the seed-card browser and deploy it to GitHub Pages.
+# Site: https://anghel4d.github.io/broadside-observer/
+name: Deploy seed browser
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "seeds/app/**"
+      - "seeds/cards/**"
+      - ".github/workflows/deploy-seed-browser.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: seeds/app/package-lock.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        working-directory: seeds/app
+        env:
+          GITHUB_PAGES: "true"
+        run: |
+          npm ci
+          npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: seeds/app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
