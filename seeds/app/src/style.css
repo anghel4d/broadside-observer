@@ -1,0 +1,303 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1218;
+  --panel: #161b24;
+  --panel-2: #1c2230;
+  --ink: #e7ebf3;
+  --muted: #9aa3b4;
+  --faint: #6c7586;
+  --line: #2a3140;
+  --accent: #8eabc9;
+  --chip: #232a38;
+  --active: #273246;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  padding: 0.9rem 1.1rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.lede,
+.status,
+.reviewed,
+.detail-id,
+.row-sub,
+.ids,
+.empty,
+.empty-detail {
+  color: var(--muted);
+}
+
+.lede {
+  margin: 0.15rem 0 0;
+  font-size: 0.85rem;
+}
+
+.status {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px minmax(280px, 360px) 1fr;
+  min-height: 0;
+}
+
+.filters {
+  padding: 0.9rem 0.9rem 1.2rem;
+  border-right: 1px solid var(--line);
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+input,
+select,
+button.reset {
+  font: inherit;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.42rem 0.5rem;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.year-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.reset {
+  margin-top: 0.2rem;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.list-pane {
+  overflow: auto;
+  border-right: 1px solid var(--line);
+  background: #131822;
+}
+
+.card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem;
+}
+
+.card-row {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.55rem 0.6rem 0.6rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.card-row:hover {
+  background: var(--panel-2);
+}
+
+.card-row.is-active {
+  background: var(--active);
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.row-meta {
+  display: flex;
+  gap: 0.45rem;
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.row-title {
+  font-weight: 600;
+}
+
+.row-sub {
+  font-size: 0.8rem;
+}
+
+.empty,
+.empty-detail {
+  padding: 1rem;
+}
+
+.detail-pane {
+  overflow: auto;
+}
+
+.detail {
+  max-width: 46rem;
+  padding: 1.1rem 1.3rem 2.4rem;
+}
+
+.detail-id {
+  margin: 0 0 0.35rem;
+  font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
+  font-size: 0.75rem;
+}
+
+.detail h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+.authors {
+  margin: 0 0 0.25rem;
+}
+
+.ids {
+  margin: 0 0 0.8rem;
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--chip);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.75rem;
+  cursor: default;
+}
+
+.chip.is-filter {
+  cursor: pointer;
+}
+
+.chip.is-filter:hover {
+  border-color: var(--accent);
+}
+
+.detail h3 {
+  margin: 1.1rem 0 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.detail p,
+.detail li {
+  margin: 0 0 0.45rem;
+}
+
+.detail ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.detail code {
+  font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
+  font-size: 0.86em;
+  background: var(--panel-2);
+  padding: 0.05rem 0.28rem;
+  border-radius: 4px;
+}
+
+.empty-section {
+  color: var(--faint);
+}
+
+.reviewed {
+  margin-top: 1.4rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters,
+  .list-pane,
+  .detail-pane {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .list-pane {
+    max-height: 40vh;
+  }
+}

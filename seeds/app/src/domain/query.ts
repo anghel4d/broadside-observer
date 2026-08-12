@@ -1,0 +1,136 @@
+import { assertNever } from "./never.ts";
+import type { Corpus } from "./corpus.ts";
+import type {
+  BatchFilter,
+  CardId,
+  PoolFilter,
+  Query,
+  SeedCard,
+  SortKey,
+  TopicFilter,
+  YearRange,
+} from "./schema.ts";
+
+export function tokenize(search: string): ReadonlyArray<string> {
+  return search
+    .toLowerCase()
+    .split(/\s+/u)
+    .filter((token) => token.length > 0);
+}
+
+function matchesTopic(filter: TopicFilter, card: SeedCard): boolean {
+  switch (filter._tag) {
+    case "All":
+      return true;
+    case "One":
+      return card.topics.includes(filter.topic);
+  }
+}
+
+function matchesBatch(filter: BatchFilter, card: SeedCard): boolean {
+  switch (filter._tag) {
+    case "All":
+      return true;
+    case "One":
+      return card.seed_batch === filter.batch;
+  }
+}
+
+function matchesPool(filter: PoolFilter, card: SeedCard): boolean {
+  switch (filter._tag) {
+    case "All":
+      return true;
+    case "None":
+      return card.pool === null;
+    case "One":
+      return card.pool === filter.pool;
+  }
+}
+
+function matchesYear(range: YearRange, card: SeedCard): boolean {
+  if (range.min !== null && card.year < range.min) return false;
+  if (range.max !== null && card.year > range.max) return false;
+  return true;
+}
+
+function matchesSearch(
+  tokens: ReadonlyArray<string>,
+  haystack: string | undefined,
+): boolean {
+  if (tokens.length === 0) return true;
+  if (haystack === undefined) return false;
+  return tokens.every((token) => haystack.includes(token));
+}
+
+/** Title hits outweigh haystack hits; used as a stable tie-breaker. */
+export function searchScore(card: SeedCard, haystack: string, tokens: ReadonlyArray<string>): number {
+  if (tokens.length === 0) return 0;
+  const title = card.title.toLowerCase();
+  let score = 0;
+  for (const token of tokens) {
+    if (title.includes(token)) score += 3;
+    if (haystack.includes(token)) score += 1;
+  }
+  return score;
+}
+
+function comparePrimary(left: SeedCard, right: SeedCard, sort: SortKey): number {
+  switch (sort) {
+    case "rank":
+      return left.seed_rank - right.seed_rank;
+    case "year":
+      return right.year - left.year;
+    case "title":
+      return left.title.localeCompare(right.title, "en");
+    case "relevance":
+      return (right.relevance_score ?? -1) - (left.relevance_score ?? -1);
+    default:
+      return assertNever(sort);
+  }
+}
+
+function compareCards(
+  left: SeedCard,
+  right: SeedCard,
+  sort: SortKey,
+  scores: ReadonlyMap<CardId, number>,
+): number {
+  const primary = comparePrimary(left, right, sort);
+  if (primary !== 0) return primary;
+  const scoreDelta = (scores.get(right.id) ?? 0) - (scores.get(left.id) ?? 0);
+  if (scoreDelta !== 0) return scoreDelta;
+  return left.id.localeCompare(right.id, "en");
+}
+
+/** `Corpus × Query → [SeedCard]` — filter then sort; does not mutate the corpus. */
+export function applyQuery(corpus: Corpus, query: Query): ReadonlyArray<SeedCard> {
+  const tokens = tokenize(query.search);
+  const scores = new Map<CardId, number>();
+  const filtered: SeedCard[] = [];
+
+  for (const card of corpus.cards) {
+    if (!matchesTopic(query.topic, card)) continue;
+    if (!matchesBatch(query.batch, card)) continue;
+    if (!matchesPool(query.pool, card)) continue;
+    if (!matchesYear(query.year, card)) continue;
+    const haystack = corpus.haystack.get(card.id) ?? "";
+    if (!matchesSearch(tokens, haystack)) continue;
+    scores.set(card.id, searchScore(card, haystack, tokens));
+    filtered.push(card);
+  }
+
+  filtered.sort((left, right) => compareCards(left, right, query.sort, scores));
+  return filtered;
+}
+
+export function selectedCard(
+  corpus: Corpus,
+  visible: ReadonlyArray<SeedCard>,
+  id: CardId | null,
+): SeedCard | null {
+  if (id !== null) {
+    const fromCorpus = corpus.byId.get(id);
+    if (fromCorpus !== undefined) return fromCorpus;
+  }
+  return visible[0] ?? null;
+}

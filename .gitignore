@@ -33,3 +33,6 @@
 # Seed digests from historical prefill.
 !/seeds/
 !/seeds/**
+/seeds/app/node_modules/
+/seeds/app/dist/
+/seeds/app/src/generated/cards.json
