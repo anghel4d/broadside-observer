@@ -1,5 +1,7 @@
 # Version-controlled scope for the Broadside Observer research loop.
-# Informed by standing agent research plus Anoptic engine, ano, and GRID COMMAND / RTS work.
+# Informed by standing agent research plus deep reads of Anoptic engine and ano
+# (array/columnar ECS language, BQN twins, Japanese surface, standing rules;
+# arenas, lock-free buses, Vulkan meshlets, radiance cascades, text).
 project_anchors:
 - https://github.com/Anoptic-Games/anoptic-engine
 - https://github.com/anghel4d/ano
@@ -161,3 +163,93 @@ topics:
   - all:4X AND (all:AI OR all:agent) OR all:AIIDE
   priority: high
   cluster: game-ai
+- id: array-programming-apl-bqn-q
+  name: Array programming (APL / BQN / q)
+  description: Array languages and columnar query/command languages; masked updates, folds/scans, kdb+/q
+    and BQN practice relevant to ano.
+  arxiv_query_hints:
+  - all:APL OR all:BQN OR all:"array programming"
+  - all:kdb OR all:"array language" OR all:J OR all:K
+  priority: high
+  cluster: language
+- id: category-theory-plt
+  name: Category theory for PLT
+  description: Category theory applied to programming languages, type systems, semantics, and compositional
+    software design.
+  arxiv_query_hints:
+  - all:"category theory" AND (all:programming OR all:type OR all:semantics)
+  - cat:math.CT AND all:programming
+  priority: high
+  cluster: language
+- id: typed-programming-systems
+  name: Typed programming and type systems
+  description: 'Type theory and typed language implementation: inference, effects, capabilities, dependent
+    and gradual typing for systems and DSLs.'
+  arxiv_query_hints:
+  - all:"type system" AND (all:effect OR all:region OR all:capability)
+  - all:"type inference" AND (all:compiler OR all:language)
+  priority: high
+  cluster: language
+- id: region-memory-capabilities
+  name: Region memory and capabilities
+  description: Region-based memory management, effect masking, and capability calculi (Tofte–Talpin, Cyclone,
+    Walker–Crary–Morrisett lineage) for arena-heavy engines.
+  arxiv_query_hints:
+  - all:"region-based" AND all:memory
+  - all:capability AND (all:region OR all:Cyclone OR all:ownership)
+  priority: high
+  cluster: engine
+- id: radiance-cascades-gi
+  name: Radiance cascades and real-time GI
+  description: Radiance cascades, probe hierarchies, and real-time global illumination techniques for
+    Vulkan/GPU engines.
+  arxiv_query_hints:
+  - all:"radiance cascade" OR all:"radiance cascades"
+  - all:"global illumination" AND (all:real-time OR all:probe OR all:cascade)
+  priority: high
+  cluster: engine
+- id: mesh-shaders-gpu-driven
+  name: Mesh shaders and GPU-driven rendering
+  description: Task/mesh shaders, meshlets, GPU culling, and GPU-driven frame construction with compatibility
+    fallbacks.
+  arxiv_query_hints:
+  - all:"mesh shader" OR all:meshlet
+  - all:"GPU-driven" AND all:rendering
+  priority: high
+  cluster: engine
+- id: production-rules-triggers
+  name: Production rules and trigger systems
+  description: OPS5/CLIPS-style production rules, datalog-like standing rules, and game trigger/mission
+    languages with deterministic barriers.
+  arxiv_query_hints:
+  - all:OPS5 OR all:CLIPS OR all:"production rule"
+  - all:Datalog AND (all:game OR all:trigger OR all:rule)
+  priority: high
+  cluster: language
+- id: unicode-text-shaping
+  name: Unicode, strings, and text shaping
+  description: Unicode collation/interning, font rasterization, and GPU text (scanline/coverage) for multilingual
+    engine UI including CJK.
+  arxiv_query_hints:
+  - all:Unicode AND (all:collation OR all:interning OR all:shaping)
+  - all:"font rendering" OR all:"text rendering" AND all:GPU
+  priority: medium
+  cluster: engine
+- id: cellular-automata-falling-sand
+  name: Cellular automata and falling-sand sims
+  description: Conway/Life, falling-sand, and particle cellular automata as ECS-friendly simulation patterns
+    (Noita-shaped design space).
+  arxiv_query_hints:
+  - all:"cellular automaton" OR all:"falling sand" OR all:Noita
+  - all:"Conway" AND all:Life AND (all:parallel OR all:GPU OR all:ECS)
+  priority: medium
+  cluster: game-ai
+- id: relational-ecs-queries
+  name: Relational queries over ECS worlds
+  description: Predicate/mask selection, relationship hops, and bulk effects over entity-component stores
+    — ano's query-and-command niche.
+  arxiv_query_hints:
+  - all:ECS AND (all:query OR all:relational OR all:SQL)
+  - all:"entity component" AND (all:query OR all:language OR all:scripting)
+  priority: high
+  cluster: language
