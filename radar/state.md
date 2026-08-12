@@ -1,6 +1,6 @@
 # Radar state
 
-The radar keeps small, reviewable state in Git. It is deliberately separate from fetched source material and derived digests.
+The radar keeps small, reviewable state in Git. Poll targets live in [`sources.yaml`](sources.yaml); topical scope lives in [`topics.yaml`](topics.yaml). It is deliberately separate from fetched source material and derived digests.
 
 ## Source cursors
 
