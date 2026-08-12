@@ -1,20 +1,33 @@
 ---
-title: "Parallel Implementations of Soft Real-Time Game Systems"
+title: Parallel Implementations of Soft Real-Time Game Systems
 authors:
-  - "Michael Acton"
+- Michael Acton
 year: 2014
-venue: "CppCon"
+venue: CppCon
 arxiv: null
 doi: null
-source: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+source: https://www.youtube.com/watch?v=rX0ItVEVjHc
 topics:
-  - dod
-  - engine
+- dod
+- engine
 seed_rank: 126
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 9
+cites:
+- title: Job System and Fiber Architecture (Naughty Dog)
+  url: https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine
+  year: 2015
+  arxiv: null
+  doi: null
+  card: 121-job-system-and-fiber-architecture-naughty-dog
+- title: Intel Threading Building Blocks
+  url: https://www.threadingbuildingblocks.org/
+  year: 2007
+  arxiv: null
+  doi: null
+  card: 486-intel-threading-building-blocks
 ---
 
 # Parallel Implementations of Soft Real-Time Game Systems

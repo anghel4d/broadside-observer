@@ -1,20 +1,33 @@
 ---
-title: "Region-Based Memory Management"
+title: Region-Based Memory Management
 authors:
-  - "Mads Tofte"
-  - "Jean-Pierre Talpin"
+- Mads Tofte
+- Jean-Pierre Talpin
 year: 1997
-venue: "Information and Computation"
+venue: Information and Computation
 arxiv: null
-doi: "10.1006/inco.1996.2613"
-source: "https://doi.org/10.1006/inco.1996.2613"
+doi: 10.1006/inco.1996.2613
+source: https://doi.org/10.1006/inco.1996.2613
 topics:
-  - region-memory-capabilities
+- region-memory-capabilities
 seed_rank: 31
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: language
 relevance_score: 10
+cites:
+- title: Implementation of the Typed Call-by-Value λ-Calculus using a Stack of Regions
+  url: https://doi.org/10.1145/174675.177855
+  year: 1994
+  arxiv: null
+  doi: null
+  card: 033-implementation-of-the-typed-call-by-value-calculus-using-a-s
+- title: Typed Memory Management in a Calculus of Capabilities
+  url: https://doi.org/10.1145/292540.292564
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 029-typed-memory-management-in-a-calculus-of-capabilities
 ---
 
 # Region-Based Memory Management

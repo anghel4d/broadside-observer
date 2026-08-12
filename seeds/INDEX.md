@@ -641,3 +641,44 @@ Narratives: [`lineages/grid-pathfinding.md`](lineages/grid-pathfinding.md), [`li
 
 Patched **70** cards with `lineage` + `cites`; **15** additional cites-only edges; decision log `_pools/lineage_shallow_scan.jsonl`.
 
+
+## Lineage shallow scan (2026-08-13)
+
+Seed batch `lineage-shallow-2026-08-13`. Shared 701–850 block (coordinated). Medium lineages + cites patches.
+
+| # | Score | Year | Title | Lineage |
+|---|------:|-----:|-------|--------|
+| 701 | 9 | 2015 | JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids | grid-pathfinding |
+| 702 | 10 | 2004 | Fix Your Timestep! | rollback-netcode |
+| 703 | 9 | 2017 | Hazard Eras: Non-Blocking Memory Reclamation | memory-reclamation |
+| 704 | 9 | 2019 | Hyaline: Fast and Transparent Lock-Free Memory Reclamation | memory-reclamation |
+| 705 | 8 | 2009 | ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation | steering-boids-orca |
+| 706 | 9 | 1998 | Motion Planning in Dynamic Environments Using Velocity Obstacles | steering-boids-orca |
+| 707 | 9 | 2007 | Example-Based Model Synthesis | pcg-wfc |
+| 708 | 9 | 2018 | Behavior Trees in Robotics and AI: An Introduction | behavior-trees-goap |
+| 709 | 9 | 2003 | Applying Goal-Oriented Action Planning to Games | behavior-trees-goap |
+| 710 | 8 | 2016 | Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques | gpu-driven-visibility |
+| 711 | 8 | 2014 | Koka: Programming with Row Polymorphic Effect Types | effects-handlers |
+| 712 | 8 | 1995 | Social Force Model for Pedestrian Dynamics | steering-boids-orca |
+| 714 | 8 | 1985 | Virtual Time / Time Warp Optimistic Distributed Simulation | rollback-netcode |
+| 715 | 8 | 2009 | Userspace RCU Library (liburcu) | memory-reclamation |
+| 716 | 7 | 2019 | F14 — A Hash Table Library for C++ | open-addressing |
+| 717 | 8 | 2006 | Field D*: An Interpolation-Based Path Planner | grid-pathfinding |
+| 719 | 8 | 2011 | RVO2 Library | steering-boids-orca |
+| 720 | 8 | 2018 | Vulkan Meshlet CAD Scene Sample | gpu-driven-visibility |
+| 721 | 8 | 2019 | GGPO Overview and Design Notes | rollback-netcode |
+| 722 | 9 | 1979 | How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs | linearizability |
+| 723 | 7 | 2007 | Manifold Dual Contouring | pcg-wfc |
+| 724 | 8 | 2015 | Eff: Algebraic Effect Handlers Language | effects-handlers |
+| 725 | 7 | 1990 | Priority Ceiling Protocols for Real-Time Synchronization | realtime-sync |
+| 726 | 8 | 2015 | Moving AI Lab / Grid-Based Path Planning Competition | grid-pathfinding |
+| 727 | 8 | 2012 | Clustered Deferred and Forward Shading | gpu-driven-visibility |
+| 729 | 8 | 2021 | Retrofitting Effect Handlers onto OCaml | effects-handlers |
+| 730 | 8 | 2016 | Masked Software Occlusion Culling | gpu-driven-visibility |
+| 731 | 9 | 2011 | Ultra-Fast Optimal Pathfinding without Runtime Search | grid-pathfinding |
+| 732 | 8 | 2022 | MarkovJunior | pcg-wfc |
+| 733 | 9 | 2016 | meshoptimizer | gpu-driven-visibility |
+| 734 | 8 | 2013 | Position Based Fluids | fluids-sph |
+| 735 | 8 | 2007 | Finding Next Gen: CryEngine 2 (SSAO) | screen-space-ao |
+| 736 | 9 | 2010 | A Better x86 Memory Model: x86-TSO | linearizability |
+| 737 | 8 | 2017 | I Wrote a Faster Hash Table | open-addressing |

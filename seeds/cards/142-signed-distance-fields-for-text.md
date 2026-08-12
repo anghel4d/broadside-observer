@@ -1,20 +1,27 @@
 ---
-title: "Signed Distance Fields for Text"
+title: Signed Distance Fields for Text
 authors:
-  - "Valve/Chris Green"
+- Valve/Chris Green
 year: 2007
-venue: "SIGGRAPH"
+venue: SIGGRAPH
 arxiv: null
-doi: "10.1145/1281500.1281665"
-source: "https://doi.org/10.1145/1281500.1281665"
+doi: 10.1145/1281500.1281665
+source: https://doi.org/10.1145/1281500.1281665
 topics:
-  - text
-  - graphics
+- text
+- graphics
 seed_rank: 142
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 9
+cites:
+- title: Dual Contouring of Hermite Data
+  url: https://doi.org/10.1145/566570.566586
+  year: 2002
+  arxiv: null
+  doi: 10.1145/566570.566586
+  card: 491-dual-contouring-of-hermite-data
 ---
 
 # Signed Distance Fields for Text

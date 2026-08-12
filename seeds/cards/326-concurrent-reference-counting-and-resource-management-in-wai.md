@@ -1,21 +1,36 @@
 ---
-title: "Concurrent Reference Counting and Resource Management in Wait-free Constant Time"
+title: Concurrent Reference Counting and Resource Management in Wait-free Constant
+  Time
 authors:
-  - "Guy E. Blelloch"
-  - "Yuanhao Wei"
+- Guy E. Blelloch
+- Yuanhao Wei
 year: 2020
-venue: "arXiv:cs.DC"
-arxiv: "2002.07053"
+venue: arXiv:cs.DC
+arxiv: '2002.07053'
 doi: null
-source: "https://arxiv.org/abs/2002.07053"
+source: https://arxiv.org/abs/2002.07053
 topics:
-  - memory-allocation
-  - lockfree
+- memory-allocation
+- lockfree
 seed_rank: 326
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hpc"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hpc
 relevance_score: 9
+lineage: memory-reclamation
+cites:
+- title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
+  url: https://doi.org/10.1109/TPDS.2004.8
+  year: 2004
+  arxiv: null
+  doi: 10.1109/TPDS.2004.8
+  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
+- title: Wait-Free Synchronization
+  url: https://doi.org/10.1145/114005.102808
+  year: 1991
+  arxiv: null
+  doi: 10.1145/114005.102808
+  card: 037-wait-free-synchronization
 ---
 
 # Concurrent Reference Counting and Resource Management in Wait-free Constant Time

@@ -1,20 +1,27 @@
 ---
-title: "A Calculus of Communicating Systems"
+title: A Calculus of Communicating Systems
 authors:
-  - "Robin Milner"
+- Robin Milner
 year: 1980
-venue: "LNCS"
+venue: LNCS
 arxiv: null
 doi: null
-source: "https://link.springer.com/book/10.1007/3-540-10235-3"
+source: https://link.springer.com/book/10.1007/3-540-10235-3
 topics:
-  - concurrency
-  - archive
+- concurrency
+- archive
 seed_rank: 44
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hand_topup"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hand_topup
 relevance_score: 10
+cites:
+- title: Communicating Sequential Processes
+  url: https://www.cs.ox.ac.uk/publications/books/concurrency/
+  year: 1978
+  arxiv: null
+  doi: null
+  card: 047-communicating-sequential-processes
 ---
 
 # A Calculus of Communicating Systems

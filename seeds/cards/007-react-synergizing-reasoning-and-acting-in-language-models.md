@@ -1,28 +1,47 @@
 ---
-title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+title: 'ReAct: Synergizing Reasoning and Acting in Language Models'
 authors:
-  - "Shunyu Yao"
-  - "Jeffrey Zhao"
-  - "Dian Yu"
-  - "Nan Du"
-  - "Izhak Shafran"
-  - "Karthik Narasimhan"
-  - "Yuan Cao"
+- Shunyu Yao
+- Jeffrey Zhao
+- Dian Yu
+- Nan Du
+- Izhak Shafran
+- Karthik Narasimhan
+- Yuan Cao
 year: 2022
-venue: "ICLR"
-arxiv: "2210.03629"
+venue: ICLR
+arxiv: '2210.03629'
 doi: null
-source: "https://arxiv.org/abs/2210.03629"
+source: https://arxiv.org/abs/2210.03629
 topics:
-  - tool-use
-  - react
-  - reasoning
-  - planning
+- tool-use
+- react
+- reasoning
+- planning
 seed_rank: 7
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 10
+cites:
+- title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
+  url: https://arxiv.org/abs/2201.11903
+  year: 2022
+  arxiv: '2201.11903'
+  doi: null
+  card: 104-chain-of-thought-prompting-elicits-reasoning-in-large-langua
+- title: 'Reflexion: Language Agents with Verbal Reinforcement Learning'
+  url: https://arxiv.org/abs/2303.11366
+  year: 2023
+  arxiv: '2303.11366'
+  doi: null
+  card: 097-reflexion-language-agents-with-verbal-reinforcement-learning
+- title: 'Toolformer: Language Models Can Teach Themselves to Use Tools'
+  url: https://arxiv.org/abs/2302.04761
+  year: 2023
+  arxiv: '2302.04761'
+  doi: null
+  card: 102-toolformer-language-models-can-teach-themselves-to-use-tools
 ---
 
 # ReAct: Synergizing Reasoning and Acting in Language Models

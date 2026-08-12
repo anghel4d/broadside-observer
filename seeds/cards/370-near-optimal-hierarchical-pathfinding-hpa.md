@@ -1,43 +1,48 @@
 ---
-
-title: "Near Optimal Hierarchical Pathfinding (HPA*)"
+title: Near Optimal Hierarchical Pathfinding (HPA*)
 authors:
-  - "Adi Botea"
-  - "Martin Müller"
-  - "Jonathan Schaeffer"
+- Adi Botea
+- Martin Müller
+- Jonathan Schaeffer
 year: 2004
-venue: "JAIR"
+venue: JAIR
 arxiv: null
-doi: "10.1613/jair.1423"
-source: "https://doi.org/10.1613/jair.1423"
+doi: 10.1613/jair.1423
+source: https://doi.org/10.1613/jair.1423
 topics:
-  - pathfinding
-  - hpa
+- pathfinding
+- hpa
 seed_rank: 370
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 9
 lineage: grid-pathfinding
 cites:
-  - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
-    url: "https://doi.org/10.1109/TSSC.1968.300136"
-    year: 1968
-    arxiv: null
-    doi: "10.1109/TSSC.1968.300136"
-    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
-  - title: "Online Graph Pruning for Pathfinding on Grid Maps"
-    url: "https://doi.org/10.1609/aaai.v25i1.7994"
-    year: 2011
-    arxiv: null
-    doi: "10.1609/aaai.v25i1.7994"
-    card: "253-online-graph-pruning-for-pathfinding-on-grid-maps"
-  - title: "Subgoal Graphs for Optimal Pathfinding"
-    url: "https://www.aaai.org/ocs/index.php/SOCS/SOCS15/paper/view/11204"
-    year: 2015
-    arxiv: null
-    doi: null
-    card: "411-subgoal-graphs-for-optimal-pathfinding"
+- title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
+  url: https://doi.org/10.1109/TSSC.1968.300136
+  year: 1968
+  arxiv: null
+  doi: 10.1109/TSSC.1968.300136
+  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
+- title: Online Graph Pruning for Pathfinding on Grid Maps
+  url: https://doi.org/10.1609/aaai.v25i1.7994
+  year: 2011
+  arxiv: null
+  doi: 10.1609/aaai.v25i1.7994
+  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
+- title: Subgoal Graphs for Optimal Pathfinding
+  url: https://www.aaai.org/ocs/index.php/SOCS/SOCS15/paper/view/11204
+  year: 2015
+  arxiv: null
+  doi: null
+  card: 411-subgoal-graphs-for-optimal-pathfinding
+- title: Recast Navigation / Detour
+  url: https://github.com/recastnavigation/recastnavigation
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 357-recast-navigation-detour
 ---
 
 # Near Optimal Hierarchical Pathfinding (HPA*)

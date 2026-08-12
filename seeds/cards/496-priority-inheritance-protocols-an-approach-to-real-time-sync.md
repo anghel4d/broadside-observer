@@ -1,22 +1,30 @@
 ---
-title: "Priority Inheritance Protocols: An Approach to Real-Time Synchronization"
+title: 'Priority Inheritance Protocols: An Approach to Real-Time Synchronization'
 authors:
-  - "Lui Sha"
-  - "Ragunathan Rajkumar"
-  - "John P. Lehoczky"
+- Lui Sha
+- Ragunathan Rajkumar
+- John P. Lehoczky
 year: 1990
-venue: "IEEE TC"
+venue: IEEE TC
 arxiv: null
-doi: "10.1109/12.57058"
-source: "https://doi.org/10.1109/12.57058"
+doi: 10.1109/12.57058
+source: https://doi.org/10.1109/12.57058
 topics:
-  - scheduling
-  - priority
+- scheduling
+- priority
 seed_rank: 496
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "realtime"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: realtime
 relevance_score: 7
+lineage: realtime-sync
+cites:
+- title: Priority Ceiling Protocols for Real-Time Synchronization
+  url: https://doi.org/10.1109/12.57058
+  year: 1990
+  arxiv: null
+  doi: 10.1109/12.57058
+  card: 725-priority-ceiling-protocols-for-real-time-synchronization
 ---
 
 # Priority Inheritance Protocols: An Approach to Real-Time Synchronization

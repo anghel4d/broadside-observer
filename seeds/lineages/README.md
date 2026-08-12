@@ -23,3 +23,18 @@ Medium threads (shallow scan 2026-08-13):
 - `gpu-driven-visibility` — Hi-Z → GPU-driven → mesh shaders → Nanite
 - `behavior-trees-goap` — STRIPS/GOAP/Halo BT/Champandard …
 - `pcg-wfc` — Model Synthesis → WFC (+ PCG surveys)
+
+## Medium / shallow threads (2026-08-13)
+- `behavior-trees-goap`
+- `effects-handlers`
+- `fluids-sph`
+- `gpu-driven-visibility`
+- `grid-pathfinding`
+- `linearizability`
+- `memory-reclamation`
+- `open-addressing`
+- `pcg-wfc`
+- `realtime-sync`
+- `rollback-netcode`
+- `screen-space-ao`
+- `steering-boids-orca`

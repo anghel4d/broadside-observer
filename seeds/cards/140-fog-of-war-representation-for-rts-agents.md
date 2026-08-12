@@ -1,21 +1,34 @@
 ---
-title: "Fog of War Representation for RTS Agents"
+title: Fog of War Representation for RTS Agents
 authors:
-  - "Weber"
-  - "Mateas"
+- Weber
+- Mateas
 year: 2009
-venue: "AIIDE"
+venue: AIIDE
 arxiv: null
 doi: null
-source: "https://ojs.aaai.org/index.php/AIIDE/article/view/12366"
+source: https://ojs.aaai.org/index.php/AIIDE/article/view/12366
 topics:
-  - rts
-  - fog
+- rts
+- fog
 seed_rank: 140
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 9
+cites:
+- title: A Particle Model for State Estimation in Real-Time Strategy Games
+  url: https://doi.org/10.1609/aiide.v7i1.12436
+  year: 2011
+  arxiv: null
+  doi: null
+  card: 132-a-particle-model-for-state-estimation-in-real-time-strategy-
+- title: A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft
+  url: https://doi.org/10.1109/TCIAIG.2013.2286295
+  year: 2013
+  arxiv: null
+  doi: null
+  card: 018-a-survey-of-real-time-strategy-game-ai-research-and-competit
 ---
 
 # Fog of War Representation for RTS Agents

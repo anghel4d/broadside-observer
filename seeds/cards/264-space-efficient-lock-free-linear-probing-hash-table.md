@@ -1,21 +1,41 @@
 ---
-title: "Space-Efficient Lock-Free Linear-Probing Hash Table"
+title: Space-Efficient Lock-Free Linear-Probing Hash Table
 authors:
-  - "Hagit Attiya"
-  - "Rotem Oshman"
-  - "Noa Schiller"
+- Hagit Attiya
+- Rotem Oshman
+- Noa Schiller
 year: 2026
-venue: "arXiv:cs.DC"
-arxiv: "2606.17315"
+venue: arXiv:cs.DC
+arxiv: '2606.17315'
 doi: null
-source: "https://arxiv.org/abs/2606.17315"
+source: https://arxiv.org/abs/2606.17315
 topics:
-  - lockfree
+- lockfree
 seed_rank: 264
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hpc"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hpc
 relevance_score: 9
+lineage: open-addressing
+cites:
+- title: Hopscotch Hashing
+  url: https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf
+  year: 2008
+  arxiv: null
+  doi: null
+  card: 483-hopscotch-hashing
+- title: Abseil Swiss Tables
+  url: https://abseil.io/about/design/swisstables
+  year: 2017
+  arxiv: null
+  doi: null
+  card: 470-abseil-swiss-tables
+- title: An Efficient Wait-free Resizable Hash Table
+  url: https://doi.org/10.1145/3490146
+  year: 2022
+  arxiv: null
+  doi: null
+  card: 304-an-efficient-wait-free-resizable-hash-table
 ---
 
 # Space-Efficient Lock-Free Linear-Probing Hash Table

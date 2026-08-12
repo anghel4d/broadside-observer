@@ -1,22 +1,36 @@
 ---
-title: "XPBD: Position-Based Simulation of Compliant Constrained Dynamics"
+title: 'XPBD: Position-Based Simulation of Compliant Constrained Dynamics'
 authors:
-  - "Miles Macklin"
-  - "Matthias Müller"
-  - "Nuttapong Chentanez"
+- Miles Macklin
+- Matthias Müller
+- Nuttapong Chentanez
 year: 2016
-venue: "MIG"
-arxiv: "1609.09792"
+venue: MIG
+arxiv: '1609.09792'
 doi: null
-source: "https://arxiv.org/abs/1609.09792"
+source: https://arxiv.org/abs/1609.09792
 topics:
-  - physics
-  - xpbd
+- physics
+- xpbd
 seed_rank: 340
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 9
+lineage: fluids-sph
+cites:
+- title: Particle-Based Fluid Simulation for Interactive Applications
+  url: https://matthias-research.github.io/pages/publications/sca03.pdf
+  year: 2003
+  arxiv: null
+  doi: null
+  card: 490-particle-based-fluid-simulation-for-interactive-applications
+- title: Position Based Fluids
+  url: https://doi.org/10.1145/2461912.2461984
+  year: 2013
+  arxiv: null
+  doi: 10.1145/2461912.2461984
+  card: 734-position-based-fluids
 ---
 
 # XPBD: Position-Based Simulation of Compliant Constrained Dynamics

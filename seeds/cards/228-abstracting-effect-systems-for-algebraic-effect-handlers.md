@@ -1,35 +1,41 @@
 ---
-
-title: "Abstracting Effect Systems for Algebraic Effect Handlers"
+title: Abstracting Effect Systems for Algebraic Effect Handlers
 authors:
-  - "Takuma Yoshioka"
-  - "Taro Sekiyama"
-  - "Atsushi Igarashi"
+- Takuma Yoshioka
+- Taro Sekiyama
+- Atsushi Igarashi
 year: 2024
-venue: "arXiv"
-arxiv: "2404.16381"
+venue: arXiv
+arxiv: '2404.16381'
 doi: null
-source: "https://arxiv.org/abs/2404.16381"
+source: https://arxiv.org/abs/2404.16381
 topics:
-  - typed-programming-systems
+- typed-programming-systems
 seed_rank: 228
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: language
 relevance_score: 8
 cites:
-  - title: "Handlers of Algebraic Effects"
-    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
-    year: 2009
-    arxiv: null
-    doi: null
-    card: "022-handlers-of-algebraic-effects"
-  - title: "Programming with Algebraic Effects and Handlers"
-    url: "https://arxiv.org/abs/1203.1539"
-    year: 2015
-    arxiv: "1203.1539"
-    doi: null
-    card: "123-programming-with-algebraic-effects-and-handlers"
+- title: Handlers of Algebraic Effects
+  url: https://doi.org/10.1007/978-3-642-00590-9_7
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 022-handlers-of-algebraic-effects
+- title: Programming with Algebraic Effects and Handlers
+  url: https://arxiv.org/abs/1203.1539
+  year: 2015
+  arxiv: '1203.1539'
+  doi: null
+  card: 123-programming-with-algebraic-effects-and-handlers
+- title: 'Koka: Programming with Row Polymorphic Effect Types'
+  url: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
+  year: 2014
+  arxiv: null
+  doi: null
+  card: 711-koka-programming-with-row-polymorphic-effect-types
+lineage: effects-handlers
 ---
 
 # Abstracting Effect Systems for Algebraic Effect Handlers

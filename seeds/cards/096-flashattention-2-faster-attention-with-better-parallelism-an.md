@@ -1,22 +1,35 @@
 ---
-title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
+title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
 authors:
-  - "Tri Dao"
+- Tri Dao
 year: 2023
-venue: "arXiv:cs.LG"
-arxiv: "2307.08691"
+venue: arXiv:cs.LG
+arxiv: '2307.08691'
 doi: null
-source: "https://arxiv.org/abs/2307.08691"
+source: https://arxiv.org/abs/2307.08691
 topics:
-  - kv-serving
-  - inference-systems
-  - transformer
-  - foundations
+- kv-serving
+- inference-systems
+- transformer
+- foundations
 seed_rank: 96
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 9
+cites:
+- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
+  url: https://arxiv.org/abs/2205.14135
+  year: 2022
+  arxiv: '2205.14135'
+  doi: null
+  card: 105-flashattention-fast-and-memory-efficient-exact-attention-wit
+- title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
+  url: https://arxiv.org/abs/2407.08608
+  year: 2024
+  arxiv: '2407.08608'
+  doi: null
+  card: 089-flashattention-3-fast-and-accurate-attention-with-asynchrony
 ---
 
 # FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning

@@ -1,22 +1,36 @@
 ---
-title: "Meshlet Priors for 3D Mesh Reconstruction"
+title: Meshlet Priors for 3D Mesh Reconstruction
 authors:
-  - "Abhishek Badki"
-  - "Orazio Gallo"
-  - "Jan Kautz"
-  - "Pradeep Sen"
+- Abhishek Badki
+- Orazio Gallo
+- Jan Kautz
+- Pradeep Sen
 year: 2020
-venue: "arXiv:cs.CV"
-arxiv: "2001.01744"
+venue: arXiv:cs.CV
+arxiv: '2001.01744'
 doi: null
-source: "https://arxiv.org/abs/2001.01744"
+source: https://arxiv.org/abs/2001.01744
 topics:
-  - meshlets
+- meshlets
 seed_rank: 329
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "graphics"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: graphics
 relevance_score: 9
+lineage: gpu-driven-visibility
+cites:
+- title: meshoptimizer
+  url: https://github.com/zeux/meshoptimizer
+  year: 2016
+  arxiv: null
+  doi: null
+  card: 733-meshoptimizer
+- title: Towards Practical Meshlet Compression
+  url: https://arxiv.org/abs/2402.09919
+  year: 2024
+  arxiv: null
+  doi: null
+  card: 288-towards-practical-meshlet-compression
 ---
 
 # Meshlet Priors for 3D Mesh Reconstruction

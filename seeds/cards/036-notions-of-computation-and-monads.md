@@ -1,22 +1,36 @@
 ---
-title: "Notions of Computation and Monads"
+title: Notions of Computation and Monads
 authors:
-  - "Eugenio Moggi"
+- Eugenio Moggi
 year: 1991
-venue: "Information and Computation"
+venue: Information and Computation
 arxiv: null
-doi: "10.1016/0890-5401(91)90052-4"
-source: "https://doi.org/10.1016/0890-5401(91)90052-4"
+doi: 10.1016/0890-5401(91)90052-4
+source: https://doi.org/10.1016/0890-5401(91)90052-4
 topics:
-  - monads
-  - effects
-  - lambda-calculus
-  - category-theory
+- monads
+- effects
+- lambda-calculus
+- category-theory
 seed_rank: 36
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: language
 relevance_score: 10
+lineage: effects-handlers
+cites:
+- title: Handlers of Algebraic Effects
+  url: https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 022-handlers-of-algebraic-effects
+- title: Monad Transformers and Modular Interpreters
+  url: https://doi.org/10.1145/199448.199528
+  year: 1995
+  arxiv: null
+  doi: null
+  card: 156-monad-transformers-and-modular-interpreters
 ---
 
 # Notions of Computation and Monads

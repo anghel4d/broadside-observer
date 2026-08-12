@@ -1,28 +1,33 @@
 ---
-
-title: "A Note on Two Problems in Connexion with Graphs (Dijkstra)"
+title: A Note on Two Problems in Connexion with Graphs (Dijkstra)
 authors:
-  - "E. W. Dijkstra"
+- E. W. Dijkstra
 year: 1959
-venue: "Numerische Mathematik"
+venue: Numerische Mathematik
 arxiv: null
-doi: "10.1007/BF01386390"
-source: "https://doi.org/10.1007/BF01386390"
+doi: 10.1007/BF01386390
+source: https://doi.org/10.1007/BF01386390
 topics:
-  - pathfinding
+- pathfinding
 seed_rank: 386
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 9
 lineage: grid-pathfinding
 cites:
-  - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
-    url: "https://doi.org/10.1109/TSSC.1968.300136"
-    year: 1968
-    arxiv: null
-    doi: "10.1109/TSSC.1968.300136"
-    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+- title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
+  url: https://doi.org/10.1109/TSSC.1968.300136
+  year: 1968
+  arxiv: null
+  doi: 10.1109/TSSC.1968.300136
+  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
+- title: Online Graph Pruning for Pathfinding on Grid Maps
+  url: https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761
+  year: 2011
+  arxiv: null
+  doi: null
+  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
 ---
 
 # A Note on Two Problems in Connexion with Graphs (Dijkstra)

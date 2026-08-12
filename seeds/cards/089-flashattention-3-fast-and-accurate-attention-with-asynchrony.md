@@ -1,29 +1,36 @@
 ---
-title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
+title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
 authors:
-  - "Jay Shah"
-  - "Ganesh Bikshandi"
-  - "Ying Zhang"
-  - "Vijay Thakkar"
-  - "Pradeep Ramani"
-  - "Tri Dao"
+- Jay Shah
+- Ganesh Bikshandi
+- Ying Zhang
+- Vijay Thakkar
+- Pradeep Ramani
+- Tri Dao
 year: 2024
-venue: "arXiv:cs.LG"
-arxiv: "2407.08608"
+venue: arXiv:cs.LG
+arxiv: '2407.08608'
 doi: null
-source: "https://arxiv.org/abs/2407.08608"
+source: https://arxiv.org/abs/2407.08608
 topics:
-  - rag
-  - retrieval
-  - kv-serving
-  - inference-systems
-  - transformer
-  - foundations
+- rag
+- retrieval
+- kv-serving
+- inference-systems
+- transformer
+- foundations
 seed_rank: 89
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 9
+cites:
+- title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
+  url: https://arxiv.org/abs/2307.08691
+  year: 2023
+  arxiv: '2307.08691'
+  doi: null
+  card: 096-flashattention-2-faster-attention-with-better-parallelism-an
 ---
 
 # FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision

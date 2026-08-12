@@ -1,20 +1,39 @@
 ---
-title: "Job System and Fiber Architecture (Naughty Dog)"
+title: Job System and Fiber Architecture (Naughty Dog)
 authors:
-  - "Christian Gyrling"
+- Christian Gyrling
 year: 2015
-venue: "GDC"
+venue: GDC
 arxiv: null
 doi: null
-source: "https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine"
+source: https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine
 topics:
-  - job-system
-  - engine
+- job-system
+- engine
 seed_rank: 121
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 9
+cites:
+- title: Scheduling Multithreaded Computations by Work Stealing
+  url: https://doi.org/10.1145/324133.324234
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 257-scheduling-multithreaded-computations-by-work-stealing
+- title: Intel Threading Building Blocks
+  url: https://www.threadingbuildingblocks.org/
+  year: 2007
+  arxiv: null
+  doi: null
+  card: 486-intel-threading-building-blocks
+- title: Parallelizing the Naughty Dog Engine Using Fibers
+  url: https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine
+  year: 2015
+  arxiv: null
+  doi: null
+  card: 122-parallelizing-the-naughty-dog-engine-using-fibers
 ---
 
 # Job System and Fiber Architecture (Naughty Dog)

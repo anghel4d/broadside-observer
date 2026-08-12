@@ -1,33 +1,46 @@
 ---
-title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+title: Efficient Memory Management for Large Language Model Serving with PagedAttention
 authors:
-  - "Woosuk Kwon"
-  - "Zhuohan Li"
-  - "Siyuan Zhuang"
-  - "Ying Sheng"
-  - "Lianmin Zheng"
-  - "Cody Hao Yu"
-  - "Joseph E. Gonzalez"
-  - "Hao Zhang"
-  - "Ion Stoica"
+- Woosuk Kwon
+- Zhuohan Li
+- Siyuan Zhuang
+- Ying Sheng
+- Lianmin Zheng
+- Cody Hao Yu
+- Joseph E. Gonzalez
+- Hao Zhang
+- Ion Stoica
 year: 2023
-venue: "SOSP"
-arxiv: "2309.06180"
+venue: SOSP
+arxiv: '2309.06180'
 doi: null
-source: "https://arxiv.org/abs/2309.06180"
+source: https://arxiv.org/abs/2309.06180
 topics:
-  - rag
-  - retrieval
-  - kv-serving
-  - inference-systems
-  - transformer
-  - foundations
-  - llm-serving
+- rag
+- retrieval
+- kv-serving
+- inference-systems
+- transformer
+- foundations
+- llm-serving
 seed_rank: 2
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 10
+cites:
+- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
+  url: https://arxiv.org/abs/2205.14135
+  year: 2022
+  arxiv: '2205.14135'
+  doi: null
+  card: 105-flashattention-fast-and-memory-efficient-exact-attention-wit
+- title: 'SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills'
+  url: https://arxiv.org/abs/2308.16369
+  year: 2023
+  arxiv: '2308.16369'
+  doi: null
+  card: 098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with
 ---
 
 # Efficient Memory Management for Large Language Model Serving with PagedAttention

@@ -1,34 +1,39 @@
 ---
-
-title: "Quake III Arena Networking Source"
+title: Quake III Arena Networking Source
 authors:
-  - "id Software"
+- id Software
 year: 1999
-venue: "GPL source"
+venue: GPL source
 arxiv: null
 doi: null
-source: "https://github.com/id-Software/Quake-III-Arena"
+source: https://github.com/id-Software/Quake-III-Arena
 topics:
-  - netcode
+- netcode
 seed_rank: 495
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "realtime"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: realtime
 relevance_score: 7
 lineage: rollback-netcode
 cites:
-  - title: "Unreal Engine Networking Architecture"
-    url: "https://docs.unrealengine.com/udk/Three/NetworkingOverview.html"
-    year: 1999
-    arxiv: null
-    doi: null
-    card: "452-unreal-engine-networking-architecture"
-  - title: "Source Multiplayer Networking"
-    url: "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking"
-    year: 2001
-    arxiv: null
-    doi: null
-    card: "376-source-multiplayer-networking"
+- title: Unreal Engine Networking Architecture
+  url: https://docs.unrealengine.com/udk/Three/NetworkingOverview.html
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 452-unreal-engine-networking-architecture
+- title: Source Multiplayer Networking
+  url: https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
+  year: 2001
+  arxiv: null
+  doi: null
+  card: 376-source-multiplayer-networking
+- title: 1500 Archers on a 28.8
+  url: https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond
+  year: 2001
+  arxiv: null
+  doi: null
+  card: 028-1500-archers-on-a-28-8-network-programming-in-age-of-empires
 ---
 
 # Quake III Arena Networking Source

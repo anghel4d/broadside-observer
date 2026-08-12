@@ -1,20 +1,33 @@
 ---
-title: "Types and Programming Languages"
+title: Types and Programming Languages
 authors:
-  - "Benjamin C. Pierce"
+- Benjamin C. Pierce
 year: 2002
-venue: "MIT Press"
+venue: MIT Press
 arxiv: null
 doi: null
-source: "https://www.cis.upenn.edu/~bcpierce/tapl/"
+source: https://www.cis.upenn.edu/~bcpierce/tapl/
 topics:
-  - typed-programming
-  - plt
+- typed-programming
+- plt
 seed_rank: 27
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hand_topup"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hand_topup
 relevance_score: 10
+cites:
+- title: Notions of Computation and Monads
+  url: https://doi.org/10.1016/0890-5401(91)90052-4
+  year: 1991
+  arxiv: null
+  doi: 10.1016/0890-5401(91)90052-4
+  card: 036-notions-of-computation-and-monads
+- title: Region-Based Memory Management
+  url: https://doi.org/10.1006/inco.1996.2613
+  year: 1997
+  arxiv: null
+  doi: null
+  card: 031-region-based-memory-management
 ---
 
 # Types and Programming Languages

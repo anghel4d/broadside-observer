@@ -1,19 +1,26 @@
 ---
-title: "Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem"
+title: 'Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem'
 authors:
-  - "Charles L. Forgy"
+- Charles L. Forgy
 year: 1982
-venue: "Artificial Intelligence"
+venue: Artificial Intelligence
 arxiv: null
-doi: "10.1016/0004-3702(82)90020-0"
-source: "https://doi.org/10.1016/0004-3702(82)90020-0"
+doi: 10.1016/0004-3702(82)90020-0
+source: https://doi.org/10.1016/0004-3702(82)90020-0
 topics:
-  - production-rules-triggers
+- production-rules-triggers
 seed_rank: 43
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: language
 relevance_score: 10
+cites:
+- title: 'Three States and a Plan: The AI of F.E.A.R.'
+  url: https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf
+  year: 2006
+  arxiv: null
+  doi: null
+  card: 023-three-states-and-a-plan-the-ai-of-f-e-a-r
 ---
 
 # Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem

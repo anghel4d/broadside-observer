@@ -1,19 +1,33 @@
 ---
-title: "Potential Fields for Unit Behavior"
+title: Potential Fields for Unit Behavior
 authors:
-  - "Johan Hagelbäck"
+- Johan Hagelbäck
 year: 2009
-venue: "CIG / papers"
+venue: CIG / papers
 arxiv: null
 doi: null
-source: "https://www.gamedevs.org/"
+source: https://www.gamedevs.org/
 topics:
-  - potential-fields
+- potential-fields
 seed_rank: 482
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 7
+lineage: steering-boids-orca
+cites:
+- title: Steering Behaviors for Autonomous Characters
+  url: https://www.red3d.com/cwr/papers/1999/gdc99steer.html
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 258-steering-behaviors-for-autonomous-characters
+- title: Understanding Goal-Based Vector Field / Flow Field Pathfinding
+  url: https://howtorts.github.io/
+  year: 2010
+  arxiv: null
+  doi: null
+  card: 355-understanding-goal-based-vector-field-flow-field-pathfinding
 ---
 
 # Potential Fields for Unit Behavior

@@ -1,23 +1,30 @@
 ---
-title: "A Particle Model for State Estimation in Real-Time Strategy Games"
+title: A Particle Model for State Estimation in Real-Time Strategy Games
 authors:
-  - "Ben G. Weber"
-  - "Michael Mateas"
-  - "Arnav Jhala"
+- Ben G. Weber
+- Michael Mateas
+- Arnav Jhala
 year: 2011
-venue: "AIIDE"
+venue: AIIDE
 arxiv: null
-doi: "10.1609/aiide.v7i1.12424"
-source: "https://doi.org/10.1609/aiide.v7i1.12424"
+doi: 10.1609/aiide.v7i1.12424
+source: https://doi.org/10.1609/aiide.v7i1.12424
 topics:
-  - partial-observability
-  - opponent-modeling
-  - rts-bots
+- partial-observability
+- opponent-modeling
+- rts-bots
 seed_rank: 132
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: scratch_curated.json
 relevance_score: 9
+cites:
+- title: Fog of War Representation for RTS Agents
+  url: https://doi.org/10.1609/aiide.v5i1.12364
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 140-fog-of-war-representation-for-rts-agents
 ---
 
 # A Particle Model for State Estimation in Real-Time Strategy Games

@@ -1,37 +1,42 @@
 ---
-
-title: "Read-Copy Update"
+title: Read-Copy Update
 authors:
-  - "Paul E. McKenney"
-  - "John D. Slingwine"
+- Paul E. McKenney
+- John D. Slingwine
 year: 1998
-venue: "Ottawa Linux Symposium"
+venue: Ottawa Linux Symposium
 arxiv: null
 doi: null
-source: "https://www.rdrop.com/~paulmck/RCU/"
+source: https://www.rdrop.com/~paulmck/RCU/
 topics:
-  - memory-allocation
-  - rcu
-  - reclamation
+- memory-allocation
+- rcu
+- reclamation
 seed_rank: 380
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hpc"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hpc
 relevance_score: 9
 lineage: memory-reclamation
 cites:
-  - title: "Epoch-Based Reclamation / Practical lock-freedom"
-    url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
-    year: 2004
-    arxiv: null
-    doi: null
-    card: "369-epoch-based-reclamation-practical-lock-freedom"
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/TPDS.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+- title: Epoch-Based Reclamation / Practical lock-freedom
+  url: https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf
+  year: 2004
+  arxiv: null
+  doi: null
+  card: 369-epoch-based-reclamation-practical-lock-freedom
+- title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
+  url: https://doi.org/10.1109/TPDS.2004.8
+  year: 2004
+  arxiv: null
+  doi: 10.1109/TPDS.2004.8
+  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
+- title: Userspace RCU Library (liburcu)
+  url: https://liburcu.org/
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 715-userspace-rcu-library-liburcu
 ---
 
 # Read-Copy Update

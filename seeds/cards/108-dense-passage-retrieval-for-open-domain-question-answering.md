@@ -1,27 +1,34 @@
 ---
-title: "Dense Passage Retrieval for Open-Domain Question Answering"
+title: Dense Passage Retrieval for Open-Domain Question Answering
 authors:
-  - "Vladimir Karpukhin"
-  - "Barlas Oğuz"
-  - "Sewon Min"
-  - "Patrick Lewis"
-  - "Ledell Wu"
-  - "Sergey Edunov"
-  - "Danqi Chen"
-  - "Wen-tau Yih"
+- Vladimir Karpukhin
+- Barlas Oğuz
+- Sewon Min
+- Patrick Lewis
+- Ledell Wu
+- Sergey Edunov
+- Danqi Chen
+- Wen-tau Yih
 year: 2020
-venue: "EMNLP"
-arxiv: "2004.04906"
+venue: EMNLP
+arxiv: '2004.04906'
 doi: null
-source: "https://arxiv.org/abs/2004.04906"
+source: https://arxiv.org/abs/2004.04906
 topics:
-  - rag
-  - retrieval
+- rag
+- retrieval
 seed_rank: 108
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 9
+cites:
+- title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+  url: https://arxiv.org/abs/2005.11401
+  year: 2020
+  arxiv: '2005.11401'
+  doi: null
+  card: 008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t
 ---
 
 # Dense Passage Retrieval for Open-Domain Question Answering

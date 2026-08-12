@@ -1,28 +1,41 @@
 ---
-title: "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 authors:
-  - "Jason Wei"
-  - "Xuezhi Wang"
-  - "Dale Schuurmans"
-  - "Maarten Bosma"
-  - "Brian Ichter"
-  - "Fei Xia"
-  - "Ed Chi"
-  - "Quoc Le"
-  - "Denny Zhou"
+- Jason Wei
+- Xuezhi Wang
+- Dale Schuurmans
+- Maarten Bosma
+- Brian Ichter
+- Fei Xia
+- Ed Chi
+- Quoc Le
+- Denny Zhou
 year: 2022
-venue: "arXiv:cs.CL"
-arxiv: "2201.11903"
+venue: arXiv:cs.CL
+arxiv: '2201.11903'
 doi: null
-source: "https://arxiv.org/abs/2201.11903"
+source: https://arxiv.org/abs/2201.11903
 topics:
-  - reasoning
-  - planning
+- reasoning
+- planning
 seed_rank: 104
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 9
+cites:
+- title: 'Tree of Thoughts: Deliberate Problem Solving with Large Language Models'
+  url: https://arxiv.org/abs/2305.10601
+  year: 2023
+  arxiv: '2305.10601'
+  doi: null
+  card: 103-tree-of-thoughts-deliberate-problem-solving-with-large-langu
+- title: 'ReAct: Synergizing Reasoning and Acting in Language Models'
+  url: https://arxiv.org/abs/2210.03629
+  year: 2022
+  arxiv: '2210.03629'
+  doi: null
+  card: 007-react-synergizing-reasoning-and-acting-in-language-models
 ---
 
 # Chain-of-Thought Prompting Elicits Reasoning in Large Language Models

@@ -1,37 +1,42 @@
 ---
-
-title: "EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation"
+title: 'EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation'
 authors:
-  - "Gali Sheffi"
-  - "Pedro Ramalhete"
-  - "Erez Petrank"
+- Gali Sheffi
+- Pedro Ramalhete
+- Erez Petrank
 year: 2022
-venue: "arXiv:cs.DB"
-arxiv: "2210.17086"
+venue: arXiv:cs.DB
+arxiv: '2210.17086'
 doi: null
-source: "https://arxiv.org/abs/2210.17086"
+source: https://arxiv.org/abs/2210.17086
 topics:
-  - memory-allocation
-  - lockfree
+- memory-allocation
+- lockfree
 seed_rank: 308
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "hpc"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: hpc
 relevance_score: 9
 lineage: memory-reclamation
 cites:
-  - title: "Interval-Based Memory Reclamation"
-    url: "https://doi.org/10.1145/3178487.3178488"
-    year: 2018
-    arxiv: null
-    doi: "10.1145/3178487.3178488"
-    card: "402-interval-based-memory-reclamation"
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/TPDS.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+- title: Interval-Based Memory Reclamation
+  url: https://doi.org/10.1145/3178487.3178488
+  year: 2018
+  arxiv: null
+  doi: 10.1145/3178487.3178488
+  card: 402-interval-based-memory-reclamation
+- title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
+  url: https://doi.org/10.1109/TPDS.2004.8
+  year: 2004
+  arxiv: null
+  doi: 10.1109/TPDS.2004.8
+  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
+- title: 'DEBRA: Distributed Epoch-Based Reclamation'
+  url: https://www.cs.utoronto.ca/~tabrown/debra/
+  year: 2015
+  arxiv: null
+  doi: null
+  card: 409-debra-distributed-epoch-based-reclamation
 ---
 
 # EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation

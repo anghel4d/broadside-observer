@@ -1,42 +1,47 @@
 ---
-
-title: "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
+title: '1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond'
 authors:
-  - "Mark Terrano"
-  - "Glenn Hillebrandt"
+- Mark Terrano
+- Glenn Hillebrandt
 year: 2001
-venue: "GDC"
+venue: GDC
 arxiv: null
 doi: null
-source: "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond"
+source: https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond
 topics:
-  - networking
-  - lockstep
+- networking
+- lockstep
 seed_rank: 28
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 10
 lineage: rollback-netcode
 cites:
-  - title: "Deterministic Lockstep"
-    url: "https://gafferongames.com/post/deterministic_lockstep/"
-    year: 2014
-    arxiv: null
-    doi: null
-    card: "017-deterministic-lockstep"
-  - title: "Fix Your Timestep!"
-    url: "https://gafferongames.com/post/fix_your_timestep/"
-    year: 2004
-    arxiv: null
-    doi: null
-    card: "702-fix-your-timestep"
-  - title: "GGPO Rollback Networking"
-    url: "https://github.com/pond3r/ggpo"
-    year: 2006
-    arxiv: null
-    doi: null
-    card: "254-ggpo-rollback-networking"
+- title: Deterministic Lockstep
+  url: https://gafferongames.com/post/deterministic_lockstep/
+  year: 2014
+  arxiv: null
+  doi: null
+  card: 017-deterministic-lockstep
+- title: Fix Your Timestep!
+  url: https://gafferongames.com/post/fix_your_timestep/
+  year: 2004
+  arxiv: null
+  doi: null
+  card: 702-fix-your-timestep
+- title: GGPO Rollback Networking
+  url: https://github.com/pond3r/ggpo
+  year: 2006
+  arxiv: null
+  doi: null
+  card: 254-ggpo-rollback-networking
+- title: Quake III Arena Networking Source
+  url: https://github.com/id-Software/Quake-III-Arena
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 495-quake-iii-arena-networking-source
 ---
 
 # 1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond

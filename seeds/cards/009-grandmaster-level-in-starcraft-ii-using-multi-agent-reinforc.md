@@ -1,20 +1,33 @@
 ---
-title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
+title: Grandmaster level in StarCraft II using multi-agent reinforcement learning
 authors:
-  - "Vinyals et al."
+- Vinyals et al.
 year: 2019
-venue: "Nature"
-arxiv: "2011.XXXX"
+venue: Nature
+arxiv: 2011.XXXX
 doi: null
-source: "https://www.nature.com/articles/s41586-019-1724-z"
+source: https://www.nature.com/articles/s41586-019-1724-z
 topics:
-  - rts
-  - marl
+- rts
+- marl
 seed_rank: 9
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 10
+cites:
+- title: 'StarCraft II: A New Challenge for Reinforcement Learning'
+  url: https://arxiv.org/abs/1708.04782
+  year: 2017
+  arxiv: '1708.04782'
+  doi: null
+  card: 015-starcraft-ii-a-new-challenge-for-reinforcement-learning
+- title: The StarCraft Multi-Agent Challenge
+  url: https://arxiv.org/abs/1902.04043
+  year: 2019
+  arxiv: '1902.04043'
+  doi: null
+  card: 011-the-starcraft-multi-agent-challenge
 ---
 
 # Grandmaster level in StarCraft II using multi-agent reinforcement learning

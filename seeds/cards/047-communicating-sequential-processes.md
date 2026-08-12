@@ -1,20 +1,27 @@
 ---
-title: "Communicating Sequential Processes"
+title: Communicating Sequential Processes
 authors:
-  - "C. A. R. Hoare"
+- C. A. R. Hoare
 year: 1978
-venue: "CACM"
+venue: CACM
 arxiv: null
-doi: "10.1145/359576.359585"
-source: "https://doi.org/10.1145/359576.359585"
+doi: 10.1145/359576.359585
+source: https://doi.org/10.1145/359576.359585
 topics:
-  - concurrency
-  - archive
+- concurrency
+- archive
 seed_rank: 47
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: language
 relevance_score: 10
+cites:
+- title: A Calculus of Communicating Systems
+  url: https://doi.org/10.1007/3-540-10235-3
+  year: 1980
+  arxiv: null
+  doi: null
+  card: 044-a-calculus-of-communicating-systems
 ---
 
 # Communicating Sequential Processes

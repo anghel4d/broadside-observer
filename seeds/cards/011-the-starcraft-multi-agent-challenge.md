@@ -1,30 +1,44 @@
 ---
-title: "The StarCraft Multi-Agent Challenge"
+title: The StarCraft Multi-Agent Challenge
 authors:
-  - "Mikayel Samvelyan"
-  - "Tabish Rashid"
-  - "Christian Schroeder de Witt"
-  - "Gregory Farquhar"
-  - "Nantas Nardelli"
-  - "Tim G. J. Rudner"
-  - "Chia-Man Hung"
-  - "Philip H. S. Torr"
-  - "Jakob Foerster"
-  - "Shimon Whiteson"
+- Mikayel Samvelyan
+- Tabish Rashid
+- Christian Schroeder de Witt
+- Gregory Farquhar
+- Nantas Nardelli
+- Tim G. J. Rudner
+- Chia-Man Hung
+- Philip H. S. Torr
+- Jakob Foerster
+- Shimon Whiteson
 year: 2019
-venue: "AAMAS"
-arxiv: "1902.04043"
+venue: AAMAS
+arxiv: '1902.04043'
 doi: null
-source: "https://arxiv.org/abs/1902.04043"
+source: https://arxiv.org/abs/1902.04043
 topics:
-  - multi-agent
-  - partial-observability
-  - rts-bots
+- multi-agent
+- partial-observability
+- rts-bots
 seed_rank: 11
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 10
+cites:
+- title: 'QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement
+    Learning'
+  url: https://arxiv.org/abs/1803.11485
+  year: 2018
+  arxiv: '1803.11485'
+  doi: null
+  card: 114-qmix-monotonic-value-function-factorisation-for-deep-multi-a
+- title: 'StarCraft II: A New Challenge for Reinforcement Learning'
+  url: https://arxiv.org/abs/1708.04782
+  year: 2017
+  arxiv: '1708.04782'
+  doi: null
+  card: 015-starcraft-ii-a-new-challenge-for-reinforcement-learning
 ---
 
 # The StarCraft Multi-Agent Challenge

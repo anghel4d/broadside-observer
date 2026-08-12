@@ -1,45 +1,58 @@
 ---
-title: "StarCraft II: A New Challenge for Reinforcement Learning"
+title: 'StarCraft II: A New Challenge for Reinforcement Learning'
 authors:
-  - "Oriol Vinyals"
-  - "Timo Ewalds"
-  - "Sergey Bartunov"
-  - "Petko Georgiev"
-  - "Alexander Sasha Vezhnevets"
-  - "Michelle Yeo"
-  - "Alireza Makhzani"
-  - "Heinrich Kuttler"
-  - "John Agapiou"
-  - "Julian Schrittwieser"
-  - "John Quan"
-  - "Stephen Gaffney"
-  - "Stig Petersen"
-  - "Karen Simonyan"
-  - "Tom Schaul"
-  - "Hado van Hasselt"
-  - "David Silver"
-  - "Timothy Lillicrap"
-  - "Kevin Calderone"
-  - "Paul Keet"
-  - "Anthony Brunasso"
-  - "David Lawrence"
-  - "Anders Ekermo"
-  - "Jacob Repp"
-  - "Rodney Tsing"
+- Oriol Vinyals
+- Timo Ewalds
+- Sergey Bartunov
+- Petko Georgiev
+- Alexander Sasha Vezhnevets
+- Michelle Yeo
+- Alireza Makhzani
+- Heinrich Kuttler
+- John Agapiou
+- Julian Schrittwieser
+- John Quan
+- Stephen Gaffney
+- Stig Petersen
+- Karen Simonyan
+- Tom Schaul
+- Hado van Hasselt
+- David Silver
+- Timothy Lillicrap
+- Kevin Calderone
+- Paul Keet
+- Anthony Brunasso
+- David Lawrence
+- Anders Ekermo
+- Jacob Repp
+- Rodney Tsing
 year: 2017
-venue: "arXiv"
-arxiv: "1708.04782"
+venue: arXiv
+arxiv: '1708.04782'
 doi: null
-source: "https://arxiv.org/abs/1708.04782"
+source: https://arxiv.org/abs/1708.04782
 topics:
-  - rts-bots
-  - partial-observability
-  - multi-agent
+- rts-bots
+- partial-observability
+- multi-agent
 seed_rank: 15
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 10
+cites:
+- title: Grandmaster level in StarCraft II using multi-agent reinforcement learning
+  url: https://www.nature.com/articles/s41586-019-1724-z
+  year: 2019
+  arxiv: null
+  doi: null
+  card: 009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc
+- title: A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft
+  url: https://doi.org/10.1109/TCIAIG.2013.2286295
+  year: 2013
+  arxiv: null
+  doi: null
+  card: 018-a-survey-of-real-time-strategy-game-ai-research-and-competit
 ---
 
 # StarCraft II: A New Challenge for Reinforcement Learning

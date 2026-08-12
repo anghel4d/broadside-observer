@@ -1,34 +1,39 @@
 ---
-
-title: "Smart Terrain Object Affordance AI (The Sims lineage)"
+title: Smart Terrain Object Affordance AI (The Sims lineage)
 authors:
-  - "Will Wright / Maxis"
+- Will Wright / Maxis
 year: 2000
-venue: "GDC"
+venue: GDC
 arxiv: null
 doi: null
-source: "https://www.gamedeveloper.com/"
+source: https://www.gamedeveloper.com/
 topics:
-  - smart-terrain
+- smart-terrain
 seed_rank: 494
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 7
 lineage: behavior-trees-goap
 cites:
-  - title: "Managing Complexity in the Halo 2 AI System"
-    url: "https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo"
-    year: 2005
-    arxiv: null
-    doi: null
-    card: "441-managing-complexity-in-the-halo-2-ai-system"
-  - title: "Building a Better Battle: DAMN and Utility Theory for Games"
-    url: "https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN"
-    year: 2010
-    arxiv: null
-    doi: null
-    card: "351-building-a-better-battle-damn-and-utility-theory-for-games"
+- title: Managing Complexity in the Halo 2 AI System
+  url: https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo
+  year: 2005
+  arxiv: null
+  doi: null
+  card: 441-managing-complexity-in-the-halo-2-ai-system
+- title: 'Building a Better Battle: DAMN and Utility Theory for Games'
+  url: https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN
+  year: 2010
+  arxiv: null
+  doi: null
+  card: 351-building-a-better-battle-damn-and-utility-theory-for-games
+- title: Steering Behaviors for Autonomous Characters
+  url: https://www.red3d.com/cwr/papers/1999/gdc99steer.html
+  year: 1999
+  arxiv: null
+  doi: null
+  card: 258-steering-behaviors-for-autonomous-characters
 ---
 
 # Smart Terrain Object Affordance AI (The Sims lineage)

@@ -1,25 +1,39 @@
 ---
-title: "Towards Practical Meshlet Compression"
+title: Towards Practical Meshlet Compression
 authors:
-  - "Bastian Kuth"
-  - "Max Oberberger"
-  - "Felix Kawala"
-  - "Sander Reitter"
-  - "Sebastian Michel"
-  - "Matthäus Chajdas"
-  - "Quirin Meyer"
+- Bastian Kuth
+- Max Oberberger
+- Felix Kawala
+- Sander Reitter
+- Sebastian Michel
+- Matthäus Chajdas
+- Quirin Meyer
 year: 2024
-venue: "arXiv:cs.GR"
-arxiv: "2404.06359"
+venue: arXiv:cs.GR
+arxiv: '2404.06359'
 doi: null
-source: "https://arxiv.org/abs/2404.06359"
+source: https://arxiv.org/abs/2404.06359
 topics:
-  - meshlets
+- meshlets
 seed_rank: 288
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "graphics"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: graphics
 relevance_score: 9
+lineage: gpu-driven-visibility
+cites:
+- title: meshoptimizer
+  url: https://github.com/zeux/meshoptimizer
+  year: 2016
+  arxiv: null
+  doi: null
+  card: 733-meshoptimizer
+- title: Mesh Shaders in the Vulkan Ecosystem
+  url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
+  year: 2018
+  arxiv: null
+  doi: null
+  card: 113-mesh-shaders-in-the-vulkan-ecosystem
 ---
 
 # Towards Practical Meshlet Compression

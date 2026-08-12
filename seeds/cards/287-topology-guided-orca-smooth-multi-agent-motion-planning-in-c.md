@@ -1,23 +1,37 @@
 ---
-title: "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments"
+title: 'Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments'
 authors:
-  - "Fatemeh Cheraghi Pouria"
-  - "Zhe Huang"
-  - "Ananya Yammanuru"
-  - "Shuijing Liu"
-  - "Katherine Driggs-Campbell"
+- Fatemeh Cheraghi Pouria
+- Zhe Huang
+- Ananya Yammanuru
+- Shuijing Liu
+- Katherine Driggs-Campbell
 year: 2024
-venue: "arXiv:cs.RO"
-arxiv: "2407.16771"
+venue: arXiv:cs.RO
+arxiv: '2407.16771'
 doi: null
-source: "https://arxiv.org/abs/2407.16771"
+source: https://arxiv.org/abs/2407.16771
 topics:
-  - gameai
+- gameai
 seed_rank: 287
-seed_batch: "systems-prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "gameai"
+seed_batch: systems-prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: gameai
 relevance_score: 9
+lineage: steering-boids-orca
+cites:
+- title: Reciprocal n-body Collision Avoidance (ORCA)
+  url: https://doi.org/10.1007/978-3-642-19457-3_1
+  year: 2011
+  arxiv: null
+  doi: 10.1007/978-3-642-19457-3_1
+  card: 349-reciprocal-n-body-collision-avoidance-orca
+- title: RVO2 Library
+  url: https://gamma.cs.unc.edu/RVO2/
+  year: 2011
+  arxiv: null
+  doi: null
+  card: 719-rvo2-library
 ---
 
 # Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments

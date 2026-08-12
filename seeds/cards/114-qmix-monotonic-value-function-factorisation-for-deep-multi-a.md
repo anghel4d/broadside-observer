@@ -1,24 +1,32 @@
 ---
-title: "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning"
+title: 'QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement
+  Learning'
 authors:
-  - "Tabish Rashid"
-  - "Mikayel Samvelyan"
-  - "Christian Schroeder de Witt"
-  - "Gregory Farquhar"
-  - "Jakob Foerster"
-  - "Shimon Whiteson"
+- Tabish Rashid
+- Mikayel Samvelyan
+- Christian Schroeder de Witt
+- Gregory Farquhar
+- Jakob Foerster
+- Shimon Whiteson
 year: 2018
-venue: "ICML"
-arxiv: "1803.11485"
+venue: ICML
+arxiv: '1803.11485'
 doi: null
-source: "https://arxiv.org/abs/1803.11485"
+source: https://arxiv.org/abs/1803.11485
 topics:
-  - multi-agent
+- multi-agent
 seed_rank: 114
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: scratch_curated.json
 relevance_score: 9
+cites:
+- title: The StarCraft Multi-Agent Challenge
+  url: https://arxiv.org/abs/1902.04043
+  year: 2019
+  arxiv: '1902.04043'
+  doi: null
+  card: 011-the-starcraft-multi-agent-challenge
 ---
 
 # QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning

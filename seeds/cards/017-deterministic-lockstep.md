@@ -1,41 +1,52 @@
 ---
-
-title: "Deterministic Lockstep"
+title: Deterministic Lockstep
 authors:
-  - "Glenn Fiedler"
+- Glenn Fiedler
 year: 2014
-venue: "Gaffer on Games"
+venue: Gaffer on Games
 arxiv: null
 doi: null
-source: "https://gafferongames.com/post/deterministic_lockstep/"
+source: https://gafferongames.com/post/deterministic_lockstep/
 topics:
-  - networking
-  - determinism
+- networking
+- determinism
 seed_rank: 17
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "engine"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engine
 relevance_score: 10
 lineage: rollback-netcode
 cites:
-  - title: "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond"
-    url: "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond"
-    year: 2001
-    arxiv: null
-    doi: null
-    card: "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
-  - title: "Fix Your Timestep!"
-    url: "https://gafferongames.com/post/fix_your_timestep/"
-    year: 2004
-    arxiv: null
-    doi: null
-    card: "702-fix-your-timestep"
-  - title: "GGPO Rollback Networking"
-    url: "https://github.com/pond3r/ggpo"
-    year: 2006
-    arxiv: null
-    doi: null
-    card: "254-ggpo-rollback-networking"
+- title: '1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond'
+  url: https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond
+  year: 2001
+  arxiv: null
+  doi: null
+  card: 028-1500-archers-on-a-28-8-network-programming-in-age-of-empires
+- title: Fix Your Timestep!
+  url: https://gafferongames.com/post/fix_your_timestep/
+  year: 2004
+  arxiv: null
+  doi: null
+  card: 702-fix-your-timestep
+- title: GGPO Rollback Networking
+  url: https://github.com/pond3r/ggpo
+  year: 2006
+  arxiv: null
+  doi: null
+  card: 254-ggpo-rollback-networking
+- title: Snapshot Interpolation
+  url: https://gafferongames.com/post/snapshot_interpolation/
+  year: 2015
+  arxiv: null
+  doi: null
+  card: 341-snapshot-interpolation
+- title: Client-Side Prediction & Server Reconciliation
+  url: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html
+  year: 2013
+  arxiv: null
+  doi: null
+  card: 345-client-side-prediction-server-reconciliation
 ---
 
 # Deterministic Lockstep

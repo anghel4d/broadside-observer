@@ -1,27 +1,40 @@
 ---
-title: "Attention Is All You Need"
+title: Attention Is All You Need
 authors:
-  - "Ashish Vaswani"
-  - "Noam Shazeer"
-  - "Niki Parmar"
-  - "Jakob Uszkoreit"
-  - "Llion Jones"
-  - "Aidan N. Gomez"
-  - "Lukasz Kaiser"
-  - "Illia Polosukhin"
+- Ashish Vaswani
+- Noam Shazeer
+- Niki Parmar
+- Jakob Uszkoreit
+- Llion Jones
+- Aidan N. Gomez
+- Lukasz Kaiser
+- Illia Polosukhin
 year: 2017
-venue: "arXiv:cs.CL"
-arxiv: "1706.03762"
+venue: arXiv:cs.CL
+arxiv: '1706.03762'
 doi: null
-source: "https://arxiv.org/abs/1706.03762"
+source: https://arxiv.org/abs/1706.03762
 topics:
-  - transformer
-  - foundations
+- transformer
+- foundations
 seed_rank: 14
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 10
+cites:
+- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
+  url: https://arxiv.org/abs/2205.14135
+  year: 2022
+  arxiv: '2205.14135'
+  doi: null
+  card: 105-flashattention-fast-and-memory-efficient-exact-attention-wit
+- title: Language Models are Few-Shot Learners
+  url: https://arxiv.org/abs/2005.14165
+  year: 2020
+  arxiv: '2005.14165'
+  doi: null
+  card: 109-language-models-are-few-shot-learners
 ---
 
 # Attention Is All You Need

@@ -1,32 +1,45 @@
 ---
-title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
 authors:
-  - "Patrick Lewis"
-  - "Ethan Perez"
-  - "Aleksandra Piktus"
-  - "Fabio Petroni"
-  - "Vladimir Karpukhin"
-  - "Naman Goyal"
-  - "Heinrich Küttler"
-  - "Mike Lewis"
-  - "Wen-tau Yih"
-  - "Tim Rocktäschel"
-  - "Sebastian Riedel"
-  - "Douwe Kiela"
+- Patrick Lewis
+- Ethan Perez
+- Aleksandra Piktus
+- Fabio Petroni
+- Vladimir Karpukhin
+- Naman Goyal
+- Heinrich Küttler
+- Mike Lewis
+- Wen-tau Yih
+- Tim Rocktäschel
+- Sebastian Riedel
+- Douwe Kiela
 year: 2020
-venue: "NeurIPS"
-arxiv: "2005.11401"
+venue: NeurIPS
+arxiv: '2005.11401'
 doi: null
-source: "https://arxiv.org/abs/2005.11401"
+source: https://arxiv.org/abs/2005.11401
 topics:
-  - rag
-  - retrieval
-  - provenance
+- rag
+- retrieval
+- provenance
 seed_rank: 8
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "agents"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: agents
 relevance_score: 10
+cites:
+- title: Dense Passage Retrieval for Open-Domain Question Answering
+  url: https://arxiv.org/abs/2004.04906
+  year: 2020
+  arxiv: '2004.04906'
+  doi: null
+  card: 108-dense-passage-retrieval-for-open-domain-question-answering
+- title: 'Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection'
+  url: https://arxiv.org/abs/2310.11511
+  year: 2023
+  arxiv: '2310.11511'
+  doi: null
+  card: 101-self-rag-learning-to-retrieve-generate-and-critique-through-
 ---
 
 # Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
