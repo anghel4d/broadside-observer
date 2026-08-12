@@ -16,7 +16,8 @@ Conventions for new passes:
 4. **Update the index** — every pass that adds cards also updates `INDEX.md` (section per batch or a regenerated full table).
 5. **Dedupe** — skip works already represented in `cards/` / `radar/seen.json` unless you are deliberately revising a card in place.
 6. **Keep rate** — from a wide candidate pool, keep roughly the best ~25% as seeds (same spirit as the deep-digest filter). Themed passes may bias topics; they should not fork the file format.
-7. **Pool artifacts optional** — shortlists and merge scripts may live under `_pools/`; only `cards/`, `INDEX.md`, and this README are the human-facing contract.
+7. **Lineage edges** — when a keeper sits on a known thread, set `lineage` and populate `cites` (with `card:` links when targets exist). Deep threads also get `lineages/<slug>.md`.
+8. **Pool artifacts optional** — shortlists and merge scripts may live under `_pools/`; only `cards/`, `INDEX.md`, and this README are the human-facing contract.
 
 Scheduled Broadside dayparts (Frontier / Craft / Curiosity / Archive) should default to **seed card first** for keepers that are not yet worth a full `summaries/` digest. Deep digests remain the upgrade path.
 
@@ -37,6 +38,14 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"       # optional: hpc | graphics | realtime | engine | gameai | agents | language | ...
 relevance_score: 9   # optional: 1–10 for Anghel / Anoptic / ano / RTS fit
+lineage: lock-free-queues   # optional: single primary thread slug (see Lineage below)
+cites:                      # optional: important citations / successors / predecessors
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
+    url: "https://doi.org/10.1145/248052.248106"
+    year: 1996
+    arxiv: null
+    doi: "10.1145/248052.248106"
+    card: "032-michael-scott-lock-free-queue"  # filename stem in cards/ when we have one; else omit/null
 ---
 ```
 
@@ -47,6 +56,27 @@ Body sections (exact headings):
 3. `## Key ideas` — 3–6 bullets, specific
 4. `## Caveats` — what not to overclaim
 5. `## Links` — PDF/HTML/DOI/arXiv
+
+
+## Lineage and cites
+
+Two optional frontmatter fields turn the library from a flat pile into a graph you can walk:
+
+| Field | Shape | Meaning |
+|-------|--------|---------|
+| `lineage` | one string slug | The **single** primary thread this card belongs to (e.g. `lock-free-queues`, `work-stealing`, `slab-allocators`, `ecs-data-oriented`, `radiance-cascades`). A card has at most one lineage. |
+| `cites` | list of objects | Important bibliographic edges. Each entry is a citation (predecessor, successor, or key related work). Always include a resolvable `url` when possible. If Broadside already has a seed for that work, set `card` to that file’s stem (`NNN-slug` without `.md`) so browsers can deep-link. |
+
+`cites` entry fields:
+
+- `title` (required)
+- `url` (required when known)
+- `year`, `arxiv`, `doi` (optional)
+- `card` (optional) — stem of an existing file in `cards/`
+
+Narrative write-ups for deep threads live under [`lineages/`](lineages/) as `lineages/<slug>.md` (ordered epistemology of the thread). Cards still carry `lineage: <slug>` so the app can group them. When a successor is important enough, **mint a new seed card** (append numbering) and point `cites` both ways as appropriate (ancestor lists successors; successor lists the classic it extends).
+
+Future research passes should fill `lineage` / `cites` when the edge is obvious; do not invent a second parallel schema for “related papers.”
 
 ## Layout
 
@@ -60,4 +90,4 @@ Body sections (exact headings):
 
 ## Browsing
 
-`INDEX.md` is the current human surface. The static app in [`app/`](app/) parses `cards/*.md` through a schema, packs them into JSON, and filters in the browser. See [`app/README.md`](app/README.md) to run it. Keep adding cards in this format regardless.
+`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). Building that app is welcome; do not wait on it to keep adding cards.

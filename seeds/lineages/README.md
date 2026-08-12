@@ -1,0 +1,16 @@
+# Lineages
+
+One markdown file per deep thread, filename = `lineage` slug used on cards.
+
+Each file should include:
+1. One-paragraph charter of the thread
+2. Ordered spine (classics → living successors still important today)
+3. Table or list of Broadside cards in the thread (`card` stems)
+4. Open frontiers / what Anoptic should watch next
+
+Current deep epistemologies (2026-08-13):
+- `lock-free-queues` — Michael & Scott → Vyukov / Disruptor / wait-free queues …
+- `work-stealing` — Cilk / Blumofe–Leiserson → Chase–Lev → …
+- `slab-allocators` — Bonwick → Magazines/Vmem → size-class industrial heaps …
+- `ecs-data-oriented` — West/Martin/Acton → Flecs/EnTT/archetypes …
+- `radiance-cascades` — classical RTGI precursors → Radiance Cascades → splits/variants …
