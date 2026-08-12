@@ -20,3 +20,12 @@
 !/sources/
 !/sources/02-model-or-harness.txt
 !/sources/05-zero-mem.txt
+
+# Declarative radar scope and durable run state.
+!/radar/
+!/radar/**/
+!/radar/*.yaml
+!/radar/*.json
+!/radar/*.md
+!/radar/runs/.gitkeep
+!/radar/runs/*.md
