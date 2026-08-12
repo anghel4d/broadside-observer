@@ -327,8 +327,9 @@ button:focus-visible {
 }
 
 .workspace[data-view="cards"] {
-  /* Browse gets ≥ half at laptop widths so auto-fill can land 2–3 card columns. */
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  /* 24rem detail left only ~658px browse at 1042px (2 columns). Cap detail at
+     18rem so browse is ~754px and 14.5rem tracks land 3 columns. */
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 18rem);
 }
 
 .browse-pane,
@@ -449,9 +450,8 @@ button:focus-visible {
 
 .card-grid {
   display: grid;
-  /* 15.5rem (~248px) is the floor that still fits two columns in a half-width
-     ~1040px browse pane; 1fr grows tracks into the 260–300px card band. */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr));
+  /* 14.5rem (~232px): 3 tracks + gaps fit a ~754px browse pane at 1042px. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14.5rem), 1fr));
   gap: 0.5rem;
   padding: 0.5rem;
   align-content: start;

@@ -44,7 +44,8 @@ import { displayTopics } from "./tags.ts";
 import {
   browserStorage,
   parseViewMode,
-  readStoredView,
+  printViewSearch,
+  resolveView,
   writeStoredView,
   type ViewMode,
 } from "./view.ts";
@@ -568,12 +569,14 @@ function requireElement<T extends HTMLElement>(root: HTMLElement, id: string): T
   return node as T;
 }
 
-function syncHash(route: Route): void {
-  const next = printRoute(route);
-  if (next === "" && (location.hash === "" || location.hash === "#")) return;
-  if (location.hash !== next) {
-    history.replaceState(null, "", next === "" ? `${location.pathname}${location.search}` : next);
-  }
+function syncLocation(route: Route, view: ViewMode): void {
+  const hash = printRoute(route);
+  const search = printViewSearch(location.search, view);
+  const next = `${location.pathname}${search}${hash}`;
+  const currentHash = location.hash === "#" ? "" : location.hash;
+  const current = `${location.pathname}${location.search}${currentHash}`;
+  if (next === current) return;
+  history.replaceState(null, "", next);
 }
 
 function setActive(root: HTMLElement, id: CardId | null): void {
@@ -615,7 +618,7 @@ function isTypingTarget(target: EventTarget | null): boolean {
 
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
-  const initialView = readStoredView(storage);
+  const initialView = resolveView(location.search, storage);
   root.innerHTML = shellHtml(corpus, initialView);
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
@@ -718,7 +721,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const next = update(model, msg);
     if (next === model) return;
     model = next;
-    if (msg._tag !== "Hash") syncHash(model.route);
+    if (msg._tag !== "Hash") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
     patch(model);
   };
@@ -880,5 +883,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   }
 
   syncFilterDisclosure();
+  syncLocation(model.route, model.view);
   patch(model);
 }
