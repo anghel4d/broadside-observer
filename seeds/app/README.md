@@ -33,6 +33,16 @@ Rebuild whenever cards are added or edited. The JSON artifact is generated, not 
 
 `npm test` runs a few pure-domain checks (parse + query) without a test framework.
 
+## GitHub Pages
+
+The hosted app is at **https://anghel4d.github.io/broadside-observer/**.
+
+After this lands on `main`, every push to `main` that touches `seeds/app/**`, `seeds/cards/**`, or `.github/workflows/deploy-seed-browser.yml` rebuilds the single-file bundle and deploys it via GitHub Actions (Pages source: GitHub Actions, not a branch). You can also run the **Deploy seed browser** workflow manually from the Actions tab.
+
+Deep links stay hash routes, e.g. `https://anghel4d.github.io/broadside-observer/#card/<file-stem>`.
+
+The Pages build sets `GITHUB_PAGES=true` so Vite uses `base: '/broadside-observer/'`. Local `npm run build` keeps `base: './'` so `file://` still works.
+
 ## Architecture
 
 The program is a small morphism pipeline with an impure shell:

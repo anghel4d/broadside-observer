@@ -6,6 +6,11 @@
 !/.gitignore
 !/README.md
 
+# GitHub Actions (Pages deploy, etc.).
+!/.github/
+!/.github/workflows/
+!/.github/workflows/*.yml
+
 # Declarative Nix interface.
 !/flake.nix
 !/flake.lock
