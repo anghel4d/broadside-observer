@@ -1,0 +1,49 @@
+# Version-controlled scope for the Broadside Observer research loop.
+topics:
+  - id: agentic-llm-serving
+    name: Agentic LLM serving systems
+    description: Systems work on serving long-running, tool-using LLM agents, especially stateful front ends, long contexts, and multi-step workloads.
+    arxiv_query_hints:
+      - 'all:"agentic LLM serving"'
+      - 'all:"LLM agent" AND (all:serving OR all:inference)'
+    priority: high
+
+  - id: agent-tokenization-and-caching
+    name: Tokenization and cache reuse for agents
+    description: Exact or incremental tokenization, prefix caching, and KV-cache techniques shaped around append-heavy agent sessions.
+    arxiv_query_hints:
+      - '(all:tokenization OR all:tokenizer) AND (all:agent OR all:agentic)'
+      - '(all:"prefix caching" OR all:"KV cache") AND (all:agent OR all:agentic)'
+    priority: high
+
+  - id: agent-failure-localization
+    name: Model-versus-harness failure localization
+    description: Methods and taxonomies that localize agent failures across models, harnesses, tools, environments, owners, and evaluators.
+    arxiv_query_hints:
+      - 'all:"agent failure" AND (all:localization OR all:taxonomy)'
+      - '(all:model AND all:harness) AND (all:failure OR all:evaluation)'
+    priority: high
+
+  - id: continual-agent-skills
+    name: Continual skills and skill evolution
+    description: Evidence and evaluation for agents that create, revise, retrieve, transfer, or retire durable skills across tasks.
+    arxiv_query_hints:
+      - 'all:"continual learning" AND all:"LLM agent"'
+      - '(all:"skill evolution" OR all:"skill library") AND all:agent'
+    priority: high
+
+  - id: autoresearch-experiment-selection
+    name: Autoresearch, rehearsal, and experiment selection
+    description: Self-improving research loops that propose, rank, rehearse, and select experiments under measured compute or execution budgets.
+    arxiv_query_hints:
+      - '(all:autoresearch OR all:"self-improving research") AND all:agent'
+      - '(all:"experiment selection" OR all:rehearsal) AND (all:agent OR all:LLM)'
+    priority: high
+
+  - id: provenance-first-agent-memory
+    name: Provenance-first agent memory and retrieval
+    description: Agent memory and retrieval systems that preserve authoritative source traces, expose evidence, and minimize unsupported generated intermediates.
+    arxiv_query_hints:
+      - 'all:"agent memory" AND (all:provenance OR all:evidence)'
+      - '(all:"long-term memory" OR all:retrieval) AND all:"LLM agent"'
+    priority: high
