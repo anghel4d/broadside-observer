@@ -7,6 +7,7 @@ import type {
   PoolFilter,
   Query,
   SeedCard,
+  SeedRank,
   SortKey,
   TopicFilter,
   YearRange,
@@ -170,4 +171,66 @@ export function selectedCard(
 ): SeedCard | null {
   const state = selectionState(corpus, visible, id);
   return state._tag === "None" ? null : state.card;
+}
+
+export const FILTER_KEYS = ["search", "topic", "batch", "pool", "lineage", "year"] as const;
+export type FilterKey = (typeof FILTER_KEYS)[number];
+
+export type ActiveFilter = {
+  readonly key: FilterKey;
+  readonly label: string;
+};
+
+/** Facets that currently narrow the catalog (sort is not a filter). */
+export function activeFilters(query: Query): ReadonlyArray<ActiveFilter> {
+  const out: ActiveFilter[] = [];
+  const search = query.search.trim();
+  if (search.length > 0) out.push({ key: "search", label: search });
+  if (query.topic._tag === "One") out.push({ key: "topic", label: query.topic.topic });
+  if (query.batch._tag === "One") out.push({ key: "batch", label: query.batch.batch });
+  if (query.pool._tag === "None") out.push({ key: "pool", label: "No pool" });
+  if (query.pool._tag === "One") out.push({ key: "pool", label: query.pool.pool });
+  if (query.lineage._tag === "None") out.push({ key: "lineage", label: "No lineage" });
+  if (query.lineage._tag === "One") out.push({ key: "lineage", label: query.lineage.lineage });
+  if (query.year.min !== null || query.year.max !== null) {
+    const lo = query.year.min === null ? "" : String(query.year.min);
+    const hi = query.year.max === null ? "" : String(query.year.max);
+    const label = query.year.min !== null && query.year.max !== null ? `${lo}–${hi}` : lo !== "" ? `from ${lo}` : `to ${hi}`;
+    out.push({ key: "year", label });
+  }
+  return out;
+}
+
+export function clearFilter(query: Query, key: FilterKey): Query {
+  switch (key) {
+    case "search":
+      return { ...query, search: "" };
+    case "topic":
+      return { ...query, topic: { _tag: "All" } };
+    case "batch":
+      return { ...query, batch: { _tag: "All" } };
+    case "pool":
+      return { ...query, pool: { _tag: "All" } };
+    case "lineage":
+      return { ...query, lineage: { _tag: "All" } };
+    case "year":
+      return { ...query, year: { min: null, max: null } };
+    default:
+      return assertNever(key);
+  }
+}
+
+/** Prefer a visible card at `rank`; otherwise any corpus card with that rank. */
+export function findCardByRank(
+  preferred: ReadonlyArray<SeedCard>,
+  fallback: ReadonlyArray<SeedCard>,
+  rank: SeedRank,
+): SeedCard | null {
+  for (const card of preferred) {
+    if (card.seed_rank === rank) return card;
+  }
+  for (const card of fallback) {
+    if (card.seed_rank === rank) return card;
+  }
+  return null;
 }

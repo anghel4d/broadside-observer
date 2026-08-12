@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "npm run pack && tsc --noEmit -p tsconfig.json && vite build",
     "preview": "vite preview",
-    "test": "tsx src/domain/query.test.ts && tsx src/domain/parse.test.ts && tsx src/shell/view.test.ts"
+    "test": "tsx src/domain/query.test.ts && tsx src/domain/parse.test.ts && tsx src/shell/view.test.ts && tsx src/shell/tags.test.ts"
   },
   "dependencies": {
     "zod": "^3.24.4"

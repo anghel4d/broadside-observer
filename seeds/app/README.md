@@ -56,18 +56,22 @@ Corpus × Query  →  [SeedCard]
 - **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` to `[]`, so missing vs empty is not a third state. Each cite is a small struct (`title`, optional `url` / `year` / `arxiv` / `doi`, optional `card` FK).
 - **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
 - **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
-- **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: filter chrome stays put; browse and detail panes scroll independently. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`).
+- **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`).
 
 Deep links: `#card/<file-stem>`. Cite entries that set `card` to a stem present in the corpus render as the same hash route.
 
 ## Views
 
-The app is a locked viewport (`100dvh`, no document scroll). Header + filters stay in the shell; the browse pane and the detail pane each scroll on their own. Selecting a row never moves the detail pane off-screen.
+The app is a locked viewport (`100dvh`, no document scroll). Header + search stay in the shell; the browse pane and the detail pane each scroll on their own. Selecting a row never moves the detail pane off-screen.
 
 - **List** — master-detail rows + preview (default).
-- **Cards** — dense grid (title, year, topics/lineage, takeaway, rank) with the same pinned detail pane on the right.
+- **Cards** — dense `auto-fill` grid (title, year, topics/lineage, takeaway, rank) with the same pinned detail pane on the right. The browse pane is the wider column so a half-width laptop layout lands **2–3 card columns** (`minmax(15.5rem, 1fr)`), not one stretched tile.
 
-Toggle with the segmented control in the top bar. The last mode is stored in `localStorage` (`broadside.seed-browser.view`). Keyboard: `j`/`k` or arrows move the selection; `/` focuses search.
+Toggle with the segmented control in the top bar. The last mode is stored in `localStorage` (`broadside.seed-browser.view`). Keyboard: `j`/`k` or arrows move the selection; `/` focuses search. **Rank** in the filter row jumps to that `seed_rank` (Enter).
+
+On viewports ≤980px, topic/batch/pool/lineage/year/sort/rank collapse behind a **Filters** disclosure so the panes keep height; search and Reset stay visible. Active facets render as dismissible pills under the chrome (clear one or Reset). If the open card is excluded by the current filter, the detail banner offers **Clear filters** and **Show first match**.
+
+Detail keeps a sticky mini-header (id, title, authors) while the body sections scroll. Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`).
 
 ## Lineage and cites
 
