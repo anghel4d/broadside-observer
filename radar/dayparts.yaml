@@ -1,0 +1,65 @@
+# Four provenances for the every-6-hours Broadside radar.
+# Schedule: 28 */6 * * * in Europe/Bucharest → 00:28, 06:28, 12:28, 18:28.
+# Pick the daypart whose local_hours contains the run's local hour.
+
+dayparts:
+  - id: frontier
+    name: Frontier
+    local_hours: [6]
+    intent: >
+      Genuinely new material since the last frontier run (or ~48h). Prefer
+      primary sources on standing topics. No backfill of old work unless a
+      brand-new version appeared.
+    keep_rate: 0.25
+    recency: since_last_frontier_or_48h
+    topic_clusters: [agents, engine, language, game-ai]
+    source_bias: [arxiv, hf-daily-papers, openreview, papers-with-code]
+    notes: Default "what's new" slot. Dedup hard against seen.json.
+
+  - id: craft
+    name: Craft
+    local_hours: [12]
+    intent: >
+      Workbench material that helps build Anoptic, ano, and GRID COMMAND this
+      week: implementation-heavy graphics/systems/PL practice, not novelty for
+      its own sake. JCGT-style techniques, mesh shaders, radiance cascades,
+      lock-free recipes, array-language engineering, Unicode/text shaping,
+      production-rule / trigger systems, ECS/DOD practice.
+    keep_rate: 0.25
+    recency: any_recent_or_evergreen_practice
+    topic_clusters: [engine, language, game-ai, craft]
+    source_bias: [hpg-jcgt, acm-siggraph-tog, eurographics-cgf, acm-sigplan-dblp, arxiv, aiide-ieee-cog]
+    notes: >
+      Slot 3. Prefer actionable technique papers and durable practice notes
+      over benchmark-chasing LLM agent papers unless they change how we build.
+
+  - id: curiosity
+    name: Curiosity
+    local_hours: [18]
+    intent: >
+      Lovely or surprising work that may not look immediately on-mission:
+      maths, physics, biology, art, odd algorithms — chosen because the research
+      agent judges M. Anghel would enjoy them, with a short "why you might love
+      this" bridge back to Broadside / Anoptic / ano when there is one.
+    keep_rate: 0.15
+    recency: flexible
+    topic_clusters: [curiosity, agents, language, engine]
+    source_bias: [arxiv, openreview, acl-anthology, papers-with-code]
+    extra_arxiv_categories: [math.CT, math.CO, math.DS, physics.class-ph, q-bio, cs.CG]
+    notes: Lower keep rate; prioritize delight + intellectual sparkle.
+
+  - id: archive
+    name: Archive
+    local_hours: [0]
+    intent: >
+      Historical gems from the 2010s, 2000s, or 20th century: lost techniques,
+      foundational PLT/systems/graphics papers that slipped past modern feeds,
+      category theory and array-language classics, region memory, early lock-free
+      algorithms, production systems (OPS5/CLIPS), k/q/APL lineage.
+    keep_rate: 0.2
+    recency: pre_2018_preferred
+    topic_clusters: [archive, language, engine, craft]
+    source_bias: [acm-sigplan-dblp, acm-siggraph-tog, eurographics-cgf, acl-anthology, arxiv, hpg-jcgt]
+    notes: >
+      Dig archives and citations, not the daily firehose. Prefer primary PDFs
+      with lasting ideas over retrospective blog fluff.
