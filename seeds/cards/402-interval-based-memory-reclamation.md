@@ -1,4 +1,5 @@
 ---
+
 title: "Interval-Based Memory Reclamation"
 authors:
   - "Haosen Wen"
@@ -19,6 +20,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 8
+lineage: memory-reclamation
+cites:
+  - title: "Hazard Eras: Non-Blocking Memory Reclamation"
+    url: "https://doi.org/10.1145/3087556.3087588"
+    year: 2017
+    arxiv: null
+    doi: "10.1145/3087556.3087588"
+    card: "703-hazard-eras-non-blocking-memory-reclamation"
+  - title: "DEBRA: Distributed Epoch-Based Reclamation"
+    url: "https://doi.org/10.1145/2767386.2767436"
+    year: 2015
+    arxiv: null
+    doi: "10.1145/2767386.2767436"
+    card: "409-debra-distributed-epoch-based-reclamation"
+  - title: "Hyaline: Fast and Transparent Lock-Free Memory Reclamation"
+    url: "https://arxiv.org/abs/1905.07903"
+    year: 2019
+    arxiv: "1905.07903"
+    doi: null
+    card: "704-hyaline-fast-and-transparent-lock-free-memory-reclamati"
 ---
 
 # Interval-Based Memory Reclamation

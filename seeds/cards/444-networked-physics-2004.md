@@ -1,4 +1,5 @@
 ---
+
 title: "Networked Physics (2004)"
 authors:
   - "Glenn Fiedler"
@@ -15,6 +16,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
+lineage: rollback-netcode
+cites:
+  - title: "Fix Your Timestep!"
+    url: "https://gafferongames.com/post/fix_your_timestep/"
+    year: 2004
+    arxiv: null
+    doi: null
+    card: "702-fix-your-timestep"
+  - title: "State Synchronization"
+    url: "https://gafferongames.com/post/state_synchronization/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "410-state-synchronization"
+  - title: "Snapshot Interpolation"
+    url: "https://gafferongames.com/post/snapshot_interpolation/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "341-snapshot-interpolation"
 ---
 
 # Networked Physics (2004)

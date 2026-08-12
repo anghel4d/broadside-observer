@@ -1,4 +1,5 @@
 ---
+
 title: "Search-Based Procedural Content Generation: A Taxonomy and Survey"
 authors:
   - "Julian Togelius"
@@ -17,6 +18,26 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 10
+lineage: pcg-wfc
+cites:
+  - title: "Experience-Driven Procedural Content Generation"
+    url: "https://doi.org/10.1109/TCIAIG.2011.2159716"
+    year: 2011
+    arxiv: null
+    doi: "10.1109/TCIAIG.2011.2159716"
+    card: "136-experience-driven-procedural-content-generation"
+  - title: "Procedural Content Generation in Games"
+    url: "https://doi.org/10.1007/978-3-319-42716-4"
+    year: 2016
+    arxiv: null
+    doi: null
+    card: "118-procedural-content-generation-in-games"
+  - title: "Wave Function Collapse"
+    url: "https://github.com/mxgmn/WaveFunctionCollapse"
+    year: 2016
+    arxiv: null
+    doi: null
+    card: "119-wave-function-collapse"
 ---
 
 # Search-Based Procedural Content Generation: A Taxonomy and Survey

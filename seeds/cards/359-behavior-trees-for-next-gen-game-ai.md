@@ -1,4 +1,5 @@
 ---
+
 title: "Behavior Trees for Next-Gen Game AI"
 authors:
   - "Alex J. Champandard"
@@ -14,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: behavior-trees-goap
+cites:
+  - title: "Managing Complexity in the Halo 2 AI System"
+    url: "https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo"
+    year: 2005
+    arxiv: null
+    doi: null
+    card: "441-managing-complexity-in-the-halo-2-ai-system"
+  - title: "Behavior Trees in Robotics and AI: An Introduction"
+    url: "https://arxiv.org/abs/1709.00084"
+    year: 2018
+    arxiv: "1709.00084"
+    doi: null
+    card: "708-behavior-trees-in-robotics-and-ai-an-introduction"
+  - title: "Building a Better Battle: DAMN and Utility Theory for Games"
+    url: "https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN"
+    year: 2010
+    arxiv: null
+    doi: null
+    card: "351-building-a-better-battle-damn-and-utility-theory-for-games"
 ---
 
 # Behavior Trees for Next-Gen Game AI

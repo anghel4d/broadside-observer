@@ -1,4 +1,5 @@
 ---
+
 title: "Continuum Crowds"
 authors:
   - "Adrien Treuille"
@@ -17,6 +18,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 8
+lineage: steering-boids-orca
+cites:
+  - title: "Flocks, Herds, and Schools: A Distributed Behavioral Model"
+    url: "https://doi.org/10.1145/37401.37406"
+    year: 1987
+    arxiv: null
+    doi: "10.1145/37401.37406"
+    card: "261-flocks-herds-and-schools-a-distributed-behavioral-model"
+  - title: "Reciprocal n-body Collision Avoidance (ORCA)"
+    url: "https://doi.org/10.1007/978-3-642-19457-3_1"
+    year: 2011
+    arxiv: null
+    doi: "10.1007/978-3-642-19457-3_1"
+    card: "349-reciprocal-n-body-collision-avoidance-orca"
 ---
 
 # Continuum Crowds

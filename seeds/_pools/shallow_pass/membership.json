@@ -1,0 +1,86 @@
+{
+  "grid-pathfinding": [
+    "dijkstra",
+    "astar",
+    "navmesh",
+    "hpa",
+    "theta",
+    "recast",
+    "flowfield",
+    "lazytheta",
+    "jps",
+    "jps_improve",
+    "subgoal",
+    "jps_redundant",
+    "jps4",
+    "jps_plus"
+  ],
+  "rollback-netcode": [
+    "unreal_net",
+    "quake_net",
+    "archers",
+    "source_net",
+    "net_physics",
+    "ggpo",
+    "prediction",
+    "lockstep",
+    "snapshot",
+    "statesync",
+    "timestep"
+  ],
+  "memory-reclamation": [
+    "rcu",
+    "smr2002",
+    "hazard",
+    "ebr",
+    "debra",
+    "ibr",
+    "uwf_smr",
+    "crystalline",
+    "eemarq",
+    "opt_access",
+    "hazard_eras",
+    "hyaline"
+  ],
+  "steering-boids-orca": [
+    "boids",
+    "steering",
+    "continuum",
+    "rvo",
+    "orca",
+    "clearpath",
+    "vo"
+  ],
+  "gpu-driven-visibility": [
+    "hiz",
+    "visbuf",
+    "gpudriven",
+    "mesh_vk",
+    "mesh_turing",
+    "nanite",
+    "megatex",
+    "wihlidal_gpu"
+  ],
+  "behavior-trees-goap": [
+    "strips",
+    "smartterrain",
+    "shop2",
+    "halo2",
+    "fear",
+    "plan_survey",
+    "bt_champ",
+    "utility",
+    "bt_book",
+    "goap_orkin"
+  ],
+  "pcg-wfc": [
+    "lsystems",
+    "dualcontour",
+    "sbpcg",
+    "edpcg",
+    "pcg_book",
+    "wfc",
+    "pcgml",
+    "model_synthesis"
+  ]
+}

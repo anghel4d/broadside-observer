@@ -1,4 +1,5 @@
 ---
+
 title: "Flocks, Herds, and Schools: A Distributed Behavioral Model"
 authors:
   - "Craig W. Reynolds"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 10
+lineage: steering-boids-orca
+cites:
+  - title: "Steering Behaviors For Autonomous Characters"
+    url: "https://www.red3d.com/cwr/steer/"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: "258-steering-behaviors-for-autonomous-characters"
+  - title: "Continuum Crowds"
+    url: "https://doi.org/10.1145/1141911.1141978"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1141911.1141978"
+    card: "437-continuum-crowds"
 ---
 
 # Flocks, Herds, and Schools: A Distributed Behavioral Model

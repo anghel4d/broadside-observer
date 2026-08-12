@@ -1,4 +1,5 @@
 ---
+
 title: "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis"
 authors:
   - "Alex Nash"
@@ -16,6 +17,14 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 8
+lineage: grid-pathfinding
+cites:
+  - title: "Theta*: Any-Angle Path Planning on Grids"
+    url: "https://ojs.aaai.org/index.php/AIIDE/article/view/18782"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "435-theta-any-angle-path-planning-on-grids"
 ---
 
 # Lazy Theta*: Any-Angle Path Planning and Path Length Analysis

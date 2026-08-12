@@ -1,0 +1,278 @@
+{
+  "dijkstra": [
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    }
+  ],
+  "astar": [
+    {
+      "title": "A Note on Two Problems in Connexion with Graphs",
+      "url": "https://doi.org/10.1007/BF01386390",
+      "year": 1959,
+      "arxiv": null,
+      "doi": "10.1007/BF01386390",
+      "card_key": "dijkstra"
+    },
+    {
+      "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+      "url": "https://doi.org/10.1613/jair.1423",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1613/jair.1423",
+      "card_key": "hpa"
+    },
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    }
+  ],
+  "hpa": [
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    },
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    },
+    {
+      "title": "Subgoal Graphs for Optimal Pathfinding",
+      "url": "https://www.aaai.org/ocs/index.php/SOCS/SOCS15/paper/view/11204",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "subgoal"
+    }
+  ],
+  "navmesh": [
+    {
+      "title": "Recast Navigation / Detour",
+      "url": "https://github.com/recastnavigation/recastnavigation",
+      "year": 2009,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "recast"
+    },
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    }
+  ],
+  "recast": [
+    {
+      "title": "Simplified 3D Movement and Pathfinding Using Navigation Meshes",
+      "url": "https://www.gamedevs.org/uploads/simplified-3d-movement-and-pathfinding-using-navigation-meshes.pdf",
+      "year": 2000,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "navmesh"
+    },
+    {
+      "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+      "url": "https://doi.org/10.1613/jair.1423",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1613/jair.1423",
+      "card_key": "hpa"
+    }
+  ],
+  "theta": [
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    },
+    {
+      "title": "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis",
+      "url": "https://doi.org/10.1609/aaai.v24i1.7562",
+      "year": 2010,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v24i1.7562",
+      "card_key": "lazytheta"
+    }
+  ],
+  "lazytheta": [
+    {
+      "title": "Theta*: Any-Angle Path Planning on Grids",
+      "url": "https://ojs.aaai.org/index.php/AIIDE/article/view/18782",
+      "year": 2007,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "theta"
+    }
+  ],
+  "flowfield": [
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    },
+    {
+      "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+      "url": "https://doi.org/10.1613/jair.1423",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1613/jair.1423",
+      "card_key": "hpa"
+    }
+  ],
+  "jps": [
+    {
+      "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "year": 1968,
+      "arxiv": null,
+      "doi": "10.1109/TSSC.1968.300136",
+      "card_key": "astar"
+    },
+    {
+      "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+      "url": "https://doi.org/10.1613/jair.1423",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1613/jair.1423",
+      "card_key": "hpa"
+    },
+    {
+      "title": "Improving Jump Point Search",
+      "url": "https://ojs.aaai.org/index.php/ICAPS/article/view/13620",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_improve"
+    },
+    {
+      "title": "JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids",
+      "url": "https://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter14_JPS_Plus_An_Extreme_A_Star_Speed_Optimization_for_Static_Uniform_Cost_Grids.pdf",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_plus"
+    }
+  ],
+  "jps_improve": [
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    },
+    {
+      "title": "JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids",
+      "url": "https://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter14_JPS_Plus_An_Extreme_A_Star_Speed_Optimization_for_Static_Uniform_Cost_Grids.pdf",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_plus"
+    },
+    {
+      "title": "Reducing Redundant Work in Jump Point Search",
+      "url": "https://arxiv.org/abs/2306.14221",
+      "year": 2023,
+      "arxiv": "2306.14221",
+      "doi": null,
+      "card_key": "jps_redundant"
+    }
+  ],
+  "jps_plus": [
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    },
+    {
+      "title": "Improving Jump Point Search",
+      "url": "https://ojs.aaai.org/index.php/ICAPS/article/view/13620",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_improve"
+    }
+  ],
+  "subgoal": [
+    {
+      "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+      "url": "https://doi.org/10.1613/jair.1423",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1613/jair.1423",
+      "card_key": "hpa"
+    },
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    }
+  ],
+  "jps_redundant": [
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    },
+    {
+      "title": "Improving Jump Point Search",
+      "url": "https://ojs.aaai.org/index.php/ICAPS/article/view/13620",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_improve"
+    }
+  ],
+  "jps4": [
+    {
+      "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+      "url": "https://doi.org/10.1609/aaai.v25i1.7994",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1609/aaai.v25i1.7994",
+      "card_key": "jps"
+    },
+    {
+      "title": "Improving Jump Point Search",
+      "url": "https://ojs.aaai.org/index.php/ICAPS/article/view/13620",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "jps_improve"
+    }
+  ]
+}

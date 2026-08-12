@@ -1,4 +1,5 @@
 ---
+
 title: "Snapshot Interpolation"
 authors:
   - "Glenn Fiedler"
@@ -15,6 +16,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+lineage: rollback-netcode
+cites:
+  - title: "State Synchronization"
+    url: "https://gafferongames.com/post/state_synchronization/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "410-state-synchronization"
+  - title: "Client-Side Prediction & Server Reconciliation"
+    url: "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "345-client-side-prediction-server-reconciliation"
+  - title: "Networked Physics (2004)"
+    url: "https://gafferongames.com/post/networked_physics_2004/"
+    year: 2004
+    arxiv: null
+    doi: null
+    card: "444-networked-physics-2004"
 ---
 
 # Snapshot Interpolation

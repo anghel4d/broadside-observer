@@ -1,4 +1,5 @@
 ---
+
 title: "Programming with Algebraic Effects and Handlers"
 authors:
   - "Andrej Bauer"
@@ -16,6 +17,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "language"
 relevance_score: 9
+cites:
+  - title: "Handlers of Algebraic Effects"
+    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "022-handlers-of-algebraic-effects"
+  - title: "Handling Algebraic Effects"
+    url: "https://doi.org/10.2168/LMCS-9(4:23)2013"
+    year: 2013
+    arxiv: null
+    doi: "10.2168/LMCS-9(4:23)2013"
+    card: "128-handling-algebraic-effects"
 ---
 
 # Programming with Algebraic Effects and Handlers

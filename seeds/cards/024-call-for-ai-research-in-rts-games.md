@@ -1,4 +1,5 @@
 ---
+
 title: "Call for AI Research in RTS Games"
 authors:
   - "Michael Buro"
@@ -15,6 +16,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "scratch_curated.json"
 relevance_score: 10
+cites:
+  - title: "Real-Time Strategy Games: A New AI Research Challenge"
+    url: "https://www.aaai.org/"
+    year: 2003
+    arxiv: null
+    doi: null
+    card: "026-real-time-strategy-games-a-new-ai-research-challenge"
+  - title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"
+    url: "https://doi.org/10.1109/TCIAIG.2013.2286295"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
 ---
 
 # Call for AI Research in RTS Games

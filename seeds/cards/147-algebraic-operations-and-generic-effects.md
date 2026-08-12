@@ -1,4 +1,5 @@
 ---
+
 title: "Algebraic Operations and Generic Effects"
 authors:
   - "Gordon Plotkin"
@@ -16,6 +17,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "language"
 relevance_score: 9
+cites:
+  - title: "Handlers of Algebraic Effects"
+    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "022-handlers-of-algebraic-effects"
+  - title: "Notions of Computation Determine Monads"
+    url: "https://doi.org/10.1007/3-540-45931-6_1"
+    year: 2002
+    arxiv: null
+    doi: null
+    card: "149-notions-of-computation-determine-monads"
 ---
 
 # Algebraic Operations and Generic Effects

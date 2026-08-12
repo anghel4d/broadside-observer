@@ -1,4 +1,5 @@
 ---
+
 title: "Managing Complexity in the Halo 2 AI System"
 authors:
   - "Damian Isla"
@@ -14,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 8
+lineage: behavior-trees-goap
+cites:
+  - title: "Behavior Trees for Next-Gen Game AI"
+    url: "https://aigamedev.com/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "359-behavior-trees-for-next-gen-game-ai"
+  - title: "Behavior Trees in Robotics and AI: An Introduction"
+    url: "https://arxiv.org/abs/1709.00084"
+    year: 2018
+    arxiv: "1709.00084"
+    doi: null
+    card: "708-behavior-trees-in-robotics-and-ai-an-introduction"
+  - title: "Smart Terrain Object Affordance AI (The Sims lineage)"
+    url: "https://www.gamedeveloper.com/"
+    year: 2000
+    arxiv: null
+    doi: null
+    card: "494-smart-terrain-object-affordance-ai-the-sims-lineage"
 ---
 
 # Managing Complexity in the Halo 2 AI System

@@ -1,4 +1,5 @@
 ---
+
 title: "Build Order Optimization in StarCraft"
 authors:
   - "Churchill"
@@ -15,6 +16,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+cites:
+  - title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"
+    url: "https://doi.org/10.1109/TCIAIG.2013.2286295"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+  - title: "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft"
+    url: "https://doi.org/10.1109/TCIAIG.2013.2282292"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "129-portfolio-greedy-search-and-simulation-for-large-scale-comba"
 ---
 
 # Build Order Optimization in StarCraft

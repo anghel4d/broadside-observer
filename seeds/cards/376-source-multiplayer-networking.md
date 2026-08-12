@@ -1,4 +1,5 @@
 ---
+
 title: "Source Multiplayer Networking"
 authors:
   - "Valve"
@@ -15,6 +16,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+lineage: rollback-netcode
+cites:
+  - title: "Client-Side Prediction & Server Reconciliation"
+    url: "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "345-client-side-prediction-server-reconciliation"
+  - title: "Snapshot Interpolation"
+    url: "https://gafferongames.com/post/snapshot_interpolation/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "341-snapshot-interpolation"
+  - title: "Quake III Arena Networking Source"
+    url: "https://github.com/id-Software/Quake-III-Arena"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: "495-quake-iii-arena-networking-source"
 ---
 
 # Source Multiplayer Networking

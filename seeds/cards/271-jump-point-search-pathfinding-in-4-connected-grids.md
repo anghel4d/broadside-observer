@@ -1,4 +1,5 @@
 ---
+
 title: "Jump Point Search Pathfinding in 4-connected Grids"
 authors:
   - "Johannes Baum"
@@ -14,6 +15,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: grid-pathfinding
+cites:
+  - title: "Online Graph Pruning for Pathfinding on Grid Maps"
+    url: "https://doi.org/10.1609/aaai.v25i1.7994"
+    year: 2011
+    arxiv: null
+    doi: "10.1609/aaai.v25i1.7994"
+    card: "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+  - title: "Improving Jump Point Search"
+    url: "https://ojs.aaai.org/index.php/ICAPS/article/view/13620"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "342-improving-jump-point-search"
 ---
 
 # Jump Point Search Pathfinding in 4-connected Grids

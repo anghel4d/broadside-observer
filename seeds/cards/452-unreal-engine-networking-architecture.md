@@ -1,4 +1,5 @@
 ---
+
 title: "Unreal Engine Networking Architecture"
 authors:
   - "Tim Sweeney / Epic"
@@ -14,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
+lineage: rollback-netcode
+cites:
+  - title: "Quake III Arena Networking Source"
+    url: "https://github.com/id-Software/Quake-III-Arena"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: "495-quake-iii-arena-networking-source"
+  - title: "Source Multiplayer Networking"
+    url: "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking"
+    year: 2001
+    arxiv: null
+    doi: null
+    card: "376-source-multiplayer-networking"
+  - title: "Client-Side Prediction & Server Reconciliation"
+    url: "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "345-client-side-prediction-server-reconciliation"
 ---
 
 # Unreal Engine Networking Architecture

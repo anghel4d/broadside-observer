@@ -1,4 +1,5 @@
 ---
+
 title: "Simplified 3D Movement and Pathfinding Using Navigation Meshes"
 authors:
   - "Greg Snook"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: grid-pathfinding
+cites:
+  - title: "Recast Navigation / Detour"
+    url: "https://github.com/recastnavigation/recastnavigation"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "357-recast-navigation-detour"
+  - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    url: "https://doi.org/10.1109/TSSC.1968.300136"
+    year: 1968
+    arxiv: null
+    doi: "10.1109/TSSC.1968.300136"
+    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
 ---
 
 # Simplified 3D Movement and Pathfinding Using Navigation Meshes

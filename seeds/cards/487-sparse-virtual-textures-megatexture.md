@@ -1,4 +1,5 @@
 ---
+
 title: "Sparse Virtual Textures / MegaTexture"
 authors:
   - "John Carmack / id Software"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 7
+lineage: gpu-driven-visibility
+cites:
+  - title: "GPU-Driven Rendering Pipelines"
+    url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "016-gpu-driven-rendering-pipelines"
+  - title: "Nanite: A Deep Dive"
+    url: "https://advances.realtimerendering.com/"
+    year: 2021
+    arxiv: null
+    doi: null
+    card: "106-nanite-a-deep-dive"
 ---
 
 # Sparse Virtual Textures / MegaTexture

@@ -1,4 +1,5 @@
 ---
+
 title: "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading"
 authors:
   - "Christopher A. Burns"
@@ -15,6 +16,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+lineage: gpu-driven-visibility
+cites:
+  - title: "Hierarchical Z-Buffer Visibility"
+    url: "https://doi.org/10.1145/166117.166147"
+    year: 1993
+    arxiv: null
+    doi: "10.1145/166117.166147"
+    card: "161-hierarchical-z-buffer-visibility"
+  - title: "GPU-Driven Rendering Pipelines"
+    url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "016-gpu-driven-rendering-pipelines"
+  - title: "Nanite: A Deep Dive"
+    url: "https://advances.realtimerendering.com/"
+    year: 2021
+    arxiv: null
+    doi: null
+    card: "106-nanite-a-deep-dive"
 ---
 
 # The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading

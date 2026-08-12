@@ -1,4 +1,5 @@
 ---
+
 title: "Online Graph Pruning for Pathfinding on Grid Maps"
 authors:
   - "Daniel Harabor"
@@ -6,8 +7,8 @@ authors:
 year: 2011
 venue: "AAAI"
 arxiv: null
-doi: null
-source: "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761"
+doi: "10.1609/aaai.v25i1.7994"
+source: "https://doi.org/10.1609/aaai.v25i1.7994"
 topics:
   - pathfinding
   - jps
@@ -16,6 +17,32 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 10
+lineage: grid-pathfinding
+cites:
+  - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    url: "https://doi.org/10.1109/TSSC.1968.300136"
+    year: 1968
+    arxiv: null
+    doi: "10.1109/TSSC.1968.300136"
+    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+  - title: "Near Optimal Hierarchical Pathfinding (HPA*)"
+    url: "https://doi.org/10.1613/jair.1423"
+    year: 2004
+    arxiv: null
+    doi: "10.1613/jair.1423"
+    card: "370-near-optimal-hierarchical-pathfinding-hpa"
+  - title: "Improving Jump Point Search"
+    url: "https://ojs.aaai.org/index.php/ICAPS/article/view/13620"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "342-improving-jump-point-search"
+  - title: "JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids"
+    url: "https://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter14_JPS_Plus_An_Extreme_A_Star_Speed_Optimization_for_Static_Uniform_Cost_Grids.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "701-jps-plus-extreme-a-star-speed-optimization-static-grids"
 ---
 
 # Online Graph Pruning for Pathfinding on Grid Maps

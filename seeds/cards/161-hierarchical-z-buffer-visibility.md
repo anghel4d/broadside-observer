@@ -1,4 +1,5 @@
 ---
+
 title: "Hierarchical Z-Buffer Visibility"
 authors:
   - "Ned Greene"
@@ -17,6 +18,20 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+lineage: gpu-driven-visibility
+cites:
+  - title: "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading"
+    url: "https://jcgt.org/published/0002/02/04/"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+  - title: "GPU-Driven Rendering Pipelines"
+    url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "016-gpu-driven-rendering-pipelines"
 ---
 
 # Hierarchical Z-Buffer Visibility

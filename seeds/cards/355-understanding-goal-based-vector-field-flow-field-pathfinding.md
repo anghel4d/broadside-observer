@@ -1,4 +1,5 @@
 ---
+
 title: "Understanding Goal-Based Vector Field / Flow Field Pathfinding"
 authors:
   - "E. Graham / community"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: grid-pathfinding
+cites:
+  - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
+    url: "https://doi.org/10.1109/TSSC.1968.300136"
+    year: 1968
+    arxiv: null
+    doi: "10.1109/TSSC.1968.300136"
+    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+  - title: "Near Optimal Hierarchical Pathfinding (HPA*)"
+    url: "https://doi.org/10.1613/jair.1423"
+    year: 2004
+    arxiv: null
+    doi: "10.1613/jair.1423"
+    card: "370-near-optimal-hierarchical-pathfinding-hpa"
 ---
 
 # Understanding Goal-Based Vector Field / Flow Field Pathfinding

@@ -1,0 +1,306 @@
+{
+  "rcu": [
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    }
+  ],
+  "smr2002": [
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+      "url": "https://doi.org/10.1145/248052.248106",
+      "year": 1996,
+      "arxiv": null,
+      "doi": "10.1145/248052.248106",
+      "card_key": "msqueue"
+    }
+  ],
+  "hazard": [
+    {
+      "title": "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes",
+      "url": "https://doi.org/10.1145/571825.571829",
+      "year": 2002,
+      "arxiv": null,
+      "doi": "10.1145/571825.571829",
+      "card_key": "smr2002"
+    },
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Hazard Eras: Non-Blocking Memory Reclamation",
+      "url": "https://doi.org/10.1145/3087556.3087588",
+      "year": 2017,
+      "arxiv": null,
+      "doi": "10.1145/3087556.3087588",
+      "card_key": "hazard_eras"
+    },
+    {
+      "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+      "url": "https://doi.org/10.1145/248052.248106",
+      "year": 1996,
+      "arxiv": null,
+      "doi": "10.1145/248052.248106",
+      "card_key": "msqueue"
+    },
+    {
+      "title": "Fast Concurrent Queues for x86 Processors",
+      "url": "https://doi.org/10.1145/2442516.2442527",
+      "year": 2013,
+      "arxiv": null,
+      "doi": "10.1145/2442516.2442527",
+      "card_key": "lcrq"
+    }
+  ],
+  "ebr": [
+    {
+      "title": "Read-Copy Update",
+      "url": "https://www.rdrop.com/~paulmck/RCU/",
+      "year": 1998,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "rcu"
+    },
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "DEBRA: Distributed Epoch-Based Reclamation",
+      "url": "https://doi.org/10.1145/2767386.2767436",
+      "year": 2015,
+      "arxiv": null,
+      "doi": "10.1145/2767386.2767436",
+      "card_key": "debra"
+    }
+  ],
+  "debra": [
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Interval-Based Memory Reclamation",
+      "url": "https://doi.org/10.1145/3178487.3178488",
+      "year": 2018,
+      "arxiv": null,
+      "doi": "10.1145/3178487.3178488",
+      "card_key": "ibr"
+    }
+  ],
+  "hazard_eras": [
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Interval-Based Memory Reclamation",
+      "url": "https://doi.org/10.1145/3178487.3178488",
+      "year": 2018,
+      "arxiv": null,
+      "doi": "10.1145/3178487.3178488",
+      "card_key": "ibr"
+    }
+  ],
+  "ibr": [
+    {
+      "title": "Hazard Eras: Non-Blocking Memory Reclamation",
+      "url": "https://doi.org/10.1145/3087556.3087588",
+      "year": 2017,
+      "arxiv": null,
+      "doi": "10.1145/3087556.3087588",
+      "card_key": "hazard_eras"
+    },
+    {
+      "title": "DEBRA: Distributed Epoch-Based Reclamation",
+      "url": "https://doi.org/10.1145/2767386.2767436",
+      "year": 2015,
+      "arxiv": null,
+      "doi": "10.1145/2767386.2767436",
+      "card_key": "debra"
+    },
+    {
+      "title": "Hyaline: Fast and Transparent Lock-Free Memory Reclamation",
+      "url": "https://arxiv.org/abs/1905.07903",
+      "year": 2019,
+      "arxiv": "1905.07903",
+      "doi": null,
+      "card_key": "hyaline"
+    }
+  ],
+  "hyaline": [
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Crystalline: Fast and Memory Efficient Wait-Free Reclamation",
+      "url": "https://arxiv.org/abs/2104.01142",
+      "year": 2021,
+      "arxiv": "2104.01142",
+      "doi": null,
+      "card_key": "crystalline"
+    }
+  ],
+  "uwf_smr": [
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Hyaline: Fast and Transparent Lock-Free Memory Reclamation",
+      "url": "https://arxiv.org/abs/1905.07903",
+      "year": 2019,
+      "arxiv": "1905.07903",
+      "doi": null,
+      "card_key": "hyaline"
+    },
+    {
+      "title": "Crystalline: Fast and Memory Efficient Wait-Free Reclamation",
+      "url": "https://arxiv.org/abs/2104.01142",
+      "year": 2021,
+      "arxiv": "2104.01142",
+      "doi": null,
+      "card_key": "crystalline"
+    }
+  ],
+  "crystalline": [
+    {
+      "title": "Universal Wait-Free Memory Reclamation",
+      "url": "https://arxiv.org/abs/2006.07688",
+      "year": 2020,
+      "arxiv": "2006.07688",
+      "doi": null,
+      "card_key": "uwf_smr"
+    },
+    {
+      "title": "Hyaline: Fast and Transparent Lock-Free Memory Reclamation",
+      "url": "https://arxiv.org/abs/1905.07903",
+      "year": 2019,
+      "arxiv": "1905.07903",
+      "doi": null,
+      "card_key": "hyaline"
+    },
+    {
+      "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+      "url": "https://doi.org/10.1145/248052.248106",
+      "year": 1996,
+      "arxiv": null,
+      "doi": "10.1145/248052.248106",
+      "card_key": "msqueue"
+    }
+  ],
+  "eemarq": [
+    {
+      "title": "Interval-Based Memory Reclamation",
+      "url": "https://doi.org/10.1145/3178487.3178488",
+      "year": 2018,
+      "arxiv": null,
+      "doi": "10.1145/3178487.3178488",
+      "card_key": "ibr"
+    },
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    }
+  ],
+  "opt_access": [
+    {
+      "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+      "url": "https://doi.org/10.1109/TPDS.2004.8",
+      "year": 2004,
+      "arxiv": null,
+      "doi": "10.1109/TPDS.2004.8",
+      "card_key": "hazard"
+    },
+    {
+      "title": "Epoch-Based Reclamation / Practical lock-freedom",
+      "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ebr"
+    },
+    {
+      "title": "Interval-Based Memory Reclamation",
+      "url": "https://doi.org/10.1145/3178487.3178488",
+      "year": 2018,
+      "arxiv": null,
+      "doi": "10.1145/3178487.3178488",
+      "card_key": "ibr"
+    }
+  ]
+}

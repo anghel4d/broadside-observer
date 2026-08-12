@@ -49,7 +49,31 @@
   },
   "shallow-scan": {
     "start": 701,
-    "end": 850
+    "end": 850,
+    "claimed": "2026-08-13",
+    "seed_batch": "lineage-shallow-2026-08-13",
+    "note": "Medium-thread shallow lineage scan; mints + cites patches",
+    "minted": [
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710
+    ],
+    "lineages": [
+      "grid-pathfinding",
+      "rollback-netcode",
+      "memory-reclamation",
+      "steering-boids-orca",
+      "gpu-driven-visibility",
+      "behavior-trees-goap",
+      "pcg-wfc"
+    ]
   },
   "_note": "max existing card was 500; claimed 2026-08-13"
 }

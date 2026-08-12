@@ -1,4 +1,5 @@
 ---
+
 title: "Subgoal Graphs for Optimal Pathfinding"
 authors:
   - "Tansel Uras"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 8
+lineage: grid-pathfinding
+cites:
+  - title: "Near Optimal Hierarchical Pathfinding (HPA*)"
+    url: "https://doi.org/10.1613/jair.1423"
+    year: 2004
+    arxiv: null
+    doi: "10.1613/jair.1423"
+    card: "370-near-optimal-hierarchical-pathfinding-hpa"
+  - title: "Online Graph Pruning for Pathfinding on Grid Maps"
+    url: "https://doi.org/10.1609/aaai.v25i1.7994"
+    year: 2011
+    arxiv: null
+    doi: "10.1609/aaai.v25i1.7994"
+    card: "253-online-graph-pruning-for-pathfinding-on-grid-maps"
 ---
 
 # Subgoal Graphs for Optimal Pathfinding

@@ -1,4 +1,5 @@
 ---
+
 title: "Building a Better Battle: DAMN and Utility Theory for Games"
 authors:
   - "Dave Mark"
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: behavior-trees-goap
+cites:
+  - title: "Behavior Trees for Next-Gen Game AI"
+    url: "https://aigamedev.com/"
+    year: 2007
+    arxiv: null
+    doi: null
+    card: "359-behavior-trees-for-next-gen-game-ai"
+  - title: "Three States and a Plan: The AI of F.E.A.R."
+    url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
+    year: 2006
+    arxiv: null
+    doi: null
+    card: "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
 ---
 
 # Building a Better Battle: DAMN and Utility Theory for Games

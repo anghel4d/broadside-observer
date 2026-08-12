@@ -1,4 +1,5 @@
 ---
+
 title: "Horizon-Based Ambient Occlusion"
 authors:
   - "Louis Bavoil"
@@ -16,6 +17,13 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 7
+cites:
+  - title: "The Rendering Equation"
+    url: "https://doi.org/10.1145/15886.15902"
+    year: 1986
+    arxiv: null
+    doi: "10.1145/15886.15902"
+    card: "169-the-rendering-equation"
 ---
 
 # Horizon-Based Ambient Occlusion

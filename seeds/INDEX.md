@@ -620,3 +620,24 @@ Patched existing thread cards with `lineage: radiance-cascades` + `cites`; minte
 ### Thread size
 
 **22** cards currently carry `lineage: radiance-cascades`.
+
+## Shallow lineage scan (`lineage-shallow-2026-08-13`)
+
+Medium threads (depth 2–3) over non-deep cards. New mints use reserved block **701–850**.
+Narratives: [`lineages/grid-pathfinding.md`](lineages/grid-pathfinding.md), [`lineages/rollback-netcode.md`](lineages/rollback-netcode.md), [`lineages/memory-reclamation.md`](lineages/memory-reclamation.md), [`lineages/steering-boids-orca.md`](lineages/steering-boids-orca.md), [`lineages/gpu-driven-visibility.md`](lineages/gpu-driven-visibility.md), [`lineages/behavior-trees-goap.md`](lineages/behavior-trees-goap.md), [`lineages/pcg-wfc.md`](lineages/pcg-wfc.md)
+
+| # | Score | Year | Title | Lineage | Pool |
+|---|------:|-----:|-------|---------|------|
+| 701 | 9 | 2015 | JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids | `grid-pathfinding` | gameai |
+| 702 | 10 | 2004 | Fix Your Timestep! | `rollback-netcode` | engine |
+| 703 | 9 | 2017 | Hazard Eras: Non-Blocking Memory Reclamation | `memory-reclamation` | hpc |
+| 704 | 9 | 2019 | Hyaline: Fast and Transparent Lock-Free Memory Reclamation | `memory-reclamation` | hpc |
+| 705 | 8 | 2009 | ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation | `steering-boids-orca` | gameai |
+| 706 | 9 | 1998 | Motion Planning in Dynamic Environments Using Velocity Obstacles | `steering-boids-orca` | gameai |
+| 707 | 9 | 2007 | Example-Based Model Synthesis | `pcg-wfc` | engine |
+| 708 | 9 | 2018 | Behavior Trees in Robotics and AI: An Introduction | `behavior-trees-goap` | gameai |
+| 709 | 9 | 2003 | Applying Goal-Oriented Action Planning to Games | `behavior-trees-goap` | gameai |
+| 710 | 8 | 2016 | Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques | `gpu-driven-visibility` | graphics |
+
+Patched **70** cards with `lineage` + `cites`; **15** additional cites-only edges; decision log `_pools/lineage_shallow_scan.jsonl`.
+

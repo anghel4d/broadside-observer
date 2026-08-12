@@ -1,0 +1,288 @@
+{
+  "archers": [
+    {
+      "title": "Deterministic Lockstep",
+      "url": "https://gafferongames.com/post/deterministic_lockstep/",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "lockstep"
+    },
+    {
+      "title": "Fix Your Timestep!",
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "timestep"
+    },
+    {
+      "title": "GGPO Rollback Networking",
+      "url": "https://github.com/pond3r/ggpo",
+      "year": 2006,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ggpo"
+    }
+  ],
+  "unreal_net": [
+    {
+      "title": "Quake III Arena Networking Source",
+      "url": "https://github.com/id-Software/Quake-III-Arena",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "quake_net"
+    },
+    {
+      "title": "Source Multiplayer Networking",
+      "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+      "year": 2001,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "source_net"
+    },
+    {
+      "title": "Client-Side Prediction & Server Reconciliation",
+      "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+      "year": 2013,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "prediction"
+    }
+  ],
+  "quake_net": [
+    {
+      "title": "Unreal Engine Networking Architecture",
+      "url": "https://docs.unrealengine.com/udk/Three/NetworkingOverview.html",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "unreal_net"
+    },
+    {
+      "title": "Source Multiplayer Networking",
+      "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+      "year": 2001,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "source_net"
+    }
+  ],
+  "source_net": [
+    {
+      "title": "Client-Side Prediction & Server Reconciliation",
+      "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+      "year": 2013,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "prediction"
+    },
+    {
+      "title": "Snapshot Interpolation",
+      "url": "https://gafferongames.com/post/snapshot_interpolation/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "snapshot"
+    },
+    {
+      "title": "Quake III Arena Networking Source",
+      "url": "https://github.com/id-Software/Quake-III-Arena",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "quake_net"
+    }
+  ],
+  "net_physics": [
+    {
+      "title": "Fix Your Timestep!",
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "timestep"
+    },
+    {
+      "title": "State Synchronization",
+      "url": "https://gafferongames.com/post/state_synchronization/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "statesync"
+    },
+    {
+      "title": "Snapshot Interpolation",
+      "url": "https://gafferongames.com/post/snapshot_interpolation/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "snapshot"
+    }
+  ],
+  "timestep": [
+    {
+      "title": "Deterministic Lockstep",
+      "url": "https://gafferongames.com/post/deterministic_lockstep/",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "lockstep"
+    },
+    {
+      "title": "Networked Physics (2004)",
+      "url": "https://gafferongames.com/post/networked_physics_2004/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "net_physics"
+    },
+    {
+      "title": "GGPO Rollback Networking",
+      "url": "https://github.com/pond3r/ggpo",
+      "year": 2006,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ggpo"
+    }
+  ],
+  "ggpo": [
+    {
+      "title": "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond",
+      "url": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+      "year": 2001,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "archers"
+    },
+    {
+      "title": "Deterministic Lockstep",
+      "url": "https://gafferongames.com/post/deterministic_lockstep/",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "lockstep"
+    },
+    {
+      "title": "Fix Your Timestep!",
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "timestep"
+    },
+    {
+      "title": "Client-Side Prediction & Server Reconciliation",
+      "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+      "year": 2013,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "prediction"
+    }
+  ],
+  "prediction": [
+    {
+      "title": "Source Multiplayer Networking",
+      "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+      "year": 2001,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "source_net"
+    },
+    {
+      "title": "GGPO Rollback Networking",
+      "url": "https://github.com/pond3r/ggpo",
+      "year": 2006,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ggpo"
+    },
+    {
+      "title": "Snapshot Interpolation",
+      "url": "https://gafferongames.com/post/snapshot_interpolation/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "snapshot"
+    }
+  ],
+  "lockstep": [
+    {
+      "title": "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond",
+      "url": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+      "year": 2001,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "archers"
+    },
+    {
+      "title": "Fix Your Timestep!",
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "timestep"
+    },
+    {
+      "title": "GGPO Rollback Networking",
+      "url": "https://github.com/pond3r/ggpo",
+      "year": 2006,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ggpo"
+    }
+  ],
+  "snapshot": [
+    {
+      "title": "State Synchronization",
+      "url": "https://gafferongames.com/post/state_synchronization/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "statesync"
+    },
+    {
+      "title": "Client-Side Prediction & Server Reconciliation",
+      "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+      "year": 2013,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "prediction"
+    },
+    {
+      "title": "Networked Physics (2004)",
+      "url": "https://gafferongames.com/post/networked_physics_2004/",
+      "year": 2004,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "net_physics"
+    }
+  ],
+  "statesync": [
+    {
+      "title": "Snapshot Interpolation",
+      "url": "https://gafferongames.com/post/snapshot_interpolation/",
+      "year": 2015,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "snapshot"
+    },
+    {
+      "title": "Deterministic Lockstep",
+      "url": "https://gafferongames.com/post/deterministic_lockstep/",
+      "year": 2014,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "lockstep"
+    },
+    {
+      "title": "GGPO Rollback Networking",
+      "url": "https://github.com/pond3r/ggpo",
+      "year": 2006,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "ggpo"
+    }
+  ]
+}

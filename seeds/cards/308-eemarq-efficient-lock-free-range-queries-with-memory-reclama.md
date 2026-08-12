@@ -1,4 +1,5 @@
 ---
+
 title: "EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation"
 authors:
   - "Gali Sheffi"
@@ -17,6 +18,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 9
+lineage: memory-reclamation
+cites:
+  - title: "Interval-Based Memory Reclamation"
+    url: "https://doi.org/10.1145/3178487.3178488"
+    year: 2018
+    arxiv: null
+    doi: "10.1145/3178487.3178488"
+    card: "402-interval-based-memory-reclamation"
+  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
+    url: "https://doi.org/10.1109/TPDS.2004.8"
+    year: 2004
+    arxiv: null
+    doi: "10.1109/TPDS.2004.8"
+    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation

@@ -1,4 +1,5 @@
 ---
+
 title: "Experience-Driven Procedural Content Generation"
 authors:
   - "Georgios N. Yannakakis"
@@ -15,6 +16,20 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: pcg-wfc
+cites:
+  - title: "Search-Based Procedural Content Generation: A Taxonomy and Survey"
+    url: "https://doi.org/10.1109/TCIAIG.2011.2148116"
+    year: 2011
+    arxiv: null
+    doi: "10.1109/TCIAIG.2011.2148116"
+    card: "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+  - title: "Procedural Content Generation via Machine Learning (PCGML)"
+    url: "https://arxiv.org/abs/1702.00539"
+    year: 2018
+    arxiv: "1702.00539"
+    doi: null
+    card: "013-procedural-content-generation-via-machine-learning-pcgml"
 ---
 
 # Experience-Driven Procedural Content Generation

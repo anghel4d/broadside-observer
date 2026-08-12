@@ -1,0 +1,168 @@
+{
+  "boids": [
+    {
+      "title": "Steering Behaviors For Autonomous Characters",
+      "url": "https://www.red3d.com/cwr/steer/",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "steering"
+    },
+    {
+      "title": "Continuum Crowds",
+      "url": "https://doi.org/10.1145/1141911.1141978",
+      "year": 2006,
+      "arxiv": null,
+      "doi": "10.1145/1141911.1141978",
+      "card_key": "continuum"
+    }
+  ],
+  "steering": [
+    {
+      "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
+      "url": "https://doi.org/10.1145/37401.37406",
+      "year": 1987,
+      "arxiv": null,
+      "doi": "10.1145/37401.37406",
+      "card_key": "boids"
+    },
+    {
+      "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+      "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+      "year": 2008,
+      "arxiv": null,
+      "doi": "10.1109/ROBOT.2008.4543489",
+      "card_key": "rvo"
+    },
+    {
+      "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+      "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1007/978-3-642-19457-3_1",
+      "card_key": "orca"
+    }
+  ],
+  "continuum": [
+    {
+      "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
+      "url": "https://doi.org/10.1145/37401.37406",
+      "year": 1987,
+      "arxiv": null,
+      "doi": "10.1145/37401.37406",
+      "card_key": "boids"
+    },
+    {
+      "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+      "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1007/978-3-642-19457-3_1",
+      "card_key": "orca"
+    }
+  ],
+  "vo": [
+    {
+      "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+      "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+      "year": 2008,
+      "arxiv": null,
+      "doi": "10.1109/ROBOT.2008.4543489",
+      "card_key": "rvo"
+    },
+    {
+      "title": "ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation",
+      "url": "https://doi.org/10.1145/1599470.1599494",
+      "year": 2009,
+      "arxiv": null,
+      "doi": "10.1145/1599470.1599494",
+      "card_key": "clearpath"
+    }
+  ],
+  "rvo": [
+    {
+      "title": "Motion Planning in Dynamic Environments Using Velocity Obstacles",
+      "url": "https://doi.org/10.1177/027836499801700706",
+      "year": 1998,
+      "arxiv": null,
+      "doi": "10.1177/027836499801700706",
+      "card_key": "vo"
+    },
+    {
+      "title": "ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation",
+      "url": "https://doi.org/10.1145/1599470.1599494",
+      "year": 2009,
+      "arxiv": null,
+      "doi": "10.1145/1599470.1599494",
+      "card_key": "clearpath"
+    },
+    {
+      "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+      "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1007/978-3-642-19457-3_1",
+      "card_key": "orca"
+    },
+    {
+      "title": "Steering Behaviors For Autonomous Characters",
+      "url": "https://www.red3d.com/cwr/steer/",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "steering"
+    }
+  ],
+  "clearpath": [
+    {
+      "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+      "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+      "year": 2008,
+      "arxiv": null,
+      "doi": "10.1109/ROBOT.2008.4543489",
+      "card_key": "rvo"
+    },
+    {
+      "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+      "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1007/978-3-642-19457-3_1",
+      "card_key": "orca"
+    }
+  ],
+  "orca": [
+    {
+      "title": "Motion Planning in Dynamic Environments Using Velocity Obstacles",
+      "url": "https://doi.org/10.1177/027836499801700706",
+      "year": 1998,
+      "arxiv": null,
+      "doi": "10.1177/027836499801700706",
+      "card_key": "vo"
+    },
+    {
+      "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+      "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+      "year": 2008,
+      "arxiv": null,
+      "doi": "10.1109/ROBOT.2008.4543489",
+      "card_key": "rvo"
+    },
+    {
+      "title": "ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation",
+      "url": "https://doi.org/10.1145/1599470.1599494",
+      "year": 2009,
+      "arxiv": null,
+      "doi": "10.1145/1599470.1599494",
+      "card_key": "clearpath"
+    },
+    {
+      "title": "Steering Behaviors For Autonomous Characters",
+      "url": "https://www.red3d.com/cwr/steer/",
+      "year": 1999,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "steering"
+    }
+  ]
+}

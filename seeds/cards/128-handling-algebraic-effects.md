@@ -1,4 +1,5 @@
 ---
+
 title: "Handling Algebraic Effects"
 authors:
   - "Gordon Plotkin"
@@ -15,6 +16,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "language"
 relevance_score: 9
+cites:
+  - title: "Handlers of Algebraic Effects"
+    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "022-handlers-of-algebraic-effects"
+  - title: "Programming with Algebraic Effects and Handlers"
+    url: "https://arxiv.org/abs/1203.1539"
+    year: 2015
+    arxiv: "1203.1539"
+    doi: null
+    card: "123-programming-with-algebraic-effects-and-handlers"
 ---
 
 # Handling Algebraic Effects

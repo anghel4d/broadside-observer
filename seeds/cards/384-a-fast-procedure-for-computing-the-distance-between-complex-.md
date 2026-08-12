@@ -1,4 +1,5 @@
 ---
+
 title: "A Fast Procedure for Computing the Distance Between Complex Objects (GJK)"
 authors:
   - "E. G. Gilbert"
@@ -17,6 +18,13 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+cites:
+  - title: "Proximity Queries and Penetration Depth with GJK/EPA"
+    url: "https://graphics.stanford.edu/courses/cs448b-00-winter/"
+    year: 2001
+    arxiv: null
+    doi: null
+    card: "451-proximity-queries-and-penetration-depth-with-gjk-epa"
 ---
 
 # A Fast Procedure for Computing the Distance Between Complex Objects (GJK)

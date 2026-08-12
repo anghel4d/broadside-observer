@@ -1,4 +1,5 @@
 ---
+
 title: "FrameGraph: Extensible Rendering Architecture in Frostbite"
 authors:
   - "Yuriy O'Donnell"
@@ -15,6 +16,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engine"
 relevance_score: 9
+cites:
+  - title: "GPU-Driven Rendering Pipelines"
+    url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "016-gpu-driven-rendering-pipelines"
+  - title: "Nanite: A Deep Dive"
+    url: "https://advances.realtimerendering.com/"
+    year: 2021
+    arxiv: null
+    doi: null
+    card: "106-nanite-a-deep-dive"
 ---
 
 # FrameGraph: Extensible Rendering Architecture in Frostbite

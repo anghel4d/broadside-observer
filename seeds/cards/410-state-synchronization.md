@@ -1,4 +1,5 @@
 ---
+
 title: "State Synchronization"
 authors:
   - "Glenn Fiedler"
@@ -14,6 +15,26 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
+lineage: rollback-netcode
+cites:
+  - title: "Snapshot Interpolation"
+    url: "https://gafferongames.com/post/snapshot_interpolation/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "341-snapshot-interpolation"
+  - title: "Deterministic Lockstep"
+    url: "https://gafferongames.com/post/deterministic_lockstep/"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "017-deterministic-lockstep"
+  - title: "GGPO Rollback Networking"
+    url: "https://github.com/pond3r/ggpo"
+    year: 2006
+    arxiv: null
+    doi: null
+    card: "254-ggpo-rollback-networking"
 ---
 
 # State Synchronization

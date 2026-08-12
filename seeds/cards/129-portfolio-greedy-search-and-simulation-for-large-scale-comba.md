@@ -1,4 +1,5 @@
 ---
+
 title: "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft"
 authors:
   - "David Churchill"
@@ -17,6 +18,19 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+cites:
+  - title: "Build Order Optimization in StarCraft"
+    url: "https://www.aaai.org/"
+    year: 2011
+    arxiv: null
+    doi: null
+    card: "134-build-order-optimization-in-starcraft"
+  - title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"
+    url: "https://doi.org/10.1109/TCIAIG.2013.2286295"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
 ---
 
 # Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft

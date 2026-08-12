@@ -1,0 +1,178 @@
+{
+  "lsystems": [
+    {
+      "title": "Example-Based Model Synthesis",
+      "url": "https://doi.org/10.1145/1230100.1230119",
+      "year": 2007,
+      "arxiv": null,
+      "doi": "10.1145/1230100.1230119",
+      "card_key": "model_synthesis"
+    },
+    {
+      "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2148116",
+      "card_key": "sbpcg"
+    }
+  ],
+  "dualcontour": [
+    {
+      "title": "The Algorithmic Beauty of Plants (L-Systems)",
+      "url": "http://algorithmicbotany.org/papers/#abop",
+      "year": 1990,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "lsystems"
+    },
+    {
+      "title": "Procedural Content Generation in Games",
+      "url": "https://doi.org/10.1007/978-3-319-42716-4",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "pcg_book"
+    }
+  ],
+  "model_synthesis": [
+    {
+      "title": "Wave Function Collapse",
+      "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "wfc"
+    },
+    {
+      "title": "Procedural Content Generation in Games",
+      "url": "https://doi.org/10.1007/978-3-319-42716-4",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "pcg_book"
+    }
+  ],
+  "sbpcg": [
+    {
+      "title": "Experience-Driven Procedural Content Generation",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2159716",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2159716",
+      "card_key": "edpcg"
+    },
+    {
+      "title": "Procedural Content Generation in Games",
+      "url": "https://doi.org/10.1007/978-3-319-42716-4",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "pcg_book"
+    },
+    {
+      "title": "Wave Function Collapse",
+      "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "wfc"
+    }
+  ],
+  "edpcg": [
+    {
+      "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2148116",
+      "card_key": "sbpcg"
+    },
+    {
+      "title": "Procedural Content Generation via Machine Learning (PCGML)",
+      "url": "https://arxiv.org/abs/1702.00539",
+      "year": 2018,
+      "arxiv": "1702.00539",
+      "doi": null,
+      "card_key": "pcgml"
+    }
+  ],
+  "pcg_book": [
+    {
+      "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2148116",
+      "card_key": "sbpcg"
+    },
+    {
+      "title": "Wave Function Collapse",
+      "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "wfc"
+    },
+    {
+      "title": "Example-Based Model Synthesis",
+      "url": "https://doi.org/10.1145/1230100.1230119",
+      "year": 2007,
+      "arxiv": null,
+      "doi": "10.1145/1230100.1230119",
+      "card_key": "model_synthesis"
+    }
+  ],
+  "wfc": [
+    {
+      "title": "Example-Based Model Synthesis",
+      "url": "https://doi.org/10.1145/1230100.1230119",
+      "year": 2007,
+      "arxiv": null,
+      "doi": "10.1145/1230100.1230119",
+      "card_key": "model_synthesis"
+    },
+    {
+      "title": "Procedural Content Generation in Games",
+      "url": "https://doi.org/10.1007/978-3-319-42716-4",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "pcg_book"
+    },
+    {
+      "title": "Procedural Content Generation via Machine Learning (PCGML)",
+      "url": "https://arxiv.org/abs/1702.00539",
+      "year": 2018,
+      "arxiv": "1702.00539",
+      "doi": null,
+      "card_key": "pcgml"
+    }
+  ],
+  "pcgml": [
+    {
+      "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2148116",
+      "card_key": "sbpcg"
+    },
+    {
+      "title": "Wave Function Collapse",
+      "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+      "year": 2016,
+      "arxiv": null,
+      "doi": null,
+      "card_key": "wfc"
+    },
+    {
+      "title": "Experience-Driven Procedural Content Generation",
+      "url": "https://doi.org/10.1109/TCIAIG.2011.2159716",
+      "year": 2011,
+      "arxiv": null,
+      "doi": "10.1109/TCIAIG.2011.2159716",
+      "card_key": "edpcg"
+    }
+  ]
+}

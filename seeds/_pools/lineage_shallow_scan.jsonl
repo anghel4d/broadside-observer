@@ -1,0 +1,86 @@
+{"decision": "patch-lineage-cites", "stem": "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra", "lineage": "grid-pathfinding", "n_cites": 1, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co", "lineage": "grid-pathfinding", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "370-near-optimal-hierarchical-pathfinding-hpa", "lineage": "grid-pathfinding", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "435-theta-any-angle-path-planning-on-grids", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "357-recast-navigation-detour", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "355-understanding-goal-based-vector-field-flow-field-pathfinding", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "429-lazy-theta-any-angle-path-planning-and-path-length-analysis", "lineage": "grid-pathfinding", "n_cites": 1, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "253-online-graph-pruning-for-pathfinding-on-grid-maps", "lineage": "grid-pathfinding", "n_cites": 4, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "342-improving-jump-point-search", "lineage": "grid-pathfinding", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "411-subgoal-graphs-for-optimal-pathfinding", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "298-reducing-redundant-work-in-jump-point-search", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "271-jump-point-search-pathfinding-in-4-connected-grids", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "701-jps-plus-extreme-a-star-speed-optimization-static-grids", "lineage": "grid-pathfinding", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "452-unreal-engine-networking-architecture", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "495-quake-iii-arena-networking-source", "lineage": "rollback-netcode", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "376-source-multiplayer-networking", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "444-networked-physics-2004", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "254-ggpo-rollback-networking", "lineage": "rollback-netcode", "n_cites": 4, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "345-client-side-prediction-server-reconciliation", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "017-deterministic-lockstep", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "341-snapshot-interpolation", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "410-state-synchronization", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "702-fix-your-timestep", "lineage": "rollback-netcode", "n_cites": 3, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "380-read-copy-update", "lineage": "memory-reclamation", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-", "lineage": "memory-reclamation", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object", "lineage": "memory-reclamation", "n_cites": 5, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "369-epoch-based-reclamation-practical-lock-freedom", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "409-debra-distributed-epoch-based-reclamation", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "402-interval-based-memory-reclamation", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "333-universal-wait-free-memory-reclamation", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "315-crystalline-fast-and-memory-efficient-wait-free-reclamation", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "308-eemarq-efficient-lock-free-range-queries-with-memory-reclama", "lineage": "memory-reclamation", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "299-releasing-memory-with-optimistic-access-a-hybrid-approach-to", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "703-hazard-eras-non-blocking-memory-reclamation", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "mint", "stem": "704-hyaline-fast-and-transparent-lock-free-memory-reclamati", "lineage": "memory-reclamation", "n_cites": 3, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "261-flocks-herds-and-schools-a-distributed-behavioral-model", "lineage": "steering-boids-orca", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "258-steering-behaviors-for-autonomous-characters", "lineage": "steering-boids-orca", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "437-continuum-crowds", "lineage": "steering-boids-orca", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi", "lineage": "steering-boids-orca", "n_cites": 4, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "349-reciprocal-n-body-collision-avoidance-orca", "lineage": "steering-boids-orca", "n_cites": 4, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "705-clearpath-highly-parallel-collision-avoidance-for-multi", "lineage": "steering-boids-orca", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "mint", "stem": "706-motion-planning-in-dynamic-environments-using-velocity", "lineage": "steering-boids-orca", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "161-hierarchical-z-buffer-visibility", "lineage": "gpu-driven-visibility", "n_cites": 2, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-", "lineage": "gpu-driven-visibility", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "016-gpu-driven-rendering-pipelines", "lineage": "gpu-driven-visibility", "n_cites": 5, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "113-mesh-shaders-in-the-vulkan-ecosystem", "lineage": "gpu-driven-visibility", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "335-introduction-to-turing-mesh-shaders", "lineage": "gpu-driven-visibility", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "106-nanite-a-deep-dive", "lineage": "gpu-driven-visibility", "n_cites": 4, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "487-sparse-virtual-textures-megatexture", "lineage": "gpu-driven-visibility", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "710-optimizing-the-graphics-pipeline-with-compute-gpu-drive", "lineage": "gpu-driven-visibility", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "385-strips-a-new-approach-to-the-application-of-theorem-proving-", "lineage": "behavior-trees-goap", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "494-smart-terrain-object-affordance-ai-the-sims-lineage", "lineage": "behavior-trees-goap", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "372-shop2-an-htn-planning-system", "lineage": "behavior-trees-goap", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "441-managing-complexity-in-the-halo-2-ai-system", "lineage": "behavior-trees-goap", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "023-three-states-and-a-plan-the-ai-of-f-e-a-r", "lineage": "behavior-trees-goap", "n_cites": 4, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "143-a-survey-of-planning-techniques-for-agents-in-games", "lineage": "behavior-trees-goap", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "359-behavior-trees-for-next-gen-game-ai", "lineage": "behavior-trees-goap", "n_cites": 3, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "351-building-a-better-battle-damn-and-utility-theory-for-games", "lineage": "behavior-trees-goap", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "mint", "stem": "708-behavior-trees-in-robotics-and-ai-an-introduction", "lineage": "behavior-trees-goap", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "mint", "stem": "709-applying-goal-oriented-action-planning-to-games", "lineage": "behavior-trees-goap", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "498-the-algorithmic-beauty-of-plants-l-systems", "lineage": "pcg-wfc", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "491-dual-contouring-of-hermite-data", "lineage": "pcg-wfc", "n_cites": 2, "seed_batch": "systems-prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "020-search-based-procedural-content-generation-a-taxonomy-and-su", "lineage": "pcg-wfc", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "136-experience-driven-procedural-content-generation", "lineage": "pcg-wfc", "n_cites": 2, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "118-procedural-content-generation-in-games", "lineage": "pcg-wfc", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "119-wave-function-collapse", "lineage": "pcg-wfc", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "patch-lineage-cites", "stem": "013-procedural-content-generation-via-machine-learning-pcgml", "lineage": "pcg-wfc", "n_cites": 3, "seed_batch": "prefill-2026-08-13"}
+{"decision": "mint", "stem": "707-example-based-model-synthesis", "lineage": "pcg-wfc", "n_cites": 2, "seed_batch": "lineage-shallow-2026-08-13"}
+{"decision": "patch-cites-only", "stem": "022-handlers-of-algebraic-effects", "n_cites": 3}
+{"decision": "patch-cites-only", "stem": "128-handling-algebraic-effects", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "123-programming-with-algebraic-effects-and-handlers", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "147-algebraic-operations-and-generic-effects", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "228-abstracting-effect-systems-for-algebraic-effect-handlers", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "451-proximity-queries-and-penetration-depth-with-gjk-epa", "n_cites": 1}
+{"decision": "patch-cites-only", "stem": "384-a-fast-procedure-for-computing-the-distance-between-complex-", "n_cites": 1}
+{"decision": "patch-cites-only", "stem": "026-real-time-strategy-games-a-new-ai-research-challenge", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "024-call-for-ai-research-in-rts-games", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "018-a-survey-of-real-time-strategy-game-ai-research-and-competit", "n_cites": 3}
+{"decision": "patch-cites-only", "stem": "134-build-order-optimization-in-starcraft", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "129-portfolio-greedy-search-and-simulation-for-large-scale-comba", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "116-framegraph-extensible-rendering-architecture-in-frostbite", "n_cites": 2}
+{"decision": "patch-cites-only", "stem": "484-horizon-based-ambient-occlusion", "n_cites": 1}
+{"decision": "patch-cites-only", "stem": "499-robin-hood-hashing", "n_cites": 1}
+{"decision": "summary", "patched_with_lineage": 70, "minted": 10, "extra_cites_only": 15, "cards_touched_approx": 85, "medium_lineage_counts": {"grid-pathfinding": 14, "rollback-netcode": 11, "memory-reclamation": 12, "steering-boids-orca": 7, "gpu-driven-visibility": 8, "behavior-trees-goap": 10, "pcg-wfc": 8}, "seed_batch": "lineage-shallow-2026-08-13", "card_range": "701-850", "minted_nums": [701, 702, 703, 704, 705, 706, 707, 708, 709, 710], "artifacts": ["seeds/lineages/{grid-pathfinding,rollback-netcode,memory-reclamation,steering-boids-orca,gpu-driven-visibility,behavior-trees-goap,pcg-wfc}.md", "seeds/_pools/lineage_shallow_scan.jsonl", "seeds/_pools/lineage_ranges.json", "seeds/INDEX.md", "seeds/cards/701-710-*.md"]}

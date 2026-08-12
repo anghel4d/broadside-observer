@@ -1,4 +1,5 @@
 ---
+
 title: "Robin Hood Hashing"
 authors:
   - "Pedro Celis"
@@ -14,6 +15,13 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hpc"
 relevance_score: 7
+cites:
+  - title: "Space-Efficient Lock-Free Linear-Probing Hash Table"
+    url: "https://arxiv.org/abs/2606.17315"
+    year: 2026
+    arxiv: "2606.17315"
+    doi: null
+    card: "264-space-efficient-lock-free-linear-probing-hash-table"
 ---
 
 # Robin Hood Hashing

@@ -1,4 +1,5 @@
 ---
+
 title: "Dual Contouring of Hermite Data"
 authors:
   - "Tao Ju et al."
@@ -15,6 +16,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 7
+lineage: pcg-wfc
+cites:
+  - title: "The Algorithmic Beauty of Plants (L-Systems)"
+    url: "http://algorithmicbotany.org/papers/#abop"
+    year: 1990
+    arxiv: null
+    doi: null
+    card: "498-the-algorithmic-beauty-of-plants-l-systems"
+  - title: "Procedural Content Generation in Games"
+    url: "https://doi.org/10.1007/978-3-319-42716-4"
+    year: 2016
+    arxiv: null
+    doi: null
+    card: "118-procedural-content-generation-in-games"
 ---
 
 # Dual Contouring of Hermite Data

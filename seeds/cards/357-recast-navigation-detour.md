@@ -1,4 +1,5 @@
 ---
+
 title: "Recast Navigation / Detour"
 authors:
   - "Mikko Mononen"
@@ -14,6 +15,20 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "gameai"
 relevance_score: 9
+lineage: grid-pathfinding
+cites:
+  - title: "Simplified 3D Movement and Pathfinding Using Navigation Meshes"
+    url: "https://www.gamedevs.org/uploads/simplified-3d-movement-and-pathfinding-using-navigation-meshes.pdf"
+    year: 2000
+    arxiv: null
+    doi: null
+    card: "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh"
+  - title: "Near Optimal Hierarchical Pathfinding (HPA*)"
+    url: "https://doi.org/10.1613/jair.1423"
+    year: 2004
+    arxiv: null
+    doi: "10.1613/jair.1423"
+    card: "370-near-optimal-hierarchical-pathfinding-hpa"
 ---
 
 # Recast Navigation / Detour
