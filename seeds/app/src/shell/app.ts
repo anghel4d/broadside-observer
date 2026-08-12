@@ -1,4 +1,12 @@
-import { applyQuery, selectionState } from "../domain/query.ts";
+import {
+  FILTER_KEYS,
+  activeFilters,
+  applyQuery,
+  clearFilter,
+  findCardByRank,
+  selectionState,
+  type FilterKey,
+} from "../domain/query.ts";
 import { parseRoute, printRoute, routeId } from "../domain/route.ts";
 import { assertNever } from "../domain/never.ts";
 import {
@@ -9,6 +17,7 @@ import {
   SECTION_KEYS,
   SORT_KEYS,
   SeedBatchSchema,
+  SeedRankSchema,
   TopicSchema,
   YearSchema,
   defaultQuery,
@@ -21,6 +30,7 @@ import {
   type Query,
   type Route,
   type SeedCard,
+  type SeedRank,
   type SortKey,
   type TopicFilter,
   type Year,
@@ -29,6 +39,7 @@ import type { Corpus } from "../domain/corpus.ts";
 import { debounce } from "./debounce.ts";
 import { attr, escapeHtml } from "./html.ts";
 import { renderMarkdown } from "./markdown.ts";
+import { displayTopics } from "./tags.ts";
 import {
   browserStorage,
   parseViewMode,
@@ -54,8 +65,11 @@ type Msg =
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
+  | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
+  | { readonly _tag: "SelectFirst" }
+  | { readonly _tag: "JumpRank"; readonly rank: SeedRank }
   | { readonly _tag: "Move"; readonly delta: -1 | 1 }
   | { readonly _tag: "Hash"; readonly hash: string };
 
@@ -72,6 +86,7 @@ type ViewModel = {
   readonly offFilter: boolean;
   readonly view: ViewMode;
   readonly corpus: Corpus;
+  readonly query: Query;
 };
 
 type Paint = {
@@ -80,6 +95,8 @@ type Paint = {
   readonly highlight: CardId | null;
   readonly detail: CardId | null;
   readonly offFilter: boolean;
+  readonly hasVisible: boolean;
+  readonly filterKey: string;
 };
 
 function init(corpus: Corpus, hash: string, view: ViewMode): Model {
@@ -111,10 +128,24 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, sort: msg.sort } };
     case "SetView":
       return model.view === msg.view ? model : { ...model, view: msg.view };
+    case "ClearFilter":
+      return { ...model, query: clearFilter(model.query, msg.key) };
     case "Reset":
       return { ...model, query: defaultQuery };
     case "Select":
       return routeId(model.route) === msg.id ? model : { ...model, route: { _tag: "Card", id: msg.id } };
+    case "SelectFirst": {
+      const visible = applyQuery(model.corpus, model.query);
+      const first = visible[0];
+      if (first === undefined) return model;
+      return routeId(model.route) === first.id ? model : { ...model, route: { _tag: "Card", id: first.id } };
+    }
+    case "JumpRank": {
+      const visible = applyQuery(model.corpus, model.query);
+      const hit = findCardByRank(visible, model.corpus.cards, msg.rank);
+      if (hit === null) return model;
+      return routeId(model.route) === hit.id ? model : { ...model, route: { _tag: "Card", id: hit.id } };
+    }
     case "Move": {
       const visible = applyQuery(model.corpus, model.query);
       if (visible.length === 0) return model;
@@ -145,6 +176,7 @@ function project(model: Model): ViewModel {
     offFilter: state._tag === "OffFilter",
     view: model.view,
     corpus: model.corpus,
+    query: model.query,
   };
 }
 
@@ -170,12 +202,61 @@ function parseCardId(value: string): CardId | null {
   return parsed.success ? parsed.data : null;
 }
 
+function parseFilterKey(value: string): FilterKey | null {
+  for (const key of FILTER_KEYS) {
+    if (key === value) return key;
+  }
+  return null;
+}
+
+function parseRank(raw: string): SeedRank | null {
+  if (!/^-?\d+$/u.test(raw.trim())) return null;
+  const parsed = SeedRankSchema.safeParse(Number(raw.trim()));
+  return parsed.success ? parsed.data : null;
+}
+
 function plainText(value: string): string {
   return value.replace(/\s+/gu, " ").trim();
 }
 
 function visibleKey(cards: ReadonlyArray<SeedCard>): string {
   return cards.map((card) => card.id).join("\n");
+}
+
+function filterKey(query: Query): string {
+  return activeFilters(query)
+    .map((filter) => `${filter.key}:${filter.label}`)
+    .join("\n");
+}
+
+function topicSelectValue(filter: TopicFilter): string {
+  return filter._tag === "All" ? "" : filter.topic;
+}
+
+function batchSelectValue(filter: BatchFilter): string {
+  return filter._tag === "All" ? "" : filter.batch;
+}
+
+function poolSelectValue(filter: PoolFilter): string {
+  switch (filter._tag) {
+    case "All":
+      return "";
+    case "None":
+      return "__none__";
+    case "One":
+      return filter.pool;
+  }
+}
+
+function lineageSelectValue(filter: LineageFilter): string {
+  switch (filter._tag) {
+    case "All":
+      return "";
+    case "None":
+      return "__none__";
+    case "One":
+      return filter.lineage;
+  }
 }
 
 function shellHtml(corpus: Corpus, view: ViewMode): string {
@@ -196,57 +277,67 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
         <p class="status" id="status"></p>
       </div>
     </header>
-    <div class="chrome" aria-label="Filters">
+    <div class="chrome" id="chrome" aria-label="Filters">
       <label class="search-field">
         Search
         <input id="query" type="search" placeholder="Title, authors, topics, takeaway" autocomplete="off" spellcheck="false" />
       </label>
-      <label>
-        Topic
-        <select id="topic">
-          ${option("", "All topics", true)}
-          ${corpus.topics.map((topic) => option(topic, topic, false)).join("")}
-        </select>
-      </label>
-      <label>
-        Batch
-        <select id="batch">
-          ${option("", "All batches", true)}
-          ${corpus.batches.map((batch) => option(batch, batch, false)).join("")}
-        </select>
-      </label>
-      <label>
-        Pool
-        <select id="pool">
-          ${option("", "All pools", true)}
-          ${corpus.hasUnpooled ? option("__none__", "No pool", false) : ""}
-          ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
-        </select>
-      </label>
-      <label>
-        Lineage
-        <select id="lineage">
-          ${option("", "All lineages", true)}
-          ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
-          ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
-        </select>
-      </label>
-      <div class="year-fields">
-        <span class="field-label">Year</span>
-        <span class="year-inputs">
-          <input id="yearMin" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearLo ?? "from"}" aria-label="Year from" />
-          <span class="year-dash" aria-hidden="true">–</span>
-          <input id="yearMax" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearHi ?? "to"}" aria-label="Year to" />
-        </span>
+      <button type="button" class="filters-toggle" id="filters-toggle" aria-controls="filter-fields" aria-expanded="false">
+        Filters
+      </button>
+      <div class="filter-fields" id="filter-fields">
+        <label>
+          Topic
+          <select id="topic">
+            ${option("", "All topics", true)}
+            ${corpus.topics.map((topic) => option(topic, topic, false)).join("")}
+          </select>
+        </label>
+        <label>
+          Batch
+          <select id="batch">
+            ${option("", "All batches", true)}
+            ${corpus.batches.map((batch) => option(batch, batch, false)).join("")}
+          </select>
+        </label>
+        <label>
+          Pool
+          <select id="pool">
+            ${option("", "All pools", true)}
+            ${corpus.hasUnpooled ? option("__none__", "No pool", false) : ""}
+            ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
+          </select>
+        </label>
+        <label>
+          Lineage
+          <select id="lineage">
+            ${option("", "All lineages", true)}
+            ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
+            ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
+          </select>
+        </label>
+        <div class="year-fields">
+          <span class="field-label">Year</span>
+          <span class="year-inputs">
+            <input id="yearMin" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearLo ?? "from"}" aria-label="Year from" />
+            <span class="year-dash" aria-hidden="true">–</span>
+            <input id="yearMax" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearHi ?? "to"}" aria-label="Year to" />
+          </span>
+        </div>
+        <label>
+          Sort
+          <select id="sort">
+            ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
+          </select>
+        </label>
+        <label class="jump-field">
+          Rank
+          <input id="jump-rank" type="text" inputmode="numeric" placeholder="#" autocomplete="off" spellcheck="false" aria-label="Jump to rank" />
+        </label>
       </div>
-      <label>
-        Sort
-        <select id="sort">
-          ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
-        </select>
-      </label>
       <button type="button" class="reset" id="reset">Reset</button>
     </div>
+    <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
     <div class="workspace" id="workspace" data-view="${attr(view)}">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
@@ -336,10 +427,11 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
 }
 
 function cardFaceChips(card: SeedCard): string {
+  const topics = displayTopics(card);
   const topicLimit = card.lineage === null ? 3 : 2;
   return [
     ...(card.lineage === null ? [] : [chip(card.lineage, "lineage")]),
-    ...card.topics.slice(0, topicLimit).map((topic) => chip(topic, "topic")),
+    ...topics.slice(0, topicLimit).map((topic) => chip(topic, "topic")),
   ].join("");
 }
 
@@ -368,32 +460,64 @@ function renderBrowse(view: ViewMode, visible: ReadonlyArray<SeedCard>, selected
   return view === "list" ? renderList(visible, selectedId) : renderGrid(visible, selectedId);
 }
 
+function renderFilterPills(query: Query): string {
+  const filters = activeFilters(query);
+  if (filters.length === 0) return "";
+  return filters
+    .map(
+      (filter) =>
+        `<span class="filter-pill" role="listitem">
+          <span class="filter-pill-key">${escapeHtml(filter.key)}</span>
+          <span class="filter-pill-value">${escapeHtml(filter.label)}</span>
+          <button type="button" class="filter-pill-clear" data-clear="${attr(filter.key)}" aria-label="Clear ${attr(filter.key)} filter">×</button>
+        </span>`,
+    )
+    .join("");
+}
+
 function renderDetail(
   card: SeedCard | null,
   corpus: Corpus,
   offFilter: boolean,
-  emptyVisible: boolean,
+  visibleCount: number,
 ): string {
   if (card === null) {
-    const message = emptyVisible
+    const message = visibleCount === 0
       ? "No cards match the current filters."
       : "Select a card from the list.";
     return `<div class="empty-detail"><p>${escapeHtml(message)}</p></div>`;
   }
 
+  const firstAction =
+    visibleCount > 0
+      ? `<button type="button" class="off-filter-btn" data-off="first">Show first match</button>`
+      : "";
   const banner = offFilter
-    ? `<p class="off-filter" role="status">Not in the current filter. Linked card still shown.</p>`
+    ? `<div class="off-filter" role="status">
+        <p class="off-filter-copy">Not in the current filter. Linked card still shown.</p>
+        <p class="off-filter-actions">
+          <button type="button" class="off-filter-btn" data-off="clear">Clear filters</button>
+          ${firstAction}
+        </p>
+      </div>`
     : "";
 
-  const chips = [
-    chip(`rank ${card.seed_rank}`, "rank"),
-    chip(String(card.year), "year"),
-    ...card.topics.map((topic) => chip(topic, "topic", topic)),
-    chip(card.seed_batch, "batch", card.seed_batch),
-    ...(card.pool === null ? [] : [chip(card.pool, "pool", card.pool)]),
+  const topicChips = [
+    ...displayTopics(card).map((topic) => chip(topic, "topic", topic)),
     renderLineageChip(card, corpus),
-    ...(card.relevance_score === null ? [] : [chip(`relevance ${card.relevance_score}`, "relevance")]),
-    ...(card.venue.length > 0 ? [chip(card.venue, "venue")] : []),
+  ].join("");
+
+  const provenance = [
+    `<span class="prov-item">rank ${card.seed_rank}</span>`,
+    `<span class="prov-item">${card.year}</span>`,
+    `<button type="button" class="prov-filter" data-filter="batch" data-value="${attr(card.seed_batch)}">${escapeHtml(card.seed_batch)}</button>`,
+    ...(card.pool === null
+      ? []
+      : [
+          `<button type="button" class="prov-filter" data-filter="pool" data-value="${attr(card.pool)}">${escapeHtml(card.pool)}</button>`,
+        ]),
+    ...(card.relevance_score === null ? [] : [`<span class="prov-item">relevance ${card.relevance_score}</span>`]),
+    ...(card.venue.length > 0 ? [`<span class="prov-item prov-venue">${escapeHtml(card.venue)}</span>`] : []),
   ].join("");
 
   const identifiers = [
@@ -419,15 +543,20 @@ function renderDetail(
 
   return `
     <article class="detail">
-      ${banner}
-      <p class="detail-id">${escapeHtml(card.id)}</p>
-      <h2>${escapeHtml(card.title)}</h2>
-      <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
-      <p class="ids">${identifiers}</p>
-      <div class="chips">${chips}</div>
-      ${renderCites(card, corpus)}
-      ${sections}
-      <p class="reviewed">Reviewed ${escapeHtml(card.reviewed)}</p>
+      <header class="detail-head">
+        ${banner}
+        <p class="detail-id">${escapeHtml(card.id)}</p>
+        <h2>${escapeHtml(card.title)}</h2>
+        <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
+      </header>
+      <div class="detail-body">
+        <p class="ids">${identifiers}</p>
+        <div class="chips chips-topics">${topicChips}</div>
+        <p class="provenance">${provenance}</p>
+        ${renderCites(card, corpus)}
+        ${sections}
+        <p class="reviewed">Reviewed ${escapeHtml(card.reviewed)}</p>
+      </div>
     </article>
   `;
 }
@@ -488,7 +617,11 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const initialView = readStoredView(storage);
   root.innerHTML = shellHtml(corpus, initialView);
 
+  const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
+  const filtersToggle = requireElement<HTMLButtonElement>(root, "filters-toggle");
+  const filterFields = requireElement<HTMLElement>(root, "filter-fields");
+  const filterPills = requireElement<HTMLElement>(root, "filter-pills");
   const topicSelect = requireElement<HTMLSelectElement>(root, "topic");
   const batchSelect = requireElement<HTMLSelectElement>(root, "batch");
   const poolSelect = requireElement<HTMLSelectElement>(root, "pool");
@@ -496,6 +629,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const yearMinInput = requireElement<HTMLInputElement>(root, "yearMin");
   const yearMaxInput = requireElement<HTMLInputElement>(root, "yearMax");
   const sortSelect = requireElement<HTMLSelectElement>(root, "sort");
+  const jumpRankInput = requireElement<HTMLInputElement>(root, "jump-rank");
   const resetButton = requireElement<HTMLButtonElement>(root, "reset");
   const viewToggle = requireElement<HTMLElement>(root, "view-toggle");
   const workspace = requireElement<HTMLElement>(root, "workspace");
@@ -505,15 +639,49 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
   let model = init(corpus, location.hash, initialView);
   let painted: Paint | null = null;
+  let filtersOpen = false;
+  const narrowFilters = window.matchMedia("(max-width: 980px)");
+
+  const syncFilterDisclosure = (): void => {
+    const narrow = narrowFilters.matches;
+    const showFields = !narrow || filtersOpen;
+    filterFields.toggleAttribute("hidden", !showFields);
+    chrome.classList.toggle("is-filters-open", filtersOpen);
+    filtersToggle.setAttribute("aria-expanded", filtersOpen ? "true" : "false");
+    filtersToggle.hidden = !narrow;
+  };
+
+  const syncFilterControls = (query: Query): void => {
+    if (document.activeElement !== queryInput) queryInput.value = query.search;
+    topicSelect.value = topicSelectValue(query.topic);
+    batchSelect.value = batchSelectValue(query.batch);
+    poolSelect.value = poolSelectValue(query.pool);
+    lineageSelect.value = lineageSelectValue(query.lineage);
+    if (document.activeElement !== yearMinInput) {
+      yearMinInput.value = query.year.min === null ? "" : String(query.year.min);
+    }
+    if (document.activeElement !== yearMaxInput) {
+      yearMaxInput.value = query.year.max === null ? "" : String(query.year.max);
+    }
+    sortSelect.value = query.sort;
+  };
 
   const patch = (next: Model): void => {
     const vm = project(next);
     const highlight = vm.offFilter ? null : (vm.selected?.id ?? null);
     const detailId = vm.selected?.id ?? null;
     const ids = visibleKey(vm.visible);
+    const filters = filterKey(vm.query);
+    const hasVisible = vm.visible.length > 0;
+    const activeCount = activeFilters(vm.query).length;
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     workspace.dataset.view = vm.view;
     syncViewToggle(root, vm.view);
+    syncFilterControls(vm.query);
+    filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
+    if (painted === null || painted.filterKey !== filters) {
+      filterPills.innerHTML = renderFilterPills(vm.query);
+    }
 
     const prev = painted;
     if (prev === null || prev.view !== vm.view || prev.ids !== ids) {
@@ -522,8 +690,13 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       setActive(browse, highlight);
     }
 
-    if (prev === null || prev.detail !== detailId || prev.offFilter !== vm.offFilter) {
-      detail.innerHTML = renderDetail(vm.selected, vm.corpus, vm.offFilter, vm.visible.length === 0);
+    if (
+      prev === null ||
+      prev.detail !== detailId ||
+      prev.offFilter !== vm.offFilter ||
+      prev.hasVisible !== hasVisible
+    ) {
+      detail.innerHTML = renderDetail(vm.selected, vm.corpus, vm.offFilter, vm.visible.length);
     }
 
     const active = browse.querySelector(".is-active");
@@ -535,6 +708,8 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       highlight,
       detail: detailId,
       offFilter: vm.offFilter,
+      hasVisible,
+      filterKey: filters,
     };
   };
 
@@ -614,22 +789,30 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const sort = parseSort(sortSelect.value);
     if (sort !== null) dispatch({ _tag: "SetSort", sort });
   });
+  jumpRankInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    const rank = parseRank(jumpRankInput.value);
+    if (rank !== null) dispatch({ _tag: "JumpRank", rank });
+  });
   viewToggle.addEventListener("click", (event) => {
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-view]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.view === undefined) return;
     const view = parseViewMode(button.dataset.view);
     if (view !== null) dispatch({ _tag: "SetView", view });
   });
+  filtersToggle.addEventListener("click", () => {
+    filtersOpen = !filtersOpen;
+    syncFilterDisclosure();
+  });
   resetButton.addEventListener("click", () => {
-    queryInput.value = "";
-    topicSelect.value = "";
-    batchSelect.value = "";
-    poolSelect.value = "";
-    lineageSelect.value = "";
-    yearMinInput.value = "";
-    yearMaxInput.value = "";
-    sortSelect.value = "rank";
     dispatch({ _tag: "Reset" });
+  });
+  filterPills.addEventListener("click", (event) => {
+    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-clear]");
+    if (!(button instanceof HTMLButtonElement) || button.dataset.clear === undefined) return;
+    const key = parseFilterKey(button.dataset.clear);
+    if (key !== null) dispatch({ _tag: "ClearFilter", key });
   });
   browse.addEventListener("click", (event) => {
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-id]");
@@ -638,6 +821,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (id !== null) dispatch({ _tag: "Select", id });
   });
   detail.addEventListener("click", (event) => {
+    const off = (event.target instanceof Element ? event.target : null)?.closest("button[data-off]");
+    if (off instanceof HTMLButtonElement) {
+      if (off.dataset.off === "clear") dispatch({ _tag: "Reset" });
+      else if (off.dataset.off === "first") dispatch({ _tag: "SelectFirst" });
+      return;
+    }
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-filter]");
     if (!(button instanceof HTMLButtonElement)) return;
     const kind = button.dataset.filter;
@@ -646,22 +835,18 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (kind === "topic") {
       const topic = TopicSchema.safeParse(value);
       if (!topic.success) return;
-      topicSelect.value = value;
       dispatch({ _tag: "SetTopic", filter: { _tag: "One", topic: topic.data } });
     } else if (kind === "batch") {
       const batch = SeedBatchSchema.safeParse(value);
       if (!batch.success) return;
-      batchSelect.value = value;
       dispatch({ _tag: "SetBatch", filter: { _tag: "One", batch: batch.data } });
     } else if (kind === "pool") {
       const pool = PoolSchema.safeParse(value);
       if (!pool.success) return;
-      poolSelect.value = value;
       dispatch({ _tag: "SetPool", filter: { _tag: "One", pool: pool.data } });
     } else if (kind === "lineage") {
       const lineage = LineageSchema.safeParse(value);
       if (!lineage.success) return;
-      lineageSelect.value = value;
       dispatch({ _tag: "SetLineage", filter: { _tag: "One", lineage: lineage.data } });
     }
   });
@@ -687,6 +872,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   window.addEventListener("hashchange", () => {
     dispatch({ _tag: "Hash", hash: location.hash });
   });
+  if (typeof narrowFilters.addEventListener === "function") {
+    narrowFilters.addEventListener("change", syncFilterDisclosure);
+  } else {
+    narrowFilters.addListener(syncFilterDisclosure);
+  }
 
+  syncFilterDisclosure();
   patch(model);
 }

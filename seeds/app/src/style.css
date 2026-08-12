@@ -158,7 +158,8 @@ kbd {
 }
 
 .chrome label,
-.year-fields {
+.year-fields,
+.jump-field {
   display: flex;
   flex-direction: column;
   gap: 0.28rem;
@@ -231,6 +232,91 @@ button:focus-visible {
   align-self: end;
 }
 
+.filters-toggle {
+  display: none;
+  flex: 0 0 auto;
+  align-self: end;
+  font: inherit;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.42rem 0.65rem;
+  cursor: pointer;
+}
+
+.filter-fields {
+  display: contents;
+}
+
+.filter-pills {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+  padding: 0.35rem 1rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  min-width: 0;
+  margin-top: -1px;
+}
+
+.filter-pills:empty {
+  display: none;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  max-width: 100%;
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.12rem 0.2rem 0.12rem 0.55rem;
+  font-size: 0.75rem;
+}
+
+.filter-pill-key {
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.62rem;
+}
+
+.filter-pill-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+}
+
+.filter-pill-clear {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1;
+  padding: 0.05rem 0.4rem 0.1rem;
+  border-radius: 999px;
+}
+
+.filter-pill-clear:hover {
+  color: var(--ink);
+  background: var(--active);
+}
+
+.jump-field {
+  flex: 0 0 6.5rem;
+}
+
+.jump-field input {
+  width: 100%;
+}
+
 .workspace {
   flex: 1 1 0;
   min-height: 0;
@@ -241,7 +327,8 @@ button:focus-visible {
 }
 
 .workspace[data-view="cards"] {
-  grid-template-columns: minmax(0, 1fr) minmax(22rem, 34rem);
+  /* Browse gets ≥ half at laptop widths so auto-fill can land 2–3 card columns. */
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
 }
 
 .browse-pane,
@@ -272,6 +359,8 @@ button:focus-visible {
 .browse-pane {
   border-right: 1px solid var(--line);
   background: var(--browse);
+  container-type: inline-size;
+  container-name: browse;
 }
 
 .detail-pane {
@@ -360,9 +449,11 @@ button:focus-visible {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
-  gap: 0.6rem;
-  padding: 0.7rem;
+  /* 15.5rem (~248px) is the floor that still fits two columns in a half-width
+     ~1040px browse pane; 1fr grows tracks into the 260–300px card band. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
   align-content: start;
 }
 
@@ -433,17 +524,51 @@ button:focus-visible {
 
 .detail {
   max-width: 46rem;
-  padding: 1.05rem 1.25rem 2.2rem;
+  padding: 0;
+}
+
+.detail-head .authors {
+  margin-bottom: 0;
+}
+
+.detail-body {
+  padding: 0.85rem 1.25rem 2.2rem;
 }
 
 .off-filter {
-  margin: 0 0 0.75rem;
-  padding: 0.4rem 0.55rem;
+  margin: 0 0 0.7rem;
+  padding: 0.45rem 0.55rem 0.5rem;
   border: 1px solid #3d4a3a;
   background: #1c241c;
   color: #c5d4c0;
   border-radius: 6px;
   font-size: 0.8rem;
+}
+
+.off-filter-copy {
+  margin: 0 0 0.4rem;
+}
+
+.off-filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.off-filter-btn {
+  font: inherit;
+  font-size: 0.75rem;
+  color: var(--ink);
+  background: #243328;
+  border: 1px solid #4a5c4a;
+  border-radius: 6px;
+  padding: 0.22rem 0.5rem;
+  cursor: pointer;
+}
+
+.off-filter-btn:hover {
+  border-color: var(--accent);
 }
 
 .detail-id {
@@ -474,7 +599,51 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.55rem;
+}
+
+.chips-topics .chip {
+  font-size: 0.78rem;
+  padding: 0.18rem 0.6rem;
+}
+
+.provenance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.65rem;
+  align-items: baseline;
+  margin: 0 0 1.05rem;
+  color: var(--faint);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prov-item,
+.prov-filter {
+  font: inherit;
+  color: var(--faint);
+}
+
+.prov-filter {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 2px;
+}
+
+.prov-filter:hover {
+  color: var(--muted);
+}
+
+.prov-venue {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .chip {
@@ -648,7 +817,7 @@ a.chip-lineage-doc {
   .workspace,
   .workspace[data-view="cards"] {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(10rem, 42%) minmax(0, 1fr);
+    grid-template-rows: minmax(8rem, 38%) minmax(0, 1fr);
   }
 
   .browse-pane {
@@ -657,10 +826,50 @@ a.chip-lineage-doc {
   }
 
   .search-field {
-    flex: 1 1 100%;
+    flex: 1 1 12rem;
   }
 
   .lede {
     display: none;
+  }
+
+  .filters-toggle {
+    display: inline-flex;
+  }
+
+  .filter-fields {
+    display: none;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 0.55rem 0.7rem;
+    align-items: end;
+  }
+
+  .chrome.is-filters-open .filter-fields:not([hidden]) {
+    display: flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace,
+  .workspace[data-view="cards"] {
+    grid-template-rows: minmax(7.5rem, 34%) minmax(0, 1fr);
+  }
+
+  .search-field {
+    flex: 1 1 100%;
+  }
+
+  .topbar {
+    padding: 0.5rem 0.75rem 0.45rem;
+  }
+
+  .chrome {
+    padding: 0.45rem 0.75rem 0.5rem;
+  }
+
+  .filter-pills {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

@@ -1,7 +1,15 @@
 import assert from "node:assert/strict";
 import { buildCorpus } from "./corpus.ts";
-import { applyQuery, searchScore, selectionState, tokenize } from "./query.ts";
-import { SeedCardSchema, defaultQuery, type Query, type SeedCard } from "./schema.ts";
+import {
+  activeFilters,
+  applyQuery,
+  clearFilter,
+  findCardByRank,
+  searchScore,
+  selectionState,
+  tokenize,
+} from "./query.ts";
+import { SeedCardSchema, SeedRankSchema, defaultQuery, type Query, type SeedCard } from "./schema.ts";
 
 function card(overrides: Record<string, unknown>): SeedCard {
   return SeedCardSchema.parse({
@@ -157,6 +165,43 @@ assert.equal(offFilter._tag, "OffFilter");
 assert.equal(offFilter._tag === "OffFilter" ? offFilter.card.id : "", "001-alpha");
 
 assert.equal(selectionState(corpus, [], null)._tag, "None");
+
+assert.deepEqual(activeFilters(defaultQuery), []);
+assert.deepEqual(
+  activeFilters({
+    ...defaultQuery,
+    search: "  paging ",
+    topic: { _tag: "One", topic: cards[0]!.topics[0]! },
+    pool: { _tag: "None" },
+    year: { min: cards[1]!.year, max: cards[1]!.year },
+  }).map((filter) => filter.key),
+  ["search", "topic", "pool", "year"],
+);
+assert.equal(
+  activeFilters({
+    ...defaultQuery,
+    year: { min: cards[1]!.year, max: cards[1]!.year },
+  })[0]?.label,
+  "1999–1999",
+);
+
+const narrowed: Query = {
+  ...defaultQuery,
+  search: "paging",
+  topic: { _tag: "One", topic: cards[0]!.topics[0]! },
+};
+assert.equal(clearFilter(narrowed, "search").search, "");
+assert.equal(clearFilter(narrowed, "topic").topic._tag, "All");
+assert.equal(clearFilter({ ...defaultQuery, year: { min: cards[1]!.year, max: null } }, "year").year.min, null);
+assert.equal(activeFilters(narrowed).length > 0, true);
+
+const rankTwo = findCardByRank(byRank, corpus.cards, SeedRankSchema.parse(2));
+assert.equal(rankTwo?.id, "001-alpha");
+const missing = findCardByRank(byRank, corpus.cards, SeedRankSchema.parse(9999));
+assert.equal(missing, null);
+const offList = applyQuery(corpus, lineage);
+const stillFound = findCardByRank(offList, corpus.cards, SeedRankSchema.parse(2));
+assert.equal(stillFound?.id, "001-alpha");
 
 const autoFirst = selectionState(corpus, byRank, null);
 assert.equal(autoFirst._tag, "Visible");
