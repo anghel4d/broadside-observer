@@ -1,0 +1,51 @@
+---
+title: "DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents"
+authors:
+  - "You Lu"
+  - "Kun Zhang"
+  - "Bihuan Chen"
+  - "Xin Peng"
+year: 2026
+venue: "arXiv:cs.LG"
+arxiv: "2608.10037"
+doi: null
+source: "https://arxiv.org/abs/2608.10037"
+topics:
+  - tool-use
+  - react
+  - rag
+  - retrieval
+  - provenance
+seed_rank: 60
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "agents"
+relevance_score: 9
+---
+
+# DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents
+
+## One-sentence takeaway
+
+Large language models (LLMs) increasingly rely on external tools to accomplish complex real-world tasks, making tool documentation a critical grounding resource for LLM agents.
+
+## Why it matters here
+
+retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents)
+
+## Key ideas
+
+- Large language models (LLMs) increasingly rely on external tools to accomplish complex real-world tasks, making tool documentation a critical grounding resource for LLM agents.
+- Existing studies mainly focus on improving the tool-use capabilities of LLM agents, while largely treating tool documentation as a fixed input.
+- Although several recent works attempt to optimize tool documentation through rewriting or compression, little is known about how the information contained in tool documentation affects agent performance across different settings.
+- To bridge this gap, we conduct a large-scale empirical study on tool documentation for LLM agents.
+- Our study reveals substantial heterogeneity in the information fields provided by existing tool documentation.
+
+## Caveats
+
+- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+
+## Links
+
+- arXiv: [2608.10037](https://arxiv.org/abs/2608.10037)
+- URL: https://arxiv.org/abs/2608.10037
