@@ -18,6 +18,10 @@ Normalize each candidate to a stable identifier, using the version-independent a
 
 Score the remaining candidates against the descriptions, query hints, and priorities in `radar/topics.yaml`. This stage should be inexpensive and target a keep rate of about 25%—for example, reduce roughly 100 normalized candidates to 25 deep reads. In the run log, record the matched topic and score for accepted items and a brief reason for every rejection.
 
+### Stage C2 — Seed cards (standing library)
+
+Keepers that are worth lasting attention but not yet a full digest become **seed cards** under [`seeds/cards/`](seeds/cards/). Every card uses the same frontmatter and section layout (see [`seeds/README.md`](seeds/README.md)). This is an ongoing library, not a one-time prefill: future research passes append new `NNN-*.md` cards, update [`seeds/INDEX.md`](seeds/INDEX.md), and record ids in `radar/seen.json`. Promote a seed to `summaries/` when it deserves a deep read; leave the card in place.
+
 ### Stage D — Deep read
 
 For each accepted item, fetch the best available PDF, HTML, or source text into `sources/` when licensing permits it. Write a full digest in `summaries/` using the existing format documented in [`summaries/README.md`](summaries/README.md): YAML frontmatter followed by One-sentence takeaway, Problem, Design/method, Evidence, Strengths/Limitations, Implications for Broadside, and Bottom line. Paper-specific subsection names are welcome when they make the analysis clearer, but the same information must remain present and source links must be retained.
