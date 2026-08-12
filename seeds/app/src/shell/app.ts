@@ -39,6 +39,7 @@ import type { Corpus } from "../domain/corpus.ts";
 import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
+import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
 import { attr, escapeHtml } from "./html.ts";
 import { readStoredDetailFocus, writeStoredDetailFocus } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
@@ -78,6 +79,7 @@ type Msg =
   | { readonly _tag: "SelectFirst" }
   | { readonly _tag: "JumpRank"; readonly rank: SeedRank }
   | { readonly _tag: "Move"; readonly delta: -1 | 1 }
+  | { readonly _tag: "MoveGrid"; readonly dir: GridDir; readonly cols: number }
   | { readonly _tag: "Hash"; readonly hash: string };
 
 const SORT_LABEL = {
@@ -165,6 +167,21 @@ function update(model: Model, msg: Msg): Model {
         return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
       }
       const nextIndex = Math.min(visible.length - 1, Math.max(0, index + msg.delta));
+      const next = visible[nextIndex];
+      if (next === undefined || next.id === currentId) return model;
+      return { ...model, route: { _tag: "Card", id: next.id } };
+    }
+    case "MoveGrid": {
+      const visible = applyQuery(model.corpus, model.query);
+      if (visible.length === 0) return model;
+      const currentId = routeId(model.route);
+      const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
+      if (index < 0) {
+        const forward = msg.dir === "j" || msg.dir === "l";
+        const pick = forward ? visible[0] : visible[visible.length - 1];
+        return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
+      }
+      const nextIndex = moveGridIndex(index, msg.cols, visible.length, msg.dir);
       const next = visible[nextIndex];
       if (next === undefined || next.id === currentId) return model;
       return { ...model, route: { _tag: "Card", id: next.id } };
@@ -273,7 +290,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string
     <header class="topbar">
       <div class="brand">
         <h1>Seed browser</h1>
-        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> move · <kbd>Esc</kbd> clear.</p>
+        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> list · <kbd>hjkl</kbd> cards · <kbd>Esc</kbd> clear.</p>
       </div>
       <div class="topbar-tools">
         <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
@@ -916,6 +933,14 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       if (event.key === "c") {
         event.preventDefault();
         dispatch({ _tag: "Reset" });
+        return;
+      }
+    }
+    if (model.view === "cards") {
+      const dir = gridDirFromKey(event.key);
+      if (dir !== null) {
+        event.preventDefault();
+        dispatch({ _tag: "MoveGrid", dir, cols: virt.columns() });
         return;
       }
     }
