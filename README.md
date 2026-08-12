@@ -40,4 +40,4 @@ Topic-scope changes, destructive deletion, and any external publication beyond t
 
 ## Status
 
-Research loop v1 is specified and agent-operated on a 6-hour cadence. The repository now includes a ten-source registry (`radar/sources.yaml`) and an expanded topic map covering agent systems plus Anoptic engine, ano language, and RTS/game-AI work. Per-source adapters and a Nix runtime remain future work.
+Research loop v1 is agent-operated every 6 hours with **split provenances** (`radar/dayparts.yaml`): Frontier (new), Craft (workbench), Curiosity (cross-domain delight), Archive (historical gems). Ten primary sources plus secondary craft/archive feeds; topic map covers agents, Anoptic engine, ano (array/columnar ECS language), and RTS/game-AI. Per-source adapters and a Nix runtime remain future work.
