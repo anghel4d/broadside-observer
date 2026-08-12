@@ -3,6 +3,7 @@ import { parseRoute, printRoute, routeId } from "../domain/route.ts";
 import { assertNever } from "../domain/never.ts";
 import {
   CardIdSchema,
+  LineageSchema,
   PoolSchema,
   SECTION_HEADING,
   SECTION_KEYS,
@@ -13,6 +14,9 @@ import {
   defaultQuery,
   type BatchFilter,
   type CardId,
+  type Cite,
+  type Lineage,
+  type LineageFilter,
   type PoolFilter,
   type Query,
   type Route,
@@ -37,6 +41,7 @@ type Msg =
   | { readonly _tag: "SetTopic"; readonly filter: TopicFilter }
   | { readonly _tag: "SetBatch"; readonly filter: BatchFilter }
   | { readonly _tag: "SetPool"; readonly filter: PoolFilter }
+  | { readonly _tag: "SetLineage"; readonly filter: LineageFilter }
   | { readonly _tag: "SetYearMin"; readonly value: Year | null }
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
@@ -77,6 +82,8 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, batch: msg.filter } };
     case "SetPool":
       return { ...model, query: { ...model.query, pool: msg.filter } };
+    case "SetLineage":
+      return { ...model, query: { ...model.query, lineage: msg.filter } };
     case "SetYearMin":
       return { ...model, query: { ...model.query, year: { ...model.query.year, min: msg.value } } };
     case "SetYearMax":
@@ -175,6 +182,14 @@ function shellHtml(corpus: Corpus): string {
             ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
           </select>
         </label>
+        <label>
+          Lineage
+          <select id="lineage">
+            ${option("", "All lineages", true)}
+            ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
+            ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
+          </select>
+        </label>
         <div class="year-row">
           <label>
             Year from
@@ -208,6 +223,52 @@ function chip(label: string, kind: string, value?: string): string {
   return `<button type="button" class="chip chip-${attr(kind)}${clickable}"${data}>${escapeHtml(label)}</button>`;
 }
 
+const LINEAGE_DOC_BASE = "https://github.com/anghel4d/broadside-observer/blob/main/seeds/lineages/";
+
+function lineageDocHref(slug: Lineage): string {
+  return `${LINEAGE_DOC_BASE}${encodeURIComponent(slug)}.md`;
+}
+
+function citeExternalHref(cite: Cite): string | null {
+  if (cite.url !== null) return cite.url;
+  if (cite.doi !== null) return `https://doi.org/${cite.doi}`;
+  if (cite.arxiv !== null) return `https://arxiv.org/abs/${cite.arxiv}`;
+  return null;
+}
+
+function renderCites(card: SeedCard, corpus: Corpus): string {
+  if (card.cites.length === 0) return "";
+  const items = card.cites
+    .map((cite) => {
+      const year = cite.year === null ? "" : ` <span class="cite-year">${cite.year}</span>`;
+      const href = citeExternalHref(cite);
+      const external =
+        href === null
+          ? ""
+          : ` <a class="cite-url" href="${attr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(href)}</a>`;
+      const local =
+        cite.card !== null && corpus.byId.has(cite.card)
+          ? ` <a class="cite-card" href="${attr(printRoute({ _tag: "Card", id: cite.card }))}">${escapeHtml(cite.card)}</a>`
+          : "";
+      return `<li class="cite">
+        <span class="cite-title">${escapeHtml(cite.title)}</span>${year}${external}${local}
+      </li>`;
+    })
+    .join("");
+  return `<section>
+      <h3>Cites</h3>
+      <ul class="cites">${items}</ul>
+    </section>`;
+}
+
+function renderLineageChip(card: SeedCard, corpus: Corpus): string {
+  if (card.lineage === null) return "";
+  const notes = corpus.lineageDocs.has(card.lineage)
+    ? `<a class="chip chip-lineage-doc" href="${attr(lineageDocHref(card.lineage))}" target="_blank" rel="noopener noreferrer">lineage notes</a>`
+    : "";
+  return `${chip(card.lineage, "lineage", card.lineage)}${notes}`;
+}
+
 function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
   if (visible.length === 0) {
     return `<li class="empty">No cards match the current filters.</li>`;
@@ -223,6 +284,7 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
             <span class="rank">#${card.seed_rank}</span>
             <span class="year">${card.year}</span>
             ${card.pool === null ? "" : `<span class="pool">${escapeHtml(card.pool)}</span>`}
+            ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(card.lineage)}</span>`}
           </span>
           <span class="row-title">${escapeHtml(card.title)}</span>
           <span class="row-sub">${escapeHtml(authors)}</span>
@@ -232,7 +294,7 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
     .join("");
 }
 
-function renderDetail(card: SeedCard | null): string {
+function renderDetail(card: SeedCard | null, corpus: Corpus): string {
   if (card === null) {
     return `<div class="empty-detail"><p>Select a card from the list.</p></div>`;
   }
@@ -243,6 +305,7 @@ function renderDetail(card: SeedCard | null): string {
     ...card.topics.map((topic) => chip(topic, "topic", topic)),
     chip(card.seed_batch, "batch", card.seed_batch),
     ...(card.pool === null ? [] : [chip(card.pool, "pool", card.pool)]),
+    renderLineageChip(card, corpus),
     ...(card.relevance_score === null ? [] : [chip(`relevance ${card.relevance_score}`, "relevance")]),
     ...(card.venue.length > 0 ? [chip(card.venue, "venue")] : []),
   ].join("");
@@ -275,6 +338,7 @@ function renderDetail(card: SeedCard | null): string {
       <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
       <p class="ids">${identifiers}</p>
       <div class="chips">${chips}</div>
+      ${renderCites(card, corpus)}
       ${sections}
       <p class="reviewed">Reviewed ${escapeHtml(card.reviewed)}</p>
     </article>
@@ -302,6 +366,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const topicSelect = requireElement<HTMLSelectElement>(root, "topic");
   const batchSelect = requireElement<HTMLSelectElement>(root, "batch");
   const poolSelect = requireElement<HTMLSelectElement>(root, "pool");
+  const lineageSelect = requireElement<HTMLSelectElement>(root, "lineage");
   const yearMinInput = requireElement<HTMLInputElement>(root, "yearMin");
   const yearMaxInput = requireElement<HTMLInputElement>(root, "yearMax");
   const sortSelect = requireElement<HTMLSelectElement>(root, "sort");
@@ -316,7 +381,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const vm = project(next);
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     list.innerHTML = renderList(vm.visible, vm.selected?.id ?? null);
-    detail.innerHTML = renderDetail(vm.selected);
+    detail.innerHTML = renderDetail(vm.selected, vm.corpus);
     const active = list.querySelector(".is-active");
     if (active instanceof HTMLElement) active.scrollIntoView({ block: "nearest" });
   };
@@ -362,6 +427,18 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const pool = PoolSchema.safeParse(poolSelect.value);
     if (pool.success) dispatch({ _tag: "SetPool", filter: { _tag: "One", pool: pool.data } });
   });
+  lineageSelect.addEventListener("change", () => {
+    if (lineageSelect.value === "") {
+      dispatch({ _tag: "SetLineage", filter: { _tag: "All" } });
+      return;
+    }
+    if (lineageSelect.value === "__none__") {
+      dispatch({ _tag: "SetLineage", filter: { _tag: "None" } });
+      return;
+    }
+    const lineage = LineageSchema.safeParse(lineageSelect.value);
+    if (lineage.success) dispatch({ _tag: "SetLineage", filter: { _tag: "One", lineage: lineage.data } });
+  });
   yearMinInput.addEventListener("input", () => {
     const raw = yearMinInput.value.trim();
     if (raw === "") dispatch({ _tag: "SetYearMin", value: null });
@@ -387,6 +464,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     topicSelect.value = "";
     batchSelect.value = "";
     poolSelect.value = "";
+    lineageSelect.value = "";
     yearMinInput.value = "";
     yearMaxInput.value = "";
     sortSelect.value = "rank";
@@ -419,6 +497,11 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       if (!pool.success) return;
       poolSelect.value = value;
       dispatch({ _tag: "SetPool", filter: { _tag: "One", pool: pool.data } });
+    } else if (kind === "lineage") {
+      const lineage = LineageSchema.safeParse(value);
+      if (!lineage.success) return;
+      lineageSelect.value = value;
+      dispatch({ _tag: "SetLineage", filter: { _tag: "One", lineage: lineage.data } });
     }
   });
 

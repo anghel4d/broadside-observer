@@ -15,4 +15,4 @@ if (!(root instanceof HTMLElement)) {
   throw new Error("Missing #app");
 }
 
-startApp(root, buildCorpus(decoded.data.cards));
+startApp(root, buildCorpus(decoded.data.cards, decoded.data.lineageDocs));

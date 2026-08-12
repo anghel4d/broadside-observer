@@ -179,6 +179,13 @@ button:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+.row-meta .lineage {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+}
+
 .row-title {
   font-weight: 600;
 }
@@ -247,6 +254,58 @@ button:focus-visible {
 
 .chip.is-filter:hover {
   border-color: var(--accent);
+}
+
+.chip-lineage {
+  border-color: #3a4a62;
+}
+
+a.chip-lineage-doc {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cites {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.cite {
+  margin: 0;
+  padding: 0.45rem 0.55rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.cite-title {
+  font-weight: 600;
+}
+
+.cite-year {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.cite-year::before {
+  content: " · ";
+  color: var(--faint);
+}
+
+.cite-url,
+.cite-card {
+  display: inline-block;
+  margin-left: 0.45rem;
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.cite-card {
+  font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
 }
 
 .detail h3 {
