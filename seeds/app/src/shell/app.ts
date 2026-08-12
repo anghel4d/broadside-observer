@@ -1,4 +1,4 @@
-import { applyQuery, selectedCard } from "../domain/query.ts";
+import { applyQuery, selectionState } from "../domain/query.ts";
 import { parseRoute, printRoute, routeId } from "../domain/route.ts";
 import { assertNever } from "../domain/never.ts";
 import {
@@ -29,11 +29,19 @@ import type { Corpus } from "../domain/corpus.ts";
 import { debounce } from "./debounce.ts";
 import { attr, escapeHtml } from "./html.ts";
 import { renderMarkdown } from "./markdown.ts";
+import {
+  browserStorage,
+  parseViewMode,
+  readStoredView,
+  writeStoredView,
+  type ViewMode,
+} from "./view.ts";
 
 type Model = {
   readonly corpus: Corpus;
   readonly query: Query;
   readonly route: Route;
+  readonly view: ViewMode;
 };
 
 type Msg =
@@ -45,6 +53,7 @@ type Msg =
   | { readonly _tag: "SetYearMin"; readonly value: Year | null }
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
+  | { readonly _tag: "SetView"; readonly view: ViewMode }
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
   | { readonly _tag: "Move"; readonly delta: -1 | 1 }
@@ -58,17 +67,27 @@ const SORT_LABEL = {
 } as const satisfies Record<SortKey, string>;
 
 type ViewModel = {
-  readonly query: Query;
   readonly visible: ReadonlyArray<SeedCard>;
   readonly selected: SeedCard | null;
+  readonly offFilter: boolean;
+  readonly view: ViewMode;
   readonly corpus: Corpus;
 };
 
-function init(corpus: Corpus, hash: string): Model {
+type Paint = {
+  readonly view: ViewMode;
+  readonly ids: string;
+  readonly highlight: CardId | null;
+  readonly detail: CardId | null;
+  readonly offFilter: boolean;
+};
+
+function init(corpus: Corpus, hash: string, view: ViewMode): Model {
   return {
     corpus,
     query: defaultQuery,
     route: parseRoute(hash),
+    view,
   };
 }
 
@@ -90,19 +109,25 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, year: { ...model.query.year, max: msg.value } } };
     case "SetSort":
       return { ...model, query: { ...model.query, sort: msg.sort } };
+    case "SetView":
+      return model.view === msg.view ? model : { ...model, view: msg.view };
     case "Reset":
       return { ...model, query: defaultQuery };
     case "Select":
-      return { ...model, route: { _tag: "Card", id: msg.id } };
+      return routeId(model.route) === msg.id ? model : { ...model, route: { _tag: "Card", id: msg.id } };
     case "Move": {
       const visible = applyQuery(model.corpus, model.query);
       if (visible.length === 0) return model;
-      const currentId = selectedCard(model.corpus, visible, routeId(model.route))?.id;
-      const index = currentId === undefined ? 0 : visible.findIndex((card) => card.id === currentId);
-      const from = index < 0 ? 0 : index;
-      const nextIndex = Math.min(visible.length - 1, Math.max(0, from + msg.delta));
+      const currentId = routeId(model.route);
+      const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
+      if (index < 0) {
+        const pick = msg.delta > 0 ? visible[0] : visible[visible.length - 1];
+        return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
+      }
+      const nextIndex = Math.min(visible.length - 1, Math.max(0, index + msg.delta));
       const next = visible[nextIndex];
-      return next === undefined ? model : { ...model, route: { _tag: "Card", id: next.id } };
+      if (next === undefined || next.id === currentId) return model;
+      return { ...model, route: { _tag: "Card", id: next.id } };
     }
     case "Hash":
       return { ...model, route: parseRoute(msg.hash) };
@@ -113,10 +138,12 @@ function update(model: Model, msg: Msg): Model {
 
 function project(model: Model): ViewModel {
   const visible = applyQuery(model.corpus, model.query);
+  const state = selectionState(model.corpus, visible, routeId(model.route));
   return {
-    query: model.query,
     visible,
-    selected: selectedCard(model.corpus, visible, routeId(model.route)),
+    selected: state._tag === "None" ? null : state.card,
+    offFilter: state._tag === "OffFilter",
+    view: model.view,
     corpus: model.corpus,
   };
 }
@@ -143,84 +170,95 @@ function parseCardId(value: string): CardId | null {
   return parsed.success ? parsed.data : null;
 }
 
-function shellHtml(corpus: Corpus): string {
+function plainText(value: string): string {
+  return value.replace(/\s+/gu, " ").trim();
+}
+
+function visibleKey(cards: ReadonlyArray<SeedCard>): string {
+  return cards.map((card) => card.id).join("\n");
+}
+
+function shellHtml(corpus: Corpus, view: ViewMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
+  const listOn = view === "list";
   return `
     <header class="topbar">
-      <div>
+      <div class="brand">
         <h1>Seed browser</h1>
-        <p class="lede">Validated local catalog. Search and filter stay in memory.</p>
+        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> move.</p>
       </div>
-      <p class="status" id="status"></p>
-    </header>
-    <div class="layout">
-      <aside class="filters" aria-label="Filters">
-        <label>
-          Search
-          <input id="query" type="search" placeholder="Title, authors, topics, takeaway" autocomplete="off" />
-        </label>
-        <label>
-          Topic
-          <select id="topic">
-            ${option("", "All topics", true)}
-            ${corpus.topics.map((topic) => option(topic, topic, false)).join("")}
-          </select>
-        </label>
-        <label>
-          Batch
-          <select id="batch">
-            ${option("", "All batches", true)}
-            ${corpus.batches.map((batch) => option(batch, batch, false)).join("")}
-          </select>
-        </label>
-        <label>
-          Pool
-          <select id="pool">
-            ${option("", "All pools", true)}
-            ${corpus.hasUnpooled ? option("__none__", "No pool", false) : ""}
-            ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
-          </select>
-        </label>
-        <label>
-          Lineage
-          <select id="lineage">
-            ${option("", "All lineages", true)}
-            ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
-            ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
-          </select>
-        </label>
-        <div class="year-row">
-          <label>
-            Year from
-            <input id="yearMin" type="number" inputmode="numeric" placeholder="${yearLo ?? ""}" />
-          </label>
-          <label>
-            Year to
-            <input id="yearMax" type="number" inputmode="numeric" placeholder="${yearHi ?? ""}" />
-          </label>
+      <div class="topbar-tools">
+        <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
+          <button type="button" role="radio" data-view="list" aria-checked="${listOn ? "true" : "false"}">List</button>
+          <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
         </div>
-        <label>
-          Sort
-          <select id="sort">
-            ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
-          </select>
-        </label>
-        <button type="button" class="reset" id="reset">Reset filters</button>
-      </aside>
-      <section class="list-pane" aria-label="Card list">
-        <ul class="card-list" id="list"></ul>
-      </section>
+        <p class="status" id="status"></p>
+      </div>
+    </header>
+    <div class="chrome" aria-label="Filters">
+      <label class="search-field">
+        Search
+        <input id="query" type="search" placeholder="Title, authors, topics, takeaway" autocomplete="off" spellcheck="false" />
+      </label>
+      <label>
+        Topic
+        <select id="topic">
+          ${option("", "All topics", true)}
+          ${corpus.topics.map((topic) => option(topic, topic, false)).join("")}
+        </select>
+      </label>
+      <label>
+        Batch
+        <select id="batch">
+          ${option("", "All batches", true)}
+          ${corpus.batches.map((batch) => option(batch, batch, false)).join("")}
+        </select>
+      </label>
+      <label>
+        Pool
+        <select id="pool">
+          ${option("", "All pools", true)}
+          ${corpus.hasUnpooled ? option("__none__", "No pool", false) : ""}
+          ${corpus.pools.map((pool) => option(pool, pool, false)).join("")}
+        </select>
+      </label>
+      <label>
+        Lineage
+        <select id="lineage">
+          ${option("", "All lineages", true)}
+          ${corpus.hasUnlineaged ? option("__none__", "No lineage", false) : ""}
+          ${corpus.lineages.map((lineage) => option(lineage, lineage, false)).join("")}
+        </select>
+      </label>
+      <div class="year-fields">
+        <span class="field-label">Year</span>
+        <span class="year-inputs">
+          <input id="yearMin" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearLo ?? "from"}" aria-label="Year from" />
+          <span class="year-dash" aria-hidden="true">–</span>
+          <input id="yearMax" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearHi ?? "to"}" aria-label="Year to" />
+        </span>
+      </div>
+      <label>
+        Sort
+        <select id="sort">
+          ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
+        </select>
+      </label>
+      <button type="button" class="reset" id="reset">Reset</button>
+    </div>
+    <div class="workspace" id="workspace" data-view="${attr(view)}">
+      <section class="browse-pane" id="browse" aria-label="Card list"></section>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
     </div>
   `;
 }
 
 function chip(label: string, kind: string, value?: string): string {
-  const data =
-    value === undefined ? "" : ` data-filter="${attr(kind)}" data-value="${attr(value)}"`;
-  const clickable = value === undefined ? "" : " is-filter";
-  return `<button type="button" class="chip chip-${attr(kind)}${clickable}"${data}>${escapeHtml(label)}</button>`;
+  if (value !== undefined) {
+    return `<button type="button" class="chip chip-${attr(kind)} is-filter" data-filter="${attr(kind)}" data-value="${attr(value)}">${escapeHtml(label)}</button>`;
+  }
+  return `<span class="chip chip-${attr(kind)}">${escapeHtml(label)}</span>`;
 }
 
 const LINEAGE_DOC_BASE = "https://github.com/anghel4d/broadside-observer/blob/main/seeds/lineages/";
@@ -245,13 +283,15 @@ function renderCites(card: SeedCard, corpus: Corpus): string {
       const external =
         href === null
           ? ""
-          : ` <a class="cite-url" href="${attr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(href)}</a>`;
+          : ` <a class="cite-url" href="${attr(href)}" title="${attr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(href)}</a>`;
       const local =
         cite.card !== null && corpus.byId.has(cite.card)
           ? ` <a class="cite-card" href="${attr(printRoute({ _tag: "Card", id: cite.card }))}">${escapeHtml(cite.card)}</a>`
           : "";
+      const links = external === "" && local === "" ? "" : `<div class="cite-links">${external}${local}</div>`;
       return `<li class="cite">
-        <span class="cite-title">${escapeHtml(cite.title)}</span>${year}${external}${local}
+        <div class="cite-head"><span class="cite-title">${escapeHtml(cite.title)}</span>${year}</div>
+        ${links}
       </li>`;
     })
     .join("");
@@ -271,9 +311,9 @@ function renderLineageChip(card: SeedCard, corpus: Corpus): string {
 
 function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
   if (visible.length === 0) {
-    return `<li class="empty">No cards match the current filters.</li>`;
+    return `<p class="empty">No cards match the current filters.</p>`;
   }
-  return visible
+  const items = visible
     .map((card) => {
       const active = card.id === selectedId;
       const authors =
@@ -286,18 +326,64 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null)
             ${card.pool === null ? "" : `<span class="pool">${escapeHtml(card.pool)}</span>`}
             ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(card.lineage)}</span>`}
           </span>
-          <span class="row-title">${escapeHtml(card.title)}</span>
+          <span class="row-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
           <span class="row-sub">${escapeHtml(authors)}</span>
         </button>
       </li>`;
     })
     .join("");
+  return `<ul class="card-list">${items}</ul>`;
 }
 
-function renderDetail(card: SeedCard | null, corpus: Corpus): string {
-  if (card === null) {
-    return `<div class="empty-detail"><p>Select a card from the list.</p></div>`;
+function cardFaceChips(card: SeedCard): string {
+  const topicLimit = card.lineage === null ? 3 : 2;
+  return [
+    ...(card.lineage === null ? [] : [chip(card.lineage, "lineage")]),
+    ...card.topics.slice(0, topicLimit).map((topic) => chip(topic, "topic")),
+  ].join("");
+}
+
+function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
+  if (visible.length === 0) {
+    return `<p class="empty">No cards match the current filters.</p>`;
   }
+  const items = visible
+    .map((card) => {
+      const active = card.id === selectedId;
+      return `<button type="button" class="seed-card${active ? " is-active" : ""}" data-id="${attr(card.id)}" aria-current="${active ? "true" : "false"}">
+        <span class="seed-card-meta">
+          <span class="rank">#${card.seed_rank}</span>
+          <span class="year">${card.year}</span>
+        </span>
+        <span class="seed-card-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
+        <span class="seed-card-chips">${cardFaceChips(card)}</span>
+        <span class="seed-card-takeaway">${escapeHtml(plainText(card.sections.takeaway))}</span>
+      </button>`;
+    })
+    .join("");
+  return `<div class="card-grid">${items}</div>`;
+}
+
+function renderBrowse(view: ViewMode, visible: ReadonlyArray<SeedCard>, selectedId: CardId | null): string {
+  return view === "list" ? renderList(visible, selectedId) : renderGrid(visible, selectedId);
+}
+
+function renderDetail(
+  card: SeedCard | null,
+  corpus: Corpus,
+  offFilter: boolean,
+  emptyVisible: boolean,
+): string {
+  if (card === null) {
+    const message = emptyVisible
+      ? "No cards match the current filters."
+      : "Select a card from the list.";
+    return `<div class="empty-detail"><p>${escapeHtml(message)}</p></div>`;
+  }
+
+  const banner = offFilter
+    ? `<p class="off-filter" role="status">Not in the current filter. Linked card still shown.</p>`
+    : "";
 
   const chips = [
     chip(`rank ${card.seed_rank}`, "rank"),
@@ -333,6 +419,7 @@ function renderDetail(card: SeedCard | null, corpus: Corpus): string {
 
   return `
     <article class="detail">
+      ${banner}
       <p class="detail-id">${escapeHtml(card.id)}</p>
       <h2>${escapeHtml(card.title)}</h2>
       <p class="authors">${escapeHtml(card.authors.join(" · "))}</p>
@@ -359,8 +446,47 @@ function syncHash(route: Route): void {
   }
 }
 
+function setActive(root: HTMLElement, id: CardId | null): void {
+  for (const node of root.querySelectorAll("[data-id]")) {
+    if (!(node instanceof HTMLElement)) continue;
+    const on = id !== null && node.dataset.id === id;
+    node.classList.toggle("is-active", on);
+    node.setAttribute("aria-current", on ? "true" : "false");
+  }
+}
+
+/** Scroll `child` inside `pane` only — never the document. */
+function scrollIntoPane(pane: HTMLElement, child: HTMLElement): void {
+  const paneRect = pane.getBoundingClientRect();
+  const childRect = child.getBoundingClientRect();
+  const pad = 6;
+  if (childRect.top < paneRect.top + pad) {
+    pane.scrollTop += childRect.top - paneRect.top - pad;
+  } else if (childRect.bottom > paneRect.bottom - pad) {
+    pane.scrollTop += childRect.bottom - paneRect.bottom + pad;
+  }
+}
+
+function syncViewToggle(root: HTMLElement, view: ViewMode): void {
+  for (const node of root.querySelectorAll("#view-toggle [data-view]")) {
+    if (!(node instanceof HTMLElement)) continue;
+    node.setAttribute("aria-checked", node.dataset.view === view ? "true" : "false");
+  }
+}
+
+function isTypingTarget(target: EventTarget | null): boolean {
+  return (
+    target instanceof HTMLInputElement ||
+    target instanceof HTMLSelectElement ||
+    target instanceof HTMLTextAreaElement ||
+    (target instanceof HTMLElement && target.isContentEditable)
+  );
+}
+
 export function startApp(root: HTMLElement, corpus: Corpus): void {
-  root.innerHTML = shellHtml(corpus);
+  const storage = browserStorage();
+  const initialView = readStoredView(storage);
+  root.innerHTML = shellHtml(corpus, initialView);
 
   const queryInput = requireElement<HTMLInputElement>(root, "query");
   const topicSelect = requireElement<HTMLSelectElement>(root, "topic");
@@ -371,24 +497,53 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const yearMaxInput = requireElement<HTMLInputElement>(root, "yearMax");
   const sortSelect = requireElement<HTMLSelectElement>(root, "sort");
   const resetButton = requireElement<HTMLButtonElement>(root, "reset");
-  const list = requireElement<HTMLUListElement>(root, "list");
+  const viewToggle = requireElement<HTMLElement>(root, "view-toggle");
+  const workspace = requireElement<HTMLElement>(root, "workspace");
+  const browse = requireElement<HTMLElement>(root, "browse");
   const detail = requireElement<HTMLElement>(root, "detail");
   const status = requireElement<HTMLParagraphElement>(root, "status");
 
-  let model = init(corpus, location.hash);
+  let model = init(corpus, location.hash, initialView);
+  let painted: Paint | null = null;
 
   const patch = (next: Model): void => {
     const vm = project(next);
+    const highlight = vm.offFilter ? null : (vm.selected?.id ?? null);
+    const detailId = vm.selected?.id ?? null;
+    const ids = visibleKey(vm.visible);
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
-    list.innerHTML = renderList(vm.visible, vm.selected?.id ?? null);
-    detail.innerHTML = renderDetail(vm.selected, vm.corpus);
-    const active = list.querySelector(".is-active");
-    if (active instanceof HTMLElement) active.scrollIntoView({ block: "nearest" });
+    workspace.dataset.view = vm.view;
+    syncViewToggle(root, vm.view);
+
+    const prev = painted;
+    if (prev === null || prev.view !== vm.view || prev.ids !== ids) {
+      browse.innerHTML = renderBrowse(vm.view, vm.visible, highlight);
+    } else if (prev.highlight !== highlight) {
+      setActive(browse, highlight);
+    }
+
+    if (prev === null || prev.detail !== detailId || prev.offFilter !== vm.offFilter) {
+      detail.innerHTML = renderDetail(vm.selected, vm.corpus, vm.offFilter, vm.visible.length === 0);
+    }
+
+    const active = browse.querySelector(".is-active");
+    if (active instanceof HTMLElement) scrollIntoPane(browse, active);
+
+    painted = {
+      view: vm.view,
+      ids,
+      highlight,
+      detail: detailId,
+      offFilter: vm.offFilter,
+    };
   };
 
   const dispatch = (msg: Msg): void => {
-    model = update(model, msg);
+    const next = update(model, msg);
+    if (next === model) return;
+    model = next;
     if (msg._tag !== "Hash") syncHash(model.route);
+    if (msg._tag === "SetView") writeStoredView(storage, model.view);
     patch(model);
   };
 
@@ -459,6 +614,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const sort = parseSort(sortSelect.value);
     if (sort !== null) dispatch({ _tag: "SetSort", sort });
   });
+  viewToggle.addEventListener("click", (event) => {
+    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-view]");
+    if (!(button instanceof HTMLButtonElement) || button.dataset.view === undefined) return;
+    const view = parseViewMode(button.dataset.view);
+    if (view !== null) dispatch({ _tag: "SetView", view });
+  });
   resetButton.addEventListener("click", () => {
     queryInput.value = "";
     topicSelect.value = "";
@@ -470,8 +631,8 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     sortSelect.value = "rank";
     dispatch({ _tag: "Reset" });
   });
-  list.addEventListener("click", (event) => {
-    const button = (event.target instanceof Element ? event.target : null)?.closest("button.card-row");
+  browse.addEventListener("click", (event) => {
+    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-id]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.id === undefined) return;
     const id = parseCardId(button.dataset.id);
     if (id !== null) dispatch({ _tag: "Select", id });
@@ -506,12 +667,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   });
 
   document.addEventListener("keydown", (event) => {
-    const target = event.target;
-    if (
-      target instanceof HTMLInputElement ||
-      target instanceof HTMLSelectElement ||
-      target instanceof HTMLTextAreaElement
-    ) {
+    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    if (isTypingTarget(event.target)) return;
+    if (event.key === "/" ) {
+      event.preventDefault();
+      queryInput.focus();
+      queryInput.select();
       return;
     }
     if (event.key === "ArrowDown" || event.key === "j") {

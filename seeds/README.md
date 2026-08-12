@@ -90,4 +90,4 @@ Future research passes should fill `lineage` / `cites` when the edge is obvious;
 
 ## Browsing
 
-`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). Building that app is welcome; do not wait on it to keep adding cards.
+`INDEX.md` is the current human surface. The seed browser in [`app/`](app/) is a static catalog UI over the same files: **List** (master-detail) and **Cards** (grid + pinned detail), with independent pane scrolling. Because every card shares one schema, the app can filter by `topics`, `seed_batch`, `year`, `pool`, and `lineage`. Keep adding cards in this format; do not wait on the app to do so.
