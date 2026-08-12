@@ -1,4 +1,5 @@
 import type { CardId, SeedCard } from "../domain/schema.ts";
+import { measureGridColumns } from "./gridNav.ts";
 import type { ViewMode } from "./view.ts";
 import {
   fillSizes,
@@ -28,6 +29,8 @@ export type BrowseVirtualizer = {
   readonly reveal: (id: CardId | null) => void;
   readonly flash: (id: CardId) => void;
   readonly refresh: () => void;
+  /** Live Cards column count from the CSS grid (or the auto-fill width formula). */
+  readonly columns: () => number;
   readonly disconnect: () => void;
 };
 
@@ -81,6 +84,21 @@ export function createBrowseVirtualizer(
     idToIndex = next;
   };
 
+  const liveColumns = (): number => {
+    const m = remMetrics();
+    const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
+    const grid = pane.querySelector(".card-grid");
+    if (grid instanceof HTMLElement) {
+      return measureGridColumns({
+        templateColumns: getComputedStyle(grid).gridTemplateColumns,
+        width: grid.clientWidth > 0 ? grid.clientWidth : inner,
+        minTrack: m.gridMinTrack,
+        gap: m.gridGap,
+      });
+    }
+    return gridColumns(inner, m.gridMinTrack, m.gridGap);
+  };
+
   const listPrefix = (count: number, fallback: number): Float64Array => {
     if (!prefixDirty && prefix.length === count + 1) return prefix;
     prefix = prefixSums(fillSizes(count, fallback, listHeights));
@@ -102,8 +120,7 @@ export function createBrowseVirtualizer(
         m.listInset,
       );
     }
-    const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
-    const columns = gridColumns(inner, m.gridMinTrack, m.gridGap);
+    const columns = liveColumns();
     const rowHeight = cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow;
     return gridSlice(
       cards.length,
@@ -226,7 +243,7 @@ export function createBrowseVirtualizer(
         ? listItemBounds(listPrefix(cards.length, m.listDefault), index, m.listInset)
         : gridItemBounds(
             index,
-            gridColumns(Math.max(0, pane.clientWidth - m.gridPad * 2), m.gridMinTrack, m.gridGap),
+            liveColumns(),
             cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow,
             m.gridGap,
             m.gridPad,
@@ -331,6 +348,7 @@ export function createBrowseVirtualizer(
     set,
     reveal,
     flash,
+    columns: liveColumns,
     refresh: () => {
       lastSlice = null;
       paint(true);
