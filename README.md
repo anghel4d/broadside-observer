@@ -8,7 +8,7 @@ The research agent owns and operates this loop. Each run follows the versioned t
 
 ### Stage A — Poll
 
-Query the preregistered topic queries against arXiv and any optional configured sources. Request items created or changed since the last successful source cursor. Record the cursor used, query time, source, and next cursor in the run log; do not advance a cursor after an incomplete poll.
+Query the preregistered sources in [`radar/sources.yaml`](radar/sources.yaml) (arXiv, Hugging Face Daily Papers, OpenReview, SIGGRAPH/TOG, Eurographics, HPG/JCGT, SIGPLAN/DBLP, ACL Anthology, Papers with Code, AIIDE/IEEE CoG) using topic hints from [`radar/topics.yaml`](radar/topics.yaml). Request items created or changed since the last successful source cursor. Record the cursor used, query time, source, and next cursor in the run log; do not advance a cursor after an incomplete poll.
 
 ### Stage B — Normalize and dedupe
 
@@ -40,4 +40,4 @@ Topic-scope changes, destructive deletion, and any external publication beyond t
 
 ## Status
 
-Research loop v1, the topic registry, and initial radar state are specified in this repository. The runtime is currently operated by the research assistant; it is not yet implemented as a Nix service. Source adapters, scheduling, and automated execution remain future work.
+Research loop v1 is specified and agent-operated on a 6-hour cadence. The repository now includes a ten-source registry (`radar/sources.yaml`) and an expanded topic map covering agent systems plus Anoptic engine, ano language, and RTS/game-AI work. Per-source adapters and a Nix runtime remain future work.
