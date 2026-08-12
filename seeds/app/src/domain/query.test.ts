@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { buildCorpus } from "./corpus.ts";
-import { applyQuery, searchScore, tokenize } from "./query.ts";
+import { applyQuery, searchScore, selectionState, tokenize } from "./query.ts";
 import { SeedCardSchema, defaultQuery, type Query, type SeedCard } from "./schema.ts";
 
 function card(overrides: Record<string, unknown>): SeedCard {
@@ -146,5 +146,20 @@ assert.deepEqual(
   applyQuery(corpus, noLineage).map((item) => item.id),
   ["002-beta", "001-alpha", "003-gamma"],
 );
+
+const lineageVisible = applyQuery(corpus, lineage);
+const inFilter = selectionState(corpus, lineageVisible, cards[3]!.id);
+assert.equal(inFilter._tag, "Visible");
+assert.equal(inFilter._tag === "Visible" ? inFilter.card.id : "", "025-hazard-pointers");
+
+const offFilter = selectionState(corpus, lineageVisible, cards[0]!.id);
+assert.equal(offFilter._tag, "OffFilter");
+assert.equal(offFilter._tag === "OffFilter" ? offFilter.card.id : "", "001-alpha");
+
+assert.equal(selectionState(corpus, [], null)._tag, "None");
+
+const autoFirst = selectionState(corpus, byRank, null);
+assert.equal(autoFirst._tag, "Visible");
+assert.equal(autoFirst._tag === "Visible" ? autoFirst.card.id : "", "002-beta");
 
 console.log("query.test.ts ok");

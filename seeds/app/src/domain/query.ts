@@ -136,14 +136,38 @@ export function applyQuery(corpus: Corpus, query: Query): ReadonlyArray<SeedCard
   return filtered;
 }
 
+export type SelectionState =
+  | { readonly _tag: "None" }
+  | { readonly _tag: "Visible"; readonly card: SeedCard }
+  | { readonly _tag: "OffFilter"; readonly card: SeedCard };
+
+/**
+ * Resolve the detail card against the current filter.
+ * A routed id still present in `visible` wins; a routed id excluded by the
+ * filter is `OffFilter` (detail can warn instead of going stale); otherwise
+ * the first visible card is selected.
+ */
+export function selectionState(
+  corpus: Corpus,
+  visible: ReadonlyArray<SeedCard>,
+  id: CardId | null,
+): SelectionState {
+  if (id !== null) {
+    for (const card of visible) {
+      if (card.id === id) return { _tag: "Visible", card };
+    }
+    const off = corpus.byId.get(id);
+    if (off !== undefined) return { _tag: "OffFilter", card: off };
+  }
+  const first = visible[0];
+  return first === undefined ? { _tag: "None" } : { _tag: "Visible", card: first };
+}
+
 export function selectedCard(
   corpus: Corpus,
   visible: ReadonlyArray<SeedCard>,
   id: CardId | null,
 ): SeedCard | null {
-  if (id !== null) {
-    const fromCorpus = corpus.byId.get(id);
-    if (fromCorpus !== undefined) return fromCorpus;
-  }
-  return visible[0] ?? null;
+  const state = selectionState(corpus, visible, id);
+  return state._tag === "None" ? null : state.card;
 }
