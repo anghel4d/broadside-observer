@@ -14,9 +14,9 @@ topics:
 seed_rank: 712
 seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 8
-lineage: steering-boids-orca
+lineage: crowd-steering
 cites:
 - title: 'Flocks, Herds, and Schools: A Distributed Behavioral Model'
   url: https://doi.org/10.1145/37401.37406

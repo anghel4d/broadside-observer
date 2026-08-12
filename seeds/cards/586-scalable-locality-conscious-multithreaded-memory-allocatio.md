@@ -14,11 +14,11 @@ topics:
   - size-class
   - lock-free
 seed_rank: 586
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"

@@ -15,9 +15,9 @@ topics:
 seed_rank: 262
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 10
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
 - title: A Note on Two Problems in Connexion with Graphs
   url: https://doi.org/10.1007/BF01386390

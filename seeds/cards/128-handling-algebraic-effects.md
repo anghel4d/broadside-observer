@@ -1,34 +1,34 @@
 ---
-
-title: "Handling Algebraic Effects"
+title: Handling Algebraic Effects
 authors:
-  - "Gordon Plotkin"
-  - "Matija Pretnar"
+- Gordon Plotkin
+- Matija Pretnar
 year: 2013
-venue: "Logical Methods in Computer Science"
-arxiv: "1312.1399"
-doi: "10.2168/LMCS-9(4:23)2013"
-source: "https://arxiv.org/abs/1312.1399"
+venue: Logical Methods in Computer Science
+arxiv: '1312.1399'
+doi: 10.2168/LMCS-9(4:23)2013
+source: https://arxiv.org/abs/1312.1399
 topics:
-  - typed-programming-systems
+- typed-programming-systems
 seed_rank: 128
-seed_batch: "prefill-2026-08-13"
-reviewed: "2026-08-13"
-pool: "language"
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: languages
 relevance_score: 9
 cites:
-  - title: "Handlers of Algebraic Effects"
-    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
-    year: 2009
-    arxiv: null
-    doi: null
-    card: "022-handlers-of-algebraic-effects"
-  - title: "Programming with Algebraic Effects and Handlers"
-    url: "https://arxiv.org/abs/1203.1539"
-    year: 2015
-    arxiv: "1203.1539"
-    doi: null
-    card: "123-programming-with-algebraic-effects-and-handlers"
+- title: Handlers of Algebraic Effects
+  url: https://doi.org/10.1007/978-3-642-00590-9_7
+  year: 2009
+  arxiv: null
+  doi: null
+  card: 022-handlers-of-algebraic-effects
+- title: Programming with Algebraic Effects and Handlers
+  url: https://arxiv.org/abs/1203.1539
+  year: 2015
+  arxiv: '1203.1539'
+  doi: null
+  card: 123-programming-with-algebraic-effects-and-handlers
+lineage: algebraic-effects
 ---
 
 # Handling Algebraic Effects

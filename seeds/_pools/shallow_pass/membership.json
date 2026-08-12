@@ -1,5 +1,5 @@
 {
-  "grid-pathfinding": [
+  "pathfinding": [
     "dijkstra",
     "astar",
     "navmesh",
@@ -15,7 +15,7 @@
     "jps4",
     "jps_plus"
   ],
-  "rollback-netcode": [
+  "game-networking": [
     "unreal_net",
     "quake_net",
     "archers",
@@ -42,7 +42,7 @@
     "hazard_eras",
     "hyaline"
   ],
-  "steering-boids-orca": [
+  "crowd-steering": [
     "boids",
     "steering",
     "continuum",
@@ -51,7 +51,7 @@
     "clearpath",
     "vo"
   ],
-  "gpu-driven-visibility": [
+  "gpu-driven-rendering": [
     "hiz",
     "visbuf",
     "gpudriven",
@@ -61,7 +61,7 @@
     "megatex",
     "wihlidal_gpu"
   ],
-  "behavior-trees-goap": [
+  "game-ai-planning": [
     "strips",
     "smartterrain",
     "shop2",
@@ -73,7 +73,7 @@
     "bt_book",
     "goap_orkin"
   ],
-  "pcg-wfc": [
+  "procedural-generation": [
     "lsystems",
     "dualcontour",
     "sbpcg",

@@ -14,7 +14,7 @@ topics:
 seed_rank: 200
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "language"
+pool: "languages"
 relevance_score: 8
 lineage: ecs-data-oriented
 cites:

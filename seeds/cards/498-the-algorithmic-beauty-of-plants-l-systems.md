@@ -13,9 +13,9 @@ topics:
 seed_rank: 498
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 7
-lineage: pcg-wfc
+lineage: procedural-generation
 cites:
 - title: Example-Based Model Synthesis
   url: https://doi.org/10.1145/1230100.1230119

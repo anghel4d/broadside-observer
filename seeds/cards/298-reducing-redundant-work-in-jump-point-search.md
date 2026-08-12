@@ -15,9 +15,9 @@ topics:
 seed_rank: 298
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
   - title: "Online Graph Pruning for Pathfinding on Grid Maps"
     url: "https://doi.org/10.1609/aaai.v25i1.7994"

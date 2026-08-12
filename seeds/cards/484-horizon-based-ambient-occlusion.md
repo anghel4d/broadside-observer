@@ -29,7 +29,7 @@ cites:
   arxiv: null
   doi: null
   card: 735-finding-next-gen-cryengine-2-ssao
-lineage: screen-space-ao
+lineage: ambient-occlusion
 ---
 
 # Horizon-Based Ambient Occlusion

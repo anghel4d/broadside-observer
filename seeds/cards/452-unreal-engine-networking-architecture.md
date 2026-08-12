@@ -15,7 +15,7 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
-lineage: rollback-netcode
+lineage: game-networking
 cites:
   - title: "Quake III Arena Networking Source"
     url: "https://github.com/id-Software/Quake-III-Arena"

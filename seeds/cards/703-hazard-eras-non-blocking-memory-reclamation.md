@@ -16,7 +16,7 @@ topics:
 seed_rank: 703
 seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
 lineage: memory-reclamation
 cites:

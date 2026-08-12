@@ -17,11 +17,11 @@ topics:
   - tcmalloc
   - hugepages
 seed_rank: 591
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "TCMalloc: Thread-Caching Malloc"
     url: "https://gperftools.github.io/gperftools/tcmalloc.html"

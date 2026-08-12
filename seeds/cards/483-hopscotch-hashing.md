@@ -15,7 +15,7 @@ topics:
 seed_rank: 483
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 7
 lineage: open-addressing
 cites:

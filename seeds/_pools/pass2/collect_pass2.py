@@ -23,7 +23,7 @@ BAN = re.compile(
 QUERIES = [
 ('all:"lock-free" OR all:lockfree OR all:"wait-free"', 40),
 ('all:"hazard pointer" OR all:"memory reclamation" OR all:QSBR OR all:DEBRA', 30),
-('all:"work stealing" OR all:"work-stealing" OR all:"Chase-Lev"', 30),
+('all:"work stealing" OR all:"work-stealing-schedulers" OR all:"Chase-Lev"', 30),
 ('all:"task graph" AND (all:scheduling OR all:parallel)', 25),
 ('all:slab AND all:allocator', 25),
 ('all:jemalloc OR all:tcmalloc OR all:mimalloc OR all:snmalloc OR all:Hoard', 30),
@@ -207,7 +207,7 @@ def topics_for(r):
         ("memory-allocation", r"\b(allocator|malloc|slab|jemalloc|mimalloc|tcmalloc|snmalloc|hoard|arena|multipool|reclamation|hazard|RCU|epoch)\b"),
         ("ecs", r"\b(entity[- ]?component|ECS\b|archetype|sparse set|data[- ]oriented)\b"),
         ("lockfree", r"\b(lock[- ]?free|wait[- ]?free)\b"),
-        ("work-stealing", r"\bwork[- ]?steal"),
+        ("work-stealing-schedulers", r"\bwork[- ]?steal"),
         ("gi", r"\b(global illumination|radiance|voxel cone|LPV|DDGI|photon)\b"),
         ("meshlets", r"\b(meshlet|mesh shader)\b"),
         ("pathfinding", r"\b(pathfind|jump point|navmesh|A\*)\b"),

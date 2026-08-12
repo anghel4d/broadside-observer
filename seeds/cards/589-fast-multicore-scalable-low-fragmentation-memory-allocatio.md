@@ -15,11 +15,11 @@ topics:
   - size-class
   - virtual-spans
 seed_rank: 589
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 8
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines"
     url: "https://doi.org/10.1145/2754169.2754178"

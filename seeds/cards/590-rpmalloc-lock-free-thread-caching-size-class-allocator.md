@@ -12,11 +12,11 @@ topics:
   - size-class
   - engine
 seed_rank: 590
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 8
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"

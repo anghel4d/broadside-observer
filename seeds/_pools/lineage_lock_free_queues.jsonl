@@ -30,5 +30,5 @@
 {"status": "rejected", "title": "Ostrovsky & Morrison HTM concurrent queues", "year": 2020, "reason": "HTM-specific acceleration; niche vs living portable family"}
 {"status": "rejected", "title": "Modular Baskets Queue (2025 follow-on)", "year": 2025, "reason": "Interesting but secondary to 2007 baskets classic for this pass"}
 {"status": "rejected", "title": "LLM-agent concurrent queue papers", "year": 2024, "reason": "Out of scope per Broadside instruction (no LLM-agent papers)"}
-{"status": "rejected", "title": "Chase-Lev / Cilk work-stealing deques", "year": 1999, "reason": "Belongs to work-stealing lineage, not FIFO queue spine"}
+{"status": "rejected", "title": "Chase-Lev / Cilk work-stealing-schedulers deques", "year": 1999, "reason": "Belongs to work-stealing-schedulers lineage, not FIFO queue spine"}
 {"status": "rejected", "title": "Vyukov unbounded SPSC queue page", "year": 2010, "reason": "SPSC covered implicitly; MPSC+MPMC are the lineage-critical Vyukov artifacts"}

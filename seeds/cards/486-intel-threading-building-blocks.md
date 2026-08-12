@@ -8,14 +8,14 @@ arxiv: null
 doi: null
 source: "https://www.oreilly.com/library/view/intel-threading-building/9780596514808/"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - tbb
 seed_rank: 486
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 7
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Scheduling Multithreaded Computations by Work Stealing"
     url: "https://doi.org/10.1145/324133.324234"

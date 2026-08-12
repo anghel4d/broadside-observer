@@ -15,7 +15,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: graphics
 relevance_score: 7
-lineage: pcg-wfc
+lineage: procedural-generation
 cites:
 - title: The Algorithmic Beauty of Plants (L-Systems)
   url: http://algorithmicbotany.org/papers/#abop

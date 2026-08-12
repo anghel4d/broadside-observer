@@ -17,7 +17,7 @@ seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
 pool: graphics
 relevance_score: 7
-lineage: pcg-wfc
+lineage: procedural-generation
 cites:
 - title: Dual Contouring of Hermite Data
   url: https://doi.org/10.1145/566570.566586

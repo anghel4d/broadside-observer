@@ -10,15 +10,15 @@ arxiv: null
 doi: "10.1145/1504176.1504186"
 source: "https://doi.org/10.1145/1504176.1504186"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - lockfree
   - idempotent
 seed_rank: 544
-seed_batch: "lineage-work-stealing-2026-08-13"
+seed_batch: "lineage-work-stealing-schedulers-schedulers-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 8
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Dynamic Circular Work-Stealing Deque"
     url: "https://doi.org/10.1145/1073970.1073974"

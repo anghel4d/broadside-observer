@@ -23,7 +23,7 @@ topics:
 seed_rank: 205
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "language"
+pool: "languages"
 relevance_score: 8
 ---
 

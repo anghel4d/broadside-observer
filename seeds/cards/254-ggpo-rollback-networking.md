@@ -15,7 +15,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: realtime
 relevance_score: 10
-lineage: rollback-netcode
+lineage: game-networking
 cites:
 - title: '1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond'
   url: https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond

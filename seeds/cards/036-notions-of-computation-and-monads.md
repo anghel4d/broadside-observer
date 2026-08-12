@@ -15,9 +15,9 @@ topics:
 seed_rank: 36
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 10
-lineage: effects-handlers
+lineage: algebraic-effects
 cites:
 - title: Handlers of Algebraic Effects
   url: https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf

@@ -20,9 +20,9 @@ topics:
 seed_rank: 13
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 10
-lineage: pcg-wfc
+lineage: procedural-generation
 cites:
   - title: "Search-Based Procedural Content Generation: A Taxonomy and Survey"
     url: "https://doi.org/10.1109/TCIAIG.2011.2148116"

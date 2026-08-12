@@ -14,9 +14,9 @@ topics:
 seed_rank: 734
 seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 8
-lineage: fluids-sph
+lineage: particle-fluids
 cites:
 - title: Particle-Based Fluid Simulation for Interactive Applications
   url: https://matthias-research.github.io/pages/publications/sca03.pdf

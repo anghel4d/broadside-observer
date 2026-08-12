@@ -9,14 +9,14 @@ arxiv: null
 doi: "10.1145/324133.324234"
 source: "https://doi.org/10.1145/324133.324234"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - scheduling
 seed_rank: 257
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 10
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Cilk: An Efficient Multithreaded Runtime System"
     url: "https://doi.org/10.1145/209936.209958"
@@ -49,15 +49,15 @@ cites:
 
 ## One-sentence takeaway
 
-Foundational work-stealing analysis for job systems.
+Foundational work-stealing-schedulers analysis for job systems.
 
 ## Why it matters here
 
-Foundational work-stealing analysis for job systems.
+Foundational work-stealing-schedulers analysis for job systems.
 
 ## Key ideas
 
-- Foundational work-stealing analysis for job systems.
+- Foundational work-stealing-schedulers analysis for job systems.
 
 ## Caveats
 

@@ -16,9 +16,9 @@
       "pathfinding",
       "jps"
     ],
-    "pool": "gameai",
+    "pool": "game-ai",
     "rel": 9,
-    "lineage": "grid-pathfinding",
+    "lineage": "pathfinding",
     "takeaway": "Precomputed jump/wall distances turn JPS into a near-constant-touch optimal grid search \u2014 often ~100x A* on open maps.",
     "why": "GRID COMMAND unit pathing on large static grids needs preprocess-once, query-cheap optimal search.",
     "ideas": [
@@ -50,9 +50,9 @@
       "simulation",
       "netcode"
     ],
-    "pool": "engine",
+    "pool": "engines",
     "rel": 10,
-    "lineage": "rollback-netcode",
+    "lineage": "game-networking",
     "takeaway": "Fixed-dt accumulator + render interpolation is the substrate under lockstep, prediction, and rollback.",
     "why": "Without a stable sim tick, GGPO-style rollback and deterministic lockstep both lie.",
     "ideas": [
@@ -85,7 +85,7 @@
       "lockfree",
       "hazard-pointers"
     ],
-    "pool": "hpc",
+    "pool": "systems",
     "rel": 9,
     "lineage": "memory-reclamation",
     "takeaway": "HP-shaped API that reserves eras instead of pointers, often cutting fence traffic on traversals.",
@@ -121,7 +121,7 @@
       "reclamation",
       "lockfree"
     ],
-    "pool": "hpc",
+    "pool": "systems",
     "rel": 9,
     "lineage": "memory-reclamation",
     "takeaway": "Reference-counting only in the reclamation phase: EBR-like speed with better robustness than classical epochs.",
@@ -160,9 +160,9 @@
       "crowds",
       "collision-avoidance"
     ],
-    "pool": "gameai",
+    "pool": "game-ai",
     "rel": 8,
-    "lineage": "steering-boids-orca",
+    "lineage": "crowd-steering",
     "takeaway": "Casts VO-style avoidance as a parallelizable quadratic program \u2014 bridge from VO toward ORCA-scale crowds.",
     "why": "Shows how reciprocal avoidance becomes a data-parallel kernel before ORCA for large unit counts.",
     "ideas": [
@@ -196,9 +196,9 @@
       "collision-avoidance",
       "motion-planning"
     ],
-    "pool": "gameai",
+    "pool": "game-ai",
     "rel": 9,
-    "lineage": "steering-boids-orca",
+    "lineage": "crowd-steering",
     "takeaway": "Velocity Obstacles \u2014 the geometric primitive that RVO/ORCA later reciprocalize.",
     "why": "Necessary root for understanding ORCA (Optimal Reciprocal Collision Avoidance), not whales/LLMs.",
     "ideas": [
@@ -228,9 +228,9 @@
       "pcg",
       "model-synthesis"
     ],
-    "pool": "engine",
+    "pool": "engines",
     "rel": 9,
-    "lineage": "pcg-wfc",
+    "lineage": "procedural-generation",
     "takeaway": "Constraint-based exemplar synthesis that Wave Function Collapse later popularized.",
     "why": "Corrects the WFC origin story: Merrell 2007 is the algorithmic parent Anoptic PCG should cite.",
     "ideas": [
@@ -264,9 +264,9 @@
       "behavior-trees",
       "game-ai"
     ],
-    "pool": "gameai",
+    "pool": "game-ai",
     "rel": 9,
-    "lineage": "behavior-trees-goap",
+    "lineage": "game-ai-planning",
     "takeaway": "Modern formal book taking Halo/Champandard BTs into analyzable switching structures.",
     "why": "Best single reference when graduating ad-hoc BT lore into something GRID COMMAND AI can reason about.",
     "ideas": [
@@ -298,9 +298,9 @@
       "planning",
       "game-ai"
     ],
-    "pool": "gameai",
+    "pool": "game-ai",
     "rel": 9,
-    "lineage": "behavior-trees-goap",
+    "lineage": "game-ai-planning",
     "takeaway": "GOAP as practical STRIPS-style planning for NPCs \u2014 prelude to the F.E.A.R. GDC talk.",
     "why": "Pairs with F.E.A.R. 2006 as the actionable classical planning stack for squad AI.",
     "ideas": [
@@ -333,7 +333,7 @@
     ],
     "pool": "graphics",
     "rel": 8,
-    "lineage": "gpu-driven-visibility",
+    "lineage": "gpu-driven-rendering",
     "takeaway": "Frostbite-era compute culling/compaction that popularized GPU-resident scene submission alongside Haar/Aaltonen.",
     "why": "Complements the 2015 Advances talk and foreshadows Nanite-style cluster pipelines.",
     "ideas": [

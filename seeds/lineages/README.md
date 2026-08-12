@@ -9,32 +9,32 @@ Each file should include:
 4. Open frontiers / what Anoptic should watch next
 
 Current deep epistemologies (2026-08-13):
-- `lock-free-queues` — Michael & Scott → Vyukov / Disruptor / wait-free queues …
-- `work-stealing` — Cilk / Blumofe–Leiserson → Chase–Lev → …
-- `slab-allocators` — Bonwick → Magazines/Vmem → size-class industrial heaps …
-- `ecs-data-oriented` — West/Martin/Acton → Flecs/EnTT/archetypes …
-- `radiance-cascades` — classical RTGI precursors → Radiance Cascades → splits/variants …
+- `concurrent-data-structures` — Concurrent data structures (queues, linearizability, …)
+- `work-stealing-schedulers` — Work-stealing task schedulers
+- `memory-allocators` — Memory allocators (slab / size-class)
+- `ecs-data-oriented` — ECS & data-oriented design
+- `radiance-cascades` — Radiance Cascades & real-time GI
 
 Medium threads (shallow scan 2026-08-13):
-- `grid-pathfinding` — A*/HPA*/JPS/navmesh …
-- `rollback-netcode` — lockstep, prediction, GGPO, timestep …
-- `memory-reclamation` — HP/EBR/RCU/DEBRA/Hazard Eras/Hyaline … (cite into queues; own lineage)
-- `steering-boids-orca` — Reynolds → VO/RVO/ORCA (collision avoidance)
-- `gpu-driven-visibility` — Hi-Z → GPU-driven → mesh shaders → Nanite
-- `behavior-trees-goap` — STRIPS/GOAP/Halo BT/Champandard …
-- `pcg-wfc` — Model Synthesis → WFC (+ PCG surveys)
+- `pathfinding` — Grid & navmesh pathfinding
+- `game-networking` — Lockstep, prediction & rollback
+- `memory-reclamation` — Safe memory reclamation
+- `crowd-steering` — Flocking, steering & ORCA
+- `gpu-driven-rendering` — GPU-driven rendering & meshlets
+- `game-ai-planning` — Behavior trees & GOAP
+- `procedural-generation` — WFC & procedural content
 
 ## Medium / shallow threads (2026-08-13)
-- `behavior-trees-goap`
-- `effects-handlers`
-- `fluids-sph`
-- `gpu-driven-visibility`
-- `grid-pathfinding`
-- `linearizability`
-- `memory-reclamation`
-- `open-addressing`
-- `pcg-wfc`
-- `realtime-sync`
-- `rollback-netcode`
-- `screen-space-ao`
-- `steering-boids-orca`
+- `algebraic-effects` — Algebraic effects & handlers
+- `ambient-occlusion` — Screen-space ambient occlusion
+- `crowd-steering` — Flocking, steering & ORCA
+- `game-ai-planning` — Behavior trees & GOAP
+- `game-networking` — Lockstep, prediction & rollback
+- `gpu-driven-rendering` — GPU-driven rendering & meshlets
+- `memory-reclamation` — Safe memory reclamation
+- `open-addressing` — Open-addressing hash tables
+- `particle-fluids` — SPH & position-based fluids
+- `pathfinding` — Grid & navmesh pathfinding
+- `procedural-generation` — WFC & procedural content
+- `realtime-scheduling` — Real-time sync & scheduling
+

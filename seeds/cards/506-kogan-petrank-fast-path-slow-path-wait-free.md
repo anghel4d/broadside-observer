@@ -12,11 +12,11 @@ topics:
   - lockfree
   - queues
 seed_rank: 506
-seed_batch: "lineage-lock-free-queues-2026-08-13"
+seed_batch: "lineage-concurrent-data-structures-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 10
-lineage: lock-free-queues
+lineage: concurrent-data-structures
 cites:
   - title: "Wait-Free Queues with Multiple Enqueuers and Dequeuers"
     url: "https://doi.org/10.1145/1941553.1941585"

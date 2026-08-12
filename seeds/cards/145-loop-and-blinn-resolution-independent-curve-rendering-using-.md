@@ -14,7 +14,7 @@ topics:
 seed_rank: 145
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 9
 ---
 

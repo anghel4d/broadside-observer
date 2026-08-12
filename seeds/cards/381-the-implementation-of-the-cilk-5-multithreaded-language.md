@@ -10,14 +10,14 @@ arxiv: null
 doi: "10.1145/277650.277725"
 source: "https://doi.org/10.1145/277650.277725"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - cilk
 seed_rank: 381
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Scheduling Multithreaded Computations by Work Stealing"
     url: "https://doi.org/10.1145/324133.324234"

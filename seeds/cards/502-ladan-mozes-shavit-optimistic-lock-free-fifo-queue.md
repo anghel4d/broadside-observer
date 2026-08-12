@@ -12,11 +12,11 @@ topics:
   - lockfree
   - queues
 seed_rank: 502
-seed_batch: "lineage-lock-free-queues-2026-08-13"
+seed_batch: "lineage-concurrent-data-structures-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 8
-lineage: lock-free-queues
+lineage: concurrent-data-structures
 cites:
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"

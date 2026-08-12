@@ -17,7 +17,7 @@ seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
   - title: "GPU-Driven Rendering Pipelines"
     url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"

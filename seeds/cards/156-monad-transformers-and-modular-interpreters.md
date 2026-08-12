@@ -17,9 +17,9 @@ topics:
 seed_rank: 156
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: archive_ct
+pool: maths-foundations
 relevance_score: 9
-lineage: effects-handlers
+lineage: algebraic-effects
 cites:
 - title: Notions of Computation and Monads
   url: https://doi.org/10.1016/0890-5401(91)90052-4

@@ -11,16 +11,16 @@ arxiv: null
 doi: "10.1145/2442516.2442524"
 source: "https://doi.org/10.1145/2442516.2442524"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - chase-lev
   - weak-memory
   - lockfree
 seed_rank: 545
-seed_batch: "lineage-work-stealing-2026-08-13"
+seed_batch: "lineage-work-stealing-schedulers-schedulers-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 10
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Dynamic Circular Work-Stealing Deque"
     url: "https://doi.org/10.1145/1073970.1073974"

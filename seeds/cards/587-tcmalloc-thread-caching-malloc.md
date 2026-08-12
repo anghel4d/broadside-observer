@@ -13,11 +13,11 @@ topics:
   - size-class
   - thread-cache
 seed_rank: 587
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 10
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"

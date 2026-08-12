@@ -12,9 +12,9 @@ topics:
 seed_rank: 401
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 8
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Scalable Locality-Conscious Multithreaded Memory Allocation (Streamflow)"
     url: "https://doi.org/10.1145/1133956.1133968"

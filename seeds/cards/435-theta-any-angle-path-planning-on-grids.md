@@ -13,9 +13,9 @@ topics:
 seed_rank: 435
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 8
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
 - title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
   url: https://doi.org/10.1109/TSSC.1968.300136

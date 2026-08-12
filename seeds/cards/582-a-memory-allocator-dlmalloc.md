@@ -12,11 +12,11 @@ topics:
   - size-class
   - segregated-fit
 seed_rank: 582
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 10
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Dynamic Storage Allocation: A Survey and Critical Review"
     url: "https://doi.org/10.1007/3-540-60368-9_19"

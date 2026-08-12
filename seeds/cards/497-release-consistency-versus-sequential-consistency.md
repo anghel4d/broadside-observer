@@ -12,9 +12,9 @@ topics:
 seed_rank: 497
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 7
-lineage: linearizability
+lineage: concurrent-data-structures
 cites:
 - title: How to Make a Multiprocessor Computer That Correctly Executes Multiprocess
     Programs

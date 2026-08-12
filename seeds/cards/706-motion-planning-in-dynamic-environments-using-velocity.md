@@ -15,9 +15,9 @@ topics:
 seed_rank: 706
 seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: steering-boids-orca
+lineage: crowd-steering
 cites:
   - title: "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation"
     url: "https://doi.org/10.1109/ROBOT.2008.4543489"

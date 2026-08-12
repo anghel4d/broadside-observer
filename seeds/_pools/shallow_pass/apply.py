@@ -11,7 +11,7 @@ POOLS = ROOT / "_pools"
 DATA = POOLS / "shallow_pass"
 BATCH = "lineage-shallow-2026-08-13"
 REVIEWED = "2026-08-13"
-DEEP = {"lock-free-queues","work-stealing","slab-allocators","ecs-data-oriented","radiance-cascades"}
+DEEP = {"concurrent-data-structures","work-stealing-schedulers","memory-allocators","ecs-data-oriented","radiance-cascades"}
 
 def slugify(title: str, n: int = 55) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")

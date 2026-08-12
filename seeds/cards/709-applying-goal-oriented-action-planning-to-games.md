@@ -15,9 +15,9 @@ topics:
 seed_rank: 709
 seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: behavior-trees-goap
+lineage: game-ai-planning
 cites:
   - title: "STRIPS: A New Approach to the Application of Theorem Proving to Problem Solving"
     url: "https://doi.org/10.1016/0004-3702(71)90010-5"

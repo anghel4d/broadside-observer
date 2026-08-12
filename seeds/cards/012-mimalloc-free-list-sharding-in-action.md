@@ -15,9 +15,9 @@ topics:
 seed_rank: 12
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 10
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"

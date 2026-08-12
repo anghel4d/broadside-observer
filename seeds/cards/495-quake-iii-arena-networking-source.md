@@ -14,7 +14,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: realtime
 relevance_score: 7
-lineage: rollback-netcode
+lineage: game-networking
 cites:
 - title: Unreal Engine Networking Architecture
   url: https://docs.unrealengine.com/udk/Three/NetworkingOverview.html

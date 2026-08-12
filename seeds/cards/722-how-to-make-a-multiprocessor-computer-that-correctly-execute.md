@@ -14,9 +14,9 @@ topics:
 seed_rank: 722
 seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 9
-lineage: linearizability
+lineage: concurrent-data-structures
 cites:
 - title: 'Linearizability: A Correctness Condition for Concurrent Objects'
   url: https://doi.org/10.1145/78969.78972

@@ -1,0 +1,4421 @@
+{
+  "new_cards": [
+    {
+      "n": 701,
+      "title": "Ultra-Fast Optimal Pathfinding without Runtime Search",
+      "authors": [
+        "Adi Botea"
+      ],
+      "year": 2011,
+      "venue": "AIIDE",
+      "source": "https://doi.org/10.1609/aiide.v7i1.12443",
+      "doi": "10.1609/aiide.v7i1.12443",
+      "topics": [
+        "pathfinding",
+        "cpd"
+      ],
+      "pool": "game-ai",
+      "rel": 9,
+      "lineage": "pathfinding",
+      "takeaway": "Compressed Path Databases answer optimal grid moves by lookup instead of runtime A*/JPS search.",
+      "why": "Static GRID COMMAND maps can trade preprocess memory for tiny first-move lag across many units.",
+      "ideas": [
+        "Precompute all-pairs first moves; compress with rectangle/run-length encodings.",
+        "Runtime extracts optimal next step without expanding open lists.",
+        "Complements online pruning (JPS) when maps are mostly static.",
+        "First-move lag independent of path length."
+      ],
+      "caveats": [
+        "Dynamic destructible terrain invalidates CPDs; hybrid with JPS/HPA* needed.",
+        "Memory/preprocess dominate for huge or frequently rebuilt maps."
+      ],
+      "cites": [
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": "10.1109/TSS.1968.253136",
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        },
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+          "url": "https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "370-near-optimal-hierarchical-pathfinding-hpa"
+        }
+      ]
+    },
+    {
+      "n": 702,
+      "title": "Example-Based Model Synthesis",
+      "authors": [
+        "Paul Merrell"
+      ],
+      "year": 2007,
+      "venue": "i3D",
+      "source": "https://doi.org/10.1145/1230100.1230119",
+      "doi": "10.1145/1230100.1230119",
+      "topics": [
+        "pcg",
+        "model-synthesis"
+      ],
+      "pool": "engines",
+      "rel": 9,
+      "lineage": "procedural-generation",
+      "takeaway": "Constraint-based example model synthesis is the direct algorithmic parent of Wave Function Collapse.",
+      "why": "Anoptic/GRID COMMAND PCG should cite Merrell when evaluating WFC-family layout generators.",
+      "ideas": [
+        "Assemble large models from small example adjacency constraints.",
+        "Scanline/block modification differs from WFC entropy ordering.",
+        "Focused on 3D model assembly before 2016 WFC popularization.",
+        "Same CSP core later rediscovered as WFC."
+      ],
+      "caveats": [
+        "Not identical to Gumin WFC; heuristic and failure recovery differ.",
+        "Heavy 3D instances need block partitioning."
+      ],
+      "cites": [
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        },
+        {
+          "title": "The Algorithmic Beauty of Plants (L-Systems)",
+          "url": "http://algorithmicbotany.org/papers/#abop",
+          "year": 1990,
+          "arxiv": null,
+          "doi": null,
+          "card": "498-the-algorithmic-beauty-of-plants-l-systems"
+        }
+      ]
+    },
+    {
+      "n": 703,
+      "title": "MarkovJunior",
+      "authors": [
+        "Maxim Gumin"
+      ],
+      "year": 2022,
+      "venue": "GitHub",
+      "source": "https://github.com/mxgmn/MarkovJunior",
+      "topics": [
+        "pcg",
+        "rewriting"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "procedural-generation",
+      "takeaway": "Probabilistic rewrite-rule PCG successor to WFC for hierarchical, multi-stage world generation.",
+      "why": "Living craft tool for multi-scale RTS/colony map grammars beyond single-pass WFC.",
+      "ideas": [
+        "Rewrite rules as first-class PCG programs.",
+        "Can embed WFC-like constraint steps inside a Markov program.",
+        "Hierarchical generation in one framework.",
+        "Same author lineage as WaveFunctionCollapse."
+      ],
+      "caveats": [
+        "Craft software, not a peer-reviewed theory paper.",
+        "Rule authoring skill dominates quality."
+      ],
+      "cites": [
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        },
+        {
+          "title": "Example-Based Model Synthesis",
+          "url": "https://doi.org/10.1145/1230100.1230119",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1145/1230100.1230119",
+          "card": "702-example-based-model-synthesis"
+        }
+      ]
+    },
+    {
+      "n": 704,
+      "title": "Brief Announcement: Hazard Eras \u2014 Non-Blocking Memory Reclamation",
+      "authors": [
+        "Pedro Ramalhete",
+        "Andreia Correia"
+      ],
+      "year": 2017,
+      "venue": "SPAA",
+      "source": "https://doi.org/10.1145/3087556.3087588",
+      "doi": "10.1145/3087556.3087588",
+      "topics": [
+        "reclamation",
+        "lockfree"
+      ],
+      "pool": "systems",
+      "rel": 9,
+      "lineage": "memory-reclamation",
+      "takeaway": "Hazard Eras combine epoch-style clocks with hazard-pointer progress for faster non-blocking SMR.",
+      "why": "Drop-in HP alternative for Anoptic lock-free structures that traverse many nodes.",
+      "ideas": [
+        "Era clock + per-thread reservations instead of per-pointer hazards.",
+        "Matches HP worst case; large wins on linked structures.",
+        "Implements with C11/C++11 atomics.",
+        "Bridges EBR throughput and HP progress guarantees."
+      ],
+      "caveats": [
+        "Brief announcement; read full tech report before production port.",
+        "Retire-heavy queues may still prefer classic hazard pointers."
+      ],
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        },
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    {
+      "n": 705,
+      "title": "meshoptimizer",
+      "authors": [
+        "Arseny Kapoulkine"
+      ],
+      "year": 2016,
+      "venue": "GitHub",
+      "source": "https://github.com/zeux/meshoptimizer",
+      "topics": [
+        "meshlets",
+        "gpu-driven"
+      ],
+      "pool": "engines",
+      "rel": 9,
+      "lineage": "gpu-meshlets",
+      "takeaway": "Industrial meshlet builder/optimizer used to feed Vulkan/DX mesh shaders and Nanite-adjacent cluster pipelines.",
+      "why": "Default craft path from authored meshes to meshlet buffers for Anoptic GPU-driven rendering.",
+      "ideas": [
+        "meshopt_buildMeshlets balances reuse vs cluster cone/radius.",
+        "Cluster culling bounds for task/mesh shader rejection.",
+        "Index/vertex cache optimization and compression companions.",
+        "Living library \u2014 not a one-off paper."
+      ],
+      "caveats": [
+        "Library, not a rendering architecture paper; pair with Nanite/mesh-shader reads.",
+        "Cluster LOD DAG hierarchy remains engine-specific."
+      ],
+      "cites": [
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        },
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    },
+    {
+      "n": 706,
+      "title": "Position Based Fluids",
+      "authors": [
+        "Miles Macklin",
+        "Matthias M\u00fcller"
+      ],
+      "year": 2013,
+      "venue": "SIGGRAPH/TOG",
+      "source": "https://doi.org/10.1145/2461912.2461984",
+      "doi": "10.1145/2461912.2461984",
+      "topics": [
+        "fluids",
+        "pbd"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "particle-fluids",
+      "takeaway": "PBD density constraints deliver stable real-time incompressible fluids beyond classical interactive SPH timesteps.",
+      "why": "Successor path from M\u00fcller 2003 SPH toward engine-stable liquid FX.",
+      "ideas": [
+        "Constant-density constraints inside Position Based Dynamics.",
+        "Artificial pressure for surface tension/distribution.",
+        "Vorticity confinement post-process.",
+        "Large stable timesteps suitable for games."
+      ],
+      "caveats": [
+        "Not full CFD; viscosity/turbulence still approximate.",
+        "Neighbor queries remain the performance core."
+      ],
+      "cites": [
+        {
+          "title": "Particle-Based Fluid Simulation for Interactive Applications",
+          "url": "https://matthias-research.github.io/pages/publications/sca03.pdf",
+          "year": 2003,
+          "arxiv": null,
+          "doi": null,
+          "card": "490-particle-based-fluid-simulation-for-interactive-applications"
+        },
+        {
+          "title": "Position Based Dynamics",
+          "url": "https://doi.org/10.1016/j.jvcir.2007.01.005",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1016/j.jvcir.2007.01.005",
+          "card": "707-position-based-dynamics"
+        }
+      ]
+    },
+    {
+      "n": 707,
+      "title": "Position Based Dynamics",
+      "authors": [
+        "Matthias M\u00fcller",
+        "Bruno Heidelberger",
+        "Marcus Hennix",
+        "John Ratcliff"
+      ],
+      "year": 2007,
+      "venue": "JVCIR",
+      "source": "https://doi.org/10.1016/j.jvcir.2007.01.005",
+      "doi": "10.1016/j.jvcir.2007.01.005",
+      "topics": [
+        "pbd",
+        "physics"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "particle-fluids",
+      "takeaway": "Constraint projection on positions became the stable real-time cloth/softbody/fluid substrate (PBD/XPBD).",
+      "why": "Shared foundation for game physics and Position Based Fluids.",
+      "ideas": [
+        "Replace force integration with iterative position constraints.",
+        "Stable stiff constraints at game timesteps.",
+        "Extensible constraint sets.",
+        "Direct parent of PBF and XPBD."
+      ],
+      "caveats": [
+        "Constraint order/iteration count affect stiffness/energy.",
+        "Lineage shared with fluids for shallow organization; PBD is broader than SPH."
+      ],
+      "cites": [
+        {
+          "title": "Position Based Fluids",
+          "url": "https://doi.org/10.1145/2461912.2461984",
+          "year": 2013,
+          "arxiv": null,
+          "doi": "10.1145/2461912.2461984",
+          "card": "706-position-based-fluids"
+        },
+        {
+          "title": "Particle-Based Fluid Simulation for Interactive Applications",
+          "url": "https://matthias-research.github.io/pages/publications/sca03.pdf",
+          "year": 2003,
+          "arxiv": null,
+          "doi": null,
+          "card": "490-particle-based-fluid-simulation-for-interactive-applications"
+        }
+      ]
+    },
+    {
+      "n": 708,
+      "title": "Finding Next Gen: CryEngine 2 (SSAO)",
+      "authors": [
+        "Martin Mittring"
+      ],
+      "year": 2007,
+      "venue": "SIGGRAPH Course",
+      "source": "https://www.crytek.com/download/Presentations/FindingNextGen-CryEngine2.pdf",
+      "topics": [
+        "ssao",
+        "ao"
+      ],
+      "pool": "graphics",
+      "rel": 8,
+      "lineage": "ambient-occlusion",
+      "takeaway": "Crytek SSAO popularized screen-space ambient occlusion as a real-time GI approximation.",
+      "why": "Baseline for HBAO and later AO comparisons outside the radiance-cascades spine.",
+      "ideas": [
+        "Sample depth-buffer hemisphere to estimate occlusion.",
+        "Screenspace approximation \u2014 no scene BVH.",
+        "Industrial adoption catalyst for AO post-processes.",
+        "Parent of HBAO refinements."
+      ],
+      "caveats": [
+        "Course notes; PDF hosts move \u2014 verify artifact.",
+        "Quality/noise tradeoffs; not physically based GI."
+      ],
+      "cites": [
+        {
+          "title": "Horizon-Based Ambient Occlusion",
+          "url": "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "484-horizon-based-ambient-occlusion"
+        }
+      ]
+    },
+    {
+      "n": 709,
+      "title": "A Better x86 Memory Model: x86-TSO",
+      "authors": [
+        "Peter Sewell",
+        "Susmit Sarkar",
+        "Scott Owens",
+        "Francesco Zappa Nardelli",
+        "Magnus O. Myreen"
+      ],
+      "year": 2010,
+      "venue": "TPHOLs",
+      "source": "https://doi.org/10.1145/1785326.1785333",
+      "doi": "10.1145/1785326.1785333",
+      "topics": [
+        "memory-model",
+        "concurrency"
+      ],
+      "pool": "systems",
+      "rel": 9,
+      "lineage": "concurrent-data-structures",
+      "takeaway": "x86-TSO became the usable programmer-facing model for x86 atomics beneath linearizable algorithms.",
+      "why": "Bridge from Herlihy/Wing linearizability to what Anoptic C++ atomics actually guarantee on x86.",
+      "ideas": [
+        "Total Store Order with store buffer as executable model.",
+        "Matches observed x86 behaviors better than sequential consistency.",
+        "Enables rigorous reasoning for lock-free code.",
+        "Pairs with Art of Multiprocessor Programming practice."
+      ],
+      "caveats": [
+        "ARM/POWER are weaker; do not over-generalize TSO.",
+        "Linearizability is a data-structure spec; TSO is a machine model."
+      ],
+      "cites": [
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        },
+        {
+          "title": "Memory Ordering in Modern Microprocessors",
+          "url": "https://www.kernel.org/doc/ols/2005/ols2005v2-pages-107-118.pdf",
+          "year": 2005,
+          "arxiv": null,
+          "doi": null,
+          "card": "489-memory-ordering-in-modern-microprocessors"
+        },
+        {
+          "title": "Release Consistency versus Sequential Consistency",
+          "url": "https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-92-5.pdf",
+          "year": 1992,
+          "arxiv": null,
+          "doi": null,
+          "card": "497-release-consistency-versus-sequential-consistency"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    {
+      "n": 710,
+      "title": "I Wrote a Faster Hash Table",
+      "authors": [
+        "Malte Skarupke"
+      ],
+      "year": 2017,
+      "venue": "Blog",
+      "source": "https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/",
+      "topics": [
+        "hashtable",
+        "robin-hood"
+      ],
+      "pool": "systems",
+      "rel": 8,
+      "lineage": "open-addressing",
+      "takeaway": "Modern robin-hood open-addressing craft that influenced many post-Swiss flat hash maps.",
+      "why": "Practical successor notes connecting Celis robin hood to Abseil Swiss Tables era.",
+      "ideas": [
+        "Robin-hood displacement bounds probe lengths.",
+        "Flat arrays beat node-based maps for small keys.",
+        "Empirically tuned for game/engine workloads.",
+        "Conversation partner to Swiss Tables / F14."
+      ],
+      "caveats": [
+        "Blog engineering, not peer-reviewed.",
+        "Benchmarks are workload-sensitive."
+      ],
+      "cites": [
+        {
+          "title": "Robin Hood Hashing",
+          "url": "https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf",
+          "year": 1986,
+          "arxiv": null,
+          "doi": null,
+          "card": "499-robin-hood-hashing"
+        },
+        {
+          "title": "Hopscotch Hashing",
+          "url": "https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "483-hopscotch-hashing"
+        },
+        {
+          "title": "Abseil Swiss Tables",
+          "url": "https://abseil.io/about/design/swisstables",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "470-abseil-swiss-tables"
+        }
+      ]
+    },
+    {
+      "n": 711,
+      "title": "Koka: Programming with Row Polymorphic Effect Types",
+      "authors": [
+        "Daan Leijen"
+      ],
+      "year": 2014,
+      "venue": "MSFP",
+      "source": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+      "topics": [
+        "effects",
+        "handlers"
+      ],
+      "pool": "languages",
+      "rel": 8,
+      "lineage": "algebraic-effects",
+      "takeaway": "Row-polymorphic effect types make algebraic-effect style programming practical in a real language (Koka).",
+      "why": "Living language successor of Plotkin/Pretnar handlers for Anoptic PL experiments.",
+      "ideas": [
+        "Effect rows infer and abstract effect sets.",
+        "Handlers as first-class control.",
+        "Bridges theory papers to an implemented compiler.",
+        "Influences later effect systems."
+      ],
+      "caveats": [
+        "Language evolves; pin a paper/version when citing APIs.",
+        "Not the only practical effects design."
+      ],
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-00590-9_7",
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Programming with Algebraic Effects and Handlers",
+          "url": "https://arxiv.org/abs/1203.1539",
+          "year": 2012,
+          "arxiv": "1203.1539",
+          "doi": null,
+          "card": "123-programming-with-algebraic-effects-and-handlers"
+        },
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        }
+      ]
+    },
+    {
+      "n": 712,
+      "title": "Social Force Model for Pedestrian Dynamics",
+      "authors": [
+        "Dirk Helbing",
+        "Peter Molnar"
+      ],
+      "year": 1995,
+      "venue": "Phys. Rev. E",
+      "source": "https://doi.org/10.1103/PhysRevE.51.4282",
+      "doi": "10.1103/PhysRevE.51.4282",
+      "topics": [
+        "crowds",
+        "steering"
+      ],
+      "pool": "game-ai",
+      "rel": 8,
+      "lineage": "crowd-steering",
+      "takeaway": "Social forces give a physics-style pedestrian model that still informs crowd/RTS avoidance baselines.",
+      "why": "Predecessor/cousin to steering and ORCA for dense unit crowds.",
+      "ideas": [
+        "Attractive/repulsive forces for goal, walls, agents.",
+        "Emergent lane formation and panic dynamics.",
+        "Continuous model vs discrete boid rules.",
+        "Often compared with RVO/ORCA."
+      ],
+      "caveats": [
+        "Force tuning can oscillate; ORCA offers clearer velocity-space guarantees.",
+        "Needs damping hacks for games."
+      ],
+      "cites": [
+        {
+          "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
+          "url": "https://doi.org/10.1145/37401.37406",
+          "year": 1987,
+          "arxiv": null,
+          "doi": "10.1145/37401.37406",
+          "card": "261-flocks-herds-and-schools-a-distributed-behavioral-model"
+        },
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        }
+      ]
+    },
+    {
+      "n": 713,
+      "title": "ClearPath: Highly Parallel Collision Avoidance",
+      "authors": [
+        "Stephen J. Guy",
+        "Jatin Chhugani",
+        "Changkyu Kim",
+        "Nadia Shirishkumar",
+        "Pradeep Dubey",
+        "Ming C. Lin",
+        "Dinesh Manocha"
+      ],
+      "year": 2009,
+      "venue": "SCA",
+      "source": "https://gamma.cs.unc.edu/ClearPath/ClearPath.pdf",
+      "topics": [
+        "crowds",
+        "orca"
+      ],
+      "pool": "game-ai",
+      "rel": 8,
+      "lineage": "crowd-steering",
+      "takeaway": "Parallel geometric collision avoidance bridging RVO toward ORCA-scale crowds.",
+      "why": "Shows how reciprocal avoidance maps onto SIMD/multicore for thousands of RTS units.",
+      "ideas": [
+        "Conservative velocity adjustments for agents.",
+        "Designed for highly parallel architectures.",
+        "UNC GAMMA crowd stack with RVO/ORCA.",
+        "Throughput focus beyond single-agent proofs."
+      ],
+      "caveats": [
+        "Project PDF is the durable artifact.",
+        "ORCA 2011 is the cleaner theoretical successor."
+      ],
+      "cites": [
+        {
+          "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+          "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+          "year": 2008,
+          "arxiv": null,
+          "doi": "10.1109/ROBOT.2008.4543489",
+          "card": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+        },
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        }
+      ]
+    },
+    {
+      "n": 714,
+      "title": "Virtual Time / Time Warp Optimistic Distributed Simulation",
+      "authors": [
+        "David R. Jefferson"
+      ],
+      "year": 1985,
+      "venue": "TOPLAS",
+      "source": "https://doi.org/10.1145/3916.3988",
+      "doi": "10.1145/3916.3988",
+      "topics": [
+        "rollback",
+        "simulation"
+      ],
+      "pool": "realtime",
+      "rel": 8,
+      "lineage": "game-networking",
+      "takeaway": "Time Warp is the classic optimistic rollback substrate that game rollback netcode rhymes with.",
+      "why": "Intellectual ancestor for GGPO-style speculate-and-rollback (analogy across domains).",
+      "ideas": [
+        "Optimistic execution with antimessages/rollback on causality faults.",
+        "Global Virtual Time for fossil collection.",
+        "Decades before fighting-game rollback libraries.",
+        "Useful vocabulary for systems engineers."
+      ],
+      "caveats": [
+        "DES Time Warp is not fighting-game netcode \u2014 analogy, not identity.",
+        "Do not cite as a GGPO design doc."
+      ],
+      "cites": [
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        },
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        }
+      ]
+    },
+    {
+      "n": 715,
+      "title": "Userspace RCU Library (liburcu)",
+      "authors": [
+        "Mathieu Desnoyers",
+        "Paul E. McKenney"
+      ],
+      "year": 2009,
+      "venue": "lttng/liburcu",
+      "source": "https://liburcu.org/",
+      "topics": [
+        "rcu",
+        "reclamation"
+      ],
+      "pool": "systems",
+      "rel": 8,
+      "lineage": "memory-reclamation",
+      "takeaway": "liburcu brings RCU-style quiescent-state/epoch reclamation to userspace as a living industrial library.",
+      "why": "Practical QSBR/EBR-family tool alongside hazard pointers for Anoptic readers.",
+      "ideas": [
+        "Multiple RCU flavors (QSBR, MB, signal-based).",
+        "Grace periods instead of per-pointer hazards.",
+        "Craft child of kernel RCU ideas.",
+        "Compared with DEBRA/EBR in userspace designs."
+      ],
+      "caveats": [
+        "Requires disciplined quiescent points.",
+        "Progress differs from hazard pointers under starvation."
+      ],
+      "cites": [
+        {
+          "title": "Read-Copy Update",
+          "url": "https://www.rdrop.com/~paulmck/RCU/",
+          "year": 1998,
+          "arxiv": null,
+          "doi": null,
+          "card": "380-read-copy-update"
+        },
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        }
+      ]
+    },
+    {
+      "n": 716,
+      "title": "F14 \u2014 A Hash Table Library for C++",
+      "authors": [
+        "Facebook Engineering"
+      ],
+      "year": 2019,
+      "venue": "Engineering Blog",
+      "source": "https://engineering.fb.com/2019/04/25/developer-tools/f14/",
+      "topics": [
+        "hashtable"
+      ],
+      "pool": "systems",
+      "rel": 7,
+      "lineage": "open-addressing",
+      "takeaway": "F14 is a production open-addressing/chunked hash map in the Swiss-table design family.",
+      "why": "Industrial sibling to Abseil Swiss Tables for engine hashtable choices.",
+      "ideas": [
+        "SIMD/metadata filtering for probes.",
+        "Multiple map variants.",
+        "Explicit engineering writeup.",
+        "Lives in Folly."
+      ],
+      "caveats": [
+        "Blog + library; API churn possible.",
+        "Benchmark against Swiss Tables/ska on your key type."
+      ],
+      "cites": [
+        {
+          "title": "Abseil Swiss Tables",
+          "url": "https://abseil.io/about/design/swisstables",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "470-abseil-swiss-tables"
+        },
+        {
+          "title": "Hopscotch Hashing",
+          "url": "https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "483-hopscotch-hashing"
+        },
+        {
+          "title": "Robin Hood Hashing",
+          "url": "https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf",
+          "year": 1986,
+          "arxiv": null,
+          "doi": null,
+          "card": "499-robin-hood-hashing"
+        }
+      ]
+    },
+    {
+      "n": 717,
+      "title": "Field D*: An Interpolation-Based Path Planner",
+      "authors": [
+        "Dave Ferguson",
+        "Anthony Stentz"
+      ],
+      "year": 2006,
+      "venue": "JFR",
+      "source": "https://doi.org/10.1002/rob.20147",
+      "doi": "10.1002/rob.20147",
+      "topics": [
+        "pathfinding",
+        "any-angle"
+      ],
+      "pool": "game-ai",
+      "rel": 8,
+      "lineage": "pathfinding",
+      "takeaway": "Field D* interpolates costs for any-angle paths on grids \u2014 precursor energy to Theta*/Lazy Theta*.",
+      "why": "Completes the any-angle side of the grid pathfinding spine beside JPS.",
+      "ideas": [
+        "Interpolation inside grid cells for smoother paths.",
+        "Dynamic replanning lineage (D*/Field D*).",
+        "Motivates later Theta* line-of-sight successors.",
+        "Useful when navmesh unavailable but short grid paths look jagged."
+      ],
+      "caveats": [
+        "Heavier than JPS for pure 8-connected optimal grid paths.",
+        "Robotics origin \u2014 retune for games."
+      ],
+      "cites": [
+        {
+          "title": "Theta*: Any-Angle Path Planning on Grids",
+          "url": "https://doi.org/10.1613/jair.2994",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "435-theta-any-angle-path-planning-on-grids"
+        },
+        {
+          "title": "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis",
+          "url": "https://doi.org/10.1609/aaai.v24i1.7566",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "429-lazy-theta-any-angle-path-planning-and-path-length-analysis"
+        },
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": null,
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        }
+      ]
+    },
+    {
+      "n": 718,
+      "title": "Hyaline: Fast and Transparent Lock-Free Memory Reclamation",
+      "authors": [
+        "Ruslan Nikolaev",
+        "Binoy Ravindran"
+      ],
+      "year": 2019,
+      "venue": "OPODIS/arXiv",
+      "source": "https://arxiv.org/abs/1905.07903",
+      "arxiv": "1905.07903",
+      "topics": [
+        "reclamation",
+        "lockfree"
+      ],
+      "pool": "systems",
+      "rel": 8,
+      "lineage": "memory-reclamation",
+      "takeaway": "Hyaline offers another modern SMR design point between epochs and hazard pointers.",
+      "why": "Living successor cited alongside DEBRA/Hazard Eras for the reclamation menu.",
+      "ideas": [
+        "Handle-based reclamation with strong progress goals.",
+        "Aims for writer-path transparency.",
+        "Part of late-2010s SMR wave with IBR/Crystalline.",
+        "Comparison point when HP/EBR tradeoffs hurt."
+      ],
+      "caveats": [
+        "Multiple Hyaline variants \u2014 pin arXiv/OPODIS version.",
+        "Integration cost non-trivial."
+      ],
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Interval-Based Memory Reclamation",
+          "url": "https://doi.org/10.1145/3178487.3178488",
+          "year": 2018,
+          "arxiv": null,
+          "doi": "10.1145/3178487.3178488",
+          "card": "402-interval-based-memory-reclamation"
+        },
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        }
+      ]
+    },
+    {
+      "n": 719,
+      "title": "RVO2 Library",
+      "authors": [
+        "Jur van den Berg",
+        "Stephen J. Guy",
+        "Jamie Snape",
+        "Ming C. Lin",
+        "Dinesh Manocha"
+      ],
+      "year": 2011,
+      "venue": "UNC GAMMA",
+      "source": "https://gamma.cs.unc.edu/RVO2/",
+      "topics": [
+        "orca",
+        "crowds"
+      ],
+      "pool": "game-ai",
+      "rel": 8,
+      "lineage": "crowd-steering",
+      "takeaway": "Reference implementation packaging ORCA for real-time multi-agent avoidance.",
+      "why": "Craft entry point to ORCA for GRID COMMAND unit local avoidance prototypes.",
+      "ideas": [
+        "2D ORCA implementation used widely in games/robotics.",
+        "Companion to the 2011 ORCA paper.",
+        "API: radius/pref-velocity to new velocity.",
+        "Baseline before ECS-friendly rewrites."
+      ],
+      "caveats": [
+        "Verify license/mirror before shipping.",
+        "ORCA is local; still need global path/flow fields."
+      ],
+      "cites": [
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        },
+        {
+          "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+          "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+          "year": 2008,
+          "arxiv": null,
+          "doi": "10.1109/ROBOT.2008.4543489",
+          "card": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+        }
+      ]
+    },
+    {
+      "n": 720,
+      "title": "Vulkan Meshlet CAD Scene Sample",
+      "authors": [
+        "NVIDIA Developer"
+      ],
+      "year": 2018,
+      "venue": "nvpro-samples",
+      "source": "https://github.com/nvpro-samples/gl_vk_meshlet_cadscene",
+      "topics": [
+        "meshlets",
+        "vulkan"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "gpu-meshlets",
+      "takeaway": "Public meshlet CAD sample crystallizes task/mesh shader cluster submission for Vulkan.",
+      "why": "Concrete sample alongside Kubisch mesh-shader talks and meshoptimizer.",
+      "ideas": [
+        "Meshlet CAD scene as reference layout.",
+        "Task shaders for cluster culling amplification.",
+        "Pairs with meshoptimizer builders.",
+        "Bridge from Turing mesh shaders to engine integration."
+      ],
+      "caveats": [
+        "Sample code, not a peer-reviewed architecture paper.",
+        "Nanite-class LOD DAG is a separate leap."
+      ],
+      "cites": [
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        },
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    },
+    {
+      "n": 721,
+      "title": "GGPO Overview and Design Notes",
+      "authors": [
+        "Tony Cannon"
+      ],
+      "year": 2019,
+      "venue": "GGPO README",
+      "source": "https://github.com/pond3r/ggpo/blob/master/README.md",
+      "topics": [
+        "rollback",
+        "netcode"
+      ],
+      "pool": "realtime",
+      "rel": 8,
+      "lineage": "game-networking",
+      "takeaway": "Canonical README/design notes for modern GGPO forks used by fighting games.",
+      "why": "Companion craft card to the 2006 GGPO seed for integration details.",
+      "ideas": [
+        "Predict remote inputs; rollback mispredictions; resimulate.",
+        "Requires deterministic simulation.",
+        "Session/spectator/frame-delay knobs.",
+        "Living forks still ship on this design."
+      ],
+      "caveats": [
+        "README is not an academic paper.",
+        "RTS lockstep (AoE) is a sibling architecture, not the same algorithm."
+      ],
+      "cites": [
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        },
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        },
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        }
+      ]
+    },
+    {
+      "n": 722,
+      "title": "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs",
+      "authors": [
+        "Leslie Lamport"
+      ],
+      "year": 1979,
+      "venue": "IEEE Trans. Computers",
+      "source": "https://doi.org/10.1109/TC.1979.1675439",
+      "doi": "10.1109/TC.1979.1675439",
+      "topics": [
+        "consistency",
+        "concurrency"
+      ],
+      "pool": "systems",
+      "rel": 9,
+      "lineage": "concurrent-data-structures",
+      "takeaway": "Sequential consistency is the classic multiprocessor correctness baseline that linearizability refines for objects.",
+      "why": "Predecessor node for the linearizability to concurrent structures spine.",
+      "ideas": [
+        "Single global order agreeing with program order.",
+        "Foundation for later object-level linearizability.",
+        "Mental model programmers wish hardware provided.",
+        "Contrasts with release/weak consistency."
+      ],
+      "caveats": [
+        "SC is stronger/more expensive than TSO on real hardware.",
+        "Linearizability is per-object and real-time constrained \u2014 not identical to SC."
+      ],
+      "cites": [
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        },
+        {
+          "title": "Release Consistency versus Sequential Consistency",
+          "url": "https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-92-5.pdf",
+          "year": 1992,
+          "arxiv": null,
+          "doi": null,
+          "card": "497-release-consistency-versus-sequential-consistency"
+        },
+        {
+          "title": "Wait-Free Synchronization",
+          "url": "https://doi.org/10.1145/114005.102808",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1145/114005.102808",
+          "card": "037-wait-free-synchronization"
+        }
+      ]
+    },
+    {
+      "n": 723,
+      "title": "Manifold Dual Contouring",
+      "authors": [
+        "Scott Schaefer",
+        "Tao Ju",
+        "Joe Warren"
+      ],
+      "year": 2007,
+      "venue": "IEEE TVCG",
+      "source": "https://doi.org/10.1109/TVCG.2007.1064",
+      "doi": "10.1109/TVCG.2007.1064",
+      "topics": [
+        "isosurface",
+        "voxels"
+      ],
+      "pool": "graphics",
+      "rel": 7,
+      "lineage": "procedural-generation",
+      "takeaway": "Manifold Dual Contouring hardens dual contouring for watertight meshes \u2014 living geometry child of 2002 DC.",
+      "why": "Voxel/RTS terraforming meshes still lean on DC-family extraction.",
+      "ideas": [
+        "Enforces manifold output vs classical DC cracks.",
+        "Hermite data still the input.",
+        "Pairs with macro PCG (WFC/L-systems) at isosurface scale.",
+        "Industrial voxel engines cite this family."
+      ],
+      "caveats": [
+        "Geometry extraction is not WFC; shared lineage is organizational for shallow pass.",
+        "QEF numerics remain fiddly."
+      ],
+      "cites": [
+        {
+          "title": "Dual Contouring of Hermite Data",
+          "url": "https://doi.org/10.1145/566570.566586",
+          "year": 2002,
+          "arxiv": null,
+          "doi": "10.1145/566570.566586",
+          "card": "491-dual-contouring-of-hermite-data"
+        }
+      ]
+    },
+    {
+      "n": 724,
+      "title": "Eff: Algebraic Effect Handlers Language",
+      "authors": [
+        "Andrej Bauer",
+        "Matija Pretnar"
+      ],
+      "year": 2015,
+      "venue": "eff-lang.org",
+      "source": "https://www.eff-lang.org/",
+      "topics": [
+        "effects",
+        "handlers"
+      ],
+      "pool": "languages",
+      "rel": 8,
+      "lineage": "algebraic-effects",
+      "takeaway": "Eff was an early executable language showcasing Plotkin/Pretnar handlers outside pure theory.",
+      "why": "Craft companion to the handlers papers and Koka.",
+      "ideas": [
+        "Handlers as user-programmable control.",
+        "Direct implementation of algebraic effects ideas.",
+        "Pedagogical bridge into later industrial effect systems.",
+        "Same Pretnar lineage as Handling Algebraic Effects."
+      ],
+      "caveats": [
+        "Research language; ecosystem small vs OCaml 5 effects.",
+        "Pin docs version when comparing semantics."
+      ],
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Handling Algebraic Effects",
+          "url": "https://doi.org/10.2168/LMCS-9(4:23)2013",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "128-handling-algebraic-effects"
+        },
+        {
+          "title": "Koka: Programming with Row Polymorphic Effect Types",
+          "url": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "711-koka-programming-with-row-polymorphic-effect-types"
+        }
+      ]
+    },
+    {
+      "n": 725,
+      "title": "Priority Ceiling Protocols for Real-Time Synchronization",
+      "authors": [
+        "Lui Sha",
+        "Ragunathan Rajkumar",
+        "John P. Lehoczky"
+      ],
+      "year": 1990,
+      "venue": "IEEE Trans. Computers",
+      "source": "https://doi.org/10.1109/12.57058",
+      "doi": "10.1109/12.57058",
+      "topics": [
+        "realtime",
+        "scheduling"
+      ],
+      "pool": "realtime",
+      "rel": 7,
+      "lineage": "realtime-scheduling",
+      "takeaway": "Priority ceiling complements priority inheritance for bounded priority inversion in RT locks.",
+      "why": "Living RT sync pair with the priority inheritance card for engine soft-RT threads.",
+      "ideas": [
+        "Raise ceiling to prevent transitive blocking chains.",
+        "Analyzable blocking bounds for RMS/EDF.",
+        "Still taught in RTOS courses.",
+        "Pairs with inheritance protocols."
+      ],
+      "caveats": [
+        "Overkill for many game-frame job systems.",
+        "Requires static resource knowledge."
+      ],
+      "cites": [
+        {
+          "title": "Priority Inheritance Protocols: An Approach to Real-Time Synchronization",
+          "url": "https://doi.org/10.1109/12.57055",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1109/12.57055",
+          "card": "496-priority-inheritance-protocols-an-approach-to-real-time-sync"
+        }
+      ]
+    },
+    {
+      "n": 726,
+      "title": "Moving AI Lab / Grid-Based Path Planning Competition",
+      "authors": [
+        "Nathan Sturtevant",
+        "Daniel Harabor",
+        "et al."
+      ],
+      "year": 2015,
+      "venue": "GPPC/MovingAI",
+      "source": "https://movingai.com/GPPC/",
+      "topics": [
+        "pathfinding",
+        "benchmarks"
+      ],
+      "pool": "game-ai",
+      "rel": 8,
+      "lineage": "pathfinding",
+      "takeaway": "GPPC/MovingAI benchmarks standardized grid pathfinding comparisons for JPS, CPD, subgoals, etc.",
+      "why": "Evaluation harness for GRID COMMAND pathfinding choices.",
+      "ideas": [
+        "Common maps and metrics for grid planners.",
+        "Hosted comparisons among JPS+/CPD/subgoal entries.",
+        "Keeps academic to game AI dialogue honest.",
+        "Living benchmark portal."
+      ],
+      "caveats": [
+        "Portal aggregates many papers \u2014 cite specific algorithms for claims.",
+        "Dynamic multi-agent RTS loads differ from static single-agent GPPC."
+      ],
+      "cites": [
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Ultra-Fast Optimal Pathfinding without Runtime Search",
+          "url": "https://doi.org/10.1609/aiide.v7i1.12443",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1609/aiide.v7i1.12443",
+          "card": "701-ultra-fast-optimal-pathfinding-without-runtime-search"
+        },
+        {
+          "title": "Improving Jump Point Search",
+          "url": "https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "342-improving-jump-point-search"
+        }
+      ]
+    },
+    {
+      "n": 727,
+      "title": "Clustered Deferred and Forward Shading",
+      "authors": [
+        "Ola Olsson",
+        "Markus Billeter",
+        "Ulf Assarsson"
+      ],
+      "year": 2012,
+      "venue": "HPG",
+      "source": "https://doi.org/10.1145/2159616.2159628",
+      "doi": "10.1145/2159616.2159628",
+      "topics": [
+        "clustered-shading",
+        "gpu-driven"
+      ],
+      "pool": "graphics",
+      "rel": 8,
+      "lineage": "gpu-meshlets",
+      "takeaway": "Clustered shading is a GPU-driven lighting organization sibling to meshlet/visibility-buffer pipelines.",
+      "why": "Lighting-side counterpart to geometry clusterization for modern forward+ engines.",
+      "ideas": [
+        "2.5D/3D tiling of lights into clusters.",
+        "Scales many lights without classic deferred bandwidth blowups.",
+        "Composes with GPU-driven visibility pipelines.",
+        "Still standard in AAA forward+ stacks."
+      ],
+      "caveats": [
+        "Not a meshlet paper \u2014 adjacent GPU-driven theme.",
+        "Lineage tag organizational for shallow pass."
+      ],
+      "cites": [
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading",
+          "url": "https://jcgt.org/published/0002/02/04/",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+        }
+      ]
+    },
+    {
+      "n": 728,
+      "title": "XPBD: Position-Based Simulation of Compliant Constrained Dynamics",
+      "authors": [
+        "Miles Macklin",
+        "Matthias Muller",
+        "Nuttapong Chentanez"
+      ],
+      "year": 2016,
+      "venue": "MIG",
+      "source": "https://doi.org/10.1145/2994258.2994272",
+      "doi": "10.1145/2994258.2994272",
+      "topics": [
+        "pbd",
+        "physics"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "particle-fluids",
+      "takeaway": "XPBD restores physically meaningful compliance/stiffness control to PBD \u2014 modern engine default.",
+      "why": "Living successor after PBD/PBF for soft constraints in gameplay physics.",
+      "ideas": [
+        "Compliance formulation removes iteration-count stiffness hacks.",
+        "Unifies cloth/softbody/fluid constraint solving.",
+        "Widely implemented in engine physics stacks.",
+        "Direct child of 2007 PBD."
+      ],
+      "caveats": [
+        "Still not FEM.",
+        "Lineage shared with fluids for shallow organization."
+      ],
+      "cites": [
+        {
+          "title": "Position Based Dynamics",
+          "url": "https://doi.org/10.1016/j.jvcir.2007.01.005",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1016/j.jvcir.2007.01.005",
+          "card": "707-position-based-dynamics"
+        },
+        {
+          "title": "Position Based Fluids",
+          "url": "https://doi.org/10.1145/2461912.2461984",
+          "year": 2013,
+          "arxiv": null,
+          "doi": "10.1145/2461912.2461984",
+          "card": "706-position-based-fluids"
+        }
+      ]
+    },
+    {
+      "n": 729,
+      "title": "Retrofitting Effect Handlers onto OCaml",
+      "authors": [
+        "KC Sivaramakrishnan",
+        "Stephen Dolan",
+        "Leo White",
+        "Tom Kelly",
+        "Sadiq Jaffer",
+        "Anil Madhavapeddy"
+      ],
+      "year": 2021,
+      "venue": "PLDI",
+      "source": "https://arxiv.org/abs/2104.02882",
+      "arxiv": "2104.02882",
+      "topics": [
+        "effects",
+        "handlers"
+      ],
+      "pool": "languages",
+      "rel": 8,
+      "lineage": "algebraic-effects",
+      "takeaway": "OCaml 5 brings delimited effect handlers to an industrial compiler \u2014 living PL successor.",
+      "why": "Shows algebraic-effect ideas graduating into production runtimes.",
+      "ideas": [
+        "Effect handlers for concurrency and resources.",
+        "Retrofitting a mature language.",
+        "Connects Plotkin/Pretnar theory to systems programming.",
+        "Parallel runtime interactions matter."
+      ],
+      "caveats": [
+        "Follow OCaml manual for shipped semantics.",
+        "Not identical to Koka row-effect design."
+      ],
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Koka: Programming with Row Polymorphic Effect Types",
+          "url": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "711-koka-programming-with-row-polymorphic-effect-types"
+        },
+        {
+          "title": "Programming with Algebraic Effects and Handlers",
+          "url": "https://arxiv.org/abs/1203.1539",
+          "year": 2012,
+          "arxiv": "1203.1539",
+          "doi": null,
+          "card": "123-programming-with-algebraic-effects-and-handlers"
+        }
+      ]
+    },
+    {
+      "n": 730,
+      "title": "Masked Software Occlusion Culling",
+      "authors": [
+        "Aske Simon Christensen",
+        "Jesper Van Haller",
+        "et al. / Intel"
+      ],
+      "year": 2016,
+      "venue": "HPG/Intel",
+      "source": "https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling.pdf",
+      "topics": [
+        "occlusion",
+        "gpu-driven"
+      ],
+      "pool": "engines",
+      "rel": 8,
+      "lineage": "gpu-meshlets",
+      "takeaway": "Masked software occlusion culling is a living CPU/GPU hybrid visibility technique used beside meshlet pipelines.",
+      "why": "Practical occlusion sibling to hierarchical Z and Nanite-style cluster rejection.",
+      "ideas": [
+        "SIMD bitmasks over depth hierarchy on CPU.",
+        "Feeds GPU-driven submit/cull loops.",
+        "Industrial craft paper/sample lineage.",
+        "Complements meshlets when HW occlusion queries lag."
+      ],
+      "caveats": [
+        "Vendor sample lineage; APIs evolve.",
+        "Not a replacement for Nanite DAG."
+      ],
+      "cites": [
+        {
+          "title": "Hierarchical Z-Buffer Visibility",
+          "url": "https://doi.org/10.1145/166117.166147",
+          "year": 1993,
+          "arxiv": null,
+          "doi": "10.1145/166117.166147",
+          "card": "161-hierarchical-z-buffer-visibility"
+        },
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    }
+  ],
+  "patches": {
+    "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": null,
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        },
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        }
+      ]
+    },
+    "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "A Note on Two Problems in Connexion with Graphs (Dijkstra)",
+          "url": "https://doi.org/10.1007/BF01386390",
+          "year": 1959,
+          "arxiv": null,
+          "doi": null,
+          "card": "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+        },
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+          "url": "https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "370-near-optimal-hierarchical-pathfinding-hpa"
+        },
+        {
+          "title": "Theta*: Any-Angle Path Planning on Grids",
+          "url": "https://doi.org/10.1613/jair.2994",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "435-theta-any-angle-path-planning-on-grids"
+        }
+      ]
+    },
+    "253-online-graph-pruning-for-pathfinding-on-grid-maps": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": null,
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        },
+        {
+          "title": "Improving Jump Point Search",
+          "url": "https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "342-improving-jump-point-search"
+        },
+        {
+          "title": "Reducing Redundant Work in Jump Point Search",
+          "url": "https://arxiv.org/abs/2307.05824",
+          "year": 2023,
+          "arxiv": "2307.05824",
+          "doi": null,
+          "card": "298-reducing-redundant-work-in-jump-point-search"
+        },
+        {
+          "title": "Ultra-Fast Optimal Pathfinding without Runtime Search",
+          "url": "https://doi.org/10.1609/aiide.v7i1.12443",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1609/aiide.v7i1.12443",
+          "card": "701-ultra-fast-optimal-pathfinding-without-runtime-search"
+        },
+        {
+          "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+          "url": "https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "370-near-optimal-hierarchical-pathfinding-hpa"
+        }
+      ]
+    },
+    "342-improving-jump-point-search": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Reducing Redundant Work in Jump Point Search",
+          "url": "https://arxiv.org/abs/2307.05824",
+          "year": 2023,
+          "arxiv": "2307.05824",
+          "doi": null,
+          "card": "298-reducing-redundant-work-in-jump-point-search"
+        },
+        {
+          "title": "Subgoal Graphs for Optimal Pathfinding",
+          "url": "https://doi.org/10.1609/socs.v6i1.18355",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "411-subgoal-graphs-for-optimal-pathfinding"
+        }
+      ]
+    },
+    "298-reducing-redundant-work-in-jump-point-search": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Improving Jump Point Search",
+          "url": "https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "342-improving-jump-point-search"
+        }
+      ]
+    },
+    "271-jump-point-search-pathfinding-in-4-connected-grids": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Improving Jump Point Search",
+          "url": "https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "342-improving-jump-point-search"
+        }
+      ]
+    },
+    "370-near-optimal-hierarchical-pathfinding-hpa": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": null,
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        },
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        },
+        {
+          "title": "Subgoal Graphs for Optimal Pathfinding",
+          "url": "https://doi.org/10.1609/socs.v6i1.18355",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "411-subgoal-graphs-for-optimal-pathfinding"
+        },
+        {
+          "title": "Recast Navigation / Detour",
+          "url": "https://github.com/recastnavigation/recastnavigation",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "357-recast-navigation-detour"
+        }
+      ]
+    },
+    "411-subgoal-graphs-for-optimal-pathfinding": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+          "url": "https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "370-near-optimal-hierarchical-pathfinding-hpa"
+        },
+        {
+          "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+          "url": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+        }
+      ]
+    },
+    "435-theta-any-angle-path-planning-on-grids": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+          "url": "https://doi.org/10.1109/TSS.1968.253136",
+          "year": 1968,
+          "arxiv": null,
+          "doi": null,
+          "card": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+        },
+        {
+          "title": "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis",
+          "url": "https://doi.org/10.1609/aaai.v24i1.7566",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "429-lazy-theta-any-angle-path-planning-and-path-length-analysis"
+        },
+        {
+          "title": "Field D*: An Interpolation-Based Path Planner",
+          "url": "https://doi.org/10.1002/rob.20147",
+          "year": 2006,
+          "arxiv": null,
+          "doi": "10.1002/rob.20147",
+          "card": "717-field-d-an-interpolation-based-path-planner"
+        }
+      ]
+    },
+    "429-lazy-theta-any-angle-path-planning-and-path-length-analysis": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Theta*: Any-Angle Path Planning on Grids",
+          "url": "https://doi.org/10.1613/jair.2994",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "435-theta-any-angle-path-planning-on-grids"
+        }
+      ]
+    },
+    "357-recast-navigation-detour": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Simplified 3D Movement and Pathfinding Using Navigation Meshes",
+          "url": "https://www.gamedevs.org/",
+          "year": 2000,
+          "arxiv": null,
+          "doi": null,
+          "card": "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh"
+        },
+        {
+          "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+          "url": "https://webdocs.cs.ualberta.ca/~mmueller/ps/hpastar.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "370-near-optimal-hierarchical-pathfinding-hpa"
+        },
+        {
+          "title": "Understanding Goal-Based Vector Field / Flow Field Pathfinding",
+          "url": "https://howtorts.github.io/",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "355-understanding-goal-based-vector-field-flow-field-pathfinding"
+        }
+      ]
+    },
+    "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Recast Navigation / Detour",
+          "url": "https://github.com/recastnavigation/recastnavigation",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "357-recast-navigation-detour"
+        }
+      ]
+    },
+    "355-understanding-goal-based-vector-field-flow-field-pathfinding": {
+      "lineage": "pathfinding",
+      "cites": [
+        {
+          "title": "Continuum Crowds",
+          "url": "https://doi.org/10.1145/1141911.1141978",
+          "year": 2006,
+          "arxiv": null,
+          "doi": "10.1145/1141911.1141978",
+          "card": "437-continuum-crowds"
+        },
+        {
+          "title": "Potential Fields for Unit Behavior",
+          "url": "https://www.gamedeveloper.com/",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "482-potential-fields-for-unit-behavior"
+        },
+        {
+          "title": "Recast Navigation / Detour",
+          "url": "https://github.com/recastnavigation/recastnavigation",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "357-recast-navigation-detour"
+        }
+      ]
+    },
+    "254-ggpo-rollback-networking": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        },
+        {
+          "title": "1500 Archers on a 28.8",
+          "url": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
+        },
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        },
+        {
+          "title": "Virtual Time / Time Warp",
+          "url": "https://doi.org/10.1145/3916.3988",
+          "year": 1985,
+          "arxiv": null,
+          "doi": "10.1145/3916.3988",
+          "card": "714-virtual-time-time-warp-optimistic-distributed-simulation"
+        },
+        {
+          "title": "GGPO Overview and Design Notes",
+          "url": "https://github.com/pond3r/ggpo/blob/master/README.md",
+          "year": 2019,
+          "arxiv": null,
+          "doi": null,
+          "card": "721-ggpo-overview-and-design-notes"
+        }
+      ]
+    },
+    "017-deterministic-lockstep": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "1500 Archers on a 28.8",
+          "url": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
+        },
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        },
+        {
+          "title": "Snapshot Interpolation",
+          "url": "https://gafferongames.com/post/snapshot_interpolation/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "341-snapshot-interpolation"
+        },
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        }
+      ]
+    },
+    "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        },
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        },
+        {
+          "title": "Quake III Arena Networking Source",
+          "url": "https://github.com/id-Software/Quake-III-Arena",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "495-quake-iii-arena-networking-source"
+        }
+      ]
+    },
+    "345-client-side-prediction-server-reconciliation": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Snapshot Interpolation",
+          "url": "https://gafferongames.com/post/snapshot_interpolation/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "341-snapshot-interpolation"
+        },
+        {
+          "title": "Source Multiplayer Networking",
+          "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "376-source-multiplayer-networking"
+        },
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        },
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        }
+      ]
+    },
+    "341-snapshot-interpolation": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        },
+        {
+          "title": "State Synchronization",
+          "url": "https://gafferongames.com/post/state_synchronization/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "410-state-synchronization"
+        },
+        {
+          "title": "Source Multiplayer Networking",
+          "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "376-source-multiplayer-networking"
+        }
+      ]
+    },
+    "376-source-multiplayer-networking": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        },
+        {
+          "title": "Quake III Arena Networking Source",
+          "url": "https://github.com/id-Software/Quake-III-Arena",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "495-quake-iii-arena-networking-source"
+        },
+        {
+          "title": "Snapshot Interpolation",
+          "url": "https://gafferongames.com/post/snapshot_interpolation/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "341-snapshot-interpolation"
+        }
+      ]
+    },
+    "410-state-synchronization": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Snapshot Interpolation",
+          "url": "https://gafferongames.com/post/snapshot_interpolation/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "341-snapshot-interpolation"
+        },
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        }
+      ]
+    },
+    "495-quake-iii-arena-networking-source": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Source Multiplayer Networking",
+          "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "376-source-multiplayer-networking"
+        },
+        {
+          "title": "1500 Archers on a 28.8",
+          "url": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
+        }
+      ]
+    },
+    "452-unreal-engine-networking-architecture": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Source Multiplayer Networking",
+          "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+          "year": 2001,
+          "arxiv": null,
+          "doi": null,
+          "card": "376-source-multiplayer-networking"
+        },
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        }
+      ]
+    },
+    "444-networked-physics-2004": {
+      "lineage": "game-networking",
+      "cites": [
+        {
+          "title": "Client-Side Prediction & Server Reconciliation",
+          "url": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "345-client-side-prediction-server-reconciliation"
+        },
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        }
+      ]
+    },
+    "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Deterministic Lockstep",
+          "url": "https://gafferongames.com/post/deterministic_lockstep/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "017-deterministic-lockstep"
+        },
+        {
+          "title": "GGPO Rollback Networking",
+          "url": "https://github.com/pond3r/ggpo",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "254-ggpo-rollback-networking"
+        }
+      ]
+    },
+    "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        },
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        },
+        {
+          "title": "Brief Announcement: Hazard Eras",
+          "url": "https://doi.org/10.1145/3087556.3087588",
+          "year": 2017,
+          "arxiv": null,
+          "doi": "10.1145/3087556.3087588",
+          "card": "704-brief-announcement-hazard-eras-non-blocking-memory-reclamati"
+        },
+        {
+          "title": "Interval-Based Memory Reclamation",
+          "url": "https://doi.org/10.1145/3178487.3178488",
+          "year": 2018,
+          "arxiv": null,
+          "doi": "10.1145/3178487.3178488",
+          "card": "402-interval-based-memory-reclamation"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    "369-epoch-based-reclamation-practical-lock-freedom": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Read-Copy Update",
+          "url": "https://www.rdrop.com/~paulmck/RCU/",
+          "year": 1998,
+          "arxiv": null,
+          "doi": null,
+          "card": "380-read-copy-update"
+        },
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        },
+        {
+          "title": "Userspace RCU Library (liburcu)",
+          "url": "https://liburcu.org/",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "715-userspace-rcu-library-liburcu"
+        }
+      ]
+    },
+    "380-read-copy-update": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        },
+        {
+          "title": "Userspace RCU Library (liburcu)",
+          "url": "https://liburcu.org/",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "715-userspace-rcu-library-liburcu"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        }
+      ]
+    },
+    "409-debra-distributed-epoch-based-reclamation": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Interval-Based Memory Reclamation",
+          "url": "https://doi.org/10.1145/3178487.3178488",
+          "year": 2018,
+          "arxiv": null,
+          "doi": "10.1145/3178487.3178488",
+          "card": "402-interval-based-memory-reclamation"
+        }
+      ]
+    },
+    "402-interval-based-memory-reclamation": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Hyaline: Fast and Transparent Lock-Free Memory Reclamation",
+          "url": "https://arxiv.org/abs/1905.07903",
+          "year": 2019,
+          "arxiv": "1905.07903",
+          "doi": null,
+          "card": "718-hyaline-fast-and-transparent-lock-free-memory-reclamation"
+        }
+      ]
+    },
+    "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    "333-universal-wait-free-memory-reclamation": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Crystalline: Fast and Memory Efficient Wait-Free Reclamation",
+          "url": "https://doi.org/10.1145/3437801.3441592",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "315-crystalline-fast-and-memory-efficient-wait-free-reclamation"
+        }
+      ]
+    },
+    "315-crystalline-fast-and-memory-efficient-wait-free-reclamation": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Universal Wait-Free Memory Reclamation",
+          "url": "https://doi.org/10.1145/3332466.3374530",
+          "year": 2020,
+          "arxiv": null,
+          "doi": null,
+          "card": "333-universal-wait-free-memory-reclamation"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        }
+      ]
+    },
+    "299-releasing-memory-with-optimistic-access-a-hybrid-approach-to": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Epoch-Based Reclamation / Practical lock-freedom",
+          "url": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+          "year": 2004,
+          "arxiv": null,
+          "doi": null,
+          "card": "369-epoch-based-reclamation-practical-lock-freedom"
+        }
+      ]
+    },
+    "308-eemarq-efficient-lock-free-range-queries-with-memory-reclama": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "DEBRA: Distributed Epoch-Based Reclamation",
+          "url": "https://www.cs.utoronto.ca/~tabrown/debra/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "409-debra-distributed-epoch-based-reclamation"
+        },
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        }
+      ]
+    },
+    "326-concurrent-reference-counting-and-resource-management-in-wai": {
+      "lineage": "memory-reclamation",
+      "cites": [
+        {
+          "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+          "url": "https://doi.org/10.1109/TPDS.2004.8",
+          "year": 2004,
+          "arxiv": null,
+          "doi": "10.1109/TPDS.2004.8",
+          "card": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+        },
+        {
+          "title": "Wait-Free Synchronization",
+          "url": "https://doi.org/10.1145/114005.102808",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1145/114005.102808",
+          "card": "037-wait-free-synchronization"
+        }
+      ]
+    },
+    "261-flocks-herds-and-schools-a-distributed-behavioral-model": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+          "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+          "year": 2008,
+          "arxiv": null,
+          "doi": "10.1109/ROBOT.2008.4543489",
+          "card": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+        },
+        {
+          "title": "Social Force Model for Pedestrian Dynamics",
+          "url": "https://doi.org/10.1103/PhysRevE.51.4282",
+          "year": 1995,
+          "arxiv": null,
+          "doi": "10.1103/PhysRevE.51.4282",
+          "card": "712-social-force-model-for-pedestrian-dynamics"
+        }
+      ]
+    },
+    "258-steering-behaviors-for-autonomous-characters": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
+          "url": "https://doi.org/10.1145/37401.37406",
+          "year": 1987,
+          "arxiv": null,
+          "doi": "10.1145/37401.37406",
+          "card": "261-flocks-herds-and-schools-a-distributed-behavioral-model"
+        },
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        },
+        {
+          "title": "Continuum Crowds",
+          "url": "https://doi.org/10.1145/1141911.1141978",
+          "year": 2006,
+          "arxiv": null,
+          "doi": "10.1145/1141911.1141978",
+          "card": "437-continuum-crowds"
+        }
+      ]
+    },
+    "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        },
+        {
+          "title": "ClearPath: Highly Parallel Collision Avoidance",
+          "url": "https://gamma.cs.unc.edu/ClearPath/ClearPath.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "713-clearpath-highly-parallel-collision-avoidance"
+        }
+      ]
+    },
+    "349-reciprocal-n-body-collision-avoidance-orca": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+          "url": "https://doi.org/10.1109/ROBOT.2008.4543489",
+          "year": 2008,
+          "arxiv": null,
+          "doi": "10.1109/ROBOT.2008.4543489",
+          "card": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+        },
+        {
+          "title": "RVO2 Library",
+          "url": "https://gamma.cs.unc.edu/RVO2/",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "719-rvo2-library"
+        },
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Continuum Crowds",
+          "url": "https://doi.org/10.1145/1141911.1141978",
+          "year": 2006,
+          "arxiv": null,
+          "doi": "10.1145/1141911.1141978",
+          "card": "437-continuum-crowds"
+        }
+      ]
+    },
+    "437-continuum-crowds": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Understanding Goal-Based Vector Field / Flow Field Pathfinding",
+          "url": "https://howtorts.github.io/",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "355-understanding-goal-based-vector-field-flow-field-pathfinding"
+        },
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        }
+      ]
+    },
+    "482-potential-fields-for-unit-behavior": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        },
+        {
+          "title": "Understanding Goal-Based Vector Field / Flow Field Pathfinding",
+          "url": "https://howtorts.github.io/",
+          "year": 2010,
+          "arxiv": null,
+          "doi": null,
+          "card": "355-understanding-goal-based-vector-field-flow-field-pathfinding"
+        }
+      ]
+    },
+    "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c": {
+      "lineage": "crowd-steering",
+      "cites": [
+        {
+          "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+          "url": "https://doi.org/10.1007/978-3-642-19457-3_1",
+          "year": 2011,
+          "arxiv": null,
+          "doi": "10.1007/978-3-642-19457-3_1",
+          "card": "349-reciprocal-n-body-collision-avoidance-orca"
+        },
+        {
+          "title": "RVO2 Library",
+          "url": "https://gamma.cs.unc.edu/RVO2/",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "719-rvo2-library"
+        }
+      ]
+    },
+    "260-linearizability-a-correctness-condition-for-concurrent-objec": {
+      "lineage": "concurrent-data-structures",
+      "cites": [
+        {
+          "title": "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs",
+          "url": "https://doi.org/10.1109/TC.1979.1675439",
+          "year": 1979,
+          "arxiv": null,
+          "doi": "10.1109/TC.1979.1675439",
+          "card": "722-how-to-make-a-multiprocessor-computer-that-correctly-execute"
+        },
+        {
+          "title": "Wait-Free Synchronization",
+          "url": "https://doi.org/10.1145/114005.102808",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1145/114005.102808",
+          "card": "037-wait-free-synchronization"
+        },
+        {
+          "title": "The Art of Multiprocessor Programming",
+          "url": "https://www.elsevier.com/books/the-art-of-multiprocessor-programming/herlihy/978-0-12-397337-5",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "141-the-art-of-multiprocessor-programming"
+        },
+        {
+          "title": "A Better x86 Memory Model: x86-TSO",
+          "url": "https://doi.org/10.1145/1785326.1785333",
+          "year": 2010,
+          "arxiv": null,
+          "doi": "10.1145/1785326.1785333",
+          "card": "709-a-better-x86-memory-model-x86-tso"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    "037-wait-free-synchronization": {
+      "lineage": "concurrent-data-structures",
+      "cites": [
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        },
+        {
+          "title": "The Art of Multiprocessor Programming",
+          "url": "https://www.elsevier.com/books/the-art-of-multiprocessor-programming/herlihy/978-0-12-397337-5",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "141-the-art-of-multiprocessor-programming"
+        },
+        {
+          "title": "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms",
+          "url": "https://doi.org/10.1145/248052.248106",
+          "year": 1996,
+          "arxiv": null,
+          "doi": "10.1145/248052.248106",
+          "card": "032-michael-scott-lock-free-queue"
+        }
+      ]
+    },
+    "141-the-art-of-multiprocessor-programming": {
+      "lineage": "concurrent-data-structures",
+      "cites": [
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        },
+        {
+          "title": "Wait-Free Synchronization",
+          "url": "https://doi.org/10.1145/114005.102808",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1145/114005.102808",
+          "card": "037-wait-free-synchronization"
+        },
+        {
+          "title": "A Better x86 Memory Model: x86-TSO",
+          "url": "https://doi.org/10.1145/1785326.1785333",
+          "year": 2010,
+          "arxiv": null,
+          "doi": "10.1145/1785326.1785333",
+          "card": "709-a-better-x86-memory-model-x86-tso"
+        }
+      ]
+    },
+    "497-release-consistency-versus-sequential-consistency": {
+      "lineage": "concurrent-data-structures",
+      "cites": [
+        {
+          "title": "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs",
+          "url": "https://doi.org/10.1109/TC.1979.1675439",
+          "year": 1979,
+          "arxiv": null,
+          "doi": "10.1109/TC.1979.1675439",
+          "card": "722-how-to-make-a-multiprocessor-computer-that-correctly-execute"
+        },
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        },
+        {
+          "title": "Memory Ordering in Modern Microprocessors",
+          "url": "https://www.kernel.org/doc/ols/2005/ols2005v2-pages-107-118.pdf",
+          "year": 2005,
+          "arxiv": null,
+          "doi": null,
+          "card": "489-memory-ordering-in-modern-microprocessors"
+        }
+      ]
+    },
+    "489-memory-ordering-in-modern-microprocessors": {
+      "lineage": "concurrent-data-structures",
+      "cites": [
+        {
+          "title": "A Better x86 Memory Model: x86-TSO",
+          "url": "https://doi.org/10.1145/1785326.1785333",
+          "year": 2010,
+          "arxiv": null,
+          "doi": "10.1145/1785326.1785333",
+          "card": "709-a-better-x86-memory-model-x86-tso"
+        },
+        {
+          "title": "Release Consistency versus Sequential Consistency",
+          "url": "https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-92-5.pdf",
+          "year": 1992,
+          "arxiv": null,
+          "doi": null,
+          "card": "497-release-consistency-versus-sequential-consistency"
+        },
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        }
+      ]
+    },
+    "016-gpu-driven-rendering-pipelines": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        },
+        {
+          "title": "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading",
+          "url": "https://jcgt.org/published/0002/02/04/",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+        },
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Hierarchical Z-Buffer Visibility",
+          "url": "https://doi.org/10.1145/166117.166147",
+          "year": 1993,
+          "arxiv": null,
+          "doi": "10.1145/166117.166147",
+          "card": "161-hierarchical-z-buffer-visibility"
+        }
+      ]
+    },
+    "113-mesh-shaders-in-the-vulkan-ecosystem": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "Introduction to Turing Mesh Shaders",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "335-introduction-to-turing-mesh-shaders"
+        },
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    },
+    "335-introduction-to-turing-mesh-shaders": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        },
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        }
+      ]
+    },
+    "106-nanite-a-deep-dive": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        },
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Sparse Virtual Textures / MegaTexture",
+          "url": "https://www.iddevnet.com/",
+          "year": 2007,
+          "arxiv": null,
+          "doi": null,
+          "card": "487-sparse-virtual-textures-megatexture"
+        }
+      ]
+    },
+    "288-towards-practical-meshlet-compression": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Mesh Shaders in the Vulkan Ecosystem",
+          "url": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "113-mesh-shaders-in-the-vulkan-ecosystem"
+        }
+      ]
+    },
+    "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "Clustered Deferred and Forward Shading",
+          "url": "https://doi.org/10.1145/2159616.2159628",
+          "year": 2012,
+          "arxiv": null,
+          "doi": "10.1145/2159616.2159628",
+          "card": "727-clustered-deferred-and-forward-shading"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    },
+    "161-hierarchical-z-buffer-visibility": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        },
+        {
+          "title": "Masked Software Occlusion Culling",
+          "url": "https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling.pdf",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "730-masked-software-occlusion-culling"
+        },
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        }
+      ]
+    },
+    "487-sparse-virtual-textures-megatexture": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "Nanite: A Deep Dive",
+          "url": "https://www.youtube.com/watch?v=e_5kdRpGrpI",
+          "year": 2021,
+          "arxiv": null,
+          "doi": null,
+          "card": "106-nanite-a-deep-dive"
+        },
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        }
+      ]
+    },
+    "116-framegraph-extensible-rendering-architecture-in-frostbite": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "GPU-Driven Rendering Pipelines",
+          "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "016-gpu-driven-rendering-pipelines"
+        }
+      ]
+    },
+    "329-meshlet-priors-for-3d-mesh-reconstruction": {
+      "lineage": "gpu-meshlets",
+      "cites": [
+        {
+          "title": "meshoptimizer",
+          "url": "https://github.com/zeux/meshoptimizer",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "705-meshoptimizer"
+        },
+        {
+          "title": "Towards Practical Meshlet Compression",
+          "url": "https://arxiv.org/abs/2402.09919",
+          "year": 2024,
+          "arxiv": null,
+          "doi": null,
+          "card": "288-towards-practical-meshlet-compression"
+        }
+      ]
+    },
+    "499-robin-hood-hashing": {
+      "lineage": "open-addressing",
+      "cites": [
+        {
+          "title": "Hopscotch Hashing",
+          "url": "https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "483-hopscotch-hashing"
+        },
+        {
+          "title": "Abseil Swiss Tables",
+          "url": "https://abseil.io/about/design/swisstables",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "470-abseil-swiss-tables"
+        },
+        {
+          "title": "I Wrote a Faster Hash Table",
+          "url": "https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "710-i-wrote-a-faster-hash-table"
+        }
+      ]
+    },
+    "483-hopscotch-hashing": {
+      "lineage": "open-addressing",
+      "cites": [
+        {
+          "title": "Robin Hood Hashing",
+          "url": "https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf",
+          "year": 1986,
+          "arxiv": null,
+          "doi": null,
+          "card": "499-robin-hood-hashing"
+        },
+        {
+          "title": "Abseil Swiss Tables",
+          "url": "https://abseil.io/about/design/swisstables",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "470-abseil-swiss-tables"
+        },
+        {
+          "title": "Space-Efficient Lock-Free Linear-Probing Hash Table",
+          "url": "https://arxiv.org/abs/2601.00000",
+          "year": 2026,
+          "arxiv": null,
+          "doi": null,
+          "card": "264-space-efficient-lock-free-linear-probing-hash-table"
+        }
+      ]
+    },
+    "470-abseil-swiss-tables": {
+      "lineage": "open-addressing",
+      "cites": [
+        {
+          "title": "Robin Hood Hashing",
+          "url": "https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf",
+          "year": 1986,
+          "arxiv": null,
+          "doi": null,
+          "card": "499-robin-hood-hashing"
+        },
+        {
+          "title": "Hopscotch Hashing",
+          "url": "https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "483-hopscotch-hashing"
+        },
+        {
+          "title": "F14 \u2014 A Hash Table Library for C++",
+          "url": "https://engineering.fb.com/2019/04/25/developer-tools/f14/",
+          "year": 2019,
+          "arxiv": null,
+          "doi": null,
+          "card": "716-f14-a-hash-table-library-for-c"
+        },
+        {
+          "title": "I Wrote a Faster Hash Table",
+          "url": "https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "710-i-wrote-a-faster-hash-table"
+        }
+      ]
+    },
+    "264-space-efficient-lock-free-linear-probing-hash-table": {
+      "lineage": "open-addressing",
+      "cites": [
+        {
+          "title": "Hopscotch Hashing",
+          "url": "https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "483-hopscotch-hashing"
+        },
+        {
+          "title": "Abseil Swiss Tables",
+          "url": "https://abseil.io/about/design/swisstables",
+          "year": 2017,
+          "arxiv": null,
+          "doi": null,
+          "card": "470-abseil-swiss-tables"
+        },
+        {
+          "title": "An Efficient Wait-free Resizable Hash Table",
+          "url": "https://doi.org/10.1145/3490146",
+          "year": 2022,
+          "arxiv": null,
+          "doi": null,
+          "card": "304-an-efficient-wait-free-resizable-hash-table"
+        }
+      ]
+    },
+    "304-an-efficient-wait-free-resizable-hash-table": {
+      "lineage": "open-addressing",
+      "cites": [
+        {
+          "title": "Space-Efficient Lock-Free Linear-Probing Hash Table",
+          "url": "https://arxiv.org/abs/2601.00000",
+          "year": 2026,
+          "arxiv": null,
+          "doi": null,
+          "card": "264-space-efficient-lock-free-linear-probing-hash-table"
+        },
+        {
+          "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+          "url": "https://doi.org/10.1145/78969.78972",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1145/78969.78972",
+          "card": "260-linearizability-a-correctness-condition-for-concurrent-objec"
+        }
+      ]
+    },
+    "119-wave-function-collapse": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Example-Based Model Synthesis",
+          "url": "https://doi.org/10.1145/1230100.1230119",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1145/1230100.1230119",
+          "card": "702-example-based-model-synthesis"
+        },
+        {
+          "title": "MarkovJunior",
+          "url": "https://github.com/mxgmn/MarkovJunior",
+          "year": 2022,
+          "arxiv": null,
+          "doi": null,
+          "card": "703-markovjunior"
+        },
+        {
+          "title": "The Algorithmic Beauty of Plants (L-Systems)",
+          "url": "http://algorithmicbotany.org/papers/#abop",
+          "year": 1990,
+          "arxiv": null,
+          "doi": null,
+          "card": "498-the-algorithmic-beauty-of-plants-l-systems"
+        },
+        {
+          "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+          "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+        }
+      ]
+    },
+    "498-the-algorithmic-beauty-of-plants-l-systems": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        },
+        {
+          "title": "Example-Based Model Synthesis",
+          "url": "https://doi.org/10.1145/1230100.1230119",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1145/1230100.1230119",
+          "card": "702-example-based-model-synthesis"
+        }
+      ]
+    },
+    "491-dual-contouring-of-hermite-data": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Manifold Dual Contouring",
+          "url": "https://doi.org/10.1109/TVCG.2007.1064",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1109/TVCG.2007.1064",
+          "card": "723-manifold-dual-contouring"
+        }
+      ]
+    },
+    "020-search-based-procedural-content-generation-a-taxonomy-and-su": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        },
+        {
+          "title": "Procedural Content Generation via Machine Learning (PCGML)",
+          "url": "https://doi.org/10.1109/TG.2018.2846626",
+          "year": 2018,
+          "arxiv": null,
+          "doi": null,
+          "card": "013-procedural-content-generation-via-machine-learning-pcgml"
+        }
+      ]
+    },
+    "013-procedural-content-generation-via-machine-learning-pcgml": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+          "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+        },
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        }
+      ]
+    },
+    "118-procedural-content-generation-in-games": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+          "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+        },
+        {
+          "title": "Wave Function Collapse",
+          "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+          "year": 2016,
+          "arxiv": null,
+          "doi": null,
+          "card": "119-wave-function-collapse"
+        }
+      ]
+    },
+    "136-experience-driven-procedural-content-generation": {
+      "lineage": "procedural-generation",
+      "cites": [
+        {
+          "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+          "url": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+        }
+      ]
+    },
+    "022-handlers-of-algebraic-effects": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        },
+        {
+          "title": "Handling Algebraic Effects",
+          "url": "https://doi.org/10.2168/LMCS-9(4:23)2013",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "128-handling-algebraic-effects"
+        },
+        {
+          "title": "Programming with Algebraic Effects and Handlers",
+          "url": "https://arxiv.org/abs/1203.1539",
+          "year": 2012,
+          "arxiv": "1203.1539",
+          "doi": null,
+          "card": "123-programming-with-algebraic-effects-and-handlers"
+        },
+        {
+          "title": "Koka: Programming with Row Polymorphic Effect Types",
+          "url": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "711-koka-programming-with-row-polymorphic-effect-types"
+        },
+        {
+          "title": "Eff: Algebraic Effect Handlers Language",
+          "url": "https://www.eff-lang.org/",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "724-eff-algebraic-effect-handlers-language"
+        }
+      ]
+    },
+    "128-handling-algebraic-effects": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Programming with Algebraic Effects and Handlers",
+          "url": "https://arxiv.org/abs/1203.1539",
+          "year": 2012,
+          "arxiv": "1203.1539",
+          "doi": null,
+          "card": "123-programming-with-algebraic-effects-and-handlers"
+        }
+      ]
+    },
+    "123-programming-with-algebraic-effects-and-handlers": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Koka: Programming with Row Polymorphic Effect Types",
+          "url": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "711-koka-programming-with-row-polymorphic-effect-types"
+        },
+        {
+          "title": "Retrofitting Effect Handlers onto OCaml",
+          "url": "https://arxiv.org/abs/2104.02882",
+          "year": 2021,
+          "arxiv": "2104.02882",
+          "doi": null,
+          "card": "729-retrofitting-effect-handlers-onto-ocaml"
+        }
+      ]
+    },
+    "036-notions-of-computation-and-monads": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Monad Transformers and Modular Interpreters",
+          "url": "https://doi.org/10.1145/199448.199528",
+          "year": 1995,
+          "arxiv": null,
+          "doi": null,
+          "card": "156-monad-transformers-and-modular-interpreters"
+        }
+      ]
+    },
+    "147-algebraic-operations-and-generic-effects": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        }
+      ]
+    },
+    "156-monad-transformers-and-modular-interpreters": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        },
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        }
+      ]
+    },
+    "228-abstracting-effect-systems-for-algebraic-effect-handlers": {
+      "lineage": "algebraic-effects",
+      "cites": [
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        },
+        {
+          "title": "Koka: Programming with Row Polymorphic Effect Types",
+          "url": "https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/",
+          "year": 2014,
+          "arxiv": null,
+          "doi": null,
+          "card": "711-koka-programming-with-row-polymorphic-effect-types"
+        }
+      ]
+    },
+    "484-horizon-based-ambient-occlusion": {
+      "lineage": "ambient-occlusion",
+      "cites": [
+        {
+          "title": "Finding Next Gen: CryEngine 2 (SSAO)",
+          "url": "https://www.crytek.com/download/Presentations/FindingNextGen-CryEngine2.pdf",
+          "year": 2007,
+          "arxiv": null,
+          "doi": null,
+          "card": "708-finding-next-gen-cryengine-2-ssao"
+        }
+      ]
+    },
+    "492-photographic-tone-reproduction-for-digital-images": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Horizon-Based Ambient Occlusion",
+          "url": "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion",
+          "year": 2008,
+          "arxiv": null,
+          "doi": null,
+          "card": "484-horizon-based-ambient-occlusion"
+        }
+      ]
+    },
+    "493-depth-peeling-order-independent-transparency": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading",
+          "url": "https://jcgt.org/published/0002/02/04/",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+        }
+      ]
+    },
+    "490-particle-based-fluid-simulation-for-interactive-applications": {
+      "lineage": "particle-fluids",
+      "cites": [
+        {
+          "title": "Position Based Fluids",
+          "url": "https://doi.org/10.1145/2461912.2461984",
+          "year": 2013,
+          "arxiv": null,
+          "doi": "10.1145/2461912.2461984",
+          "card": "706-position-based-fluids"
+        },
+        {
+          "title": "Position Based Dynamics",
+          "url": "https://doi.org/10.1016/j.jvcir.2007.01.005",
+          "year": 2007,
+          "arxiv": null,
+          "doi": "10.1016/j.jvcir.2007.01.005",
+          "card": "707-position-based-dynamics"
+        },
+        {
+          "title": "XPBD: Position-Based Simulation of Compliant Constrained Dynamics",
+          "url": "https://doi.org/10.1145/2994258.2994272",
+          "year": 2016,
+          "arxiv": null,
+          "doi": "10.1145/2994258.2994272",
+          "card": "728-xpbd-position-based-simulation-of-compliant-constrained-dyna"
+        }
+      ]
+    },
+    "496-priority-inheritance-protocols-an-approach-to-real-time-sync": {
+      "lineage": "realtime-scheduling",
+      "cites": [
+        {
+          "title": "Priority Ceiling Protocols for Real-Time Synchronization",
+          "url": "https://doi.org/10.1109/12.57058",
+          "year": 1990,
+          "arxiv": null,
+          "doi": "10.1109/12.57058",
+          "card": "725-priority-ceiling-protocols-for-real-time-synchronization"
+        }
+      ]
+    },
+    "121-job-system-and-fiber-architecture-naughty-dog": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Scheduling Multithreaded Computations by Work Stealing",
+          "url": "https://doi.org/10.1145/324133.324234",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "257-scheduling-multithreaded-computations-by-work-stealing"
+        },
+        {
+          "title": "Intel Threading Building Blocks",
+          "url": "https://www.threadingbuildingblocks.org/",
+          "year": 2007,
+          "arxiv": null,
+          "doi": null,
+          "card": "486-intel-threading-building-blocks"
+        },
+        {
+          "title": "Parallelizing the Naughty Dog Engine Using Fibers",
+          "url": "https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "122-parallelizing-the-naughty-dog-engine-using-fibers"
+        }
+      ]
+    },
+    "122-parallelizing-the-naughty-dog-engine-using-fibers": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Job System and Fiber Architecture (Naughty Dog)",
+          "url": "https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "121-job-system-and-fiber-architecture-naughty-dog"
+        },
+        {
+          "title": "Scheduling Multithreaded Computations by Work Stealing",
+          "url": "https://doi.org/10.1145/324133.324234",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "257-scheduling-multithreaded-computations-by-work-stealing"
+        },
+        {
+          "title": "Dynamic Circular Work-Stealing Deque",
+          "url": "https://doi.org/10.1145/1073970.1073974",
+          "year": 2005,
+          "arxiv": null,
+          "doi": null,
+          "card": "367-dynamic-circular-work-stealing-deque"
+        }
+      ]
+    },
+    "126-parallel-implementations-of-soft-real-time-game-systems": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Job System and Fiber Architecture (Naughty Dog)",
+          "url": "https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine",
+          "year": 2015,
+          "arxiv": null,
+          "doi": null,
+          "card": "121-job-system-and-fiber-architecture-naughty-dog"
+        },
+        {
+          "title": "Intel Threading Building Blocks",
+          "url": "https://www.threadingbuildingblocks.org/",
+          "year": 2007,
+          "arxiv": null,
+          "doi": null,
+          "card": "486-intel-threading-building-blocks"
+        }
+      ]
+    },
+    "023-three-states-and-a-plan-the-ai-of-f-e-a-r": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem",
+          "url": "https://doi.org/10.1016/0004-3702(82)90020-0",
+          "year": 1982,
+          "arxiv": null,
+          "doi": null,
+          "card": "043-rete-a-fast-algorithm-for-the-many-pattern-many-object-patte"
+        }
+      ]
+    },
+    "043-rete-a-fast-algorithm-for-the-many-pattern-many-object-patte": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Three States and a Plan: The AI of F.E.A.R.",
+          "url": "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf",
+          "year": 2006,
+          "arxiv": null,
+          "doi": null,
+          "card": "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
+        }
+      ]
+    },
+    "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "StarCraft II: A New Challenge for Reinforcement Learning",
+          "url": "https://arxiv.org/abs/1708.04782",
+          "year": 2017,
+          "arxiv": "1708.04782",
+          "doi": null,
+          "card": "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+        },
+        {
+          "title": "The StarCraft Multi-Agent Challenge",
+          "url": "https://arxiv.org/abs/1902.04043",
+          "year": 2019,
+          "arxiv": "1902.04043",
+          "doi": null,
+          "card": "011-the-starcraft-multi-agent-challenge"
+        }
+      ]
+    },
+    "015-starcraft-ii-a-new-challenge-for-reinforcement-learning": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Grandmaster level in StarCraft II using multi-agent reinforcement learning",
+          "url": "https://www.nature.com/articles/s41586-019-1724-z",
+          "year": 2019,
+          "arxiv": null,
+          "doi": null,
+          "card": "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
+        },
+        {
+          "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
+          "url": "https://doi.org/10.1109/TCIAIG.2013.2286295",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+        }
+      ]
+    },
+    "018-a-survey-of-real-time-strategy-game-ai-research-and-competit": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "StarCraft II: A New Challenge for Reinforcement Learning",
+          "url": "https://arxiv.org/abs/1708.04782",
+          "year": 2017,
+          "arxiv": "1708.04782",
+          "doi": null,
+          "card": "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+        },
+        {
+          "title": "Build Order Optimization in StarCraft",
+          "url": "https://doi.org/10.1609/aiide.v7i1.12441",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "134-build-order-optimization-in-starcraft"
+        }
+      ]
+    },
+    "011-the-starcraft-multi-agent-challenge": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning",
+          "url": "https://arxiv.org/abs/1803.11485",
+          "year": 2018,
+          "arxiv": "1803.11485",
+          "doi": null,
+          "card": "114-qmix-monotonic-value-function-factorisation-for-deep-multi-a"
+        },
+        {
+          "title": "StarCraft II: A New Challenge for Reinforcement Learning",
+          "url": "https://arxiv.org/abs/1708.04782",
+          "year": 2017,
+          "arxiv": "1708.04782",
+          "doi": null,
+          "card": "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+        }
+      ]
+    },
+    "114-qmix-monotonic-value-function-factorisation-for-deep-multi-a": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "The StarCraft Multi-Agent Challenge",
+          "url": "https://arxiv.org/abs/1902.04043",
+          "year": 2019,
+          "arxiv": "1902.04043",
+          "doi": null,
+          "card": "011-the-starcraft-multi-agent-challenge"
+        }
+      ]
+    },
+    "134-build-order-optimization-in-starcraft": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
+          "url": "https://doi.org/10.1109/TCIAIG.2013.2286295",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+        },
+        {
+          "title": "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft",
+          "url": "https://doi.org/10.1609/aiide.v9i1.12680",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "129-portfolio-greedy-search-and-simulation-for-large-scale-comba"
+        }
+      ]
+    },
+    "129-portfolio-greedy-search-and-simulation-for-large-scale-comba": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Build Order Optimization in StarCraft",
+          "url": "https://doi.org/10.1609/aiide.v7i1.12441",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "134-build-order-optimization-in-starcraft"
+        },
+        {
+          "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
+          "url": "https://doi.org/10.1109/TCIAIG.2013.2286295",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+        }
+      ]
+    },
+    "140-fog-of-war-representation-for-rts-agents": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "A Particle Model for State Estimation in Real-Time Strategy Games",
+          "url": "https://doi.org/10.1609/aiide.v7i1.12436",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "132-a-particle-model-for-state-estimation-in-real-time-strategy-"
+        },
+        {
+          "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
+          "url": "https://doi.org/10.1109/TCIAIG.2013.2286295",
+          "year": 2013,
+          "arxiv": null,
+          "doi": null,
+          "card": "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+        }
+      ]
+    },
+    "132-a-particle-model-for-state-estimation-in-real-time-strategy-": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Fog of War Representation for RTS Agents",
+          "url": "https://doi.org/10.1609/aiide.v5i1.12364",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "140-fog-of-war-representation-for-rts-agents"
+        }
+      ]
+    },
+    "494-smart-terrain-object-affordance-ai-the-sims-lineage": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Steering Behaviors for Autonomous Characters",
+          "url": "https://www.red3d.com/cwr/papers/1999/gdc99steer.html",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "258-steering-behaviors-for-autonomous-characters"
+        }
+      ]
+    },
+    "031-region-based-memory-management": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Implementation of the Typed Call-by-Value \u03bb-Calculus using a Stack of Regions",
+          "url": "https://doi.org/10.1145/174675.177855",
+          "year": 1994,
+          "arxiv": null,
+          "doi": null,
+          "card": "033-implementation-of-the-typed-call-by-value-lambda-calculus-us"
+        },
+        {
+          "title": "Typed Memory Management in a Calculus of Capabilities",
+          "url": "https://doi.org/10.1145/292540.292564",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "029-typed-memory-management-in-a-calculus-of-capabilities"
+        }
+      ]
+    },
+    "033-implementation-of-the-typed-call-by-value-lambda-calculus-us": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Region-Based Memory Management",
+          "url": "https://doi.org/10.1006/inco.1996.2613",
+          "year": 1997,
+          "arxiv": null,
+          "doi": null,
+          "card": "031-region-based-memory-management"
+        },
+        {
+          "title": "Typed Memory Management in a Calculus of Capabilities",
+          "url": "https://doi.org/10.1145/292540.292564",
+          "year": 1999,
+          "arxiv": null,
+          "doi": null,
+          "card": "029-typed-memory-management-in-a-calculus-of-capabilities"
+        }
+      ]
+    },
+    "029-typed-memory-management-in-a-calculus-of-capabilities": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Region-Based Memory Management",
+          "url": "https://doi.org/10.1006/inco.1996.2613",
+          "year": 1997,
+          "arxiv": null,
+          "doi": null,
+          "card": "031-region-based-memory-management"
+        },
+        {
+          "title": "Implementation of the Typed Call-by-Value \u03bb-Calculus using a Stack of Regions",
+          "url": "https://doi.org/10.1145/174675.177855",
+          "year": 1994,
+          "arxiv": null,
+          "doi": null,
+          "card": "033-implementation-of-the-typed-call-by-value-lambda-calculus-us"
+        }
+      ]
+    },
+    "027-types-and-programming-languages": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        },
+        {
+          "title": "Region-Based Memory Management",
+          "url": "https://doi.org/10.1006/inco.1996.2613",
+          "year": 1997,
+          "arxiv": null,
+          "doi": null,
+          "card": "031-region-based-memory-management"
+        }
+      ]
+    },
+    "034-the-essence-of-functional-programming": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        },
+        {
+          "title": "Handlers of Algebraic Effects",
+          "url": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+          "year": 2009,
+          "arxiv": null,
+          "doi": null,
+          "card": "022-handlers-of-algebraic-effects"
+        }
+      ]
+    },
+    "041-linear-logic": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Session Types as Intuitionistic Linear Propositions",
+          "url": "https://doi.org/10.1007/978-3-642-23217-6_15",
+          "year": 2011,
+          "arxiv": null,
+          "doi": null,
+          "card": "138-session-types-as-intuitionistic-linear-propositions"
+        },
+        {
+          "title": "Notions of Computation and Monads",
+          "url": "https://doi.org/10.1016/0890-5401(91)90052-4",
+          "year": 1991,
+          "arxiv": null,
+          "doi": "10.1016/0890-5401(91)90052-4",
+          "card": "036-notions-of-computation-and-monads"
+        }
+      ]
+    },
+    "047-communicating-sequential-processes": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "A Calculus of Communicating Systems",
+          "url": "https://doi.org/10.1007/3-540-10235-3",
+          "year": 1980,
+          "arxiv": null,
+          "doi": null,
+          "card": "044-a-calculus-of-communicating-systems"
+        }
+      ]
+    },
+    "044-a-calculus-of-communicating-systems": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Communicating Sequential Processes",
+          "url": "https://www.cs.ox.ac.uk/publications/books/concurrency/",
+          "year": 1978,
+          "arxiv": null,
+          "doi": null,
+          "card": "047-communicating-sequential-processes"
+        }
+      ]
+    },
+    "014-attention-is-all-you-need": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+          "url": "https://arxiv.org/abs/2205.14135",
+          "year": 2022,
+          "arxiv": "2205.14135",
+          "doi": null,
+          "card": "105-flashattention-fast-and-memory-efficient-exact-attention-wi"
+        },
+        {
+          "title": "Language Models are Few-Shot Learners",
+          "url": "https://arxiv.org/abs/2005.14165",
+          "year": 2020,
+          "arxiv": "2005.14165",
+          "doi": null,
+          "card": "109-language-models-are-few-shot-learners"
+        }
+      ]
+    },
+    "105-flashattention-fast-and-memory-efficient-exact-attention-wi": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Attention Is All You Need",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "year": 2017,
+          "arxiv": "1706.03762",
+          "doi": null,
+          "card": "014-attention-is-all-you-need"
+        },
+        {
+          "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+          "url": "https://arxiv.org/abs/2307.08691",
+          "year": 2023,
+          "arxiv": "2307.08691",
+          "doi": null,
+          "card": "096-flashattention-2-faster-attention-with-better-parallelism-an"
+        },
+        {
+          "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+          "url": "https://arxiv.org/abs/2407.08608",
+          "year": 2024,
+          "arxiv": "2407.08608",
+          "doi": null,
+          "card": "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+        }
+      ]
+    },
+    "096-flashattention-2-faster-attention-with-better-parallelism-an": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+          "url": "https://arxiv.org/abs/2205.14135",
+          "year": 2022,
+          "arxiv": "2205.14135",
+          "doi": null,
+          "card": "105-flashattention-fast-and-memory-efficient-exact-attention-wi"
+        },
+        {
+          "title": "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision",
+          "url": "https://arxiv.org/abs/2407.08608",
+          "year": 2024,
+          "arxiv": "2407.08608",
+          "doi": null,
+          "card": "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+        }
+      ]
+    },
+    "089-flashattention-3-fast-and-accurate-attention-with-asynchrony": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+          "url": "https://arxiv.org/abs/2307.08691",
+          "year": 2023,
+          "arxiv": "2307.08691",
+          "doi": null,
+          "card": "096-flashattention-2-faster-attention-with-better-parallelism-an"
+        }
+      ]
+    },
+    "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+          "url": "https://arxiv.org/abs/2004.04906",
+          "year": 2020,
+          "arxiv": "2004.04906",
+          "doi": null,
+          "card": "108-dense-passage-retrieval-for-open-domain-question-answering"
+        },
+        {
+          "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+          "url": "https://arxiv.org/abs/2310.11511",
+          "year": 2023,
+          "arxiv": "2310.11511",
+          "doi": null,
+          "card": "101-self-rag-learning-to-retrieve-generate-and-critique-through"
+        }
+      ]
+    },
+    "108-dense-passage-retrieval-for-open-domain-question-answering": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "url": "https://arxiv.org/abs/2005.11401",
+          "year": 2020,
+          "arxiv": "2005.11401",
+          "doi": null,
+          "card": "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+        }
+      ]
+    },
+    "007-react-synergizing-reasoning-and-acting-in-language-models": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+          "url": "https://arxiv.org/abs/2201.11903",
+          "year": 2022,
+          "arxiv": "2201.11903",
+          "doi": null,
+          "card": "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
+        },
+        {
+          "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2303.11366",
+          "year": 2023,
+          "arxiv": "2303.11366",
+          "doi": null,
+          "card": "097-reflexion-language-agents-with-verbal-reinforcement-learning"
+        },
+        {
+          "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+          "url": "https://arxiv.org/abs/2302.04761",
+          "year": 2023,
+          "arxiv": "2302.04761",
+          "doi": null,
+          "card": "102-toolformer-language-models-can-teach-themselves-to-use-tools"
+        }
+      ]
+    },
+    "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+          "url": "https://arxiv.org/abs/2305.10601",
+          "year": 2023,
+          "arxiv": "2305.10601",
+          "doi": null,
+          "card": "103-tree-of-thoughts-deliberate-problem-solving-with-large-langu"
+        },
+        {
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "url": "https://arxiv.org/abs/2210.03629",
+          "year": 2022,
+          "arxiv": "2210.03629",
+          "doi": null,
+          "card": "007-react-synergizing-reasoning-and-acting-in-language-models"
+        }
+      ]
+    },
+    "002-efficient-memory-management-for-large-language-model-serving": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+          "url": "https://arxiv.org/abs/2205.14135",
+          "year": 2022,
+          "arxiv": "2205.14135",
+          "doi": null,
+          "card": "105-flashattention-fast-and-memory-efficient-exact-attention-wi"
+        },
+        {
+          "title": "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills",
+          "url": "https://arxiv.org/abs/2308.16369",
+          "year": 2023,
+          "arxiv": "2308.16369",
+          "doi": null,
+          "card": "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+        }
+      ]
+    },
+    "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+          "url": "https://arxiv.org/abs/2309.06180",
+          "year": 2023,
+          "arxiv": "2309.06180",
+          "doi": null,
+          "card": "002-efficient-memory-management-for-large-language-model-serving"
+        },
+        {
+          "title": "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+          "url": "https://arxiv.org/abs/2403.02310",
+          "year": 2024,
+          "arxiv": "2403.02310",
+          "doi": null,
+          "card": "094-taming-throughput-latency-tradeoff-in-llm-inference-with-sar"
+        }
+      ]
+    },
+    "142-signed-distance-fields-for-text": {
+      "lineage": null,
+      "cites": [
+        {
+          "title": "Dual Contouring of Hermite Data",
+          "url": "https://doi.org/10.1145/566570.566586",
+          "year": 2002,
+          "arxiv": null,
+          "doi": "10.1145/566570.566586",
+          "card": "491-dual-contouring-of-hermite-data"
+        }
+      ]
+    }
+  },
+  "lineages": {
+    "pathfinding": "# pathfinding\n\n**Charter.** Grid pathfinding from Dijkstra/A* through HPA*, JPS/JPS+, any-angle (Field D*/Theta*), navmesh/Recast, flow fields, and CPD lookup databases \u2014 the living RTS/grid AI spine.\n\n**Spine.** Dijkstra (1959) \u2192 A* (1968) \u2192 HPA* (2004) \u2192 JPS (2011) \u2192 JPS+ (2014) / Subgoals (2015) \u2192 CPD (2011+) \u2192 Theta*/Lazy Theta*/Field D* \u2194 Recast/Detour & flow fields.\n\n## Cards in this shallow thread\n\n- `701-ultra-fast-optimal-pathfinding-without-runtime-search`\n- `717-field-d-an-interpolation-based-path-planner`\n- `726-moving-ai-lab-grid-based-path-planning-competition`\n- `386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra`\n- `262-a-formal-basis-for-the-heuristic-determination-of-minimum-co`\n- `253-online-graph-pruning-for-pathfinding-on-grid-maps`\n- `342-improving-jump-point-search`\n- `298-reducing-redundant-work-in-jump-point-search`\n- `271-jump-point-search-pathfinding-in-4-connected-grids`\n- `370-near-optimal-hierarchical-pathfinding-hpa`\n- `411-subgoal-graphs-for-optimal-pathfinding`\n- `435-theta-any-angle-path-planning-on-grids`\n- `429-lazy-theta-any-angle-path-planning-and-path-length-analysis`\n- `357-recast-navigation-detour`\n- `378-simplified-3d-movement-and-pathfinding-using-navigation-mesh`\n- `355-understanding-goal-based-vector-field-flow-field-pathfinding`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "game-networking": "# game-networking\n\n**Charter.** Game networking architectures: deterministic lockstep, GGPO-style rollback, and client-prediction/snapshot siblings still used in fighting games and RTS.\n\n**Spine.** Quake/AoE lockstep craft \u2192 GGPO rollback (2006+) \u2192 Gaffer/Gambetta prediction & snapshots \u2192 modern GGPO forks; Time Warp as optimistic DES analogy.\n\n## Cards in this shallow thread\n\n- `714-virtual-time-time-warp-optimistic-distributed-simulation`\n- `721-ggpo-overview-and-design-notes`\n- `254-ggpo-rollback-networking`\n- `017-deterministic-lockstep`\n- `028-1500-archers-on-a-28-8-network-programming-in-age-of-empires`\n- `345-client-side-prediction-server-reconciliation`\n- `341-snapshot-interpolation`\n- `376-source-multiplayer-networking`\n- `410-state-synchronization`\n- `495-quake-iii-arena-networking-source`\n- `452-unreal-engine-networking-architecture`\n- `444-networked-physics-2004`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "memory-reclamation": "# memory-reclamation\n\n**Charter.** Safe memory reclamation for non-GC lock-free structures: hazard pointers, EBR/RCU/DEBRA, Hazard Eras, IBR/Hyaline/Crystalline \u2014 do not steal concurrent-data-structures lineage.\n\n**Spine.** Michael SMR/HP (2002/2004) \u2194 Fraser EBR (2004) \u2194 McKenney RCU \u2192 DEBRA (2015) \u2192 Hazard Eras (2017) \u2192 IBR/Hyaline/Universal/Crystalline.\n\n## Cards in this shallow thread\n\n- `704-brief-announcement-hazard-eras-non-blocking-memory-reclamati`\n- `715-userspace-rcu-library-liburcu`\n- `718-hyaline-fast-and-transparent-lock-free-memory-reclamation`\n- `025-hazard-pointers-safe-memory-reclamation-for-lock-free-object`\n- `369-epoch-based-reclamation-practical-lock-freedom`\n- `380-read-copy-update`\n- `409-debra-distributed-epoch-based-reclamation`\n- `402-interval-based-memory-reclamation`\n- `373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-`\n- `333-universal-wait-free-memory-reclamation`\n- `315-crystalline-fast-and-memory-efficient-wait-free-reclamation`\n- `299-releasing-memory-with-optimistic-access-a-hybrid-approach-to`\n- `308-eemarq-efficient-lock-free-range-queries-with-memory-reclama`\n- `326-concurrent-reference-counting-and-resource-management-in-wai`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "crowd-steering": "# crowd-steering\n\n**Charter.** Local multi-agent motion: Reynolds boids/steering \u2192 social forces \u2192 RVO/ClearPath \u2192 ORCA/RVO2 \u2192 continuum/flow-field hybrids for RTS crowds.\n\n**Spine.** Boids (1987) \u2192 Steering (1999) \u2192 Social Forces (1995) \u2192 RVO (2008) \u2192 ClearPath (2009) \u2192 ORCA (2011) + Continuum Crowds / potential & flow fields.\n\n## Cards in this shallow thread\n\n- `712-social-force-model-for-pedestrian-dynamics`\n- `713-clearpath-highly-parallel-collision-avoidance`\n- `719-rvo2-library`\n- `261-flocks-herds-and-schools-a-distributed-behavioral-model`\n- `258-steering-behaviors-for-autonomous-characters`\n- `358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi`\n- `349-reciprocal-n-body-collision-avoidance-orca`\n- `437-continuum-crowds`\n- `482-potential-fields-for-unit-behavior`\n- `287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "linearizability": "# linearizability\n\n**Charter.** Correctness & memory models beneath concurrent objects: SC \u2192 linearizability/wait-free hierarchy \u2192 TSO/release consistency practice.\n\n**Spine.** Lamport SC (1979) \u2192 Herlihy/Wing linearizability (1990) \u2192 Wait-Free Synchronization (1991) \u2192 Art of Multiprocessor Programming \u2192 x86-TSO / memory ordering notes. Light cites into Michael&Scott queues.\n\n## Cards in this shallow thread\n\n- `709-a-better-x86-memory-model-x86-tso`\n- `722-how-to-make-a-multiprocessor-computer-that-correctly-execute`\n- `260-linearizability-a-correctness-condition-for-concurrent-objec`\n- `037-wait-free-synchronization`\n- `141-the-art-of-multiprocessor-programming`\n- `497-release-consistency-versus-sequential-consistency`\n- `489-memory-ordering-in-modern-microprocessors`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "gpu-meshlets": "# gpu-meshlets\n\n**Charter.** GPU-driven geometry: hierarchical Z / visibility buffer \u2192 GPU-driven pipelines \u2192 mesh shaders/meshlets \u2192 Nanite-adjacent cluster LOD; meshoptimizer as craft substrate.\n\n**Spine.** Hi-Z (1993) \u2192 Visibility Buffer (2013) \u2192 GPU-Driven (2015) \u2192 Mesh Shaders (2018) \u2192 meshoptimizer/meshlets \u2192 Nanite (2021); clustered shading as lighting sibling.\n\n## Cards in this shallow thread\n\n- `705-meshoptimizer`\n- `720-vulkan-meshlet-cad-scene-sample`\n- `727-clustered-deferred-and-forward-shading`\n- `730-masked-software-occlusion-culling`\n- `016-gpu-driven-rendering-pipelines`\n- `113-mesh-shaders-in-the-vulkan-ecosystem`\n- `335-introduction-to-turing-mesh-shaders`\n- `106-nanite-a-deep-dive`\n- `288-towards-practical-meshlet-compression`\n- `347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-`\n- `161-hierarchical-z-buffer-visibility`\n- `487-sparse-virtual-textures-megatexture`\n- `329-meshlet-priors-for-3d-mesh-reconstruction`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "open-addressing": "# open-addressing\n\n**Charter.** Open-addressing hash maps from robin hood/hopscotch theory to Swiss Tables/F14/ska craft and lock-free probing variants.\n\n**Spine.** Robin Hood (1986) \u2192 Hopscotch (2008) \u2192 Swiss Tables (2017) / ska / F14 \u2192 concurrent linear-probing tables.\n\n## Cards in this shallow thread\n\n- `710-i-wrote-a-faster-hash-table`\n- `716-f14-a-hash-table-library-for-c`\n- `499-robin-hood-hashing`\n- `483-hopscotch-hashing`\n- `470-abseil-swiss-tables`\n- `264-space-efficient-lock-free-linear-probing-hash-table`\n- `304-an-efficient-wait-free-resizable-hash-table`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "procedural-generation": "# procedural-generation\n\n**Charter.** Constraint/rewrite PCG: L-systems & dual contouring geometry, Merrell model synthesis \u2192 WFC \u2192 MarkovJunior, with SBPCG/PCGML surveys as context.\n\n**Spine.** L-systems / Dual Contouring \u2192 Model Synthesis (2007) \u2192 WFC (2016) \u2192 MarkovJunior (2022); surveys for taxonomy.\n\n## Cards in this shallow thread\n\n- `702-example-based-model-synthesis`\n- `703-markovjunior`\n- `723-manifold-dual-contouring`\n- `119-wave-function-collapse`\n- `498-the-algorithmic-beauty-of-plants-l-systems`\n- `491-dual-contouring-of-hermite-data`\n- `020-search-based-procedural-content-generation-a-taxonomy-and-su`\n- `013-procedural-content-generation-via-machine-learning-pcgml`\n- `118-procedural-content-generation-in-games`\n- `136-experience-driven-procedural-content-generation`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "algebraic-effects": "# algebraic-effects\n\n**Charter.** From monads to algebraic effects/handlers and living languages (Eff, Koka, OCaml 5).\n\n**Spine.** Moggi monads \u2192 Plotkin/Power algebraic ops \u2192 Plotkin/Pretnar handlers (2009+) \u2192 Eff/Koka \u2192 OCaml 5 retrofit.\n\n## Cards in this shallow thread\n\n- `711-koka-programming-with-row-polymorphic-effect-types`\n- `724-eff-algebraic-effect-handlers-language`\n- `729-retrofitting-effect-handlers-onto-ocaml`\n- `022-handlers-of-algebraic-effects`\n- `128-handling-algebraic-effects`\n- `123-programming-with-algebraic-effects-and-handlers`\n- `036-notions-of-computation-and-monads`\n- `147-algebraic-operations-and-generic-effects`\n- `156-monad-transformers-and-modular-interpreters`\n- `228-abstracting-effect-systems-for-algebraic-effect-handlers`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "ambient-occlusion": "# ambient-occlusion\n\n**Charter.** Screen-space ambient occlusion craft line outside radiance-cascades (SSAO \u2192 HBAO). SSDO/ISM stay on radiance-cascades when already claimed.\n\n**Spine.** Crytek SSAO (2007) \u2192 HBAO (2008).\n\n## Cards in this shallow thread\n\n- `708-finding-next-gen-cryengine-2-ssao`\n- `484-horizon-based-ambient-occlusion`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "particle-fluids": "# particle-fluids\n\n**Charter.** Interactive particle fluids: M\u00fcller SPH \u2192 PBD \u2192 Position Based Fluids \u2192 XPBD compliance.\n\n**Spine.** SPH interactive (2003) \u2192 PBD (2007) \u2192 PBF (2013) \u2192 XPBD (2016).\n\n## Cards in this shallow thread\n\n- `706-position-based-fluids`\n- `707-position-based-dynamics`\n- `728-xpbd-position-based-simulation-of-compliant-constrained-dyna`\n- `490-particle-based-fluid-simulation-for-interactive-applications`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n",
+    "realtime-scheduling": "# realtime-scheduling\n\n**Charter.** Classic real-time synchronization protocols for priority inversion (inheritance/ceiling).\n\n**Spine.** Priority Inheritance (1990) \u2194 Priority Ceiling (1990).\n\n## Cards in this shallow thread\n\n- `725-priority-ceiling-protocols-for-real-time-synchronization`\n- `496-priority-inheritance-protocols-an-approach-to-real-time-sync`\n\n## Open frontiers\n\n- Keep depth 2\u20133; promote only living successors with clear Anoptic/GRID COMMAND pull.\n- Do not absorb the five deep epistemologies; `card:`-link into them when needed (e.g. Michael&Scott).\n\n**seed_batch:** `lineage-shallow-2026-08-13` \u00b7 number block 701\u2013850 (`shallow-scan`).\n\n"
+  }
+}

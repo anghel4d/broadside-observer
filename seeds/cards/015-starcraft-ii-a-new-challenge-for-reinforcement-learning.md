@@ -38,7 +38,7 @@ topics:
 seed_rank: 15
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 10
 cites:
 - title: Grandmaster level in StarCraft II using multi-agent reinforcement learning

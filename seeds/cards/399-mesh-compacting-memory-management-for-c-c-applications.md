@@ -16,9 +16,9 @@ topics:
 seed_rank: 399
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 8
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "DieHard: Probabilistic Memory Safety for Unsafe Languages"
     url: "https://doi.org/10.1145/1133981.1134000"

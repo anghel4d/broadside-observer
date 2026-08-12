@@ -16,9 +16,9 @@ topics:
 seed_rank: 287
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 9
-lineage: steering-boids-orca
+lineage: crowd-steering
 cites:
 - title: Reciprocal n-body Collision Avoidance (ORCA)
   url: https://doi.org/10.1007/978-3-642-19457-3_1

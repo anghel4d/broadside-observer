@@ -18,7 +18,7 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Dynamic Storage Allocation: A Survey and Critical Review"
     url: "https://doi.org/10.1007/3-540-60368-9_19"

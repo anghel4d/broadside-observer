@@ -14,9 +14,9 @@ topics:
 seed_rank: 717
 seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 8
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
 - title: 'Theta*: Any-Angle Path Planning on Grids'
   url: https://doi.org/10.1613/jair.2994

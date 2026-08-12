@@ -15,7 +15,7 @@ seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
 pool: realtime
 relevance_score: 8
-lineage: rollback-netcode
+lineage: game-networking
 cites:
 - title: GGPO Rollback Networking
   url: https://github.com/pond3r/ggpo

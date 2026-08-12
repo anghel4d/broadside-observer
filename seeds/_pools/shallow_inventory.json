@@ -1,0 +1,2331 @@
+[
+  {
+    "stem": "013-procedural-content-generation-via-machine-learning-pcgml",
+    "title": "Procedural Content Generation via Machine Learning (PCGML)",
+    "year": 2018,
+    "topics": [
+      "pcg"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1702.00539",
+    "arxiv": "1702.00539",
+    "doi": "10.1109/TG.2018.2846639",
+    "authors": [
+      "Adam Summerville",
+      "Sam Snodgrass",
+      "Matthew Guzdial",
+      "Christoffer Holmgard",
+      "Amy K. Hoover",
+      "Aaron Isaksen",
+      "Andy Nealen",
+      "Julian Togelius"
+    ]
+  },
+  {
+    "stem": "016-gpu-driven-rendering-pipelines",
+    "title": "GPU-Driven Rendering Pipelines",
+    "year": 2015,
+    "topics": [
+      "gpu-driven",
+      "graphics"
+    ],
+    "pool": "engines",
+    "rel": 10,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Ulrich Haar",
+      "Sebastian Aaltonen"
+    ]
+  },
+  {
+    "stem": "017-deterministic-lockstep",
+    "title": "Deterministic Lockstep",
+    "year": 2014,
+    "topics": [
+      "networking",
+      "determinism"
+    ],
+    "pool": "engines",
+    "rel": 10,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://gafferongames.com/post/deterministic_lockstep/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Glenn Fiedler"
+    ]
+  },
+  {
+    "stem": "020-search-based-procedural-content-generation-a-taxonomy-and-su",
+    "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
+    "year": 2011,
+    "topics": [
+      "pcg"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/TCIAIG.2011.2148116",
+    "arxiv": null,
+    "doi": "10.1109/TCIAIG.2011.2148116",
+    "authors": [
+      "Julian Togelius",
+      "Georgios N. Yannakakis",
+      "Kenneth O. Stanley",
+      "Cameron Browne"
+    ]
+  },
+  {
+    "stem": "022-handlers-of-algebraic-effects",
+    "title": "Handlers of Algebraic Effects",
+    "year": 2009,
+    "topics": [
+      "typed-programming-systems"
+    ],
+    "pool": "languages",
+    "rel": 10,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf",
+    "arxiv": null,
+    "doi": "10.1007/978-3-642-00590-9_7",
+    "authors": [
+      "Gordon Plotkin",
+      "Matija Pretnar"
+    ]
+  },
+  {
+    "stem": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object",
+    "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
+    "year": 2004,
+    "topics": [
+      "lockfree",
+      "memory"
+    ],
+    "pool": "engines",
+    "rel": 10,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/TPDS.2004.8",
+    "arxiv": null,
+    "doi": "10.1109/TPDS.2004.8",
+    "authors": [
+      "Maged M. Michael"
+    ]
+  },
+  {
+    "stem": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires",
+    "title": "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond",
+    "year": 2001,
+    "topics": [
+      "networking",
+      "lockstep"
+    ],
+    "pool": "engines",
+    "rel": 10,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Mark Terrano",
+      "Glenn Hillebrandt"
+    ]
+  },
+  {
+    "stem": "036-notions-of-computation-and-monads",
+    "title": "Notions of Computation and Monads",
+    "year": 1991,
+    "topics": [
+      "monads",
+      "effects",
+      "lambda-calculus",
+      "category-theory"
+    ],
+    "pool": "languages",
+    "rel": 10,
+    "tags": [
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1016/0890-5401(91)90052-4",
+    "arxiv": null,
+    "doi": "10.1016/0890-5401(91)90052-4",
+    "authors": [
+      "Eugenio Moggi"
+    ]
+  },
+  {
+    "stem": "037-wait-free-synchronization",
+    "title": "Wait-Free Synchronization",
+    "year": 1991,
+    "topics": [
+      "lockfree"
+    ],
+    "pool": "engines",
+    "rel": 10,
+    "tags": [
+      "linearizability"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/114005.102808",
+    "arxiv": null,
+    "doi": "10.1145/114005.102808",
+    "authors": [
+      "Maurice Herlihy"
+    ]
+  },
+  {
+    "stem": "049-functorial-semantics-of-algebraic-theories",
+    "title": "Functorial Semantics of Algebraic Theories",
+    "year": 1963,
+    "topics": [
+      "category-theory",
+      "algebraic-theories",
+      "semantics"
+    ],
+    "pool": "maths-foundations",
+    "rel": 10,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1073/pnas.50.5.869",
+    "arxiv": null,
+    "doi": "10.1073/pnas.50.5.869",
+    "authors": [
+      "F. William Lawvere"
+    ]
+  },
+  {
+    "stem": "106-nanite-a-deep-dive",
+    "title": "Nanite: A Deep Dive",
+    "year": 2021,
+    "topics": [
+      "meshlets",
+      "gpu-driven"
+    ],
+    "pool": "engines",
+    "rel": 9,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://advances.realtimerendering.com/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Karis; Stubbe; Wihlidal"
+    ]
+  },
+  {
+    "stem": "118-procedural-content-generation-in-games",
+    "title": "Procedural Content Generation in Games",
+    "year": 2016,
+    "topics": [
+      "pcg"
+    ],
+    "pool": "scratch_curated.json",
+    "rel": 9,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1007/978-3-319-42716-4",
+    "arxiv": null,
+    "doi": "10.1007/978-3-319-42716-4",
+    "authors": [
+      "Noor Shaker",
+      "Julian Togelius",
+      "Mark J. Nelson"
+    ]
+  },
+  {
+    "stem": "119-wave-function-collapse",
+    "title": "Wave Function Collapse",
+    "year": 2016,
+    "topics": [
+      "pcg",
+      "procedural"
+    ],
+    "pool": "engines",
+    "rel": 9,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://github.com/mxgmn/WaveFunctionCollapse",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Maxim Gumin"
+    ]
+  },
+  {
+    "stem": "123-programming-with-algebraic-effects-and-handlers",
+    "title": "Programming with Algebraic Effects and Handlers",
+    "year": 2015,
+    "topics": [
+      "typed-programming-systems",
+      "embedded-scripting-dsls"
+    ],
+    "pool": "languages",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1203.1539",
+    "arxiv": "1203.1539",
+    "doi": "10.1016/j.jlamp.2014.02.001",
+    "authors": [
+      "Andrej Bauer",
+      "Matija Pretnar"
+    ]
+  },
+  {
+    "stem": "128-handling-algebraic-effects",
+    "title": "Handling Algebraic Effects",
+    "year": 2013,
+    "topics": [
+      "typed-programming-systems"
+    ],
+    "pool": "languages",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1312.1399",
+    "arxiv": "1312.1399",
+    "doi": "10.2168/LMCS-9(4:23)2013",
+    "authors": [
+      "Gordon Plotkin",
+      "Matija Pretnar"
+    ]
+  },
+  {
+    "stem": "136-experience-driven-procedural-content-generation",
+    "title": "Experience-Driven Procedural Content Generation",
+    "year": 2011,
+    "topics": [
+      "pcg"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/T-AFFC.2011.6",
+    "arxiv": null,
+    "doi": "10.1109/T-AFFC.2011.6",
+    "authors": [
+      "Georgios N. Yannakakis",
+      "Julian Togelius"
+    ]
+  },
+  {
+    "stem": "141-the-art-of-multiprocessor-programming",
+    "title": "The Art of Multiprocessor Programming",
+    "year": 2008,
+    "topics": [
+      "lockfree",
+      "concurrency"
+    ],
+    "pool": "engines",
+    "rel": 9,
+    "tags": [
+      "linearizability"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Herlihy; Shavit"
+    ]
+  },
+  {
+    "stem": "147-algebraic-operations-and-generic-effects",
+    "title": "Algebraic Operations and Generic Effects",
+    "year": 2003,
+    "topics": [
+      "typed-programming-systems",
+      "category-theory-plt"
+    ],
+    "pool": "languages",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1023/A:1023064908962",
+    "arxiv": null,
+    "doi": "10.1023/A:1023064908962",
+    "authors": [
+      "Gordon Plotkin",
+      "John Power"
+    ]
+  },
+  {
+    "stem": "149-notions-of-computation-determine-monads",
+    "title": "Notions of Computation Determine Monads",
+    "year": 2002,
+    "topics": [
+      "algebraic-effects",
+      "monads",
+      "semantics"
+    ],
+    "pool": "languages",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://link.springer.com/chapter/10.1007/3-540-45931-6_24",
+    "arxiv": null,
+    "doi": "10.1007/3-540-45931-6_24",
+    "authors": [
+      "Gordon Plotkin",
+      "John Power"
+    ]
+  },
+  {
+    "stem": "156-monad-transformers-and-modular-interpreters",
+    "title": "Monad Transformers and Modular Interpreters",
+    "year": 1995,
+    "topics": [
+      "monads",
+      "monad-transformers",
+      "interpreters",
+      "effects"
+    ],
+    "pool": "maths-foundations",
+    "rel": 9,
+    "tags": [
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/199448.199528",
+    "arxiv": null,
+    "doi": "10.1145/199448.199528",
+    "authors": [
+      "Sheng Liang",
+      "Paul Hudak",
+      "Mark Jones"
+    ]
+  },
+  {
+    "stem": "166-linear-logic-autonomous-categories-and-cofree-coalgebras",
+    "title": "Linear Logic, *-Autonomous Categories and Cofree Coalgebras",
+    "year": 1989,
+    "topics": [
+      "linear-logic",
+      "category-theory",
+      "star-autonomous"
+    ],
+    "pool": "maths-foundations",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://bookstore.ams.org/conm-92",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "R. A. G. Seely"
+    ]
+  },
+  {
+    "stem": "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu",
+    "title": "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs",
+    "year": 1978,
+    "topics": [
+      "array-programming-apl-bqn-q",
+      "category-theory-plt"
+    ],
+    "pool": "languages",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://dl.acm.org/doi/10.1145/359576.359579",
+    "arxiv": null,
+    "doi": "10.1145/359576.359579",
+    "authors": [
+      "John Backus"
+    ]
+  },
+  {
+    "stem": "192-multiset-semantics-in-sparql-relational-algebra-and-datalog",
+    "title": "Multiset semantics in SPARQL, Relational Algebra and Datalog",
+    "year": 2026,
+    "topics": [
+      "production-rules-triggers",
+      "relational-ecs-queries"
+    ],
+    "pool": "languages",
+    "rel": 8,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2605.00417",
+    "arxiv": "2605.00417",
+    "doi": null,
+    "authors": [
+      "Renzo Angles",
+      "Claudio Gutierrez",
+      "Daniel Hern\u00e1ndez"
+    ]
+  },
+  {
+    "stem": "228-abstracting-effect-systems-for-algebraic-effect-handlers",
+    "title": "Abstracting Effect Systems for Algebraic Effect Handlers",
+    "year": 2024,
+    "topics": [
+      "typed-programming-systems"
+    ],
+    "pool": "languages",
+    "rel": 8,
+    "tags": [
+      "memory-reclamation",
+      "algebraic-effects"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2404.16381",
+    "arxiv": "2404.16381",
+    "doi": null,
+    "authors": [
+      "Takuma Yoshioka",
+      "Taro Sekiyama",
+      "Atsushi Igarashi"
+    ]
+  },
+  {
+    "stem": "253-online-graph-pruning-for-pathfinding-on-grid-maps",
+    "title": "Online Graph Pruning for Pathfinding on Grid Maps",
+    "year": 2011,
+    "topics": [
+      "pathfinding",
+      "jps"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Daniel Harabor",
+      "Alban Grastien"
+    ]
+  },
+  {
+    "stem": "254-ggpo-rollback-networking",
+    "title": "GGPO Rollback Networking",
+    "year": 2006,
+    "topics": [
+      "rollback",
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 10,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://github.com/pond3r/ggpo",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Tony Cannon"
+    ]
+  },
+  {
+    "stem": "258-steering-behaviors-for-autonomous-characters",
+    "title": "Steering Behaviors For Autonomous Characters",
+    "year": 1999,
+    "topics": [
+      "steering",
+      "boids"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.red3d.com/cwr/steer/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Craig W. Reynolds"
+    ]
+  },
+  {
+    "stem": "260-linearizability-a-correctness-condition-for-concurrent-objec",
+    "title": "Linearizability: A Correctness Condition for Concurrent Objects",
+    "year": 1990,
+    "topics": [
+      "lockfree",
+      "concurrency"
+    ],
+    "pool": "systems",
+    "rel": 10,
+    "tags": [
+      "linearizability"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/78969.78972",
+    "arxiv": null,
+    "doi": "10.1145/78969.78972",
+    "authors": [
+      "Maurice P. Herlihy",
+      "Jeannette M. Wing"
+    ]
+  },
+  {
+    "stem": "261-flocks-herds-and-schools-a-distributed-behavioral-model",
+    "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
+    "year": 1987,
+    "topics": [
+      "boids",
+      "flocking"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/37401.37406",
+    "arxiv": null,
+    "doi": "10.1145/37401.37406",
+    "authors": [
+      "Craig W. Reynolds"
+    ]
+  },
+  {
+    "stem": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co",
+    "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
+    "year": 1968,
+    "topics": [
+      "pathfinding",
+      "astar"
+    ],
+    "pool": "game-ai",
+    "rel": 10,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/TSSC.1968.300136",
+    "arxiv": null,
+    "doi": "10.1109/TSSC.1968.300136",
+    "authors": [
+      "Peter E. Hart",
+      "Nils J. Nilsson",
+      "Bertram Raphael"
+    ]
+  },
+  {
+    "stem": "264-space-efficient-lock-free-linear-probing-hash-table",
+    "title": "Space-Efficient Lock-Free Linear-Probing Hash Table",
+    "year": 2026,
+    "topics": [
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "open-addressing"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2606.17315",
+    "arxiv": "2606.17315",
+    "doi": null,
+    "authors": [
+      "Hagit Attiya",
+      "Rotem Oshman",
+      "Noa Schiller"
+    ]
+  },
+  {
+    "stem": "268-cogram-context-sensitive-granular-optimization-method-with-r",
+    "title": "CoGraM: Context-sensitive granular optimization method with rollback for robust model fusion",
+    "year": 2025,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2512.03610",
+    "arxiv": "2512.03610",
+    "doi": null,
+    "authors": [
+      "Julius Lenz"
+    ]
+  },
+  {
+    "stem": "271-jump-point-search-pathfinding-in-4-connected-grids",
+    "title": "Jump Point Search Pathfinding in 4-connected Grids",
+    "year": 2025,
+    "topics": [
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2501.14816",
+    "arxiv": "2501.14816",
+    "doi": null,
+    "authors": [
+      "Johannes Baum"
+    ]
+  },
+  {
+    "stem": "273-log-io-unified-rollback-recovery-and-data-lineage-capture-fo",
+    "title": "LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines",
+    "year": 2025,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2512.16038",
+    "arxiv": "2512.16038",
+    "doi": null,
+    "authors": [
+      "Eric Simon",
+      "Renato B. Hoffmann",
+      "Lucas Alf",
+      "Dalvan Griebler"
+    ]
+  },
+  {
+    "stem": "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c",
+    "title": "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments",
+    "year": 2024,
+    "topics": [
+      "gameai"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2407.16771",
+    "arxiv": "2407.16771",
+    "doi": null,
+    "authors": [
+      "Fatemeh Cheraghi Pouria",
+      "Zhe Huang",
+      "Ananya Yammanuru",
+      "Shuijing Liu",
+      "Katherine Driggs-Campbell"
+    ]
+  },
+  {
+    "stem": "288-towards-practical-meshlet-compression",
+    "title": "Towards Practical Meshlet Compression",
+    "year": 2024,
+    "topics": [
+      "meshlets"
+    ],
+    "pool": "graphics",
+    "rel": 9,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2404.06359",
+    "arxiv": "2404.06359",
+    "doi": null,
+    "authors": [
+      "Bastian Kuth",
+      "Max Oberberger",
+      "Felix Kawala",
+      "Sander Reitter",
+      "Sebastian Michel",
+      "Matth\u00e4us Chajdas",
+      "Quirin Meyer"
+    ]
+  },
+  {
+    "stem": "290-an-asynchronous-scheme-for-rollback-recovery-in-message-pass",
+    "title": "An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurrent Programming Languages",
+    "year": 2023,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2401.00087",
+    "arxiv": "2401.00087",
+    "doi": "10.1145/3605098.3636051",
+    "authors": [
+      "Germ\u00e1n Vidal"
+    ]
+  },
+  {
+    "stem": "298-reducing-redundant-work-in-jump-point-search",
+    "title": "Reducing Redundant Work in Jump Point Search",
+    "year": 2023,
+    "topics": [
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2306.15928",
+    "arxiv": "2306.15928",
+    "doi": null,
+    "authors": [
+      "Shizhe Zhao",
+      "Daniel Harabor",
+      "Peter J. Stuckey"
+    ]
+  },
+  {
+    "stem": "299-releasing-memory-with-optimistic-access-a-hybrid-approach-to",
+    "title": "Releasing Memory with Optimistic Access: A Hybrid Approach to Memory Reclamation and Allocation in Lock-Free Programs",
+    "year": 2023,
+    "topics": [
+      "memory-allocation",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2302.06520",
+    "arxiv": "2302.06520",
+    "doi": null,
+    "authors": [
+      "Pedro Moreno",
+      "Ricardo Rocha"
+    ]
+  },
+  {
+    "stem": "300-safels-toward-building-a-lockstep-noel-v-core",
+    "title": "SafeLS: Toward Building a Lockstep NOEL-V Core",
+    "year": 2023,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2307.15436",
+    "arxiv": "2307.15436",
+    "doi": null,
+    "authors": [
+      "Marcel Sarraseca",
+      "Sergi Alcaide",
+      "Francisco Fuentes",
+      "Juan Carlos Rodriguez",
+      "Feng Chang",
+      "Ilham Lasfar",
+      "Ramon Canal",
+      "Francisco J. Cazorla",
+      "Jaume Abella"
+    ]
+  },
+  {
+    "stem": "304-an-efficient-wait-free-resizable-hash-table",
+    "title": "An Efficient Wait-free Resizable Hash Table",
+    "year": 2022,
+    "topics": [
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "open-addressing"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2204.09624",
+    "arxiv": "2204.09624",
+    "doi": "10.1145/3210377.3210408",
+    "authors": [
+      "Panagiota Fatourou",
+      "Nikolaos D. Kallimanis",
+      "Thomas Ropars"
+    ]
+  },
+  {
+    "stem": "306-does-the-lockstep-growth-between-black-holes-and-bulges-crea",
+    "title": "Does the lockstep growth between black holes and bulges create their mass relation?",
+    "year": 2022,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "graphics",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2210.09888",
+    "arxiv": "2210.09888",
+    "doi": "10.3847/1538-4357/ac9c68",
+    "authors": [
+      "Guang Yang",
+      "W. N. Brandt",
+      "David M. Alexander",
+      "M\u00e9d\u00e9ric Boquien",
+      "Qingling Ni",
+      "Casey Papovich",
+      "Justin S. Spilker",
+      "Fabio Vito",
+      "Jonelle L. Walsh",
+      "Chengpeng Zhang"
+    ]
+  },
+  {
+    "stem": "307-dustin-a-16-cores-parallel-ultra-low-power-cluster-with-2b-t",
+    "title": "Dustin: A 16-Cores Parallel Ultra-Low-Power Cluster with 2b-to-32b Fully Flexible Bit-Precision and Vector Lockstep Execution Mode",
+    "year": 2022,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2201.08656",
+    "arxiv": "2201.08656",
+    "doi": "10.1109/TCSI.2023.3254810",
+    "authors": [
+      "Gianmarco Ottavi",
+      "Angelo Garofalo",
+      "Giuseppe Tagliavini",
+      "Francesco Conti",
+      "Alfio Di Mauro",
+      "Luca Benini",
+      "Davide Rossi"
+    ]
+  },
+  {
+    "stem": "308-eemarq-efficient-lock-free-range-queries-with-memory-reclama",
+    "title": "EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation",
+    "year": 2022,
+    "topics": [
+      "memory-allocation",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2210.17086",
+    "arxiv": "2210.17086",
+    "doi": null,
+    "authors": [
+      "Gali Sheffi",
+      "Pedro Ramalhete",
+      "Erez Petrank"
+    ]
+  },
+  {
+    "stem": "309-erasing-labor-with-labor-dark-patterns-and-lockstep-behavior",
+    "title": "Erasing Labor with Labor: Dark Patterns and Lockstep Behaviors on Google Play",
+    "year": 2022,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2202.04561",
+    "arxiv": "2202.04561",
+    "doi": "10.1145/3511095.3536368",
+    "authors": [
+      "Ashwin Singh",
+      "Arvindh Arun",
+      "Ayushi Jain",
+      "Pooja Desur",
+      "Pulak Malhotra",
+      "Duen Horng Chau",
+      "Ponnurangam Kumaraguru"
+    ]
+  },
+  {
+    "stem": "312-sensor-object-plausibilization-with-boids-flocking-algorithm",
+    "title": "Sensor Object Plausibilization with Boids Flocking Algorithm",
+    "year": 2022,
+    "topics": [
+      "gameai"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2203.08036",
+    "arxiv": "2203.08036",
+    "doi": null,
+    "authors": [
+      "Christopher Knievel",
+      "Lars Krueger"
+    ]
+  },
+  {
+    "stem": "315-crystalline-fast-and-memory-efficient-wait-free-reclamation",
+    "title": "Crystalline: Fast and Memory Efficient Wait-Free Reclamation",
+    "year": 2021,
+    "topics": [
+      "memory-allocation",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2108.02763",
+    "arxiv": "2108.02763",
+    "doi": null,
+    "authors": [
+      "Ruslan Nikolaev",
+      "Binoy Ravindran"
+    ]
+  },
+  {
+    "stem": "317-dynamic-lockstep-processors-for-applications-with-functional",
+    "title": "Dynamic Lockstep Processors for Applications with Functional Safety Relevance",
+    "year": 2021,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2107.08997",
+    "arxiv": "2107.08997",
+    "doi": null,
+    "authors": [
+      "Hans Dermot Doran",
+      "Timo Lang"
+    ]
+  },
+  {
+    "stem": "329-meshlet-priors-for-3d-mesh-reconstruction",
+    "title": "Meshlet Priors for 3D Mesh Reconstruction",
+    "year": 2020,
+    "topics": [
+      "meshlets"
+    ],
+    "pool": "graphics",
+    "rel": 9,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2001.01744",
+    "arxiv": "2001.01744",
+    "doi": null,
+    "authors": [
+      "Abhishek Badki",
+      "Orazio Gallo",
+      "Jan Kautz",
+      "Pradeep Sen"
+    ]
+  },
+  {
+    "stem": "332-technical-report-benefits-of-stabilization-versus-rollback-i",
+    "title": "Technical Report: Benefits of Stabilization versus Rollback in Self-Stabilizing Graph-Based Applications on Eventually Consistent Key-Value Stores",
+    "year": 2020,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2007.14218",
+    "arxiv": "2007.14218",
+    "doi": null,
+    "authors": [
+      "Duong Nguyen",
+      "Sandeep S. Kulkarni"
+    ]
+  },
+  {
+    "stem": "333-universal-wait-free-memory-reclamation",
+    "title": "Universal Wait-Free Memory Reclamation",
+    "year": 2020,
+    "topics": [
+      "memory-allocation",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/2001.01999",
+    "arxiv": "2001.01999",
+    "doi": "10.1145/3332466.3374540",
+    "authors": [
+      "Ruslan Nikolaev",
+      "Binoy Ravindran"
+    ]
+  },
+  {
+    "stem": "335-introduction-to-turing-mesh-shaders",
+    "title": "Introduction to Turing Mesh Shaders",
+    "year": 2018,
+    "topics": [
+      "meshlets",
+      "mesh-shaders"
+    ],
+    "pool": "graphics",
+    "rel": 9,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Christoph Kubisch"
+    ]
+  },
+  {
+    "stem": "336-networking-the-boids-is-more-robust-against-adversarial-lear",
+    "title": "Networking the Boids is More Robust Against Adversarial Learning",
+    "year": 2018,
+    "topics": [
+      "gameai"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1802.10206",
+    "arxiv": "1802.10206",
+    "doi": null,
+    "authors": [
+      "Jiangjun Tang",
+      "George Leu",
+      "Hussein Abbass"
+    ]
+  },
+  {
+    "stem": "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored",
+    "title": "Overwatch Gameplay Architecture and Netcode (ECS-flavored)",
+    "year": 2017,
+    "topics": [
+      "ecs",
+      "realtime",
+      "netcode"
+    ],
+    "pool": "engines",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Timothy Ford"
+    ]
+  },
+  {
+    "stem": "341-snapshot-interpolation",
+    "title": "Snapshot Interpolation",
+    "year": 2015,
+    "topics": [
+      "netcode",
+      "interpolation"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://gafferongames.com/post/snapshot_interpolation/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Glenn Fiedler"
+    ]
+  },
+  {
+    "stem": "342-improving-jump-point-search",
+    "title": "Improving Jump Point Search",
+    "year": 2014,
+    "topics": [
+      "pathfinding",
+      "jps"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Daniel Harabor",
+      "Alban Grastien"
+    ]
+  },
+  {
+    "stem": "345-client-side-prediction-server-reconciliation",
+    "title": "Client-Side Prediction & Server Reconciliation",
+    "year": 2013,
+    "topics": [
+      "netcode",
+      "prediction"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Gabriel Gambetta"
+    ]
+  },
+  {
+    "stem": "349-reciprocal-n-body-collision-avoidance-orca",
+    "title": "Reciprocal n-body Collision Avoidance (ORCA)",
+    "year": 2011,
+    "topics": [
+      "crowds",
+      "orca"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1007/978-3-642-19457-3_1",
+    "arxiv": null,
+    "doi": "10.1007/978-3-642-19457-3_1",
+    "authors": [
+      "Jur van den Berg",
+      "Stephen J. Guy",
+      "Ming Lin",
+      "Dinesh Manocha"
+    ]
+  },
+  {
+    "stem": "354-numerical-study-on-the-emergence-of-anisotropy-in-artificial",
+    "title": "Numerical study on the emergence of anisotropy in artificial flocks: A BOIDS modeling and simulations of empirical findings",
+    "year": 2010,
+    "topics": [
+      "physics"
+    ],
+    "pool": "engines",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1004.3837",
+    "arxiv": "1004.3837",
+    "doi": null,
+    "authors": [
+      "Motohiro Makiguchi",
+      "Jun-ichi Inoue"
+    ]
+  },
+  {
+    "stem": "355-understanding-goal-based-vector-field-flow-field-pathfinding",
+    "title": "Understanding Goal-Based Vector Field / Flow Field Pathfinding",
+    "year": 2010,
+    "topics": [
+      "pathfinding",
+      "flowfields"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding",
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://gamedevelopment.tutsplus.com/tutorials/understanding-goal-based-vector-field-pathfinding--gamedev-9007",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "E. Graham / community"
+    ]
+  },
+  {
+    "stem": "357-recast-navigation-detour",
+    "title": "Recast Navigation / Detour",
+    "year": 2009,
+    "topics": [
+      "navmesh"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://github.com/recastnavigation/recastnavigation",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Mikko Mononen"
+    ]
+  },
+  {
+    "stem": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi",
+    "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
+    "year": 2008,
+    "topics": [
+      "crowds",
+      "rvo"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/ROBOT.2008.4543489",
+    "arxiv": null,
+    "doi": "10.1109/ROBOT.2008.4543489",
+    "authors": [
+      "Jur van den Berg",
+      "Ming Lin",
+      "Dinesh Manocha"
+    ]
+  },
+  {
+    "stem": "367-dynamic-circular-work-stealing-deque",
+    "title": "Dynamic Circular Work-Stealing Deque",
+    "year": 2005,
+    "topics": [
+      "work-stealing-schedulers"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": true,
+    "source": "https://doi.org/10.1145/1073970.1073974",
+    "arxiv": null,
+    "doi": "10.1145/1073970.1073974",
+    "authors": [
+      "David Chase",
+      "Yossi Lev"
+    ]
+  },
+  {
+    "stem": "369-epoch-based-reclamation-practical-lock-freedom",
+    "title": "Epoch-Based Reclamation / Practical lock-freedom",
+    "year": 2004,
+    "topics": [
+      "memory-allocation",
+      "reclamation",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Keir Fraser"
+    ]
+  },
+  {
+    "stem": "370-near-optimal-hierarchical-pathfinding-hpa",
+    "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
+    "year": 2004,
+    "topics": [
+      "pathfinding",
+      "hpa"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1613/jair.1423",
+    "arxiv": null,
+    "doi": "10.1613/jair.1423",
+    "authors": [
+      "Adi Botea",
+      "Martin M\u00fcller",
+      "Jonathan Schaeffer"
+    ]
+  },
+  {
+    "stem": "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-",
+    "title": "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes",
+    "year": 2002,
+    "topics": [
+      "memory-allocation",
+      "hazard-pointers",
+      "reclamation"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/571825.571829",
+    "arxiv": null,
+    "doi": "10.1145/571825.571829",
+    "authors": [
+      "Maged M. Michael"
+    ]
+  },
+  {
+    "stem": "376-source-multiplayer-networking",
+    "title": "Source Multiplayer Networking",
+    "year": 2001,
+    "topics": [
+      "netcode",
+      "lag-compensation"
+    ],
+    "pool": "realtime",
+    "rel": 9,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Valve"
+    ]
+  },
+  {
+    "stem": "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh",
+    "title": "Simplified 3D Movement and Pathfinding Using Navigation Meshes",
+    "year": 2000,
+    "topics": [
+      "navmesh",
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://digestingduck.blogspot.com/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Greg Snook"
+    ]
+  },
+  {
+    "stem": "380-read-copy-update",
+    "title": "Read-Copy Update",
+    "year": 1998,
+    "topics": [
+      "memory-allocation",
+      "rcu",
+      "reclamation"
+    ],
+    "pool": "systems",
+    "rel": 9,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.rdrop.com/~paulmck/RCU/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Paul E. McKenney",
+      "John D. Slingwine"
+    ]
+  },
+  {
+    "stem": "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra",
+    "title": "A Note on Two Problems in Connexion with Graphs (Dijkstra)",
+    "year": 1959,
+    "topics": [
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 9,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1007/BF01386390",
+    "arxiv": null,
+    "doi": "10.1007/BF01386390",
+    "authors": [
+      "E. W. Dijkstra"
+    ]
+  },
+  {
+    "stem": "402-interval-based-memory-reclamation",
+    "title": "Interval-Based Memory Reclamation",
+    "year": 2018,
+    "topics": [
+      "memory-allocation",
+      "reclamation"
+    ],
+    "pool": "systems",
+    "rel": 8,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://arxiv.org/abs/1801.04512",
+    "arxiv": "1801.04512",
+    "doi": null,
+    "authors": [
+      "Haosen Wen",
+      "Joseph Izraelevitz",
+      "Wentao Cai",
+      "H. Alan Beadle",
+      "Michael L. Scott"
+    ]
+  },
+  {
+    "stem": "409-debra-distributed-epoch-based-reclamation",
+    "title": "DEBRA: Distributed Epoch-Based Reclamation",
+    "year": 2015,
+    "topics": [
+      "memory-allocation",
+      "reclamation"
+    ],
+    "pool": "systems",
+    "rel": 8,
+    "tags": [
+      "memory-reclamation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.cs.utoronto.ca/~tabrown/debra/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Trevor Brown"
+    ]
+  },
+  {
+    "stem": "410-state-synchronization",
+    "title": "State Synchronization",
+    "year": 2015,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 8,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://gafferongames.com/post/state_synchronization/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Glenn Fiedler"
+    ]
+  },
+  {
+    "stem": "411-subgoal-graphs-for-optimal-pathfinding",
+    "title": "Subgoal Graphs for Optimal Pathfinding",
+    "year": 2015,
+    "topics": [
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 8,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.aaai.org/ocs/index.php/SOCS/SOCS15/paper/view/11207",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Tansel Uras",
+      "Sven Koenig"
+    ]
+  },
+  {
+    "stem": "429-lazy-theta-any-angle-path-planning-and-path-length-analysis",
+    "title": "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis",
+    "year": 2010,
+    "topics": [
+      "pathfinding"
+    ],
+    "pool": "game-ai",
+    "rel": 8,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/view/1930",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Alex Nash",
+      "Sven Koenig",
+      "Craig Tovey"
+    ]
+  },
+  {
+    "stem": "435-theta-any-angle-path-planning-on-grids",
+    "title": "Theta*: Any-Angle Path Planning on Grids",
+    "year": 2007,
+    "topics": [
+      "pathfinding",
+      "any-angle"
+    ],
+    "pool": "game-ai",
+    "rel": 8,
+    "tags": [
+      "pathfinding"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.aaai.org/Papers/AAAI/2007/AAAI07-186.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Alex Nash et al."
+    ]
+  },
+  {
+    "stem": "437-continuum-crowds",
+    "title": "Continuum Crowds",
+    "year": 2006,
+    "topics": [
+      "crowds",
+      "fields"
+    ],
+    "pool": "game-ai",
+    "rel": 8,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/1141911.1141978",
+    "arxiv": null,
+    "doi": "10.1145/1141911.1141978",
+    "authors": [
+      "Adrien Treuille",
+      "Seth Cooper",
+      "Zoran Popovi\u0107"
+    ]
+  },
+  {
+    "stem": "444-networked-physics-2004",
+    "title": "Networked Physics (2004)",
+    "year": 2004,
+    "topics": [
+      "netcode",
+      "physics"
+    ],
+    "pool": "realtime",
+    "rel": 8,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://gafferongames.com/post/networked_physics_2004/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Glenn Fiedler"
+    ]
+  },
+  {
+    "stem": "452-unreal-engine-networking-architecture",
+    "title": "Unreal Engine Networking Architecture",
+    "year": 1999,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 8,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://docs.unrealengine.com/udk/Three/NetworkingOverview.html",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Tim Sweeney / Epic"
+    ]
+  },
+  {
+    "stem": "470-abseil-swiss-tables",
+    "title": "Abseil Swiss Tables",
+    "year": 2017,
+    "topics": [
+      "hashtable",
+      "performance"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "open-addressing"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://abseil.io/about/design/swisstables",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Google"
+    ]
+  },
+  {
+    "stem": "481-approximating-dynamic-global-illumination-in-image-space-ssd",
+    "title": "Approximating Dynamic Global Illumination in Image Space (SSDO)",
+    "year": 2009,
+    "topics": [
+      "ssao",
+      "ssdo"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "rtgi-ssao"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/1507149.1507168",
+    "arxiv": null,
+    "doi": "10.1145/1507149.1507168",
+    "authors": [
+      "Tobias Ritschel",
+      "Thorsten Grosch",
+      "Hans-Peter Seidel"
+    ]
+  },
+  {
+    "stem": "482-potential-fields-for-unit-behavior",
+    "title": "Potential Fields for Unit Behavior",
+    "year": 2009,
+    "topics": [
+      "potential-fields"
+    ],
+    "pool": "game-ai",
+    "rel": 7,
+    "tags": [
+      "crowd-steering"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.gamedevs.org/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Johan Hagelb\u00e4ck"
+    ]
+  },
+  {
+    "stem": "483-hopscotch-hashing",
+    "title": "Hopscotch Hashing",
+    "year": 2008,
+    "topics": [
+      "hashtable",
+      "lockfree"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "open-addressing"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1007/978-3-540-87779-0_14",
+    "arxiv": null,
+    "doi": "10.1007/978-3-540-87779-0_14",
+    "authors": [
+      "Maurice Herlihy",
+      "Nir Shavit",
+      "Moran Tzafrir"
+    ]
+  },
+  {
+    "stem": "484-horizon-based-ambient-occlusion",
+    "title": "Horizon-Based Ambient Occlusion",
+    "year": 2008,
+    "topics": [
+      "hbao"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "rtgi-ssao"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Louis Bavoil",
+      "Miguel Sainz",
+      "Rouslan Dimitrov"
+    ]
+  },
+  {
+    "stem": "485-imperfect-shadow-maps-for-efficient-computation-of-indirect-",
+    "title": "Imperfect Shadow Maps for Efficient Computation of Indirect Illumination",
+    "year": 2008,
+    "topics": [
+      "gi",
+      "shadows"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "rtgi-ssao"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/1409060.1409082",
+    "arxiv": null,
+    "doi": "10.1145/1409060.1409082",
+    "authors": [
+      "Tobias Ritschel et al."
+    ]
+  },
+  {
+    "stem": "487-sparse-virtual-textures-megatexture",
+    "title": "Sparse Virtual Textures / MegaTexture",
+    "year": 2007,
+    "topics": [
+      "texturing",
+      "streaming"
+    ],
+    "pool": "engines",
+    "rel": 7,
+    "tags": [
+      "gpu-meshlets"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://en.wikipedia.org/wiki/MegaTexture",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "John Carmack / id Software"
+    ]
+  },
+  {
+    "stem": "488-diehard-probabilistic-memory-safety-for-unsafe-languages",
+    "title": "DieHard: Probabilistic Memory Safety for Unsafe Languages",
+    "year": 2006,
+    "topics": [
+      "memory-allocation",
+      "reliability"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "hash-safety"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/1133981.1134000",
+    "arxiv": null,
+    "doi": "10.1145/1133981.1134000",
+    "authors": [
+      "Emery D. Berger",
+      "Benjamin G. Zorn"
+    ]
+  },
+  {
+    "stem": "489-memory-ordering-in-modern-microprocessors",
+    "title": "Memory Ordering in Modern Microprocessors",
+    "year": 2005,
+    "topics": [
+      "memory-model"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "linearizability"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://www.rdrop.com/~paulmck/scalability/paper/ordering.2007.09.19a.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Paul E. McKenney"
+    ]
+  },
+  {
+    "stem": "490-particle-based-fluid-simulation-for-interactive-applications",
+    "title": "Particle-Based Fluid Simulation for Interactive Applications",
+    "year": 2003,
+    "topics": [
+      "physics",
+      "fluids"
+    ],
+    "pool": "engines",
+    "rel": 7,
+    "tags": [
+      "particle-fluids"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/846276.846298",
+    "arxiv": null,
+    "doi": "10.1145/846276.846298",
+    "authors": [
+      "Matthias M\u00fcller",
+      "David Charypar",
+      "Markus Gross"
+    ]
+  },
+  {
+    "stem": "491-dual-contouring-of-hermite-data",
+    "title": "Dual Contouring of Hermite Data",
+    "year": 2002,
+    "topics": [
+      "voxels",
+      "meshing"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/566570.566586",
+    "arxiv": null,
+    "doi": "10.1145/566570.566586",
+    "authors": [
+      "Tao Ju et al."
+    ]
+  },
+  {
+    "stem": "492-photographic-tone-reproduction-for-digital-images",
+    "title": "Photographic Tone Reproduction for Digital Images",
+    "year": 2002,
+    "topics": [
+      "tonemap"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "rtgi-ssao"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/566654.566575",
+    "arxiv": null,
+    "doi": "10.1145/566654.566575",
+    "authors": [
+      "Erik Reinhard et al."
+    ]
+  },
+  {
+    "stem": "493-depth-peeling-order-independent-transparency",
+    "title": "Depth Peeling Order-Independent Transparency",
+    "year": 2001,
+    "topics": [
+      "oit"
+    ],
+    "pool": "graphics",
+    "rel": 7,
+    "tags": [
+      "rtgi-ssao"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://developer.download.nvidia.com/assets/gamedev/docs/OrderIndependentTransparency.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Cass Everitt"
+    ]
+  },
+  {
+    "stem": "495-quake-iii-arena-networking-source",
+    "title": "Quake III Arena Networking Source",
+    "year": 1999,
+    "topics": [
+      "netcode"
+    ],
+    "pool": "realtime",
+    "rel": 7,
+    "tags": [
+      "game-networking"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://github.com/id-Software/Quake-III-Arena",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "id Software"
+    ]
+  },
+  {
+    "stem": "496-priority-inheritance-protocols-an-approach-to-real-time-sync",
+    "title": "Priority Inheritance Protocols: An Approach to Real-Time Synchronization",
+    "year": 1990,
+    "topics": [
+      "scheduling",
+      "priority"
+    ],
+    "pool": "realtime",
+    "rel": 7,
+    "tags": [
+      "realtime-scheduling"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1109/12.57058",
+    "arxiv": null,
+    "doi": "10.1109/12.57058",
+    "authors": [
+      "Lui Sha",
+      "Ragunathan Rajkumar",
+      "John P. Lehoczky"
+    ]
+  },
+  {
+    "stem": "497-release-consistency-versus-sequential-consistency",
+    "title": "Release Consistency versus Sequential Consistency",
+    "year": 1990,
+    "topics": [
+      "memory-model"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "linearizability"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://doi.org/10.1145/325694.325729",
+    "arxiv": null,
+    "doi": "10.1145/325694.325729",
+    "authors": [
+      "Kourosh Gharachorloo et al."
+    ]
+  },
+  {
+    "stem": "498-the-algorithmic-beauty-of-plants-l-systems",
+    "title": "The Algorithmic Beauty of Plants (L-Systems)",
+    "year": 1990,
+    "topics": [
+      "pcg"
+    ],
+    "pool": "engines",
+    "rel": 7,
+    "tags": [
+      "procedural-generation"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "http://algorithmicbotany.org/papers/",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Przemyslaw Prusinkiewicz",
+      "Aristid Lindenmayer"
+    ]
+  },
+  {
+    "stem": "499-robin-hood-hashing",
+    "title": "Robin Hood Hashing",
+    "year": 1986,
+    "topics": [
+      "hashtable"
+    ],
+    "pool": "systems",
+    "rel": 7,
+    "tags": [
+      "open-addressing"
+    ],
+    "has_cites": false,
+    "lineage": null,
+    "deepish": false,
+    "source": "https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf",
+    "arxiv": null,
+    "doi": null,
+    "authors": [
+      "Pedro Celis"
+    ]
+  }
+]

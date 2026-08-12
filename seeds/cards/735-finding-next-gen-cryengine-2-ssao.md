@@ -15,7 +15,7 @@ seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
 pool: graphics
 relevance_score: 8
-lineage: screen-space-ao
+lineage: ambient-occlusion
 cites:
 - title: Horizon-Based Ambient Occlusion
   url: https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion

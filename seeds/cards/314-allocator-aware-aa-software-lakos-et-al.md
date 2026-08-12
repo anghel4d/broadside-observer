@@ -16,9 +16,9 @@ topics:
 seed_rank: 314
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 9
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
     url: "https://www.youtube.com/watch?v=nZNd5FjSquk"

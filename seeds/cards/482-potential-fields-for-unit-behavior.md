@@ -12,9 +12,9 @@ topics:
 seed_rank: 482
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 7
-lineage: steering-boids-orca
+lineage: crowd-steering
 cites:
 - title: Steering Behaviors for Autonomous Characters
   url: https://www.red3d.com/cwr/papers/1999/gdc99steer.html

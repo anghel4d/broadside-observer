@@ -14,9 +14,9 @@ topics:
 seed_rank: 252
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 10
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "Reconsidering Custom Memory Allocation"
     url: "https://doi.org/10.1145/582419.582421"

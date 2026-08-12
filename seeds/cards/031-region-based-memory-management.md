@@ -13,7 +13,7 @@ topics:
 seed_rank: 31
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 10
 cites:
 - title: Implementation of the Typed Call-by-Value λ-Calculus using a Stack of Regions

@@ -15,9 +15,9 @@ topics:
 seed_rank: 702
 seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 10
-lineage: rollback-netcode
+lineage: game-networking
 cites:
   - title: "Deterministic Lockstep"
     url: "https://gafferongames.com/post/deterministic_lockstep/"

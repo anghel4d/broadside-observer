@@ -14,9 +14,9 @@ topics:
 seed_rank: 32
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 10
-lineage: lock-free-queues
+lineage: concurrent-data-structures
 cites:
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
@@ -136,7 +136,7 @@ Canonical two-CAS lock-free MPMC linked queue (MS-queue) that still anchors acad
 
 ## Why it matters here
 
-Root of the Anoptic / Broadside `lock-free-queues` lineage: every later wait-free helper scheme, Vyukov ring, LCRQ/SCQ/wCQ design, and Disruptor-style bus is measured against or descends from this PODC’96 algorithm.
+Root of the Anoptic / Broadside `concurrent-data-structures` lineage: every later wait-free helper scheme, Vyukov ring, LCRQ/SCQ/wCQ design, and Disruptor-style bus is measured against or descends from this PODC’96 algorithm.
 
 ## Key ideas
 

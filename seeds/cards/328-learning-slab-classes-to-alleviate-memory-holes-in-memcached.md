@@ -13,9 +13,9 @@ topics:
 seed_rank: 328
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
     url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"

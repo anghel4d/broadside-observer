@@ -16,7 +16,7 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
-lineage: rollback-netcode
+lineage: game-networking
 cites:
   - title: "Client-Side Prediction & Server Reconciliation"
     url: "https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html"

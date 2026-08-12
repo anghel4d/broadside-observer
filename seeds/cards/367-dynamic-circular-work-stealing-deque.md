@@ -9,13 +9,13 @@ arxiv: null
 doi: "10.1145/1073970.1073974"
 source: "https://doi.org/10.1145/1073970.1073974"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
 seed_rank: 367
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Thread Scheduling for Multiprogrammed Multiprocessors"
     url: "https://doi.org/10.1145/277651.277678"

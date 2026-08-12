@@ -14,9 +14,9 @@ topics:
 seed_rank: 143
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: behavior-trees-goap
+lineage: game-ai-planning
 cites:
   - title: "Three States and a Plan: The AI of F.E.A.R."
     url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"

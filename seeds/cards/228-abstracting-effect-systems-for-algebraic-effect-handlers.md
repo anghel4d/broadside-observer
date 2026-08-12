@@ -14,7 +14,7 @@ topics:
 seed_rank: 228
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 8
 cites:
 - title: Handlers of Algebraic Effects
@@ -35,7 +35,7 @@ cites:
   arxiv: null
   doi: null
   card: 711-koka-programming-with-row-polymorphic-effect-types
-lineage: effects-handlers
+lineage: algebraic-effects
 ---
 
 # Abstracting Effect Systems for Algebraic Effect Handlers

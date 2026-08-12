@@ -14,7 +14,7 @@ topics:
 seed_rank: 134
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
 cites:
   - title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"

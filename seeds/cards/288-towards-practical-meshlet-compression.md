@@ -20,7 +20,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: graphics
 relevance_score: 9
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: meshoptimizer
   url: https://github.com/zeux/meshoptimizer

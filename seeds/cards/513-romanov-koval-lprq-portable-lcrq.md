@@ -12,11 +12,11 @@ topics:
   - lockfree
   - queues
 seed_rank: 513
-seed_batch: "lineage-lock-free-queues-2026-08-13"
+seed_batch: "lineage-concurrent-data-structures-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: lock-free-queues
+lineage: concurrent-data-structures
 cites:
   - title: "Fast Concurrent Queues for x86 Processors"
     url: "https://doi.org/10.1145/2442516.2442527"

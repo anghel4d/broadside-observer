@@ -15,9 +15,9 @@ topics:
 seed_rank: 429
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 8
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
   - title: "Theta*: Any-Angle Path Planning on Grids"
     url: "https://ojs.aaai.org/index.php/AIIDE/article/view/18782"

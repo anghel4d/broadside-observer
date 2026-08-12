@@ -14,9 +14,9 @@ topics:
 seed_rank: 378
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
   - title: "Recast Navigation / Detour"
     url: "https://github.com/recastnavigation/recastnavigation"

@@ -14,7 +14,7 @@ topics:
 seed_rank: 260
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 10
 cites:
 - title: Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms
@@ -66,7 +66,7 @@ cites:
   arxiv: null
   doi: 10.1145/1785326.1785333
   card: 736-a-better-x86-memory-model-x86-tso
-lineage: linearizability
+lineage: concurrent-data-structures
 ---
 
 # Linearizability: A Correctness Condition for Concurrent Objects

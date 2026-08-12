@@ -1,0 +1,118 @@
+excludes: 611 arxiv, 956 titles
+after floors 22
+after curated 168
+Q1/57 kept=40 total=208 | all:"lock-free" OR all:lockfree OR all:"wait-free"
+Q2/57 kept=29 total=237 | all:"hazard pointer" OR all:"memory reclamation" OR all:QSBR
+Q3/57 kept=30 total=267 | all:"work stealing" OR all:"work-stealing" OR all:"Chase-Lev
+Q4/57 kept=22 total=289 | all:"task graph" AND (all:scheduling OR all:parallel)
+Q5/57 kept=7 total=296 | all:slab AND all:allocator
+Q6/57 kept=17 total=313 | all:jemalloc OR all:tcmalloc OR all:mimalloc OR all:snmalloc
+Q7/57 kept=32 total=345 | all:"memory allocator" AND (all:multiprocessor OR all:scalab
+Q8/57 kept=14 total=359 | all:"region-based" AND all:memory
+Q9/57 kept=12 total=371 | all:"arena allocator" OR all:"linear allocator" OR all:"stac
+Q10/57 kept=22 total=393 | all:NUMA AND (all:allocator OR all:scheduling OR all:memory)
+Q11/57 kept=23 total=416 | all:SIMD AND (all:cache OR all:parallel OR all:game)
+Q12/57 kept=20 total=436 | all:"cache oblivious" OR all:"cache-oblivious"
+Q13/57 kept=15 total=451 | all:"parallel prefix" OR all:"prefix sum" OR (all:scan AND a
+Q14/57 kept=17 total=468 | all:OpenMP AND all:task
+Q15/57 kept=15 total=483 | all:"lock-free" AND all:queue
+Q16/57 kept=5 total=488 | all:RCU AND (all:reclamation OR all:concurrent)
+Q17/57 kept=13 total=501 | all:"false sharing" OR all:"cache line"
+Q18/57 kept=0 total=501 | all:Vulkan AND (all:meshlet OR all:"mesh shader" OR all:"GPU
+Q19/57 kept=31 total=532 | all:"global illumination" AND (all:real-time OR all:realtime
+Q20/57 kept=22 total=554 | all:"radiance cascades" OR all:"voxel cone" OR all:"instant 
+Q21/57 kept=7 total=561 | all:"clustered shading" OR all:"tiled shading" OR all:"defer
+Q22/57 kept=21 total=582 | all:"temporal antialiasing" OR all:TAA OR all:"visibility bu
+Q23/57 kept=12 total=594 | all:"order-independent transparency" OR all:OIT
+Q24/57 kept=0 total=594 | all:"cascaded shadow" OR all:"variance shadow"
+Q25/57 kept=15 total=609 | all:"signed distance" AND (all:rendering OR all:font OR all:
+Q26/57 kept=3 total=612 | all:meshlet OR all:"mesh shaders"
+Q27/57 kept=17 total=629 | all:"bounding volume hierarchy" AND all:GPU
+Q28/57 kept=3 total=632 | all:DDGI OR all:"irradiance probe" OR (all:"light probe" AND
+Q29/57 kept=12 total=644 | all:"render graph" OR all:"frame graph"
+Q30/57 kept=1 total=645 | all:Vulkan AND (all:synchronization OR all:barrier OR all:bi
+Q31/57 kept=21 total=666 | all:lockstep OR (all:rollback AND (all:game OR all:network O
+Q32/57 kept=16 total=682 | all:"deterministic simulation" OR all:"deterministic lockste
+Q33/57 kept=9 total=691 | all:netcode OR all:"client-side prediction" OR all:"lag comp
+Q34/57 kept=5 total=696 | all:"job system" OR (all:fiber AND all:game AND all:parallel
+Q35/57 kept=6 total=702 | all:"real-time scheduling" AND (all:soft OR all:game OR all:
+Q36/57 kept=32 total=734 | all:"entity component" OR all:"entity-component" OR (all:ECS
+Q37/57 kept=0 total=734 | all:"data-oriented design" AND (all:entity OR all:component 
+Q38/57 kept=21 total=755 | all:archetype AND (all:ECS OR all:component)
+Q39/57 kept=19 total=774 | all:"structure of arrays" OR (all:SoA AND (all:game OR all:s
+Q40/57 kept=21 total=795 | all:GJK OR all:"position based dynamics" OR all:XPBD
+Q41/57 kept=17 total=812 | all:"physics engine" AND (all:constraint OR all:rigid OR all
+Q42/57 kept=9 total=821 | all:"navigation mesh" OR all:navmesh
+Q43/57 kept=19 total=840 | all:"collision detection" AND all:real-time
+Q44/57 kept=21 total=861 | all:"jump point search" OR all:JPS OR all:"hierarchical path
+Q45/57 kept=14 total=875 | all:"behavior tree" AND (all:game OR all:robot OR all:NPC)
+Q46/57 kept=3 total=878 | all:GOAP OR all:"goal-oriented action" OR (all:"HTN planning
+Q47/57 kept=19 total=897 | all:"utility AI" OR all:"influence map" OR all:flocking OR a
+Q48/57 kept=3 total=900 | all:"real-time strategy" AND (all:pathfinding OR all:plannin
+Q49/57 kept=26 total=926 | all:MCTS OR all:"Monte Carlo tree search" AND (all:game OR a
+Q50/57 kept=14 total=940 | all:ORCA OR all:"reciprocal velocity" OR all:"continuum crow
+Q51/57 kept=4 total=944 | all:"any-angle" AND all:pathfinding
+Q52/57 kept=8 total=952 | all:steering AND all:behavior AND all:autonomous
+Q53/57 kept=0 total=952 | all:"combat search" OR all:"portfolio greedy"
+Q54/57 kept=7 total=959 | all:"segregated fit" OR all:TLSF OR (all:buddy AND all:alloc
+Q55/57 kept=15 total=974 | all:"memory pool" OR all:"object pool"
+Q56/57 kept=1 total=975 | all:"work stealing" AND all:deque
+Q57/57 kept=5 total=980 | all:blackboard AND (all:game OR all:AI)
+merged unique 980 arxiv fetched entries 1055
+hpc 361
+graphics 169
+realtime 39
+engine 260
+gameai 151
+TOP250 pools {'hpc': 59, 'engine': 50, 'gameai': 50, 'realtime': 36, 'graphics': 55}
+allocator seeds 23
+ecs seeds 23
+score dist Counter({10: 118, 9: 107, 8: 19, 7: 6})
+--- ALLOCATORS ---
+10 Multi-Property Temporal Logic Monitoring
+10 NUMA balancing hampering performance of spiking network simulations
+10 Fixing Non-blocking Data Structures for Better Compatibility with Memory Reclamation Schem
+10 No Cords Attached: Coordination-Free Concurrent Lock-Free Queues
+10 Safe Memory Reclamation Techniques
+10 SpeedMalloc: Improving Multi-threaded Applications via a Lightweight Core for Memory Alloc
+10 Releasing Memory with Optimistic Access: A Hybrid Approach to Memory Reclamation and Alloc
+10 EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation
+10 Turning Manual Concurrent Memory Reclamation into Automatic Reference Counting
+10 Crystalline: Fast and Memory Efficient Wait-Free Reclamation
+10 VBR: Version Based Reclamation
+10 Concurrent Reference Counting and Resource Management in Wait-free Constant Time
+10 Universal Wait-Free Memory Reclamation
+10 A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue
+10 A Wait-Free Universal Construct for Large Objects
+10 Automatic Techniques to Systematically Discover New Heap Exploitation Primitives
+10 Snapshot-Free, Transparent, and Robust Memory Reclamation for Lock-Free Data Structures
+10 Every Data Structure Deserves Lock-Free Memory Reclamation
+10 Local Memory Allocators in Large-Scale C++ (Lakos allocator model)
+9 Robust Player-Conditional Champion Ranking for League of Legends: Style Similarity, Master
+9 Allocator-Aware (AA) Software (Lakos et al.)
+9 Bitsquid Custom Memory Allocation in C++
+8 An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF)
+--- ECS ---
+10 Multi-Property Temporal Logic Monitoring
+10 HECATE: An ECS-based Framework for Teaching and Developing Multi-Agent Systems
+10 Multi-Actor Generative Artificial Intelligence as a Game Engine
+10 pyGANDALF -- An open-source, Geometric, ANimation, Directed, Algorithmic, Learning Framewo
+10 AtomECS: Simulate laser cooling and magneto-optical traps
+10 Data-Oriented Design and C++
+9 Aitchison Embeddings for Learning Compositional Graph Representations
+9 Robust Player-Conditional Champion Ranking for League of Legends: Style Similarity, Master
+9 A hyperreduced reduced basis element method for reduced-order modeling of component-based 
+9 A Leakage-Aware Data Layer For Student Analytics: The Capire Framework For Multilevel Traj
+9 An online-adaptive hyperreduced reduced basis element method for parameterized component-b
+9 Is Herbertsmithite far from an ideal antiferromagnet? Ab-initio answer including in-plane 
+9 The Nature of a Recently Discovered Wolf-Rayet Binary: Archetype of Stripping?
+9 Lepto-hadronic jet-disc model for the multi-wavelength SED of M87
+9 Non-thermal $X$-rays from pulsation-driven shocks in Cepheids
+9 Flecs: A Fast Entity Component System for C99
+9 Imaging the AGN Torus in Cygnus
+9 The Discovery of a New Massive Molecular Gas Component Associated with the Submillimeter G
+9 Overwatch Gameplay Architecture and Netcode (ECS-flavored)
+9 Bitsquid Data-Driven / Entity system posts
+9 Pitfalls of Object Oriented Programming
+9 VLBA Observations of HI in the Archetype Compact Symmetric Object B2352+495
+9 Evolve Your Hierarchy

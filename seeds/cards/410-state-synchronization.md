@@ -15,7 +15,7 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 8
-lineage: rollback-netcode
+lineage: game-networking
 cites:
   - title: "Snapshot Interpolation"
     url: "https://gafferongames.com/post/snapshot_interpolation/"

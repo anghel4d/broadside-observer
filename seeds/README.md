@@ -36,9 +36,9 @@ topics: [region-memory-capabilities]
 seed_rank: 1         # rank within its batch (or global order in INDEX)
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"       # optional: hpc | graphics | realtime | engine | gameai | agents | language | ...
+pool: "engines"      # optional: systems | graphics | realtime | engines | game-ai | agents | languages | maths-foundations | ...
 relevance_score: 9   # optional: 1–10 for Anghel / Anoptic / ano / RTS fit
-lineage: lock-free-queues   # optional: single primary thread slug (see Lineage below)
+lineage: concurrent-data-structures   # optional: single primary thread slug (see Lineage below)
 cites:                      # optional: important citations / successors / predecessors
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
@@ -64,7 +64,7 @@ Two optional frontmatter fields turn the library from a flat pile into a graph y
 
 | Field | Shape | Meaning |
 |-------|--------|---------|
-| `lineage` | one string slug | The **single** primary thread this card belongs to (e.g. `lock-free-queues`, `work-stealing`, `slab-allocators`, `ecs-data-oriented`, `radiance-cascades`). A card has at most one lineage. |
+| `lineage` | one string slug | The **single** primary thread this card belongs to (e.g. `concurrent-data-structures`, `work-stealing-schedulers`, `memory-allocators`, `ecs-data-oriented`, `radiance-cascades`). A card has at most one lineage. |
 | `cites` | list of objects | Important bibliographic edges. Each entry is a citation (predecessor, successor, or key related work). Always include a resolvable `url` when possible. If Broadside already has a seed for that work, set `card` to that file’s stem (`NNN-slug` without `.md`) so browsers can deep-link. |
 
 `cites` entry fields:
@@ -90,4 +90,4 @@ Future research passes should fill `lineage` / `cites` when the edge is obvious;
 
 ## Browsing
 
-`INDEX.md` is the current human surface. The seed browser in [`app/`](app/) is a static catalog UI over the same files: **List** (master-detail) and **Cards** (grid + pinned detail), with independent pane scrolling. Because every card shares one schema, the app can filter by `topics`, `seed_batch`, `year`, `pool`, and `lineage`. Keep adding cards in this format; do not wait on the app to do so.
+`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). Building that app is welcome; do not wait on it to keep adding cards.

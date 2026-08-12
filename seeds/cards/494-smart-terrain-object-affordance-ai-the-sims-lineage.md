@@ -12,9 +12,9 @@ topics:
 seed_rank: 494
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 7
-lineage: behavior-trees-goap
+lineage: game-ai-planning
 cites:
 - title: Managing Complexity in the Halo 2 AI System
   url: https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo

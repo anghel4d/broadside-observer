@@ -12,9 +12,9 @@ topics:
 seed_rank: 489
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 7
-lineage: linearizability
+lineage: concurrent-data-structures
 cites:
 - title: 'A Better x86 Memory Model: x86-TSO'
   url: https://doi.org/10.1145/1785326.1785333

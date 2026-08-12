@@ -13,7 +13,7 @@ topics:
 seed_rank: 22
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 10
 cites:
 - title: Handling Algebraic Effects
@@ -52,7 +52,7 @@ cites:
   arxiv: null
   doi: null
   card: 724-eff-algebraic-effect-handlers-language
-lineage: effects-handlers
+lineage: algebraic-effects
 ---
 
 # Handlers of Algebraic Effects

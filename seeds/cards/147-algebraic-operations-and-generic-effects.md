@@ -14,7 +14,7 @@ topics:
 seed_rank: 147
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 9
 cites:
 - title: Handlers of Algebraic Effects
@@ -35,7 +35,7 @@ cites:
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
   card: 036-notions-of-computation-and-monads
-lineage: effects-handlers
+lineage: algebraic-effects
 ---
 
 # Algebraic Operations and Generic Effects

@@ -15,9 +15,9 @@ topics:
 seed_rank: 385
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
-lineage: behavior-trees-goap
+lineage: game-ai-planning
 cites:
   - title: "Applying Goal-Oriented Action Planning to Games"
     url: "https://alumni.media.mit.edu/~jorkin/goap.html"

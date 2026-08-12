@@ -15,7 +15,7 @@ topics:
 seed_rank: 171
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "archive_ct"
+pool: "maths-foundations"
 relevance_score: 9
 ---
 

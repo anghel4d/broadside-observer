@@ -8,15 +8,15 @@ arxiv: null
 doi: "10.1145/337449.337465"
 source: "https://doi.org/10.1145/337449.337465"
 topics:
-  - work-stealing
+  - work-stealing-schedulers
   - fork-join
   - java
 seed_rank: 543
-seed_batch: "lineage-work-stealing-2026-08-13"
+seed_batch: "lineage-work-stealing-schedulers-schedulers-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "The Implementation of the Cilk-5 Multithreaded Language"
     url: "https://doi.org/10.1145/277650.277725"
@@ -52,7 +52,7 @@ Cilk-style fork/join + work stealing brought into Java; later became java.util.c
 
 ## Why it matters here
 
-Canonical industrial proof that work-stealing task pools scale in managed runtimes—design patterns (recursive decomposition, lightweight tasks) map directly to engine job graphs.
+Canonical industrial proof that work-stealing-schedulers task pools scale in managed runtimes—design patterns (recursive decomposition, lightweight tasks) map directly to engine job graphs.
 
 ## Key ideas
 

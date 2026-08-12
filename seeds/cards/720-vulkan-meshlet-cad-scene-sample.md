@@ -13,9 +13,9 @@ topics:
 seed_rank: 720
 seed_batch: lineage-shallow-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 8
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: Mesh Shaders in the Vulkan Ecosystem
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/

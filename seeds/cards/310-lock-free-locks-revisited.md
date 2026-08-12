@@ -14,7 +14,7 @@ topics:
 seed_rank: 310
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
 ---
 

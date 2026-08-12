@@ -15,9 +15,9 @@ topics:
 seed_rank: 490
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 7
-lineage: fluids-sph
+lineage: particle-fluids
 cites:
 - title: Position Based Fluids
   url: https://doi.org/10.1145/2461912.2461984

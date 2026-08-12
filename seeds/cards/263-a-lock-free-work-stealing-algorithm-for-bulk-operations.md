@@ -11,13 +11,13 @@ doi: null
 source: "https://arxiv.org/abs/2603.05766"
 topics:
   - lockfree
-  - work-stealing
+  - work-stealing-schedulers
 seed_rank: 263
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: work-stealing
+lineage: work-stealing-schedulers
 cites:
   - title: "Dynamic Circular Work-Stealing Deque"
     url: "https://doi.org/10.1145/1073970.1073974"
@@ -54,7 +54,7 @@ cites:
 
 ## One-sentence takeaway
 
-Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing deques to reduce contention and improve scalability.
+Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing-schedulers deques to reduce contention and improve scalability.
 
 ## Why it matters here
 
@@ -62,9 +62,9 @@ Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobb
 
 ## Key ideas
 
-- Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing deques to reduce contention and improve scalability.
+- Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing-schedulers deques to reduce contention and improve scalability.
 - However, existing algorithms are designed for general-purpose parallel runtimes and often incur overheads that are unnecessary in specialized settings.
-- In this paper, we present a new lock-free work-stealing queue tailored for a master-worker framework used in the parallelization of a mixed-integer programming optimization solver based on decision diagrams.
+- In this paper, we present a new lock-free work-stealing-schedulers queue tailored for a master-worker framework used in the parallelization of a mixed-integer programming optimization solver based on decision diagrams.
 - Our design supports native bulk operations, grows without bounds, and assumes at most one owner and one concurrent stealer, thereby eliminating the need for heavy synchronization.
 - We provide an informal sketch that our queue is linearizable and lock-free under this restricted concurrency model.
 

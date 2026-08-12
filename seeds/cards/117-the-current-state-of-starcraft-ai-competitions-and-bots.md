@@ -14,7 +14,7 @@ topics:
 seed_rank: 117
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 9
 ---
 

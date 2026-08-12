@@ -14,11 +14,11 @@ topics:
   - custom-allocators
   - regions
 seed_rank: 584
-seed_batch: "lineage-slab-allocators-2026-08-13"
+seed_batch: "lineage-memory-allocators-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hpc"
+pool: "systems"
 relevance_score: 9
-lineage: slab-allocators
+lineage: memory-allocators
 cites:
   - title: "A Memory Allocator (dlmalloc)"
     url: "https://gee.cs.oswego.edu/dl/html/malloc.html"

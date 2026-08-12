@@ -14,9 +14,9 @@ topics:
 seed_rank: 707
 seed_batch: "lineage-shallow-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 9
-lineage: pcg-wfc
+lineage: procedural-generation
 cites:
   - title: "Wave Function Collapse"
     url: "https://github.com/mxgmn/WaveFunctionCollapse"

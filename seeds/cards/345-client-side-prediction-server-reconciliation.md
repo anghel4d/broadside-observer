@@ -15,7 +15,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: realtime
 relevance_score: 9
-lineage: rollback-netcode
+lineage: game-networking
 cites:
 - title: Source Multiplayer Networking
   url: https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking

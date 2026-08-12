@@ -14,9 +14,9 @@ topics:
 seed_rank: 16
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 10
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: Hierarchical Z-Buffer Visibility
   url: https://doi.org/10.1145/166117.166147

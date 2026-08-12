@@ -12,7 +12,7 @@ topics:
 seed_rank: 37
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 10
 cites:
 - title: 'Linearizability: A Correctness Condition for Concurrent Objects'
@@ -63,7 +63,7 @@ cites:
   arxiv: null
   doi: 10.1145/248052.248106
   card: 032-michael-scott-lock-free-queue
-lineage: linearizability
+lineage: concurrent-data-structures
 ---
 
 # Wait-Free Synchronization

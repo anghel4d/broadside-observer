@@ -14,7 +14,7 @@ topics:
 seed_rank: 123
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: language
+pool: languages
 relevance_score: 9
 cites:
 - title: Handlers of Algebraic Effects
@@ -41,7 +41,7 @@ cites:
   arxiv: '2104.02882'
   doi: null
   card: 729-retrofitting-effect-handlers-onto-ocaml
-lineage: effects-handlers
+lineage: algebraic-effects
 ---
 
 # Programming with Algebraic Effects and Handlers

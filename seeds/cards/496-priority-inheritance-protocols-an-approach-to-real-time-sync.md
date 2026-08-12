@@ -17,7 +17,7 @@ seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
 pool: realtime
 relevance_score: 7
-lineage: realtime-sync
+lineage: realtime-scheduling
 cites:
 - title: Priority Ceiling Protocols for Real-Time Synchronization
   url: https://doi.org/10.1109/12.57058

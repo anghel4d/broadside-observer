@@ -14,7 +14,7 @@ topics:
 seed_rank: 451
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 8
 cites:
   - title: "A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space"

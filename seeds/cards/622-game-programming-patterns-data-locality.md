@@ -14,7 +14,7 @@ topics:
 seed_rank: 622
 seed_batch: "lineage-ecs-data-oriented-2026-08-13"
 reviewed: "2026-08-13"
-pool: "engine"
+pool: "engines"
 relevance_score: 8
 lineage: ecs-data-oriented
 cites:

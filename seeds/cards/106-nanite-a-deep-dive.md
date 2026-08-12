@@ -13,9 +13,9 @@ topics:
 seed_rank: 106
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 9
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: GPU-Driven Rendering Pipelines
   url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf

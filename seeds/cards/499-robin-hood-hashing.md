@@ -12,7 +12,7 @@ topics:
 seed_rank: 499
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: hpc
+pool: systems
 relevance_score: 7
 cites:
 - title: Space-Efficient Lock-Free Linear-Probing Hash Table

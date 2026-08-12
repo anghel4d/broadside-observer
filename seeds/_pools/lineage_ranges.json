@@ -1,21 +1,21 @@
 {
-  "lock-free-queues": {
+  "concurrent-data-structures": {
     "start": 501,
     "end": 540,
     "claimed": "2026-08-13",
-    "seed_batch": "lineage-lock-free-queues-2026-08-13",
-    "note": "40-slot block for lock-free-queues lineage expansion"
+    "seed_batch": "lineage-concurrent-data-structures-2026-08-13",
+    "note": "40-slot block for concurrent-data-structures lineage expansion"
   },
-  "work-stealing": {
+  "work-stealing-schedulers": {
     "start": 541,
     "end": 580
   },
-  "slab-allocators": {
+  "memory-allocators": {
     "start": 581,
     "end": 620,
     "claimed": "2026-08-13",
-    "seed_batch": "lineage-slab-allocators-2026-08-13",
-    "note": "40-slot block for slab-allocators lineage expansion (size-class / slab / multipool)",
+    "seed_batch": "lineage-memory-allocators-2026-08-13",
+    "note": "40-slot block for memory-allocators lineage expansion (size-class / slab / multipool)",
     "minted": [
       581,
       582,
@@ -90,19 +90,19 @@
       737
     ],
     "lineages": [
-      "behavior-trees-goap",
-      "effects-handlers",
-      "fluids-sph",
-      "gpu-driven-visibility",
-      "grid-pathfinding",
+      "game-ai-planning",
+      "algebraic-effects",
+      "particle-fluids",
+      "gpu-driven-rendering",
+      "pathfinding",
       "linearizability",
       "memory-reclamation",
       "open-addressing",
-      "pcg-wfc",
-      "realtime-sync",
-      "rollback-netcode",
-      "screen-space-ao",
-      "steering-boids-orca"
+      "procedural-generation",
+      "realtime-scheduling",
+      "game-networking",
+      "ambient-occlusion",
+      "crowd-steering"
     ]
   },
   "_note": "max existing card was 500; claimed 2026-08-13"

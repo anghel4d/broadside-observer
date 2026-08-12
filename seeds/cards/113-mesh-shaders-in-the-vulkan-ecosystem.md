@@ -13,9 +13,9 @@ topics:
 seed_rank: 113
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 9
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: Introduction to Turing Mesh Shaders
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/

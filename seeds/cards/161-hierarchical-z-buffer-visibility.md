@@ -15,9 +15,9 @@ topics:
 seed_rank: 161
 seed_batch: prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: engine
+pool: engines
 relevance_score: 9
-lineage: gpu-driven-visibility
+lineage: gpu-driven-rendering
 cites:
 - title: 'The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading'
   url: https://jcgt.org/published/0002/02/04/

@@ -14,9 +14,9 @@ topics:
 seed_rank: 411
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "gameai"
+pool: "game-ai"
 relevance_score: 8
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
   - title: "Near Optimal Hierarchical Pathfinding (HPA*)"
     url: "https://doi.org/10.1613/jair.1423"

@@ -12,9 +12,9 @@ topics:
 seed_rank: 357
 seed_batch: systems-prefill-2026-08-13
 reviewed: '2026-08-13'
-pool: gameai
+pool: game-ai
 relevance_score: 9
-lineage: grid-pathfinding
+lineage: pathfinding
 cites:
 - title: Simplified 3D Movement and Pathfinding Using Navigation Meshes
   url: https://www.gamedevs.org/uploads/simplified-3d-movement-and-pathfinding-using-navigation-meshes.pdf
