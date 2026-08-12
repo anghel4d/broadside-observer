@@ -282,8 +282,27 @@ export function createBrowseVirtualizer(
       reindex();
     }
     if (viewChanged) lastSlice = null;
-    if (selChanged || idsChanged || viewChanged) reveal(selectedId);
-    else paint(false);
+    if (idsChanged || viewChanged) {
+      reveal(selectedId);
+      return;
+    }
+    if (selChanged) {
+      if (selectedId === null) {
+        setActive(pane, null);
+        return;
+      }
+      const node = pane.querySelector(`[data-id="${CSS.escape(selectedId)}"]`);
+      if (node instanceof HTMLElement) {
+        setActive(pane, selectedId);
+        const before = pane.scrollTop;
+        alignChild(node);
+        if (Math.abs(pane.scrollTop - before) > 1) paint(false);
+        return;
+      }
+      reveal(selectedId);
+      return;
+    }
+    paint(false);
   };
 
   const onScroll = (): void => {

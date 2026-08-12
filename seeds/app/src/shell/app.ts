@@ -695,7 +695,10 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const prev = painted;
     virt.set(vm.view, vm.visible, highlight);
     if (prev !== null && prev.detailFocus !== vm.detailFocus) {
-      requestAnimationFrame(() => virt.refresh());
+      requestAnimationFrame(() => {
+        virt.refresh();
+        virt.reveal(highlight);
+      });
     }
 
     if (

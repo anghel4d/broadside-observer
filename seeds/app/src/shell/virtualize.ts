@@ -201,10 +201,11 @@ export function scrollToShow(
   viewport: number,
   pad: number,
 ): number | null {
-  if (viewport <= 0) return Math.max(0, itemTop - pad);
-  if (itemTop < scrollTop + pad) return Math.max(0, itemTop - pad);
+  const settle = (next: number): number | null => (next === scrollTop ? null : next);
+  if (viewport <= 0) return settle(Math.max(0, itemTop - pad));
+  if (itemTop < scrollTop + pad) return settle(Math.max(0, itemTop - pad));
   if (itemBottom > scrollTop + viewport - pad) {
-    return Math.max(0, itemBottom - viewport + pad);
+    return settle(Math.max(0, itemBottom - viewport + pad));
   }
   return null;
 }
