@@ -54,6 +54,7 @@ Corpus × Query  →  [SeedCard]
 ```
 
 - **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` to `[]`, so missing vs empty is not a third state. Each cite is a small struct (`title`, optional `url` / `year` / `arxiv` / `doi`, optional `card` FK).
+- **`src/domain/lineageLabels.ts`** — display titles for known lineage (and pool) slugs. Filter values stay the raw slug; unknown slugs get a light prettify.
 - **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
 - **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
 - **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`).
@@ -84,6 +85,6 @@ Optional frontmatter on every card (see [`../README.md`](../README.md)):
 
 Cards without these keys still pack. When present, the packer keeps them in `cards.json`.
 
-The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
+The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Known slugs show a human title from `src/domain/lineageLabels.ts` (e.g. `concurrent-data-structures` → “Concurrent data structures”); unknown slugs still work as filter values and get a light prettify. Pool options use a smaller title map the same way. Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
 
 Narrative thread pages live at `seeds/lineages/<slug>.md`. The packer records which of those files exist; the detail view links out to the GitHub copy when a matching doc is present.

@@ -9,7 +9,15 @@ import {
   selectionState,
   tokenize,
 } from "./query.ts";
-import { SeedCardSchema, SeedRankSchema, defaultQuery, type Query, type SeedCard } from "./schema.ts";
+import {
+  LineageSchema,
+  PoolSchema,
+  SeedCardSchema,
+  SeedRankSchema,
+  defaultQuery,
+  type Query,
+  type SeedCard,
+} from "./schema.ts";
 
 function card(overrides: Record<string, unknown>): SeedCard {
   return SeedCardSchema.parse({
@@ -183,6 +191,27 @@ assert.equal(
     year: { min: cards[1]!.year, max: cards[1]!.year },
   })[0]?.label,
   "1999–1999",
+);
+assert.equal(
+  activeFilters({
+    ...defaultQuery,
+    lineage: { _tag: "One", lineage: LineageSchema.parse("concurrent-data-structures") },
+  })[0]?.label,
+  "Concurrent data structures",
+);
+assert.equal(
+  activeFilters({
+    ...defaultQuery,
+    lineage: { _tag: "One", lineage: cards[3]!.lineage! },
+  })[0]?.label,
+  "Lock free queues",
+);
+assert.equal(
+  activeFilters({
+    ...defaultQuery,
+    pool: { _tag: "One", pool: PoolSchema.parse("game-ai") },
+  })[0]?.label,
+  "Game AI",
 );
 
 const narrowed: Query = {
