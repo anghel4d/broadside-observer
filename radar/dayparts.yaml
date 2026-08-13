@@ -1,11 +1,17 @@
-# Four provenances for the every-6-hours Broadside radar.
-# Schedule: 0 0,6,12,18 * * * in Europe/Bucharest → 00:00, 06:00, 12:00, 18:00.
-# Pick the daypart whose local_hours contains the run's local hour.
+# Four provenances for the Broadside 12-hour radar.
+# Schedule: 0 0,12 * * * in Europe/Bucharest → 00:00 and 12:00.
+# Rotation (each category ~every 48h):
+#   00:00 even date → archive
+#   00:00 odd date  → curiosity
+#   12:00 even date → frontier
+#   12:00 odd date  → craft
+# Keep rates are HARD CAPS: search vastly more candidates than you keep.
 
 dayparts:
   - id: frontier
     name: Frontier
-    local_hours: [6]
+    local_hours: [12]
+    rotation: even_date
     intent: >
       Genuinely new material since the last frontier run (or ~48h). Prefer
       primary sources on standing topics. No backfill of old work unless a
@@ -14,28 +20,33 @@ dayparts:
     recency: since_last_frontier_or_48h
     topic_clusters: [agents, engine, language, game-ai]
     source_bias: [arxiv, hf-daily-papers, openreview, papers-with-code]
-    notes: Default "what's new" slot. Dedup hard against seen.json.
+    notes: >
+      Default "what's new" slot. Dedup hard against seen.json.
+      Poll wide; keep at most 25%.
 
   - id: craft
     name: Craft
     local_hours: [12]
+    rotation: odd_date
     intent: >
       Workbench material that helps build Anoptic, ano, and GRID COMMAND this
       week: implementation-heavy graphics/systems/PL practice, not novelty for
       its own sake. JCGT-style techniques, mesh shaders, radiance cascades,
       lock-free recipes, array-language engineering, Unicode/text shaping,
-      production-rule / trigger systems, ECS/DOD practice.
+      production-rule / trigger systems, ECS/DOD practice, contemporary DB,
+      type-safety.
     keep_rate: 0.25
     recency: any_recent_or_evergreen_practice
     topic_clusters: [engine, language, game-ai, craft]
     source_bias: [hpg-jcgt, acm-siggraph-tog, eurographics-cgf, acm-sigplan-dblp, arxiv, aiide-ieee-cog]
     notes: >
-      Slot 3. Prefer actionable technique papers and durable practice notes
-      over benchmark-chasing LLM agent papers unless they change how we build.
+      Prefer actionable technique papers over benchmark-chasing LLM agent papers
+      unless they change how we build. Poll wide; keep at most 25%.
 
   - id: curiosity
     name: Curiosity
-    local_hours: [18]
+    local_hours: [0]
+    rotation: odd_date
     intent: >
       Lovely or surprising work that may not look immediately on-mission:
       maths, physics, biology, art, odd algorithms — chosen because the research
@@ -46,11 +57,12 @@ dayparts:
     topic_clusters: [curiosity, agents, language, engine]
     source_bias: [arxiv, openreview, acl-anthology, papers-with-code]
     extra_arxiv_categories: [math.CT, math.CO, math.DS, physics.class-ph, q-bio, cs.CG]
-    notes: Lower keep rate; prioritize delight + intellectual sparkle.
+    notes: Lower keep rate; prioritize delight + intellectual sparkle. Cap 15%.
 
   - id: archive
     name: Archive
     local_hours: [0]
+    rotation: even_date
     intent: >
       Historical gems from the 2010s, 2000s, or 20th century: lost techniques,
       foundational PLT/systems/graphics papers that slipped past modern feeds,
@@ -61,5 +73,4 @@ dayparts:
     topic_clusters: [archive, language, engine, craft]
     source_bias: [acm-sigplan-dblp, acm-siggraph-tog, eurographics-cgf, acl-anthology, arxiv, hpg-jcgt]
     notes: >
-      Dig archives and citations, not the daily firehose. Prefer primary PDFs
-      with lasting ideas over retrospective blog fluff.
+      Dig archives and citations, not the daily firehose. Keep at most 20%.
