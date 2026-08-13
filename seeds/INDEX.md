@@ -1049,3 +1049,16 @@ Daypart: **Craft** (odd calendar date, noon slot Europe/Bucharest). Unique candi
 | 1192 | 8 | 2025 | A Stack-Free Traversal Algorithm for Left-Balanced k-d Trees | graphics |
 
 _Recount after `craft-2026-08-13`: **1022** unique title cards on main._
+
+## Halo / Myth combat AI (2026-08-13)
+
+Practitioner trail that is *not* F.E.A.R. GOAP. Halo has GDC proceedings; Myth has a postmortem.
+
+| # | Title | Year |
+|---|-------|------|
+| 1193 | [The Illusion of Intelligence (Halo, GDC 2002)](cards/1193-the-illusion-of-intelligence-ai-and-level-design-in-halo.md) | 2002 |
+| 1194 | [Handling Complexity in the Halo 2 AI](cards/1194-handling-complexity-in-the-halo-2-ai.md) | 2005 |
+| 1195 | [Building a Better Battle: HALO 3 AI Objectives](cards/1195-building-a-better-battle-halo-3-ai-objectives.md) | 2008 |
+| 1196 | [Postmortem: Bungie's Myth: The Fallen Lords](cards/1196-postmortem-bungie-myth-the-fallen-lords.md) | 1998 |
+
+Slides + transcript: [`sources/halo-myth-ai/`](../sources/halo-myth-ai/).
