@@ -15,6 +15,8 @@ Current deep epistemologies (2026-08-13):
 - `ecs-data-oriented` — ECS & data-oriented design
 - `radiance-cascades` — Radiance Cascades & real-time GI
 - `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
+- `programming-language-foundations` — Programming language foundations (System F, semantics, …)
+- `algorithms-and-complexity` — Algorithms & complexity (NP-completeness, graphs, …)
 
 Medium threads (shallow scan 2026-08-13):
 - `pathfinding` — Grid & navmesh pathfinding
@@ -41,3 +43,5 @@ Medium threads (shallow scan 2026-08-13):
 
 Deep foundations thread (2026-08-13):
 - `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
+- `programming-language-foundations` — Programming language foundations (System F, semantics, …)
+- `algorithms-and-complexity` — Algorithms & complexity (NP-completeness, graphs, …)
