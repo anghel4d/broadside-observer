@@ -8,7 +8,7 @@ The research agent owns and operates this loop. Each run follows the versioned t
 
 ### Stage A — Poll
 
-Query the preregistered sources in [`radar/sources.yaml`](radar/sources.yaml) (arXiv, Hugging Face Daily Papers, OpenReview, SIGGRAPH/TOG, Eurographics, HPG/JCGT, SIGPLAN/DBLP, ACL Anthology, Papers with Code, AIIDE/IEEE CoG) using topic hints from [`radar/topics.yaml`](radar/topics.yaml). Request items created or changed since the last successful source cursor. Record the cursor used, query time, source, and next cursor in the run log; do not advance a cursor after an incomplete poll.
+Query the preregistered sources in [`radar/sources.yaml`](radar/sources.yaml) (arXiv, Hugging Face Daily Papers, OpenReview, SIGGRAPH/TOG, Eurographics, HPG/JCGT, SIGPLAN/DBLP, ACL Anthology, Papers with Code, AIIDE/IEEE CoG) using topic hints from [`radar/topics.yaml`](radar/topics.yaml). Also poll first-party lab sources in the same registry: DeepSeek Research, Google DeepMind, OpenAI, and xAI. Request items created or changed since the last successful source cursor. Record the cursor used, query time, source, and next cursor in the run log; do not advance a cursor after an incomplete poll.
 
 ### Stage B — Normalize and dedupe
 
@@ -44,4 +44,4 @@ Topic-scope changes, destructive deletion, and any external publication beyond t
 
 ## Status
 
-Research loop v1 is agent-operated every 6 hours with **split provenances** (`radar/dayparts.yaml`): Frontier (new), Craft (workbench), Curiosity (cross-domain delight), Archive (historical gems). Ten primary sources plus secondary craft/archive feeds; topic map covers agents, Anoptic engine, ano (array/columnar ECS language), and RTS/game-AI. Per-source adapters and a Nix runtime remain future work.
+Research loop v1 is agent-operated every 6 hours with **split provenances** (`radar/dayparts.yaml`): Frontier (new), Craft (workbench), Curiosity (cross-domain delight), Archive (historical gems). Fourteen primary sources plus secondary craft/archive feeds; topic map covers agents, Anoptic engine, ano (array/columnar ECS language), and RTS/game-AI. Per-source adapters and a Nix runtime remain future work.

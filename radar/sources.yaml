@@ -102,6 +102,43 @@ sources:
   notes: Game AI, RTS/strategy agents, simulation opponents, procedural content.
   priority: high
   enabled: true
+- id: deepseek-research
+  name: DeepSeek Research
+  kind: lab
+  url: https://github.com/deepseek-ai
+  also:
+  - https://huggingface.co/deepseek-ai
+  - https://arxiv.org/search/?searchtype=author&query=DeepSeek-AI
+  notes: First-party DeepSeek-AI technical reports (LLM, MoE, Coder, Math/GRPO, V2 MLA, V3, R1, V3.2 DSA, V4, Fire-Flyer HPC, NSA, VL/Janus). Prefer author=DeepSeek-AI over papers merely citing them.
+  priority: high
+  enabled: true
+- id: google-deepmind
+  name: Google DeepMind
+  kind: lab
+  url: https://deepmind.google/research/publications/
+  also:
+  - https://arxiv.org/search/?searchtype=author&query=Google+DeepMind
+  notes: DeepMind / Google DeepMind publications (Gemini, Alpha*, Gato, AlphaFold, and serving/systems papers). Lab feed, not a dump of every Google paper.
+  priority: high
+  enabled: true
+- id: openai-research
+  name: OpenAI
+  kind: lab
+  url: https://openai.com/research/
+  also:
+  - https://arxiv.org/search/?searchtype=author&query=OpenAI
+  notes: OpenAI research index and first-party arXiv (GPT, o-series, Whisper, CLIP, system cards). Author/org OpenAI, not third-party evals.
+  priority: high
+  enabled: true
+- id: xai-labs
+  name: xAI
+  kind: lab
+  url: https://x.ai
+  also:
+  - https://arxiv.org/search/?query=xAI&searchtype=all
+  notes: xAI lab papers and technical reports (Grok family, Colossus, first-party evals). Sparse compared with the other three; still poll.
+  priority: high
+  enabled: true
 cross_index:
 - id: semantic-scholar
   name: Semantic Scholar
