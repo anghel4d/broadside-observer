@@ -41,3 +41,4 @@
 /seeds/app/node_modules/
 /seeds/app/dist/
 /seeds/app/src/generated/cards.json
+/seeds/app/public/cards.json

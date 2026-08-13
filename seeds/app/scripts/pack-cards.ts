@@ -8,7 +8,8 @@ import { LineageSchema, type Catalog, type Lineage } from "../src/domain/schema.
 const here = dirname(fileURLToPath(import.meta.url));
 const cardsDir = join(here, "../../cards");
 const lineagesDir = join(here, "../../lineages");
-const outFile = join(here, "../src/generated/cards.json");
+const generatedFile = join(here, "../src/generated/cards.json");
+const publicFile = join(here, "../public/cards.json");
 
 function isMissingDir(cause: unknown): boolean {
   return typeof cause === "object" && cause !== null && "code" in cause && cause.code === "ENOENT";
@@ -67,6 +68,11 @@ const catalog = {
   lineageDocs,
 } satisfies Catalog;
 
-await mkdir(dirname(outFile), { recursive: true });
-await writeFile(outFile, `${JSON.stringify(catalog)}\n`, "utf8");
-console.log(`Packed ${catalog.count} cards · ${lineageDocs.length} lineage docs → ${outFile}`);
+const payload = `${JSON.stringify(catalog)}\n`;
+await mkdir(dirname(generatedFile), { recursive: true });
+await mkdir(dirname(publicFile), { recursive: true });
+await writeFile(generatedFile, payload, "utf8");
+await writeFile(publicFile, payload, "utf8");
+console.log(
+  `Packed ${catalog.count} cards · ${lineageDocs.length} lineage docs → ${generatedFile} and ${publicFile}`,
+);
