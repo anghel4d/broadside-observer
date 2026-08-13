@@ -70,14 +70,16 @@ export const IsoDateSchema = z
   .brand<"IsoDate">();
 export type IsoDate = z.infer<typeof IsoDateSchema>;
 
-/** Bibliographic edge. `url` may be omitted; `card` is an optional FK into the local corpus. */
+/**
+ * Bibliography-only cite. No nested library pointer (`card`); those live on frontmatter `see`.
+ * Unknown YAML keys (including leftover `card:`) are stripped, not rejected.
+ */
 export const CiteSchema = z.object({
   title: z.string().min(1),
   url: z.string().min(1).nullable().default(null),
   year: YearSchema.nullable().default(null),
   arxiv: ArxivIdSchema.nullable().default(null),
   doi: DoiSchema.nullable().default(null),
-  card: CardIdSchema.nullable().default(null),
 });
 
 export type Cite = z.infer<typeof CiteSchema>;
@@ -98,6 +100,7 @@ export const FrontmatterSchema = z.object({
   relevance_score: RelevanceScoreSchema.nullable(),
   lineage: LineageSchema.nullable().default(null),
   cites: z.array(CiteSchema).default([]),
+  see: z.array(CardIdSchema).default([]),
 });
 
 export type Frontmatter = z.infer<typeof FrontmatterSchema>;

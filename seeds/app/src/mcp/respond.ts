@@ -80,7 +80,6 @@ function formatCite(cite: Cite): string {
   if (cite.url !== null) bits.push(`url: ${cite.url}`);
   if (cite.arxiv !== null) bits.push(`arxiv: ${cite.arxiv}`);
   if (cite.doi !== null) bits.push(`doi: ${cite.doi}`);
-  if (cite.card !== null) bits.push(`card: ${cite.card}`);
   return `  - ${bits.join("; ")}`;
 }
 
@@ -131,6 +130,7 @@ Examples:
 export function formatFullCard(card: SeedCard): string {
   const cites =
     card.cites.length === 0 ? "cites: []" : `cites:\n${card.cites.map(formatCite).join("\n")}`;
+  const see = card.see.length === 0 ? "" : `see: ${JSON.stringify(card.see)}\n`;
   const sections = SECTION_KEYS.map(
     (key) => `## ${SECTION_HEADING[key]}\n\n${card.sections[key]}`,
   ).join("\n\n");
@@ -149,7 +149,7 @@ seed_rank: ${card.seed_rank}
 seed_batch: ${yamlScalar(card.seed_batch)}
 pool: ${yamlScalar(card.pool)}
 lineage: ${yamlScalar(card.lineage)}
-${cites}
+${see}${cites}
 ---
 
 # ${card.title}

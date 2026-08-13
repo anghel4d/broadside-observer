@@ -95,7 +95,6 @@ function normalizeCite(raw: unknown): unknown {
     year: record.year === undefined || record.year === null || record.year === "" ? null : asNumber(record.year),
     arxiv: emptyToNull(asString(record.arxiv)),
     doi: emptyToNull(asString(record.doi)),
-    card: asCardStem(record.card),
   };
 }
 
@@ -104,6 +103,21 @@ function normalizeCites(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(normalizeCite);
   if (typeof value === "object") return [normalizeCite(value)];
   return value;
+}
+
+function normalizeSee(value: unknown): unknown {
+  if (value === undefined || value === null) return [];
+  if (typeof value === "string") {
+    const stem = asCardStem(value);
+    return typeof stem === "string" ? [stem] : [];
+  }
+  if (!Array.isArray(value)) return value;
+  const stems: string[] = [];
+  for (const item of value) {
+    const stem = asCardStem(item);
+    if (typeof stem === "string") stems.push(stem);
+  }
+  return stems;
 }
 
 /** Tolerant wire-format cleanup. Does not invent fields; only normalizes encodings. */
@@ -125,6 +139,7 @@ export function normalizeFrontmatter(raw: unknown): unknown {
     source: record.source ?? "",
     lineage: emptyToNull(record.lineage),
     cites: normalizeCites(record.cites),
+    see: normalizeSee(record.see),
   };
 }
 

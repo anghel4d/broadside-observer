@@ -86,14 +86,14 @@ CardFile  →  ParseResult  →  SeedCard
 Corpus × Query  →  [SeedCard]
 ```
 
-- **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` to `[]`, so missing vs empty is not a third state. Each cite is a small struct (`title`, optional `url` / `year` / `arxiv` / `doi`, optional `card` FK).
+- **`src/domain/schema.ts`** — Zod schemas are the denotation of a card. Branded types (`CardId`, `Topic`, `Year`, `Lineage`, …) keep ids from mixing. Sort keys and section names are finite unions. Filter state is an ADT (`All | One | None`), not a pile of nullable strings. Optional `pool` / `relevance_score` / `lineage` are normalized to `null`, and optional `cites` / `see` to `[]`, so missing vs empty is not a third state. Each cite is bibliography-only (`title`, optional `url` / `year` / `arxiv` / `doi`). In-library stems live on sibling `see`, not nested under cites. Leftover YAML `card:` on a cite is stripped.
 - **`src/domain/lineageLabels.ts`** — display titles for known lineage (and pool) slugs. Filter values stay the raw slug; unknown slugs get a light prettify.
-- **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
-- **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
-- **`src/mcp/`** — stdio (and optional Streamable HTTP) tools `query_seeds` / `get_seed` over the same `Corpus × Query → [SeedCard]` morphism. Responses are agent-facing text with explicit `NEXT:` / JSON-shaped calls. The MCP process reads packed JSON; it does not parse markdown at runtime.
+- **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites` / `see`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
+- **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs, `byArxiv`) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker. In-library links are `see` stems that exist in the corpus, plus a fallback join on matching `arxiv` ids.
+- **`src/mcp/`** — stdio (and optional Streamable HTTP) tools `query_seeds` / `get_seed` over the same `Corpus × Query → [SeedCard]` morphism. Responses are agent-facing text with explicit `NEXT:` / JSON-shaped calls. Full-card dumps include `see: [...]` when non-empty and never emit `card:` on cites. The MCP process reads packed JSON; it does not parse markdown at runtime.
 - **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. The browse pane is windowed (list rows and the Cards grid) so only nearby items are in the DOM. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`, with `?view=cards` in the URL when Cards is active). A draggable splitter resizes browse vs detail. List detail is a centered ~46rem reading column. Compact Cards (≤980px) opens detail as a sheet over the grid instead of a stacked side pane.
 
-Deep links: `#card/<file-stem>`. Cards mode is `?view=cards` (omitted for List). Cite entries that set `card` to a stem present in the corpus render as the same hash route.
+Deep links: `#card/<file-stem>`. Cards mode is `?view=cards` (omitted for List). Bibliography is always shown from `cites`. In-library chips come from `see` ∪ arxiv-join and use the same hash route.
 
 ## Views
 
@@ -109,17 +109,18 @@ On viewports ≤980px, topic/batch/pool/lineage/year/sort/rank collapse behind a
 
 Detail keeps a compact sticky title (rank + up to 3 lines, full title on hover). File stem and authors sit in the scrolling body so they leave as you read — the pinned chrome no longer eats a sixth of the pane. The out-of-filter banner, when present, stays in that sticky bar (one row). Topic/lineage chips are the primary tags; batch/pool/rank/year/venue sit in a quieter provenance row. Topic chips omit a slug that already appears as the lineage (no doubled `radiance-cascades`). Cards titles clamp to 3 lines with a `title` tooltip for the rest.
 
-## Lineage and cites
+## Lineage, cites, and see
 
 Optional frontmatter on every card (see [`../README.md`](../README.md)):
 
 | Field | Shape | Meaning |
 |-------|--------|---------|
 | `lineage` | one string slug | At most one primary thread (`lock-free-queues`, `work-stealing`, …). Omit if the card is not on a thread. |
-| `cites` | list of objects | Bibliographic edges. `title` is required. `url` should be set when known; `year`, `arxiv`, `doi` are optional. `card` is the stem of a file in `../cards/` (no `.md`) when that work already has a seed. |
+| `cites` | list of objects | Bibliography only. `title` is required. `url` when known (arXiv abs URL when the work is on arXiv). `arxiv` is the id (e.g. `2401.14183`) whenever the cited work has one. `year` and `doi` are optional. There is no `card` key — do not nest library pointers here. A `cites` entry is never dropped because its target card was culled. |
+| `see` | list of card stems | In-library pointers: stems currently in `../cards/` that this paper cites (no `.md`). Example: `see: ["032-michael-scott-lock-free-queue", "1206-deepseek-v3-technical-report"]`. On cull, drop the matching stem from other cards’ `see` lists and leave `cites` untouched. |
 
-Cards without these keys still pack. When present, the packer keeps them in `cards.json`.
+Cards without these keys still pack. When present, the packer keeps them in `cards.json`. Nested `cites[].card` leftover in YAML is ignored (stripped), not a pack failure.
 
-The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Known slugs show a human title from `src/domain/lineageLabels.ts` (e.g. `concurrent-data-structures` → “Concurrent data structures”); unknown slugs still work as filter values and get a light prettify. Pool options use a smaller title map the same way. Card detail shows a lineage chip (click to filter) and a **Cites** section (title, year, external URL). If `card` points at an id in the packed corpus, that cite deep-links to `#card/<stem>`.
+The catalog filter has a **Lineage** dropdown of slugs observed in the corpus (`All` / `No lineage` / one slug). Known slugs show a human title from `src/domain/lineageLabels.ts` (e.g. `concurrent-data-structures` → “Concurrent data structures”); unknown slugs still work as filter values and get a light prettify. Pool options use a smaller title map the same way. Card detail always shows a **Cites** bibliography (title, year, url / arXiv / DOI) when `cites` is non-empty. A **See** chip list deep-links to `#card/<stem>` for live `see` stems, plus any cite whose `arxiv` matches a packed card. Dead `see` stems are omitted, not shown as broken links.
 
 Narrative thread pages live at `seeds/lineages/<slug>.md`. The packer records which of those files exist; the detail view links out to the GitHub copy when a matching doc is present.

@@ -23,7 +23,6 @@ import {
   defaultQuery,
   type BatchFilter,
   type CardId,
-  type Cite,
   type Lineage,
   type LineageFilter,
   type PoolFilter,
@@ -35,7 +34,7 @@ import {
   type TopicFilter,
   type Year,
 } from "../domain/schema.ts";
-import type { Corpus } from "../domain/corpus.ts";
+import { inLibraryIds, type Corpus } from "../domain/corpus.ts";
 import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
@@ -409,28 +408,30 @@ function lineageDocHref(slug: Lineage): string {
   return `${LINEAGE_DOC_BASE}${encodeURIComponent(slug)}.md`;
 }
 
-function citeExternalHref(cite: Cite): string | null {
-  if (cite.url !== null) return cite.url;
-  if (cite.doi !== null) return `https://doi.org/${cite.doi}`;
-  if (cite.arxiv !== null) return `https://arxiv.org/abs/${cite.arxiv}`;
-  return null;
-}
-
-function renderCites(card: SeedCard, corpus: Corpus): string {
+function renderBibliography(card: SeedCard): string {
   if (card.cites.length === 0) return "";
   const items = card.cites
     .map((cite) => {
       const year = cite.year === null ? "" : ` <span class="cite-year">${cite.year}</span>`;
-      const href = citeExternalHref(cite);
-      const external =
-        href === null
-          ? ""
-          : ` <a class="cite-url" href="${attr(href)}" title="${attr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(href)}</a>`;
-      const local =
-        cite.card !== null && corpus.byId.has(cite.card)
-          ? ` <a class="cite-card" href="${attr(printRoute({ _tag: "Card", id: cite.card }))}">${escapeHtml(cite.card)}</a>`
-          : "";
-      const links = external === "" && local === "" ? "" : `<div class="cite-links">${external}${local}</div>`;
+      const extras: string[] = [];
+      if (cite.url !== null) {
+        extras.push(
+          `<a class="cite-url" href="${attr(cite.url)}" title="${attr(cite.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(cite.url)}</a>`,
+        );
+      }
+      if (cite.arxiv !== null) {
+        const href = `https://arxiv.org/abs/${cite.arxiv}`;
+        extras.push(
+          `<a class="cite-id" href="${attr(href)}" title="${attr(href)}" target="_blank" rel="noopener noreferrer">arXiv ${escapeHtml(cite.arxiv)}</a>`,
+        );
+      }
+      if (cite.doi !== null) {
+        const href = `https://doi.org/${cite.doi}`;
+        extras.push(
+          `<a class="cite-id" href="${attr(href)}" title="${attr(href)}" target="_blank" rel="noopener noreferrer">doi:${escapeHtml(cite.doi)}</a>`,
+        );
+      }
+      const links = extras.length === 0 ? "" : `<div class="cite-links">${extras.join("")}</div>`;
       return `<li class="cite">
         <div class="cite-head"><span class="cite-title">${escapeHtml(cite.title)}</span>${year}</div>
         ${links}
@@ -441,6 +442,26 @@ function renderCites(card: SeedCard, corpus: Corpus): string {
       <h3>Cites</h3>
       <ul class="cites">${items}</ul>
     </section>`;
+}
+
+function renderSee(card: SeedCard, corpus: Corpus): string {
+  const ids = inLibraryIds(card, corpus);
+  if (ids.length === 0) return "";
+  const chips = ids
+    .map((id) => {
+      const target = corpus.byId.get(id);
+      const label = target === undefined ? id : target.title;
+      return `<a class="chip chip-see" href="${attr(printRoute({ _tag: "Card", id }))}" title="${attr(id)}">${escapeHtml(label)}</a>`;
+    })
+    .join("");
+  return `<section>
+      <h3>See</h3>
+      <div class="chips see-chips">${chips}</div>
+    </section>`;
+}
+
+function renderCites(card: SeedCard, corpus: Corpus): string {
+  return `${renderBibliography(card)}${renderSee(card, corpus)}`;
 }
 
 function renderLineageChip(card: SeedCard, corpus: Corpus): string {

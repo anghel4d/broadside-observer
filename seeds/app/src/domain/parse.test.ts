@@ -115,6 +115,9 @@ cites:
   - title: "Wait-Free Synchronization"
     year: 1991
     card: "037-wait-free-synchronization.md"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "037-wait-free-synchronization.md"
 ---
 
 ## One-sentence takeaway
@@ -149,9 +152,13 @@ assert.equal(
 assert.equal(withLineage.value.cites[0]?.url, "https://doi.org/10.1145/248052.248106");
 assert.equal(withLineage.value.cites[0]?.year, 1996);
 assert.equal(withLineage.value.cites[0]?.doi, "10.1145/248052.248106");
-assert.equal(withLineage.value.cites[0]?.card, "032-michael-scott-lock-free-queue");
+assert.equal("card" in (withLineage.value.cites[0] ?? {}), false);
+assert.equal("card" in (withLineage.value.cites[1] ?? {}), false);
 assert.equal(withLineage.value.cites[1]?.url, null);
-assert.equal(withLineage.value.cites[1]?.card, "037-wait-free-synchronization");
+assert.deepEqual(withLineage.value.see, [
+  "032-michael-scott-lock-free-queue",
+  "037-wait-free-synchronization",
+]);
 assert.equal(SeedCardSchema.safeParse(withLineage.value).success, true);
 
 assert.equal(ArxivIdSchema.parse(1411.2684), "1411.2684");
@@ -214,5 +221,57 @@ Event-bus / logger lineage.
 assert.equal(numericCiteArxiv._tag, "Ok");
 if (numericCiteArxiv._tag !== "Ok") throw new Error("expected Ok");
 assert.equal(numericCiteArxiv.value.cites[0]?.arxiv, "1903.00982");
+assert.deepEqual(numericCiteArxiv.value.see, []);
+
+const leftoverCardKey = parseCard({
+  file: "025-hazard-pointers.md",
+  markdown: `---
+title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
+authors:
+  - "Maged M. Michael"
+year: 2004
+venue: "TPDS"
+arxiv: null
+doi: "10.1109/TPDS.2004.8"
+source: "https://doi.org/10.1109/TPDS.2004.8"
+topics:
+  - lockfree
+seed_rank: 25
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "engine"
+relevance_score: 10
+cites:
+  - title: "Wait-Free Synchronization"
+    year: 1991
+    card: "037-wait-free-synchronization.md"
+see: "037-wait-free-synchronization.md"
+---
+
+## One-sentence takeaway
+
+Safe reclamation for lock-free structures without GC.
+
+## Why it matters here
+
+Event-bus / logger lineage.
+
+## Key ideas
+
+- Retire lists.
+
+## Caveats
+
+- Seed card.
+
+## Links
+
+- DOI
+`,
+});
+assert.equal(leftoverCardKey._tag, "Ok");
+if (leftoverCardKey._tag !== "Ok") throw new Error("expected Ok");
+assert.equal("card" in (leftoverCardKey.value.cites[0] ?? {}), false);
+assert.deepEqual(leftoverCardKey.value.see, ["037-wait-free-synchronization"]);
 
 console.log("parse.test.ts ok");

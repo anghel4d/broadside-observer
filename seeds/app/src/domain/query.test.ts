@@ -103,9 +103,9 @@ const cards: ReadonlyArray<SeedCard> = [
         year: 1996,
         arxiv: null,
         doi: "10.1145/248052.248106",
-        card: "032-michael-scott-lock-free-queue",
       },
     ],
+    see: ["032-michael-scott-lock-free-queue"],
     sections: {
       takeaway: "Safe reclamation.",
       why: "why",

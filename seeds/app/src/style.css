@@ -979,11 +979,17 @@ button:focus-visible {
   color: var(--muted);
 }
 
-a.chip-lineage-doc {
+a.chip-lineage-doc,
+a.chip-see {
   text-decoration: none;
   cursor: pointer;
   background: #1a2838;
   border-color: #3d5a78;
+}
+
+a.chip-see:hover {
+  border-color: var(--accent);
+  background: color-mix(in oklab, #1a2838 80%, var(--accent));
 }
 
 .cites {
@@ -1020,33 +1026,34 @@ a.chip-lineage-doc {
 
 .cite-links {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.55rem;
+  gap: 0.35rem 0.55rem;
   margin-top: 0.2rem;
   min-width: 0;
 }
 
 .cite-url,
-.cite-card {
+.cite-id {
   min-width: 0;
   font-size: 0.82rem;
 }
 
 .cite-url {
-  flex: 1 1 auto;
+  flex: 1 1 12rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.cite-card {
+.cite-id {
   flex: 0 1 auto;
   font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 14rem;
+  color: var(--muted);
+}
+
+.see-chips {
+  margin-bottom: 0;
 }
 
 .detail h3 {
