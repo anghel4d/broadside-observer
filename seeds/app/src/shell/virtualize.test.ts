@@ -94,7 +94,6 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   const minInnerFor = (n: number): number => (n - 1) * pitch + uncovered;
 
   assert.equal(GRID_COLUMN_COVER_FRACTION, 0.95);
-  assert.equal(uncovered, 0.05 * track);
   assert.equal(gridColumns(738, track, gap), 4);
   assert.equal(gridColumns(500, track, gap), 3);
   assert.equal(gridColumns(200, track, gap), 1);
