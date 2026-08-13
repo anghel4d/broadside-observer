@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { SEED_CARD_HEIGHT_REM, SEED_CARD_WIDTH_REM } from "./cardMetrics.ts";
 import {
   fillSizes,
   gridColumns,
@@ -83,11 +84,18 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 
 {
   // 754px browse − 16px grid padding = 738 inner; 14.5rem/0.5rem at 16px root.
+  // floor((inner + gap) / (cardWidth + gap)); leftover space is empty gutter.
   assert.equal(gridColumns(738, 232, 8), 3);
   assert.equal(gridColumns(500, 232, 8), 2);
   assert.equal(gridColumns(200, 232, 8), 1);
+  assert.equal(gridColumns(100, 232, 8), 1);
   assert.equal(gridColumns(976, 232, 8), 4);
   assert.equal(gridColumns(0, 232, 8), 1);
+  // 3 tracks + 2 gaps = 712; 713..951 still 3 columns (no 1fr stretch).
+  assert.equal(gridColumns(712, 232, 8), 3);
+  assert.equal(gridColumns(713, 232, 8), 3);
+  assert.equal(gridColumns(951, 232, 8), 3);
+  assert.equal(gridColumns(952, 232, 8), 4);
   assert.equal(gridRowCount(571, 3), 191);
   assert.equal(gridRowCount(0, 3), 0);
   assert.equal(gridTotalHeight(3, 100, 8, 8, 8), 8 + 8 + 300 + 16);
@@ -199,7 +207,7 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   // Catalog-sized grid: last page includes the tail; height is stable at every scrollTop.
   const count = 571;
   const cols = 3;
-  const rowH = 172; // 10.75rem at 16px root
+  const rowH = SEED_CARD_HEIGHT_REM * 16; // canonical tile at 16px root
   const gap = 8;
   const inset = 8;
   const rows = gridRowCount(count, cols);
@@ -225,9 +233,15 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 {
   const css = readFileSync(new URL("../style.css", import.meta.url), "utf8");
   assert.ok(
-    css.includes("grid-auto-rows: 10.75rem"),
-    "card grid row height must match browse.ts gridDefaultRow",
+    css.includes("grid-auto-rows: var(--seed-card-height)"),
+    "card grid row height must use the canonical --seed-card-height token",
   );
+  assert.ok(
+    css.includes("repeat(auto-fill, var(--seed-card-width))"),
+    "card grid tracks must be the canonical width, not 1fr",
+  );
+  assert.equal(SEED_CARD_WIDTH_REM * 16, 232);
+  assert.equal(SEED_CARD_HEIGHT_REM * 16, 172);
 }
 
 console.log("virtualize.test.ts ok");

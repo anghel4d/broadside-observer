@@ -99,12 +99,12 @@ export function listSlice(
 }
 
 /**
- * CSS `repeat(auto-fill, minmax(min(100%, minTrack), 1fr))` column count
- * for a content box of `innerWidth` with `gap` between tracks.
+ * CSS `repeat(auto-fill, track)` column count for a content box of
+ * `innerWidth` with `gap` between fixed tracks.
+ * `floor((innerWidth + gap) / (track + gap))`, at least 1.
  */
-export function gridColumns(innerWidth: number, minTrack: number, gap: number): number {
-  if (innerWidth <= 0 || minTrack <= 0) return 1;
-  const track = Math.min(innerWidth, minTrack);
+export function gridColumns(innerWidth: number, track: number, gap: number): number {
+  if (innerWidth <= 0 || track <= 0) return 1;
   const pitch = track + Math.max(0, gap);
   if (pitch <= 0) return 1;
   return Math.max(1, Math.floor((innerWidth + Math.max(0, gap)) / pitch));
