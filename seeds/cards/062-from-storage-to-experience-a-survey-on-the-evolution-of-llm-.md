@@ -26,6 +26,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
+    url: "https://arxiv.org/abs/2603.11768"
+    year: 2026
+    arxiv: "2603.11768"
+    doi: null
+    card: "064-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
+  - title: "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory"
+    url: "https://arxiv.org/abs/2605.19952"
+    year: 2026
+    arxiv: "2605.19952"
+    doi: null
+    card: "073-rethinking-how-to-remember-beyond-atomic-facts-in-lifelong-l"
+  - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    url: "https://arxiv.org/abs/2305.16291"
+    year: 2023
+    arxiv: "2305.16291"
+    doi: null
+    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
 ---
 
 # From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms

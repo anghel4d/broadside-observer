@@ -25,12 +25,24 @@ reviewed: '2026-08-13'
 pool: agents
 relevance_score: 9
 cites:
-- title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
-  url: https://arxiv.org/abs/2307.08691
-  year: 2023
-  arxiv: '2307.08691'
-  doi: null
-  card: 096-flashattention-2-faster-attention-with-better-parallelism-an
+  - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
+    url: "https://arxiv.org/abs/2307.08691"
+    year: 2023
+    arxiv: "2307.08691"
+    doi: null
+    card: "096-flashattention-2-faster-attention-with-better-parallelism-an"
+  - title: "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective"
+    url: "https://arxiv.org/abs/2502.03805"
+    year: 2025
+    arxiv: "2502.03805"
+    doi: null
+    card: "083-criticalkv-optimizing-kv-cache-eviction-from-an-output-pertu"
+  - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+    url: "https://arxiv.org/abs/2205.14135"
+    year: 2022
+    arxiv: "2205.14135"
+    doi: null
+    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
 ---
 
 # FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision

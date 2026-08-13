@@ -19,6 +19,79 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 9
+cites:
+  - title: "Region-Based Memory Management"
+    url: "https://doi.org/10.1006/inco.1996.2613"
+    year: 1997
+    arxiv: null
+    doi: "10.1006/inco.1996.2613"
+    card: "031-region-based-memory-management"
+  - title: "Typed memory management in a calculus of capabilities"
+    url: "https://doi.org/10.1145/292540.292564"
+    year: 1999
+    arxiv: null
+    doi: "10.1145/292540.292564"
+    card: "029-typed-memory-management-in-a-calculus-of-capabilities"
+  - title: "Dependent types in practical programming"
+    url: "https://doi.org/10.1145/292540.292560"
+    year: 1999
+    arxiv: null
+    doi: "10.1145/292540.292560"
+    card: null
+  - title: "Enforcing high-level protocols in low-level software"
+    url: "https://doi.org/10.1145/378795.378811"
+    year: 2001
+    arxiv: null
+    doi: "10.1145/378795.378811"
+    card: null
+  - title: "CCured"
+    url: "https://doi.org/10.1145/503272.503286"
+    year: 2002
+    arxiv: null
+    doi: "10.1145/503272.503286"
+    card: null
+  - title: "The Art of Computer Systems Performance Analysis."
+    url: "https://www.cmg.org/?s2member_file_download=/proceedings/1991/91INT145.pdf"
+    year: 1990
+    arxiv: null
+    doi: null
+    card: null
+  - title: "Garbage collection in an uncooperative environment"
+    url: "https://doi.org/10.1002/spe.4380180902"
+    year: 1988
+    arxiv: null
+    doi: "10.1002/spe.4380180902"
+    card: null
+  - title: "CCured"
+    url: "https://doi.org/10.1145/2442776.2442786"
+    year: 2012
+    arxiv: null
+    doi: "10.1145/2442776.2442786"
+    card: null
+  - title: "Cyclone: A Safe Dialect of C"
+    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.127.7825"
+    year: 2002
+    arxiv: null
+    doi: null
+    card: null
+  - title: "Automatically Validating Temporal Safety Properties of Interfaces"
+    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.118.3063"
+    year: 2001
+    arxiv: null
+    doi: null
+    card: null
+  - title: "Efficient detection of all pointer and array access errors"
+    url: "https://doi.org/10.1145/178243.178446"
+    year: 1994
+    arxiv: null
+    doi: "10.1145/178243.178446"
+    card: null
+  - title: "Language support for regions"
+    url: "https://doi.org/10.1145/378795.378815"
+    year: 2001
+    arxiv: null
+    doi: "10.1145/378795.378815"
+    card: null
 ---
 
 # Region-Based Memory Management in Cyclone

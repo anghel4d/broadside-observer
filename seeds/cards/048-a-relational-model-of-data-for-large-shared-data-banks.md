@@ -14,6 +14,43 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 10
+cites:
+  - title: "An Introduction to Mathematical Logic"
+    url: "https://doi.org/10.1201/b13782-17"
+    year: 2005
+    arxiv: null
+    doi: "10.1201/b13782-17"
+    card: null
+  - title: "An ALGOL-based associative language"
+    url: "https://doi.org/10.1145/363196.363204"
+    year: 1969
+    arxiv: null
+    doi: "10.1145/363196.363204"
+    card: null
+  - title: "A computer system for inference execution and data retrieval"
+    url: "https://doi.org/10.1145/363790.363817"
+    year: 1967
+    arxiv: null
+    doi: "10.1145/363790.363817"
+    card: null
+  - title: "Generalized file processing"
+    url: "https://doi.org/10.1016/0066-4138(69)90003-2"
+    year: 1969
+    arxiv: null
+    doi: "10.1016/0066-4138(69)90003-2"
+    card: null
+  - title: "Treating hierarchical data structures in the SDC Time-Shared Data Management System (TDMS)"
+    url: "https://doi.org/10.1145/800196.805973"
+    year: 1967
+    arxiv: null
+    doi: "10.1145/800196.805973"
+    card: null
+  - title: "Annual review in automatic programming"
+    url: "https://doi.org/10.1016/0031-3203(76)90021-2"
+    year: 1976
+    arxiv: null
+    doi: "10.1016/0031-3203(76)90021-2"
+    card: null
 ---
 
 # A Relational Model of Data for Large Shared Data Banks

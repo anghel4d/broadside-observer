@@ -39,6 +39,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments"
+    url: "https://arxiv.org/abs/2501.10893"
+    year: 2025
+    arxiv: "2501.10893"
+    doi: null
+    card: "211-learn-by-interact-a-data-centric-framework-for-self-adaptive"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
+    doi: null
+    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
+    url: "https://arxiv.org/abs/2606.09774"
+    year: 2026
+    arxiv: "2606.09774"
+    doi: null
+    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
 ---
 
 # OpenHands: An Open Platform for AI Software Developers as Generalist Agents

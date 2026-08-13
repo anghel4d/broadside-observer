@@ -23,6 +23,79 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+cites:
+  - title: "The Astropy Project: Building an Open-science Project and Status of the v2.0 Core Package<sup>*</sup>"
+    url: "https://doi.org/10.3847/1538-3881/aabc4f"
+    year: 2018
+    arxiv: null
+    doi: "10.3847/1538-3881/aabc4f"
+    card: null
+  - title: "CIGALE: a python Code Investigating GALaxy Emission"
+    url: "https://doi.org/10.1051/0004-6361/201834156"
+    year: 2018
+    arxiv: null
+    doi: "10.1051/0004-6361/201834156"
+    card: null
+  - title: "Coevolution (Or Not) of Supermassive Black Holes and Host Galaxies"
+    url: "https://doi.org/10.1146/annurev-astro-082708-101811"
+    year: 2013
+    arxiv: null
+    doi: "10.1146/annurev-astro-082708-101811"
+    card: null
+  - title: "The CO-to-H<sub>2</sub> Conversion Factor"
+    url: "https://doi.org/10.1146/annurev-astro-082812-140944"
+    year: 2013
+    arxiv: null
+    doi: "10.1146/annurev-astro-082812-140944"
+    card: null
+  - title: "Cool Gas in High-Redshift Galaxies"
+    url: "https://doi.org/10.1146/annurev-astro-082812-140953"
+    year: 2013
+    arxiv: null
+    doi: "10.1146/annurev-astro-082812-140953"
+    card: null
+  - title: "CANDELS: THE COSMIC ASSEMBLY NEAR-INFRARED DEEP EXTRAGALACTIC LEGACY SURVEY"
+    url: "https://doi.org/10.1088/0067-0049/197/2/35"
+    year: 2011
+    arxiv: null
+    doi: "10.1088/0067-0049/197/2/35"
+    card: null
+  - title: "CANDELS: THE COSMIC ASSEMBLY NEAR-INFRARED DEEP EXTRAGALACTIC LEGACY SURVEY—THE <i>HUBBLE SPACE TELESCOPE</i> OBSERVATIONS, IMAGING DATA PRODUCTS, AND MOSAICS"
+    url: "https://doi.org/10.1088/0067-0049/197/2/36"
+    year: 2011
+    arxiv: null
+    doi: "10.1088/0067-0049/197/2/36"
+    card: null
+  - title: "GOODS–<i>Herschel</i>: an infrared main sequence for star-forming galaxies"
+    url: "https://doi.org/10.1051/0004-6361/201117239"
+    year: 2011
+    arxiv: null
+    doi: "10.1051/0004-6361/201117239"
+    card: null
+  - title: "UV Star Formation Rates in the Local Universe"
+    url: "https://doi.org/10.1086/519218"
+    year: 2007
+    arxiv: null
+    doi: "10.1086/519218"
+    card: null
+  - title: "THE STAR FORMATION MASS SEQUENCE OUT TO <i>z</i> = 2.5"
+    url: "https://doi.org/10.1088/2041-8205/754/2/l29"
+    year: 2012
+    arxiv: null
+    doi: "10.1088/2041-8205/754/2/l29"
+    card: null
+  - title: "Stellar population synthesis at the resolution of 2003"
+    url: "https://doi.org/10.1046/j.1365-8711.2003.06897.x"
+    year: 2003
+    arxiv: null
+    doi: "10.1046/j.1365-8711.2003.06897.x"
+    card: null
+  - title: "A new look at the statistical model identification"
+    url: "https://doi.org/10.1109/tac.1974.1100705"
+    year: 1974
+    arxiv: null
+    doi: "10.1109/tac.1974.1100705"
+    card: null
 ---
 
 # Does the lockstep growth between black holes and bulges create their mass relation?

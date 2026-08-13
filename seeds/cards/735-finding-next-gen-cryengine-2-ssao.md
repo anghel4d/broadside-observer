@@ -17,12 +17,18 @@ pool: graphics
 relevance_score: 8
 lineage: ambient-occlusion
 cites:
-- title: Horizon-Based Ambient Occlusion
-  url: https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion
-  year: 2008
-  arxiv: null
-  doi: null
-  card: 484-horizon-based-ambient-occlusion
+  - title: "Approximating Dynamic Global Illumination in Image Space (SSDO)"
+    url: "https://doi.org/10.1145/1507149.1507168"
+    year: 2009
+    arxiv: null
+    doi: "10.1145/1507149.1507168"
+    card: "481-approximating-dynamic-global-illumination-in-image-space-ssd"
+  - title: "Horizon-Based Ambient Occlusion"
+    url: "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion"
+    year: 2008
+    arxiv: null
+    doi: null
+    card: "484-horizon-based-ambient-occlusion"
 ---
 
 # Finding Next Gen: CryEngine 2 (SSAO)

@@ -53,6 +53,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "ChainWorld: Composing Long-Horizon Desktop Workloads from Atomic OSWorld Tasks"
+    url: "https://arxiv.org/abs/2606.21654"
+    year: 2026
+    arxiv: "2606.21654"
+    doi: null
+    card: "185-chainworld-composing-long-horizon-desktop-workloads-from-ato"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
+  - title: "The BrowserGym Ecosystem for Web Agent Research"
+    url: "https://arxiv.org/abs/2412.05467"
+    year: 2024
+    arxiv: "2412.05467"
+    doi: null
+    card: "095-the-browsergym-ecosystem-for-web-agent-research"
 ---
 
 # OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks

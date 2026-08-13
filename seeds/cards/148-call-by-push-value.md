@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
+cites:
+  - title: "Notions of Computation and Monads"
+    url: "https://doi.org/10.1016/0890-5401(91)90052-4"
+    year: 1991
+    arxiv: null
+    doi: "10.1016/0890-5401(91)90052-4"
+    card: "036-notions-of-computation-and-monads"
+  - title: "Computational lambda-calculus and monads"
+    url: "https://doi.org/10.1109/lics.1989.39155"
+    year: 1989
+    arxiv: null
+    doi: "10.1109/lics.1989.39155"
+    card: "038-computational-lambda-calculus-and-monads"
+  - title: "Evidence for specific control of RNA polymerase synthesis in Escherichia coli."
+    url: "https://pubmed.ncbi.nlm.nih.gov/17319069"
+    year: 1973
+    arxiv: null
+    doi: null
+    card: null
 ---
 
 # Call-by-Push-Value

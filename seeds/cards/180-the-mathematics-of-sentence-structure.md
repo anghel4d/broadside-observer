@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
+cites:
+  - title: "Deductive Systems and Categories I. Syntactic Calculus and Residuated Categories"
+    url: "https://doi.org/10.1007/bf01702865"
+    year: 1968
+    arxiv: null
+    doi: "10.1007/bf01702865"
+    card: "178-deductive-systems-and-categories-i-syntactic-calculus-and-re"
+  - title: "Introduction to Higher Order Categorical Logic"
+    url: "https://doi.org/10.1017/cbo9780511620263"
+    year: 1986
+    arxiv: null
+    doi: "10.1017/cbo9780511620263"
+    card: "042-introduction-to-higher-order-categorical-logic"
+  - title: "Categorical Logic and Type Theory"
+    url: "https://www.elsevier.com/books/categorical-logic-and-type-theory/jacobs/978-0-444-50170-7"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: "152-categorical-logic-and-type-theory"
 ---
 
 # The Mathematics of Sentence Structure

@@ -27,6 +27,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents"
+    url: "https://arxiv.org/abs/2608.10037"
+    year: 2026
+    arxiv: "2608.10037"
+    doi: null
+    card: "060-docschisel-adaptive-tool-documentation-optimization-framewor"
+  - title: "ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents"
+    url: "https://arxiv.org/abs/2606.03054"
+    year: 2026
+    arxiv: "2606.03054"
+    doi: null
+    card: "079-toolgate-token-efficient-pre-call-control-for-tool-augmented"
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
+    doi: null
+    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
 ---
 
 # UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning

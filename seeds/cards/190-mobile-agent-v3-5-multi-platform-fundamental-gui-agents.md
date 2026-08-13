@@ -38,6 +38,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory"
+    url: "https://arxiv.org/abs/2601.21714"
+    year: 2026
+    arxiv: "2601.21714"
+    doi: null
+    card: "187-e-mem-multi-agent-based-episodic-context-reconstruction-for-"
+  - title: "The BrowserGym Ecosystem for Web Agent Research"
+    url: "https://arxiv.org/abs/2412.05467"
+    year: 2024
+    arxiv: "2412.05467"
+    doi: null
+    card: "095-the-browsergym-ecosystem-for-web-agent-research"
+  - title: "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"
+    url: "https://arxiv.org/abs/2404.07972"
+    year: 2024
+    arxiv: "2404.07972"
+    doi: null
+    card: "248-osworld-benchmarking-multimodal-agents-for-open-ended-tasks-"
 ---
 
 # Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents

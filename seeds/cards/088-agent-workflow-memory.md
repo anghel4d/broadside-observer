@@ -20,6 +20,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    url: "https://arxiv.org/abs/2305.16291"
+    year: 2023
+    arxiv: "2305.16291"
+    doi: null
+    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
+    url: "https://arxiv.org/abs/2604.03964"
+    year: 2026
+    arxiv: "2604.03964"
+    doi: null
+    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
+  - title: "SWE-chat: Coding Agent Interactions From Real Users in the Wild"
+    url: "https://arxiv.org/abs/2604.20779"
+    year: 2026
+    arxiv: "2604.20779"
+    doi: null
+    card: "075-swe-chat-coding-agent-interactions-from-real-users-in-the-wi"
 ---
 
 # Agent Workflow Memory

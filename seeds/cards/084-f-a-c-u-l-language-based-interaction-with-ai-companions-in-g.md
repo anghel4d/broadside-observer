@@ -24,6 +24,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "scratch_curated.json"
 relevance_score: 9
+cites:
+  - title: "LLM-PySC2: Starcraft II learning environment for Large Language Models"
+    url: "https://arxiv.org/abs/2411.05348"
+    year: 2024
+    arxiv: "2411.05348"
+    doi: null
+    card: "243-llm-pysc2-starcraft-ii-learning-environment-for-large-langua"
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
+    doi: null
+    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
+  - title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
+    url: "https://doi.org/10.1038/s41586-019-1724-z"
+    year: 2019
+    arxiv: null
+    doi: "10.1038/s41586-019-1724-z"
+    card: "010-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
 ---
 
 # F.A.C.U.L.: Language-Based Interaction with AI Companions in Gaming

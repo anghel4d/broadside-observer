@@ -17,6 +17,67 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+cites:
+  - title: "Real-Time Collision Detection"
+    url: "https://doi.org/10.1201/b14581"
+    year: 2004
+    arxiv: null
+    doi: "10.1201/b14581"
+    card: "371-real-time-collision-detection"
+  - title: "MuJoCo: A physics engine for model-based control"
+    url: "https://doi.org/10.1109/iros.2012.6386109"
+    year: 2012
+    arxiv: null
+    doi: "10.1109/iros.2012.6386109"
+    card: null
+  - title: "FCL: A general purpose library for collision and proximity queries"
+    url: "https://doi.org/10.1109/icra.2012.6225337"
+    year: 2012
+    arxiv: null
+    doi: "10.1109/icra.2012.6225337"
+    card: null
+  - title: "A fast algorithm for incremental distance calculation"
+    url: "https://doi.org/10.1109/robot.1991.131723"
+    year: 2002
+    arxiv: null
+    doi: "10.1109/robot.1991.131723"
+    card: null
+  - title: "Improving the GJK Algorithm for Faster and More Reliable Distance Queries Between Convex Objects"
+    url: "https://doi.org/10.1145/3072959.3083724"
+    year: 2017
+    arxiv: null
+    doi: "10.1145/3072959.3083724"
+    card: null
+  - title: "CGAL"
+    url: "https://doi.org/10.1145/1653771.1653865"
+    year: 2009
+    arxiv: null
+    doi: "10.1145/1653771.1653865"
+    card: null
+  - title: "V-Clip"
+    url: "https://doi.org/10.1145/285857.285860"
+    year: 1998
+    arxiv: null
+    doi: "10.1145/285857.285860"
+    card: null
+  - title: "Real-time collision detection and distance computation on point cloud sensor data"
+    url: "https://doi.org/10.1109/icra.2013.6631081"
+    year: 2013
+    arxiv: null
+    doi: "10.1109/icra.2013.6631081"
+    card: null
+  - title: "Enhancing GJK: computing minimum and penetration distances between convex polyhedra"
+    url: "https://doi.org/10.1109/robot.1997.606761"
+    year: 2002
+    arxiv: null
+    doi: "10.1109/robot.1997.606761"
+    card: null
+  - title: "A Fast and Robust GJK Implementation for Collision Detection of Convex Objects"
+    url: "https://doi.org/10.1080/10867651.1999.10487502"
+    year: 1999
+    arxiv: null
+    doi: "10.1080/10867651.1999.10487502"
+    card: null
 ---
 
 # Barycode-based GJK Algorithm

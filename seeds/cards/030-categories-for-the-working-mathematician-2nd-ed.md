@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
+cites:
+  - title: "Notions of Computation and Monads"
+    url: "https://doi.org/10.1016/0890-5401(91)90052-4"
+    year: 1991
+    arxiv: null
+    doi: "10.1016/0890-5401(91)90052-4"
+    card: "036-notions-of-computation-and-monads"
+  - title: "Computational lambda-calculus and monads"
+    url: "https://doi.org/10.1109/lics.1989.39155"
+    year: 1989
+    arxiv: null
+    doi: "10.1109/lics.1989.39155"
+    card: "038-computational-lambda-calculus-and-monads"
+  - title: "General Theory of Natural Equivalences"
+    url: "https://doi.org/10.2307/1990284"
+    year: 1945
+    arxiv: null
+    doi: "10.2307/1990284"
+    card: "051-general-theory-of-natural-equivalences"
 ---
 
 # Categories for the Working Mathematician (2nd ed.)

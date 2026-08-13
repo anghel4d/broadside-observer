@@ -20,6 +20,49 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+cites:
+  - title: "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+    url: "https://doi.org/10.18653/v1/d19-1410"
+    year: 2019
+    arxiv: null
+    doi: "10.18653/v1/d19-1410"
+    card: null
+  - title: "UpSet: Visualization of Intersecting Sets"
+    url: "https://doi.org/10.1109/tvcg.2014.2346248"
+    year: 2014
+    arxiv: null
+    doi: "10.1109/tvcg.2014.2346248"
+    card: null
+  - title: "Qualitative Data Analysis: An Expanded Sourcebook"
+    url: "https://doi.org/10.1016/s0272-4944(05)80231-2"
+    year: 1994
+    arxiv: null
+    doi: "10.1016/s0272-4944(05)80231-2"
+    card: null
+  - title: "The Art and Craft of Fraudulent App Promotion in Google Play"
+    url: "https://doi.org/10.1145/3319535.3345658"
+    year: 2019
+    arxiv: null
+    doi: "10.1145/3319535.3345658"
+    card: null
+  - title: "Understanding Incentivized Mobile App Installs on Google Play Store"
+    url: "https://doi.org/10.1145/3419394.3423662"
+    year: 2020
+    arxiv: null
+    doi: "10.1145/3419394.3423662"
+    card: null
+  - title: "Are Dark Patterns Anticompetitive?"
+    url: "https://doi.org/10.2139/ssrn.3468321"
+    year: 2019
+    arxiv: null
+    doi: "10.2139/ssrn.3468321"
+    card: null
+  - title: "A Framework for Fake Review Annotation"
+    url: "http://dl.acm.org/citation.cfm?id=2867552.2868189"
+    year: 2015
+    arxiv: null
+    doi: "10.1109/uksim.2015.38"
+    card: null
 ---
 
 # Erasing Labor with Labor: Dark Patterns and Lockstep Behaviors on Google Play

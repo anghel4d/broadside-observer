@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+cites:
+  - title: "CoGraM: Context-sensitive granular optimization method with rollback for robust model fusion"
+    url: "https://arxiv.org/abs/2512.03610"
+    year: 2025
+    arxiv: "2512.03610"
+    doi: null
+    card: "268-cogram-context-sensitive-granular-optimization-method-with-r"
+  - title: "LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines"
+    url: "https://arxiv.org/abs/2512.16038"
+    year: 2025
+    arxiv: "2512.16038"
+    doi: null
+    card: "273-log-io-unified-rollback-recovery-and-data-lineage-capture-fo"
+  - title: "GGPO Rollback Networking"
+    url: "https://github.com/pond3r/ggpo"
+    year: 2006
+    arxiv: null
+    doi: null
+    card: "254-ggpo-rollback-networking"
 ---
 
 # Dynamic Lockstep Processors for Applications with Functional Safety Relevance

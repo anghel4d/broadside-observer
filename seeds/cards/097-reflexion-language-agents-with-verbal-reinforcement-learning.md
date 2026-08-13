@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
+    doi: null
+    card: "007-react-synergizing-reasoning-and-acting-in-language-models"
+  - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
+    url: "https://arxiv.org/abs/2607.12267"
+    year: 2026
+    arxiv: "2607.12267"
+    doi: null
+    card: "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
+  - title: "Meta-Policy Reflexion: Reusable Reflective Memory and Rule Admissibility for Resource-Efficient LLM Agent"
+    url: "https://arxiv.org/abs/2509.03990"
+    year: 2025
+    arxiv: "2509.03990"
+    doi: null
+    card: "086-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
 ---
 
 # Reflexion: Language Agents with Verbal Reinforcement Learning

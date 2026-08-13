@@ -17,6 +17,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
+cites:
+  - title: "CoGraM: Context-sensitive granular optimization method with rollback for robust model fusion"
+    url: "https://arxiv.org/abs/2512.03610"
+    year: 2025
+    arxiv: "2512.03610"
+    doi: null
+    card: "268-cogram-context-sensitive-granular-optimization-method-with-r"
+  - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
+    url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
+    year: 2017
+    arxiv: null
+    doi: null
+    card: "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
+  - title: "GGPO Rollback Networking"
+    url: "https://github.com/pond3r/ggpo"
+    year: 2006
+    arxiv: null
+    doi: null
+    card: "254-ggpo-rollback-networking"
 ---
 
 # LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines

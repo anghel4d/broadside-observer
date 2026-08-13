@@ -14,6 +14,19 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 7
+cites:
+  - title: "Building a Better Battle: DAMN and Utility Theory for Games"
+    url: "https://www.gdcvault.com/"
+    year: 2010
+    arxiv: null
+    doi: null
+    card: "351-building-a-better-battle-damn-and-utility-theory-for-games"
+  - title: "Behavioral Mathematics for Game AI"
+    url: "https://www.courseptr.com/"
+    year: 2009
+    arxiv: null
+    doi: null
+    card: "431-behavioral-mathematics-for-game-ai"
 ---
 
 # Game AI Pro — Utility-Based Decision Architectures

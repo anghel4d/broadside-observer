@@ -20,8 +20,75 @@ cites:
   - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
     url: "https://doi.org/10.1145/1944745.1944787"
     year: 2011
+    arxiv: null
     doi: "10.1145/1944745.1944787"
     card: "348-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - title: "Fast volume rendering using a shear-warp factorization of the viewing transformation"
+    url: "https://doi.org/10.1145/192161.192283"
+    year: 1994
+    arxiv: null
+    doi: "10.1145/192161.192283"
+    card: null
+  - title: "Real-Time Volume Graphics"
+    url: "https://doi.org/10.1201/b10629"
+    year: 2006
+    arxiv: null
+    doi: "10.1201/b10629"
+    card: null
+  - title: "High-quality pre-integrated volume rendering using hardware-accelerated pixel shading"
+    url: "https://doi.org/10.1145/383507.383515"
+    year: 2001
+    arxiv: null
+    doi: "10.1145/383507.383515"
+    card: null
+  - title: "A single-pass GPU ray casting framework for interactive out-of-core rendering of massive volumetric datasets"
+    url: "https://doi.org/10.1007/s00371-008-0261-9"
+    year: 2008
+    arxiv: null
+    doi: "10.1007/s00371-008-0261-9"
+    card: null
+  - title: "Interactive k-d tree GPU raytracing"
+    url: "https://doi.org/10.1145/1230100.1230129"
+    year: 2007
+    arxiv: null
+    doi: "10.1145/1230100.1230129"
+    card: null
+  - title: "Perfect spatial hashing"
+    url: "https://doi.org/10.1145/1141911.1141926"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1141911.1141926"
+    card: null
+  - title: "Relief texture mapping"
+    url: "https://doi.org/10.1145/344779.344947"
+    year: 2000
+    arxiv: null
+    doi: "10.1145/344779.344947"
+    card: null
+  - title: "Synthesis of bidirectional texture functions on arbitrary surfaces"
+    url: "https://doi.org/10.1145/566570.566634"
+    year: 2002
+    arxiv: null
+    doi: "10.1145/566570.566634"
+    card: null
+  - title: "Real-time volume graphics"
+    url: "https://doi.org/10.1145/1103900.1103929"
+    year: 2004
+    arxiv: null
+    doi: "10.1145/1103900.1103929"
+    card: null
+  - title: "Volumetric reconstruction and interactive rendering of trees from photographs"
+    url: "https://doi.org/10.1145/1015706.1015785"
+    year: 2004
+    arxiv: null
+    doi: "10.1145/1015706.1015785"
+    card: null
+  - title: "Glift"
+    url: "https://doi.org/10.1145/1122501.1122505"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1122501.1122505"
+    card: null
 ---
 
 # Gigavoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering

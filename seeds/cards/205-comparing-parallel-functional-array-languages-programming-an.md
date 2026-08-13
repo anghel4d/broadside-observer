@@ -25,6 +25,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 8
+cites:
+  - title: "APL since 1978"
+    url: "https://arxiv.org/abs/2005.02839"
+    year: 2020
+    arxiv: "2005.02839"
+    doi: "10.1145/3386319"
+    card: "107-apl-since-1978"
+  - title: "Notation as a Tool of Thought"
+    url: "https://doi.org/10.1145/358896.358899"
+    year: 1980
+    arxiv: null
+    doi: "10.1145/358896.358899"
+    card: "046-notation-as-a-tool-of-thought"
+  - title: "A Programming Language"
+    url: "https://www.jsoftware.com/papers/APL.htm"
+    year: 1962
+    arxiv: null
+    doi: null
+    card: "050-a-programming-language"
 ---
 
 # Comparing Parallel Functional Array Languages: Programming and Performance

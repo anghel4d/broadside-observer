@@ -15,6 +15,79 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hand_topup"
 relevance_score: 9
+cites:
+  - title: "Monitors"
+    url: "https://doi.org/10.1145/355620.361161"
+    year: 1974
+    arxiv: null
+    doi: "10.1145/355620.361161"
+    card: null
+  - title: "Proof of correctness of data representations"
+    url: "https://doi.org/10.1007/bf00289507"
+    year: 1972
+    arxiv: null
+    doi: "10.1007/bf00289507"
+    card: null
+  - title: "The programming language pascal"
+    url: "https://doi.org/10.1007/bf00264291"
+    year: 1971
+    arxiv: null
+    doi: "10.1007/bf00264291"
+    card: null
+  - title: "A lazy evaluator"
+    url: "https://doi.org/10.1145/800168.811543"
+    year: 1976
+    arxiv: null
+    doi: "10.1145/800168.811543"
+    card: null
+  - title: "Towards a Theory of Parallel Programming"
+    url: "https://doi.org/10.1007/978-1-4757-3472-0_6"
+    year: 1972
+    arxiv: null
+    doi: "10.1007/978-1-4757-3472-0_6"
+    card: null
+  - title: "User-Defined Types and Procedural Data Structures as Complementary Approaches to Data Abstraction"
+    url: "https://doi.org/10.1007/978-1-4612-6315-9_22"
+    year: 1978
+    arxiv: null
+    doi: "10.1007/978-1-4612-6315-9_22"
+    card: null
+  - title: "Correspondence between ALGOL 60 and Church's Lambda-notation"
+    url: "https://doi.org/10.1145/363744.363749"
+    year: 1965
+    arxiv: null
+    doi: "10.1145/363744.363749"
+    card: null
+  - title: "Structured multiprogramming"
+    url: "https://doi.org/10.1145/361454.361473"
+    year: 1972
+    arxiv: null
+    doi: "10.1145/361454.361473"
+    card: null
+  - title: "Notes on the design of Euclid"
+    url: "https://doi.org/10.1145/390018.808307"
+    year: 1977
+    arxiv: null
+    doi: "10.1145/390018.808307"
+    card: null
+  - title: "The Programming Language Pascal"
+    url: "https://doi.org/10.1007/978-3-642-48354-7_22"
+    year: 1971
+    arxiv: null
+    doi: "10.1007/978-3-642-48354-7_22"
+    card: null
+  - title: "<scp>A. van Wijngaarden</scp> (Ed.), <scp>B. J. Mailloux</scp>, <scp>J. E. L. Peck</scp> and <scp>C. H. A. Koster</scp>, Report on the Algorithmic Language ALGOL 68. Amsterdam 1969. Printing by the Mathematisch Centrum. Preis brosch. $ 4.50 ."
+    url: "https://doi.org/10.1002/zamm.19700501120"
+    year: 1970
+    arxiv: null
+    doi: "10.1002/zamm.19700501120"
+    card: null
+  - title: "CONS Should Not Evaluate its Arguments."
+    url: "https://dblp.uni-trier.de/db/conf/icalp/icalp76.html#FriedmanW76"
+    year: 1976
+    arxiv: null
+    doi: null
+    card: null
 ---
 
 # Syntactic Control of Interference

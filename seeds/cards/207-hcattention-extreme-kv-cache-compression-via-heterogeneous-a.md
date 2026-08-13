@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective"
+    url: "https://arxiv.org/abs/2502.03805"
+    year: 2025
+    arxiv: "2502.03805"
+    doi: null
+    card: "083-criticalkv-optimizing-kv-cache-eviction-from-an-output-pertu"
+  - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
+    url: "https://arxiv.org/abs/2407.08608"
+    year: 2024
+    arxiv: "2407.08608"
+    doi: null
+    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs

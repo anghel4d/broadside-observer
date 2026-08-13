@@ -16,6 +16,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
+cites:
+  - title: "Introduction to Higher Order Categorical Logic"
+    url: "https://doi.org/10.1017/cbo9780511620263"
+    year: 1986
+    arxiv: null
+    doi: "10.1017/cbo9780511620263"
+    card: "042-introduction-to-higher-order-categorical-logic"
+  - title: "Cartesian Closed Categories and Typed λ-Calculi"
+    url: "https://doi.org/10.1007/3-540-17184-3_44"
+    year: 1986
+    arxiv: null
+    doi: "10.1007/3-540-17184-3_44"
+    card: "168-cartesian-closed-categories-and-typed-calculi"
+  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
+    url: "https://arxiv.org/abs/0903.0340"
+    year: 2011
+    arxiv: "0903.0340"
+    doi: "10.1007/978-3-642-12821-9_2"
+    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # From λ-calculus to Cartesian Closed Categories

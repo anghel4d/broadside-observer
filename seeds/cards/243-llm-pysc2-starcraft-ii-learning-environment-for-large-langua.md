@@ -27,6 +27,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 8
+cites:
+  - title: "F.A.C.U.L.: Language-Based Interaction with AI Companions in Gaming"
+    url: "https://doi.org/10.1609/aaai.v39i28.38842"
+    year: 2025
+    arxiv: null
+    doi: "10.1609/aaai.v39i28.38842"
+    card: "084-f-a-c-u-l-language-based-interaction-with-ai-companions-in-g"
+  - title: "Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach"
+    url: "https://arxiv.org/abs/2312.11865"
+    year: 2024
+    arxiv: "2312.11865"
+    doi: null
+    card: "092-large-language-models-play-starcraft-ii-benchmarks-and-a-cha"
+  - title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
+    url: "https://doi.org/10.1038/s41586-019-1724-z"
+    year: 2019
+    arxiv: null
+    doi: "10.1038/s41586-019-1724-z"
+    card: "010-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
 ---
 
 # LLM-PySC2: Starcraft II learning environment for Large Language Models

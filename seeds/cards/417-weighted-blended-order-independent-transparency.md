@@ -15,6 +15,79 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+cites:
+  - title: "Compositing digital images"
+    url: "https://doi.org/10.1145/800031.808606"
+    year: 1984
+    arxiv: null
+    doi: "10.1145/800031.808606"
+    card: null
+  - title: "On visible surface generation by a priori tree structures"
+    url: "https://doi.org/10.1145/800250.807481"
+    year: 1980
+    arxiv: null
+    doi: "10.1145/800250.807481"
+    card: null
+  - title: "Blue screen matting"
+    url: "https://doi.org/10.1145/237170.237263"
+    year: 1996
+    arxiv: null
+    doi: "10.1145/237170.237263"
+    card: null
+  - title: "Stochastic transparency"
+    url: "https://doi.org/10.1145/1730804.1730830"
+    year: 2010
+    arxiv: null
+    doi: "10.1145/1730804.1730830"
+    card: null
+  - title: "Adaptive transparency"
+    url: "https://doi.org/10.1145/2018323.2018342"
+    year: 2011
+    arxiv: null
+    doi: "10.1145/2018323.2018342"
+    card: null
+  - title: "Fourier opacity mapping"
+    url: "https://doi.org/10.1145/1730804.1730831"
+    year: 2010
+    arxiv: null
+    doi: "10.1145/1730804.1730831"
+    card: null
+  - title: "Hybrid transparency"
+    url: "https://doi.org/10.1145/2448196.2448212"
+    year: 2013
+    arxiv: null
+    doi: "10.1145/2448196.2448212"
+    card: null
+  - title: "Deep shadow maps"
+    url: "https://doi.org/10.1145/344779.344958"
+    year: 2000
+    arxiv: null
+    doi: "10.1145/344779.344958"
+    card: null
+  - title: "Colored stochastic shadow maps"
+    url: "https://doi.org/10.1145/1944745.1944760"
+    year: 2011
+    arxiv: null
+    doi: "10.1145/1944745.1944760"
+    card: null
+  - title: "Multi-fragment effects on the GPU using the <i>k</i> -buffer"
+    url: "https://doi.org/10.1145/1230100.1230117"
+    year: 2007
+    arxiv: null
+    doi: "10.1145/1230100.1230117"
+    card: null
+  - title: "Stencil routed A-Buffer"
+    url: "https://doi.org/10.1145/1278780.1278806"
+    year: 2007
+    arxiv: null
+    doi: "10.1145/1278780.1278806"
+    card: null
+  - title: "Hair self shadowing and transparency depth ordering using occupancy maps"
+    url: "https://doi.org/10.1145/1507149.1507160"
+    year: 2009
+    arxiv: null
+    doi: "10.1145/1507149.1507160"
+    card: null
 ---
 
 # Weighted Blended Order-Independent Transparency

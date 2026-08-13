@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    url: "https://arxiv.org/abs/2305.16291"
+    year: 2023
+    arxiv: "2305.16291"
+    doi: null
+    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
+    url: "https://arxiv.org/abs/2605.06716"
+    year: 2026
+    arxiv: "2605.06716"
+    doi: null
+    card: "062-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
+  - title: "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
+    url: "https://arxiv.org/abs/2605.09100"
+    year: 2026
+    arxiv: "2605.09100"
+    doi: null
+    card: "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
 ---
 
 # Feeders and Expellers, Two Types of Animalcules With Outboard Cilia, Have Distinct Surface Interactions

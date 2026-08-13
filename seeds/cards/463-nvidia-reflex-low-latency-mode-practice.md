@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 7
+cites:
+  - title: "Tracy Frame Profiler"
+    url: "https://github.com/wolfpld/tracy"
+    year: 2019
+    arxiv: null
+    doi: null
+    card: "468-tracy-frame-profiler"
+  - title: "RenderDoc Graphics Debugger"
+    url: "https://renderdoc.org/"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "477-renderdoc-graphics-debugger"
+  - title: "Floating Point Determinism"
+    url: "https://gafferongames.com/post/floating_point_determinism/"
+    year: 2010
+    arxiv: null
+    doi: null
+    card: "352-floating-point-determinism"
 ---
 
 # NVIDIA Reflex / Low Latency Mode Practice

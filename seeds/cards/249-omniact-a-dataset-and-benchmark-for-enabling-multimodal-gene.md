@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "The BrowserGym Ecosystem for Web Agent Research"
+    url: "https://arxiv.org/abs/2412.05467"
+    year: 2024
+    arxiv: "2412.05467"
+    doi: null
+    card: "095-the-browsergym-ecosystem-for-web-agent-research"
+  - title: "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"
+    url: "https://arxiv.org/abs/2404.07972"
+    year: 2024
+    arxiv: "2404.07972"
+    doi: null
+    card: "248-osworld-benchmarking-multimodal-agents-for-open-ended-tasks-"
+  - title: "Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents"
+    url: "https://arxiv.org/abs/2602.16855"
+    year: 2026
+    arxiv: "2602.16855"
+    doi: null
+    card: "190-mobile-agent-v3-5-multi-platform-fundamental-gui-agents"
 ---
 
 # OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web

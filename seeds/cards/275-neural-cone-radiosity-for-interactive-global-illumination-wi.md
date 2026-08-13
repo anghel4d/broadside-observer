@@ -19,6 +19,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+cites:
+  - title: "Voxel Cone Tracing for Real-Time Global Illumination"
+    url: "https://doi.org/10.1145/1944745.1944787"
+    year: 2011
+    arxiv: null
+    doi: "10.1145/1944745.1944787"
+    card: "137-voxel-cone-tracing-for-real-time-global-illumination"
+  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
+    url: "https://github.com/Raikiri/RadianceCascadesPaper"
+    year: 2023
+    arxiv: null
+    doi: null
+    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - title: "The Rendering Equation"
+    url: "https://doi.org/10.1145/15922.15902"
+    year: 1986
+    arxiv: null
+    doi: "10.1145/15922.15902"
+    card: "169-the-rendering-equation"
 ---
 
 # Neural Cone Radiosity for Interactive Global Illumination with Glossy Materials

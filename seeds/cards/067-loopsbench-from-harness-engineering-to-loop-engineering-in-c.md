@@ -27,6 +27,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
+    url: "https://arxiv.org/abs/2607.28591"
+    year: 2026
+    arxiv: "2607.28591"
+    doi: null
+    card: "056-change2task-from-repository-changes-to-executable-coding-age"
+  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
+    url: "https://arxiv.org/abs/2608.06811"
+    year: 2026
+    arxiv: "2608.06811"
+    doi: null
+    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
+    url: "https://arxiv.org/abs/2604.03964"
+    year: 2026
+    arxiv: "2604.03964"
+    doi: null
+    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
 ---
 
 # LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation

@@ -14,6 +14,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+cites:
+  - title: "Deterministic Lockstep"
+    url: "https://gafferongames.com/post/deterministic_lockstep/"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "017-deterministic-lockstep"
+  - title: "Fix Your Timestep!"
+    url: "https://gafferongames.com/post/fix_your_timestep/"
+    year: 2004
+    arxiv: null
+    doi: null
+    card: "255-fix-your-timestep"
+  - title: "Fix Your Timestep!"
+    url: "https://gafferongames.com/post/fix_your_timestep/"
+    year: 2004
+    arxiv: null
+    doi: null
+    card: "702-fix-your-timestep"
 ---
 
 # Floating Point Determinism

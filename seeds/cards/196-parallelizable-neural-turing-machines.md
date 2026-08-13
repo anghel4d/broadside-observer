@@ -15,6 +15,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "End-To-End Memory Networks"
+    url: "https://arxiv.org/abs/1503.08895"
+    year: 2015
+    arxiv: "1503.08895"
+    doi: null
+    card: "120-end-to-end-memory-networks"
+  - title: "Memory Networks"
+    url: "https://arxiv.org/abs/1410.3916"
+    year: 2014
+    arxiv: "1410.3916"
+    doi: null
+    card: "124-memory-networks"
+  - title: "Neural Turing Machines"
+    url: "https://arxiv.org/abs/1410.5401"
+    year: 2014
+    arxiv: "1410.5401"
+    doi: null
+    card: "125-neural-turing-machines"
 ---
 
 # Parallelizable Neural Turing Machines

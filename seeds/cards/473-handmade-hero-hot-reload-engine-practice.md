@@ -15,6 +15,19 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 7
+cites:
+  - title: "RenderDoc Graphics Debugger"
+    url: "https://renderdoc.org/"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "477-renderdoc-graphics-debugger"
+  - title: "Tracy Frame Profiler"
+    url: "https://github.com/wolfpld/tracy"
+    year: 2019
+    arxiv: null
+    doi: null
+    card: "468-tracy-frame-profiler"
 ---
 
 # Handmade Hero / Hot-Reload Engine Practice

@@ -15,6 +15,79 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 9
+cites:
+  - title: "Preliminary reference Earth model"
+    url: "https://doi.org/10.1016/0031-9201(81)90046-7"
+    year: 1981
+    arxiv: null
+    doi: "10.1016/0031-9201(81)90046-7"
+    card: null
+  - title: "Neutrino oscillations in matter"
+    url: "https://doi.org/10.1103/physrevd.17.2369"
+    year: 1978
+    arxiv: null
+    doi: "10.1103/physrevd.17.2369"
+    card: null
+  - title: "Global analysis of neutrino masses, mixings, and phases: Entering the era of leptonic<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mml:mi>C</mml:mi><mml:mi>P</mml:mi></mml:math>violation searches"
+    url: "https://doi.org/10.1103/physrevd.86.013012"
+    year: 2012
+    arxiv: null
+    doi: "10.1103/physrevd.86.013012"
+    card: null
+  - title: "Updated fit to three neutrino mixing: status of leptonic CP violation"
+    url: "https://doi.org/10.1007/jhep11(2014)052"
+    year: 2014
+    arxiv: null
+    doi: "10.1007/jhep11(2014)052"
+    card: null
+  - title: "Compositional Model for the Earth's Core"
+    url: "https://doi.org/10.1016/b0-08-043751-6/02015-6"
+    year: 2003
+    arxiv: null
+    doi: "10.1016/b0-08-043751-6/02015-6"
+    card: null
+  - title: "Atmospheric neutrino flux calculation using the NRLMSISE-00 atmospheric model"
+    url: "https://doi.org/10.1103/physrevd.92.023004"
+    year: 2015
+    arxiv: null
+    doi: "10.1103/physrevd.92.023004"
+    card: null
+  - title: "Core formation and core composition from coupled geochemical and geophysical constraints"
+    url: "https://doi.org/10.1073/pnas.1505672112"
+    year: 2015
+    arxiv: null
+    doi: "10.1073/pnas.1505672112"
+    card: null
+  - title: "Atmospheric neutrino oscillations for Earth tomography"
+    url: "https://doi.org/10.1016/j.nuclphysb.2016.03.033"
+    year: 2016
+    arxiv: null
+    doi: "10.1016/j.nuclphysb.2016.03.033"
+    card: null
+  - title: "Matter effects on three-neutrino oscillations"
+    url: "https://doi.org/10.1103/physrevd.22.2718"
+    year: 1980
+    arxiv: null
+    doi: "10.1103/physrevd.22.2718"
+    card: null
+  - title: "Neutrino oscillation tomography of the Earth with KM3NeT-ORCA"
+    url: "https://doi.org/10.1088/1742-6596/888/1/012114"
+    year: 2017
+    arxiv: null
+    doi: "10.1088/1742-6596/888/1/012114"
+    card: null
+  - title: "Probing the neutrino mass ordering with KM3NeT-ORCA: analysis and perspectives"
+    url: "https://doi.org/10.1088/1361-6471/aa9503"
+    year: 2017
+    arxiv: null
+    doi: "10.1088/1361-6471/aa9503"
+    card: null
+  - title: "KM3NeT - ORCA: Measuring neutrino oscillations and the mass hierarchy in the Mediterranean"
+    url: "https://doi.org/10.22323/1.236.1140"
+    year: 2016
+    arxiv: null
+    doi: "10.22323/1.236.1140"
+    card: null
 ---
 
 # Neutrino Tomography of the Earth with ORCA Detector

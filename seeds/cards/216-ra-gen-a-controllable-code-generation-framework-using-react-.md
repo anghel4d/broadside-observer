@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "$λ_A$: A Typed Lambda Calculus for LLM Agent Composition"
+    url: "https://arxiv.org/abs/2604.11767"
+    year: 2026
+    arxiv: "2604.11767"
+    doi: null
+    card: "181-a-a-typed-lambda-calculus-for-llm-agent-composition"
+  - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
+    url: "https://arxiv.org/abs/2505.07236"
+    year: 2025
+    arxiv: "2505.07236"
+    doi: null
+    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # RA-Gen: A Controllable Code Generation Framework Using ReAct for Multi-Agent Task Execution

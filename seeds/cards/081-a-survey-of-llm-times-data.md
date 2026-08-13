@@ -36,6 +36,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
+    url: "https://arxiv.org/abs/2606.24467"
+    year: 2026
+    arxiv: "2606.24467"
+    doi: null
+    card: "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
+  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    url: "https://arxiv.org/abs/2606.19667"
+    year: 2026
+    arxiv: "2606.19667"
+    doi: null
+    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
+    doi: null
+    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
 ---
 
 # A Survey of LLM $\times$ DATA

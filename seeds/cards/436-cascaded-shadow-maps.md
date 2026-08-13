@@ -14,6 +14,19 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+cites:
+  - title: "Variance Shadow Maps"
+    url: "https://doi.org/10.1145/1111411.1111440"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1111411.1111440"
+    card: "439-variance-shadow-maps"
+  - title: "Imperfect Shadow Maps for Efficient Computation of Indirect Illumination"
+    url: "https://doi.org/10.1145/1409060.1409082"
+    year: 2008
+    arxiv: null
+    doi: "10.1145/1409060.1409082"
+    card: "485-imperfect-shadow-maps-for-efficient-computation-of-indirect-"
 ---
 
 # Cascaded Shadow Maps

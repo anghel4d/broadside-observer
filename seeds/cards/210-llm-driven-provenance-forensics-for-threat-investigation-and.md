@@ -19,6 +19,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
+    url: "https://arxiv.org/abs/2607.12267"
+    year: 2026
+    arxiv: "2607.12267"
+    doi: null
+    card: "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
+  - title: "Jailbreaks on Vision Language Model via Multimodal Reasoning"
+    url: "https://arxiv.org/abs/2601.22398"
+    year: 2026
+    arxiv: "2601.22398"
+    doi: null
+    card: "189-jailbreaks-on-vision-language-model-via-multimodal-reasoning"
+  - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: "https://arxiv.org/abs/2005.11401"
+    year: 2020
+    arxiv: "2005.11401"
+    doi: null
+    card: "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
 ---
 
 # LLM-driven Provenance Forensics for Threat Investigation and Detection

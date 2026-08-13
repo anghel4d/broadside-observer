@@ -22,6 +22,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 10
+cites:
+  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
+    url: "https://arxiv.org/abs/2605.06716"
+    year: 2026
+    arxiv: "2605.06716"
+    doi: null
+    card: "062-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
+  - title: "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
+    url: "https://arxiv.org/abs/2605.09100"
+    year: 2026
+    arxiv: "2605.09100"
+    doi: null
+    card: "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
+  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
+    url: "https://arxiv.org/abs/2603.11768"
+    year: 2026
+    arxiv: "2603.11768"
+    doi: null
+    card: "064-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
 ---
 
 # Voyager: An Open-Ended Embodied Agent with Large Language Models

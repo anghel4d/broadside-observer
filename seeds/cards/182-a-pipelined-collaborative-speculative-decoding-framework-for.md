@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    url: "https://arxiv.org/abs/2606.19667"
+    year: 2026
+    arxiv: "2606.19667"
+    doi: null
+    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
+  - title: "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
+    url: "https://arxiv.org/abs/2606.24467"
+    year: 2026
+    arxiv: "2606.24467"
+    doi: null
+    card: "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference

@@ -20,6 +20,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
+    url: "https://arxiv.org/abs/2606.09774"
+    year: 2026
+    arxiv: "2606.09774"
+    doi: null
+    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
+  - title: "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration"
+    url: "https://arxiv.org/abs/2603.22862"
+    year: 2026
+    arxiv: "2603.22862"
+    doi: null
+    card: "078-the-evolution-of-tool-use-in-llm-agents-from-single-tool-cal"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance

@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch"
+    url: "https://arxiv.org/abs/2606.26607"
+    year: 2026
+    arxiv: "2606.26607"
+    doi: null
+    card: "070-moebius-serving-mixture-of-expert-models-with-seamless-runti"
+  - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    url: "https://arxiv.org/abs/2305.16291"
+    year: 2023
+    arxiv: "2305.16291"
+    doi: null
+    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression

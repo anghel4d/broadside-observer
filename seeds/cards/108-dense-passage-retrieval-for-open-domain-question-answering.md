@@ -23,12 +23,78 @@ reviewed: '2026-08-13'
 pool: agents
 relevance_score: 9
 cites:
-- title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
-  url: https://arxiv.org/abs/2005.11401
-  year: 2020
-  arxiv: '2005.11401'
-  doi: null
-  card: 008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t
+  - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: "https://arxiv.org/abs/2005.11401"
+    year: 2020
+    arxiv: "2005.11401"
+    doi: null
+    card: "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+  - title: "Natural Questions: A Benchmark for Question Answering Research"
+    url: "https://doi.org/10.1162/tacl_a_00276"
+    year: 2019
+    arxiv: null
+    doi: "10.1162/tacl_a_00276"
+    card: null
+  - title: "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension"
+    url: "https://doi.org/10.18653/v1/2020.acl-main.703"
+    year: 2020
+    arxiv: null
+    doi: "10.18653/v1/2020.acl-main.703"
+    card: null
+  - title: "ColBERT"
+    url: "https://doi.org/10.1145/3397271.3401075"
+    year: 2020
+    arxiv: null
+    doi: "10.1145/3397271.3401075"
+    card: null
+  - title: "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
+    url: "https://doi.org/10.18653/v1/d16-1264"
+    year: 2016
+    arxiv: null
+    doi: "10.18653/v1/d16-1264"
+    card: null
+  - title: "Learning deep structured semantic models for web search using clickthrough data"
+    url: "https://doi.org/10.1145/2505515.2505665"
+    year: 2013
+    arxiv: null
+    doi: "10.1145/2505515.2505665"
+    card: null
+  - title: "Semantic Parsing on Freebase from Question-Answer Pairs"
+    url: "https://doi.org/10.18653/v1/d13-1160"
+    year: 2013
+    arxiv: null
+    doi: "10.18653/v1/d13-1160"
+    card: null
+  - title: "Learning to rank using gradient descent"
+    url: "https://doi.org/10.1145/1102351.1102363"
+    year: 2005
+    arxiv: null
+    doi: "10.1145/1102351.1102363"
+    card: null
+  - title: "Billion-Scale Similarity Search with GPUs"
+    url: "https://doi.org/10.1109/tbdata.2019.2921572"
+    year: 2019
+    arxiv: null
+    doi: "10.1109/tbdata.2019.2921572"
+    card: null
+  - title: "SIGNATURE VERIFICATION USING A “SIAMESE” TIME DELAY NEURAL NETWORK"
+    url: "https://doi.org/10.1142/9789812797926_0003"
+    year: 1994
+    arxiv: null
+    doi: "10.1142/9789812797926_0003"
+    card: null
+  - title: "Indexing by latent semantic analysis"
+    url: "https://doi.org/10.1002/(sici)1097-4571(199009)41:6<391::aid-asi1>3.0.co;2-9"
+    year: 1990
+    arxiv: null
+    doi: "10.1002/(sici)1097-4571(199009)41:6<391::aid-asi1>3.0.co;2-9"
+    card: null
+  - title: "REALM: Retrieval-Augmented Language Model Pre-Training"
+    url: "http://arxiv.org/abs/2002.08909"
+    year: 2020
+    arxiv: "2002.08909"
+    doi: "10.48550/arxiv.2002.08909"
+    card: null
 ---
 
 # Dense Passage Retrieval for Open-Domain Question Answering

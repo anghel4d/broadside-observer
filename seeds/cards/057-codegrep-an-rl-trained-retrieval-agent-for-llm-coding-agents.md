@@ -20,6 +20,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
+    url: "https://arxiv.org/abs/2607.28591"
+    year: 2026
+    arxiv: "2607.28591"
+    doi: null
+    card: "056-change2task-from-repository-changes-to-executable-coding-age"
+  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
+    url: "https://arxiv.org/abs/2608.06811"
+    year: 2026
+    arxiv: "2608.06811"
+    doi: null
+    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
+    doi: null
+    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents

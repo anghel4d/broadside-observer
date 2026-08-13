@@ -25,6 +25,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
+    url: "https://arxiv.org/abs/2606.24467"
+    year: 2026
+    arxiv: "2606.24467"
+    doi: null
+    card: "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
+  - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
+    url: "https://arxiv.org/abs/2407.08608"
+    year: 2024
+    arxiv: "2407.08608"
+    doi: null
+    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective

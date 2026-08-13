@@ -18,6 +18,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
+    doi: null
+    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
+    url: "https://arxiv.org/abs/2606.09774"
+    year: 2026
+    arxiv: "2606.09774"
+    doi: null
+    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
+  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
+    url: "https://arxiv.org/abs/2607.28591"
+    year: 2026
+    arxiv: "2607.28591"
+    doi: null
+    card: "056-change2task-from-repository-changes-to-executable-coding-age"
 ---
 
 # Agentless: Demystifying LLM-based Software Engineering Agents

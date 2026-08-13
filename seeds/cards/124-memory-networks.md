@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "End-To-End Memory Networks"
+    url: "https://arxiv.org/abs/1503.08895"
+    year: 2015
+    arxiv: "1503.08895"
+    doi: null
+    card: "120-end-to-end-memory-networks"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
+    doi: null
+    card: "004-memgpt-towards-llms-as-operating-systems"
+  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
+    url: "https://arxiv.org/abs/2604.16548"
+    year: 2026
+    arxiv: "2604.16548"
+    doi: null
+    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
 ---
 
 # Memory Networks

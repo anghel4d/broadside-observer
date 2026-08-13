@@ -40,6 +40,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding"
+    url: "https://arxiv.org/abs/2508.21706"
+    year: 2025
+    arxiv: "2508.21706"
+    doi: null
+    card: "203-accelerating-mixture-of-experts-inference-by-hiding-offloadi"
+  - title: "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models"
+    url: "https://arxiv.org/abs/2405.14366"
+    year: 2024
+    arxiv: "2405.14366"
+    doi: null
+    card: "245-minicache-kv-cache-compression-in-depth-dimension-for-large-"
+  - title: "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch"
+    url: "https://arxiv.org/abs/2606.26607"
+    year: 2026
+    arxiv: "2606.26607"
+    doi: null
+    card: "070-moebius-serving-mixture-of-expert-models-with-seamless-runti"
 ---
 
 # Mixtral of Experts

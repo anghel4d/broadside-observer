@@ -18,6 +18,79 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Neural Turing Machines"
+    url: "http://arxiv.org/abs/1410.5401"
+    year: 2014
+    arxiv: "1410.5401"
+    doi: "10.48550/arxiv.1410.5401"
+    card: "125-neural-turing-machines"
+  - title: "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling"
+    url: "http://arxiv.org/abs/1412.3555"
+    year: 2014
+    arxiv: "1412.3555"
+    doi: "10.48550/arxiv.1412.3555"
+    card: null
+  - title: "Show, Attend and Tell: Neural Image Caption Generation with Visual Attention"
+    url: "http://arxiv.org/abs/1502.03044"
+    year: 2015
+    arxiv: "1502.03044"
+    doi: "10.48550/arxiv.1502.03044"
+    card: null
+  - title: "Recurrent Neural Network Regularization"
+    url: "http://arxiv.org/abs/1409.2329"
+    year: 2014
+    arxiv: "1409.2329"
+    doi: "10.48550/arxiv.1409.2329"
+    card: null
+  - title: "LSTM neural networks for language modeling"
+    url: "https://doi.org/10.21437/interspeech.2012-65"
+    year: 2012
+    arxiv: null
+    doi: "10.21437/interspeech.2012-65"
+    card: null
+  - title: "DRAW: A Recurrent Neural Network For Image Generation"
+    url: "http://arxiv.org/abs/1502.04623"
+    year: 2015
+    arxiv: "1502.04623"
+    doi: "10.48550/arxiv.1502.04623"
+    card: null
+  - title: "Generating Sequences With Recurrent Neural Networks"
+    url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2019.10"
+    year: 2013
+    arxiv: null
+    doi: "10.4230/lipics.fun.2016.3"
+    card: null
+  - title: "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks"
+    url: "http://arxiv.org/abs/1502.05698"
+    year: 2015
+    arxiv: "1502.05698"
+    doi: "10.48550/arxiv.1502.05698"
+    card: null
+  - title: "10.1162/153244303322533223"
+    url: "https://doi.org/10.1162/153244303322533223"
+    year: 2000
+    arxiv: null
+    doi: "10.1162/153244303322533223"
+    card: null
+  - title: "Long Short-Term Memory"
+    url: "https://doi.org/10.1162/neco.1997.9.8.1735"
+    year: 1997
+    arxiv: null
+    doi: "10.1162/neco.1997.9.8.1735"
+    card: null
+  - title: "Building a Large Annotated Corpus of English: The Penn Treebank"
+    url: "https://doi.org/10.21236/ada273556"
+    year: 1993
+    arxiv: null
+    doi: "10.21236/ada273556"
+    card: null
+  - title: "Learning Longer Memory in Recurrent Neural Networks"
+    url: "http://arxiv.org/abs/1412.7753"
+    year: 2014
+    arxiv: "1412.7753"
+    doi: "10.48550/arxiv.1412.7753"
+    card: null
 ---
 
 # End-To-End Memory Networks

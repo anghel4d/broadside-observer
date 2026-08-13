@@ -21,12 +21,78 @@ reviewed: '2026-08-13'
 pool: scratch_curated.json
 relevance_score: 9
 cites:
-- title: The StarCraft Multi-Agent Challenge
-  url: https://arxiv.org/abs/1902.04043
-  year: 2019
-  arxiv: '1902.04043'
-  doi: null
-  card: 011-the-starcraft-multi-agent-challenge
+  - title: "StarCraft II: A New Challenge for Reinforcement Learning"
+    url: "http://arxiv.org/abs/1708.04782"
+    year: 2017
+    arxiv: "1708.04782"
+    doi: "10.48550/arxiv.1708.04782"
+    card: "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+  - title: "The StarCraft Multi-Agent Challenge"
+    url: "https://doi.org/10.65109/lvzz5205"
+    year: 2019
+    arxiv: null
+    doi: "10.65109/lvzz5205"
+    card: "011-the-starcraft-multi-agent-challenge"
+  - title: "The StarCraft Multi-Agent Challenge"
+    url: "https://arxiv.org/abs/1902.04043"
+    year: 2019
+    arxiv: "1902.04043"
+    doi: null
+    card: "011-the-starcraft-multi-agent-challenge"
+  - title: "Human-level control through deep reinforcement learning"
+    url: "https://doi.org/10.1038/nature14236"
+    year: 2015
+    arxiv: null
+    doi: "10.1038/nature14236"
+    card: null
+  - title: "Deep Reinforcement Learning with Double Q-Learning"
+    url: "https://doi.org/10.1609/aaai.v30i1.10295"
+    year: 2016
+    arxiv: null
+    doi: "10.1609/aaai.v30i1.10295"
+    card: null
+  - title: "A Concise Introduction to Decentralized POMDPs"
+    url: "https://doi.org/10.1007/978-3-319-28929-8"
+    year: 2016
+    arxiv: null
+    doi: "10.1007/978-3-319-28929-8"
+    card: null
+  - title: "Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling"
+    url: "http://arxiv.org/abs/1412.3555"
+    year: 2014
+    arxiv: "1412.3555"
+    doi: "10.48550/arxiv.1412.3555"
+    card: null
+  - title: "An Overview of Recent Progress in the Study of Distributed Multi-Agent Coordination"
+    url: "https://doi.org/10.1109/tii.2012.2219061"
+    year: 2012
+    arxiv: null
+    doi: "10.1109/tii.2012.2219061"
+    card: null
+  - title: "Cooperative Multi-agent Control Using Deep Reinforcement Learning"
+    url: "https://doi.org/10.1007/978-3-319-71682-4_5"
+    year: 2017
+    arxiv: null
+    doi: "10.1007/978-3-319-71682-4_5"
+    card: null
+  - title: "A Comprehensive Survey of Multiagent Reinforcement Learning"
+    url: "https://doi.org/10.1109/tsmcc.2007.913919"
+    year: 2008
+    arxiv: null
+    doi: "10.1109/tsmcc.2007.913919"
+    card: null
+  - title: "Approximation theory of the MLP model in neural networks"
+    url: "https://doi.org/10.1017/s0962492900002919"
+    year: 1999
+    arxiv: null
+    doi: "10.1017/s0962492900002919"
+    card: null
+  - title: "Value-Decomposition Networks For Cooperative Multi-Agent Learning Based On Team Reward"
+    url: "https://doi.org/10.65109/jsrc7365"
+    year: 2018
+    arxiv: null
+    doi: "10.65109/jsrc7365"
+    card: null
 ---
 
 # QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning

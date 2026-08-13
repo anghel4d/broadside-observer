@@ -16,6 +16,79 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 9
+cites:
+  - title: "Introduction to automata theory, languages and computation"
+    url: "https://doi.org/10.1016/0378-4754(81)90068-9"
+    year: 1981
+    arxiv: null
+    doi: "10.1016/0378-4754(81)90068-9"
+    card: null
+  - title: "Elements of the Theory of Computation"
+    url: "https://doi.org/10.1145/300307.1040360"
+    year: 1998
+    arxiv: null
+    doi: "10.1145/300307.1040360"
+    card: null
+  - title: "Rational Series and Their Languages"
+    url: "https://doi.org/10.1007/978-3-642-73235-5"
+    year: 1988
+    arxiv: null
+    doi: "10.1007/978-3-642-73235-5"
+    card: null
+  - title: "Automata-Theoretic Aspects of Formal Power Series"
+    url: "https://doi.org/10.1007/978-1-4612-6264-0"
+    year: 1978
+    arxiv: null
+    doi: "10.1007/978-1-4612-6264-0"
+    card: null
+  - title: "On the complexity of omega -automata"
+    url: "https://doi.org/10.1109/sfcs.1988.21948"
+    year: 1988
+    arxiv: null
+    doi: "10.1109/sfcs.1988.21948"
+    card: null
+  - title: "The Design and Analysis of Computer Algorithms"
+    url: "https://openalex.org/W1655990431"
+    year: 1974
+    arxiv: null
+    doi: null
+    card: null
+  - title: "Complete systems ofB-rational identities"
+    url: "https://doi.org/10.1016/0304-3975(91)90395-i"
+    year: 1991
+    arxiv: null
+    doi: "10.1016/0304-3975(91)90395-i"
+    card: null
+  - title: "On kleene algebras and closed semirings"
+    url: "https://doi.org/10.1007/bfb0029594"
+    year: 2005
+    arxiv: null
+    doi: "10.1007/bfb0029594"
+    card: null
+  - title: "Une remarque sur les systèmes complets d'identités rationnelles"
+    url: "https://doi.org/10.1051/ita/1990240404191"
+    year: 1990
+    arxiv: null
+    doi: "10.1051/ita/1990240404191"
+    card: null
+  - title: "The kleene and the Parikh Theorem in complete semirings"
+    url: "https://doi.org/10.1007/3-540-18088-5_17"
+    year: 1987
+    arxiv: null
+    doi: "10.1007/3-540-18088-5_17"
+    card: null
+  - title: "A Semiring on Convex Polygons and Zero-Sum Cycle Problems"
+    url: "https://doi.org/10.1137/0219061"
+    year: 1990
+    arxiv: null
+    doi: "10.1137/0219061"
+    card: null
+  - title: "Regular algebra and finite machines"
+    url: "https://openalex.org/W1570949334"
+    year: 1971
+    arxiv: null
+    doi: null
+    card: null
 ---
 
 # The Type and Effect Discipline

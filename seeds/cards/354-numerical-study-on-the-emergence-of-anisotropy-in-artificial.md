@@ -15,6 +15,43 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 9
+cites:
+  - title: "Flocks, herds and schools: A distributed behavioral model"
+    url: "https://doi.org/10.1145/37401.37406"
+    year: 1987
+    arxiv: null
+    doi: "10.1145/37401.37406"
+    card: "261-flocks-herds-and-schools-a-distributed-behavioral-model"
+  - title: "A Guide to Monte Carlo Simulations in Statistical Physics"
+    url: "https://doi.org/10.1017/cbo9781139696463"
+    year: 2014
+    arxiv: null
+    doi: "10.1017/cbo9781139696463"
+    card: null
+  - title: "The STARFLAG handbook on collective animal behaviour: 1. Empirical methods"
+    url: "https://doi.org/10.1016/j.anbehav.2008.02.002"
+    year: 2008
+    arxiv: null
+    doi: "10.1016/j.anbehav.2008.02.002"
+    card: null
+  - title: "Modeling reality: how computers mirror life"
+    url: "https://doi.org/10.5860/choice.42-6541"
+    year: 2005
+    arxiv: null
+    doi: "10.5860/choice.42-6541"
+    card: null
+  - title: "The eye of a passeriform bird, the European starling (Sturnus vulgaris): eye movement amplitude, visual fields and schematic optics"
+    url: "https://doi.org/10.1007/bf00604174"
+    year: 1986
+    arxiv: null
+    doi: "10.1007/bf00604174"
+    card: null
+  - title: "Methods for measuring the three-dimensional structure of fish schools"
+    url: "https://doi.org/10.1016/0003-3472(65)90117-x"
+    year: 1965
+    arxiv: null
+    doi: "10.1016/0003-3472(65)90117-x"
+    card: null
 ---
 
 # Numerical study on the emergence of anisotropy in artificial flocks: A BOIDS modeling and simulations of empirical findings

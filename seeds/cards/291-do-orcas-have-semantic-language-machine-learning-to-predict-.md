@@ -14,6 +14,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 9
+cites:
+  - title: "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments"
+    url: "https://arxiv.org/abs/2407.16771"
+    year: 2024
+    arxiv: "2407.16771"
+    doi: null
+    card: "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c"
+  - title: "Orca 2: Teaching Small Language Models How to Reason"
+    url: "https://arxiv.org/abs/2311.11045"
+    year: 2023
+    arxiv: "2311.11045"
+    doi: null
+    card: "297-orca-2-teaching-small-language-models-how-to-reason"
+  - title: "Benchmarking ORCA PT-1 Boson Sampler in Simulation"
+    url: "https://arxiv.org/abs/2505.23217"
+    year: 2025
+    arxiv: "2505.23217"
+    doi: null
+    card: "267-benchmarking-orca-pt-1-boson-sampler-in-simulation"
 ---
 
 # Do Orcas Have Semantic Language? Machine Learning to Predict Orca Behaviors Using Partially Labeled Vocalization Data

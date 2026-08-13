@@ -18,6 +18,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
+  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
+    url: "https://arxiv.org/abs/2608.06811"
+    year: 2026
+    arxiv: "2608.06811"
+    doi: null
+    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - title: "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
+    url: "https://arxiv.org/abs/2606.10677"
+    year: 2026
+    arxiv: "2606.10677"
+    doi: null
+    card: "065-infini-memory-maintainable-topic-documents-for-long-term-llm"
 ---
 
 # MemLineage: Lineage-Guided Enforcement for LLM Agent Memory

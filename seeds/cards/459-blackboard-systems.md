@@ -14,6 +14,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 8
+cites:
+  - title: "The Hearsay-II Speech-Understanding System: Integrating Knowledge to Resolve Uncertainty"
+    url: "https://doi.org/10.1145/356810.356816"
+    year: 1980
+    arxiv: null
+    doi: "10.1145/356810.356816"
+    card: "500-the-hearsay-ii-speech-understanding-system"
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
+    doi: null
+    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
+  - title: "Steering Behaviors For Autonomous Characters"
+    url: "https://www.red3d.com/cwr/steer/"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: "258-steering-behaviors-for-autonomous-characters"
 ---
 
 # Blackboard Systems

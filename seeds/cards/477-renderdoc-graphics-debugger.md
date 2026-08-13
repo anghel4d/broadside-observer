@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 7
+cites:
+  - title: "Handmade Hero / Hot-Reload Engine Practice"
+    url: "https://hero.handmade.network/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "473-handmade-hero-hot-reload-engine-practice"
+  - title: "GPU-Driven Rendering Pipelines"
+    url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "016-gpu-driven-rendering-pipelines"
+  - title: "Tracy Frame Profiler"
+    url: "https://github.com/wolfpld/tracy"
+    year: 2019
+    arxiv: null
+    doi: null
+    card: "468-tracy-frame-profiler"
 ---
 
 # RenderDoc Graphics Debugger

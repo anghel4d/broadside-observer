@@ -18,6 +18,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "hand_topup"
 relevance_score: 9
+cites:
+  - title: "Notions of computation and monads"
+    url: "https://doi.org/10.1016/0890-5401(91)90052-4"
+    year: 1991
+    arxiv: null
+    doi: "10.1016/0890-5401(91)90052-4"
+    card: "036-notions-of-computation-and-monads"
+  - title: "Types and Programming Languages"
+    url: "http://www.cis.upenn.edu/~bcpierce/tapl/"
+    year: 2002
+    arxiv: null
+    doi: null
+    card: "027-types-and-programming-languages"
+  - title: "The Essence of Functional Programming"
+    url: "https://doi.org/10.1145/143165.143169"
+    year: 1992
+    arxiv: null
+    doi: "10.1145/143165.143169"
+    card: "034-the-essence-of-functional-programming"
 ---
 
 # The Definition of Standard ML (Revised)

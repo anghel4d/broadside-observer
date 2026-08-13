@@ -16,6 +16,79 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+cites:
+  - title: "The rendering equation"
+    url: "https://doi.org/10.1145/15886.15902"
+    year: 1986
+    arxiv: null
+    doi: "10.1145/15886.15902"
+    card: "169-the-rendering-equation"
+  - title: "Chapman and Hall"
+    url: "https://doi.org/10.1093/notesj/32.3.377-a"
+    year: 1985
+    arxiv: null
+    doi: "10.1093/notesj/32.3.377-a"
+    card: null
+  - title: "Distributed ray tracing"
+    url: "https://doi.org/10.1145/800031.808590"
+    year: 1984
+    arxiv: null
+    doi: "10.1145/800031.808590"
+    card: null
+  - title: "Monte Carlo Methods"
+    url: "https://doi.org/10.1007/978-94-009-5819-7"
+    year: 1964
+    arxiv: null
+    doi: "10.1007/978-94-009-5819-7"
+    card: null
+  - title: "Distributed ray tracing"
+    url: "https://doi.org/10.1145/964965.808590"
+    year: 1984
+    arxiv: null
+    doi: "10.1145/964965.808590"
+    card: null
+  - title: "Adaptive radiosity textures for bidirectional ray tracing"
+    url: "https://doi.org/10.1145/97879.97895"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/97879.97895"
+    card: null
+  - title: "A global illumination solution for general reflectance distributions"
+    url: "https://doi.org/10.1145/122718.122739"
+    year: 1991
+    arxiv: null
+    doi: "10.1145/122718.122739"
+    card: null
+  - title: "A ray tracing solution for diffuse interreflection"
+    url: "https://doi.org/10.1145/1281500.1281626"
+    year: 2007
+    arxiv: null
+    doi: "10.1145/1281500.1281626"
+    card: null
+  - title: "Particle transport and image synthesis"
+    url: "https://doi.org/10.1145/97879.97886"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/97879.97886"
+    card: null
+  - title: "Combining hierarchical radiosity and discontinuity meshing"
+    url: "https://doi.org/10.1145/166117.166143"
+    year: 1993
+    arxiv: null
+    doi: "10.1145/166117.166143"
+    card: null
+  - title: "An importance-driven radiosity algorithm"
+    url: "https://doi.org/10.1145/133994.134080"
+    year: 1992
+    arxiv: null
+    doi: "10.1145/133994.134080"
+    card: null
+  - title: "A ray tracing solution for diffuse interreflection"
+    url: "https://doi.org/10.1145/378456.378490"
+    year: 1988
+    arxiv: null
+    doi: "10.1145/378456.378490"
+    card: null
 ---
 
 # Bidirectional Estimators for Light Transport

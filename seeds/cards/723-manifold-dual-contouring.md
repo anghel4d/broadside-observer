@@ -19,12 +19,78 @@ pool: graphics
 relevance_score: 7
 lineage: procedural-generation
 cites:
-- title: Dual Contouring of Hermite Data
-  url: https://doi.org/10.1145/566570.566586
-  year: 2002
-  arxiv: null
-  doi: 10.1145/566570.566586
-  card: 491-dual-contouring-of-hermite-data
+  - title: "Dual Contouring of Hermite Data"
+    url: "https://doi.org/10.1145/566570.566586"
+    year: 2002
+    arxiv: null
+    doi: "10.1145/566570.566586"
+    card: "491-dual-contouring-of-hermite-data"
+  - title: "Object modeling by registration of multiple range images"
+    url: "https://doi.org/10.1109/robot.1991.132043"
+    year: 2002
+    arxiv: null
+    doi: "10.1109/robot.1991.132043"
+    card: null
+  - title: "Iterative Methods for Optimization"
+    url: "https://doi.org/10.1137/1.9781611970920"
+    year: 1999
+    arxiv: null
+    doi: "10.1137/1.9781611970920"
+    card: null
+  - title: "Numerical Methods for Least Squares Problems"
+    url: "https://doi.org/10.1137/1.9781611971484"
+    year: 1996
+    arxiv: null
+    doi: "10.1137/1.9781611971484"
+    card: null
+  - title: "Numerical methods for least squares problems"
+    url: "https://doi.org/10.5860/choice.34-1602"
+    year: 1996
+    arxiv: null
+    doi: "10.5860/choice.34-1602"
+    card: null
+  - title: "Object modelling by registration of multiple range images"
+    url: "https://doi.org/10.1016/0262-8856(92)90066-c"
+    year: 1992
+    arxiv: null
+    doi: "10.1016/0262-8856(92)90066-c"
+    card: null
+  - title: "Surface reconstruction from unorganized points"
+    url: "https://doi.org/10.1145/133994.134011"
+    year: 1992
+    arxiv: null
+    doi: "10.1145/133994.134011"
+    card: null
+  - title: "Surface reconstruction from unorganized points"
+    url: "https://doi.org/10.1145/142920.134011"
+    year: 1992
+    arxiv: null
+    doi: "10.1145/142920.134011"
+    card: null
+  - title: "Active Contours"
+    url: "https://doi.org/10.1007/978-1-4471-1555-7"
+    year: 1998
+    arxiv: null
+    doi: "10.1007/978-1-4471-1555-7"
+    card: null
+  - title: "Marching cubes: A high resolution 3D surface construction algorithm"
+    url: "https://doi.org/10.1145/37401.37422"
+    year: 1987
+    arxiv: null
+    doi: "10.1145/37401.37422"
+    card: null
+  - title: "Marching cubes: A high resolution 3D surface construction algorithm"
+    url: "https://doi.org/10.1145/37402.37422"
+    year: 1987
+    arxiv: null
+    doi: "10.1145/37402.37422"
+    card: null
+  - title: "Methods for Non-Linear Least Squares Problems"
+    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.73.3864"
+    year: 1999
+    arxiv: null
+    doi: null
+    card: null
 ---
 
 # Manifold Dual Contouring

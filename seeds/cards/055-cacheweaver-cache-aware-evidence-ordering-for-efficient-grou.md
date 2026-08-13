@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
+    url: "https://arxiv.org/abs/2606.24467"
+    year: 2026
+    arxiv: "2606.24467"
+    doi: null
+    card: "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
+  - title: "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"
+    url: "https://arxiv.org/abs/2308.16369"
+    year: 2023
+    arxiv: "2308.16369"
+    doi: null
+    card: "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
 ---
 
 # CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference

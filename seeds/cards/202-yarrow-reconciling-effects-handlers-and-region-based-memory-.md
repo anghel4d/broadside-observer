@@ -17,6 +17,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 8
+cites:
+  - title: "Typed Memory Management in a Calculus of Capabilities"
+    url: "https://doi.org/10.1145/292540.292564"
+    year: 1999
+    arxiv: null
+    doi: "10.1145/292540.292564"
+    card: "029-typed-memory-management-in-a-calculus-of-capabilities"
+  - title: "The Type and Effect Discipline"
+    url: "https://doi.org/10.1006/inco.1994.1037"
+    year: 1994
+    arxiv: null
+    doi: "10.1006/inco.1994.1037"
+    card: "159-the-type-and-effect-discipline"
+  - title: "Polymorphic Effect Systems"
+    url: "https://doi.org/10.1145/73560.73564"
+    year: 1988
+    arxiv: null
+    doi: "10.1145/73560.73564"
+    card: "167-polymorphic-effect-systems"
 ---
 
 # Yarrow: Reconciling Effects Handlers and Region-Based Memory Management

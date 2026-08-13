@@ -14,6 +14,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 8
+cites:
+  - title: "Programming with Algebraic Effects and Handlers"
+    url: "https://arxiv.org/abs/1203.1539"
+    year: 2015
+    arxiv: "1203.1539"
+    doi: "10.1016/j.jlamp.2014.02.001"
+    card: "123-programming-with-algebraic-effects-and-handlers"
+  - title: "Handlers of Algebraic Effects"
+    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
+    year: 2009
+    arxiv: null
+    doi: "10.1007/978-3-642-00590-9_7"
+    card: "022-handlers-of-algebraic-effects"
+  - title: "Typed Memory Management in a Calculus of Capabilities"
+    url: "https://doi.org/10.1145/292540.292564"
+    year: 1999
+    arxiv: null
+    doi: "10.1145/292540.292564"
+    card: "029-typed-memory-management-in-a-calculus-of-capabilities"
 ---
 
 # On Complete Categorical Semantics for Effect Handlers

@@ -14,6 +14,31 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
+cites:
+  - title: "Deferred voxel shading for real-time global illumination"
+    url: "https://doi.org/10.1109/clei.2016.7833375"
+    year: 2016
+    arxiv: null
+    doi: "10.1109/clei.2016.7833375"
+    card: null
+  - title: "Octree-Based Sparse Voxelization Using the GPU Hardware Rasterizer"
+    url: "https://doi.org/10.1201/b12288-26"
+    year: 2012
+    arxiv: null
+    doi: "10.1201/b12288-26"
+    card: null
+  - title: "Computer graphics: principles and practice (2nd ed.)"
+    url: "http://portal.acm.org/citation.cfm?id=83821"
+    year: 1990
+    arxiv: null
+    doi: null
+    card: null
+  - title: "GPU Gems: Programming Techniques, Tips and Tricks for Real-Time Graphics"
+    url: "http://cds.cern.ch/record/1516482"
+    year: 2004
+    arxiv: null
+    doi: null
+    card: null
 ---
 
 # Real-Time Global Illumination Using OpenGL And Voxel Cone Tracing

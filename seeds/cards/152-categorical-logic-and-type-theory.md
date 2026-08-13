@@ -17,6 +17,43 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
+cites:
+  - title: "Notions of computation and monads"
+    url: "https://doi.org/10.1016/0890-5401(91)90052-4"
+    year: 1991
+    arxiv: null
+    doi: "10.1016/0890-5401(91)90052-4"
+    card: "036-notions-of-computation-and-monads"
+  - title: "Introduction to Higher Order Categorical Logic."
+    url: "https://doi.org/10.2307/2274784"
+    year: 1989
+    arxiv: null
+    doi: "10.2307/2274784"
+    card: "042-introduction-to-higher-order-categorical-logic"
+  - title: "Linear logic"
+    url: "https://doi.org/10.1016/0304-3975(87)90045-4"
+    year: 1987
+    arxiv: null
+    doi: "10.1016/0304-3975(87)90045-4"
+    card: "041-linear-logic"
+  - title: "Category Theory For Computing Science"
+    url: "http://bvbr.bib-bvb.de:8991/F?func=service&amp;doc_library=BVB01&amp;local_base=BVB01&amp;doc_number=020472105&amp;sequence=000002&amp;line_number=0001&amp;func_code=DB_RECORDS&amp;service_type=MEDIA"
+    year: 1995
+    arxiv: null
+    doi: null
+    card: "155-category-theory-for-computing-science"
+  - title: "Adjointness in Foundations"
+    url: "https://doi.org/10.1111/j.1746-8361.1969.tb01194.x"
+    year: 1969
+    arxiv: null
+    doi: "10.1111/j.1746-8361.1969.tb01194.x"
+    card: "177-adjointness-in-foundations"
+  - title: "Locally cartesian closed categories and type theory"
+    url: "https://doi.org/10.1017/s0305004100061284"
+    year: 1984
+    arxiv: null
+    doi: "10.1017/s0305004100061284"
+    card: "171-locally-cartesian-closed-categories-and-type-theory"
 ---
 
 # Categorical Logic and Type Theory

@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 9
+cites:
+  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
+    url: "https://arxiv.org/abs/0903.0340"
+    year: 2011
+    arxiv: "0903.0340"
+    doi: "10.1007/978-3-642-12821-9_2"
+    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
+  - title: "KM3NeT/ORCA: status and perspectives for neutrino oscillation and mass hierarchy measurements"
+    url: "https://arxiv.org/abs/2107.10593"
+    year: 2021
+    arxiv: "2107.10593"
+    doi: "10.22323/1.390.0149"
+    card: "318-km3net-orca-status-and-perspectives-for-neutrino-oscillation"
+  - title: "MGPBD: A Multigrid Accelerated Global XPBD Solver"
+    url: "https://arxiv.org/abs/2505.13390"
+    year: 2025
+    arxiv: "2505.13390"
+    doi: "10.1145/3721238.3730720"
+    card: "274-mgpbd-a-multigrid-accelerated-global-xpbd-solver"
 ---
 
 # Sequential Impulses for Constraint Solving (Box2D)

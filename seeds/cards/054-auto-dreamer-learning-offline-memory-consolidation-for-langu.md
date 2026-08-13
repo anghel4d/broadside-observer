@@ -28,6 +28,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
+    url: "https://arxiv.org/abs/2604.16548"
+    year: 2026
+    arxiv: "2604.16548"
+    doi: null
+    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
+  - title: "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
+    url: "https://arxiv.org/abs/2606.10677"
+    year: 2026
+    arxiv: "2606.10677"
+    doi: null
+    card: "065-infini-memory-maintainable-topic-documents-for-long-term-llm"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
+    doi: null
+    card: "004-memgpt-towards-llms-as-operating-systems"
 ---
 
 # Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents

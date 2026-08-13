@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 9
+cites:
+  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
+    url: "https://arxiv.org/abs/0903.0340"
+    year: 2011
+    arxiv: "0903.0340"
+    doi: "10.1007/978-3-642-12821-9_2"
+    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
+  - title: "Barycode-based GJK Algorithm"
+    url: "https://arxiv.org/abs/2011.09117"
+    year: 2020
+    arxiv: "2011.09117"
+    doi: null
+    card: "325-barycode-based-gjk-algorithm"
+  - title: "MGPBD: A Multigrid Accelerated Global XPBD Solver"
+    url: "https://arxiv.org/abs/2505.13390"
+    year: 2025
+    arxiv: "2505.13390"
+    doi: "10.1145/3721238.3730720"
+    card: "274-mgpbd-a-multigrid-accelerated-global-xpbd-solver"
 ---
 
 # Real-Time Collision Detection

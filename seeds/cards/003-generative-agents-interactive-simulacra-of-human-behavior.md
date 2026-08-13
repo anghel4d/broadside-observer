@@ -20,6 +20,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 10
+cites:
+  - title: "A Survey of LLM $	imes$ DATA"
+    url: "https://arxiv.org/abs/2505.18458"
+    year: 2025
+    arxiv: "2505.18458"
+    doi: null
+    card: "081-a-survey-of-llm-times-data"
+  - title: "Meta-Policy Reflexion: Reusable Reflective Memory and Rule Admissibility for Resource-Efficient LLM Agent"
+    url: "https://arxiv.org/abs/2509.03990"
+    year: 2025
+    arxiv: "2509.03990"
+    doi: null
+    card: "086-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
+  - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
+    url: "https://arxiv.org/abs/2505.07236"
+    year: 2025
+    arxiv: "2505.07236"
+    doi: null
+    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
 ---
 
 # Generative Agents: Interactive Simulacra of Human Behavior

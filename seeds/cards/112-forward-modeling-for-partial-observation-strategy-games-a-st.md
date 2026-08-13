@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 9
+cites:
+  - title: "StarCraft II: A New Challenge for Reinforcement Learning"
+    url: "http://arxiv.org/abs/1708.04782"
+    year: 2017
+    arxiv: "1708.04782"
+    doi: "10.48550/arxiv.1708.04782"
+    card: "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+  - title: "A Bayesian model for opening prediction in RTS games with application to StarCraft"
+    url: "https://doi.org/10.1109/cig.2011.6032018"
+    year: 2011
+    arxiv: null
+    doi: "10.1109/cig.2011.6032018"
+    card: "131-a-bayesian-model-for-opening-prediction-in-rts-games-with-ap"
+  - title: "A Particle Model for State Estimation in Real-Time Strategy Games"
+    url: "https://doi.org/10.1609/aiide.v7i1.12424"
+    year: 2011
+    arxiv: null
+    doi: "10.1609/aiide.v7i1.12424"
+    card: "132-a-particle-model-for-state-estimation-in-real-time-strategy-"
 ---
 
 # Forward Modeling for Partial Observation Strategy Games - A StarCraft Defogger

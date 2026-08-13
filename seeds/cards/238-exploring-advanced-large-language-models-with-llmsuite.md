@@ -19,6 +19,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
+  - title: "DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents"
+    url: "https://arxiv.org/abs/2608.10037"
+    year: 2026
+    arxiv: "2608.10037"
+    doi: null
+    card: "060-docschisel-adaptive-tool-documentation-optimization-framewor"
 ---
 
 # Exploring Advanced Large Language Models with LLMsuite

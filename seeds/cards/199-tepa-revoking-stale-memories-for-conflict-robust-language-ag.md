@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
+  - title: "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
+    url: "https://arxiv.org/abs/2606.10677"
+    year: 2026
+    arxiv: "2606.10677"
+    doi: null
+    card: "065-infini-memory-maintainable-topic-documents-for-long-term-llm"
+  - title: "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory"
+    url: "https://arxiv.org/abs/2606.25161"
+    year: 2026
+    arxiv: "2606.25161"
+    doi: null
+    card: "077-trustmem-learning-trustworthy-memory-consolidation-for-llm-a"
 ---
 
 # TEPA: Revoking Stale Memories for Conflict-Robust Language Agents

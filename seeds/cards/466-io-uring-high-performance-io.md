@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 7
+cites:
+  - title: "Cpp-Taskflow: A General-purpose Parallel and Heterogeneous Task Programming System"
+    url: "https://arxiv.org/abs/1901.02495"
+    year: 2019
+    arxiv: "1901.02495"
+    doi: null
+    card: "396-cpp-taskflow-a-general-purpose-parallel-and-heterogeneous-ta"
+  - title: "HPX: A Task Based Programming Model"
+    url: "https://arxiv.org/abs/1407.1559"
+    year: 2014
+    arxiv: "1407.1559"
+    doi: null
+    card: "475-hpx-a-task-based-programming-model"
+  - title: "StarPU: a unified platform for task scheduling on heterogeneous multicore architectures"
+    url: "https://doi.org/10.1002/cpe.1631"
+    year: 2011
+    arxiv: null
+    doi: "10.1002/cpe.1631"
+    card: "480-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo"
 ---
 
 # io_uring High-Performance IO

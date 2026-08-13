@@ -16,6 +16,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
+cites:
+  - title: "Computational lambda-calculus and monads"
+    url: "https://doi.org/10.1109/lics.1989.39155"
+    year: 1989
+    arxiv: null
+    doi: "10.1109/lics.1989.39155"
+    card: "038-computational-lambda-calculus-and-monads"
+  - title: "Linear Logic"
+    url: "https://doi.org/10.1016/0304-3975(87)90045-4"
+    year: 1987
+    arxiv: null
+    doi: "10.1016/0304-3975(87)90045-4"
+    card: "041-linear-logic"
+  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
+    url: "https://arxiv.org/abs/0903.0340"
+    year: 2011
+    arxiv: "0903.0340"
+    doi: "10.1007/978-3-642-12821-9_2"
+    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Linear Logic, *-Autonomous Categories and Cofree Coalgebras

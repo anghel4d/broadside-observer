@@ -34,6 +34,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "The BrowserGym Ecosystem for Web Agent Research"
+    url: "https://arxiv.org/abs/2412.05467"
+    year: 2024
+    arxiv: "2412.05467"
+    doi: null
+    card: "095-the-browsergym-ecosystem-for-web-agent-research"
+  - title: "Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents"
+    url: "https://arxiv.org/abs/2602.16855"
+    year: 2026
+    arxiv: "2602.16855"
+    doi: null
+    card: "190-mobile-agent-v3-5-multi-platform-fundamental-gui-agents"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments

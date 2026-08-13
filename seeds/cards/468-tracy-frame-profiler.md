@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 7
+cites:
+  - title: "AMD Radeon GPU Profiler"
+    url: "https://gpuopen.com/rgp/"
+    year: 2017
+    arxiv: null
+    doi: null
+    card: "471-amd-radeon-gpu-profiler"
+  - title: "Handmade Hero / Hot-Reload Engine Practice"
+    url: "https://hero.handmade.network/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "473-handmade-hero-hot-reload-engine-practice"
+  - title: "RenderDoc Graphics Debugger"
+    url: "https://renderdoc.org/"
+    year: 2014
+    arxiv: null
+    doi: null
+    card: "477-renderdoc-graphics-debugger"
 ---
 
 # Tracy Frame Profiler

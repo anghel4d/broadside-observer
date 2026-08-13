@@ -16,12 +16,24 @@ reviewed: '2026-08-13'
 pool: hand_topup
 relevance_score: 10
 cites:
-- title: Communicating Sequential Processes
-  url: https://www.cs.ox.ac.uk/publications/books/concurrency/
-  year: 1978
-  arxiv: null
-  doi: null
-  card: 047-communicating-sequential-processes
+  - title: "Communicating Sequential Processes"
+    url: "https://doi.org/10.1145/359576.359585"
+    year: 1978
+    arxiv: null
+    doi: "10.1145/359576.359585"
+    card: "047-communicating-sequential-processes"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
+    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
+  - title: "Communicating Sequential Processes"
+    url: "https://www.cs.ox.ac.uk/publications/books/concurrency/"
+    year: 1978
+    arxiv: null
+    doi: null
+    card: "047-communicating-sequential-processes"
 ---
 
 # A Calculus of Communicating Systems

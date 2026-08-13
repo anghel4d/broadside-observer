@@ -1,5 +1,4 @@
 ---
-
 title: "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis"
 authors:
   - "Alex Nash"
@@ -19,6 +18,18 @@ pool: "game-ai"
 relevance_score: 8
 lineage: pathfinding
 cites:
+  - title: "Online Graph Pruning for Pathfinding on Grid Maps"
+    url: "https://doi.org/10.1609/aaai.v25i1.7994"
+    year: 2011
+    arxiv: null
+    doi: "10.1609/aaai.v25i1.7994"
+    card: "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+  - title: "Field D*: An Interpolation-Based Path Planner"
+    url: "https://doi.org/10.1002/rob.20147"
+    year: 2006
+    arxiv: null
+    doi: "10.1002/rob.20147"
+    card: "717-field-d-an-interpolation-based-path-planner"
   - title: "Theta*: Any-Angle Path Planning on Grids"
     url: "https://ojs.aaai.org/index.php/AIIDE/article/view/18782"
     year: 2007

@@ -18,6 +18,37 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "scratch_curated.json"
 relevance_score: 9
+cites:
+  - title: "Reinforcement Learning"
+    url: "https://doi.org/10.2174/9781681089409121010008"
+    year: 2021
+    arxiv: null
+    doi: "10.2174/9781681089409121010008"
+    card: null
+  - title: "Support Vector Machines"
+    url: "https://doi.org/10.1007/978-3-642-27848-8_415-2"
+    year: 2015
+    arxiv: null
+    doi: "10.1007/978-3-642-27848-8_415-2"
+    card: null
+  - title: "Frequent Pattern Mining"
+    url: "https://doi.org/10.1007/978-3-031-17442-1_9"
+    year: 2023
+    arxiv: null
+    doi: "10.1007/978-3-031-17442-1_9"
+    card: null
+  - title: "Monte-Carlo Tree Search"
+    url: "https://doi.org/10.26481/dis.20100930gc"
+    year: 2010
+    arxiv: null
+    doi: "10.26481/dis.20100930gc"
+    card: null
+  - title: "Unsupervised Learning"
+    url: "https://doi.org/10.1007/978-3-662-69995-9_5"
+    year: 2024
+    arxiv: null
+    doi: "10.1007/978-3-662-69995-9_5"
+    card: null
 ---
 
 # Artificial Intelligence and Games

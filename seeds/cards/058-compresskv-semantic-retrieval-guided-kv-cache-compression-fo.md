@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    url: "https://arxiv.org/abs/2606.19667"
+    year: 2026
+    arxiv: "2606.19667"
+    doi: null
+    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
+  - title: "A Survey of LLM $	imes$ DATA"
+    url: "https://arxiv.org/abs/2505.18458"
+    year: 2025
+    arxiv: "2505.18458"
+    doi: null
+    card: "081-a-survey-of-llm-times-data"
+  - title: "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective"
+    url: "https://arxiv.org/abs/2502.03805"
+    year: 2025
+    arxiv: "2502.03805"
+    doi: null
+    card: "083-criticalkv-optimizing-kv-cache-eviction-from-an-output-pertu"
 ---
 
 # CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference

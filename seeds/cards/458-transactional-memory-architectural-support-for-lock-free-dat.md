@@ -16,6 +16,79 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 8
+cites:
+  - title: "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs"
+    url: "https://doi.org/10.1109/tc.1979.1675439"
+    year: 1979
+    arxiv: null
+    doi: "10.1109/tc.1979.1675439"
+    card: "722-how-to-make-a-multiprocessor-computer-that-correctly-execute"
+  - title: "Algorithms for scalable synchronization on shared-memory multiprocessors"
+    url: "https://doi.org/10.1145/103727.103729"
+    year: 1991
+    arxiv: null
+    doi: "10.1145/103727.103729"
+    card: null
+  - title: "Improving direct-mapped cache performance by the addition of a small fully-associative cache prefetch buffers"
+    url: "https://doi.org/10.1145/285930.285998"
+    year: 1998
+    arxiv: null
+    doi: "10.1145/285930.285998"
+    card: null
+  - title: "Memory consistency and event ordering in scalable shared-memory multiprocessors"
+    url: "https://doi.org/10.1145/285930.285997"
+    year: 1998
+    arxiv: null
+    doi: "10.1145/285930.285997"
+    card: null
+  - title: "Ethernet"
+    url: "https://doi.org/10.1145/357980.358015"
+    year: 1983
+    arxiv: null
+    doi: "10.1145/357980.358015"
+    card: null
+  - title: "Notes on data base operating systems"
+    url: "https://doi.org/10.1007/3-540-08755-9_9"
+    year: 1978
+    arxiv: null
+    doi: "10.1007/3-540-08755-9_9"
+    card: null
+  - title: "The performance of spin lock alternatives for shared-memory multiprocessors"
+    url: "https://doi.org/10.1109/71.80120"
+    year: 1990
+    arxiv: null
+    doi: "10.1109/71.80120"
+    card: null
+  - title: "Alpha architecture reference manual"
+    url: "https://doi.org/10.1016/0378-4754(92)90080-z"
+    year: 1992
+    arxiv: null
+    doi: "10.1016/0378-4754(92)90080-z"
+    card: null
+  - title: "Memory access buffering in multiprocessors"
+    url: "https://doi.org/10.1145/17356.17406"
+    year: 1986
+    arxiv: null
+    doi: "10.1145/17356.17406"
+    card: null
+  - title: "Using cache memory to reduce processor-memory traffic"
+    url: "https://doi.org/10.1145/285930.285984"
+    year: 1998
+    arxiv: null
+    doi: "10.1145/285930.285984"
+    card: null
+  - title: "LimitLESS directories"
+    url: "https://doi.org/10.1145/106972.106995"
+    year: 1991
+    arxiv: null
+    doi: "10.1145/106972.106995"
+    card: null
+  - title: "PROTEUS: a high-performance parallel-architecture simulator"
+    url: "https://doi.org/10.1145/133057.133146"
+    year: 1992
+    arxiv: null
+    doi: "10.1145/133057.133146"
+    card: null
 ---
 
 # Transactional Memory: Architectural Support for Lock-Free Data Structures

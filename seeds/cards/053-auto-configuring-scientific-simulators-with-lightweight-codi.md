@@ -21,6 +21,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance"
+    url: "https://arxiv.org/abs/2603.13404"
+    year: 2026
+    arxiv: "2603.13404"
+    doi: null
+    card: "076-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
+  - title: "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration"
+    url: "https://arxiv.org/abs/2603.22862"
+    year: 2026
+    arxiv: "2603.22862"
+    doi: null
+    card: "078-the-evolution-of-tool-use-in-llm-agents-from-single-tool-cal"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
+    doi: null
+    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters

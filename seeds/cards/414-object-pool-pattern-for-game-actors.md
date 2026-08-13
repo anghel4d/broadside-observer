@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 8
+cites:
+  - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
+    url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+  - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
+    url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
+    year: 2001
+    arxiv: null
+    doi: null
+    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
+    url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"
+    year: 1994
+    arxiv: null
+    doi: null
+    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
 ---
 
 # Object Pool Pattern for Game Actors

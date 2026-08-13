@@ -15,12 +15,18 @@ reviewed: '2026-08-13'
 pool: graphics
 relevance_score: 7
 cites:
-- title: 'The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading'
-  url: https://jcgt.org/published/0002/02/04/
-  year: 2013
-  arxiv: null
-  doi: null
-  card: 347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-
+  - title: "The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading"
+    url: "https://jcgt.org/published/0002/02/04/"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+  - title: "Weighted Blended Order-Independent Transparency"
+    url: "https://jcgt.org/published/0002/02/09/"
+    year: 2013
+    arxiv: null
+    doi: null
+    card: "417-weighted-blended-order-independent-transparency"
 ---
 
 # Depth Peeling Order-Independent Transparency

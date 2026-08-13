@@ -20,6 +20,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
+    url: "https://arxiv.org/abs/2607.12267"
+    year: 2026
+    arxiv: "2607.12267"
+    doi: null
+    card: "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
+  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    url: "https://arxiv.org/abs/2605.20616"
+    year: 2026
+    arxiv: "2605.20616"
+    doi: null
+    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
+    doi: null
+    card: "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Jailbreaks on Vision Language Model via Multimodal Reasoning

@@ -14,6 +14,37 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 9
+cites:
+  - title: "First measurement of neutrino oscillation parameters using neutrinos and antineutrinos by NOvA"
+    url: "https://doi.org/10.1103/physrevlett.123.151803"
+    year: 2019
+    arxiv: null
+    doi: "10.1103/physrevlett.123.151803"
+    card: null
+  - title: "Atmospheric neutrino oscillation analysis with external constraints in Super-Kamiokande I-IV"
+    url: "https://doi.org/10.1103/physrevd.97.072001"
+    year: 2018
+    arxiv: null
+    doi: "10.1103/physrevd.97.072001"
+    card: null
+  - title: "Measurement of Atmospheric Neutrino Oscillations at 6–56 GeV with IceCube DeepCore"
+    url: "https://doi.org/10.1103/physrevlett.120.071801"
+    year: 2018
+    arxiv: null
+    doi: "10.1103/physrevlett.120.071801"
+    card: null
+  - title: "Constraint on the matter-antimatter symmetry-violating phase in neutrino oscillations"
+    url: "https://eprints.lancs.ac.uk/id/eprint/142511/1/SubmittedManuscript.pdf"
+    year: 2020
+    arxiv: null
+    doi: null
+    card: null
+  - title: "Recent Results From Minos And Minos+"
+    url: "https://zenodo.org/record/1286760"
+    year: 2018
+    arxiv: null
+    doi: "10.5281/zenodo.1286760"
+    card: null
 ---
 
 # KM3NeT/ORCA: status and perspectives for neutrino oscillation and mass hierarchy measurements

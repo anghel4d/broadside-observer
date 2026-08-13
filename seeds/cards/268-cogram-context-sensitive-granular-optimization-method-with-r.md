@@ -14,6 +14,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 9
+cites:
+  - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
+    url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
+    year: 2017
+    arxiv: null
+    doi: null
+    card: "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
+  - title: "Snapshot Interpolation"
+    url: "https://gafferongames.com/post/snapshot_interpolation/"
+    year: 2015
+    arxiv: null
+    doi: null
+    card: "341-snapshot-interpolation"
+  - title: "GGPO Rollback Networking"
+    url: "https://github.com/pond3r/ggpo"
+    year: 2006
+    arxiv: null
+    doi: null
+    card: "254-ggpo-rollback-networking"
 ---
 
 # CoGraM: Context-sensitive granular optimization method with rollback for robust model fusion

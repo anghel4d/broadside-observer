@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
+  - title: "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
+    url: "https://arxiv.org/abs/2605.09100"
+    year: 2026
+    arxiv: "2605.09100"
+    doi: null
+    card: "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
+  - title: "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch"
+    url: "https://arxiv.org/abs/2606.26607"
+    year: 2026
+    arxiv: "2606.26607"
+    doi: null
+    card: "070-moebius-serving-mixture-of-expert-models-with-seamless-runti"
 ---
 
 # In-context KV-Cache Eviction for LLMs via Attention-Gate

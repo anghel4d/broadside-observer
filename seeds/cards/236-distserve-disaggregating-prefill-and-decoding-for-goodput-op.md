@@ -23,6 +23,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
+cites:
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
+  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    url: "https://arxiv.org/abs/2606.19667"
+    year: 2026
+    arxiv: "2606.19667"
+    doi: null
+    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
+  - title: "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU"
+    url: "https://arxiv.org/abs/2604.15464"
+    year: 2026
+    arxiv: "2604.15464"
+    doi: null
+    card: "071-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
 ---
 
 # DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving

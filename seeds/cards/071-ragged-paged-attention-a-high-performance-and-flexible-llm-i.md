@@ -22,6 +22,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    url: "https://arxiv.org/abs/2606.19667"
+    year: 2026
+    arxiv: "2606.19667"
+    doi: null
+    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
+  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
+    url: "https://arxiv.org/abs/2309.06180"
+    year: 2023
+    arxiv: "2309.06180"
+    doi: null
+    card: "002-efficient-memory-management-for-large-language-model-serving"
+  - title: "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"
+    url: "https://arxiv.org/abs/2308.16369"
+    year: 2023
+    arxiv: "2308.16369"
+    doi: null
+    card: "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
 ---
 
 # Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU

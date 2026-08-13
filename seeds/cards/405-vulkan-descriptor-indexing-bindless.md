@@ -15,6 +15,25 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
+cites:
+  - title: "Mesh Shaders in the Vulkan Ecosystem"
+    url: "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/"
+    year: 2018
+    arxiv: null
+    doi: null
+    card: "113-mesh-shaders-in-the-vulkan-ecosystem"
+  - title: "Vulkan Meshlet CAD Scene Sample"
+    url: "https://github.com/nvpro-samples/gl_vk_meshlet_cadscene"
+    year: 2018
+    arxiv: null
+    doi: null
+    card: "720-vulkan-meshlet-cad-scene-sample"
+  - title: "Vulkan Memory Allocator (VMA)"
+    url: "https://gpuopen.com/vulkan-memory-allocator/"
+    year: 2017
+    arxiv: null
+    doi: null
+    card: "407-vulkan-memory-allocator-vma"
 ---
 
 # Vulkan Descriptor Indexing (Bindless)

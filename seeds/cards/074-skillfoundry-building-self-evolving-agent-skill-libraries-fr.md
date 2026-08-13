@@ -25,6 +25,25 @@ seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
+cites:
+  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
+    url: "https://arxiv.org/abs/2607.28591"
+    year: 2026
+    arxiv: "2607.28591"
+    doi: null
+    card: "056-change2task-from-repository-changes-to-executable-coding-age"
+  - title: "LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation"
+    url: "https://arxiv.org/abs/2608.00267"
+    year: 2026
+    arxiv: "2608.00267"
+    doi: null
+    card: "067-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
+  - title: "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory"
+    url: "https://arxiv.org/abs/2605.19952"
+    year: 2026
+    arxiv: "2605.19952"
+    doi: null
+    card: "073-rethinking-how-to-remember-beyond-atomic-facts-in-lifelong-l"
 ---
 
 # SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources
