@@ -1,6 +1,6 @@
 [
   {
-    "stem": "013-procedural-content-generation-via-machine-learning-pcgml",
+    "stem": "012-procedural-content-generation-via-machine-learning-pcgml",
     "title": "Procedural Content Generation via Machine Learning (PCGML)",
     "year": 2018,
     "topics": [
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "stem": "016-gpu-driven-rendering-pipelines",
+    "stem": "015-gpu-driven-rendering-pipelines",
     "title": "GPU-Driven Rendering Pipelines",
     "year": 2015,
     "topics": [
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "stem": "017-deterministic-lockstep",
+    "stem": "016-deterministic-lockstep",
     "title": "Deterministic Lockstep",
     "year": 2014,
     "topics": [
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "stem": "020-search-based-procedural-content-generation-a-taxonomy-and-su",
+    "stem": "019-search-based-procedural-content-generation-a-taxonomy-and-su",
     "title": "Search-Based Procedural Content Generation: A Taxonomy and Survey",
     "year": 2011,
     "topics": [
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "stem": "022-handlers-of-algebraic-effects",
+    "stem": "021-handlers-of-algebraic-effects",
     "title": "Handlers of Algebraic Effects",
     "year": 2009,
     "topics": [
@@ -125,7 +125,7 @@
     ]
   },
   {
-    "stem": "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object",
+    "stem": "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object",
     "title": "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects",
     "year": 2004,
     "topics": [
@@ -148,7 +148,7 @@
     ]
   },
   {
-    "stem": "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires",
+    "stem": "027-1500-archers-on-a-28-8-network-programming-in-age-of-empires",
     "title": "1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond",
     "year": 2001,
     "topics": [
@@ -172,7 +172,7 @@
     ]
   },
   {
-    "stem": "036-notions-of-computation-and-monads",
+    "stem": "035-notions-of-computation-and-monads",
     "title": "Notions of Computation and Monads",
     "year": 1991,
     "topics": [
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "stem": "037-wait-free-synchronization",
+    "stem": "036-wait-free-synchronization",
     "title": "Wait-Free Synchronization",
     "year": 1991,
     "topics": [
@@ -219,7 +219,7 @@
     ]
   },
   {
-    "stem": "049-functorial-semantics-of-algebraic-theories",
+    "stem": "048-functorial-semantics-of-algebraic-theories",
     "title": "Functorial Semantics of Algebraic Theories",
     "year": 1963,
     "topics": [
@@ -243,7 +243,7 @@
     ]
   },
   {
-    "stem": "106-nanite-a-deep-dive",
+    "stem": "090-nanite-a-deep-dive",
     "title": "Nanite: A Deep Dive",
     "year": 2021,
     "topics": [
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "stem": "118-procedural-content-generation-in-games",
+    "stem": "102-procedural-content-generation-in-games",
     "title": "Procedural Content Generation in Games",
     "year": 2016,
     "topics": [
@@ -290,7 +290,7 @@
     ]
   },
   {
-    "stem": "119-wave-function-collapse",
+    "stem": "103-wave-function-collapse",
     "title": "Wave Function Collapse",
     "year": 2016,
     "topics": [
@@ -313,7 +313,7 @@
     ]
   },
   {
-    "stem": "123-programming-with-algebraic-effects-and-handlers",
+    "stem": "107-programming-with-algebraic-effects-and-handlers",
     "title": "Programming with Algebraic Effects and Handlers",
     "year": 2015,
     "topics": [
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "stem": "128-handling-algebraic-effects",
+    "stem": "112-handling-algebraic-effects",
     "title": "Handling Algebraic Effects",
     "year": 2013,
     "topics": [
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "stem": "136-experience-driven-procedural-content-generation",
+    "stem": "119-experience-driven-procedural-content-generation",
     "title": "Experience-Driven Procedural Content Generation",
     "year": 2011,
     "topics": [
@@ -385,7 +385,7 @@
     ]
   },
   {
-    "stem": "141-the-art-of-multiprocessor-programming",
+    "stem": "124-the-art-of-multiprocessor-programming",
     "title": "The Art of Multiprocessor Programming",
     "year": 2008,
     "topics": [
@@ -408,7 +408,7 @@
     ]
   },
   {
-    "stem": "147-algebraic-operations-and-generic-effects",
+    "stem": "130-algebraic-operations-and-generic-effects",
     "title": "Algebraic Operations and Generic Effects",
     "year": 2003,
     "topics": [
@@ -433,7 +433,7 @@
     ]
   },
   {
-    "stem": "149-notions-of-computation-determine-monads",
+    "stem": "132-notions-of-computation-determine-monads",
     "title": "Notions of Computation Determine Monads",
     "year": 2002,
     "topics": [
@@ -459,7 +459,7 @@
     ]
   },
   {
-    "stem": "156-monad-transformers-and-modular-interpreters",
+    "stem": "139-monad-transformers-and-modular-interpreters",
     "title": "Monad Transformers and Modular Interpreters",
     "year": 1995,
     "topics": [
@@ -486,7 +486,7 @@
     ]
   },
   {
-    "stem": "166-linear-logic-autonomous-categories-and-cofree-coalgebras",
+    "stem": "149-linear-logic-autonomous-categories-and-cofree-coalgebras",
     "title": "Linear Logic, *-Autonomous Categories and Cofree Coalgebras",
     "year": 1989,
     "topics": [
@@ -510,7 +510,7 @@
     ]
   },
   {
-    "stem": "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu",
+    "stem": "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu",
     "title": "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs",
     "year": 1978,
     "topics": [
@@ -533,7 +533,7 @@
     ]
   },
   {
-    "stem": "192-multiset-semantics-in-sparql-relational-algebra-and-datalog",
+    "stem": "167-multiset-semantics-in-sparql-relational-algebra-and-datalog",
     "title": "Multiset semantics in SPARQL, Relational Algebra and Datalog",
     "year": 2026,
     "topics": [
@@ -558,7 +558,7 @@
     ]
   },
   {
-    "stem": "228-abstracting-effect-systems-for-algebraic-effect-handlers",
+    "stem": "181-abstracting-effect-systems-for-algebraic-effect-handlers",
     "title": "Abstracting Effect Systems for Algebraic Effect Handlers",
     "year": 2024,
     "topics": [
@@ -583,7 +583,7 @@
     ]
   },
   {
-    "stem": "253-online-graph-pruning-for-pathfinding-on-grid-maps",
+    "stem": "196-online-graph-pruning-for-pathfinding-on-grid-maps",
     "title": "Online Graph Pruning for Pathfinding on Grid Maps",
     "year": 2011,
     "topics": [
@@ -607,7 +607,7 @@
     ]
   },
   {
-    "stem": "254-ggpo-rollback-networking",
+    "stem": "197-ggpo-rollback-networking",
     "title": "GGPO Rollback Networking",
     "year": 2006,
     "topics": [
@@ -630,7 +630,7 @@
     ]
   },
   {
-    "stem": "258-steering-behaviors-for-autonomous-characters",
+    "stem": "201-steering-behaviors-for-autonomous-characters",
     "title": "Steering Behaviors For Autonomous Characters",
     "year": 1999,
     "topics": [
@@ -653,7 +653,7 @@
     ]
   },
   {
-    "stem": "260-linearizability-a-correctness-condition-for-concurrent-objec",
+    "stem": "203-linearizability-a-correctness-condition-for-concurrent-objec",
     "title": "Linearizability: A Correctness Condition for Concurrent Objects",
     "year": 1990,
     "topics": [
@@ -677,7 +677,7 @@
     ]
   },
   {
-    "stem": "261-flocks-herds-and-schools-a-distributed-behavioral-model",
+    "stem": "204-flocks-herds-and-schools-a-distributed-behavioral-model",
     "title": "Flocks, Herds, and Schools: A Distributed Behavioral Model",
     "year": 1987,
     "topics": [
@@ -700,7 +700,7 @@
     ]
   },
   {
-    "stem": "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co",
+    "stem": "205-a-formal-basis-for-the-heuristic-determination-of-minimum-co",
     "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
     "year": 1968,
     "topics": [
@@ -725,7 +725,7 @@
     ]
   },
   {
-    "stem": "264-space-efficient-lock-free-linear-probing-hash-table",
+    "stem": "207-space-efficient-lock-free-linear-probing-hash-table",
     "title": "Space-Efficient Lock-Free Linear-Probing Hash Table",
     "year": 2026,
     "topics": [
@@ -771,7 +771,7 @@
     ]
   },
   {
-    "stem": "271-jump-point-search-pathfinding-in-4-connected-grids",
+    "stem": "212-jump-point-search-pathfinding-in-4-connected-grids",
     "title": "Jump Point Search Pathfinding in 4-connected Grids",
     "year": 2025,
     "topics": [
@@ -793,7 +793,7 @@
     ]
   },
   {
-    "stem": "273-log-io-unified-rollback-recovery-and-data-lineage-capture-fo",
+    "stem": "214-log-io-unified-rollback-recovery-and-data-lineage-capture-fo",
     "title": "LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines",
     "year": 2025,
     "topics": [
@@ -818,7 +818,7 @@
     ]
   },
   {
-    "stem": "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c",
+    "stem": "225-topology-guided-orca-smooth-multi-agent-motion-planning-in-c",
     "title": "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments",
     "year": 2024,
     "topics": [
@@ -844,7 +844,7 @@
     ]
   },
   {
-    "stem": "288-towards-practical-meshlet-compression",
+    "stem": "226-towards-practical-meshlet-compression",
     "title": "Towards Practical Meshlet Compression",
     "year": 2024,
     "topics": [
@@ -872,7 +872,7 @@
     ]
   },
   {
-    "stem": "290-an-asynchronous-scheme-for-rollback-recovery-in-message-pass",
+    "stem": "228-an-asynchronous-scheme-for-rollback-recovery-in-message-pass",
     "title": "An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurrent Programming Languages",
     "year": 2023,
     "topics": [
@@ -894,7 +894,7 @@
     ]
   },
   {
-    "stem": "298-reducing-redundant-work-in-jump-point-search",
+    "stem": "234-reducing-redundant-work-in-jump-point-search",
     "title": "Reducing Redundant Work in Jump Point Search",
     "year": 2023,
     "topics": [
@@ -918,7 +918,7 @@
     ]
   },
   {
-    "stem": "299-releasing-memory-with-optimistic-access-a-hybrid-approach-to",
+    "stem": "235-releasing-memory-with-optimistic-access-a-hybrid-approach-to",
     "title": "Releasing Memory with Optimistic Access: A Hybrid Approach to Memory Reclamation and Allocation in Lock-Free Programs",
     "year": 2023,
     "topics": [
@@ -972,7 +972,7 @@
     ]
   },
   {
-    "stem": "304-an-efficient-wait-free-resizable-hash-table",
+    "stem": "238-an-efficient-wait-free-resizable-hash-table",
     "title": "An Efficient Wait-free Resizable Hash Table",
     "year": 2022,
     "topics": [
@@ -1055,7 +1055,7 @@
     ]
   },
   {
-    "stem": "308-eemarq-efficient-lock-free-range-queries-with-memory-reclama",
+    "stem": "240-eemarq-efficient-lock-free-range-queries-with-memory-reclama",
     "title": "EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation",
     "year": 2022,
     "topics": [
@@ -1131,7 +1131,7 @@
     ]
   },
   {
-    "stem": "315-crystalline-fast-and-memory-efficient-wait-free-reclamation",
+    "stem": "245-crystalline-fast-and-memory-efficient-wait-free-reclamation",
     "title": "Crystalline: Fast and Memory Efficient Wait-Free Reclamation",
     "year": 2021,
     "topics": [
@@ -1178,7 +1178,7 @@
     ]
   },
   {
-    "stem": "329-meshlet-priors-for-3d-mesh-reconstruction",
+    "stem": "255-meshlet-priors-for-3d-mesh-reconstruction",
     "title": "Meshlet Priors for 3D Mesh Reconstruction",
     "year": 2020,
     "topics": [
@@ -1203,7 +1203,7 @@
     ]
   },
   {
-    "stem": "332-technical-report-benefits-of-stabilization-versus-rollback-i",
+    "stem": "258-technical-report-benefits-of-stabilization-versus-rollback-i",
     "title": "Technical Report: Benefits of Stabilization versus Rollback in Self-Stabilizing Graph-Based Applications on Eventually Consistent Key-Value Stores",
     "year": 2020,
     "topics": [
@@ -1226,7 +1226,7 @@
     ]
   },
   {
-    "stem": "333-universal-wait-free-memory-reclamation",
+    "stem": "259-universal-wait-free-memory-reclamation",
     "title": "Universal Wait-Free Memory Reclamation",
     "year": 2020,
     "topics": [
@@ -1250,7 +1250,7 @@
     ]
   },
   {
-    "stem": "335-introduction-to-turing-mesh-shaders",
+    "stem": "261-introduction-to-turing-mesh-shaders",
     "title": "Introduction to Turing Mesh Shaders",
     "year": 2018,
     "topics": [
@@ -1273,7 +1273,7 @@
     ]
   },
   {
-    "stem": "336-networking-the-boids-is-more-robust-against-adversarial-lear",
+    "stem": "262-networking-the-boids-is-more-robust-against-adversarial-lear",
     "title": "Networking the Boids is More Robust Against Adversarial Learning",
     "year": 2018,
     "topics": [
@@ -1297,7 +1297,7 @@
     ]
   },
   {
-    "stem": "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored",
+    "stem": "263-overwatch-gameplay-architecture-and-netcode-ecs-flavored",
     "title": "Overwatch Gameplay Architecture and Netcode (ECS-flavored)",
     "year": 2017,
     "topics": [
@@ -1321,7 +1321,7 @@
     ]
   },
   {
-    "stem": "341-snapshot-interpolation",
+    "stem": "265-snapshot-interpolation",
     "title": "Snapshot Interpolation",
     "year": 2015,
     "topics": [
@@ -1344,7 +1344,7 @@
     ]
   },
   {
-    "stem": "342-improving-jump-point-search",
+    "stem": "266-improving-jump-point-search",
     "title": "Improving Jump Point Search",
     "year": 2014,
     "topics": [
@@ -1368,7 +1368,7 @@
     ]
   },
   {
-    "stem": "345-client-side-prediction-server-reconciliation",
+    "stem": "269-client-side-prediction-server-reconciliation",
     "title": "Client-Side Prediction & Server Reconciliation",
     "year": 2013,
     "topics": [
@@ -1391,7 +1391,7 @@
     ]
   },
   {
-    "stem": "349-reciprocal-n-body-collision-avoidance-orca",
+    "stem": "273-reciprocal-n-body-collision-avoidance-orca",
     "title": "Reciprocal n-body Collision Avoidance (ORCA)",
     "year": 2011,
     "topics": [
@@ -1417,7 +1417,7 @@
     ]
   },
   {
-    "stem": "354-numerical-study-on-the-emergence-of-anisotropy-in-artificial",
+    "stem": "278-numerical-study-on-the-emergence-of-anisotropy-in-artificial",
     "title": "Numerical study on the emergence of anisotropy in artificial flocks: A BOIDS modeling and simulations of empirical findings",
     "year": 2010,
     "topics": [
@@ -1440,7 +1440,7 @@
     ]
   },
   {
-    "stem": "355-understanding-goal-based-vector-field-flow-field-pathfinding",
+    "stem": "279-understanding-goal-based-vector-field-flow-field-pathfinding",
     "title": "Understanding Goal-Based Vector Field / Flow Field Pathfinding",
     "year": 2010,
     "topics": [
@@ -1464,7 +1464,7 @@
     ]
   },
   {
-    "stem": "357-recast-navigation-detour",
+    "stem": "281-recast-navigation-detour",
     "title": "Recast Navigation / Detour",
     "year": 2009,
     "topics": [
@@ -1486,7 +1486,7 @@
     ]
   },
   {
-    "stem": "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi",
+    "stem": "282-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi",
     "title": "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation",
     "year": 2008,
     "topics": [
@@ -1511,7 +1511,7 @@
     ]
   },
   {
-    "stem": "367-dynamic-circular-work-stealing-deque",
+    "stem": "291-dynamic-circular-work-stealing-deque",
     "title": "Dynamic Circular Work-Stealing Deque",
     "year": 2005,
     "topics": [
@@ -1534,7 +1534,7 @@
     ]
   },
   {
-    "stem": "369-epoch-based-reclamation-practical-lock-freedom",
+    "stem": "293-epoch-based-reclamation-practical-lock-freedom",
     "title": "Epoch-Based Reclamation / Practical lock-freedom",
     "year": 2004,
     "topics": [
@@ -1558,7 +1558,7 @@
     ]
   },
   {
-    "stem": "370-near-optimal-hierarchical-pathfinding-hpa",
+    "stem": "294-near-optimal-hierarchical-pathfinding-hpa",
     "title": "Near Optimal Hierarchical Pathfinding (HPA*)",
     "year": 2004,
     "topics": [
@@ -1583,7 +1583,7 @@
     ]
   },
   {
-    "stem": "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-",
+    "stem": "297-safe-memory-reclamation-for-dynamic-lock-free-objects-using-",
     "title": "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes",
     "year": 2002,
     "topics": [
@@ -1607,7 +1607,7 @@
     ]
   },
   {
-    "stem": "376-source-multiplayer-networking",
+    "stem": "300-source-multiplayer-networking",
     "title": "Source Multiplayer Networking",
     "year": 2001,
     "topics": [
@@ -1630,7 +1630,7 @@
     ]
   },
   {
-    "stem": "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh",
+    "stem": "302-simplified-3d-movement-and-pathfinding-using-navigation-mesh",
     "title": "Simplified 3D Movement and Pathfinding Using Navigation Meshes",
     "year": 2000,
     "topics": [
@@ -1653,7 +1653,7 @@
     ]
   },
   {
-    "stem": "380-read-copy-update",
+    "stem": "304-read-copy-update",
     "title": "Read-Copy Update",
     "year": 1998,
     "topics": [
@@ -1678,7 +1678,7 @@
     ]
   },
   {
-    "stem": "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra",
+    "stem": "310-a-note-on-two-problems-in-connexion-with-graphs-dijkstra",
     "title": "A Note on Two Problems in Connexion with Graphs (Dijkstra)",
     "year": 1959,
     "topics": [
@@ -1700,7 +1700,7 @@
     ]
   },
   {
-    "stem": "402-interval-based-memory-reclamation",
+    "stem": "323-interval-based-memory-reclamation",
     "title": "Interval-Based Memory Reclamation",
     "year": 2018,
     "topics": [
@@ -1727,7 +1727,7 @@
     ]
   },
   {
-    "stem": "409-debra-distributed-epoch-based-reclamation",
+    "stem": "330-debra-distributed-epoch-based-reclamation",
     "title": "DEBRA: Distributed Epoch-Based Reclamation",
     "year": 2015,
     "topics": [
@@ -1750,7 +1750,7 @@
     ]
   },
   {
-    "stem": "410-state-synchronization",
+    "stem": "331-state-synchronization",
     "title": "State Synchronization",
     "year": 2015,
     "topics": [
@@ -1772,7 +1772,7 @@
     ]
   },
   {
-    "stem": "411-subgoal-graphs-for-optimal-pathfinding",
+    "stem": "332-subgoal-graphs-for-optimal-pathfinding",
     "title": "Subgoal Graphs for Optimal Pathfinding",
     "year": 2015,
     "topics": [
@@ -1795,7 +1795,7 @@
     ]
   },
   {
-    "stem": "429-lazy-theta-any-angle-path-planning-and-path-length-analysis",
+    "stem": "349-lazy-theta-any-angle-path-planning-and-path-length-analysis",
     "title": "Lazy Theta*: Any-Angle Path Planning and Path Length Analysis",
     "year": 2010,
     "topics": [
@@ -1819,7 +1819,7 @@
     ]
   },
   {
-    "stem": "435-theta-any-angle-path-planning-on-grids",
+    "stem": "355-theta-any-angle-path-planning-on-grids",
     "title": "Theta*: Any-Angle Path Planning on Grids",
     "year": 2007,
     "topics": [
@@ -1842,7 +1842,7 @@
     ]
   },
   {
-    "stem": "437-continuum-crowds",
+    "stem": "357-continuum-crowds",
     "title": "Continuum Crowds",
     "year": 2006,
     "topics": [
@@ -1867,7 +1867,7 @@
     ]
   },
   {
-    "stem": "444-networked-physics-2004",
+    "stem": "363-networked-physics-2004",
     "title": "Networked Physics (2004)",
     "year": 2004,
     "topics": [
@@ -1890,7 +1890,7 @@
     ]
   },
   {
-    "stem": "452-unreal-engine-networking-architecture",
+    "stem": "371-unreal-engine-networking-architecture",
     "title": "Unreal Engine Networking Architecture",
     "year": 1999,
     "topics": [
@@ -1912,7 +1912,7 @@
     ]
   },
   {
-    "stem": "470-abseil-swiss-tables",
+    "stem": "387-abseil-swiss-tables",
     "title": "Abseil Swiss Tables",
     "year": 2017,
     "topics": [
@@ -1935,7 +1935,7 @@
     ]
   },
   {
-    "stem": "481-approximating-dynamic-global-illumination-in-image-space-ssd",
+    "stem": "398-approximating-dynamic-global-illumination-in-image-space-ssd",
     "title": "Approximating Dynamic Global Illumination in Image Space (SSDO)",
     "year": 2009,
     "topics": [
@@ -1960,7 +1960,7 @@
     ]
   },
   {
-    "stem": "482-potential-fields-for-unit-behavior",
+    "stem": "399-potential-fields-for-unit-behavior",
     "title": "Potential Fields for Unit Behavior",
     "year": 2009,
     "topics": [
@@ -1982,7 +1982,7 @@
     ]
   },
   {
-    "stem": "483-hopscotch-hashing",
+    "stem": "400-hopscotch-hashing",
     "title": "Hopscotch Hashing",
     "year": 2008,
     "topics": [
@@ -2007,7 +2007,7 @@
     ]
   },
   {
-    "stem": "484-horizon-based-ambient-occlusion",
+    "stem": "401-horizon-based-ambient-occlusion",
     "title": "Horizon-Based Ambient Occlusion",
     "year": 2008,
     "topics": [
@@ -2031,7 +2031,7 @@
     ]
   },
   {
-    "stem": "485-imperfect-shadow-maps-for-efficient-computation-of-indirect-",
+    "stem": "402-imperfect-shadow-maps-for-efficient-computation-of-indirect-",
     "title": "Imperfect Shadow Maps for Efficient Computation of Indirect Illumination",
     "year": 2008,
     "topics": [
@@ -2054,7 +2054,7 @@
     ]
   },
   {
-    "stem": "487-sparse-virtual-textures-megatexture",
+    "stem": "404-sparse-virtual-textures-megatexture",
     "title": "Sparse Virtual Textures / MegaTexture",
     "year": 2007,
     "topics": [
@@ -2077,7 +2077,7 @@
     ]
   },
   {
-    "stem": "488-diehard-probabilistic-memory-safety-for-unsafe-languages",
+    "stem": "405-diehard-probabilistic-memory-safety-for-unsafe-languages",
     "title": "DieHard: Probabilistic Memory Safety for Unsafe Languages",
     "year": 2006,
     "topics": [
@@ -2101,7 +2101,7 @@
     ]
   },
   {
-    "stem": "489-memory-ordering-in-modern-microprocessors",
+    "stem": "406-memory-ordering-in-modern-microprocessors",
     "title": "Memory Ordering in Modern Microprocessors",
     "year": 2005,
     "topics": [
@@ -2123,7 +2123,7 @@
     ]
   },
   {
-    "stem": "490-particle-based-fluid-simulation-for-interactive-applications",
+    "stem": "407-particle-based-fluid-simulation-for-interactive-applications",
     "title": "Particle-Based Fluid Simulation for Interactive Applications",
     "year": 2003,
     "topics": [
@@ -2148,7 +2148,7 @@
     ]
   },
   {
-    "stem": "491-dual-contouring-of-hermite-data",
+    "stem": "408-dual-contouring-of-hermite-data",
     "title": "Dual Contouring of Hermite Data",
     "year": 2002,
     "topics": [
@@ -2171,7 +2171,7 @@
     ]
   },
   {
-    "stem": "492-photographic-tone-reproduction-for-digital-images",
+    "stem": "409-photographic-tone-reproduction-for-digital-images",
     "title": "Photographic Tone Reproduction for Digital Images",
     "year": 2002,
     "topics": [
@@ -2193,7 +2193,7 @@
     ]
   },
   {
-    "stem": "493-depth-peeling-order-independent-transparency",
+    "stem": "410-depth-peeling-order-independent-transparency",
     "title": "Depth Peeling Order-Independent Transparency",
     "year": 2001,
     "topics": [
@@ -2215,7 +2215,7 @@
     ]
   },
   {
-    "stem": "495-quake-iii-arena-networking-source",
+    "stem": "412-quake-iii-arena-networking-source",
     "title": "Quake III Arena Networking Source",
     "year": 1999,
     "topics": [
@@ -2237,7 +2237,7 @@
     ]
   },
   {
-    "stem": "496-priority-inheritance-protocols-an-approach-to-real-time-sync",
+    "stem": "413-priority-inheritance-protocols-an-approach-to-real-time-sync",
     "title": "Priority Inheritance Protocols: An Approach to Real-Time Synchronization",
     "year": 1990,
     "topics": [
@@ -2262,7 +2262,7 @@
     ]
   },
   {
-    "stem": "497-release-consistency-versus-sequential-consistency",
+    "stem": "414-release-consistency-versus-sequential-consistency",
     "title": "Release Consistency versus Sequential Consistency",
     "year": 1990,
     "topics": [
@@ -2284,7 +2284,7 @@
     ]
   },
   {
-    "stem": "498-the-algorithmic-beauty-of-plants-l-systems",
+    "stem": "415-the-algorithmic-beauty-of-plants-l-systems",
     "title": "The Algorithmic Beauty of Plants (L-Systems)",
     "year": 1990,
     "topics": [
@@ -2307,7 +2307,7 @@
     ]
   },
   {
-    "stem": "499-robin-hood-hashing",
+    "stem": "416-robin-hood-hashing",
     "title": "Robin Hood Hashing",
     "year": 1986,
     "topics": [

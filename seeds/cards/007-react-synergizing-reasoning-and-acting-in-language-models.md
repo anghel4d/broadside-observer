@@ -40,9 +40,9 @@ cites:
   arxiv: '2302.04761'
   doi: null
 see:
-- "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
-- "097-reflexion-language-agents-with-verbal-reinforcement-learning"
-- "102-toolformer-language-models-can-teach-themselves-to-use-tools"
+- "088-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
+- "081-reflexion-language-agents-with-verbal-reinforcement-learning"
+- "086-toolformer-language-models-can-teach-themselves-to-use-tools"
 ---
 
 # ReAct: Synergizing Reasoning and Acting in Language Models

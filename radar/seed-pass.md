@@ -1,7 +1,7 @@
 # Prefill seeding passes (2026-08-13)
 
 ## Pass 1 — Prefill
-Goal: consider ~1000 papers across history; publish compact seed digests + refs for the top ~250 most relevant to Broadside / Anoptic / ano / RTS work (cards 001–250).
+Goal: consider ~1000 papers across history; publish compact seed digests + refs for the top ~250 most relevant to Broadside / Anoptic / ano / RTS work (cards 1–193).
 
 Method:
 1. Wide recall from topic queries, classic citation lists, and venue archives (not only recent arXiv).
@@ -11,7 +11,7 @@ Method:
 5. Maintain `seeds/INDEX.md` as the human browsing surface.
 
 ## Pass 2 — Systems prefill
-Goal: ~1000 NEW candidates focused on HPC / game engines / realtime / classical graphics / classical game AI — **explicitly excluding** modern LLM/transformer/deep-RL agent stacks. Keep top 250 as cards 251–500 (`seed_batch: systems-prefill-2026-08-13`).
+Goal: ~1000 NEW candidates focused on HPC / game engines / realtime / classical graphics / classical game AI — **explicitly excluding** modern LLM/transformer/deep-RL agent stacks. Keep top 250 as cards 194–416 (`seed_batch: systems-prefill-2026-08-13`).
 
 Method:
 1. Merge `seeds/_pools/pass2/floors_curated.jsonl` (allocator + ECS floors) first.

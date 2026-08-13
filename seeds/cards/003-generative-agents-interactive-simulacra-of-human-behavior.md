@@ -37,7 +37,7 @@ cites:
     arxiv: "2505.07236"
     doi: null
 see:
-  - "086-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
+  - "071-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
 ---
 
 # Generative Agents: Interactive Simulacra of Human Behavior

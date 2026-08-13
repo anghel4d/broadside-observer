@@ -6,12 +6,12 @@ Seeds are **denser than bookmarks** and **lighter than** the full analytical dig
 
 ## Ongoing practice (not a one-off)
 
-Future research passes **continue to append** seed cards in this format. Prefill batches (001–250 agents-heavy, 251–500 systems-heavy) were only the opening library. Every radar sweep, archive night, craft dive, or themed haul that keeps a work should mint (or refresh) a card under `cards/` and list it in [`INDEX.md`](INDEX.md).
+Future research passes **continue to append** seed cards in this format. Prefill batches (agents-heavy, then systems-heavy) were only the opening library; live cards are densely numbered **1–1000**. Every radar sweep, archive night, craft dive, or themed haul that keeps a work should mint (or refresh) a card under `cards/` and list it in [`INDEX.md`](INDEX.md).
 
 Conventions for new passes:
 
 1. **Same schema** — do not invent parallel card formats. New fields may be added to frontmatter only when they help every card; prefer topics and `seed_batch` over one-off keys.
-2. **Append numbering** — next card after the current max `NNN-*.md` in `cards/` (today: through `500`). Never reuse a number.
+2. **Append numbering** — live catalog is dense global INDEX order `001`–`1000`. Next card after the current max (`1000`). Never reuse a number.
 3. **Name the batch** — set `seed_batch` to a stable slug for the pass (e.g. `frontier-2026-08-14`, `craft-allocators-…`) and `reviewed` to the ISO date.
 4. **Update the index** — every pass that adds cards also updates `INDEX.md` (section per batch or a regenerated full table).
 5. **Dedupe** — skip works already represented in `cards/` / `radar/seen.json` unless you are deliberately revising a card in place.
@@ -33,7 +33,7 @@ arxiv: null          # or id
 doi: null
 source: "https://..."
 topics: [region-memory-capabilities]
-seed_rank: 1         # rank within its batch (or global order in INDEX)
+seed_rank: 1         # global INDEX order (unique 1–1000)
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"      # optional: systems | graphics | realtime | engines | game-ai | agents | languages | maths-foundations | ...
@@ -46,7 +46,7 @@ cites:                      # optional: bibliography only (never a nested card k
     arxiv: null          # arXiv id string when the cited work has one; required whenever it does
     doi: "10.1145/248052.248106"
 see:                        # optional: filename stems currently in cards/ that this paper cites
-  - "032-michael-scott-lock-free-queue"
+  - "031-michael-scott-lock-free-queue"
 ---
 ```
 

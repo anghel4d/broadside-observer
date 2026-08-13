@@ -44,7 +44,7 @@ Foundational substrate.
 - arXiv: [1706.03762](https://arxiv.org/abs/1706.03762)
 `;
 
-const parsed = parseCard({ file: "014-attention-is-all-you-need.md", markdown: sample });
+const parsed = parseCard({ file: "013-attention-is-all-you-need.md", markdown: sample });
 assert.equal(parsed._tag, "Ok");
 if (parsed._tag !== "Ok") throw new Error("expected Ok");
 assert.equal(parsed.value.title, "Attention Is All You Need");
@@ -82,7 +82,7 @@ assert.equal(missing.error._tag, "MissingSections");
 
 const emptyVenue = parseCard({
   file: "005-radiance.md",
-  markdown: sample.replace('venue: "NeurIPS"', 'venue: ""').replace("014-attention-is-all-you-need.md", "005-radiance.md"),
+  markdown: sample.replace('venue: "NeurIPS"', 'venue: ""').replace("013-attention-is-all-you-need.md", "005-radiance.md"),
 });
 assert.equal(emptyVenue._tag, "Ok");
 
@@ -111,13 +111,13 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
+    card: "031-michael-scott-lock-free-queue"
   - title: "Wait-Free Synchronization"
     year: 1991
-    card: "037-wait-free-synchronization.md"
+    card: "036-wait-free-synchronization.md"
 see:
-  - "032-michael-scott-lock-free-queue"
-  - "037-wait-free-synchronization.md"
+  - "031-michael-scott-lock-free-queue"
+  - "036-wait-free-synchronization.md"
 ---
 
 ## One-sentence takeaway
@@ -156,8 +156,8 @@ assert.equal("card" in (withLineage.value.cites[0] ?? {}), false);
 assert.equal("card" in (withLineage.value.cites[1] ?? {}), false);
 assert.equal(withLineage.value.cites[1]?.url, null);
 assert.deepEqual(withLineage.value.see, [
-  "032-michael-scott-lock-free-queue",
-  "037-wait-free-synchronization",
+  "031-michael-scott-lock-free-queue",
+  "036-wait-free-synchronization",
 ]);
 assert.equal(SeedCardSchema.safeParse(withLineage.value).success, true);
 
@@ -165,7 +165,7 @@ assert.equal(ArxivIdSchema.parse(1411.2684), "1411.2684");
 assert.equal(DoiSchema.parse(10.1145), "10.1145");
 
 const numericArxiv = parseCard({
-  file: "1129-rustbelt-securing-the-foundations-of-the-rust-programming-la.md",
+  file: "876-rustbelt-securing-the-foundations-of-the-rust-programming-la.md",
   markdown: sample.replace('arxiv: "1706.03762"', "arxiv: 1710.08840"),
 });
 assert.equal(numericArxiv._tag, "Ok");
@@ -244,8 +244,8 @@ relevance_score: 10
 cites:
   - title: "Wait-Free Synchronization"
     year: 1991
-    card: "037-wait-free-synchronization.md"
-see: "037-wait-free-synchronization.md"
+    card: "036-wait-free-synchronization.md"
+see: "036-wait-free-synchronization.md"
 ---
 
 ## One-sentence takeaway
@@ -272,6 +272,6 @@ Event-bus / logger lineage.
 assert.equal(leftoverCardKey._tag, "Ok");
 if (leftoverCardKey._tag !== "Ok") throw new Error("expected Ok");
 assert.equal("card" in (leftoverCardKey.value.cites[0] ?? {}), false);
-assert.deepEqual(leftoverCardKey.value.see, ["037-wait-free-synchronization"]);
+assert.deepEqual(leftoverCardKey.value.see, ["036-wait-free-synchronization"]);
 
 console.log("parse.test.ts ok");

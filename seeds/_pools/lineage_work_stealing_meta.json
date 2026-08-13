@@ -1,19 +1,19 @@
 {
   "new_stems": [
-    "541-cilk-an-efficient-multithreaded-runtime-system",
-    "542-thread-scheduling-for-multiprogrammed-multiprocessors",
-    "543-a-java-fork-join-framework",
-    "544-idempotent-work-stealing",
-    "545-correct-and-efficient-work-stealing-for-weak-memory-models",
-    "546-fence-free-work-stealing-on-bounded-tso-processors"
+    "430-cilk-an-efficient-multithreaded-runtime-system",
+    "431-thread-scheduling-for-multiprogrammed-multiprocessors",
+    "432-a-java-fork-join-framework",
+    "433-idempotent-work-stealing",
+    "434-correct-and-efficient-work-stealing-for-weak-memory-models",
+    "435-fence-free-work-stealing-on-bounded-tso-processors"
   ],
   "patched": [
-    "257-scheduling-multithreaded-computations-by-work-stealing",
-    "381-the-implementation-of-the-cilk-5-multithreaded-language",
-    "367-dynamic-circular-work-stealing-deque",
-    "292-formal-verification-of-chase-lev-deque-in-concurrent-separat",
-    "263-a-lock-free-work-stealing-algorithm-for-bulk-operations",
-    "486-intel-threading-building-blocks"
+    "200-scheduling-multithreaded-computations-by-work-stealing",
+    "305-the-implementation-of-the-cilk-5-multithreaded-language",
+    "291-dynamic-circular-work-stealing-deque",
+    "229-formal-verification-of-chase-lev-deque-in-concurrent-separat",
+    "206-a-lock-free-work-stealing-algorithm-for-bulk-operations",
+    "403-intel-threading-building-blocks"
   ],
   "range": {
     "start": 541,

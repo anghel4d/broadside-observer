@@ -40,8 +40,8 @@ cites:
   arxiv: '2308.16369'
   doi: null
 see:
-- "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
-- "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+- "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
+- "082-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
 ---
 
 # Efficient Memory Management for Large Language Model Serving with PagedAttention

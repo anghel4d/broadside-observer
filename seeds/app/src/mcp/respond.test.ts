@@ -161,12 +161,12 @@ const withSee = getSeed(
           arxiv: "1706.03762",
         },
       ],
-      see: ["014-attention-is-all-you-need"],
+      see: ["013-attention-is-all-you-need"],
     }),
   ]),
   "001-alpha",
 );
-assert.ok(withSee.includes('see: ["014-attention-is-all-you-need"]'));
+assert.ok(withSee.includes('see: ["013-attention-is-all-you-need"]'));
 assert.ok(withSee.includes("title: Attention Is All You Need"));
 assert.ok(withSee.includes("arxiv: 1706.03762"));
 assert.equal(withSee.includes("card:"), false);

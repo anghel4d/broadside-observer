@@ -51,14 +51,14 @@ cites:
     year: 2026
     arxiv: "2607.20384"
 see:
-  - "353-light-propagation-volumes-in-cryengine-3"
-  - "348-interactive-indirect-illumination-using-voxel-cone-tracing"
-  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
-  - "368-reflective-shadow-maps"
-  - "661-instant-radiosity"
-  - "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
-  - "270-holographic-radiance-cascades-for-2d-global-illumination"
-  - "265-split-radiance-cascades-real-time-global-illumination-via-sp"
+  - "277-light-propagation-volumes-in-cryengine-3"
+  - "272-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - "318-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "292-reflective-shadow-maps"
+  - "450-instant-radiosity"
+  - "453-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
+  - "211-holographic-radiance-cascades-for-2d-global-illumination"
+  - "208-split-radiance-cascades-real-time-global-illumination-via-sp"
 ---
 
 # Radiance Cascades: A Novel Approach to Calculating Global Illumination

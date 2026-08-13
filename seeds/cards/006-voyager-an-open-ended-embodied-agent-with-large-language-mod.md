@@ -39,9 +39,9 @@ cites:
     arxiv: "2603.11768"
     doi: null
 see:
-  - "062-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
-  - "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
-  - "064-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
+  - "056-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
+  - "057-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
+  - "058-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
 ---
 
 # Voyager: An Open-Ended Embodied Agent with Large Language Models
