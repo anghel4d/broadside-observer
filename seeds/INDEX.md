@@ -1031,3 +1031,21 @@ Daypart: **Curiosity** (odd date, before noon Europe/Bucharest). Unique candidat
 
 _Recount after `curiosity-2026-08-13`: **1012** unique title cards on main._
 
+## Craft radar 2026-08-13
+
+Daypart: **Craft** (odd calendar date, noon slot Europe/Bucharest). Unique candidates after fetch, corpus dedupe, neural/LLM dump ban, and a strict craft cheap filter: **106**. Keepers: **10** (keep rate **0.094**, hard cap 0.25). Prefer 6–15 exceptional practice papers over filling quota.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1183 | 9 | 2025 | Aokana: A GPU-Driven Voxel Rendering Framework for Open World Games | graphics |
+| 1184 | 9 | 2025 | Exploring the Theory and Practice of Concurrency in the Entity-Component-System Pattern | engines |
+| 1185 | 9 | 2026 | When Lifetimes Liberate: A Type System for Arenas with Higher-Order Reachability Tracking | languages |
+| 1186 | 9 | 2025 | Spegion: Implicit and Non-Lexical Regions with Sized Allocations | languages |
+| 1187 | 9 | 2024 | Are Your Epochs Too Epic? Batch Free Can Be Harmful | systems |
+| 1188 | 9 | 2025 | Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data Structures | systems |
+| 1189 | 8 | 2026 | Efficient and Robust Lock-Free Multi-Word Compare-and-Swap via Contention-Aware Helping | systems |
+| 1190 | 9 | 2019 | The Semantics of Rank Polymorphism | languages |
+| 1191 | 8 | 2024 | Latent Idiom Recognition for a Minimalist Functional Array Language using Equality Saturation | languages |
+| 1192 | 8 | 2025 | A Stack-Free Traversal Algorithm for Left-Balanced k-d Trees | graphics |
+
+_Recount after `craft-2026-08-13`: **1022** unique title cards on main._
