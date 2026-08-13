@@ -21,19 +21,20 @@ cites:
   year: 2005
   arxiv: null
   doi: null
-  card: 441-managing-complexity-in-the-halo-2-ai-system
 - title: 'Building a Better Battle: DAMN and Utility Theory for Games'
   url: https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN
   year: 2010
   arxiv: null
   doi: null
-  card: 351-building-a-better-battle-damn-and-utility-theory-for-games
 - title: Steering Behaviors for Autonomous Characters
   url: https://www.red3d.com/cwr/papers/1999/gdc99steer.html
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
+see:
+- "441-managing-complexity-in-the-halo-2-ai-system"
+- "351-building-a-better-battle-damn-and-utility-theory-for-games"
+- "258-steering-behaviors-for-autonomous-characters"
 ---
 
 # Smart Terrain Object Affordance AI (The Sims lineage)

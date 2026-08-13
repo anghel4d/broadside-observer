@@ -22,13 +22,14 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.1090/S0002-9939-1956-0078686-7
-  card: 993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin
 - title: A Note on Two Problems in Connexion with Graphs
   url: "https://doi.org/10.1007/BF01386390"
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
+see:
+- "993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin"
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
 ---
 
 # Shortest Connection Networks and Some Generalizations

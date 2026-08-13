@@ -24,25 +24,26 @@ cites:
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "Call-by-Name, Call-by-Value and the λ-Calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
+see:
+  - "909-a-structural-approach-to-operational-semantics"
+  - "911-a-syntactic-approach-to-type-soundness"
+  - "154-the-definition-of-standard-ml-revised"
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
 ---
 
 # Natural Semantics

@@ -24,13 +24,14 @@ cites:
   year: 1976
   arxiv: null
   doi: 10.1109/TIT.1976.1055638
-  card: 1034-new-directions-in-cryptography
 - title: How to Share a Secret
   url: "https://doi.org/10.1145/359168.359176"
   year: 1979
   arxiv: null
   doi: 10.1145/359168.359176
-  card: 1063-how-to-share-a-secret
+see:
+- "1034-new-directions-in-cryptography"
+- "1063-how-to-share-a-secret"
 ---
 
 # A Method for Obtaining Digital Signatures and Public-Key Cryptosystems

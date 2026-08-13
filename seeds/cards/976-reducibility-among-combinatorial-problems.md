@@ -23,13 +23,14 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
 - title: "Computers and Intractability: A Guide to the Theory of NP-Completeness"
   url: "https://en.wikipedia.org/wiki/Computers_and_Intractability"
   year: 1979
   arxiv: null
   doi: null
-  card: 978-computers-and-intractability-a-guide-to-the-theory-of-np-com
+see:
+- "975-the-complexity-of-theorem-proving-procedures"
+- "978-computers-and-intractability-a-guide-to-the-theory-of-np-com"
 ---
 
 # Reducibility Among Combinatorial Problems

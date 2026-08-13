@@ -24,37 +24,38 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "Computability and λ-Definability"
     url: "https://doi.org/10.2307/2268280"
     year: 1937
     arxiv: null
     doi: "10.2307/2268280"
-    card: "768-computability-and-lambda-definability"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem. A Correction"
     url: "https://doi.org/10.1112/plms/s2-43.6.544"
     year: 1937
     arxiv: null
     doi: "10.1112/plms/s2-43.6.544"
-    card: "767-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Finite Combinatory Processes—Formulation I"
     url: "https://doi.org/10.2307/2268534"
     year: 1936
     arxiv: null
     doi: "10.2307/2268534"
-    card: "783-finite-combinatory-processes-formulation-i"
   - title: "General recursive functions of natural numbers"
     url: "https://doi.org/10.1007/BF01565439"
     year: 1936
     arxiv: null
     doi: "10.1007/BF01565439"
-    card: "776-general-recursive-functions-of-natural-numbers"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
+see:
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "768-computability-and-lambda-definability"
+  - "767-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "783-finite-combinatory-processes-formulation-i"
+  - "776-general-recursive-functions-of-natural-numbers"
+  - "793-first-draft-of-a-report-on-the-edvac"
 ---
 
 # On Computable Numbers, with an Application to the Entscheidungsproblem

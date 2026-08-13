@@ -22,19 +22,20 @@ cites:
     year: 2017
     arxiv: null
     doi: "10.1145/3110275"
-    card: "115-compiling-to-categories"
   - title: "Category Theory for Computing Science"
     url: "https://www.math.mcgill.ca/barr/papers/ctcs.pdf"
     year: 1995
     arxiv: null
     doi: null
-    card: "155-category-theory-for-computing-science"
   - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: "https://arxiv.org/abs/0903.0340"
     year: 2011
     arxiv: "0903.0340"
     doi: "10.1007/978-3-642-12821-9_2"
-    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
+see:
+  - "115-compiling-to-categories"
+  - "155-category-theory-for-computing-science"
+  - "019-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Basic Category Theory for Computer Scientists

@@ -21,17 +21,18 @@ cites:
     url: "https://doi.org/10.1145/258734.258769"
     year: 1997
     doi: "10.1145/258734.258769"
-    card: "661-instant-radiosity"
   - title: "Reflective Shadow Maps"
     url: "https://doi.org/10.1145/1053427.1053460"
     year: 2005
     doi: "10.1145/1053427.1053460"
-    card: "368-reflective-shadow-maps"
   - title: "Cascaded Light Propagation Volumes for Real-Time Indirect Illumination"
     url: "https://doi.org/10.1145/1730804.1730821"
     year: 2010
     doi: "10.1145/1730804.1730821"
-    card: "353-light-propagation-volumes-in-cryengine-3"
+see:
+  - "661-instant-radiosity"
+  - "368-reflective-shadow-maps"
+  - "353-light-propagation-volumes-in-cryengine-3"
 ---
 
 # Imperfect Shadow Maps for Efficient Computation of Indirect Illumination

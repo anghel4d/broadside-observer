@@ -25,18 +25,18 @@ cites:
     year: 2025
     arxiv: "2505.07236"
     doi: null
-    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
   - title: "RA-Gen: A Controllable Code Generation Framework Using ReAct for Multi-Agent Task Execution"
     url: "https://arxiv.org/abs/2510.08665"
     year: 2025
     arxiv: "2510.08665"
     doi: null
-    card: "216-ra-gen-a-controllable-code-generation-framework-using-react-"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
     arxiv: "2605.20616"
     doi: null
+see:
+  - "216-ra-gen-a-controllable-code-generation-framework-using-react-"
 ---
 
 # $λ_A$: A Typed Lambda Calculus for LLM Agent Composition

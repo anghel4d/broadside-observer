@@ -28,19 +28,20 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "587-tcmalloc-thread-caching-malloc"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
+see:
+  - "587-tcmalloc-thread-caching-malloc"
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+  - "012-mimalloc-free-list-sharding-in-action"
 ---
 
 # Beyond malloc efficiency to fleet efficiency: a hugepage-aware memory allocator (Temeraire)

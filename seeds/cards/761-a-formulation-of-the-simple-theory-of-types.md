@@ -24,31 +24,32 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "A Set of Postulates for the Foundation of Logic"
     url: "https://doi.org/10.2307/1968337"
     year: 1932
     arxiv: null
     doi: "10.2307/1968337"
-    card: "763-a-set-of-postulates-for-the-foundation-of-logic"
   - title: "Functionality in Combinatory Logic"
     url: "https://doi.org/10.1073/pnas.20.11.584"
     year: 1934
     arxiv: null
     doi: "10.1073/pnas.20.11.584"
-    card: "749-functionality-in-combinatory-logic"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
   - title: "Cartesian Closed Categories and Typed λ-Calculi"
     url: "https://doi.org/10.1007/3-540-17162-2_38"
     year: 1986
     arxiv: null
     doi: null
-    card: "168-cartesian-closed-categories-and-typed-calculi"
+see:
+  - "762-the-calculi-of-lambda-conversion"
+  - "763-a-set-of-postulates-for-the-foundation-of-logic"
+  - "749-functionality-in-combinatory-logic"
+  - "027-types-and-programming-languages"
+  - "168-cartesian-closed-categories-and-typed-calculi"
 ---
 
 # A Formulation of the Simple Theory of Types

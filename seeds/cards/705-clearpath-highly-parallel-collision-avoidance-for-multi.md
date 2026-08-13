@@ -29,13 +29,14 @@ cites:
     year: 2008
     arxiv: null
     doi: "10.1109/ROBOT.2008.4543489"
-    card: "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
   - title: "Reciprocal n-body Collision Avoidance (ORCA)"
     url: "https://doi.org/10.1007/978-3-642-19457-3_1"
     year: 2011
     arxiv: null
     doi: "10.1007/978-3-642-19457-3_1"
-    card: "349-reciprocal-n-body-collision-avoidance-orca"
+see:
+  - "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+  - "349-reciprocal-n-body-collision-avoidance-orca"
 ---
 # ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation
 

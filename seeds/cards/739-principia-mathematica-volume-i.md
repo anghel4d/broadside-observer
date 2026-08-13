@@ -24,25 +24,26 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Begriffsschrift"
     url: "https://www.worldcat.org/title/begriffsschrift/oclc/4576402"
     year: 1879
     arxiv: null
     doi: null
-    card: "740-begriffsschrift"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "740-begriffsschrift"
 ---
 
 # Principia Mathematica, Volume I

@@ -22,19 +22,20 @@ cites:
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
 - title: Dynamic Programming
   url: "https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming"
   year: 1957
   arxiv: null
   doi: null
-  card: 1058-dynamic-programming
 - title: Efficient Algorithms for Shortest Paths in Sparse Networks
   url: "https://doi.org/10.1145/322003.322004"
   year: 1977
   arxiv: null
   doi: 10.1145/322003.322004
-  card: 1001-efficient-algorithms-for-shortest-paths-in-sparse-networks
+see:
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+- "1058-dynamic-programming"
+- "1001-efficient-algorithms-for-shortest-paths-in-sparse-networks"
 ---
 
 # On a Routing Problem

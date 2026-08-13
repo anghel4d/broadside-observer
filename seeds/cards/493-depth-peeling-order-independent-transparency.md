@@ -20,13 +20,14 @@ cites:
     year: 2013
     arxiv: null
     doi: null
-    card: "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
   - title: "Weighted Blended Order-Independent Transparency"
     url: "https://jcgt.org/published/0002/02/09/"
     year: 2013
     arxiv: null
     doi: null
-    card: "417-weighted-blended-order-independent-transparency"
+see:
+  - "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+  - "417-weighted-blended-order-independent-transparency"
 ---
 
 # Depth Peeling Order-Independent Transparency

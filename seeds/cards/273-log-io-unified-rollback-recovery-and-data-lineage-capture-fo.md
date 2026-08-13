@@ -28,13 +28,14 @@ cites:
     year: 2017
     arxiv: null
     doi: null
-    card: "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
   - title: "GGPO Rollback Networking"
     url: "https://github.com/pond3r/ggpo"
     year: 2006
     arxiv: null
     doi: null
-    card: "254-ggpo-rollback-networking"
+see:
+  - "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
+  - "254-ggpo-rollback-networking"
 ---
 
 # LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines

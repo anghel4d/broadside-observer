@@ -24,25 +24,26 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Toward a Mathematical Semantics for Computer Languages"
     url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "Call-by-name, call-by-value and the λ-calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-    card: "866-fundamental-concepts-in-programming-languages"
+see:
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "866-fundamental-concepts-in-programming-languages"
 ---
 
 # Definitional Interpreters for Higher-Order Programming Languages

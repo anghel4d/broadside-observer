@@ -23,25 +23,26 @@ cites:
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "A Theory of Program Size Formally Identical to Information Theory"
     url: "https://doi.org/10.1145/321892.321894"
     year: 1975
     arxiv: null
     doi: "10.1145/321892.321894"
-    card: "859-a-theory-of-program-size-formally-identical-to-information-t"
   - title: "Information-Theoretic Limitations of Formal Systems"
     url: "https://doi.org/10.1145/321812.321814"
     year: 1974
     arxiv: null
     doi: "10.1145/321812.321814"
-    card: "860-information-theoretic-limitations-of-formal-systems"
   - title: "A Formal Theory of Inductive Inference, Parts I–II"
     url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
     year: 1964
     arxiv: null
     doi: "10.1016/S0019-9958(64)90223-2"
-    card: "861-a-formal-theory-of-inductive-inference-parts-i-ii"
+see:
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "859-a-theory-of-program-size-formally-identical-to-information-t"
+  - "860-information-theoretic-limitations-of-formal-systems"
+  - "861-a-formal-theory-of-inductive-inference-parts-i-ii"
 ---
 
 # On the Length of Programs for Computing Finite Binary Sequences

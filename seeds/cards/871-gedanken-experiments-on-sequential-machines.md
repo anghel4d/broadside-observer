@@ -23,25 +23,26 @@ cites:
     year: 1955
     arxiv: null
     doi: "10.1002/j.1538-7305.1955.tb03788.x"
-    card: "872-a-method-for-synthesizing-sequential-circuits"
   - title: "Finite Automata and Their Decision Problems"
     url: "https://doi.org/10.1147/rd.32.0114"
     year: 1959
     arxiv: null
     doi: "10.1147/rd.32.0114"
-    card: "870-finite-automata-and-their-decision-problems"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "A Universal Turing Machine with Two Internal States"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "810-a-universal-turing-machine-with-two-internal-states"
+see:
+  - "872-a-method-for-synthesizing-sequential-circuits"
+  - "870-finite-automata-and-their-decision-problems"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "810-a-universal-turing-machine-with-two-internal-states"
 ---
 
 # Gedanken-Experiments on Sequential Machines

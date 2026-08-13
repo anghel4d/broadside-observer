@@ -28,7 +28,8 @@ cites:
     url: "https://doi.org/10.1109/TSE.1976.233837"
     year: 1976
     doi: "10.1109/TSE.1976.233837"
-    card: "1231-a-complexity-measure"
+see:
+  - "1231-a-complexity-measure"
 ---
 
 # rust-code-analysis: A Rust library to analyze and extract maintainability information from source codes

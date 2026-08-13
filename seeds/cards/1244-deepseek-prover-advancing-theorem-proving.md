@@ -31,7 +31,8 @@ cites:
     url: "https://arxiv.org/abs/2402.03300"
     year: 2024
     arxiv: "2402.03300"
-    card: "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
+see:
+  - "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
 ---
 
 # DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data

@@ -21,19 +21,20 @@ cites:
   year: 2010
   arxiv: null
   doi: 10.1145/1785326.1785333
-  card: 736-a-better-x86-memory-model-x86-tso
 - title: Release Consistency versus Sequential Consistency
   url: https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-92-5.pdf
   year: 1992
   arxiv: null
   doi: null
-  card: 497-release-consistency-versus-sequential-consistency
 - title: 'Linearizability: A Correctness Condition for Concurrent Objects'
   url: https://doi.org/10.1145/78969.78972
   year: 1990
   arxiv: null
   doi: 10.1145/78969.78972
-  card: 260-linearizability-a-correctness-condition-for-concurrent-objec
+see:
+- "736-a-better-x86-memory-model-x86-tso"
+- "497-release-consistency-versus-sequential-consistency"
+- "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Memory Ordering in Modern Microprocessors

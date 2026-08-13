@@ -27,13 +27,14 @@ cites:
   year: 2016
   arxiv: null
   doi: null
-  card: 733-meshoptimizer
 - title: Mesh Shaders in the Vulkan Ecosystem
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
   year: 2018
   arxiv: null
   doi: null
-  card: 113-mesh-shaders-in-the-vulkan-ecosystem
+see:
+- "733-meshoptimizer"
+- "113-mesh-shaders-in-the-vulkan-ecosystem"
 ---
 
 # Towards Practical Meshlet Compression

@@ -22,7 +22,8 @@ cites:
   year: 1965
   arxiv: null
   doi: 10.1090/S0002-9947-1965-0170805-7
-  card: 979-on-the-computational-complexity-of-algorithms
+see:
+- "979-on-the-computational-complexity-of-algorithms"
 ---
 
 # A Machine-Independent Theory of the Complexity of Recursive Functions

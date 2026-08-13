@@ -22,37 +22,38 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes"
     url: "https://doi.org/10.1145/571825.571829"
     year: 2002
     arxiv: null
     doi: "10.1145/571825.571829"
-    card: "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-"
   - title: "A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue"
     url: "https://arxiv.org/abs/1908.04511"
     year: 2019
     arxiv: "1908.04511"
     doi: "10.4230/LIPIcs.DISC.2019.28"
-    card: "512-nikolaev-scq-scalable-portable-lock-free-fifo"
   - title: "wCQ: A Fast Wait-Free Queue with Bounded Memory Usage"
     url: "https://arxiv.org/abs/2201.02179"
     year: 2022
     arxiv: "2201.02179"
     doi: "10.1145/3490148.3538572"
-    card: "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-"
+  - "512-nikolaev-scq-scalable-portable-lock-free-fifo"
+  - "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # No Cords Attached: Coordination-Free Concurrent Lock-Free Queues

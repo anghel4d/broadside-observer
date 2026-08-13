@@ -22,25 +22,21 @@ cites:
     year: 1951
     arxiv: null
     doi: null
-    card: null
   - title: "Group Extensions and Homology"
     url: "https://doi.org/10.2307/1968966"
     year: 1942
     arxiv: null
     doi: "10.2307/1968966"
-    card: null
   - title: "Algebraic topology"
     url: "https://openlibrary.org/books/OL24924347M/Algebraic_topology"
     year: 1942
     arxiv: null
     doi: null
-    card: null
   - title: "Entwicklungen von Räumen und ihren Gruppen"
     url: "http://www.numdam.org/item/CM_1937__4__145_0/"
     year: 1937
     arxiv: null
     doi: null
-    card: null
 ---
 
 # General Theory of Natural Equivalences

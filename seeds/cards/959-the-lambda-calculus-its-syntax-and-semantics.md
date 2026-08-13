@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Proofs and Types"
     url: "https://www.paultaylor.eu/stable/Proofs%2BTypes.html"
     year: 1989
     arxiv: null
     doi: null
-    card: "903-proofs-and-types"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "903-proofs-and-types"
+  - "027-types-and-programming-languages"
 ---
 
 # The Lambda Calculus: Its Syntax and Semantics

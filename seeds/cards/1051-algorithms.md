@@ -23,13 +23,14 @@ cites:
   year: 1990
   arxiv: null
   doi: null
-  card: 1050-introduction-to-algorithms
 - title: A Dichromatic Framework for Balanced Trees
   url: "https://doi.org/10.1109/SFCS.1978.3"
   year: 1978
   arxiv: null
   doi: 10.1109/SFCS.1978.3
-  card: 1017-a-dichromatic-framework-for-balanced-trees
+see:
+- "1050-introduction-to-algorithms"
+- "1017-a-dichromatic-framework-for-balanced-trees"
 ---
 
 # Algorithms

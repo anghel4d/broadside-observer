@@ -46,13 +46,14 @@ cites:
   year: 2019
   arxiv: null
   doi: null
-  card: 009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc
 - title: A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft
   url: https://doi.org/10.1109/TCIAIG.2013.2286295
   year: 2013
   arxiv: null
   doi: null
-  card: 018-a-survey-of-real-time-strategy-game-ai-research-and-competit
+see:
+- "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
+- "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
 ---
 
 # StarCraft II: A New Challenge for Reinforcement Learning

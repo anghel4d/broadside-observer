@@ -20,18 +20,19 @@ cites:
     year: 2013
     arxiv: null
     doi: null
-    card: "346-real-shading-in-unreal-engine-4"
   - title: "Moving Frostbite to Physically Based Rendering"
     url: "https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf"
     year: 2014
     arxiv: null
     doi: null
-    card: "343-moving-frostbite-to-physically-based-rendering"
   - title: "Filament Physically Based Rendering Guide"
     url: "https://google.github.io/filament/Filament.md.html"
     year: 2019
     arxiv: null
     doi: null
+see:
+  - "346-real-shading-in-unreal-engine-4"
+  - "343-moving-frostbite-to-physically-based-rendering"
 ---
 
 # Physically Based Shading at Disney

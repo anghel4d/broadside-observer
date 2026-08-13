@@ -23,25 +23,26 @@ cites:
     year: 1924
     arxiv: null
     doi: "10.1007/BF01458017"
-    card: "747-uber-die-bausteine-der-mathematischen-logik"
   - title: "Functionality in Combinatory Logic"
     url: "https://doi.org/10.1073/pnas.20.11.584"
     year: 1934
     arxiv: null
     doi: "10.1073/pnas.20.11.584"
-    card: "749-functionality-in-combinatory-logic"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
     url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
     year: 1969
     arxiv: null
     doi: "10.1090/S0002-9947-1969-0241465-X"
-    card: "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
+see:
+  - "747-uber-die-bausteine-der-mathematischen-logik"
+  - "749-functionality-in-combinatory-logic"
+  - "762-the-calculi-of-lambda-conversion"
+  - "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
 ---
 
 # Grundlagen der kombinatorischen Logik

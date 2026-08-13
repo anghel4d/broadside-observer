@@ -22,19 +22,20 @@ cites:
   year: 1958
   arxiv: null
   doi: 10.1090/qam/102435
-  card: 990-on-a-routing-problem
 - title: A Dynamic Programming Approach to Sequencing Problems
   url: "https://doi.org/10.1145/321105.321111"
   year: 1962
   arxiv: null
   doi: 10.1145/321105.321111
-  card: 1059-a-dynamic-programming-approach-to-sequencing-problems
 - title: Error Bounds for Convolutional Codes and an Asymptotically Optimum Decoding Algorithm
   url: "https://doi.org/10.1109/TIT.1967.1054010"
   year: 1967
   arxiv: null
   doi: 10.1109/TIT.1967.1054010
-  card: 1028-error-bounds-for-convolutional-codes-and-an-asymptotically-o
+see:
+- "990-on-a-routing-problem"
+- "1059-a-dynamic-programming-approach-to-sequencing-problems"
+- "1028-error-bounds-for-convolutional-codes-and-an-asymptotically-o"
 ---
 
 # Dynamic Programming

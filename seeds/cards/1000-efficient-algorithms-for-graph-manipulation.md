@@ -23,13 +23,14 @@ cites:
   year: 1972
   arxiv: null
   doi: 10.1137/0201010
-  card: 999-depth-first-search-and-linear-graph-algorithms
 - title: On the Shortest Spanning Subtree of a Graph and the Traveling Salesman Problem
   url: "https://doi.org/10.1090/S0002-9939-1956-0078686-7"
   year: 1956
   arxiv: null
   doi: 10.1090/S0002-9939-1956-0078686-7
-  card: 993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin
+see:
+- "999-depth-first-search-and-linear-graph-algorithms"
+- "993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin"
 ---
 
 # Efficient Algorithms for Graph Manipulation

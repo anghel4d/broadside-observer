@@ -26,25 +26,26 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "Scheme: An Interpreter for Extended Lambda Calculus"
     url: "https://dspace.mit.edu/handle/1721.1/5794"
     year: 1975
     arxiv: null
     doi: null
-    card: "924-scheme-an-interpreter-for-extended-lambda-calculus"
   - title: "RABBIT: A Compiler for Scheme"
     url: "https://dspace.mit.edu/handle/1721.1/6913"
     year: 1978
     arxiv: null
     doi: null
-    card: "925-rabbit-a-compiler-for-scheme"
   - title: "The Revised^5 Report on the Algorithmic Language Scheme"
     url: "https://doi.org/10.1023/A:1010051815785"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-    card: "926-the-revised-5-report-on-the-algorithmic-language-scheme"
+see:
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "924-scheme-an-interpreter-for-extended-lambda-calculus"
+  - "925-rabbit-a-compiler-for-scheme"
+  - "926-the-revised-5-report-on-the-algorithmic-language-scheme"
 ---
 
 # The Evolution of Lisp

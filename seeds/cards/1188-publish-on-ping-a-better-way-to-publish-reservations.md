@@ -23,25 +23,26 @@ cites:
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes"
     url: "https://doi.org/10.1145/571825.571829"
     year: 2002
     arxiv: null
     doi: "10.1145/571825.571829"
-    card: "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-"
   - title: "Hazard Eras: Non-Blocking Memory Reclamation"
     url: "https://doi.org/10.1145/3178487.3178488"
     year: 2018
     arxiv: null
     doi: "10.1145/3178487.3178488"
-    card: "703-hazard-eras-non-blocking-memory-reclamation"
   - title: "Epoch-Based Reclamation / Practical Lock-Freedom"
     url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
     year: 2004
     arxiv: null
     doi: null
-    card: "369-epoch-based-reclamation-practical-lock-freedom"
+see:
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-"
+  - "703-hazard-eras-non-blocking-memory-reclamation"
+  - "369-epoch-based-reclamation-practical-lock-freedom"
 ---
 
 # Publish on Ping: A Better Way to Publish Reservations in Memory Reclamation for Concurrent Data Structures

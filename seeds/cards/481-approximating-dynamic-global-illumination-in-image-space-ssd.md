@@ -23,16 +23,17 @@ cites:
     url: "https://doi.org/10.1145/1053427.1053460"
     year: 2005
     doi: "10.1145/1053427.1053460"
-    card: "368-reflective-shadow-maps"
   - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
     url: "https://doi.org/10.1145/1944745.1944787"
     year: 2011
     doi: "10.1145/1944745.1944787"
-    card: "348-interactive-indirect-illumination-using-voxel-cone-tracing"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+see:
+  - "368-reflective-shadow-maps"
+  - "348-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
 # Approximating Dynamic Global Illumination in Image Space (SSDO)

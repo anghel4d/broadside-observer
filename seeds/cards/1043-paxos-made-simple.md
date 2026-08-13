@@ -22,13 +22,14 @@ cites:
   year: 1998
   arxiv: null
   doi: 10.1145/279227.279229
-  card: 1042-the-part-time-parliament
 - title: In Search of an Understandable Consensus Algorithm
   url: "https://raft.github.io/raft.pdf"
   year: 2014
   arxiv: null
   doi: null
-  card: 1047-in-search-of-an-understandable-consensus-algorithm
+see:
+- "1042-the-part-time-parliament"
+- "1047-in-search-of-an-understandable-consensus-algorithm"
 ---
 
 # Paxos Made Simple

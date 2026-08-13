@@ -25,19 +25,20 @@ cites:
     year: 1956
     arxiv: null
     doi: null
-    card: "798-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
   - title: "Error Detecting and Error Correcting Codes"
     url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
     year: 1950
     arxiv: null
     doi: "10.1002/j.1538-7305.1950.tb00463.x"
-    card: "819-error-detecting-and-error-correcting-codes"
+see:
+  - "798-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+  - "819-error-detecting-and-error-correcting-codes"
 ---
 
 # Reliable circuits using less reliable relays

@@ -23,13 +23,14 @@ cites:
   year: 1962
   arxiv: null
   doi: 10.1093/comjnl/5.1.10
-  card: 1012-quicksort
 - title: Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms
   url: "https://doi.org/10.1145/28869.28874"
   year: 1987
   arxiv: null
   doi: 10.1145/28869.28874
-  card: 1019-fibonacci-heaps-and-their-uses-in-improved-network-optimizat
+see:
+- "1012-quicksort"
+- "1019-fibonacci-heaps-and-their-uses-in-improved-network-optimizat"
 ---
 
 # Algorithm 232: Heapsort

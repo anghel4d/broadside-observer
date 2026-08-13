@@ -24,13 +24,14 @@ cites:
     year: 2005
     arxiv: null
     doi: null
-    card: "441-managing-complexity-in-the-halo-2-ai-system"
   - title: "Behavior Trees for Next-Gen Game AI"
     url: "https://aigamedev.com/"
     year: 2007
     arxiv: null
     doi: null
-    card: "359-behavior-trees-for-next-gen-game-ai"
+see:
+  - "441-managing-complexity-in-the-halo-2-ai-system"
+  - "359-behavior-trees-for-next-gen-game-ai"
 ---
 # Behavior Trees in Robotics and AI: An Introduction
 

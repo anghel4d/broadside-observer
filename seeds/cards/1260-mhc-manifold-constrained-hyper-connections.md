@@ -38,17 +38,18 @@ cites:
     url: "https://doi.org/10.1109/CVPR.2016.90"
     year: 2016
     doi: "10.1109/CVPR.2016.90"
-    card: "1211-deep-residual-learning-for-image-recognition"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
   - title: "Attention Is All You Need"
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
+see:
+  - "1211-deep-residual-learning-for-image-recognition"
+  - "1206-deepseek-v3-technical-report"
+  - "014-attention-is-all-you-need"
 ---
 
 # mHC: Manifold-Constrained Hyper-Connections

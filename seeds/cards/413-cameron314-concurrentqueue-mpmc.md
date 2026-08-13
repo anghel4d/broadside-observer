@@ -22,31 +22,32 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Bounded MPMC Queue (1024cores)"
     url: "https://www.1024cores.net/home/lock-free-algorithms/queues/bounded-mpmc-queue"
     year: 2010
     arxiv: null
     doi: null
-    card: "508-vyukov-bounded-mpmc-queue"
   - title: "Fast Concurrent Queues for x86 Processors"
     url: "https://doi.org/10.1145/2442516.2442527"
     year: 2013
     arxiv: null
     doi: "10.1145/2442516.2442527"
-    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
   - title: "LMAX Disruptor"
     url: "https://lmax-exchange.github.io/disruptor/"
     year: 2011
     arxiv: null
     doi: null
-    card: "427-lmax-disruptor"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "508-vyukov-bounded-mpmc-queue"
+  - "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - "427-lmax-disruptor"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # cameron314 concurrentqueue (MPMC)

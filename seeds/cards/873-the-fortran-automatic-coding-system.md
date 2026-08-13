@@ -36,31 +36,32 @@ cites:
     year: 1952
     arxiv: null
     doi: "10.1145/609784.609798"
-    card: "822-the-education-of-a-computer"
   - title: "Report on the Algorithmic Language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
   - title: "The Syntax and Semantics of the Proposed International Algebraic Language of the Zurich ACM-GAMM Conference"
     url: "https://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf"
     year: 1959
     arxiv: null
     doi: null
-    card: "875-the-syntax-and-semantics-of-the-proposed-international-algeb"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "Can Programming Be Liberated from the von Neumann Style?"
     url: "https://doi.org/10.1145/359576.359579"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359579"
-    card: "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
+see:
+  - "822-the-education-of-a-computer"
+  - "874-report-on-the-algorithmic-language-algol-60"
+  - "875-the-syntax-and-semantics-of-the-proposed-international-algeb"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # The FORTRAN Automatic Coding System

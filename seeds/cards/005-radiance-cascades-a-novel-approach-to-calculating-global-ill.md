@@ -22,42 +22,43 @@ cites:
     url: "https://doi.org/10.1145/1730804.1730821"
     year: 2010
     doi: "10.1145/1730804.1730821"
-    card: "353-light-propagation-volumes-in-cryengine-3"
   - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
     url: "https://doi.org/10.1145/1944745.1944787"
     year: 2011
     doi: "10.1145/1944745.1944787"
-    card: "348-interactive-indirect-illumination-using-voxel-cone-tracing"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Reflective Shadow Maps"
     url: "https://doi.org/10.1145/1053427.1053460"
     year: 2005
     doi: "10.1145/1053427.1053460"
-    card: "368-reflective-shadow-maps"
   - title: "Instant Radiosity"
     url: "https://doi.org/10.1145/258734.258769"
     year: 1997
     doi: "10.1145/258734.258769"
-    card: "661-instant-radiosity"
   - title: "Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer"
     url: "https://arxiv.org/abs/2408.14425"
     year: 2024
     arxiv: "2408.14425"
     doi: "10.1093/rasti/rzae062"
-    card: "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
   - title: "Holographic Radiance Cascades for 2D Global Illumination"
     url: "https://arxiv.org/abs/2505.02041"
     year: 2025
     arxiv: "2505.02041"
-    card: "270-holographic-radiance-cascades-for-2d-global-illumination"
   - title: "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes"
     url: "https://arxiv.org/abs/2607.20384"
     year: 2026
     arxiv: "2607.20384"
-    card: "265-split-radiance-cascades-real-time-global-illumination-via-sp"
+see:
+  - "353-light-propagation-volumes-in-cryengine-3"
+  - "348-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "368-reflective-shadow-maps"
+  - "661-instant-radiosity"
+  - "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
+  - "270-holographic-radiance-cascades-for-2d-global-illumination"
+  - "265-split-radiance-cascades-real-time-global-illumination-via-sp"
 ---
 
 # Radiance Cascades: A Novel Approach to Calculating Global Illumination

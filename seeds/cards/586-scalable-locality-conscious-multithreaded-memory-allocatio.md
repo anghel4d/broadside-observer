@@ -25,25 +25,26 @@ cites:
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "Scalable Lock-Free Dynamic Memory Allocation"
     url: "https://doi.org/10.1145/996893.996848"
     year: 2004
     arxiv: null
     doi: "10.1145/996893.996848"
-    card: "585-scalable-lock-free-dynamic-memory-allocation"
   - title: "TCMalloc: Thread-Caching Malloc"
     url: "https://gperftools.github.io/gperftools/tcmalloc.html"
     year: 2007
     arxiv: null
     doi: null
-    card: "587-tcmalloc-thread-caching-malloc"
   - title: "snmalloc: A Message Passing Allocator"
     url: "https://doi.org/10.1145/3315573.3329980"
     year: 2019
     arxiv: null
     doi: "10.1145/3315573.3329980"
-    card: "401-snmalloc-a-message-passing-allocator"
+see:
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "585-scalable-lock-free-dynamic-memory-allocation"
+  - "587-tcmalloc-thread-caching-malloc"
+  - "401-snmalloc-a-message-passing-allocator"
 ---
 
 # Scalable Locality-Conscious Multithreaded Memory Allocation (Streamflow)

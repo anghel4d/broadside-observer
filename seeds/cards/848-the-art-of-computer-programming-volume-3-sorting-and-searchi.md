@@ -24,19 +24,20 @@ cites:
     year: 1968
     arxiv: null
     doi: null
-    card: "846-the-art-of-computer-programming-volume-1-fundamental-algorit"
   - title: "The Art of Computer Programming, Volume 2: Seminumerical Algorithms"
     url: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
     year: 1969
     arxiv: null
     doi: null
-    card: "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
   - title: "Structured Programming with go to Statements"
     url: "https://doi.org/10.1145/356635.356640"
     year: 1974
     arxiv: null
     doi: "10.1145/356635.356640"
-    card: "849-structured-programming-with-go-to-statements"
+see:
+  - "846-the-art-of-computer-programming-volume-1-fundamental-algorit"
+  - "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
+  - "849-structured-programming-with-go-to-statements"
 ---
 
 # The Art of Computer Programming, Volume 3: Sorting and Searching

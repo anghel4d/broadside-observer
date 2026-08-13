@@ -23,7 +23,8 @@ cites:
   year: 1977
   arxiv: null
   doi: 10.1137/0206024
-  card: 1002-fast-pattern-matching-in-strings
+see:
+- "1002-fast-pattern-matching-in-strings"
 ---
 
 # Efficient String Matching: An Aid to Bibliographic Search

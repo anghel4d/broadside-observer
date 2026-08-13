@@ -23,31 +23,32 @@ cites:
     year: 1933
     arxiv: null
     doi: "10.1007/978-3-642-49888-6"
-    card: "854-foundations-of-the-theory-of-probability"
   - title: "On the Length of Programs for Computing Finite Binary Sequences"
     url: "https://doi.org/10.1145/321356.321363"
     year: 1966
     arxiv: null
     doi: "10.1145/321356.321363"
-    card: "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - title: "A Formal Theory of Inductive Inference, Parts I–II"
     url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
     year: 1964
     arxiv: null
     doi: "10.1016/S0019-9958(64)90223-2"
-    card: "861-a-formal-theory-of-inductive-inference-parts-i-ii"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "The Definition of Random Sequences"
     url: "https://doi.org/10.1016/S0019-9958(66)80018-9"
     year: 1966
     arxiv: null
     doi: "10.1016/S0019-9958(66)80018-9"
-    card: "862-the-definition-of-random-sequences"
+see:
+  - "854-foundations-of-the-theory-of-probability"
+  - "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "861-a-formal-theory-of-inductive-inference-parts-i-ii"
+  - "804-a-mathematical-theory-of-communication"
+  - "862-the-definition-of-random-sequences"
 ---
 
 # Three Approaches to the Quantitative Definition of Information

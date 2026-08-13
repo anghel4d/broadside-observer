@@ -22,31 +22,32 @@ cites:
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "TCMalloc: Thread-Caching Malloc"
     url: "https://gperftools.github.io/gperftools/tcmalloc.html"
     year: 2007
     arxiv: null
     doi: null
-    card: "587-tcmalloc-thread-caching-malloc"
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
   - title: "SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines"
     url: "https://doi.org/10.1145/2754169.2754178"
     year: 2015
     arxiv: null
     doi: "10.1145/2754169.2754178"
-    card: "412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac"
+see:
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "587-tcmalloc-thread-caching-malloc"
+  - "012-mimalloc-free-list-sharding-in-action"
+  - "412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac"
 ---
 
 # A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)

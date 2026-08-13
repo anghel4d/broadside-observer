@@ -24,19 +24,20 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1109/TCIAIG.2011.2148116"
-    card: "020-search-based-procedural-content-generation-a-taxonomy-and-su"
   - title: "Wave Function Collapse"
     url: "https://github.com/mxgmn/WaveFunctionCollapse"
     year: 2016
     arxiv: null
     doi: null
-    card: "119-wave-function-collapse"
   - title: "Example-Based Model Synthesis"
     url: "https://doi.org/10.1145/1230100.1230119"
     year: 2007
     arxiv: null
     doi: "10.1145/1230100.1230119"
-    card: "707-example-based-model-synthesis"
+see:
+  - "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+  - "119-wave-function-collapse"
+  - "707-example-based-model-synthesis"
 ---
 
 # Procedural Content Generation in Games

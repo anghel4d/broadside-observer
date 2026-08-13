@@ -31,7 +31,6 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
   - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
     url: "https://arxiv.org/abs/2606.19667"
     year: 2026
@@ -42,7 +41,9 @@ cites:
     year: 2026
     arxiv: "2606.24467"
     doi: null
-    card: "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
+see:
+  - "002-efficient-memory-management-for-large-language-model-serving"
+  - "058-compresskv-semantic-retrieval-guided-kv-cache-compression-fo"
 ---
 
 # Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention

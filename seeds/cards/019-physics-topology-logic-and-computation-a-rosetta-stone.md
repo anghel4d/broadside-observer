@@ -25,73 +25,61 @@ cites:
     year: 2010
     arxiv: null
     doi: "10.1515/9783110221848"
-    card: null
   - title: "<i>Quantum Computation and Quantum Information</i>"
     url: "https://doi.org/10.1119/1.1463744"
     year: 2002
     arxiv: null
     doi: "10.1119/1.1463744"
-    card: null
   - title: "Demonstrating the viability of universal quantum computation using teleportation and single-qubit operations"
     url: "https://doi.org/10.1038/46503"
     year: 1999
     arxiv: null
     doi: "10.1038/46503"
-    card: null
   - title: "Lectures on Tensor Categories and Modular Functors"
     url: "https://doi.org/10.1090/ulect/021"
     year: 2000
     arxiv: null
     doi: "10.1090/ulect/021"
-    card: null
   - title: "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?"
     url: "https://doi.org/10.1103/physrev.47.777"
     year: 1935
     arxiv: null
     doi: "10.1103/physrev.47.777"
-    card: null
   - title: "The Collected Papers of Gerhard Gentzen"
     url: "https://doi.org/10.1016/s0049-237x(08)x7039-9"
     year: 1969
     arxiv: null
     doi: "10.1016/s0049-237x(08)x7039-9"
-    card: null
   - title: "Operads in Algebra, Topology and Physics"
     url: "https://doi.org/10.1090/surv/096"
     year: 2007
     arxiv: null
     doi: "10.1090/surv/096"
-    card: null
   - title: "Sheaves in Geometry and Logic: A First Introduction to Topos Theory"
     url: "http://ci.nii.ac.jp/ncid/BA26361245"
     year: 2018
     arxiv: null
     doi: null
-    card: null
   - title: "Dagger Compact Closed Categories and Completely Positive Maps"
     url: "https://doi.org/10.1016/j.entcs.2006.12.018"
     year: 2007
     arxiv: null
     doi: "10.1016/j.entcs.2006.12.018"
-    card: null
   - title: "Toposes, Triples and Theories"
     url: "https://doi.org/10.1007/978-1-4899-0021-0"
     year: 1985
     arxiv: null
     doi: "10.1007/978-1-4899-0021-0"
-    card: null
   - title: "An Introduction to Substructural Logics"
     url: "https://doi.org/10.4324/9780203016244"
     year: 2002
     arxiv: null
     doi: "10.4324/9780203016244"
-    card: null
   - title: "Anyons and the quantum Hall effect—A pedagogical review"
     url: "https://doi.org/10.1016/j.aop.2007.10.008"
     year: 2007
     arxiv: null
     doi: "10.1016/j.aop.2007.10.008"
-    card: null
 ---
 
 # Physics, Topology, Logic and Computation: A Rosetta Stone

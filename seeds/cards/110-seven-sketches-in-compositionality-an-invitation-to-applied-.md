@@ -24,19 +24,20 @@ cites:
     year: 1945
     arxiv: null
     doi: "10.2307/1990284"
-    card: "051-general-theory-of-natural-equivalences"
   - title: "A survey of graphical languages for monoidal categories"
     url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.216.4918"
     year: 2009
     arxiv: null
     doi: null
-    card: "133-a-survey-of-graphical-languages-for-monoidal-categories"
   - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: "https://arxiv.org/abs/0903.0340"
     year: 2011
     arxiv: "0903.0340"
     doi: "10.1007/978-3-642-12821-9_2"
-    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
+see:
+  - "051-general-theory-of-natural-equivalences"
+  - "133-a-survey-of-graphical-languages-for-monoidal-categories"
+  - "019-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Seven Sketches in Compositionality: An Invitation to Applied Category Theory

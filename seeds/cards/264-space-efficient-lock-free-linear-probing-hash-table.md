@@ -23,19 +23,20 @@ cites:
   year: 2008
   arxiv: null
   doi: null
-  card: 483-hopscotch-hashing
 - title: Abseil Swiss Tables
   url: https://abseil.io/about/design/swisstables
   year: 2017
   arxiv: null
   doi: null
-  card: 470-abseil-swiss-tables
 - title: An Efficient Wait-free Resizable Hash Table
   url: https://doi.org/10.1145/3490146
   year: 2022
   arxiv: null
   doi: null
-  card: 304-an-efficient-wait-free-resizable-hash-table
+see:
+- "483-hopscotch-hashing"
+- "470-abseil-swiss-tables"
+- "304-an-efficient-wait-free-resizable-hash-table"
 ---
 
 # Space-Efficient Lock-Free Linear-Probing Hash Table

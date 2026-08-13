@@ -22,37 +22,38 @@ cites:
     year: 2009
     arxiv: null
     doi: null
-    card: "356-pitfalls-of-object-oriented-programming"
   - title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)"
     url: "https://gamesfromwithin.com/data-oriented-design"
     year: 2009
     arxiv: null
     doi: null
-    card: "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
   - title: "Category Power of ECS architectures / Data-Oriented Design book"
     url: "https://www.dataorienteddesign.com/dodbook/"
     year: 2013
     arxiv: null
     doi: null
-    card: "127-category-power-of-ecs-architectures"
   - title: "Game Programming Patterns — Data Locality"
     url: "https://gameprogrammingpatterns.com/data-locality.html"
     year: 2014
     arxiv: null
     doi: null
-    card: "622-game-programming-patterns-data-locality"
   - title: "Bitsquid Data-Driven / Entity system posts"
     url: "https://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html"
     year: 2013
     arxiv: null
     doi: null
-    card: "344-bitsquid-data-driven-entity-system-posts"
   - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
     url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
     year: 2018
     arxiv: null
     doi: null
-    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+see:
+  - "356-pitfalls-of-object-oriented-programming"
+  - "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
+  - "127-category-power-of-ecs-architectures"
+  - "622-game-programming-patterns-data-locality"
+  - "344-bitsquid-data-driven-entity-system-posts"
+  - "404-unity-ecs-dots-architecture-overview-entities-package-docs"
 ---
 
 # Data-Oriented Design and C++

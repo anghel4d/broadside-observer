@@ -25,25 +25,26 @@ cites:
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "A Correspondence Between ALGOL 60 and Church's Lambda-Notation"
     url: "https://doi.org/10.1145/363744.363749"
     year: 1965
     arxiv: null
     doi: "10.1145/363744.363749"
-    card: "869-a-correspondence-between-algol-60-and-church-s-lambda-notati"
   - title: "The Next 700 Programming Languages"
     url: "https://doi.org/10.1145/365230.365257"
     year: 1966
     arxiv: null
     doi: "10.1145/365230.365257"
-    card: "867-the-next-700-programming-languages"
   - title: "Report on the Algorithmic Language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
+see:
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "869-a-correspondence-between-algol-60-and-church-s-lambda-notati"
+  - "867-the-next-700-programming-languages"
+  - "874-report-on-the-algorithmic-language-algol-60"
 ---
 
 # Fundamental Concepts in Programming Languages

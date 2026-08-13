@@ -23,25 +23,26 @@ cites:
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
   - title: "TCMalloc: Thread-Caching Malloc"
     url: "https://gperftools.github.io/gperftools/tcmalloc.html"
     year: 2007
     arxiv: null
     doi: null
-    card: "587-tcmalloc-thread-caching-malloc"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
   - title: "snmalloc: A Message Passing Allocator"
     url: "https://doi.org/10.1145/3315573.3329980"
     year: 2019
     arxiv: null
     doi: "10.1145/3315573.3329980"
-    card: "401-snmalloc-a-message-passing-allocator"
+see:
+  - "012-mimalloc-free-list-sharding-in-action"
+  - "587-tcmalloc-thread-caching-malloc"
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+  - "401-snmalloc-a-message-passing-allocator"
 ---
 
 # rpmalloc: Lock-Free Thread-Caching Size-Class Allocator

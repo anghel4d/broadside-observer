@@ -24,19 +24,20 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
   - title: "The FORTRAN Automatic Coding System"
     url: "https://doi.org/10.1145/1455567.1455599"
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-    card: "873-the-fortran-automatic-coding-system"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
+see:
+  - "874-report-on-the-algorithmic-language-algol-60"
+  - "873-the-fortran-automatic-coding-system"
+  - "852-on-certain-formal-properties-of-grammars"
 ---
 
 # The Syntax and Semantics of the Proposed International Algebraic Language of the Zurich ACM-GAMM Conference

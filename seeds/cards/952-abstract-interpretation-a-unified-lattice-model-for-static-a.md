@@ -25,25 +25,26 @@ cites:
     year: 1982
     arxiv: null
     doi: "10.1007/BFb0012801"
-    card: "907-domains-for-denotational-semantics"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "The Type and Effect Discipline"
     url: "https://doi.org/10.1006/inco.1994.1037"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1037"
-    card: "159-the-type-and-effect-discipline"
+see:
+  - "907-domains-for-denotational-semantics"
+  - "909-a-structural-approach-to-operational-semantics"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "159-the-type-and-effect-discipline"
 ---
 
 # Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs by Construction or Approximation of Fixpoints

@@ -23,16 +23,17 @@ cites:
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination"
     url: "https://arxiv.org/abs/2310.19855"
     year: 2023
     arxiv: "2310.19855"
-    card: "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+see:
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Dynamic Diffuse Global Illumination Resampling

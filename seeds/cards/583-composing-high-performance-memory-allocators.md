@@ -25,25 +25,26 @@ cites:
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "A Memory Allocator (dlmalloc)"
     url: "https://gee.cs.oswego.edu/dl/html/malloc.html"
     year: 2000
     arxiv: null
     doi: null
-    card: "582-a-memory-allocator-dlmalloc"
   - title: "DieHard: Probabilistic Memory Safety for Unsafe Languages"
     url: "https://doi.org/10.1145/1133981.1134000"
     year: 2006
     arxiv: null
     doi: "10.1145/1133981.1134000"
-    card: "488-diehard-probabilistic-memory-safety-for-unsafe-languages"
   - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
     url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
     year: 2013
     arxiv: null
     doi: null
-    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+see:
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "582-a-memory-allocator-dlmalloc"
+  - "488-diehard-probabilistic-memory-safety-for-unsafe-languages"
+  - "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
 ---
 
 # Composing High-Performance Memory Allocators

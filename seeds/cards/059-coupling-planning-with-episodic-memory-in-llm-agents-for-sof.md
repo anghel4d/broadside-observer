@@ -27,19 +27,19 @@ cites:
     year: 2026
     arxiv: "2604.16548"
     doi: null
-    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
   - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
     url: "https://arxiv.org/abs/2607.28591"
     year: 2026
     arxiv: "2607.28591"
     doi: null
-    card: "056-change2task-from-repository-changes-to-executable-coding-age"
   - title: "MemGPT: Towards LLMs as Operating Systems"
     url: "https://arxiv.org/abs/2310.08560"
     year: 2023
     arxiv: "2310.08560"
     doi: null
-    card: "004-memgpt-towards-llms-as-operating-systems"
+see:
+  - "056-change2task-from-repository-changes-to-executable-coding-age"
+  - "004-memgpt-towards-llms-as-operating-systems"
 ---
 
 # Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution

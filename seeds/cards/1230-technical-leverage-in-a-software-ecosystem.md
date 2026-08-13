@@ -23,7 +23,8 @@ cites:
     url: "https://arxiv.org/abs/2204.04008"
     year: 2023
     arxiv: "2204.04008"
-    card: "1228-sok-taxonomy-of-attacks-on-oss-supply-chains"
+see:
+  - "1228-sok-taxonomy-of-attacks-on-oss-supply-chains"
 ---
 
 # Technical Leverage in a Software Ecosystem: Development Opportunities and Security Risks

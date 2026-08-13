@@ -33,13 +33,14 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
   - title: "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"
     url: "https://arxiv.org/abs/2308.16369"
     year: 2023
     arxiv: "2308.16369"
     doi: null
-    card: "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+see:
+  - "002-efficient-memory-management-for-large-language-model-serving"
+  - "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
 ---
 
 # Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU

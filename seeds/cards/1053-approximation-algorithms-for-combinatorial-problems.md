@@ -22,13 +22,14 @@ cites:
   year: 1979
   arxiv: null
   doi: null
-  card: 978-computers-and-intractability-a-guide-to-the-theory-of-np-com
 - title: Proof Verification and the Hardness of Approximation Problems
   url: "https://doi.org/10.1145/278298.278306"
   year: 1998
   arxiv: null
   doi: 10.1145/278298.278306
-  card: 1054-proof-verification-and-the-hardness-of-approximation-problem
+see:
+- "978-computers-and-intractability-a-guide-to-the-theory-of-np-com"
+- "1054-proof-verification-and-the-hardness-of-approximation-problem"
 ---
 
 # Approximation Algorithms for Combinatorial Problems

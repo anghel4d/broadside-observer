@@ -24,19 +24,20 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "The Organization of Behavior"
     url: "https://www.worldcat.org/title/organization-of-behavior/oclc/523"
     year: 1949
     arxiv: null
     doi: null
-    card: "818-the-organization-of-behavior"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+see:
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "818-the-organization-of-behavior"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
 ---
 
 # How We Know Universals: The Perception of Auditory and Visual Forms

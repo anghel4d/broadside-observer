@@ -23,19 +23,20 @@ cites:
     year: 1967
     arxiv: null
     doi: null
-    card: "877-assigning-meanings-to-programs"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
     url: "https://www.npl.co.uk/famous-faces/alan-turing"
     year: 1946
     arxiv: null
     doi: null
-    card: "773-proposal-for-development-in-the-mathematics-division-of-an-a"
+see:
+  - "877-assigning-meanings-to-programs"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "773-proposal-for-development-in-the-mathematics-division-of-an-a"
 ---
 
 # Checking a Large Routine

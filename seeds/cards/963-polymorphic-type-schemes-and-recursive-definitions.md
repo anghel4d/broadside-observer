@@ -24,25 +24,26 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/169701.169692"
-    card: "922-type-inference-with-polymorphic-recursion"
   - title: "Principal Type-Schemes for Functional Programs"
     url: "https://doi.org/10.1145/582153.582176"
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-    card: "891-principal-type-schemes-for-functional-programs"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
+see:
+  - "922-type-inference-with-polymorphic-recursion"
+  - "891-principal-type-schemes-for-functional-programs"
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "154-the-definition-of-standard-ml-revised"
 ---
 
 # Polymorphic Type Schemes and Recursive Definitions

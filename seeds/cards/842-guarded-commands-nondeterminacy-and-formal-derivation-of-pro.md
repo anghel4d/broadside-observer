@@ -23,19 +23,20 @@ cites:
     year: 1976
     arxiv: null
     doi: null
-    card: "841-a-discipline-of-programming"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "841-a-discipline-of-programming"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "047-communicating-sequential-processes"
 ---
 
 # Guarded Commands, Nondeterminacy and Formal Derivation of Programs

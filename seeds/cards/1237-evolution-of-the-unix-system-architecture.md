@@ -23,7 +23,8 @@ cites:
     url: "https://doi.org/10.1145/96267.96279"
     year: 1990
     doi: "10.1145/96267.96279"
-    card: "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
+see:
+  - "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
 ---
 
 # Evolution of the Unix System Architecture: An Exploratory Case Study

@@ -23,19 +23,20 @@ cites:
     year: 2013
     arxiv: null
     doi: null
-    card: "344-bitsquid-data-driven-entity-system-posts"
   - title: "Data-Oriented Design and C++"
     url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
     year: 2014
     arxiv: null
     doi: null
-    card: "251-data-oriented-design-and-c"
   - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
     url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
     year: 2018
     arxiv: null
     doi: null
-    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+see:
+  - "344-bitsquid-data-driven-entity-system-posts"
+  - "251-data-oriented-design-and-c"
+  - "404-unity-ecs-dots-architecture-overview-entities-package-docs"
 ---
 
 # Our Machinery Component System / data-oriented engine notes

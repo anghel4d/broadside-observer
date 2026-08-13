@@ -38,17 +38,18 @@ cites:
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
   - title: "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search"
     url: "https://arxiv.org/abs/2408.08152"
     year: 2024
     arxiv: "2408.08152"
-    card: "1246-deepseek-prover-v1-5-proof-assistant-feedback"
   - title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
     url: "https://arxiv.org/abs/2501.12948"
     year: 2025
     arxiv: "2501.12948"
-    card: "1252-deepseek-r1-incentivizing-reasoning-via-rl"
+see:
+  - "1206-deepseek-v3-technical-report"
+  - "1246-deepseek-prover-v1-5-proof-assistant-feedback"
+  - "1252-deepseek-r1-incentivizing-reasoning-via-rl"
 ---
 
 # DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition

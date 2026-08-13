@@ -24,25 +24,26 @@ cites:
     year: 1974
     arxiv: null
     doi: "10.1007/3-540-06859-7_148"
-    card: "888-towards-a-theory-of-type-structure"
   - title: "Theorems for Free!"
     url: "https://doi.org/10.1145/99370.99404"
     year: 1989
     arxiv: null
     doi: "10.1145/99370.99404"
-    card: "039-theorems-for-free"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "888-towards-a-theory-of-type-structure"
+  - "039-theorems-for-free"
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "027-types-and-programming-languages"
 ---
 
 # Types, Abstraction and Parametric Polymorphism

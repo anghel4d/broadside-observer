@@ -24,25 +24,26 @@ cites:
   year: 2013
   arxiv: null
   doi: null
-  card: 347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-
 - title: GPU-Driven Rendering Pipelines
   url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
   year: 2015
   arxiv: null
   doi: null
-  card: 016-gpu-driven-rendering-pipelines
 - title: Masked Software Occlusion Culling
   url: https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling.pdf
   year: 2016
   arxiv: null
   doi: null
-  card: 730-masked-software-occlusion-culling
 - title: 'Nanite: A Deep Dive'
   url: https://www.youtube.com/watch?v=e_5kdRpGrpI
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
+see:
+- "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+- "016-gpu-driven-rendering-pipelines"
+- "730-masked-software-occlusion-culling"
+- "106-nanite-a-deep-dive"
 ---
 
 # Hierarchical Z-Buffer Visibility

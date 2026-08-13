@@ -24,13 +24,14 @@ cites:
   year: 1957
   arxiv: null
   doi: null
-  card: 1058-dynamic-programming
 - title: "Paths, Trees, and Flowers"
   url: "https://doi.org/10.4153/CJM-1965-045-4"
   year: 1965
   arxiv: null
   doi: 10.4153/CJM-1965-045-4
-  card: 1060-paths-trees-and-flowers
+see:
+- "1058-dynamic-programming"
+- "1060-paths-trees-and-flowers"
 ---
 
 # A Dynamic Programming Approach to Sequencing Problems

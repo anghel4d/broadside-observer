@@ -23,25 +23,25 @@ cites:
   year: 2014
   arxiv: null
   doi: null
-  card: 017-deterministic-lockstep
 - title: Fix Your Timestep!
   url: https://gafferongames.com/post/fix_your_timestep/
   year: 2004
   arxiv: null
   doi: null
-  card: 702-fix-your-timestep
 - title: GGPO Rollback Networking
   url: https://github.com/pond3r/ggpo
   year: 2006
   arxiv: null
   doi: null
-  card: 254-ggpo-rollback-networking
 - title: Quake III Arena Networking Source
   url: https://github.com/id-Software/Quake-III-Arena
   year: 1999
   arxiv: null
   doi: null
-  card: 495-quake-iii-arena-networking-source
+see:
+- "017-deterministic-lockstep"
+- "254-ggpo-rollback-networking"
+- "495-quake-iii-arena-networking-source"
 ---
 
 # 1500 Archers on a 28.8: Network Programming in Age of Empires and Beyond

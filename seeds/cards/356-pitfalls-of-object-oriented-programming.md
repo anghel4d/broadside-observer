@@ -22,25 +22,26 @@ cites:
     year: 2009
     arxiv: null
     doi: null
-    card: "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
   - title: "Data-Oriented Design and C++"
     url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
     year: 2014
     arxiv: null
     doi: null
-    card: "251-data-oriented-design-and-c"
   - title: "Game Programming Patterns — Data Locality"
     url: "https://gameprogrammingpatterns.com/data-locality.html"
     year: 2014
     arxiv: null
     doi: null
-    card: "622-game-programming-patterns-data-locality"
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
     arxiv: null
     doi: null
-    card: "361-evolve-your-hierarchy"
+see:
+  - "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
+  - "251-data-oriented-design-and-c"
+  - "622-game-programming-patterns-data-locality"
+  - "361-evolve-your-hierarchy"
 ---
 
 # Pitfalls of Object Oriented Programming

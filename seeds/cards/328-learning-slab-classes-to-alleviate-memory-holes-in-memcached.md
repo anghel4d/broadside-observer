@@ -22,19 +22,20 @@ cites:
     year: 1994
     arxiv: null
     doi: null
-    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+see:
+  - "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
 ---
 
 # Learning Slab Classes to Alleviate Memory Holes in Memcached

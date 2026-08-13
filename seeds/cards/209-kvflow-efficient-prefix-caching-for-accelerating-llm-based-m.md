@@ -32,7 +32,6 @@ cites:
     year: 2025
     arxiv: "2505.18458"
     doi: null
-    card: "081-a-survey-of-llm-times-data"
   - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
     url: "https://arxiv.org/abs/2606.19667"
     year: 2026
@@ -43,7 +42,8 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
+see:
+  - "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows

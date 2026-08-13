@@ -22,31 +22,32 @@ cites:
     year: 2014
     arxiv: null
     doi: null
-    card: "251-data-oriented-design-and-c"
   - title: "Archetypal ECS storage and iteration (chunked archetypes pattern)"
     url: "https://docs.rs/bevy_ecs/latest/bevy_ecs/"
     year: 2020
     arxiv: null
     doi: null
-    card: "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - title: "Unity DOTS Entities Manual"
     url: "https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html"
     year: 2020
     arxiv: null
     doi: null
-    card: "464-unity-dots-entities-manual"
   - title: "Bitsquid Data-Driven / Entity system posts"
     url: "https://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html"
     year: 2013
     arxiv: null
     doi: null
-    card: "344-bitsquid-data-driven-entity-system-posts"
   - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
     url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
     year: 2017
     arxiv: null
     doi: null
-    card: "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
+see:
+  - "251-data-oriented-design-and-c"
+  - "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
+  - "464-unity-dots-entities-manual"
+  - "344-bitsquid-data-driven-entity-system-posts"
+  - "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
 ---
 
 # Unity ECS / DOTS architecture overview (Entities package docs)

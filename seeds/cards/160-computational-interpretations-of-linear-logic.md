@@ -24,73 +24,65 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-    card: "041-linear-logic"
   - title: "Communicating sequential processes"
     url: "https://doi.org/10.1016/0011-684x(85)90108-x"
     year: 1985
     arxiv: null
     doi: "10.1016/0011-684x(85)90108-x"
-    card: "047-communicating-sequential-processes"
   - title: "Communicating Sequential Processes"
     url: "https://openlibrary.org/books/OL2859591M/Communicating_sequential_processes"
     year: 1985
     arxiv: null
     doi: null
-    card: "047-communicating-sequential-processes"
   - title: "Linear Types can Change the World"
     url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.31.5002"
     year: 1990
     arxiv: null
     doi: null
-    card: "165-linear-types-can-change-the-world"
   - title: "Communication and concurrency"
     url: "https://doi.org/10.1016/0167-6423(90)90076-p"
     year: 1990
     arxiv: null
     doi: "10.1016/0167-6423(90)90076-p"
-    card: null
   - title: "Fiftieth volume of theoretical computer science"
     url: "https://doi.org/10.1016/0304-3975(88)90001-1"
     year: 1988
     arxiv: null
     doi: "10.1016/0304-3975(88)90001-1"
-    card: null
   - title: "The implementation of functional programming languages"
     url: "https://doi.org/10.1016/0141-9331(87)90510-2"
     year: 1987
     arxiv: null
     doi: "10.1016/0141-9331(87)90510-2"
-    card: null
   - title: "The Lambda Calculus - Its Syntax and Semantics"
     url: "https://doi.org/10.1016/c2009-0-14341-6"
     year: 1984
     arxiv: null
     doi: "10.1016/c2009-0-14341-6"
-    card: null
   - title: "Principal type-schemes for functional programs"
     url: "https://doi.org/10.1145/582153.582176"
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-    card: null
   - title: "Call-by-name, call-by-value and the λ-calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: null
   - title: "Communication and Concurrency"
     url: "http://www3.ub.tu-berlin.de/ihv/001691318.pdf"
     year: 1989
     arxiv: null
     doi: null
-    card: null
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: null
+see:
+  - "041-linear-logic"
+  - "047-communicating-sequential-processes"
+  - "165-linear-types-can-change-the-world"
 ---
 
 # Computational Interpretations of Linear Logic

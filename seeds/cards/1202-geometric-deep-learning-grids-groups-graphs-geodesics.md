@@ -25,12 +25,13 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "Graph Attention Networks"
     url: "https://arxiv.org/abs/1710.10903"
     year: 2018
     arxiv: "1710.10903"
-    card: "1220-graph-attention-networks"
+see:
+  - "014-attention-is-all-you-need"
+  - "1220-graph-attention-networks"
 ---
 
 # Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges

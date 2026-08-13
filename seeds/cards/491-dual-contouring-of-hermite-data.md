@@ -22,19 +22,20 @@ cites:
   year: 1990
   arxiv: null
   doi: null
-  card: 498-the-algorithmic-beauty-of-plants-l-systems
 - title: Procedural Content Generation in Games
   url: https://doi.org/10.1007/978-3-319-42716-4
   year: 2016
   arxiv: null
   doi: null
-  card: 118-procedural-content-generation-in-games
 - title: Manifold Dual Contouring
   url: https://doi.org/10.1109/TVCG.2007.1064
   year: 2007
   arxiv: null
   doi: 10.1109/TVCG.2007.1064
-  card: 723-manifold-dual-contouring
+see:
+- "498-the-algorithmic-beauty-of-plants-l-systems"
+- "118-procedural-content-generation-in-games"
+- "723-manifold-dual-contouring"
 ---
 
 # Dual Contouring of Hermite Data

@@ -21,25 +21,26 @@ cites:
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
   - title: "TCMalloc: Thread-Caching Malloc"
     url: "https://gperftools.github.io/gperftools/tcmalloc.html"
     year: 2007
     arxiv: null
     doi: null
-    card: "587-tcmalloc-thread-caching-malloc"
   - title: "Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)"
     url: "https://doi.org/10.1145/2814270.2814294"
     year: 2015
     arxiv: "1503.09006"
     doi: "10.1145/2814270.2814294"
-    card: "589-fast-multicore-scalable-low-fragmentation-memory-allocatio"
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
+see:
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+  - "587-tcmalloc-thread-caching-malloc"
+  - "589-fast-multicore-scalable-low-fragmentation-memory-allocatio"
+  - "012-mimalloc-free-list-sharding-in-action"
 ---
 
 # SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines

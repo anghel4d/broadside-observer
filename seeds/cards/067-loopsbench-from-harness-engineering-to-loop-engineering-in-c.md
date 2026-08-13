@@ -33,18 +33,19 @@ cites:
     year: 2026
     arxiv: "2607.28591"
     doi: null
-    card: "056-change2task-from-repository-changes-to-executable-coding-age"
   - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
     url: "https://arxiv.org/abs/2608.06811"
     year: 2026
     arxiv: "2608.06811"
     doi: null
-    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
   - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
     url: "https://arxiv.org/abs/2604.03964"
     year: 2026
     arxiv: "2604.03964"
     doi: null
+see:
+  - "056-change2task-from-repository-changes-to-executable-coding-age"
+  - "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
 ---
 
 # LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation

@@ -28,19 +28,19 @@ cites:
     year: 2024
     arxiv: "2411.05348"
     doi: null
-    card: "243-llm-pysc2-starcraft-ii-learning-environment-for-large-langua"
   - title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
     url: "https://doi.org/10.1038/s41586-019-1724-z"
     year: 2019
     arxiv: null
     doi: "10.1038/s41586-019-1724-z"
-    card: "010-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
   - title: "The StarCraft Multi-Agent Challenge"
     url: "https://arxiv.org/abs/1902.04043"
     year: 2019
     arxiv: "1902.04043"
     doi: null
-    card: "011-the-starcraft-multi-agent-challenge"
+see:
+  - "243-llm-pysc2-starcraft-ii-learning-environment-for-large-langua"
+  - "011-the-starcraft-multi-agent-challenge"
 ---
 
 # Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach

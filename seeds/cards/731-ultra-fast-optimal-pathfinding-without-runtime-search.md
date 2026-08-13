@@ -22,19 +22,20 @@ cites:
   year: 2011
   arxiv: null
   doi: null
-  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
 - title: 'JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids'
   url: https://www.gdcvault.com/
   year: 2015
   arxiv: null
   doi: null
-  card: 701-jps-plus-extreme-a-star-speed-optimization-static-grids
 - title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
   url: https://doi.org/10.1109/TSS.1968.253136
   year: 1968
   arxiv: null
   doi: null
-  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
+see:
+- "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+- "701-jps-plus-extreme-a-star-speed-optimization-static-grids"
+- "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
 ---
 
 # Ultra-Fast Optimal Pathfinding without Runtime Search

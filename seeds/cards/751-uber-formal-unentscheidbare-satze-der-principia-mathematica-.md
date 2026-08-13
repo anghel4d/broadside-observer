@@ -24,37 +24,38 @@ cites:
     year: 1930
     arxiv: null
     doi: "10.1007/BF01692469"
-    card: "750-die-vollstandigkeit-der-axiome-des-logischen-funktionenkalku"
   - title: "Principia Mathematica, Volume I"
     url: "https://archive.org/details/PrincipiaMathematicaVol1"
     year: 1910
     arxiv: null
     doi: null
-    card: "739-principia-mathematica-volume-i"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
     url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
     year: 1958
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
-    card: "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
   - title: "Information-Theoretic Limitations of Formal Systems"
     url: "https://doi.org/10.1145/321812.321814"
     year: 1974
     arxiv: null
     doi: "10.1145/321812.321814"
-    card: "860-information-theoretic-limitations-of-formal-systems"
+see:
+  - "750-die-vollstandigkeit-der-axiome-des-logischen-funktionenkalku"
+  - "739-principia-mathematica-volume-i"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+  - "860-information-theoretic-limitations-of-formal-systems"
 ---
 
 # Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I

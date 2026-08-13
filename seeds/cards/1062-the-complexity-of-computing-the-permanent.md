@@ -23,13 +23,14 @@ cites:
   year: 1984
   arxiv: null
   doi: 10.1145/1968.1972
-  card: 1033-a-theory-of-the-learnable
 - title: The Complexity of Theorem-Proving Procedures
   url: "https://doi.org/10.1145/800157.805047"
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
+see:
+- "1033-a-theory-of-the-learnable"
+- "975-the-complexity-of-theorem-proving-procedures"
 ---
 
 # The Complexity of Computing the Permanent

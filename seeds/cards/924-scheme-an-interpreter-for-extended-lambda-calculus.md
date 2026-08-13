@@ -26,25 +26,26 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "Viewing Control Structures as Patterns of Passing Messages"
     url: "https://doi.org/10.1016/0004-3702(77)90033-9"
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-    card: "934-viewing-control-structures-as-patterns-of-passing-messages"
   - title: "RABBIT: A Compiler for Scheme"
     url: "https://dspace.mit.edu/handle/1721.1/6913"
     year: 1978
     arxiv: null
     doi: null
-    card: "925-rabbit-a-compiler-for-scheme"
   - title: "The Revised^5 Report on the Algorithmic Language Scheme"
     url: "https://doi.org/10.1023/A:1010051815785"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-    card: "926-the-revised-5-report-on-the-algorithmic-language-scheme"
+see:
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "934-viewing-control-structures-as-patterns-of-passing-messages"
+  - "925-rabbit-a-compiler-for-scheme"
+  - "926-the-revised-5-report-on-the-algorithmic-language-scheme"
 ---
 
 # Scheme: An Interpreter for Extended Lambda Calculus

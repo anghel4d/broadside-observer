@@ -23,25 +23,26 @@ cites:
     year: 1976
     arxiv: null
     doi: "10.1137/0205046"
-    card: "865-data-types-as-lattices"
   - title: "Toward a Mathematical Semantics for Computer Languages"
     url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "LCF Considered as a Programming Language"
     url: "https://doi.org/10.1016/0304-3975(77)90044-5"
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-    card: "866-fundamental-concepts-in-programming-languages"
+see:
+  - "865-data-types-as-lattices"
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "908-lcf-considered-as-a-programming-language"
+  - "866-fundamental-concepts-in-programming-languages"
 ---
 
 # Domains for Denotational Semantics

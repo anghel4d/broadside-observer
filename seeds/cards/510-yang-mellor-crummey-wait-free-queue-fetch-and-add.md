@@ -23,37 +23,38 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Fast Concurrent Queues for x86 Processors"
     url: "https://doi.org/10.1145/2442516.2442527"
     year: 2013
     arxiv: null
     doi: "10.1145/2442516.2442527"
-    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
   - title: "Wait-Free Queues with Multiple Enqueuers and Dequeuers"
     url: "https://doi.org/10.1145/1941553.1941585"
     year: 2011
     arxiv: null
     doi: "10.1145/1941553.1941585"
-    card: "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
   - title: "A Methodology for Creating Fast Wait-Free Data Structures"
     url: "https://doi.org/10.1145/2145816.2145835"
     year: 2012
     arxiv: null
     doi: "10.1145/2145816.2145835"
-    card: "506-kogan-petrank-fast-path-slow-path-wait-free"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-    card: "037-wait-free-synchronization"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
+  - "506-kogan-petrank-fast-path-slow-path-wait-free"
+  - "037-wait-free-synchronization"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # A Wait-Free Queue as Fast as Fetch-and-Add

@@ -22,17 +22,18 @@ cites:
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - title: "Holographic Radiance Cascades for 2D Global Illumination"
     url: "https://arxiv.org/abs/2505.02041"
     year: 2025
     arxiv: "2505.02041"
-    card: "270-holographic-radiance-cascades-for-2d-global-illumination"
   - title: "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes"
     url: "https://arxiv.org/abs/2607.20384"
     year: 2026
     arxiv: "2607.20384"
-    card: "265-split-radiance-cascades-real-time-global-illumination-via-sp"
+see:
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "270-holographic-radiance-cascades-for-2d-global-illumination"
+  - "265-split-radiance-cascades-real-time-global-illumination-via-sp"
 ---
 
 # Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer

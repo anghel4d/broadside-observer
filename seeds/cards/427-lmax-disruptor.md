@@ -26,25 +26,25 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Bounded MPMC Queue (1024cores)"
     url: "https://www.1024cores.net/home/lock-free-algorithms/queues/bounded-mpmc-queue"
     year: 2010
     arxiv: null
     doi: null
-    card: "508-vyukov-bounded-mpmc-queue"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
   - title: "Mechanical Sympathy / Disruptor technical paper"
     url: "https://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf"
     year: 2011
     arxiv: null
     doi: null
-    card: null
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "508-vyukov-bounded-mpmc-queue"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # LMAX Disruptor

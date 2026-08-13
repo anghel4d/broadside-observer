@@ -27,25 +27,26 @@ cites:
     year: 1975
     arxiv: null
     doi: null
-    card: "924-scheme-an-interpreter-for-extended-lambda-calculus"
   - title: "RABBIT: A Compiler for Scheme"
     url: "https://dspace.mit.edu/handle/1721.1/6913"
     year: 1978
     arxiv: null
     doi: null
-    card: "925-rabbit-a-compiler-for-scheme"
   - title: "Soft Typing"
     url: "https://doi.org/10.1145/113445.113469"
     year: 1991
     arxiv: null
     doi: "10.1145/113445.113469"
-    card: "912-soft-typing"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
+see:
+  - "924-scheme-an-interpreter-for-extended-lambda-calculus"
+  - "925-rabbit-a-compiler-for-scheme"
+  - "912-soft-typing"
+  - "154-the-definition-of-standard-ml-revised"
 ---
 
 # The Revised^5 Report on the Algorithmic Language Scheme

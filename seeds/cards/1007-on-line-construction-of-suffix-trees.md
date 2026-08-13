@@ -22,7 +22,8 @@ cites:
   year: 1993
   arxiv: null
   doi: 10.1137/0222058
-  card: 1006-suffix-arrays-a-new-method-for-on-line-string-searches
+see:
+- "1006-suffix-arrays-a-new-method-for-on-line-string-searches"
 ---
 
 # On-Line Construction of Suffix Trees

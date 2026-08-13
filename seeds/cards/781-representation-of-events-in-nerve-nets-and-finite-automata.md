@@ -24,25 +24,26 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "Finite Automata and Their Decision Problems"
     url: "https://doi.org/10.1147/rd.32.0114"
     year: 1959
     arxiv: null
     doi: "10.1147/rd.32.0114"
-    card: "870-finite-automata-and-their-decision-problems"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+see:
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "870-finite-automata-and-their-decision-problems"
+  - "852-on-certain-formal-properties-of-grammars"
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
 ---
 
 # Representation of Events in Nerve Nets and Finite Automata

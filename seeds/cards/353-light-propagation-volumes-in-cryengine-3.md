@@ -23,25 +23,26 @@ cites:
     url: "https://doi.org/10.1145/1053427.1053460"
     year: 2005
     doi: "10.1145/1053427.1053460"
-    card: "368-reflective-shadow-maps"
   - title: "Instant Radiosity"
     url: "https://doi.org/10.1145/258734.258769"
     year: 1997
     doi: "10.1145/258734.258769"
-    card: "661-instant-radiosity"
   - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
     url: "https://doi.org/10.1145/1944745.1944787"
     year: 2011
     doi: "10.1145/1944745.1944787"
-    card: "348-interactive-indirect-illumination-using-voxel-cone-tracing"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+see:
+  - "368-reflective-shadow-maps"
+  - "661-instant-radiosity"
+  - "348-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Cascaded Light Propagation Volumes for Real-Time Indirect Illumination

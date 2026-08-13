@@ -21,12 +21,13 @@ cites:
     url: "https://doi.org/10.1145/1073970.1073974"
     year: 2005
     doi: "10.1145/1073970.1073974"
-    card: "367-dynamic-circular-work-stealing-deque"
   - title: "Correct and Efficient Work-Stealing for Weak Memory Models"
     url: "https://doi.org/10.1145/2442516.2442524"
     year: 2013
     doi: "10.1145/2442516.2442524"
-    card: "545-correct-and-efficient-work-stealing-for-weak-memory-models"
+see:
+  - "367-dynamic-circular-work-stealing-deque"
+  - "545-correct-and-efficient-work-stealing-for-weak-memory-models"
 ---
 
 # Formal Verification of Chase-Lev Deque in Concurrent Separation Logic

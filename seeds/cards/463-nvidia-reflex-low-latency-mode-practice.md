@@ -21,19 +21,20 @@ cites:
     year: 2019
     arxiv: null
     doi: null
-    card: "468-tracy-frame-profiler"
   - title: "RenderDoc Graphics Debugger"
     url: "https://renderdoc.org/"
     year: 2014
     arxiv: null
     doi: null
-    card: "477-renderdoc-graphics-debugger"
   - title: "Floating Point Determinism"
     url: "https://gafferongames.com/post/floating_point_determinism/"
     year: 2010
     arxiv: null
     doi: null
-    card: "352-floating-point-determinism"
+see:
+  - "468-tracy-frame-profiler"
+  - "477-renderdoc-graphics-debugger"
+  - "352-floating-point-determinism"
 ---
 
 # NVIDIA Reflex / Low Latency Mode Practice

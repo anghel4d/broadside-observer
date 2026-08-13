@@ -24,17 +24,18 @@ cites:
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
     year: 2024
     arxiv: "2307.08691"
-    card: "096-flashattention-2-faster-attention-with-better-parallelism-an"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+see:
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "096-flashattention-2-faster-attention-with-better-parallelism-an"
+  - "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
 # FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling

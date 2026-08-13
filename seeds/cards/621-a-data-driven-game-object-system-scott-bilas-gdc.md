@@ -23,19 +23,20 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "361-evolve-your-hierarchy"
   - title: "Entity Systems are the future of MMOG development (T-Machine series)"
     url: "http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/"
     year: 2007
     arxiv: null
     doi: null
-    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
     url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
     year: 2018
     arxiv: null
     doi: null
-    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+see:
+  - "361-evolve-your-hierarchy"
+  - "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - "404-unity-ecs-dots-architecture-overview-entities-package-docs"
 ---
 
 # A Data-Driven Game Object System

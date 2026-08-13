@@ -24,25 +24,26 @@ cites:
     year: 1980
     arxiv: null
     doi: "10.1145/358896.358899"
-    card: "046-notation-as-a-tool-of-thought"
   - title: "A Programming Language"
     url: "https://www.jsoftware.com/papers/APL.htm"
     year: 1962
     arxiv: null
     doi: null
-    card: "050-a-programming-language"
   - title: "Comparing Parallel Functional Array Languages: Programming and Performance"
     url: "https://arxiv.org/abs/2505.08906"
     year: 2025
     arxiv: "2505.08906"
     doi: null
-    card: "205-comparing-parallel-functional-array-languages-programming-an"
   - title: "APL since 1978"
     url: "https://arxiv.org/abs/2005.02839"
     year: 2020
     arxiv: "2005.02839"
     doi: "10.1145/3386319"
-    card: "107-apl-since-1978"
+see:
+  - "046-notation-as-a-tool-of-thought"
+  - "050-a-programming-language"
+  - "205-comparing-parallel-functional-array-languages-programming-an"
+  - "107-apl-since-1978"
 ---
 
 # The Semantics of Rank Polymorphism

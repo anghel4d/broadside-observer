@@ -22,19 +22,20 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "cameron314 concurrentqueue (MPMC)"
     url: "https://github.com/cameron314/concurrentqueue"
     year: 2014
     arxiv: null
     doi: null
-    card: "413-cameron314-concurrentqueue-mpmc"
   - title: "LMAX Disruptor"
     url: "https://lmax-exchange.github.io/disruptor/"
     year: 2011
     arxiv: null
     doi: null
-    card: "427-lmax-disruptor"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "413-cameron314-concurrentqueue-mpmc"
+  - "427-lmax-disruptor"
 ---
 
 # Bounded MPMC Queue (1024cores)

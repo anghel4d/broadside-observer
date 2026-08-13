@@ -23,19 +23,20 @@ cites:
     year: 1956
     arxiv: null
     doi: null
-    card: "871-gedanken-experiments-on-sequential-machines"
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
+see:
+  - "871-gedanken-experiments-on-sequential-machines"
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
 ---
 
 # A Method for Synthesizing Sequential Circuits

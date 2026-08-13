@@ -24,7 +24,8 @@ cites:
     year: 2010
     arxiv: "0908.3347"
     doi: "10.1007/978-3-642-12821-9_4"
-    card: "133-a-survey-of-graphical-languages-for-monoidal-categories"
+see:
+  - "133-a-survey-of-graphical-languages-for-monoidal-categories"
 ---
 
 # The Geometry of Tensor Calculus, I

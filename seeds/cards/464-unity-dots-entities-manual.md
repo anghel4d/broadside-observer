@@ -22,19 +22,20 @@ cites:
     year: 2018
     arxiv: null
     doi: null
-    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
   - title: "Archetypal ECS storage and iteration (chunked archetypes pattern)"
     url: "https://docs.rs/bevy_ecs/latest/bevy_ecs/"
     year: 2020
     arxiv: null
     doi: null
-    card: "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - title: "Data-Oriented Design and C++"
     url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
     year: 2014
     arxiv: null
     doi: null
-    card: "251-data-oriented-design-and-c"
+see:
+  - "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+  - "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
+  - "251-data-oriented-design-and-c"
 ---
 
 # Unity DOTS Entities Manual

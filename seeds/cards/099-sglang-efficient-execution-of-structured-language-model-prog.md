@@ -35,7 +35,6 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
   - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
     url: "https://arxiv.org/abs/2606.19667"
     year: 2026
@@ -46,7 +45,9 @@ cites:
     year: 2026
     arxiv: "2604.15464"
     doi: null
-    card: "071-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
+see:
+  - "002-efficient-memory-management-for-large-language-model-serving"
+  - "071-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
 ---
 
 # SGLang: Efficient Execution of Structured Language Model Programs

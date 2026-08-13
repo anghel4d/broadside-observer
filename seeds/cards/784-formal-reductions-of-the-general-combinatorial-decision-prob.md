@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2268534"
-    card: "783-finite-combinatory-processes-formulation-i"
   - title: "Recursive Unsolvability of a Problem of Thue"
     url: "https://doi.org/10.2307/2267226"
     year: 1947
     arxiv: null
     doi: "10.2307/2267226"
-    card: "786-recursive-unsolvability-of-a-problem-of-thue"
   - title: "Recursively enumerable sets of positive integers and their decision problems"
     url: "https://doi.org/10.1090/S0002-9904-1944-08111-1"
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+see:
+  - "783-finite-combinatory-processes-formulation-i"
+  - "786-recursive-unsolvability-of-a-problem-of-thue"
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
 ---
 
 # Formal reductions of the general combinatorial decision problem

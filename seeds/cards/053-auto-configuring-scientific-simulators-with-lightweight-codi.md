@@ -27,19 +27,20 @@ cites:
     year: 2026
     arxiv: "2603.13404"
     doi: null
-    card: "076-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
   - title: "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration"
     url: "https://arxiv.org/abs/2603.22862"
     year: 2026
     arxiv: "2603.22862"
     doi: null
-    card: "078-the-evolution-of-tool-use-in-llm-agents-from-single-tool-cal"
   - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     url: "https://arxiv.org/abs/2405.15793"
     year: 2024
     arxiv: "2405.15793"
     doi: null
-    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+see:
+  - "076-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
+  - "078-the-evolution-of-tool-use-in-llm-agents-from-single-tool-cal"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters

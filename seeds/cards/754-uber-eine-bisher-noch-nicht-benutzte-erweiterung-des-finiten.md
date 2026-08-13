@@ -23,25 +23,26 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Zur intuitionistischen Arithmetik und Zahlentheorie"
     url: "https://www.worldcat.org/search?q=Zur+intuitionistischen+Arithmetik+und+Zahlentheorie+Gödel"
     year: 1933
     arxiv: null
     doi: null
-    card: "756-zur-intuitionistischen-arithmetik-und-zahlentheorie"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
   - title: "Outline of a Mathematical Theory of Computation"
     url: "https://www.cs.ox.ac.uk/files/3229/PRG02.pdf"
     year: 1970
     arxiv: null
     doi: null
-    card: "864-outline-of-a-mathematical-theory-of-computation"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "756-zur-intuitionistischen-arithmetik-und-zahlentheorie"
+  - "780-introduction-to-metamathematics"
+  - "864-outline-of-a-mathematical-theory-of-computation"
 ---
 
 # Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes

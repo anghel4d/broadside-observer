@@ -33,13 +33,14 @@ cites:
   year: 2020
   arxiv: '2004.04906'
   doi: null
-  card: 108-dense-passage-retrieval-for-open-domain-question-answering
 - title: 'Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection'
   url: https://arxiv.org/abs/2310.11511
   year: 2023
   arxiv: '2310.11511'
   doi: null
-  card: 101-self-rag-learning-to-retrieve-generate-and-critique-through-
+see:
+- "108-dense-passage-retrieval-for-open-domain-question-answering"
+- "101-self-rag-learning-to-retrieve-generate-and-critique-through-"
 ---
 
 # Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks

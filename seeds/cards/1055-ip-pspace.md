@@ -22,13 +22,14 @@ cites:
   year: 1998
   arxiv: null
   doi: 10.1145/278298.278306
-  card: 1054-proof-verification-and-the-hardness-of-approximation-problem
 - title: Relativizations of the P =? NP Question
   url: "https://doi.org/10.1137/0204037"
   year: 1975
   arxiv: null
   doi: 10.1137/0204037
-  card: 985-relativizations-of-the-p-np-question
+see:
+- "1054-proof-verification-and-the-hardness-of-approximation-problem"
+- "985-relativizations-of-the-p-np-question"
 ---
 
 # IP = PSPACE

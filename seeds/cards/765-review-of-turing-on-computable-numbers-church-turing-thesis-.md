@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "Computability and λ-Definability"
     url: "https://doi.org/10.2307/2268280"
     year: 1937
     arxiv: null
     doi: "10.2307/2268280"
-    card: "768-computability-and-lambda-definability"
   - title: "General recursive functions of natural numbers"
     url: "https://doi.org/10.1007/BF01565439"
     year: 1936
     arxiv: null
     doi: "10.1007/BF01565439"
-    card: "776-general-recursive-functions-of-natural-numbers"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "768-computability-and-lambda-definability"
+  - "776-general-recursive-functions-of-natural-numbers"
 ---
 
 # Review of Turing: On Computable Numbers (Church–Turing thesis framing)

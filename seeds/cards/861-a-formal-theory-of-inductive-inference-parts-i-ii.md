@@ -24,25 +24,26 @@ cites:
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "On the Length of Programs for Computing Finite Binary Sequences"
     url: "https://doi.org/10.1145/321356.321363"
     year: 1966
     arxiv: null
     doi: "10.1145/321356.321363"
-    card: "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
     arxiv: null
     doi: "10.1002/j.1538-7305.1951.tb01366.x"
-    card: "809-prediction-and-entropy-of-printed-english"
   - title: "Computing Machinery and Intelligence"
     url: "https://doi.org/10.1093/mind/LIX.236.433"
     year: 1950
     arxiv: null
     doi: "10.1093/mind/LIX.236.433"
-    card: "770-computing-machinery-and-intelligence"
+see:
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "809-prediction-and-entropy-of-printed-english"
+  - "770-computing-machinery-and-intelligence"
 ---
 
 # A Formal Theory of Inductive Inference, Parts I–II

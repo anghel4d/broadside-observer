@@ -22,19 +22,20 @@ cites:
   year: 1958
   arxiv: null
   doi: 10.1090/qam/102435
-  card: 990-on-a-routing-problem
 - title: A Note on Two Problems in Connexion with Graphs
   url: "https://doi.org/10.1007/BF01386390"
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
 - title: "Algorithm 97: Shortest Path"
   url: "https://doi.org/10.1145/367766.368168"
   year: 1962
   arxiv: null
   doi: 10.1145/367766.368168
-  card: 991-algorithm-97-shortest-path
+see:
+- "990-on-a-routing-problem"
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+- "991-algorithm-97-shortest-path"
 ---
 
 # Efficient Algorithms for Shortest Paths in Sparse Networks

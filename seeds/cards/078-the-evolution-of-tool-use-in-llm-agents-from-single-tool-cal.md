@@ -39,18 +39,19 @@ cites:
     year: 2026
     arxiv: "2606.09774"
     doi: null
-    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
   - title: "Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance"
     url: "https://arxiv.org/abs/2603.13404"
     year: 2026
     arxiv: "2603.13404"
     doi: null
-    card: "076-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
     arxiv: "2605.20616"
     doi: null
+see:
+  - "053-auto-configuring-scientific-simulators-with-lightweight-codi"
+  - "076-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
 ---
 
 # The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration

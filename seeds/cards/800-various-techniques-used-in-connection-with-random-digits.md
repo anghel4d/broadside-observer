@@ -24,25 +24,26 @@ cites:
     year: 1969
     arxiv: null
     doi: null
-    card: "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "On Tables of Random Numbers"
     url: "https://www.worldcat.org/search?q=On+Tables+of+Random+Numbers+Kolmogorov"
     year: 1963
     arxiv: null
     doi: null
-    card: "856-on-tables-of-random-numbers"
   - title: "Rounding-Off Errors in Matrix Processes"
     url: "https://doi.org/10.1093/qjmam/1.1.287"
     year: 1948
     arxiv: null
     doi: "10.1093/qjmam/1.1.287"
-    card: "775-rounding-off-errors-in-matrix-processes"
+see:
+  - "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
+  - "804-a-mathematical-theory-of-communication"
+  - "856-on-tables-of-random-numbers"
+  - "775-rounding-off-errors-in-matrix-processes"
 ---
 
 # Various techniques used in connection with random digits

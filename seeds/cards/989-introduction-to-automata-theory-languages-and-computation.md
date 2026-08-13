@@ -24,19 +24,20 @@ cites:
   year: 1959
   arxiv: null
   doi: 10.1147/rd.32.0114
-  card: 870-finite-automata-and-their-decision-problems
 - title: Three Models for the Description of Language
   url: "https://doi.org/10.1109/TIT.1956.1056813"
   year: 1956
   arxiv: null
   doi: 10.1109/TIT.1956.1056813
-  card: 850-three-models-for-the-description-of-language
 - title: Representation of Events in Nerve Nets and Finite Automata
   url: "https://doi.org/10.1515/9781400882618-002"
   year: 1956
   arxiv: null
   doi: null
-  card: 781-representation-of-events-in-nerve-nets-and-finite-automata
+see:
+- "870-finite-automata-and-their-decision-problems"
+- "850-three-models-for-the-description-of-language"
+- "781-representation-of-events-in-nerve-nets-and-finite-automata"
 ---
 
 # Introduction to Automata Theory, Languages, and Computation

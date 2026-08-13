@@ -24,25 +24,25 @@ cites:
     year: 1974
     arxiv: null
     doi: "10.1007/3-540-06859-7_148"
-    card: "888-towards-a-theory-of-type-structure"
   - title: "The System F of Variable Types, Fifteen Years Later"
     url: "https://doi.org/10.1016/0304-3975(86)90044-7"
     year: 1986
     arxiv: null
     doi: "10.1016/0304-3975(86)90044-7"
-    card: "890-the-system-f-of-variable-types-fifteen-years-later"
   - title: "Proofs and Types"
     url: "https://www.paultaylor.eu/stable/Proofs%2BTypes.html"
     year: 1989
     arxiv: null
     doi: null
-    card: "906-proofs-and-types"
   - title: "Theorems for Free!"
     url: "https://doi.org/10.1145/99370.99404"
     year: 1989
     arxiv: null
     doi: "10.1145/99370.99404"
-    card: "039-theorems-for-free"
+see:
+  - "888-towards-a-theory-of-type-structure"
+  - "890-the-system-f-of-variable-types-fifteen-years-later"
+  - "039-theorems-for-free"
 ---
 
 # Une extension de l'interprétation de Gödel à l'analyse, et son application à l'élimination des coupures dans l'analyse et la théorie des types

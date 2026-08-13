@@ -23,25 +23,26 @@ cites:
     year: 2014
     arxiv: null
     doi: null
-    card: "251-data-oriented-design-and-c"
   - title: "Pitfalls of Object Oriented Programming"
     url: "https://www.researchgate.net/publication/308689769_Pitfalls_of_object_oriented_programming"
     year: 2009
     arxiv: null
     doi: null
-    card: "356-pitfalls-of-object-oriented-programming"
   - title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)"
     url: "https://gamesfromwithin.com/data-oriented-design"
     year: 2009
     arxiv: null
     doi: null
-    card: "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
     arxiv: null
     doi: null
-    card: "361-evolve-your-hierarchy"
+see:
+  - "251-data-oriented-design-and-c"
+  - "356-pitfalls-of-object-oriented-programming"
+  - "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
+  - "361-evolve-your-hierarchy"
 ---
 
 # Game Programming Patterns — Data Locality

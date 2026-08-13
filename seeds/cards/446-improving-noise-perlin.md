@@ -21,37 +21,31 @@ cites:
     year: 2013
     arxiv: null
     doi: "10.5860/choice.51-2713"
-    card: null
   - title: "An image synthesizer"
     url: "https://doi.org/10.1145/325165.325247"
     year: 1985
     arxiv: null
     doi: "10.1145/325165.325247"
-    card: null
   - title: "Computer Graphics — Principles and Practice"
     url: "https://doi.org/10.1007/978-3-7091-2684-4_31"
     year: 1996
     arxiv: null
     doi: "10.1007/978-3-7091-2684-4_31"
-    card: null
   - title: "Texturing and Modeling"
     url: "https://doi.org/10.1016/c2009-0-22378-6"
     year: 1994
     arxiv: null
     doi: "10.1016/c2009-0-22378-6"
-    card: null
   - title: "Hypertexture"
     url: "https://doi.org/10.1145/74333.74359"
     year: 1989
     arxiv: null
     doi: "10.1145/74333.74359"
-    card: null
   - title: "RenderMan Companion: A Programmer's Guide to Realistic Computer Graphics"
     url: "http://portal.acm.org/citation.cfm?id=534134"
     year: 1989
     arxiv: null
     doi: null
-    card: null
 ---
 
 # Improving Noise (Perlin)

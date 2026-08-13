@@ -22,31 +22,31 @@ cites:
   year: 2001
   arxiv: null
   doi: null
-  card: 028-1500-archers-on-a-28-8-network-programming-in-age-of-empires
 - title: Fix Your Timestep!
   url: https://gafferongames.com/post/fix_your_timestep/
   year: 2004
   arxiv: null
   doi: null
-  card: 702-fix-your-timestep
 - title: GGPO Rollback Networking
   url: https://github.com/pond3r/ggpo
   year: 2006
   arxiv: null
   doi: null
-  card: 254-ggpo-rollback-networking
 - title: Snapshot Interpolation
   url: https://gafferongames.com/post/snapshot_interpolation/
   year: 2015
   arxiv: null
   doi: null
-  card: 341-snapshot-interpolation
 - title: Client-Side Prediction & Server Reconciliation
   url: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html
   year: 2013
   arxiv: null
   doi: null
-  card: 345-client-side-prediction-server-reconciliation
+see:
+- "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
+- "254-ggpo-rollback-networking"
+- "341-snapshot-interpolation"
+- "345-client-side-prediction-server-reconciliation"
 ---
 
 # Deterministic Lockstep

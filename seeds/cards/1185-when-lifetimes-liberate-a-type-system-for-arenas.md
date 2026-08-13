@@ -25,25 +25,26 @@ cites:
     year: 1997
     arxiv: null
     doi: "10.1006/inco.1996.2613"
-    card: "031-region-based-memory-management"
   - title: "Region-Based Memory Management in Cyclone"
     url: "https://doi.org/10.1145/512529.512563"
     year: 2002
     arxiv: null
     doi: "10.1145/512529.512563"
-    card: "150-region-based-memory-management-in-cyclone"
   - title: "Typed Memory Management in a Calculus of Capabilities"
     url: "https://doi.org/10.1145/292540.292564"
     year: 1999
     arxiv: null
     doi: "10.1145/292540.292564"
-    card: "029-typed-memory-management-in-a-calculus-of-capabilities"
   - title: "Oxide: The Essence of Rust"
     url: "https://arxiv.org/abs/1903.00982"
     year: 2019
     arxiv: "1903.00982"
     doi: null
-    card: "1131-oxide-the-essence-of-rust"
+see:
+  - "031-region-based-memory-management"
+  - "150-region-based-memory-management-in-cyclone"
+  - "029-typed-memory-management-in-a-calculus-of-capabilities"
+  - "1131-oxide-the-essence-of-rust"
 ---
 
 # When Lifetimes Liberate: A Type System for Arenas with Higher-Order Reachability Tracking

@@ -24,25 +24,26 @@ cites:
     year: 1990
     arxiv: null
     doi: "10.1016/0890-5401(90)90018-C"
-    card: "923-type-inference-for-polymorphic-references"
   - title: "Principal Type-Schemes for Functional Programs"
     url: "https://doi.org/10.1145/582153.582176"
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-    card: "891-principal-type-schemes-for-functional-programs"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
+see:
+  - "923-type-inference-for-polymorphic-references"
+  - "891-principal-type-schemes-for-functional-programs"
+  - "154-the-definition-of-standard-ml-revised"
+  - "911-a-syntactic-approach-to-type-soundness"
 ---
 
 # Simple Imperative Polymorphism

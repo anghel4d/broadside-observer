@@ -21,13 +21,14 @@ cites:
   year: 1994
   arxiv: null
   doi: null
-  card: 033-implementation-of-the-typed-call-by-value-calculus-using-a-s
 - title: Typed Memory Management in a Calculus of Capabilities
   url: https://doi.org/10.1145/292540.292564
   year: 1999
   arxiv: null
   doi: null
-  card: 029-typed-memory-management-in-a-calculus-of-capabilities
+see:
+- "033-implementation-of-the-typed-call-by-value-calculus-using-a-s"
+- "029-typed-memory-management-in-a-calculus-of-capabilities"
 ---
 
 # Region-Based Memory Management

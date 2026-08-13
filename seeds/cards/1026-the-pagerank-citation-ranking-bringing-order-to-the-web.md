@@ -26,7 +26,8 @@ cites:
   year: 1999
   arxiv: null
   doi: 10.1145/324133.324140
-  card: 1027-authoritative-sources-in-a-hyperlinked-environment
+see:
+- "1027-authoritative-sources-in-a-hyperlinked-environment"
 ---
 
 # The PageRank Citation Ranking: Bringing Order to the Web

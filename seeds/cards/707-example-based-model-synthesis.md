@@ -23,13 +23,14 @@ cites:
     year: 2016
     arxiv: null
     doi: null
-    card: "119-wave-function-collapse"
   - title: "Procedural Content Generation in Games"
     url: "https://doi.org/10.1007/978-3-319-42716-4"
     year: 2016
     arxiv: null
     doi: null
-    card: "118-procedural-content-generation-in-games"
+see:
+  - "119-wave-function-collapse"
+  - "118-procedural-content-generation-in-games"
 ---
 # Example-Based Model Synthesis
 

@@ -21,19 +21,20 @@ cites:
   year: 2000
   arxiv: null
   doi: null
-  card: 378-simplified-3d-movement-and-pathfinding-using-navigation-mesh
 - title: Near Optimal Hierarchical Pathfinding (HPA*)
   url: https://doi.org/10.1613/jair.1423
   year: 2004
   arxiv: null
   doi: 10.1613/jair.1423
-  card: 370-near-optimal-hierarchical-pathfinding-hpa
 - title: Understanding Goal-Based Vector Field / Flow Field Pathfinding
   url: https://howtorts.github.io/
   year: 2010
   arxiv: null
   doi: null
-  card: 355-understanding-goal-based-vector-field-flow-field-pathfinding
+see:
+- "378-simplified-3d-movement-and-pathfinding-using-navigation-mesh"
+- "370-near-optimal-hierarchical-pathfinding-hpa"
+- "355-understanding-goal-based-vector-field-flow-field-pathfinding"
 ---
 
 # Recast Navigation / Detour

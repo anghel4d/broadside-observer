@@ -22,19 +22,20 @@ cites:
   year: 2009
   arxiv: null
   doi: 10.1007/978-3-642-00590-9_7
-  card: 022-handlers-of-algebraic-effects
 - title: Programming with Algebraic Effects and Handlers
   url: https://arxiv.org/abs/1203.1539
   year: 2012
   arxiv: '1203.1539'
   doi: null
-  card: 123-programming-with-algebraic-effects-and-handlers
 - title: Notions of Computation and Monads
   url: https://doi.org/10.1016/0890-5401(91)90052-4
   year: 1991
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
-  card: 036-notions-of-computation-and-monads
+see:
+- "022-handlers-of-algebraic-effects"
+- "123-programming-with-algebraic-effects-and-handlers"
+- "036-notions-of-computation-and-monads"
 ---
 
 # Koka: Programming with Row Polymorphic Effect Types

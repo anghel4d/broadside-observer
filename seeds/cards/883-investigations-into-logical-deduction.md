@@ -24,31 +24,32 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Die Grundlagen der Mathematik"
     url: "https://link.springer.com/article/10.1007/BF01661237"
     year: 1928
     arxiv: null
     doi: "10.1007/BF01661237"
-    card: "745-die-grundlagen-der-mathematik"
   - title: "The Concept of Truth in Formalized Languages"
     url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
     year: 1933
     arxiv: null
     doi: null
-    card: "882-the-concept-of-truth-in-formalized-languages"
   - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
     url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
     year: 1958
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
-    card: "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
   - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: "https://arxiv.org/abs/0903.0340"
     year: 2009
-    arxiv: null
+    arxiv: "0903.0340"
     doi: "0903.0340"
-    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "745-die-grundlagen-der-mathematik"
+  - "882-the-concept-of-truth-in-formalized-languages"
+  - "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+  - "019-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Investigations into Logical Deduction

@@ -20,19 +20,20 @@ cites:
     year: 2013
     arxiv: null
     doi: null
-    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
     url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"
     year: 1994
     arxiv: null
     doi: null
-    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+see:
+  - "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
 ---
 
 # Molecular Matters Memory Allocation series

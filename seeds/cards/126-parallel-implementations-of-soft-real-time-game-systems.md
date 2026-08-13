@@ -21,13 +21,14 @@ cites:
   year: 2015
   arxiv: null
   doi: null
-  card: 121-job-system-and-fiber-architecture-naughty-dog
 - title: Intel Threading Building Blocks
   url: https://www.threadingbuildingblocks.org/
   year: 2007
   arxiv: null
   doi: null
-  card: 486-intel-threading-building-blocks
+see:
+- "121-job-system-and-fiber-architecture-naughty-dog"
+- "486-intel-threading-building-blocks"
 ---
 
 # Parallel Implementations of Soft Real-Time Game Systems

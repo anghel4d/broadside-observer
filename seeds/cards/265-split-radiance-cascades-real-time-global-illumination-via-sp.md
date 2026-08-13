@@ -22,25 +22,26 @@ cites:
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - title: "Holographic Radiance Cascades for 2D Global Illumination"
     url: "https://arxiv.org/abs/2505.02041"
     year: 2025
     arxiv: "2505.02041"
-    card: "270-holographic-radiance-cascades-for-2d-global-illumination"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
     url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
     year: 2017
-    card: "406-real-time-global-illumination-using-precomputed-light-field-"
   - title: "GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination"
     url: "https://arxiv.org/abs/2310.19855"
     year: 2023
     arxiv: "2310.19855"
-    card: "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
+see:
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "270-holographic-radiance-cascades-for-2d-global-illumination"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "406-real-time-global-illumination-using-precomputed-light-field-"
+  - "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
 ---
 
 # Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes

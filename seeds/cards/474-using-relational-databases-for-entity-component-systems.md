@@ -22,25 +22,26 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
   - title: "Flecs Relationships and Queries"
     url: "https://www.flecs.dev/flecs/"
     year: 2021
     arxiv: null
     doi: null
-    card: "392-flecs-relationships-and-queries"
   - title: "The Essence of Entity Component System"
     url: "https://arxiv.org/abs/2606.14919"
     year: 2026
     arxiv: "2606.14919"
     doi: null
-    card: "200-the-essence-of-entity-component-system"
+see:
+  - "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - "334-flecs-a-fast-entity-component-system-for-c99"
+  - "392-flecs-relationships-and-queries"
+  - "200-the-essence-of-entity-component-system"
 ---
 
 # Using Relational Databases for Entity-Component Systems

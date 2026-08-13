@@ -25,7 +25,8 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359340.359342
-  card: 1035-a-method-for-obtaining-digital-signatures-and-public-key-cry
+see:
+- "1035-a-method-for-obtaining-digital-signatures-and-public-key-cry"
 ---
 
 # PRIMES is in P

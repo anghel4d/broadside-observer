@@ -23,7 +23,8 @@ cites:
   year: 2003
   arxiv: null
   doi: 10.1145/945445.945450
-  card: 1048-the-google-file-system
+see:
+- "1048-the-google-file-system"
 ---
 
 # MapReduce: Simplified Data Processing on Large Clusters

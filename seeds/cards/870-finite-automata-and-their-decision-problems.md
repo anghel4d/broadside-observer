@@ -25,31 +25,32 @@ cites:
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "Gedanken-Experiments on Sequential Machines"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "871-gedanken-experiments-on-sequential-machines"
   - title: "Weak Second-Order Arithmetic and Finite Automata"
     url: "https://doi.org/10.1002/malq.19600060105"
     year: 1960
     arxiv: null
     doi: "10.1002/malq.19600060105"
-    card: "884-weak-second-order-arithmetic-and-finite-automata"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+see:
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "852-on-certain-formal-properties-of-grammars"
+  - "871-gedanken-experiments-on-sequential-machines"
+  - "884-weak-second-order-arithmetic-and-finite-automata"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
 # Finite Automata and Their Decision Problems

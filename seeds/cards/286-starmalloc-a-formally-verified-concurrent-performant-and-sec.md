@@ -23,25 +23,26 @@ cites:
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
   - title: "snmalloc: A Message Passing Allocator"
     url: "https://doi.org/10.1145/3315573.3329980"
     year: 2019
     arxiv: null
     doi: "10.1145/3315573.3329980"
-    card: "401-snmalloc-a-message-passing-allocator"
   - title: "DieHard: Probabilistic Memory Safety for Unsafe Languages"
     url: "https://doi.org/10.1145/1133981.1134000"
     year: 2006
     arxiv: null
     doi: "10.1145/1133981.1134000"
-    card: "488-diehard-probabilistic-memory-safety-for-unsafe-languages"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+see:
+  - "012-mimalloc-free-list-sharding-in-action"
+  - "401-snmalloc-a-message-passing-allocator"
+  - "488-diehard-probabilistic-memory-safety-for-unsafe-languages"
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
 ---
 
 # StarMalloc: A Formally Verified, Concurrent, Performant, and Security-Oriented Memory Allocator

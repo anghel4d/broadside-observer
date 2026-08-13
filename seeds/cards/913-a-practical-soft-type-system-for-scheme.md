@@ -25,25 +25,26 @@ cites:
     year: 1991
     arxiv: null
     doi: "10.1145/113445.113469"
-    card: "912-soft-typing"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
   - title: "The Revised^5 Report on the Algorithmic Language Scheme"
     url: "https://doi.org/10.1023/A:1010051815785"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-    card: "926-the-revised-5-report-on-the-algorithmic-language-scheme"
   - title: "RABBIT: A Compiler for Scheme"
     url: "https://dspace.mit.edu/handle/1721.1/6913"
     year: 1978
     arxiv: null
     doi: null
-    card: "925-rabbit-a-compiler-for-scheme"
+see:
+  - "912-soft-typing"
+  - "911-a-syntactic-approach-to-type-soundness"
+  - "926-the-revised-5-report-on-the-algorithmic-language-scheme"
+  - "925-rabbit-a-compiler-for-scheme"
 ---
 
 # A Practical Soft Type System for Scheme

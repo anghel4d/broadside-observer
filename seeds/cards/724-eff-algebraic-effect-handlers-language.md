@@ -23,19 +23,20 @@ cites:
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
 - title: Handling Algebraic Effects
   url: https://doi.org/10.2168/LMCS-9(4:23)2013
   year: 2013
   arxiv: null
   doi: null
-  card: 128-handling-algebraic-effects
 - title: 'Koka: Programming with Row Polymorphic Effect Types'
   url: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
   year: 2014
   arxiv: null
   doi: null
-  card: 711-koka-programming-with-row-polymorphic-effect-types
+see:
+- "022-handlers-of-algebraic-effects"
+- "128-handling-algebraic-effects"
+- "711-koka-programming-with-row-polymorphic-effect-types"
 ---
 
 # Eff: Algebraic Effect Handlers Language

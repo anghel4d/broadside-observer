@@ -25,12 +25,13 @@ cites:
     year: 2010
     arxiv: "0908.3347"
     doi: "10.1007/978-3-642-12821-9_4"
-    card: "133-a-survey-of-graphical-languages-for-monoidal-categories"
   - title: "The Geometry of Tensor Calculus, I"
     url: "https://doi.org/10.1016/0001-8708(91)90003-P"
     year: 1991
     doi: "10.1016/0001-8708(91)90003-P"
-    card: "1212-the-geometry-of-tensor-calculus-i"
+see:
+  - "133-a-survey-of-graphical-languages-for-monoidal-categories"
+  - "1212-the-geometry-of-tensor-calculus-i"
 ---
 
 # String diagrams for strictification and coherence

@@ -25,25 +25,26 @@ cites:
     year: 1951
     arxiv: null
     doi: null
-    card: "796-the-general-and-logical-theory-of-automata"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "The Chemical Basis of Morphogenesis"
     url: "https://doi.org/10.1098/rstb.1952.0012"
     year: 1952
     arxiv: null
     doi: "10.1098/rstb.1952.0012"
-    card: "772-the-chemical-basis-of-morphogenesis"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
+see:
+  - "796-the-general-and-logical-theory-of-automata"
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "772-the-chemical-basis-of-morphogenesis"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
 ---
 
 # Theory of Self-Reproducing Automata

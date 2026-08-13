@@ -22,7 +22,8 @@ cites:
     url: "https://arxiv.org/abs/2102.13196"
     year: 2023
     arxiv: "2102.13196"
-    card: "1203-named-tensor-notation"
+see:
+  - "1203-named-tensor-notation"
 ---
 
 # Einops: Clear and Reliable Tensor Manipulations with Einstein-Like Notation

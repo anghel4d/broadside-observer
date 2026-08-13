@@ -23,37 +23,33 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-    card: "041-linear-logic"
   - title: "Proofs and types"
     url: "https://openalex.org/W159715351"
     year: 1989
     arxiv: null
     doi: null
-    card: null
   - title: "Geometry of Interaction 1: Interpretation of System F"
     url: "https://doi.org/10.1016/s0049-237x(08)70271-4"
     year: 1989
     arxiv: null
     doi: "10.1016/s0049-237x(08)70271-4"
-    card: null
   - title: "The linear abstract machine"
     url: "https://doi.org/10.1016/0304-3975(88)90100-4"
     year: 1988
     arxiv: null
     doi: "10.1016/0304-3975(88)90100-4"
-    card: null
   - title: "The linear abstract machine"
     url: "https://doi.org/10.1016/0304-3975(88)90074-6"
     year: 1988
     arxiv: null
     doi: "10.1016/0304-3975(88)90074-6"
-    card: null
   - title: "Linear logic and lazy computation"
     url: "https://doi.org/10.1007/bfb0014972"
     year: 2005
     arxiv: null
     doi: "10.1007/bfb0014972"
-    card: null
+see:
+  - "041-linear-logic"
 ---
 
 # Interaction Nets

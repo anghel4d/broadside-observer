@@ -24,13 +24,14 @@ cites:
     year: 1995
     arxiv: null
     doi: "10.1007/3-540-60368-9_19"
-    card: "382-dynamic-storage-allocation-a-survey-and-critical-review"
   - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
     url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"
     year: 1994
     arxiv: null
     doi: null
-    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+see:
+  - "382-dynamic-storage-allocation-a-survey-and-critical-review"
+  - "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
 ---
 
 # Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel

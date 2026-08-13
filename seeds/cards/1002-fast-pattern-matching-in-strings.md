@@ -24,13 +24,14 @@ cites:
   year: 1977
   arxiv: null
   doi: 10.1145/359842.359859
-  card: 1003-a-fast-string-searching-algorithm
 - title: "Efficient String Matching: An Aid to Bibliographic Search"
   url: "https://doi.org/10.1145/360825.360855"
   year: 1975
   arxiv: null
   doi: 10.1145/360825.360855
-  card: 1004-efficient-string-matching-an-aid-to-bibliographic-search
+see:
+- "1003-a-fast-string-searching-algorithm"
+- "1004-efficient-string-matching-an-aid-to-bibliographic-search"
 ---
 
 # Fast Pattern Matching in Strings

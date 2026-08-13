@@ -22,19 +22,20 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "359-behavior-trees-for-next-gen-game-ai"
   - title: "Behavior Trees in Robotics and AI: An Introduction"
     url: "https://arxiv.org/abs/1709.00084"
     year: 2018
     arxiv: "1709.00084"
     doi: null
-    card: "708-behavior-trees-in-robotics-and-ai-an-introduction"
   - title: "Smart Terrain Object Affordance AI (The Sims lineage)"
     url: "https://www.gamedeveloper.com/"
     year: 2000
     arxiv: null
     doi: null
-    card: "494-smart-terrain-object-affordance-ai-the-sims-lineage"
+see:
+  - "359-behavior-trees-for-next-gen-game-ai"
+  - "708-behavior-trees-in-robotics-and-ai-an-introduction"
+  - "494-smart-terrain-object-affordance-ai-the-sims-lineage"
 ---
 
 # Managing Complexity in the Halo 2 AI System

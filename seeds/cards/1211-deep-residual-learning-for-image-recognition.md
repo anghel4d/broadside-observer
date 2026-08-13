@@ -25,7 +25,8 @@ cites:
     url: "https://doi.org/10.1145/3065386"
     year: 2017
     doi: "10.1145/3065386"
-    card: "1213-imagenet-classification-with-deep-convolutional-neural-nets"
+see:
+  - "1213-imagenet-classification-with-deep-convolutional-neural-nets"
 ---
 
 # Deep Residual Learning for Image Recognition

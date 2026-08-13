@@ -26,25 +26,26 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.1016/0304-3975(86)90044-7"
-    card: "890-the-system-f-of-variable-types-fifteen-years-later"
   - title: "An Intuitionistic Theory of Types: Predicative Part"
     url: "https://doi.org/10.1016/S0049-237X(08)71945-1"
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "A Framework for Defining Logics"
     url: "https://doi.org/10.1145/138027.138040"
     year: 1993
     arxiv: null
     doi: "10.1145/138027.138040"
-    card: "902-a-framework-for-defining-logics"
+see:
+  - "890-the-system-f-of-variable-types-fifteen-years-later"
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "902-a-framework-for-defining-logics"
 ---
 
 # The Calculus of Constructions

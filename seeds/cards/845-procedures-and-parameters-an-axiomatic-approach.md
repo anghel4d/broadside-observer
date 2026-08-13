@@ -23,19 +23,20 @@ cites:
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Proof of Correctness of Data Representations"
     url: "https://doi.org/10.1007/BF00289507"
     year: 1972
     arxiv: null
     doi: "10.1007/BF00289507"
-    card: "844-proof-of-correctness-of-data-representations"
   - title: "Report on the Algorithmic Language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
+see:
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "844-proof-of-correctness-of-data-representations"
+  - "874-report-on-the-algorithmic-language-algol-60"
 ---
 
 # Procedures and Parameters: An Axiomatic Approach

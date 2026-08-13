@@ -25,7 +25,8 @@ cites:
   - title: "Differential testing for software"
     url: "https://www.hpl.hp.com/hpjournal/dtj/vol10num1/vol10num1art9.pdf"
     year: 1998
-    card: "1232-differential-testing-for-software"
+see:
+  - "1232-differential-testing-for-software"
 ---
 
 # Exposing bugs in JavaScript engines through test transplantation and differential testing

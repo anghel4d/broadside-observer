@@ -21,20 +21,21 @@ cites:
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
     doi: "10.1109/38.656788"
-    card: "662-the-irradiance-volume"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Scaling Probe-Based Real-Time Dynamic Global Illumination for Production"
     url: "https://arxiv.org/abs/2009.10796"
     year: 2020
     arxiv: "2009.10796"
-    card: "330-scaling-probe-based-real-time-dynamic-global-illumination-fo"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+see:
+  - "662-the-irradiance-volume"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "330-scaling-probe-based-real-time-dynamic-global-illumination-fo"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Real-Time Global Illumination using Precomputed Light Field Probes

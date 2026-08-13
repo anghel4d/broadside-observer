@@ -24,25 +24,26 @@ cites:
   year: 2011
   arxiv: null
   doi: 10.1109/TCIAIG.2011.2159716
-  card: 136-experience-driven-procedural-content-generation
 - title: Procedural Content Generation in Games
   url: https://doi.org/10.1007/978-3-319-42716-4
   year: 2016
   arxiv: null
   doi: null
-  card: 118-procedural-content-generation-in-games
 - title: Wave Function Collapse
   url: https://github.com/mxgmn/WaveFunctionCollapse
   year: 2016
   arxiv: null
   doi: null
-  card: 119-wave-function-collapse
 - title: Procedural Content Generation via Machine Learning (PCGML)
   url: https://doi.org/10.1109/TG.2018.2846626
   year: 2018
   arxiv: null
   doi: null
-  card: 013-procedural-content-generation-via-machine-learning-pcgml
+see:
+- "136-experience-driven-procedural-content-generation"
+- "118-procedural-content-generation-in-games"
+- "119-wave-function-collapse"
+- "013-procedural-content-generation-via-machine-learning-pcgml"
 ---
 
 # Search-Based Procedural Content Generation: A Taxonomy and Survey

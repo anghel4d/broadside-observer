@@ -24,25 +24,26 @@ cites:
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
   - title: "Toward a Mathematical Semantics for Computer Languages"
     url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Practical Foundations for Programming Languages"
     url: "https://doi.org/10.1017/CBO9781316576892"
     year: 2016
     arxiv: null
     doi: "10.1017/CBO9781316576892"
-    card: "897-practical-foundations-for-programming-languages"
+see:
+  - "909-a-structural-approach-to-operational-semantics"
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "897-practical-foundations-for-programming-languages"
 ---
 
 # The Formal Semantics of Programming Languages: An Introduction

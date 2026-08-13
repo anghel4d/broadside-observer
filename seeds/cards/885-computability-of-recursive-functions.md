@@ -24,25 +24,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "General recursive functions of natural numbers"
     url: "https://doi.org/10.1007/BF01565439"
     year: 1936
     arxiv: null
     doi: "10.1007/BF01565439"
-    card: "776-general-recursive-functions-of-natural-numbers"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "Preliminary Discussion of the Logical Design of an Electronic Computing Instrument"
     url: "https://www.ias.edu/sites/default/files/library/pdfs/ecp.preliminarydiscussion.pdf"
     year: 1946
     arxiv: null
     doi: null
-    card: "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "776-general-recursive-functions-of-natural-numbers"
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
 ---
 
 # Computability of Recursive Functions

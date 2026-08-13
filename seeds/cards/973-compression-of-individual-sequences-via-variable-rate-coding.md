@@ -23,13 +23,14 @@ cites:
   year: 1977
   arxiv: null
   doi: 10.1109/TIT.1977.1055714
-  card: 972-a-universal-algorithm-for-sequential-data-compression
 - title: A Technique for High-Performance Data Compression
   url: "https://doi.org/10.1109/MC.1984.1659158"
   year: 1984
   arxiv: null
   doi: 10.1109/MC.1984.1659158
-  card: 974-a-technique-for-high-performance-data-compression
+see:
+- "972-a-universal-algorithm-for-sequential-data-compression"
+- "974-a-technique-for-high-performance-data-compression"
 ---
 
 # Compression of Individual Sequences via Variable-Rate Coding

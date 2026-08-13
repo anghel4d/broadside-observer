@@ -23,19 +23,18 @@ cites:
     year: 2023
     arxiv: "2302.10983"
     doi: null
-    card: "291-do-orcas-have-semantic-language-machine-learning-to-predict-"
   - title: "Benchmarking ORCA PT-1 Boson Sampler in Simulation"
     url: "https://arxiv.org/abs/2505.23217"
     year: 2025
     arxiv: "2505.23217"
     doi: null
-    card: "267-benchmarking-orca-pt-1-boson-sampler-in-simulation"
   - title: "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments"
     url: "https://arxiv.org/abs/2407.16771"
     year: 2024
     arxiv: "2407.16771"
     doi: null
-    card: "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c"
+see:
+  - "287-topology-guided-orca-smooth-multi-agent-motion-planning-in-c"
 ---
 
 # Behavior Tree-Based Task Planning for Multiple Mobile Robots using a Data Distribution Service

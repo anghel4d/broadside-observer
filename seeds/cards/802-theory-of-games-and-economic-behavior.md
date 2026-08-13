@@ -24,19 +24,20 @@ cites:
     year: 1928
     arxiv: null
     doi: "10.1007/BF01448847"
-    card: "801-zur-theorie-der-gesellschaftsspiele"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "Programming a Computer for Playing Chess"
     url: "https://doi.org/10.1080/14786445008521796"
     year: 1950
     arxiv: null
     doi: "10.1080/14786445008521796"
-    card: "462-programming-a-computer-for-playing-chess"
+see:
+  - "801-zur-theorie-der-gesellschaftsspiele"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "462-programming-a-computer-for-playing-chess"
 ---
 
 # Theory of Games and Economic Behavior

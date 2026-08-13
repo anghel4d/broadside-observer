@@ -22,19 +22,20 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "A Set of Postulates for the Foundation of Logic (second paper)"
     url: "https://doi.org/10.2307/1968172"
     year: 1933
     arxiv: null
     doi: "10.2307/1968172"
-    card: "764-a-set-of-postulates-for-the-foundation-of-logic-second-paper"
   - title: "Review of Turing: On Computable Numbers (Church–Turing thesis framing)"
     url: "https://www.jstor.org/stable/2268810"
     year: 1937
     arxiv: null
     doi: "10.2307/2268810"
-    card: "765-review-of-turing-on-computable-numbers-church-turing-thesis-"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "764-a-set-of-postulates-for-the-foundation-of-logic-second-paper"
+  - "765-review-of-turing-on-computable-numbers-church-turing-thesis-"
 ---
 
 # On Computable Numbers, with an Application to the Entscheidungsproblem. A Correction

@@ -39,12 +39,13 @@ cites:
     url: "https://arxiv.org/abs/2405.14333"
     year: 2024
     arxiv: "2405.14333"
-    card: "1244-deepseek-prover-advancing-theorem-proving"
   - title: "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
     url: "https://arxiv.org/abs/2402.03300"
     year: 2024
     arxiv: "2402.03300"
-    card: "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
+see:
+  - "1244-deepseek-prover-advancing-theorem-proving"
+  - "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
 ---
 
 # DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search

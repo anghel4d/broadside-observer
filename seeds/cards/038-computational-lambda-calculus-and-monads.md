@@ -24,73 +24,63 @@ cites:
     year: 1989
     arxiv: null
     doi: "10.1090/conm/092/1003210"
-    card: "166-linear-logic-autonomous-categories-and-cofree-coalgebras"
   - title: "The Lambda Calculus - Its Syntax and Semantics"
     url: "https://doi.org/10.1016/c2009-0-14341-6"
     year: 1984
     arxiv: null
     doi: "10.1016/c2009-0-14341-6"
-    card: null
   - title: "Call-by-name, call-by-value and the λ-calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: null
   - title: "Categories for the Working Mathematician"
     url: "https://doi.org/10.1007/978-1-4612-9839-7"
     year: 1971
     arxiv: null
     doi: "10.1007/978-1-4612-9839-7"
-    card: null
   - title: "The Collected Papers of Gerhard Gentzen"
     url: "https://doi.org/10.1016/s0049-237x(08)x7039-9"
     year: 1969
     arxiv: null
     doi: "10.1016/s0049-237x(08)x7039-9"
-    card: null
   - title: "Basic concepts of enriched category theory"
     url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.144.9438"
     year: 1982
     arxiv: null
     doi: null
-    card: null
   - title: "To H.B. Curry: Essays on Combinatory Logic, Lambda Calculus, and Formalism"
     url: "https://ci.nii.ac.jp/ncid/BA01035434"
     year: 1980
     arxiv: null
     doi: null
-    card: null
   - title: "Edinburgh LCF: A mechanised logic of computation"
     url: "https://doi.org/10.1007/3-540-09724-4"
     year: 1979
     arxiv: null
     doi: "10.1007/3-540-09724-4"
-    card: null
   - title: "The linear abstract machine"
     url: "https://doi.org/10.1016/0304-3975(88)90100-4"
     year: 1988
     arxiv: null
     doi: "10.1016/0304-3975(88)90100-4"
-    card: null
   - title: "The linear abstract machine"
     url: "https://doi.org/10.1016/0304-3975(88)90074-6"
     year: 1988
     arxiv: null
     doi: "10.1016/0304-3975(88)90074-6"
-    card: null
   - title: "Programming, transforming, and proving with function abstractions and memories"
     url: "https://doi.org/10.1007/bfb0035784"
     year: 1989
     arxiv: null
     doi: "10.1007/bfb0035784"
-    card: null
   - title: "Verification of programs that destructively manipulate data"
     url: "https://doi.org/10.1016/0167-6423(88)90026-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0167-6423(88)90026-3"
-    card: null
+see:
+  - "166-linear-logic-autonomous-categories-and-cofree-coalgebras"
 ---
 
 # Computational lambda-calculus and monads

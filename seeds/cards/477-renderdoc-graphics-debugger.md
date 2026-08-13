@@ -21,19 +21,20 @@ cites:
     year: 2015
     arxiv: null
     doi: null
-    card: "473-handmade-hero-hot-reload-engine-practice"
   - title: "GPU-Driven Rendering Pipelines"
     url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
     year: 2015
     arxiv: null
     doi: null
-    card: "016-gpu-driven-rendering-pipelines"
   - title: "Tracy Frame Profiler"
     url: "https://github.com/wolfpld/tracy"
     year: 2019
     arxiv: null
     doi: null
-    card: "468-tracy-frame-profiler"
+see:
+  - "473-handmade-hero-hot-reload-engine-practice"
+  - "016-gpu-driven-rendering-pipelines"
+  - "468-tracy-frame-profiler"
 ---
 
 # RenderDoc Graphics Debugger

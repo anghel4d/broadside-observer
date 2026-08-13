@@ -23,13 +23,14 @@ cites:
   year: 2022
   arxiv: '2205.14135'
   doi: null
-  card: 105-flashattention-fast-and-memory-efficient-exact-attention-wit
 - title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
   url: https://arxiv.org/abs/2407.08608
   year: 2024
   arxiv: '2407.08608'
   doi: null
-  card: 089-flashattention-3-fast-and-accurate-attention-with-asynchrony
+see:
+- "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+- "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
 # FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning

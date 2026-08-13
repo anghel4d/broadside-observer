@@ -27,19 +27,20 @@ cites:
   year: 2017
   arxiv: '1706.03762'
   doi: null
-  card: 014-attention-is-all-you-need
 - title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
   url: https://arxiv.org/abs/2307.08691
   year: 2023
   arxiv: '2307.08691'
   doi: null
-  card: 096-flashattention-2-faster-attention-with-better-parallelism-an
 - title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
   url: https://arxiv.org/abs/2407.08608
   year: 2024
   arxiv: '2407.08608'
   doi: null
-  card: 089-flashattention-3-fast-and-accurate-attention-with-asynchrony
+see:
+- "014-attention-is-all-you-need"
+- "096-flashattention-2-faster-attention-with-better-parallelism-an"
+- "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
 # FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness

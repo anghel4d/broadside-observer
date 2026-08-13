@@ -21,55 +21,48 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
   - title: "Guarded commands, nondeterminacy and formal derivation of programs"
     url: "https://doi.org/10.1145/360933.360975"
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-    card: null
   - title: "Proof of correctness of data representations"
     url: "https://doi.org/10.1007/bf00289507"
     year: 1972
     arxiv: null
     doi: "10.1007/bf00289507"
-    card: null
   - title: "Design of a separable transition-diagram compiler"
     url: "https://doi.org/10.1145/366663.366704"
     year: 1963
     arxiv: null
     doi: "10.1145/366663.366704"
-    card: null
   - title: "Structured Programming"
     url: "https://doi.org/10.1038/244318b0"
     year: 1973
     arxiv: null
     doi: "10.1038/244318b0"
-    card: null
   - title: "Report on the algorithmic language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: null
   - title: "The Programming Language Concurrent Pascal"
     url: "https://doi.org/10.1007/978-1-4612-6315-9_19"
     year: 1978
     arxiv: null
     doi: "10.1007/978-1-4612-6315-9_19"
-    card: null
   - title: "The Programming Language Concurrent Pascal"
     url: "https://doi.org/10.1007/978-1-4757-3472-0_11"
     year: 1975
     arxiv: null
     doi: "10.1007/978-1-4757-3472-0_11"
-    card: null
   - title: "Performance predictions for extended paged memories"
     url: "https://doi.org/10.1007/bf00264288"
     year: 1971
     arxiv: null
     doi: "10.1007/bf00264288"
-    card: null
+see:
+  - "044-a-calculus-of-communicating-systems"
 ---
 
 # Communicating Sequential Processes

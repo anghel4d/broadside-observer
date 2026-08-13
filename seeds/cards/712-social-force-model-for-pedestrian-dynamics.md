@@ -23,19 +23,20 @@ cites:
   year: 1987
   arxiv: null
   doi: 10.1145/37401.37406
-  card: 261-flocks-herds-and-schools-a-distributed-behavioral-model
 - title: Steering Behaviors for Autonomous Characters
   url: https://www.red3d.com/cwr/papers/1999/gdc99steer.html
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
 - title: Reciprocal n-body Collision Avoidance (ORCA)
   url: https://doi.org/10.1007/978-3-642-19457-3_1
   year: 2011
   arxiv: null
   doi: 10.1007/978-3-642-19457-3_1
-  card: 349-reciprocal-n-body-collision-avoidance-orca
+see:
+- "261-flocks-herds-and-schools-a-distributed-behavioral-model"
+- "258-steering-behaviors-for-autonomous-characters"
+- "349-reciprocal-n-body-collision-avoidance-orca"
 ---
 
 # Social Force Model for Pedestrian Dynamics

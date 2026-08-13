@@ -23,19 +23,20 @@ cites:
     year: 1933
     arxiv: null
     doi: null
-    card: "755-eine-interpretation-des-intuitionistischen-aussagenkalkuls"
   - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
     url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
     year: 1958
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
-    card: "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
+see:
+  - "755-eine-interpretation-des-intuitionistischen-aussagenkalkuls"
+  - "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+  - "780-introduction-to-metamathematics"
 ---
 
 # Zur intuitionistischen Arithmetik und Zahlentheorie

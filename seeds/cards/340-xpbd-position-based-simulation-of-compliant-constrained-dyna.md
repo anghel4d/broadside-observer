@@ -24,13 +24,14 @@ cites:
   year: 2003
   arxiv: null
   doi: null
-  card: 490-particle-based-fluid-simulation-for-interactive-applications
 - title: Position Based Fluids
   url: https://doi.org/10.1145/2461912.2461984
   year: 2013
   arxiv: null
   doi: 10.1145/2461912.2461984
-  card: 734-position-based-fluids
+see:
+- "490-particle-based-fluid-simulation-for-interactive-applications"
+- "734-position-based-fluids"
 ---
 
 # XPBD: Position-Based Simulation of Compliant Constrained Dynamics

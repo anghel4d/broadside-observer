@@ -24,19 +24,20 @@ cites:
     year: 2004
     arxiv: null
     doi: null
-    card: "369-epoch-based-reclamation-practical-lock-freedom"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Crystalline: Fast and Memory Efficient Wait-Free Reclamation"
     url: "https://arxiv.org/abs/2104.01142"
     year: 2021
     arxiv: "2104.01142"
     doi: null
-    card: "315-crystalline-fast-and-memory-efficient-wait-free-reclamation"
+see:
+  - "369-epoch-based-reclamation-practical-lock-freedom"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "315-crystalline-fast-and-memory-efficient-wait-free-reclamation"
 ---
 # Hyaline: Fast and Transparent Lock-Free Memory Reclamation
 

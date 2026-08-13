@@ -24,13 +24,14 @@ cites:
   year: 2015
   arxiv: null
   doi: null
-  card: 016-gpu-driven-rendering-pipelines
 - title: 'The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading'
   url: https://jcgt.org/published/0002/02/04/
   year: 2013
   arxiv: null
   doi: null
-  card: 347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-
+see:
+- "016-gpu-driven-rendering-pipelines"
+- "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
 ---
 
 # Clustered Deferred and Forward Shading

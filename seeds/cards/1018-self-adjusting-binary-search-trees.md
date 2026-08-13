@@ -23,13 +23,14 @@ cites:
   year: 1962
   arxiv: null
   doi: null
-  card: 1015-an-algorithm-for-the-organization-of-information
 - title: A Dichromatic Framework for Balanced Trees
   url: "https://doi.org/10.1109/SFCS.1978.3"
   year: 1978
   arxiv: null
   doi: 10.1109/SFCS.1978.3
-  card: 1017-a-dichromatic-framework-for-balanced-trees
+see:
+- "1015-an-algorithm-for-the-organization-of-information"
+- "1017-a-dichromatic-framework-for-balanced-trees"
 ---
 
 # Self-Adjusting Binary Search Trees

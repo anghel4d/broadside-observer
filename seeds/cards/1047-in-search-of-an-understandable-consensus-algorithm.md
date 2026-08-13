@@ -23,13 +23,14 @@ cites:
   year: 1998
   arxiv: null
   doi: 10.1145/279227.279229
-  card: 1042-the-part-time-parliament
 - title: Paxos Made Simple
   url: "https://lamport.azurewebsites.net/pubs/paxos-simple.pdf"
   year: 2001
   arxiv: null
   doi: null
-  card: 1043-paxos-made-simple
+see:
+- "1042-the-part-time-parliament"
+- "1043-paxos-made-simple"
 ---
 
 # In Search of an Understandable Consensus Algorithm

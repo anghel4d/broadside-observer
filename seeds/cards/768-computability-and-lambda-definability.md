@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "λ-definability and recursiveness"
     url: "https://doi.org/10.1215/S0012-7094-36-00227-2"
     year: 1936
     arxiv: null
     doi: "10.1215/S0012-7094-36-00227-2"
-    card: "777-lambda-definability-and-recursiveness"
   - title: "Review of Turing: On Computable Numbers (Church–Turing thesis framing)"
     url: "https://www.jstor.org/stable/2268810"
     year: 1937
     arxiv: null
     doi: "10.2307/2268810"
-    card: "765-review-of-turing-on-computable-numbers-church-turing-thesis-"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "777-lambda-definability-and-recursiveness"
+  - "765-review-of-turing-on-computable-numbers-church-turing-thesis-"
 ---
 
 # Computability and λ-Definability

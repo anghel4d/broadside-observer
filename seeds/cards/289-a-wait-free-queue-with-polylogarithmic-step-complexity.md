@@ -22,37 +22,38 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-    card: "037-wait-free-synchronization"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
   - title: "Wait-Free Queues with Multiple Enqueuers and Dequeuers"
     url: "https://doi.org/10.1145/1941553.1941585"
     year: 2011
     arxiv: null
     doi: "10.1145/1941553.1941585"
-    card: "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
   - title: "A Wait-Free Queue as Fast as Fetch-and-Add"
     url: "https://doi.org/10.1145/2851141.2851168"
     year: 2016
     arxiv: null
     doi: "10.1145/2851141.2851168"
-    card: "510-yang-mellor-crummey-wait-free-queue-fetch-and-add"
   - title: "wCQ: A Fast Wait-Free Queue with Bounded Memory Usage"
     url: "https://arxiv.org/abs/2201.02179"
     year: 2022
     arxiv: "2201.02179"
     doi: "10.1145/3490148.3538572"
-    card: "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "037-wait-free-synchronization"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
+  - "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
+  - "510-yang-mellor-crummey-wait-free-queue-fetch-and-add"
+  - "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
 ---
 
 # A Wait-free Queue with Polylogarithmic Step Complexity

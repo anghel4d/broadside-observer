@@ -16,7 +16,7 @@ Conventions for new passes:
 4. **Update the index** — every pass that adds cards also updates `INDEX.md` (section per batch or a regenerated full table).
 5. **Dedupe** — skip works already represented in `cards/` / `radar/seen.json` unless you are deliberately revising a card in place.
 6. **Keep rate** — from a wide candidate pool, keep roughly the best ~25% as seeds (same spirit as the deep-digest filter). Themed passes may bias topics; they should not fork the file format.
-7. **Lineage edges** — when a keeper sits on a known thread, set `lineage` and populate `cites` (with `card:` links when targets exist). Deep threads also get `lineages/<slug>.md`.
+7. **Lineage edges** — when a keeper sits on a known thread, set `lineage`, populate `cites` (bibliography only), and list live in-library targets in `see`. Deep threads also get `lineages/<slug>.md`.
 8. **Pool artifacts optional** — shortlists and merge scripts may live under `_pools/`; only `cards/`, `INDEX.md`, and this README are the human-facing contract.
 
 Scheduled Broadside dayparts (Frontier / Craft / Curiosity / Archive) should default to **seed card first** for keepers that are not yet worth a full `summaries/` digest. Deep digests remain the upgrade path.
@@ -39,13 +39,14 @@ reviewed: "2026-08-13"
 pool: "engines"      # optional: systems | graphics | realtime | engines | game-ai | agents | languages | maths-foundations | ...
 relevance_score: 9   # optional: 1–10 for Anghel / Anoptic / ano / RTS fit
 lineage: concurrent-data-structures   # optional: single primary thread slug (see Lineage below)
-cites:                      # optional: important citations / successors / predecessors
+cites:                      # optional: bibliography only (never a nested card key)
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
-    arxiv: null
+    arxiv: null          # arXiv id string when the cited work has one; required whenever it does
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"  # filename stem in cards/ when we have one; else omit/null
+see:                        # optional: filename stems currently in cards/ that this paper cites
+  - "032-michael-scott-lock-free-queue"
 ---
 ```
 
@@ -60,23 +61,28 @@ Body sections (exact headings):
 
 ## Lineage and cites
 
-Two optional frontmatter fields turn the library from a flat pile into a graph you can walk:
+Optional frontmatter fields turn the library from a flat pile into a graph you can walk. Bibliography and in-library pointers are **siblings**, not nested:
 
 | Field | Shape | Meaning |
 |-------|--------|---------|
 | `lineage` | one string slug | The **single** primary thread this card belongs to (e.g. `concurrent-data-structures`, `work-stealing-schedulers`, `memory-allocators`, `ecs-data-oriented`, `radiance-cascades`). A card has at most one lineage. |
-| `cites` | list of objects | Important bibliographic edges. Each entry is a citation (predecessor, successor, or key related work). Always include a resolvable `url` when possible. If Broadside already has a seed for that work, set `card` to that file’s stem (`NNN-slug` without `.md`) so browsers can deep-link. |
+| `cites` | list of objects | Bibliography only. Each entry is a citation (predecessor, successor, or key related work). Never a nested `card` key. |
+| `see` | list of strings | Filename stems (`NNN-slug`, no `.md`) for cards that **currently exist** in `cards/` **and** that this paper cites. Omit if none are live. |
 
 `cites` entry fields:
 
 - `title` (required)
-- `url` (required when known)
+- `url` (required when known; use `https://arxiv.org/abs/<id>` when the work is on arXiv)
 - `year`, `arxiv`, `doi` (optional)
-- `card` (optional) — stem of an existing file in `cards/`
+- Every cited work that has an arXiv id **must** have `arxiv:` set **and** `url:` pointing at the abs page
 
-Narrative write-ups for deep threads live under [`lineages/`](lineages/) as `lineages/<slug>.md` (ordered epistemology of the thread). Cards still carry `lineage: <slug>` so the app can group them. When a successor is important enough, **mint a new seed card** (append numbering) and point `cites` both ways as appropriate (ancestor lists successors; successor lists the classic it extends).
+`see` is the only in-library pointer. Empty or missing `see` is fine. Do not invent a third related-papers schema.
 
-Future research passes should fill `lineage` / `cites` when the edge is obvious; do not invent a second parallel schema for “related papers.”
+**Cull rule:** citations must never disappear when a card is culled. Delete the card file, drop that stem from other cards’ `see` lists, and do not touch `cites`.
+
+Narrative write-ups for deep threads live under [`lineages/`](lineages/) as `lineages/<slug>.md` (ordered epistemology of the thread). Cards still carry `lineage: <slug>` so the app can group them. When a successor is important enough, **mint a new seed card** (append numbering), add a `cites` entry both ways as appropriate, and list the live stem in `see`.
+
+Future research passes should fill `lineage` / `cites` / `see` when the edge is obvious.
 
 ## Layout
 

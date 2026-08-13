@@ -25,25 +25,26 @@ cites:
     year: 1983
     arxiv: null
     doi: null
-    card: "933-smalltalk-80-the-language-and-its-implementation"
   - title: "The Early History of Smalltalk"
     url: "https://doi.org/10.1145/155360.155364"
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155364"
-    card: "931-the-early-history-of-smalltalk"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
   - title: "A Denotational Semantics of Inheritance and Its Correctness"
     url: "https://doi.org/10.1145/74877.74884"
     year: 1989
     arxiv: null
     doi: "10.1145/74877.74884"
-    card: "939-a-denotational-semantics-of-inheritance-and-its-correctness"
+see:
+  - "933-smalltalk-80-the-language-and-its-implementation"
+  - "931-the-early-history-of-smalltalk"
+  - "920-a-theory-of-objects"
+  - "939-a-denotational-semantics-of-inheritance-and-its-correctness"
 ---
 
 # SELF: The Power of Simplicity

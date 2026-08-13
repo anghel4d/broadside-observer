@@ -25,25 +25,26 @@ cites:
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
   - title: "Definitional Interpreters Revisited"
     url: "https://doi.org/10.1023/A:1010075320953"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010075320953"
-    card: "893-definitional-interpreters-revisited"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
     url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
+see:
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
+  - "893-definitional-interpreters-revisited"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "916-control-operators-the-secd-machine-and-the-calculus"
 ---
 
 # Defunctionalization at Work

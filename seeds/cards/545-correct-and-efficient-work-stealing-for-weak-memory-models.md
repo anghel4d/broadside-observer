@@ -26,27 +26,28 @@ cites:
     url: "https://doi.org/10.1145/1073970.1073974"
     year: 2005
     doi: "10.1145/1073970.1073974"
-    card: "367-dynamic-circular-work-stealing-deque"
   - title: "Scheduling Multithreaded Computations by Work Stealing"
     url: "https://doi.org/10.1145/324133.324234"
     year: 1999
     doi: "10.1145/324133.324234"
-    card: "257-scheduling-multithreaded-computations-by-work-stealing"
   - title: "The Implementation of the Cilk-5 Multithreaded Language"
     url: "https://doi.org/10.1145/277650.277725"
     year: 1998
     doi: "10.1145/277650.277725"
-    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
   - title: "Fence-Free Work Stealing on Bounded TSO Processors"
     url: "https://doi.org/10.1145/2541940.2541987"
     year: 2014
     doi: "10.1145/2541940.2541987"
-    card: "546-fence-free-work-stealing-on-bounded-tso-processors"
   - title: "Formal Verification of Chase-Lev Deque in Concurrent Separation Logic"
     url: "https://arxiv.org/abs/2309.03642"
     year: 2023
     arxiv: "2309.03642"
-    card: "292-formal-verification-of-chase-lev-deque-in-concurrent-separat"
+see:
+  - "367-dynamic-circular-work-stealing-deque"
+  - "257-scheduling-multithreaded-computations-by-work-stealing"
+  - "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - "546-fence-free-work-stealing-on-bounded-tso-processors"
+  - "292-formal-verification-of-chase-lev-deque-in-concurrent-separat"
 ---
 
 # Correct and Efficient Work-Stealing for Weak Memory Models

@@ -23,19 +23,20 @@ cites:
     year: 2002
     arxiv: null
     doi: "10.1007/3-540-45706-2_19"
-    card: "445-a-practical-multi-word-compare-and-swap-operation"
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+see:
+  - "445-a-practical-multi-word-compare-and-swap-operation"
+  - "032-michael-scott-lock-free-queue"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # Efficient and Robust Lock-Free Multi-Word Compare-and-Swap via Contention-Aware Helping

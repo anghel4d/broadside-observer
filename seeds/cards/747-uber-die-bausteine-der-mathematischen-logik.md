@@ -23,25 +23,26 @@ cites:
     year: 1930
     arxiv: null
     doi: "10.2307/2370619"
-    card: "748-grundlagen-der-kombinatorischen-logik"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
     url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
     year: 1969
     arxiv: null
     doi: "10.1090/S0002-9947-1969-0241465-X"
-    card: "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
+see:
+  - "748-grundlagen-der-kombinatorischen-logik"
+  - "762-the-calculi-of-lambda-conversion"
+  - "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
+  - "868-the-mechanical-evaluation-of-expressions"
 ---
 
 # Über die Bausteine der mathematischen Logik

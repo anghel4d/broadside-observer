@@ -23,19 +23,20 @@ cites:
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
   - title: "Michael & Scott Lock-Free Queue"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "FrameGraph: Extensible Rendering Architecture in Frostbite"
     url: "https://www.gdcvault.com/play/1024612/FrameGraph-Extensible-Rendering-Architecture-in"
     year: 2017
     arxiv: null
     doi: null
-    card: "116-framegraph-extensible-rendering-architecture-in-frostbite"
+see:
+  - "012-mimalloc-free-list-sharding-in-action"
+  - "032-michael-scott-lock-free-queue"
+  - "116-framegraph-extensible-rendering-architecture-in-frostbite"
 ---
 
 # Sensing Surface Patches in Volume Rendering for Inferring Signed Distance Functions

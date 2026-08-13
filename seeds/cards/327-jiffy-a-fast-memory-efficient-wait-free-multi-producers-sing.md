@@ -22,31 +22,32 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-    card: "037-wait-free-synchronization"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
   - title: "Non-Intrusive MPSC Node-Based Queue (1024cores)"
     url: "https://www.1024cores.net/home/lock-free-algorithms/queues/non-intrusive-mpsc-node-based-queue"
     year: 2010
     arxiv: null
     doi: null
-    card: "509-vyukov-non-intrusive-mpsc-queue"
   - title: "Wait-Free Queues with Multiple Enqueuers and Dequeuers"
     url: "https://doi.org/10.1145/1941553.1941585"
     year: 2011
     arxiv: null
     doi: "10.1145/1941553.1941585"
-    card: "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "037-wait-free-synchronization"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
+  - "509-vyukov-non-intrusive-mpsc-queue"
+  - "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
 ---
 
 # Jiffy: A Fast, Memory Efficient, Wait-Free Multi-Producers Single-Consumer Queue

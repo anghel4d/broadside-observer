@@ -22,19 +22,20 @@ cites:
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
 - title: Notions of Computation Determine Monads
   url: https://doi.org/10.1007/3-540-45931-6_1
   year: 2002
   arxiv: null
   doi: null
-  card: 149-notions-of-computation-determine-monads
 - title: Notions of Computation and Monads
   url: https://doi.org/10.1016/0890-5401(91)90052-4
   year: 1991
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
-  card: 036-notions-of-computation-and-monads
+see:
+- "022-handlers-of-algebraic-effects"
+- "149-notions-of-computation-determine-monads"
+- "036-notions-of-computation-and-monads"
 lineage: algebraic-effects
 ---
 

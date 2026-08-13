@@ -25,13 +25,14 @@ cites:
   year: 2011
   arxiv: null
   doi: 10.1007/978-3-642-19457-3_1
-  card: 349-reciprocal-n-body-collision-avoidance-orca
 - title: RVO2 Library
   url: https://gamma.cs.unc.edu/RVO2/
   year: 2011
   arxiv: null
   doi: null
-  card: 719-rvo2-library
+see:
+- "349-reciprocal-n-body-collision-avoidance-orca"
+- "719-rvo2-library"
 ---
 
 # Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments

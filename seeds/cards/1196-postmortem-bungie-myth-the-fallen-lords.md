@@ -22,11 +22,11 @@ cites:
   - title: "The Illusion of Intelligence: The Integration of AI and Level Design in Halo"
     url: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
     year: 2002
-    card: "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
   - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"
     url: "https://ieeexplore.ieee.org/document/4082128"
     year: 1968
-    card: "262-a-formal-basis-for-the-heuristic-determination-of-minimum-cost"
+see:
+  - "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
 ---
 
 # Postmortem: Bungie's Myth: The Fallen Lords

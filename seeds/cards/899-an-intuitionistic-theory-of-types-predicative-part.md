@@ -24,25 +24,26 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "A Framework for Defining Logics"
     url: "https://doi.org/10.1145/138027.138040"
     year: 1993
     arxiv: null
     doi: "10.1145/138027.138040"
-    card: "902-a-framework-for-defining-logics"
   - title: "Implementing Mathematics with Nuprl"
     url: "http://www.nuprl.org/book/"
     year: 1986
     arxiv: null
     doi: null
-    card: "905-implementing-mathematics-with-nuprl"
+see:
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "901-the-calculus-of-constructions"
+  - "902-a-framework-for-defining-logics"
+  - "905-implementing-mathematics-with-nuprl"
 ---
 
 # An Intuitionistic Theory of Types: Predicative Part

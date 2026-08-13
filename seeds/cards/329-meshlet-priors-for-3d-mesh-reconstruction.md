@@ -24,13 +24,14 @@ cites:
   year: 2016
   arxiv: null
   doi: null
-  card: 733-meshoptimizer
 - title: Towards Practical Meshlet Compression
   url: https://arxiv.org/abs/2402.09919
   year: 2024
-  arxiv: null
+  arxiv: "2402.09919"
   doi: null
-  card: 288-towards-practical-meshlet-compression
+see:
+- "733-meshoptimizer"
+- "288-towards-practical-meshlet-compression"
 ---
 
 # Meshlet Priors for 3D Mesh Reconstruction

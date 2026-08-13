@@ -25,25 +25,26 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "Full Abstraction for PCF (AJM)"
     url: "https://doi.org/10.1006/inco.2000.2930"
     year: 2000
     arxiv: null
     doi: "10.1006/inco.2000.2930"
-    card: "945-full-abstraction-for-pcf-ajm"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "943-the-lazy-lambda-calculus"
   - title: "Domains for Denotational Semantics"
     url: "https://doi.org/10.1007/BFb0012801"
     year: 1982
     arxiv: null
     doi: "10.1007/BFb0012801"
-    card: "907-domains-for-denotational-semantics"
+see:
+  - "908-lcf-considered-as-a-programming-language"
+  - "945-full-abstraction-for-pcf-ajm"
+  - "943-the-lazy-lambda-calculus"
+  - "907-domains-for-denotational-semantics"
 ---
 
 # On Full Abstraction for PCF: I, II, and III

@@ -24,25 +24,26 @@ cites:
     year: 1991
     arxiv: null
     doi: "10.1016/0890-5401(91)90052-4"
-    card: "036-notions-of-computation-and-monads"
   - title: "Computational lambda-calculus and monads"
     url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
     doi: "10.1109/LICS.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
   - title: "The Essence of Functional Programming"
     url: "https://doi.org/10.1145/143165.143169"
     year: 1992
     arxiv: null
     doi: "10.1145/143165.143169"
-    card: "034-the-essence-of-functional-programming"
   - title: "Monads for Functional Programming"
     url: "https://link.springer.com/chapter/10.1007/3-540-59451-5_2"
     year: 1995
     arxiv: null
     doi: "10.1007/3-540-59451-5_2"
-    card: "157-monads-for-functional-programming"
+see:
+  - "036-notions-of-computation-and-monads"
+  - "038-computational-lambda-calculus-and-monads"
+  - "034-the-essence-of-functional-programming"
+  - "157-monads-for-functional-programming"
 ---
 
 # Comprehending Monads

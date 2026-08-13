@@ -23,25 +23,25 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Fast Concurrent Queues for x86 Processors"
     url: "https://doi.org/10.1145/2442516.2442527"
     year: 2013
     arxiv: null
     doi: "10.1145/2442516.2442527"
-    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Concurrency Freaks: FAAArrayQueue - MPMC lock-free queue"
     url: "http://concurrencyfreaks.blogspot.com/2016/11/faaarrayqueue-mpmc-lock-free-queue-part.html"
     year: 2016
     arxiv: null
     doi: null
-    card: null
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # FAAArrayQueue (Concurrency Freaks)

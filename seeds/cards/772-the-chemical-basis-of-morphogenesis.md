@@ -24,19 +24,20 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "Theory of Self-Reproducing Automata"
     url: "https://www.worldcat.org/title/theory-of-self-reproducing-automata/oclc/523589"
     year: 1966
     arxiv: null
     doi: null
-    card: "797-theory-of-self-reproducing-automata"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "797-theory-of-self-reproducing-automata"
 ---
 
 # The Chemical Basis of Morphogenesis

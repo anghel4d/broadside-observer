@@ -23,19 +23,20 @@ cites:
   year: 2003
   arxiv: null
   doi: null
-  card: 490-particle-based-fluid-simulation-for-interactive-applications
 - title: Position Based Dynamics
   url: https://doi.org/10.1016/j.jvcir.2007.01.005
   year: 2007
   arxiv: null
   doi: null
-  card: 363-position-based-dynamics
 - title: 'XPBD: Position-Based Simulation of Compliant Constrained Dynamics'
   url: https://doi.org/10.1145/2994258.2994272
   year: 2016
   arxiv: null
   doi: null
-  card: 340-xpbd-position-based-simulation-of-compliant-constrained-dyna
+see:
+- "490-particle-based-fluid-simulation-for-interactive-applications"
+- "363-position-based-dynamics"
+- "340-xpbd-position-based-simulation-of-compliant-constrained-dyna"
 ---
 
 # Position Based Fluids

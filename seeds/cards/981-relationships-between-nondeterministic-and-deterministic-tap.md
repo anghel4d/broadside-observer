@@ -23,13 +23,14 @@ cites:
   year: 1988
   arxiv: null
   doi: 10.1137/0217058
-  card: 982-nondeterministic-space-is-closed-under-complement
 - title: The Method of Forced Enumeration for Nondeterministic Automata
   url: "https://doi.org/10.1007/BF00280712"
   year: 1988
   arxiv: null
   doi: 10.1007/BF00280712
-  card: 983-the-method-of-forced-enumeration-for-nondeterministic-automa
+see:
+- "982-nondeterministic-space-is-closed-under-complement"
+- "983-the-method-of-forced-enumeration-for-nondeterministic-automa"
 ---
 
 # Relationships Between Nondeterministic and Deterministic Tape Complexities

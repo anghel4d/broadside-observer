@@ -24,25 +24,26 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
     url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
   - title: "Call-by-Name, Call-by-Value and the λ-Calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
+see:
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "916-control-operators-the-secd-machine-and-the-calculus"
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
 # A Call-by-Name Lambda-Calculus Machine

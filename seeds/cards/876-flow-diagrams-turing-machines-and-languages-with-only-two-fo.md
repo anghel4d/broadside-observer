@@ -24,25 +24,26 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-    card: "836-go-to-statement-considered-harmful"
   - title: "Notes on Structured Programming"
     url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
     year: 1970
     arxiv: null
     doi: null
-    card: "840-notes-on-structured-programming"
   - title: "Structured Programming with go to Statements"
     url: "https://doi.org/10.1145/356635.356640"
     year: 1974
     arxiv: null
     doi: "10.1145/356635.356640"
-    card: "849-structured-programming-with-go-to-statements"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+see:
+  - "836-go-to-statement-considered-harmful"
+  - "840-notes-on-structured-programming"
+  - "849-structured-programming-with-go-to-statements"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
 # Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules

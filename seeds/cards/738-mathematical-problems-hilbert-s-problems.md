@@ -23,25 +23,26 @@ cites:
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
     url: "https://doi.org/10.1007/BF01700692"
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "A Note on the Entscheidungsproblem"
     url: "https://doi.org/10.2307/2268565"
     year: 1936
     arxiv: null
     doi: "10.2307/2268565"
-    card: "759-a-note-on-the-entscheidungsproblem"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+see:
+  - "742-grundzuge-der-theoretischen-logik"
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "759-a-note-on-the-entscheidungsproblem"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
 # Mathematical Problems (Hilbert's Problems)

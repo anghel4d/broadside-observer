@@ -23,19 +23,20 @@ cites:
     year: 1932
     arxiv: null
     doi: "10.2307/1968337"
-    card: "763-a-set-of-postulates-for-the-foundation-of-logic"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "λ-definability and recursiveness"
     url: "https://doi.org/10.1215/S0012-7094-36-00227-2"
     year: 1936
     arxiv: null
     doi: "10.1215/S0012-7094-36-00227-2"
-    card: "777-lambda-definability-and-recursiveness"
+see:
+  - "763-a-set-of-postulates-for-the-foundation-of-logic"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "777-lambda-definability-and-recursiveness"
 ---
 
 # A Set of Postulates for the Foundation of Logic (second paper)

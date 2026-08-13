@@ -22,12 +22,13 @@ cites:
     url: "https://doi.org/10.1145/566570.566612"
     year: 2002
     doi: "10.1145/566570.566612"
-    card: "447-precomputed-radiance-transfer"
   - title: "The Irradiance Volume"
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
     doi: "10.1109/38.656788"
-    card: "662-the-irradiance-volume"
+see:
+  - "447-precomputed-radiance-transfer"
+  - "662-the-irradiance-volume"
 ---
 
 # An Efficient Representation for Irradiance Environment Maps

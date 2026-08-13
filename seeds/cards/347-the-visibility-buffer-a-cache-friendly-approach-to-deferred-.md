@@ -22,25 +22,26 @@ cites:
   year: 1993
   arxiv: null
   doi: 10.1145/166117.166147
-  card: 161-hierarchical-z-buffer-visibility
 - title: GPU-Driven Rendering Pipelines
   url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
   year: 2015
   arxiv: null
   doi: null
-  card: 016-gpu-driven-rendering-pipelines
 - title: 'Nanite: A Deep Dive'
   url: https://advances.realtimerendering.com/
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
 - title: Clustered Deferred and Forward Shading
   url: https://doi.org/10.1145/2159616.2159628
   year: 2012
   arxiv: null
   doi: 10.1145/2159616.2159628
-  card: 727-clustered-deferred-and-forward-shading
+see:
+- "161-hierarchical-z-buffer-visibility"
+- "016-gpu-driven-rendering-pipelines"
+- "106-nanite-a-deep-dive"
+- "727-clustered-deferred-and-forward-shading"
 ---
 
 # The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading

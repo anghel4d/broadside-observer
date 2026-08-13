@@ -22,73 +22,61 @@ cites:
     year: 1990
     arxiv: null
     doi: "10.5860/choice.27-5158"
-    card: null
   - title: "Numerical recipes in C"
     url: "https://www.carnets-tsf.fr/docs/content-table-numerical-recipes-C.pdf"
     year: 1994
     arxiv: null
     doi: null
-    card: null
   - title: "A user-programmable vertex engine"
     url: "https://doi.org/10.1145/383259.383274"
     year: 2001
     arxiv: null
     doi: "10.1145/383259.383274"
-    card: null
   - title: "GPGPU"
     url: "https://doi.org/10.1145/1103900.1103933"
     year: 2004
     arxiv: null
     doi: "10.1145/1103900.1103933"
-    card: null
   - title: "New quadric metric for simplifying meshes with appearance attributes"
     url: "https://doi.org/10.1109/visual.1999.809869"
     year: 2003
     arxiv: null
     doi: "10.1109/visual.1999.809869"
-    card: null
   - title: "Blister"
     url: "https://doi.org/10.1145/1073204.1073306"
     year: 2005
     arxiv: null
     doi: "10.1145/1073204.1073306"
-    card: null
   - title: "Silhouette maps for improved texture magnification"
     url: "https://doi.org/10.1145/1058129.1058139"
     year: 2004
     arxiv: null
     doi: "10.1145/1058129.1058139"
-    card: null
   - title: "Bixels: Picture Samples with Sharp Embedded Boundaries"
     url: "https://doi.org/10.2312/egwr/egsr04/255-264"
     year: 2004
     arxiv: null
     doi: "10.2312/egwr/egsr04/255-264"
-    card: null
   - title: "Reliable two-dimensional graphing methods for mathematical formulae with two free variables"
     url: "https://doi.org/10.1145/383259.383267"
     year: 2001
     arxiv: null
     doi: "10.1145/383259.383267"
-    card: null
   - title: "Distance approximations for rasterizing implicit curves"
     url: "https://doi.org/10.1145/174462.174531"
     year: 1994
     arxiv: null
     doi: "10.1145/174462.174531"
-    card: null
   - title: "Modeling with cubic A-patches"
     url: "https://doi.org/10.1145/221659.221662"
     year: 1995
     arxiv: null
     doi: "10.1145/221659.221662"
-    card: null
   - title: "Feature-Based Textures"
     url: "https://hdl.handle.net/1813/5648"
     year: 2004
     arxiv: null
     doi: "10.2312/egwr/egsr04/265-274"
-    card: null
 ---
 
 # Loop and Blinn Resolution Independent Curve Rendering using Programmable Graphics Hardware

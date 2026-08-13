@@ -23,25 +23,26 @@ cites:
     year: 1959
     arxiv: null
     doi: "10.1147/rd.32.0114"
-    card: "870-finite-automata-and-their-decision-problems"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "The Concept of Truth in Formalized Languages"
     url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
     year: 1933
     arxiv: null
     doi: null
-    card: "882-the-concept-of-truth-in-formalized-languages"
+see:
+  - "870-finite-automata-and-their-decision-problems"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "852-on-certain-formal-properties-of-grammars"
+  - "882-the-concept-of-truth-in-formalized-languages"
 ---
 
 # Weak Second-Order Arithmetic and Finite Automata

@@ -22,25 +22,26 @@ cites:
   year: 2001
   arxiv: null
   doi: null
-  card: 376-source-multiplayer-networking
 - title: GGPO Rollback Networking
   url: https://github.com/pond3r/ggpo
   year: 2006
   arxiv: null
   doi: null
-  card: 254-ggpo-rollback-networking
 - title: Snapshot Interpolation
   url: https://gafferongames.com/post/snapshot_interpolation/
   year: 2015
   arxiv: null
   doi: null
-  card: 341-snapshot-interpolation
 - title: Deterministic Lockstep
   url: https://gafferongames.com/post/deterministic_lockstep/
   year: 2014
   arxiv: null
   doi: null
-  card: 017-deterministic-lockstep
+see:
+- "376-source-multiplayer-networking"
+- "254-ggpo-rollback-networking"
+- "341-snapshot-interpolation"
+- "017-deterministic-lockstep"
 ---
 
 # Client-Side Prediction & Server Reconciliation

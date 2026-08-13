@@ -20,13 +20,14 @@ cites:
     year: 2010
     arxiv: null
     doi: null
-    card: "351-building-a-better-battle-damn-and-utility-theory-for-games"
   - title: "Behavioral Mathematics for Game AI"
     url: "https://www.courseptr.com/"
     year: 2009
     arxiv: null
     doi: null
-    card: "431-behavioral-mathematics-for-game-ai"
+see:
+  - "351-building-a-better-battle-damn-and-utility-theory-for-games"
+  - "431-behavioral-mathematics-for-game-ai"
 ---
 
 # Game AI Pro — Utility-Based Decision Architectures

@@ -24,25 +24,26 @@ cites:
     year: 1969
     arxiv: null
     doi: "10.1090/S0002-9947-1969-0241465-X"
-    card: "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "The Next 700 Programming Languages"
     url: "https://doi.org/10.1145/365230.365257"
     year: 1966
     arxiv: null
     doi: "10.1145/365230.365257"
-    card: "867-the-next-700-programming-languages"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "867-the-next-700-programming-languages"
+  - "027-types-and-programming-languages"
 ---
 
 # A Theory of Type Polymorphism in Programming

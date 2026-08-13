@@ -22,17 +22,28 @@ def yaml_escape(s: str) -> str:
 
 def yaml_cites(cites: List[Dict[str, Any]]) -> str:
     lines = ["cites:"]
+    see: List[str] = []
     for c in cites:
         lines.append(f'  - title: "{yaml_escape(c["title"])}"')
         lines.append(f'    url: "{c["url"]}"')
         lines.append(f'    year: {c["year"]}')
         lines.append(f'    arxiv: {("null" if not c.get("arxiv") else "\""+c["arxiv"]+"\"")}')
         lines.append(f'    doi: {("null" if not c.get("doi") else "\""+c["doi"]+"\"")}')
-        lines.append(f'    card: {("null" if not c.get("card") else "\""+c["card"]+"\"")}')
+        if c.get("card"):
+            see.append(c["card"])
+    seen: List[str] = []
+    for stem in see:
+        if stem not in seen:
+            seen.append(stem)
+    if seen:
+        lines.append("see:")
+        for stem in seen:
+            lines.append(f'  - "{stem}"')
     return "\n".join(lines)
 
 def strip_lineage_cites(front: str) -> str:
     front = re.sub(r"^cites:\n(?:  .*\n)*", "", front, flags=re.M)
+    front = re.sub(r"^see:\n(?:  .*\n)*", "", front, flags=re.M)
     front = re.sub(r"^lineage:\s*.*\n?", "", front, flags=re.M)
     return front.rstrip() + "\n"
 

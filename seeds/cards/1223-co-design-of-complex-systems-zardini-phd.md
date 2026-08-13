@@ -21,7 +21,8 @@ cites:
   - title: "Applied Compositional Thinking for Engineering"
     url: "https://bit.ly/3qQNrdR"
     year: 2024
-    card: "1224-applied-compositional-thinking-for-engineering"
+see:
+  - "1224-applied-compositional-thinking-for-engineering"
 ---
 
 # Co-Design of Complex Systems: From Autonomy to Future Mobility Systems

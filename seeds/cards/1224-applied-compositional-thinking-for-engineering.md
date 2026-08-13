@@ -24,7 +24,8 @@ cites:
     url: "https://doi.org/10.3929/ethz-b-000620391"
     year: 2023
     doi: "10.3929/ethz-b-000620391"
-    card: "1223-co-design-of-complex-systems-zardini-phd"
+see:
+  - "1223-co-design-of-complex-systems-zardini-phd"
 ---
 
 # Applied Compositional Thinking for Engineering

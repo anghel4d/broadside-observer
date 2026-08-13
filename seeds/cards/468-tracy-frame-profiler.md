@@ -21,19 +21,20 @@ cites:
     year: 2017
     arxiv: null
     doi: null
-    card: "471-amd-radeon-gpu-profiler"
   - title: "Handmade Hero / Hot-Reload Engine Practice"
     url: "https://hero.handmade.network/"
     year: 2015
     arxiv: null
     doi: null
-    card: "473-handmade-hero-hot-reload-engine-practice"
   - title: "RenderDoc Graphics Debugger"
     url: "https://renderdoc.org/"
     year: 2014
     arxiv: null
     doi: null
-    card: "477-renderdoc-graphics-debugger"
+see:
+  - "471-amd-radeon-gpu-profiler"
+  - "473-handmade-hero-hot-reload-engine-practice"
+  - "477-renderdoc-graphics-debugger"
 ---
 
 # Tracy Frame Profiler

@@ -23,25 +23,26 @@ cites:
   year: 2020
   arxiv: '2006.07688'
   doi: null
-  card: 333-universal-wait-free-memory-reclamation
 - title: 'Hyaline: Fast and Transparent Lock-Free Memory Reclamation'
   url: https://arxiv.org/abs/1905.07903
   year: 2019
   arxiv: '1905.07903'
   doi: null
-  card: 704-hyaline-fast-and-transparent-lock-free-memory-reclamati
 - title: Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms
   url: https://doi.org/10.1145/248052.248106
   year: 1996
   arxiv: null
   doi: 10.1145/248052.248106
-  card: 032-michael-scott-lock-free-queue
 - title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
   url: https://doi.org/10.1109/TPDS.2004.8
   year: 2004
   arxiv: null
   doi: 10.1109/TPDS.2004.8
-  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
+see:
+- "333-universal-wait-free-memory-reclamation"
+- "704-hyaline-fast-and-transparent-lock-free-memory-reclamati"
+- "032-michael-scott-lock-free-queue"
+- "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # Crystalline: Fast and Memory Efficient Wait-Free Reclamation

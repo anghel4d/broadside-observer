@@ -23,19 +23,20 @@ cites:
     year: 1940
     arxiv: null
     doi: null
-    card: "752-the-consistency-of-the-axiom-of-choice-and-of-the-generalize"
   - title: "Mathematical Problems (Hilbert's Problems)"
     url: "https://mathcs.clarku.edu/~djoyce/hilbert/problems.html"
     year: 1900
     arxiv: null
     doi: null
-    card: "738-mathematical-problems-hilbert-s-problems"
   - title: "Investigations in the foundations of set theory I"
     url: "https://doi.org/10.1007/BF01449999"
     year: 1908
     arxiv: null
     doi: "10.1007/BF01449999"
-    card: "746-investigations-in-the-foundations-of-set-theory-i"
+see:
+  - "752-the-consistency-of-the-axiom-of-choice-and-of-the-generalize"
+  - "738-mathematical-problems-hilbert-s-problems"
+  - "746-investigations-in-the-foundations-of-set-theory-i"
 ---
 
 # What is Cantor's Continuum Problem?

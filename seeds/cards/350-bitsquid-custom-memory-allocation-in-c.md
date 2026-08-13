@@ -21,19 +21,20 @@ cites:
     year: 2012
     arxiv: null
     doi: null
-    card: "423-per-frame-arena-allocation-patterns-in-games"
   - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
     url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
     year: 2013
     arxiv: null
     doi: null
-    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+see:
+  - "423-per-frame-arena-allocation-patterns-in-games"
+  - "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
 ---
 
 # Bitsquid Custom Memory Allocation in C++

@@ -23,13 +23,14 @@ cites:
   year: 1969
   arxiv: null
   doi: 10.1007/BF02165411
-  card: 1009-gaussian-elimination-is-not-optimal
 - title: Schnelle Multiplikation grosser Zahlen
   url: "https://doi.org/10.1007/BF02242355"
   year: 1971
   arxiv: null
   doi: 10.1007/BF02242355
-  card: 1011-schnelle-multiplikation-grosser-zahlen
+see:
+- "1009-gaussian-elimination-is-not-optimal"
+- "1011-schnelle-multiplikation-grosser-zahlen"
 ---
 
 # An Algorithm for the Machine Calculation of Complex Fourier Series

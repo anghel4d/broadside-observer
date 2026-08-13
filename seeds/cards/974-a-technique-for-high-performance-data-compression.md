@@ -22,7 +22,8 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1109/TIT.1978.1055934
-  card: 973-compression-of-individual-sequences-via-variable-rate-coding
+see:
+- "973-compression-of-individual-sequences-via-variable-rate-coding"
 ---
 
 # A Technique for High-Performance Data Compression

@@ -26,7 +26,6 @@ cites:
     year: 2026
     arxiv: "2604.16548"
     doi: null
-    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
@@ -37,7 +36,8 @@ cites:
     year: 2026
     arxiv: "2608.06811"
     doi: null
-    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+see:
+  - "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
 ---
 
 # MemGPT: Towards LLMs as Operating Systems

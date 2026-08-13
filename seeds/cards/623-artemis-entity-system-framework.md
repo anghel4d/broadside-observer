@@ -23,25 +23,26 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - title: "A Journey into Entity Component Systems"
     url: "https://www.richardlord.net/blog/ecs/what-is-an-entity-framework.html"
     year: 2012
     arxiv: null
     doi: null
-    card: "418-a-journey-into-entity-component-systems"
   - title: "EnTT: Gaming meets modern C++"
     url: "https://skypjack.github.io/2019-02-14-ecs-baf-part-1/"
     year: 2019
     arxiv: null
     doi: null
-    card: "398-entt-gaming-meets-modern-c"
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
+see:
+  - "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - "418-a-journey-into-entity-component-systems"
+  - "398-entt-gaming-meets-modern-c"
+  - "334-flecs-a-fast-entity-component-system-for-c99"
 ---
 
 # Artemis Entity System Framework

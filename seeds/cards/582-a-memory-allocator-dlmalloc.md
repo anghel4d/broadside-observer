@@ -23,19 +23,20 @@ cites:
     year: 1995
     arxiv: null
     doi: "10.1007/3-540-60368-9_19"
-    card: "382-dynamic-storage-allocation-a-survey-and-critical-review"
   - title: "Reconsidering Custom Memory Allocation"
     url: "https://doi.org/10.1145/582419.582421"
     year: 2002
     arxiv: null
     doi: "10.1145/582419.582421"
-    card: "584-reconsidering-custom-memory-allocation"
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+see:
+  - "382-dynamic-storage-allocation-a-survey-and-critical-review"
+  - "584-reconsidering-custom-memory-allocation"
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
 ---
 
 # A Memory Allocator (dlmalloc)

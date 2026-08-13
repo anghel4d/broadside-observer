@@ -23,19 +23,20 @@ cites:
     year: 1940
     arxiv: null
     doi: null
-    card: "752-the-consistency-of-the-axiom-of-choice-and-of-the-generalize"
   - title: "Principia Mathematica, Volume I"
     url: "https://archive.org/details/PrincipiaMathematicaVol1"
     year: 1910
     arxiv: null
     doi: null
-    card: "739-principia-mathematica-volume-i"
   - title: "The Concept of Truth in Formalized Languages"
     url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
     year: 1933
     arxiv: null
     doi: null
-    card: "882-the-concept-of-truth-in-formalized-languages"
+see:
+  - "752-the-consistency-of-the-axiom-of-choice-and-of-the-generalize"
+  - "739-principia-mathematica-volume-i"
+  - "882-the-concept-of-truth-in-formalized-languages"
 ---
 
 # Investigations in the foundations of set theory I

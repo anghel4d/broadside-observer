@@ -20,19 +20,20 @@ cites:
   year: 2015
   arxiv: null
   doi: null
-  card: 121-job-system-and-fiber-architecture-naughty-dog
 - title: Scheduling Multithreaded Computations by Work Stealing
   url: https://doi.org/10.1145/324133.324234
   year: 1999
   arxiv: null
   doi: null
-  card: 257-scheduling-multithreaded-computations-by-work-stealing
 - title: Dynamic Circular Work-Stealing Deque
   url: https://doi.org/10.1145/1073970.1073974
   year: 2005
   arxiv: null
   doi: null
-  card: 367-dynamic-circular-work-stealing-deque
+see:
+- "121-job-system-and-fiber-architecture-naughty-dog"
+- "257-scheduling-multithreaded-computations-by-work-stealing"
+- "367-dynamic-circular-work-stealing-deque"
 ---
 
 # Parallelizing the Naughty Dog Engine Using Fibers

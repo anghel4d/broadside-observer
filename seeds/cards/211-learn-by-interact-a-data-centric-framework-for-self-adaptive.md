@@ -34,13 +34,14 @@ cites:
     year: 2026
     arxiv: "2607.28591"
     doi: null
-    card: "056-change2task-from-repository-changes-to-executable-coding-age"
   - title: "CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents"
     url: "https://arxiv.org/abs/2608.05886"
     year: 2026
     arxiv: "2608.05886"
     doi: null
-    card: "057-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
+see:
+  - "056-change2task-from-repository-changes-to-executable-coding-age"
+  - "057-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
 ---
 
 # Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environments

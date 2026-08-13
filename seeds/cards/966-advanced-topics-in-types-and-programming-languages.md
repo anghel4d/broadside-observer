@@ -24,25 +24,26 @@ cites:
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
   - title: "Practical Foundations for Programming Languages"
     url: "https://doi.org/10.1017/CBO9781316576892"
     year: 2016
     arxiv: null
     doi: "10.1017/CBO9781316576892"
-    card: "897-practical-foundations-for-programming-languages"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "Linear Types Can Change the World!"
     url: "https://homepages.inf.ed.ac.uk/wadler/topics/linear-logic.html"
     year: 1990
     arxiv: null
     doi: null
-    card: "165-linear-types-can-change-the-world"
+see:
+  - "027-types-and-programming-languages"
+  - "897-practical-foundations-for-programming-languages"
+  - "901-the-calculus-of-constructions"
+  - "165-linear-types-can-change-the-world"
 ---
 
 # Advanced Topics in Types and Programming Languages

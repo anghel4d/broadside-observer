@@ -23,73 +23,61 @@ cites:
     year: 1966
     arxiv: null
     doi: "10.1002/j.1538-7305.1966.tb01709.x"
-    card: null
   - title: "Preemptive Scheduling of Real-Time Tasks on Multiprocessor Systems"
     url: "https://doi.org/10.1145/321574.321586"
     year: 1970
     arxiv: null
     doi: "10.1145/321574.321586"
-    card: null
   - title: "A scheduling philosophy for multiprocessing systems"
     url: "https://doi.org/10.1145/363095.363144"
     year: 1968
     arxiv: null
     doi: "10.1145/363095.363144"
-    card: null
   - title: "A Survey of Analytical Time-Sharing Models"
     url: "https://doi.org/10.1145/356546.356549"
     year: 1969
     arxiv: null
     doi: "10.1145/356546.356549"
-    card: null
   - title: "A policy-driven scheduler for a time-sharing system"
     url: "https://doi.org/10.1145/362515.362520"
     year: 1971
     arxiv: null
     doi: "10.1145/362515.362520"
-    card: null
   - title: "Programming Real-Time Computer Systems"
     url: "https://doi.org/10.2307/2003621"
     year: 1966
     arxiv: null
     doi: "10.2307/2003621"
-    card: null
   - title: "Production and Stabilization of Real-Time Task Schedules"
     url: "https://doi.org/10.1145/321406.321408"
     year: 1967
     arxiv: null
     doi: "10.1145/321406.321408"
-    card: null
   - title: "Software Design Techniques for Automatic Checkout"
     url: "https://doi.org/10.1109/taes.1967.5408666"
     year: 1967
     arxiv: null
     doi: "10.1109/taes.1967.5408666"
-    card: null
   - title: "Certification of Algorithm 46: Exponential of a complex number"
     url: "https://doi.org/10.1145/367766.368184"
     year: 1962
     arxiv: null
     doi: "10.1145/367766.368184"
-    card: null
   - title: "Sequencing Aspects of Multiprogramming"
     url: "https://doi.org/10.1145/321075.321086"
     year: 1961
     arxiv: null
     doi: "10.1145/321075.321086"
-    card: null
   - title: "Multiprogram scheduling"
     url: "https://doi.org/10.1145/367297.367317"
     year: 1960
     arxiv: null
     doi: "10.1145/367297.367317"
-    card: null
   - title: "Multiprogram scheduling"
     url: "https://doi.org/10.1145/367349.367356"
     year: 1960
     arxiv: null
     doi: "10.1145/367349.367356"
-    card: null
 ---
 
 # Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment (RM/EDF)

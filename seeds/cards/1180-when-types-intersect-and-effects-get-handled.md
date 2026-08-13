@@ -23,31 +23,32 @@ cites:
     year: 2009
     arxiv: null
     doi: "10.1007/978-3-642-00590-9_7"
-    card: "022-handlers-of-algebraic-effects"
   - title: "Programming with Algebraic Effects and Handlers"
     url: "https://arxiv.org/abs/1203.1539"
     year: 2015
     arxiv: "1203.1539"
     doi: null
-    card: "123-programming-with-algebraic-effects-and-handlers"
   - title: "Handling Algebraic Effects"
     url: "https://doi.org/10.2168/LMCS-9(4:23)2013"
     year: 2013
     arxiv: null
     doi: null
-    card: "128-handling-algebraic-effects"
   - title: "Algebraic Operations and Generic Effects"
     url: "https://doi.org/10.1023/A:1023064908962"
     year: 2003
     arxiv: null
     doi: null
-    card: "147-algebraic-operations-and-generic-effects"
   - title: "Notions of Computation and Monads"
     url: "https://doi.org/10.1016/0890-5401(91)90052-4"
     year: 1991
     arxiv: null
     doi: "10.1016/0890-5401(91)90052-4"
-    card: "036-notions-of-computation-and-monads"
+see:
+  - "022-handlers-of-algebraic-effects"
+  - "123-programming-with-algebraic-effects-and-handlers"
+  - "128-handling-algebraic-effects"
+  - "147-algebraic-operations-and-generic-effects"
+  - "036-notions-of-computation-and-monads"
 ---
 
 # When Types Intersect and Effects Get Handled

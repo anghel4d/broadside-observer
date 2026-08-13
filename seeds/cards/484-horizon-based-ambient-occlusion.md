@@ -22,13 +22,14 @@ cites:
   year: 1986
   arxiv: null
   doi: 10.1145/15886.15902
-  card: 169-the-rendering-equation
 - title: 'Finding Next Gen: CryEngine 2 (SSAO)'
   url: https://www.crytek.com/download/Presentations/FindingNextGen-CryEngine2.pdf
   year: 2007
   arxiv: null
   doi: null
-  card: 735-finding-next-gen-cryengine-2-ssao
+see:
+- "169-the-rendering-equation"
+- "735-finding-next-gen-cryengine-2-ssao"
 lineage: ambient-occlusion
 ---
 

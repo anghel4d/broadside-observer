@@ -24,19 +24,20 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/363095.363143"
-    card: "837-the-structure-of-the-the-multiprogramming-system"
   - title: "Cooperating Sequential Processes"
     url: "https://www.cs.utexas.edu/users/EWD/ewd01xx/EWD123.PDF"
     year: 1968
     arxiv: null
     doi: null
-    card: "839-cooperating-sequential-processes"
   - title: "Guarded Commands, Nondeterminacy and Formal Derivation of Programs"
     url: "https://doi.org/10.1145/360933.360975"
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-    card: "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+see:
+  - "837-the-structure-of-the-the-multiprogramming-system"
+  - "839-cooperating-sequential-processes"
+  - "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
 ---
 
 # Solution of a Problem in Concurrent Programming Control

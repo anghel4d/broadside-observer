@@ -23,13 +23,14 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1109/TCIAIG.2011.2148116"
-    card: "020-search-based-procedural-content-generation-a-taxonomy-and-su"
   - title: "Procedural Content Generation via Machine Learning (PCGML)"
     url: "https://arxiv.org/abs/1702.00539"
     year: 2018
     arxiv: "1702.00539"
     doi: null
-    card: "013-procedural-content-generation-via-machine-learning-pcgml"
+see:
+  - "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+  - "013-procedural-content-generation-via-machine-learning-pcgml"
 ---
 
 # Experience-Driven Procedural Content Generation

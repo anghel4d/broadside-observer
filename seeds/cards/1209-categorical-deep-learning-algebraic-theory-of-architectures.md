@@ -24,12 +24,13 @@ cites:
     url: "https://arxiv.org/abs/2106.07032"
     year: 2021
     arxiv: "2106.07032"
-    card: "1219-category-theory-in-machine-learning"
   - title: "Categorical Foundations of Gradient-Based Learning"
     url: "https://arxiv.org/abs/2103.01931"
     year: 2022
     arxiv: "2103.01931"
-    card: "1204-categorical-foundations-of-gradient-based-learning"
+see:
+  - "1219-category-theory-in-machine-learning"
+  - "1204-categorical-foundations-of-gradient-based-learning"
 ---
 
 # Position: Categorical Deep Learning is an Algebraic Theory of All Architectures

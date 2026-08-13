@@ -23,19 +23,20 @@ cites:
     year: 1944
     arxiv: null
     doi: null
-    card: "802-theory-of-games-and-economic-behavior"
   - title: "Programming a Computer for Playing Chess"
     url: "https://doi.org/10.1080/14786445008521796"
     year: 1950
     arxiv: null
     doi: "10.1080/14786445008521796"
-    card: "462-programming-a-computer-for-playing-chess"
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
+see:
+  - "802-theory-of-games-and-economic-behavior"
+  - "462-programming-a-computer-for-playing-chess"
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
 ---
 
 # Zur Theorie der Gesellschaftsspiele

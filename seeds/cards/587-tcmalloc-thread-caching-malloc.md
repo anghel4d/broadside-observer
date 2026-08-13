@@ -24,25 +24,26 @@ cites:
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
   - title: "Beyond malloc efficiency to fleet efficiency: a hugepage-aware memory allocator"
     url: "https://www.usenix.org/system/files/osdi21-hunter.pdf"
     year: 2021
     arxiv: null
     doi: null
-    card: "591-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa"
+see:
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
+  - "591-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa"
 ---
 
 # TCMalloc: Thread-Caching Malloc

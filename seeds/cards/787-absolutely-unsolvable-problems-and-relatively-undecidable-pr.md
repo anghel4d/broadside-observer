@@ -23,25 +23,26 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Recursively enumerable sets of positive integers and their decision problems"
     url: "https://doi.org/10.1090/S0002-9904-1944-08111-1"
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions"
     url: "https://www.worldcat.org/title/undecidable/oclc/523589"
     year: 1965
     arxiv: null
     doi: null
-    card: "887-the-undecidable-basic-papers-on-undecidable-propositions-uns"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "887-the-undecidable-basic-papers-on-undecidable-propositions-uns"
 ---
 
 # Absolutely Unsolvable Problems and Relatively Undecidable Propositions

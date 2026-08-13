@@ -24,25 +24,26 @@ cites:
     year: 1978
     arxiv: null
     doi: null
-    card: "925-rabbit-a-compiler-for-scheme"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
+see:
+  - "925-rabbit-a-compiler-for-scheme"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "154-the-definition-of-standard-ml-revised"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
 # Compiling with Continuations

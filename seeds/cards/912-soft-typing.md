@@ -25,25 +25,26 @@ cites:
     year: 1997
     arxiv: null
     doi: "10.1145/239912.239917"
-    card: "913-a-practical-soft-type-system-for-scheme"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
   - title: "The Revised^5 Report on the Algorithmic Language Scheme"
     url: "https://doi.org/10.1023/A:1010051815785"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-    card: "926-the-revised-5-report-on-the-algorithmic-language-scheme"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "913-a-practical-soft-type-system-for-scheme"
+  - "911-a-syntactic-approach-to-type-soundness"
+  - "926-the-revised-5-report-on-the-algorithmic-language-scheme"
+  - "027-types-and-programming-languages"
 ---
 
 # Soft Typing

@@ -24,13 +24,14 @@ cites:
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
 - title: Monad Transformers and Modular Interpreters
   url: https://doi.org/10.1145/199448.199528
   year: 1995
   arxiv: null
   doi: null
-  card: 156-monad-transformers-and-modular-interpreters
+see:
+- "022-handlers-of-algebraic-effects"
+- "156-monad-transformers-and-modular-interpreters"
 ---
 
 # Notions of Computation and Monads

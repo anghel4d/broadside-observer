@@ -26,25 +26,26 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "Types, Abstraction and Parametric Polymorphism"
     url: "https://people.mpi-sws.org/~dreyer/tor/papers/reynolds.pdf"
     year: 1983
     arxiv: null
     doi: null
-    card: "892-types-abstraction-and-parametric-polymorphism"
   - title: "Abstract Types Have Existential Type"
     url: "https://doi.org/10.1145/44501.44504"
     year: 1988
     arxiv: null
     doi: "10.1145/44501.44504"
-    card: "921-abstract-types-have-existential-type"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
+see:
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "892-types-abstraction-and-parametric-polymorphism"
+  - "921-abstract-types-have-existential-type"
+  - "920-a-theory-of-objects"
 ---
 
 # On Understanding Types, Data Abstraction, and Polymorphism

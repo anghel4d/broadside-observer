@@ -25,15 +25,16 @@ cites:
     url: "https://doi.org/10.1145/566570.566612"
     year: 2002
     doi: "10.1145/566570.566612"
-    card: "447-precomputed-radiance-transfer"
   - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
     url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
     year: 2017
-    card: "406-real-time-global-illumination-using-precomputed-light-field-"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+see:
+  - "447-precomputed-radiance-transfer"
+  - "406-real-time-global-illumination-using-precomputed-light-field-"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
 # The Irradiance Volume

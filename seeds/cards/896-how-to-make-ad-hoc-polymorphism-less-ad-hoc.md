@@ -25,25 +25,26 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "Principal Type-Schemes for Functional Programs"
     url: "https://doi.org/10.1145/582153.582176"
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-    card: "891-principal-type-schemes-for-functional-programs"
   - title: "Theorems for Free!"
     url: "https://doi.org/10.1145/99370.99404"
     year: 1989
     arxiv: null
     doi: "10.1145/99370.99404"
-    card: "039-theorems-for-free"
   - title: "Report on the Programming Language Haskell: A Non-strict, Purely Functional Language"
     url: "https://doi.org/10.1145/130697.130699"
     year: 1992
     arxiv: null
     doi: "10.1145/130697.130699"
-    card: "954-report-on-the-programming-language-haskell-a-non-strict-pure"
+see:
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "891-principal-type-schemes-for-functional-programs"
+  - "039-theorems-for-free"
+  - "954-report-on-the-programming-language-haskell-a-non-strict-pure"
 ---
 
 # How to Make Ad-Hoc Polymorphism Less Ad Hoc

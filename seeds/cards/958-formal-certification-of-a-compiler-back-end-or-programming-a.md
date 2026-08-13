@@ -24,25 +24,26 @@ cites:
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "The ZINC Experiment: An Economical Implementation of the ML Language"
     url: "https://xavierleroy.org/publi/ZINC.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "957-the-zinc-experiment-an-economical-implementation-of-the-ml-l"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
+see:
+  - "901-the-calculus-of-constructions"
+  - "957-the-zinc-experiment-an-economical-implementation-of-the-ml-l"
+  - "909-a-structural-approach-to-operational-semantics"
+  - "843-an-axiomatic-basis-for-computer-programming"
 ---
 
 # Formal Certification of a Compiler Back-end, or: Programming a Compiler with a Proof Assistant

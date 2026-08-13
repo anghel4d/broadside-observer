@@ -24,25 +24,26 @@ cites:
     year: 1979
     arxiv: null
     doi: "10.1145/359131.359136"
-    card: "929-algorithm-logic-control"
   - title: "Prolog in 10 Figures"
     url: "https://doi.org/10.1145/3166.3168"
     year: 1985
     arxiv: null
     doi: "10.1145/3166.3168"
-    card: "930-prolog-in-10-figures"
   - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
     url: "https://doi.org/10.1109/69.43410"
     year: 1989
     arxiv: null
     doi: "10.1109/69.43410"
-    card: "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
+see:
+  - "929-algorithm-logic-control"
+  - "930-prolog-in-10-figures"
+  - "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
+  - "154-the-definition-of-standard-ml-revised"
 ---
 
 # Predicate Logic as Programming Language

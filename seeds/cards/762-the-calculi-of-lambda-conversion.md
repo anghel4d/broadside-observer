@@ -23,37 +23,38 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "Computability and λ-Definability"
     url: "https://doi.org/10.2307/2268280"
     year: 1937
     arxiv: null
     doi: "10.2307/2268280"
-    card: "768-computability-and-lambda-definability"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "Computational lambda-calculus and monads"
     url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
     doi: "10.1109/LICS.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
+see:
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "768-computability-and-lambda-definability"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "038-computational-lambda-calculus-and-monads"
 ---
 
 # The Calculi of Lambda-Conversion

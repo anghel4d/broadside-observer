@@ -30,13 +30,23 @@ SMR = cite('Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic R
 
 def emit_yaml_cites(cites):
     out = ['cites:']
+    see = []
     for c in cites:
         out.append(f'  - title: {json.dumps(c["title"])}')
         out.append(f'    url: {json.dumps(c["url"])}')
         out.append(f'    year: {c["year"]}')
         out.append(f'    arxiv: {json.dumps(c["arxiv"]) if c.get("arxiv") else "null"}')
         out.append(f'    doi: {json.dumps(c["doi"]) if c.get("doi") else "null"}')
-        out.append(f'    card: {json.dumps(c["card"]) if c.get("card") else "null"}')
+        if c.get("card"):
+            see.append(c["card"])
+    seen = []
+    for stem in see:
+        if stem not in seen:
+            seen.append(stem)
+    if seen:
+        out.append('see:')
+        for stem in seen:
+            out.append(f'  - {json.dumps(stem)}')
     return out
 
 def write_card(stem, meta, takeaway, why, ideas, caveats, links):
@@ -390,7 +400,7 @@ def upsert_frontmatter(path: Path, lineage=None, cites=None, replace_cites=True)
         if line.startswith('lineage:'):
             i += 1
             continue
-        if line.startswith('cites:'):
+        if line.startswith('cites:') or line.startswith('see:'):
             i += 1
             while i < len(fm_lines) and (fm_lines[i].startswith('  ') or fm_lines[i].strip() == ''):
                 i += 1
@@ -585,10 +595,13 @@ def add_cites_only(path, extra_cites):
                     v = l.split(':',1)[1].strip(); cur['arxiv'] = None if v=='null' else json.loads(v)
                 elif l.strip().startswith('doi:'):
                     v = l.split(':',1)[1].strip(); cur['doi'] = None if v=='null' else json.loads(v)
-                elif l.strip().startswith('card:'):
-                    v = l.split(':',1)[1].strip(); cur['card'] = None if v=='null' else json.loads(v)
                 i += 1
             if cur: existing.append(cur)
+            continue
+        if line.startswith('see:'):
+            i += 1
+            while i < len(fm_lines) and (fm_lines[i].startswith('  ') or fm_lines[i].strip() == ''):
+                i += 1
             continue
         new_fm.append(line)
         i += 1

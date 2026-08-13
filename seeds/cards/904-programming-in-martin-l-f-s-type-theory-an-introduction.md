@@ -26,25 +26,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "Constructive Mathematics and Computer Programming"
     url: "https://doi.org/10.1016/S0049-237X(09)70189-2"
     year: 1982
     arxiv: null
     doi: "10.1016/S0049-237X(09)70189-2"
-    card: "900-constructive-mathematics-and-computer-programming"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "Implementing Mathematics with Nuprl"
     url: "http://www.nuprl.org/book/"
     year: 1986
     arxiv: null
     doi: null
-    card: "905-implementing-mathematics-with-nuprl"
+see:
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "900-constructive-mathematics-and-computer-programming"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "905-implementing-mathematics-with-nuprl"
 ---
 
 # Programming in Martin-Löf's Type Theory: An Introduction

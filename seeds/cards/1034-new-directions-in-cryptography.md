@@ -23,13 +23,14 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359340.359342
-  card: 1035-a-method-for-obtaining-digital-signatures-and-public-key-cry
 - title: Secure Communications Over Insecure Channels
   url: "https://doi.org/10.1145/359460.359473"
   year: 1978
   arxiv: null
   doi: 10.1145/359460.359473
-  card: 1036-secure-communications-over-insecure-channels
+see:
+- "1035-a-method-for-obtaining-digital-signatures-and-public-key-cry"
+- "1036-secure-communications-over-insecure-channels"
 ---
 
 # New Directions in Cryptography

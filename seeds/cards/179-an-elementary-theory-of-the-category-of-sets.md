@@ -22,19 +22,20 @@ cites:
     year: 1963
     arxiv: null
     doi: "10.1073/pnas.50.5.869"
-    card: "049-functorial-semantics-of-algebraic-theories"
   - title: "General Theory of Natural Equivalences"
     url: "https://doi.org/10.2307/1990284"
     year: 1945
     arxiv: null
     doi: "10.2307/1990284"
-    card: "051-general-theory-of-natural-equivalences"
   - title: "Categories for the Working Mathematician (2nd ed.)"
     url: "https://doi.org/10.1007/978-1-4757-4721-8"
     year: 1998
     arxiv: null
     doi: "10.1007/978-1-4757-4721-8"
-    card: "030-categories-for-the-working-mathematician-2nd-ed"
+see:
+  - "049-functorial-semantics-of-algebraic-theories"
+  - "051-general-theory-of-natural-equivalences"
+  - "030-categories-for-the-working-mathematician-2nd-ed"
 ---
 
 # An Elementary Theory of the Category of Sets

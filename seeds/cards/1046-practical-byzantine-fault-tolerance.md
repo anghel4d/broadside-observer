@@ -24,13 +24,14 @@ cites:
   year: 1982
   arxiv: null
   doi: 10.1145/357172.357176
-  card: 1044-the-byzantine-generals-problem
 - title: The Part-Time Parliament
   url: "https://doi.org/10.1145/279227.279229"
   year: 1998
   arxiv: null
   doi: 10.1145/279227.279229
-  card: 1042-the-part-time-parliament
+see:
+- "1044-the-byzantine-generals-problem"
+- "1042-the-part-time-parliament"
 ---
 
 # Practical Byzantine Fault Tolerance

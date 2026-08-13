@@ -22,19 +22,20 @@ cites:
   year: 2006
   arxiv: null
   doi: null
-  card: 254-ggpo-rollback-networking
 - title: Deterministic Lockstep
   url: https://gafferongames.com/post/deterministic_lockstep/
   year: 2014
   arxiv: null
   doi: null
-  card: 017-deterministic-lockstep
 - title: Client-Side Prediction & Server Reconciliation
   url: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html
   year: 2013
   arxiv: null
   doi: null
-  card: 345-client-side-prediction-server-reconciliation
+see:
+- "254-ggpo-rollback-networking"
+- "017-deterministic-lockstep"
+- "345-client-side-prediction-server-reconciliation"
 ---
 
 # GGPO Overview and Design Notes

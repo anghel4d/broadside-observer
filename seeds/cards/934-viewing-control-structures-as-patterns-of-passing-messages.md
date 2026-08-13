@@ -24,25 +24,26 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.7551/mitpress/1086.001.0001"
-    card: "935-actors-a-model-of-concurrent-computation-in-distributed-syst"
   - title: "Scheme: An Interpreter for Extended Lambda Calculus"
     url: "https://dspace.mit.edu/handle/1721.1/5794"
     year: 1975
     arxiv: null
     doi: null
-    card: "924-scheme-an-interpreter-for-extended-lambda-calculus"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "935-actors-a-model-of-concurrent-computation-in-distributed-syst"
+  - "924-scheme-an-interpreter-for-extended-lambda-calculus"
+  - "044-a-calculus-of-communicating-systems"
+  - "047-communicating-sequential-processes"
 ---
 
 # Viewing Control Structures as Patterns of Passing Messages

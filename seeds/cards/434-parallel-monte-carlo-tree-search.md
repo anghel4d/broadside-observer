@@ -23,61 +23,54 @@ cites:
     year: 2007
     arxiv: null
     doi: "10.1007/978-3-540-75538-8_7"
-    card: "365-efficient-selectivity-and-backup-operators-in-monte-carlo-tr"
   - title: "An analysis of alpha-beta pruning"
     url: "https://doi.org/10.1016/0004-3702(75)90019-3"
     year: 1975
     arxiv: null
     doi: "10.1016/0004-3702(75)90019-3"
-    card: "460-an-analysis-of-alpha-beta-pruning"
   - title: "Bandit Based Monte-Carlo Planning"
     url: "https://doi.org/10.1007/11871842_29"
     year: 2006
     arxiv: null
     doi: "10.1007/11871842_29"
-    card: null
   - title: "PROGRESSIVE STRATEGIES FOR MONTE-CARLO TREE SEARCH"
     url: "https://doi.org/10.1142/s1793005708001094"
     year: 2008
     arxiv: null
     doi: "10.1142/s1793005708001094"
-    card: null
   - title: "Bandit Algorithms for Tree Search"
     url: "http://arxiv.org/abs/1408.2028"
     year: 2014
     arxiv: "1408.2028"
     doi: "10.48550/arxiv.1408.2028"
-    card: null
   - title: "MOGO WINS 19x19 GO TOURNAMENT"
     url: "https://doi.org/10.3233/icg-2007-30211"
     year: 2007
     arxiv: null
     doi: "10.3233/icg-2007-30211"
-    card: null
   - title: "Modiﬁcation of UCT with Patterns in Monte-Carlo Go"
     url: "https://inria.hal.science/inria-00117266"
     year: 2006
     arxiv: null
     doi: null
-    card: null
   - title: "Exploration exploitation in Go: UCT for Monte-Carlo Go"
     url: "https://hal.science/hal-00115330"
     year: 2006
     arxiv: null
     doi: null
-    card: null
   - title: "On the Parallelization of UCT"
     url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.66.4751"
     year: 2007
     arxiv: null
     doi: null
-    card: null
   - title: "Monte-Carlo strategies for computer Go"
     url: "https://cris.maastrichtuniversity.nl/en/publications/31b38156-afda-43ca-9977-1a6aed3b5926"
     year: 2006
     arxiv: null
     doi: null
-    card: null
+see:
+  - "365-efficient-selectivity-and-backup-operators-in-monte-carlo-tr"
+  - "460-an-analysis-of-alpha-beta-pruning"
 ---
 
 # Parallel Monte-Carlo Tree Search

@@ -24,17 +24,18 @@ cites:
     url: "https://doi.org/10.1145/1073970.1073974"
     year: 2005
     doi: "10.1145/1073970.1073974"
-    card: "367-dynamic-circular-work-stealing-deque"
   - title: "The Implementation of the Cilk-5 Multithreaded Language"
     url: "https://doi.org/10.1145/277650.277725"
     year: 1998
     doi: "10.1145/277650.277725"
-    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
   - title: "Scheduling Multithreaded Computations by Work Stealing"
     url: "https://doi.org/10.1145/324133.324234"
     year: 1999
     doi: "10.1145/324133.324234"
-    card: "257-scheduling-multithreaded-computations-by-work-stealing"
+see:
+  - "367-dynamic-circular-work-stealing-deque"
+  - "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - "257-scheduling-multithreaded-computations-by-work-stealing"
 ---
 
 # Idempotent Work Stealing

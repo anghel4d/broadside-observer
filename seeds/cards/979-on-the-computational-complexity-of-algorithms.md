@@ -23,13 +23,14 @@ cites:
   year: 1967
   arxiv: null
   doi: 10.1145/321386.321395
-  card: 980-a-machine-independent-theory-of-the-complexity-of-recursive-
 - title: Relationships Between Nondeterministic and Deterministic Tape Complexities
   url: "https://doi.org/10.1016/S0022-0000(70)80006-X"
   year: 1970
   arxiv: null
   doi: 10.1016/S0022-0000(70)80006-X
-  card: 981-relationships-between-nondeterministic-and-deterministic-tap
+see:
+- "980-a-machine-independent-theory-of-the-complexity-of-recursive-"
+- "981-relationships-between-nondeterministic-and-deterministic-tap"
 ---
 
 # On the Computational Complexity of Algorithms

@@ -27,19 +27,20 @@ cites:
     year: 2026
     arxiv: "2606.26607"
     doi: null
-    card: "070-moebius-serving-mixture-of-expert-models-with-seamless-runti"
   - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
     url: "https://arxiv.org/abs/2305.16291"
     year: 2023
     arxiv: "2305.16291"
     doi: null
-    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
+see:
+  - "070-moebius-serving-mixture-of-expert-models-with-seamless-runti"
+  - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression

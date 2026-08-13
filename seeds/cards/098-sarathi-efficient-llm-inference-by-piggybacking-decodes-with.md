@@ -29,13 +29,14 @@ cites:
   year: 2023
   arxiv: '2309.06180'
   doi: null
-  card: 002-efficient-memory-management-for-large-language-model-serving
 - title: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve
   url: https://arxiv.org/abs/2403.02310
   year: 2024
   arxiv: '2403.02310'
   doi: null
-  card: 094-taming-throughput-latency-tradeoff-in-llm-inference-with-sar
+see:
+- "002-efficient-memory-management-for-large-language-model-serving"
+- "094-taming-throughput-latency-tradeoff-in-llm-inference-with-sar"
 ---
 
 # SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills

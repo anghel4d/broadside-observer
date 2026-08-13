@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "Practical Foundations for Programming Languages"
     url: "https://doi.org/10.1017/CBO9781316576892"
     year: 2016
     arxiv: null
     doi: "10.1017/CBO9781316576892"
-    card: "897-practical-foundations-for-programming-languages"
+see:
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "901-the-calculus-of-constructions"
+  - "897-practical-foundations-for-programming-languages"
 ---
 
 # Constructive Mathematics and Computer Programming

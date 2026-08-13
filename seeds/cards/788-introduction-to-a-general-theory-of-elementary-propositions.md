@@ -24,19 +24,20 @@ cites:
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "Investigations into Logical Deduction"
     url: "https://doi.org/10.1007/BF01201353"
     year: 1935
     arxiv: null
     doi: "10.1007/BF01201353"
-    card: "883-investigations-into-logical-deduction"
   - title: "The Two-Valued Iterative Systems of Mathematical Logic"
     url: "https://press.princeton.edu/books/paperback/9780691095707/the-two-valued-iterative-systems-of-mathematical-logic"
     year: 1941
     arxiv: null
     doi: null
-    card: "789-the-two-valued-iterative-systems-of-mathematical-logic"
+see:
+  - "742-grundzuge-der-theoretischen-logik"
+  - "883-investigations-into-logical-deduction"
+  - "789-the-two-valued-iterative-systems-of-mathematical-logic"
 ---
 
 # Introduction to a General Theory of Elementary Propositions

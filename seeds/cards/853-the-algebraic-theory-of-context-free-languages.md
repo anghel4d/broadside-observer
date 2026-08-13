@@ -24,19 +24,20 @@ cites:
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "Three Models for the Description of Language"
     url: "https://doi.org/10.1109/TIT.1956.1056813"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056813"
-    card: "850-three-models-for-the-description-of-language"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
+see:
+  - "852-on-certain-formal-properties-of-grammars"
+  - "850-three-models-for-the-description-of-language"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
 ---
 
 # The Algebraic Theory of Context-Free Languages

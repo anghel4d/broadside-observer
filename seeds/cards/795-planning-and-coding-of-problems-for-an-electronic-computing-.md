@@ -25,25 +25,26 @@ cites:
     year: 1946
     arxiv: null
     doi: null
-    card: "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "The Preparation of Programs for an Electronic Digital Computer"
     url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
     year: 1951
     arxiv: null
     doi: null
-    card: "823-the-preparation-of-programs-for-an-electronic-digital-comput"
   - title: "The Education of a Computer"
     url: "https://doi.org/10.1145/609784.609798"
     year: 1952
     arxiv: null
     doi: "10.1145/609784.609798"
-    card: "822-the-education-of-a-computer"
+see:
+  - "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "823-the-preparation-of-programs-for-an-electronic-digital-comput"
+  - "822-the-education-of-a-computer"
 ---
 
 # Planning and Coding of Problems for an Electronic Computing Instrument

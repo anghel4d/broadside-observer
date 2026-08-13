@@ -24,13 +24,14 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1609/aaai.v25i1.7994"
-    card: "253-online-graph-pruning-for-pathfinding-on-grid-maps"
   - title: "Improving Jump Point Search"
     url: "https://ojs.aaai.org/index.php/ICAPS/article/view/13620"
     year: 2014
     arxiv: null
     doi: null
-    card: "342-improving-jump-point-search"
+see:
+  - "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+  - "342-improving-jump-point-search"
 ---
 # JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids
 

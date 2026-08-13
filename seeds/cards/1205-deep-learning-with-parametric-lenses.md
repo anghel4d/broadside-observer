@@ -26,12 +26,13 @@ cites:
     url: "https://arxiv.org/abs/2103.01931"
     year: 2022
     arxiv: "2103.01931"
-    card: "1204-categorical-foundations-of-gradient-based-learning"
   - title: "Backprop as Functor: A compositional perspective on supervised learning"
     url: "https://arxiv.org/abs/1711.10455"
     year: 2019
     arxiv: "1711.10455"
-    card: "1207-backprop-as-functor-compositional-supervised-learning"
+see:
+  - "1204-categorical-foundations-of-gradient-based-learning"
+  - "1207-backprop-as-functor-compositional-supervised-learning"
 ---
 
 # Deep Learning with Parametric Lenses

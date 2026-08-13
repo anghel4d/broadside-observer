@@ -25,25 +25,26 @@ cites:
     year: 2026
     arxiv: "2606.14919"
     doi: "10.1145/3748522.3779910"
-    card: "200-the-essence-of-entity-component-system"
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
   - title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)"
     url: "https://gamesfromwithin.com/data-oriented-design"
     year: 2009
     arxiv: null
     doi: null
-    card: "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
   - title: "Overwatch Gameplay Architecture and Netcode"
     url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
     year: 2017
     arxiv: null
     doi: null
-    card: "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
+see:
+  - "200-the-essence-of-entity-component-system"
+  - "334-flecs-a-fast-entity-component-system-for-c99"
+  - "021-data-oriented-design-or-why-you-might-be-shooting-yourself-i"
+  - "338-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
 ---
 
 # Exploring the Theory and Practice of Concurrency in the Entity-Component-System Pattern

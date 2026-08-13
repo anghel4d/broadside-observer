@@ -20,73 +20,63 @@ cites:
     year: 2020
     arxiv: null
     doi: "10.1016/c2011-0-06993-4"
-    card: "141-the-art-of-multiprocessor-programming"
   - title: "{SNAP Datasets}: {Stanford} Large Network Dataset Collection"
     url: "https://openalex.org/W2755088640"
     year: 2014
     arxiv: null
     doi: null
-    card: null
   - title: "Cores that don't count"
     url: "https://doi.org/10.1145/3458336.3465297"
     year: 2021
     arxiv: null
     doi: "10.1145/3458336.3465297"
-    card: null
   - title: "The PageRank Citation Ranking : Bringing Order to the Web"
     url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.31.1768"
     year: 1999
     arxiv: null
     doi: null
-    card: null
   - title: "The SuiteSparse Matrix Collection Website Interface"
     url: "https://doi.org/10.21105/joss.01244"
     year: 2019
     arxiv: null
     doi: "10.21105/joss.01244"
-    card: null
   - title: "Fast incremental and personalized PageRank"
     url: "https://doi.org/10.14778/1929861.1929864"
     year: 2010
     arxiv: null
     doi: "10.14778/1929861.1929864"
-    card: null
   - title: "Parallel Vertex Color Update on Large Dynamic Networks"
     url: "https://doi.org/10.1109/hipc56025.2022.00027"
     year: 2022
     arxiv: null
     doi: "10.1109/hipc56025.2022.00027"
-    card: null
   - title: "Efficient parallel algorithms for dynamic closeness‐ and betweenness centrality"
     url: "https://doi.org/10.1002/cpe.6650"
     year: 2021
     arxiv: null
     doi: "10.1002/cpe.6650"
-    card: null
   - title: "Dynamic Batch Parallel Algorithms for Updating PageRank"
     url: "https://doi.org/10.1109/ipdpsw55747.2022.00186"
     year: 2022
     arxiv: null
     doi: "10.1109/ipdpsw55747.2022.00186"
-    card: null
   - title: "FPPR: fast pessimistic (dynamic) PageRank to update PageRank in evolving directed graphs on network changes"
     url: "https://doi.org/10.1007/s13278-022-00968-8"
     year: 2022
     arxiv: null
     doi: "10.1007/s13278-022-00968-8"
-    card: null
   - title: "MELOPPR: Software/Hardware Co-design for Memory-efficient Low-latency Personalized PageRank"
     url: "https://doi.org/10.1109/dac18074.2021.9586129"
     year: 2021
     arxiv: null
     doi: "10.1109/dac18074.2021.9586129"
-    card: null
   - title: "An Improved/Optimized Practical Non-Blocking PageRank Algorithm for Massive Graphs*"
     url: "https://doi.org/10.1007/s10766-022-00725-6"
     year: 2022
     arxiv: null
     doi: "10.1007/s10766-022-00725-6"
-    card: null
+see:
+  - "141-the-art-of-multiprocessor-programming"
 ---
 
 # Lock-Free Computation of PageRank in Dynamic Graphs

@@ -23,19 +23,20 @@ cites:
     year: 1950
     arxiv: null
     doi: "10.1002/j.1538-7305.1950.tb00463.x"
-    card: "819-error-detecting-and-error-correcting-codes"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "How We Know Universals: The Perception of Auditory and Visual Forms"
     url: "https://doi.org/10.1007/BF02478291"
     year: 1947
     arxiv: null
     doi: "10.1007/BF02478291"
-    card: "817-how-we-know-universals-the-perception-of-auditory-and-visual"
+see:
+  - "819-error-detecting-and-error-correcting-codes"
+  - "804-a-mathematical-theory-of-communication"
+  - "817-how-we-know-universals-the-perception-of-auditory-and-visual"
 ---
 
 # Notes on Digital Coding

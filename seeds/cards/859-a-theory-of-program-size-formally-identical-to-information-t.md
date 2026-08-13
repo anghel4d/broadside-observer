@@ -23,25 +23,26 @@ cites:
     year: 1966
     arxiv: null
     doi: "10.1145/321356.321363"
-    card: "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - title: "Three Approaches to the Quantitative Definition of Information"
     url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Information-Theoretic Limitations of Formal Systems"
     url: "https://doi.org/10.1145/321812.321814"
     year: 1974
     arxiv: null
     doi: "10.1145/321812.321814"
-    card: "860-information-theoretic-limitations-of-formal-systems"
+see:
+  - "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "804-a-mathematical-theory-of-communication"
+  - "860-information-theoretic-limitations-of-formal-systems"
 ---
 
 # A Theory of Program Size Formally Identical to Information Theory

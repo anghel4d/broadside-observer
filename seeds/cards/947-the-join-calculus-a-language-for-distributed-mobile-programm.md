@@ -26,25 +26,26 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90008-3"
-    card: "946-a-calculus-of-mobile-processes-i"
   - title: "The Chemical Abstract Machine"
     url: "https://doi.org/10.1016/0304-3975(92)90185-H"
     year: 1992
     arxiv: null
     doi: "10.1016/0304-3975(92)90185-H"
-    card: "948-the-chemical-abstract-machine"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
   - title: "Concurrent Programming in ML"
     url: "https://doi.org/10.1017/CBO9780511574962"
     year: 1999
     arxiv: null
     doi: "10.1017/CBO9780511574962"
-    card: "950-concurrent-programming-in-ml"
+see:
+  - "946-a-calculus-of-mobile-processes-i"
+  - "948-the-chemical-abstract-machine"
+  - "044-a-calculus-of-communicating-systems"
+  - "950-concurrent-programming-in-ml"
 ---
 
 # The Join Calculus: A Language for Distributed Mobile Programming

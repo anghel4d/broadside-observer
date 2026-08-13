@@ -32,13 +32,14 @@ cites:
   year: 2018
   arxiv: '1803.11485'
   doi: null
-  card: 114-qmix-monotonic-value-function-factorisation-for-deep-multi-a
 - title: 'StarCraft II: A New Challenge for Reinforcement Learning'
   url: https://arxiv.org/abs/1708.04782
   year: 2017
   arxiv: '1708.04782'
   doi: null
-  card: 015-starcraft-ii-a-new-challenge-for-reinforcement-learning
+see:
+- "114-qmix-monotonic-value-function-factorisation-for-deep-multi-a"
+- "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
 ---
 
 # The StarCraft Multi-Agent Challenge

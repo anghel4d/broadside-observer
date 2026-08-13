@@ -23,19 +23,20 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Communication Theory of Secrecy Systems"
     url: "https://doi.org/10.1002/j.1538-7305.1949.tb00928.x"
     year: 1949
     arxiv: null
     doi: "10.1002/j.1538-7305.1949.tb00928.x"
-    card: "806-communication-theory-of-secrecy-systems"
   - title: "Extrapolation, Interpolation, and Smoothing of Stationary Time Series"
     url: "https://mitpress.mit.edu/9780262730051/extrapolation-interpolation-and-smoothing-of-stationary-time-series/"
     year: 1949
     arxiv: null
     doi: null
-    card: "814-extrapolation-interpolation-and-smoothing-of-stationary-time"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "806-communication-theory-of-secrecy-systems"
+  - "814-extrapolation-interpolation-and-smoothing-of-stationary-time"
 ---
 
 # Communication in the Presence of Noise

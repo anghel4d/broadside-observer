@@ -24,25 +24,26 @@ cites:
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-    card: "873-the-fortran-automatic-coding-system"
   - title: "The Education of a Computer"
     url: "https://doi.org/10.1145/609784.609798"
     year: 1952
     arxiv: null
     doi: "10.1145/609784.609798"
-    card: "822-the-education-of-a-computer"
   - title: "Report on the Algorithmic Language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
+see:
+  - "873-the-fortran-automatic-coding-system"
+  - "822-the-education-of-a-computer"
+  - "874-report-on-the-algorithmic-language-algol-60"
+  - "793-first-draft-of-a-report-on-the-edvac"
 ---
 
 # Über den allgemeinen Plankalkül als Mittel zur Formulierung schematisch-kombinativer Aufgaben

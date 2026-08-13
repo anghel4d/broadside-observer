@@ -24,13 +24,14 @@ cites:
   year: 2011
   arxiv: null
   doi: null
-  card: 138-session-types-as-intuitionistic-linear-propositions
 - title: Notions of Computation and Monads
   url: https://doi.org/10.1016/0890-5401(91)90052-4
   year: 1991
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
-  card: 036-notions-of-computation-and-monads
+see:
+- "138-session-types-as-intuitionistic-linear-propositions"
+- "036-notions-of-computation-and-monads"
 ---
 
 # Linear Logic

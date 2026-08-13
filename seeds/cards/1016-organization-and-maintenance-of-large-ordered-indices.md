@@ -23,7 +23,8 @@ cites:
   year: 1962
   arxiv: null
   doi: null
-  card: 1015-an-algorithm-for-the-organization-of-information
+see:
+- "1015-an-algorithm-for-the-organization-of-information"
 ---
 
 # Organization and Maintenance of Large Ordered Indices

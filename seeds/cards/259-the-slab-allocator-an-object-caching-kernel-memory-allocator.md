@@ -22,31 +22,32 @@ cites:
     year: 1995
     arxiv: null
     doi: "10.1007/3-540-60368-9_19"
-    card: "382-dynamic-storage-allocation-a-survey-and-critical-review"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "SLUB: The Unqueued Slab Allocator"
     url: "https://lwn.net/Articles/229984/"
     year: 2007
     arxiv: null
     doi: null
-    card: "588-slub-the-unqueued-slab-allocator"
   - title: "Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel"
     url: "https://docs-archive.freebsd.org/44doc/papers/kernmalloc.pdf"
     year: 1988
     arxiv: null
     doi: null
-    card: "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
   - title: "Learning Slab Classes to Alleviate Memory Holes in Memcached"
     url: "https://arxiv.org/abs/2009.04403"
     year: 2020
     arxiv: "2009.04403"
     doi: null
-    card: "328-learning-slab-classes-to-alleviate-memory-holes-in-memcached"
+see:
+  - "382-dynamic-storage-allocation-a-survey-and-critical-review"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "588-slub-the-unqueued-slab-allocator"
+  - "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
+  - "328-learning-slab-classes-to-alleviate-memory-holes-in-memcached"
 ---
 
 # The Slab Allocator: An Object-Caching Kernel Memory Allocator

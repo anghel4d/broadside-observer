@@ -23,25 +23,26 @@ cites:
   year: 2011
   arxiv: null
   doi: 10.1609/aaai.v25i1.7994
-  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
 - title: 'JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids'
   url: https://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter14_JPS_Plus_An_Extreme_A_Star_Speed_Optimization_for_Static_Uniform_Cost_Grids.pdf
   year: 2015
   arxiv: null
   doi: null
-  card: 701-jps-plus-extreme-a-star-speed-optimization-static-grids
 - title: Reducing Redundant Work in Jump Point Search
   url: https://arxiv.org/abs/2306.14221
   year: 2023
   arxiv: '2306.14221'
   doi: null
-  card: 298-reducing-redundant-work-in-jump-point-search
 - title: Subgoal Graphs for Optimal Pathfinding
   url: https://doi.org/10.1609/socs.v6i1.18355
   year: 2015
   arxiv: null
   doi: null
-  card: 411-subgoal-graphs-for-optimal-pathfinding
+see:
+- "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+- "701-jps-plus-extreme-a-star-speed-optimization-static-grids"
+- "298-reducing-redundant-work-in-jump-point-search"
+- "411-subgoal-graphs-for-optimal-pathfinding"
 ---
 
 # Improving Jump Point Search

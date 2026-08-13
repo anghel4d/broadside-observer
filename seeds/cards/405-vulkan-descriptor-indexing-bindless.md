@@ -21,19 +21,20 @@ cites:
     year: 2018
     arxiv: null
     doi: null
-    card: "113-mesh-shaders-in-the-vulkan-ecosystem"
   - title: "Vulkan Meshlet CAD Scene Sample"
     url: "https://github.com/nvpro-samples/gl_vk_meshlet_cadscene"
     year: 2018
     arxiv: null
     doi: null
-    card: "720-vulkan-meshlet-cad-scene-sample"
   - title: "Vulkan Memory Allocator (VMA)"
     url: "https://gpuopen.com/vulkan-memory-allocator/"
     year: 2017
     arxiv: null
     doi: null
-    card: "407-vulkan-memory-allocator-vma"
+see:
+  - "113-mesh-shaders-in-the-vulkan-ecosystem"
+  - "720-vulkan-meshlet-cad-scene-sample"
+  - "407-vulkan-memory-allocator-vma"
 ---
 
 # Vulkan Descriptor Indexing (Bindless)

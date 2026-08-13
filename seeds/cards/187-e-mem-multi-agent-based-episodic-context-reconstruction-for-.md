@@ -29,19 +29,16 @@ cites:
     year: 2025
     arxiv: "2505.18458"
     doi: null
-    card: "081-a-survey-of-llm-times-data"
   - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
     url: "https://arxiv.org/abs/2505.07236"
     year: 2025
     arxiv: "2505.07236"
     doi: null
-    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
   - title: "Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents"
     url: "https://arxiv.org/abs/2602.16855"
     year: 2026
     arxiv: "2602.16855"
     doi: null
-    card: "190-mobile-agent-v3-5-multi-platform-fundamental-gui-agents"
 ---
 
 # E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory

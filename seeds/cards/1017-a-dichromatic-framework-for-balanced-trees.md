@@ -23,13 +23,14 @@ cites:
   year: 1962
   arxiv: null
   doi: null
-  card: 1015-an-algorithm-for-the-organization-of-information
 - title: Self-Adjusting Binary Search Trees
   url: "https://doi.org/10.1145/3828.3835"
   year: 1985
   arxiv: null
   doi: 10.1145/3828.3835
-  card: 1018-self-adjusting-binary-search-trees
+see:
+- "1015-an-algorithm-for-the-organization-of-information"
+- "1018-self-adjusting-binary-search-trees"
 ---
 
 # A Dichromatic Framework for Balanced Trees

@@ -23,26 +23,27 @@ cites:
     url: "https://doi.org/10.1145/258734.258769"
     year: 1997
     doi: "10.1145/258734.258769"
-    card: "661-instant-radiosity"
   - title: "Splatting Indirect Illumination"
     url: "https://doi.org/10.1145/1111411.1111428"
     year: 2006
     doi: "10.1145/1111411.1111428"
-    card: "663-splatting-indirect-illumination"
   - title: "Imperfect Shadow Maps for Efficient Computation of Indirect Illumination"
     url: "https://doi.org/10.1145/1409060.1409082"
     year: 2008
     doi: "10.1145/1409060.1409082"
-    card: "485-imperfect-shadow-maps-for-efficient-computation-of-indirect-"
   - title: "Cascaded Light Propagation Volumes for Real-Time Indirect Illumination"
     url: "https://doi.org/10.1145/1730804.1730821"
     year: 2010
     doi: "10.1145/1730804.1730821"
-    card: "353-light-propagation-volumes-in-cryengine-3"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+see:
+  - "661-instant-radiosity"
+  - "663-splatting-indirect-illumination"
+  - "485-imperfect-shadow-maps-for-efficient-computation-of-indirect-"
+  - "353-light-propagation-volumes-in-cryengine-3"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Reflective Shadow Maps

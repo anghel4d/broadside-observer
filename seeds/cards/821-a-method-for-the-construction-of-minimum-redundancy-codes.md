@@ -23,19 +23,20 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
     arxiv: null
     doi: "10.1002/j.1538-7305.1951.tb01366.x"
-    card: "809-prediction-and-entropy-of-printed-english"
   - title: "Error Detecting and Error Correcting Codes"
     url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
     year: 1950
     arxiv: null
     doi: "10.1002/j.1538-7305.1950.tb00463.x"
-    card: "819-error-detecting-and-error-correcting-codes"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "809-prediction-and-entropy-of-printed-english"
+  - "819-error-detecting-and-error-correcting-codes"
 ---
 
 # A Method for the Construction of Minimum-Redundancy Codes

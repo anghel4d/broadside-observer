@@ -25,7 +25,8 @@ cites:
   year: 2004
   arxiv: null
   doi: null
-  card: 1049-mapreduce-simplified-data-processing-on-large-clusters
+see:
+- "1049-mapreduce-simplified-data-processing-on-large-clusters"
 ---
 
 # The Google File System

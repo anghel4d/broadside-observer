@@ -24,25 +24,26 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1145/130697.130699"
-    card: "954-report-on-the-programming-language-haskell-a-non-strict-pure"
   - title: "The Implementation of Functional Programming Languages"
     url: "https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/"
     year: 1987
     arxiv: null
     doi: null
-    card: "955-the-implementation-of-functional-programming-languages"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "943-the-lazy-lambda-calculus"
+see:
+  - "954-report-on-the-programming-language-haskell-a-non-strict-pure"
+  - "955-the-implementation-of-functional-programming-languages"
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "943-the-lazy-lambda-calculus"
 ---
 
 # Miranda: A Non-strict Functional Language with Polymorphic Types

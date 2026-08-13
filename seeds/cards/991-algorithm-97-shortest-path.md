@@ -22,19 +22,20 @@ cites:
   year: 1962
   arxiv: null
   doi: 10.1145/321105.321107
-  card: 992-a-theorem-on-boolean-matrices
 - title: A Note on Two Problems in Connexion with Graphs
   url: "https://doi.org/10.1007/BF01386390"
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
 - title: Efficient Algorithms for Shortest Paths in Sparse Networks
   url: "https://doi.org/10.1145/322003.322004"
   year: 1977
   arxiv: null
   doi: 10.1145/322003.322004
-  card: 1001-efficient-algorithms-for-shortest-paths-in-sparse-networks
+see:
+- "992-a-theorem-on-boolean-matrices"
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+- "1001-efficient-algorithms-for-shortest-paths-in-sparse-networks"
 ---
 
 # Algorithm 97: Shortest Path

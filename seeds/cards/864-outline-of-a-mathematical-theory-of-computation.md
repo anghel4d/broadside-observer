@@ -24,25 +24,26 @@ cites:
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "Data Types as Lattices"
     url: "https://doi.org/10.1137/0205040"
     year: 1976
     arxiv: null
     doi: "10.1137/0205040"
-    card: "865-data-types-as-lattices"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
+see:
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "865-data-types-as-lattices"
+  - "762-the-calculi-of-lambda-conversion"
+  - "868-the-mechanical-evaluation-of-expressions"
 ---
 
 # Outline of a Mathematical Theory of Computation

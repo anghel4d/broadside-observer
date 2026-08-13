@@ -22,19 +22,20 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Bounded MPMC Queue (1024cores)"
     url: "https://www.1024cores.net/home/lock-free-algorithms/queues/bounded-mpmc-queue"
     year: 2010
     arxiv: null
     doi: null
-    card: "508-vyukov-bounded-mpmc-queue"
   - title: "Jiffy: A Fast, Memory Efficient, Wait-Free Multi-Producers Single-Consumer Queue"
     url: "https://arxiv.org/abs/2010.14189"
     year: 2020
     arxiv: "2010.14189"
     doi: null
-    card: "327-jiffy-a-fast-memory-efficient-wait-free-multi-producers-sing"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "508-vyukov-bounded-mpmc-queue"
+  - "327-jiffy-a-fast-memory-efficient-wait-free-multi-producers-sing"
 ---
 
 # Non-Intrusive MPSC Node-Based Queue (1024cores)

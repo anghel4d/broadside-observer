@@ -23,19 +23,20 @@ cites:
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
   - title: "Degrees of Recursive Unsolvability"
     url: "https://doi.org/10.2307/1969708"
     year: 1954
     arxiv: null
     doi: "10.2307/1969708"
-    card: "790-degrees-of-recursive-unsolvability"
   - title: "On the unsolvability of the problem of reducibility of the theory of algorithms"
     url: "https://www.worldcat.org/search?q=Muchnik+reducibility+1956"
     year: 1956
     arxiv: null
     doi: null
-    card: "792-on-the-unsolvability-of-the-problem-of-reducibility-of-the-t"
+see:
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+  - "790-degrees-of-recursive-unsolvability"
+  - "792-on-the-unsolvability-of-the-problem-of-reducibility-of-the-t"
 ---
 
 # Two recursively enumerable sets of incomparable degrees of unsolvability

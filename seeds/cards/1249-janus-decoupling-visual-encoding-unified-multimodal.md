@@ -32,12 +32,13 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "DeepSeek-VL: Towards Real-World Vision-Language Understanding"
     url: "https://arxiv.org/abs/2403.05525"
     year: 2024
     arxiv: "2403.05525"
-    card: "1242-deepseek-vl-towards-real-world-vision-language"
+see:
+  - "014-attention-is-all-you-need"
+  - "1242-deepseek-vl-towards-real-world-vision-language"
 ---
 
 # Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation

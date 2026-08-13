@@ -40,18 +40,18 @@ cites:
     year: 2024
     arxiv: "2412.05467"
     doi: null
-    card: "095-the-browsergym-ecosystem-for-web-agent-research"
   - title: "Mobile-Agent-v3.5: Multi-platform Fundamental GUI Agents"
     url: "https://arxiv.org/abs/2602.16855"
     year: 2026
     arxiv: "2602.16855"
     doi: null
-    card: "190-mobile-agent-v3-5-multi-platform-fundamental-gui-agents"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
     arxiv: "2605.20616"
     doi: null
+see:
+  - "095-the-browsergym-ecosystem-for-web-agent-research"
 ---
 
 # OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments

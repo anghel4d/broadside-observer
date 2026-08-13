@@ -23,19 +23,20 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "Intelligent Machinery"
     url: "https://www.npl.co.uk/getattachment/about-us/History/Famous-faces/Alan-Turing/80916595-Intelligent-Machinery.pdf?lang=en-GB"
     year: 1948
     arxiv: null
     doi: null
-    card: "771-intelligent-machinery"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+see:
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "771-intelligent-machinery"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
 ---
 
 # The Organization of Behavior

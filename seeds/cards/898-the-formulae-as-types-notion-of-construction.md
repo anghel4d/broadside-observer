@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "Proofs and Types"
     url: "https://www.paultaylor.eu/stable/Proofs%2BTypes.html"
     year: 1989
     arxiv: null
     doi: null
-    card: "903-proofs-and-types"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "901-the-calculus-of-constructions"
+  - "903-proofs-and-types"
+  - "027-types-and-programming-languages"
 ---
 
 # The Formulae-as-Types Notion of Construction

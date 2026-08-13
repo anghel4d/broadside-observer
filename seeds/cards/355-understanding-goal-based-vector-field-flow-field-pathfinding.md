@@ -22,31 +22,32 @@ cites:
   year: 1968
   arxiv: null
   doi: 10.1109/TSSC.1968.300136
-  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
 - title: Near Optimal Hierarchical Pathfinding (HPA*)
   url: https://doi.org/10.1613/jair.1423
   year: 2004
   arxiv: null
   doi: 10.1613/jair.1423
-  card: 370-near-optimal-hierarchical-pathfinding-hpa
 - title: Continuum Crowds
   url: https://doi.org/10.1145/1141911.1141978
   year: 2006
   arxiv: null
   doi: 10.1145/1141911.1141978
-  card: 437-continuum-crowds
 - title: Potential Fields for Unit Behavior
   url: https://www.gamedeveloper.com/
   year: 2009
   arxiv: null
   doi: null
-  card: 482-potential-fields-for-unit-behavior
 - title: Recast Navigation / Detour
   url: https://github.com/recastnavigation/recastnavigation
   year: 2009
   arxiv: null
   doi: null
-  card: 357-recast-navigation-detour
+see:
+- "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+- "370-near-optimal-hierarchical-pathfinding-hpa"
+- "437-continuum-crowds"
+- "482-potential-fields-for-unit-behavior"
+- "357-recast-navigation-detour"
 ---
 
 # Understanding Goal-Based Vector Field / Flow Field Pathfinding

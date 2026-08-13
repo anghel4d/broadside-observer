@@ -23,25 +23,26 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "On the Length of Programs for Computing Finite Binary Sequences"
     url: "https://doi.org/10.1145/321356.321363"
     year: 1966
     arxiv: null
     doi: "10.1145/321356.321363"
-    card: "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - title: "Three Approaches to the Quantitative Definition of Information"
     url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "A Theory of Program Size Formally Identical to Information Theory"
     url: "https://doi.org/10.1145/321892.321894"
     year: 1975
     arxiv: null
     doi: "10.1145/321892.321894"
-    card: "859-a-theory-of-program-size-formally-identical-to-information-t"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "859-a-theory-of-program-size-formally-identical-to-information-t"
 ---
 
 # Information-Theoretic Limitations of Formal Systems

@@ -23,19 +23,20 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1007/BF01565439"
-    card: "776-general-recursive-functions-of-natural-numbers"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
+see:
+  - "776-general-recursive-functions-of-natural-numbers"
+  - "742-grundzuge-der-theoretischen-logik"
+  - "780-introduction-to-metamathematics"
 ---
 
 # Zum Hilbertschen Aufbau der reellen Zahlen

@@ -21,13 +21,14 @@ cites:
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
 - title: Understanding Goal-Based Vector Field / Flow Field Pathfinding
   url: https://howtorts.github.io/
   year: 2010
   arxiv: null
   doi: null
-  card: 355-understanding-goal-based-vector-field-flow-field-pathfinding
+see:
+- "258-steering-behaviors-for-autonomous-characters"
+- "355-understanding-goal-based-vector-field-flow-field-pathfinding"
 ---
 
 # Potential Fields for Unit Behavior

@@ -26,19 +26,20 @@ cites:
     year: 1946
     arxiv: null
     doi: null
-    card: "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
   - title: "The Education of a Computer"
     url: "https://doi.org/10.1145/609784.609798"
     year: 1952
     arxiv: null
     doi: "10.1145/609784.609798"
-    card: "822-the-education-of-a-computer"
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
     url: "https://www.npl.co.uk/famous-faces/alan-turing"
     year: 1946
     arxiv: null
     doi: null
-    card: "773-proposal-for-development-in-the-mathematics-division-of-an-a"
+see:
+  - "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
+  - "822-the-education-of-a-computer"
+  - "773-proposal-for-development-in-the-mathematics-division-of-an-a"
 ---
 
 # The Preparation of Programs for an Electronic Digital Computer

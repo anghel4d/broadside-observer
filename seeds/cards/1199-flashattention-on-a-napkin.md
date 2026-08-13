@@ -23,16 +23,17 @@ cites:
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
     year: 2024
     arxiv: "2307.08691"
-    card: "096-flashattention-2-faster-attention-with-better-parallelism-an"
   - title: "Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures"
     url: "https://openreview.net/forum?id=RyZB4qXEgt"
     year: 2024
-    card: "1198-neural-circuit-diagrams"
+see:
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "096-flashattention-2-faster-attention-with-better-parallelism-an"
+  - "1198-neural-circuit-diagrams"
 ---
 
 # FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness

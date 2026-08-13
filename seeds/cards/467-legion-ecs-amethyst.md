@@ -22,19 +22,20 @@ cites:
     year: 2020
     arxiv: null
     doi: null
-    card: "394-bevy-ecs-getting-started-design"
   - title: "Archetypal ECS storage and iteration (chunked archetypes pattern)"
     url: "https://docs.rs/bevy_ecs/latest/bevy_ecs/"
     year: 2020
     arxiv: null
     doi: null
-    card: "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - title: "EnTT: Gaming meets modern C++"
     url: "https://skypjack.github.io/2019-02-14-ecs-baf-part-1/"
     year: 2019
     arxiv: null
     doi: null
-    card: "398-entt-gaming-meets-modern-c"
+see:
+  - "394-bevy-ecs-getting-started-design"
+  - "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
+  - "398-entt-gaming-meets-modern-c"
 ---
 
 # Legion ECS (Amethyst)

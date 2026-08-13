@@ -23,19 +23,20 @@ cites:
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "Scalable Locality-Conscious Multithreaded Memory Allocation"
     url: "https://doi.org/10.1145/1133956.1133968"
     year: 2006
     arxiv: null
     doi: "10.1145/1133956.1133968"
-    card: "586-scalable-locality-conscious-multithreaded-memory-allocatio"
   - title: "snmalloc: A Message Passing Allocator"
     url: "https://doi.org/10.1145/3315573.3329980"
     year: 2019
     arxiv: null
     doi: "10.1145/3315573.3329980"
-    card: "401-snmalloc-a-message-passing-allocator"
+see:
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "586-scalable-locality-conscious-multithreaded-memory-allocatio"
+  - "401-snmalloc-a-message-passing-allocator"
 ---
 
 # Scalable Lock-Free Dynamic Memory Allocation
