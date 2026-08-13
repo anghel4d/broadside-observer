@@ -309,6 +309,12 @@ function lineageSelectValue(filter: LineageFilter): string {
   }
 }
 
+const THEME_SUN_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
+
+const THEME_MOON_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+
 function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
@@ -326,8 +332,8 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
           <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
         </div>
         <div class="seg" id="theme-toggle" role="radiogroup" aria-label="Theme">
-          <button type="button" role="radio" data-theme="light" aria-checked="${lightOn ? "true" : "false"}">Light</button>
-          <button type="button" role="radio" data-theme="dark" aria-checked="${lightOn ? "false" : "true"}">Dark</button>
+          <button type="button" role="radio" data-theme="light" aria-label="Light" aria-checked="${lightOn ? "true" : "false"}">${THEME_SUN_ICON}</button>
+          <button type="button" role="radio" data-theme="dark" aria-label="Dark" aria-checked="${lightOn ? "false" : "true"}">${THEME_MOON_ICON}</button>
         </div>
         <p class="status" id="status"></p>
       </div>
