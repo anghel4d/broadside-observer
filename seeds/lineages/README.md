@@ -46,3 +46,6 @@ Deep PL / algorithms threads (2026-08-13):
 - `programming-language-foundations` — PL classics (System F, HM, semantics, verification roots)
 - `algorithms-and-complexity` — Algorithms, complexity, coding & crypto foundations
 
+## to1000 deep shelves (2026-08-13)
+- `contemporary-databases` — Spanner/Cockroach/Snowflake/DuckDB/Iceberg/RocksDB/…
+- `type-safety` — Gradual typing, RustBelt, LiquidHaskell, session types, …
