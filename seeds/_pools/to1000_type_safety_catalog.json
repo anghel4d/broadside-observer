@@ -1,0 +1,602 @@
+[
+  {
+    "file": "1308-gradual-typing-for-functional-languages.md",
+    "title": "Gradual Typing for Functional Languages",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1309-gradual-typing-for-objects.md",
+    "title": "Gradual Typing for Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1310-the-design-and-implementation-of-typed-scheme.md",
+    "title": "The Design and Implementation of Typed Scheme",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1311-logical-types-for-untyped-languages.md",
+    "title": "Logical Types for Untyped Languages",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1312-refined-criteria-for-gradual-typing.md",
+    "title": "Refined Criteria for Gradual Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1313-abstracting-gradual-typing.md",
+    "title": "Abstracting Gradual Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1314-blame-for-all.md",
+    "title": "Blame for All",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1315-threesomes-with-and-without-blame.md",
+    "title": "Threesomes, With and Without Blame",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1316-migratory-typing-ten-years-later.md",
+    "title": "Migratory Typing: Ten Years Later",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1317-is-sound-gradual-typing-dead.md",
+    "title": "Is Sound Gradual Typing Dead?",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1318-design-and-evaluation-of-gradual-typing-for-python.md",
+    "title": "Design and Evaluation of Gradual Typing for Python",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1319-gradual-typing-in-an-open-world-gradual-typing-for-python-re.md",
+    "title": "Gradual Typing in an Open World: Gradual Typing for Python, Reticulated",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1320-safe-efficient-gradual-typing-for-typescript.md",
+    "title": "Safe & Efficient Gradual Typing for TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1321-understanding-typescript.md",
+    "title": "Understanding TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1322-refinement-types-for-ml.md",
+    "title": "Refinement Types for ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1323-dependent-types-in-practical-programming.md",
+    "title": "Dependent Types in Practical Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1324-liquid-types.md",
+    "title": "Liquid Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1325-refinement-types-for-haskell.md",
+    "title": "Refinement Types for Haskell",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1326-abstract-refinement-types.md",
+    "title": "Abstract Refinement Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1327-hybrid-type-checking.md",
+    "title": "Hybrid Type Checking",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1328-dependent-types-and-multi-monadic-effects-in-f.md",
+    "title": "Dependent Types and Multi-Monadic Effects in F*",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1329-applied-type-system-with-stateful-views.md",
+    "title": "Applied Type System with Stateful Views",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1330-idris-a-general-purpose-dependently-typed-programming-langua.md",
+    "title": "Idris, a General-Purpose Dependently Typed Programming Language: Design and Implementation",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1331-dependent-types-in-haskell-theory-and-practice.md",
+    "title": "Dependent Types in Haskell: Theory and Practice",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1332-outsidein-x-modular-type-inference-with-local-assumptions.md",
+    "title": "OutsideIn(X): Modular Type Inference with Local Assumptions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1333-simple-unification-based-type-inference-for-gadts.md",
+    "title": "Simple Unification-Based Type Inference for GADTs",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1334-guarded-recursive-datatype-constructors.md",
+    "title": "Guarded Recursive Datatype Constructors",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1335-local-type-inference.md",
+    "title": "Local Type Inference",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1336-typeful-programming.md",
+    "title": "Typeful Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1337-bidirectional-typing.md",
+    "title": "Bidirectional Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1338-complete-and-easy-bidirectional-typechecking-for-higher-rank.md",
+    "title": "Complete and Easy Bidirectional Typechecking for Higher-Rank Polymorphism",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1339-practical-type-inference-for-arbitrary-rank-types.md",
+    "title": "Practical Type Inference for Arbitrary-Rank Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1340-hm-x-type-inference-for-constraint-systems.md",
+    "title": "HM(X) Type Inference for Constraint Systems",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1341-qualified-types-theory-and-practice.md",
+    "title": "Qualified Types: Theory and Practice",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1342-flux-liquid-types-for-rust.md",
+    "title": "Flux: Liquid Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1343-fast-and-precise-type-checking-for-javascript.md",
+    "title": "Fast and Precise Type Checking for JavaScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1344-rustbelt-securing-the-foundations-of-the-rust-programming-la.md",
+    "title": "RustBelt: Securing the Foundations of the Rust Programming Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1345-oxide-the-essence-of-memory-safety-in-rust.md",
+    "title": "Oxide: The Essence of Memory Safety in Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1346-stacked-borrows-an-aliasing-model-for-rust.md",
+    "title": "Stacked Borrows: An Aliasing Model for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1347-tree-borrows.md",
+    "title": "Tree Borrows",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1348-patina-a-formalization-of-the-rust-programming-language.md",
+    "title": "Patina: A Formalization of the Rust Programming Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1349-mezzo-a-typed-language-for-safe-resource-sharing.md",
+    "title": "Mezzo: a Typed Language for Safe Resource Sharing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1350-vault-enforcing-trusted-systems-implementation-discipline.md",
+    "title": "Vault: Enforcing Trusted Systems Implementation Discipline",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1351-adoption-and-focus-practical-linear-types-for-imperative-pro.md",
+    "title": "Adoption and Focus: Practical Linear Types for Imperative Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1352-cyclone-a-safe-dialect-of-c.md",
+    "title": "Cyclone: A Safe Dialect of C",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1353-linear-haskell-practical-linearity-in-a-higher-order-impure-.md",
+    "title": "Linear Haskell: Practical Linearity in a Higher-Order Impure Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1354-ownership-types-for-flexible-alias-protection.md",
+    "title": "Ownership Types for Flexible Alias Protection",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1355-generic-universe-types.md",
+    "title": "Generic Universe Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1356-the-spec-programming-system-an-overview.md",
+    "title": "The Spec# Programming System: An Overview",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1357-declaring-and-checking-non-null-types-in-an-object-oriented-.md",
+    "title": "Declaring and Checking Non-null Types in an Object-Oriented Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1358-practical-pluggable-types-for-java.md",
+    "title": "Practical Pluggable Types for Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1359-nullaway-practical-type-based-null-safety-for-java.md",
+    "title": "NullAway: Practical Type-Based Null Safety for Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1360-kotlin-null-safety.md",
+    "title": "Kotlin Null-Safety",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1361-typescript-2-0-strict-null-checks.md",
+    "title": "TypeScript 2.0 Strict Null Checks",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1362-sound-null-safety-in-dart.md",
+    "title": "Sound Null Safety in Dart",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1363-pluggable-type-systems.md",
+    "title": "Pluggable Type Systems",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1364-typed-memory-management-and-capability-calculi-for-resources.md",
+    "title": "Typed Memory Management and Capability Calculi for Resources",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1365-wyvern-a-simple-typed-approach-to-capability-security.md",
+    "title": "Wyvern: A Simple, Typed Approach to Capability Security",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1366-capturing-types.md",
+    "title": "Capturing Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1367-do-be-do-be-do-frank-effects.md",
+    "title": "Do Be Do Be Do: Frank Effects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1368-links-web-programming-without-tiers.md",
+    "title": "Links: Web Programming Without Tiers",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1369-effekt-capability-passing-style-for-type-and-effect-safe-ext.md",
+    "title": "Effekt: Capability-Passing Style for Type- and Effect-Safe, Extensible Effect Handlers",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1370-from-datalog-to-flix-a-declarative-language-for-programming-.md",
+    "title": "From Datalog to Flix: A Declarative Language for Programming with Types and Effects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1371-multiparty-asynchronous-session-types.md",
+    "title": "Multiparty Asynchronous Session Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1372-foundations-of-session-types-and-behavioural-contracts.md",
+    "title": "Foundations of Session Types and Behavioural Contracts",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1373-lightweight-session-programming-in-scala.md",
+    "title": "Lightweight Session Programming in Scala",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1374-protocol-descriptions-and-scribble-multiparty-sessions.md",
+    "title": "Protocol Descriptions and Scribble Multiparty Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1375-propositions-as-sessions.md",
+    "title": "Propositions as Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1376-a-semantics-for-propositions-as-sessions.md",
+    "title": "A Semantics for Propositions-as-Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1377-context-free-session-types.md",
+    "title": "Context-Free Session Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1378-bringing-the-web-up-to-speed-with-webassembly.md",
+    "title": "Bringing the Web up to Speed with WebAssembly",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1379-mechanising-and-verifying-the-webassembly-specification.md",
+    "title": "Mechanising and Verifying the WebAssembly Specification",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1380-webassembly-garbage-collection-and-reference-types.md",
+    "title": "WebAssembly Garbage Collection and Reference Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1381-formal-verification-of-a-realistic-compiler.md",
+    "title": "Formal Verification of a Realistic Compiler",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1382-the-cakeml-approach-to-compiler-correctness.md",
+    "title": "The CakeML Approach to Compiler Correctness",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1383-cakeml-a-verified-implementation-of-ml.md",
+    "title": "CakeML: A Verified Implementation of ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1384-when-good-components-go-bad-formally-secure-compilation.md",
+    "title": "When Good Components Go Bad: Formally Secure Compilation",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1385-typed-closure-conversion.md",
+    "title": "Typed Closure Conversion",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1386-from-system-f-to-typed-assembly-language.md",
+    "title": "From System F to Typed Assembly Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1387-til-a-type-directed-optimizing-compiler-for-ml.md",
+    "title": "TIL: A Type-Directed Optimizing Compiler for ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1388-ur-web-a-simple-model-for-programming-the-web.md",
+    "title": "Ur/Web: A Simple Model for Programming the Web",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1389-sqlx-compile-time-checked-sql-for-rust.md",
+    "title": "SQLx: Compile-Time Checked SQL for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1390-linq-reconciling-objects-relations-and-xml-in-the-net-framew.md",
+    "title": "LINQ: Reconciling Objects, Relations and XML in the .NET Framework",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1391-declarative-programming-over-eventually-consistent-data-stor.md",
+    "title": "Declarative Programming over Eventually Consistent Data Stores (Quelea)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1392-edgeql-type-system-and-query-language.md",
+    "title": "EdgeQL Type System and Query Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1393-a-practical-theory-of-language-integrated-query.md",
+    "title": "A Practical Theory of Language-Integrated Query",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1394-java-and-scala-s-type-systems-are-unsound.md",
+    "title": "Java and Scala's Type Systems are Unsound",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1395-the-essence-of-dependent-object-types.md",
+    "title": "The Essence of Dependent Object Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1396-scala-soundness-and-the-dot-calculus-engineering.md",
+    "title": "Scala Soundness and the DOT Calculus Engineering",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1397-taming-wildcards-in-java-s-type-system.md",
+    "title": "Taming Wildcards in Java's Type System",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1398-truth-and-wildcards-in-java.md",
+    "title": "Truth and Wildcards in Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1399-typescript-faq-type-system-behavior-and-soundness-limits.md",
+    "title": "TypeScript FAQ: Type System Behavior and Soundness Limits",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1400-type-inference-for-records-in-a-natural-extension-of-ml.md",
+    "title": "Type Inference for Records in a Natural Extension of ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1401-complete-type-inference-for-simple-objects.md",
+    "title": "Complete Type Inference for Simple Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1402-a-polymorphic-type-system-for-extensible-records-and-variant.md",
+    "title": "A Polymorphic Type System for Extensible Records and Variants",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1403-the-essence-of-ml-type-inference-constraint-framework.md",
+    "title": "The Essence of ML Type Inference (Constraint Framework)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1404-gadts-meet-their-match.md",
+    "title": "GADTs Meet Their Match",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1405-refinement-types-a-tutorial.md",
+    "title": "Refinement Types: A Tutorial",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1406-gradual-liquid-type-inference.md",
+    "title": "Gradual Liquid Type Inference",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1407-fast-and-precise-type-checking-for-javascript-flow.md",
+    "title": "Fast and Precise Type Checking for JavaScript (Flow)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1408-miri-an-interpreter-for-rust-mir.md",
+    "title": "Miri: An Interpreter for Rust MIR",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1409-typed-memory-management-via-static-capabilities.md",
+    "title": "Typed Memory Management via Static Capabilities",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1410-typed-lua-an-optional-type-system-for-lua.md",
+    "title": "Typed Lua: An Optional Type System for Lua",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1411-session-types-for-rust.md",
+    "title": "Session Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1412-stay-safe-under-panic-multiparty-session-types-for-rust.md",
+    "title": "Stay Safe under Panic: Multiparty Session Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1413-system-f-with-type-equality-coercions.md",
+    "title": "System F with Type Equality Coercions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1414-safe-zero-cost-coercions-for-haskell.md",
+    "title": "Safe Zero-Cost Coercions for Haskell",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1415-dependently-typed-programming-with-singletons.md",
+    "title": "Dependently Typed Programming with Singletons",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1416-type-checking-with-open-type-functions.md",
+    "title": "Type Checking with Open Type Functions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1417-giving-haskell-a-promotion.md",
+    "title": "Giving Haskell a Promotion",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1418-typestates-for-objects.md",
+    "title": "Typestates for Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1419-foundational-property-based-testing.md",
+    "title": "Foundational Property-Based Testing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1420-deny-capabilities-for-safe-fast-actors.md",
+    "title": "Deny Capabilities for Safe, Fast Actors",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1421-towards-strongly-typed-set-theoretic-foundations-for-typescr.md",
+    "title": "Towards Strongly Typed Set-Theoretic Foundations for TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1422-leveraging-rust-types-for-modular-specification-and-verifica.md",
+    "title": "Leveraging Rust Types for Modular Specification and Verification",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1423-type-classes-as-objects-and-implicits.md",
+    "title": "Type Classes as Objects and Implicits",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1424-fun-with-phantom-types.md",
+    "title": "Fun with Phantom Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1425-the-rustonomicon-the-dark-arts-of-unsafe-rust.md",
+    "title": "The Rustonomicon: The Dark Arts of Unsafe Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1426-pyre-and-pytype-gradual-typing-for-python-at-scale.md",
+    "title": "Pyre and Pytype: Gradual Typing for Python at Scale",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1427-pep-484-type-hints.md",
+    "title": "PEP 484 \u2014 Type Hints",
+    "lineage": "type-safety"
+  }
+]

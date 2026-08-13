@@ -46,3 +46,6 @@ Deep foundations thread (2026-08-13):
 
 Deep type-safety thread (2026-08-13):
 - `type-safety` — 120 cards at **1308–1427** (`to1000-type-safety-2026-08-13`, pool `languages`). Original exclusive 878–997 was preempted; HM/System F/soft-typing remain on foundations/perfects-pl shelves as external cites.
+
+Deep systems thread (2026-08-13):
+- `contemporary-databases` — Contemporary databases (Spanner…DuckDB/Velox/lakehouse/learned indexes)
