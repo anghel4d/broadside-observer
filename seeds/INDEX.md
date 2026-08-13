@@ -1066,3 +1066,24 @@ First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF
 _Recount after `deepseek-lab-2026-08-13`: **1027** unique title cards on main._
 
 _Recount after dirt/dup cull: **1000** unique title cards on main._
+
+## Archive radar 2026-08-14
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/ano/RTS/historical-gem filter: **62**. Keepers: **12** (keep rate **0.194**, hard cap 0.20). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1001 | 10 | 1998 | From System F to Typed Assembly Language | languages |
+| 1002 | 10 | 2017 | Futhark: Purely Functional GPU-Programming with Nested Parallelism and In-Place Array Updates | languages |
+| 1003 | 9 | 2009 | Finally Tagless, Partially Evaluated: Tagless Staged Interpreters for Simpler Typed Languages | languages |
+| 1004 | 9 | 1987 | TREAT: A Better Match Algorithm for AI Production Systems | languages |
+| 1005 | 10 | 1978 | Casting Curved Shadows on Curved Surfaces | graphics |
+| 1006 | 10 | 1981 | A Reflectance Model for Computer Graphics | graphics |
+| 1007 | 9 | 1985 | An Image Synthesizer | graphics |
+| 1008 | 9 | 2006 | Linear Regions Are All You Need | languages |
+| 1009 | 10 | 2006 | Bandit Based Monte-Carlo Planning | game-ai |
+| 1010 | 9 | 1987 | The Reyes Image Rendering Architecture | engines |
+| 1011 | 9 | 2002 | Cyclone: A Safe Dialect of C | languages |
+| 1012 | 9 | 2000 | Deep Shadow Maps | graphics |
+
+_Recount after `archive-2026-08-14`: **1012** unique title cards on main._
