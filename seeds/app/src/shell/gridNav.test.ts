@@ -131,7 +131,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   assert.equal(countGridTemplateColumns("repeat(12, minmax(0px, 1fr))"), 12);
   assert.equal(countGridTemplateColumns("minmax(min(100%, 14.5rem), 1fr)"), 1);
   assert.equal(
-    countGridTemplateColumns("repeat(auto-fill, minmax(min(100%, 14.5rem), 1fr))"),
+    countGridTemplateColumns("repeat(auto-fill, var(--seed-card-width))"),
     0,
   );
 }
@@ -141,7 +141,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   const twoCol = measureGridColumns({
     templateColumns: "232px 232px",
     width: 3000,
-    minTrack: 232,
+    track: 232,
     gap: 8,
   });
   assert.equal(twoCol, 2);
@@ -149,7 +149,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   const twelveCol = measureGridColumns({
     templateColumns: Array.from({ length: 12 }, () => "116px").join(" "),
     width: 500,
-    minTrack: 232,
+    track: 232,
     gap: 8,
   });
   assert.equal(twelveCol, 12);
@@ -157,7 +157,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   const fallback = measureGridColumns({
     templateColumns: "none",
     width: 738,
-    minTrack: 232,
+    track: 232,
     gap: 8,
   });
   assert.equal(fallback, 3);

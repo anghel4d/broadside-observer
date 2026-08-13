@@ -1,4 +1,5 @@
 import type { CardId, SeedCard } from "../domain/schema.ts";
+import { cardGridMetricsFromCss } from "./cardMetrics.ts";
 import { measureGridColumns } from "./gridNav.ts";
 import type { ViewMode } from "./view.ts";
 import {
@@ -59,7 +60,6 @@ export function createBrowseVirtualizer(
   let listHeights = new Map<number, number>();
   let prefix: Float64Array = new Float64Array([0]);
   let prefixDirty = true;
-  let cardRowHeight = 0;
   let lastSlice: Slice | null = null;
   let ignoreScroll = false;
   let raf = 0;
@@ -69,14 +69,14 @@ export function createBrowseVirtualizer(
 
   const remMetrics = () => {
     const rem = rootRem();
+    const grid = cardGridMetricsFromCss(getComputedStyle(document.documentElement), rem);
     return {
       listInset: 0.2 * rem,
       listDefault: 5.85 * rem,
-      gridPad: 0.5 * rem,
-      gridGap: 0.5 * rem,
-      gridMinTrack: 14.5 * rem,
-      // Keep in sync with `.card-grid { grid-auto-rows: 10.75rem }` in style.css.
-      gridDefaultRow: 10.75 * rem,
+      gridPad: grid.inset,
+      gridGap: grid.gap,
+      gridCardWidth: grid.width,
+      gridCardHeight: grid.height,
     };
   };
 
@@ -97,11 +97,11 @@ export function createBrowseVirtualizer(
       return measureGridColumns({
         templateColumns: getComputedStyle(grid).gridTemplateColumns,
         width: grid.clientWidth > 0 ? grid.clientWidth : inner,
-        minTrack: m.gridMinTrack,
+        track: m.gridCardWidth,
         gap: m.gridGap,
       });
     }
-    return gridColumns(inner, m.gridMinTrack, m.gridGap);
+    return gridColumns(inner, m.gridCardWidth, m.gridGap);
   };
 
   const listPrefix = (count: number, fallback: number): Float64Array => {
@@ -111,10 +111,7 @@ export function createBrowseVirtualizer(
     return prefix;
   };
 
-  const rowHeightPx = (): number => {
-    const m = remMetrics();
-    return cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow;
-  };
+  const rowHeightPx = (): number => remMetrics().gridCardHeight;
 
   const computeSlice = (): Slice => {
     const m = remMetrics();
@@ -156,41 +153,29 @@ export function createBrowseVirtualizer(
   };
 
   const measure = (): void => {
-    if (cards.length === 0 || measureDepth > 3) return;
+    if (view !== "list" || cards.length === 0 || measureDepth > 3) return;
     measureDepth += 1;
     try {
-      if (view === "list") {
-        let changed = false;
-        for (const row of pane.querySelectorAll(".card-row")) {
-          if (!(row instanceof HTMLElement) || row.dataset.id === undefined) continue;
-          const index = idToIndex.get(row.dataset.id);
-          if (index === undefined) continue;
-          const host = row.parentElement;
-          const height = host instanceof HTMLElement ? host.offsetHeight : row.offsetHeight;
-          if (height > 0 && listHeights.get(index) !== height) {
-            listHeights.set(index, height);
-            changed = true;
-          }
+      let changed = false;
+      for (const row of pane.querySelectorAll(".card-row")) {
+        if (!(row instanceof HTMLElement) || row.dataset.id === undefined) continue;
+        const index = idToIndex.get(row.dataset.id);
+        if (index === undefined) continue;
+        const host = row.parentElement;
+        const height = host instanceof HTMLElement ? host.offsetHeight : row.offsetHeight;
+        if (height > 0 && listHeights.get(index) !== height) {
+          listHeights.set(index, height);
+          changed = true;
         }
-        if (!changed) return;
-        prefixDirty = true;
-        const next = computeSlice();
-        if (lastSlice !== null && (next.start !== lastSlice.start || next.end !== lastSlice.end)) {
-          paint(true);
-        } else {
-          applyPads(next);
-          lastSlice = next;
-        }
-        return;
       }
-      let maxH = 0;
-      for (const card of pane.querySelectorAll(".seed-card")) {
-        if (card instanceof HTMLElement && card.offsetHeight > maxH) maxH = card.offsetHeight;
-      }
-      if (maxH <= 0) return;
-      if (Math.abs(maxH - cardRowHeight) > 1) {
-        cardRowHeight = maxH;
+      if (!changed) return;
+      prefixDirty = true;
+      const next = computeSlice();
+      if (lastSlice !== null && (next.start !== lastSlice.start || next.end !== lastSlice.end)) {
         paint(true);
+      } else {
+        applyPads(next);
+        lastSlice = next;
       }
     } finally {
       measureDepth -= 1;

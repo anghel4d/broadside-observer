@@ -99,16 +99,16 @@ export function countGridTemplateColumns(value: string): number {
 }
 
 /**
- * Prefer the live CSS track list; fall back to the auto-fill width formula
- * (`minmax(min(100%, minTrack), 1fr)` + gap) used by the virtualizer.
+ * Prefer the live CSS track list; fall back to the fixed-track auto-fill
+ * formula (`repeat(auto-fill, track)` + gap) used by the virtualizer.
  */
 export function measureGridColumns(args: {
   readonly templateColumns: string | null | undefined;
   readonly width: number;
-  readonly minTrack: number;
+  readonly track: number;
   readonly gap: number;
 }): number {
   const fromStyle = countGridTemplateColumns(args.templateColumns ?? "");
   if (fromStyle >= 1) return fromStyle;
-  return gridColumns(args.width, args.minTrack, args.gap);
+  return gridColumns(args.width, args.track, args.gap);
 }

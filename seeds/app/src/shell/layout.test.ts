@@ -33,6 +33,11 @@ import {
   writeStoredDetailFocus,
   writeStoredDetailWidth,
 } from "./layout.ts";
+import {
+  SEED_CARD_GAP_REM,
+  SEED_CARD_INSET_REM,
+  SEED_CARD_WIDTH_REM,
+} from "./cardMetrics.ts";
 
 assert.equal(parseDetailFocus("1"), true);
 assert.equal(parseDetailFocus("true"), true);
@@ -108,7 +113,8 @@ assert.equal(
 {
   const css = readFileSync(new URL("../style.css", import.meta.url), "utf8");
   assert.ok(
-    css.includes(`@media (max-width: ${COMPACT_MAX_PX}px)`),
+    css.includes(`@media (max-width: ${COMPACT_MAX_PX}px)`) ||
+      css.includes(`@media (width <= ${COMPACT_MAX_PX}px)`),
     "style.css compact breakpoint must match COMPACT_MAX_PX",
   );
 }
@@ -229,10 +235,11 @@ assert.equal(
   assert.equal(cardsLaptop, expectedCards);
   assert.ok(cardsLaptop >= CARDS_DETAIL_MIN_DEFAULT_REM * rem);
   assert.ok(cardsLaptop <= CARDS_DETAIL_MAX_DEFAULT_REM * rem);
-  const minTwoCols = 2 * 14.5 * rem + 0.5 * rem + 2 * 0.5 * rem;
+  const minTwoCols =
+    2 * SEED_CARD_WIDTH_REM * rem + SEED_CARD_GAP_REM * rem + 2 * SEED_CARD_INSET_REM * rem;
   assert.ok(
     browseWidthPx(1280, cardsLaptop, gutter) >= minTwoCols,
-    "Cards default must leave room for two 14.5rem columns on a 1280px laptop",
+    `Cards default must leave room for two ${SEED_CARD_WIDTH_REM}rem columns on a 1280px laptop`,
   );
 
   const cardsNarrow = defaultDetailWidthPx({
@@ -295,7 +302,10 @@ assert.equal(
     !css.includes("minmax(16rem, 18rem)"),
     "Cards default must no longer pin detail to 16–18rem",
   );
-  const compactBlock = css.slice(css.indexOf(`@media (max-width: ${COMPACT_MAX_PX}px)`));
+  const compactBlock =
+    css.includes(`@media (width <= ${COMPACT_MAX_PX}px)`)
+      ? css.slice(css.indexOf(`@media (width <= ${COMPACT_MAX_PX}px)`))
+      : css.slice(css.indexOf(`@media (max-width: ${COMPACT_MAX_PX}px)`));
   assert.ok(
     compactBlock.includes(".pane-split") && compactBlock.includes("display: none"),
     "compact layout must hide the side splitter",
