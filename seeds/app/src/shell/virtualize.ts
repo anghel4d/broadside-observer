@@ -193,6 +193,11 @@ export function gridSlice(
   return sliceFromGridRows(startRow, endRow, count, cols, rowHeight, gap, insetTop, insetBottom, rows);
 }
 
+/** Largest `scrollTop` that still shows the end of a `total`-tall plane. */
+export function maxScrollTop(total: number, viewport: number): number {
+  return Math.max(0, total - Math.max(0, viewport));
+}
+
 /** New `scrollTop` if `item` is outside the padded viewport; otherwise `null`. */
 export function scrollToShow(
   itemTop: number,
@@ -208,6 +213,21 @@ export function scrollToShow(
     return settle(Math.max(0, itemBottom - viewport + pad));
   }
   return null;
+}
+
+export type SetRevealChange = {
+  readonly selectionChanged: boolean;
+  readonly viewChanged: boolean;
+  readonly itemsChanged: boolean;
+};
+
+/**
+ * Scroll the selection into view only when the user changed which card is
+ * selected, or switched List/Cards (item sizes are not comparable). Filter
+ * and other item-list updates must not steal the user's scroll.
+ */
+export function shouldRevealOnSet(change: SetRevealChange): boolean {
+  return change.selectionChanged || change.viewChanged;
 }
 
 export function listItemBounds(
