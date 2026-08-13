@@ -477,7 +477,7 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
     return `<p class="empty">No cards match the current filters.</p>`;
   }
   const items: string[] = [
-    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px">`,
+    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px;min-height:${slice.total}px">`,
     `<ul class="card-list">`,
   ];
   for (let i = slice.start; i < slice.end; i++) {
@@ -503,7 +503,7 @@ function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
     return `<p class="empty">No cards match the current filters.</p>`;
   }
   const items: string[] = [
-    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px">`,
+    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px;min-height:${slice.total}px">`,
     `<div class="card-grid">`,
   ];
   for (let i = slice.start; i < slice.end; i++) {
@@ -783,7 +783,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (prev !== null && prev.detailFocus !== vm.detailFocus) {
       requestAnimationFrame(() => {
         virt.refresh();
-        virt.reveal(highlight);
       });
     }
 

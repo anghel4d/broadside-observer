@@ -5,11 +5,15 @@ import {
   fillSizes,
   gridColumns,
   gridItemBounds,
+  gridRowCount,
   gridSlice,
+  gridTotalHeight,
   listItemBounds,
   listSlice,
+  maxScrollTop,
   prefixSums,
   scrollToShow,
+  shouldRevealOnSet,
   type Slice,
 } from "./virtualize.ts";
 
@@ -71,6 +75,7 @@ export function createBrowseVirtualizer(
       gridPad: 0.5 * rem,
       gridGap: 0.5 * rem,
       gridMinTrack: 14.5 * rem,
+      // Keep in sync with `.card-grid { grid-auto-rows: 10.75rem }` in style.css.
       gridDefaultRow: 10.75 * rem,
     };
   };
@@ -106,6 +111,11 @@ export function createBrowseVirtualizer(
     return prefix;
   };
 
+  const rowHeightPx = (): number => {
+    const m = remMetrics();
+    return cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow;
+  };
+
   const computeSlice = (): Slice => {
     const m = remMetrics();
     const viewport = pane.clientHeight;
@@ -120,12 +130,10 @@ export function createBrowseVirtualizer(
         m.listInset,
       );
     }
-    const columns = liveColumns();
-    const rowHeight = cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow;
     return gridSlice(
       cards.length,
-      columns,
-      rowHeight,
+      liveColumns(),
+      rowHeightPx(),
       m.gridGap,
       scrollTop,
       viewport,
@@ -140,6 +148,11 @@ export function createBrowseVirtualizer(
     if (!(plane instanceof HTMLElement)) return;
     plane.style.paddingTop = `${slice.padTop}px`;
     plane.style.paddingBottom = `${slice.padBottom}px`;
+    plane.style.minHeight = `${slice.total}px`;
+    const grid = plane.querySelector(".card-grid");
+    if (grid instanceof HTMLElement) {
+      grid.style.gridAutoRows = `${rowHeightPx()}px`;
+    }
   };
 
   const measure = (): void => {
@@ -170,10 +183,13 @@ export function createBrowseVirtualizer(
         }
         return;
       }
-      const card = pane.querySelector(".seed-card");
-      if (!(card instanceof HTMLElement) || card.offsetHeight <= 0) return;
-      if (Math.abs(card.offsetHeight - cardRowHeight) > 1) {
-        cardRowHeight = card.offsetHeight;
+      let maxH = 0;
+      for (const card of pane.querySelectorAll(".seed-card")) {
+        if (card instanceof HTMLElement && card.offsetHeight > maxH) maxH = card.offsetHeight;
+      }
+      if (maxH <= 0) return;
+      if (Math.abs(maxH - cardRowHeight) > 1) {
+        cardRowHeight = maxH;
         paint(true);
       }
     } finally {
@@ -238,22 +254,25 @@ export function createBrowseVirtualizer(
     }
     const m = remMetrics();
     const viewport = pane.clientHeight;
+    const columns = liveColumns();
+    const rowH = rowHeightPx();
     const bounds =
       view === "list"
         ? listItemBounds(listPrefix(cards.length, m.listDefault), index, m.listInset)
-        : gridItemBounds(
-            index,
-            liveColumns(),
-            cardRowHeight > 0 ? cardRowHeight : m.gridDefaultRow,
-            m.gridGap,
-            m.gridPad,
-          );
+        : gridItemBounds(index, columns, rowH, m.gridGap, m.gridPad);
+    const total =
+      view === "list"
+        ? (listPrefix(cards.length, m.listDefault)[cards.length] ?? 0) + m.listInset * 2
+        : gridTotalHeight(gridRowCount(cards.length, columns), rowH, m.gridGap, m.gridPad, m.gridPad);
     if (bounds !== null) {
       const next = scrollToShow(bounds.top, bounds.bottom, pane.scrollTop, viewport, EDGE_PAD);
-      if (next !== null && Math.abs(next - pane.scrollTop) > 1) {
-        ignoreScroll = true;
-        pane.scrollTop = next;
-        ignoreScroll = false;
+      if (next !== null) {
+        const clamped = Math.min(next, maxScrollTop(total, viewport));
+        if (Math.abs(clamped - pane.scrollTop) > 1) {
+          ignoreScroll = true;
+          pane.scrollTop = clamped;
+          ignoreScroll = false;
+        }
       }
     }
     paint(true);
@@ -299,24 +318,33 @@ export function createBrowseVirtualizer(
       reindex();
     }
     if (viewChanged) lastSlice = null;
-    if (idsChanged || viewChanged) {
+    if (
+      shouldRevealOnSet({
+        selectionChanged: selChanged,
+        viewChanged,
+        itemsChanged: idsChanged,
+      })
+    ) {
+      if (selChanged && selectedId === null && !viewChanged) {
+        setActive(pane, null);
+        if (idsChanged) paint(true);
+        return;
+      }
+      if (selChanged && !viewChanged && !idsChanged && selectedId !== null) {
+        const node = pane.querySelector(`[data-id="${CSS.escape(selectedId)}"]`);
+        if (node instanceof HTMLElement) {
+          setActive(pane, selectedId);
+          const before = pane.scrollTop;
+          alignChild(node);
+          if (Math.abs(pane.scrollTop - before) > 1) paint(false);
+          return;
+        }
+      }
       reveal(selectedId);
       return;
     }
-    if (selChanged) {
-      if (selectedId === null) {
-        setActive(pane, null);
-        return;
-      }
-      const node = pane.querySelector(`[data-id="${CSS.escape(selectedId)}"]`);
-      if (node instanceof HTMLElement) {
-        setActive(pane, selectedId);
-        const before = pane.scrollTop;
-        alignChild(node);
-        if (Math.abs(pane.scrollTop - before) > 1) paint(false);
-        return;
-      }
-      reveal(selectedId);
+    if (idsChanged) {
+      paint(true);
       return;
     }
     paint(false);
