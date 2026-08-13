@@ -26,6 +26,7 @@ export const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   "foundations-of-computing": "Foundations of computing",
   "programming-language-foundations": "Programming language foundations",
   "algorithms-and-complexity": "Algorithms & complexity",
+  deepseek: "DeepSeek",
 };
 
 export const POOL_TITLES: Readonly<Record<string, string>> = {

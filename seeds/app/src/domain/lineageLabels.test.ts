@@ -10,6 +10,7 @@ assert.equal(labelForLineage("type-safety"), "Type safety");
 assert.equal(labelForLineage("foundations-of-computing"), "Foundations of computing");
 assert.equal(labelForLineage("programming-language-foundations"), "Programming language foundations");
 assert.equal(labelForLineage("algorithms-and-complexity"), "Algorithms & complexity");
+assert.equal(labelForLineage("deepseek"), "DeepSeek");
 
 assert.equal(labelForLineage("brand-new-thread"), "Brand new thread");
 assert.equal(labelForLineage("lock-free-queues"), "Lock free queues");
