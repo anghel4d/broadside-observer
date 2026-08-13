@@ -24,7 +24,7 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1016/S0049-237X(08)70845-7"
-    card: "889-une-extension-de-l-interpr-tation-de-g-del-l-analyse-et-son-"
+    card: "889-girard-system-f-une-extension-de-linterpretation-de-godel"
   - title: "Towards a Theory of Type Structure"
     url: "https://doi.org/10.1007/3-540-06859-7_148"
     year: 1974

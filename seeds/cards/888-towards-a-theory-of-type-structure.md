@@ -30,7 +30,7 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
+    card: "892-a-theory-of-type-polymorphism-in-programming"
   - title: "Theorems for Free!"
     url: "https://doi.org/10.1145/99370.99404"
     year: 1989
