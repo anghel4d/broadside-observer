@@ -46,10 +46,22 @@ export type SeedRank = z.infer<typeof SeedRankSchema>;
 export const RelevanceScoreSchema = z.number().int().min(1).max(10).brand<"RelevanceScore">();
 export type RelevanceScore = z.infer<typeof RelevanceScoreSchema>;
 
-export const ArxivIdSchema = z.string().min(1).brand<"ArxivId">();
+/** YAML may parse bare ids such as `1710.08840` as numbers. */
+function coerceBibliographicId(value: unknown): unknown {
+  if (typeof value === "number" && Number.isFinite(value)) return String(value);
+  return value;
+}
+
+export const ArxivIdSchema = z.preprocess(
+  coerceBibliographicId,
+  z.string().min(1).brand<"ArxivId">(),
+);
 export type ArxivId = z.infer<typeof ArxivIdSchema>;
 
-export const DoiSchema = z.string().min(1).brand<"Doi">();
+export const DoiSchema = z.preprocess(
+  coerceBibliographicId,
+  z.string().min(1).brand<"Doi">(),
+);
 export type Doi = z.infer<typeof DoiSchema>;
 
 export const IsoDateSchema = z

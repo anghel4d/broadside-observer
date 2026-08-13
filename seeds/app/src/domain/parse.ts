@@ -45,7 +45,7 @@ function splitFrontmatter(source: CardSource): Result<ParseError, FrontmatterBlo
 
 function parseYaml(file: string, yaml: string): Result<ParseError, unknown> {
   try {
-    return ok(parseYamlValue(yaml));
+    return ok(parseYamlValue(quoteBareBibliographicIds(yaml)));
   } catch (cause) {
     const message = cause instanceof Error ? cause.message : String(cause);
     return err({ _tag: "YamlError", file, message });
@@ -61,8 +61,21 @@ function asNumber(value: unknown): unknown {
   return value;
 }
 
+function asString(value: unknown): unknown {
+  if (typeof value === "number" && Number.isFinite(value)) return String(value);
+  return value;
+}
+
 function emptyToNull(value: unknown): unknown {
   return value === "" || value === undefined ? null : value;
+}
+
+/** Keep bare numeric arxiv/doi as text so YAML floats do not drop trailing zeros. */
+function quoteBareBibliographicIds(yaml: string): string {
+  return yaml.replace(
+    /^([ \t]*(?:-[ \t]+)?(?:arxiv|doi):[ \t]*)([+-]?(?:\d+\.\d+|\d+\.|\.\d+|\d+)(?:[eE][+-]?\d+)?)[ \t]*$/gm,
+    `$1"$2"`,
+  );
 }
 
 function asCardStem(value: unknown): unknown {
@@ -80,8 +93,8 @@ function normalizeCite(raw: unknown): unknown {
     title: record.title,
     url: emptyToNull(record.url),
     year: record.year === undefined || record.year === null || record.year === "" ? null : asNumber(record.year),
-    arxiv: emptyToNull(record.arxiv),
-    doi: emptyToNull(record.doi),
+    arxiv: emptyToNull(asString(record.arxiv)),
+    doi: emptyToNull(asString(record.doi)),
     card: asCardStem(record.card),
   };
 }
@@ -105,8 +118,8 @@ export function normalizeFrontmatter(raw: unknown): unknown {
     seed_rank: asNumber(record.seed_rank),
     relevance_score:
       record.relevance_score === undefined ? null : asNumber(record.relevance_score),
-    arxiv: record.arxiv === "" ? null : (record.arxiv ?? null),
-    doi: record.doi === "" ? null : (record.doi ?? null),
+    arxiv: emptyToNull(asString(record.arxiv)),
+    doi: emptyToNull(asString(record.doi)),
     pool: record.pool === "" || record.pool === undefined ? null : record.pool,
     venue: record.venue ?? "",
     source: record.source ?? "",
