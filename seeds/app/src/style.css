@@ -170,36 +170,6 @@ kbd {
   }
 }
 
-.focus-detail {
-  appearance: none;
-  font: inherit;
-  font-size: 0.8rem;
-  color: var(--muted);
-  background: var(--panel-2);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.28rem 0.72rem;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
-
-  &:hover {
-    color: var(--ink);
-    border-color: color-mix(in oklab, var(--line) 60%, var(--accent));
-  }
-
-  &[aria-pressed="true"] {
-    background: var(--active);
-    color: var(--ink);
-    box-shadow: 0 0 0 1px var(--line);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--focus-ring);
-    outline-offset: 2px;
-  }
-}
-
 .chrome {
   flex: 0 0 auto;
   display: flex;
@@ -407,13 +377,6 @@ button:focus-visible {
     /* Wider than the old 16–18rem rail so Cards detail is readable; JS further
        tunes 42% of the workspace clamped to 28–34rem. */
     --detail-width: 32rem;
-  }
-
-  &[data-focus="detail"],
-  &[data-view="cards"][data-focus="detail"] {
-    --browse-min: 14rem;
-    --detail-min: 22rem;
-    --detail-width: calc(100% - 20rem - var(--split-gutter));
   }
 
   &.is-resizing {
@@ -756,10 +719,6 @@ button:focus-visible {
   max-width: 46rem;
   margin-inline: auto;
   min-width: 0;
-}
-
-.workspace[data-focus="detail"] .reading-col {
-  max-width: 48rem;
 }
 
 .detail-dismiss {
@@ -1122,20 +1081,13 @@ a.chip-lineage-doc {
 /* Compact: 980px matches COMPACT_MAX_PX in layout.ts. List stacks; Cards uses a sheet. */
 @media (width <= 980px) {
   .workspace,
-  .workspace[data-view="cards"],
-  .workspace[data-focus="detail"],
-  .workspace[data-view="cards"][data-focus="detail"] {
+  .workspace[data-view="cards"] {
     --detail-width: auto;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(8rem, 38%) minmax(0, 1fr);
   }
 
-  .workspace[data-focus="detail"] {
-    grid-template-rows: minmax(5.5rem, 22%) minmax(0, 1fr);
-  }
-
-  .workspace[data-view="cards"],
-  .workspace[data-view="cards"][data-focus="detail"] {
+  .workspace[data-view="cards"] {
     grid-template-rows: minmax(0, 1fr);
   }
 
@@ -1210,12 +1162,7 @@ a.chip-lineage-doc {
     grid-template-rows: minmax(7.5rem, 34%) minmax(0, 1fr);
   }
 
-  .workspace[data-focus="detail"] {
-    grid-template-rows: minmax(5rem, 20%) minmax(0, 1fr);
-  }
-
-  .workspace[data-view="cards"],
-  .workspace[data-view="cards"][data-focus="detail"] {
+  .workspace[data-view="cards"] {
     grid-template-rows: minmax(0, 1fr);
   }
 
@@ -1244,7 +1191,6 @@ a.chip-lineage-doc {
   }
 
   .seg button,
-  .focus-detail,
   .filter-pill-clear,
   .reset,
   .filters-toggle,
