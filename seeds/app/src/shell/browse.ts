@@ -1,10 +1,9 @@
 import type { CardId, SeedCard } from "../domain/schema.ts";
-import { cardGridMetricsFromCss } from "./cardMetrics.ts";
+import { SEED_CARD_COLS_VAR, cardGridMetricsFromCss } from "./cardMetrics.ts";
 import { measureGridColumns } from "./gridNav.ts";
 import type { ViewMode } from "./view.ts";
 import {
   fillSizes,
-  gridColumns,
   gridItemBounds,
   gridRowCount,
   gridSlice,
@@ -34,7 +33,7 @@ export type BrowseVirtualizer = {
   readonly reveal: (id: CardId | null) => void;
   readonly flash: (id: CardId) => void;
   readonly refresh: () => void;
-  /** Live Cards column count from the CSS grid (or the auto-fill width formula). */
+  /** Live Cards column count from `gridColumns` (same value written to `--seed-card-cols`). */
   readonly columns: () => number;
   readonly disconnect: () => void;
 };
@@ -66,6 +65,7 @@ export function createBrowseVirtualizer(
   let measureDepth = 0;
   let idToIndex = new Map<string, number>();
   let lastBox = { width: -1, height: -1 };
+  let lastColsWritten = Number.NaN;
 
   const remMetrics = () => {
     const rem = rootRem();
@@ -92,16 +92,21 @@ export function createBrowseVirtualizer(
   const liveColumns = (): number => {
     const m = remMetrics();
     const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
-    const grid = pane.querySelector(".card-grid");
-    if (grid instanceof HTMLElement) {
-      return measureGridColumns({
-        templateColumns: getComputedStyle(grid).gridTemplateColumns,
-        width: grid.clientWidth > 0 ? grid.clientWidth : inner,
-        track: m.gridCardWidth,
-        gap: m.gridGap,
-      });
+    return measureGridColumns({
+      templateColumns: undefined,
+      width: inner,
+      track: m.gridCardWidth,
+      gap: m.gridGap,
+    });
+  };
+
+  const syncColumnCount = (): number => {
+    const cols = liveColumns();
+    if (cols !== lastColsWritten) {
+      lastColsWritten = cols;
+      pane.style.setProperty(SEED_CARD_COLS_VAR, String(cols));
     }
-    return gridColumns(inner, m.gridCardWidth, m.gridGap);
+    return cols;
   };
 
   const listPrefix = (count: number, fallback: number): Float64Array => {
@@ -129,7 +134,7 @@ export function createBrowseVirtualizer(
     }
     return gridSlice(
       cards.length,
-      liveColumns(),
+      syncColumnCount(),
       rowHeightPx(),
       m.gridGap,
       scrollTop,
@@ -239,7 +244,7 @@ export function createBrowseVirtualizer(
     }
     const m = remMetrics();
     const viewport = pane.clientHeight;
-    const columns = liveColumns();
+    const columns = view === "list" ? 1 : syncColumnCount();
     const rowH = rowHeightPx();
     const bounds =
       view === "list"
@@ -361,7 +366,7 @@ export function createBrowseVirtualizer(
     set,
     reveal,
     flash,
-    columns: liveColumns,
+    columns: syncColumnCount,
     refresh: () => {
       lastSlice = null;
       paint(true);

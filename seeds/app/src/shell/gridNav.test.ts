@@ -6,6 +6,7 @@ import {
   moveGridIndex,
   type GridDir,
 } from "./gridNav.ts";
+import { GRID_COLUMN_COVER_FRACTION, gridColumns } from "./virtualize.ts";
 
 const dirs: ReadonlyArray<GridDir> = ["h", "j", "k", "l"];
 
@@ -161,10 +162,50 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
     gap: 8,
   });
   assert.equal(fallback, 3);
+  assert.equal(fallback, gridColumns(738, 232, 8));
+
+  const autoFill = measureGridColumns({
+    templateColumns: "repeat(auto-fill, var(--seed-card-width))",
+    width: 738,
+    track: 232,
+    gap: 8,
+  });
+  assert.equal(autoFill, gridColumns(738, 232, 8));
+
+  // Slack fallback: same keep-N threshold as the virtualizer (hjkl uses this).
+  const track = 232;
+  const gap = 8;
+  const pitch = track + gap;
+  const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
+  const threeFull = 3 * track + 2 * gap;
+  const stillThree = measureGridColumns({
+    templateColumns: "none",
+    width: threeFull - GRID_COLUMN_COVER_FRACTION * track,
+    track,
+    gap,
+  });
+  assert.equal(stillThree, 3);
+  const dropToTwo = measureGridColumns({
+    templateColumns: "none",
+    width: threeFull - GRID_COLUMN_COVER_FRACTION * track - 1,
+    track,
+    gap,
+  });
+  assert.equal(dropToTwo, 2);
+  assert.equal(
+    measureGridColumns({
+      templateColumns: "none",
+      width: pitch + uncovered - 1,
+      track,
+      gap,
+    }),
+    1,
+  );
 
   // After a measured relayout, the next hjkl step uses the new cols.
   assert.equal(moveGridIndex(5, twoCol, 24, "j"), 7);
   assert.equal(moveGridIndex(5, twelveCol, 24, "j"), 17);
+  assert.equal(moveGridIndex(5, stillThree, 24, "j"), 8);
 }
 
 {

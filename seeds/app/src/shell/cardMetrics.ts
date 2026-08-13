@@ -9,6 +9,8 @@ export const SEED_CARD_WIDTH_VAR = "--seed-card-width";
 export const SEED_CARD_HEIGHT_VAR = "--seed-card-height";
 export const SEED_CARD_GAP_VAR = "--seed-card-gap";
 export const SEED_CARD_INSET_VAR = "--seed-card-inset";
+/** Integer column count; JS `gridColumns()` is the source of truth. */
+export const SEED_CARD_COLS_VAR = "--seed-card-cols";
 
 export type CardGridMetrics = {
   readonly width: number;

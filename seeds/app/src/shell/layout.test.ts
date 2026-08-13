@@ -213,6 +213,11 @@ assert.equal(
     css.includes(`--split-gutter: ${SPLIT_GUTTER_PX}px`),
     "CSS gutter must match SPLIT_GUTTER_PX",
   );
+  assert.match(
+    css,
+    /\.browse-pane,\s*\n\s*\.detail-pane \{[\s\S]*?overflow-x:\s*hidden/,
+    "browse pane must clip a partially covered last grid column at the splitter",
+  );
   assert.ok(
     !css.includes("minmax(16rem, 18rem)"),
     "Cards default must no longer pin detail to 16–18rem",

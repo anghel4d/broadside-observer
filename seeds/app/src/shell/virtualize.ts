@@ -99,15 +99,33 @@ export function listSlice(
 }
 
 /**
- * CSS `repeat(auto-fill, track)` column count for a content box of
- * `innerWidth` with `gap` between fixed tracks.
- * `floor((innerWidth + gap) / (track + gap))`, at least 1.
+ * Fraction of a card the splitter may cover before the column count drops.
+ * Tunable: 0.75 means the rightmost tile stays until ~¾ of it is clipped.
+ */
+export const GRID_COLUMN_COVER_FRACTION = 0.75;
+
+/**
+ * Cards column count for a content box of `innerWidth` with fixed `track`
+ * width and `gap` between tracks.
+ *
+ * CSS `repeat(auto-fill, track)` would drop to N−1 as soon as N full tiles
+ * no longer fit. This formula keeps a partially covered last column until
+ * `GRID_COLUMN_COVER_FRACTION` of that card is hidden, then reflows.
+ *
+ * Let `pitch = track + gap` and `coverSlack = fraction * track`. Then
+ * `cols = max(1, floor((innerWidth + gap + coverSlack) / pitch))`.
+ *
+ * Equivalent: keep N≥2 columns while
+ * `innerWidth >= (N-1)*pitch + (1 - fraction)*track`
+ * — (N−1) full cards plus gaps, plus a sliver of the Nth card. One column
+ * remains even when that single tile is more than ¾ covered.
  */
 export function gridColumns(innerWidth: number, track: number, gap: number): number {
   if (innerWidth <= 0 || track <= 0) return 1;
   const pitch = track + Math.max(0, gap);
   if (pitch <= 0) return 1;
-  return Math.max(1, Math.floor((innerWidth + Math.max(0, gap)) / pitch));
+  const coverSlack = GRID_COLUMN_COVER_FRACTION * track;
+  return Math.max(1, Math.floor((innerWidth + Math.max(0, gap) + coverSlack) / pitch));
 }
 
 export function gridRowCount(count: number, columns: number): number {
