@@ -7,7 +7,7 @@ year: 2002
 venue: "GDC"
 arxiv: null
 doi: null
-source: "https://www.jmeiners.com/shamans/papers/ai/the_illusion_of_intelligence.pdf"
+source: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
 topics:
   - game-ai
   - halo
@@ -38,31 +38,34 @@ cites:
 
 ## One-sentence takeaway
 
-Halo's AI is an *illusion* built where design and code overlap: restricted perception, firing-point spatial decisions, racial black boxes, and combat dialogue that tells the player what the actor intends.
+Halo's AI is an *illusion* at the design/code overlap: no psychics, no hidden fuzzy moods, firing points for "where should I stand?", racial caricatures, and a breaking point so the player can *feel* they won.
 
 ## Why it matters here
 
-This is the GRID COMMAND cousin of F.E.A.R. GOAP. Soldiers should look intelligible and reactive without omniscient RTS brains. Battle lines, firing points, and "smarter = tougher" difficulty are the right grain for squads under fog.
+This is the GRID COMMAND cousin of F.E.A.R. GOAP. Soldiers should look intelligible and reactive without omniscient RTS brains. Battle lines, firing points, and "tougher = smarter" are the right grain for squads under fog.
 
 ## Key ideas
 
-- Design owns the 3-minute drama (objectives, racial personality, battle lines). Code owns the 30-second combat loop.
-- Discarded: full world models, hidden internal states, fuzzy emotion systems, omniscient enemies.
-- Kept: individual knowledge that can be fooled; intent shown via posture, focus, dialogue; emergence from stimuli (fire, damage, death) plus a rich sim.
-- Actor = restricted world interface + layered knowledge + decision logic over actions (search, hide, flee, fight, sleep) with an alert cycle.
-- Firing points discretize "where should I stand?" via LOS, range, cover, friends/enemies.
-- Combat dialogue is a high-rate, priority/context filter — hundreds of candidates per second, nearby actors can reply.
-- Xbox budget: ~20–25 actors, 2–4 vehicles, ~15% CPU, co-op.
+- Design owns ~3-minute scope (racial personality, strategic purpose). Code owns ~30-second scope (this rock is cover, dive from grenade). You borrow designer intelligence, then ship it as code ("you can't ship a designer on a CD").
+- Discarded methods: heavy scripting (Medal of Honor), extended bot UI (Unreal), omniscient reflex enemies (Quake III). Discarded internals: complete world models, hidden states, four fuzzy variables (fear/anger/defensiveness/surprise).
+- Intelligible: same capabilities as the player (Elite shields recharge like Chief's); no perfect aim; Flood can jump higher only if the ability is readable. Cause-and-effect decisions, custom anims/dialog per decision, racial caricatures (Grunts hide/panic, Elites rarely hide, berserk on massive damage).
+- Interactive: first-seen reactions (Grunt surprise, Elite anger, Marine awe). Foolable via eyes/ears. Predictable search (forward, constant rate, no double-back). **Breaking point**: Grunt flees when friends/Elite die; Elite berserks on damage; squad retreats to cover. That is how the player knows they won.
+- Unpredictable ≠ random. Cascade: unpredictable player → situations → reactions. Analog inputs (exact range, LOS, health, cover) amplify small differences. Scripted encounters are digital (in-room? dead?).
+- Knowledge: no cheating. Track ~3 friends / ~5 enemies, not O(n²) over 25. Four senses: vision, hearing, touch, ESP (scripting + friend locations only). Intent shown via language (including reversed-English Covenant), posture, gesture, look-at.
+- Firing points discretize stance via LOS, range, cover, friends/enemies; hundreds of rays/tick.
+- Combat dialogue is flavor for the player only (AI coordinates silently): 57 events, 166 types, 12 speakers, 5147 lines. Priority/context/uniqueness; nearby actors can reply.
+- Playtest: weak enemies → 36% too easy, 8% "very intelligent." Same behaviors, more HP/damage → 0% too easy, 43% "very intelligent." Consistent challenge so easy≠dumb-AI and hard≠evil-designer. Negative reinforcement (accuracy ramps out of cover; melee to punish close rushes) plus rewards (backstab, grunt-flee-on-elite-kill, headshots, weapon matchups).
+- Xbox: ~25 actors/battle (+vehicles), ~15% of a 733 MHz PIII, co-op doubles load. Flood infection forms excepted (~100).
 
 ## Caveats
 
-- Practitioner GDC deck, not a refereed paper. Slide OCR is imperfect; use the transcript + video.
+- GDC 2002 published no separate prose paper. The proceedings entry *is* the PPT + speaker notes (Isla's [Greisemer02]). HBO converted that deck to HTML on 2002-04-15.
 - Halo 2/3 (Isla) is the architectural sequel: behavior DAG, orders/styles, objectives.
 
 ## Links
 
-- Slides (repo): [sources/halo-myth-ai/slides.pdf](../../sources/halo-myth-ai/slides.pdf)
-- Slide transcript (repo): [sources/halo-myth-ai/TRANSCRIPT.md](../../sources/halo-myth-ai/TRANSCRIPT.md)
-- Cleaner PDF: https://www.jmeiners.com/shamans/papers/ai/the_illusion_of_intelligence.pdf
-- Spoken-intro notes: http://halo.bungie.org/misc/gdc.2002.haloai/talk.html
+- **Proceedings (speaker notes):** [sources/halo-myth-ai/PROCEEDINGS.md](../../sources/halo-myth-ai/PROCEEDINGS.md)
+- HBO HTML (27 pages): http://halo.bungie.org/misc/gdc.2002.haloai/talk.html
+- HBO slide images: [sources/halo-myth-ai/slides/](../../sources/halo-myth-ai/slides/)
+- Slides PDF: [sources/halo-myth-ai/slides.pdf](../../sources/halo-myth-ai/slides.pdf)
 - Video: https://www.youtube.com/watch?v=xp468IY99ag
