@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-`npm run dev` regenerates `src/generated/cards.json` from `../cards/*.md`, then starts Vite. Open the printed local URL (usually `http://localhost:5173`).
+`npm run dev` regenerates `src/generated/cards.json` and `public/cards.json` from `../cards/*.md`, then starts Vite. Open the printed local URL (usually `http://localhost:5173`).
 
 ## Build a static bundle
 
@@ -23,7 +23,7 @@ npm run build
 This:
 
 1. Parses and schema-validates every `seeds/cards/*.md` file (build fails on violations)
-2. Writes `src/generated/cards.json`
+2. Writes `src/generated/cards.json` (inlined into the app) **and** `public/cards.json` (copied to `dist/cards.json` for GitHub Pages / MCP)
 3. Typechecks the client
 4. Emits a single-file app at `dist/index.html` (catalog inlined; no extra network fetch)
 
@@ -31,7 +31,40 @@ Open `dist/index.html` in a browser, including via `file://`, or drop `dist/` in
 
 Rebuild whenever cards are added or edited. The JSON artifact is generated, not hand-maintained.
 
-`npm test` runs a few pure-domain checks (parse + query) without a test framework.
+`npm test` runs a few pure-domain checks (parse + query + MCP response shapes) without a test framework.
+
+## MCP server
+
+Agents can query the same packed catalog over MCP. No LLM, no database — stdio (required) plus optional Streamable HTTP.
+
+```bash
+npm install
+npm run pack && npm run mcp          # stdio (Cursor / Claude Desktop / Codex)
+PORT=3000 npm run mcp:http           # Streamable HTTP at /mcp
+```
+
+The process loads cards, in order: local `public/cards.json` or `src/generated/cards.json` (or `dist/cards.json`), then the `SEEDS_CARDS_JSON` env path/URL, then `https://anghel4d.github.io/broadside-observer/cards.json`.
+
+Tools:
+
+- `query_seeds {"query":"<tokens>"}` — AND search over title, authors, topics, takeaway, lineage. Optional `id`, `topic`, `lineage`, `year_min`, `year_max`, `limit` (default 20, max 50). **0 hits** return usage + copy-pasteable calls; **1 hit** (or a unique `#123` / `123` rank, or a found `id`) returns the full card; **2+ hits** return a compact list with `NEXT: call get_seed {"id":"..."}`.
+- `get_seed {"id":"<card-id>"}` — entire card by file stem (no `.md`). Copy `id` from a list hit.
+
+Cursor `mcp.json` snippet (after `npm install` in `seeds/app`):
+
+```json
+{
+  "mcpServers": {
+    "broadside-seeds": {
+      "command": "npx",
+      "args": ["tsx", "src/mcp/stdio.ts"],
+      "cwd": "/absolute/path/to/broadside-observer/seeds/app"
+    }
+  }
+}
+```
+
+Rebuild the packed JSON after new cards (`npm run pack`). The hosted catalog is `https://anghel4d.github.io/broadside-observer/cards.json` (emitted as `public/cards.json` → `dist/cards.json` on Pages).
 
 ## GitHub Pages
 
@@ -41,7 +74,7 @@ After this lands on `main`, every push to `main` that touches `seeds/app/**`, `s
 
 Deep links stay hash routes, e.g. `https://anghel4d.github.io/broadside-observer/#card/<file-stem>`. Cards view: `https://anghel4d.github.io/broadside-observer/?view=cards#card/<file-stem>`.
 
-The Pages build sets `GITHUB_PAGES=true` so Vite uses `base: '/broadside-observer/'`. Local `npm run build` keeps `base: './'` so `file://` still works.
+The Pages build sets `GITHUB_PAGES=true` so Vite uses `base: '/broadside-observer/'`. Local `npm run build` keeps `base: './'` so `file://` still works. The packed catalog is also published at **https://anghel4d.github.io/broadside-observer/cards.json** for remote MCP.
 
 ## Architecture
 
@@ -57,6 +90,7 @@ Corpus × Query  →  [SeedCard]
 - **`src/domain/lineageLabels.ts`** — display titles for known lineage (and pool) slugs. Filter values stay the raw slug; unknown slugs get a light prettify.
 - **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
 - **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker.
+- **`src/mcp/`** — stdio (and optional Streamable HTTP) tools `query_seeds` / `get_seed` over the same `Corpus × Query → [SeedCard]` morphism. Responses are agent-facing text with explicit `NEXT:` / JSON-shaped calls. The MCP process reads packed JSON; it does not parse markdown at runtime.
 - **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. The browse pane is windowed (list rows and the Cards grid) so only nearby items are in the DOM. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`, with `?view=cards` in the URL when Cards is active). A draggable splitter resizes browse vs detail. List detail is a centered ~46rem reading column. Compact Cards (≤980px) opens detail as a sheet over the grid instead of a stacked side pane.
 
 Deep links: `#card/<file-stem>`. Cards mode is `?view=cards` (omitted for List). Cite entries that set `card` to a stem present in the corpus render as the same hash route.

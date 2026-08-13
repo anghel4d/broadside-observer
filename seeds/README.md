@@ -90,4 +90,4 @@ Future research passes should fill `lineage` / `cites` when the edge is obvious;
 
 ## Browsing
 
-`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). Building that app is welcome; do not wait on it to keep adding cards.
+`INDEX.md` is the current human surface. Because every card shares one schema, a small local or web app can treat `cards/*.md` as a document database (filter by `topics`, `seed_batch`, `year`, `pool`). The TypeScript browser in [`app/`](app/) packs cards to JSON; [`app/README.md`](app/README.md) also documents an MCP server (`query_seeds` / `get_seed`) over that catalog.
