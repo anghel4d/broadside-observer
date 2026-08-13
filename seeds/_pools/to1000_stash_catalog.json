@@ -1,0 +1,1797 @@
+[
+  {
+    "file": "1006-finite-automata-and-their-decision-problems.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "1010-three-models-for-the-description-of-language.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "1011-representation-of-events-in-nerve-nets-and-finite-automata.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "1075-the-art-of-computer-programming-volume-1-fundamental-algorit.md",
+    "title": "The Art of Computer Programming, Volume 1: Fundamental Algorithms",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "1088-an-introduction-to-database-systems.md",
+    "title": "An Introduction to Database Systems",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1089-system-r-relational-approach-to-database-management.md",
+    "title": "System R: Relational Approach to Database Management",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1090-access-path-selection-in-a-relational-database-management-sy.md",
+    "title": "Access Path Selection in a Relational Database Management System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1091-the-design-and-implementation-of-ingres.md",
+    "title": "The Design and Implementation of INGRES",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1092-the-design-of-postgres.md",
+    "title": "The Design of POSTGRES",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1093-aries-a-transaction-recovery-method-supporting-fine-granular.md",
+    "title": "ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1094-the-notions-of-consistency-and-predicate-locks-in-a-database.md",
+    "title": "The Notions of Consistency and Predicate Locks in a Database System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1095-on-optimistic-methods-for-concurrency-control.md",
+    "title": "On Optimistic Methods for Concurrency Control",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1096-the-transaction-concept-virtues-and-limitations.md",
+    "title": "The Transaction Concept: Virtues and Limitations",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1097-concurrency-control-in-distributed-database-systems.md",
+    "title": "Concurrency Control in Distributed Database Systems",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1098-towards-robust-distributed-systems-podc-keynote.md",
+    "title": "Towards Robust Distributed Systems (PODC Keynote)",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1099-brewer-s-conjecture-and-the-feasibility-of-consistent-availa.md",
+    "title": "Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1100-base-an-acid-alternative.md",
+    "title": "BASE: An Acid Alternative",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1101-the-unix-time-sharing-system.md",
+    "title": "The UNIX Time-Sharing System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1102-a-commentary-on-the-sixth-edition-unix-operating-system.md",
+    "title": "A Commentary on the Sixth Edition UNIX Operating System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1103-end-to-end-arguments-in-system-design.md",
+    "title": "End-to-End Arguments in System Design",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1104-hints-for-computer-system-design.md",
+    "title": "Hints for Computer System Design",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1105-introduction-and-overview-of-the-multics-system.md",
+    "title": "Introduction and Overview of the Multics System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1106-monitors-an-operating-system-structuring-concept.md",
+    "title": "Monitors: An Operating System Structuring Concept",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1107-mach-a-new-kernel-foundation-for-unix-development.md",
+    "title": "Mach: A New Kernel Foundation for UNIX Development",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1108-on-micro-kernel-construction.md",
+    "title": "On Micro-Kernel Construction",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1109-xen-and-the-art-of-virtualization.md",
+    "title": "Xen and the Art of Virtualization",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1110-a-fast-file-system-for-unix.md",
+    "title": "A Fast File System for UNIX",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1111-exokernel-an-operating-system-architecture-for-application-l.md",
+    "title": "Exokernel: An Operating System Architecture for Application-Level Resource Management",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1112-scheduler-activations-effective-kernel-support-for-the-user-.md",
+    "title": "Scheduler Activations: Effective Kernel Support for the User-Level Management of Parallelism",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1113-disco-running-commodity-operating-systems-on-scalable-multip.md",
+    "title": "Disco: Running Commodity Operating Systems on Scalable Multiprocessors",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1114-ethernet-distributed-packet-switching-for-local-computer-net.md",
+    "title": "Ethernet: Distributed Packet Switching for Local Computer Networks",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1115-a-protocol-for-packet-network-intercommunication.md",
+    "title": "A Protocol for Packet Network Intercommunication",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1116-internet-protocol-rfc-791.md",
+    "title": "Internet Protocol (RFC 791)",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1117-transmission-control-protocol-rfc-793.md",
+    "title": "Transmission Control Protocol (RFC 793)",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1118-congestion-avoidance-and-control.md",
+    "title": "Congestion Avoidance and Control",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1119-the-design-philosophy-of-the-darpa-internet-protocols.md",
+    "title": "The Design Philosophy of the DARPA Internet Protocols",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1120-implementing-remote-procedure-calls.md",
+    "title": "Implementing Remote Procedure Calls",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1121-random-early-detection-gateways-for-congestion-avoidance.md",
+    "title": "Random Early Detection Gateways for Congestion Avoidance",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1122-a-case-for-redundant-arrays-of-inexpensive-disks-raid.md",
+    "title": "A Case for Redundant Arrays of Inexpensive Disks (RAID)",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1123-the-design-and-implementation-of-a-log-structured-file-syste.md",
+    "title": "The Design and Implementation of a Log-Structured File System",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1124-a-new-solution-of-dijkstra-s-concurrent-programming-problem.md",
+    "title": "A New Solution of Dijkstra's Concurrent Programming Problem",
+    "lineage": "concurrent-data-structures"
+  },
+  {
+    "file": "1125-myths-about-the-mutual-exclusion-problem.md",
+    "title": "Myths About the Mutual Exclusion Problem",
+    "lineage": "concurrent-data-structures"
+  },
+  {
+    "file": "1126-impossibility-of-distributed-consensus-with-one-faulty-proce.md",
+    "title": "Impossibility of Distributed Consensus with One Faulty Process",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1127-why-aren-t-operating-systems-getting-faster-as-fast-as-hardw.md",
+    "title": "Why Aren't Operating Systems Getting Faster As Fast As Hardware?",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1128-design-and-implementation-of-the-sun-network-filesystem.md",
+    "title": "Design and Implementation of the Sun Network Filesystem",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1129-system-deadlocks.md",
+    "title": "System Deadlocks",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1130-the-working-set-model-for-program-behavior.md",
+    "title": "The Working Set Model for Program Behavior",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1131-a-study-of-replacement-algorithms-for-a-virtual-storage-comp.md",
+    "title": "A Study of Replacement Algorithms for a Virtual-Storage Computer",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1132-computer-architecture-a-quantitative-approach.md",
+    "title": "Computer Architecture: A Quantitative Approach",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1133-an-efficient-algorithm-for-exploiting-multiple-arithmetic-un.md",
+    "title": "An Efficient Algorithm for Exploiting Multiple Arithmetic Units",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1134-validity-of-the-single-processor-approach-to-achieving-large.md",
+    "title": "Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1135-the-mythical-man-month-essays-on-software-engineering.md",
+    "title": "The Mythical Man-Month: Essays on Software Engineering",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1136-how-do-committees-invent.md",
+    "title": "How Do Committees Invent?",
+    "lineage": "systems-classics"
+  },
+  {
+    "file": "1137-sketchpad-a-man-machine-graphical-communication-system.md",
+    "title": "Sketchpad: A Man-Machine Graphical Communication System",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1138-the-ultimate-display.md",
+    "title": "The Ultimate Display",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1139-a-head-mounted-three-dimensional-display.md",
+    "title": "A Head-Mounted Three Dimensional Display",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1140-computer-graphics-principles-and-practice.md",
+    "title": "Computer Graphics: Principles and Practice",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1141-algorithm-for-computer-control-of-a-digital-plotter.md",
+    "title": "Algorithm for Computer Control of a Digital Plotter",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1142-reentrant-polygon-clipping.md",
+    "title": "Reentrant Polygon Clipping",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1143-a-hidden-surface-algorithm-for-computer-generated-halftone-p.md",
+    "title": "A Hidden Surface Algorithm for Computer Generated Halftone Pictures",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1144-a-characterization-of-ten-hidden-surface-algorithms.md",
+    "title": "A Characterization of Ten Hidden-Surface Algorithms",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1145-a-subdivision-algorithm-for-computer-display-of-curved-surfa.md",
+    "title": "A Subdivision Algorithm for Computer Display of Curved Surfaces",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1146-recursively-generated-b-spline-surfaces-on-arbitrary-topolog.md",
+    "title": "Recursively Generated B-Spline Surfaces on Arbitrary Topological Meshes",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1147-smooth-subdivision-surfaces-based-on-triangles.md",
+    "title": "Smooth Subdivision Surfaces Based on Triangles",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1148-behaviour-of-recursive-division-surfaces-near-extraordinary-.md",
+    "title": "Behaviour of Recursive Division Surfaces Near Extraordinary Points",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1149-models-of-light-reflection-for-computer-synthesized-pictures.md",
+    "title": "Models of Light Reflection for Computer Synthesized Pictures",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1150-texture-and-reflection-in-computer-generated-images.md",
+    "title": "Texture and Reflection in Computer Generated Images",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1151-continuous-shading-of-curved-surfaces.md",
+    "title": "Continuous Shading of Curved Surfaces",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1152-illumination-for-computer-generated-pictures.md",
+    "title": "Illumination for Computer Generated Pictures",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1153-an-improved-illumination-model-for-shaded-display.md",
+    "title": "An Improved Illumination Model for Shaded Display",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1154-a-reflectance-model-for-computer-graphics.md",
+    "title": "A Reflectance Model for Computer Graphics",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1155-distributed-ray-tracing.md",
+    "title": "Distributed Ray Tracing",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1156-the-reyes-image-rendering-architecture.md",
+    "title": "The Reyes Image Rendering Architecture",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1157-compositing-digital-images.md",
+    "title": "Compositing Digital Images",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1158-image-compositing-fundamentals.md",
+    "title": "Image Compositing Fundamentals",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1159-survey-of-texture-mapping.md",
+    "title": "Survey of Texture Mapping",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1160-display-of-surfaces-from-volume-data.md",
+    "title": "Display of Surfaces from Volume Data",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1161-marching-cubes-a-high-resolution-3d-surface-construction-alg.md",
+    "title": "Marching Cubes: A High Resolution 3D Surface Construction Algorithm",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1162-casting-curved-shadows-on-curved-surfaces.md",
+    "title": "Casting Curved Shadows on Curved Surfaces",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1163-shadow-algorithms-for-computer-graphics.md",
+    "title": "Shadow Algorithms for Computer Graphics",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1164-some-techniques-for-shading-machine-renderings-of-solids.md",
+    "title": "Some Techniques for Shading Machine Renderings of Solids",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1165-the-geometry-engine-a-vlsi-geometry-system-for-graphics.md",
+    "title": "The Geometry Engine: A VLSI Geometry System for Graphics",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1166-the-a-buffer-an-antialiased-hidden-surface-method.md",
+    "title": "The A-buffer, an Antialiased Hidden Surface Method",
+    "lineage": "gpu-driven-rendering"
+  },
+  {
+    "file": "1308-gradual-typing-for-functional-languages.md",
+    "title": "Gradual Typing for Functional Languages",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1309-gradual-typing-for-objects.md",
+    "title": "Gradual Typing for Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1310-the-design-and-implementation-of-typed-scheme.md",
+    "title": "The Design and Implementation of Typed Scheme",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1311-logical-types-for-untyped-languages.md",
+    "title": "Logical Types for Untyped Languages",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1312-refined-criteria-for-gradual-typing.md",
+    "title": "Refined Criteria for Gradual Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1313-abstracting-gradual-typing.md",
+    "title": "Abstracting Gradual Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1314-blame-for-all.md",
+    "title": "Blame for All",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1315-threesomes-with-and-without-blame.md",
+    "title": "Threesomes, With and Without Blame",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1316-migratory-typing-ten-years-later.md",
+    "title": "Migratory Typing: Ten Years Later",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1317-is-sound-gradual-typing-dead.md",
+    "title": "Is Sound Gradual Typing Dead?",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1318-design-and-evaluation-of-gradual-typing-for-python.md",
+    "title": "Design and Evaluation of Gradual Typing for Python",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1319-gradual-typing-in-an-open-world-gradual-typing-for-python-re.md",
+    "title": "Gradual Typing in an Open World: Gradual Typing for Python, Reticulated",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1320-safe-efficient-gradual-typing-for-typescript.md",
+    "title": "Safe & Efficient Gradual Typing for TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1321-understanding-typescript.md",
+    "title": "Understanding TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1322-refinement-types-for-ml.md",
+    "title": "Refinement Types for ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1323-dependent-types-in-practical-programming.md",
+    "title": "Dependent Types in Practical Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1324-liquid-types.md",
+    "title": "Liquid Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1325-refinement-types-for-haskell.md",
+    "title": "Refinement Types for Haskell",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1326-abstract-refinement-types.md",
+    "title": "Abstract Refinement Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1327-hybrid-type-checking.md",
+    "title": "Hybrid Type Checking",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1328-dependent-types-and-multi-monadic-effects-in-f.md",
+    "title": "Dependent Types and Multi-Monadic Effects in F*",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1329-applied-type-system-with-stateful-views.md",
+    "title": "Applied Type System with Stateful Views",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1330-idris-a-general-purpose-dependently-typed-programming-langua.md",
+    "title": "Idris, a General-Purpose Dependently Typed Programming Language: Design and Implementation",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1331-dependent-types-in-haskell-theory-and-practice.md",
+    "title": "Dependent Types in Haskell: Theory and Practice",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1332-outsidein-x-modular-type-inference-with-local-assumptions.md",
+    "title": "OutsideIn(X): Modular Type Inference with Local Assumptions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1333-simple-unification-based-type-inference-for-gadts.md",
+    "title": "Simple Unification-Based Type Inference for GADTs",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1334-guarded-recursive-datatype-constructors.md",
+    "title": "Guarded Recursive Datatype Constructors",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1335-local-type-inference.md",
+    "title": "Local Type Inference",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1336-typeful-programming.md",
+    "title": "Typeful Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1337-bidirectional-typing.md",
+    "title": "Bidirectional Typing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1338-complete-and-easy-bidirectional-typechecking-for-higher-rank.md",
+    "title": "Complete and Easy Bidirectional Typechecking for Higher-Rank Polymorphism",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1339-practical-type-inference-for-arbitrary-rank-types.md",
+    "title": "Practical Type Inference for Arbitrary-Rank Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1340-hm-x-type-inference-for-constraint-systems.md",
+    "title": "HM(X) Type Inference for Constraint Systems",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1341-qualified-types-theory-and-practice.md",
+    "title": "Qualified Types: Theory and Practice",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1342-flux-liquid-types-for-rust.md",
+    "title": "Flux: Liquid Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1343-fast-and-precise-type-checking-for-javascript.md",
+    "title": "Fast and Precise Type Checking for JavaScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1344-rustbelt-securing-the-foundations-of-the-rust-programming-la.md",
+    "title": "RustBelt: Securing the Foundations of the Rust Programming Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1345-oxide-the-essence-of-memory-safety-in-rust.md",
+    "title": "Oxide: The Essence of Memory Safety in Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1346-stacked-borrows-an-aliasing-model-for-rust.md",
+    "title": "Stacked Borrows: An Aliasing Model for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1347-tree-borrows.md",
+    "title": "Tree Borrows",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1348-patina-a-formalization-of-the-rust-programming-language.md",
+    "title": "Patina: A Formalization of the Rust Programming Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1349-mezzo-a-typed-language-for-safe-resource-sharing.md",
+    "title": "Mezzo: a Typed Language for Safe Resource Sharing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1350-vault-enforcing-trusted-systems-implementation-discipline.md",
+    "title": "Vault: Enforcing Trusted Systems Implementation Discipline",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1351-adoption-and-focus-practical-linear-types-for-imperative-pro.md",
+    "title": "Adoption and Focus: Practical Linear Types for Imperative Programming",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1352-cyclone-a-safe-dialect-of-c.md",
+    "title": "Cyclone: A Safe Dialect of C",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1353-linear-haskell-practical-linearity-in-a-higher-order-impure-.md",
+    "title": "Linear Haskell: Practical Linearity in a Higher-Order Impure Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1354-ownership-types-for-flexible-alias-protection.md",
+    "title": "Ownership Types for Flexible Alias Protection",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1355-generic-universe-types.md",
+    "title": "Generic Universe Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1356-the-spec-programming-system-an-overview.md",
+    "title": "The Spec# Programming System: An Overview",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1357-declaring-and-checking-non-null-types-in-an-object-oriented-.md",
+    "title": "Declaring and Checking Non-null Types in an Object-Oriented Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1358-practical-pluggable-types-for-java.md",
+    "title": "Practical Pluggable Types for Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1359-nullaway-practical-type-based-null-safety-for-java.md",
+    "title": "NullAway: Practical Type-Based Null Safety for Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1360-kotlin-null-safety.md",
+    "title": "Kotlin Null-Safety",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1361-typescript-2-0-strict-null-checks.md",
+    "title": "TypeScript 2.0 Strict Null Checks",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1362-sound-null-safety-in-dart.md",
+    "title": "Sound Null Safety in Dart",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1363-pluggable-type-systems.md",
+    "title": "Pluggable Type Systems",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1364-typed-memory-management-and-capability-calculi-for-resources.md",
+    "title": "Typed Memory Management and Capability Calculi for Resources",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1365-wyvern-a-simple-typed-approach-to-capability-security.md",
+    "title": "Wyvern: A Simple, Typed Approach to Capability Security",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1366-capturing-types.md",
+    "title": "Capturing Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1367-do-be-do-be-do-frank-effects.md",
+    "title": "Do Be Do Be Do: Frank Effects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1368-links-web-programming-without-tiers.md",
+    "title": "Links: Web Programming Without Tiers",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1369-effekt-capability-passing-style-for-type-and-effect-safe-ext.md",
+    "title": "Effekt: Capability-Passing Style for Type- and Effect-Safe, Extensible Effect Handlers",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1370-from-datalog-to-flix-a-declarative-language-for-programming-.md",
+    "title": "From Datalog to Flix: A Declarative Language for Programming with Types and Effects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1371-multiparty-asynchronous-session-types.md",
+    "title": "Multiparty Asynchronous Session Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1372-foundations-of-session-types-and-behavioural-contracts.md",
+    "title": "Foundations of Session Types and Behavioural Contracts",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1373-lightweight-session-programming-in-scala.md",
+    "title": "Lightweight Session Programming in Scala",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1374-protocol-descriptions-and-scribble-multiparty-sessions.md",
+    "title": "Protocol Descriptions and Scribble Multiparty Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1375-propositions-as-sessions.md",
+    "title": "Propositions as Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1376-a-semantics-for-propositions-as-sessions.md",
+    "title": "A Semantics for Propositions-as-Sessions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1377-context-free-session-types.md",
+    "title": "Context-Free Session Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1378-bringing-the-web-up-to-speed-with-webassembly.md",
+    "title": "Bringing the Web up to Speed with WebAssembly",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1379-mechanising-and-verifying-the-webassembly-specification.md",
+    "title": "Mechanising and Verifying the WebAssembly Specification",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1380-webassembly-garbage-collection-and-reference-types.md",
+    "title": "WebAssembly Garbage Collection and Reference Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1381-formal-verification-of-a-realistic-compiler.md",
+    "title": "Formal Verification of a Realistic Compiler",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1382-the-cakeml-approach-to-compiler-correctness.md",
+    "title": "The CakeML Approach to Compiler Correctness",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1383-cakeml-a-verified-implementation-of-ml.md",
+    "title": "CakeML: A Verified Implementation of ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1384-when-good-components-go-bad-formally-secure-compilation.md",
+    "title": "When Good Components Go Bad: Formally Secure Compilation",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1385-typed-closure-conversion.md",
+    "title": "Typed Closure Conversion",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1386-from-system-f-to-typed-assembly-language.md",
+    "title": "From System F to Typed Assembly Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1387-til-a-type-directed-optimizing-compiler-for-ml.md",
+    "title": "TIL: A Type-Directed Optimizing Compiler for ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1388-ur-web-a-simple-model-for-programming-the-web.md",
+    "title": "Ur/Web: A Simple Model for Programming the Web",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1389-sqlx-compile-time-checked-sql-for-rust.md",
+    "title": "SQLx: Compile-Time Checked SQL for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1390-linq-reconciling-objects-relations-and-xml-in-the-net-framew.md",
+    "title": "LINQ: Reconciling Objects, Relations and XML in the .NET Framework",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1391-declarative-programming-over-eventually-consistent-data-stor.md",
+    "title": "Declarative Programming over Eventually Consistent Data Stores (Quelea)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1392-edgeql-type-system-and-query-language.md",
+    "title": "EdgeQL Type System and Query Language",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1393-a-practical-theory-of-language-integrated-query.md",
+    "title": "A Practical Theory of Language-Integrated Query",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1394-java-and-scala-s-type-systems-are-unsound.md",
+    "title": "Java and Scala's Type Systems are Unsound",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1395-the-essence-of-dependent-object-types.md",
+    "title": "The Essence of Dependent Object Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1396-scala-soundness-and-the-dot-calculus-engineering.md",
+    "title": "Scala Soundness and the DOT Calculus Engineering",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1397-taming-wildcards-in-java-s-type-system.md",
+    "title": "Taming Wildcards in Java's Type System",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1398-truth-and-wildcards-in-java.md",
+    "title": "Truth and Wildcards in Java",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1399-typescript-faq-type-system-behavior-and-soundness-limits.md",
+    "title": "TypeScript FAQ: Type System Behavior and Soundness Limits",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1400-type-inference-for-records-in-a-natural-extension-of-ml.md",
+    "title": "Type Inference for Records in a Natural Extension of ML",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1401-complete-type-inference-for-simple-objects.md",
+    "title": "Complete Type Inference for Simple Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1402-a-polymorphic-type-system-for-extensible-records-and-variant.md",
+    "title": "A Polymorphic Type System for Extensible Records and Variants",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1403-the-essence-of-ml-type-inference-constraint-framework.md",
+    "title": "The Essence of ML Type Inference (Constraint Framework)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1404-gadts-meet-their-match.md",
+    "title": "GADTs Meet Their Match",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1405-refinement-types-a-tutorial.md",
+    "title": "Refinement Types: A Tutorial",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1406-gradual-liquid-type-inference.md",
+    "title": "Gradual Liquid Type Inference",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1407-fast-and-precise-type-checking-for-javascript-flow.md",
+    "title": "Fast and Precise Type Checking for JavaScript (Flow)",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1408-miri-an-interpreter-for-rust-mir.md",
+    "title": "Miri: An Interpreter for Rust MIR",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1409-typed-memory-management-via-static-capabilities.md",
+    "title": "Typed Memory Management via Static Capabilities",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1410-typed-lua-an-optional-type-system-for-lua.md",
+    "title": "Typed Lua: An Optional Type System for Lua",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1411-session-types-for-rust.md",
+    "title": "Session Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1412-stay-safe-under-panic-multiparty-session-types-for-rust.md",
+    "title": "Stay Safe under Panic: Multiparty Session Types for Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1413-system-f-with-type-equality-coercions.md",
+    "title": "System F with Type Equality Coercions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1414-safe-zero-cost-coercions-for-haskell.md",
+    "title": "Safe Zero-Cost Coercions for Haskell",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1415-dependently-typed-programming-with-singletons.md",
+    "title": "Dependently Typed Programming with Singletons",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1416-type-checking-with-open-type-functions.md",
+    "title": "Type Checking with Open Type Functions",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1417-giving-haskell-a-promotion.md",
+    "title": "Giving Haskell a Promotion",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1418-typestates-for-objects.md",
+    "title": "Typestates for Objects",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1419-foundational-property-based-testing.md",
+    "title": "Foundational Property-Based Testing",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1420-deny-capabilities-for-safe-fast-actors.md",
+    "title": "Deny Capabilities for Safe, Fast Actors",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1421-towards-strongly-typed-set-theoretic-foundations-for-typescr.md",
+    "title": "Towards Strongly Typed Set-Theoretic Foundations for TypeScript",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1422-leveraging-rust-types-for-modular-specification-and-verifica.md",
+    "title": "Leveraging Rust Types for Modular Specification and Verification",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1423-type-classes-as-objects-and-implicits.md",
+    "title": "Type Classes as Objects and Implicits",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1424-fun-with-phantom-types.md",
+    "title": "Fun with Phantom Types",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1425-the-rustonomicon-the-dark-arts-of-unsafe-rust.md",
+    "title": "The Rustonomicon: The Dark Arts of Unsafe Rust",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1426-pyre-and-pytype-gradual-typing-for-python-at-scale.md",
+    "title": "Pyre and Pytype: Gradual Typing for Python at Scale",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "1427-pep-484-type-hints.md",
+    "title": "PEP 484 \u2014 Type Hints",
+    "lineage": "type-safety"
+  },
+  {
+    "file": "738-tidb-a-raft-based-htap-database.md",
+    "title": "TiDB: A Raft-based HTAP Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "739-analyticdb-v-a-hybrid-analytical-engine-towards-query-fusion.md",
+    "title": "AnalyticDB-V: A Hybrid Analytical Engine Towards Query Fusion for Structured and Unstructured Data",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "740-spanner-becoming-a-sql-system.md",
+    "title": "Spanner: Becoming a SQL System",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "741-oceanbase-a-707-million-tpmc-distributed-relational-database.md",
+    "title": "OceanBase: A 707 Million tpmC Distributed Relational Database System",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "742-ermia-fast-memory-optimized-database-system-for-heterogeneou.md",
+    "title": "ERMIA: Fast Memory-Optimized Database System for Heterogeneous Workloads",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "743-polardb-x-an-elastic-distributed-relational-database-for-clo.md",
+    "title": "PolarDB-X: An Elastic Distributed Relational Database for Cloud-Native Applications",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "744-velox-meta-s-unified-execution-engine.md",
+    "title": "Velox: Meta's Unified Execution Engine",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "745-a1-a-distributed-in-memory-graph-database.md",
+    "title": "A1: A Distributed In-Memory Graph Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "746-alex-an-updatable-adaptive-learned-index.md",
+    "title": "ALEX: An Updatable Adaptive Learned Index",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "747-neo-a-learned-query-optimizer.md",
+    "title": "Neo: A Learned Query Optimizer",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "748-amazon-aurora-on-avoiding-distributed-consensus-for-i-os-com.md",
+    "title": "Amazon Aurora: On Avoiding Distributed Consensus for I/Os, Commits, and Membership Changes",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "749-structured-streaming-a-declarative-api-for-real-time-applica.md",
+    "title": "Structured Streaming: A Declarative API for Real-Time Applications in Apache Spark",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "750-amazon-aurora-design-considerations-for-high-throughput-clou.md",
+    "title": "Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "751-the-dataflow-model-a-practical-approach-to-balancing-correct.md",
+    "title": "The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "752-f1-a-distributed-sql-database-that-scales.md",
+    "title": "F1: A Distributed SQL Database That Scales",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "753-flow-loss-learning-cardinality-estimates-that-matter.md",
+    "title": "Flow-Loss: Learning Cardinality Estimates That Matter",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "754-milvus-a-purpose-built-vector-data-management-system.md",
+    "title": "Milvus: A Purpose-Built Vector Data Management System",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "755-neurocard-one-cardinality-estimator-for-all-tables.md",
+    "title": "NeuroCard: One Cardinality Estimator for All Tables",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "756-polardb-serverless-a-cloud-native-database-for-disaggregated.md",
+    "title": "PolarDB Serverless: A Cloud Native Database for Disaggregated Data Centers",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "757-cockroachdb-the-resilient-geo-distributed-sql-database.md",
+    "title": "CockroachDB: The Resilient Geo-Distributed SQL Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "758-radixspline-a-single-pass-learned-index.md",
+    "title": "RadixSpline: A Single-Pass Learned Index",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "759-xindex-a-scalable-learned-index-for-multicore-data-storage.md",
+    "title": "XIndex: A Scalable Learned Index for Multicore Data Storage",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "760-procella-unifying-serving-and-analytical-data-at-youtube.md",
+    "title": "Procella: Unifying Serving and Analytical Data at YouTube",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "761-socrates-the-new-sql-server-in-the-cloud.md",
+    "title": "Socrates: The New SQL Server in the Cloud",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "762-f1-query-declarative-querying-at-scale.md",
+    "title": "F1 Query: Declarative Querying at Scale",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "763-balsa-learning-a-query-optimizer-without-expert-demonstratio.md",
+    "title": "Balsa: Learning a Query Optimizer Without Expert Demonstrations",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "764-bao-making-learned-query-optimization-practical.md",
+    "title": "Bao: Making Learned Query Optimization Practical",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "765-delta-lake-high-performance-acid-table-storage-over-cloud-ob.md",
+    "title": "Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "766-f1-lightning-htap-as-a-service.md",
+    "title": "F1 Lightning: HTAP as a Service",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "767-taurus-database-how-to-be-fast-available-and-frugal-in-the-c.md",
+    "title": "Taurus Database: How to be Fast, Available, and Frugal in the Cloud",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "768-hyrise-re-engineered-an-extensible-database-system-for-resea.md",
+    "title": "Hyrise Re-engineered: An Extensible Database System for Research in Relational In-Memory Data Management",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "769-skinnerdb-regret-bounded-query-evaluation-via-reinforcement-.md",
+    "title": "SkinnerDB: Regret-Bounded Query Evaluation via Reinforcement Learning",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "770-everything-you-always-wanted-to-know-about-compiled-and-vect.md",
+    "title": "Everything You Always Wanted to Know About Compiled and Vectorized Queries But Were Afraid to Ask",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "771-data-blocks-hybrid-oltp-and-olap-on-compressed-storage-using.md",
+    "title": "Data Blocks: Hybrid OLTP and OLAP on Compressed Storage using both Vectorization and Compilation",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "772-calvin-fast-distributed-transactions-for-partitioned-databas.md",
+    "title": "Calvin: Fast Distributed Transactions for Partitioned Database Systems",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "773-dbsp-automatic-incremental-view-maintenance-for-rich-query-l.md",
+    "title": "DBSP: Automatic Incremental View Maintenance for Rich Query Languages",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "774-virtual-memory-assisted-buffer-management.md",
+    "title": "Virtual-Memory Assisted Buffer Management",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "775-photon-a-fast-query-engine-for-lakehouse-systems.md",
+    "title": "Photon: A Fast Query Engine for Lakehouse Systems",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "776-are-we-ready-for-learned-cardinality-estimation.md",
+    "title": "Are We Ready For Learned Cardinality Estimation?",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "777-fiting-tree-a-data-aware-index-structure.md",
+    "title": "FITing-Tree: A Data-aware Index Structure",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "778-accordion-better-memory-organization-for-lsm-key-value-store.md",
+    "title": "Accordion: Better Memory Organization for LSM Key-Value Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "779-the-case-for-learned-index-structures.md",
+    "title": "The Case for Learned Index Structures",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "780-an-empirical-evaluation-of-in-memory-multi-version-concurren.md",
+    "title": "An Empirical Evaluation of In-Memory Multi-Version Concurrency Control",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "781-constructing-and-analyzing-the-lsm-compaction-design-space.md",
+    "title": "Constructing and Analyzing the LSM Compaction Design Space",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "782-rocksdb-evolution-of-development-priorities-in-a-key-value-s.md",
+    "title": "RocksDB: Evolution of Development Priorities in a Key-Value Store Serving Large-scale Applications",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "783-aria-a-fast-and-practical-deterministic-oltp-database.md",
+    "title": "Aria: A Fast and Practical Deterministic OLTP Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "784-rosetta-a-robust-space-time-optimized-range-filter-for-key-v.md",
+    "title": "Rosetta: A Robust Space-Time Optimized Range Filter for Key-Value Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "785-tsunami-a-learned-multi-dimensional-index-for-correlated-dat.md",
+    "title": "Tsunami: A Learned Multi-dimensional Index for Correlated Data and Skewed Workloads",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "786-batchdb-efficient-isolated-execution-of-hybrid-oltp-olap-wor.md",
+    "title": "BatchDB: Efficient Isolated Execution of Hybrid OLTP+OLAP Workloads for Interactive Applications",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "787-pebblesdb-building-key-value-stores-using-fragmented-log-str.md",
+    "title": "PebblesDB: Building Key-Value Stores using Fragmented Log-Structured Merge Trees",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "788-myrocks-lsm-tree-database-storage-engine-serving-facebook-s-.md",
+    "title": "MyRocks: LSM-Tree Database Storage Engine Serving Facebook's Social Graph",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "789-how-to-architect-a-query-compiler-revisited.md",
+    "title": "How to Architect a Query Compiler, Revisited",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "790-cicada-dependably-fast-multi-core-in-memory-transactions.md",
+    "title": "Cicada: Dependably Fast Multi-Core In-Memory Transactions",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "791-hybrid-transactional-analytical-processing-a-survey.md",
+    "title": "Hybrid Transactional/Analytical Processing: A Survey",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "792-monkey-optimal-navigable-key-value-store.md",
+    "title": "Monkey: Optimal Navigable Key-Value Store",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "793-relaxed-operator-fusion-for-in-memory-databases-making-compi.md",
+    "title": "Relaxed Operator Fusion for In-Memory Databases: Making Compilation, Vectorization, and Prefetching Work Together At Last",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "794-lsm-based-storage-techniques-a-survey.md",
+    "title": "LSM-based Storage Techniques: A Survey",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "795-pgm-index-a-fully-dynamic-compressed-learned-index-with-prov.md",
+    "title": "PGM-index: A Fully-Dynamic Compressed Learned Index with Provable Worst-Case Bounds",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "796-duckdb-an-embeddable-analytical-database.md",
+    "title": "DuckDB: an Embeddable Analytical Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "797-dostoevsky-better-space-time-trade-offs-for-lsm-tree-based-k.md",
+    "title": "Dostoevsky: Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores via Adaptive Removal of Superfluous Merging",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "798-rethinking-serializable-multiversion-concurrency-control.md",
+    "title": "Rethinking Serializable Multiversion Concurrency Control",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "799-bohm-durable-and-scalable-multiversioning-for-main-memory-da.md",
+    "title": "Bohm: Durable and Scalable Multiversioning for Main Memory Databases",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "800-hyper-a-hybrid-oltp-olap-main-memory-database-system-based-o.md",
+    "title": "HyPer: A Hybrid OLTP&OLAP Main Memory Database System Based on Virtual Memory Snapshots",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "801-gaussdb-a-cloud-native-multi-primary-database-with-compute-m.md",
+    "title": "GaussDB: A Cloud-Native Multi-Primary Database with Compute-Memory-Storage Disaggregation",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "802-cloud-native-database-systems-at-alibaba-opportunities-and-c.md",
+    "title": "Cloud-Native Database Systems at Alibaba: Opportunities and Challenges",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "803-from-wisckey-to-bourbon-a-learned-index-for-log-structured-m.md",
+    "title": "From WiscKey to Bourbon: A Learned Index for Log-Structured Merge Trees",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "804-instance-optimized-data-layouts-for-cloud-analytics-workload.md",
+    "title": "Instance-Optimized Data Layouts for Cloud Analytics Workloads",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "805-mb2-decomposed-behavior-modeling-for-self-driving-database-m.md",
+    "title": "MB2: Decomposed Behavior Modeling for Self-Driving Database Management Systems",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "806-qd-tree-learning-data-layouts-for-big-data-analytics.md",
+    "title": "Qd-tree: Learning Data Layouts for Big Data Analytics",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "807-analyticdb-real-time-olap-database-system-at-alibaba-cloud.md",
+    "title": "AnalyticDB: Real-time OLAP Database System at Alibaba Cloud",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "808-cdbtune-an-end-to-end-deep-reinforcement-learning-based-data.md",
+    "title": "CDBTune: An End-to-End Deep Reinforcement Learning based Database Tuning System",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "809-presto-sql-on-everything.md",
+    "title": "Presto: SQL on Everything",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "810-quickstep-a-data-platform-for-analytics.md",
+    "title": "Quickstep: A Data Platform for Analytics",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "811-existential-consistency-measuring-and-understanding-consiste.md",
+    "title": "Existential Consistency: Measuring and Understanding Consistency at Facebook",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "812-spark-sql-relational-data-processing-in-spark.md",
+    "title": "Spark SQL: Relational Data Processing in Spark",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "813-hekaton-sql-server-s-memory-optimized-oltp-engine.md",
+    "title": "Hekaton: SQL Server's Memory-Optimized OLTP Engine",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "814-millwheel-fault-tolerant-stream-processing-at-internet-scale.md",
+    "title": "MillWheel: Fault-Tolerant Stream Processing at Internet Scale",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "815-spanner-google-s-globally-distributed-database.md",
+    "title": "Spanner: Google's Globally-Distributed Database",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "816-foundationdb-a-distributed-unbundled-transactional-key-value.md",
+    "title": "FoundationDB: A Distributed Unbundled Transactional Key Value Store",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "817-cloudburst-stateful-functions-as-a-service.md",
+    "title": "Cloudburst: Stateful Functions-as-a-Service",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "818-foundationdb-record-layer-a-multi-tenant-structured-datastor.md",
+    "title": "FoundationDB Record Layer: A Multi-Tenant Structured Datastore",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "819-building-a-bw-tree-takes-more-than-just-buzz-words.md",
+    "title": "Building a Bw-Tree Takes More Than Just Buzz Words",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "820-surf-practical-range-query-filtering-with-fast-succinct-trie.md",
+    "title": "SuRF: Practical Range Query Filtering with Fast Succinct Tries",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "821-the-snowflake-elastic-data-warehouse.md",
+    "title": "The Snowflake Elastic Data Warehouse",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "822-amazon-redshift-and-the-case-for-simpler-data-warehouses.md",
+    "title": "Amazon Redshift and the Case for Simpler Data Warehouses",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "823-livegraph-a-transactional-graph-storage-system-with-purely-s.md",
+    "title": "LiveGraph: A Transactional Graph Storage System with Purely Sequential Adjacency List Scans",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "824-faster-a-concurrent-key-value-store-with-in-place-updates.md",
+    "title": "FASTER: A Concurrent Key-Value Store with In-Place Updates",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "825-emptyheaded-a-relational-engine-for-graph-processing.md",
+    "title": "EmptyHeaded: A Relational Engine for Graph Processing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "826-feral-concurrency-control-an-empirical-investigation-of-mode.md",
+    "title": "Feral Concurrency Control: An Empirical Investigation of Modern Application-Level Transactions",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "827-how-good-are-query-optimizers-really.md",
+    "title": "How Good Are Query Optimizers, Really?",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "828-discretized-streams-fault-tolerant-streaming-computation-at-.md",
+    "title": "Discretized Streams: Fault-Tolerant Streaming Computation at Scale",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "829-naiad-a-timely-dataflow-system.md",
+    "title": "Naiad: A Timely Dataflow System",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "830-sap-hana-database-data-management-for-modern-business-applic.md",
+    "title": "SAP HANA Database: Data Management for Modern Business Applications",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "831-napa-powering-scalable-data-warehousing-with-robust-query-pe.md",
+    "title": "Napa: Powering Scalable Data Warehousing with Robust Query Performance at Google",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "832-recipe-converting-concurrent-dram-indexes-to-persistent-memo.md",
+    "title": "Recipe: Converting Concurrent DRAM Indexes to Persistent-Memory Indexes",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "833-apache-calcite-a-foundational-framework-for-optimized-query-.md",
+    "title": "Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "834-fptree-a-hybrid-scm-dram-persistent-and-concurrent-b-tree-fo.md",
+    "title": "FPTree: A Hybrid SCM-DRAM Persistent and Concurrent B-Tree for Storage-Class Memory",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "835-smooth-scan-statistics-oblivious-access-paths.md",
+    "title": "Smooth Scan: Statistics-Oblivious Access Paths",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "836-tapir-building-consistent-transactions-with-inconsistent-rep.md",
+    "title": "TAPIR: Building Consistent Transactions with Inconsistent Replication",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "837-predicate-transfer-efficient-pre-filtering-on-multi-join-que.md",
+    "title": "Predicate Transfer: Efficient Pre-Filtering on Multi-Join Queries",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "838-dash-scalable-hashing-on-persistent-memory.md",
+    "title": "Dash: Scalable Hashing on Persistent Memory",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "839-starling-a-scalable-query-engine-on-cloud-functions.md",
+    "title": "Starling: A Scalable Query Engine on Cloud Functions",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "840-anna-a-kvs-for-any-scale.md",
+    "title": "Anna: A KVS for Any Scale",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "841-kvell-the-design-and-implementation-of-a-fast-persistent-key.md",
+    "title": "KVell: The Design and Implementation of a Fast Persistent Key-Value Store for Modern SSD Devices",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "842-leanstore-in-memory-data-management-beyond-main-memory.md",
+    "title": "LeanStore: In-Memory Data Management Beyond Main Memory",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "843-an-evaluation-of-distributed-concurrency-control.md",
+    "title": "An Evaluation of Distributed Concurrency Control",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "844-ottertune-automatic-database-tuning.md",
+    "title": "OtterTune: Automatic Database Tuning",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "845-tictoc-time-traveling-optimistic-concurrency-control.md",
+    "title": "TicToc: Time Traveling Optimistic Concurrency Control",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "846-exploiting-cloud-object-storage-for-high-performance-analyti.md",
+    "title": "Exploiting Cloud Object Storage for High-Performance Analytics",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "847-slog-serializable-low-latency-geo-replicated-transactions.md",
+    "title": "SLOG: Serializable, Low-latency, Geo-replicated Transactions",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "848-write-behind-logging.md",
+    "title": "Write-Behind Logging",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "849-a-seven-dimensional-analysis-of-hashing-methods-and-its-impl.md",
+    "title": "A Seven-Dimensional Analysis of Hashing Methods and its Implications on Query Processing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "850-let-s-talk-about-storage-recovery-methods-for-non-volatile-m.md",
+    "title": "Let's Talk About Storage & Recovery Methods for Non-Volatile Memory Database Systems",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "851-amazon-redshift-re-invented.md",
+    "title": "Amazon Redshift Re-invented",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "852-efficient-and-robust-approximate-nearest-neighbor-search-usi.md",
+    "title": "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "853-adaptive-optimization-of-very-large-join-queries.md",
+    "title": "Adaptive Optimization of Very Large Join Queries",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "854-mostly-optimistic-concurrency-control-for-highly-contended-d.md",
+    "title": "Mostly-Optimistic Concurrency Control for Highly Contended Dynamic Workloads on a Thousand Cores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "855-what-s-really-new-with-newsql.md",
+    "title": "What's Really New with NewSQL?",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "856-serializable-snapshot-isolation-in-postgresql.md",
+    "title": "Serializable Snapshot Isolation in PostgreSQL",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "857-blsm-a-general-purpose-log-structured-merge-tree.md",
+    "title": "bLSM: A General Purpose Log Structured Merge Tree",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "858-foedus-oltp-engine-for-a-thousand-cores-and-nvram.md",
+    "title": "FOEDUS: OLTP Engine for a Thousand Cores and NVRAM",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "859-efficiently-compiling-efficient-query-plans-for-modern-hardw.md",
+    "title": "Efficiently Compiling Efficient Query Plans for Modern Hardware",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "860-matrixkv-reducing-write-amplification-by-exploiting-multi-le.md",
+    "title": "MatrixKV: Reducing Write Amplification by Exploiting Multi-level Memory for LSM-tree-based KV Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "861-triad-creating-synergies-between-memory-disk-and-log-in-log-.md",
+    "title": "TRIAD: Creating Synergies Between Memory, Disk and Log in Log Structured Key-Value Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "862-learned-cardinalities-estimating-correlated-joins-with-deep-.md",
+    "title": "Learned Cardinalities: Estimating Correlated Joins with Deep Learning",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "863-silk-preventing-latency-spikes-in-log-structured-merge-key-v.md",
+    "title": "Silk: Preventing Latency Spikes in Log-Structured Merge Key-Value Stores",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "864-apache-flink-stream-and-batch-processing-in-a-single-engine.md",
+    "title": "Apache Flink: Stream and Batch Processing in a Single Engine",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "865-novelsm-supporting-writes-and-efficient-garbage-collection-i.md",
+    "title": "NoveLSM: Supporting Writes and Efficient Garbage Collection in Novel LSM-Trees",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "866-lakehouse-a-new-generation-of-open-platforms-that-unify-data.md",
+    "title": "Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "867-hashkv-enabling-efficient-updates-in-kv-storage-via-hashing.md",
+    "title": "HashKV: Enabling Efficient Updates in KV Storage via Hashing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "868-wisckey-separating-keys-from-values-in-ssd-conscious-storage.md",
+    "title": "WiscKey: Separating Keys from Values in SSD-conscious Storage",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "869-lsm-trie-an-lsm-tree-based-ultra-large-key-value-store-for-s.md",
+    "title": "LSM-trie: An LSM-tree-based Ultra-Large Key-Value Store for Small Data Items",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "870-anyblob-a-multi-cloud-download-agent-for-high-performance-da.md",
+    "title": "AnyBlob: A Multi-Cloud Download Agent for High-Performance Data Processing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "871-umbra-a-disk-based-system-with-in-memory-performance.md",
+    "title": "Umbra: A Disk-Based System with In-Memory Performance",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "872-mesa-geo-replicated-near-real-time-scalable-data-warehousing.md",
+    "title": "Mesa: Geo-Replicated, Near Real-Time, Scalable Data Warehousing",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "873-scuba-diving-into-data-at-facebook.md",
+    "title": "Scuba: Diving into Data at Facebook",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "874-bigtable-a-distributed-storage-system-for-structured-data.md",
+    "title": "Bigtable: A Distributed Storage System for Structured Data",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "875-silo-speculative-shared-memory-multicore-transactions.md",
+    "title": "Silo: Speculative Shared-Memory Multicore Transactions",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "876-tango-distributed-data-structures-over-a-shared-log.md",
+    "title": "Tango: Distributed Data Structures over a Shared Log",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "877-the-vertica-analytic-database-c-store-7-years-later.md",
+    "title": "The Vertica Analytic Database: C-Store 7 Years Later",
+    "lineage": "contemporary-databases"
+  },
+  {
+    "file": "891-the-principal-type-scheme-of-an-object-in-combinatory-logic.md",
+    "title": "The Principal Type-Scheme of an Object in Combinatory Logic",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "892-a-theory-of-type-polymorphism-in-programming.md",
+    "title": "A Theory of Type Polymorphism in Programming",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "895-definitional-interpreters-for-higher-order-programming-langu.md",
+    "title": "Definitional Interpreters for Higher-Order Programming Languages",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "910-fundamental-concepts-in-programming-languages.md",
+    "title": "Fundamental Concepts in Programming Languages",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "911-toward-a-mathematical-semantics-for-computer-languages.md",
+    "title": "Toward a Mathematical Semantics for Computer Languages",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "912-data-types-as-lattices.md",
+    "title": "Data Types as Lattices",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "914-call-by-name-call-by-value-and-the-calculus.md",
+    "title": "Call-by-Name, Call-by-Value and the \u03bb-Calculus",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "931-the-mechanical-evaluation-of-expressions.md",
+    "title": "The Mechanical Evaluation of Expressions",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "932-the-next-700-programming-languages.md",
+    "title": "The Next 700 Programming Languages",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "933-recursive-functions-of-symbolic-expressions-and-their-comput.md",
+    "title": "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "962-an-axiomatic-basis-for-computer-programming.md",
+    "title": "An Axiomatic Basis for Computer Programming",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "963-assigning-meanings-to-programs.md",
+    "title": "Assigning Meanings to Programs",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "964-guarded-commands-nondeterminacy-and-formal-derivation-of-pro.md",
+    "title": "Guarded Commands, Nondeterminacy and Formal Derivation of Programs",
+    "lineage": "programming-language-foundations"
+  },
+  {
+    "file": "988-a-mathematical-theory-of-communication.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "989-error-detecting-and-error-correcting-codes.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  },
+  {
+    "file": "990-a-method-for-the-construction-of-minimum-redundancy-codes.md",
+    "title": "",
+    "lineage": "algorithms-and-complexity"
+  }
+]

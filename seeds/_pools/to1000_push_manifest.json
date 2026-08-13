@@ -1,0 +1,766 @@
+{
+  "tip": "28ff8f9f074753fb97f384968e2a83d2341cff90",
+  "to_push": [
+    "/workspace/broadside/seeds/cards/1000-relationships-between-nondeterministic-and-deterministic-tap.md",
+    "/workspace/broadside/seeds/cards/1001-nondeterministic-space-is-closed-under-complement.md",
+    "/workspace/broadside/seeds/cards/1002-the-method-of-forced-enumeration-for-nondeterministic-automa.md",
+    "/workspace/broadside/seeds/cards/1003-the-polynomial-time-hierarchy.md",
+    "/workspace/broadside/seeds/cards/1004-relativizations-of-the-p-np-question.md",
+    "/workspace/broadside/seeds/cards/1005-on-the-structure-of-polynomial-time-reducibility.md",
+    "/workspace/broadside/seeds/cards/1006-finite-automata-and-their-decision-problems.md",
+    "/workspace/broadside/seeds/cards/1007-myhill-nerode-theorem-myhill-technical-notes.md",
+    "/workspace/broadside/seeds/cards/1008-linear-automaton-transformations-nerode-congruence.md",
+    "/workspace/broadside/seeds/cards/1009-introduction-to-automata-theory-languages-and-computation.md",
+    "/workspace/broadside/seeds/cards/1010-three-models-for-the-description-of-language.md",
+    "/workspace/broadside/seeds/cards/1011-representation-of-events-in-nerve-nets-and-finite-automata.md",
+    "/workspace/broadside/seeds/cards/1012-on-a-routing-problem.md",
+    "/workspace/broadside/seeds/cards/1013-algorithm-97-shortest-path.md",
+    "/workspace/broadside/seeds/cards/1014-a-theorem-on-boolean-matrices.md",
+    "/workspace/broadside/seeds/cards/1015-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin.md",
+    "/workspace/broadside/seeds/cards/1016-shortest-connection-networks-and-some-generalizations.md",
+    "/workspace/broadside/seeds/cards/1017-maximal-flow-through-a-network.md",
+    "/workspace/broadside/seeds/cards/1018-theoretical-improvements-in-algorithmic-efficiency-for-netwo.md",
+    "/workspace/broadside/seeds/cards/1019-algorithm-for-solution-of-a-problem-of-maximum-flow-in-a-net.md",
+    "/workspace/broadside/seeds/cards/1020-a-new-approach-to-the-maximum-flow-problem.md",
+    "/workspace/broadside/seeds/cards/1021-depth-first-search-and-linear-graph-algorithms.md",
+    "/workspace/broadside/seeds/cards/1022-efficient-algorithms-for-graph-manipulation.md",
+    "/workspace/broadside/seeds/cards/1023-efficient-algorithms-for-shortest-paths-in-sparse-networks.md",
+    "/workspace/broadside/seeds/cards/1024-fast-pattern-matching-in-strings.md",
+    "/workspace/broadside/seeds/cards/1025-a-fast-string-searching-algorithm.md",
+    "/workspace/broadside/seeds/cards/1026-efficient-string-matching-an-aid-to-bibliographic-search.md",
+    "/workspace/broadside/seeds/cards/1027-efficient-randomized-pattern-matching-algorithms.md",
+    "/workspace/broadside/seeds/cards/1028-suffix-arrays-a-new-method-for-on-line-string-searches.md",
+    "/workspace/broadside/seeds/cards/1029-on-line-construction-of-suffix-trees.md",
+    "/workspace/broadside/seeds/cards/1030-an-algorithm-for-the-machine-calculation-of-complex-fourier-.md",
+    "/workspace/broadside/seeds/cards/1031-gaussian-elimination-is-not-optimal.md",
+    "/workspace/broadside/seeds/cards/1032-multiplication-of-multidigit-numbers-on-automata.md",
+    "/workspace/broadside/seeds/cards/1033-schnelle-multiplikation-grosser-zahlen.md",
+    "/workspace/broadside/seeds/cards/1034-quicksort.md",
+    "/workspace/broadside/seeds/cards/1035-algorithm-232-heapsort.md",
+    "/workspace/broadside/seeds/cards/1036-a-high-speed-sorting-procedure.md",
+    "/workspace/broadside/seeds/cards/1037-an-algorithm-for-the-organization-of-information.md",
+    "/workspace/broadside/seeds/cards/1038-organization-and-maintenance-of-large-ordered-indices.md",
+    "/workspace/broadside/seeds/cards/1039-a-dichromatic-framework-for-balanced-trees.md",
+    "/workspace/broadside/seeds/cards/1040-self-adjusting-binary-search-trees.md",
+    "/workspace/broadside/seeds/cards/1041-fibonacci-heaps-and-their-uses-in-improved-network-optimizat.md",
+    "/workspace/broadside/seeds/cards/1042-skip-lists-a-probabilistic-alternative-to-balanced-trees.md",
+    "/workspace/broadside/seeds/cards/1043-space-time-trade-offs-in-hash-coding-with-allowable-errors.md",
+    "/workspace/broadside/seeds/cards/1044-consistent-hashing-and-random-trees-distributed-caching-prot.md",
+    "/workspace/broadside/seeds/cards/1045-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap.md",
+    "/workspace/broadside/seeds/cards/1046-pastry-scalable-decentralized-object-location-and-routing-fo.md",
+    "/workspace/broadside/seeds/cards/1047-kademlia-a-peer-to-peer-information-system-based-on-the-xor-.md",
+    "/workspace/broadside/seeds/cards/1048-the-pagerank-citation-ranking-bringing-order-to-the-web.md",
+    "/workspace/broadside/seeds/cards/1049-authoritative-sources-in-a-hyperlinked-environment.md",
+    "/workspace/broadside/seeds/cards/1050-error-bounds-for-convolutional-codes-and-an-asymptotically-o.md",
+    "/workspace/broadside/seeds/cards/1051-a-maximization-technique-occurring-in-the-statistical-analys.md",
+    "/workspace/broadside/seeds/cards/1052-analysis-of-a-complex-of-statistical-variables-into-principa.md",
+    "/workspace/broadside/seeds/cards/1053-the-use-of-multiple-measurements-in-taxonomic-problems.md",
+    "/workspace/broadside/seeds/cards/1054-probabilistic-computations-toward-a-unified-measure-of-compl.md",
+    "/workspace/broadside/seeds/cards/1055-a-theory-of-the-learnable.md",
+    "/workspace/broadside/seeds/cards/1056-new-directions-in-cryptography.md",
+    "/workspace/broadside/seeds/cards/1057-a-method-for-obtaining-digital-signatures-and-public-key-cry.md",
+    "/workspace/broadside/seeds/cards/1058-secure-communications-over-insecure-channels.md",
+    "/workspace/broadside/seeds/cards/1059-protocols-for-public-key-cryptosystems.md",
+    "/workspace/broadside/seeds/cards/1060-time-clocks-and-the-ordering-of-events-in-a-distributed-syst.md",
+    "/workspace/broadside/seeds/cards/1061-timestamps-in-message-passing-systems-that-preserve-the-part.md",
+    "/workspace/broadside/seeds/cards/1062-virtual-time-and-global-states-of-distributed-systems.md",
+    "/workspace/broadside/seeds/cards/1063-distributed-snapshots-determining-global-states-of-distribut.md",
+    "/workspace/broadside/seeds/cards/1064-the-part-time-parliament.md",
+    "/workspace/broadside/seeds/cards/1065-paxos-made-simple.md",
+    "/workspace/broadside/seeds/cards/1066-the-byzantine-generals-problem.md",
+    "/workspace/broadside/seeds/cards/1067-reaching-agreement-in-the-presence-of-faults.md",
+    "/workspace/broadside/seeds/cards/1068-practical-byzantine-fault-tolerance.md",
+    "/workspace/broadside/seeds/cards/1069-in-search-of-an-understandable-consensus-algorithm.md",
+    "/workspace/broadside/seeds/cards/1070-the-google-file-system.md",
+    "/workspace/broadside/seeds/cards/1071-mapreduce-simplified-data-processing-on-large-clusters.md",
+    "/workspace/broadside/seeds/cards/1072-introduction-to-algorithms.md",
+    "/workspace/broadside/seeds/cards/1073-algorithms.md",
+    "/workspace/broadside/seeds/cards/1074-the-design-and-analysis-of-computer-algorithms.md",
+    "/workspace/broadside/seeds/cards/1076-approximation-algorithms-for-combinatorial-problems.md",
+    "/workspace/broadside/seeds/cards/1077-proof-verification-and-the-hardness-of-approximation-problem.md",
+    "/workspace/broadside/seeds/cards/1078-ip-pspace.md",
+    "/workspace/broadside/seeds/cards/1079-a-machine-program-for-theorem-proving.md",
+    "/workspace/broadside/seeds/cards/1080-a-computing-procedure-for-quantification-theory.md",
+    "/workspace/broadside/seeds/cards/1081-dynamic-programming.md",
+    "/workspace/broadside/seeds/cards/1082-a-dynamic-programming-approach-to-sequencing-problems.md",
+    "/workspace/broadside/seeds/cards/1083-paths-trees-and-flowers.md",
+    "/workspace/broadside/seeds/cards/1084-efficiency-of-a-good-but-not-linear-set-union-algorithm.md",
+    "/workspace/broadside/seeds/cards/1085-the-complexity-of-computing-the-permanent.md",
+    "/workspace/broadside/seeds/cards/1086-how-to-share-a-secret.md",
+    "/workspace/broadside/seeds/cards/1087-primes-is-in-p.md",
+    "/workspace/broadside/seeds/cards/888-towards-a-theory-of-type-structure.md",
+    "/workspace/broadside/seeds/cards/889-girard-system-f-une-extension-de-linterpretation-de-godel.md",
+    "/workspace/broadside/seeds/cards/890-the-system-f-of-variable-types-fifteen-years-later.md",
+    "/workspace/broadside/seeds/cards/893-principal-type-schemes-for-functional-programs.md",
+    "/workspace/broadside/seeds/cards/894-types-abstraction-and-parametric-polymorphism.md",
+    "/workspace/broadside/seeds/cards/896-definitional-interpreters-revisited.md",
+    "/workspace/broadside/seeds/cards/897-defunctionalization-at-work.md",
+    "/workspace/broadside/seeds/cards/898-comprehending-monads.md",
+    "/workspace/broadside/seeds/cards/899-how-to-make-ad-hoc-polymorphism-less-ad-hoc.md",
+    "/workspace/broadside/seeds/cards/900-practical-foundations-for-programming-languages.md",
+    "/workspace/broadside/seeds/cards/901-the-formulae-as-types-notion-of-construction.md",
+    "/workspace/broadside/seeds/cards/902-an-intuitionistic-theory-of-types-predicative-part.md",
+    "/workspace/broadside/seeds/cards/903-constructive-mathematics-and-computer-programming.md",
+    "/workspace/broadside/seeds/cards/904-the-calculus-of-constructions.md",
+    "/workspace/broadside/seeds/cards/905-a-framework-for-defining-logics.md",
+    "/workspace/broadside/seeds/cards/906-proofs-and-types.md",
+    "/workspace/broadside/seeds/cards/907-programming-in-martin-l-f-s-type-theory-an-introduction.md",
+    "/workspace/broadside/seeds/cards/908-implementing-mathematics-with-nuprl.md",
+    "/workspace/broadside/seeds/cards/909-the-mathematical-language-automath-its-usage-and-some-of-its.md",
+    "/workspace/broadside/seeds/cards/913-domains-for-denotational-semantics.md",
+    "/workspace/broadside/seeds/cards/915-lcf-considered-as-a-programming-language.md",
+    "/workspace/broadside/seeds/cards/916-a-structural-approach-to-operational-semantics.md",
+    "/workspace/broadside/seeds/cards/917-natural-semantics.md",
+    "/workspace/broadside/seeds/cards/918-a-syntactic-approach-to-type-soundness.md",
+    "/workspace/broadside/seeds/cards/919-soft-typing.md",
+    "/workspace/broadside/seeds/cards/920-a-practical-soft-type-system-for-scheme.md",
+    "/workspace/broadside/seeds/cards/921-on-the-expressive-power-of-programming-languages.md",
+    "/workspace/broadside/seeds/cards/922-a-calculus-for-assignments-and-control-flow.md",
+    "/workspace/broadside/seeds/cards/923-control-operators-the-secd-machine-and-the-calculus.md",
+    "/workspace/broadside/seeds/cards/924-the-essence-of-compiling-with-continuations.md",
+    "/workspace/broadside/seeds/cards/925-compiling-with-continuations.md",
+    "/workspace/broadside/seeds/cards/926-on-understanding-types-data-abstraction-and-polymorphism.md",
+    "/workspace/broadside/seeds/cards/927-a-theory-of-objects.md",
+    "/workspace/broadside/seeds/cards/928-abstract-types-have-existential-type.md",
+    "/workspace/broadside/seeds/cards/929-type-inference-with-polymorphic-recursion.md",
+    "/workspace/broadside/seeds/cards/930-type-inference-for-polymorphic-references.md",
+    "/workspace/broadside/seeds/cards/934-scheme-an-interpreter-for-extended-lambda-calculus.md",
+    "/workspace/broadside/seeds/cards/935-rabbit-a-compiler-for-scheme.md",
+    "/workspace/broadside/seeds/cards/936-the-revised-5-report-on-the-algorithmic-language-scheme.md",
+    "/workspace/broadside/seeds/cards/937-the-evolution-of-lisp.md",
+    "/workspace/broadside/seeds/cards/938-predicate-logic-as-programming-language.md",
+    "/workspace/broadside/seeds/cards/939-algorithm-logic-control.md",
+    "/workspace/broadside/seeds/cards/940-prolog-in-10-figures.md",
+    "/workspace/broadside/seeds/cards/941-the-early-history-of-smalltalk.md",
+    "/workspace/broadside/seeds/cards/942-design-principles-behind-smalltalk.md",
+    "/workspace/broadside/seeds/cards/943-smalltalk-80-the-language-and-its-implementation.md",
+    "/workspace/broadside/seeds/cards/944-viewing-control-structures-as-patterns-of-passing-messages.md",
+    "/workspace/broadside/seeds/cards/945-actors-a-model-of-concurrent-computation-in-distributed-syst.md",
+    "/workspace/broadside/seeds/cards/946-a-history-of-clu.md",
+    "/workspace/broadside/seeds/cards/947-programming-with-abstract-data-types.md",
+    "/workspace/broadside/seeds/cards/948-self-the-power-of-simplicity.md",
+    "/workspace/broadside/seeds/cards/949-a-denotational-semantics-of-inheritance-and-its-correctness.md",
+    "/workspace/broadside/seeds/cards/950-mixin-based-inheritance.md",
+    "/workspace/broadside/seeds/cards/951-a-functional-correspondence-between-evaluators-and-abstract.md",
+    "/workspace/broadside/seeds/cards/952-geometry-of-interaction-i-interpretation-of-system-f.md",
+    "/workspace/broadside/seeds/cards/953-the-lazy-lambda-calculus.md",
+    "/workspace/broadside/seeds/cards/954-on-full-abstraction-for-pcf-i-ii-and-iii.md",
+    "/workspace/broadside/seeds/cards/955-full-abstraction-for-pcf-ajm.md",
+    "/workspace/broadside/seeds/cards/956-a-calculus-of-mobile-processes-i.md",
+    "/workspace/broadside/seeds/cards/957-the-join-calculus-a-language-for-distributed-mobile-programm.md",
+    "/workspace/broadside/seeds/cards/958-the-chemical-abstract-machine.md",
+    "/workspace/broadside/seeds/cards/959-mobile-ambients.md",
+    "/workspace/broadside/seeds/cards/960-concurrent-programming-in-ml.md",
+    "/workspace/broadside/seeds/cards/961-making-reliable-distributed-systems-in-the-presence-of-softw.md",
+    "/workspace/broadside/seeds/cards/965-abstract-interpretation-a-unified-lattice-model-for-static-a.md",
+    "/workspace/broadside/seeds/cards/966-principles-of-program-analysis.md",
+    "/workspace/broadside/seeds/cards/967-report-on-the-programming-language-haskell-a-non-strict-pure.md",
+    "/workspace/broadside/seeds/cards/968-the-implementation-of-functional-programming-languages.md",
+    "/workspace/broadside/seeds/cards/969-a-call-by-name-lambda-calculus-machine.md",
+    "/workspace/broadside/seeds/cards/970-the-zinc-experiment-an-economical-implementation-of-the-ml-l.md",
+    "/workspace/broadside/seeds/cards/971-formal-certification-of-a-compiler-back-end-or-programming-a.md",
+    "/workspace/broadside/seeds/cards/972-the-lambda-calculus-its-syntax-and-semantics.md",
+    "/workspace/broadside/seeds/cards/973-the-essence-of-algol.md",
+    "/workspace/broadside/seeds/cards/974-simple-imperative-polymorphism.md",
+    "/workspace/broadside/seeds/cards/975-on-the-type-structure-of-standard-ml.md",
+    "/workspace/broadside/seeds/cards/976-polymorphic-type-schemes-and-recursive-definitions.md",
+    "/workspace/broadside/seeds/cards/977-the-formal-semantics-of-programming-languages-an-introductio.md",
+    "/workspace/broadside/seeds/cards/978-semantics-of-programming-languages-structures-and-techniques.md",
+    "/workspace/broadside/seeds/cards/979-advanced-topics-in-types-and-programming-languages.md",
+    "/workspace/broadside/seeds/cards/980-miranda-a-non-strict-functional-language-with-polymorphic-ty.md",
+    "/workspace/broadside/seeds/cards/981-program-development-by-stepwise-refinement.md",
+    "/workspace/broadside/seeds/cards/982-simula-an-algol-based-simulation-language.md",
+    "/workspace/broadside/seeds/cards/983-a-powerdomain-construction.md",
+    "/workspace/broadside/seeds/cards/984-inductive-definitions-in-the-system-coq-rules-and-properties.md",
+    "/workspace/broadside/seeds/cards/988-a-mathematical-theory-of-communication.md",
+    "/workspace/broadside/seeds/cards/989-error-detecting-and-error-correcting-codes.md",
+    "/workspace/broadside/seeds/cards/990-a-method-for-the-construction-of-minimum-redundancy-codes.md",
+    "/workspace/broadside/seeds/cards/991-a-universal-algorithm-for-sequential-data-compression.md",
+    "/workspace/broadside/seeds/cards/992-compression-of-individual-sequences-via-variable-rate-coding.md",
+    "/workspace/broadside/seeds/cards/993-a-technique-for-high-performance-data-compression.md",
+    "/workspace/broadside/seeds/cards/994-the-complexity-of-theorem-proving-procedures.md",
+    "/workspace/broadside/seeds/cards/995-reducibility-among-combinatorial-problems.md",
+    "/workspace/broadside/seeds/cards/996-universal-sequential-search-problems.md",
+    "/workspace/broadside/seeds/cards/997-computers-and-intractability-a-guide-to-the-theory-of-np-com.md",
+    "/workspace/broadside/seeds/cards/998-on-the-computational-complexity-of-algorithms.md",
+    "/workspace/broadside/seeds/cards/999-a-machine-independent-theory-of-the-complexity-of-recursive-.md"
+  ],
+  "extra": [
+    "seeds/lineages/programming-language-foundations.md",
+    "seeds/lineages/algorithms-and-complexity.md",
+    "seeds/lineages/README.md",
+    "seeds/INDEX.md"
+  ],
+  "skipped": [
+    [
+      "title",
+      "1075-the-art-of-computer-programming-volume-1-fundamental-algorit.md",
+      "the art of computer programming, volume 1: fundamental algor"
+    ],
+    [
+      "title",
+      "1208-mathematical-problems-hilbert-s-problems.md",
+      "mathematical problems (hilbert's problems)"
+    ],
+    [
+      "title",
+      "1209-principia-mathematica-volume-i.md",
+      "principia mathematica, volume i"
+    ],
+    [
+      "title",
+      "1210-begriffsschrift.md",
+      "begriffsschrift"
+    ],
+    [
+      "title",
+      "1211-arithmetices-principia-nova-methodo-exposita.md",
+      "arithmetices principia, nova methodo exposita"
+    ],
+    [
+      "title",
+      "1212-grundzuege-der-theoretischen-logik.md",
+      "grundz\u00fcge der theoretischen logik"
+    ],
+    [
+      "title",
+      "1213-zum-hilbertschen-aufbau-der-reellen-zahlen.md",
+      "zum hilbertschen aufbau der reellen zahlen"
+    ],
+    [
+      "title",
+      "1214-on-the-infinite.md",
+      "on the infinite"
+    ],
+    [
+      "title",
+      "1215-investigations-in-the-foundations-of-set-theory-i.md",
+      "investigations in the foundations of set theory i"
+    ],
+    [
+      "title",
+      "1216-ueber-die-bausteine-der-mathematischen-logik.md",
+      "\u00fcber die bausteine der mathematischen logik"
+    ],
+    [
+      "title",
+      "1217-grundlagen-der-kombinatorischen-logik.md",
+      "grundlagen der kombinatorischen logik"
+    ],
+    [
+      "title",
+      "1218-functionality-in-combinatory-logic.md",
+      "functionality in combinatory logic"
+    ],
+    [
+      "title",
+      "1219-die-vollstaendigkeit-der-axiome-des-logischen-funktionenkalk.md",
+      "die vollst\u00e4ndigkeit der axiome des logischen funktionenkalk\u00fc"
+    ],
+    [
+      "title",
+      "1220-ueber-formal-unentscheidbare-saetze-der-principia-mathematic.md",
+      "\u00fcber formal unentscheidbare s\u00e4tze der principia mathematica "
+    ],
+    [
+      "title",
+      "1221-the-consistency-of-the-axiom-of-choice-and-of-the-generalize.md",
+      "the consistency of the axiom of choice and of the generalize"
+    ],
+    [
+      "title",
+      "1222-ueber-eine-bisher-noch-nicht-benuetzte-erweiterung-des-finit.md",
+      "\u00fcber eine bisher noch nicht ben\u00fctzte erweiterung des finiten"
+    ],
+    [
+      "title",
+      "1223-eine-interpretation-des-intuitionistischen-aussagenkalkuels.md",
+      "eine interpretation des intuitionistischen aussagenkalk\u00fcls"
+    ],
+    [
+      "title",
+      "1224-zur-intuitionistischen-arithmetik-und-zahlentheorie.md",
+      "zur intuitionistischen arithmetik und zahlentheorie"
+    ],
+    [
+      "title",
+      "1225-on-undecidable-propositions-of-formal-mathematical-systems.md",
+      "on undecidable propositions of formal mathematical systems"
+    ],
+    [
+      "title",
+      "1226-an-unsolvable-problem-of-elementary-number-theory.md",
+      "an unsolvable problem of elementary number theory"
+    ],
+    [
+      "title",
+      "1227-a-note-on-the-entscheidungsproblem.md",
+      "a note on the entscheidungsproblem"
+    ],
+    [
+      "title",
+      "1228-correction-to-a-note-on-the-entscheidungsproblem.md",
+      "correction to a note on the entscheidungsproblem"
+    ],
+    [
+      "title",
+      "1229-a-formulation-of-the-simple-theory-of-types.md",
+      "a formulation of the simple theory of types"
+    ],
+    [
+      "title",
+      "1230-the-calculi-of-lambda-conversion.md",
+      "the calculi of lambda-conversion"
+    ],
+    [
+      "title",
+      "1231-a-set-of-postulates-for-the-foundation-of-logic.md",
+      "a set of postulates for the foundation of logic"
+    ],
+    [
+      "title",
+      "1232-a-set-of-postulates-for-the-foundation-of-logic-second-paper.md",
+      "a set of postulates for the foundation of logic (second pape"
+    ],
+    [
+      "title",
+      "1233-review-of-turing-on-computable-numbers-church-turing-thesis-.md",
+      "review of turing: on computable numbers (church\u2013turing thesi"
+    ],
+    [
+      "title",
+      "1234-on-computable-numbers-with-an-application-to-the-entscheidun.md",
+      "on computable numbers, with an application to the entscheidu"
+    ],
+    [
+      "title",
+      "1235-on-computable-numbers-with-an-application-to-the-entscheidun.md",
+      "on computable numbers, with an application to the entscheidu"
+    ],
+    [
+      "title",
+      "1236-computability-and-definability.md",
+      "computability and \u03bb-definability"
+    ],
+    [
+      "title",
+      "1237-systems-of-logic-based-on-ordinals.md",
+      "systems of logic based on ordinals"
+    ],
+    [
+      "title",
+      "1238-computing-machinery-and-intelligence.md",
+      "computing machinery and intelligence"
+    ],
+    [
+      "title",
+      "1239-intelligent-machinery.md",
+      "intelligent machinery"
+    ],
+    [
+      "title",
+      "1240-proposal-for-development-in-the-mathematics-division-of-an-a.md",
+      "proposal for development in the mathematics division of an a"
+    ],
+    [
+      "title",
+      "1241-checking-a-large-routine.md",
+      "checking a large routine"
+    ],
+    [
+      "title",
+      "1242-general-recursive-functions-of-natural-numbers.md",
+      "general recursive functions of natural numbers"
+    ],
+    [
+      "title",
+      "1243-definability-and-recursiveness.md",
+      "\u03bb-definability and recursiveness"
+    ],
+    [
+      "title",
+      "1244-on-notation-for-ordinal-numbers.md",
+      "on notation for ordinal numbers"
+    ],
+    [
+      "title",
+      "1245-recursive-predicates-and-quantifiers.md",
+      "recursive predicates and quantifiers"
+    ],
+    [
+      "title",
+      "1246-introduction-to-metamathematics.md",
+      "introduction to metamathematics"
+    ],
+    [
+      "title",
+      "1247-finite-combinatory-processes-formulation-i.md",
+      "finite combinatory processes\u2014formulation i"
+    ],
+    [
+      "title",
+      "1248-formal-reductions-of-the-general-combinatorial-decision-prob.md",
+      "formal reductions of the general combinatorial decision prob"
+    ],
+    [
+      "title",
+      "1249-recursively-enumerable-sets-of-positive-integers-and-their-d.md",
+      "recursively enumerable sets of positive integers and their d"
+    ],
+    [
+      "title",
+      "1250-recursive-unsolvability-of-a-problem-of-thue.md",
+      "recursive unsolvability of a problem of thue"
+    ],
+    [
+      "title",
+      "1251-degrees-of-recursive-unsolvability.md",
+      "degrees of recursive unsolvability"
+    ],
+    [
+      "title",
+      "1252-two-recursively-enumerable-sets-of-incomparable-degrees-of-u.md",
+      "two recursively enumerable sets of incomparable degrees of u"
+    ],
+    [
+      "title",
+      "1253-on-the-unsolvability-of-the-problem-of-reducibility-of-the-t.md",
+      "on the unsolvability of the problem of reducibility of the t"
+    ],
+    [
+      "title",
+      "1254-first-draft-of-a-report-on-the-edvac.md",
+      "first draft of a report on the edvac"
+    ],
+    [
+      "title",
+      "1255-preliminary-discussion-of-the-logical-design-of-an-electroni.md",
+      "preliminary discussion of the logical design of an electroni"
+    ],
+    [
+      "title",
+      "1256-planning-and-coding-of-problems-for-an-electronic-computing-.md",
+      "planning and coding of problems for an electronic computing "
+    ],
+    [
+      "title",
+      "1257-the-general-and-logical-theory-of-automata.md",
+      "the general and logical theory of automata"
+    ],
+    [
+      "title",
+      "1258-theory-of-self-reproducing-automata.md",
+      "theory of self-reproducing automata"
+    ],
+    [
+      "title",
+      "1259-probabilistic-logics-and-the-synthesis-of-reliable-organisms.md",
+      "probabilistic logics and the synthesis of reliable organisms"
+    ],
+    [
+      "title",
+      "1260-the-computer-and-the-brain.md",
+      "the computer and the brain"
+    ],
+    [
+      "title",
+      "1261-various-techniques-used-in-connection-with-random-digits.md",
+      "various techniques used in connection with random digits"
+    ],
+    [
+      "title",
+      "1262-zur-theorie-der-gesellschaftsspiele.md",
+      "zur theorie der gesellschaftsspiele"
+    ],
+    [
+      "title",
+      "1263-theory-of-games-and-economic-behavior.md",
+      "theory of games and economic behavior"
+    ],
+    [
+      "title",
+      "1264-a-symbolic-analysis-of-relay-and-switching-circuits.md",
+      "a symbolic analysis of relay and switching circuits"
+    ],
+    [
+      "title",
+      "1265-the-mathematical-theory-of-communication.md",
+      "the mathematical theory of communication"
+    ],
+    [
+      "title",
+      "1266-communication-theory-of-secrecy-systems.md",
+      "communication theory of secrecy systems"
+    ],
+    [
+      "title",
+      "1267-communication-in-the-presence-of-noise.md",
+      "communication in the presence of noise"
+    ],
+    [
+      "title",
+      "1268-the-synthesis-of-two-terminal-switching-circuits.md",
+      "the synthesis of two-terminal switching circuits"
+    ],
+    [
+      "title",
+      "1269-prediction-and-entropy-of-printed-english.md",
+      "prediction and entropy of printed english"
+    ],
+    [
+      "title",
+      "1270-cybernetics-or-control-and-communication-in-the-animal-and-t.md",
+      "cybernetics: or control and communication in the animal and "
+    ],
+    [
+      "title",
+      "1271-the-human-use-of-human-beings.md",
+      "the human use of human beings"
+    ],
+    [
+      "title",
+      "1272-extrapolation-interpolation-and-smoothing-of-stationary-time.md",
+      "extrapolation, interpolation, and smoothing of stationary ti"
+    ],
+    [
+      "title",
+      "1273-behavior-purpose-and-teleology.md",
+      "behavior, purpose and teleology"
+    ],
+    [
+      "title",
+      "1274-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity.md",
+      "a logical calculus of the ideas immanent in nervous activity"
+    ],
+    [
+      "title",
+      "1275-how-we-know-universals-the-perception-of-auditory-and-visual.md",
+      "how we know universals: the perception of auditory and visua"
+    ],
+    [
+      "title",
+      "1276-the-organization-of-behavior.md",
+      "the organization of behavior"
+    ],
+    [
+      "title",
+      "1277-notes-on-digital-coding.md",
+      "notes on digital coding"
+    ],
+    [
+      "title",
+      "1278-the-education-of-a-computer.md",
+      "the education of a computer"
+    ],
+    [
+      "title",
+      "1279-the-preparation-of-programs-for-an-electronic-digital-comput.md",
+      "the preparation of programs for an electronic digital comput"
+    ],
+    [
+      "title",
+      "1280-ueber-den-allgemeinen-plankalkuel-als-mittel-zur-formulierun.md",
+      "\u00fcber den allgemeinen plankalk\u00fcl als mittel zur formulierung "
+    ],
+    [
+      "title",
+      "1281-computing-machine-for-the-solution-of-large-systems-of-linea.md",
+      "computing machine for the solution of large systems of linea"
+    ],
+    [
+      "title",
+      "1282-programs-with-common-sense.md",
+      "programs with common sense"
+    ],
+    [
+      "title",
+      "1283-a-basis-for-a-mathematical-theory-of-computation.md",
+      "a basis for a mathematical theory of computation"
+    ],
+    [
+      "title",
+      "1284-towards-a-mathematical-science-of-computation.md",
+      "towards a mathematical science of computation"
+    ],
+    [
+      "title",
+      "1285-the-logic-theory-machine-a-complex-information-processing-sy.md",
+      "the logic theory machine: a complex information processing s"
+    ],
+    [
+      "title",
+      "1286-report-on-a-general-problem-solving-program.md",
+      "report on a general problem-solving program"
+    ],
+    [
+      "title",
+      "1287-elements-of-a-theory-of-human-problem-solving.md",
+      "elements of a theory of human problem solving"
+    ],
+    [
+      "title",
+      "1288-computer-science-as-empirical-inquiry-symbols-and-search.md",
+      "computer science as empirical inquiry: symbols and search"
+    ],
+    [
+      "title",
+      "1289-go-to-statement-considered-harmful.md",
+      "go to statement considered harmful"
+    ],
+    [
+      "title",
+      "1290-the-structure-of-the-the-multiprogramming-system.md",
+      "the structure of the 'the'-multiprogramming system"
+    ],
+    [
+      "title",
+      "1291-notes-on-structured-programming.md",
+      "notes on structured programming"
+    ],
+    [
+      "title",
+      "1292-a-discipline-of-programming.md",
+      "a discipline of programming"
+    ],
+    [
+      "title",
+      "1293-proof-of-correctness-of-data-representations.md",
+      "proof of correctness of data representations"
+    ],
+    [
+      "title",
+      "1294-syntactic-structures.md",
+      "syntactic structures"
+    ],
+    [
+      "title",
+      "1295-on-certain-formal-properties-of-grammars.md",
+      "on certain formal properties of grammars"
+    ],
+    [
+      "title",
+      "1296-three-approaches-to-the-quantitative-definition-of-informati.md",
+      "three approaches to the quantitative definition of informati"
+    ],
+    [
+      "title",
+      "1297-on-the-length-of-programs-for-computing-finite-binary-sequen.md",
+      "on the length of programs for computing finite binary sequen"
+    ],
+    [
+      "title",
+      "1298-a-formal-theory-of-inductive-inference-parts-i-ii.md",
+      "a formal theory of inductive inference, parts i\u2013ii"
+    ],
+    [
+      "title",
+      "1299-the-definition-of-random-sequences.md",
+      "the definition of random sequences"
+    ],
+    [
+      "title",
+      "1300-outline-of-a-mathematical-theory-of-computation.md",
+      "outline of a mathematical theory of computation"
+    ],
+    [
+      "title",
+      "1301-a-correspondence-between-algol-60-and-church-s-lambda-notati.md",
+      "a correspondence between algol 60 and church's lambda-notati"
+    ],
+    [
+      "title",
+      "1302-gedanken-experiments-on-sequential-machines.md",
+      "gedanken-experiments on sequential machines"
+    ],
+    [
+      "title",
+      "1303-a-method-for-synthesizing-sequential-circuits.md",
+      "a method for synthesizing sequential circuits"
+    ],
+    [
+      "title",
+      "1304-the-fortran-automatic-coding-system.md",
+      "the fortran automatic coding system"
+    ],
+    [
+      "title",
+      "1305-report-on-the-algorithmic-language-algol-60.md",
+      "report on the algorithmic language algol 60"
+    ],
+    [
+      "title",
+      "1306-the-syntax-and-semantics-of-the-proposed-international-algeb.md",
+      "the syntax and semantics of the proposed international algeb"
+    ],
+    [
+      "title",
+      "1307-flow-diagrams-turing-machines-and-languages-with-only-two-fo.md",
+      "flow diagrams, turing machines and languages with only two f"
+    ],
+    [
+      "title",
+      "891-the-principal-type-scheme-of-an-object-in-combinatory-logic.md",
+      "the principal type-scheme of an object in combinatory logic"
+    ],
+    [
+      "title",
+      "892-a-theory-of-type-polymorphism-in-programming.md",
+      "a theory of type polymorphism in programming"
+    ],
+    [
+      "title",
+      "895-definitional-interpreters-for-higher-order-programming-langu.md",
+      "definitional interpreters for higher-order programming langu"
+    ],
+    [
+      "title",
+      "910-fundamental-concepts-in-programming-languages.md",
+      "fundamental concepts in programming languages"
+    ],
+    [
+      "title",
+      "911-toward-a-mathematical-semantics-for-computer-languages.md",
+      "toward a mathematical semantics for computer languages"
+    ],
+    [
+      "title",
+      "912-data-types-as-lattices.md",
+      "data types as lattices"
+    ],
+    [
+      "title",
+      "914-call-by-name-call-by-value-and-the-calculus.md",
+      "call-by-name, call-by-value and the \u03bb-calculus"
+    ],
+    [
+      "title",
+      "931-the-mechanical-evaluation-of-expressions.md",
+      "the mechanical evaluation of expressions"
+    ],
+    [
+      "title",
+      "932-the-next-700-programming-languages.md",
+      "the next 700 programming languages"
+    ],
+    [
+      "title",
+      "933-recursive-functions-of-symbolic-expressions-and-their-comput.md",
+      "recursive functions of symbolic expressions and their comput"
+    ],
+    [
+      "title",
+      "962-an-axiomatic-basis-for-computer-programming.md",
+      "an axiomatic basis for computer programming"
+    ],
+    [
+      "title",
+      "963-assigning-meanings-to-programs.md",
+      "assigning meanings to programs"
+    ],
+    [
+      "title",
+      "964-guarded-commands-nondeterminacy-and-formal-derivation-of-pro.md",
+      "guarded commands, nondeterminacy and formal derivation of pr"
+    ]
+  ]
+}

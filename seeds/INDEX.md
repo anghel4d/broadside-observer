@@ -683,247 +683,15 @@ Seed batch `lineage-shallow-2026-08-13`. Shared 701–850 block (coordinated). M
 | 736 | 9 | 2010 | A Better x86 Memory Model: x86-TSO | concurrent-data-structures |
 | 737 | 8 | 2017 | I Wrote a Faster Hash Table | open-addressing |
 
-## Foundations pantheon (`foundations-greats-2026-08-13`)
+## Perfects — algorithms & complexity (`perfects-algorithms-2026-08-13`)
 
-Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Claimed block **738–887** (150 cards). Pool mostly `maths-foundations` / `languages` / `systems` / `agents`.
+Canonical classics mint for lineage [`algorithms-and-complexity`](lineages/algorithms-and-complexity.md). Claimed block **988–1087**. Skipped Dijkstra (existing `386`). Shannon minted here (foundations block empty at claim).
 
 | # | Score | Year | Title | Pool |
 |---|------:|-----:|-------|------|
-| 738 | 10 | 1900 | Mathematical Problems (Hilbert's Problems) | maths-foundations |
-| 739 | 10 | 1910 | Principia Mathematica, Volume I | maths-foundations |
-| 740 | 9 | 1879 | Begriffsschrift | maths-foundations |
-| 741 | 9 | 1889 | Arithmetices principia, nova methodo exposita | maths-foundations |
-| 742 | 10 | 1928 | Grundzüge der theoretischen Logik | maths-foundations |
-| 743 | 9 | 1928 | Zum Hilbertschen Aufbau der reellen Zahlen | maths-foundations |
-| 744 | 8 | 1925 | On the Infinite | maths-foundations |
-| 745 | 9 | 1928 | Die Grundlagen der Mathematik | maths-foundations |
-| 746 | 8 | 1908 | Investigations in the foundations of set theory I | maths-foundations |
-| 747 | 10 | 1924 | Über die Bausteine der mathematischen Logik | maths-foundations |
-| 748 | 10 | 1930 | Grundlagen der kombinatorischen Logik | maths-foundations |
-| 749 | 9 | 1934 | Functionality in Combinatory Logic | maths-foundations |
-| 750 | 10 | 1930 | Die Vollständigkeit der Axiome des logischen Funktionenkalküls | maths-foundations |
-| 751 | 10 | 1931 | Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Sy... | maths-foundations |
-| 752 | 9 | 1940 | The Consistency of the Axiom of Choice and of the Generalized Continuum Hypot... | maths-foundations |
-| 753 | 8 | 1947 | What is Cantor's Continuum Problem? | maths-foundations |
-| 754 | 9 | 1958 | Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes | maths-foundations |
-| 755 | 8 | 1933 | Eine Interpretation des intuitionistischen Aussagenkalküls | maths-foundations |
-| 756 | 8 | 1933 | Zur intuitionistischen Arithmetik und Zahlentheorie | maths-foundations |
-| 757 | 9 | 1934 | On Undecidable Propositions of Formal Mathematical Systems | maths-foundations |
-| 758 | 10 | 1936 | An Unsolvable Problem of Elementary Number Theory | maths-foundations |
-| 759 | 10 | 1936 | A Note on the Entscheidungsproblem | maths-foundations |
-| 760 | 8 | 1936 | Correction to A Note on the Entscheidungsproblem | maths-foundations |
-| 761 | 10 | 1940 | A Formulation of the Simple Theory of Types | maths-foundations |
-| 762 | 10 | 1941 | The Calculi of Lambda-Conversion | maths-foundations |
-| 763 | 9 | 1932 | A Set of Postulates for the Foundation of Logic | maths-foundations |
-| 764 | 8 | 1933 | A Set of Postulates for the Foundation of Logic (second paper) | maths-foundations |
-| 765 | 9 | 1937 | Review of Turing: On Computable Numbers (Church–Turing thesis framing) | maths-foundations |
-| 766 | 10 | 1936 | On Computable Numbers, with an Application to the Entscheidungsproblem | maths-foundations |
-| 767 | 8 | 1937 | On Computable Numbers, with an Application to the Entscheidungsproblem. A Cor... | maths-foundations |
-| 768 | 10 | 1937 | Computability and λ-Definability | maths-foundations |
-| 769 | 10 | 1939 | Systems of Logic Based on Ordinals | maths-foundations |
-| 770 | 10 | 1950 | Computing Machinery and Intelligence | agents |
-| 771 | 9 | 1948 | Intelligent Machinery | agents |
-| 772 | 9 | 1952 | The Chemical Basis of Morphogenesis | maths-foundations |
-| 773 | 9 | 1946 | Proposal for Development in the Mathematics Division of an Automatic Computin... | systems |
-| 774 | 9 | 1949 | Checking a Large Routine | languages |
-| 775 | 8 | 1948 | Rounding-Off Errors in Matrix Processes | systems |
-| 776 | 10 | 1936 | General recursive functions of natural numbers | maths-foundations |
-| 777 | 9 | 1936 | λ-definability and recursiveness | maths-foundations |
-| 778 | 8 | 1938 | On notation for ordinal numbers | maths-foundations |
-| 779 | 9 | 1943 | Recursive predicates and quantifiers | maths-foundations |
-| 780 | 10 | 1952 | Introduction to Metamathematics | maths-foundations |
-| 781 | 10 | 1956 | Representation of Events in Nerve Nets and Finite Automata | languages |
-| 782 | 8 | 1955 | Hierarchies of number-theoretic predicates | maths-foundations |
-| 783 | 10 | 1936 | Finite Combinatory Processes—Formulation I | maths-foundations |
-| 784 | 9 | 1943 | Formal reductions of the general combinatorial decision problem | maths-foundations |
-| 785 | 10 | 1944 | Recursively enumerable sets of positive integers and their decision problems | maths-foundations |
-| 786 | 9 | 1947 | Recursive Unsolvability of a Problem of Thue | maths-foundations |
-| 787 | 8 | 1965 | Absolutely Unsolvable Problems and Relatively Undecidable Propositions | maths-foundations |
-| 788 | 9 | 1921 | Introduction to a General Theory of Elementary Propositions | maths-foundations |
-| 789 | 8 | 1941 | The Two-Valued Iterative Systems of Mathematical Logic | maths-foundations |
-| 790 | 9 | 1954 | Degrees of Recursive Unsolvability | maths-foundations |
-| 791 | 9 | 1957 | Two recursively enumerable sets of incomparable degrees of unsolvability | maths-foundations |
-| 792 | 9 | 1956 | On the unsolvability of the problem of reducibility of the theory of algorithms | maths-foundations |
-| 793 | 10 | 1945 | First Draft of a Report on the EDVAC | systems |
-| 794 | 10 | 1946 | Preliminary Discussion of the Logical Design of an Electronic Computing Instr... | systems |
-| 795 | 9 | 1947 | Planning and Coding of Problems for an Electronic Computing Instrument | languages |
-| 796 | 10 | 1951 | The General and Logical Theory of Automata | maths-foundations |
-| 797 | 10 | 1966 | Theory of Self-Reproducing Automata | maths-foundations |
-| 798 | 9 | 1956 | Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable ... | systems |
-| 799 | 9 | 1958 | The Computer and the Brain | agents |
-| 800 | 8 | 1951 | Various techniques used in connection with random digits | systems |
-| 801 | 8 | 1928 | Zur Theorie der Gesellschaftsspiele | game-ai |
-| 802 | 8 | 1944 | Theory of Games and Economic Behavior | game-ai |
-| 803 | 10 | 1938 | A Symbolic Analysis of Relay and Switching Circuits | systems |
-| 804 | 10 | 1948 | A Mathematical Theory of Communication | maths-foundations |
-| 805 | 9 | 1949 | The Mathematical Theory of Communication | maths-foundations |
-| 806 | 9 | 1949 | Communication Theory of Secrecy Systems | systems |
-| 807 | 8 | 1949 | Communication in the Presence of Noise | systems |
-| 808 | 8 | 1949 | The Synthesis of Two-Terminal Switching Circuits | systems |
-| 809 | 9 | 1951 | Prediction and Entropy of Printed English | agents |
-| 810 | 8 | 1956 | A Universal Turing Machine with Two Internal States | maths-foundations |
-| 811 | 8 | 1956 | Reliable circuits using less reliable relays | systems |
-| 812 | 10 | 1948 | Cybernetics: Or Control and Communication in the Animal and the Machine | agents |
-| 813 | 8 | 1950 | The Human Use of Human Beings | agents |
-| 814 | 9 | 1949 | Extrapolation, Interpolation, and Smoothing of Stationary Time Series | systems |
-| 815 | 9 | 1943 | Behavior, Purpose and Teleology | agents |
-| 816 | 10 | 1943 | A Logical Calculus of the Ideas Immanent in Nervous Activity | agents |
-| 817 | 8 | 1947 | How We Know Universals: The Perception of Auditory and Visual Forms | agents |
-| 818 | 9 | 1949 | The Organization of Behavior | agents |
-| 819 | 10 | 1950 | Error Detecting and Error Correcting Codes | systems |
-| 820 | 8 | 1949 | Notes on Digital Coding | systems |
-| 821 | 9 | 1952 | A Method for the Construction of Minimum-Redundancy Codes | systems |
-| 822 | 9 | 1952 | The Education of a Computer | languages |
-| 823 | 9 | 1951 | The Preparation of Programs for an Electronic Digital Computer | languages |
-| 824 | 9 | 1948 | Über den allgemeinen Plankalkül als Mittel zur Formulierung schematisch-kombi... | languages |
-| 825 | 8 | 1940 | Computing Machine for the Solution of Large Systems of Linear Algebraic Equat... | systems |
-| 826 | 10 | 1960 | Recursive Functions of Symbolic Expressions and Their Computation by Machine,... | languages |
-| 827 | 9 | 1959 | Programs with Common Sense | agents |
-| 828 | 9 | 1963 | A Basis for a Mathematical Theory of Computation | languages |
-| 829 | 8 | 1962 | Towards a Mathematical Science of Computation | languages |
-| 830 | 8 | 1963 | Situations, Actions, and Causal Laws | agents |
-| 831 | 10 | 1956 | The Logic Theory Machine: A Complex Information Processing System | agents |
-| 832 | 8 | 1957 | Empirical Explorations of the Logic Theory Machine | agents |
-| 833 | 10 | 1959 | Report on a General Problem-Solving Program | agents |
-| 834 | 9 | 1958 | Elements of a Theory of Human Problem Solving | agents |
-| 835 | 9 | 1976 | Computer Science as Empirical Inquiry: Symbols and Search | agents |
-| 836 | 10 | 1968 | Go To Statement Considered Harmful | languages |
-| 837 | 10 | 1968 | The Structure of the 'THE'-Multiprogramming System | systems |
-| 838 | 9 | 1965 | Solution of a Problem in Concurrent Programming Control | systems |
-| 839 | 9 | 1968 | Cooperating Sequential Processes | systems |
-| 840 | 9 | 1970 | Notes on Structured Programming | languages |
-| 841 | 9 | 1976 | A Discipline of Programming | languages |
-| 842 | 9 | 1975 | Guarded Commands, Nondeterminacy and Formal Derivation of Programs | languages |
-| 843 | 10 | 1969 | An Axiomatic Basis for Computer Programming | languages |
-| 844 | 9 | 1972 | Proof of Correctness of Data Representations | languages |
-| 845 | 8 | 1971 | Procedures and Parameters: An Axiomatic Approach | languages |
-| 846 | 10 | 1968 | The Art of Computer Programming, Volume 1: Fundamental Algorithms | systems |
-| 847 | 9 | 1969 | The Art of Computer Programming, Volume 2: Seminumerical Algorithms | systems |
-| 848 | 9 | 1973 | The Art of Computer Programming, Volume 3: Sorting and Searching | systems |
-| 849 | 8 | 1974 | Structured Programming with go to Statements | languages |
-| 850 | 10 | 1956 | Three Models for the Description of Language | languages |
-| 851 | 9 | 1957 | Syntactic Structures | languages |
-| 852 | 10 | 1959 | On Certain Formal Properties of Grammars | languages |
-| 853 | 8 | 1963 | The Algebraic Theory of Context-Free Languages | languages |
-| 854 | 10 | 1933 | Foundations of the Theory of Probability | maths-foundations |
-| 855 | 10 | 1965 | Three Approaches to the Quantitative Definition of Information | maths-foundations |
-| 856 | 8 | 1963 | On Tables of Random Numbers | maths-foundations |
-| 857 | 8 | 1968 | Logical Basis for Information Theory and Probability Theory | maths-foundations |
-| 858 | 9 | 1966 | On the Length of Programs for Computing Finite Binary Sequences | maths-foundations |
-| 859 | 9 | 1975 | A Theory of Program Size Formally Identical to Information Theory | maths-foundations |
-| 860 | 9 | 1974 | Information-Theoretic Limitations of Formal Systems | maths-foundations |
-| 861 | 9 | 1964 | A Formal Theory of Inductive Inference, Parts I–II | agents |
-| 862 | 9 | 1966 | The Definition of Random Sequences | maths-foundations |
-| 863 | 10 | 1971 | Toward a Mathematical Semantics for Computer Languages | languages |
-| 864 | 10 | 1970 | Outline of a Mathematical Theory of Computation | languages |
-| 865 | 9 | 1976 | Data Types as Lattices | languages |
-| 866 | 10 | 1967 | Fundamental Concepts in Programming Languages | languages |
-| 867 | 10 | 1966 | The Next 700 Programming Languages | languages |
-| 868 | 10 | 1964 | The Mechanical Evaluation of Expressions | languages |
-| 869 | 9 | 1965 | A Correspondence Between ALGOL 60 and Church's Lambda-Notation | languages |
-| 870 | 10 | 1959 | Finite Automata and Their Decision Problems | languages |
-| 871 | 8 | 1956 | Gedanken-Experiments on Sequential Machines | languages |
-| 872 | 8 | 1955 | A Method for Synthesizing Sequential Circuits | systems |
-| 873 | 10 | 1957 | The FORTRAN Automatic Coding System | languages |
-| 874 | 10 | 1960 | Report on the Algorithmic Language ALGOL 60 | languages |
-| 875 | 9 | 1959 | The Syntax and Semantics of the Proposed International Algebraic Language of ... | languages |
-| 876 | 9 | 1966 | Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules | languages |
-| 877 | 10 | 1967 | Assigning Meanings to Programs | languages |
-| 878 | 9 | 1975 | Call-by-name, call-by-value and the λ-calculus | languages |
-| 879 | 9 | 1969 | The Principal Type-Scheme of an Object in Combinatory Logic | languages |
-| 880 | 9 | 1978 | A Theory of Type Polymorphism in Programming | languages |
-| 881 | 9 | 1972 | Definitional Interpreters for Higher-Order Programming Languages | languages |
-| 882 | 9 | 1933 | The Concept of Truth in Formalized Languages | maths-foundations |
-| 883 | 10 | 1935 | Investigations into Logical Deduction | maths-foundations |
-| 884 | 9 | 1960 | Weak Second-Order Arithmetic and Finite Automata | languages |
-| 885 | 8 | 1963 | Computability of Recursive Functions | systems |
-| 886 | 8 | 1958 | Computability and Unsolvability | maths-foundations |
-| 887 | 8 | 1965 | The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problem... | maths-foundations |
-
-| 888 | 10 | 1974 | Towards a Theory of Type Structure | languages |
-| 889 | 10 | 1971 | Une extension de l'interprétation de Gödel à l'analyse, et son appl... | languages |
-| 890 | 10 | 1986 | The System F of Variable Types, Fifteen Years Later | languages |
-| 893 | 10 | 1982 | Principal Type-Schemes for Functional Programs | languages |
-| 894 | 10 | 1983 | Types, Abstraction and Parametric Polymorphism | languages |
-| 896 | 10 | 1998 | Definitional Interpreters Revisited | languages |
-| 897 | 10 | 2001 | Defunctionalization at Work | languages |
-| 898 | 10 | 1992 | Comprehending Monads | languages |
-| 899 | 10 | 1989 | How to Make Ad-Hoc Polymorphism Less Ad Hoc | languages |
-| 900 | 10 | 2016 | Practical Foundations for Programming Languages | languages |
-| 901 | 10 | 1980 | The Formulae-as-Types Notion of Construction | languages |
-| 902 | 10 | 1975 | An Intuitionistic Theory of Types: Predicative Part | languages |
-| 903 | 10 | 1982 | Constructive Mathematics and Computer Programming | languages |
-| 904 | 10 | 1988 | The Calculus of Constructions | languages |
-| 905 | 10 | 1993 | A Framework for Defining Logics | languages |
-| 906 | 10 | 1989 | Proofs and Types | languages |
-| 907 | 10 | 1990 | Programming in Martin-Löf's Type Theory: An Introduction | languages |
-| 908 | 10 | 1986 | Implementing Mathematics with Nuprl | languages |
-| 909 | 10 | 1970 | The Mathematical Language AUTOMATH, Its Usage, and Some of Its Exte... | languages |
-| 913 | 10 | 1982 | Domains for Denotational Semantics | languages |
-| 915 | 10 | 1977 | LCF Considered as a Programming Language | languages |
-| 916 | 10 | 1981 | A Structural Approach to Operational Semantics | languages |
-| 917 | 10 | 1987 | Natural Semantics | languages |
-| 918 | 10 | 1994 | A Syntactic Approach to Type Soundness | languages |
-| 919 | 10 | 1991 | Soft Typing | languages |
-| 920 | 10 | 1997 | A Practical Soft Type System for Scheme | languages |
-| 921 | 10 | 1991 | On the Expressive Power of Programming Languages | languages |
-| 922 | 10 | 1987 | A Calculus for Assignments and Control Flow | languages |
-| 923 | 10 | 1986 | Control Operators, the SECD Machine, and the λ-Calculus | languages |
-| 924 | 10 | 1993 | The Essence of Compiling with Continuations | languages |
-| 925 | 10 | 1992 | Compiling with Continuations | languages |
-| 926 | 10 | 1985 | On Understanding Types, Data Abstraction, and Polymorphism | languages |
-| 927 | 10 | 1996 | A Theory of Objects | languages |
-| 928 | 10 | 1988 | Abstract Types Have Existential Type | languages |
-| 929 | 10 | 1993 | Type Inference with Polymorphic Recursion | languages |
-| 930 | 10 | 1990 | Type Inference for Polymorphic References | languages |
-| 934 | 10 | 1975 | Scheme: An Interpreter for Extended Lambda Calculus | languages |
-| 935 | 10 | 1978 | RABBIT: A Compiler for Scheme | languages |
-| 936 | 10 | 1998 | The Revised^5 Report on the Algorithmic Language Scheme | languages |
-| 937 | 10 | 1993 | The Evolution of Lisp | languages |
-| 938 | 10 | 1974 | Predicate Logic as Programming Language | languages |
-| 939 | 10 | 1979 | Algorithm = Logic + Control | languages |
-| 940 | 10 | 1985 | Prolog in 10 Figures | languages |
-| 941 | 10 | 1993 | The Early History of Smalltalk | languages |
-| 942 | 10 | 1981 | Design Principles Behind Smalltalk | languages |
-| 943 | 10 | 1983 | Smalltalk-80: The Language and Its Implementation | languages |
-| 944 | 10 | 1977 | Viewing Control Structures as Patterns of Passing Messages | languages |
-| 945 | 10 | 1986 | Actors: A Model of Concurrent Computation in Distributed Systems | languages |
-| 946 | 10 | 1993 | A History of CLU | languages |
-| 947 | 10 | 1974 | Programming with Abstract Data Types | languages |
-| 948 | 10 | 1987 | SELF: The Power of Simplicity | languages |
-| 949 | 10 | 1989 | A Denotational Semantics of Inheritance and Its Correctness | languages |
-| 950 | 10 | 1990 | Mixin-Based Inheritance | languages |
-| 951 | 10 | 2003 | A Functional Correspondence between Evaluators and Abstract Machines | languages |
-| 952 | 10 | 1989 | Geometry of Interaction I: Interpretation of System F | languages |
-| 953 | 10 | 1990 | The Lazy Lambda Calculus | languages |
-| 954 | 10 | 2000 | On Full Abstraction for PCF: I, II, and III | languages |
-| 955 | 10 | 2000 | Full Abstraction for PCF (AJM) | languages |
-| 956 | 10 | 1992 | A Calculus of Mobile Processes, I | languages |
-| 957 | 10 | 2000 | The Join Calculus: A Language for Distributed Mobile Programming | languages |
-| 958 | 10 | 1992 | The Chemical Abstract Machine | languages |
-| 959 | 10 | 2000 | Mobile Ambients | languages |
-| 960 | 10 | 1999 | Concurrent Programming in ML | languages |
-| 961 | 10 | 2003 | Making Reliable Distributed Systems in the Presence of Software Errors | languages |
-| 965 | 10 | 1977 | Abstract Interpretation: A Unified Lattice Model for Static Analysi... | languages |
-| 966 | 10 | 1999 | Principles of Program Analysis | languages |
-| 967 | 10 | 1992 | Report on the Programming Language Haskell: A Non-strict, Purely Fu... | languages |
-| 968 | 10 | 1987 | The Implementation of Functional Programming Languages | languages |
-| 969 | 10 | 2007 | A Call-by-Name Lambda-Calculus Machine | languages |
-| 970 | 10 | 1990 | The ZINC Experiment: An Economical Implementation of the ML Language | languages |
-| 971 | 10 | 2006 | Formal Certification of a Compiler Back-end, or: Programming a Comp... | languages |
-| 972 | 10 | 1984 | The Lambda Calculus: Its Syntax and Semantics | languages |
-| 973 | 10 | 1981 | The Essence of Algol | languages |
-| 974 | 10 | 1995 | Simple Imperative Polymorphism | languages |
-| 975 | 10 | 1993 | On the Type Structure of Standard ML | languages |
-| 976 | 10 | 1984 | Polymorphic Type Schemes and Recursive Definitions | languages |
-| 977 | 10 | 1993 | The Formal Semantics of Programming Languages: An Introduction | languages |
-| 978 | 10 | 1992 | Semantics of Programming Languages: Structures and Techniques | languages |
-| 979 | 10 | 2005 | Advanced Topics in Types and Programming Languages | languages |
-| 980 | 10 | 1985 | Miranda: A Non-strict Functional Language with Polymorphic Types | languages |
-| 981 | 10 | 1971 | Program Development by Stepwise Refinement | languages |
-| 982 | 10 | 1966 | SIMULA: An Algol-Based Simulation Language | languages |
-| 983 | 10 | 1976 | A Powerdomain Construction | languages |
-| 984 | 10 | 1993 | Inductive Definitions in the System Coq: Rules and Properties | languages |
+| 988 | 10 | 1948 | A Mathematical Theory of Communication | maths-foundations |
+| 989 | 10 | 1950 | Error Detecting and Error Correcting Codes | maths-foundations |
+| 990 | 10 | 1952 | A Method for the Construction of Minimum-Redundancy Codes | maths-foundations |
 | 991 | 10 | 1977 | A Universal Algorithm for Sequential Data Compression | systems |
 | 992 | 9 | 1978 | Compression of Individual Sequences via Variable-Rate Coding | systems |
 | 993 | 8 | 1984 | A Technique for High-Performance Data Compression | systems |
@@ -933,23 +701,26 @@ Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Clai
 | 997 | 10 | 1979 | Computers and Intractability: A Guide to the Theory of NP-Completeness | maths-foundations |
 | 998 | 9 | 1965 | On the Computational Complexity of Algorithms | maths-foundations |
 | 999 | 9 | 1967 | A Machine-Independent Theory of the Complexity of Recursive Functions | maths-foundations |
-| 1000 | 9 | 1970 | Relationships Between Nondeterministic and Deterministic Tape Compl... | maths-foundations |
+| 1000 | 9 | 1970 | Relationships Between Nondeterministic and Deterministic Tape Complexities | maths-foundations |
 | 1001 | 9 | 1988 | Nondeterministic Space is Closed Under Complement | maths-foundations |
 | 1002 | 9 | 1988 | The Method of Forced Enumeration for Nondeterministic Automata | maths-foundations |
 | 1003 | 8 | 1976 | The Polynomial-Time Hierarchy | maths-foundations |
 | 1004 | 8 | 1975 | Relativizations of the P =? NP Question | maths-foundations |
 | 1005 | 8 | 1975 | On the Structure of Polynomial Time Reducibility | maths-foundations |
+| 1006 | 10 | 1959 | Finite Automata and Their Decision Problems | maths-foundations |
 | 1007 | 8 | 1957 | Myhill–Nerode Theorem (Myhill technical notes) | maths-foundations |
 | 1008 | 8 | 1958 | Linear Automaton Transformations (Nerode congruence) | maths-foundations |
 | 1009 | 9 | 1979 | Introduction to Automata Theory, Languages, and Computation | maths-foundations |
+| 1010 | 9 | 1956 | Three Models for the Description of Language | maths-foundations |
+| 1011 | 9 | 1956 | Representation of Events in Nerve Nets and Finite Automata | maths-foundations |
 | 1012 | 10 | 1958 | On a Routing Problem | systems |
 | 1013 | 10 | 1962 | Algorithm 97: Shortest Path | systems |
 | 1014 | 9 | 1962 | A Theorem on Boolean Matrices | maths-foundations |
-| 1015 | 10 | 1956 | On the Shortest Spanning Subtree of a Graph and the Traveling Sales... | systems |
+| 1015 | 10 | 1956 | On the Shortest Spanning Subtree of a Graph and the Traveling Salesman Problem | systems |
 | 1016 | 10 | 1957 | Shortest Connection Networks and Some Generalizations | systems |
 | 1017 | 10 | 1956 | Maximal Flow Through a Network | systems |
-| 1018 | 9 | 1972 | Theoretical Improvements in Algorithmic Efficiency for Network Flow... | systems |
-| 1019 | 8 | 1970 | Algorithm for Solution of a Problem of Maximum Flow in a Network wi... | systems |
+| 1018 | 9 | 1972 | Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems | systems |
+| 1019 | 8 | 1970 | Algorithm for Solution of a Problem of Maximum Flow in a Network with Power Estimation | systems |
 | 1020 | 8 | 1988 | A New Approach to the Maximum-Flow Problem | systems |
 | 1021 | 10 | 1972 | Depth-First Search and Linear Graph Algorithms | systems |
 | 1022 | 8 | 1973 | Efficient Algorithms for Graph Manipulation | systems |
@@ -971,18 +742,18 @@ Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Clai
 | 1038 | 10 | 1972 | Organization and Maintenance of Large Ordered Indices | systems |
 | 1039 | 9 | 1978 | A Dichromatic Framework for Balanced Trees | systems |
 | 1040 | 8 | 1985 | Self-Adjusting Binary Search Trees | systems |
-| 1041 | 8 | 1987 | Fibonacci Heaps and Their Uses in Improved Network Optimization Alg... | systems |
+| 1041 | 8 | 1987 | Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms | systems |
 | 1042 | 8 | 1990 | Skip Lists: A Probabilistic Alternative to Balanced Trees | systems |
 | 1043 | 10 | 1970 | Space/Time Trade-offs in Hash Coding with Allowable Errors | systems |
-| 1044 | 10 | 1997 | Consistent Hashing and Random Trees: Distributed Caching Protocols... | systems |
-| 1045 | 9 | 2001 | Chord: A Scalable Peer-to-peer Lookup Service for Internet Applicat... | systems |
-| 1046 | 8 | 2001 | Pastry: Scalable, Decentralized Object Location and Routing for Lar... | systems |
+| 1044 | 10 | 1997 | Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web | systems |
+| 1045 | 9 | 2001 | Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications | systems |
+| 1046 | 8 | 2001 | Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems | systems |
 | 1047 | 8 | 2002 | Kademlia: A Peer-to-peer Information System Based on the XOR Metric | systems |
 | 1048 | 10 | 1999 | The PageRank Citation Ranking: Bringing Order to the Web | systems |
 | 1049 | 9 | 1999 | Authoritative Sources in a Hyperlinked Environment | systems |
-| 1050 | 10 | 1967 | Error Bounds for Convolutional Codes and an Asymptotically Optimum... | maths-foundations |
-| 1051 | 9 | 1970 | A Maximization Technique Occurring in the Statistical Analysis of P... | maths-foundations |
-| 1052 | 9 | 1933 | Analysis of a Complex of Statistical Variables into Principal Compo... | maths-foundations |
+| 1050 | 10 | 1967 | Error Bounds for Convolutional Codes and an Asymptotically Optimum Decoding Algorithm | maths-foundations |
+| 1051 | 9 | 1970 | A Maximization Technique Occurring in the Statistical Analysis of Probabilistic Functions of Markov Chains | maths-foundations |
+| 1052 | 9 | 1933 | Analysis of a Complex of Statistical Variables into Principal Components | maths-foundations |
 | 1053 | 8 | 1936 | The Use of Multiple Measurements in Taxonomic Problems | maths-foundations |
 | 1054 | 9 | 1977 | Probabilistic Computations: Toward a Unified Measure of Complexity | maths-foundations |
 | 1055 | 10 | 1984 | A Theory of the Learnable | maths-foundations |
@@ -991,9 +762,9 @@ Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Clai
 | 1058 | 9 | 1978 | Secure Communications Over Insecure Channels | systems |
 | 1059 | 8 | 1980 | Protocols for Public Key Cryptosystems | systems |
 | 1060 | 10 | 1978 | Time, Clocks, and the Ordering of Events in a Distributed System | systems |
-| 1061 | 8 | 1988 | Timestamps in Message-Passing Systems That Preserve the Partial Ord... | systems |
+| 1061 | 8 | 1988 | Timestamps in Message-Passing Systems That Preserve the Partial Ordering | systems |
 | 1062 | 8 | 1989 | Virtual Time and Global States of Distributed Systems | systems |
-| 1063 | 9 | 1985 | Distributed Snapshots: Determining Global States of Distributed Sys... | systems |
+| 1063 | 9 | 1985 | Distributed Snapshots: Determining Global States of Distributed Systems | systems |
 | 1064 | 10 | 1998 | The Part-Time Parliament | systems |
 | 1065 | 9 | 2001 | Paxos Made Simple | systems |
 | 1066 | 10 | 1982 | The Byzantine Generals Problem | systems |
@@ -1005,6 +776,7 @@ Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Clai
 | 1072 | 9 | 1990 | Introduction to Algorithms | maths-foundations |
 | 1073 | 8 | 1983 | Algorithms | systems |
 | 1074 | 8 | 1974 | The Design and Analysis of Computer Algorithms | maths-foundations |
+| 1075 | 9 | 1968 | The Art of Computer Programming, Volume 1: Fundamental Algorithms | maths-foundations |
 | 1076 | 8 | 1974 | Approximation Algorithms for Combinatorial Problems | maths-foundations |
 | 1077 | 9 | 1998 | Proof Verification and the Hardness of Approximation Problems | maths-foundations |
 | 1078 | 9 | 1992 | IP = PSPACE | maths-foundations |
@@ -1017,3 +789,199 @@ Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Clai
 | 1085 | 9 | 1979 | The Complexity of Computing the Permanent | maths-foundations |
 | 1086 | 8 | 1979 | How to Share a Secret | systems |
 | 1087 | 9 | 2004 | PRIMES is in P | maths-foundations |
+
+**Minted this pass:** 100 cards · jsonl `_pools/perfects_algorithms.jsonl`.
+
+## Foundations pantheon (`to1000-foundations-2026-08-13`)
+
+Lineage [`foundations-of-computing`](lineages/foundations-of-computing.md). Remint block **1208–1307** (100 cards; exclusive 998–1097 was preempted). Pool mostly `maths-foundations` / `languages` / `systems` / `agents`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1208 | 10 | 1900 | Mathematical Problems (Hilbert's Problems) | maths-foundations |
+| 1209 | 10 | 1910 | Principia Mathematica, Volume I | maths-foundations |
+| 1210 | 9 | 1879 | Begriffsschrift | maths-foundations |
+| 1211 | 9 | 1889 | Arithmetices principia, nova methodo exposita | maths-foundations |
+| 1212 | 10 | 1928 | Grundzüge der theoretischen Logik | maths-foundations |
+| 1213 | 9 | 1928 | Zum Hilbertschen Aufbau der reellen Zahlen | maths-foundations |
+| 1214 | 8 | 1925 | On the Infinite | maths-foundations |
+| 1215 | 8 | 1908 | Investigations in the foundations of set theory I | maths-foundations |
+| 1216 | 10 | 1924 | Über die Bausteine der mathematischen Logik | maths-foundations |
+| 1217 | 10 | 1930 | Grundlagen der kombinatorischen Logik | maths-foundations |
+| 1218 | 9 | 1934 | Functionality in Combinatory Logic | maths-foundations |
+| 1219 | 10 | 1930 | Die Vollständigkeit der Axiome des logischen Funktionenkalküls | maths-foundations |
+| 1220 | 10 | 1931 | Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Sy... | maths-foundations |
+| 1221 | 9 | 1940 | The Consistency of the Axiom of Choice and of the Generalized Continuum Hypot... | maths-foundations |
+| 1222 | 9 | 1958 | Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes | maths-foundations |
+| 1223 | 8 | 1933 | Eine Interpretation des intuitionistischen Aussagenkalküls | maths-foundations |
+| 1224 | 8 | 1933 | Zur intuitionistischen Arithmetik und Zahlentheorie | maths-foundations |
+| 1225 | 9 | 1934 | On Undecidable Propositions of Formal Mathematical Systems | maths-foundations |
+| 1226 | 10 | 1936 | An Unsolvable Problem of Elementary Number Theory | maths-foundations |
+| 1227 | 10 | 1936 | A Note on the Entscheidungsproblem | maths-foundations |
+| 1228 | 8 | 1936 | Correction to A Note on the Entscheidungsproblem | maths-foundations |
+| 1229 | 10 | 1940 | A Formulation of the Simple Theory of Types | maths-foundations |
+| 1230 | 10 | 1941 | The Calculi of Lambda-Conversion | maths-foundations |
+| 1231 | 9 | 1932 | A Set of Postulates for the Foundation of Logic | maths-foundations |
+| 1232 | 8 | 1933 | A Set of Postulates for the Foundation of Logic (second paper) | maths-foundations |
+| 1233 | 9 | 1937 | Review of Turing: On Computable Numbers (Church–Turing thesis framing) | maths-foundations |
+| 1234 | 10 | 1936 | On Computable Numbers, with an Application to the Entscheidungsproblem | maths-foundations |
+| 1235 | 8 | 1937 | On Computable Numbers, with an Application to the Entscheidungsproblem. A Cor... | maths-foundations |
+| 1236 | 10 | 1937 | Computability and λ-Definability | maths-foundations |
+| 1237 | 10 | 1939 | Systems of Logic Based on Ordinals | maths-foundations |
+| 1238 | 10 | 1950 | Computing Machinery and Intelligence | agents |
+| 1239 | 9 | 1948 | Intelligent Machinery | agents |
+| 1240 | 9 | 1946 | Proposal for Development in the Mathematics Division of an Automatic Computin... | systems |
+| 1241 | 9 | 1949 | Checking a Large Routine | languages |
+| 1242 | 10 | 1936 | General recursive functions of natural numbers | maths-foundations |
+| 1243 | 9 | 1936 | λ-definability and recursiveness | maths-foundations |
+| 1244 | 8 | 1938 | On notation for ordinal numbers | maths-foundations |
+| 1245 | 9 | 1943 | Recursive predicates and quantifiers | maths-foundations |
+| 1246 | 10 | 1952 | Introduction to Metamathematics | maths-foundations |
+| 1247 | 10 | 1936 | Finite Combinatory Processes—Formulation I | maths-foundations |
+| 1248 | 9 | 1943 | Formal reductions of the general combinatorial decision problem | maths-foundations |
+| 1249 | 10 | 1944 | Recursively enumerable sets of positive integers and their decision problems | maths-foundations |
+| 1250 | 9 | 1947 | Recursive Unsolvability of a Problem of Thue | maths-foundations |
+| 1251 | 9 | 1954 | Degrees of Recursive Unsolvability | maths-foundations |
+| 1252 | 9 | 1957 | Two recursively enumerable sets of incomparable degrees of unsolvability | maths-foundations |
+| 1253 | 9 | 1956 | On the unsolvability of the problem of reducibility of the theory of algorithms | maths-foundations |
+| 1254 | 10 | 1945 | First Draft of a Report on the EDVAC | systems |
+| 1255 | 10 | 1946 | Preliminary Discussion of the Logical Design of an Electronic Computing Instr... | systems |
+| 1256 | 9 | 1947 | Planning and Coding of Problems for an Electronic Computing Instrument | languages |
+| 1257 | 10 | 1951 | The General and Logical Theory of Automata | maths-foundations |
+| 1258 | 10 | 1966 | Theory of Self-Reproducing Automata | maths-foundations |
+| 1259 | 9 | 1956 | Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable ... | systems |
+| 1260 | 9 | 1958 | The Computer and the Brain | agents |
+| 1261 | 8 | 1951 | Various techniques used in connection with random digits | systems |
+| 1262 | 8 | 1928 | Zur Theorie der Gesellschaftsspiele | game-ai |
+| 1263 | 8 | 1944 | Theory of Games and Economic Behavior | game-ai |
+| 1264 | 10 | 1938 | A Symbolic Analysis of Relay and Switching Circuits | systems |
+| 1265 | 9 | 1949 | The Mathematical Theory of Communication | maths-foundations |
+| 1266 | 9 | 1949 | Communication Theory of Secrecy Systems | systems |
+| 1267 | 8 | 1949 | Communication in the Presence of Noise | systems |
+| 1268 | 8 | 1949 | The Synthesis of Two-Terminal Switching Circuits | systems |
+| 1269 | 9 | 1951 | Prediction and Entropy of Printed English | agents |
+| 1270 | 10 | 1948 | Cybernetics: Or Control and Communication in the Animal and the Machine | agents |
+| 1271 | 8 | 1950 | The Human Use of Human Beings | agents |
+| 1272 | 9 | 1949 | Extrapolation, Interpolation, and Smoothing of Stationary Time Series | systems |
+| 1273 | 9 | 1943 | Behavior, Purpose and Teleology | agents |
+| 1274 | 10 | 1943 | A Logical Calculus of the Ideas Immanent in Nervous Activity | agents |
+| 1275 | 8 | 1947 | How We Know Universals: The Perception of Auditory and Visual Forms | agents |
+| 1276 | 9 | 1949 | The Organization of Behavior | agents |
+| 1277 | 8 | 1949 | Notes on Digital Coding | systems |
+| 1278 | 9 | 1952 | The Education of a Computer | languages |
+| 1279 | 9 | 1951 | The Preparation of Programs for an Electronic Digital Computer | languages |
+| 1280 | 9 | 1948 | Über den allgemeinen Plankalkül als Mittel zur Formulierung schematisch-kombi... | languages |
+| 1281 | 8 | 1940 | Computing Machine for the Solution of Large Systems of Linear Algebraic Equat... | systems |
+| 1282 | 9 | 1959 | Programs with Common Sense | agents |
+| 1283 | 9 | 1963 | A Basis for a Mathematical Theory of Computation | languages |
+| 1284 | 8 | 1962 | Towards a Mathematical Science of Computation | languages |
+| 1285 | 10 | 1956 | The Logic Theory Machine: A Complex Information Processing System | agents |
+| 1286 | 10 | 1959 | Report on a General Problem-Solving Program | agents |
+| 1287 | 9 | 1958 | Elements of a Theory of Human Problem Solving | agents |
+| 1288 | 9 | 1976 | Computer Science as Empirical Inquiry: Symbols and Search | agents |
+| 1289 | 10 | 1968 | Go To Statement Considered Harmful | languages |
+| 1290 | 10 | 1968 | The Structure of the 'THE'-Multiprogramming System | systems |
+| 1291 | 9 | 1970 | Notes on Structured Programming | languages |
+| 1292 | 9 | 1976 | A Discipline of Programming | languages |
+| 1293 | 9 | 1972 | Proof of Correctness of Data Representations | languages |
+| 1294 | 9 | 1957 | Syntactic Structures | languages |
+| 1295 | 10 | 1959 | On Certain Formal Properties of Grammars | languages |
+| 1296 | 10 | 1965 | Three Approaches to the Quantitative Definition of Information | maths-foundations |
+| 1297 | 9 | 1966 | On the Length of Programs for Computing Finite Binary Sequences | maths-foundations |
+| 1298 | 9 | 1964 | A Formal Theory of Inductive Inference, Parts I–II | agents |
+| 1299 | 9 | 1966 | The Definition of Random Sequences | maths-foundations |
+| 1300 | 10 | 1970 | Outline of a Mathematical Theory of Computation | languages |
+| 1301 | 9 | 1965 | A Correspondence Between ALGOL 60 and Church's Lambda-Notation | languages |
+| 1302 | 8 | 1956 | Gedanken-Experiments on Sequential Machines | languages |
+| 1303 | 8 | 1955 | A Method for Synthesizing Sequential Circuits | systems |
+| 1304 | 10 | 1957 | The FORTRAN Automatic Coding System | languages |
+| 1305 | 10 | 1960 | Report on the Algorithmic Language ALGOL 60 | languages |
+| 1306 | 9 | 1959 | The Syntax and Semantics of the Proposed International Algebraic Language of ... | languages |
+| 1307 | 9 | 1966 | Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules | languages |
+
+
+## Perfects systems (`perfects-systems-2026-08-13`)
+
+79 canonical systems/DB/graphics/networking classics (cards 1088–1166). Primary lineage `systems-classics`; graphics → `gpu-driven-rendering`; bakery/Peterson → `concurrent-data-structures`.
+
+| # | Score | Year | Title | Pool | Lineage |
+|---|------:|-----:|-------|------|--------|
+| 1088 | 9 | 1975 | An Introduction to Database Systems | systems | systems-classics |
+| 1089 | 10 | 1976 | System R: Relational Approach to Database Management | systems | systems-classics |
+| 1090 | 10 | 1979 | Access Path Selection in a Relational Database Management System | systems | systems-classics |
+| 1091 | 10 | 1976 | The Design and Implementation of INGRES | systems | systems-classics |
+| 1092 | 10 | 1986 | The Design of POSTGRES | systems | systems-classics |
+| 1093 | 10 | 1992 | ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locki | systems | systems-classics |
+| 1094 | 10 | 1976 | The Notions of Consistency and Predicate Locks in a Database System | systems | systems-classics |
+| 1095 | 9 | 1981 | On Optimistic Methods for Concurrency Control | systems | systems-classics |
+| 1096 | 10 | 1981 | The Transaction Concept: Virtues and Limitations | systems | systems-classics |
+| 1097 | 10 | 1981 | Concurrency Control in Distributed Database Systems | systems | systems-classics |
+| 1098 | 9 | 2000 | Towards Robust Distributed Systems (PODC Keynote) | systems | systems-classics |
+| 1099 | 10 | 2002 | Brewer's Conjecture and the Feasibility of Consistent, Available, Part | systems | systems-classics |
+| 1100 | 8 | 2008 | BASE: An Acid Alternative | systems | systems-classics |
+| 1101 | 10 | 1974 | The UNIX Time-Sharing System | systems | systems-classics |
+| 1102 | 9 | 1977 | A Commentary on the Sixth Edition UNIX Operating System | systems | systems-classics |
+| 1103 | 10 | 1984 | End-to-End Arguments in System Design | systems | systems-classics |
+| 1104 | 10 | 1983 | Hints for Computer System Design | systems | systems-classics |
+| 1105 | 9 | 1965 | Introduction and Overview of the Multics System | systems | systems-classics |
+| 1106 | 10 | 1974 | Monitors: An Operating System Structuring Concept | systems | systems-classics |
+| 1107 | 9 | 1986 | Mach: A New Kernel Foundation for UNIX Development | systems | systems-classics |
+| 1108 | 10 | 1995 | On Micro-Kernel Construction | systems | systems-classics |
+| 1109 | 10 | 2003 | Xen and the Art of Virtualization | systems | systems-classics |
+| 1110 | 9 | 1984 | A Fast File System for UNIX | systems | systems-classics |
+| 1111 | 9 | 1995 | Exokernel: An Operating System Architecture for Application-Level Reso | systems | systems-classics |
+| 1112 | 9 | 1991 | Scheduler Activations: Effective Kernel Support for the User-Level Man | systems | systems-classics |
+| 1113 | 8 | 1997 | Disco: Running Commodity Operating Systems on Scalable Multiprocessors | systems | systems-classics |
+| 1114 | 10 | 1976 | Ethernet: Distributed Packet Switching for Local Computer Networks | systems | systems-classics |
+| 1115 | 10 | 1974 | A Protocol for Packet Network Intercommunication | systems | systems-classics |
+| 1116 | 10 | 1981 | Internet Protocol (RFC 791) | systems | systems-classics |
+| 1117 | 10 | 1981 | Transmission Control Protocol (RFC 793) | systems | systems-classics |
+| 1118 | 10 | 1988 | Congestion Avoidance and Control | systems | systems-classics |
+| 1119 | 9 | 1988 | The Design Philosophy of the DARPA Internet Protocols | systems | systems-classics |
+| 1120 | 9 | 1984 | Implementing Remote Procedure Calls | systems | systems-classics |
+| 1121 | 8 | 1993 | Random Early Detection Gateways for Congestion Avoidance | systems | systems-classics |
+| 1122 | 10 | 1988 | A Case for Redundant Arrays of Inexpensive Disks (RAID) | systems | systems-classics |
+| 1123 | 10 | 1992 | The Design and Implementation of a Log-Structured File System | systems | systems-classics |
+| 1124 | 9 | 1974 | A New Solution of Dijkstra's Concurrent Programming Problem | systems | concurrent-data-structures |
+| 1125 | 9 | 1981 | Myths About the Mutual Exclusion Problem | systems | concurrent-data-structures |
+| 1126 | 10 | 1985 | Impossibility of Distributed Consensus with One Faulty Process | systems | systems-classics |
+| 1127 | 8 | 1990 | Why Aren't Operating Systems Getting Faster As Fast As Hardware? | systems | systems-classics |
+| 1128 | 9 | 1985 | Design and Implementation of the Sun Network Filesystem | systems | systems-classics |
+| 1129 | 8 | 1971 | System Deadlocks | systems | systems-classics |
+| 1130 | 9 | 1968 | The Working Set Model for Program Behavior | systems | systems-classics |
+| 1131 | 9 | 1966 | A Study of Replacement Algorithms for a Virtual-Storage Computer | systems | systems-classics |
+| 1132 | 10 | 1990 | Computer Architecture: A Quantitative Approach | systems | systems-classics |
+| 1133 | 10 | 1967 | An Efficient Algorithm for Exploiting Multiple Arithmetic Units | systems | systems-classics |
+| 1134 | 10 | 1967 | Validity of the Single Processor Approach to Achieving Large Scale Com | systems | systems-classics |
+| 1135 | 10 | 1975 | The Mythical Man-Month: Essays on Software Engineering | systems | systems-classics |
+| 1136 | 9 | 1968 | How Do Committees Invent? | systems | systems-classics |
+| 1137 | 10 | 1963 | Sketchpad: A Man-Machine Graphical Communication System | graphics | gpu-driven-rendering |
+| 1138 | 9 | 1965 | The Ultimate Display | graphics | gpu-driven-rendering |
+| 1139 | 9 | 1968 | A Head-Mounted Three Dimensional Display | graphics | gpu-driven-rendering |
+| 1140 | 9 | 1990 | Computer Graphics: Principles and Practice | graphics | gpu-driven-rendering |
+| 1141 | 9 | 1965 | Algorithm for Computer Control of a Digital Plotter | graphics | gpu-driven-rendering |
+| 1142 | 8 | 1974 | Reentrant Polygon Clipping | graphics | gpu-driven-rendering |
+| 1143 | 9 | 1969 | A Hidden Surface Algorithm for Computer Generated Halftone Pictures | graphics | gpu-driven-rendering |
+| 1144 | 8 | 1974 | A Characterization of Ten Hidden-Surface Algorithms | graphics | gpu-driven-rendering |
+| 1145 | 10 | 1974 | A Subdivision Algorithm for Computer Display of Curved Surfaces | graphics | gpu-driven-rendering |
+| 1146 | 10 | 1978 | Recursively Generated B-Spline Surfaces on Arbitrary Topological Meshe | graphics | gpu-driven-rendering |
+| 1147 | 8 | 1987 | Smooth Subdivision Surfaces Based on Triangles | graphics | gpu-driven-rendering |
+| 1148 | 8 | 1978 | Behaviour of Recursive Division Surfaces Near Extraordinary Points | graphics | gpu-driven-rendering |
+| 1149 | 10 | 1977 | Models of Light Reflection for Computer Synthesized Pictures | graphics | gpu-driven-rendering |
+| 1150 | 9 | 1976 | Texture and Reflection in Computer Generated Images | graphics | gpu-driven-rendering |
+| 1151 | 9 | 1971 | Continuous Shading of Curved Surfaces | graphics | gpu-driven-rendering |
+| 1152 | 10 | 1975 | Illumination for Computer Generated Pictures | graphics | gpu-driven-rendering |
+| 1153 | 10 | 1980 | An Improved Illumination Model for Shaded Display | graphics | gpu-driven-rendering |
+| 1154 | 10 | 1982 | A Reflectance Model for Computer Graphics | graphics | gpu-driven-rendering |
+| 1155 | 9 | 1984 | Distributed Ray Tracing | graphics | gpu-driven-rendering |
+| 1156 | 9 | 1987 | The Reyes Image Rendering Architecture | graphics | gpu-driven-rendering |
+| 1157 | 10 | 1984 | Compositing Digital Images | graphics | gpu-driven-rendering |
+| 1158 | 8 | 1995 | Image Compositing Fundamentals | graphics | gpu-driven-rendering |
+| 1159 | 9 | 1986 | Survey of Texture Mapping | graphics | gpu-driven-rendering |
+| 1160 | 9 | 1988 | Display of Surfaces from Volume Data | graphics | gpu-driven-rendering |
+| 1161 | 10 | 1987 | Marching Cubes: A High Resolution 3D Surface Construction Algorithm | graphics | gpu-driven-rendering |
+| 1162 | 9 | 1978 | Casting Curved Shadows on Curved Surfaces | graphics | gpu-driven-rendering |
+| 1163 | 8 | 1977 | Shadow Algorithms for Computer Graphics | graphics | gpu-driven-rendering |
+| 1164 | 8 | 1968 | Some Techniques for Shading Machine Renderings of Solids | graphics | gpu-driven-rendering |
+| 1165 | 9 | 1982 | The Geometry Engine: A VLSI Geometry System for Graphics | graphics | gpu-driven-rendering |
+| 1166 | 8 | 1984 | The A-buffer, an Antialiased Hidden Surface Method | graphics | gpu-driven-rendering |

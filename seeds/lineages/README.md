@@ -15,6 +15,7 @@ Current deep epistemologies (2026-08-13):
 - `ecs-data-oriented` — ECS & data-oriented design
 - `radiance-cascades` — Radiance Cascades & real-time GI
 - `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
+- `type-safety` — Type systems & type safety (gradual, liquid, RustBelt, sessions, Wasm, …)
 
 Medium threads (shallow scan 2026-08-13):
 - `pathfinding` — Grid & navmesh pathfinding
@@ -41,8 +42,7 @@ Medium threads (shallow scan 2026-08-13):
 
 Deep foundations thread (2026-08-13):
 - `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
+- to1000 remint `to1000-foundations-2026-08-13` at **1208–1307** (998–1097 preempted by algorithms/type-safety).
 
-Deep PL / algorithms threads (2026-08-13):
-- `programming-language-foundations` — PL classics (System F, HM, semantics, verification roots)
-- `algorithms-and-complexity` — Algorithms, complexity, coding & crypto foundations
-
+Deep type-safety thread (2026-08-13):
+- `type-safety` — 120 cards at **1308–1427** (`to1000-type-safety-2026-08-13`, pool `languages`). Original exclusive 878–997 was preempted; HM/System F/soft-typing remain on foundations/perfects-pl shelves as external cites.
