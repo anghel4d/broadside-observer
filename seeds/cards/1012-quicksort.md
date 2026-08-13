@@ -28,7 +28,6 @@ cites:
   year: 1959
   arxiv: null
   doi: 10.1145/368370.368387
-  card: 1014-a-high-speed-sorting-procedure
 ---
 
 # Quicksort

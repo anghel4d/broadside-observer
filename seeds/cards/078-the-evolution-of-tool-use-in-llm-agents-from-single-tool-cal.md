@@ -51,7 +51,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration

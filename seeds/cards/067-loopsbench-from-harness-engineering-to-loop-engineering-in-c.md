@@ -45,7 +45,6 @@ cites:
     year: 2026
     arxiv: "2604.03964"
     doi: null
-    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
 ---
 
 # LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation

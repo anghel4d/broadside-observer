@@ -29,7 +29,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
   - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
     url: "https://arxiv.org/abs/2607.28591"
     year: 2026

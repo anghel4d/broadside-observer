@@ -44,19 +44,16 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
   - title: "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
     url: "https://arxiv.org/abs/2606.10677"
     year: 2026
     arxiv: "2606.10677"
     doi: null
-    card: "065-infini-memory-maintainable-topic-documents-for-long-term-llm"
   - title: "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory"
     url: "https://arxiv.org/abs/2606.25161"
     year: 2026
     arxiv: "2606.25161"
     doi: null
-    card: "077-trustmem-learning-trustworthy-memory-consolidation-for-llm-a"
 ---
 
 # The BrowserGym Ecosystem for Web Agent Research

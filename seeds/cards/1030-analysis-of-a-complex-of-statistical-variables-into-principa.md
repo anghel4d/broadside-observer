@@ -22,7 +22,6 @@ cites:
   year: 1936
   arxiv: null
   doi: 10.1111/j.1469-1809.1936.tb02137.x
-  card: 1031-the-use-of-multiple-measurements-in-taxonomic-problems
 ---
 
 # Analysis of a Complex of Statistical Variables into Principal Components

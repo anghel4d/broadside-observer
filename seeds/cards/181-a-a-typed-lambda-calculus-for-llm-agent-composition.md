@@ -37,7 +37,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # $λ_A$: A Typed Lambda Calculus for LLM Agent Composition

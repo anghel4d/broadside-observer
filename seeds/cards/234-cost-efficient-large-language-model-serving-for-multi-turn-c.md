@@ -37,7 +37,6 @@ cites:
     year: 2026
     arxiv: "2606.19667"
     doi: null
-    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
   - title: "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
     url: "https://arxiv.org/abs/2606.24467"
     year: 2026

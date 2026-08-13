@@ -29,13 +29,11 @@ cites:
     year: 2026
     arxiv: "2608.10037"
     doi: null
-    card: "060-docschisel-adaptive-tool-documentation-optimization-framewor"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
   - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
     url: "https://arxiv.org/abs/2505.07236"
     year: 2025

@@ -41,7 +41,6 @@ cites:
     year: 2026
     arxiv: "2604.03964"
     doi: null
-    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
 ---
 
 # Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory
