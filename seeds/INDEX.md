@@ -1057,7 +1057,7 @@ _Recount after cull-2026-08-13: **1000** unique title cards on main._
 
 ## DeepSeek lab (2026-08-13)
 
-First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF tech report). V3 already on main as [`1206`](cards/1206-deepseek-v3-technical-report.md) — not reminted; its cites now point at V2 / R1 / MoE / Math / loss-free / V3.2. New lineage: [`deepseek`](lineages/deepseek.md). Pool **agents** (1206 stays `languages`). FlashMLA is a kernel repo, not a paper. Muon optimizer is not first-party.
+First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF tech report). V3 already on main as [`1206`](cards/1206-deepseek-v3-technical-report.md) — not reminted; its cites now point at V2 / R1 / MoE / Math / loss-free / V3.2. New lineage: [`deepseek`](lineages/deepseek.md). Pool **agents** (1206 stays `languages`). FlashMLA is a kernel repo, not a paper. Muon optimizer is not first-party. **1264** is the 2026-08-13 V4-Pro-0813 GA changelog (no new arXiv; cites 2606.19348 / `1263`).
 
 | # | Title | Year | Pool | arXiv |
 |---|-------|------|------|-------|
@@ -1088,5 +1088,6 @@ First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF
 | 1261 | [Conditional Memory via Scalable Lookup (Engram)](cards/1261-engram-conditional-memory-via-scalable-lookup.md) | 2026 | agents | 2601.07372 |
 | 1262 | [DeepSeek-OCR 2: Visual Causal Flow](cards/1262-deepseek-ocr-2-visual-causal-flow.md) | 2026 | agents | 2601.20552 |
 | 1263 | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](cards/1263-deepseek-v4-million-token-context-intelligence.md) | 2026 | agents | 2606.19348 |
+| 1264 | [DeepSeek-V4-Pro-0813 GA](cards/1264-deepseek-v4-pro-0813-ga.md) | 2026 | agents | *(changelog, no arXiv)* |
 
-_Recount after `deepseek-lab-2026-08-13`: **1026** unique title cards on main._
+_Recount after `deepseek-lab-2026-08-13`: **1027** unique title cards on main._

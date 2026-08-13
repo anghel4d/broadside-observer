@@ -13,7 +13,7 @@ V3 (card `1206`) was minted earlier in the categorical-deep-learning batch as th
 5. **Reasoning RL** — R1 / R1-Zero on V3 (`1252`); Math-V2 self-verification (`1258`).
 6. **Sparse attention** — NSA (ACL 2025 Best Paper, `1254`) → V3.2 DSA (`1259`) → V4 CSA+HCA (`1263`).
 7. **Residuals / memory** — mHC Birkhoff-constrained hyper-connections (`1260`); Engram conditional memory (`1261`).
-8. **Million-token product** — V4-Pro / V4-Flash, 1M context, Muon, mHC (`1263`). HF PDF is canonical alongside arXiv 2606.19348.
+8. **Million-token product** — V4-Pro / V4-Flash preview (`1263`, arXiv 2606.19348) → **V4-Pro-0813 GA** hosted checkpoint (`1264`, 2026-08-13 changelog, no new arXiv).
 
 ## Side branches
 
@@ -35,6 +35,7 @@ V3 (card `1206`) was minted earlier in the categorical-deep-learning batch as th
 - FlashMLA — https://github.com/deepseek-ai/FlashMLA (kernels for MLA / DSA, not a paper)
 - DualPipe / DeepEP / 3FS — infra repos under https://github.com/deepseek-ai/open-infra-index
 - Muon optimizer — Keller Jordan et al.; used by V4, not first-party DeepSeek
+- DeepSeek-V3.1 / V3.1-Terminus / V4-Flash-0731 — API changelog entries only; no first-party arXiv. V4-Pro-0813 is card `1264` because it is the GA of the flagship.
 
 ## Cards in this mint (`deepseek-lab-2026-08-13`)
 
@@ -67,3 +68,4 @@ V3 (card `1206`) was minted earlier in the categorical-deep-learning batch as th
 | 1261 | 2026 | Engram | `1261-engram-conditional-memory-via-scalable-lookup` | 2601.07372 |
 | 1262 | 2026 | DeepSeek-OCR 2 | `1262-deepseek-ocr-2-visual-causal-flow` | 2601.20552 |
 | 1263 | 2026 | DeepSeek-V4 | `1263-deepseek-v4-million-token-context-intelligence` | 2606.19348 |
+| 1264 | 2026 | DeepSeek-V4-Pro-0813 GA | `1264-deepseek-v4-pro-0813-ga` | *(changelog)* |
