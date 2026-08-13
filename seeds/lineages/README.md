@@ -38,3 +38,5 @@ Medium threads (shallow scan 2026-08-13):
 - `procedural-generation` — WFC & procedural content
 - `realtime-scheduling` — Real-time sync & scheduling
 
+Deep foundations thread (2026-08-13):
+- `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
