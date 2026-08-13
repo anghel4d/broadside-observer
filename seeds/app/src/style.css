@@ -1,26 +1,53 @@
 :root {
-  color-scheme: dark;
-  --bg: #0e1218;
-  --panel: #151a22;
-  --panel-2: #1b212c;
-  --ink: #e8edf5;
-  --muted: #a7b0c0;
-  --faint: #8b94a6;
-  --line: #2a3140;
-  --accent: #8eabc9;
-  --accent-strong: color-mix(in oklab, var(--accent) 70%, white);
+  color-scheme: light dark;
+  --bg: light-dark(#f4f6f8, #0e1218);
+  --panel: light-dark(#f7f8fa, #151a22);
+  --panel-2: light-dark(#e8edf2, #1b212c);
+  --ink: light-dark(#1a2130, #e8edf5);
+  --muted: light-dark(#5c6574, #a7b0c0);
+  --faint: light-dark(#7a8494, #8b94a6);
+  --line: light-dark(#cfd5de, #2a3140);
+  --accent: light-dark(#3b6388, #8eabc9);
+  --accent-strong: color-mix(in oklab, var(--accent) 70%, var(--ink));
   --hover: color-mix(in oklab, var(--panel-2) 86%, var(--accent));
-  --focus-ring: color-mix(in oklab, var(--accent) 80%, white);
-  --chip: #232a38;
-  --active: #243044;
-  --browse: #12171f;
+  --focus-ring: color-mix(in oklab, var(--accent) 65%, var(--ink));
+  --chip: light-dark(#e4e9f0, #232a38);
+  --active: light-dark(#d7e2ee, #243044);
+  --browse: light-dark(#eceff3, #12171f);
   --scroll-thumb: color-mix(in oklab, var(--line) 55%, var(--ink));
+  --head-shadow: light-dark(rgb(26 33 48 / 0.14), rgb(0 0 0 / 0.7));
+  --chip-topic: light-dark(#dce6f0, #1e2a3a);
+  --chip-topic-line: light-dark(#b0c4d6, #3a4d66);
+  --chip-batch: light-dark(#dde8df, #1e2a24);
+  --chip-batch-line: light-dark(#b3c6b6, #3a5348);
+  --chip-pool: light-dark(#e6e0ee, #262033);
+  --chip-pool-line: light-dark(#c4b8d2, #4a3f5e);
+  --chip-lineage: light-dark(#d7e3ee, #1a2838);
+  --chip-lineage-line: light-dark(#a8bfd4, #3d5a78);
+  --chip-rank: light-dark(#eee6dc, #2a2620);
+  --chip-rank-line: light-dark(#d0c4b4, #5a5040);
+  --chip-year: light-dark(#e4e8ee, #1c2430);
+  --chip-relevance: light-dark(#e4eadc, #242a1e);
+  --chip-relevance-line: light-dark(#c2ccb0, #4a5438);
+  --off-filter-bg: light-dark(#e7efe6, #1c241c);
+  --off-filter-line: light-dark(#b5c6b2, #3d4a3a);
+  --off-filter-ink: light-dark(#2c3d2e, #c5d4c0);
+  --off-filter-btn: light-dark(#d3e0d1, #243328);
+  --off-filter-btn-line: light-dark(#9eb09b, #4a5c4a);
   /* Canonical Cards tile. Keep in sync with cardMetrics.ts. */
   --seed-card-width: 14.5rem;
   --seed-card-height: 10.75rem;
   --seed-card-gap: 0.5rem;
   --seed-card-inset: 0.5rem;
   font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 * {
@@ -125,6 +152,8 @@ kbd {
   align-items: center;
   gap: 0.55rem;
   flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .status {
@@ -519,7 +548,7 @@ button:focus-visible {
   text-align: left;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #1c2330;
+  border-bottom: 1px solid var(--line);
   border-radius: 0;
   color: inherit;
   padding: 0.5rem 0.85rem 0.55rem 0.95rem;
@@ -763,7 +792,7 @@ button:focus-visible {
   background: var(--bg);
   padding: 0.4rem 1.15rem 0.38rem;
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 10px 14px -12px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 14px -12px var(--head-shadow);
 }
 
 .detail-head h2 {
@@ -799,9 +828,9 @@ button:focus-visible {
   gap: 0.3rem 0.55rem;
   margin: 0;
   padding: 0.28rem 0.45rem;
-  border: 1px solid #3d4a3a;
-  background: #1c241c;
-  color: #c5d4c0;
+  border: 1px solid var(--off-filter-line);
+  background: var(--off-filter-bg);
+  color: var(--off-filter-ink);
   border-radius: 6px;
   font-size: 0.78rem;
 }
@@ -822,8 +851,8 @@ button:focus-visible {
   font: inherit;
   font-size: 0.75rem;
   color: var(--ink);
-  background: #243328;
-  border: 1px solid #4a5c4a;
+  background: var(--off-filter-btn);
+  border: 1px solid var(--off-filter-btn-line);
   border-radius: 6px;
   padding: 0.22rem 0.5rem;
   cursor: pointer;
@@ -942,37 +971,37 @@ button:focus-visible {
 }
 
 .chip-topic {
-  background: #1e2a3a;
-  border-color: #3a4d66;
+  background: var(--chip-topic);
+  border-color: var(--chip-topic-line);
 }
 
 .chip-batch {
-  background: #1e2a24;
-  border-color: #3a5348;
+  background: var(--chip-batch);
+  border-color: var(--chip-batch-line);
 }
 
 .chip-pool {
-  background: #262033;
-  border-color: #4a3f5e;
+  background: var(--chip-pool);
+  border-color: var(--chip-pool-line);
 }
 
 .chip-lineage {
-  background: #1a2838;
-  border-color: #3d5a78;
+  background: var(--chip-lineage);
+  border-color: var(--chip-lineage-line);
 }
 
 .chip-rank {
-  background: #2a2620;
-  border-color: #5a5040;
+  background: var(--chip-rank);
+  border-color: var(--chip-rank-line);
 }
 
 .chip-year {
-  background: #1c2430;
+  background: var(--chip-year);
 }
 
 .chip-relevance {
-  background: #242a1e;
-  border-color: #4a5438;
+  background: var(--chip-relevance);
+  border-color: var(--chip-relevance-line);
 }
 
 .chip-venue {
@@ -983,13 +1012,13 @@ a.chip-lineage-doc,
 a.chip-see {
   text-decoration: none;
   cursor: pointer;
-  background: #1a2838;
-  border-color: #3d5a78;
+  background: var(--chip-lineage);
+  border-color: var(--chip-lineage-line);
 }
 
 a.chip-see:hover {
   border-color: var(--accent);
-  background: color-mix(in oklab, #1a2838 80%, var(--accent));
+  background: color-mix(in oklab, var(--chip-lineage) 80%, var(--accent));
 }
 
 .cites {
@@ -1079,6 +1108,7 @@ a.chip-see:hover {
   font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
   font-size: 0.86em;
   background: var(--panel-2);
+  border: 1px solid var(--line);
   padding: 0.05rem 0.28rem;
   border-radius: 4px;
 }

@@ -57,6 +57,7 @@ import {
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
+import { bindThemeControls, readStoredTheme, resolveTheme, THEME_MEDIA, type ThemeMode } from "./theme.ts";
 import type { Slice } from "./virtualize.ts";
 import {
   browserStorage,
@@ -308,10 +309,11 @@ function lineageSelectValue(filter: LineageFilter): string {
   }
 }
 
-function shellHtml(corpus: Corpus, view: ViewMode): string {
+function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
   const listOn = view === "list";
+  const lightOn = theme === "light";
   return `
     <header class="topbar">
       <div class="brand">
@@ -322,6 +324,10 @@ function shellHtml(corpus: Corpus, view: ViewMode): string {
         <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
           <button type="button" role="radio" data-view="list" aria-checked="${listOn ? "true" : "false"}">List</button>
           <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
+        </div>
+        <div class="seg" id="theme-toggle" role="radiogroup" aria-label="Theme">
+          <button type="button" role="radio" data-theme="light" aria-checked="${lightOn ? "true" : "false"}">Light</button>
+          <button type="button" role="radio" data-theme="dark" aria-checked="${lightOn ? "false" : "true"}">Dark</button>
         </div>
         <p class="status" id="status"></p>
       </div>
@@ -692,7 +698,12 @@ function rootRem(): number {
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
   const initialView = resolveView(location.search, storage);
-  root.innerHTML = shellHtml(corpus, initialView);
+  const initialTheme = resolveTheme(
+    readStoredTheme(storage),
+    window.matchMedia(THEME_MEDIA).matches,
+  );
+  root.innerHTML = shellHtml(corpus, initialView, initialTheme);
+  bindThemeControls(root, storage);
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
