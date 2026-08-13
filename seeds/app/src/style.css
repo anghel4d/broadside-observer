@@ -337,24 +337,31 @@ button:focus-visible {
 }
 
 .workspace {
+  --split-gutter: 6px;
+  --browse-min: 17rem;
+  --detail-min: 19rem;
+  /* List default: 24rem browse rail, detail takes the rest. */
+  --detail-width: calc(100% - 24rem - var(--split-gutter));
   flex: 1 1 0;
   min-height: 0;
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(18rem, 24rem) minmax(0, 1fr);
+  grid-template-columns: minmax(var(--browse-min), 1fr) var(--split-gutter) minmax(var(--detail-min), var(--detail-width));
   overflow: hidden;
   position: relative;
 }
 
 .workspace[data-view="cards"] {
-  /* 24rem detail left only ~658px browse at 1042px (2 columns). Cap detail at
-     18rem so browse is ~754px and 14.5rem tracks land 3 columns. */
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 18rem);
+  /* Wider than the old 16–18rem rail so Cards detail is readable; JS further
+     tunes 42% of the workspace clamped to 28–34rem. */
+  --detail-width: 32rem;
 }
 
 .workspace[data-focus="detail"],
 .workspace[data-view="cards"][data-focus="detail"] {
-  grid-template-columns: minmax(14rem, 20rem) minmax(0, 1fr);
+  --browse-min: 14rem;
+  --detail-min: 22rem;
+  --detail-width: calc(100% - 20rem - var(--split-gutter));
 }
 
 .browse-pane,
@@ -383,10 +390,79 @@ button:focus-visible {
 }
 
 .browse-pane {
-  border-right: 1px solid var(--line);
   background: var(--browse);
   container-type: inline-size;
   container-name: browse;
+}
+
+.pane-split {
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: col-resize;
+  position: relative;
+  z-index: 4;
+  touch-action: none;
+  user-select: none;
+  flex: 0 0 auto;
+}
+
+.pane-split[hidden] {
+  display: none;
+}
+
+.pane-split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--line);
+}
+
+.pane-split::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -4px;
+  right: -4px;
+}
+
+.pane-split:hover,
+.pane-split:focus-visible,
+.workspace.is-resizing > .pane-split {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.pane-split:hover::before,
+.pane-split:focus-visible::before,
+.workspace.is-resizing > .pane-split::before {
+  width: 3px;
+  background: var(--accent);
+}
+
+.pane-split:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.workspace.is-resizing {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.workspace.is-resizing > .browse-pane,
+.workspace.is-resizing > .detail-pane {
+  pointer-events: none;
 }
 
 .detail-pane {
@@ -965,24 +1041,29 @@ a.chip-lineage-doc {
 
 /* Compact: 980px matches COMPACT_MAX_PX in layout.ts. List stacks; Cards uses a sheet. */
 @media (max-width: 980px) {
-  .workspace {
+  .workspace,
+  .workspace[data-view="cards"],
+  .workspace[data-focus="detail"],
+  .workspace[data-view="cards"][data-focus="detail"] {
+    --detail-width: auto;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(8rem, 38%) minmax(0, 1fr);
   }
 
   .workspace[data-focus="detail"] {
-    grid-template-columns: 1fr;
     grid-template-rows: minmax(5.5rem, 22%) minmax(0, 1fr);
   }
 
   .workspace[data-view="cards"],
   .workspace[data-view="cards"][data-focus="detail"] {
-    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
   }
 
+  .pane-split {
+    display: none;
+  }
+
   .browse-pane {
-    border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
