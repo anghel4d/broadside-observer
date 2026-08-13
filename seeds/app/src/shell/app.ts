@@ -41,7 +41,13 @@ import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
 import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
 import { attr, escapeHtml } from "./html.ts";
-import { readStoredDetailFocus, writeStoredDetailFocus } from "./layout.ts";
+import {
+  COMPACT_MEDIA,
+  isCardsSheetLayout,
+  isCardsSheetVisible,
+  readStoredDetailFocus,
+  writeStoredDetailFocus,
+} from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
 import type { Slice } from "./virtualize.ts";
@@ -60,6 +66,7 @@ type Model = {
   readonly route: Route;
   readonly view: ViewMode;
   readonly detailFocus: boolean;
+  readonly cardsSheet: boolean;
 };
 
 type Msg =
@@ -73,6 +80,7 @@ type Msg =
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
   | { readonly _tag: "SetDetailFocus"; readonly value: boolean }
+  | { readonly _tag: "SetCardsSheet"; readonly value: boolean }
   | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
@@ -95,6 +103,7 @@ type ViewModel = {
   readonly offFilter: boolean;
   readonly view: ViewMode;
   readonly detailFocus: boolean;
+  readonly cardsSheet: boolean;
   readonly corpus: Corpus;
   readonly query: Query;
 };
@@ -108,13 +117,21 @@ type Paint = {
 };
 
 function init(corpus: Corpus, hash: string, view: ViewMode, detailFocus: boolean): Model {
+  const route = parseRoute(hash);
   return {
     corpus,
     query: defaultQuery,
-    route: parseRoute(hash),
+    route,
     view,
     detailFocus,
+    cardsSheet: view === "cards" && route._tag === "Card",
   };
+}
+
+function selectCard(model: Model, id: CardId): Model {
+  const sheet = model.view === "cards" ? true : model.cardsSheet;
+  if (routeId(model.route) === id && model.cardsSheet === sheet) return model;
+  return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet };
 }
 
 function update(model: Model, msg: Msg): Model {
@@ -136,26 +153,28 @@ function update(model: Model, msg: Msg): Model {
     case "SetSort":
       return { ...model, query: { ...model.query, sort: msg.sort } };
     case "SetView":
-      return model.view === msg.view ? model : { ...model, view: msg.view };
+      return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
     case "SetDetailFocus":
       return model.detailFocus === msg.value ? model : { ...model, detailFocus: msg.value };
+    case "SetCardsSheet":
+      return model.cardsSheet === msg.value ? model : { ...model, cardsSheet: msg.value };
     case "ClearFilter":
       return { ...model, query: clearFilter(model.query, msg.key) };
     case "Reset":
       return { ...model, query: defaultQuery };
     case "Select":
-      return routeId(model.route) === msg.id ? model : { ...model, route: { _tag: "Card", id: msg.id } };
+      return selectCard(model, msg.id);
     case "SelectFirst": {
       const visible = applyQuery(model.corpus, model.query);
       const first = visible[0];
       if (first === undefined) return model;
-      return routeId(model.route) === first.id ? model : { ...model, route: { _tag: "Card", id: first.id } };
+      return selectCard(model, first.id);
     }
     case "JumpRank": {
       const visible = applyQuery(model.corpus, model.query);
       const hit = findCardByRank(visible, model.corpus.cards, msg.rank);
       if (hit === null) return model;
-      return routeId(model.route) === hit.id ? model : { ...model, route: { _tag: "Card", id: hit.id } };
+      return selectCard(model, hit.id);
     }
     case "Move": {
       const visible = applyQuery(model.corpus, model.query);
@@ -186,8 +205,14 @@ function update(model: Model, msg: Msg): Model {
       if (next === undefined || next.id === currentId) return model;
       return { ...model, route: { _tag: "Card", id: next.id } };
     }
-    case "Hash":
-      return { ...model, route: parseRoute(msg.hash) };
+    case "Hash": {
+      const route = parseRoute(msg.hash);
+      return {
+        ...model,
+        route,
+        cardsSheet: route._tag === "Card" && model.view === "cards" ? true : model.cardsSheet,
+      };
+    }
     default:
       return assertNever(msg);
   }
@@ -202,6 +227,7 @@ function project(model: Model): ViewModel {
     offFilter: state._tag === "OffFilter",
     view: model.view,
     detailFocus: model.detailFocus,
+    cardsSheet: model.cardsSheet,
     corpus: model.corpus,
     query: model.query,
   };
@@ -364,7 +390,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string
       <button type="button" class="reset" id="reset">Reset</button>
     </div>
     <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
-    <div class="workspace" id="workspace" data-view="${attr(view)}" data-focus="${detailFocus ? "detail" : "browse"}">
+    <div class="workspace" id="workspace" data-view="${attr(view)}" data-focus="${detailFocus ? "detail" : "browse"}" data-sheet="closed">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
     </div>
@@ -526,7 +552,7 @@ function renderDetail(
     const message = visibleCount === 0
       ? "No cards match the current filters."
       : "Select a card from the list.";
-    return `<div class="empty-detail"><p>${escapeHtml(message)}</p></div>`;
+    return `<div class="reading-col"><div class="empty-detail"><p>${escapeHtml(message)}</p></div></div>`;
   }
 
   const firstAction =
@@ -583,22 +609,25 @@ function renderDetail(
   ).join("");
 
   return `
-    <article class="detail">
-      <header class="detail-head">
-        ${banner}
-        <h2 title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
-      </header>
-      <div class="detail-body">
-        <p class="detail-id">${escapeHtml(card.id)}</p>
-        <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
-        <p class="ids">${identifiers}</p>
-        <div class="chips chips-topics">${topicChips}</div>
-        <p class="provenance">${provenance}</p>
-        ${renderCites(card, corpus)}
-        ${sections}
-        <p class="reviewed">Reviewed ${escapeHtml(card.reviewed)}</p>
-      </div>
-    </article>
+    <div class="reading-col">
+      <article class="detail">
+        <header class="detail-head">
+          <button type="button" class="detail-dismiss" data-sheet="close" title="Back to grid (Esc)" aria-keyshortcuts="Escape">Back to grid</button>
+          ${banner}
+          <h2 id="detail-title" title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
+        </header>
+        <div class="detail-body">
+          <p class="detail-id">${escapeHtml(card.id)}</p>
+          <p class="authors" title="${attr(card.authors.join(" · "))}">${escapeHtml(card.authors.join(" · "))}</p>
+          <p class="ids">${identifiers}</p>
+          <div class="chips chips-topics">${topicChips}</div>
+          <p class="provenance">${provenance}</p>
+          ${renderCites(card, corpus)}
+          ${sections}
+          <p class="reviewed">Reviewed ${escapeHtml(card.reviewed)}</p>
+        </div>
+      </article>
+    </div>
   `;
 }
 
@@ -665,15 +694,55 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   let model = init(corpus, location.hash, initialView, initialFocus);
   let painted: Paint | null = null;
   let filtersOpen = false;
-  const narrowFilters = window.matchMedia("(max-width: 980px)");
+  let sheetWasVisible = false;
+  const compactLayout = window.matchMedia(COMPACT_MEDIA);
 
   const syncFilterDisclosure = (): void => {
-    const narrow = narrowFilters.matches;
+    const narrow = compactLayout.matches;
     const showFields = !narrow || filtersOpen;
     filterFields.toggleAttribute("hidden", !showFields);
     chrome.classList.toggle("is-filters-open", filtersOpen);
     filtersToggle.setAttribute("aria-expanded", filtersOpen ? "true" : "false");
     filtersToggle.hidden = !narrow;
+  };
+
+  const syncSheetChrome = (vm: ViewModel, detailHadFocus: boolean): void => {
+    const compact = compactLayout.matches;
+    const sheetLayout = isCardsSheetLayout(vm.view, compact);
+    const sheetVisible = isCardsSheetVisible({
+      view: vm.view,
+      compact,
+      sheetOpen: vm.cardsSheet,
+      hasSelection: vm.selected !== null,
+    });
+    workspace.dataset.sheet = sheetVisible ? "open" : "closed";
+    if (sheetVisible) {
+      detail.setAttribute("role", "dialog");
+      detail.setAttribute("aria-modal", "true");
+      detail.setAttribute("aria-labelledby", "detail-title");
+      detail.removeAttribute("aria-hidden");
+    } else {
+      detail.removeAttribute("role");
+      detail.removeAttribute("aria-modal");
+      detail.removeAttribute("aria-labelledby");
+      if (sheetLayout) detail.setAttribute("aria-hidden", "true");
+      else detail.removeAttribute("aria-hidden");
+    }
+    detail.toggleAttribute("inert", sheetLayout && !sheetVisible);
+    browse.toggleAttribute("inert", sheetVisible);
+    const active = document.activeElement;
+    const focusInDetail = active instanceof Node && detail.contains(active);
+    if (sheetVisible && !sheetWasVisible) {
+      const closeBtn = detail.querySelector(".detail-dismiss");
+      if (closeBtn instanceof HTMLButtonElement) closeBtn.focus();
+    } else if (sheetVisible && detailHadFocus && !focusInDetail) {
+      const closeBtn = detail.querySelector(".detail-dismiss");
+      if (closeBtn instanceof HTMLButtonElement) closeBtn.focus();
+    } else if (!sheetVisible && sheetWasVisible) {
+      const selected = browse.querySelector("[data-id].is-active");
+      if (selected instanceof HTMLElement) selected.focus();
+    }
+    sheetWasVisible = sheetVisible;
   };
 
   const syncFilterControls = (query: Query): void => {
@@ -718,6 +787,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       });
     }
 
+    const detailHadFocus = detail.contains(document.activeElement);
     if (
       prev === null ||
       prev.detail !== detailId ||
@@ -726,6 +796,8 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     ) {
       detail.innerHTML = renderDetail(vm.selected, vm.corpus, vm.offFilter, vm.visible.length);
     }
+
+    syncSheetChrome(vm, detailHadFocus);
 
     painted = {
       detail: detailId,
@@ -854,6 +926,11 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (id !== null) dispatch({ _tag: "Select", id });
   });
   detail.addEventListener("click", (event) => {
+    const dismiss = (event.target instanceof Element ? event.target : null)?.closest("button[data-sheet]");
+    if (dismiss instanceof HTMLButtonElement && dismiss.dataset.sheet === "close") {
+      dispatch({ _tag: "SetCardsSheet", value: false });
+      return;
+    }
     const off = (event.target instanceof Element ? event.target : null)?.closest("button[data-off]");
     if (off instanceof HTMLButtonElement) {
       if (off.dataset.off === "clear") dispatch({ _tag: "Reset" });
@@ -897,6 +974,17 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
         if (event.target instanceof HTMLElement) event.target.blur();
         return;
       }
+      if (
+        isCardsSheetVisible({
+          view: model.view,
+          compact: compactLayout.matches,
+          sheetOpen: model.cardsSheet,
+          hasSelection: routeId(model.route) !== null,
+        })
+      ) {
+        dispatch({ _tag: "SetCardsSheet", value: false });
+        return;
+      }
       if (model.query.search.trim() !== "") {
         queryInput.value = "";
         dispatch({ _tag: "SetSearch", value: "" });
@@ -936,6 +1024,17 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
         return;
       }
     }
+    if (
+      event.key === "Enter" &&
+      model.view === "cards" &&
+      compactLayout.matches &&
+      !model.cardsSheet &&
+      routeId(model.route) !== null
+    ) {
+      event.preventDefault();
+      dispatch({ _tag: "SetCardsSheet", value: true });
+      return;
+    }
     if (model.view === "cards") {
       const dir = gridDirFromKey(event.key);
       if (dir !== null) {
@@ -956,10 +1055,17 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   window.addEventListener("hashchange", () => {
     dispatch({ _tag: "Hash", hash: location.hash });
   });
-  if (typeof narrowFilters.addEventListener === "function") {
-    narrowFilters.addEventListener("change", syncFilterDisclosure);
+  const onCompactChange = (): void => {
+    syncFilterDisclosure();
+    if (compactLayout.matches && model.view === "cards" && routeId(model.route) !== null) {
+      dispatch({ _tag: "SetCardsSheet", value: true });
+    }
+    patch(model);
+  };
+  if (typeof compactLayout.addEventListener === "function") {
+    compactLayout.addEventListener("change", onCompactChange);
   } else {
-    narrowFilters.addListener(syncFilterDisclosure);
+    compactLayout.addListener(onCompactChange);
   }
 
   syncFilterDisclosure();
