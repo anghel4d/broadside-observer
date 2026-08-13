@@ -42,20 +42,18 @@ import { debounce } from "./debounce.ts";
 import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
 import { attr, escapeHtml } from "./html.ts";
 import {
+  BROWSE_MIN_REM,
   COMPACT_MEDIA,
+  DETAIL_MIN_REM,
   SPLIT_GUTTER_PX,
-  browseMinRem,
   clearStoredDetailWidth,
   clampDetailWidthPx,
-  detailMinRem,
   isCardsSheetLayout,
   isCardsSheetVisible,
   isSideSplitLayout,
   paneSplitKey,
-  readStoredDetailFocus,
   readStoredDetailWidth,
   resolveDetailWidthPx,
-  writeStoredDetailFocus,
   writeStoredDetailWidth,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
@@ -75,7 +73,6 @@ type Model = {
   readonly query: Query;
   readonly route: Route;
   readonly view: ViewMode;
-  readonly detailFocus: boolean;
   readonly cardsSheet: boolean;
 };
 
@@ -89,7 +86,6 @@ type Msg =
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
-  | { readonly _tag: "SetDetailFocus"; readonly value: boolean }
   | { readonly _tag: "SetCardsSheet"; readonly value: boolean }
   | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
   | { readonly _tag: "Reset" }
@@ -112,7 +108,6 @@ type ViewModel = {
   readonly selected: SeedCard | null;
   readonly offFilter: boolean;
   readonly view: ViewMode;
-  readonly detailFocus: boolean;
   readonly cardsSheet: boolean;
   readonly corpus: Corpus;
   readonly query: Query;
@@ -123,18 +118,16 @@ type Paint = {
   readonly offFilter: boolean;
   readonly hasVisible: boolean;
   readonly filterKey: string;
-  readonly detailFocus: boolean;
   readonly view: ViewMode;
 };
 
-function init(corpus: Corpus, hash: string, view: ViewMode, detailFocus: boolean): Model {
+function init(corpus: Corpus, hash: string, view: ViewMode): Model {
   const route = parseRoute(hash);
   return {
     corpus,
     query: defaultQuery,
     route,
     view,
-    detailFocus,
     cardsSheet: view === "cards" && route._tag === "Card",
   };
 }
@@ -165,8 +158,6 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, sort: msg.sort } };
     case "SetView":
       return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
-    case "SetDetailFocus":
-      return model.detailFocus === msg.value ? model : { ...model, detailFocus: msg.value };
     case "SetCardsSheet":
       return model.cardsSheet === msg.value ? model : { ...model, cardsSheet: msg.value };
     case "ClearFilter":
@@ -237,7 +228,6 @@ function project(model: Model): ViewModel {
     selected: state._tag === "None" ? null : state.card,
     offFilter: state._tag === "OffFilter",
     view: model.view,
-    detailFocus: model.detailFocus,
     cardsSheet: model.cardsSheet,
     corpus: model.corpus,
     query: model.query,
@@ -319,7 +309,7 @@ function lineageSelectValue(filter: LineageFilter): string {
   }
 }
 
-function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string {
+function shellHtml(corpus: Corpus, view: ViewMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
   const listOn = view === "list";
@@ -334,9 +324,6 @@ function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string
           <button type="button" role="radio" data-view="list" aria-checked="${listOn ? "true" : "false"}">List</button>
           <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
         </div>
-        <button type="button" class="focus-detail" id="focus-detail" aria-pressed="${detailFocus ? "true" : "false"}" aria-keyshortcuts="]" title="Widen the detail pane (])">
-          Focus detail
-        </button>
         <p class="status" id="status"></p>
       </div>
     </header>
@@ -401,7 +388,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string
       <button type="button" class="reset" id="reset">Reset</button>
     </div>
     <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
-    <div class="workspace" id="workspace" data-view="${attr(view)}" data-focus="${detailFocus ? "detail" : "browse"}" data-sheet="closed">
+    <div class="workspace" id="workspace" data-view="${attr(view)}" data-sheet="closed">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
       <div class="pane-split" id="pane-split" role="separator" aria-orientation="vertical" aria-label="Resize browse and detail panes" aria-controls="browse detail" aria-keyshortcuts="ArrowLeft ArrowRight" tabindex="0" title="Drag to resize. Double-click to reset."></div>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
@@ -684,8 +671,7 @@ function rootRem(): number {
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
   const initialView = resolveView(location.search, storage);
-  const initialFocus = readStoredDetailFocus(storage);
-  root.innerHTML = shellHtml(corpus, initialView, initialFocus);
+  root.innerHTML = shellHtml(corpus, initialView);
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
@@ -702,7 +688,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const jumpRankInput = requireElement<HTMLInputElement>(root, "jump-rank");
   const resetButton = requireElement<HTMLButtonElement>(root, "reset");
   const viewToggle = requireElement<HTMLElement>(root, "view-toggle");
-  const focusDetail = requireElement<HTMLButtonElement>(root, "focus-detail");
   const workspace = requireElement<HTMLElement>(root, "workspace");
   const browse = requireElement<HTMLElement>(root, "browse");
   const splitter = requireElement<HTMLElement>(root, "pane-split");
@@ -710,7 +695,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  let model = init(corpus, location.hash, initialView, initialFocus);
+  let model = init(corpus, location.hash, initialView);
   let painted: Paint | null = null;
   let filtersOpen = false;
   let sheetWasVisible = false;
@@ -727,7 +712,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
   const splitMeasure = () => ({
     view: model.view,
-    focus: model.detailFocus,
     workspacePx: workspace.clientWidth,
     gutterPx: SPLIT_GUTTER_PX,
     rem: rootRem(),
@@ -746,17 +730,17 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
     const measure = splitMeasure();
     if (measure.workspacePx <= 0) return;
-    const key = paneSplitKey(model.view, model.detailFocus);
+    const key = paneSplitKey(model.view);
     const stored = liveDetailPx ?? readStoredDetailWidth(storage, key);
     const detailPx = resolveDetailWidthPx({ ...measure, storedPx: stored });
-    const detailMin = detailMinRem(model.detailFocus) * measure.rem;
+    const detailMin = DETAIL_MIN_REM * measure.rem;
     const maxDetail = Math.max(
       detailMin,
-      measure.workspacePx - measure.gutterPx - browseMinRem(model.detailFocus) * measure.rem,
+      measure.workspacePx - measure.gutterPx - BROWSE_MIN_REM * measure.rem,
     );
     workspace.style.setProperty("--split-gutter", `${SPLIT_GUTTER_PX}px`);
-    workspace.style.setProperty("--browse-min", `${browseMinRem(model.detailFocus)}rem`);
-    workspace.style.setProperty("--detail-min", `${detailMinRem(model.detailFocus)}rem`);
+    workspace.style.setProperty("--browse-min", `${BROWSE_MIN_REM}rem`);
+    workspace.style.setProperty("--detail-min", `${DETAIL_MIN_REM}rem`);
     workspace.style.setProperty("--detail-width", `${detailPx}px`);
     splitter.setAttribute("aria-valuemin", String(Math.round(Math.min(detailMin, maxDetail))));
     splitter.setAttribute("aria-valuemax", String(Math.round(maxDetail)));
@@ -768,7 +752,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     liveDetailPx = next;
     applyPaneSplit();
     if (persist) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus), next);
+      writeStoredDetailWidth(storage, paneSplitKey(model.view), next);
       liveDetailPx = null;
       virt.refresh();
     }
@@ -779,7 +763,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const pointerId = splitDrag.pointerId;
     const moved = splitDrag.moved;
     if (moved && liveDetailPx !== null) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus), liveDetailPx);
+      writeStoredDetailWidth(storage, paneSplitKey(model.view), liveDetailPx);
     }
     liveDetailPx = null;
     splitDrag = null;
@@ -860,9 +844,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const activeCount = activeFilters(vm.query).length;
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     workspace.dataset.view = vm.view;
-    workspace.dataset.focus = vm.detailFocus ? "detail" : "browse";
     applyPaneSplit();
-    focusDetail.setAttribute("aria-pressed", vm.detailFocus ? "true" : "false");
     syncViewToggle(root, vm.view);
     syncFilterControls(vm.query);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
@@ -872,7 +854,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
     const prev = painted;
     virt.set(vm.view, vm.visible, highlight);
-    if (prev !== null && (prev.detailFocus !== vm.detailFocus || prev.view !== vm.view)) {
+    if (prev !== null && prev.view !== vm.view) {
       requestAnimationFrame(() => {
         virt.refresh();
       });
@@ -895,7 +877,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       offFilter: vm.offFilter,
       hasVisible,
       filterKey: filters,
-      detailFocus: vm.detailFocus,
       view: vm.view,
     };
   };
@@ -906,8 +887,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     model = next;
     if (msg._tag !== "Hash") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
-    if (msg._tag === "SetDetailFocus") writeStoredDetailFocus(storage, model.detailFocus);
-    if ((msg._tag === "SetView" || msg._tag === "SetDetailFocus") && splitDrag === null) {
+    if (msg._tag === "SetView" && splitDrag === null) {
       liveDetailPx = null;
     }
     patch(model);
@@ -998,15 +978,12 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const view = parseViewMode(button.dataset.view);
     if (view !== null) dispatch({ _tag: "SetView", view });
   });
-  focusDetail.addEventListener("click", () => {
-    dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
-  });
   splitter.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || !isSideSplitLayout(compactLayout.matches)) return;
     event.preventDefault();
     splitter.focus();
     const measure = splitMeasure();
-    const key = paneSplitKey(model.view, model.detailFocus);
+    const key = paneSplitKey(model.view);
     const startDetail = resolveDetailWidthPx({
       ...measure,
       storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),
@@ -1042,7 +1019,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (!isSideSplitLayout(compactLayout.matches)) return;
     event.preventDefault();
     endSplitDrag();
-    clearStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus));
+    clearStoredDetailWidth(storage, paneSplitKey(model.view));
     applyPaneSplit();
     virt.refresh();
   });
@@ -1130,10 +1107,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
         dispatch({ _tag: "SetSearch", value: "" });
         return;
       }
-      if (model.detailFocus) {
-        dispatch({ _tag: "SetDetailFocus", value: false });
-        return;
-      }
       if (filtersOpen) {
         filtersOpen = false;
         syncFilterDisclosure();
@@ -1147,11 +1120,6 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       queryInput.select();
       return;
     }
-    if (event.key === "]") {
-      event.preventDefault();
-      dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
-      return;
-    }
     if (
       event.target === splitter &&
       isSideSplitLayout(compactLayout.matches) &&
@@ -1161,7 +1129,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       const rem = rootRem();
       const step = (event.shiftKey ? 5 : 1) * rem;
       const delta = event.key === "ArrowLeft" ? step : -step;
-      const key = paneSplitKey(model.view, model.detailFocus);
+      const key = paneSplitKey(model.view);
       const current = resolveDetailWidthPx({
         ...splitMeasure(),
         storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),
