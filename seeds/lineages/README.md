@@ -14,6 +14,7 @@ Current deep epistemologies (2026-08-13):
 - `memory-allocators` — Memory allocators (slab / size-class)
 - `ecs-data-oriented` — ECS & data-oriented design
 - `radiance-cascades` — Radiance Cascades & real-time GI
+- `foundations-of-computing` — Foundations of computing (Church, Turing, von Neumann, …)
 
 Medium threads (shallow scan 2026-08-13):
 - `pathfinding` — Grid & navmesh pathfinding
