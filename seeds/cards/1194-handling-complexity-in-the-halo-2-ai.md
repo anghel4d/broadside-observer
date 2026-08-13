@@ -19,7 +19,7 @@ relevance_score: 10
 lineage: game-ai-planning
 cites:
   - title: "The Illusion of Intelligence: The Integration of AI and Level Design in Halo"
-    url: "https://www.jmeiners.com/shamans/papers/ai/the_illusion_of_intelligence.pdf"
+    url: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
     year: 2002
     card: "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
   - title: "Behavior Trees for Next-Gen Game AI"
@@ -60,6 +60,7 @@ If GRID COMMAND soldiers need many simple, readable rules that still compose, th
 
 ## Links
 
+- Halo 1 proceedings (cited as Greisemer02): http://halo.bungie.org/misc/gdc.2002.haloai/talk.html
 - Gamasutra/Game Developer: https://www.gamedeveloper.com/programming/gdc-2005-proceeding-handling-complexity-in-the-i-halo-2-i-ai
 - GDC Vault: https://gdcvault.com/play/1020270/Managing-Complexity-in-the-Halo
 - Archive video: https://archive.org/details/GDC2005Isla

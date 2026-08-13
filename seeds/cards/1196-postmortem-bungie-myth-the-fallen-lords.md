@@ -20,7 +20,7 @@ relevance_score: 9
 lineage: game-ai-planning
 cites:
   - title: "The Illusion of Intelligence: The Integration of AI and Level Design in Halo"
-    url: "https://www.jmeiners.com/shamans/papers/ai/the_illusion_of_intelligence.pdf"
+    url: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
     year: 2002
     card: "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
   - title: "A Formal Basis for the Heuristic Determination of Minimum Cost Paths"

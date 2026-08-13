@@ -23,7 +23,7 @@ cites:
     year: 2005
     card: "1194-handling-complexity-in-the-halo-2-ai"
   - title: "The Illusion of Intelligence: The Integration of AI and Level Design in Halo"
-    url: "https://www.jmeiners.com/shamans/papers/ai/the_illusion_of_intelligence.pdf"
+    url: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
     year: 2002
     card: "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
   - title: "Behavior Trees for Next-Gen Game AI"
