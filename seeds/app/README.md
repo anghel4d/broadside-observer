@@ -47,7 +47,7 @@ The process loads cards, in order: local `public/cards.json` or `src/generated/c
 
 Tools:
 
-- `query_seeds {"query":"<tokens>"}` — AND search over title, authors, topics, takeaway, lineage. Optional `id`, `topic`, `lineage`, `year_min`, `year_max`, `limit` (default 20, max 50). **0 hits** return usage + copy-pasteable calls; **1 hit** (or a unique `#123` / `123` rank, or a found `id`) returns the full card; **2+ hits** return a compact list with `NEXT: call get_seed {"id":"..."}`.
+- `query_seeds {"query":"<tokens>"}` — AND search over title, authors, topics, takeaway, lineage. Optional `id`, `topic`, `lineage`, `year_min`, `year_max`, `limit` (default 20, max 50). **0 hits** return usage + copy-pasteable calls; **1 hit** (or a unique `#123` / `107` rank, or a found `id`) returns the full card; **2+ hits** return a compact list with `NEXT: call get_seed {"id":"..."}`.
 - `get_seed {"id":"<card-id>"}` — entire card by file stem (no `.md`). Copy `id` from a list hit.
 
 Cursor `mcp.json` snippet (after `npm install` in `seeds/app`):
@@ -117,7 +117,7 @@ Optional frontmatter on every card (see [`../README.md`](../README.md)):
 |-------|--------|---------|
 | `lineage` | one string slug | At most one primary thread (`lock-free-queues`, `work-stealing`, …). Omit if the card is not on a thread. |
 | `cites` | list of objects | Bibliography only. `title` is required. `url` when known (arXiv abs URL when the work is on arXiv). `arxiv` is the id (e.g. `2401.14183`) whenever the cited work has one. `year` and `doi` are optional. There is no `card` key — do not nest library pointers here. A `cites` entry is never dropped because its target card was culled. |
-| `see` | list of card stems | In-library pointers: stems currently in `../cards/` that this paper cites (no `.md`). Example: `see: ["032-michael-scott-lock-free-queue", "1206-deepseek-v3-technical-report"]`. On cull, drop the matching stem from other cards’ `see` lists and leave `cites` untouched. |
+| `see` | list of card stems | In-library pointers: stems currently in `../cards/` that this paper cites (no `.md`). Example: `see: ["031-michael-scott-lock-free-queue", "942-deepseek-v3-technical-report"]`. On cull, drop the matching stem from other cards’ `see` lists and leave `cites` untouched. |
 
 Cards without these keys still pack. When present, the packer keeps them in `cards.json`. Nested `cites[].card` leftover in YAML is ignored (stripped), not a pack failure.
 

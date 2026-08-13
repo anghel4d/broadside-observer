@@ -37,7 +37,7 @@ cites:
     arxiv: "2608.06811"
     doi: null
 see:
-  - "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
 ---
 
 # MemGPT: Towards LLMs as Operating Systems

@@ -1,0 +1,86 @@
+---
+title: 'Nanite: A Deep Dive'
+authors:
+- Karis; Stubbe; Wihlidal
+year: 2021
+venue: SIGGRAPH/Advances
+arxiv: null
+doi: null
+source: https://advances.realtimerendering.com/
+topics:
+- meshlets
+- gpu-driven
+seed_rank: 90
+seed_batch: prefill-2026-08-13
+reviewed: '2026-08-13'
+pool: engines
+relevance_score: 9
+lineage: gpu-driven-rendering
+cites:
+- title: GPU-Driven Rendering Pipelines
+  url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
+  year: 2015
+  arxiv: null
+  doi: null
+- title: 'The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading'
+  url: https://jcgt.org/published/0002/02/04/
+  year: 2013
+  arxiv: null
+  doi: null
+- title: Introduction to Turing Mesh Shaders
+  url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
+  year: 2018
+  arxiv: null
+  doi: null
+- title: Hierarchical Z-Buffer Visibility
+  url: https://doi.org/10.1145/166117.166147
+  year: 1993
+  arxiv: null
+  doi: 10.1145/166117.166147
+- title: Mesh Shaders in the Vulkan Ecosystem
+  url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
+  year: 2018
+  arxiv: null
+  doi: null
+- title: meshoptimizer
+  url: https://github.com/zeux/meshoptimizer
+  year: 2016
+  arxiv: null
+  doi: null
+- title: Sparse Virtual Textures / MegaTexture
+  url: https://www.iddevnet.com/
+  year: 2007
+  arxiv: null
+  doi: null
+see:
+- "015-gpu-driven-rendering-pipelines"
+- "271-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+- "261-introduction-to-turing-mesh-shaders"
+- "144-hierarchical-z-buffer-visibility"
+- "097-mesh-shaders-in-the-vulkan-ecosystem"
+- "482-meshoptimizer"
+- "404-sparse-virtual-textures-megatexture"
+---
+
+# Nanite: A Deep Dive
+
+## One-sentence takeaway
+
+Virtualized geometry extreme of meshlet/GPU-driven design.
+
+## Why it matters here
+
+Virtualized geometry extreme of meshlet/GPU-driven design.
+
+## Key ideas
+
+- Virtualized geometry extreme of meshlet/GPU-driven design.
+
+## Caveats
+
+- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
+- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
+
+## Links
+
+- URL: https://advances.realtimerendering.com/

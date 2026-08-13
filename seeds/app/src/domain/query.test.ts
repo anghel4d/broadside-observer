@@ -105,7 +105,7 @@ const cards: ReadonlyArray<SeedCard> = [
         doi: "10.1145/248052.248106",
       },
     ],
-    see: ["032-michael-scott-lock-free-queue"],
+    see: ["031-michael-scott-lock-free-queue"],
     sections: {
       takeaway: "Safe reclamation.",
       why: "why",

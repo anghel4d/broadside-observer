@@ -16,46 +16,46 @@ Charter: umbrella thread for **concurrent data structures** — correctness (lin
 
 | Stem | Year | Role |
 |------|------|------|
-| `032-michael-scott-lock-free-queue` | 1996 | Root MS-queue |
-| `501-tsigas-zhang-non-blocking-concurrent-fifo-queue` | 2001 | Early scalable CAS array FIFO |
-| `502-ladan-mozes-shavit-optimistic-lock-free-fifo-queue` | 2004 | Optimistic doubly-linked MS alternative |
-| `503-moir-elimination-backoff-lock-free-fifo-queues` | 2005 | Elimination backoff for FIFO |
-| `438-scalable-synchronous-queues` | 2006 | Synchronous hand-off queues |
-| `504-hoffman-shalev-shavit-baskets-queue` | 2007 | Baskets Queue |
-| `508-vyukov-bounded-mpmc-queue` | 2010 | Vyukov bounded MPMC |
-| `509-vyukov-non-intrusive-mpsc-queue` | 2010 | Vyukov MPSC |
-| `505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers` | 2011 | Practical wait-free MPMC |
-| `427-lmax-disruptor` | 2011 | LMAX Disruptor |
-| `506-kogan-petrank-fast-path-slow-path-wait-free` | 2012 | Fast-path/slow-path methodology |
-| `507-morrison-afek-lcrq-fast-concurrent-queues-x86` | 2013 | LCRQ |
-| `413-cameron314-concurrentqueue-mpmc` | 2014 | cameron314 ConcurrentQueue |
-| `510-yang-mellor-crummey-wait-free-queue-fetch-and-add` | 2016 | YMC/WFQueue |
-| `511-ramalhete-correia-faaarrayqueue` | 2016 | FAAArrayQueue |
-| `512-nikolaev-scq-scalable-portable-lock-free-fifo` | 2019 | SCQ / LSCQ |
-| `327-jiffy-a-fast-memory-efficient-wait-free-multi-producers-sing` | 2020 | Jiffy wait-free MPSC |
-| `313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage` | 2022 | wCQ |
-| `513-romanov-koval-lprq-portable-lcrq` | 2023 | LPRQ |
-| `289-a-wait-free-queue-with-polylogarithmic-step-complexity` | 2023 | Polylog step-complexity wait-free queue |
-| `276-no-cords-attached-coordination-free-concurrent-lock-free-que` | 2025 | Coordination-free lock-free queues |
+| `031-michael-scott-lock-free-queue` | 1996 | Root MS-queue |
+| `417-tsigas-zhang-non-blocking-concurrent-fifo-queue` | 2001 | Early scalable CAS array FIFO |
+| `418-ladan-mozes-shavit-optimistic-lock-free-fifo-queue` | 2004 | Optimistic doubly-linked MS alternative |
+| `419-moir-elimination-backoff-lock-free-fifo-queues` | 2005 | Elimination backoff for FIFO |
+| `358-scalable-synchronous-queues` | 2006 | Synchronous hand-off queues |
+| `420-hoffman-shalev-shavit-baskets-queue` | 2007 | Baskets Queue |
+| `424-vyukov-bounded-mpmc-queue` | 2010 | Vyukov bounded MPMC |
+| `425-vyukov-non-intrusive-mpsc-queue` | 2010 | Vyukov MPSC |
+| `421-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers` | 2011 | Practical wait-free MPMC |
+| `347-lmax-disruptor` | 2011 | LMAX Disruptor |
+| `422-kogan-petrank-fast-path-slow-path-wait-free` | 2012 | Fast-path/slow-path methodology |
+| `423-morrison-afek-lcrq-fast-concurrent-queues-x86` | 2013 | LCRQ |
+| `334-cameron314-concurrentqueue-mpmc` | 2014 | cameron314 ConcurrentQueue |
+| `426-yang-mellor-crummey-wait-free-queue-fetch-and-add` | 2016 | YMC/WFQueue |
+| `427-ramalhete-correia-faaarrayqueue` | 2016 | FAAArrayQueue |
+| `428-nikolaev-scq-scalable-portable-lock-free-fifo` | 2019 | SCQ / LSCQ |
+| `253-jiffy-a-fast-memory-efficient-wait-free-multi-producers-sing` | 2020 | Jiffy wait-free MPSC |
+| `243-wcq-a-fast-wait-free-queue-with-bounded-memory-usage` | 2022 | wCQ |
+| `429-romanov-koval-lprq-portable-lcrq` | 2023 | LPRQ |
+| `227-a-wait-free-queue-with-polylogarithmic-step-complexity` | 2023 | Polylog step-complexity wait-free queue |
+| `216-no-cords-attached-coordination-free-concurrent-lock-free-que` | 2025 | Coordination-free lock-free queues |
 
 ### Correctness & memory-model spine (same lineage)
 
 | Stem | Year | Role |
 |------|------|------|
-| `722-how-to-make-a-multiprocessor-computer-that-correctly-execute` | 1979 | Sequential consistency root (Lamport) |
-| `260-linearizability-a-correctness-condition-for-concurrent-objec` | 1990 | Linearizability |
-| `037-wait-free-synchronization` | 1991 | Progress taxonomy / wait-freedom |
-| `497-release-consistency-versus-sequential-consistency` | 1993 | RC vs SC foil |
-| `489-memory-ordering-in-modern-microprocessors` | 2005 | Practitioner memory-ordering |
-| `736-a-better-x86-memory-model-x86-tso` | 2010 | x86-TSO |
-| `141-the-art-of-multiprocessor-programming` | 2008 | Textbook carrier |
+| `472-how-to-make-a-multiprocessor-computer-that-correctly-execute` | 1979 | Sequential consistency root (Lamport) |
+| `203-linearizability-a-correctness-condition-for-concurrent-objec` | 1990 | Linearizability |
+| `036-wait-free-synchronization` | 1991 | Progress taxonomy / wait-freedom |
+| `414-release-consistency-versus-sequential-consistency` | 1993 | RC vs SC foil |
+| `406-memory-ordering-in-modern-microprocessors` | 2005 | Practitioner memory-ordering |
+| `485-a-better-x86-memory-model-x86-tso` | 2010 | x86-TSO |
+| `124-the-art-of-multiprocessor-programming` | 2008 | Textbook carrier |
 
 ### Essential cites outside this lineage (do not steal `lineage`)
 
 | Stem | Year | Why cited here |
 |------|------|----------------|
-| `373-safe-memory-reclamation-for-dynamic-lock-free-objects-using-` | 2002 | SMR precursor for unmanaged MS-style queues |
-| `025-hazard-pointers-safe-memory-reclamation-for-lock-free-object` | 2004 | Practical reclamation paired with MS/LCRQ/FAAArray |
+| `297-safe-memory-reclamation-for-dynamic-lock-free-objects-using-` | 2002 | SMR precursor for unmanaged MS-style queues |
+| `024-hazard-pointers-safe-memory-reclamation-for-lock-free-object` | 2004 | Practical reclamation paired with MS/LCRQ/FAAArray |
 
 
 ## Open frontiers / what Anoptic should watch
@@ -68,4 +68,4 @@ Charter: umbrella thread for **concurrent data structures** — correctness (lin
 
 ## Batch
 
-Seed expansion batch: `lineage-concurrent-data-structures-2026-08-13` (queues 501–513; concurrent-data-structures shallow cards folded into this umbrella; existing thread cards patched with `lineage` + `cites`).
+Seed expansion batch: `lineage-concurrent-data-structures-2026-08-13` (queues 417–429; concurrent-data-structures shallow cards folded into this umbrella; existing thread cards patched with `lineage` + `cites`).

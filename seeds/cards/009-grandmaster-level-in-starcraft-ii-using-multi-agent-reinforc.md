@@ -27,8 +27,8 @@ cites:
   arxiv: '1902.04043'
   doi: null
 see:
-- "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
-- "011-the-starcraft-multi-agent-challenge"
+- "014-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+- "010-the-starcraft-multi-agent-challenge"
 ---
 
 # Grandmaster level in StarCraft II using multi-agent reinforcement learning

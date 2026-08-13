@@ -38,9 +38,9 @@ cites:
     arxiv: "2608.05886"
     doi: null
 see:
-  - "053-auto-configuring-scientific-simulators-with-lightweight-codi"
-  - "056-change2task-from-repository-changes-to-executable-coding-age"
-  - "057-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
+  - "051-auto-configuring-scientific-simulators-with-lightweight-codi"
+  - "052-change2task-from-repository-changes-to-executable-coding-age"
+  - "053-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
 ---
 
 # SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering

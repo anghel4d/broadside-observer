@@ -17,18 +17,18 @@ This is Broadside's 'you can replace the floor' thread: P1 compatibility, multic
 
 | Rank | Year | Title | Stem |
 |-----:|-----:|-------|------|
-| 1226 | 2026 | Rust Coreutils: Rebuilding Unix Foundations in a Modern Language | `1226-rust-coreutils-rebuilding-unix-foundations` |
-| 1227 | 2020 | rust-code-analysis: A Rust library to analyze and extract maintainability information from source codes | `1227-rust-code-analysis` |
-| 1228 | 2023 | SoK: Taxonomy of Attacks on Open-Source Software Supply Chains | `1228-sok-taxonomy-of-attacks-on-oss-supply-chains` |
-| 1229 | 2021 | Exposing bugs in JavaScript engines through test transplantation and differential testing | `1229-exposing-bugs-in-javascript-engines` |
-| 1230 | 2021 | Technical Leverage in a Software Ecosystem: Development Opportunities and Security Risks | `1230-technical-leverage-in-a-software-ecosystem` |
-| 1231 | 1976 | A Complexity Measure | `1231-a-complexity-measure` |
-| 1232 | 1998 | Differential Testing for Software | `1232-differential-testing-for-software` |
-| 1233 | 1990 | An Empirical Study of the Reliability of UNIX Utilities | `1233-an-empirical-study-of-the-reliability-of-unix-utilities` |
-| 1234 | 2016 | Continuous Fuzzing with libFuzzer and AddressSanitizer | `1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer` |
-| 1235 | 2017 | OSS-Fuzz: Google's Continuous Fuzzing Service for Open Source Software | `1235-oss-fuzz-continuous-fuzzing-for-open-source-software` |
-| 1236 | 2025 | Rewriting the Unix Stream Editor in Rust | `1236-rewriting-the-unix-stream-editor-in-rust` |
-| 1237 | 2021 | Evolution of the Unix System Architecture: An Exploratory Case Study | `1237-evolution-of-the-unix-system-architecture` |
+| 962 | 2026 | Rust Coreutils: Rebuilding Unix Foundations in a Modern Language | `962-rust-coreutils-rebuilding-unix-foundations` |
+| 963 | 2020 | rust-code-analysis: A Rust library to analyze and extract maintainability information from source codes | `963-rust-code-analysis` |
+| 964 | 2023 | SoK: Taxonomy of Attacks on Open-Source Software Supply Chains | `964-sok-taxonomy-of-attacks-on-oss-supply-chains` |
+| 965 | 2021 | Exposing bugs in JavaScript engines through test transplantation and differential testing | `965-exposing-bugs-in-javascript-engines` |
+| 966 | 2021 | Technical Leverage in a Software Ecosystem: Development Opportunities and Security Risks | `966-technical-leverage-in-a-software-ecosystem` |
+| 967 | 1976 | A Complexity Measure | `967-a-complexity-measure` |
+| 968 | 1998 | Differential Testing for Software | `968-differential-testing-for-software` |
+| 969 | 1990 | An Empirical Study of the Reliability of UNIX Utilities | `969-an-empirical-study-of-the-reliability-of-unix-utilities` |
+| 970 | 2016 | Continuous Fuzzing with libFuzzer and AddressSanitizer | `970-continuous-fuzzing-with-libfuzzer-and-addresssanitizer` |
+| 971 | 2017 | OSS-Fuzz: Google's Continuous Fuzzing Service for Open Source Software | `971-oss-fuzz-continuous-fuzzing-for-open-source-software` |
+| 972 | 2025 | Rewriting the Unix Stream Editor in Rust | `972-rewriting-the-unix-stream-editor-in-rust` |
+| 973 | 2021 | Evolution of the Unix System Architecture: An Exploratory Case Study | `973-evolution-of-the-unix-system-architecture` |
 
 ## Cite-without-card (this batch)
 

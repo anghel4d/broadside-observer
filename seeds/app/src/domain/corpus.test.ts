@@ -32,8 +32,8 @@ function card(overrides: Record<string, unknown>): SeedCard {
 
 const alpha = card({});
 const transformer = card({
-  id: "014-attention-is-all-you-need",
-  file: "014-attention-is-all-you-need.md",
+  id: "013-attention-is-all-you-need",
+  file: "013-attention-is-all-you-need.md",
   title: "Attention Is All You Need",
   arxiv: "1706.03762",
   year: 2017,
@@ -46,7 +46,7 @@ const citing = card({
   arxiv: "2201.11903",
   year: 2022,
   seed_rank: 104,
-  see: ["014-attention-is-all-you-need", "999-missing-stem", "104-chain-of-thought"],
+  see: ["013-attention-is-all-you-need", "999-missing-stem", "104-chain-of-thought"],
   cites: [
     {
       title: "Attention Is All You Need",
@@ -78,8 +78,8 @@ const corpus = buildCorpus([alpha, transformer, citing, arxivOnly]);
 assert.equal(corpus.byArxiv.get(transformer.arxiv!), transformer.id);
 assert.equal(corpus.byArxiv.get(citing.arxiv!), citing.id);
 
-assert.deepEqual(inLibraryIds(citing, corpus), ["014-attention-is-all-you-need"]);
-assert.deepEqual(inLibraryIds(arxivOnly, corpus), ["014-attention-is-all-you-need"]);
+assert.deepEqual(inLibraryIds(citing, corpus), ["013-attention-is-all-you-need"]);
+assert.deepEqual(inLibraryIds(arxivOnly, corpus), ["013-attention-is-all-you-need"]);
 assert.deepEqual(inLibraryIds(transformer, corpus), []);
 assert.deepEqual(inLibraryIds(alpha, corpus), []);
 

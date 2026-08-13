@@ -33,7 +33,7 @@ Score for delight + Anghel fit (array languages, combinatory logic, category the
 
 | id | arxiv | title |
 |----|-------|-------|
-| 1171 | 2507.12640 | Dual-Numbers Reverse AD for Functional Array Languages |
+| 918 | 2507.12640 | Dual-Numbers Reverse AD for Functional Array Languages |
 | 1172 | 2405.01675 | Clones, closed categories, and combinatory logic |
 | 1173 | 2604.12194 | Simple Types for Polymorphic Functions |
 | 1174 | 2411.14579 | Functional Array Programming in an Extended Pi-Calculus |
@@ -42,7 +42,7 @@ Score for delight + Anghel fit (array languages, combinatory logic, category the
 | 1177 | 2607.27402 | Continuous Game of Life: cell emergence and self-organization at the edge of growth |
 | 1178 | 2607.26331 | Quantum Turing Patterns |
 | 1179 | 2607.24619 | Control of morphology and topology in a lattice model of branching morphogenesis |
-| 1180 | 2606.09526 | When Types Intersect and Effects Get Handled |
+| 919 | 2606.09526 | When Types Intersect and Effects Get Handled |
 | 1181 | 2605.25733 | Characterization of Word-Representable Near-Triangulations |
 | 1182 | 2607.05324 | Necklaces and Lyndon words in colexicographic order |
 
@@ -50,4 +50,4 @@ Radiance / probe GI: inspected; Adaptive Dynamic GI and thin-client probes are n
 
 ## Publish
 
-Seed batch `curiosity-2026-08-13`. Cards 1171–1182. INDEX new section. `radar/seen.json` append-only arxiv+titles for keepers. Did not touch `seeds/app`.
+Seed batch `curiosity-2026-08-13`. Cards 918–919. INDEX new section. `radar/seen.json` append-only arxiv+titles for keepers. Did not touch `seeds/app`.

@@ -39,8 +39,8 @@ cites:
   arxiv: '2310.11511'
   doi: null
 see:
-- "108-dense-passage-retrieval-for-open-domain-question-answering"
-- "101-self-rag-learning-to-retrieve-generate-and-critique-through-"
+- "092-dense-passage-retrieval-for-open-domain-question-answering"
+- "085-self-rag-learning-to-retrieve-generate-and-critique-through-"
 ---
 
 # Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks

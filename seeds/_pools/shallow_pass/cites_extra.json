@@ -1,12 +1,12 @@
 {
-  "022-handlers-of-algebraic-effects": [
+  "021-handlers-of-algebraic-effects": [
     {
       "title": "Handling Algebraic Effects",
       "url": "https://doi.org/10.2168/LMCS-9(4:23)2013",
       "year": 2013,
       "arxiv": null,
       "doi": "10.2168/LMCS-9(4:23)2013",
-      "card_key": "ABS:128-handling-algebraic-effects"
+      "card_key": "ABS:112-handling-algebraic-effects"
     },
     {
       "title": "Programming with Algebraic Effects and Handlers",
@@ -14,7 +14,7 @@
       "year": 2015,
       "arxiv": "1203.1539",
       "doi": null,
-      "card_key": "ABS:123-programming-with-algebraic-effects-and-handlers"
+      "card_key": "ABS:107-programming-with-algebraic-effects-and-handlers"
     },
     {
       "title": "Algebraic Operations and Generic Effects",
@@ -22,17 +22,17 @@
       "year": 2003,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:147-algebraic-operations-and-generic-effects"
+      "card_key": "ABS:130-algebraic-operations-and-generic-effects"
     }
   ],
-  "128-handling-algebraic-effects": [
+  "112-handling-algebraic-effects": [
     {
       "title": "Handlers of Algebraic Effects",
       "url": "https://doi.org/10.1007/978-3-642-00590-9_7",
       "year": 2009,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:022-handlers-of-algebraic-effects"
+      "card_key": "ABS:021-handlers-of-algebraic-effects"
     },
     {
       "title": "Programming with Algebraic Effects and Handlers",
@@ -40,17 +40,17 @@
       "year": 2015,
       "arxiv": "1203.1539",
       "doi": null,
-      "card_key": "ABS:123-programming-with-algebraic-effects-and-handlers"
+      "card_key": "ABS:107-programming-with-algebraic-effects-and-handlers"
     }
   ],
-  "123-programming-with-algebraic-effects-and-handlers": [
+  "107-programming-with-algebraic-effects-and-handlers": [
     {
       "title": "Handlers of Algebraic Effects",
       "url": "https://doi.org/10.1007/978-3-642-00590-9_7",
       "year": 2009,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:022-handlers-of-algebraic-effects"
+      "card_key": "ABS:021-handlers-of-algebraic-effects"
     },
     {
       "title": "Handling Algebraic Effects",
@@ -58,17 +58,17 @@
       "year": 2013,
       "arxiv": null,
       "doi": "10.2168/LMCS-9(4:23)2013",
-      "card_key": "ABS:128-handling-algebraic-effects"
+      "card_key": "ABS:112-handling-algebraic-effects"
     }
   ],
-  "147-algebraic-operations-and-generic-effects": [
+  "130-algebraic-operations-and-generic-effects": [
     {
       "title": "Handlers of Algebraic Effects",
       "url": "https://doi.org/10.1007/978-3-642-00590-9_7",
       "year": 2009,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:022-handlers-of-algebraic-effects"
+      "card_key": "ABS:021-handlers-of-algebraic-effects"
     },
     {
       "title": "Notions of Computation Determine Monads",
@@ -76,17 +76,17 @@
       "year": 2002,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:149-notions-of-computation-determine-monads"
+      "card_key": "ABS:132-notions-of-computation-determine-monads"
     }
   ],
-  "228-abstracting-effect-systems-for-algebraic-effect-handlers": [
+  "181-abstracting-effect-systems-for-algebraic-effect-handlers": [
     {
       "title": "Handlers of Algebraic Effects",
       "url": "https://doi.org/10.1007/978-3-642-00590-9_7",
       "year": 2009,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:022-handlers-of-algebraic-effects"
+      "card_key": "ABS:021-handlers-of-algebraic-effects"
     },
     {
       "title": "Programming with Algebraic Effects and Handlers",
@@ -94,37 +94,37 @@
       "year": 2015,
       "arxiv": "1203.1539",
       "doi": null,
-      "card_key": "ABS:123-programming-with-algebraic-effects-and-handlers"
+      "card_key": "ABS:107-programming-with-algebraic-effects-and-handlers"
     }
   ],
-  "451-proximity-queries-and-penetration-depth-with-gjk-epa": [
+  "370-proximity-queries-and-penetration-depth-with-gjk-epa": [
     {
       "title": "A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space",
       "url": "https://doi.org/10.1109/56.2083",
       "year": 1988,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:384-a-fast-procedure-for-computing-the-distance-between-complex-"
+      "card_key": "ABS:308-a-fast-procedure-for-computing-the-distance-between-complex-"
     }
   ],
-  "384-a-fast-procedure-for-computing-the-distance-between-complex-": [
+  "308-a-fast-procedure-for-computing-the-distance-between-complex-": [
     {
       "title": "Proximity Queries and Penetration Depth with GJK/EPA",
       "url": "https://graphics.stanford.edu/courses/cs448b-00-winter/",
       "year": 2001,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:451-proximity-queries-and-penetration-depth-with-gjk-epa"
+      "card_key": "ABS:370-proximity-queries-and-penetration-depth-with-gjk-epa"
     }
   ],
-  "026-real-time-strategy-games-a-new-ai-research-challenge": [
+  "025-real-time-strategy-games-a-new-ai-research-challenge": [
     {
       "title": "Call for AI Research in RTS Games",
       "url": "https://www.cs.ualberta.ca/~mburo/",
       "year": 2004,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:024-call-for-ai-research-in-rts-games"
+      "card_key": "ABS:023-call-for-ai-research-in-rts-games"
     },
     {
       "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
@@ -132,17 +132,17 @@
       "year": 2013,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+      "card_key": "ABS:017-a-survey-of-real-time-strategy-game-ai-research-and-competit"
     }
   ],
-  "024-call-for-ai-research-in-rts-games": [
+  "023-call-for-ai-research-in-rts-games": [
     {
       "title": "Real-Time Strategy Games: A New AI Research Challenge",
       "url": "https://www.aaai.org/",
       "year": 2003,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:026-real-time-strategy-games-a-new-ai-research-challenge"
+      "card_key": "ABS:025-real-time-strategy-games-a-new-ai-research-challenge"
     },
     {
       "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
@@ -150,17 +150,17 @@
       "year": 2013,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+      "card_key": "ABS:017-a-survey-of-real-time-strategy-game-ai-research-and-competit"
     }
   ],
-  "018-a-survey-of-real-time-strategy-game-ai-research-and-competit": [
+  "017-a-survey-of-real-time-strategy-game-ai-research-and-competit": [
     {
       "title": "StarCraft II: A New Challenge for Reinforcement Learning",
       "url": "https://arxiv.org/abs/1708.04782",
       "year": 2017,
       "arxiv": "1708.04782",
       "doi": null,
-      "card_key": "ABS:015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+      "card_key": "ABS:014-starcraft-ii-a-new-challenge-for-reinforcement-learning"
     },
     {
       "title": "The StarCraft Multi-Agent Challenge",
@@ -168,7 +168,7 @@
       "year": 2019,
       "arxiv": "1902.04043",
       "doi": null,
-      "card_key": "ABS:011-the-starcraft-multi-agent-challenge"
+      "card_key": "ABS:010-the-starcraft-multi-agent-challenge"
     },
     {
       "title": "Build Order Optimization in StarCraft",
@@ -176,17 +176,17 @@
       "year": 2011,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:134-build-order-optimization-in-starcraft"
+      "card_key": "ABS:118-build-order-optimization-in-starcraft"
     }
   ],
-  "134-build-order-optimization-in-starcraft": [
+  "118-build-order-optimization-in-starcraft": [
     {
       "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
       "url": "https://doi.org/10.1109/TCIAIG.2013.2286295",
       "year": 2013,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+      "card_key": "ABS:017-a-survey-of-real-time-strategy-game-ai-research-and-competit"
     },
     {
       "title": "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft",
@@ -194,17 +194,17 @@
       "year": 2013,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:129-portfolio-greedy-search-and-simulation-for-large-scale-combat"
+      "card_key": "ABS:113-portfolio-greedy-search-and-simulation-for-large-scale-combat"
     }
   ],
-  "129-portfolio-greedy-search-and-simulation-for-large-scale-combat": [
+  "113-portfolio-greedy-search-and-simulation-for-large-scale-combat": [
     {
       "title": "Build Order Optimization in StarCraft",
       "url": "https://www.aaai.org/",
       "year": 2011,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:134-build-order-optimization-in-starcraft"
+      "card_key": "ABS:118-build-order-optimization-in-starcraft"
     },
     {
       "title": "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft",
@@ -212,10 +212,10 @@
       "year": 2013,
       "arxiv": null,
       "doi": null,
-      "card_key": "ABS:018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+      "card_key": "ABS:017-a-survey-of-real-time-strategy-game-ai-research-and-competit"
     }
   ],
-  "116-framegraph-extensible-rendering-architecture-in-frostbite": [
+  "100-framegraph-extensible-rendering-architecture-in-frostbite": [
     {
       "title": "GPU-Driven Rendering Pipelines",
       "url": "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf",
@@ -233,24 +233,24 @@
       "card_key": "nanite"
     }
   ],
-  "484-horizon-based-ambient-occlusion": [
+  "401-horizon-based-ambient-occlusion": [
     {
       "title": "The Rendering Equation",
       "url": "https://doi.org/10.1145/15886.15902",
       "year": 1986,
       "arxiv": null,
       "doi": "10.1145/15886.15902",
-      "card_key": "ABS:169-the-rendering-equation"
+      "card_key": "ABS:152-the-rendering-equation"
     }
   ],
-  "499-robin-hood-hashing": [
+  "416-robin-hood-hashing": [
     {
       "title": "Space-Efficient Lock-Free Linear-Probing Hash Table",
       "url": "https://arxiv.org/abs/2606.17315",
       "year": 2026,
       "arxiv": "2606.17315",
       "doi": null,
-      "card_key": "ABS:264-space-efficient-lock-free-linear-probing-hash-table"
+      "card_key": "ABS:207-space-efficient-lock-free-linear-probing-hash-table"
     }
   ]
 }

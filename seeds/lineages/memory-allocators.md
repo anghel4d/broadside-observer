@@ -4,38 +4,38 @@
 
 **Slug:** `memory-allocators`  
 **seed_batch (mint wave):** `lineage-memory-allocators-2026-08-13`  
-**Number block:** 581–620 (minted 581–591)
+**Number block:** 436–446 (minted 436–446)
 
 ## Ordered spine
 
 | Year | Card | Role in thread |
 |-----:|------|----------------|
-| 1988 | `581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd` | BSD power-of-two kernel malloc (size-class precursor) |
-| 1994 | `259-the-slab-allocator-an-object-caching-kernel-memory-allocator` | Slab object-caching kernel allocator |
-| 1995 | `382-dynamic-storage-allocation-a-survey-and-critical-review` | DSA survey & fragmentation taxonomy |
-| 2000 | `377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat` | Scalable per-processor heaps / blowup bound |
-| 2000 | `582-a-memory-allocator-dlmalloc` | Lea segregated-fit userspace baseline |
-| 2001 | `583-composing-high-performance-memory-allocators` | Composable allocator layers |
-| 2001 | `256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus` | Per-CPU magazines + vmem |
-| 2002 | `584-reconsidering-custom-memory-allocation` | Custom vs general heaps; reaps |
-| 2004 | `585-scalable-lock-free-dynamic-memory-allocation` | Lock-free size-class malloc |
-| 2004 | `442-an-efficient-memory-allocator-for-network-processors-and-mul` | O(1) two-level segregated fit (realtime) |
-| 2006 | `586-scalable-locality-conscious-multithreaded-memory-allocatio` | Sync-free local path + remote free lists |
-| 2006 | `364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je` | Multi-arena industrial size-class heap |
-| 2006 | `488-diehard-probabilistic-memory-safety-for-unsafe-languages` | Randomized/replicated safety heap |
-| 2007 | `587-tcmalloc-thread-caching-malloc` | Thread-caching industrial size-class heap |
-| 2007 | `588-slub-the-unqueued-slab-allocator` | Linux unqueued slab successor |
-| 2013 | `252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod` | Local/multipool allocator policy (cousin) |
-| 2015 | `412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac` | 64-bit multithreaded size-class malloc |
-| 2015 | `589-fast-multicore-scalable-low-fragmentation-memory-allocatio` | Virtual spans + scalable global backend |
-| 2017 | `590-rpmalloc-lock-free-thread-caching-size-class-allocator` | Embeddable lock-free size-class allocator |
-| 2019 | `399-mesh-compacting-memory-management-for-c-c-applications` | Page-aliased compaction |
-| 2019 | `401-snmalloc-a-message-passing-allocator` | Message-passing remote frees |
-| 2019 | `012-mimalloc-free-list-sharding-in-action` | Free-list sharding (Anoptic global heap) |
-| 2020 | `328-learning-slab-classes-to-alleviate-memory-holes-in-memcached` | Learned slab class sizing |
-| 2021 | `314-allocator-aware-aa-software-lakos-et-al` | Allocator-aware vocabulary types (cousin) |
-| 2021 | `591-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa` | Hugepage-aware TCMalloc backend |
-| 2024 | `286-starmalloc-a-formally-verified-concurrent-performant-and-sec` | Verified concurrent security-oriented malloc |
+| 1988 | `436-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd` | BSD power-of-two kernel malloc (size-class precursor) |
+| 1994 | `202-the-slab-allocator-an-object-caching-kernel-memory-allocator` | Slab object-caching kernel allocator |
+| 1995 | `306-dynamic-storage-allocation-a-survey-and-critical-review` | DSA survey & fragmentation taxonomy |
+| 2000 | `301-hoard-a-scalable-memory-allocator-for-multithreaded-applicat` | Scalable per-processor heaps / blowup bound |
+| 2000 | `437-a-memory-allocator-dlmalloc` | Lea segregated-fit userspace baseline |
+| 2001 | `438-composing-high-performance-memory-allocators` | Composable allocator layers |
+| 2001 | `199-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus` | Per-CPU magazines + vmem |
+| 2002 | `439-reconsidering-custom-memory-allocation` | Custom vs general heaps; reaps |
+| 2004 | `440-scalable-lock-free-dynamic-memory-allocation` | Lock-free size-class malloc |
+| 2004 | `361-an-efficient-memory-allocator-for-network-processors-and-mul` | O(1) two-level segregated fit (realtime) |
+| 2006 | `441-scalable-locality-conscious-multithreaded-memory-allocatio` | Sync-free local path + remote free lists |
+| 2006 | `288-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je` | Multi-arena industrial size-class heap |
+| 2006 | `405-diehard-probabilistic-memory-safety-for-unsafe-languages` | Randomized/replicated safety heap |
+| 2007 | `442-tcmalloc-thread-caching-malloc` | Thread-caching industrial size-class heap |
+| 2007 | `443-slub-the-unqueued-slab-allocator` | Linux unqueued slab successor |
+| 2013 | `195-local-memory-allocators-in-large-scale-c-lakos-allocator-mod` | Local/multipool allocator policy (cousin) |
+| 2015 | `333-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac` | 64-bit multithreaded size-class malloc |
+| 2015 | `444-fast-multicore-scalable-low-fragmentation-memory-allocatio` | Virtual spans + scalable global backend |
+| 2017 | `445-rpmalloc-lock-free-thread-caching-size-class-allocator` | Embeddable lock-free size-class allocator |
+| 2019 | `320-mesh-compacting-memory-management-for-c-c-applications` | Page-aliased compaction |
+| 2019 | `322-snmalloc-a-message-passing-allocator` | Message-passing remote frees |
+| 2019 | `011-mimalloc-free-list-sharding-in-action` | Free-list sharding (Anoptic global heap) |
+| 2020 | `254-learning-slab-classes-to-alleviate-memory-holes-in-memcached` | Learned slab class sizing |
+| 2021 | `244-allocator-aware-aa-software-lakos-et-al` | Allocator-aware vocabulary types (cousin) |
+| 2021 | `446-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa` | Hugepage-aware TCMalloc backend |
+| 2024 | `224-starmalloc-a-formally-verified-concurrent-performant-and-sec` | Verified concurrent security-oriented malloc |
 
 ## Narrative
 
@@ -61,29 +61,29 @@ Engine bump/arena practice and GPU/VMA pools stay nearby but on other threads: B
 
 ## Broadside cards in thread
 
-- `581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd` — Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel
-- `259-the-slab-allocator-an-object-caching-kernel-memory-allocator` — The Slab Allocator: An Object-Caching Kernel Memory Allocator
-- `382-dynamic-storage-allocation-a-survey-and-critical-review` — Dynamic Storage Allocation: A Survey and Critical Review
-- `377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat` — Hoard: A Scalable Memory Allocator for Multithreaded Applications
-- `582-a-memory-allocator-dlmalloc` — A Memory Allocator (dlmalloc)
-- `583-composing-high-performance-memory-allocators` — Composing High-Performance Memory Allocators
-- `256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus` — Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources
-- `584-reconsidering-custom-memory-allocation` — Reconsidering Custom Memory Allocation
-- `585-scalable-lock-free-dynamic-memory-allocation` — Scalable Lock-Free Dynamic Memory Allocation
-- `442-an-efficient-memory-allocator-for-network-processors-and-mul` — An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF)
-- `586-scalable-locality-conscious-multithreaded-memory-allocatio` — Scalable Locality-Conscious Multithreaded Memory Allocation (Streamflow)
-- `364-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je` — A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)
-- `488-diehard-probabilistic-memory-safety-for-unsafe-languages` — DieHard: Probabilistic Memory Safety for Unsafe Languages
-- `587-tcmalloc-thread-caching-malloc` — TCMalloc: Thread-Caching Malloc
-- `588-slub-the-unqueued-slab-allocator` — SLUB: The Unqueued Slab Allocator
-- `252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod` — Local Memory Allocators in Large-Scale C++ (Lakos allocator model)
-- `412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac` — SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines
-- `589-fast-multicore-scalable-low-fragmentation-memory-allocatio` — Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)
-- `590-rpmalloc-lock-free-thread-caching-size-class-allocator` — rpmalloc: Lock-Free Thread-Caching Size-Class Allocator
-- `399-mesh-compacting-memory-management-for-c-c-applications` — Mesh: Compacting Memory Management for C/C++ Applications
-- `401-snmalloc-a-message-passing-allocator` — snmalloc: A Message Passing Allocator
-- `012-mimalloc-free-list-sharding-in-action` — mimalloc: Free List Sharding in Action
-- `328-learning-slab-classes-to-alleviate-memory-holes-in-memcached` — Learning Slab Classes to Alleviate Memory Holes in Memcached
-- `314-allocator-aware-aa-software-lakos-et-al` — Allocator-Aware (AA) Software (Lakos et al.)
-- `591-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa` — Beyond malloc efficiency to fleet efficiency: a hugepage-aware memory allocator (Temeraire)
-- `286-starmalloc-a-formally-verified-concurrent-performant-and-sec` — StarMalloc: A Formally Verified, Concurrent, Performant, and Security-Oriented Memory Allocator
+- `436-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd` — Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel
+- `202-the-slab-allocator-an-object-caching-kernel-memory-allocator` — The Slab Allocator: An Object-Caching Kernel Memory Allocator
+- `306-dynamic-storage-allocation-a-survey-and-critical-review` — Dynamic Storage Allocation: A Survey and Critical Review
+- `301-hoard-a-scalable-memory-allocator-for-multithreaded-applicat` — Hoard: A Scalable Memory Allocator for Multithreaded Applications
+- `437-a-memory-allocator-dlmalloc` — A Memory Allocator (dlmalloc)
+- `438-composing-high-performance-memory-allocators` — Composing High-Performance Memory Allocators
+- `199-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus` — Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources
+- `439-reconsidering-custom-memory-allocation` — Reconsidering Custom Memory Allocation
+- `440-scalable-lock-free-dynamic-memory-allocation` — Scalable Lock-Free Dynamic Memory Allocation
+- `361-an-efficient-memory-allocator-for-network-processors-and-mul` — An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF)
+- `441-scalable-locality-conscious-multithreaded-memory-allocatio` — Scalable Locality-Conscious Multithreaded Memory Allocation (Streamflow)
+- `288-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je` — A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)
+- `405-diehard-probabilistic-memory-safety-for-unsafe-languages` — DieHard: Probabilistic Memory Safety for Unsafe Languages
+- `442-tcmalloc-thread-caching-malloc` — TCMalloc: Thread-Caching Malloc
+- `443-slub-the-unqueued-slab-allocator` — SLUB: The Unqueued Slab Allocator
+- `195-local-memory-allocators-in-large-scale-c-lakos-allocator-mod` — Local Memory Allocators in Large-Scale C++ (Lakos allocator model)
+- `333-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac` — SuperMalloc: A Super Fast Multithreaded malloc for 64-bit Machines
+- `444-fast-multicore-scalable-low-fragmentation-memory-allocatio` — Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)
+- `445-rpmalloc-lock-free-thread-caching-size-class-allocator` — rpmalloc: Lock-Free Thread-Caching Size-Class Allocator
+- `320-mesh-compacting-memory-management-for-c-c-applications` — Mesh: Compacting Memory Management for C/C++ Applications
+- `322-snmalloc-a-message-passing-allocator` — snmalloc: A Message Passing Allocator
+- `011-mimalloc-free-list-sharding-in-action` — mimalloc: Free List Sharding in Action
+- `254-learning-slab-classes-to-alleviate-memory-holes-in-memcached` — Learning Slab Classes to Alleviate Memory Holes in Memcached
+- `244-allocator-aware-aa-software-lakos-et-al` — Allocator-Aware (AA) Software (Lakos et al.)
+- `446-beyond-malloc-efficiency-to-fleet-efficiency-a-hugepage-awa` — Beyond malloc efficiency to fleet efficiency: a hugepage-aware memory allocator (Temeraire)
+- `224-starmalloc-a-formally-verified-concurrent-performant-and-sec` — StarMalloc: A Formally Verified, Concurrent, Performant, and Security-Oriented Memory Allocator
