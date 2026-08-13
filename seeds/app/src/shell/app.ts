@@ -43,10 +43,20 @@ import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
 import { attr, escapeHtml } from "./html.ts";
 import {
   COMPACT_MEDIA,
+  SPLIT_GUTTER_PX,
+  browseMinRem,
+  clearStoredDetailWidth,
+  clampDetailWidthPx,
+  detailMinRem,
   isCardsSheetLayout,
   isCardsSheetVisible,
+  isSideSplitLayout,
+  paneSplitKey,
   readStoredDetailFocus,
+  readStoredDetailWidth,
+  resolveDetailWidthPx,
   writeStoredDetailFocus,
+  writeStoredDetailWidth,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
@@ -114,6 +124,7 @@ type Paint = {
   readonly hasVisible: boolean;
   readonly filterKey: string;
   readonly detailFocus: boolean;
+  readonly view: ViewMode;
 };
 
 function init(corpus: Corpus, hash: string, view: ViewMode, detailFocus: boolean): Model {
@@ -392,6 +403,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, detailFocus: boolean): string
     <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
     <div class="workspace" id="workspace" data-view="${attr(view)}" data-focus="${detailFocus ? "detail" : "browse"}" data-sheet="closed">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
+      <div class="pane-split" id="pane-split" role="separator" aria-orientation="vertical" aria-label="Resize browse and detail panes" aria-controls="browse detail" aria-keyshortcuts="ArrowLeft ArrowRight" tabindex="0" title="Drag to resize. Double-click to reset."></div>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
     </div>
   `;
@@ -663,6 +675,12 @@ function isTypingTarget(target: EventTarget | null): boolean {
   );
 }
 
+function rootRem(): number {
+  const raw = getComputedStyle(document.documentElement).fontSize;
+  const px = Number.parseFloat(raw);
+  return Number.isFinite(px) && px > 0 ? px : 16;
+}
+
 export function startApp(root: HTMLElement, corpus: Corpus): void {
   const storage = browserStorage();
   const initialView = resolveView(location.search, storage);
@@ -687,6 +705,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const focusDetail = requireElement<HTMLButtonElement>(root, "focus-detail");
   const workspace = requireElement<HTMLElement>(root, "workspace");
   const browse = requireElement<HTMLElement>(root, "browse");
+  const splitter = requireElement<HTMLElement>(root, "pane-split");
   const detail = requireElement<HTMLElement>(root, "detail");
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
@@ -696,6 +715,78 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   let filtersOpen = false;
   let sheetWasVisible = false;
   const compactLayout = window.matchMedia(COMPACT_MEDIA);
+
+  type SplitDrag = {
+    readonly pointerId: number;
+    readonly startX: number;
+    readonly startDetail: number;
+    moved: boolean;
+  };
+  let splitDrag: SplitDrag | null = null;
+  let liveDetailPx: number | null = null;
+
+  const splitMeasure = () => ({
+    view: model.view,
+    focus: model.detailFocus,
+    workspacePx: workspace.clientWidth,
+    gutterPx: SPLIT_GUTTER_PX,
+    rem: rootRem(),
+  });
+
+  const applyPaneSplit = (): void => {
+    const side = isSideSplitLayout(compactLayout.matches);
+    splitter.hidden = !side;
+    splitter.tabIndex = side ? 0 : -1;
+    if (side) splitter.removeAttribute("aria-hidden");
+    else {
+      splitter.setAttribute("aria-hidden", "true");
+      if (document.activeElement === splitter) splitter.blur();
+      workspace.classList.remove("is-resizing");
+      return;
+    }
+    const measure = splitMeasure();
+    if (measure.workspacePx <= 0) return;
+    const key = paneSplitKey(model.view, model.detailFocus);
+    const stored = liveDetailPx ?? readStoredDetailWidth(storage, key);
+    const detailPx = resolveDetailWidthPx({ ...measure, storedPx: stored });
+    const detailMin = detailMinRem(model.detailFocus) * measure.rem;
+    const maxDetail = Math.max(
+      detailMin,
+      measure.workspacePx - measure.gutterPx - browseMinRem(model.detailFocus) * measure.rem,
+    );
+    workspace.style.setProperty("--split-gutter", `${SPLIT_GUTTER_PX}px`);
+    workspace.style.setProperty("--browse-min", `${browseMinRem(model.detailFocus)}rem`);
+    workspace.style.setProperty("--detail-min", `${detailMinRem(model.detailFocus)}rem`);
+    workspace.style.setProperty("--detail-width", `${detailPx}px`);
+    splitter.setAttribute("aria-valuemin", String(Math.round(Math.min(detailMin, maxDetail))));
+    splitter.setAttribute("aria-valuemax", String(Math.round(maxDetail)));
+    splitter.setAttribute("aria-valuenow", String(Math.round(detailPx)));
+  };
+
+  const commitDetailWidth = (detailPx: number, persist: boolean): void => {
+    const next = clampDetailWidthPx({ ...splitMeasure(), detailPx });
+    liveDetailPx = next;
+    applyPaneSplit();
+    if (persist) {
+      writeStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus), next);
+      liveDetailPx = null;
+      virt.refresh();
+    }
+  };
+
+  const endSplitDrag = (): void => {
+    if (splitDrag === null) return;
+    const pointerId = splitDrag.pointerId;
+    const moved = splitDrag.moved;
+    if (moved && liveDetailPx !== null) {
+      writeStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus), liveDetailPx);
+    }
+    liveDetailPx = null;
+    splitDrag = null;
+    workspace.classList.remove("is-resizing");
+    if (splitter.hasPointerCapture(pointerId)) splitter.releasePointerCapture(pointerId);
+    if (moved) virt.refresh();
+  };
 
   const syncFilterDisclosure = (): void => {
     const narrow = compactLayout.matches;
@@ -770,6 +861,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     workspace.dataset.view = vm.view;
     workspace.dataset.focus = vm.detailFocus ? "detail" : "browse";
+    applyPaneSplit();
     focusDetail.setAttribute("aria-pressed", vm.detailFocus ? "true" : "false");
     syncViewToggle(root, vm.view);
     syncFilterControls(vm.query);
@@ -780,7 +872,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
     const prev = painted;
     virt.set(vm.view, vm.visible, highlight);
-    if (prev !== null && prev.detailFocus !== vm.detailFocus) {
+    if (prev !== null && (prev.detailFocus !== vm.detailFocus || prev.view !== vm.view)) {
       requestAnimationFrame(() => {
         virt.refresh();
         virt.reveal(highlight);
@@ -805,6 +897,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       hasVisible,
       filterKey: filters,
       detailFocus: vm.detailFocus,
+      view: vm.view,
     };
   };
 
@@ -815,6 +908,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (msg._tag !== "Hash") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
     if (msg._tag === "SetDetailFocus") writeStoredDetailFocus(storage, model.detailFocus);
+    if ((msg._tag === "SetView" || msg._tag === "SetDetailFocus") && splitDrag === null) {
+      liveDetailPx = null;
+    }
     patch(model);
   };
 
@@ -905,6 +1001,51 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   });
   focusDetail.addEventListener("click", () => {
     dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
+  });
+  splitter.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0 || !isSideSplitLayout(compactLayout.matches)) return;
+    event.preventDefault();
+    splitter.focus();
+    const measure = splitMeasure();
+    const key = paneSplitKey(model.view, model.detailFocus);
+    const startDetail = resolveDetailWidthPx({
+      ...measure,
+      storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),
+    });
+    splitDrag = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startDetail,
+      moved: false,
+    };
+    splitter.setPointerCapture(event.pointerId);
+  });
+  splitter.addEventListener("pointermove", (event) => {
+    if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
+    const dx = event.clientX - splitDrag.startX;
+    if (!splitDrag.moved && Math.abs(dx) < 3) return;
+    splitDrag.moved = true;
+    workspace.classList.add("is-resizing");
+    commitDetailWidth(splitDrag.startDetail - dx, false);
+  });
+  splitter.addEventListener("pointerup", (event) => {
+    if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
+    endSplitDrag();
+  });
+  splitter.addEventListener("pointercancel", (event) => {
+    if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
+    endSplitDrag();
+  });
+  splitter.addEventListener("lostpointercapture", () => {
+    endSplitDrag();
+  });
+  splitter.addEventListener("dblclick", (event) => {
+    if (!isSideSplitLayout(compactLayout.matches)) return;
+    event.preventDefault();
+    endSplitDrag();
+    clearStoredDetailWidth(storage, paneSplitKey(model.view, model.detailFocus));
+    applyPaneSplit();
+    virt.refresh();
   });
   filtersToggle.addEventListener("click", () => {
     filtersOpen = !filtersOpen;
@@ -1012,6 +1153,23 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       dispatch({ _tag: "SetDetailFocus", value: !model.detailFocus });
       return;
     }
+    if (
+      event.target === splitter &&
+      isSideSplitLayout(compactLayout.matches) &&
+      (event.key === "ArrowLeft" || event.key === "ArrowRight")
+    ) {
+      event.preventDefault();
+      const rem = rootRem();
+      const step = (event.shiftKey ? 5 : 1) * rem;
+      const delta = event.key === "ArrowLeft" ? step : -step;
+      const key = paneSplitKey(model.view, model.detailFocus);
+      const current = resolveDetailWidthPx({
+        ...splitMeasure(),
+        storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),
+      });
+      commitDetailWidth(current + delta, true);
+      return;
+    }
     if (painted?.offFilter) {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -1056,6 +1214,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     dispatch({ _tag: "Hash", hash: location.hash });
   });
   const onCompactChange = (): void => {
+    if (compactLayout.matches) endSplitDrag();
     syncFilterDisclosure();
     if (compactLayout.matches && model.view === "cards" && routeId(model.route) !== null) {
       dispatch({ _tag: "SetCardsSheet", value: true });
@@ -1067,6 +1226,10 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   } else {
     compactLayout.addListener(onCompactChange);
   }
+  const splitObserver = new ResizeObserver(() => {
+    applyPaneSplit();
+  });
+  splitObserver.observe(workspace);
 
   syncFilterDisclosure();
   syncLocation(model.route, model.view);
