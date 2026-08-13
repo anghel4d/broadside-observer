@@ -343,6 +343,7 @@ button:focus-visible {
   display: grid;
   grid-template-columns: minmax(18rem, 24rem) minmax(0, 1fr);
   overflow: hidden;
+  position: relative;
 }
 
 .workspace[data-view="cards"] {
@@ -604,12 +605,37 @@ button:focus-visible {
 }
 
 .detail {
-  max-width: 46rem;
   padding: 0;
 }
 
-.workspace[data-focus="detail"] .detail {
-  max-width: 52rem;
+.reading-col {
+  width: 100%;
+  max-width: 46rem;
+  margin-inline: auto;
+  min-width: 0;
+}
+
+.workspace[data-focus="detail"] .reading-col {
+  max-width: 48rem;
+}
+
+.detail-dismiss {
+  display: none;
+  appearance: none;
+  align-self: flex-start;
+  font: inherit;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.18rem 0.55rem;
+  cursor: pointer;
+}
+
+.detail-dismiss:hover {
+  color: var(--ink);
+  border-color: var(--accent);
 }
 
 .detail-head {
@@ -937,22 +963,49 @@ a.chip-lineage-doc {
   font-size: 0.8rem;
 }
 
+/* Compact: 980px matches COMPACT_MAX_PX in layout.ts. List stacks; Cards uses a sheet. */
 @media (max-width: 980px) {
-  .workspace,
-  .workspace[data-view="cards"] {
+  .workspace {
     grid-template-columns: 1fr;
     grid-template-rows: minmax(8rem, 38%) minmax(0, 1fr);
   }
 
-  .workspace[data-focus="detail"],
-  .workspace[data-view="cards"][data-focus="detail"] {
+  .workspace[data-focus="detail"] {
     grid-template-columns: 1fr;
     grid-template-rows: minmax(5.5rem, 22%) minmax(0, 1fr);
+  }
+
+  .workspace[data-view="cards"],
+  .workspace[data-view="cards"][data-focus="detail"] {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
   }
 
   .browse-pane {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .workspace[data-view="cards"] .browse-pane {
+    border-bottom: 0;
+  }
+
+  .workspace[data-view="cards"] .detail-pane {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    background: var(--bg);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .workspace[data-view="cards"][data-sheet="open"] .detail-pane {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .workspace[data-view="cards"][data-sheet="open"] .detail-dismiss {
+    display: inline-flex;
   }
 
   .search-field {
@@ -981,14 +1034,17 @@ a.chip-lineage-doc {
 }
 
 @media (max-width: 560px) {
-  .workspace,
-  .workspace[data-view="cards"] {
+  .workspace {
     grid-template-rows: minmax(7.5rem, 34%) minmax(0, 1fr);
   }
 
-  .workspace[data-focus="detail"],
-  .workspace[data-view="cards"][data-focus="detail"] {
+  .workspace[data-focus="detail"] {
     grid-template-rows: minmax(5rem, 20%) minmax(0, 1fr);
+  }
+
+  .workspace[data-view="cards"],
+  .workspace[data-view="cards"][data-focus="detail"] {
+    grid-template-rows: minmax(0, 1fr);
   }
 
   .search-field {
