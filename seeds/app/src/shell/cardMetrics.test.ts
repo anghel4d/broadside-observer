@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  SEED_CARD_COLS_VAR,
   SEED_CARD_GAP_REM,
   SEED_CARD_GAP_VAR,
   SEED_CARD_HEIGHT_REM,
@@ -74,16 +75,26 @@ import {
 
   assert.match(
     css,
-    /grid-template-columns:\s*repeat\(\s*auto-fill\s*,\s*var\(--seed-card-width\)\s*\)/,
-    "Cards grid must use fixed auto-fill tracks, not 1fr growth",
+    /grid-template-columns:\s*repeat\(\s*var\(--seed-card-cols,\s*1\)\s*,\s*var\(--seed-card-width\)\s*\)/,
+    "Cards grid must use JS column count with fixed tracks, not 1fr growth",
   );
   assert.ok(
     !/repeat\(\s*auto-fill\s*,\s*minmax\([^)]*1fr/.test(css),
     "Cards grid must not stretch tiles with 1fr",
   );
+  assert.ok(
+    !/repeat\(\s*auto-fill\s*,\s*var\(--seed-card-width\)/.test(css),
+    "Cards grid must not use auto-fill (it reflows before the virtualizer slack)",
+  );
   assert.match(css, /grid-auto-rows:\s*var\(--seed-card-height\)/);
   assert.match(css, /\.seed-card[\s\S]*?width:\s*var\(--seed-card-width\)/);
   assert.match(css, /\.seed-card[\s\S]*?height:\s*var\(--seed-card-height\)/);
+  assert.equal(SEED_CARD_COLS_VAR, "--seed-card-cols");
+  assert.match(
+    css,
+    /\.card-grid[\s\S]*?overflow-x:\s*hidden/,
+    "Cards grid must clip a partially covered last column",
+  );
 }
 
 console.log("cardMetrics.test.ts ok");

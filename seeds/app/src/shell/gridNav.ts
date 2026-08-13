@@ -99,8 +99,8 @@ export function countGridTemplateColumns(value: string): number {
 }
 
 /**
- * Prefer the live CSS track list; fall back to the fixed-track auto-fill
- * formula (`repeat(auto-fill, track)` + gap) used by the virtualizer.
+ * Prefer the live CSS track list; fall back to the virtualizer's
+ * `gridColumns` formula (fixed tracks + partial-cover slack).
  */
 export function measureGridColumns(args: {
   readonly templateColumns: string | null | undefined;

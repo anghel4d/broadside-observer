@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { SEED_CARD_HEIGHT_REM, SEED_CARD_WIDTH_REM } from "./cardMetrics.ts";
 import {
   fillSizes,
+  GRID_COLUMN_COVER_FRACTION,
   gridColumns,
   gridItemBounds,
   gridRowCount,
@@ -84,18 +85,58 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 
 {
   // 754px browse − 16px grid padding = 738 inner; 14.5rem/0.5rem at 16px root.
-  // floor((inner + gap) / (cardWidth + gap)); leftover space is empty gutter.
-  assert.equal(gridColumns(738, 232, 8), 3);
-  assert.equal(gridColumns(500, 232, 8), 2);
-  assert.equal(gridColumns(200, 232, 8), 1);
-  assert.equal(gridColumns(100, 232, 8), 1);
-  assert.equal(gridColumns(976, 232, 8), 4);
-  assert.equal(gridColumns(0, 232, 8), 1);
-  // 3 tracks + 2 gaps = 712; 713..951 still 3 columns (no 1fr stretch).
-  assert.equal(gridColumns(712, 232, 8), 3);
-  assert.equal(gridColumns(713, 232, 8), 3);
-  assert.equal(gridColumns(951, 232, 8), 3);
-  assert.equal(gridColumns(952, 232, 8), 4);
+  // Partial-cover slack: last column stays until ~¾ of that card is clipped.
+  const track = 232;
+  const gap = 8;
+  const pitch = track + gap;
+  const coverSlack = GRID_COLUMN_COVER_FRACTION * track;
+  const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
+  const minInnerFor = (n: number): number => (n - 1) * pitch + uncovered;
+
+  assert.equal(GRID_COLUMN_COVER_FRACTION, 0.75);
+  assert.equal(gridColumns(738, track, gap), 3);
+  assert.equal(gridColumns(500, track, gap), 2);
+  assert.equal(gridColumns(200, track, gap), 1);
+  assert.equal(gridColumns(100, track, gap), 1);
+  assert.equal(gridColumns(976, track, gap), 4);
+  assert.equal(gridColumns(0, track, gap), 1);
+  assert.equal(gridColumns(-10, track, gap), 1);
+  assert.equal(gridColumns(738, 0, gap), 1);
+
+  // 3 full cards + 2 gaps = 712. Shrink by up to ¾ of a card → still 3; more → 2.
+  const threeFull = 3 * track + 2 * gap;
+  assert.equal(threeFull, 712);
+  assert.equal(gridColumns(threeFull, track, gap), 3);
+  assert.equal(minInnerFor(3), threeFull - coverSlack);
+  assert.equal(gridColumns(minInnerFor(3), track, gap), 3);
+  assert.equal(gridColumns(minInnerFor(3) - 1, track, gap), 2);
+
+  // 4th column appears once a sliver of that card is visible, not at 4 full tiles.
+  assert.equal(gridColumns(minInnerFor(4) - 1, track, gap), 3);
+  assert.equal(gridColumns(minInnerFor(4), track, gap), 4);
+  assert.equal(gridColumns(3 * track + 2 * gap + 1, track, gap), 3);
+
+  // One column remains even when the single tile is more than ¾ covered.
+  assert.equal(minInnerFor(2), pitch + uncovered);
+  assert.equal(gridColumns(minInnerFor(2), track, gap), 2);
+  assert.equal(gridColumns(minInnerFor(2) - 1, track, gap), 1);
+  assert.equal(gridColumns(1, track, gap), 1);
+  assert.equal(gridColumns(uncovered, track, gap), 1);
+
+  // floor((inner + gap + coverSlack) / pitch) matches the keep-N inequality.
+  for (const inner of [1, 50, 200, 297, 298, 537, 538, 712, 777, 778, 951, 952, 1200]) {
+    const cols = gridColumns(inner, track, gap);
+    assert.ok(cols >= 1);
+    if (cols >= 2) {
+      assert.ok(inner + 1e-9 >= minInnerFor(cols), `inner=${inner} cols=${cols}`);
+    }
+    assert.ok(
+      inner < minInnerFor(cols + 1),
+      `inner=${inner} cols=${cols} should reflow before ${cols + 1}`,
+    );
+    assert.equal(cols, Math.max(1, Math.floor((inner + gap + coverSlack) / pitch)));
+  }
+
   assert.equal(gridRowCount(571, 3), 191);
   assert.equal(gridRowCount(0, 3), 0);
   assert.equal(gridTotalHeight(3, 100, 8, 8, 8), 8 + 8 + 300 + 16);
@@ -237,8 +278,12 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
     "card grid row height must use the canonical --seed-card-height token",
   );
   assert.ok(
-    css.includes("repeat(auto-fill, var(--seed-card-width))"),
-    "card grid tracks must be the canonical width, not 1fr",
+    css.includes("repeat(var(--seed-card-cols, 1), var(--seed-card-width))"),
+    "card grid tracks must be JS-driven fixed columns, not 1fr",
+  );
+  assert.ok(
+    /overflow-x:\s*hidden/.test(css),
+    "browse pane / grid must clip a partially covered last column",
   );
   assert.equal(SEED_CARD_WIDTH_REM * 16, 232);
   assert.equal(SEED_CARD_HEIGHT_REM * 16, 172);
