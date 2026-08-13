@@ -29,6 +29,36 @@ cites:
     year: 2022
     arxiv: "2205.14135"
     card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - title: "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
+    url: "https://arxiv.org/abs/2401.06066"
+    year: 2024
+    arxiv: "2401.06066"
+    card: "1239-deepseekmoe-towards-ultimate-expert-specialization"
+  - title: "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+    url: "https://arxiv.org/abs/2402.03300"
+    year: 2024
+    arxiv: "2402.03300"
+    card: "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
+  - title: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
+    url: "https://arxiv.org/abs/2405.04434"
+    year: 2024
+    arxiv: "2405.04434"
+    card: "1243-deepseek-v2-economical-efficient-moe-language-model"
+  - title: "Auxiliary-Loss-Free Load Balancing Strategy for Mixture-of-Experts"
+    url: "https://arxiv.org/abs/2408.15664"
+    year: 2024
+    arxiv: "2408.15664"
+    card: "1248-auxiliary-loss-free-load-balancing-for-moe"
+  - title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
+    url: "https://arxiv.org/abs/2501.12948"
+    year: 2025
+    arxiv: "2501.12948"
+    card: "1252-deepseek-r1-incentivizing-reasoning-via-rl"
+  - title: "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
+    url: "https://arxiv.org/abs/2512.02556"
+    year: 2025
+    arxiv: "2512.02556"
+    card: "1259-deepseek-v3-2-pushing-the-frontier-of-open-llms"
 ---
 
 # DeepSeek-V3 Technical Report

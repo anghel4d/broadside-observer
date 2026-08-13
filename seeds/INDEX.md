@@ -1054,3 +1054,39 @@ Ledru, Tardieu, Zacchiroli, *Rust Coreutils* (arXiv:2608.07135) plus the testing
 _Recount after `user-add-2026-08-13`: **1067** unique title cards on main._
 
 _Recount after cull-2026-08-13: **1000** unique title cards on main._
+
+## DeepSeek lab (2026-08-13)
+
+First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF tech report). V3 already on main as [`1206`](cards/1206-deepseek-v3-technical-report.md) — not reminted; its cites now point at V2 / R1 / MoE / Math / loss-free / V3.2. New lineage: [`deepseek`](lineages/deepseek.md). Pool **agents** (1206 stays `languages`). FlashMLA is a kernel repo, not a paper. Muon optimizer is not first-party.
+
+| # | Title | Year | Pool | arXiv |
+|---|-------|------|------|-------|
+| 1238 | [DeepSeek LLM: Scaling Open-Source Language Models with Longtermism](cards/1238-deepseek-llm-scaling-open-source-language-models.md) | 2024 | agents | 2401.02954 |
+| 1239 | [DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models](cards/1239-deepseekmoe-towards-ultimate-expert-specialization.md) | 2024 | agents | 2401.06066 |
+| 1240 | [DeepSeek-Coder: When the Large Language Model Meets Programming](cards/1240-deepseek-coder-when-the-llm-meets-programming.md) | 2024 | agents | 2401.14196 |
+| 1241 | [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](cards/1241-deepseekmath-pushing-limits-of-mathematical-reasoning.md) | 2024 | agents | 2402.03300 |
+| 1242 | [DeepSeek-VL: Towards Real-World Vision-Language Understanding](cards/1242-deepseek-vl-towards-real-world-vision-language.md) | 2024 | agents | 2403.05525 |
+| 1243 | [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](cards/1243-deepseek-v2-economical-efficient-moe-language-model.md) | 2024 | agents | 2405.04434 |
+| 1244 | [DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](cards/1244-deepseek-prover-advancing-theorem-proving.md) | 2024 | agents | 2405.14333 |
+| 1245 | [DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence](cards/1245-deepseek-coder-v2-breaking-closed-source-barrier.md) | 2024 | agents | 2406.11931 |
+| 1246 | [DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for RL and MCTS](cards/1246-deepseek-prover-v1-5-proof-assistant-feedback.md) | 2024 | agents | 2408.08152 |
+| 1247 | [Fire-Flyer AI-HPC: A Cost-Effective Software-Hardware Co-Design for Deep Learning](cards/1247-fire-flyer-ai-hpc-cost-effective-software-hardware.md) | 2024 | agents | 2408.14158 |
+| 1248 | [Auxiliary-Loss-Free Load Balancing Strategy for Mixture-of-Experts](cards/1248-auxiliary-loss-free-load-balancing-for-moe.md) | 2024 | agents | 2408.15664 |
+| 1249 | [Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation](cards/1249-janus-decoupling-visual-encoding-unified-multimodal.md) | 2024 | agents | 2410.13848 |
+| 1250 | [JanusFlow: Harmonizing Autoregression and Rectified Flow](cards/1250-janusflow-autoregression-and-rectified-flow.md) | 2024 | agents | 2411.07975 |
+| 1251 | [DeepSeek-VL2: Mixture-of-Experts Vision-Language Models](cards/1251-deepseek-vl2-moe-vision-language-models.md) | 2024 | agents | 2412.10302 |
+| 1206 | [DeepSeek-V3 Technical Report](cards/1206-deepseek-v3-technical-report.md) *(already on main)* | 2025 | languages | 2412.19437 |
+| 1252 | [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](cards/1252-deepseek-r1-incentivizing-reasoning-via-rl.md) | 2025 | agents | 2501.12948 |
+| 1253 | [Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling](cards/1253-janus-pro-unified-multimodal-data-and-model-scaling.md) | 2025 | agents | 2501.17811 |
+| 1254 | [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](cards/1254-native-sparse-attention-hardware-aligned.md) | 2025 | agents | 2502.11089 |
+| 1255 | [DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via RL](cards/1255-deepseek-prover-v2-formal-reasoning-via-rl.md) | 2025 | agents | 2504.21801 |
+| 1256 | [Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware](cards/1256-insights-into-deepseek-v3-hardware-for-ai.md) | 2025 | agents | 2505.09343 |
+| 1257 | [DeepSeek-OCR: Contexts Optical Compression](cards/1257-deepseek-ocr-contexts-optical-compression.md) | 2025 | agents | 2510.18234 |
+| 1258 | [DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning](cards/1258-deepseekmath-v2-towards-self-verifiable-math.md) | 2025 | agents | 2511.22570 |
+| 1259 | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](cards/1259-deepseek-v3-2-pushing-the-frontier-of-open-llms.md) | 2025 | agents | 2512.02556 |
+| 1260 | [mHC: Manifold-Constrained Hyper-Connections](cards/1260-mhc-manifold-constrained-hyper-connections.md) | 2025 | agents | 2512.24880 |
+| 1261 | [Conditional Memory via Scalable Lookup (Engram)](cards/1261-engram-conditional-memory-via-scalable-lookup.md) | 2026 | agents | 2601.07372 |
+| 1262 | [DeepSeek-OCR 2: Visual Causal Flow](cards/1262-deepseek-ocr-2-visual-causal-flow.md) | 2026 | agents | 2601.20552 |
+| 1263 | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](cards/1263-deepseek-v4-million-token-context-intelligence.md) | 2026 | agents | 2606.19348 |
+
+_Recount after `deepseek-lab-2026-08-13`: **1026** unique title cards on main._
