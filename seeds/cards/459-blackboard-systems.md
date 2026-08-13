@@ -20,7 +20,6 @@ cites:
     year: 1980
     arxiv: null
     doi: "10.1145/356810.356816"
-    card: "500-the-hearsay-ii-speech-understanding-system"
   - title: "Generative Agents: Interactive Simulacra of Human Behavior"
     url: "https://arxiv.org/abs/2304.03442"
     year: 2023

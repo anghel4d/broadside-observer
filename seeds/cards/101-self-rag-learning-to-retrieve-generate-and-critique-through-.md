@@ -38,7 +38,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
 ---
 
 # Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection

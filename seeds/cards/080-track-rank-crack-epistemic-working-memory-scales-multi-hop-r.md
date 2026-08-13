@@ -26,7 +26,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
   - title: "Jailbreaks on Vision Language Model via Multimodal Reasoning"
     url: "https://arxiv.org/abs/2601.22398"
     year: 2026

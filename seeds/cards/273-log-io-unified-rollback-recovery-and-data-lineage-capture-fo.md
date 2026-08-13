@@ -23,7 +23,6 @@ cites:
     year: 2025
     arxiv: "2512.03610"
     doi: null
-    card: "268-cogram-context-sensitive-granular-optimization-method-with-r"
   - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
     url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
     year: 2017

@@ -41,7 +41,6 @@ cites:
     year: 2026
     arxiv: "2604.03964"
     doi: null
-    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
   - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     url: "https://arxiv.org/abs/2405.15793"
     year: 2024

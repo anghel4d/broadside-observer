@@ -40,7 +40,6 @@ cites:
     year: 2026
     arxiv: "2605.20616"
     doi: null
-    card: "054-auto-dreamer-learning-offline-memory-consolidation-for-langu"
   - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
     url: "https://arxiv.org/abs/2608.06811"
     year: 2026

@@ -33,7 +33,6 @@ cites:
     year: 2025
     arxiv: null
     doi: "10.1609/aaai.v39i28.38842"
-    card: "084-f-a-c-u-l-language-based-interaction-with-ai-companions-in-g"
   - title: "Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach"
     url: "https://arxiv.org/abs/2312.11865"
     year: 2024

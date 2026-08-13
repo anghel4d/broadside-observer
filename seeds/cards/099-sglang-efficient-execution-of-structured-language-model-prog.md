@@ -41,7 +41,6 @@ cites:
     year: 2026
     arxiv: "2606.19667"
     doi: null
-    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
   - title: "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU"
     url: "https://arxiv.org/abs/2604.15464"
     year: 2026

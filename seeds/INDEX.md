@@ -57,35 +57,24 @@ Total merged candidates considered: **965**.
 | 50 | 10 | 1962 | A Programming Language | languages |
 | 51 | 10 | 1945 | General Theory of Natural Equivalences | maths-foundations |
 | 53 | 9 | 2026 | Auto-Configuring Scientific Simulators with Lightweight Coding-Agen... | agents |
-| 54 | 9 | 2026 | Auto-Dreamer: Learning Offline Memory Consolidation for Language Ag... | agents |
-| 55 | 9 | 2026 | CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded R... | agents |
 | 56 | 9 | 2026 | Change2Task: From Repository Changes to Executable Coding Agent Tas... | agents |
 | 57 | 9 | 2026 | CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents | agents |
 | 58 | 9 | 2026 | CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Reso... | agents |
 | 59 | 9 | 2026 | Coupling Planning with Episodic Memory in LLM Agents for Software I... | agents |
-| 60 | 9 | 2026 | DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for... | agents |
-| 61 | 9 | 2026 | ElasticMem: Latent Memory as a Learnable Resource for LLM Agents | agents |
 | 62 | 9 | 2026 | From Storage to Experience: A Survey on the Evolution of LLM Agent... | agents |
 | 63 | 9 | 2026 | GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression | agents |
 | 64 | 9 | 2026 | Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the... | agents |
-| 65 | 9 | 2026 | Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent... | agents |
 | 66 | 9 | 2026 | Lightweight LLM Agent Memory with Small Language Models | agents |
 | 67 | 9 | 2026 | LoopsBench: From Harness Engineering to Loop Engineering in Coding... | agents |
-| 68 | 9 | 2026 | MemChain: Learning Interpretable Memory Traces for Memory-Augmented... | agents |
-| 69 | 9 | 2026 | MemLineage: Lineage-Guided Enforcement for LLM Agent Memory | agents |
 | 70 | 9 | 2026 | Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Par... | agents |
 | 71 | 9 | 2026 | Ragged Paged Attention: A High-Performance and Flexible LLM Inferen... | agents |
 | 72 | 9 | 2026 | Retain or Consolidate? Budget-Dependent Operator Selection for Lang... | agents |
 | 73 | 9 | 2026 | Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Age... | agents |
-| 74 | 9 | 2026 | SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Het... | agents |
-| 75 | 9 | 2026 | SWE-chat: Coding Agent Interactions From Real Users in the Wild | agents |
 | 76 | 9 | 2026 | Schema First Tool APIs for LLM Agents: A Controlled Study of Tool M... | agents |
-| 77 | 9 | 2026 | TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents... | agents |
 | 78 | 9 | 2026 | The Evolution of Tool Use in LLM Agents: From Single-Tool Call to M... | agents |
 | 79 | 9 | 2026 | ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Visio... | agents |
 | 80 | 9 | 2026 | Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reaso... | agents |
 | 82 | 9 | 2025 | A-MEM: Agentic Memory for LLM Agents | agents |
-| 84 | 9 | 2025 | F.A.C.U.L.: Language-Based Interaction with AI Companions in Gaming | scratch_curated.json |
 | 85 | 9 | 2025 | Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents | agents |
 | 86 | 9 | 2025 | Meta-Policy Reflexion: Reusable Reflective Memory and Rule Admissib... | agents |
 | 88 | 9 | 2024 | Agent Workflow Memory | agents |
@@ -186,7 +175,6 @@ Total merged candidates considered: **965**.
 | 192 | 8 | 2026 | Multiset semantics in SPARQL, Relational Algebra and Datalog | languages |
 | 194 | 8 | 2026 | On Complete Categorical Semantics for Effect Handlers | languages |
 | 195 | 8 | 2026 | Open-Source Reproduction and Explainability Analysis of Corrective... | agents |
-| 197 | 8 | 2026 | PlugMem: A Task-Agnostic Plugin Memory Module for LLM Agents | agents |
 | 198 | 8 | 2026 | Scaling Worst-Case Optimal Datalog to GPUs | languages |
 | 199 | 8 | 2026 | TEPA: Revoking Stale Memories for Conflict-Robust Language Agents | agents |
 | 200 | 8 | 2026 | The Essence of Entity Component System | languages |
@@ -197,7 +185,6 @@ Total merged candidates considered: **965**.
 | 211 | 8 | 2025 | Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agent... | agents |
 | 216 | 8 | 2025 | RA-Gen: A Controllable Code Generation Framework Using ReAct for Mu... | agents |
 | 217 | 8 | 2025 | Reachability is Decidable for ATM-Typable Finitary PCF with Effect... | languages |
-| 223 | 8 | 2025 | SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous S... | agents |
 | 224 | 8 | 2025 | The OpenHands Software Agent SDK: A Composable and Extensible Found... | agents |
 | 228 | 8 | 2024 | Abstracting Effect Systems for Algebraic Effect Handlers | languages |
 | 229 | 8 | 2024 | Agentless: Demystifying LLM-based Software Engineering Agents | agents |
@@ -206,13 +193,9 @@ Total merged candidates considered: **965**.
 | 232 | 8 | 2024 | CacheBlend: Fast Large Language Model Serving for RAG with Cached K... | agents |
 | 233 | 8 | 2024 | Corrective Retrieval Augmented Generation | agents |
 | 234 | 8 | 2024 | Cost-Efficient Large Language Model Serving for Multi-turn Conversa... | agents |
-| 235 | 8 | 2024 | Decoding Speculative Decoding | agents |
 | 236 | 8 | 2024 | DistServe: Disaggregating Prefill and Decoding for Goodput-optimize... | agents |
-| 237 | 8 | 2024 | Dynamic Depth Decoding: Faster Speculative Decoding for LLMs | agents |
 | 240 | 8 | 2024 | HyperAgent: Generalist Software Engineering Agents to Solve Coding... | agents |
 | 243 | 8 | 2024 | LLM-PySC2: Starcraft II learning environment for Large Language Models | game-ai |
-| 244 | 8 | 2024 | LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agno... | agents |
-| 246 | 8 | 2024 | Mixtral of Experts | agents |
 | 247 | 8 | 2024 | MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi... | agents |
 | 248 | 8 | 2024 | OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Rea... | agents |
 | 250 | 8 | 2024 | OpenHands: An Open Platform for AI Software Developers as Generalis... | agents |
@@ -232,7 +215,6 @@ Total merged candidates considered: **965**.
 | 264 | 9 | 2026 | Space-Efficient Lock-Free Linear-Probing Hash Table | systems |
 | 265 | 9 | 2026 | Split Radiance Cascades: Real-Time Global Illumination via Sparse R... | graphics |
 | 266 | 9 | 2026 | TurboMem: High-Performance Lock-Free Memory Pool with Transparent H... | systems |
-| 268 | 9 | 2025 | CoGraM: Context-sensitive granular optimization method with rollbac... | realtime |
 | 269 | 9 | 2025 | Fair Kernel-Lock-Free Claim/Release Protocol for Shared Object Acce... | systems |
 | 270 | 9 | 2025 | Holographic Radiance Cascades for 2D Global Illumination | graphics |
 | 271 | 9 | 2025 | Jump Point Search Pathfinding in 4-connected Grids | game-ai |
@@ -266,7 +248,6 @@ Total merged candidates considered: **965**.
 | 308 | 9 | 2022 | EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation | systems |
 | 310 | 9 | 2022 | Lock-Free Locks Revisited | systems |
 | 311 | 9 | 2022 | Practical Detectability for Persistent Lock-Free Data Structures | systems |
-| 312 | 9 | 2022 | Sensor Object Plausibilization with Boids Flocking Algorithm | game-ai |
 | 313 | 9 | 2022 | wCQ: A Fast Wait-Free Queue with Bounded Memory Usage | systems |
 | 314 | 9 | 2021 | Allocator-Aware (AA) Software (Lakos et al.) | engines |
 | 315 | 9 | 2021 | Crystalline: Fast and Memory Efficient Wait-Free Reclamation | systems |
@@ -336,7 +317,6 @@ Total merged candidates considered: **965**.
 | 385 | 9 | 1971 | STRIPS: A New Approach to the Application of Theorem Proving to Pro... | game-ai |
 | 386 | 9 | 1959 | A Note on Two Problems in Connexion with Graphs (Dijkstra) | game-ai |
 | 387 | 8 | 2026 | ComFree-Sim: A GPU-Parallelized Analytical Contact Physics Engine f... | realtime |
-| 388 | 8 | 2024 | Implementation of Formal Standard for Interoperability in M&S/Syste... | engines |
 | 390 | 8 | 2024 | Sensing Surface Patches in Volume Rendering for Inferring Signed Di... | engines |
 | 391 | 8 | 2022 | Dojo: A Differentiable Physics Engine for Robotics | engines |
 | 392 | 8 | 2021 | Flecs Relationships and Queries | engines |
@@ -409,11 +389,9 @@ Total merged candidates considered: **965**.
 | 462 | 8 | 1950 | Programming a Computer for Playing Chess | game-ai |
 | 463 | 7 | 2020 | NVIDIA Reflex / Low Latency Mode Practice | realtime |
 | 464 | 7 | 2020 | Unity DOTS Entities Manual | engines |
-| 465 | 7 | 2019 | Filament Physically Based Rendering Guide | graphics |
 | 466 | 7 | 2019 | io_uring High-Performance IO | realtime |
 | 467 | 7 | 2019 | Legion ECS (Amethyst) | engines |
 | 468 | 7 | 2019 | Tracy Frame Profiler | engines |
-| 469 | 7 | 2018 | OpenMP Application Programming Interface 5.0 | systems |
 | 470 | 7 | 2017 | Abseil Swiss Tables | systems |
 | 471 | 7 | 2017 | AMD Radeon GPU Profiler | graphics |
 | 472 | 7 | 2017 | Animation Compression Library | engines |
@@ -444,7 +422,6 @@ Total merged candidates considered: **965**.
 | 497 | 7 | 1990 | Release Consistency versus Sequential Consistency | systems |
 | 498 | 7 | 1990 | The Algorithmic Beauty of Plants (L-Systems) | engines |
 | 499 | 7 | 1986 | Robin Hood Hashing | systems |
-| 500 | 7 | 1980 | The Hearsay-II Speech-Understanding System | game-ai |
 | 501 | 8 | 2001 | A Simple, Fast and Scalable Non-Blocking Concurrent FIFO Queue for... | systems |
 | 502 | 8 | 2004 | An Optimistic Approach to Lock-Free FIFO Queues | systems |
 | 503 | 8 | 2005 | Using Elimination to Implement Scalable and Lock-Free FIFO Queues | systems |
@@ -791,7 +768,6 @@ Total merged candidates considered: **965**.
 | 1011 | 8 | 1971 | Schnelle Multiplikation grosser Zahlen | maths-foundations |
 | 1012 | 9 | 1962 | Quicksort | systems |
 | 1013 | 8 | 1964 | Algorithm 232: Heapsort | systems |
-| 1014 | 7 | 1959 | A High-Speed Sorting Procedure | systems |
 | 1015 | 9 | 1962 | An Algorithm for the Organization of Information | systems |
 | 1016 | 10 | 1972 | Organization and Maintenance of Large Ordered Indices | systems |
 | 1017 | 9 | 1978 | A Dichromatic Framework for Balanced Trees | systems |
@@ -808,7 +784,6 @@ Total merged candidates considered: **965**.
 | 1028 | 10 | 1967 | Error Bounds for Convolutional Codes and an Asymptotically Optimum... | maths-foundations |
 | 1029 | 9 | 1970 | A Maximization Technique Occurring in the Statistical Analysis of P... | maths-foundations |
 | 1030 | 9 | 1933 | Analysis of a Complex of Statistical Variables into Principal Compo... | maths-foundations |
-| 1031 | 8 | 1936 | The Use of Multiple Measurements in Taxonomic Problems | maths-foundations |
 | 1032 | 9 | 1977 | Probabilistic Computations: Toward a Unified Measure of Complexity | maths-foundations |
 | 1033 | 10 | 1984 | A Theory of the Learnable | maths-foundations |
 | 1034 | 10 | 1976 | New Directions in Cryptography | systems |
@@ -959,7 +934,6 @@ Daypart: **Curiosity** (odd date, before noon Europe/Bucharest). Unique candidat
 | # | Score | Year | Title | Pool |
 |---|------:|-----:|-------|------|
 | 1171 | 9 | 2025 | Dual-Numbers Reverse AD for Functional Array Languages | languages |
-| 1174 | 8 | 2024 | Functional Array Programming in an Extended Pi-Calculus | languages |
 | 1180 | 9 | 2026 | When Types Intersect and Effects Get Handled | languages |
 
 _Recount after `curiosity-2026-08-13`: **1012** unique title cards on main._
@@ -970,7 +944,6 @@ Daypart: **Craft** (odd calendar date, noon slot Europe/Bucharest). Unique candi
 
 | # | Score | Year | Title | Pool |
 |---|------:|-----:|-------|------|
-| 1183 | 9 | 2025 | Aokana: A GPU-Driven Voxel Rendering Framework for Open World Games | graphics |
 | 1184 | 9 | 2025 | Exploring the Theory and Practice of Concurrency in the Entity-Component-System Pattern | engines |
 | 1185 | 9 | 2026 | When Lifetimes Liberate: A Type System for Arenas with Higher-Order Reachability Tracking | languages |
 | 1186 | 9 | 2025 | Spegion: Implicit and Non-Lexical Regions with Sized Allocations | languages |
@@ -1091,3 +1064,5 @@ First-party DeepSeek-AI papers (org author, DeepSeek affiliation, or official HF
 | 1264 | [DeepSeek-V4-Pro-0813 GA](cards/1264-deepseek-v4-pro-0813-ga.md) | 2026 | agents | *(changelog, no arXiv)* |
 
 _Recount after `deepseek-lab-2026-08-13`: **1027** unique title cards on main._
+
+_Recount after dirt/dup cull: **1000** unique title cards on main._

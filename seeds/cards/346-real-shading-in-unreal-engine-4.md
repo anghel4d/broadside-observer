@@ -32,7 +32,6 @@ cites:
     year: 2019
     arxiv: null
     doi: null
-    card: "465-filament-physically-based-rendering-guide"
 ---
 
 # Real Shading in Unreal Engine 4

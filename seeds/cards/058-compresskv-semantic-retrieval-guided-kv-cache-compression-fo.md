@@ -29,7 +29,6 @@ cites:
     year: 2026
     arxiv: "2606.19667"
     doi: null
-    card: "055-cacheweaver-cache-aware-evidence-ordering-for-efficient-grou"
   - title: "A Survey of LLM $	imes$ DATA"
     url: "https://arxiv.org/abs/2505.18458"
     year: 2025

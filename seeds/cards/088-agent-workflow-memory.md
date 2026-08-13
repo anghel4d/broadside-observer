@@ -32,13 +32,11 @@ cites:
     year: 2026
     arxiv: "2604.03964"
     doi: null
-    card: "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
   - title: "SWE-chat: Coding Agent Interactions From Real Users in the Wild"
     url: "https://arxiv.org/abs/2604.20779"
     year: 2026
     arxiv: "2604.20779"
     doi: null
-    card: "075-swe-chat-coding-agent-interactions-from-real-users-in-the-wi"
 ---
 
 # Agent Workflow Memory
