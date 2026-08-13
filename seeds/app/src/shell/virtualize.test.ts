@@ -85,7 +85,7 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 
 {
   // 754px browse − 16px grid padding = 738 inner; 14.5rem/0.5rem at 16px root.
-  // Partial-cover slack: last column stays until ~¾ of that card is clipped.
+  // Partial-cover slack: last column stays until ~95% of that card is clipped.
   const track = 232;
   const gap = 8;
   const pitch = track + gap;
@@ -93,17 +93,17 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
   const minInnerFor = (n: number): number => (n - 1) * pitch + uncovered;
 
-  assert.equal(GRID_COLUMN_COVER_FRACTION, 0.75);
-  assert.equal(gridColumns(738, track, gap), 3);
-  assert.equal(gridColumns(500, track, gap), 2);
+  assert.equal(GRID_COLUMN_COVER_FRACTION, 0.95);
+  assert.equal(gridColumns(738, track, gap), 4);
+  assert.equal(gridColumns(500, track, gap), 3);
   assert.equal(gridColumns(200, track, gap), 1);
   assert.equal(gridColumns(100, track, gap), 1);
-  assert.equal(gridColumns(976, track, gap), 4);
+  assert.equal(gridColumns(976, track, gap), 5);
   assert.equal(gridColumns(0, track, gap), 1);
   assert.equal(gridColumns(-10, track, gap), 1);
   assert.equal(gridColumns(738, 0, gap), 1);
 
-  // 3 full cards + 2 gaps = 712. Shrink by up to ¾ of a card → still 3; more → 2.
+  // 3 full cards + 2 gaps = 712. Shrink by up to ~95% of a card → still 3; more → 2.
   const threeFull = 3 * track + 2 * gap;
   assert.equal(threeFull, 712);
   assert.equal(gridColumns(threeFull, track, gap), 3);
@@ -116,7 +116,7 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   assert.equal(gridColumns(minInnerFor(4), track, gap), 4);
   assert.equal(gridColumns(3 * track + 2 * gap + 1, track, gap), 3);
 
-  // One column remains even when the single tile is more than ¾ covered.
+  // One column remains even when the single tile is more than 95% covered.
   assert.equal(minInnerFor(2), pitch + uncovered);
   assert.equal(gridColumns(minInnerFor(2), track, gap), 2);
   assert.equal(gridColumns(minInnerFor(2) - 1, track, gap), 1);
@@ -124,7 +124,7 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   assert.equal(gridColumns(uncovered, track, gap), 1);
 
   // floor((inner + gap + coverSlack) / pitch) matches the keep-N inequality.
-  for (const inner of [1, 50, 200, 297, 298, 537, 538, 712, 777, 778, 951, 952, 1200]) {
+  for (const inner of [1, 50, 200, 251, 252, 491, 492, 712, 731, 732, 971, 972, 1200]) {
     const cols = gridColumns(inner, track, gap);
     assert.ok(cols >= 1);
     if (cols >= 2) {
