@@ -1009,3 +1009,25 @@ Total merged candidates considered: **965**.
 
 
 _Recount after `to1000-db-types-2026-08-13`: **1000** unique title cards on main._
+
+## Curiosity radar 2026-08-13
+
+Daypart: **Curiosity** (odd date, before noon Europe/Bucharest). Unique candidates after fetch, corpus dedupe, LLM-dump ban, and a strict curiosity cheap filter: **98**. Keepers: **12** (keep rate **0.122**, hard cap 0.15). Prefer crème over filling the quota.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1171 | 9 | 2025 | Dual-Numbers Reverse AD for Functional Array Languages | languages |
+| 1172 | 9 | 2024 | Clones, closed categories, and combinatory logic | maths-foundations |
+| 1173 | 9 | 2026 | Simple Types for Polymorphic Functions | languages |
+| 1174 | 8 | 2024 | Functional Array Programming in an Extended Pi-Calculus | languages |
+| 1175 | 8 | 2026 | Counting number-conserving cellular automata with radius 1 | maths-foundations |
+| 1176 | 8 | 2026 | Three-dimensional Fundamental Diagrams of Five-neighbor Particle Cellular Automata | maths-foundations |
+| 1177 | 9 | 2026 | Continuous Game of Life: cell emergence and self-organization at the edge of growth | maths-foundations |
+| 1178 | 8 | 2026 | Quantum Turing Patterns | maths-foundations |
+| 1179 | 8 | 2026 | Control of morphology and topology in a lattice model of branching morphogenesis | maths-foundations |
+| 1180 | 9 | 2026 | When Types Intersect and Effects Get Handled | languages |
+| 1181 | 8 | 2026 | Characterization of Word-Representable Near-Triangulations | maths-foundations |
+| 1182 | 8 | 2026 | Necklaces and Lyndon words in colexicographic order | maths-foundations |
+
+_Recount after `curiosity-2026-08-13`: **1012** unique title cards on main._
+
