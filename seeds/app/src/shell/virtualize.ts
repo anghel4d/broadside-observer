@@ -100,9 +100,10 @@ export function listSlice(
 
 /**
  * Fraction of a card the splitter may cover before the column count drops.
- * Tunable: 0.75 means the rightmost tile stays until ~¾ of it is clipped.
+ * Tunable: 0.95 means the rightmost tile stays until ~95% of it is clipped
+ * (remaining visible width of the last card ≥ ~5% of card width).
  */
-export const GRID_COLUMN_COVER_FRACTION = 0.75;
+export const GRID_COLUMN_COVER_FRACTION = 0.95;
 
 /**
  * Cards column count for a content box of `innerWidth` with fixed `track`
@@ -118,7 +119,7 @@ export const GRID_COLUMN_COVER_FRACTION = 0.75;
  * Equivalent: keep N≥2 columns while
  * `innerWidth >= (N-1)*pitch + (1 - fraction)*track`
  * — (N−1) full cards plus gaps, plus a sliver of the Nth card. One column
- * remains even when that single tile is more than ¾ covered.
+ * remains even when that single tile is more than 95% covered.
  */
 export function gridColumns(innerWidth: number, track: number, gap: number): number {
   if (innerWidth <= 0 || track <= 0) return 1;

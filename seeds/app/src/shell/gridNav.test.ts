@@ -161,7 +161,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
     track: 232,
     gap: 8,
   });
-  assert.equal(fallback, 3);
+  assert.equal(fallback, 4);
   assert.equal(fallback, gridColumns(738, 232, 8));
 
   const autoFill = measureGridColumns({
