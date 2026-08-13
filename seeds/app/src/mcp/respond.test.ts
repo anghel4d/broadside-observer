@@ -147,6 +147,29 @@ const got = getSeed(corpus, "001-alpha");
 assert.match(got, /^Retrieved full seed card id="001-alpha"\./u);
 assert.ok(got.includes("Alpha Paper"));
 assert.ok(got.includes("Alpha takeaway about paging."));
+assert.equal(got.includes("card:"), false);
+assert.equal(got.includes("see:"), false);
+
+const withSee = getSeed(
+  buildCorpus([
+    card({
+      cites: [
+        {
+          title: "Attention Is All You Need",
+          url: "https://arxiv.org/abs/1706.03762",
+          year: 2017,
+          arxiv: "1706.03762",
+        },
+      ],
+      see: ["014-attention-is-all-you-need"],
+    }),
+  ]),
+  "001-alpha",
+);
+assert.ok(withSee.includes('see: ["014-attention-is-all-you-need"]'));
+assert.ok(withSee.includes("title: Attention Is All You Need"));
+assert.ok(withSee.includes("arxiv: 1706.03762"));
+assert.equal(withSee.includes("card:"), false);
 
 const gotMd = getSeed(corpus, "001-alpha.md");
 assert.match(gotMd, /^Retrieved full seed card id="001-alpha"\./u);
