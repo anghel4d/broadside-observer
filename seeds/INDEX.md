@@ -1062,3 +1062,61 @@ Practitioner trail that is *not* F.E.A.R. GOAP. Halo has GDC proceedings; Myth h
 | 1196 | [Postmortem: Bungie's Myth: The Fallen Lords](cards/1196-postmortem-bungie-myth-the-fallen-lords.md) | 1998 |
 
 Slides + transcript: [`sources/halo-myth-ai/`](../sources/halo-myth-ai/).
+
+## Categorical deep learning (user-add 2026-08-13)
+
+Abbott & Zardini, *Weaves, Wires, and Morphisms* (arXiv:2604.07242) plus the CDL citation spine. New lineage: [`categorical-deep-learning`](lineages/categorical-deep-learning.md). Existing FA/Attention/Selinger cards are cite-linked, not reminted. Software-only (pyncd, tsncd): GitHub URLs, no cards.
+
+| # | Title | Year | Pool |
+|---|-------|------|------|
+| 1197 | [Weaves, Wires, and Morphisms: Formalizing and Implementing the Algebra of Deep Learning](cards/1197-weaves-wires-and-morphisms-algebra-of-deep-learning.md) | 2026 | languages |
+| 1198 | [Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures](cards/1198-neural-circuit-diagrams.md) | 2024 | languages |
+| 1199 | [FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness](cards/1199-flashattention-on-a-napkin.md) | 2025 | languages |
+| 1200 | [Accelerating Machine Learning Systems via Category Theory: Applications to Spherical Attention for Gene Regulatory Networks](cards/1200-accelerating-ml-systems-via-category-theory.md) | 2025 | languages |
+| 1201 | [Lectures on Quantum Tensor Networks](cards/1201-lectures-on-quantum-tensor-networks.md) | 2019 | maths-foundations |
+| 1202 | [Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](cards/1202-geometric-deep-learning-grids-groups-graphs-geodesics.md) | 2021 | languages |
+| 1203 | [Named Tensor Notation](cards/1203-named-tensor-notation.md) | 2023 | languages |
+| 1204 | [Categorical Foundations of Gradient-Based Learning](cards/1204-categorical-foundations-of-gradient-based-learning.md) | 2022 | maths-foundations |
+| 1205 | [Deep Learning with Parametric Lenses](cards/1205-deep-learning-with-parametric-lenses.md) | 2024 | maths-foundations |
+| 1206 | [DeepSeek-V3 Technical Report](cards/1206-deepseek-v3-technical-report.md) | 2025 | languages |
+| 1207 | [Backprop as Functor: A compositional perspective on supervised learning](cards/1207-backprop-as-functor-compositional-supervised-learning.md) | 2019 | maths-foundations |
+| 1208 | [Representable Markov Categories and Comparison of Statistical Experiments in Categorical Probability](cards/1208-representable-markov-categories-statistical-experiments.md) | 2023 | maths-foundations |
+| 1209 | [Position: Categorical Deep Learning is an Algebraic Theory of All Architectures](cards/1209-categorical-deep-learning-algebraic-theory-of-architectures.md) | 2024 | maths-foundations |
+| 1210 | [AI and Memory Wall](cards/1210-ai-and-memory-wall.md) | 2024 | languages |
+| 1211 | [Deep Residual Learning for Image Recognition](cards/1211-deep-residual-learning-for-image-recognition.md) | 2015 | languages |
+| 1212 | [The Geometry of Tensor Calculus, I](cards/1212-the-geometry-of-tensor-calculus-i.md) | 1991 | maths-foundations |
+| 1213 | [ImageNet classification with deep convolutional neural networks](cards/1213-imagenet-classification-with-deep-convolutional-neural-nets.md) | 2017 | languages |
+| 1214 | [Formal Algorithms for Transformers](cards/1214-formal-algorithms-for-transformers.md) | 2022 | languages |
+| 1215 | [An Introduction to String Diagrams for Computer Scientists](cards/1215-an-introduction-to-string-diagrams-for-computer-scientists.md) | 2025 | maths-foundations |
+| 1216 | [Categorical foundations for CuTe layouts](cards/1216-categorical-foundations-for-cute-layouts.md) | 2025 | languages |
+| 1217 | [Einops: Clear and Reliable Tensor Manipulations with Einstein-Like Notation](cards/1217-einops-clear-and-reliable-tensor-manipulations.md) | 2022 | languages |
+| 1218 | [GLU Variants Improve Transformer](cards/1218-glu-variants-improve-transformer.md) | 2020 | languages |
+| 1219 | [Category Theory in Machine Learning](cards/1219-category-theory-in-machine-learning.md) | 2021 | maths-foundations |
+| 1220 | [Graph Attention Networks](cards/1220-graph-attention-networks.md) | 2018 | languages |
+| 1221 | [String diagrams for strictification and coherence](cards/1221-string-diagrams-for-strictification-and-coherence.md) | 2024 | maths-foundations |
+| 1222 | [FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling](cards/1222-flashattention-4.md) | 2026 | languages |
+| 1223 | [Co-Design of Complex Systems: From Autonomy to Future Mobility Systems](cards/1223-co-design-of-complex-systems-zardini-phd.md) | 2023 | maths-foundations |
+| 1224 | [Applied Compositional Thinking for Engineering](cards/1224-applied-compositional-thinking-for-engineering.md) | 2024 | maths-foundations |
+| 1225 | [Deep Learning](cards/1225-deep-learning.md) | 2016 | languages |
+
+## Unix foundations / Rust coreutils (user-add 2026-08-13)
+
+Ledru, Tardieu, Zacchiroli, *Rust Coreutils* (arXiv:2608.07135) plus the testing / complexity / supply-chain / Unix-architecture spine. New lineage: [`unix-foundations`](lineages/unix-foundations.md). Geiselhart, Kernighan podcast, GNU manual, POSIX: cited without cards.
+
+| # | Title | Year | Pool |
+|---|-------|------|------|
+| 1226 | [Rust Coreutils: Rebuilding Unix Foundations in a Modern Language](cards/1226-rust-coreutils-rebuilding-unix-foundations.md) | 2026 | systems |
+| 1227 | [rust-code-analysis: A Rust library to analyze and extract maintainability information from source codes](cards/1227-rust-code-analysis.md) | 2020 | systems |
+| 1228 | [SoK: Taxonomy of Attacks on Open-Source Software Supply Chains](cards/1228-sok-taxonomy-of-attacks-on-oss-supply-chains.md) | 2023 | systems |
+| 1229 | [Exposing bugs in JavaScript engines through test transplantation and differential testing](cards/1229-exposing-bugs-in-javascript-engines.md) | 2021 | systems |
+| 1230 | [Technical Leverage in a Software Ecosystem: Development Opportunities and Security Risks](cards/1230-technical-leverage-in-a-software-ecosystem.md) | 2021 | systems |
+| 1231 | [A Complexity Measure](cards/1231-a-complexity-measure.md) | 1976 | systems |
+| 1232 | [Differential Testing for Software](cards/1232-differential-testing-for-software.md) | 1998 | systems |
+| 1233 | [An Empirical Study of the Reliability of UNIX Utilities](cards/1233-an-empirical-study-of-the-reliability-of-unix-utilities.md) | 1990 | systems |
+| 1234 | [Continuous Fuzzing with libFuzzer and AddressSanitizer](cards/1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer.md) | 2016 | systems |
+| 1235 | [OSS-Fuzz: Google's Continuous Fuzzing Service for Open Source Software](cards/1235-oss-fuzz-continuous-fuzzing-for-open-source-software.md) | 2017 | systems |
+| 1236 | [Rewriting the Unix Stream Editor in Rust](cards/1236-rewriting-the-unix-stream-editor-in-rust.md) | 2025 | systems |
+| 1237 | [Evolution of the Unix System Architecture: An Exploratory Case Study](cards/1237-evolution-of-the-unix-system-architecture.md) | 2021 | systems |
+
+_Recount after `user-add-2026-08-13`: **1067** unique title cards on main._
+
