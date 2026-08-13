@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { parseCard } from "./parse.ts";
-import { SeedCardSchema } from "./schema.ts";
+import { ArxivIdSchema, DoiSchema, SeedCardSchema } from "./schema.ts";
 
 const sample = `---
 title: "Attention Is All You Need"
@@ -153,5 +153,66 @@ assert.equal(withLineage.value.cites[0]?.card, "032-michael-scott-lock-free-queu
 assert.equal(withLineage.value.cites[1]?.url, null);
 assert.equal(withLineage.value.cites[1]?.card, "037-wait-free-synchronization");
 assert.equal(SeedCardSchema.safeParse(withLineage.value).success, true);
+
+assert.equal(ArxivIdSchema.parse(1411.2684), "1411.2684");
+assert.equal(DoiSchema.parse(10.1145), "10.1145");
+
+const numericArxiv = parseCard({
+  file: "1129-rustbelt-securing-the-foundations-of-the-rust-programming-la.md",
+  markdown: sample.replace('arxiv: "1706.03762"', "arxiv: 1710.08840"),
+});
+assert.equal(numericArxiv._tag, "Ok");
+if (numericArxiv._tag !== "Ok") throw new Error("expected Ok");
+assert.equal(numericArxiv.value.arxiv, "1710.08840");
+assert.equal(SeedCardSchema.safeParse(numericArxiv.value).success, true);
+
+const numericCiteArxiv = parseCard({
+  file: "025-hazard-pointers.md",
+  markdown: `---
+title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
+authors:
+  - "Maged M. Michael"
+year: 2004
+venue: "TPDS"
+arxiv: null
+doi: "10.1109/TPDS.2004.8"
+source: "https://doi.org/10.1109/TPDS.2004.8"
+topics:
+  - lockfree
+seed_rank: 25
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "engine"
+relevance_score: 10
+cites:
+  - title: "Oxide: The Essence of Rust"
+    year: 2019
+    arxiv: 1903.00982
+---
+
+## One-sentence takeaway
+
+Safe reclamation for lock-free structures without GC.
+
+## Why it matters here
+
+Event-bus / logger lineage.
+
+## Key ideas
+
+- Retire lists.
+
+## Caveats
+
+- Seed card.
+
+## Links
+
+- DOI
+`,
+});
+assert.equal(numericCiteArxiv._tag, "Ok");
+if (numericCiteArxiv._tag !== "Ok") throw new Error("expected Ok");
+assert.equal(numericCiteArxiv.value.cites[0]?.arxiv, "1903.00982");
 
 console.log("parse.test.ts ok");

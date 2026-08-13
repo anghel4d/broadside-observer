@@ -21,6 +21,11 @@ export const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   "open-addressing": "Open-addressing hash tables",
   "realtime-scheduling": "Real-time scheduling",
   "ambient-occlusion": "Ambient occlusion",
+  "contemporary-databases": "Contemporary databases",
+  "type-safety": "Type safety",
+  "foundations-of-computing": "Foundations of computing",
+  "programming-language-foundations": "Programming language foundations",
+  "algorithms-and-complexity": "Algorithms & complexity",
 };
 
 export const POOL_TITLES: Readonly<Record<string, string>> = {

@@ -5,6 +5,11 @@ assert.equal(labelForLineage("concurrent-data-structures"), "Concurrent data str
 assert.equal(labelForLineage("radiance-cascades"), "Radiance Cascades & real-time GI");
 assert.equal(labelForLineage("game-ai-planning"), "Behavior trees & GOAP");
 assert.equal(labelForLineage("pathfinding"), "Pathfinding");
+assert.equal(labelForLineage("contemporary-databases"), "Contemporary databases");
+assert.equal(labelForLineage("type-safety"), "Type safety");
+assert.equal(labelForLineage("foundations-of-computing"), "Foundations of computing");
+assert.equal(labelForLineage("programming-language-foundations"), "Programming language foundations");
+assert.equal(labelForLineage("algorithms-and-complexity"), "Algorithms & complexity");
 
 assert.equal(labelForLineage("brand-new-thread"), "Brand new thread");
 assert.equal(labelForLineage("lock-free-queues"), "Lock free queues");
