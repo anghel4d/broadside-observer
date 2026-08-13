@@ -24,25 +24,26 @@ cites:
     year: 1974
     arxiv: null
     doi: "10.1145/942572.807045"
-    card: "937-programming-with-abstract-data-types"
   - title: "Abstract Types Have Existential Type"
     url: "https://doi.org/10.1145/44501.44504"
     year: 1988
     arxiv: null
     doi: "10.1145/44501.44504"
-    card: "921-abstract-types-have-existential-type"
   - title: "On Understanding Types, Data Abstraction, and Polymorphism"
     url: "https://doi.org/10.1145/6041.6042"
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-    card: "919-on-understanding-types-data-abstraction-and-polymorphism"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
+see:
+  - "937-programming-with-abstract-data-types"
+  - "921-abstract-types-have-existential-type"
+  - "919-on-understanding-types-data-abstraction-and-polymorphism"
+  - "154-the-definition-of-standard-ml-revised"
 ---
 
 # A History of CLU

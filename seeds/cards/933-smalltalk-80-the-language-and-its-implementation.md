@@ -25,25 +25,26 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155364"
-    card: "931-the-early-history-of-smalltalk"
   - title: "Design Principles Behind Smalltalk"
     url: "https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html"
     year: 1981
     arxiv: null
     doi: null
-    card: "932-design-principles-behind-smalltalk"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
     arxiv: null
     doi: "10.1145/38765.38828"
-    card: "938-self-the-power-of-simplicity"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
+see:
+  - "931-the-early-history-of-smalltalk"
+  - "932-design-principles-behind-smalltalk"
+  - "938-self-the-power-of-simplicity"
+  - "920-a-theory-of-objects"
 ---
 
 # Smalltalk-80: The Language and Its Implementation

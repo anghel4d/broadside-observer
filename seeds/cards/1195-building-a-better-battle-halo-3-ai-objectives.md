@@ -21,15 +21,16 @@ cites:
   - title: "Handling Complexity in the Halo 2 AI"
     url: "https://www.gamedeveloper.com/programming/gdc-2005-proceeding-handling-complexity-in-the-i-halo-2-i-ai"
     year: 2005
-    card: "1194-handling-complexity-in-the-halo-2-ai"
   - title: "The Illusion of Intelligence: The Integration of AI and Level Design in Halo"
     url: "http://halo.bungie.org/misc/gdc.2002.haloai/talk.html"
     year: 2002
-    card: "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
   - title: "Behavior Trees for Next-Gen Game AI"
     url: "https://aigamedev.com/"
     year: 2007
-    card: "359-behavior-trees-for-next-gen-game-ai"
+see:
+  - "1194-handling-complexity-in-the-halo-2-ai"
+  - "1193-the-illusion-of-intelligence-ai-and-level-design-in-halo"
+  - "359-behavior-trees-for-next-gen-game-ai"
 ---
 
 # Building a Better Battle: HALO 3 AI Objectives

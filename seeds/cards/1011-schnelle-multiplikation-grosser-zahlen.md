@@ -23,13 +23,14 @@ cites:
   year: 1965
   arxiv: null
   doi: 10.1090/S0025-5718-1965-0178586-1
-  card: 1008-an-algorithm-for-the-machine-calculation-of-complex-fourier-
 - title: Multiplication of Multidigit Numbers on Automata
   url: "https://en.wikipedia.org/wiki/Karatsuba_algorithm"
   year: 1962
   arxiv: null
   doi: null
-  card: 1010-multiplication-of-multidigit-numbers-on-automata
+see:
+- "1008-an-algorithm-for-the-machine-calculation-of-complex-fourier-"
+- "1010-multiplication-of-multidigit-numbers-on-automata"
 ---
 
 # Schnelle Multiplikation grosser Zahlen

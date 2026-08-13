@@ -22,31 +22,31 @@ cites:
   year: 2004
   arxiv: null
   doi: null
-  card: 702-fix-your-timestep
 - title: State Synchronization
   url: https://gafferongames.com/post/state_synchronization/
   year: 2015
   arxiv: null
   doi: null
-  card: 410-state-synchronization
 - title: Snapshot Interpolation
   url: https://gafferongames.com/post/snapshot_interpolation/
   year: 2015
   arxiv: null
   doi: null
-  card: 341-snapshot-interpolation
 - title: Client-Side Prediction & Server Reconciliation
   url: https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html
   year: 2013
   arxiv: null
   doi: null
-  card: 345-client-side-prediction-server-reconciliation
 - title: Deterministic Lockstep
   url: https://gafferongames.com/post/deterministic_lockstep/
   year: 2014
   arxiv: null
   doi: null
-  card: 017-deterministic-lockstep
+see:
+- "410-state-synchronization"
+- "341-snapshot-interpolation"
+- "345-client-side-prediction-server-reconciliation"
+- "017-deterministic-lockstep"
 ---
 
 # Networked Physics (2004)

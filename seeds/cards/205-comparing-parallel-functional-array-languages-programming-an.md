@@ -31,19 +31,20 @@ cites:
     year: 2020
     arxiv: "2005.02839"
     doi: "10.1145/3386319"
-    card: "107-apl-since-1978"
   - title: "Notation as a Tool of Thought"
     url: "https://doi.org/10.1145/358896.358899"
     year: 1980
     arxiv: null
     doi: "10.1145/358896.358899"
-    card: "046-notation-as-a-tool-of-thought"
   - title: "A Programming Language"
     url: "https://www.jsoftware.com/papers/APL.htm"
     year: 1962
     arxiv: null
     doi: null
-    card: "050-a-programming-language"
+see:
+  - "107-apl-since-1978"
+  - "046-notation-as-a-tool-of-thought"
+  - "050-a-programming-language"
 ---
 
 # Comparing Parallel Functional Array Languages: Programming and Performance

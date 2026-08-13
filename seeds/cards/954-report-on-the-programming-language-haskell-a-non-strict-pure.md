@@ -27,25 +27,26 @@ cites:
     year: 1989
     arxiv: null
     doi: "10.1145/75277.75283"
-    card: "896-how-to-make-ad-hoc-polymorphism-less-ad-hoc"
   - title: "The Implementation of Functional Programming Languages"
     url: "https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/"
     year: 1987
     arxiv: null
     doi: null
-    card: "955-the-implementation-of-functional-programming-languages"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "943-the-lazy-lambda-calculus"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
+see:
+  - "896-how-to-make-ad-hoc-polymorphism-less-ad-hoc"
+  - "955-the-implementation-of-functional-programming-languages"
+  - "943-the-lazy-lambda-calculus"
+  - "880-a-theory-of-type-polymorphism-in-programming"
 ---
 
 # Report on the Programming Language Haskell: A Non-strict, Purely Functional Language

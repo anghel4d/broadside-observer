@@ -21,19 +21,20 @@ cites:
     year: 2004
     arxiv: null
     doi: "10.1109/tpds.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Michael & Scott Lock-Free Queue"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-    card: "037-wait-free-synchronization"
+see:
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "032-michael-scott-lock-free-queue"
+  - "037-wait-free-synchronization"
 ---
 
 # Lock-Free Augmented Trees

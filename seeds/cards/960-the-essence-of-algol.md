@@ -24,25 +24,26 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1145/512760.512766"
-    card: "175-syntactic-control-of-interference"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-    card: "866-fundamental-concepts-in-programming-languages"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
   - title: "Separation Logic: A Logic for Shared Mutable Data Structures"
     url: "https://doi.org/10.1109/LICS.2002.1029817"
     year: 2002
     arxiv: null
     doi: "10.1109/LICS.2002.1029817"
-    card: "151-separation-logic-a-logic-for-shared-mutable-data-structures"
+see:
+  - "175-syntactic-control-of-interference"
+  - "866-fundamental-concepts-in-programming-languages"
+  - "909-a-structural-approach-to-operational-semantics"
+  - "151-separation-logic-a-logic-for-shared-mutable-data-structures"
 ---
 
 # The Essence of Algol

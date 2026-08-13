@@ -23,25 +23,26 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-    card: "836-go-to-statement-considered-harmful"
   - title: "Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules"
     url: "https://doi.org/10.1145/355592.365646"
     year: 1966
     arxiv: null
     doi: "10.1145/355592.365646"
-    card: "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
   - title: "A Discipline of Programming"
     url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
     year: 1976
     arxiv: null
     doi: null
-    card: "841-a-discipline-of-programming"
   - title: "Assigning Meanings to Programs"
     url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
     year: 1967
     arxiv: null
     doi: null
-    card: "877-assigning-meanings-to-programs"
+see:
+  - "836-go-to-statement-considered-harmful"
+  - "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
+  - "841-a-discipline-of-programming"
+  - "877-assigning-meanings-to-programs"
 ---
 
 # Notes on Structured Programming

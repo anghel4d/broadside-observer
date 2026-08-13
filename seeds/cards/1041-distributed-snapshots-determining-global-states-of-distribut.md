@@ -24,7 +24,8 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359545.359563
-  card: 1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst
+see:
+- "1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst"
 ---
 
 # Distributed Snapshots: Determining Global States of Distributed Systems

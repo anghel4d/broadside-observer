@@ -23,19 +23,20 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "Investigations into Logical Deduction"
     url: "https://doi.org/10.1007/BF01201353"
     year: 1935
     arxiv: null
     doi: "10.1007/BF01201353"
-    card: "883-investigations-into-logical-deduction"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "742-grundzuge-der-theoretischen-logik"
+  - "883-investigations-into-logical-deduction"
 ---
 
 # Die Grundlagen der Mathematik

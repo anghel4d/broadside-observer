@@ -23,19 +23,20 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "Finite Automata and Their Decision Problems"
     url: "https://doi.org/10.1147/rd.32.0114"
     year: 1959
     arxiv: null
     doi: "10.1147/rd.32.0114"
-    card: "870-finite-automata-and-their-decision-problems"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "870-finite-automata-and-their-decision-problems"
 ---
 
 # A Universal Turing Machine with Two Internal States

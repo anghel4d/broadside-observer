@@ -20,25 +20,26 @@ cites:
     year: 2013
     arxiv: null
     doi: "10.1109/tciaig.2013.2286295"
-    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
   - title: "Steering Behaviors For Autonomous Characters"
     url: "https://www.red3d.com/cwr/steer/"
     year: 1999
     arxiv: null
     doi: null
-    card: "258-steering-behaviors-for-autonomous-characters"
   - title: "Real-Time Strategy Games: A New AI Research Challenge"
     url: "https://www.ijcai.org/Proceedings/03/Papers/284.pdf"
     year: 2003
     arxiv: null
     doi: null
-    card: "026-real-time-strategy-games-a-new-ai-research-challenge"
   - title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
     url: "https://arxiv.org/abs/2011.XXXX"
     year: 2019
     arxiv: "2011.XXXX"
     doi: null
-    card: "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
+see:
+  - "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+  - "258-steering-behaviors-for-autonomous-characters"
+  - "026-real-time-strategy-games-a-new-ai-research-challenge"
+  - "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
 ---
 
 # Influence Mapping

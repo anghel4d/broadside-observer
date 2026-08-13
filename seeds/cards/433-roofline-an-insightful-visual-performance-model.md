@@ -23,25 +23,26 @@ cites:
     year: 2014
     arxiv: null
     doi: "10.1016/j.jpdc.2014.07.003"
-    card: "476-kokkos-enabling-manycore-performance-portability"
   - title: "ispc: A SPMD Compiler for High-Performance CPU Programming"
     url: "https://ispc.github.io/papers/ispc_inpar_2012.pdf"
     year: 2012
     arxiv: null
     doi: null
-    card: "420-ispc-a-spmd-compiler-for-high-performance-cpu-programming"
   - title: "Scans as Primitive Parallel Operations"
     url: "https://doi.org/10.1109/12.42122"
     year: 1989
     arxiv: null
     doi: "10.1109/12.42122"
-    card: "383-scans-as-primitive-parallel-operations"
   - title: "Abseil Swiss Tables"
     url: "https://abseil.io/about/design/swisstables"
     year: 2017
     arxiv: null
     doi: null
-    card: "470-abseil-swiss-tables"
+see:
+  - "476-kokkos-enabling-manycore-performance-portability"
+  - "420-ispc-a-spmd-compiler-for-high-performance-cpu-programming"
+  - "383-scans-as-primitive-parallel-operations"
+  - "470-abseil-swiss-tables"
 ---
 
 # Roofline: An Insightful Visual Performance Model

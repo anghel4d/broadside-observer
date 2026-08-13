@@ -24,25 +24,26 @@ cites:
     year: 1951
     arxiv: null
     doi: null
-    card: "796-the-general-and-logical-theory-of-automata"
   - title: "Reliable circuits using less reliable relays"
     url: "https://doi.org/10.1016/0016-0032(56)90559-2"
     year: 1956
     arxiv: null
     doi: "10.1016/0016-0032(56)90559-2"
-    card: "811-reliable-circuits-using-less-reliable-relays"
   - title: "Error Detecting and Error Correcting Codes"
     url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
     year: 1950
     arxiv: null
     doi: "10.1002/j.1538-7305.1950.tb00463.x"
-    card: "819-error-detecting-and-error-correcting-codes"
   - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
     url: "https://doi.org/10.1007/BF02478259"
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+see:
+  - "796-the-general-and-logical-theory-of-automata"
+  - "811-reliable-circuits-using-less-reliable-relays"
+  - "819-error-detecting-and-error-correcting-codes"
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
 ---
 
 # Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable Components

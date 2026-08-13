@@ -23,55 +23,46 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1007/978-1-4612-9839-7"
-    card: null
   - title: "An Intuitionistic Theory of Types: Predicative Part"
     url: "https://doi.org/10.1016/s0049-237x(08)71945-1"
     year: 1975
     arxiv: null
     doi: "10.1016/s0049-237x(08)71945-1"
-    card: null
   - title: "To H.B. Curry: Essays on Combinatory Logic, Lambda Calculus, and Formalism"
     url: "https://ci.nii.ac.jp/ncid/BA01035434"
     year: 1980
     arxiv: null
     doi: null
-    card: null
   - title: "Ideas and Results in Proof Theory"
     url: "https://doi.org/10.1016/s0049-237x(08)70849-8"
     year: 1971
     arxiv: null
     doi: "10.1016/s0049-237x(08)70849-8"
-    card: null
   - title: "Natural Deduction: A Proof-Theoretical Study"
     url: "https://openalex.org/W1488538795"
     year: 1965
     arxiv: null
     doi: null
-    card: null
   - title: "HYPERDOCTRINES, NATURAL DEDUCTION AND THE BECK CONDITION"
     url: "https://doi.org/10.1002/malq.19830291005"
     year: 1983
     arxiv: null
     doi: "10.1002/malq.19830291005"
-    card: null
   - title: "Aspects of topoi"
     url: "https://doi.org/10.1017/s0004972700044828"
     year: 1972
     arxiv: null
     doi: "10.1017/s0004972700044828"
-    card: null
   - title: "Abstract families and the adjoint functor theorems"
     url: "https://doi.org/10.1007/bfb0061361"
     year: 1978
     arxiv: null
     doi: "10.1007/bfb0061361"
-    card: null
   - title: "Indexed Categories and Their Applications"
     url: "https://doi.org/10.1007/bfb0061360"
     year: 1978
     arxiv: null
     doi: "10.1007/bfb0061360"
-    card: null
 ---
 
 # Locally Cartesian Closed Categories and Type Theory

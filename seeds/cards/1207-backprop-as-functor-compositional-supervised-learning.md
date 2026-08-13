@@ -24,7 +24,8 @@ cites:
     url: "https://doi.org/10.1016/0001-8708(91)90003-P"
     year: 1991
     doi: "10.1016/0001-8708(91)90003-P"
-    card: "1212-the-geometry-of-tensor-calculus-i"
+see:
+  - "1212-the-geometry-of-tensor-calculus-i"
 ---
 
 # Backprop as Functor: A compositional perspective on supervised learning

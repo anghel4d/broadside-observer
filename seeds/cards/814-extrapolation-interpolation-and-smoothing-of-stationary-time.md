@@ -24,19 +24,20 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "Communication in the Presence of Noise"
     url: "https://doi.org/10.1109/JRPROC.1949.232969"
     year: 1949
     arxiv: null
     doi: "10.1109/JRPROC.1949.232969"
-    card: "807-communication-in-the-presence-of-noise"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
+see:
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "807-communication-in-the-presence-of-noise"
+  - "804-a-mathematical-theory-of-communication"
 ---
 
 # Extrapolation, Interpolation, and Smoothing of Stationary Time Series

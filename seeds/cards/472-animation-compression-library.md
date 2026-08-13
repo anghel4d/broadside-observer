@@ -21,19 +21,20 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1016/j.gmod.2011.05.001"
-    card: "426-fabrik-a-fast-iterative-solver-for-the-inverse-kinematics-pr"
   - title: "Motion Matching and The Road to Next-Gen Animation"
     url: "https://www.gdcvault.com/play/1023280/Motion-Matching-and-The"
     year: 2016
     arxiv: null
     doi: null
-    card: "408-motion-matching-and-the-road-to-next-gen-animation"
   - title: "Adaptive Scalable Texture Compression"
     url: "https://www.khronos.org/astc/"
     year: 2012
     arxiv: null
     doi: null
-    card: "479-adaptive-scalable-texture-compression"
+see:
+  - "426-fabrik-a-fast-iterative-solver-for-the-inverse-kinematics-pr"
+  - "408-motion-matching-and-the-road-to-next-gen-animation"
+  - "479-adaptive-scalable-texture-compression"
 ---
 
 # Animation Compression Library

@@ -24,25 +24,26 @@ cites:
     year: 1969
     arxiv: null
     doi: null
-    card: "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
   - title: "The Art of Computer Programming, Volume 3: Sorting and Searching"
     url: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
     year: 1973
     arxiv: null
     doi: null
-    card: "848-the-art-of-computer-programming-volume-3-sorting-and-searchi"
   - title: "The Preparation of Programs for an Electronic Digital Computer"
     url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
     year: 1951
     arxiv: null
     doi: null
-    card: "823-the-preparation-of-programs-for-an-electronic-digital-comput"
   - title: "The FORTRAN Automatic Coding System"
     url: "https://doi.org/10.1145/1455567.1455599"
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-    card: "873-the-fortran-automatic-coding-system"
+see:
+  - "847-the-art-of-computer-programming-volume-2-seminumerical-algor"
+  - "848-the-art-of-computer-programming-volume-3-sorting-and-searchi"
+  - "823-the-preparation-of-programs-for-an-electronic-digital-comput"
+  - "873-the-fortran-automatic-coding-system"
 ---
 
 # The Art of Computer Programming, Volume 1: Fundamental Algorithms

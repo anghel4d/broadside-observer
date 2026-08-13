@@ -24,25 +24,26 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Situations, Actions, and Causal Laws"
     url: "https://www-formal.stanford.edu/jmc/"
     year: 1963
     arxiv: null
     doi: null
-    card: "830-situations-actions-and-causal-laws"
   - title: "Report on a General Problem-Solving Program"
     url: "https://bitsavers.org/pdf/rand/ipl/"
     year: 1959
     arxiv: null
     doi: null
-    card: "833-report-on-a-general-problem-solving-program"
+see:
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "830-situations-actions-and-causal-laws"
+  - "833-report-on-a-general-problem-solving-program"
 ---
 
 # Programs with Common Sense

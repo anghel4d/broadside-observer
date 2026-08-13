@@ -23,19 +23,20 @@ cites:
     year: 1921
     arxiv: null
     doi: "10.2307/2370324"
-    card: "788-introduction-to-a-general-theory-of-elementary-propositions"
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
   - title: "Reliable circuits using less reliable relays"
     url: "https://doi.org/10.1016/0016-0032(56)90559-2"
     year: 1956
     arxiv: null
     doi: "10.1016/0016-0032(56)90559-2"
-    card: "811-reliable-circuits-using-less-reliable-relays"
+see:
+  - "788-introduction-to-a-general-theory-of-elementary-propositions"
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+  - "811-reliable-circuits-using-less-reliable-relays"
 ---
 
 # The Two-Valued Iterative Systems of Mathematical Logic

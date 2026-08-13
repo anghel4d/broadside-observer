@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "LCF Considered as a Programming Language"
     url: "https://doi.org/10.1016/0304-3975(77)90044-5"
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "Report on the Programming Language Haskell: A Non-strict, Purely Functional Language"
     url: "https://doi.org/10.1145/130697.130699"
     year: 1992
     arxiv: null
     doi: "10.1145/130697.130699"
-    card: "954-report-on-the-programming-language-haskell-a-non-strict-pure"
   - title: "On Full Abstraction for PCF: I, II, and III"
     url: "https://doi.org/10.1006/inco.2000.2917"
     year: 2000
     arxiv: null
     doi: "10.1006/inco.2000.2917"
-    card: "944-on-full-abstraction-for-pcf-i-ii-and-iii"
+see:
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "908-lcf-considered-as-a-programming-language"
+  - "954-report-on-the-programming-language-haskell-a-non-strict-pure"
+  - "944-on-full-abstraction-for-pcf-i-ii-and-iii"
 ---
 
 # The Lazy Lambda Calculus

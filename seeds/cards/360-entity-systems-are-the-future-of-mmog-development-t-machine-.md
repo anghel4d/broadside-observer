@@ -21,31 +21,32 @@ cites:
     year: 2002
     arxiv: null
     doi: null
-    card: "621-a-data-driven-game-object-system-scott-bilas-gdc"
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
     arxiv: null
     doi: null
-    card: "361-evolve-your-hierarchy"
   - title: "Artemis Entity System Framework"
     url: "https://github.com/junkdog/artemis-odb"
     year: 2011
     arxiv: null
     doi: null
-    card: "623-artemis-entity-system-framework"
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
   - title: "EnTT: Gaming meets modern C++"
     url: "https://skypjack.github.io/2019-02-14-ecs-baf-part-1/"
     year: 2019
     arxiv: null
     doi: null
-    card: "398-entt-gaming-meets-modern-c"
+see:
+  - "621-a-data-driven-game-object-system-scott-bilas-gdc"
+  - "361-evolve-your-hierarchy"
+  - "623-artemis-entity-system-framework"
+  - "334-flecs-a-fast-entity-component-system-for-c99"
+  - "398-entt-gaming-meets-modern-c"
 ---
 
 # Entity Systems are the future of MMOG development (T-Machine series)

@@ -26,25 +26,26 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155364"
-    card: "931-the-early-history-of-smalltalk"
   - title: "Smalltalk-80: The Language and Its Implementation"
     url: "https://dl.acm.org/doi/10.5555/273"
     year: 1983
     arxiv: null
     doi: null
-    card: "933-smalltalk-80-the-language-and-its-implementation"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
+see:
+  - "931-the-early-history-of-smalltalk"
+  - "933-smalltalk-80-the-language-and-its-implementation"
+  - "920-a-theory-of-objects"
+  - "843-an-axiomatic-basis-for-computer-programming"
 ---
 
 # SIMULA: An Algol-Based Simulation Language

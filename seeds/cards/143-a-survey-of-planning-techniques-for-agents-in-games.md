@@ -23,19 +23,20 @@ cites:
     year: 2006
     arxiv: null
     doi: null
-    card: "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
   - title: "SHOP2: An HTN Planning System"
     url: "https://doi.org/10.1613/jair.1141"
     year: 2003
     arxiv: null
     doi: "10.1613/jair.1141"
-    card: "372-shop2-an-htn-planning-system"
   - title: "Managing Complexity in the Halo 2 AI System"
     url: "https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo"
     year: 2005
     arxiv: null
     doi: null
-    card: "441-managing-complexity-in-the-halo-2-ai-system"
+see:
+  - "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
+  - "372-shop2-an-htn-planning-system"
+  - "441-managing-complexity-in-the-halo-2-ai-system"
 ---
 
 # A Survey of Planning Techniques for Agents in Games

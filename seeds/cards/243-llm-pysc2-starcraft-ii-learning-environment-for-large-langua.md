@@ -38,13 +38,13 @@ cites:
     year: 2024
     arxiv: "2312.11865"
     doi: null
-    card: "092-large-language-models-play-starcraft-ii-benchmarks-and-a-cha"
   - title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning"
     url: "https://doi.org/10.1038/s41586-019-1724-z"
     year: 2019
     arxiv: null
     doi: "10.1038/s41586-019-1724-z"
-    card: "010-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
+see:
+  - "092-large-language-models-play-starcraft-ii-benchmarks-and-a-cha"
 ---
 
 # LLM-PySC2: Starcraft II learning environment for Large Language Models

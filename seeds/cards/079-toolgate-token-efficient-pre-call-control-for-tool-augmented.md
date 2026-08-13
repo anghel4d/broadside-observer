@@ -39,7 +39,6 @@ cites:
     year: 2025
     arxiv: "2505.07236"
     doi: null
-    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
 ---
 
 # ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents

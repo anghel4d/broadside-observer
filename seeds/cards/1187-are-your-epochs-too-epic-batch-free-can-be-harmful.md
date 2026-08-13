@@ -24,25 +24,26 @@ cites:
     year: 2004
     arxiv: null
     doi: null
-    card: "369-epoch-based-reclamation-practical-lock-freedom"
   - title: "DEBRA: Distributed Epoch-Based Reclamation"
     url: "https://doi.org/10.1145/2851141.2851167"
     year: 2015
     arxiv: null
     doi: "10.1145/2851141.2851167"
-    card: "409-debra-distributed-epoch-based-reclamation"
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"
     year: 2019
     arxiv: "1908.05006"
     doi: null
-    card: "012-mimalloc-free-list-sharding-in-action"
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+see:
+  - "369-epoch-based-reclamation-practical-lock-freedom"
+  - "409-debra-distributed-epoch-based-reclamation"
+  - "012-mimalloc-free-list-sharding-in-action"
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
 ---
 
 # Are Your Epochs Too Epic? Batch Free Can Be Harmful

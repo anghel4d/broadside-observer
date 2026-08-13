@@ -22,13 +22,14 @@ cites:
   year: 2006
   arxiv: null
   doi: null
-  card: 254-ggpo-rollback-networking
 - title: Deterministic Lockstep
   url: https://gafferongames.com/post/deterministic_lockstep/
   year: 2014
   arxiv: null
   doi: null
-  card: 017-deterministic-lockstep
+see:
+- "254-ggpo-rollback-networking"
+- "017-deterministic-lockstep"
 ---
 
 # Virtual Time / Time Warp Optimistic Distributed Simulation

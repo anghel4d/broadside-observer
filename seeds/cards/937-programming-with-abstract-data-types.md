@@ -25,25 +25,26 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155367"
-    card: "936-a-history-of-clu"
   - title: "Abstract Types Have Existential Type"
     url: "https://doi.org/10.1145/44501.44504"
     year: 1988
     arxiv: null
     doi: "10.1145/44501.44504"
-    card: "921-abstract-types-have-existential-type"
   - title: "On Understanding Types, Data Abstraction, and Polymorphism"
     url: "https://doi.org/10.1145/6041.6042"
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-    card: "919-on-understanding-types-data-abstraction-and-polymorphism"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
+see:
+  - "936-a-history-of-clu"
+  - "921-abstract-types-have-existential-type"
+  - "919-on-understanding-types-data-abstraction-and-polymorphism"
+  - "843-an-axiomatic-basis-for-computer-programming"
 ---
 
 # Programming with Abstract Data Types

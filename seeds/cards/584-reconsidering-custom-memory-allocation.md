@@ -25,25 +25,26 @@ cites:
     year: 2000
     arxiv: null
     doi: null
-    card: "582-a-memory-allocator-dlmalloc"
   - title: "Composing High-Performance Memory Allocators"
     url: "https://doi.org/10.1145/378795.378821"
     year: 2001
     arxiv: null
     doi: "10.1145/378795.378821"
-    card: "583-composing-high-performance-memory-allocators"
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
     url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
     year: 2013
     arxiv: null
     doi: null
-    card: "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
+see:
+  - "582-a-memory-allocator-dlmalloc"
+  - "583-composing-high-performance-memory-allocators"
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "252-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
 ---
 
 # Reconsidering Custom Memory Allocation

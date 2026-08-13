@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "On Full Abstraction for PCF: I, II, and III"
     url: "https://doi.org/10.1006/inco.2000.2917"
     year: 2000
     arxiv: null
     doi: "10.1006/inco.2000.2917"
-    card: "944-on-full-abstraction-for-pcf-i-ii-and-iii"
   - title: "Full Abstraction for PCF (AJM)"
     url: "https://doi.org/10.1006/inco.2000.2930"
     year: 2000
     arxiv: null
     doi: "10.1006/inco.2000.2930"
-    card: "945-full-abstraction-for-pcf-ajm"
   - title: "Domains for Denotational Semantics"
     url: "https://doi.org/10.1007/BFb0012801"
     year: 1982
     arxiv: null
     doi: "10.1007/BFb0012801"
-    card: "907-domains-for-denotational-semantics"
+see:
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "944-on-full-abstraction-for-pcf-i-ii-and-iii"
+  - "945-full-abstraction-for-pcf-ajm"
+  - "907-domains-for-denotational-semantics"
 ---
 
 # LCF Considered as a Programming Language

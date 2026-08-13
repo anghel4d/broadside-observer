@@ -26,19 +26,20 @@ cites:
   year: 1983
   arxiv: null
   doi: null
-  card: 1051-algorithms
 - title: The Design and Analysis of Computer Algorithms
   url: "https://en.wikipedia.org/wiki/The_Design_and_Analysis_of_Computer_Algorithms"
   year: 1974
   arxiv: null
   doi: null
-  card: 1052-the-design-and-analysis-of-computer-algorithms
 - title: The Complexity of Theorem-Proving Procedures
   url: "https://doi.org/10.1145/800157.805047"
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
+see:
+- "1051-algorithms"
+- "1052-the-design-and-analysis-of-computer-algorithms"
+- "975-the-complexity-of-theorem-proving-procedures"
 ---
 
 # Introduction to Algorithms

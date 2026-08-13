@@ -22,13 +22,14 @@ cites:
   year: 1958
   arxiv: null
   doi: 10.1090/S0002-9939-1958-0135681-9
-  card: 988-linear-automaton-transformations-nerode-congruence
 - title: Finite Automata and Their Decision Problems
   url: "https://doi.org/10.1147/rd.32.0114"
   year: 1959
   arxiv: null
   doi: 10.1147/rd.32.0114
-  card: 870-finite-automata-and-their-decision-problems
+see:
+- "988-linear-automaton-transformations-nerode-congruence"
+- "870-finite-automata-and-their-decision-problems"
 ---
 
 # Myhill–Nerode Theorem (Myhill technical notes)

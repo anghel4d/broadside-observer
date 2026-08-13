@@ -22,13 +22,14 @@ cites:
     year: 2009
     arxiv: null
     doi: "10.1145/1507149.1507168"
-    card: "481-approximating-dynamic-global-illumination-in-image-space-ssd"
   - title: "Horizon-Based Ambient Occlusion"
     url: "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion"
     year: 2008
     arxiv: null
     doi: null
-    card: "484-horizon-based-ambient-occlusion"
+see:
+  - "481-approximating-dynamic-global-illumination-in-image-space-ssd"
+  - "484-horizon-based-ambient-occlusion"
 ---
 
 # Finding Next Gen: CryEngine 2 (SSAO)

@@ -28,19 +28,20 @@ cites:
     year: 2026
     arxiv: "2607.12267"
     doi: null
-    card: "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
   - title: "Generative Agents: Interactive Simulacra of Human Behavior"
     url: "https://arxiv.org/abs/2304.03442"
     year: 2023
     arxiv: "2304.03442"
     doi: null
-    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
   - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
     url: "https://arxiv.org/abs/2210.03629"
     year: 2022
     arxiv: "2210.03629"
     doi: null
-    card: "007-react-synergizing-reasoning-and-acting-in-language-models"
+see:
+  - "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
+  - "003-generative-agents-interactive-simulacra-of-human-behavior"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Meta-Policy Reflexion: Reusable Reflective Memory and Rule Admissibility for Resource-Efficient LLM Agent

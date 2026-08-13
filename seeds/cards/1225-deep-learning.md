@@ -23,12 +23,13 @@ cites:
     url: "https://doi.org/10.1145/3065386"
     year: 2017
     doi: "10.1145/3065386"
-    card: "1213-imagenet-classification-with-deep-convolutional-neural-nets"
   - title: "Deep Residual Learning for Image Recognition"
     url: "https://arxiv.org/abs/1512.03385"
     year: 2015
     arxiv: "1512.03385"
-    card: "1211-deep-residual-learning-for-image-recognition"
+see:
+  - "1213-imagenet-classification-with-deep-convolutional-neural-nets"
+  - "1211-deep-residual-learning-for-image-recognition"
 ---
 
 # Deep Learning

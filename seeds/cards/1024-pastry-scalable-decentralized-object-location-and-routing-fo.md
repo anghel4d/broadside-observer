@@ -23,13 +23,14 @@ cites:
   year: 1997
   arxiv: null
   doi: 10.1145/258533.258660
-  card: 1022-consistent-hashing-and-random-trees-distributed-caching-prot
 - title: "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications"
   url: "https://doi.org/10.1145/964723.383071"
   year: 2001
   arxiv: null
   doi: 10.1145/964723.383071
-  card: 1023-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap
+see:
+- "1022-consistent-hashing-and-random-trees-distributed-caching-prot"
+- "1023-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap"
 ---
 
 # Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems

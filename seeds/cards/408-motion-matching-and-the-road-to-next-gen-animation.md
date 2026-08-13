@@ -20,13 +20,14 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1016/j.gmod.2011.05.001"
-    card: "426-fabrik-a-fast-iterative-solver-for-the-inverse-kinematics-pr"
   - title: "Animation Compression Library"
     url: "https://github.com/nfrechette/acl"
     year: 2017
     arxiv: null
     doi: null
-    card: "472-animation-compression-library"
+see:
+  - "426-fabrik-a-fast-iterative-solver-for-the-inverse-kinematics-pr"
+  - "472-animation-compression-library"
 ---
 
 # Motion Matching and The Road to Next-Gen Animation

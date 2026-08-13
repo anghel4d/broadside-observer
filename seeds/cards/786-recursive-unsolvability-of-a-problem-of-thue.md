@@ -24,19 +24,20 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.2307/2371809"
-    card: "784-formal-reductions-of-the-general-combinatorial-decision-prob"
   - title: "Finite Combinatory Processes—Formulation I"
     url: "https://doi.org/10.2307/2268534"
     year: 1936
     arxiv: null
     doi: "10.2307/2268534"
-    card: "783-finite-combinatory-processes-formulation-i"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
+see:
+  - "784-formal-reductions-of-the-general-combinatorial-decision-prob"
+  - "783-finite-combinatory-processes-formulation-i"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
 ---
 
 # Recursive Unsolvability of a Problem of Thue

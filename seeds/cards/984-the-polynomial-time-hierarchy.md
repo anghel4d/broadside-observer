@@ -22,13 +22,14 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
 - title: Relationships Between Nondeterministic and Deterministic Tape Complexities
   url: "https://doi.org/10.1016/S0022-0000(70)80006-X"
   year: 1970
   arxiv: null
   doi: 10.1016/S0022-0000(70)80006-X
-  card: 981-relationships-between-nondeterministic-and-deterministic-tap
+see:
+- "975-the-complexity-of-theorem-proving-procedures"
+- "981-relationships-between-nondeterministic-and-deterministic-tap"
 ---
 
 # The Polynomial-Time Hierarchy

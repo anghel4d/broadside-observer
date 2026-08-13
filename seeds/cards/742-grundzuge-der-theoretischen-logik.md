@@ -24,25 +24,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "A Note on the Entscheidungsproblem"
     url: "https://doi.org/10.2307/2268565"
     year: 1936
     arxiv: null
     doi: "10.2307/2268565"
-    card: "759-a-note-on-the-entscheidungsproblem"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Mathematical Problems (Hilbert's Problems)"
     url: "https://mathcs.clarku.edu/~djoyce/hilbert/problems.html"
     year: 1900
     arxiv: null
     doi: null
-    card: "738-mathematical-problems-hilbert-s-problems"
+see:
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "759-a-note-on-the-entscheidungsproblem"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "738-mathematical-problems-hilbert-s-problems"
 ---
 
 # Grundzüge der theoretischen Logik

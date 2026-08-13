@@ -24,19 +24,20 @@ cites:
     year: 2003
     arxiv: null
     doi: null
-    card: "709-applying-goal-oriented-action-planning-to-games"
   - title: "Three States and a Plan: The AI of F.E.A.R."
     url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
   - title: "SHOP2: An HTN Planning System"
     url: "https://doi.org/10.1613/jair.1141"
     year: 2003
     arxiv: null
     doi: "10.1613/jair.1141"
-    card: "372-shop2-an-htn-planning-system"
+see:
+  - "709-applying-goal-oriented-action-planning-to-games"
+  - "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
+  - "372-shop2-an-htn-planning-system"
 ---
 
 # STRIPS: A New Approach to the Application of Theorem Proving to Problem Solving

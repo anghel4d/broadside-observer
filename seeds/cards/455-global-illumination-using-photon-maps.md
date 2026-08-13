@@ -21,73 +21,63 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.1145/15886.15902"
-    card: "169-the-rendering-equation"
   - title: "The RADIANCE lighting simulation and rendering system"
     url: "https://doi.org/10.1145/192161.192286"
     year: 1994
     arxiv: null
     doi: "10.1145/192161.192286"
-    card: null
   - title: "Measuring and modeling anisotropic reflection"
     url: "https://doi.org/10.1145/133994.134078"
     year: 1992
     arxiv: null
     doi: "10.1145/133994.134078"
-    card: null
   - title: "Optimally combining sampling techniques for Monte Carlo rendering"
     url: "https://doi.org/10.1145/218380.218498"
     year: 1995
     arxiv: null
     doi: "10.1145/218380.218498"
-    card: null
   - title: "Distributed ray tracing"
     url: "https://doi.org/10.1145/800031.808590"
     year: 1984
     arxiv: null
     doi: "10.1145/800031.808590"
-    card: null
   - title: "Multidimensional binary search trees used for associative searching"
     url: "https://doi.org/10.1145/361002.361007"
     year: 1975
     arxiv: null
     doi: "10.1145/361002.361007"
-    card: null
   - title: "Modeling the interaction of light between diffuse surfaces"
     url: "https://doi.org/10.1145/800031.808601"
     year: 1984
     arxiv: null
     doi: "10.1145/800031.808601"
-    card: null
   - title: "Measuring and modeling anisotropic reflection"
     url: "https://doi.org/10.1145/142920.134078"
     year: 1992
     arxiv: null
     doi: "10.1145/142920.134078"
-    card: null
   - title: "Modeling the interaction of light between diffuse surfaces"
     url: "https://doi.org/10.1145/964965.808601"
     year: 1984
     arxiv: null
     doi: "10.1145/964965.808601"
-    card: null
   - title: "Importance Driven Path Tracing using the Photon Map"
     url: "https://doi.org/10.1007/978-3-7091-9430-0_31"
     year: 1995
     arxiv: null
     doi: "10.1007/978-3-7091-9430-0_31"
-    card: null
   - title: "Wavelet radiosity"
     url: "https://doi.org/10.1145/166117.166146"
     year: 1993
     arxiv: null
     doi: "10.1145/166117.166146"
-    card: null
   - title: "Distributed ray tracing"
     url: "https://doi.org/10.1145/964965.808590"
     year: 1984
     arxiv: null
     doi: "10.1145/964965.808590"
-    card: null
+see:
+  - "169-the-rendering-equation"
 ---
 
 # Global Illumination using Photon Maps

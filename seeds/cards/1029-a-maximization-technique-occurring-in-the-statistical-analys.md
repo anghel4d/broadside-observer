@@ -26,7 +26,8 @@ cites:
   year: 1967
   arxiv: null
   doi: 10.1109/TIT.1967.1054010
-  card: 1028-error-bounds-for-convolutional-codes-and-an-asymptotically-o
+see:
+- "1028-error-bounds-for-convolutional-codes-and-an-asymptotically-o"
 ---
 
 # A Maximization Technique Occurring in the Statistical Analysis of Probabilistic Functions of Markov Chains

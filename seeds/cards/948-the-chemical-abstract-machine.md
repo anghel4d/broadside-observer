@@ -26,25 +26,26 @@ cites:
     year: 2000
     arxiv: null
     doi: "10.1007/3-540-45699-6_5"
-    card: "947-the-join-calculus-a-language-for-distributed-mobile-programm"
   - title: "A Calculus of Mobile Processes, I"
     url: "https://doi.org/10.1016/0890-5401(92)90008-3"
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90008-3"
-    card: "946-a-calculus-of-mobile-processes-i"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "947-the-join-calculus-a-language-for-distributed-mobile-programm"
+  - "946-a-calculus-of-mobile-processes-i"
+  - "044-a-calculus-of-communicating-systems"
+  - "047-communicating-sequential-processes"
 ---
 
 # The Chemical Abstract Machine

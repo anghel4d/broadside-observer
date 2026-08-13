@@ -21,13 +21,13 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0004-3702(75)90019-3"
-    card: "460-an-analysis-of-alpha-beta-pruning"
   - title: "The Theory of Numbers"
     url: "https://doi.org/10.1126/science.56.1450.401"
     year: 1922
     arxiv: null
     doi: "10.1126/science.56.1450.401"
-    card: null
+see:
+  - "460-an-analysis-of-alpha-beta-pruning"
 ---
 
 # Programming a Computer for Playing Chess

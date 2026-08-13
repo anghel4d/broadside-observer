@@ -20,19 +20,16 @@ cites:
     year: 1952
     arxiv: null
     doi: "10.1109/jrproc.1952.273898"
-    card: null
   - title: "Sorting on Electronic Computer Systems"
     url: "https://doi.org/10.1145/320831.320833"
     year: 1956
     arxiv: null
     doi: "10.1145/320831.320833"
-    card: null
   - title: "An analysis of a logical machine using parenthesis-free notation"
     url: "https://doi.org/10.1090/s0025-5718-1954-0061484-4"
     year: 1954
     arxiv: null
     doi: "10.1090/s0025-5718-1954-0061484-4"
-    card: null
 ---
 
 # A Programming Language

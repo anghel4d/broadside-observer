@@ -26,25 +26,26 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "On Full Abstraction for PCF: I, II, and III"
     url: "https://doi.org/10.1006/inco.2000.2917"
     year: 2000
     arxiv: null
     doi: "10.1006/inco.2000.2917"
-    card: "944-on-full-abstraction-for-pcf-i-ii-and-iii"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "943-the-lazy-lambda-calculus"
   - title: "Computational Interpretations of Linear Logic"
     url: "https://doi.org/10.1016/0304-3975(93)90181-Q"
     year: 1993
     arxiv: null
     doi: "10.1016/0304-3975(93)90181-Q"
-    card: "160-computational-interpretations-of-linear-logic"
+see:
+  - "908-lcf-considered-as-a-programming-language"
+  - "944-on-full-abstraction-for-pcf-i-ii-and-iii"
+  - "943-the-lazy-lambda-calculus"
+  - "160-computational-interpretations-of-linear-logic"
 ---
 
 # Full Abstraction for PCF (AJM)

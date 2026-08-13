@@ -23,25 +23,26 @@ cites:
     year: 2013
     arxiv: null
     doi: "10.1145/2442516.2442527"
-    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue"
     url: "https://arxiv.org/abs/1908.04511"
     year: 2019
     arxiv: "1908.04511"
     doi: "10.4230/LIPIcs.DISC.2019.28"
-    card: "512-nikolaev-scq-scalable-portable-lock-free-fifo"
   - title: "FAAArrayQueue (Concurrency Freaks)"
     url: "https://github.com/pramalhe/ConcurrencyFreaks/blob/master/CPP/queues/array/FAAArrayQueue.hpp"
     year: 2016
     arxiv: null
     doi: null
-    card: "511-ramalhete-correia-faaarrayqueue"
+see:
+  - "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - "032-michael-scott-lock-free-queue"
+  - "512-nikolaev-scq-scalable-portable-lock-free-fifo"
+  - "511-ramalhete-correia-faaarrayqueue"
 ---
 
 # The State-of-the-Art LCRQ Concurrent Queue Algorithm Does NOT Require CAS2

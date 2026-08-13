@@ -23,19 +23,20 @@ cites:
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Procedures and Parameters: An Axiomatic Approach"
     url: "https://doi.org/10.1007/BFb0059696"
     year: 1971
     arxiv: null
     doi: "10.1007/BFb0059696"
-    card: "845-procedures-and-parameters-an-axiomatic-approach"
   - title: "A Discipline of Programming"
     url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
     year: 1976
     arxiv: null
     doi: null
-    card: "841-a-discipline-of-programming"
+see:
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "845-procedures-and-parameters-an-axiomatic-approach"
+  - "841-a-discipline-of-programming"
 ---
 
 # Proof of Correctness of Data Representations

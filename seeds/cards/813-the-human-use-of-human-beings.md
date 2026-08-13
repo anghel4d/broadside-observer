@@ -23,19 +23,20 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "Behavior, Purpose and Teleology"
     url: "https://doi.org/10.1086/286788"
     year: 1943
     arxiv: null
     doi: "10.1086/286788"
-    card: "815-behavior-purpose-and-teleology"
   - title: "A Universal Turing Machine with Two Internal States"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "810-a-universal-turing-machine-with-two-internal-states"
+see:
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "815-behavior-purpose-and-teleology"
+  - "810-a-universal-turing-machine-with-two-internal-states"
 ---
 
 # The Human Use of Human Beings

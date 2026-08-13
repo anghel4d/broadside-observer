@@ -23,7 +23,8 @@ cites:
   - title: "Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures"
     url: "https://openreview.net/forum?id=RyZB4qXEgt"
     year: 2024
-    card: "1198-neural-circuit-diagrams"
+see:
+  - "1198-neural-circuit-diagrams"
 ---
 
 # Accelerating Machine Learning Systems via Category Theory: Applications to Spherical Attention for Gene Regulatory Networks

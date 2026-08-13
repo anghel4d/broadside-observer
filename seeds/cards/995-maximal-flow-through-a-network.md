@@ -23,19 +23,20 @@ cites:
   year: 1972
   arxiv: null
   doi: 10.1145/321694.321699
-  card: 996-theoretical-improvements-in-algorithmic-efficiency-for-netwo
 - title: Algorithm for Solution of a Problem of Maximum Flow in a Network with Power Estimation
   url: "https://en.wikipedia.org/wiki/Dinic%27s_algorithm"
   year: 1970
   arxiv: null
   doi: null
-  card: 997-algorithm-for-solution-of-a-problem-of-maximum-flow-in-a-net
 - title: A New Approach to the Maximum-Flow Problem
   url: "https://doi.org/10.1145/48014.61051"
   year: 1988
   arxiv: null
   doi: 10.1145/48014.61051
-  card: 998-a-new-approach-to-the-maximum-flow-problem
+see:
+- "996-theoretical-improvements-in-algorithmic-efficiency-for-netwo"
+- "997-algorithm-for-solution-of-a-problem-of-maximum-flow-in-a-net"
+- "998-a-new-approach-to-the-maximum-flow-problem"
 ---
 
 # Maximal Flow Through a Network

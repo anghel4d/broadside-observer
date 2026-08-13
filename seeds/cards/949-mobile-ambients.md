@@ -26,25 +26,26 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90008-3"
-    card: "946-a-calculus-of-mobile-processes-i"
   - title: "The Join Calculus: A Language for Distributed Mobile Programming"
     url: "https://doi.org/10.1007/3-540-45699-6_5"
     year: 2000
     arxiv: null
     doi: "10.1007/3-540-45699-6_5"
-    card: "947-the-join-calculus-a-language-for-distributed-mobile-programm"
   - title: "On Understanding Types, Data Abstraction, and Polymorphism"
     url: "https://doi.org/10.1145/6041.6042"
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-    card: "919-on-understanding-types-data-abstraction-and-polymorphism"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
+see:
+  - "946-a-calculus-of-mobile-processes-i"
+  - "947-the-join-calculus-a-language-for-distributed-mobile-programm"
+  - "919-on-understanding-types-data-abstraction-and-polymorphism"
+  - "044-a-calculus-of-communicating-systems"
 ---
 
 # Mobile Ambients

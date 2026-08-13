@@ -25,7 +25,8 @@ cites:
   year: 1982
   arxiv: null
   doi: 10.1145/357172.357176
-  card: 1044-the-byzantine-generals-problem
+see:
+- "1044-the-byzantine-generals-problem"
 ---
 
 # Reaching Agreement in the Presence of Faults

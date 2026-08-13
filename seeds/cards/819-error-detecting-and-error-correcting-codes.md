@@ -23,25 +23,26 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Notes on Digital Coding"
     url: "https://doi.org/10.1109/JRPROC.1949.233620"
     year: 1949
     arxiv: null
     doi: "10.1109/JRPROC.1949.233620"
-    card: "820-notes-on-digital-coding"
   - title: "Communication Theory of Secrecy Systems"
     url: "https://doi.org/10.1002/j.1538-7305.1949.tb00928.x"
     year: 1949
     arxiv: null
     doi: "10.1002/j.1538-7305.1949.tb00928.x"
-    card: "806-communication-theory-of-secrecy-systems"
   - title: "Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable Components"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "798-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "820-notes-on-digital-coding"
+  - "806-communication-theory-of-secrecy-systems"
+  - "798-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
 ---
 
 # Error Detecting and Error Correcting Codes

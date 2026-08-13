@@ -22,19 +22,20 @@ cites:
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
 - title: Programming with Algebraic Effects and Handlers
   url: https://arxiv.org/abs/1203.1539
   year: 2015
   arxiv: '1203.1539'
   doi: null
-  card: 123-programming-with-algebraic-effects-and-handlers
 - title: 'Koka: Programming with Row Polymorphic Effect Types'
   url: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
   year: 2014
   arxiv: null
   doi: null
-  card: 711-koka-programming-with-row-polymorphic-effect-types
+see:
+- "022-handlers-of-algebraic-effects"
+- "123-programming-with-algebraic-effects-and-handlers"
+- "711-koka-programming-with-row-polymorphic-effect-types"
 lineage: algebraic-effects
 ---
 

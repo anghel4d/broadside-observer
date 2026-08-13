@@ -22,13 +22,14 @@ cites:
     year: 1997
     arxiv: null
     doi: "10.1145/258734.258769"
-    card: "661-instant-radiosity"
   - title: "Clustered Deferred and Forward Shading"
     url: "http://publications.lib.chalmers.se/publication/161725-clustered-deferred-and-forward-shading"
     year: 2012
     arxiv: null
     doi: null
-    card: "727-clustered-deferred-and-forward-shading"
+see:
+  - "661-instant-radiosity"
+  - "727-clustered-deferred-and-forward-shading"
 ---
 
 # Forward+: Bringing Deferred Lighting to the Next Level

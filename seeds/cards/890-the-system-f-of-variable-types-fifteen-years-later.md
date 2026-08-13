@@ -24,25 +24,26 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1016/S0049-237X(08)70845-7"
-    card: "889-girard-system-f-une-extension-de-linterpretation-de-godel"
   - title: "Towards a Theory of Type Structure"
     url: "https://doi.org/10.1007/3-540-06859-7_148"
     year: 1974
     arxiv: null
     doi: "10.1007/3-540-06859-7_148"
-    card: "888-towards-a-theory-of-type-structure"
   - title: "Theorems for Free!"
     url: "https://doi.org/10.1145/99370.99404"
     year: 1989
     arxiv: null
     doi: "10.1145/99370.99404"
-    card: "039-theorems-for-free"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "889-girard-system-f-une-extension-de-linterpretation-de-godel"
+  - "888-towards-a-theory-of-type-structure"
+  - "039-theorems-for-free"
+  - "027-types-and-programming-languages"
 ---
 
 # The System F of Variable Types, Fifteen Years Later

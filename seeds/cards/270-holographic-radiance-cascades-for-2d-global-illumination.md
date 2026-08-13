@@ -23,22 +23,23 @@ cites:
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - title: "Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer"
     url: "https://arxiv.org/abs/2408.14425"
     year: 2024
     arxiv: "2408.14425"
     doi: "10.1093/rasti/rzae062"
-    card: "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
   - title: "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes"
     url: "https://arxiv.org/abs/2607.20384"
     year: 2026
     arxiv: "2607.20384"
-    card: "265-split-radiance-cascades-real-time-global-illumination-via-sp"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+see:
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "664-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
+  - "265-split-radiance-cascades-real-time-global-illumination-via-sp"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
 # Holographic Radiance Cascades for 2D Global Illumination

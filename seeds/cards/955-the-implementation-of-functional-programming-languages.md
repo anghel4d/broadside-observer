@@ -24,25 +24,26 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1145/130697.130699"
-    card: "954-report-on-the-programming-language-haskell-a-non-strict-pure"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
     arxiv: null
     doi: null
-    card: "943-the-lazy-lambda-calculus"
   - title: "Call-by-Name, Call-by-Value and the λ-Calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
+see:
+  - "954-report-on-the-programming-language-haskell-a-non-strict-pure"
+  - "943-the-lazy-lambda-calculus"
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "868-the-mechanical-evaluation-of-expressions"
 ---
 
 # The Implementation of Functional Programming Languages

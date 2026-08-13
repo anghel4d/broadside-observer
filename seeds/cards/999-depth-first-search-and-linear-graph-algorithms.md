@@ -23,7 +23,8 @@ cites:
   year: 1975
   arxiv: null
   doi: 10.1145/321879.321884
-  card: 1061-efficiency-of-a-good-but-not-linear-set-union-algorithm
+see:
+- "1061-efficiency-of-a-good-but-not-linear-set-union-algorithm"
 ---
 
 # Depth-First Search and Linear Graph Algorithms

@@ -22,25 +22,26 @@ cites:
   year: 2018
   arxiv: null
   doi: null
-  card: 113-mesh-shaders-in-the-vulkan-ecosystem
 - title: GPU-Driven Rendering Pipelines
   url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
   year: 2015
   arxiv: null
   doi: null
-  card: 016-gpu-driven-rendering-pipelines
 - title: 'Nanite: A Deep Dive'
   url: https://www.youtube.com/watch?v=e_5kdRpGrpI
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
 - title: Optimizing the Graphics Pipeline with Compute
   url: https://advances.realtimerendering.com/
   year: 2016
   arxiv: null
   doi: null
-  card: 710-optimizing-the-graphics-pipeline-with-compute-gpu-drive
+see:
+- "113-mesh-shaders-in-the-vulkan-ecosystem"
+- "016-gpu-driven-rendering-pipelines"
+- "106-nanite-a-deep-dive"
+- "710-optimizing-the-graphics-pipeline-with-compute-gpu-drive"
 ---
 
 # meshoptimizer

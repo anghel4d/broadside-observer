@@ -25,37 +25,38 @@ cites:
   year: 1998
   arxiv: null
   doi: 10.1177/027836499801700706
-  card: 706-motion-planning-in-dynamic-environments-using-velocity
 - title: Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation
   url: https://doi.org/10.1109/ROBOT.2008.4543489
   year: 2008
   arxiv: null
   doi: 10.1109/ROBOT.2008.4543489
-  card: 358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi
 - title: 'ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation'
   url: https://doi.org/10.1145/1599470.1599494
   year: 2009
   arxiv: null
   doi: 10.1145/1599470.1599494
-  card: 705-clearpath-highly-parallel-collision-avoidance-for-multi
 - title: Steering Behaviors For Autonomous Characters
   url: https://www.red3d.com/cwr/steer/
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
 - title: RVO2 Library
   url: https://gamma.cs.unc.edu/RVO2/
   year: 2011
   arxiv: null
   doi: null
-  card: 719-rvo2-library
 - title: Continuum Crowds
   url: https://doi.org/10.1145/1141911.1141978
   year: 2006
   arxiv: null
   doi: 10.1145/1141911.1141978
-  card: 437-continuum-crowds
+see:
+- "706-motion-planning-in-dynamic-environments-using-velocity"
+- "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+- "705-clearpath-highly-parallel-collision-avoidance-for-multi"
+- "258-steering-behaviors-for-autonomous-characters"
+- "719-rvo2-library"
+- "437-continuum-crowds"
 ---
 
 # Reciprocal n-body Collision Avoidance (ORCA)

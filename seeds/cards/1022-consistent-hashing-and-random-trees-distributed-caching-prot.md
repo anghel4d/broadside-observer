@@ -27,19 +27,20 @@ cites:
   year: 2001
   arxiv: null
   doi: 10.1145/964723.383071
-  card: 1023-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap
 - title: "Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems"
   url: "https://doi.org/10.1007/3-540-45518-3_18"
   year: 2001
   arxiv: null
   doi: 10.1007/3-540-45518-3_18
-  card: 1024-pastry-scalable-decentralized-object-location-and-routing-fo
 - title: "Kademlia: A Peer-to-peer Information System Based on the XOR Metric"
   url: "https://doi.org/10.1007/3-540-45748-8_5"
   year: 2002
   arxiv: null
   doi: 10.1007/3-540-45748-8_5
-  card: 1025-kademlia-a-peer-to-peer-information-system-based-on-the-xor-
+see:
+- "1023-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap"
+- "1024-pastry-scalable-decentralized-object-location-and-routing-fo"
+- "1025-kademlia-a-peer-to-peer-information-system-based-on-the-xor-"
 ---
 
 # Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web

@@ -25,13 +25,14 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
 - title: IP = PSPACE
   url: "https://doi.org/10.1145/146585.146609"
   year: 1992
   arxiv: null
   doi: 10.1145/146585.146609
-  card: 1055-ip-pspace
+see:
+- "975-the-complexity-of-theorem-proving-procedures"
+- "1055-ip-pspace"
 ---
 
 # Relativizations of the P =? NP Question

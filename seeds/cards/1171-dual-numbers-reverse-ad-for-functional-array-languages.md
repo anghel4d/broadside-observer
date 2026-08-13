@@ -24,25 +24,26 @@ cites:
     year: 2024
     arxiv: null
     doi: null
-    card: "205-comparing-parallel-functional-array-languages-programming-an"
   - title: "Notation as a Tool of Thought"
     url: "https://doi.org/10.1145/358896.358899"
     year: 1980
     arxiv: null
     doi: "10.1145/358896.358899"
-    card: "046-notation-as-a-tool-of-thought"
   - title: "Scans as Primitive Parallel Operations"
     url: "https://doi.org/10.1109/TC.1986.1676477"
     year: 1986
     arxiv: null
     doi: null
-    card: "383-scans-as-primitive-parallel-operations"
   - title: "A Programming Language"
     url: "https://doi.org/10.1145/1460833.1460872"
     year: 1962
     arxiv: null
     doi: null
-    card: "050-a-programming-language"
+see:
+  - "205-comparing-parallel-functional-array-languages-programming-an"
+  - "046-notation-as-a-tool-of-thought"
+  - "383-scans-as-primitive-parallel-operations"
+  - "050-a-programming-language"
 ---
 
 # Dual-Numbers Reverse AD for Functional Array Languages

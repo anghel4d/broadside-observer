@@ -24,25 +24,26 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-    card: "836-go-to-statement-considered-harmful"
   - title: "Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules"
     url: "https://doi.org/10.1145/355592.365646"
     year: 1966
     arxiv: null
     doi: "10.1145/355592.365646"
-    card: "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
   - title: "The Art of Computer Programming, Volume 1: Fundamental Algorithms"
     url: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
     year: 1968
     arxiv: null
     doi: null
-    card: "846-the-art-of-computer-programming-volume-1-fundamental-algorit"
   - title: "Notes on Structured Programming"
     url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
     year: 1970
     arxiv: null
     doi: null
-    card: "840-notes-on-structured-programming"
+see:
+  - "836-go-to-statement-considered-harmful"
+  - "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
+  - "846-the-art-of-computer-programming-volume-1-fundamental-algorit"
+  - "840-notes-on-structured-programming"
 ---
 
 # Structured Programming with go to Statements

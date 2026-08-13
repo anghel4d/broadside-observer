@@ -26,7 +26,6 @@ cites:
     year: 2023
     arxiv: "2305.16291"
     doi: null
-    card: "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
   - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
     url: "https://arxiv.org/abs/2604.03964"
     year: 2026
@@ -37,6 +36,8 @@ cites:
     year: 2026
     arxiv: "2604.20779"
     doi: null
+see:
+  - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
 ---
 
 # Agent Workflow Memory

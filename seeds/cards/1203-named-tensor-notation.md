@@ -24,11 +24,12 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "Einops: Clear and Reliable Tensor Manipulations with Einstein-Like Notation"
     url: "https://openreview.net/forum?id=oapKSVM2bcj"
     year: 2022
-    card: "1217-einops-clear-and-reliable-tensor-manipulations"
+see:
+  - "014-attention-is-all-you-need"
+  - "1217-einops-clear-and-reliable-tensor-manipulations"
 ---
 
 # Named Tensor Notation

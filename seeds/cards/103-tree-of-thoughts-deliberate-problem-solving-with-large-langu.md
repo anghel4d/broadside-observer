@@ -27,19 +27,20 @@ cites:
     year: 2022
     arxiv: "2201.11903"
     doi: null
-    card: "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
   - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
     url: "https://arxiv.org/abs/2210.03629"
     year: 2022
     arxiv: "2210.03629"
     doi: null
-    card: "007-react-synergizing-reasoning-and-acting-in-language-models"
   - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
     url: "https://arxiv.org/abs/2607.12267"
     year: 2026
     arxiv: "2607.12267"
     doi: null
-    card: "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
+see:
+  - "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
+  - "080-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
 ---
 
 # Tree of Thoughts: Deliberate Problem Solving with Large Language Models

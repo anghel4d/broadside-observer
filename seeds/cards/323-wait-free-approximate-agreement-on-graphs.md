@@ -22,73 +22,61 @@ cites:
     year: 1985
     arxiv: null
     doi: "10.1145/3149.214121"
-    card: null
   - title: "Reaching Agreement in the Presence of Faults"
     url: "https://doi.org/10.1145/322186.322188"
     year: 1980
     arxiv: null
     doi: "10.1145/322186.322188"
-    card: null
   - title: "On rigid circuit graphs"
     url: "https://doi.org/10.1007/bf02992776"
     year: 1961
     arxiv: null
     doi: "10.1007/bf02992776"
-    card: null
   - title: "Reaching approximate agreement in the presence of faults"
     url: "https://doi.org/10.1145/5925.5931"
     year: 1986
     arxiv: null
     doi: "10.1145/5925.5931"
-    card: null
   - title: "Distributed Computing by Mobile Robots: Gathering"
     url: "https://doi.org/10.1137/100796534"
     year: 2012
     arxiv: null
     doi: "10.1137/100796534"
-    card: null
   - title: "Brief Announcement: Why Extension-Based Proofs Fail"
     url: "https://doi.org/10.1145/3382734.3405743"
     year: 2020
     arxiv: null
     doi: "10.1145/3382734.3405743"
-    card: null
   - title: "The topological structure of asynchronous computability"
     url: "https://doi.org/10.1145/331524.331529"
     year: 1999
     arxiv: null
     doi: "10.1145/331524.331529"
-    card: null
   - title: "Distributed Computing Through Combinatorial Topology"
     url: "https://doi.org/10.1016/c2011-0-07032-1"
     year: 2014
     arxiv: null
     doi: "10.1016/c2011-0-07032-1"
-    card: null
   - title: "Asynchronous Robots on Graphs: Gathering"
     url: "https://doi.org/10.1007/978-3-030-11072-7_8"
     year: 2019
     arxiv: null
     doi: "10.1007/978-3-030-11072-7_8"
-    card: null
   - title: "The topology of look-compute-move robot wait-free algorithms with hard termination"
     url: "https://doi.org/10.1007/s00446-018-0345-3"
     year: 2018
     arxiv: null
     doi: "10.1007/s00446-018-0345-3"
-    card: null
   - title: "Convergence and covering on graphs for wait-free robots"
     url: "https://doi.org/10.1186/s13173-017-0065-8"
     year: 2018
     arxiv: null
     doi: "10.1186/s13173-017-0065-8"
-    card: null
   - title: "Tight Bounds for Asymptotic and Approximate Consensus"
     url: "https://doi.org/10.1145/3212734.3212762"
     year: 2018
     arxiv: null
     doi: "10.1145/3212734.3212762"
-    card: null
 ---
 
 # Wait-free approximate agreement on graphs

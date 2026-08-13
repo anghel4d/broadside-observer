@@ -22,13 +22,14 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359545.359563
-  card: 1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst
 - title: Virtual Time and Global States of Distributed Systems
   url: "https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf"
   year: 1989
   arxiv: null
   doi: null
-  card: 1040-virtual-time-and-global-states-of-distributed-systems
+see:
+- "1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst"
+- "1040-virtual-time-and-global-states-of-distributed-systems"
 ---
 
 # Timestamps in Message-Passing Systems That Preserve the Partial Ordering

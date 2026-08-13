@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-    card: "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Assigning Meanings to Programs"
     url: "https://doi.org/10.1090/psapm/019/0235771"
     year: 1967
     arxiv: null
     doi: "10.1090/psapm/019/0235771"
-    card: "877-assigning-meanings-to-programs"
   - title: "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs"
     url: "https://dl.acm.org/doi/10.1145/359576.359579"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359579"
-    card: "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
+see:
+  - "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "877-assigning-meanings-to-programs"
+  - "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # Program Development by Stepwise Refinement

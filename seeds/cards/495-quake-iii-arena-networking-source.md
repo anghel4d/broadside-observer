@@ -21,19 +21,20 @@ cites:
   year: 1999
   arxiv: null
   doi: null
-  card: 452-unreal-engine-networking-architecture
 - title: Source Multiplayer Networking
   url: https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
   year: 2001
   arxiv: null
   doi: null
-  card: 376-source-multiplayer-networking
 - title: 1500 Archers on a 28.8
   url: https://www.gamedeveloper.com/programming/1500-archers-on-a-28-8-network-programming-in-age-of-empires-and-beyond
   year: 2001
   arxiv: null
   doi: null
-  card: 028-1500-archers-on-a-28-8-network-programming-in-age-of-empires
+see:
+- "452-unreal-engine-networking-architecture"
+- "376-source-multiplayer-networking"
+- "028-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
 ---
 
 # Quake III Arena Networking Source

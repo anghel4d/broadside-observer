@@ -38,17 +38,18 @@ cites:
     url: "https://arxiv.org/abs/2403.05525"
     year: 2024
     arxiv: "2403.05525"
-    card: "1242-deepseek-vl-towards-real-world-vision-language"
   - title: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model"
     url: "https://arxiv.org/abs/2405.04434"
     year: 2024
     arxiv: "2405.04434"
-    card: "1243-deepseek-v2-economical-efficient-moe-language-model"
   - title: "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     url: "https://arxiv.org/abs/2401.06066"
     year: 2024
     arxiv: "2401.06066"
-    card: "1239-deepseekmoe-towards-ultimate-expert-specialization"
+see:
+  - "1242-deepseek-vl-towards-real-world-vision-language"
+  - "1243-deepseek-v2-economical-efficient-moe-language-model"
+  - "1239-deepseekmoe-towards-ultimate-expert-specialization"
 ---
 
 # DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding

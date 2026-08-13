@@ -23,25 +23,26 @@ cites:
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Checking a Large Routine"
     url: "https://www.turingarchive.org/browse.php/b/8"
     year: 1949
     arxiv: null
     doi: null
-    card: "774-checking-a-large-routine"
   - title: "A Discipline of Programming"
     url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
     year: 1976
     arxiv: null
     doi: null
-    card: "841-a-discipline-of-programming"
   - title: "Towards a Mathematical Science of Computation"
     url: "https://www-formal.stanford.edu/jmc/towards.html"
     year: 1962
     arxiv: null
     doi: null
-    card: "829-towards-a-mathematical-science-of-computation"
+see:
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "774-checking-a-large-routine"
+  - "841-a-discipline-of-programming"
+  - "829-towards-a-mathematical-science-of-computation"
 ---
 
 # Assigning Meanings to Programs

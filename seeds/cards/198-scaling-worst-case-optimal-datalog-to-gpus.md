@@ -25,19 +25,20 @@ cites:
     year: 2026
     arxiv: "2605.00417"
     doi: null
-    card: "192-multiset-semantics-in-sparql-relational-algebra-and-datalog"
   - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
     url: "https://doi.org/10.1109/69.43410"
     year: 1989
     arxiv: null
     doi: "10.1109/69.43410"
-    card: "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
   - title: "Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem"
     url: "https://doi.org/10.1016/0004-3702(82)90020-0"
     year: 1982
     arxiv: null
     doi: "10.1016/0004-3702(82)90020-0"
-    card: "043-rete-a-fast-algorithm-for-the-many-pattern-many-object-patte"
+see:
+  - "192-multiset-semantics-in-sparql-relational-algebra-and-datalog"
+  - "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
+  - "043-rete-a-fast-algorithm-for-the-many-pattern-many-object-patte"
 ---
 
 # Scaling Worst-Case Optimal Datalog to GPUs

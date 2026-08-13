@@ -21,13 +21,14 @@ cites:
     year: 2014
     arxiv: null
     doi: null
-    card: "477-renderdoc-graphics-debugger"
   - title: "Tracy Frame Profiler"
     url: "https://github.com/wolfpld/tracy"
     year: 2019
     arxiv: null
     doi: null
-    card: "468-tracy-frame-profiler"
+see:
+  - "477-renderdoc-graphics-debugger"
+  - "468-tracy-frame-profiler"
 ---
 
 # Handmade Hero / Hot-Reload Engine Practice

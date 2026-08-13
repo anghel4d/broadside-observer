@@ -24,19 +24,20 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.1007/3-540-17184-3_44"
-    card: "168-cartesian-closed-categories-and-typed-calculi"
   - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: "https://arxiv.org/abs/0903.0340"
     year: 2011
     arxiv: "0903.0340"
     doi: "10.1007/978-3-642-12821-9_2"
-    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
   - title: "From λ-calculus to Cartesian Closed Categories"
     url: "https://www.cs.cmu.edu/~crary/819-f09/"
     year: 1980
     arxiv: null
     doi: null
-    card: "045-from-calculus-to-cartesian-closed-categories"
+see:
+  - "168-cartesian-closed-categories-and-typed-calculi"
+  - "019-physics-topology-logic-and-computation-a-rosetta-stone"
+  - "045-from-calculus-to-cartesian-closed-categories"
 ---
 
 # Introduction to Higher Order Categorical Logic

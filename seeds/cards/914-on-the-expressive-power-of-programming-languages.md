@@ -24,25 +24,26 @@ cites:
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
+see:
+  - "916-control-operators-the-secd-machine-and-the-calculus"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "911-a-syntactic-approach-to-type-soundness"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
 # On the Expressive Power of Programming Languages

@@ -22,25 +22,26 @@ cites:
   year: 1986
   arxiv: null
   doi: null
-  card: 499-robin-hood-hashing
 - title: Hopscotch Hashing
   url: https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf
   year: 2008
   arxiv: null
   doi: null
-  card: 483-hopscotch-hashing
 - title: F14 — A Hash Table Library for C++
   url: https://engineering.fb.com/2019/04/25/developer-tools/f14/
   year: 2019
   arxiv: null
   doi: null
-  card: 716-f14-a-hash-table-library-for-c
 - title: I Wrote a Faster Hash Table
   url: https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/
   year: 2017
   arxiv: null
   doi: null
-  card: 737-i-wrote-a-faster-hash-table
+see:
+- "499-robin-hood-hashing"
+- "483-hopscotch-hashing"
+- "716-f14-a-hash-table-library-for-c"
+- "737-i-wrote-a-faster-hash-table"
 ---
 
 # Abseil Swiss Tables

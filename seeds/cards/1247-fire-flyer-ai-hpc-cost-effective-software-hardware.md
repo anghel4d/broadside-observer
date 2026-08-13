@@ -32,12 +32,13 @@ cites:
   - title: "AI and Memory Wall"
     url: "https://doi.org/10.1109/MM.2024.3373763"
     year: 2024
-    card: "1210-ai-and-memory-wall"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
+see:
+  - "1210-ai-and-memory-wall"
+  - "1206-deepseek-v3-technical-report"
 ---
 
 # Fire-Flyer AI-HPC: A Cost-Effective Software-Hardware Co-Design for Deep Learning

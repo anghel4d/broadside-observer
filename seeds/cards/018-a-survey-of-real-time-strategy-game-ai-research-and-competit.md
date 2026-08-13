@@ -29,19 +29,20 @@ cites:
     year: 2017
     arxiv: "1708.04782"
     doi: null
-    card: "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
   - title: "The StarCraft Multi-Agent Challenge"
     url: "https://arxiv.org/abs/1902.04043"
     year: 2019
     arxiv: "1902.04043"
     doi: null
-    card: "011-the-starcraft-multi-agent-challenge"
   - title: "Build Order Optimization in StarCraft"
     url: "https://www.aaai.org/"
     year: 2011
     arxiv: null
     doi: null
-    card: "134-build-order-optimization-in-starcraft"
+see:
+  - "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+  - "011-the-starcraft-multi-agent-challenge"
+  - "134-build-order-optimization-in-starcraft"
 ---
 
 # A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft

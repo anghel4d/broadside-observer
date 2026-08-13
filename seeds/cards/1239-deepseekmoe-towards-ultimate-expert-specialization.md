@@ -37,17 +37,18 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "GLU Variants Improve Transformer"
     url: "https://arxiv.org/abs/2002.05202"
     year: 2020
     arxiv: "2002.05202"
-    card: "1218-glu-variants-improve-transformer"
   - title: "DeepSeek LLM: Scaling Open-Source Language Models with Longtermism"
     url: "https://arxiv.org/abs/2401.02954"
     year: 2024
     arxiv: "2401.02954"
-    card: "1238-deepseek-llm-scaling-open-source-language-models"
+see:
+  - "014-attention-is-all-you-need"
+  - "1218-glu-variants-improve-transformer"
+  - "1238-deepseek-llm-scaling-open-source-language-models"
 ---
 
 # DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models

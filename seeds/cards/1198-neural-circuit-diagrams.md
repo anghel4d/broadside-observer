@@ -22,13 +22,14 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "A Survey of Graphical Languages for Monoidal Categories"
     url: "https://arxiv.org/abs/0908.3347"
     year: 2010
     arxiv: "0908.3347"
     doi: "10.1007/978-3-642-12821-9_4"
-    card: "133-a-survey-of-graphical-languages-for-monoidal-categories"
+see:
+  - "014-attention-is-all-you-need"
+  - "133-a-survey-of-graphical-languages-for-monoidal-categories"
 ---
 
 # Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures

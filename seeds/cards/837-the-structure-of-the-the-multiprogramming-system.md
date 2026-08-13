@@ -24,25 +24,26 @@ cites:
     year: 1965
     arxiv: null
     doi: "10.1145/365559.365617"
-    card: "838-solution-of-a-problem-in-concurrent-programming-control"
   - title: "Cooperating Sequential Processes"
     url: "https://www.cs.utexas.edu/users/EWD/ewd01xx/EWD123.PDF"
     year: 1968
     arxiv: null
     doi: null
-    card: "839-cooperating-sequential-processes"
   - title: "Go To Statement Considered Harmful"
     url: "https://doi.org/10.1145/362929.362947"
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-    card: "836-go-to-statement-considered-harmful"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "838-solution-of-a-problem-in-concurrent-programming-control"
+  - "839-cooperating-sequential-processes"
+  - "836-go-to-statement-considered-harmful"
+  - "047-communicating-sequential-processes"
 ---
 
 # The Structure of the 'THE'-Multiprogramming System

@@ -26,19 +26,20 @@ cites:
   year: 1979
   arxiv: null
   doi: null
-  card: 978-computers-and-intractability-a-guide-to-the-theory-of-np-com
 - title: Approximation Algorithms for Combinatorial Problems
   url: "https://doi.org/10.1016/S0022-0000(74)80044-9"
   year: 1974
   arxiv: null
   doi: 10.1016/S0022-0000(74)80044-9
-  card: 1053-approximation-algorithms-for-combinatorial-problems
 - title: IP = PSPACE
   url: "https://doi.org/10.1145/146585.146609"
   year: 1992
   arxiv: null
   doi: 10.1145/146585.146609
-  card: 1055-ip-pspace
+see:
+- "978-computers-and-intractability-a-guide-to-the-theory-of-np-com"
+- "1053-approximation-algorithms-for-combinatorial-problems"
+- "1055-ip-pspace"
 ---
 
 # Proof Verification and the Hardness of Approximation Problems

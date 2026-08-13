@@ -24,25 +24,26 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155364"
-    card: "931-the-early-history-of-smalltalk"
   - title: "Smalltalk-80: The Language and Its Implementation"
     url: "https://dl.acm.org/doi/10.5555/273"
     year: 1983
     arxiv: null
     doi: null
-    card: "933-smalltalk-80-the-language-and-its-implementation"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
     arxiv: null
     doi: "10.1145/38765.38828"
-    card: "938-self-the-power-of-simplicity"
   - title: "Viewing Control Structures as Patterns of Passing Messages"
     url: "https://doi.org/10.1016/0004-3702(77)90033-9"
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-    card: "934-viewing-control-structures-as-patterns-of-passing-messages"
+see:
+  - "931-the-early-history-of-smalltalk"
+  - "933-smalltalk-80-the-language-and-its-implementation"
+  - "938-self-the-power-of-simplicity"
+  - "934-viewing-control-structures-as-patterns-of-passing-messages"
 ---
 
 # Design Principles Behind Smalltalk

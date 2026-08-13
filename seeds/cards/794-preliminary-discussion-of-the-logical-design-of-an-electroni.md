@@ -26,25 +26,26 @@ cites:
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "Planning and Coding of Problems for an Electronic Computing Instrument"
     url: "https://www.ias.edu/electronic-computer-project"
     year: 1947
     arxiv: null
     doi: null
-    card: "795-planning-and-coding-of-problems-for-an-electronic-computing-"
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
     url: "https://www.npl.co.uk/famous-faces/alan-turing"
     year: 1946
     arxiv: null
     doi: null
-    card: "773-proposal-for-development-in-the-mathematics-division-of-an-a"
   - title: "The Preparation of Programs for an Electronic Digital Computer"
     url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
     year: 1951
     arxiv: null
     doi: null
-    card: "823-the-preparation-of-programs-for-an-electronic-digital-comput"
+see:
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "795-planning-and-coding-of-problems-for-an-electronic-computing-"
+  - "773-proposal-for-development-in-the-mathematics-division-of-an-a"
+  - "823-the-preparation-of-programs-for-an-electronic-digital-comput"
 ---
 
 # Preliminary Discussion of the Logical Design of an Electronic Computing Instrument

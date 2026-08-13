@@ -24,19 +24,20 @@ cites:
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Hyaline: Fast and Transparent Lock-Free Memory Reclamation"
     url: "https://arxiv.org/abs/1905.07903"
     year: 2019
     arxiv: "1905.07903"
     doi: null
-    card: "704-hyaline-fast-and-transparent-lock-free-memory-reclamati"
   - title: "Crystalline: Fast and Memory Efficient Wait-Free Reclamation"
     url: "https://arxiv.org/abs/2104.01142"
     year: 2021
     arxiv: "2104.01142"
     doi: null
-    card: "315-crystalline-fast-and-memory-efficient-wait-free-reclamation"
+see:
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "704-hyaline-fast-and-transparent-lock-free-memory-reclamati"
+  - "315-crystalline-fast-and-memory-efficient-wait-free-reclamation"
 ---
 
 # Universal Wait-Free Memory Reclamation

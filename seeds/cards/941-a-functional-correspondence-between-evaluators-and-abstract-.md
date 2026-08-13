@@ -28,25 +28,26 @@ cites:
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
   - title: "Defunctionalization at Work"
     url: "https://doi.org/10.1145/773184.773202"
     year: 2001
     arxiv: null
     doi: "10.1145/773184.773202"
-    card: "894-defunctionalization-at-work"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
     url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
+see:
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
+  - "894-defunctionalization-at-work"
+  - "916-control-operators-the-secd-machine-and-the-calculus"
+  - "868-the-mechanical-evaluation-of-expressions"
 ---
 
 # A Functional Correspondence between Evaluators and Abstract Machines

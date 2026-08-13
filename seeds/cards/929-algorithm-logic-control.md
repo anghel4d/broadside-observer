@@ -24,25 +24,26 @@ cites:
     year: 1974
     arxiv: null
     doi: null
-    card: "928-predicate-logic-as-programming-language"
   - title: "Prolog in 10 Figures"
     url: "https://doi.org/10.1145/3166.3168"
     year: 1985
     arxiv: null
     doi: "10.1145/3166.3168"
-    card: "930-prolog-in-10-figures"
   - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
     url: "https://doi.org/10.1109/69.43410"
     year: 1989
     arxiv: null
     doi: "10.1109/69.43410"
-    card: "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
   - title: "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs"
     url: "https://dl.acm.org/doi/10.1145/359576.359579"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359579"
-    card: "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
+see:
+  - "928-predicate-logic-as-programming-language"
+  - "930-prolog-in-10-figures"
+  - "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
+  - "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # Algorithm = Logic + Control

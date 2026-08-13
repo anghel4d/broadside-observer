@@ -21,25 +21,26 @@ cites:
     url: "https://doi.org/10.1145/1507149.1507152"
     year: 2009
     doi: "10.1145/1507149.1507152"
-    card: "432-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
   - title: "Cascaded Light Propagation Volumes for Real-Time Indirect Illumination"
     url: "https://doi.org/10.1145/1730804.1730821"
     year: 2010
     doi: "10.1145/1730804.1730821"
-    card: "353-light-propagation-volumes-in-cryengine-3"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - title: "Voxel Cone Tracing for Real-Time Global Illumination"
     url: "https://doi.org/10.1145/1944745.1944787"
     year: 2011
     doi: "10.1145/1944745.1944787"
-    card: "137-voxel-cone-tracing-for-real-time-global-illumination"
+see:
+  - "432-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
+  - "353-light-propagation-volumes-in-cryengine-3"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "137-voxel-cone-tracing-for-real-time-global-illumination"
 ---
 
 # Interactive Indirect Illumination Using Voxel Cone Tracing

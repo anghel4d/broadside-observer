@@ -23,13 +23,14 @@ cites:
   year: 1970
   arxiv: null
   doi: 10.1214/aoms/1177697196
-  card: 1029-a-maximization-technique-occurring-in-the-statistical-analys
 - title: Dynamic Programming
   url: "https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming"
   year: 1957
   arxiv: null
   doi: null
-  card: 1058-dynamic-programming
+see:
+- "1029-a-maximization-technique-occurring-in-the-statistical-analys"
+- "1058-dynamic-programming"
 ---
 
 # Error Bounds for Convolutional Codes and an Asymptotically Optimum Decoding Algorithm

@@ -26,19 +26,20 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
     url: "https://doi.org/10.1007/BF02478259"
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "Computing Machinery and Intelligence"
     url: "https://doi.org/10.1093/mind/LIX.236.433"
     year: 1950
     arxiv: null
     doi: "10.1093/mind/LIX.236.433"
-    card: "770-computing-machinery-and-intelligence"
+see:
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "770-computing-machinery-and-intelligence"
 ---
 
 # Behavior, Purpose and Teleology

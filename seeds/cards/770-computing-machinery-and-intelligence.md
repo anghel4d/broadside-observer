@@ -24,25 +24,26 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-    card: "771-intelligent-machinery"
   - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
     url: "https://doi.org/10.1007/BF02478259"
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Programming a Computer for Playing Chess"
     url: "https://doi.org/10.1080/14786445008521796"
     year: 1950
     arxiv: null
     doi: "10.1080/14786445008521796"
-    card: "462-programming-a-computer-for-playing-chess"
+see:
+  - "771-intelligent-machinery"
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "462-programming-a-computer-for-playing-chess"
 ---
 
 # Computing Machinery and Intelligence

@@ -22,7 +22,8 @@ cites:
   year: 1999
   arxiv: null
   doi: null
-  card: 1026-the-pagerank-citation-ranking-bringing-order-to-the-web
+see:
+- "1026-the-pagerank-citation-ranking-bringing-order-to-the-web"
 ---
 
 # Authoritative Sources in a Hyperlinked Environment

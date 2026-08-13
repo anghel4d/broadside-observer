@@ -24,25 +24,26 @@ cites:
     year: 1950
     arxiv: null
     doi: "10.1093/mind/LIX.236.433"
-    card: "770-computing-machinery-and-intelligence"
   - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
     url: "https://doi.org/10.1007/BF02478259"
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+see:
+  - "770-computing-machinery-and-intelligence"
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
 ---
 
 # Intelligent Machinery

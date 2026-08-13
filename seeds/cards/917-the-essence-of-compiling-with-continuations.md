@@ -27,25 +27,26 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1017/CBO9780511609619"
-    card: "918-compiling-with-continuations"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
   - title: "Defunctionalization at Work"
     url: "https://doi.org/10.1145/773184.773202"
     year: 2001
     arxiv: null
     doi: "10.1145/773184.773202"
-    card: "894-defunctionalization-at-work"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
     url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
+see:
+  - "918-compiling-with-continuations"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
+  - "894-defunctionalization-at-work"
+  - "916-control-operators-the-secd-machine-and-the-calculus"
 ---
 
 # The Essence of Compiling with Continuations

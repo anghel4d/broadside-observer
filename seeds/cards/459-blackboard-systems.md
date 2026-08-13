@@ -25,13 +25,14 @@ cites:
     year: 2023
     arxiv: "2304.03442"
     doi: null
-    card: "003-generative-agents-interactive-simulacra-of-human-behavior"
   - title: "Steering Behaviors For Autonomous Characters"
     url: "https://www.red3d.com/cwr/steer/"
     year: 1999
     arxiv: null
     doi: null
-    card: "258-steering-behaviors-for-autonomous-characters"
+see:
+  - "003-generative-agents-interactive-simulacra-of-human-behavior"
+  - "258-steering-behaviors-for-autonomous-characters"
 ---
 
 # Blackboard Systems

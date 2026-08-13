@@ -23,19 +23,20 @@ cites:
     year: 1994
     arxiv: null
     doi: null
-    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
     url: "https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many"
     year: 2001
     arxiv: null
     doi: null
-    card: "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - title: "Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel"
     url: "https://docs-archive.freebsd.org/44doc/papers/kernmalloc.pdf"
     year: 1988
     arxiv: null
     doi: null
-    card: "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
+see:
+  - "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+  - "256-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
+  - "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
 ---
 
 # SLUB: The Unqueued Slab Allocator

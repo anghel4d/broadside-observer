@@ -33,73 +33,63 @@ cites:
     year: 2005
     arxiv: null
     doi: null
-    card: "146-monetdb-x100-hyper-pipelining-query-execution"
   - title: "Data Cube: A Relational Aggregation Operator Generalizing Group-By, Cross-Tab, and Sub-Totals"
     url: "https://doi.org/10.1023/a:1009726021843"
     year: 1997
     arxiv: null
     doi: "10.1023/a:1009726021843"
-    card: null
   - title: "The log-structured merge-tree (LSM-tree)"
     url: "https://doi.org/10.1007/s002360050048"
     year: 1996
     arxiv: null
     doi: "10.1007/s002360050048"
-    card: null
   - title: "Parallel database systems"
     url: "https://doi.org/10.1145/129888.129894"
     year: 1992
     arxiv: null
     doi: "10.1145/129888.129894"
-    card: null
   - title: "Query evaluation techniques for large databases"
     url: "https://doi.org/10.1145/152610.152611"
     year: 1993
     arxiv: null
     doi: "10.1145/152610.152611"
-    card: null
   - title: "ARIES"
     url: "https://doi.org/10.1145/128765.128770"
     year: 1992
     arxiv: null
     doi: "10.1145/128765.128770"
-    card: null
   - title: "A critique of ANSI SQL isolation levels"
     url: "https://doi.org/10.1145/223784.223785"
     year: 1995
     arxiv: null
     doi: "10.1145/223784.223785"
-    card: null
   - title: "Arithmetic coding for data compression"
     url: "https://doi.org/10.1145/214762.214771"
     year: 1987
     arxiv: null
     doi: "10.1145/214762.214771"
-    card: null
   - title: "Transaction Processing: Concepts and Techniques"
     url: "http://www.loc.gov/catdir/description/els032/92025954.html"
     year: 1992
     arxiv: null
     doi: null
-    card: null
   - title: "The Gamma database machine project"
     url: "https://doi.org/10.1109/69.50905"
     year: 1990
     arxiv: null
     doi: "10.1109/69.50905"
-    card: null
   - title: "Improved query performance with variant indexes"
     url: "https://doi.org/10.1145/253260.253268"
     year: 1997
     arxiv: null
     doi: "10.1145/253260.253268"
-    card: null
   - title: "An array-based algorithm for simultaneous multidimensional aggregates"
     url: "https://doi.org/10.1145/253260.253288"
     year: 1997
     arxiv: null
     doi: "10.1145/253260.253288"
-    card: null
+see:
+  - "146-monetdb-x100-hyper-pipelining-query-execution"
 ---
 
 # C-Store: A Column-oriented DBMS

@@ -22,19 +22,20 @@ cites:
     year: 2005
     arxiv: null
     doi: null
-    card: "441-managing-complexity-in-the-halo-2-ai-system"
   - title: "Behavior Trees in Robotics and AI: An Introduction"
     url: "https://arxiv.org/abs/1709.00084"
     year: 2018
     arxiv: "1709.00084"
     doi: null
-    card: "708-behavior-trees-in-robotics-and-ai-an-introduction"
   - title: "Building a Better Battle: DAMN and Utility Theory for Games"
     url: "https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN"
     year: 2010
     arxiv: null
     doi: null
-    card: "351-building-a-better-battle-damn-and-utility-theory-for-games"
+see:
+  - "441-managing-complexity-in-the-halo-2-ai-system"
+  - "708-behavior-trees-in-robotics-and-ai-an-introduction"
+  - "351-building-a-better-battle-damn-and-utility-theory-for-games"
 ---
 
 # Behavior Trees for Next-Gen Game AI

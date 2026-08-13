@@ -21,19 +21,20 @@ cites:
     year: 1980
     arxiv: null
     doi: "10.1145/358896.358899"
-    card: "046-notation-as-a-tool-of-thought"
   - title: "APL since 1978"
     url: "https://arxiv.org/abs/2005.02839"
     year: 2020
     arxiv: "2005.02839"
     doi: "10.1145/3386319"
-    card: "107-apl-since-1978"
   - title: "A Programming Language"
     url: "https://www.jsoftware.com/papers/APL.htm"
     year: 1962
     arxiv: null
     doi: null
-    card: "050-a-programming-language"
+see:
+  - "046-notation-as-a-tool-of-thought"
+  - "107-apl-since-1978"
+  - "050-a-programming-language"
 ---
 
 # NESL: A Nested Data-Parallel Language (Version 3.1)

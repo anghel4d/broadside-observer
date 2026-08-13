@@ -21,13 +21,14 @@ cites:
   year: 1968
   arxiv: null
   doi: 10.1109/TSSC.1968.300136
-  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
 - title: Online Graph Pruning for Pathfinding on Grid Maps
   url: https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761
   year: 2011
   arxiv: null
   doi: null
-  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
+see:
+- "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+- "253-online-graph-pruning-for-pathfinding-on-grid-maps"
 ---
 
 # A Note on Two Problems in Connexion with Graphs (Dijkstra)

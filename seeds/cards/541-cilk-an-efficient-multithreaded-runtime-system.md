@@ -27,17 +27,18 @@ cites:
     url: "https://doi.org/10.1145/324133.324234"
     year: 1999
     doi: "10.1145/324133.324234"
-    card: "257-scheduling-multithreaded-computations-by-work-stealing"
   - title: "The Implementation of the Cilk-5 Multithreaded Language"
     url: "https://doi.org/10.1145/277650.277725"
     year: 1998
     doi: "10.1145/277650.277725"
-    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
   - title: "Thread Scheduling for Multiprogrammed Multiprocessors"
     url: "https://doi.org/10.1145/277651.277678"
     year: 1998
     doi: "10.1145/277651.277678"
-    card: "542-thread-scheduling-for-multiprogrammed-multiprocessors"
+see:
+  - "257-scheduling-multithreaded-computations-by-work-stealing"
+  - "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - "542-thread-scheduling-for-multiprogrammed-multiprocessors"
 ---
 
 # Cilk: An Efficient Multithreaded Runtime System

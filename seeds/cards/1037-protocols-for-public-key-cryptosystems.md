@@ -22,7 +22,8 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359460.359473
-  card: 1036-secure-communications-over-insecure-channels
+see:
+- "1036-secure-communications-over-insecure-channels"
 ---
 
 # Protocols for Public Key Cryptosystems

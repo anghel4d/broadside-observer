@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
   - title: "The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions"
     url: "https://www.worldcat.org/title/undecidable/oclc/523589"
     year: 1965
     arxiv: null
     doi: null
-    card: "887-the-undecidable-basic-papers-on-undecidable-propositions-uns"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "780-introduction-to-metamathematics"
+  - "887-the-undecidable-basic-papers-on-undecidable-propositions-uns"
 ---
 
 # Computability and Unsolvability

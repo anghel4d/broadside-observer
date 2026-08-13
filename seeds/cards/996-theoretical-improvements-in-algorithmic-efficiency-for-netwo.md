@@ -23,13 +23,14 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.4153/CJM-1956-045-5
-  card: 995-maximal-flow-through-a-network
 - title: Algorithm for Solution of a Problem of Maximum Flow in a Network with Power Estimation
   url: "https://en.wikipedia.org/wiki/Dinic%27s_algorithm"
   year: 1970
   arxiv: null
   doi: null
-  card: 997-algorithm-for-solution-of-a-problem-of-maximum-flow-in-a-net
+see:
+- "995-maximal-flow-through-a-network"
+- "997-algorithm-for-solution-of-a-problem-of-maximum-flow-in-a-net"
 ---
 
 # Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems

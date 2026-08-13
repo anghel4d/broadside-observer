@@ -26,13 +26,14 @@ cites:
   year: 1991
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
-  card: 036-notions-of-computation-and-monads
 - title: Handlers of Algebraic Effects
   url: https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
+see:
+- "036-notions-of-computation-and-monads"
+- "022-handlers-of-algebraic-effects"
 ---
 
 # Monad Transformers and Modular Interpreters

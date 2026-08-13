@@ -21,73 +21,61 @@ cites:
     year: 2010
     arxiv: null
     doi: "10.1017/cbo9780511750854"
-    card: null
   - title: "Random Fragmentation and Coagulation Processes"
     url: "https://doi.org/10.1017/cbo9780511617768"
     year: 2006
     arxiv: null
     doi: "10.1017/cbo9780511617768"
-    card: null
   - title: "Cover times, blanket times, and majorizing measures"
     url: "https://doi.org/10.4007/annals.2012.175.3.8"
     year: 2012
     arxiv: null
     doi: "10.4007/annals.2012.175.3.8"
-    card: null
   - title: "The Brownian loop soup"
     url: "https://doi.org/10.1007/s00440-003-0319-6"
     year: 2004
     arxiv: null
     doi: "10.1007/s00440-003-0319-6"
-    card: null
   - title: "Markovian loop soups: permanental processes and isomorphism theorems"
     url: "https://doi.org/10.1214/ejp.v19-3255"
     year: 2014
     arxiv: null
     doi: "10.1214/ejp.v19-3255"
-    card: null
   - title: "A sufficient condition for the continuity of permanental processes with applications to local times of Markov processes"
     url: "https://doi.org/10.1214/12-aop744"
     year: 2013
     arxiv: null
     doi: "10.1214/12-aop744"
-    card: null
   - title: "Continuity Conditions for a Class of Second-order Permanental Chaoses"
     url: "https://doi.org/10.1007/978-3-0348-0490-5_15"
     year: 2013
     arxiv: null
     doi: "10.1007/978-3-0348-0490-5_15"
-    card: null
   - title: "Intersection local times for interlacements"
     url: "https://doi.org/10.1016/j.spa.2014.01.002"
     year: 2014
     arxiv: null
     doi: "10.1016/j.spa.2014.01.002"
-    card: null
   - title: "General Theory of Markov Processes."
     url: "http://doi.org/10.2307/2982988"
     year: 1990
     arxiv: null
     doi: "10.2307/2982988"
-    card: null
   - title: "Markov loops and renormalization"
     url: "https://doi.org/10.1214/09-aop509"
     year: 2010
     arxiv: null
     doi: "10.1214/09-aop509"
-    card: null
   - title: "Intersection Local Times, Loop Soups and Permanental Wick Powers"
     url: "https://doi.org/10.1090/memo/1171"
     year: 2017
     arxiv: null
     doi: "10.1090/memo/1171"
-    card: null
   - title: "An isomorphism theorem for random interlacements"
     url: "http://hdl.handle.net/20.500.11850/47040"
     year: 2011
     arxiv: null
     doi: "10.3929/ethz-b-000047040"
-    card: null
 ---
 
 # HPX: A Task Based Programming Model

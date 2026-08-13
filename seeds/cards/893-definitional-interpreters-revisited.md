@@ -24,25 +24,26 @@ cites:
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
   - title: "Defunctionalization at Work"
     url: "https://doi.org/10.1145/773184.773202"
     year: 2001
     arxiv: null
     doi: "10.1145/773184.773202"
-    card: "894-defunctionalization-at-work"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "Compiling with Continuations"
     url: "https://doi.org/10.1017/CBO9780511609619"
     year: 1992
     arxiv: null
     doi: "10.1017/CBO9780511609619"
-    card: "918-compiling-with-continuations"
+see:
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
+  - "894-defunctionalization-at-work"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "918-compiling-with-continuations"
 ---
 
 # Definitional Interpreters Revisited

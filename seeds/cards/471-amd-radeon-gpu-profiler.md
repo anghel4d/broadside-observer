@@ -21,19 +21,20 @@ cites:
     year: 2019
     arxiv: null
     doi: null
-    card: "468-tracy-frame-profiler"
   - title: "RenderDoc Graphics Debugger"
     url: "https://renderdoc.org/"
     year: 2014
     arxiv: null
     doi: null
-    card: "477-renderdoc-graphics-debugger"
   - title: "Nanite: A Deep Dive"
     url: "https://advances.realtimerendering.com/"
     year: 2021
     arxiv: null
     doi: null
-    card: "106-nanite-a-deep-dive"
+see:
+  - "468-tracy-frame-profiler"
+  - "477-renderdoc-graphics-debugger"
+  - "106-nanite-a-deep-dive"
 ---
 
 # AMD Radeon GPU Profiler

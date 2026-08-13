@@ -26,25 +26,26 @@ cites:
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Elements of a Theory of Human Problem Solving"
     url: "https://doi.org/10.1037/h0048495"
     year: 1958
     arxiv: null
     doi: "10.1037/h0048495"
-    card: "834-elements-of-a-theory-of-human-problem-solving"
   - title: "Computer Science as Empirical Inquiry: Symbols and Search"
     url: "https://doi.org/10.1145/360303.360308"
     year: 1976
     arxiv: null
     doi: "10.1145/360303.360308"
-    card: "835-computer-science-as-empirical-inquiry-symbols-and-search"
   - title: "Programs with Common Sense"
     url: "https://www-formal.stanford.edu/jmc/mcc59.pdf"
     year: 1959
     arxiv: null
     doi: null
-    card: "827-programs-with-common-sense"
+see:
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "834-elements-of-a-theory-of-human-problem-solving"
+  - "835-computer-science-as-empirical-inquiry-symbols-and-search"
+  - "827-programs-with-common-sense"
 ---
 
 # Report on a General Problem-Solving Program

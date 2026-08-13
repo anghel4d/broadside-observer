@@ -31,19 +31,19 @@ cites:
     year: 2026
     arxiv: "2605.09100"
     doi: null
-    card: "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
   - title: "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models"
     url: "https://arxiv.org/abs/2405.14366"
     year: 2024
     arxiv: "2405.14366"
     doi: null
-    card: "245-minicache-kv-cache-compression-in-depth-dimension-for-large-"
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
+see:
+  - "063-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
+  - "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch

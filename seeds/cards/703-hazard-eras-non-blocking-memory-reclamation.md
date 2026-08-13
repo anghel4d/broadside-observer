@@ -25,19 +25,20 @@ cites:
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-    card: "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - title: "Epoch-Based Reclamation / Practical lock-freedom"
     url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
     year: 2004
     arxiv: null
     doi: null
-    card: "369-epoch-based-reclamation-practical-lock-freedom"
   - title: "Interval-Based Memory Reclamation"
     url: "https://doi.org/10.1145/3178487.3178488"
     year: 2018
     arxiv: null
     doi: "10.1145/3178487.3178488"
-    card: "402-interval-based-memory-reclamation"
+see:
+  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "369-epoch-based-reclamation-practical-lock-freedom"
+  - "402-interval-based-memory-reclamation"
 ---
 # Hazard Eras: Non-Blocking Memory Reclamation
 

@@ -23,25 +23,26 @@ cites:
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-    card: "891-principal-type-schemes-for-functional-programs"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "891-principal-type-schemes-for-functional-programs"
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "154-the-definition-of-standard-ml-revised"
+  - "027-types-and-programming-languages"
 ---
 
 # Type Inference with Polymorphic Recursion

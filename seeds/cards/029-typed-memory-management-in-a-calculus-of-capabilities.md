@@ -23,13 +23,14 @@ cites:
   year: 1997
   arxiv: null
   doi: null
-  card: 031-region-based-memory-management
 - title: Implementation of the Typed Call-by-Value λ-Calculus using a Stack of Regions
   url: https://doi.org/10.1145/174675.177855
   year: 1994
   arxiv: null
   doi: null
-  card: 033-implementation-of-the-typed-call-by-value-calculus-using-a-s
+see:
+- "031-region-based-memory-management"
+- "033-implementation-of-the-typed-call-by-value-calculus-using-a-s"
 ---
 
 # Typed Memory Management in a Calculus of Capabilities

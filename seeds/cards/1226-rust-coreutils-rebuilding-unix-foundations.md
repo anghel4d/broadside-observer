@@ -27,7 +27,6 @@ cites:
     url: "https://doi.org/10.1016/j.softx.2020.100635"
     year: 2020
     doi: "10.1016/j.softx.2020.100635"
-    card: "1227-rust-code-analysis"
   - title: "Creating a multi-call Linux binary"
     url: "https://www.redbooks.ibm.com/abstracts/tips0092.html"
     year: 2022
@@ -39,12 +38,10 @@ cites:
     year: 2023
     arxiv: "2204.04008"
     doi: "10.1109/SP46215.2023.00010"
-    card: "1228-sok-taxonomy-of-attacks-on-oss-supply-chains"
   - title: "Exposing bugs in JavaScript engines through test transplantation and differential testing"
     url: "https://doi.org/10.1007/s11219-020-09537-8"
     year: 2021
     doi: "10.1007/s11219-020-09537-8"
-    card: "1229-exposing-bugs-in-javascript-engines"
   - title: "GNU coreutils — core GNU utilities"
     url: "https://www.gnu.org/software/coreutils/manual/"
     year: 1994
@@ -52,21 +49,17 @@ cites:
     url: "https://doi.org/10.1109/ICSE43902.2021.00124"
     year: 2021
     doi: "10.1109/ICSE43902.2021.00124"
-    card: "1230-technical-leverage-in-a-software-ecosystem"
   - title: "A Complexity Measure"
     url: "https://doi.org/10.1109/TSE.1976.233837"
     year: 1976
     doi: "10.1109/TSE.1976.233837"
-    card: "1231-a-complexity-measure"
   - title: "Differential testing for software"
     url: "https://www.hpl.hp.com/hpjournal/dtj/vol10num1/vol10num1art9.pdf"
     year: 1998
-    card: "1232-differential-testing-for-software"
   - title: "An empirical study of the reliability of UNIX utilities"
     url: "https://doi.org/10.1145/96267.96279"
     year: 1990
     doi: "10.1145/96267.96279"
-    card: "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
   - title: "IEEE Std 1003.1-2024 (POSIX) — Base Specifications, Issue 8"
     url: "https://pubs.opengroup.org/onlinepubs/9799919799/"
     year: 2024
@@ -74,21 +67,29 @@ cites:
     url: "https://doi.org/10.1109/SecDev.2016.043"
     year: 2016
     doi: "10.1109/SecDev.2016.043"
-    card: "1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer"
   - title: "OSS-Fuzz — Google's continuous fuzzing service for open source software"
     url: "https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/serebryany"
     year: 2017
-    card: "1235-oss-fuzz-continuous-fuzzing-for-open-source-software"
   - title: "Rewriting the Unix Stream Editor in Rust"
     url: "https://doi.org/10.1109/MS.2025.3579008"
     year: 2025
     doi: "10.1109/MS.2025.3579008"
-    card: "1236-rewriting-the-unix-stream-editor-in-rust"
   - title: "Evolution of the Unix System Architecture: An Exploratory Case Study"
     url: "https://doi.org/10.1109/TSE.2019.2892146"
     year: 2021
     doi: "10.1109/TSE.2019.2892146"
-    card: "1237-evolution-of-the-unix-system-architecture"
+see:
+  - "1227-rust-code-analysis"
+  - "1228-sok-taxonomy-of-attacks-on-oss-supply-chains"
+  - "1229-exposing-bugs-in-javascript-engines"
+  - "1230-technical-leverage-in-a-software-ecosystem"
+  - "1231-a-complexity-measure"
+  - "1232-differential-testing-for-software"
+  - "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
+  - "1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer"
+  - "1235-oss-fuzz-continuous-fuzzing-for-open-source-software"
+  - "1236-rewriting-the-unix-stream-editor-in-rust"
+  - "1237-evolution-of-the-unix-system-architecture"
 ---
 
 # Rust Coreutils: Rebuilding Unix Foundations in a Modern Language

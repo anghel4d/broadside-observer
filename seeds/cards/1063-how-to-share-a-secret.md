@@ -23,13 +23,14 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359340.359342
-  card: 1035-a-method-for-obtaining-digital-signatures-and-public-key-cry
 - title: New Directions in Cryptography
   url: "https://doi.org/10.1109/TIT.1976.1055638"
   year: 1976
   arxiv: null
   doi: 10.1109/TIT.1976.1055638
-  card: 1034-new-directions-in-cryptography
+see:
+- "1035-a-method-for-obtaining-digital-signatures-and-public-key-cry"
+- "1034-new-directions-in-cryptography"
 ---
 
 # How to Share a Secret

@@ -23,13 +23,14 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1007/BF02242355
-  card: 1011-schnelle-multiplikation-grosser-zahlen
 - title: Gaussian Elimination is Not Optimal
   url: "https://doi.org/10.1007/BF02165411"
   year: 1969
   arxiv: null
   doi: 10.1007/BF02165411
-  card: 1009-gaussian-elimination-is-not-optimal
+see:
+- "1011-schnelle-multiplikation-grosser-zahlen"
+- "1009-gaussian-elimination-is-not-optimal"
 ---
 
 # Multiplication of Multidigit Numbers on Automata

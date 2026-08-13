@@ -27,25 +27,26 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.1016/0304-3975(86)90044-7"
-    card: "890-the-system-f-of-variable-types-fifteen-years-later"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "Linear Logic"
     url: "https://doi.org/10.1016/0304-3975(87)90045-4"
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-    card: "041-linear-logic"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "890-the-system-f-of-variable-types-fifteen-years-later"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "041-linear-logic"
+  - "027-types-and-programming-languages"
 ---
 
 # Proofs and Types

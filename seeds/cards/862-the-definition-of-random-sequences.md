@@ -23,19 +23,20 @@ cites:
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "On the Length of Programs for Computing Finite Binary Sequences"
     url: "https://doi.org/10.1145/321356.321363"
     year: 1966
     arxiv: null
     doi: "10.1145/321356.321363"
-    card: "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - title: "Foundations of the Theory of Probability"
     url: "https://www.worldcat.org/title/foundations-of-the-theory-of-probability/oclc/523"
     year: 1933
     arxiv: null
     doi: "10.1007/978-3-642-49888-6"
-    card: "854-foundations-of-the-theory-of-probability"
+see:
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "858-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "854-foundations-of-the-theory-of-probability"
 ---
 
 # The Definition of Random Sequences

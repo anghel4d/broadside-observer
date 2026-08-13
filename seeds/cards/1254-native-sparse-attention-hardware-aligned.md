@@ -37,37 +37,38 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
     year: 2024
     arxiv: "2307.08691"
-    card: "096-flashattention-2-faster-attention-with-better-parallelism-an"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
   - title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
     url: "https://arxiv.org/abs/2603.05451"
     year: 2026
     arxiv: "2603.05451"
-    card: "1222-flashattention-4"
   - title: "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     url: "https://arxiv.org/abs/2401.06066"
     year: 2024
     arxiv: "2401.06066"
-    card: "1239-deepseekmoe-towards-ultimate-expert-specialization"
   - title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
     url: "https://arxiv.org/abs/2501.12948"
     year: 2025
     arxiv: "2501.12948"
-    card: "1252-deepseek-r1-incentivizing-reasoning-via-rl"
+see:
+  - "014-attention-is-all-you-need"
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "096-flashattention-2-faster-attention-with-better-parallelism-an"
+  - "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - "1222-flashattention-4"
+  - "1239-deepseekmoe-towards-ultimate-expert-specialization"
+  - "1252-deepseek-r1-incentivizing-reasoning-via-rl"
 ---
 
 # Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention

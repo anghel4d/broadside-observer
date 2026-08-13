@@ -22,15 +22,16 @@ cites:
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
     url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
     year: 2017
-    card: "406-real-time-global-illumination-using-precomputed-light-field-"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+see:
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+  - "406-real-time-global-illumination-using-precomputed-light-field-"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Scaling Probe-Based Real-Time Dynamic Global Illumination for Production

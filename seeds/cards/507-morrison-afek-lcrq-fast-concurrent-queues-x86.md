@@ -23,25 +23,26 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
   - title: "A Wait-Free Queue as Fast as Fetch-and-Add"
     url: "https://doi.org/10.1145/2851141.2851168"
     year: 2016
     arxiv: null
     doi: "10.1145/2851141.2851168"
-    card: "510-yang-mellor-crummey-wait-free-queue-fetch-and-add"
   - title: "A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue"
     url: "https://arxiv.org/abs/1908.04511"
     year: 2019
     arxiv: "1908.04511"
     doi: "10.4230/LIPIcs.DISC.2019.28"
-    card: "512-nikolaev-scq-scalable-portable-lock-free-fifo"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
+  - "510-yang-mellor-crummey-wait-free-queue-fetch-and-add"
+  - "512-nikolaev-scq-scalable-portable-lock-free-fifo"
 ---
 
 # Fast Concurrent Queues for x86 Processors

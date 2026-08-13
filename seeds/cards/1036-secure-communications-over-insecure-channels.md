@@ -23,13 +23,14 @@ cites:
   year: 1976
   arxiv: null
   doi: 10.1109/TIT.1976.1055638
-  card: 1034-new-directions-in-cryptography
 - title: Protocols for Public Key Cryptosystems
   url: "https://doi.org/10.1109/SP.1980.10006"
   year: 1980
   arxiv: null
   doi: 10.1109/SP.1980.10006
-  card: 1037-protocols-for-public-key-cryptosystems
+see:
+- "1034-new-directions-in-cryptography"
+- "1037-protocols-for-public-key-cryptosystems"
 ---
 
 # Secure Communications Over Insecure Channels

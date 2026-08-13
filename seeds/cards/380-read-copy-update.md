@@ -24,19 +24,20 @@ cites:
   year: 2004
   arxiv: null
   doi: null
-  card: 369-epoch-based-reclamation-practical-lock-freedom
 - title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
   url: https://doi.org/10.1109/TPDS.2004.8
   year: 2004
   arxiv: null
   doi: 10.1109/TPDS.2004.8
-  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
 - title: Userspace RCU Library (liburcu)
   url: https://liburcu.org/
   year: 2009
   arxiv: null
   doi: null
-  card: 715-userspace-rcu-library-liburcu
+see:
+- "369-epoch-based-reclamation-practical-lock-freedom"
+- "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+- "715-userspace-rcu-library-liburcu"
 ---
 
 # Read-Copy Update

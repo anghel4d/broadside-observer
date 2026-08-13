@@ -27,7 +27,8 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
+see:
+  - "014-attention-is-all-you-need"
 ---
 
 # Graph Attention Networks

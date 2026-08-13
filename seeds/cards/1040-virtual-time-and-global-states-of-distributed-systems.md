@@ -22,13 +22,14 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1145/359545.359563
-  card: 1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst
 - title: Timestamps in Message-Passing Systems That Preserve the Partial Ordering
   url: "https://en.wikipedia.org/wiki/Vector_clock"
   year: 1988
   arxiv: null
   doi: null
-  card: 1039-timestamps-in-message-passing-systems-that-preserve-the-part
+see:
+- "1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst"
+- "1039-timestamps-in-message-passing-systems-that-preserve-the-part"
 ---
 
 # Virtual Time and Global States of Distributed Systems

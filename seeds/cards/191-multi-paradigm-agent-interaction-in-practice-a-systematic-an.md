@@ -28,19 +28,19 @@ cites:
     year: 2025
     arxiv: "2509.03990"
     doi: null
-    card: "086-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
   - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
     url: "https://arxiv.org/abs/2505.07236"
     year: 2025
     arxiv: "2505.07236"
     doi: null
-    card: "087-uav-codeagents-scalable-uav-mission-planning-via-multi-agent"
   - title: "$λ_A$: A Typed Lambda Calculus for LLM Agent Composition"
     url: "https://arxiv.org/abs/2604.11767"
     year: 2026
     arxiv: "2604.11767"
     doi: null
-    card: "181-a-a-typed-lambda-calculus-for-llm-agent-composition"
+see:
+  - "086-meta-policy-reflexion-reusable-reflective-memory-and-rule-ad"
+  - "181-a-a-typed-lambda-calculus-for-llm-agent-composition"
 ---
 
 # Multi-Paradigm Agent Interaction in Practice:A Systematic Analysis of Generator-Evaluator, ReAct Loop,and Adversarial Evaluation in the buddyMe Framework

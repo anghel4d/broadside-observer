@@ -22,12 +22,13 @@ cites:
   year: 1964
   arxiv: null
   doi: 10.1145/512274.512284
-  card: 1013-algorithm-232-heapsort
 - title: A High-Speed Sorting Procedure
   url: "https://doi.org/10.1145/368370.368387"
   year: 1959
   arxiv: null
   doi: 10.1145/368370.368387
+see:
+- "1013-algorithm-232-heapsort"
 ---
 
 # Quicksort

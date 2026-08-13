@@ -26,25 +26,26 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "The Next 700 Programming Languages"
     url: "https://doi.org/10.1145/365230.365257"
     year: 1966
     arxiv: null
     doi: "10.1145/365230.365257"
-    card: "867-the-next-700-programming-languages"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
+see:
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "867-the-next-700-programming-languages"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
 # Control Operators, the SECD Machine, and the λ-Calculus

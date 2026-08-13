@@ -25,25 +25,26 @@ cites:
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "A Framework for Defining Logics"
     url: "https://doi.org/10.1145/138027.138040"
     year: 1993
     arxiv: null
     doi: "10.1145/138027.138040"
-    card: "902-a-framework-for-defining-logics"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
+see:
+  - "027-types-and-programming-languages"
+  - "154-the-definition-of-standard-ml-revised"
+  - "902-a-framework-for-defining-logics"
+  - "909-a-structural-approach-to-operational-semantics"
 ---
 
 # Practical Foundations for Programming Languages

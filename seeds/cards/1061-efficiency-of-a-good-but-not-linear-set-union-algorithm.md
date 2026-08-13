@@ -23,7 +23,8 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.1090/S0002-9939-1956-0078686-7
-  card: 993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin
+see:
+- "993-on-the-shortest-spanning-subtree-of-a-graph-and-the-travelin"
 ---
 
 # Efficiency of a Good But Not Linear Set Union Algorithm

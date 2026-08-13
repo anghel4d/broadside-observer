@@ -23,19 +23,20 @@ cites:
   year: 2001
   arxiv: null
   doi: null
-  card: 1043-paxos-made-simple
 - title: "Time, Clocks, and the Ordering of Events in a Distributed System"
   url: "https://doi.org/10.1145/359545.359563"
   year: 1978
   arxiv: null
   doi: 10.1145/359545.359563
-  card: 1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst
 - title: In Search of an Understandable Consensus Algorithm
   url: "https://raft.github.io/raft.pdf"
   year: 2014
   arxiv: null
   doi: null
-  card: 1047-in-search-of-an-understandable-consensus-algorithm
+see:
+- "1043-paxos-made-simple"
+- "1038-time-clocks-and-the-ordering-of-events-in-a-distributed-syst"
+- "1047-in-search-of-an-understandable-consensus-algorithm"
 ---
 
 # The Part-Time Parliament

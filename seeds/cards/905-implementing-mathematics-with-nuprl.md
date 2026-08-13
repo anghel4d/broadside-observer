@@ -25,25 +25,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "Constructive Mathematics and Computer Programming"
     url: "https://doi.org/10.1016/S0049-237X(09)70189-2"
     year: 1982
     arxiv: null
     doi: "10.1016/S0049-237X(09)70189-2"
-    card: "900-constructive-mathematics-and-computer-programming"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
+see:
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "900-constructive-mathematics-and-computer-programming"
+  - "901-the-calculus-of-constructions"
+  - "898-the-formulae-as-types-notion-of-construction"
 ---
 
 # Implementing Mathematics with Nuprl

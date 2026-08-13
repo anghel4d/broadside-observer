@@ -23,19 +23,20 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "780-introduction-to-metamathematics"
+  - "742-grundzuge-der-theoretischen-logik"
 ---
 
 # Arithmetices principia, nova methodo exposita

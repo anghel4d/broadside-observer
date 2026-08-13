@@ -33,12 +33,13 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "DeepSeek-Coder: When the Large Language Model Meets Programming — The Rise of Code Intelligence"
     url: "https://arxiv.org/abs/2401.14196"
     year: 2024
     arxiv: "2401.14196"
-    card: "1240-deepseek-coder-when-the-llm-meets-programming"
+see:
+  - "014-attention-is-all-you-need"
+  - "1240-deepseek-coder-when-the-llm-meets-programming"
 ---
 
 # DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models

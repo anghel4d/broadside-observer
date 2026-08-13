@@ -22,19 +22,20 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2268565"
-    card: "759-a-note-on-the-entscheidungsproblem"
   - title: "An Unsolvable Problem of Elementary Number Theory"
     url: "https://doi.org/10.2307/2371045"
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "On Undecidable Propositions of Formal Mathematical Systems"
     url: "https://www.worldcat.org/title/undecidable/oclc/523589"
     year: 1934
     arxiv: null
     doi: null
-    card: "757-on-undecidable-propositions-of-formal-mathematical-systems"
+see:
+  - "759-a-note-on-the-entscheidungsproblem"
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "757-on-undecidable-propositions-of-formal-mathematical-systems"
 ---
 
 # Correction to A Note on the Entscheidungsproblem

@@ -24,7 +24,8 @@ cites:
     url: "https://arxiv.org/abs/1711.10455"
     year: 2019
     arxiv: "1711.10455"
-    card: "1207-backprop-as-functor-compositional-supervised-learning"
+see:
+  - "1207-backprop-as-functor-compositional-supervised-learning"
 ---
 
 # Category Theory in Machine Learning

@@ -23,13 +23,14 @@ cites:
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
 - title: "Algorithm 232: Heapsort"
   url: "https://doi.org/10.1145/512274.512284"
   year: 1964
   arxiv: null
   doi: 10.1145/512274.512284
-  card: 1013-algorithm-232-heapsort
+see:
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+- "1013-algorithm-232-heapsort"
 ---
 
 # Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms

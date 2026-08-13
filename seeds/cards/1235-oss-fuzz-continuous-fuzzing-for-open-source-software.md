@@ -22,12 +22,13 @@ cites:
     url: "https://doi.org/10.1109/SecDev.2016.043"
     year: 2016
     doi: "10.1109/SecDev.2016.043"
-    card: "1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer"
   - title: "An Empirical Study of the Reliability of UNIX Utilities"
     url: "https://doi.org/10.1145/96267.96279"
     year: 1990
     doi: "10.1145/96267.96279"
-    card: "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
+see:
+  - "1234-continuous-fuzzing-with-libfuzzer-and-addresssanitizer"
+  - "1233-an-empirical-study-of-the-reliability-of-unix-utilities"
 ---
 
 # OSS-Fuzz: Google's Continuous Fuzzing Service for Open Source Software

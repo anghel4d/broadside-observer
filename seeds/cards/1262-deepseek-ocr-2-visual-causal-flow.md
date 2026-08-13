@@ -24,7 +24,8 @@ cites:
     url: "https://arxiv.org/abs/2510.18234"
     year: 2025
     arxiv: "2510.18234"
-    card: "1257-deepseek-ocr-contexts-optical-compression"
+see:
+  - "1257-deepseek-ocr-contexts-optical-compression"
 ---
 
 # DeepSeek-OCR 2: Visual Causal Flow

@@ -23,19 +23,20 @@ cites:
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Reliable circuits using less reliable relays"
     url: "https://doi.org/10.1016/0016-0032(56)90559-2"
     year: 1956
     arxiv: null
     doi: "10.1016/0016-0032(56)90559-2"
-    card: "811-reliable-circuits-using-less-reliable-relays"
+see:
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+  - "804-a-mathematical-theory-of-communication"
+  - "811-reliable-circuits-using-less-reliable-relays"
 ---
 
 # The Synthesis of Two-Terminal Switching Circuits

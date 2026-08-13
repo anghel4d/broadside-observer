@@ -21,19 +21,20 @@ cites:
   year: 1999
   arxiv: null
   doi: null
-  card: 257-scheduling-multithreaded-computations-by-work-stealing
 - title: Intel Threading Building Blocks
   url: https://www.threadingbuildingblocks.org/
   year: 2007
   arxiv: null
   doi: null
-  card: 486-intel-threading-building-blocks
 - title: Parallelizing the Naughty Dog Engine Using Fibers
   url: https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine
   year: 2015
   arxiv: null
   doi: null
-  card: 122-parallelizing-the-naughty-dog-engine-using-fibers
+see:
+- "257-scheduling-multithreaded-computations-by-work-stealing"
+- "486-intel-threading-building-blocks"
+- "122-parallelizing-the-naughty-dog-engine-using-fibers"
 ---
 
 # Job System and Fiber Architecture (Naughty Dog)

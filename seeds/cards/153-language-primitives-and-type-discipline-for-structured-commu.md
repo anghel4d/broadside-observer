@@ -24,73 +24,63 @@ cites:
     year: 1983
     arxiv: null
     doi: "10.1145/357980.358021"
-    card: "047-communicating-sequential-processes"
   - title: "Communicating Sequential Processes"
     url: "https://openlibrary.org/books/OL2859591M/Communicating_sequential_processes"
     year: 1985
     arxiv: null
     doi: null
-    card: "047-communicating-sequential-processes"
   - title: "On communicating sequential processes"
     url: "https://doi.org/10.1016/0169-7552(94)00016-m"
     year: 1995
     arxiv: null
     doi: "10.1016/0169-7552(94)00016-m"
-    card: "047-communicating-sequential-processes"
   - title: "The Definition of Standard ML"
     url: "https://doi.org/10.7551/mitpress/2319.001.0001"
     year: 1997
     arxiv: null
     doi: "10.7551/mitpress/2319.001.0001"
-    card: null
   - title: "A calculus of mobile processes, I"
     url: "https://doi.org/10.1016/0890-5401(92)90008-4"
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90008-4"
-    card: null
   - title: "A calculus of mobile processes, II"
     url: "https://doi.org/10.1016/0890-5401(92)90009-5"
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90009-5"
-    card: null
   - title: "Actors"
     url: "https://doi.org/10.7551/mitpress/1086.001.0001"
     year: 1986
     arxiv: null
     doi: "10.7551/mitpress/1086.001.0001"
-    card: null
   - title: "The Lambda Calculus - Its Syntax and Semantics"
     url: "https://doi.org/10.1016/c2009-0-14341-6"
     year: 1984
     arxiv: null
     doi: "10.1016/c2009-0-14341-6"
-    card: null
   - title: "The chemical abstract machine"
     url: "https://doi.org/10.1016/0304-3975(92)90185-i"
     year: 1992
     arxiv: null
     doi: "10.1016/0304-3975(92)90185-i"
-    card: null
   - title: "The Polyadic π-Calculus: a Tutorial"
     url: "https://doi.org/10.1007/978-3-642-58041-3_6"
     year: 1993
     arxiv: null
     doi: "10.1007/978-3-642-58041-3_6"
-    card: null
   - title: "Communication and Concurrency"
     url: "http://www3.ub.tu-berlin.de/ihv/001691318.pdf"
     year: 1989
     arxiv: null
     doi: null
-    card: null
   - title: "The reflexive CHAM and the join-calculus"
     url: "https://doi.org/10.1145/237721.237805"
     year: 1996
     arxiv: null
     doi: "10.1145/237721.237805"
-    card: null
+see:
+  - "047-communicating-sequential-processes"
 ---
 
 # Language Primitives and Type Discipline for Structured Communication-Based Programming

@@ -23,19 +23,20 @@ cites:
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "Various techniques used in connection with random digits"
     url: "https://www.worldcat.org/title/monte-carlo-method/oclc/523"
     year: 1951
     arxiv: null
     doi: null
-    card: "800-various-techniques-used-in-connection-with-random-digits"
   - title: "The Definition of Random Sequences"
     url: "https://doi.org/10.1016/S0019-9958(66)80018-9"
     year: 1966
     arxiv: null
     doi: "10.1016/S0019-9958(66)80018-9"
-    card: "862-the-definition-of-random-sequences"
+see:
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "800-various-techniques-used-in-connection-with-random-digits"
+  - "862-the-definition-of-random-sequences"
 ---
 
 # On Tables of Random Numbers

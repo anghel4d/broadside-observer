@@ -26,19 +26,20 @@ cites:
     year: 2015
     arxiv: null
     doi: "10.1145/2754169.2754178"
-    card: "412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac"
   - title: "Mesh: Compacting Memory Management for C/C++ Applications"
     url: "https://arxiv.org/abs/1902.04738"
     year: 2019
     arxiv: "1902.04738"
     doi: null
-    card: "399-mesh-compacting-memory-management-for-c-c-applications"
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+see:
+  - "412-supermalloc-a-super-fast-multithreaded-malloc-for-64-bit-mac"
+  - "399-mesh-compacting-memory-management-for-c-c-applications"
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
 ---
 
 # Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)

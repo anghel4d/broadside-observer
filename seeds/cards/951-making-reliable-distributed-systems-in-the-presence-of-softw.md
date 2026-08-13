@@ -25,25 +25,26 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-    card: "934-viewing-control-structures-as-patterns-of-passing-messages"
   - title: "Actors: A Model of Concurrent Computation in Distributed Systems"
     url: "https://mitpress.mit.edu/9780262511414/actors/"
     year: 1986
     arxiv: null
     doi: "10.7551/mitpress/1086.001.0001"
-    card: "935-actors-a-model-of-concurrent-computation-in-distributed-syst"
   - title: "Concurrent Programming in ML"
     url: "https://doi.org/10.1017/CBO9780511574962"
     year: 1999
     arxiv: null
     doi: "10.1017/CBO9780511574962"
-    card: "950-concurrent-programming-in-ml"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "934-viewing-control-structures-as-patterns-of-passing-messages"
+  - "935-actors-a-model-of-concurrent-computation-in-distributed-syst"
+  - "950-concurrent-programming-in-ml"
+  - "047-communicating-sequential-processes"
 ---
 
 # Making Reliable Distributed Systems in the Presence of Software Errors

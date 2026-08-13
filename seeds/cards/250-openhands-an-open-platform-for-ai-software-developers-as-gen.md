@@ -45,19 +45,20 @@ cites:
     year: 2025
     arxiv: "2501.10893"
     doi: null
-    card: "211-learn-by-interact-a-data-centric-framework-for-self-adaptive"
   - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     url: "https://arxiv.org/abs/2405.15793"
     year: 2024
     arxiv: "2405.15793"
     doi: null
-    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
   - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
     url: "https://arxiv.org/abs/2606.09774"
     year: 2026
     arxiv: "2606.09774"
     doi: null
-    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
+see:
+  - "211-learn-by-interact-a-data-centric-framework-for-self-adaptive"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+  - "053-auto-configuring-scientific-simulators-with-lightweight-codi"
 ---
 
 # OpenHands: An Open Platform for AI Software Developers as Generalist Agents

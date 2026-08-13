@@ -31,17 +31,18 @@ cites:
     url: "https://arxiv.org/abs/2402.03300"
     year: 2024
     arxiv: "2402.03300"
-    card: "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
   - title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"
     url: "https://arxiv.org/abs/2501.12948"
     year: 2025
     arxiv: "2501.12948"
-    card: "1252-deepseek-r1-incentivizing-reasoning-via-rl"
   - title: "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition"
     url: "https://arxiv.org/abs/2504.21801"
     year: 2025
     arxiv: "2504.21801"
-    card: "1255-deepseek-prover-v2-formal-reasoning-via-rl"
+see:
+  - "1241-deepseekmath-pushing-limits-of-mathematical-reasoning"
+  - "1252-deepseek-r1-incentivizing-reasoning-via-rl"
+  - "1255-deepseek-prover-v2-formal-reasoning-via-rl"
 ---
 
 # DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning

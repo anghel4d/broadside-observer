@@ -22,19 +22,20 @@ cites:
     year: 1989
     arxiv: null
     doi: "10.1109/lics.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
   - title: "Notions of Computation and Monads"
     url: "https://doi.org/10.1016/0890-5401(91)90052-4"
     year: 1991
     arxiv: null
     doi: "10.1016/0890-5401(91)90052-4"
-    card: "036-notions-of-computation-and-monads"
   - title: "The Essence of Functional Programming"
     url: "https://doi.org/10.1145/143165.143169"
     year: 1992
     arxiv: null
     doi: "10.1145/143165.143169"
-    card: "034-the-essence-of-functional-programming"
+see:
+  - "038-computational-lambda-calculus-and-monads"
+  - "036-notions-of-computation-and-monads"
+  - "034-the-essence-of-functional-programming"
 ---
 
 # An Abstract View of Programming Languages

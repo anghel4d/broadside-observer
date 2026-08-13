@@ -23,16 +23,17 @@ cites:
     url: "https://doi.org/10.1145/383259.383317"
     year: 2001
     doi: "10.1145/383259.383317"
-    card: "448-an-efficient-representation-for-irradiance-environment-maps"
   - title: "The Irradiance Volume"
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
     doi: "10.1109/38.656788"
-    card: "662-the-irradiance-volume"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
-    card: "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
+see:
+  - "448-an-efficient-representation-for-irradiance-environment-maps"
+  - "662-the-irradiance-volume"
+  - "397-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
 # Precomputed Radiance Transfer

@@ -24,19 +24,20 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Three Models for the Description of Language"
     url: "https://doi.org/10.1109/TIT.1956.1056813"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056813"
-    card: "850-three-models-for-the-description-of-language"
   - title: "A Formal Theory of Inductive Inference, Parts I–II"
     url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
     year: 1964
     arxiv: null
     doi: "10.1016/S0019-9958(64)90223-2"
-    card: "861-a-formal-theory-of-inductive-inference-parts-i-ii"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "850-three-models-for-the-description-of-language"
+  - "861-a-formal-theory-of-inductive-inference-parts-i-ii"
 ---
 
 # Prediction and Entropy of Printed English

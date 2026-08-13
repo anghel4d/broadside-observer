@@ -23,7 +23,8 @@ cites:
     url: "https://doi.org/10.1109/TSE.2019.2892146"
     year: 2021
     doi: "10.1109/TSE.2019.2892146"
-    card: "1237-evolution-of-the-unix-system-architecture"
+see:
+  - "1237-evolution-of-the-unix-system-architecture"
 ---
 
 # Rewriting the Unix Stream Editor in Rust

@@ -26,25 +26,26 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
   - title: "Session Types as Intuitionistic Linear Propositions"
     url: "https://link.springer.com/chapter/10.1007/978-3-642-15375-4_16"
     year: 2010
     arxiv: null
     doi: "10.1007/978-3-642-15375-4_16"
-    card: "138-session-types-as-intuitionistic-linear-propositions"
   - title: "The Join Calculus: A Language for Distributed Mobile Programming"
     url: "https://doi.org/10.1007/3-540-45699-6_5"
     year: 2000
     arxiv: null
     doi: "10.1007/3-540-45699-6_5"
-    card: "947-the-join-calculus-a-language-for-distributed-mobile-programm"
+see:
+  - "044-a-calculus-of-communicating-systems"
+  - "047-communicating-sequential-processes"
+  - "138-session-types-as-intuitionistic-linear-propositions"
+  - "947-the-join-calculus-a-language-for-distributed-mobile-programm"
 ---
 
 # A Calculus of Mobile Processes, I

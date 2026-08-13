@@ -20,67 +20,56 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1145/359545.359563"
-    card: null
   - title: "A survey of rollback-recovery protocols in message-passing systems"
     url: "https://doi.org/10.1145/568522.568525"
     year: 2002
     arxiv: null
     doi: "10.1145/568522.568525"
-    card: null
   - title: "Multiparty asynchronous session types"
     url: "https://doi.org/10.1145/1328438.1328472"
     year: 2008
     arxiv: null
     doi: "10.1145/1328438.1328472"
-    card: null
   - title: "Rollback Recovery in Session-Based Programming"
     url: "https://doi.org/10.1007/978-3-031-35361-1_11"
     year: 2023
     arxiv: null
     doi: "10.1007/978-3-031-35361-1_11"
-    card: null
   - title: "A theory of reversibility for Erlang"
     url: "https://doi.org/10.1016/j.jlamp.2018.06.004"
     year: 2018
     arxiv: null
     doi: "10.1016/j.jlamp.2018.06.004"
-    card: null
   - title: "Causal-Consistent Replay Reversible Semantics for Message Passing Concurrent Programs"
     url: "https://doi.org/10.3233/fi-2021-2005"
     year: 2021
     arxiv: null
     doi: "10.3233/fi-2021-2005"
-    card: null
   - title: "Reversible Choreographies via Monitoring in Erlang"
     url: "https://doi.org/10.1007/978-3-319-93767-0_6"
     year: 2018
     arxiv: null
     doi: "10.1007/978-3-319-93767-0_6"
-    card: null
   - title: "Playing with Bisimulation in Erlang"
     url: "https://doi.org/10.1007/978-3-030-21485-2_6"
     year: 2019
     arxiv: null
     doi: "10.1007/978-3-030-21485-2_6"
-    card: null
   - title: "Transactional actors: communication in transactions"
     url: "https://doi.org/10.1145/3141865.3141866"
     year: 2017
     arxiv: null
     doi: "10.1145/3141865.3141866"
-    card: null
   - title: "A General Approach to Derive Uncontrolled Reversible Semantics"
     url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CONCUR.2020.33"
     year: 2020
     arxiv: null
     doi: "10.4230/lipics.concur.2020.33"
-    card: null
   - title: "Transactors"
     url: "https://doi.org/10.1145/1040305.1040322"
     year: 2005
     arxiv: null
     doi: "10.1145/1040305.1040322"
-    card: null
 ---
 
 # An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurrent Programming Languages

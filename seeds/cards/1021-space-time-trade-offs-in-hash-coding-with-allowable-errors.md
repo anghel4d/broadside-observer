@@ -22,7 +22,8 @@ cites:
   year: 1997
   arxiv: null
   doi: 10.1145/258533.258660
-  card: 1022-consistent-hashing-and-random-trees-distributed-caching-prot
+see:
+- "1022-consistent-hashing-and-random-trees-distributed-caching-prot"
 ---
 
 # Space/Time Trade-offs in Hash Coding with Allowable Errors

@@ -23,25 +23,26 @@ cites:
     year: 2025
     arxiv: "2505.08906"
     doi: null
-    card: "205-comparing-parallel-functional-array-languages-programming-an"
   - title: "Notation as a Tool of Thought"
     url: "https://doi.org/10.1145/358896.358899"
     year: 1980
     arxiv: null
     doi: "10.1145/358896.358899"
-    card: "046-notation-as-a-tool-of-thought"
   - title: "Scans as Primitive Parallel Operations"
     url: "https://doi.org/10.1109/TC.1986.1676477"
     year: 1986
     arxiv: null
     doi: "10.1109/TC.1986.1676477"
-    card: "383-scans-as-primitive-parallel-operations"
   - title: "The Semantics of Rank Polymorphism"
     url: "https://arxiv.org/abs/1907.00509"
     year: 2019
     arxiv: "1907.00509"
     doi: null
-    card: "1190-the-semantics-of-rank-polymorphism"
+see:
+  - "205-comparing-parallel-functional-array-languages-programming-an"
+  - "046-notation-as-a-tool-of-thought"
+  - "383-scans-as-primitive-parallel-operations"
+  - "1190-the-semantics-of-rank-polymorphism"
 ---
 
 # Latent Idiom Recognition for a Minimalist Functional Array Language using Equality Saturation

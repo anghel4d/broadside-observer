@@ -26,19 +26,20 @@ cites:
   year: 1990
   arxiv: null
   doi: 10.1145/78969.78972
-  card: 260-linearizability-a-correctness-condition-for-concurrent-objec
 - title: Memory Ordering in Modern Microprocessors
   url: https://www.kernel.org/doc/ols/2005/ols2005v2-pages-107-118.pdf
   year: 2005
   arxiv: null
   doi: null
-  card: 489-memory-ordering-in-modern-microprocessors
 - title: Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms
   url: https://doi.org/10.1145/248052.248106
   year: 1996
   arxiv: null
   doi: 10.1145/248052.248106
-  card: 032-michael-scott-lock-free-queue
+see:
+- "260-linearizability-a-correctness-condition-for-concurrent-objec"
+- "489-memory-ordering-in-modern-microprocessors"
+- "032-michael-scott-lock-free-queue"
 ---
 
 # A Better x86 Memory Model: x86-TSO

@@ -23,25 +23,26 @@ cites:
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "The Concept of Truth in Formalized Languages"
     url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
     year: 1933
     arxiv: null
     doi: null
-    card: "882-the-concept-of-truth-in-formalized-languages"
   - title: "Investigations into Logical Deduction"
     url: "https://doi.org/10.1007/BF01201353"
     year: 1935
     arxiv: null
     doi: "10.1007/BF01201353"
-    card: "883-investigations-into-logical-deduction"
+see:
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "742-grundzuge-der-theoretischen-logik"
+  - "882-the-concept-of-truth-in-formalized-languages"
+  - "883-investigations-into-logical-deduction"
 ---
 
 # Die Vollständigkeit der Axiome des logischen Funktionenkalküls

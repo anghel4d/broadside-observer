@@ -23,25 +23,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-    card: "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Notes on Structured Programming"
     url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
     year: 1970
     arxiv: null
     doi: null
-    card: "840-notes-on-structured-programming"
   - title: "Assigning Meanings to Programs"
     url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
     year: 1967
     arxiv: null
     doi: null
-    card: "877-assigning-meanings-to-programs"
+see:
+  - "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "840-notes-on-structured-programming"
+  - "877-assigning-meanings-to-programs"
 ---
 
 # A Discipline of Programming

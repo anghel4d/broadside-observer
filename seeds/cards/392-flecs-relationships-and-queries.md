@@ -22,19 +22,20 @@ cites:
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
   - title: "Entity Systems are the future of MMOG development (T-Machine series)"
     url: "http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/"
     year: 2007
     arxiv: null
     doi: null
-    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - title: "Using Relational Databases for Entity-Component Systems"
     url: "https://www.gamedeveloper.com/programming/the-entity-component-system-an-awesome-game-design-pattern-in-c-part-1-"
     year: 2015
     arxiv: null
     doi: null
-    card: "474-using-relational-databases-for-entity-component-systems"
+see:
+  - "334-flecs-a-fast-entity-component-system-for-c99"
+  - "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - "474-using-relational-databases-for-entity-component-systems"
 ---
 
 # Flecs Relationships and Queries

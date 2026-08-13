@@ -24,19 +24,20 @@ cites:
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
   - title: "Two recursively enumerable sets of incomparable degrees of unsolvability"
     url: "https://doi.org/10.1073/pnas.43.2.236"
     year: 1957
     arxiv: null
     doi: "10.1073/pnas.43.2.236"
-    card: "791-two-recursively-enumerable-sets-of-incomparable-degrees-of-u"
   - title: "Degrees of Recursive Unsolvability"
     url: "https://doi.org/10.2307/1969708"
     year: 1954
     arxiv: null
     doi: "10.2307/1969708"
-    card: "790-degrees-of-recursive-unsolvability"
+see:
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+  - "791-two-recursively-enumerable-sets-of-incomparable-degrees-of-u"
+  - "790-degrees-of-recursive-unsolvability"
 ---
 
 # On the unsolvability of the problem of reducibility of the theory of algorithms

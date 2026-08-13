@@ -35,7 +35,6 @@ cites:
     year: 2026
     arxiv: "2608.06811"
     doi: null
-    card: "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
   - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
     url: "https://arxiv.org/abs/2604.03964"
     year: 2026
@@ -46,7 +45,9 @@ cites:
     year: 2024
     arxiv: "2405.15793"
     doi: null
-    card: "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+see:
+  - "059-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments

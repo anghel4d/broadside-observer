@@ -24,25 +24,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2268534"
-    card: "783-finite-combinatory-processes-formulation-i"
   - title: "Degrees of Recursive Unsolvability"
     url: "https://doi.org/10.2307/1969708"
     year: 1954
     arxiv: null
     doi: "10.2307/1969708"
-    card: "790-degrees-of-recursive-unsolvability"
   - title: "Two recursively enumerable sets of incomparable degrees of unsolvability"
     url: "https://doi.org/10.1073/pnas.43.2.236"
     year: 1957
     arxiv: null
     doi: "10.1073/pnas.43.2.236"
-    card: "791-two-recursively-enumerable-sets-of-incomparable-degrees-of-u"
   - title: "On the unsolvability of the problem of reducibility of the theory of algorithms"
     url: "https://www.worldcat.org/search?q=Muchnik+reducibility+1956"
     year: 1956
     arxiv: null
     doi: null
-    card: "792-on-the-unsolvability-of-the-problem-of-reducibility-of-the-t"
+see:
+  - "783-finite-combinatory-processes-formulation-i"
+  - "790-degrees-of-recursive-unsolvability"
+  - "791-two-recursively-enumerable-sets-of-incomparable-degrees-of-u"
+  - "792-on-the-unsolvability-of-the-problem-of-reducibility-of-the-t"
 ---
 
 # Recursively enumerable sets of positive integers and their decision problems

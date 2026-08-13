@@ -21,15 +21,16 @@ cites:
 - title: Space-Efficient Lock-Free Linear-Probing Hash Table
   url: https://arxiv.org/abs/2601.00000
   year: 2026
-  arxiv: null
+  arxiv: "2601.00000"
   doi: null
-  card: 264-space-efficient-lock-free-linear-probing-hash-table
 - title: 'Linearizability: A Correctness Condition for Concurrent Objects'
   url: https://doi.org/10.1145/78969.78972
   year: 1990
   arxiv: null
   doi: 10.1145/78969.78972
-  card: 260-linearizability-a-correctness-condition-for-concurrent-objec
+see:
+- "264-space-efficient-lock-free-linear-probing-hash-table"
+- "260-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # An Efficient Wait-free Resizable Hash Table

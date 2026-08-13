@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.2307/2371045"
-    card: "758-an-unsolvable-problem-of-elementary-number-theory"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
     arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-    card: "742-grundzuge-der-theoretischen-logik"
   - title: "Correction to A Note on the Entscheidungsproblem"
     url: "https://doi.org/10.2307/2268319"
     year: 1936
     arxiv: null
     doi: "10.2307/2268319"
-    card: "760-correction-to-a-note-on-the-entscheidungsproblem"
+see:
+  - "758-an-unsolvable-problem-of-elementary-number-theory"
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "742-grundzuge-der-theoretischen-logik"
+  - "760-correction-to-a-note-on-the-entscheidungsproblem"
 ---
 
 # A Note on the Entscheidungsproblem

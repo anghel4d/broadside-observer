@@ -20,19 +20,20 @@ cites:
     year: 2019
     arxiv: "2011.XXXX"
     doi: null
-    card: "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
   - title: "Build Order Optimization in StarCraft"
     url: "https://www.aaai.org/ocs/index.php/AIIDE/AIIDE11/paper/view/4078"
     year: 2011
     arxiv: null
     doi: null
-    card: "134-build-order-optimization-in-starcraft"
   - title: "Fog of War Representation for RTS Agents"
     url: "https://ojs.aaai.org/index.php/AIIDE/article/view/12366"
     year: 2009
     arxiv: null
     doi: null
-    card: "140-fog-of-war-representation-for-rts-agents"
+see:
+  - "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
+  - "134-build-order-optimization-in-starcraft"
+  - "140-fog-of-war-representation-for-rts-agents"
 ---
 
 # BWAPI: Brood War API

@@ -24,25 +24,26 @@ cites:
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-    card: "873-the-fortran-automatic-coding-system"
   - title: "The Preparation of Programs for an Electronic Digital Computer"
     url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
     year: 1951
     arxiv: null
     doi: null
-    card: "823-the-preparation-of-programs-for-an-electronic-digital-comput"
   - title: "Planning and Coding of Problems for an Electronic Computing Instrument"
     url: "https://www.ias.edu/electronic-computer-project"
     year: 1947
     arxiv: null
     doi: null
-    card: "795-planning-and-coding-of-problems-for-an-electronic-computing-"
   - title: "Über den allgemeinen Plankalkül als Mittel zur Formulierung schematisch-kombinativer Aufgaben"
     url: "https://www.zib.de/zuse/Inhalt/Komplexe/Plankalkuel.htm"
     year: 1948
     arxiv: null
     doi: null
-    card: "824-uber-den-allgemeinen-plankalkul-als-mittel-zur-formulierung-"
+see:
+  - "873-the-fortran-automatic-coding-system"
+  - "823-the-preparation-of-programs-for-an-electronic-digital-comput"
+  - "795-planning-and-coding-of-problems-for-an-electronic-computing-"
+  - "824-uber-den-allgemeinen-plankalkul-als-mittel-zur-formulierung-"
 ---
 
 # The Education of a Computer

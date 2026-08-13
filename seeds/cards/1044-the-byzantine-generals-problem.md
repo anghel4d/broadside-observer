@@ -24,13 +24,14 @@ cites:
   year: 1980
   arxiv: null
   doi: 10.1145/322186.322188
-  card: 1045-reaching-agreement-in-the-presence-of-faults
 - title: Practical Byzantine Fault Tolerance
   url: "https://pmg.csail.mit.edu/papers/osdi99.pdf"
   year: 1999
   arxiv: null
   doi: null
-  card: 1046-practical-byzantine-fault-tolerance
+see:
+- "1045-reaching-agreement-in-the-presence-of-faults"
+- "1046-practical-byzantine-fault-tolerance"
 ---
 
 # The Byzantine Generals Problem

@@ -25,31 +25,32 @@ cites:
     year: 1910
     arxiv: null
     doi: null
-    card: "739-principia-mathematica-volume-i"
   - title: "Report on a General Problem-Solving Program"
     url: "https://bitsavers.org/pdf/rand/ipl/"
     year: 1959
     arxiv: null
     doi: null
-    card: "833-report-on-a-general-problem-solving-program"
   - title: "Elements of a Theory of Human Problem Solving"
     url: "https://doi.org/10.1037/h0048495"
     year: 1958
     arxiv: null
     doi: "10.1037/h0048495"
-    card: "834-elements-of-a-theory-of-human-problem-solving"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
   - title: "Computing Machinery and Intelligence"
     url: "https://doi.org/10.1093/mind/LIX.236.433"
     year: 1950
     arxiv: null
     doi: "10.1093/mind/LIX.236.433"
-    card: "770-computing-machinery-and-intelligence"
+see:
+  - "739-principia-mathematica-volume-i"
+  - "833-report-on-a-general-problem-solving-program"
+  - "834-elements-of-a-theory-of-human-problem-solving"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+  - "770-computing-machinery-and-intelligence"
 ---
 
 # The Logic Theory Machine: A Complex Information Processing System

@@ -22,25 +22,26 @@ cites:
   year: 1988
   arxiv: null
   doi: null
-  card: 1039-timestamps-in-message-passing-systems-that-preserve-the-part
 - title: Virtual Time and Global States of Distributed Systems
   url: "https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf"
   year: 1989
   arxiv: null
   doi: null
-  card: 1040-virtual-time-and-global-states-of-distributed-systems
 - title: "Distributed Snapshots: Determining Global States of Distributed Systems"
   url: "https://doi.org/10.1145/214451.214456"
   year: 1985
   arxiv: null
   doi: 10.1145/214451.214456
-  card: 1041-distributed-snapshots-determining-global-states-of-distribut
 - title: The Part-Time Parliament
   url: "https://doi.org/10.1145/279227.279229"
   year: 1998
   arxiv: null
   doi: 10.1145/279227.279229
-  card: 1042-the-part-time-parliament
+see:
+- "1039-timestamps-in-message-passing-systems-that-preserve-the-part"
+- "1040-virtual-time-and-global-states-of-distributed-systems"
+- "1041-distributed-snapshots-determining-global-states-of-distribut"
+- "1042-the-part-time-parliament"
 ---
 
 # Time, Clocks, and the Ordering of Events in a Distributed System

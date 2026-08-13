@@ -23,13 +23,14 @@ cites:
   year: 1995
   arxiv: null
   doi: 10.1007/BF01206331
-  card: 1007-on-line-construction-of-suffix-trees
 - title: Fast Pattern Matching in Strings
   url: "https://doi.org/10.1137/0206024"
   year: 1977
   arxiv: null
   doi: 10.1137/0206024
-  card: 1002-fast-pattern-matching-in-strings
+see:
+- "1007-on-line-construction-of-suffix-trees"
+- "1002-fast-pattern-matching-in-strings"
 ---
 
 # Suffix Arrays: A New Method for On-Line String Searches

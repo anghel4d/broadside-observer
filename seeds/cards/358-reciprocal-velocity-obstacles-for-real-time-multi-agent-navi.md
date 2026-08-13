@@ -24,31 +24,31 @@ cites:
   year: 1998
   arxiv: null
   doi: 10.1177/027836499801700706
-  card: 706-motion-planning-in-dynamic-environments-using-velocity
 - title: 'ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation'
   url: https://doi.org/10.1145/1599470.1599494
   year: 2009
   arxiv: null
   doi: 10.1145/1599470.1599494
-  card: 705-clearpath-highly-parallel-collision-avoidance-for-multi
 - title: Reciprocal n-body Collision Avoidance (ORCA)
   url: https://doi.org/10.1007/978-3-642-19457-3_1
   year: 2011
   arxiv: null
   doi: 10.1007/978-3-642-19457-3_1
-  card: 349-reciprocal-n-body-collision-avoidance-orca
 - title: Steering Behaviors For Autonomous Characters
   url: https://www.red3d.com/cwr/steer/
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
 - title: 'ClearPath: Highly Parallel Collision Avoidance'
   url: https://gamma.cs.unc.edu/ClearPath/ClearPath.pdf
   year: 2009
   arxiv: null
   doi: null
-  card: 705-clearpath-highly-parallel-collision-avoidance-for-multi
+see:
+- "706-motion-planning-in-dynamic-environments-using-velocity"
+- "705-clearpath-highly-parallel-collision-avoidance-for-multi"
+- "349-reciprocal-n-body-collision-avoidance-orca"
+- "258-steering-behaviors-for-autonomous-characters"
 ---
 
 # Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation

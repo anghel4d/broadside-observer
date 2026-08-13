@@ -22,13 +22,14 @@ cites:
   year: 1977
   arxiv: null
   doi: 10.1109/SFCS.1977.24
-  card: 1032-probabilistic-computations-toward-a-unified-measure-of-compl
 - title: The Complexity of Computing the Permanent
   url: "https://doi.org/10.1016/0304-3975(79)90044-6"
   year: 1979
   arxiv: null
   doi: 10.1016/0304-3975(79)90044-6
-  card: 1062-the-complexity-of-computing-the-permanent
+see:
+- "1032-probabilistic-computations-toward-a-unified-measure-of-compl"
+- "1062-the-complexity-of-computing-the-permanent"
 ---
 
 # A Theory of the Learnable

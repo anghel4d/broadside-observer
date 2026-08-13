@@ -23,13 +23,14 @@ cites:
   year: 1988
   arxiv: null
   doi: 10.1137/0217058
-  card: 982-nondeterministic-space-is-closed-under-complement
 - title: Relationships Between Nondeterministic and Deterministic Tape Complexities
   url: "https://doi.org/10.1016/S0022-0000(70)80006-X"
   year: 1970
   arxiv: null
   doi: 10.1016/S0022-0000(70)80006-X
-  card: 981-relationships-between-nondeterministic-and-deterministic-tap
+see:
+- "982-nondeterministic-space-is-closed-under-complement"
+- "981-relationships-between-nondeterministic-and-deterministic-tap"
 ---
 
 # The Method of Forced Enumeration for Nondeterministic Automata

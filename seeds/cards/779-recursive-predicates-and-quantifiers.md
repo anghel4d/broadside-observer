@@ -23,25 +23,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1007/BF01565439"
-    card: "776-general-recursive-functions-of-natural-numbers"
   - title: "Hierarchies of number-theoretic predicates"
     url: "https://doi.org/10.1090/S0002-9904-1955-09909-1"
     year: 1955
     arxiv: null
     doi: "10.1090/S0002-9904-1955-09909-1"
-    card: "782-hierarchies-of-number-theoretic-predicates"
   - title: "Recursively enumerable sets of positive integers and their decision problems"
     url: "https://doi.org/10.1090/S0002-9904-1944-08111-1"
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
+see:
+  - "776-general-recursive-functions-of-natural-numbers"
+  - "782-hierarchies-of-number-theoretic-predicates"
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+  - "780-introduction-to-metamathematics"
 ---
 
 # Recursive predicates and quantifiers

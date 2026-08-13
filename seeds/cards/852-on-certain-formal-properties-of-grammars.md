@@ -23,31 +23,32 @@ cites:
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056813"
-    card: "850-three-models-for-the-description-of-language"
   - title: "Finite Automata and Their Decision Problems"
     url: "https://doi.org/10.1147/rd.32.0114"
     year: 1959
     arxiv: null
     doi: "10.1147/rd.32.0114"
-    card: "870-finite-automata-and-their-decision-problems"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "The Algebraic Theory of Context-Free Languages"
     url: "https://www.worldcat.org/search?q=Algebraic+Theory+of+Context-Free+Languages"
     year: 1963
     arxiv: null
     doi: null
-    card: "853-the-algebraic-theory-of-context-free-languages"
   - title: "Report on the Algorithmic Language ALGOL 60"
     url: "https://doi.org/10.1145/367236.367262"
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
+see:
+  - "850-three-models-for-the-description-of-language"
+  - "870-finite-automata-and-their-decision-problems"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "853-the-algebraic-theory-of-context-free-languages"
+  - "874-report-on-the-algorithmic-language-algol-60"
 ---
 
 # On Certain Formal Properties of Grammars

@@ -21,19 +21,20 @@ cites:
   year: 2017
   arxiv: null
   doi: null
-  card: 470-abseil-swiss-tables
 - title: Hopscotch Hashing
   url: https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf
   year: 2008
   arxiv: null
   doi: null
-  card: 483-hopscotch-hashing
 - title: Robin Hood Hashing
   url: https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf
   year: 1986
   arxiv: null
   doi: null
-  card: 499-robin-hood-hashing
+see:
+- "470-abseil-swiss-tables"
+- "483-hopscotch-hashing"
+- "499-robin-hood-hashing"
 ---
 
 # F14 — A Hash Table Library for C++

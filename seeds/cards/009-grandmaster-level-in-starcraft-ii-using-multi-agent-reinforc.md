@@ -21,13 +21,14 @@ cites:
   year: 2017
   arxiv: '1708.04782'
   doi: null
-  card: 015-starcraft-ii-a-new-challenge-for-reinforcement-learning
 - title: The StarCraft Multi-Agent Challenge
   url: https://arxiv.org/abs/1902.04043
   year: 2019
   arxiv: '1902.04043'
   doi: null
-  card: 011-the-starcraft-multi-agent-challenge
+see:
+- "015-starcraft-ii-a-new-challenge-for-reinforcement-learning"
+- "011-the-starcraft-multi-agent-challenge"
 ---
 
 # Grandmaster level in StarCraft II using multi-agent reinforcement learning

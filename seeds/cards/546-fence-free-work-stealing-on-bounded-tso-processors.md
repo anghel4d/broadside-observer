@@ -23,17 +23,18 @@ cites:
     url: "https://doi.org/10.1145/1073970.1073974"
     year: 2005
     doi: "10.1145/1073970.1073974"
-    card: "367-dynamic-circular-work-stealing-deque"
   - title: "The Implementation of the Cilk-5 Multithreaded Language"
     url: "https://doi.org/10.1145/277650.277725"
     year: 1998
     doi: "10.1145/277650.277725"
-    card: "381-the-implementation-of-the-cilk-5-multithreaded-language"
   - title: "Correct and Efficient Work-Stealing for Weak Memory Models"
     url: "https://doi.org/10.1145/2442516.2442524"
     year: 2013
     doi: "10.1145/2442516.2442524"
-    card: "545-correct-and-efficient-work-stealing-for-weak-memory-models"
+see:
+  - "367-dynamic-circular-work-stealing-deque"
+  - "381-the-implementation-of-the-cilk-5-multithreaded-language"
+  - "545-correct-and-efficient-work-stealing-for-weak-memory-models"
 ---
 
 # Fence-Free Work Stealing on Bounded TSO Processors

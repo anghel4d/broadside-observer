@@ -23,22 +23,23 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
   - title: "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
     url: "https://arxiv.org/abs/2606.19348"
     year: 2026
     arxiv: "2606.19348"
-    card: "1263-deepseek-v4-million-token-context-intelligence"
+see:
+  - "014-attention-is-all-you-need"
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "1206-deepseek-v3-technical-report"
+  - "1263-deepseek-v4-million-token-context-intelligence"
 ---
 
 # DeepSeek-V4-Pro-0813 GA

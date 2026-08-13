@@ -20,31 +20,32 @@ cites:
   - title: "Real-Time Global Illumination using Precomputed Light Field Probes"
     url: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
     year: 2017
-    card: "406-real-time-global-illumination-using-precomputed-light-field-"
   - title: "Scaling Probe-Based Real-Time Dynamic Global Illumination for Production"
     url: "https://arxiv.org/abs/2009.10796"
     year: 2020
     arxiv: "2009.10796"
-    card: "330-scaling-probe-based-real-time-dynamic-global-illumination-fo"
   - title: "Dynamic Diffuse Global Illumination Resampling"
     url: "https://arxiv.org/abs/2108.05263"
     year: 2021
     arxiv: "2108.05263"
-    card: "316-dynamic-diffuse-global-illumination-resampling"
   - title: "The Irradiance Volume"
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
     doi: "10.1109/38.656788"
-    card: "662-the-irradiance-volume"
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-    card: "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - title: "GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination"
     url: "https://arxiv.org/abs/2310.19855"
     year: 2023
     arxiv: "2310.19855"
-    card: "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
+see:
+  - "406-real-time-global-illumination-using-precomputed-light-field-"
+  - "330-scaling-probe-based-real-time-dynamic-global-illumination-fo"
+  - "316-dynamic-diffuse-global-illumination-resampling"
+  - "662-the-irradiance-volume"
+  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "294-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
 ---
 
 # Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields

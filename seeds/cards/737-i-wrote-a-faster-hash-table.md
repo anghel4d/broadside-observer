@@ -22,19 +22,20 @@ cites:
   year: 1986
   arxiv: null
   doi: null
-  card: 499-robin-hood-hashing
 - title: Hopscotch Hashing
   url: https://people.csail.mit.edu/shanir/publications/disc2008_submission_56.pdf
   year: 2008
   arxiv: null
   doi: null
-  card: 483-hopscotch-hashing
 - title: Abseil Swiss Tables
   url: https://abseil.io/about/design/swisstables
   year: 2017
   arxiv: null
   doi: null
-  card: 470-abseil-swiss-tables
+see:
+- "499-robin-hood-hashing"
+- "483-hopscotch-hashing"
+- "470-abseil-swiss-tables"
 ---
 
 # I Wrote a Faster Hash Table

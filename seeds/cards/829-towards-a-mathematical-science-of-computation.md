@@ -23,25 +23,26 @@ cites:
     year: 1963
     arxiv: null
     doi: null
-    card: "828-a-basis-for-a-mathematical-theory-of-computation"
   - title: "Assigning Meanings to Programs"
     url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
     year: 1967
     arxiv: null
     doi: null
-    card: "877-assigning-meanings-to-programs"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-    card: "843-an-axiomatic-basis-for-computer-programming"
   - title: "Outline of a Mathematical Theory of Computation"
     url: "https://www.cs.ox.ac.uk/files/3229/PRG02.pdf"
     year: 1970
     arxiv: null
     doi: null
-    card: "864-outline-of-a-mathematical-theory-of-computation"
+see:
+  - "828-a-basis-for-a-mathematical-theory-of-computation"
+  - "877-assigning-meanings-to-programs"
+  - "843-an-axiomatic-basis-for-computer-programming"
+  - "864-outline-of-a-mathematical-theory-of-computation"
 ---
 
 # Towards a Mathematical Science of Computation

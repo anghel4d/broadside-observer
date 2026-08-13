@@ -25,25 +25,26 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
     url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
     year: 1986
     arxiv: null
     doi: null
-    card: "916-control-operators-the-secd-machine-and-the-calculus"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "Compiling with Continuations"
     url: "https://doi.org/10.1017/CBO9780511609619"
     year: 1992
     arxiv: null
     doi: "10.1017/CBO9780511609619"
-    card: "918-compiling-with-continuations"
+see:
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "916-control-operators-the-secd-machine-and-the-calculus"
+  - "154-the-definition-of-standard-ml-revised"
+  - "918-compiling-with-continuations"
 ---
 
 # The ZINC Experiment: An Economical Implementation of the ML Language

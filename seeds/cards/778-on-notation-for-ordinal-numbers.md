@@ -24,19 +24,20 @@ cites:
     year: 1939
     arxiv: null
     doi: "10.1112/plms/s2-45.1.161"
-    card: "769-systems-of-logic-based-on-ordinals"
   - title: "Recursive predicates and quantifiers"
     url: "https://doi.org/10.1090/S0002-9947-1943-0007371-8"
     year: 1943
     arxiv: null
     doi: "10.1090/S0002-9947-1943-0007371-8"
-    card: "779-recursive-predicates-and-quantifiers"
   - title: "Introduction to Metamathematics"
     url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
     year: 1952
     arxiv: null
     doi: null
-    card: "780-introduction-to-metamathematics"
+see:
+  - "769-systems-of-logic-based-on-ordinals"
+  - "779-recursive-predicates-and-quantifiers"
+  - "780-introduction-to-metamathematics"
 ---
 
 # On notation for ordinal numbers

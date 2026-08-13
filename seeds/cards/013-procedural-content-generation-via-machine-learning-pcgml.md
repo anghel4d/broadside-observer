@@ -29,19 +29,20 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1109/TCIAIG.2011.2148116"
-    card: "020-search-based-procedural-content-generation-a-taxonomy-and-su"
   - title: "Wave Function Collapse"
     url: "https://github.com/mxgmn/WaveFunctionCollapse"
     year: 2016
     arxiv: null
     doi: null
-    card: "119-wave-function-collapse"
   - title: "Experience-Driven Procedural Content Generation"
     url: "https://doi.org/10.1109/TCIAIG.2011.2159716"
     year: 2011
     arxiv: null
     doi: "10.1109/TCIAIG.2011.2159716"
-    card: "136-experience-driven-procedural-content-generation"
+see:
+  - "020-search-based-procedural-content-generation-a-taxonomy-and-su"
+  - "119-wave-function-collapse"
+  - "136-experience-driven-procedural-content-generation"
 ---
 
 # Procedural Content Generation via Machine Learning (PCGML)

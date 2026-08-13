@@ -24,19 +24,20 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
     arxiv: null
     doi: "10.1002/j.1538-7305.1951.tb01366.x"
-    card: "809-prediction-and-entropy-of-printed-english"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "809-prediction-and-entropy-of-printed-english"
 ---
 
 # The Mathematical Theory of Communication

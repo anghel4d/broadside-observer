@@ -24,31 +24,32 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367236.367262"
-    card: "874-report-on-the-algorithmic-language-algol-60"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "The Next 700 Programming Languages"
     url: "https://doi.org/10.1145/365230.365257"
     year: 1966
     arxiv: null
     doi: "10.1145/365230.365257"
-    card: "867-the-next-700-programming-languages"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-    card: "866-fundamental-concepts-in-programming-languages"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
+see:
+  - "874-report-on-the-algorithmic-language-algol-60"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "867-the-next-700-programming-languages"
+  - "866-fundamental-concepts-in-programming-languages"
+  - "762-the-calculi-of-lambda-conversion"
 ---
 
 # A Correspondence Between ALGOL 60 and Church's Lambda-Notation

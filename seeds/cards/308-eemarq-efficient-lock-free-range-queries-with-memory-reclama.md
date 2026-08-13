@@ -24,19 +24,20 @@ cites:
   year: 2018
   arxiv: null
   doi: 10.1145/3178487.3178488
-  card: 402-interval-based-memory-reclamation
 - title: 'Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects'
   url: https://doi.org/10.1109/TPDS.2004.8
   year: 2004
   arxiv: null
   doi: 10.1109/TPDS.2004.8
-  card: 025-hazard-pointers-safe-memory-reclamation-for-lock-free-object
 - title: 'DEBRA: Distributed Epoch-Based Reclamation'
   url: https://www.cs.utoronto.ca/~tabrown/debra/
   year: 2015
   arxiv: null
   doi: null
-  card: 409-debra-distributed-epoch-based-reclamation
+see:
+- "402-interval-based-memory-reclamation"
+- "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+- "409-debra-distributed-epoch-based-reclamation"
 ---
 
 # EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation

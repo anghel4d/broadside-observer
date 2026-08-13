@@ -23,19 +23,20 @@ cites:
   year: 2010
   arxiv: null
   doi: null
-  card: 435-theta-any-angle-path-planning-on-grids
 - title: 'Lazy Theta*: Any-Angle Path Planning and Path Length Analysis'
   url: https://doi.org/10.1609/aaai.v24i1.7566
   year: 2010
   arxiv: null
   doi: null
-  card: 429-lazy-theta-any-angle-path-planning-and-path-length-analysis
 - title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
   url: https://doi.org/10.1109/TSS.1968.253136
   year: 1968
   arxiv: null
   doi: null
-  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
+see:
+- "435-theta-any-angle-path-planning-on-grids"
+- "429-lazy-theta-any-angle-path-planning-and-path-length-analysis"
+- "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
 ---
 
 # Field D*: An Interpolation-Based Path Planner

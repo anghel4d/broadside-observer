@@ -23,31 +23,32 @@ cites:
     url: "https://doi.org/10.1145/324133.324234"
     year: 1999
     doi: "10.1145/324133.324234"
-    card: "257-scheduling-multithreaded-computations-by-work-stealing"
   - title: "Cilk: An Efficient Multithreaded Runtime System"
     url: "https://doi.org/10.1145/209936.209958"
     year: 1995
     doi: "10.1145/209936.209958"
-    card: "541-cilk-an-efficient-multithreaded-runtime-system"
   - title: "Thread Scheduling for Multiprogrammed Multiprocessors"
     url: "https://doi.org/10.1145/277651.277678"
     year: 1998
     doi: "10.1145/277651.277678"
-    card: "542-thread-scheduling-for-multiprogrammed-multiprocessors"
   - title: "Dynamic Circular Work-Stealing Deque"
     url: "https://doi.org/10.1145/1073970.1073974"
     year: 2005
     doi: "10.1145/1073970.1073974"
-    card: "367-dynamic-circular-work-stealing-deque"
   - title: "A Java Fork/Join Framework"
     url: "https://doi.org/10.1145/337449.337465"
     year: 2000
     doi: "10.1145/337449.337465"
-    card: "543-a-java-fork-join-framework"
   - title: "Intel Threading Building Blocks"
     url: "https://www.oreilly.com/library/view/intel-threading-building/9780596514808/"
     year: 2007
-    card: "486-intel-threading-building-blocks"
+see:
+  - "257-scheduling-multithreaded-computations-by-work-stealing"
+  - "541-cilk-an-efficient-multithreaded-runtime-system"
+  - "542-thread-scheduling-for-multiprogrammed-multiprocessors"
+  - "367-dynamic-circular-work-stealing-deque"
+  - "543-a-java-fork-join-framework"
+  - "486-intel-threading-building-blocks"
 ---
 
 # The Implementation of the Cilk-5 Multithreaded Language

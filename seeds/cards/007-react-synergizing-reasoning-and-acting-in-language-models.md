@@ -29,19 +29,20 @@ cites:
   year: 2022
   arxiv: '2201.11903'
   doi: null
-  card: 104-chain-of-thought-prompting-elicits-reasoning-in-large-langua
 - title: 'Reflexion: Language Agents with Verbal Reinforcement Learning'
   url: https://arxiv.org/abs/2303.11366
   year: 2023
   arxiv: '2303.11366'
   doi: null
-  card: 097-reflexion-language-agents-with-verbal-reinforcement-learning
 - title: 'Toolformer: Language Models Can Teach Themselves to Use Tools'
   url: https://arxiv.org/abs/2302.04761
   year: 2023
   arxiv: '2302.04761'
   doi: null
-  card: 102-toolformer-language-models-can-teach-themselves-to-use-tools
+see:
+- "104-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
+- "097-reflexion-language-agents-with-verbal-reinforcement-learning"
+- "102-toolformer-language-models-can-teach-themselves-to-use-tools"
 ---
 
 # ReAct: Synergizing Reasoning and Acting in Language Models

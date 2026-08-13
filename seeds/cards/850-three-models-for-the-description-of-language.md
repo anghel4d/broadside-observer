@@ -24,25 +24,26 @@ cites:
     year: 1957
     arxiv: null
     doi: null
-    card: "851-syntactic-structures"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
     arxiv: null
     doi: "10.1002/j.1538-7305.1951.tb01366.x"
-    card: "809-prediction-and-entropy-of-printed-english"
+see:
+  - "851-syntactic-structures"
+  - "852-on-certain-formal-properties-of-grammars"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "809-prediction-and-entropy-of-printed-english"
 ---
 
 # Three Models for the Description of Language

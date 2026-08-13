@@ -23,19 +23,20 @@ cites:
     year: 1928
     arxiv: null
     doi: "10.1007/BF01661237"
-    card: "745-die-grundlagen-der-mathematik"
   - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
     url: "https://doi.org/10.1007/BF01700692"
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
     url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
     year: 1958
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
-    card: "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+see:
+  - "745-die-grundlagen-der-mathematik"
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
 ---
 
 # On the Infinite

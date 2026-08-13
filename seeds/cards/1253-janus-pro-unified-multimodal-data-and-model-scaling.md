@@ -29,7 +29,8 @@ cites:
     url: "https://arxiv.org/abs/2410.13848"
     year: 2024
     arxiv: "2410.13848"
-    card: "1249-janus-decoupling-visual-encoding-unified-multimodal"
+see:
+  - "1249-janus-decoupling-visual-encoding-unified-multimodal"
 ---
 
 # Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling

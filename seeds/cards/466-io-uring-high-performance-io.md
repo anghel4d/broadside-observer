@@ -21,19 +21,20 @@ cites:
     year: 2019
     arxiv: "1901.02495"
     doi: null
-    card: "396-cpp-taskflow-a-general-purpose-parallel-and-heterogeneous-ta"
   - title: "HPX: A Task Based Programming Model"
     url: "https://arxiv.org/abs/1407.1559"
     year: 2014
     arxiv: "1407.1559"
     doi: null
-    card: "475-hpx-a-task-based-programming-model"
   - title: "StarPU: a unified platform for task scheduling on heterogeneous multicore architectures"
     url: "https://doi.org/10.1002/cpe.1631"
     year: 2011
     arxiv: null
     doi: "10.1002/cpe.1631"
-    card: "480-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo"
+see:
+  - "396-cpp-taskflow-a-general-purpose-parallel-and-heterogeneous-ta"
+  - "475-hpx-a-task-based-programming-model"
+  - "480-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo"
 ---
 
 # io_uring High-Performance IO

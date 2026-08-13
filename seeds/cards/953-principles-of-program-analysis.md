@@ -26,25 +26,26 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1145/512950.512973"
-    card: "952-abstract-interpretation-a-unified-lattice-model-for-static-a"
   - title: "The Type and Effect Discipline"
     url: "https://doi.org/10.1006/inco.1994.1037"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1037"
-    card: "159-the-type-and-effect-discipline"
   - title: "Polymorphic Effect Systems"
     url: "https://doi.org/10.1145/73560.73564"
     year: 1988
     arxiv: null
     doi: "10.1145/73560.73564"
-    card: "167-polymorphic-effect-systems"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-    card: "909-a-structural-approach-to-operational-semantics"
+see:
+  - "952-abstract-interpretation-a-unified-lattice-model-for-static-a"
+  - "159-the-type-and-effect-discipline"
+  - "167-polymorphic-effect-systems"
+  - "909-a-structural-approach-to-operational-semantics"
 ---
 
 # Principles of Program Analysis

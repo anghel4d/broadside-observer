@@ -23,12 +23,13 @@ cites:
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+see:
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
 # Categorical foundations for CuTe layouts

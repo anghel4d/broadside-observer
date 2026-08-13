@@ -25,25 +25,26 @@ cites:
     year: 1975
     arxiv: null
     doi: null
-    card: "924-scheme-an-interpreter-for-extended-lambda-calculus"
   - title: "Compiling with Continuations"
     url: "https://doi.org/10.1017/CBO9780511609619"
     year: 1992
     arxiv: null
     doi: "10.1017/CBO9780511609619"
-    card: "918-compiling-with-continuations"
   - title: "The Essence of Compiling with Continuations"
     url: "https://doi.org/10.1145/155090.155113"
     year: 1993
     arxiv: null
     doi: "10.1145/155090.155113"
-    card: "917-the-essence-of-compiling-with-continuations"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-    card: "881-definitional-interpreters-for-higher-order-programming-langu"
+see:
+  - "924-scheme-an-interpreter-for-extended-lambda-calculus"
+  - "918-compiling-with-continuations"
+  - "917-the-essence-of-compiling-with-continuations"
+  - "881-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
 # RABBIT: A Compiler for Scheme

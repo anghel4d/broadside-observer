@@ -25,19 +25,20 @@ cites:
     year: 1959
     arxiv: null
     doi: null
-    card: "833-report-on-a-general-problem-solving-program"
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Computer Science as Empirical Inquiry: Symbols and Search"
     url: "https://doi.org/10.1145/360303.360308"
     year: 1976
     arxiv: null
     doi: "10.1145/360303.360308"
-    card: "835-computer-science-as-empirical-inquiry-symbols-and-search"
+see:
+  - "833-report-on-a-general-problem-solving-program"
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "835-computer-science-as-empirical-inquiry-symbols-and-search"
 ---
 
 # Elements of a Theory of Human Problem Solving

@@ -24,31 +24,32 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1086/286788"
-    card: "815-behavior-purpose-and-teleology"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
     url: "https://doi.org/10.1007/BF02478259"
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "The Computer and the Brain"
     url: "https://yalebooks.yale.edu/book/9780300181111/the-computer-and-the-brain/"
     year: 1958
     arxiv: null
     doi: null
-    card: "799-the-computer-and-the-brain"
   - title: "The Human Use of Human Beings"
     url: "https://www.worldcat.org/title/human-use-of-human-beings/oclc/523"
     year: 1950
     arxiv: null
     doi: null
-    card: "813-the-human-use-of-human-beings"
+see:
+  - "815-behavior-purpose-and-teleology"
+  - "804-a-mathematical-theory-of-communication"
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "799-the-computer-and-the-brain"
+  - "813-the-human-use-of-human-beings"
 ---
 
 # Cybernetics: Or Control and Communication in the Animal and the Machine

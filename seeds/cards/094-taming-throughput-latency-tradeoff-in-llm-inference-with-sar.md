@@ -29,18 +29,19 @@ cites:
     year: 2023
     arxiv: "2308.16369"
     doi: null
-    card: "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
   - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
     url: "https://arxiv.org/abs/2606.19667"
     year: 2026
     arxiv: "2606.19667"
     doi: null
+see:
+  - "098-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+  - "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
 # Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve

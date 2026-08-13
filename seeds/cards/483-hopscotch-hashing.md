@@ -24,19 +24,20 @@ cites:
   year: 1986
   arxiv: null
   doi: null
-  card: 499-robin-hood-hashing
 - title: Abseil Swiss Tables
   url: https://abseil.io/about/design/swisstables
   year: 2017
   arxiv: null
   doi: null
-  card: 470-abseil-swiss-tables
 - title: Space-Efficient Lock-Free Linear-Probing Hash Table
   url: https://arxiv.org/abs/2601.00000
   year: 2026
-  arxiv: null
+  arxiv: "2601.00000"
   doi: null
-  card: 264-space-efficient-lock-free-linear-probing-hash-table
+see:
+- "499-robin-hood-hashing"
+- "470-abseil-swiss-tables"
+- "264-space-efficient-lock-free-linear-probing-hash-table"
 ---
 
 # Hopscotch Hashing

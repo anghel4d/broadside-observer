@@ -24,25 +24,26 @@ cites:
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "An Intuitionistic Theory of Types: Predicative Part"
     url: "https://doi.org/10.1016/S0049-237X(08)71945-1"
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "Formal Certification of a Compiler Back-end, or: Programming a Compiler with a Proof Assistant"
     url: "https://doi.org/10.1145/1111037.1111042"
     year: 2006
     arxiv: null
     doi: "10.1145/1111037.1111042"
-    card: "958-formal-certification-of-a-compiler-back-end-or-programming-a"
+see:
+  - "901-the-calculus-of-constructions"
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "958-formal-certification-of-a-compiler-back-end-or-programming-a"
 ---
 
 # Inductive Definitions in the System Coq: Rules and Properties

@@ -22,13 +22,14 @@ cites:
     year: 2003
     arxiv: null
     doi: null
-    card: "026-real-time-strategy-games-a-new-ai-research-challenge"
   - title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"
     url: "https://doi.org/10.1109/TCIAIG.2013.2286295"
     year: 2013
     arxiv: null
     doi: null
-    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+see:
+  - "026-real-time-strategy-games-a-new-ai-research-challenge"
+  - "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
 ---
 
 # Call for AI Research in RTS Games

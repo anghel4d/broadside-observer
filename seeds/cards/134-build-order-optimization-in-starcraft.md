@@ -22,13 +22,14 @@ cites:
     year: 2013
     arxiv: null
     doi: null
-    card: "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
   - title: "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft"
     url: "https://doi.org/10.1109/TCIAIG.2013.2282292"
     year: 2013
     arxiv: null
     doi: null
-    card: "129-portfolio-greedy-search-and-simulation-for-large-scale-comba"
+see:
+  - "018-a-survey-of-real-time-strategy-game-ai-research-and-competit"
+  - "129-portfolio-greedy-search-and-simulation-for-large-scale-comba"
 ---
 
 # Build Order Optimization in StarCraft

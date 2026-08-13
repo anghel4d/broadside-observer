@@ -22,19 +22,20 @@ cites:
   year: 2018
   arxiv: null
   doi: null
-  card: 113-mesh-shaders-in-the-vulkan-ecosystem
 - title: meshoptimizer
   url: https://github.com/zeux/meshoptimizer
   year: 2016
   arxiv: null
   doi: null
-  card: 733-meshoptimizer
 - title: 'Nanite: A Deep Dive'
   url: https://www.youtube.com/watch?v=e_5kdRpGrpI
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
+see:
+- "113-mesh-shaders-in-the-vulkan-ecosystem"
+- "733-meshoptimizer"
+- "106-nanite-a-deep-dive"
 ---
 
 # Vulkan Meshlet CAD Scene Sample

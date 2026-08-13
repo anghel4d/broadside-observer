@@ -24,19 +24,20 @@ cites:
   year: 2011
   arxiv: null
   doi: null
-  card: 253-online-graph-pruning-for-pathfinding-on-grid-maps
 - title: Ultra-Fast Optimal Pathfinding without Runtime Search
   url: https://doi.org/10.1609/aiide.v7i1.12443
   year: 2011
   arxiv: null
   doi: 10.1609/aiide.v7i1.12443
-  card: 731-ultra-fast-optimal-pathfinding-without-runtime-search
 - title: Improving Jump Point Search
   url: https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820
   year: 2014
   arxiv: null
   doi: null
-  card: 342-improving-jump-point-search
+see:
+- "253-online-graph-pruning-for-pathfinding-on-grid-maps"
+- "731-ultra-fast-optimal-pathfinding-without-runtime-search"
+- "342-improving-jump-point-search"
 ---
 
 # Moving AI Lab / Grid-Based Path Planning Competition

@@ -21,19 +21,19 @@ cites:
     year: 2011
     arxiv: "0903.0340"
     doi: "10.1007/978-3-642-12821-9_2"
-    card: "019-physics-topology-logic-and-computation-a-rosetta-stone"
   - title: "A Fast Procedure for Computing the Distance Between Complex Objects (GJK)"
     url: "https://doi.org/10.1109/56.2083"
     year: 1988
     arxiv: null
     doi: "10.1109/56.2083"
-    card: "384-a-fast-procedure-for-computing-the-distance-between-complex-"
   - title: "A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space"
     url: "https://doi.org/10.1109/56.2083"
     year: 1988
     arxiv: null
     doi: null
-    card: "384-a-fast-procedure-for-computing-the-distance-between-complex-"
+see:
+  - "019-physics-topology-logic-and-computation-a-rosetta-stone"
+  - "384-a-fast-procedure-for-computing-the-distance-between-complex-"
 ---
 
 # Proximity Queries and Penetration Depth with GJK/EPA

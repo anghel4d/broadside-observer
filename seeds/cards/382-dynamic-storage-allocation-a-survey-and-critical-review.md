@@ -25,25 +25,26 @@ cites:
     year: 1994
     arxiv: null
     doi: null
-    card: "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
   - title: "A Memory Allocator (dlmalloc)"
     url: "https://gee.cs.oswego.edu/dl/html/malloc.html"
     year: 2000
     arxiv: null
     doi: null
-    card: "582-a-memory-allocator-dlmalloc"
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
     arxiv: null
     doi: "10.1145/378993.379232"
-    card: "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
   - title: "Design of a General Purpose Memory Allocator for the 4.3BSD UNIX Kernel"
     url: "https://docs-archive.freebsd.org/44doc/papers/kernmalloc.pdf"
     year: 1988
     arxiv: null
     doi: null
-    card: "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
+see:
+  - "259-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+  - "582-a-memory-allocator-dlmalloc"
+  - "377-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
+  - "581-design-of-a-general-purpose-memory-allocator-for-the-4-3bsd"
 ---
 
 # Dynamic Storage Allocation: A Survey and Critical Review

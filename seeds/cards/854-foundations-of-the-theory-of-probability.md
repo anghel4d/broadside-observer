@@ -23,19 +23,20 @@ cites:
     year: 1965
     arxiv: null
     doi: null
-    card: "855-three-approaches-to-the-quantitative-definition-of-informati"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "The Definition of Random Sequences"
     url: "https://doi.org/10.1016/S0019-9958(66)80018-9"
     year: 1966
     arxiv: null
     doi: "10.1016/S0019-9958(66)80018-9"
-    card: "862-the-definition-of-random-sequences"
+see:
+  - "855-three-approaches-to-the-quantitative-definition-of-informati"
+  - "804-a-mathematical-theory-of-communication"
+  - "862-the-definition-of-random-sequences"
 ---
 
 # Foundations of the Theory of Probability

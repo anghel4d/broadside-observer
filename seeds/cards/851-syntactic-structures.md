@@ -23,19 +23,20 @@ cites:
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056813"
-    card: "850-three-models-for-the-description-of-language"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-    card: "852-on-certain-formal-properties-of-grammars"
   - title: "The Mathematics of Sentence Structure"
     url: "https://doi.org/10.2307/2266900"
     year: 1958
     arxiv: null
     doi: "10.2307/2266900"
-    card: "180-the-mathematics-of-sentence-structure"
+see:
+  - "850-three-models-for-the-description-of-language"
+  - "852-on-certain-formal-properties-of-grammars"
+  - "180-the-mathematics-of-sentence-structure"
 ---
 
 # Syntactic Structures

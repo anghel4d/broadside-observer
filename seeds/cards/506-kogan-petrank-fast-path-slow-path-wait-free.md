@@ -23,19 +23,20 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1145/1941553.1941585"
-    card: "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
   - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-    card: "037-wait-free-synchronization"
+see:
+  - "505-kogan-petrank-wait-free-queues-multiple-enqueuers-dequeuers"
+  - "032-michael-scott-lock-free-queue"
+  - "037-wait-free-synchronization"
 ---
 
 # A Methodology for Creating Fast Wait-Free Data Structures

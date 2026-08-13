@@ -24,25 +24,26 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-    card: "789-the-two-valued-iterative-systems-of-mathematical-logic"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "The Synthesis of Two-Terminal Switching Circuits"
     url: "https://doi.org/10.1002/j.1538-7305.1949.tb03624.x"
     year: 1949
     arxiv: null
     doi: "10.1002/j.1538-7305.1949.tb03624.x"
-    card: "808-the-synthesis-of-two-terminal-switching-circuits"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
+see:
+  - "789-the-two-valued-iterative-systems-of-mathematical-logic"
+  - "804-a-mathematical-theory-of-communication"
+  - "808-the-synthesis-of-two-terminal-switching-circuits"
+  - "793-first-draft-of-a-report-on-the-edvac"
 ---
 
 # A Symbolic Analysis of Relay and Switching Circuits

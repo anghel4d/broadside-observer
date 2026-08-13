@@ -21,19 +21,20 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-    card: "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - title: "Artemis Entity System Framework"
     url: "https://github.com/junkdog/artemis-odb"
     year: 2011
     arxiv: null
     doi: null
-    card: "623-artemis-entity-system-framework"
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
     arxiv: null
     doi: null
-    card: "361-evolve-your-hierarchy"
+see:
+  - "360-entity-systems-are-the-future-of-mmog-development-t-machine-"
+  - "623-artemis-entity-system-framework"
+  - "361-evolve-your-hierarchy"
 ---
 
 # A Journey into Entity Component Systems

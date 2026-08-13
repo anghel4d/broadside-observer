@@ -23,25 +23,26 @@ cites:
     year: 1933
     arxiv: null
     doi: "10.2307/1968172"
-    card: "764-a-set-of-postulates-for-the-foundation-of-logic-second-paper"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "Grundlagen der kombinatorischen Logik"
     url: "https://doi.org/10.2307/2370619"
     year: 1930
     arxiv: null
     doi: "10.2307/2370619"
-    card: "748-grundlagen-der-kombinatorischen-logik"
+see:
+  - "764-a-set-of-postulates-for-the-foundation-of-logic-second-paper"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "762-the-calculi-of-lambda-conversion"
+  - "748-grundlagen-der-kombinatorischen-logik"
 ---
 
 # A Set of Postulates for the Foundation of Logic

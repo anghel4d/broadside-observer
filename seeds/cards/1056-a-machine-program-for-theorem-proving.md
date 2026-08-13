@@ -24,13 +24,14 @@ cites:
   year: 1960
   arxiv: null
   doi: 10.1145/321033.321034
-  card: 1057-a-computing-procedure-for-quantification-theory
 - title: The Complexity of Theorem-Proving Procedures
   url: "https://doi.org/10.1145/800157.805047"
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
+see:
+- "1057-a-computing-procedure-for-quantification-theory"
+- "975-the-complexity-of-theorem-proving-procedures"
 ---
 
 # A Machine Program for Theorem-Proving

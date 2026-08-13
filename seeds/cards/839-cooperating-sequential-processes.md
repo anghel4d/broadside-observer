@@ -23,25 +23,26 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/363095.363143"
-    card: "837-the-structure-of-the-the-multiprogramming-system"
   - title: "Solution of a Problem in Concurrent Programming Control"
     url: "https://doi.org/10.1145/365559.365617"
     year: 1965
     arxiv: null
     doi: "10.1145/365559.365617"
-    card: "838-solution-of-a-problem-in-concurrent-programming-control"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
   - title: "A Calculus of Communicating Systems"
     url: "https://doi.org/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
+see:
+  - "837-the-structure-of-the-the-multiprogramming-system"
+  - "838-solution-of-a-problem-in-concurrent-programming-control"
+  - "047-communicating-sequential-processes"
+  - "044-a-calculus-of-communicating-systems"
 ---
 
 # Cooperating Sequential Processes

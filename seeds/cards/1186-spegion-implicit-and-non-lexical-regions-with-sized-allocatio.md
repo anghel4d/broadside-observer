@@ -24,25 +24,26 @@ cites:
     year: 1997
     arxiv: null
     doi: "10.1006/inco.1996.2613"
-    card: "031-region-based-memory-management"
   - title: "Region-Based Memory Management in Cyclone"
     url: "https://doi.org/10.1145/512529.512563"
     year: 2002
     arxiv: null
     doi: "10.1145/512529.512563"
-    card: "150-region-based-memory-management-in-cyclone"
   - title: "Yarrow: Reconciling Effects Handlers and Region-Based Memory Management"
     url: "https://arxiv.org/abs/2607.15876"
     year: 2026
     arxiv: "2607.15876"
     doi: null
-    card: "202-yarrow-reconciling-effects-handlers-and-region-based-memory-"
   - title: "Typed Memory Management in a Calculus of Capabilities"
     url: "https://doi.org/10.1145/292540.292564"
     year: 1999
     arxiv: null
     doi: "10.1145/292540.292564"
-    card: "029-typed-memory-management-in-a-calculus-of-capabilities"
+see:
+  - "031-region-based-memory-management"
+  - "150-region-based-memory-management-in-cyclone"
+  - "202-yarrow-reconciling-effects-handlers-and-region-based-memory-"
+  - "029-typed-memory-management-in-a-calculus-of-capabilities"
 ---
 
 # Spegion: Implicit and Non-Lexical Regions with Sized Allocations

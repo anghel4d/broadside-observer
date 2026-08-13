@@ -24,19 +24,20 @@ cites:
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "Preliminary Discussion of the Logical Design of an Electronic Computing Instrument"
     url: "https://www.ias.edu/sites/default/files/library/pdfs/ecp.preliminarydiscussion.pdf"
     year: 1946
     arxiv: null
     doi: null
-    card: "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-    card: "803-a-symbolic-analysis-of-relay-and-switching-circuits"
+see:
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "794-preliminary-discussion-of-the-logical-design-of-an-electroni"
+  - "803-a-symbolic-analysis-of-relay-and-switching-circuits"
 ---
 
 # Computing Machine for the Solution of Large Systems of Linear Algebraic Equations

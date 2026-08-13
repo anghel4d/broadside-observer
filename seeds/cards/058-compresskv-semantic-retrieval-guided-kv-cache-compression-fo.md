@@ -34,13 +34,11 @@ cites:
     year: 2025
     arxiv: "2505.18458"
     doi: null
-    card: "081-a-survey-of-llm-times-data"
   - title: "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective"
     url: "https://arxiv.org/abs/2502.03805"
     year: 2025
     arxiv: "2502.03805"
     doi: null
-    card: "083-criticalkv-optimizing-kv-cache-eviction-from-an-output-pertu"
 ---
 
 # CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference

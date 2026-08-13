@@ -22,19 +22,20 @@ cites:
     year: 2015
     arxiv: null
     doi: null
-    card: "341-snapshot-interpolation"
   - title: "Deterministic Lockstep"
     url: "https://gafferongames.com/post/deterministic_lockstep/"
     year: 2014
     arxiv: null
     doi: null
-    card: "017-deterministic-lockstep"
   - title: "GGPO Rollback Networking"
     url: "https://github.com/pond3r/ggpo"
     year: 2006
     arxiv: null
     doi: null
-    card: "254-ggpo-rollback-networking"
+see:
+  - "341-snapshot-interpolation"
+  - "017-deterministic-lockstep"
+  - "254-ggpo-rollback-networking"
 ---
 
 # State Synchronization

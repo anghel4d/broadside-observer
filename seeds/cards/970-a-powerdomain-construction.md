@@ -24,25 +24,26 @@ cites:
     year: 1982
     arxiv: null
     doi: "10.1007/BFb0012801"
-    card: "907-domains-for-denotational-semantics"
   - title: "Data Types as Lattices"
     url: "https://doi.org/10.1137/0205046"
     year: 1976
     arxiv: null
     doi: "10.1137/0205046"
-    card: "865-data-types-as-lattices"
   - title: "LCF Considered as a Programming Language"
     url: "https://doi.org/10.1016/0304-3975(77)90044-5"
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "Guarded Commands, Nondeterminacy and Formal Derivation of Programs"
     url: "https://doi.org/10.1145/360933.360975"
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-    card: "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+see:
+  - "907-domains-for-denotational-semantics"
+  - "865-data-types-as-lattices"
+  - "908-lcf-considered-as-a-programming-language"
+  - "842-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
 ---
 
 # A Powerdomain Construction

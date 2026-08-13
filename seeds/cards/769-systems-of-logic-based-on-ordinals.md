@@ -24,25 +24,26 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-    card: "766-on-computable-numbers-with-an-application-to-the-entscheidun"
   - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
     url: "https://doi.org/10.1007/BF01700692"
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - title: "On notation for ordinal numbers"
     url: "https://doi.org/10.2307/2267778"
     year: 1938
     arxiv: null
     doi: "10.2307/2267778"
-    card: "778-on-notation-for-ordinal-numbers"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
+see:
+  - "766-on-computable-numbers-with-an-application-to-the-entscheidun"
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "778-on-notation-for-ordinal-numbers"
+  - "761-a-formulation-of-the-simple-theory-of-types"
 ---
 
 # Systems of Logic Based on Ordinals

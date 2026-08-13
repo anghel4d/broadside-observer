@@ -21,13 +21,14 @@ cites:
   year: 2009
   arxiv: null
   doi: null
-  card: 022-handlers-of-algebraic-effects
 - title: Programming with Algebraic Effects and Handlers
   url: https://arxiv.org/abs/1203.1539
   year: 2015
   arxiv: '1203.1539'
   doi: null
-  card: 123-programming-with-algebraic-effects-and-handlers
+see:
+- "022-handlers-of-algebraic-effects"
+- "123-programming-with-algebraic-effects-and-handlers"
 lineage: algebraic-effects
 ---
 

@@ -21,13 +21,14 @@ cites:
   year: 1991
   arxiv: null
   doi: 10.1016/0890-5401(91)90052-4
-  card: 036-notions-of-computation-and-monads
 - title: Region-Based Memory Management
   url: https://doi.org/10.1006/inco.1996.2613
   year: 1997
   arxiv: null
   doi: null
-  card: 031-region-based-memory-management
+see:
+- "036-notions-of-computation-and-monads"
+- "031-region-based-memory-management"
 ---
 
 # Types and Programming Languages

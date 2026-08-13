@@ -24,37 +24,38 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Programs with Common Sense"
     url: "https://www-formal.stanford.edu/jmc/mcc59.pdf"
     year: 1959
     arxiv: null
     doi: null
-    card: "827-programs-with-common-sense"
   - title: "The FORTRAN Automatic Coding System"
     url: "https://doi.org/10.1145/1455567.1455599"
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-    card: "873-the-fortran-automatic-coding-system"
   - title: "Can Programming Be Liberated from the von Neumann Style?"
     url: "https://doi.org/10.1145/359576.359579"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359579"
-    card: "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
   - title: "Computational lambda-calculus and monads"
     url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
     doi: "10.1109/LICS.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
+see:
+  - "762-the-calculi-of-lambda-conversion"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "827-programs-with-common-sense"
+  - "873-the-fortran-automatic-coding-system"
+  - "174-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
+  - "038-computational-lambda-calculus-and-monads"
 ---
 
 # Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I

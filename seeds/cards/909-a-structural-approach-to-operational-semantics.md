@@ -24,25 +24,26 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-    card: "878-call-by-name-call-by-value-and-the-lambda-calculus"
   - title: "LCF Considered as a Programming Language"
     url: "https://doi.org/10.1016/0304-3975(77)90044-5"
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-    card: "908-lcf-considered-as-a-programming-language"
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
     arxiv: null
     doi: "10.1006/inco.1994.1093"
-    card: "911-a-syntactic-approach-to-type-soundness"
   - title: "Natural Semantics"
     url: "https://doi.org/10.1007/3-540-17220-3_2"
     year: 1987
     arxiv: null
     doi: "10.1007/3-540-17220-3_2"
-    card: "910-natural-semantics"
+see:
+  - "878-call-by-name-call-by-value-and-the-lambda-calculus"
+  - "908-lcf-considered-as-a-programming-language"
+  - "911-a-syntactic-approach-to-type-soundness"
+  - "910-natural-semantics"
 ---
 
 # A Structural Approach to Operational Semantics

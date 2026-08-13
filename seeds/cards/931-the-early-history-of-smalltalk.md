@@ -25,25 +25,26 @@ cites:
     year: 1981
     arxiv: null
     doi: null
-    card: "932-design-principles-behind-smalltalk"
   - title: "Smalltalk-80: The Language and Its Implementation"
     url: "https://dl.acm.org/doi/10.5555/273"
     year: 1983
     arxiv: null
     doi: null
-    card: "933-smalltalk-80-the-language-and-its-implementation"
   - title: "Viewing Control Structures as Patterns of Passing Messages"
     url: "https://doi.org/10.1016/0004-3702(77)90033-9"
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-    card: "934-viewing-control-structures-as-patterns-of-passing-messages"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
+see:
+  - "932-design-principles-behind-smalltalk"
+  - "933-smalltalk-80-the-language-and-its-implementation"
+  - "934-viewing-control-structures-as-patterns-of-passing-messages"
+  - "920-a-theory-of-objects"
 ---
 
 # The Early History of Smalltalk

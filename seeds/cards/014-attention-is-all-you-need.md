@@ -28,13 +28,14 @@ cites:
   year: 2022
   arxiv: '2205.14135'
   doi: null
-  card: 105-flashattention-fast-and-memory-efficient-exact-attention-wit
 - title: Language Models are Few-Shot Learners
   url: https://arxiv.org/abs/2005.14165
   year: 2020
   arxiv: '2005.14165'
   doi: null
-  card: 109-language-models-are-few-shot-learners
+see:
+- "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+- "109-language-models-are-few-shot-learners"
 ---
 
 # Attention Is All You Need

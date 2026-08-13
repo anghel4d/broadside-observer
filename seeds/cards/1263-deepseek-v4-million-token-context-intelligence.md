@@ -25,52 +25,53 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
     year: 2024
     arxiv: "2307.08691"
-    card: "096-flashattention-2-faster-attention-with-better-parallelism-an"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-    card: "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
   - title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
     url: "https://arxiv.org/abs/2603.05451"
     year: 2026
     arxiv: "2603.05451"
-    card: "1222-flashattention-4"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
   - title: "GLU Variants Improve Transformer"
     url: "https://arxiv.org/abs/2002.05202"
     year: 2020
     arxiv: "2002.05202"
-    card: "1218-glu-variants-improve-transformer"
   - title: "DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models"
     url: "https://arxiv.org/abs/2512.02556"
     year: 2025
     arxiv: "2512.02556"
-    card: "1259-deepseek-v3-2-pushing-the-frontier-of-open-llms"
   - title: "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention"
     url: "https://arxiv.org/abs/2502.11089"
     year: 2025
     arxiv: "2502.11089"
-    card: "1254-native-sparse-attention-hardware-aligned"
   - title: "mHC: Manifold-Constrained Hyper-Connections"
     url: "https://arxiv.org/abs/2512.24880"
     year: 2025
     arxiv: "2512.24880"
-    card: "1260-mhc-manifold-constrained-hyper-connections"
+see:
+  - "014-attention-is-all-you-need"
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "096-flashattention-2-faster-attention-with-better-parallelism-an"
+  - "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - "1222-flashattention-4"
+  - "1206-deepseek-v3-technical-report"
+  - "1218-glu-variants-improve-transformer"
+  - "1259-deepseek-v3-2-pushing-the-frontier-of-open-llms"
+  - "1254-native-sparse-attention-hardware-aligned"
+  - "1260-mhc-manifold-constrained-hyper-connections"
 ---
 
 # DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence

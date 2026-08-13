@@ -24,13 +24,14 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1016/0004-3702(71)90010-5"
-    card: "385-strips-a-new-approach-to-the-application-of-theorem-proving-"
   - title: "Three States and a Plan: The AI of F.E.A.R."
     url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
     year: 2006
     arxiv: null
     doi: null
-    card: "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
+see:
+  - "385-strips-a-new-approach-to-the-application-of-theorem-proving-"
+  - "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
 ---
 # Applying Goal-Oriented Action Planning to Games
 

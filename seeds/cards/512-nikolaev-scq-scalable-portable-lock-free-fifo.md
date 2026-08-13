@@ -22,25 +22,26 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/248052.248106"
-    card: "032-michael-scott-lock-free-queue"
   - title: "Fast Concurrent Queues for x86 Processors"
     url: "https://doi.org/10.1145/2442516.2442527"
     year: 2013
     arxiv: null
     doi: "10.1145/2442516.2442527"
-    card: "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
   - title: "Linearizability: A Correctness Condition for Concurrent Objects"
     url: "https://doi.org/10.1145/78969.78972"
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-    card: "260-linearizability-a-correctness-condition-for-concurrent-objec"
   - title: "wCQ: A Fast Wait-Free Queue with Bounded Memory Usage"
     url: "https://arxiv.org/abs/2201.02179"
     year: 2022
     arxiv: "2201.02179"
     doi: "10.1145/3490148.3538572"
-    card: "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
+see:
+  - "032-michael-scott-lock-free-queue"
+  - "507-morrison-afek-lcrq-fast-concurrent-queues-x86"
+  - "260-linearizability-a-correctness-condition-for-concurrent-objec"
+  - "313-wcq-a-fast-wait-free-queue-with-bounded-memory-usage"
 ---
 
 # A Scalable, Portable, and Memory-Efficient Lock-Free FIFO Queue

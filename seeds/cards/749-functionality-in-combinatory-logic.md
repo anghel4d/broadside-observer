@@ -23,25 +23,26 @@ cites:
     year: 1930
     arxiv: null
     doi: "10.2307/2370619"
-    card: "748-grundlagen-der-kombinatorischen-logik"
   - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
     url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
     year: 1969
     arxiv: null
     doi: "10.1090/S0002-9947-1969-0241465-X"
-    card: "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "Cartesian Closed Categories and Typed λ-Calculi"
     url: "https://doi.org/10.1007/3-540-17162-2_38"
     year: 1986
     arxiv: null
     doi: null
-    card: "168-cartesian-closed-categories-and-typed-calculi"
+see:
+  - "748-grundlagen-der-kombinatorischen-logik"
+  - "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "168-cartesian-closed-categories-and-typed-calculi"
 ---
 
 # Functionality in Combinatory Logic

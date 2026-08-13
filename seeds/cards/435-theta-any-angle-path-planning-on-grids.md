@@ -22,19 +22,20 @@ cites:
   year: 1968
   arxiv: null
   doi: 10.1109/TSSC.1968.300136
-  card: 262-a-formal-basis-for-the-heuristic-determination-of-minimum-co
 - title: 'Lazy Theta*: Any-Angle Path Planning and Path Length Analysis'
   url: https://doi.org/10.1609/aaai.v24i1.7562
   year: 2010
   arxiv: null
   doi: 10.1609/aaai.v24i1.7562
-  card: 429-lazy-theta-any-angle-path-planning-and-path-length-analysis
 - title: 'Field D*: An Interpolation-Based Path Planner'
   url: https://doi.org/10.1002/rob.20147
   year: 2006
   arxiv: null
   doi: 10.1002/rob.20147
-  card: 717-field-d-an-interpolation-based-path-planner
+see:
+- "262-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+- "429-lazy-theta-any-angle-path-planning-and-path-length-analysis"
+- "717-field-d-an-interpolation-based-path-planner"
 ---
 
 # Theta*: Any-Angle Path Planning on Grids

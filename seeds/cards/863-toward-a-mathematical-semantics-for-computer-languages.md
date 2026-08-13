@@ -25,37 +25,38 @@ cites:
     year: 1970
     arxiv: null
     doi: null
-    card: "864-outline-of-a-mathematical-theory-of-computation"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-    card: "866-fundamental-concepts-in-programming-languages"
   - title: "The Next 700 Programming Languages"
     url: "https://doi.org/10.1145/365230.365257"
     year: 1966
     arxiv: null
     doi: "10.1145/365230.365257"
-    card: "867-the-next-700-programming-languages"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Computational lambda-calculus and monads"
     url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
     doi: "10.1109/LICS.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
   - title: "Notions of Computation and Monads"
     url: "https://doi.org/10.1016/0890-5401(91)90052-4"
     year: 1991
     arxiv: null
     doi: "10.1016/0890-5401(91)90052-4"
-    card: "036-notions-of-computation-and-monads"
+see:
+  - "864-outline-of-a-mathematical-theory-of-computation"
+  - "866-fundamental-concepts-in-programming-languages"
+  - "867-the-next-700-programming-languages"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "038-computational-lambda-calculus-and-monads"
+  - "036-notions-of-computation-and-monads"
 ---
 
 # Toward a Mathematical Semantics for Computer Languages

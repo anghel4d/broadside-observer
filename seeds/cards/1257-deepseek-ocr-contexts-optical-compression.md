@@ -24,12 +24,13 @@ cites:
     url: "https://arxiv.org/abs/2412.10302"
     year: 2024
     arxiv: "2412.10302"
-    card: "1251-deepseek-vl2-moe-vision-language-models"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
+see:
+  - "1251-deepseek-vl2-moe-vision-language-models"
+  - "1206-deepseek-v3-technical-report"
 ---
 
 # DeepSeek-OCR: Contexts Optical Compression

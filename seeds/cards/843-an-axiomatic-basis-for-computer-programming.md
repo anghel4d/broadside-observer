@@ -23,37 +23,38 @@ cites:
     year: 1967
     arxiv: null
     doi: null
-    card: "877-assigning-meanings-to-programs"
   - title: "A Discipline of Programming"
     url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
     year: 1976
     arxiv: null
     doi: null
-    card: "841-a-discipline-of-programming"
   - title: "Proof of Correctness of Data Representations"
     url: "https://doi.org/10.1007/BF00289507"
     year: 1972
     arxiv: null
     doi: "10.1007/BF00289507"
-    card: "844-proof-of-correctness-of-data-representations"
   - title: "Procedures and Parameters: An Axiomatic Approach"
     url: "https://doi.org/10.1007/BFb0059696"
     year: 1971
     arxiv: null
     doi: "10.1007/BFb0059696"
-    card: "845-procedures-and-parameters-an-axiomatic-approach"
   - title: "Separation Logic: A Logic for Shared Mutable Data Structures"
     url: "https://doi.org/10.1109/LICS.2002.1029817"
     year: 2002
     arxiv: null
     doi: "10.1109/LICS.2002.1029817"
-    card: "151-separation-logic-a-logic-for-shared-mutable-data-structures"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
+see:
+  - "877-assigning-meanings-to-programs"
+  - "841-a-discipline-of-programming"
+  - "844-proof-of-correctness-of-data-representations"
+  - "845-procedures-and-parameters-an-axiomatic-approach"
+  - "151-separation-logic-a-logic-for-shared-mutable-data-structures"
+  - "047-communicating-sequential-processes"
 ---
 
 # An Axiomatic Basis for Computer Programming

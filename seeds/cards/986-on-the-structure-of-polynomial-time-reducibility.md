@@ -23,13 +23,14 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
 - title: Reducibility Among Combinatorial Problems
   url: "https://doi.org/10.1007/978-1-4684-2001-2_9"
   year: 1972
   arxiv: null
   doi: 10.1007/978-1-4684-2001-2_9
-  card: 976-reducibility-among-combinatorial-problems
+see:
+- "975-the-complexity-of-theorem-proving-procedures"
+- "976-reducibility-among-combinatorial-problems"
 ---
 
 # On the Structure of Polynomial Time Reducibility

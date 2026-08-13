@@ -22,13 +22,14 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1109/SFCS.1978.3
-  card: 1017-a-dichromatic-framework-for-balanced-trees
 - title: An Algorithm for the Organization of Information
   url: "https://en.wikipedia.org/wiki/AVL_tree"
   year: 1962
   arxiv: null
   doi: null
-  card: 1015-an-algorithm-for-the-organization-of-information
+see:
+- "1017-a-dichromatic-framework-for-balanced-trees"
+- "1015-an-algorithm-for-the-organization-of-information"
 ---
 
 # Skip Lists: A Probabilistic Alternative to Balanced Trees

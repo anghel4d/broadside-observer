@@ -23,43 +23,44 @@ cites:
   year: 1993
   arxiv: null
   doi: 10.1145/166117.166147
-  card: 161-hierarchical-z-buffer-visibility
 - title: 'The Visibility Buffer: A Cache-Friendly Approach to Deferred Shading'
   url: https://jcgt.org/published/0002/02/04/
   year: 2013
   arxiv: null
   doi: null
-  card: 347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-
 - title: Introduction to Turing Mesh Shaders
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
   year: 2018
   arxiv: null
   doi: null
-  card: 335-introduction-to-turing-mesh-shaders
 - title: 'Nanite: A Deep Dive'
   url: https://advances.realtimerendering.com/
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
 - title: Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques
   url: https://www.gdcvault.com/play/1023275/Optimizing-the-Graphics-Pipeline-with
   year: 2016
   arxiv: null
   doi: null
-  card: 710-optimizing-the-graphics-pipeline-with-compute-gpu-drive
 - title: Mesh Shaders in the Vulkan Ecosystem
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
   year: 2018
   arxiv: null
   doi: null
-  card: 113-mesh-shaders-in-the-vulkan-ecosystem
 - title: meshoptimizer
   url: https://github.com/zeux/meshoptimizer
   year: 2016
   arxiv: null
   doi: null
-  card: 733-meshoptimizer
+see:
+- "161-hierarchical-z-buffer-visibility"
+- "347-the-visibility-buffer-a-cache-friendly-approach-to-deferred-"
+- "335-introduction-to-turing-mesh-shaders"
+- "106-nanite-a-deep-dive"
+- "710-optimizing-the-graphics-pipeline-with-compute-gpu-drive"
+- "113-mesh-shaders-in-the-vulkan-ecosystem"
+- "733-meshoptimizer"
 ---
 
 # GPU-Driven Rendering Pipelines

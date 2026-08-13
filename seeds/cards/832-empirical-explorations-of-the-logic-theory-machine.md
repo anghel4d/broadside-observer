@@ -25,19 +25,20 @@ cites:
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-    card: "831-the-logic-theory-machine-a-complex-information-processing-sy"
   - title: "Report on a General Problem-Solving Program"
     url: "https://bitsavers.org/pdf/rand/ipl/"
     year: 1959
     arxiv: null
     doi: null
-    card: "833-report-on-a-general-problem-solving-program"
   - title: "Elements of a Theory of Human Problem Solving"
     url: "https://doi.org/10.1037/h0048495"
     year: 1958
     arxiv: null
     doi: "10.1037/h0048495"
-    card: "834-elements-of-a-theory-of-human-problem-solving"
+see:
+  - "831-the-logic-theory-machine-a-complex-information-processing-sy"
+  - "833-report-on-a-general-problem-solving-program"
+  - "834-elements-of-a-theory-of-human-problem-solving"
 ---
 
 # Empirical Explorations of the Logic Theory Machine

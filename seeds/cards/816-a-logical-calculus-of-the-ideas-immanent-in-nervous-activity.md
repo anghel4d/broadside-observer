@@ -25,31 +25,32 @@ cites:
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
     url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
     arxiv: null
     doi: null
-    card: "781-representation-of-events-in-nerve-nets-and-finite-automata"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "The Organization of Behavior"
     url: "https://www.worldcat.org/title/organization-of-behavior/oclc/523"
     year: 1949
     arxiv: null
     doi: null
-    card: "818-the-organization-of-behavior"
   - title: "How We Know Universals: The Perception of Auditory and Visual Forms"
     url: "https://doi.org/10.1007/BF02478291"
     year: 1947
     arxiv: null
     doi: "10.1007/BF02478291"
-    card: "817-how-we-know-universals-the-perception-of-auditory-and-visual"
+see:
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "781-representation-of-events-in-nerve-nets-and-finite-automata"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "818-the-organization-of-behavior"
+  - "817-how-we-know-universals-the-perception-of-auditory-and-visual"
 ---
 
 # A Logical Calculus of the Ideas Immanent in Nervous Activity

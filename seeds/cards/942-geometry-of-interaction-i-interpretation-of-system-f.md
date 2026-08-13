@@ -24,25 +24,26 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-    card: "041-linear-logic"
   - title: "The System F of Variable Types, Fifteen Years Later"
     url: "https://doi.org/10.1016/0304-3975(86)90044-7"
     year: 1986
     arxiv: null
     doi: "10.1016/0304-3975(86)90044-7"
-    card: "890-the-system-f-of-variable-types-fifteen-years-later"
   - title: "Interaction Nets"
     url: "https://doi.org/10.1145/96709.96718"
     year: 1990
     arxiv: null
     doi: "10.1145/96709.96718"
-    card: "164-interaction-nets"
   - title: "Computational Interpretations of Linear Logic"
     url: "https://doi.org/10.1016/0304-3975(93)90181-Q"
     year: 1993
     arxiv: null
     doi: "10.1016/0304-3975(93)90181-Q"
-    card: "160-computational-interpretations-of-linear-logic"
+see:
+  - "041-linear-logic"
+  - "890-the-system-f-of-variable-types-fifteen-years-later"
+  - "164-interaction-nets"
+  - "160-computational-interpretations-of-linear-logic"
 ---
 
 # Geometry of Interaction I: Interpretation of System F

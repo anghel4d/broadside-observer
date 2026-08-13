@@ -23,19 +23,20 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-    card: "804-a-mathematical-theory-of-communication"
   - title: "Communication in the Presence of Noise"
     url: "https://doi.org/10.1109/JRPROC.1949.232969"
     year: 1949
     arxiv: null
     doi: "10.1109/JRPROC.1949.232969"
-    card: "807-communication-in-the-presence-of-noise"
   - title: "Error Detecting and Error Correcting Codes"
     url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
     year: 1950
     arxiv: null
     doi: "10.1002/j.1538-7305.1950.tb00463.x"
-    card: "819-error-detecting-and-error-correcting-codes"
+see:
+  - "804-a-mathematical-theory-of-communication"
+  - "807-communication-in-the-presence-of-noise"
+  - "819-error-detecting-and-error-correcting-codes"
 ---
 
 # Communication Theory of Secrecy Systems

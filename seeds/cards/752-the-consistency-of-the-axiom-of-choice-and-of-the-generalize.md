@@ -23,19 +23,20 @@ cites:
     year: 1908
     arxiv: null
     doi: "10.1007/BF01449999"
-    card: "746-investigations-in-the-foundations-of-set-theory-i"
   - title: "What is Cantor's Continuum Problem?"
     url: "https://doi.org/10.2307/2305611"
     year: 1947
     arxiv: null
     doi: "10.2307/2305611"
-    card: "753-what-is-cantor-s-continuum-problem"
   - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
     url: "https://doi.org/10.1007/BF01700692"
     year: 1931
     arxiv: null
     doi: "10.1007/BF01700692"
-    card: "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+see:
+  - "746-investigations-in-the-foundations-of-set-theory-i"
+  - "753-what-is-cantor-s-continuum-problem"
+  - "751-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
 ---
 
 # The Consistency of the Axiom of Choice and of the Generalized Continuum Hypothesis with the Axioms of Set Theory

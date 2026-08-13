@@ -27,19 +27,20 @@ cites:
     year: 2026
     arxiv: "2606.09774"
     doi: null
-    card: "053-auto-configuring-scientific-simulators-with-lightweight-codi"
   - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
     url: "https://arxiv.org/abs/2607.28591"
     year: 2026
     arxiv: "2607.28591"
     doi: null
-    card: "056-change2task-from-repository-changes-to-executable-coding-age"
   - title: "CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents"
     url: "https://arxiv.org/abs/2608.05886"
     year: 2026
     arxiv: "2608.05886"
     doi: null
-    card: "057-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
+see:
+  - "053-auto-configuring-scientific-simulators-with-lightweight-codi"
+  - "056-change2task-from-repository-changes-to-executable-coding-age"
+  - "057-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
 ---
 
 # SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering

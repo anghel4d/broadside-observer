@@ -23,19 +23,20 @@ cites:
   year: 1978
   arxiv: null
   doi: 10.1109/SFCS.1978.3
-  card: 1017-a-dichromatic-framework-for-balanced-trees
 - title: Self-Adjusting Binary Search Trees
   url: "https://doi.org/10.1145/3828.3835"
   year: 1985
   arxiv: null
   doi: 10.1145/3828.3835
-  card: 1018-self-adjusting-binary-search-trees
 - title: Organization and Maintenance of Large Ordered Indices
   url: "https://doi.org/10.1007/BF00288683"
   year: 1972
   arxiv: null
   doi: 10.1007/BF00288683
-  card: 1016-organization-and-maintenance-of-large-ordered-indices
+see:
+- "1017-a-dichromatic-framework-for-balanced-trees"
+- "1018-self-adjusting-binary-search-trees"
+- "1016-organization-and-maintenance-of-large-ordered-indices"
 ---
 
 # An Algorithm for the Organization of Information

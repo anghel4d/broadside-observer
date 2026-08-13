@@ -23,25 +23,26 @@ cites:
     year: 1966
     arxiv: null
     doi: "10.1145/355592.365646"
-    card: "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
   - title: "Notes on Structured Programming"
     url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
     year: 1970
     arxiv: null
     doi: null
-    card: "840-notes-on-structured-programming"
   - title: "The Structure of the 'THE'-Multiprogramming System"
     url: "https://doi.org/10.1145/363095.363143"
     year: 1968
     arxiv: null
     doi: "10.1145/363095.363143"
-    card: "837-the-structure-of-the-the-multiprogramming-system"
   - title: "Structured Programming with go to Statements"
     url: "https://doi.org/10.1145/356635.356640"
     year: 1974
     arxiv: null
     doi: "10.1145/356635.356640"
-    card: "849-structured-programming-with-go-to-statements"
+see:
+  - "876-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
+  - "840-notes-on-structured-programming"
+  - "837-the-structure-of-the-the-multiprogramming-system"
+  - "849-structured-programming-with-go-to-statements"
 ---
 
 # Go To Statement Considered Harmful

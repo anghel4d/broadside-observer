@@ -22,25 +22,26 @@ cites:
   year: 1999
   arxiv: null
   doi: null
-  card: 258-steering-behaviors-for-autonomous-characters
 - title: Continuum Crowds
   url: https://doi.org/10.1145/1141911.1141978
   year: 2006
   arxiv: null
   doi: 10.1145/1141911.1141978
-  card: 437-continuum-crowds
 - title: Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation
   url: https://doi.org/10.1109/ROBOT.2008.4543489
   year: 2008
   arxiv: null
   doi: 10.1109/ROBOT.2008.4543489
-  card: 358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi
 - title: Social Force Model for Pedestrian Dynamics
   url: https://doi.org/10.1103/PhysRevE.51.4282
   year: 1995
   arxiv: null
   doi: 10.1103/PhysRevE.51.4282
-  card: 712-social-force-model-for-pedestrian-dynamics
+see:
+- "258-steering-behaviors-for-autonomous-characters"
+- "437-continuum-crowds"
+- "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+- "712-social-force-model-for-pedestrian-dynamics"
 ---
 
 # Flocks, Herds, and Schools: A Distributed Behavioral Model

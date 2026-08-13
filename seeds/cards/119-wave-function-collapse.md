@@ -22,37 +22,38 @@ cites:
   year: 2007
   arxiv: null
   doi: 10.1145/1230100.1230119
-  card: 707-example-based-model-synthesis
 - title: Procedural Content Generation in Games
   url: https://doi.org/10.1007/978-3-319-42716-4
   year: 2016
   arxiv: null
   doi: null
-  card: 118-procedural-content-generation-in-games
 - title: Procedural Content Generation via Machine Learning (PCGML)
   url: https://arxiv.org/abs/1702.00539
   year: 2018
   arxiv: '1702.00539'
   doi: null
-  card: 013-procedural-content-generation-via-machine-learning-pcgml
 - title: MarkovJunior
   url: https://github.com/mxgmn/MarkovJunior
   year: 2022
   arxiv: null
   doi: null
-  card: 732-markovjunior
 - title: The Algorithmic Beauty of Plants (L-Systems)
   url: http://algorithmicbotany.org/papers/#abop
   year: 1990
   arxiv: null
   doi: null
-  card: 498-the-algorithmic-beauty-of-plants-l-systems
 - title: 'Search-Based Procedural Content Generation: A Taxonomy and Survey'
   url: https://doi.org/10.1109/TCIAIG.2011.2148116
   year: 2011
   arxiv: null
   doi: null
-  card: 020-search-based-procedural-content-generation-a-taxonomy-and-su
+see:
+- "707-example-based-model-synthesis"
+- "118-procedural-content-generation-in-games"
+- "013-procedural-content-generation-via-machine-learning-pcgml"
+- "732-markovjunior"
+- "498-the-algorithmic-beauty-of-plants-l-systems"
+- "020-search-based-procedural-content-generation-a-taxonomy-and-su"
 ---
 
 # Wave Function Collapse

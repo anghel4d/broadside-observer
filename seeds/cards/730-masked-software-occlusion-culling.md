@@ -24,19 +24,20 @@ cites:
   year: 1993
   arxiv: null
   doi: 10.1145/166117.166147
-  card: 161-hierarchical-z-buffer-visibility
 - title: GPU-Driven Rendering Pipelines
   url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
   year: 2015
   arxiv: null
   doi: null
-  card: 016-gpu-driven-rendering-pipelines
 - title: 'Nanite: A Deep Dive'
   url: https://www.youtube.com/watch?v=e_5kdRpGrpI
   year: 2021
   arxiv: null
   doi: null
-  card: 106-nanite-a-deep-dive
+see:
+- "161-hierarchical-z-buffer-visibility"
+- "016-gpu-driven-rendering-pipelines"
+- "106-nanite-a-deep-dive"
 ---
 
 # Masked Software Occlusion Culling

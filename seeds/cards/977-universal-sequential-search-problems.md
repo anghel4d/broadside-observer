@@ -23,7 +23,8 @@ cites:
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
-  card: 975-the-complexity-of-theorem-proving-procedures
+see:
+- "975-the-complexity-of-theorem-proving-procedures"
 ---
 
 # Universal Sequential Search Problems

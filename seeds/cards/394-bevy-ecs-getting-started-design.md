@@ -22,25 +22,26 @@ cites:
     year: 2020
     arxiv: null
     doi: null
-    card: "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
     url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
     year: 2018
     arxiv: null
     doi: null
-    card: "404-unity-ecs-dots-architecture-overview-entities-package-docs"
   - title: "Legion ECS (Amethyst)"
     url: "https://github.com/amethyst/legion"
     year: 2019
     arxiv: null
     doi: null
-    card: "467-legion-ecs-amethyst"
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-    card: "334-flecs-a-fast-entity-component-system-for-c99"
+see:
+  - "393-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
+  - "404-unity-ecs-dots-architecture-overview-entities-package-docs"
+  - "467-legion-ecs-amethyst"
+  - "334-flecs-a-fast-entity-component-system-for-c99"
 ---
 
 # Bevy ECS Getting Started / Design

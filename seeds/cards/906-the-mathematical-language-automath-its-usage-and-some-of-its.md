@@ -24,25 +24,26 @@ cites:
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-    card: "901-the-calculus-of-constructions"
   - title: "A Framework for Defining Logics"
     url: "https://doi.org/10.1145/138027.138040"
     year: 1993
     arxiv: null
     doi: "10.1145/138027.138040"
-    card: "902-a-framework-for-defining-logics"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
     arxiv: null
     doi: null
-    card: "898-the-formulae-as-types-notion-of-construction"
   - title: "An Intuitionistic Theory of Types: Predicative Part"
     url: "https://doi.org/10.1016/S0049-237X(08)71945-1"
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
-    card: "899-an-intuitionistic-theory-of-types-predicative-part"
+see:
+  - "901-the-calculus-of-constructions"
+  - "902-a-framework-for-defining-logics"
+  - "898-the-formulae-as-types-notion-of-construction"
+  - "899-an-intuitionistic-theory-of-types-predicative-part"
 ---
 
 # The Mathematical Language AUTOMATH, Its Usage, and Some of Its Extensions

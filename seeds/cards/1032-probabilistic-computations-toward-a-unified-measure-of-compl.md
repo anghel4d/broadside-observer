@@ -22,7 +22,8 @@ cites:
   year: 1984
   arxiv: null
   doi: 10.1145/1968.1972
-  card: 1033-a-theory-of-the-learnable
+see:
+- "1033-a-theory-of-the-learnable"
 ---
 
 # Probabilistic Computations: Toward a Unified Measure of Complexity

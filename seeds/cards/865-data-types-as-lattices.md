@@ -23,25 +23,26 @@ cites:
     year: 1970
     arxiv: null
     doi: null
-    card: "864-outline-of-a-mathematical-theory-of-computation"
   - title: "Toward a Mathematical Semantics for Computer Languages"
     url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "Call-by-Push-Value"
     url: "https://www.cs.bham.ac.uk/~pbl/papers/lix3.pdf"
     year: 2003
     arxiv: null
     doi: null
-    card: "148-call-by-push-value"
+see:
+  - "864-outline-of-a-mathematical-theory-of-computation"
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "762-the-calculi-of-lambda-conversion"
+  - "148-call-by-push-value"
 ---
 
 # Data Types as Lattices

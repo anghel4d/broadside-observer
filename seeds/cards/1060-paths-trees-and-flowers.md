@@ -23,13 +23,14 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.4153/CJM-1956-045-5
-  card: 995-maximal-flow-through-a-network
 - title: A Dynamic Programming Approach to Sequencing Problems
   url: "https://doi.org/10.1145/321105.321111"
   year: 1962
   arxiv: null
   doi: 10.1145/321105.321111
-  card: 1059-a-dynamic-programming-approach-to-sequencing-problems
+see:
+- "995-maximal-flow-through-a-network"
+- "1059-a-dynamic-programming-approach-to-sequencing-problems"
 ---
 
 # Paths, Trees, and Flowers

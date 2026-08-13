@@ -22,19 +22,20 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.4153/CJM-1956-045-5
-  card: 995-maximal-flow-through-a-network
 - title: Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems
   url: "https://doi.org/10.1145/321694.321699"
   year: 1972
   arxiv: null
   doi: 10.1145/321694.321699
-  card: 996-theoretical-improvements-in-algorithmic-efficiency-for-netwo
 - title: A New Approach to the Maximum-Flow Problem
   url: "https://doi.org/10.1145/48014.61051"
   year: 1988
   arxiv: null
   doi: 10.1145/48014.61051
-  card: 998-a-new-approach-to-the-maximum-flow-problem
+see:
+- "995-maximal-flow-through-a-network"
+- "996-theoretical-improvements-in-algorithmic-efficiency-for-netwo"
+- "998-a-new-approach-to-the-maximum-flow-problem"
 ---
 
 # Algorithm for Solution of a Problem of Maximum Flow in a Network with Power Estimation

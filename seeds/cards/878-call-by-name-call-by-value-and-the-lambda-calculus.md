@@ -24,31 +24,32 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-    card: "762-the-calculi-of-lambda-conversion"
   - title: "The Mechanical Evaluation of Expressions"
     url: "https://doi.org/10.1093/comjnl/6.4.308"
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-    card: "868-the-mechanical-evaluation-of-expressions"
   - title: "Toward a Mathematical Semantics for Computer Languages"
     url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
     year: 1971
     arxiv: null
     doi: null
-    card: "863-toward-a-mathematical-semantics-for-computer-languages"
   - title: "Computational lambda-calculus and monads"
     url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
     doi: "10.1109/LICS.1989.39155"
-    card: "038-computational-lambda-calculus-and-monads"
   - title: "Call-by-Push-Value"
     url: "https://www.cs.bham.ac.uk/~pbl/papers/lix3.pdf"
     year: 2003
     arxiv: null
     doi: null
-    card: "148-call-by-push-value"
+see:
+  - "762-the-calculi-of-lambda-conversion"
+  - "868-the-mechanical-evaluation-of-expressions"
+  - "863-toward-a-mathematical-semantics-for-computer-languages"
+  - "038-computational-lambda-calculus-and-monads"
+  - "148-call-by-push-value"
 ---
 
 # Call-by-name, call-by-value and the λ-calculus

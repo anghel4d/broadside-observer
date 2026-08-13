@@ -25,25 +25,26 @@ cites:
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-    card: "919-on-understanding-types-data-abstraction-and-polymorphism"
   - title: "A Denotational Semantics of Inheritance and Its Correctness"
     url: "https://doi.org/10.1145/74877.74884"
     year: 1989
     arxiv: null
     doi: "10.1145/74877.74884"
-    card: "939-a-denotational-semantics-of-inheritance-and-its-correctness"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
     arxiv: null
     doi: "10.1145/38765.38828"
-    card: "938-self-the-power-of-simplicity"
   - title: "Smalltalk-80: The Language and Its Implementation"
     url: "https://dl.acm.org/doi/10.5555/273"
     year: 1983
     arxiv: null
     doi: null
-    card: "933-smalltalk-80-the-language-and-its-implementation"
+see:
+  - "919-on-understanding-types-data-abstraction-and-polymorphism"
+  - "939-a-denotational-semantics-of-inheritance-and-its-correctness"
+  - "938-self-the-power-of-simplicity"
+  - "933-smalltalk-80-the-language-and-its-implementation"
 ---
 
 # A Theory of Objects

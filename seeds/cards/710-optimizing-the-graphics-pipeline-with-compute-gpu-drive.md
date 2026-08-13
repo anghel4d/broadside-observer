@@ -24,13 +24,14 @@ cites:
     year: 2015
     arxiv: null
     doi: null
-    card: "016-gpu-driven-rendering-pipelines"
   - title: "Nanite: A Deep Dive"
     url: "https://advances.realtimerendering.com/"
     year: 2021
     arxiv: null
     doi: null
-    card: "106-nanite-a-deep-dive"
+see:
+  - "016-gpu-driven-rendering-pipelines"
+  - "106-nanite-a-deep-dive"
 ---
 # Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques
 

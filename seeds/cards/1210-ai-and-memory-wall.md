@@ -27,12 +27,13 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     url: "https://arxiv.org/abs/2205.14135"
     year: 2022
     arxiv: "2205.14135"
-    card: "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+see:
+  - "014-attention-is-all-you-need"
+  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
 ---
 
 # AI and Memory Wall

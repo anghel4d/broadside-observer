@@ -22,19 +22,20 @@ cites:
     year: 2009
     arxiv: null
     doi: "10.1145/1576246.1531330"
-    card: "432-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
   - title: "Nanite: A Deep Dive"
     url: "https://advances.realtimerendering.com/"
     year: 2021
     arxiv: null
     doi: null
-    card: "106-nanite-a-deep-dive"
   - title: "Hierarchical Z-Buffer Visibility"
     url: "https://doi.org/10.1145/166117.166147"
     year: 1993
     arxiv: null
     doi: "10.1145/166117.166147"
-    card: "161-hierarchical-z-buffer-visibility"
+see:
+  - "432-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
+  - "106-nanite-a-deep-dive"
+  - "161-hierarchical-z-buffer-visibility"
 ---
 
 # A Stack-Free Traversal Algorithm for Left-Balanced k-d Trees

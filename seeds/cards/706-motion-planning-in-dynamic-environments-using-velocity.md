@@ -24,13 +24,14 @@ cites:
     year: 2008
     arxiv: null
     doi: "10.1109/ROBOT.2008.4543489"
-    card: "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
   - title: "ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation"
     url: "https://doi.org/10.1145/1599470.1599494"
     year: 2009
     arxiv: null
     doi: "10.1145/1599470.1599494"
-    card: "705-clearpath-highly-parallel-collision-avoidance-for-multi"
+see:
+  - "358-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
+  - "705-clearpath-highly-parallel-collision-avoidance-for-multi"
 ---
 # Motion Planning in Dynamic Environments Using Velocity Obstacles
 

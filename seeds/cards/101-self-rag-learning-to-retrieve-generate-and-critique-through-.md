@@ -26,18 +26,18 @@ cites:
     year: 2020
     arxiv: "2005.11401"
     doi: null
-    card: "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
   - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
     url: "https://arxiv.org/abs/2604.16548"
     year: 2026
     arxiv: "2604.16548"
     doi: null
-    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
     arxiv: "2605.20616"
     doi: null
+see:
+  - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
 ---
 
 # Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection

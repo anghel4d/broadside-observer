@@ -25,25 +25,26 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
     url: "https://doi.org/10.1090/S0002-9947-1969-0253909-0"
     year: 1969
     arxiv: null
     doi: "10.1090/S0002-9947-1969-0253909-0"
-    card: "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "Types and Programming Languages"
     url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
     year: 2002
     arxiv: null
     doi: null
-    card: "027-types-and-programming-languages"
+see:
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "879-the-principal-type-scheme-of-an-object-in-combinatory-logic"
+  - "154-the-definition-of-standard-ml-revised"
+  - "027-types-and-programming-languages"
 ---
 
 # Principal Type-Schemes for Functional Programs

@@ -23,25 +23,26 @@ cites:
     year: 1934
     arxiv: null
     doi: "10.1073/pnas.20.11.584"
-    card: "749-functionality-in-combinatory-logic"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-    card: "880-a-theory-of-type-polymorphism-in-programming"
   - title: "A Formulation of the Simple Theory of Types"
     url: "https://doi.org/10.2307/2266170"
     year: 1940
     arxiv: null
     doi: "10.2307/2266170"
-    card: "761-a-formulation-of-the-simple-theory-of-types"
   - title: "Über die Bausteine der mathematischen Logik"
     url: "https://doi.org/10.1007/BF01458017"
     year: 1924
     arxiv: null
     doi: "10.1007/BF01458017"
-    card: "747-uber-die-bausteine-der-mathematischen-logik"
+see:
+  - "749-functionality-in-combinatory-logic"
+  - "880-a-theory-of-type-polymorphism-in-programming"
+  - "761-a-formulation-of-the-simple-theory-of-types"
+  - "747-uber-die-bausteine-der-mathematischen-logik"
 ---
 
 # The Principal Type-Scheme of an Object in Combinatory Logic

@@ -23,15 +23,16 @@ cites:
   - title: "Handling Complexity in the Halo 2 AI"
     url: "https://www.gamedeveloper.com/programming/gdc-2005-proceeding-handling-complexity-in-the-i-halo-2-i-ai"
     year: 2005
-    card: "1194-handling-complexity-in-the-halo-2-ai"
   - title: "Building a Better Battle: HALO 3 AI Objectives"
     url: "https://web.cs.wpi.edu/~rich/courses/imgd4000-d09/lectures/halo3.pdf"
     year: 2008
-    card: "1195-building-a-better-battle-halo-3-ai-objectives"
   - title: "Three States and a Plan: The AI of F.E.A.R."
     url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
     year: 2006
-    card: "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
+see:
+  - "1194-handling-complexity-in-the-halo-2-ai"
+  - "1195-building-a-better-battle-halo-3-ai-objectives"
+  - "023-three-states-and-a-plan-the-ai-of-f-e-a-r"
 ---
 
 # The Illusion of Intelligence: The Integration of AI and Level Design in Halo

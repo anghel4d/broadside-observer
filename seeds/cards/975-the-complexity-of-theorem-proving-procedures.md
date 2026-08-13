@@ -23,25 +23,26 @@ cites:
   year: 1972
   arxiv: null
   doi: 10.1007/978-1-4684-2001-2_9
-  card: 976-reducibility-among-combinatorial-problems
 - title: Universal Sequential Search Problems
   url: "https://www.cs.bu.edu/fac/lnd/dvi/ussp.pdf"
   year: 1973
   arxiv: null
   doi: null
-  card: 977-universal-sequential-search-problems
 - title: "Computers and Intractability: A Guide to the Theory of NP-Completeness"
   url: "https://en.wikipedia.org/wiki/Computers_and_Intractability"
   year: 1979
   arxiv: null
   doi: null
-  card: 978-computers-and-intractability-a-guide-to-the-theory-of-np-com
 - title: A Machine Program for Theorem-Proving
   url: "https://doi.org/10.1145/368273.368557"
   year: 1962
   arxiv: null
   doi: 10.1145/368273.368557
-  card: 1056-a-machine-program-for-theorem-proving
+see:
+- "976-reducibility-among-combinatorial-problems"
+- "977-universal-sequential-search-problems"
+- "978-computers-and-intractability-a-guide-to-the-theory-of-np-com"
+- "1056-a-machine-program-for-theorem-proving"
 ---
 
 # The Complexity of Theorem-Proving Procedures

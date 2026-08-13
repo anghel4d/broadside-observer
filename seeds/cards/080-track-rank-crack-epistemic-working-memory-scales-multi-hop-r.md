@@ -31,13 +31,13 @@ cites:
     year: 2026
     arxiv: "2601.22398"
     doi: null
-    card: "189-jailbreaks-on-vision-language-model-via-multimodal-reasoning"
   - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
     url: "https://arxiv.org/abs/2210.03629"
     year: 2022
     arxiv: "2210.03629"
     doi: null
-    card: "007-react-synergizing-reasoning-and-acting-in-language-models"
+see:
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents

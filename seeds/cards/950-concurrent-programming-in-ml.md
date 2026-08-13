@@ -25,25 +25,26 @@ cites:
     year: 1997
     arxiv: null
     doi: null
-    card: "154-the-definition-of-standard-ml-revised"
   - title: "A Calculus of Mobile Processes, I"
     url: "https://doi.org/10.1016/0890-5401(92)90008-3"
     year: 1992
     arxiv: null
     doi: "10.1016/0890-5401(92)90008-3"
-    card: "946-a-calculus-of-mobile-processes-i"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-    card: "047-communicating-sequential-processes"
   - title: "Making Reliable Distributed Systems in the Presence of Software Errors"
     url: "https://erlang.org/download/armstrong_thesis_2003.pdf"
     year: 2003
     arxiv: null
     doi: null
-    card: "951-making-reliable-distributed-systems-in-the-presence-of-softw"
+see:
+  - "154-the-definition-of-standard-ml-revised"
+  - "946-a-calculus-of-mobile-processes-i"
+  - "047-communicating-sequential-processes"
+  - "951-making-reliable-distributed-systems-in-the-presence-of-softw"
 ---
 
 # Concurrent Programming in ML

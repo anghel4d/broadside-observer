@@ -23,19 +23,20 @@ cites:
   year: 1948
   arxiv: null
   doi: 10.1002/j.1538-7305.1948.tb01338.x
-  card: 804-a-mathematical-theory-of-communication
 - title: Compression of Individual Sequences via Variable-Rate Coding
   url: "https://doi.org/10.1109/TIT.1978.1055934"
   year: 1978
   arxiv: null
   doi: 10.1109/TIT.1978.1055934
-  card: 973-compression-of-individual-sequences-via-variable-rate-coding
 - title: A Method for the Construction of Minimum-Redundancy Codes
   url: "https://doi.org/10.1109/JRPROC.1952.273898"
   year: 1952
   arxiv: null
   doi: 10.1109/JRPROC.1952.273898
-  card: 821-a-method-for-the-construction-of-minimum-redundancy-codes
+see:
+- "804-a-mathematical-theory-of-communication"
+- "973-compression-of-individual-sequences-via-variable-rate-coding"
+- "821-a-method-for-the-construction-of-minimum-redundancy-codes"
 ---
 
 # A Universal Algorithm for Sequential Data Compression

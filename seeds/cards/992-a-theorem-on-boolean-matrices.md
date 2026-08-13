@@ -22,7 +22,8 @@ cites:
   year: 1962
   arxiv: null
   doi: 10.1145/367766.368168
-  card: 991-algorithm-97-shortest-path
+see:
+- "991-algorithm-97-shortest-path"
 ---
 
 # A Theorem on Boolean Matrices

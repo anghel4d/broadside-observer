@@ -23,19 +23,20 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1090/S0002-9947-1943-0007371-8"
-    card: "779-recursive-predicates-and-quantifiers"
   - title: "On notation for ordinal numbers"
     url: "https://doi.org/10.2307/2267778"
     year: 1938
     arxiv: null
     doi: "10.2307/2267778"
-    card: "778-on-notation-for-ordinal-numbers"
   - title: "Recursively enumerable sets of positive integers and their decision problems"
     url: "https://doi.org/10.1090/S0002-9904-1944-08111-1"
     year: 1944
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
-    card: "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
+see:
+  - "779-recursive-predicates-and-quantifiers"
+  - "778-on-notation-for-ordinal-numbers"
+  - "785-recursively-enumerable-sets-of-positive-integers-and-their-d"
 ---
 
 # Hierarchies of number-theoretic predicates

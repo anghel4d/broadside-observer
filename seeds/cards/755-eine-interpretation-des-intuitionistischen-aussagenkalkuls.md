@@ -23,19 +23,20 @@ cites:
     year: 1933
     arxiv: null
     doi: null
-    card: "756-zur-intuitionistischen-arithmetik-und-zahlentheorie"
   - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
     url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
     year: 1958
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
-    card: "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
   - title: "Investigations into Logical Deduction"
     url: "https://doi.org/10.1007/BF01201353"
     year: 1935
     arxiv: null
     doi: "10.1007/BF01201353"
-    card: "883-investigations-into-logical-deduction"
+see:
+  - "756-zur-intuitionistischen-arithmetik-und-zahlentheorie"
+  - "754-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+  - "883-investigations-into-logical-deduction"
 ---
 
 # Eine Interpretation des intuitionistischen Aussagenkalküls

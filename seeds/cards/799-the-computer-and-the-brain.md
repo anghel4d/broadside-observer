@@ -24,25 +24,26 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-    card: "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
   - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
     url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
     year: 1948
     arxiv: null
     doi: null
-    card: "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
   - title: "First Draft of a Report on the EDVAC"
     url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
     year: 1945
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
-    card: "793-first-draft-of-a-report-on-the-edvac"
   - title: "The General and Logical Theory of Automata"
     url: "https://www.worldcat.org/title/cerebral-mechanisms-in-behavior/oclc/1123456"
     year: 1951
     arxiv: null
     doi: null
-    card: "796-the-general-and-logical-theory-of-automata"
+see:
+  - "816-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
+  - "812-cybernetics-or-control-and-communication-in-the-animal-and-t"
+  - "793-first-draft-of-a-report-on-the-edvac"
+  - "796-the-general-and-logical-theory-of-automata"
 ---
 
 # The Computer and the Brain

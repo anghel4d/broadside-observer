@@ -24,25 +24,26 @@ cites:
     year: 1974
     arxiv: null
     doi: null
-    card: "928-predicate-logic-as-programming-language"
   - title: "Algorithm = Logic + Control"
     url: "https://doi.org/10.1145/359131.359136"
     year: 1979
     arxiv: null
     doi: "10.1145/359131.359136"
-    card: "929-algorithm-logic-control"
   - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
     url: "https://doi.org/10.1109/69.43410"
     year: 1989
     arxiv: null
     doi: "10.1109/69.43410"
-    card: "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
   - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
     url: "https://doi.org/10.1145/367177.367199"
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-    card: "826-recursive-functions-of-symbolic-expressions-and-their-comput"
+see:
+  - "928-predicate-logic-as-programming-language"
+  - "929-algorithm-logic-control"
+  - "040-what-you-always-wanted-to-know-about-datalog-and-never-dared"
+  - "826-recursive-functions-of-symbolic-expressions-and-their-comput"
 ---
 
 # Prolog in 10 Figures

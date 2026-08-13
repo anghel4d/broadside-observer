@@ -26,25 +26,26 @@ cites:
     year: 1989
     arxiv: null
     doi: "10.1145/74877.74884"
-    card: "939-a-denotational-semantics-of-inheritance-and-its-correctness"
   - title: "A Theory of Objects"
     url: "https://doi.org/10.1007/978-1-4419-8598-9"
     year: 1996
     arxiv: null
     doi: "10.1007/978-1-4419-8598-9"
-    card: "920-a-theory-of-objects"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
     arxiv: null
     doi: "10.1145/38765.38828"
-    card: "938-self-the-power-of-simplicity"
   - title: "On Understanding Types, Data Abstraction, and Polymorphism"
     url: "https://doi.org/10.1145/6041.6042"
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-    card: "919-on-understanding-types-data-abstraction-and-polymorphism"
+see:
+  - "939-a-denotational-semantics-of-inheritance-and-its-correctness"
+  - "920-a-theory-of-objects"
+  - "938-self-the-power-of-simplicity"
+  - "919-on-understanding-types-data-abstraction-and-polymorphism"
 ---
 
 # Mixin-Based Inheritance

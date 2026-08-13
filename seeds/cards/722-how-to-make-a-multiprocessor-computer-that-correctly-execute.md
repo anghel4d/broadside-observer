@@ -23,19 +23,20 @@ cites:
   year: 1990
   arxiv: null
   doi: 10.1145/78969.78972
-  card: 260-linearizability-a-correctness-condition-for-concurrent-objec
 - title: Release Consistency versus Sequential Consistency
   url: https://www.hpl.hp.com/techreports/Compaq-DEC/WRL-92-5.pdf
   year: 1992
   arxiv: null
   doi: null
-  card: 497-release-consistency-versus-sequential-consistency
 - title: Wait-Free Synchronization
   url: https://doi.org/10.1145/114005.102808
   year: 1991
   arxiv: null
   doi: 10.1145/114005.102808
-  card: 037-wait-free-synchronization
+see:
+- "260-linearizability-a-correctness-condition-for-concurrent-objec"
+- "497-release-consistency-versus-sequential-consistency"
+- "037-wait-free-synchronization"
 ---
 
 # How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs

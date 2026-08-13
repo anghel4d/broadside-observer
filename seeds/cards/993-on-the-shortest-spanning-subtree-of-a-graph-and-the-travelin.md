@@ -22,19 +22,20 @@ cites:
   year: 1957
   arxiv: null
   doi: 10.1002/j.1538-7305.1957.tb01515.x
-  card: 994-shortest-connection-networks-and-some-generalizations
 - title: Efficiency of a Good But Not Linear Set Union Algorithm
   url: "https://doi.org/10.1145/321879.321884"
   year: 1975
   arxiv: null
   doi: 10.1145/321879.321884
-  card: 1061-efficiency-of-a-good-but-not-linear-set-union-algorithm
 - title: A Note on Two Problems in Connexion with Graphs
   url: "https://doi.org/10.1007/BF01386390"
   year: 1959
   arxiv: null
   doi: 10.1007/BF01386390
-  card: 386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra
+see:
+- "994-shortest-connection-networks-and-some-generalizations"
+- "1061-efficiency-of-a-good-but-not-linear-set-union-algorithm"
+- "386-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
 ---
 
 # On the Shortest Spanning Subtree of a Graph and the Traveling Salesman Problem

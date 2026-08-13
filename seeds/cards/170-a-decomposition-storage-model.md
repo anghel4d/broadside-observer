@@ -22,73 +22,61 @@ cites:
     year: 1984
     arxiv: null
     doi: "10.1145/348.318586"
-    card: null
   - title: "Extending the database relational model to capture more meaning"
     url: "https://doi.org/10.1145/320107.320109"
     year: 1979
     arxiv: null
     doi: "10.1145/320107.320109"
-    card: null
   - title: "Organization and maintenance of large ordered indexes"
     url: "https://doi.org/10.1007/bf00288683"
     year: 1972
     arxiv: null
     doi: "10.1007/bf00288683"
-    card: null
   - title: "Smalltalk-80: The Language and its Implementation"
     url: "https://inria.hal.science/hal-05183338"
     year: 1983
     arxiv: null
     doi: null
-    card: null
   - title: "Multivalued dependencies and a new normal form for relational databases"
     url: "https://doi.org/10.1145/320557.320571"
     year: 1977
     arxiv: null
     doi: "10.1145/320557.320571"
-    card: null
   - title: "Extending the data base relational model to capture more meaning"
     url: "https://doi.org/10.1145/582095.582122"
     year: 1979
     arxiv: null
     doi: "10.1145/582095.582122"
-    card: null
   - title: "Making smalltalk a database system"
     url: "https://doi.org/10.1145/602259.602300"
     year: 1984
     arxiv: null
     doi: "10.1145/602259.602300"
-    card: null
   - title: "Multidimensional Binary Search Trees in Database Applications"
     url: "https://doi.org/10.1109/tse.1979.234200"
     year: 1979
     arxiv: null
     doi: "10.1109/tse.1979.234200"
-    card: null
   - title: "Differential files"
     url: "https://doi.org/10.1145/320473.320484"
     year: 1976
     arxiv: null
     doi: "10.1145/320473.320484"
-    card: null
   - title: "The case for the reduced instruction set computer"
     url: "https://doi.org/10.1145/641914.641917"
     year: 1980
     arxiv: null
     doi: "10.1145/641914.641917"
-    card: null
   - title: "Prefix <i>B</i> -trees"
     url: "https://doi.org/10.1145/320521.320530"
     year: 1977
     arxiv: null
     doi: "10.1145/320521.320530"
-    card: null
   - title: "Modeling the storage architectures of commercial database systems"
     url: "https://doi.org/10.1145/4879.5392"
     year: 1985
     arxiv: null
     doi: "10.1145/4879.5392"
-    card: null
 ---
 
 # A Decomposition Storage Model

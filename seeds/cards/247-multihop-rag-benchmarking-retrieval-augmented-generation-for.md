@@ -23,7 +23,6 @@ cites:
     year: 2026
     arxiv: "2604.16548"
     doi: null
-    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
   - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
     url: "https://arxiv.org/abs/2605.20616"
     year: 2026
@@ -34,7 +33,8 @@ cites:
     year: 2020
     arxiv: "2005.11401"
     doi: null
-    card: "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+see:
+  - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
 ---
 
 # MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries

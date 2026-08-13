@@ -29,13 +29,14 @@ cites:
   year: 2023
   arxiv: '2305.10601'
   doi: null
-  card: 103-tree-of-thoughts-deliberate-problem-solving-with-large-langu
 - title: 'ReAct: Synergizing Reasoning and Acting in Language Models'
   url: https://arxiv.org/abs/2210.03629
   year: 2022
   arxiv: '2210.03629'
   doi: null
-  card: 007-react-synergizing-reasoning-and-acting-in-language-models
+see:
+- "103-tree-of-thoughts-deliberate-problem-solving-with-large-langu"
+- "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Chain-of-Thought Prompting Elicits Reasoning in Large Language Models

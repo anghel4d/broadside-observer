@@ -24,19 +24,19 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-    card: "002-efficient-memory-management-for-large-language-model-serving"
   - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
     url: "https://arxiv.org/abs/2604.16548"
     year: 2026
     arxiv: "2604.16548"
     doi: null
-    card: "052-a-survey-on-long-term-memory-security-in-llm-agents-attacks-"
   - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
     url: "https://arxiv.org/abs/2005.11401"
     year: 2020
     arxiv: "2005.11401"
     doi: null
-    card: "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+see:
+  - "002-efficient-memory-management-for-large-language-model-serving"
+  - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
 ---
 
 # Corrective Retrieval Augmented Generation

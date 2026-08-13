@@ -32,22 +32,23 @@ cites:
     url: "https://arxiv.org/abs/1706.03762"
     year: 2017
     arxiv: "1706.03762"
-    card: "014-attention-is-all-you-need"
   - title: "DeepSeek-V3 Technical Report"
     url: "https://arxiv.org/abs/2412.19437"
     year: 2025
     arxiv: "2412.19437"
-    card: "1206-deepseek-v3-technical-report"
   - title: "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models"
     url: "https://arxiv.org/abs/2401.06066"
     year: 2024
     arxiv: "2401.06066"
-    card: "1239-deepseekmoe-towards-ultimate-expert-specialization"
   - title: "mHC: Manifold-Constrained Hyper-Connections"
     url: "https://arxiv.org/abs/2512.24880"
     year: 2025
     arxiv: "2512.24880"
-    card: "1260-mhc-manifold-constrained-hyper-connections"
+see:
+  - "014-attention-is-all-you-need"
+  - "1206-deepseek-v3-technical-report"
+  - "1239-deepseekmoe-towards-ultimate-expert-specialization"
+  - "1260-mhc-manifold-constrained-hyper-connections"
 ---
 
 # Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models

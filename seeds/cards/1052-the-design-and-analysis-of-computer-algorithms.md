@@ -25,13 +25,14 @@ cites:
   year: 1990
   arxiv: null
   doi: null
-  card: 1050-introduction-to-algorithms
 - title: "Introduction to Automata Theory, Languages, and Computation"
   url: "https://en.wikipedia.org/wiki/Introduction_to_Automata_Theory,_Languages,_and_Computation"
   year: 1979
   arxiv: null
   doi: null
-  card: 989-introduction-to-automata-theory-languages-and-computation
+see:
+- "1050-introduction-to-algorithms"
+- "989-introduction-to-automata-theory-languages-and-computation"
 ---
 
 # The Design and Analysis of Computer Algorithms

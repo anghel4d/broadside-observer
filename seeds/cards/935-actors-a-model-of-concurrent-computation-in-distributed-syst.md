@@ -24,25 +24,26 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-    card: "934-viewing-control-structures-as-patterns-of-passing-messages"
   - title: "Making Reliable Distributed Systems in the Presence of Software Errors"
     url: "https://erlang.org/download/armstrong_thesis_2003.pdf"
     year: 2003
     arxiv: null
     doi: null
-    card: "951-making-reliable-distributed-systems-in-the-presence-of-softw"
   - title: "Concurrent Programming in ML"
     url: "https://doi.org/10.1017/CBO9780511574962"
     year: 1999
     arxiv: null
     doi: "10.1017/CBO9780511574962"
-    card: "950-concurrent-programming-in-ml"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
     arxiv: null
     doi: null
-    card: "044-a-calculus-of-communicating-systems"
+see:
+  - "934-viewing-control-structures-as-patterns-of-passing-messages"
+  - "951-making-reliable-distributed-systems-in-the-presence-of-softw"
+  - "950-concurrent-programming-in-ml"
+  - "044-a-calculus-of-communicating-systems"
 ---
 
 # Actors: A Model of Concurrent Computation in Distributed Systems
