@@ -53,6 +53,7 @@ import {
   paneSplitKey,
   readStoredDetailWidth,
   resolveDetailWidthPx,
+  snapDetailWidthPx,
   writeStoredDetailWidth,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
@@ -62,11 +63,11 @@ import type { Slice } from "./virtualize.ts";
 import {
   browserStorage,
   parseViewMode,
-  printViewSearch,
   resolveView,
   writeStoredView,
   type ViewMode,
 } from "./view.ts";
+import { orderedYear, parseQueryFromSearch, parseSortKey, printQuerySearch } from "./queryUrl.ts";
 
 type Model = {
   readonly corpus: Corpus;
@@ -92,7 +93,7 @@ type Msg =
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
   | { readonly _tag: "SelectFirst" }
-  | { readonly _tag: "JumpRank"; readonly rank: SeedRank }
+  | { readonly _tag: "JumpRank"; readonly rank: SeedRank; readonly replace?: boolean }
   | { readonly _tag: "Move"; readonly delta: -1 | 1 }
   | { readonly _tag: "MoveGrid"; readonly dir: GridDir; readonly cols: number }
   | { readonly _tag: "Hash"; readonly hash: string };
@@ -122,11 +123,122 @@ type Paint = {
   readonly view: ViewMode;
 };
 
-function init(corpus: Corpus, hash: string, view: ViewMode): Model {
-  const route = parseRoute(hash);
+const QUERY_STORAGE_KEY = "broadside.seed-browser.query";
+const LAST_CARD_KEY = "broadside.seed-browser.card";
+
+function asRecord(value: unknown): Record<string, unknown> | null {
+  return typeof value === "object" && value !== null ? (value as Record<string, unknown>) : null;
+}
+
+
+function readStoredQuery(storage: Pick<Storage, "getItem"> | null, corpus: Corpus): Query {
+  if (storage === null) return defaultQuery;
+  try {
+    const raw = storage.getItem(QUERY_STORAGE_KEY);
+    if (raw === null) return defaultQuery;
+    const rec = asRecord(JSON.parse(raw) as unknown);
+    if (rec === null) return defaultQuery;
+    const sort = typeof rec.sort === "string" ? parseSortKey(rec.sort) : null;
+    const search = typeof rec.search === "string" ? rec.search : "";
+    let topic: Query["topic"] = { _tag: "All" };
+    const topicRec = asRecord(rec.topic);
+    if (topicRec !== null && topicRec._tag === "One" && typeof topicRec.topic === "string") {
+      const parsed = TopicSchema.safeParse(topicRec.topic);
+      if (parsed.success && corpus.topics.includes(parsed.data)) {
+        topic = { _tag: "One", topic: parsed.data };
+      }
+    }
+    let batch: Query["batch"] = { _tag: "All" };
+    const batchRec = asRecord(rec.batch);
+    if (batchRec !== null && batchRec._tag === "One" && typeof batchRec.batch === "string") {
+      const parsed = SeedBatchSchema.safeParse(batchRec.batch);
+      if (parsed.success && corpus.batches.includes(parsed.data)) {
+        batch = { _tag: "One", batch: parsed.data };
+      }
+    }
+    let pool: Query["pool"] = { _tag: "All" };
+    const poolRec = asRecord(rec.pool);
+    if (poolRec !== null && poolRec._tag === "None") pool = { _tag: "None" };
+    else if (poolRec !== null && poolRec._tag === "One" && typeof poolRec.pool === "string") {
+      const parsed = PoolSchema.safeParse(poolRec.pool);
+      if (parsed.success && corpus.pools.includes(parsed.data)) {
+        pool = { _tag: "One", pool: parsed.data };
+      }
+    }
+    let lineage: Query["lineage"] = { _tag: "All" };
+    const lineageRec = asRecord(rec.lineage);
+    if (lineageRec !== null && lineageRec._tag === "None") lineage = { _tag: "None" };
+    else if (lineageRec !== null && lineageRec._tag === "One" && typeof lineageRec.lineage === "string") {
+      const parsed = LineageSchema.safeParse(lineageRec.lineage);
+      if (parsed.success && corpus.lineages.includes(parsed.data)) {
+        lineage = { _tag: "One", lineage: parsed.data };
+      }
+    }
+    const yearRec = asRecord(rec.year);
+    const minRaw = yearRec !== null ? YearSchema.safeParse(yearRec.min) : null;
+    const maxRaw = yearRec !== null ? YearSchema.safeParse(yearRec.max) : null;
+    return {
+      search,
+      topic,
+      batch,
+      pool,
+      lineage,
+      year: orderedYear(
+        minRaw !== null && minRaw.success ? minRaw.data : null,
+        maxRaw !== null && maxRaw.success ? maxRaw.data : null,
+      ),
+      sort: sort ?? defaultQuery.sort,
+      sortReversed: rec.sortReversed === true,
+    };
+  } catch {
+    return defaultQuery;
+  }
+}
+
+function writeStoredQuery(storage: Pick<Storage, "setItem"> | null, query: Query): void {
+  if (storage === null) return;
+  try {
+    storage.setItem(QUERY_STORAGE_KEY, JSON.stringify(query));
+  } catch {
+  }
+}
+
+function readStoredCard(
+  storage: Pick<Storage, "getItem"> | null,
+  corpus: Corpus,
+): CardId | null {
+  if (storage === null) return null;
+  try {
+    const parsed = CardIdSchema.safeParse(storage.getItem(LAST_CARD_KEY));
+    if (!parsed.success) return null;
+    return corpus.byId.has(parsed.data) ? parsed.data : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeStoredCard(storage: Pick<Storage, "setItem"> | null, id: CardId): void {
+  if (storage === null) return;
+  try {
+    storage.setItem(LAST_CARD_KEY, id);
+  } catch {
+  }
+}
+
+function init(
+  corpus: Corpus,
+  hash: string,
+  view: ViewMode,
+  query: Query,
+  storedId: CardId | null,
+): Model {
+  let route = parseRoute(hash);
+  if (route._tag === "Catalog" && storedId !== null) {
+    route = { _tag: "Card", id: storedId };
+  }
   return {
     corpus,
-    query: defaultQuery,
+    query,
     route,
     view,
     cardsSheet: view === "cards" && route._tag === "Card",
@@ -139,32 +251,44 @@ function selectCard(model: Model, id: CardId): Model {
   return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet };
 }
 
+function pinVisibleCard(model: Model): Model {
+  if (routeId(model.route) !== null) return model;
+  const visible = applyQuery(model.corpus, model.query);
+  const first = visible[0];
+  return first === undefined ? model : { ...model, route: { _tag: "Card", id: first.id } };
+}
+
+function setQuery(model: Model, query: Query): Model {
+  const pinned = pinVisibleCard(model);
+  return { ...pinned, query };
+}
+
 function update(model: Model, msg: Msg): Model {
   switch (msg._tag) {
     case "SetSearch":
-      return { ...model, query: { ...model.query, search: msg.value } };
+      return setQuery(model, { ...model.query, search: msg.value });
     case "SetTopic":
-      return { ...model, query: { ...model.query, topic: msg.filter } };
+      return setQuery(model, { ...model.query, topic: msg.filter });
     case "SetBatch":
-      return { ...model, query: { ...model.query, batch: msg.filter } };
+      return setQuery(model, { ...model.query, batch: msg.filter });
     case "SetPool":
-      return { ...model, query: { ...model.query, pool: msg.filter } };
+      return setQuery(model, { ...model.query, pool: msg.filter });
     case "SetLineage":
-      return { ...model, query: { ...model.query, lineage: msg.filter } };
+      return setQuery(model, { ...model.query, lineage: msg.filter });
     case "SetYearMin":
-      return { ...model, query: { ...model.query, year: { ...model.query.year, min: msg.value } } };
+      return setQuery(model, { ...model.query, year: orderedYear(msg.value, model.query.year.max) });
     case "SetYearMax":
-      return { ...model, query: { ...model.query, year: { ...model.query.year, max: msg.value } } };
+      return setQuery(model, { ...model.query, year: orderedYear(model.query.year.min, msg.value) });
     case "SetSort":
-      return { ...model, query: { ...model.query, sort: msg.sort, sortReversed: false } };
+      return setQuery(model, { ...model.query, sort: msg.sort });
     case "ToggleSortDir":
-      return { ...model, query: { ...model.query, sortReversed: !model.query.sortReversed } };
+      return setQuery(model, { ...model.query, sortReversed: !model.query.sortReversed });
     case "SetView":
       return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
     case "SetCardsSheet":
       return model.cardsSheet === msg.value ? model : { ...model, cardsSheet: msg.value };
     case "ClearFilter":
-      return { ...model, query: clearFilter(model.query, msg.key) };
+      return setQuery(model, clearFilter(model.query, msg.key));
     case "Reset":
       return { ...model, query: defaultQuery };
     case "Select":
@@ -247,12 +371,6 @@ function yearFromInput(raw: string): Year | null {
   return parsed.success ? parsed.data : null;
 }
 
-function parseSort(value: string): SortKey | null {
-  for (const key of SORT_KEYS) {
-    if (key === value) return key;
-  }
-  return null;
-}
 
 function parseCardId(value: string): CardId | null {
   const parsed = CardIdSchema.safeParse(value);
@@ -282,6 +400,51 @@ function filterKey(query: Query): string {
     .join("\n");
 }
 
+function formatCitation(card: SeedCard): string {
+  const authors = card.authors.join(", ");
+  const venue = card.venue.length > 0 ? `. ${card.venue}` : "";
+  const ids: string[] = [];
+  if (card.arxiv !== null) ids.push(`https://arxiv.org/abs/${card.arxiv}`);
+  if (card.doi !== null) ids.push(`https://doi.org/${card.doi}`);
+  if (ids.length === 0 && card.source.length > 0) ids.push(card.source);
+  const loc = ids.length > 0 ? `. ${ids.join(" ")}` : "";
+  return `${authors} (${card.year}). ${card.title}${venue}${loc}`;
+}
+
+function copyText(text: string): Promise<boolean> {
+  const fallback = (): boolean => {
+    const field = document.createElement("textarea");
+    field.value = text;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.left = "-9999px";
+    document.body.appendChild(field);
+    field.select();
+    let ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch {
+      ok = false;
+    }
+    field.remove();
+    return ok;
+  };
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+    return navigator.clipboard.writeText(text).then(
+      () => true,
+      () => fallback(),
+    );
+  }
+  return Promise.resolve(fallback());
+}
+
+function flashCopy(button: HTMLButtonElement, idle: string, ok: boolean): void {
+  button.textContent = ok ? "Copied" : "Copy failed";
+  window.setTimeout(() => {
+    if (button.isConnected) button.textContent = idle;
+  }, 1200);
+}
+
 function topicSelectValue(filter: TopicFilter): string {
   return filter._tag === "All" ? "" : filter.topic;
 }
@@ -289,6 +452,7 @@ function topicSelectValue(filter: TopicFilter): string {
 function batchSelectValue(filter: BatchFilter): string {
   return filter._tag === "All" ? "" : filter.batch;
 }
+
 
 function poolSelectValue(filter: PoolFilter): string {
   switch (filter._tag) {
@@ -654,7 +818,10 @@ function renderDetail(
           ${banner}
           <div class="detail-title-row">
             <h2 id="detail-title" title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
-            <button type="button" class="copy-link" data-copy-link="${attr(card.id)}" title="Copy link to this card">Copy link</button>
+            <span class="detail-copy">
+              <button type="button" class="copy-link" data-copy-link="${attr(card.id)}" title="Copy link to this card (y)">Copy link</button>
+              <button type="button" class="copy-cite" data-copy-cite="${attr(card.id)}" title="Copy citation (Y)">Copy cite</button>
+            </span>
           </div>
         </header>
         <div class="detail-body">
@@ -678,14 +845,15 @@ function requireElement<T extends HTMLElement>(root: HTMLElement, id: string): T
   return node as T;
 }
 
-function syncLocation(route: Route, view: ViewMode): void {
+function syncLocation(route: Route, view: ViewMode, query: Query, mode: "replace" | "push"): void {
   const hash = printRoute(route);
-  const search = printViewSearch(location.search, view);
+  const search = printQuerySearch(location.search, view, query);
   const next = `${location.pathname}${search}${hash}`;
   const currentHash = location.hash === "#" ? "" : location.hash;
   const current = `${location.pathname}${location.search}${currentHash}`;
   if (next === current) return;
-  history.replaceState(null, "", next);
+  if (mode === "push") history.pushState(null, "", next);
+  else history.replaceState(null, "", next);
 }
 
 function syncViewToggle(root: HTMLElement, view: ViewMode): void {
@@ -743,10 +911,13 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  let model = init(corpus, location.hash, initialView);
+  const fromUrl = parseQueryFromSearch(location.search, corpus);
+  const initialQuery = fromUrl ?? readStoredQuery(storage, corpus);
+  let model = init(corpus, location.hash, initialView, initialQuery, readStoredCard(storage, corpus));
   let painted: Paint | null = null;
   let filtersOpen = false;
   let sheetWasVisible = false;
+  const browseScroll: Record<ViewMode, number> = { list: 0, cards: 0 };
   const compactLayout = window.matchMedia(COMPACT_MEDIA);
 
   type SplitDrag = {
@@ -796,11 +967,13 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   };
 
   const commitDetailWidth = (detailPx: number, persist: boolean): void => {
-    const next = clampDetailWidthPx({ ...splitMeasure(), detailPx });
-    liveDetailPx = next;
+    const snapped = persist
+      ? snapDetailWidthPx({ ...splitMeasure(), detailPx })
+      : clampDetailWidthPx({ ...splitMeasure(), detailPx });
+    liveDetailPx = snapped;
     applyPaneSplit();
     if (persist) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view), next);
+      writeStoredDetailWidth(storage, paneSplitKey(model.view), snapped);
       liveDetailPx = null;
       virt.refresh();
     }
@@ -810,14 +983,11 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (splitDrag === null) return;
     const pointerId = splitDrag.pointerId;
     const moved = splitDrag.moved;
-    if (moved && liveDetailPx !== null) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view), liveDetailPx);
-    }
-    liveDetailPx = null;
+    if (moved && liveDetailPx !== null) commitDetailWidth(liveDetailPx, true);
+    else liveDetailPx = null;
     splitDrag = null;
     workspace.classList.remove("is-resizing");
     if (splitter.hasPointerCapture(pointerId)) splitter.releasePointerCapture(pointerId);
-    if (moved) virt.refresh();
   };
 
   const syncFilterDisclosure = (): void => {
@@ -867,8 +1037,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
     sheetWasVisible = sheetVisible;
   };
-
-  const syncFilterControls = (query: Query): void => {
+  const syncFilterControls = (query: Query, rank: number | null): void => {
     if (document.activeElement !== queryInput) queryInput.value = query.search;
     topicSelect.value = topicSelectValue(query.topic);
     batchSelect.value = batchSelectValue(query.batch);
@@ -879,6 +1048,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
     if (document.activeElement !== yearMaxInput) {
       yearMaxInput.value = query.year.max === null ? "" : String(query.year.max);
+    }
+    if (document.activeElement !== jumpRankInput) {
+      jumpRankInput.value = rank === null ? "" : String(rank);
     }
     sortSelect.value = query.sort;
     sortDirButton.setAttribute("aria-pressed", query.sortReversed ? "true" : "false");
@@ -897,17 +1069,20 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     workspace.dataset.view = vm.view;
     applyPaneSplit();
     syncViewToggle(root, vm.view);
-    syncFilterControls(vm.query);
+    syncFilterControls(vm.query, vm.selected?.seed_rank ?? null);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
     if (painted === null || painted.filterKey !== filters) {
       filterPills.innerHTML = renderFilterPills(vm.query);
     }
 
     const prev = painted;
+    if (prev !== null) browseScroll[prev.view] = browse.scrollTop;
     virt.set(vm.view, vm.visible, highlight);
     if (prev !== null && prev.view !== vm.view) {
+      browse.scrollTop = browseScroll[vm.view];
       requestAnimationFrame(() => {
         virt.refresh();
+        virt.reveal(highlight);
       });
     }
 
@@ -933,14 +1108,27 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   };
 
   const dispatch = (msg: Msg): void => {
+    const prevQuery = model.query;
+    const prevId = routeId(model.route);
     const next = update(model, msg);
     if (next === model) return;
     model = next;
-    if (msg._tag !== "Hash") syncLocation(model.route, model.view);
+    if (msg._tag !== "Hash") {
+      const nextId = routeId(model.route);
+      const explicitPick =
+        msg._tag === "Select" ||
+        msg._tag === "SelectFirst" ||
+        (msg._tag === "JumpRank" && msg.replace !== true);
+      const cardNav = explicitPick && prevId !== nextId && nextId !== null;
+      syncLocation(model.route, model.view, model.query, cardNav ? "push" : "replace");
+    }
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
     if (msg._tag === "SetView" && splitDrag === null) {
       liveDetailPx = null;
     }
+    if (next.query !== prevQuery) writeStoredQuery(storage, model.query);
+    const openId = routeId(model.route);
+    if (openId !== null) writeStoredCard(storage, openId);
     patch(model);
   };
 
@@ -957,6 +1145,13 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   queryInput.addEventListener("input", () => {
     onSearch();
   });
+  queryInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    event.preventDefault();
+    dispatch({ _tag: "SetSearch", value: queryInput.value });
+    queryInput.blur();
+  });
+
   topicSelect.addEventListener("change", () => {
     if (topicSelect.value === "") {
       dispatch({ _tag: "SetTopic", filter: { _tag: "All" } });
@@ -997,35 +1192,51 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const lineage = LineageSchema.safeParse(lineageSelect.value);
     if (lineage.success) dispatch({ _tag: "SetLineage", filter: { _tag: "One", lineage: lineage.data } });
   });
-  yearMinInput.addEventListener("input", () => {
-    const raw = yearMinInput.value.trim();
-    if (raw === "") dispatch({ _tag: "SetYearMin", value: null });
-    else {
-      const year = yearFromInput(raw);
-      if (year !== null) dispatch({ _tag: "SetYearMin", value: year });
-    }
-  });
-  yearMaxInput.addEventListener("input", () => {
-    const raw = yearMaxInput.value.trim();
-    if (raw === "") dispatch({ _tag: "SetYearMax", value: null });
-    else {
-      const year = yearFromInput(raw);
-      if (year !== null) dispatch({ _tag: "SetYearMax", value: year });
-    }
-  });
+  const bindYearInput = (
+    el: HTMLInputElement,
+    tag: "SetYearMin" | "SetYearMax",
+  ): void => {
+    el.addEventListener("input", () => {
+      const raw = el.value.trim();
+      if (raw === "") dispatch({ _tag: tag, value: null });
+      else {
+        const year = yearFromInput(raw);
+        if (year !== null) dispatch({ _tag: tag, value: year });
+      }
+    });
+    el.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") return;
+      event.preventDefault();
+      el.blur();
+    });
+  };
+  bindYearInput(yearMinInput, "SetYearMin");
+  bindYearInput(yearMaxInput, "SetYearMax");
+
   sortSelect.addEventListener("change", () => {
-    const sort = parseSort(sortSelect.value);
+    const sort = parseSortKey(sortSelect.value);
     if (sort !== null) dispatch({ _tag: "SetSort", sort });
   });
   sortDirButton.addEventListener("click", () => {
     dispatch({ _tag: "ToggleSortDir" });
   });
 
+  const jumpRank = (replace: boolean): void => {
+    const rank = parseRank(jumpRankInput.value);
+    if (rank !== null) dispatch({ _tag: "JumpRank", rank, replace });
+  };
+  jumpRankInput.addEventListener("input", debounce(200, () => {
+    if (jumpRankInput.value.trim().length < 3) return;
+    jumpRank(true);
+  }));
   jumpRankInput.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
     event.preventDefault();
-    const rank = parseRank(jumpRankInput.value);
-    if (rank !== null) dispatch({ _tag: "JumpRank", rank });
+    jumpRank(false);
+    jumpRankInput.blur();
+  });
+  jumpRankInput.addEventListener("blur", () => {
+    jumpRank(true);
   });
   viewToggle.addEventListener("click", (event) => {
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-view]");
@@ -1109,46 +1320,25 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       else if (off.dataset.off === "first") flashFirstMatch();
       return;
     }
-    const copy = (event.target instanceof Element ? event.target : null)?.closest("button[data-copy-link]");
-    if (copy instanceof HTMLButtonElement) {
-      const id = parseCardId(copy.dataset.copyLink ?? "");
+    const copyLink = (event.target instanceof Element ? event.target : null)?.closest("button[data-copy-link]");
+    if (copyLink instanceof HTMLButtonElement) {
+      const id = parseCardId(copyLink.dataset.copyLink ?? "");
       const href =
         id === null
           ? location.href
           : new URL(printRoute({ _tag: "Card", id }), location.href).href;
-      const fallback = (): boolean => {
-        const field = document.createElement("textarea");
-        field.value = href;
-        field.setAttribute("readonly", "");
-        field.style.position = "fixed";
-        field.style.left = "-9999px";
-        document.body.appendChild(field);
-        field.select();
-        let ok = false;
-        try {
-          ok = document.execCommand("copy");
-        } catch {
-          ok = false;
-        }
-        field.remove();
-        return ok;
-      };
-      const done = (ok: boolean): void => {
-        copy.textContent = ok ? "Copied" : "Copy failed";
-        window.setTimeout(() => {
-          if (copy.isConnected) copy.textContent = "Copy link";
-        }, 1200);
-      };
-      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
-        void navigator.clipboard.writeText(href).then(
-          () => done(true),
-          () => done(fallback()),
-        );
-      } else {
-        done(fallback());
-      }
+      void copyText(href).then((ok) => flashCopy(copyLink, "Copy link", ok));
       return;
     }
+    const copyCite = (event.target instanceof Element ? event.target : null)?.closest("button[data-copy-cite]");
+    if (copyCite instanceof HTMLButtonElement) {
+      const id = parseCardId(copyCite.dataset.copyCite ?? "");
+      const card = id === null ? undefined : corpus.byId.get(id);
+      if (card === undefined) return;
+      void copyText(formatCitation(card)).then((ok) => flashCopy(copyCite, "Copy cite", ok));
+      return;
+    }
+
 
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-filter]");
     if (!(button instanceof HTMLButtonElement)) return;
@@ -1210,10 +1400,46 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       return;
     }
     if (isTypingTarget(event.target)) return;
-    if (event.key === "/") {
+    if (event.key === "/" || event.key === "s") {
       event.preventDefault();
       queryInput.focus();
       queryInput.select();
+      return;
+    }
+    if (event.key === "v") {
+      event.preventDefault();
+      dispatch({ _tag: "SetView", view: model.view === "list" ? "cards" : "list" });
+      return;
+    }
+    if (event.key === "y" || event.key === "Y") {
+      const sel = event.shiftKey ? "[data-copy-cite]" : "[data-copy-link]";
+      const copyBtn = detail.querySelector(sel);
+      if (copyBtn instanceof HTMLButtonElement) {
+        event.preventDefault();
+        copyBtn.click();
+      }
+      return;
+    }
+    if (event.key === "o") {
+      const id = routeId(model.route);
+      const card =
+        id !== null
+          ? (model.corpus.byId.get(id) ?? null)
+          : (applyQuery(model.corpus, model.query)[0] ?? null);
+      const href =
+        card === null
+          ? null
+          : card.arxiv !== null
+            ? `https://arxiv.org/abs/${card.arxiv}`
+            : card.doi !== null
+              ? `https://doi.org/${card.doi}`
+              : card.source.length > 0
+                ? card.source
+                : null;
+      if (href !== null) {
+        event.preventDefault();
+        window.open(href, "_blank", "noopener,noreferrer");
+      }
       return;
     }
     if (
@@ -1275,8 +1501,30 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
   });
 
+  let ignoreHashChange = false;
   window.addEventListener("hashchange", () => {
+    if (ignoreHashChange) {
+      ignoreHashChange = false;
+      return;
+    }
     dispatch({ _tag: "Hash", hash: location.hash });
+  });
+  window.addEventListener("popstate", () => {
+    ignoreHashChange = true;
+    const route = parseRoute(location.hash);
+    const fromUrl = parseQueryFromSearch(location.search, corpus);
+    const view = resolveView(location.search, storage);
+    model = {
+      ...model,
+      route,
+      view,
+      query: fromUrl ?? model.query,
+      cardsSheet: route._tag === "Card" && view === "cards" ? true : model.cardsSheet,
+    };
+    const openId = routeId(model.route);
+    if (openId !== null) writeStoredCard(storage, openId);
+    if (fromUrl !== null) writeStoredQuery(storage, model.query);
+    patch(model);
   });
   const onCompactChange = (): void => {
     if (compactLayout.matches) endSplitDrag();
@@ -1297,6 +1545,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   splitObserver.observe(workspace);
 
   syncFilterDisclosure();
-  syncLocation(model.route, model.view);
+  syncLocation(model.route, model.view, model.query, "replace");
+  if (fromUrl === null) writeStoredQuery(storage, model.query);
+  const landed = routeId(model.route);
+  if (landed !== null) writeStoredCard(storage, landed);
   patch(model);
 }

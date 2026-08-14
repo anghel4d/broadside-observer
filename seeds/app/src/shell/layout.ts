@@ -1,3 +1,9 @@
+import {
+  SEED_CARD_GAP_REM,
+  SEED_CARD_INSET_REM,
+  SEED_CARD_WIDTH_REM,
+} from "./cardMetrics.ts";
+import { gridColumns } from "./virtualize.ts";
 import type { ViewMode } from "./view.ts";
 
 export const PANE_SPLIT_STORAGE_KEY = "broadside.seed-browser.paneSplit";
@@ -155,3 +161,21 @@ export function resolveDetailWidthPx(args: SplitMeasure & { readonly storedPx: n
 export function browseWidthPx(workspacePx: number, detailPx: number, gutterPx: number): number {
   return Math.max(0, workspacePx - gutterPx - detailPx);
 }
+
+export function snapDetailWidthPx(args: SplitMeasure & { readonly detailPx: number }): number {
+  const clamped = clampDetailWidthPx(args);
+  if (args.view !== "cards") return clamped;
+  const track = SEED_CARD_WIDTH_REM * args.rem;
+  const gap = SEED_CARD_GAP_REM * args.rem;
+  const inset = SEED_CARD_INSET_REM * args.rem * 2;
+  const browse = browseWidthPx(args.workspacePx, clamped, args.gutterPx);
+  const inner = browse - inset;
+  const cols = gridColumns(inner, track, gap);
+  const used = cols * track + Math.max(0, cols - 1) * gap;
+  const snappedBrowse = used + inset;
+  return clampDetailWidthPx({
+    ...args,
+    detailPx: args.workspacePx - args.gutterPx - snappedBrowse,
+  });
+}
+

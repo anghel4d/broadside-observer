@@ -73,6 +73,7 @@ const cards: ReadonlyArray<SeedCard> = [
     title: "Gamma",
     authors: ["Cara"],
     year: 2024,
+    venue: "UniqueVenueXYZ",
     topics: ["memory"],
     seed_rank: 3,
     pool: null,
@@ -143,6 +144,12 @@ assert.deepEqual(
   applyQuery(corpus, search).map((item) => item.id),
   ["001-alpha"],
 );
+
+assert.deepEqual(
+  applyQuery(corpus, { ...defaultQuery, search: "uniquevenuexyz" }).map((item) => item.id),
+  ["003-gamma"],
+);
+
 
 assert.deepEqual(tokenize("  Foo   BAR "), ["foo", "bar"]);
 assert.ok(searchScore(cards[0]!, "alpha paper\nada\nmemory\nalpha takeaway about paging.", ["alpha"]) > 0);

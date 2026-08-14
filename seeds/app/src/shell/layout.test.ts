@@ -22,6 +22,7 @@ import {
   parsePaneSplitMap,
   readStoredDetailWidth,
   resolveDetailWidthPx,
+  snapDetailWidthPx,
   writeStoredDetailWidth,
 } from "./layout.ts";
 import {
@@ -29,6 +30,7 @@ import {
   SEED_CARD_INSET_REM,
   SEED_CARD_WIDTH_REM,
 } from "./cardMetrics.ts";
+import { gridColumns } from "./virtualize.ts";
 
 assert.equal(COMPACT_MAX_PX, 980);
 assert.equal(COMPACT_MEDIA, "(max-width: 980px)");
@@ -204,6 +206,32 @@ assert.equal(
   assert.equal(resolveDetailWidthPx({ ...measure, storedPx: 500 }), 500);
   assert.equal(resolveDetailWidthPx({ ...measure, storedPx: 50 }), minDetail);
 }
+
+{
+  const rem = 16;
+  const measure = {
+    view: "cards" as const,
+    workspacePx: 1280,
+    gutterPx: SPLIT_GUTTER_PX,
+    rem,
+  };
+  const sliver = clampDetailWidthPx({ ...measure, detailPx: 520 });
+  const snapped = snapDetailWidthPx({ ...measure, detailPx: sliver });
+  const track = SEED_CARD_WIDTH_REM * rem;
+  const gap = SEED_CARD_GAP_REM * rem;
+  const inset = SEED_CARD_INSET_REM * rem * 2;
+  const browse = browseWidthPx(measure.workspacePx, snapped, measure.gutterPx);
+  const inner = browse - inset;
+  const cols = gridColumns(inner, track, gap);
+  const used = cols * track + Math.max(0, cols - 1) * gap;
+  assert.ok(Math.abs(inner - used) < 1, "snapped browse inner should equal used tile tracks");
+  assert.equal(snapDetailWidthPx({ ...measure, detailPx: snapped }), snapped);
+  assert.equal(
+    snapDetailWidthPx({ ...measure, view: "list", detailPx: 800 }),
+    clampDetailWidthPx({ ...measure, view: "list", detailPx: 800 }),
+  );
+}
+
 
 {
   const css = readFileSync(new URL("../style.css", import.meta.url), "utf8");

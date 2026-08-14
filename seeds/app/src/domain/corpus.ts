@@ -25,6 +25,7 @@ export function haystackFor(card: SeedCard): string {
     card.authors.join(" "),
     card.topics.join(" "),
     card.lineage ?? "",
+    card.venue,
     card.cites.map((cite) => cite.title).join(" "),
     card.sections.takeaway,
   ]

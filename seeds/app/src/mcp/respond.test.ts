@@ -91,7 +91,7 @@ assert.match(
 assert.ok(zero.includes(EXAMPLE_QUERY_RADIANCE));
 assert.ok(zero.includes(EXAMPLE_QUERY_LOCKFREE));
 assert.ok(zero.includes(EXAMPLE_GET_SEED));
-assert.ok(zero.includes("title, authors, topics, takeaway, lineage"));
+assert.ok(zero.includes("title, authors, topics, takeaway, lineage, venue"));
 assert.ok(zero.includes("AND tokens"));
 assert.ok(zero.includes("query (string, required unless id is set)"));
 assert.equal(zero.includes("UNIQUE_CAVEAT_DUMP"), false);
