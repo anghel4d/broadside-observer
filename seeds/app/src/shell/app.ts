@@ -85,6 +85,7 @@ type Msg =
   | { readonly _tag: "SetYearMin"; readonly value: Year | null }
   | { readonly _tag: "SetYearMax"; readonly value: Year | null }
   | { readonly _tag: "SetSort"; readonly sort: SortKey }
+  | { readonly _tag: "ToggleSortDir" }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
   | { readonly _tag: "SetCardsSheet"; readonly value: boolean }
   | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
@@ -155,7 +156,9 @@ function update(model: Model, msg: Msg): Model {
     case "SetYearMax":
       return { ...model, query: { ...model.query, year: { ...model.query.year, max: msg.value } } };
     case "SetSort":
-      return { ...model, query: { ...model.query, sort: msg.sort } };
+      return { ...model, query: { ...model.query, sort: msg.sort, sortReversed: false } };
+    case "ToggleSortDir":
+      return { ...model, query: { ...model.query, sortReversed: !model.query.sortReversed } };
     case "SetView":
       return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
     case "SetCardsSheet":
@@ -385,12 +388,15 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
             <input id="yearMax" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearHi ?? "to"}" aria-label="Year to" />
           </span>
         </div>
-        <label>
-          Sort
-          <select id="sort">
-            ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
-          </select>
-        </label>
+        <div class="sort-field">
+          <label>
+            Sort
+            <select id="sort">
+              ${SORT_KEYS.map((key) => option(key, SORT_LABEL[key], key === "rank")).join("")}
+            </select>
+          </label>
+          <button type="button" class="sort-dir" id="sort-dir" aria-pressed="false" title="Reverse sort order" aria-label="Reverse sort order">↕</button>
+        </div>
         <label class="jump-field">
           Rank
           <input id="jump-rank" type="text" inputmode="numeric" placeholder="#" autocomplete="off" spellcheck="false" aria-label="Jump to rank" />
@@ -646,7 +652,10 @@ function renderDetail(
         <header class="detail-head">
           <button type="button" class="detail-dismiss" data-sheet="close" title="Back to grid (Esc)" aria-keyshortcuts="Escape">Back to grid</button>
           ${banner}
-          <h2 id="detail-title" title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
+          <div class="detail-title-row">
+            <h2 id="detail-title" title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
+            <button type="button" class="copy-link" data-copy-link="${attr(card.id)}" title="Copy link to this card">Copy link</button>
+          </div>
         </header>
         <div class="detail-body">
           <p class="detail-id">${escapeHtml(card.id)}</p>
@@ -723,6 +732,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const yearMinInput = requireElement<HTMLInputElement>(root, "yearMin");
   const yearMaxInput = requireElement<HTMLInputElement>(root, "yearMax");
   const sortSelect = requireElement<HTMLSelectElement>(root, "sort");
+  const sortDirButton = requireElement<HTMLButtonElement>(root, "sort-dir");
   const jumpRankInput = requireElement<HTMLInputElement>(root, "jump-rank");
   const resetButton = requireElement<HTMLButtonElement>(root, "reset");
   const viewToggle = requireElement<HTMLElement>(root, "view-toggle");
@@ -871,6 +881,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       yearMaxInput.value = query.year.max === null ? "" : String(query.year.max);
     }
     sortSelect.value = query.sort;
+    sortDirButton.setAttribute("aria-pressed", query.sortReversed ? "true" : "false");
+    sortDirButton.title = query.sortReversed ? "Default sort order" : "Reverse sort order";
+    sortDirButton.setAttribute("aria-label", sortDirButton.title);
   };
 
   const patch = (next: Model): void => {
@@ -1004,6 +1017,10 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const sort = parseSort(sortSelect.value);
     if (sort !== null) dispatch({ _tag: "SetSort", sort });
   });
+  sortDirButton.addEventListener("click", () => {
+    dispatch({ _tag: "ToggleSortDir" });
+  });
+
   jumpRankInput.addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
     event.preventDefault();
@@ -1092,6 +1109,47 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       else if (off.dataset.off === "first") flashFirstMatch();
       return;
     }
+    const copy = (event.target instanceof Element ? event.target : null)?.closest("button[data-copy-link]");
+    if (copy instanceof HTMLButtonElement) {
+      const id = parseCardId(copy.dataset.copyLink ?? "");
+      const href =
+        id === null
+          ? location.href
+          : new URL(printRoute({ _tag: "Card", id }), location.href).href;
+      const fallback = (): boolean => {
+        const field = document.createElement("textarea");
+        field.value = href;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.left = "-9999px";
+        document.body.appendChild(field);
+        field.select();
+        let ok = false;
+        try {
+          ok = document.execCommand("copy");
+        } catch {
+          ok = false;
+        }
+        field.remove();
+        return ok;
+      };
+      const done = (ok: boolean): void => {
+        copy.textContent = ok ? "Copied" : "Copy failed";
+        window.setTimeout(() => {
+          if (copy.isConnected) copy.textContent = "Copy link";
+        }, 1200);
+      };
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+        void navigator.clipboard.writeText(href).then(
+          () => done(true),
+          () => done(fallback()),
+        );
+      } else {
+        done(fallback());
+      }
+      return;
+    }
+
     const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-filter]");
     if (!(button instanceof HTMLButtonElement)) return;
     const kind = button.dataset.filter;

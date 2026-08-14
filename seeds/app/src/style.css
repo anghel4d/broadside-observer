@@ -402,6 +402,70 @@ button:focus-visible {
   width: 100%;
 }
 
+.sort-field {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 0.35rem;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.sort-field label {
+  flex: 0 1 8.5rem;
+}
+
+.sort-dir,
+.copy-link {
+  font: inherit;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sort-dir {
+  flex: 0 0 auto;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.sort-dir[aria-pressed="true"] {
+  background: var(--active);
+  border-color: color-mix(in oklab, var(--line) 40%, var(--accent));
+}
+
+.sort-dir:hover,
+.copy-link:hover {
+  border-color: color-mix(in oklab, var(--line) 55%, var(--accent));
+  background: var(--hover);
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.detail-title-row h2 {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.copy-link {
+  flex: 0 0 auto;
+  margin-top: 0.12rem;
+  padding: 0.18rem 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
 .workspace {
   --split-gutter: 6px;
   --browse-min: 17rem;

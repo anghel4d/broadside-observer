@@ -123,6 +123,11 @@ assert.deepEqual(
   byRank.map((item) => item.id),
   ["002-beta", "001-alpha", "003-gamma", "025-hazard-pointers"],
 );
+assert.deepEqual(
+  applyQuery(corpus, { ...defaultQuery, sortReversed: true }).map((item) => item.id),
+  [...byRank].reverse().map((item) => item.id),
+);
+
 
 const memory: Query = {
   ...defaultQuery,

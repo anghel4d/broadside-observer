@@ -135,6 +135,7 @@ export function applyQuery(corpus: Corpus, query: Query): ReadonlyArray<SeedCard
   }
 
   filtered.sort((left, right) => compareCards(left, right, query.sort, scores));
+  if (query.sortReversed) filtered.reverse();
   return filtered;
 }
 

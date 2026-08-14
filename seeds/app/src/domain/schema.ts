@@ -164,6 +164,7 @@ export type Query = {
   readonly lineage: LineageFilter;
   readonly year: YearRange;
   readonly sort: SortKey;
+  readonly sortReversed: boolean;
 };
 
 export const defaultQuery: Query = {
@@ -174,6 +175,7 @@ export const defaultQuery: Query = {
   lineage: { _tag: "All" },
   year: { min: null, max: null },
   sort: "rank",
+  sortReversed: false,
 };
 
 export type Route = { readonly _tag: "Catalog" } | { readonly _tag: "Card"; readonly id: CardId };
