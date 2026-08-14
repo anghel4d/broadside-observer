@@ -1106,3 +1106,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1022 | 8 | 2026 | Introducing Grok 4.6 | agents |
 
 _Recount after `frontier-2026-08-14`: **1022** unique title cards on main._
+
+## Curiosity 2026-08-15
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **82**. Keepers: **7** (keep rate **0.085**, hard cap **0.15**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1023 | 9 | 2023 | An aperiodic monotile | maths-foundations |
+| 1024 | 9 | 2025 | Sturmian lattices and Aperiodic tile sets | maths-foundations |
+| 1025 | 9 | 2026 | On the sphere spectrum from the viewpoint of linear logic | maths-foundations |
+| 1026 | 8 | 2026 | Complete Diagrammatic Axiomatisations of Relative Entropy | maths-foundations |
+| 1027 | 8 | 2026 | A Critical Pair Enumeration Algorithm for String Diagram Rewriting | languages |
+| 1028 | 9 | 2005 | Discrete Exterior Calculus | graphics |
+| 1029 | 9 | 2026 | A Rig of Transformations | languages |
+
+_Recount after `curiosity-2026-08-15`: **1029** unique title cards on main._
