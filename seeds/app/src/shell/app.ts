@@ -407,7 +407,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
     <div class="filter-pills" id="filter-pills" role="list" aria-label="Active filters"></div>
     <div class="workspace" id="workspace" data-view="${attr(view)}" data-sheet="closed">
       <section class="browse-pane" id="browse" aria-label="Card list"></section>
-      <div class="pane-split" id="pane-split" role="separator" aria-orientation="vertical" aria-label="Resize browse and detail panes" aria-controls="browse detail" aria-keyshortcuts="ArrowLeft ArrowRight" tabindex="0" title="Drag to resize. Double-click to reset."></div>
+      <div class="pane-split" id="pane-split" role="separator" aria-orientation="vertical" aria-label="Resize browse and detail panes" aria-controls="browse detail" aria-keyshortcuts="Shift+ArrowLeft Shift+ArrowRight Shift+H Shift+L" tabindex="0" title="Drag to resize. Shift+←/→ or Shift+H/L to nudge. Double-click to reset."></div>
       <section class="detail-pane" id="detail" aria-live="polite"></section>
     </div>
   `;
@@ -1217,14 +1217,16 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       return;
     }
     if (
-      event.target === splitter &&
+      event.shiftKey &&
       isSideSplitLayout(compactLayout.matches) &&
-      (event.key === "ArrowLeft" || event.key === "ArrowRight")
+      (event.key === "ArrowLeft" ||
+        event.key === "ArrowRight" ||
+        event.key === "H" ||
+        event.key === "L")
     ) {
       event.preventDefault();
       const rem = rootRem();
-      const step = (event.shiftKey ? 5 : 1) * rem;
-      const delta = event.key === "ArrowLeft" ? step : -step;
+      const delta = event.key === "ArrowLeft" || event.key === "H" ? rem : -rem;
       const key = paneSplitKey(model.view);
       const current = resolveDetailWidthPx({
         ...splitMeasure(),
