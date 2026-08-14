@@ -1,13 +1,16 @@
-import catalog from "./generated/cards.json";
+import compressedCatalog from "./generated/cards.json.gz.b64?raw";
 import { buildCorpus } from "./domain/corpus.ts";
-import { CatalogSchema } from "./domain/schema.ts";
+import { inflateGzipBase64, parsePackedCatalog } from "./domain/packedCatalog.ts";
 import { startApp } from "./shell/app.ts";
 import "./style.css";
 
-const decoded = CatalogSchema.safeParse(catalog);
-if (!decoded.success) {
-  document.body.textContent = `Packed catalog failed schema decode (${decoded.error.issues.length} issues). Rebuild with npm run pack.`;
-  throw new Error("Invalid packed catalog");
+let catalog;
+try {
+  catalog = parsePackedCatalog(await inflateGzipBase64(compressedCatalog));
+} catch (cause) {
+  const message = cause instanceof Error ? cause.message : String(cause);
+  document.body.textContent = message;
+  throw cause instanceof Error ? cause : new Error(message);
 }
 
 const root = document.getElementById("app");
@@ -15,4 +18,4 @@ if (!(root instanceof HTMLElement)) {
   throw new Error("Missing #app");
 }
 
-startApp(root, buildCorpus(decoded.data.cards, decoded.data.lineageDocs));
+startApp(root, buildCorpus(catalog.cards, catalog.lineageDocs));

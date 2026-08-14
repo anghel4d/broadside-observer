@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { gzipSync } from "node:zlib";
 import { formatParseError, parseCard, uniqueIds } from "../src/domain/parse.ts";
 import { partitionResults } from "../src/domain/result.ts";
 import { LineageSchema, type Catalog, type Lineage } from "../src/domain/schema.ts";
@@ -9,6 +10,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const cardsDir = join(here, "../../cards");
 const lineagesDir = join(here, "../../lineages");
 const generatedFile = join(here, "../src/generated/cards.json");
+const compressedFile = join(here, "../src/generated/cards.json.gz.b64");
 const publicFile = join(here, "../public/cards.json");
 
 function isMissingDir(cause: unknown): boolean {
@@ -73,6 +75,7 @@ await mkdir(dirname(generatedFile), { recursive: true });
 await mkdir(dirname(publicFile), { recursive: true });
 await writeFile(generatedFile, payload, "utf8");
 await writeFile(publicFile, payload, "utf8");
+await writeFile(compressedFile, `${gzipSync(payload, { level: 9 }).toString("base64")}\n`, "utf8");
 console.log(
-  `Packed ${catalog.count} cards · ${lineageDocs.length} lineage docs → ${generatedFile} and ${publicFile}`,
+  `Packed ${catalog.count} cards · ${lineageDocs.length} lineage docs → ${generatedFile}, ${compressedFile} and ${publicFile}`,
 );
