@@ -53,7 +53,6 @@ import {
   paneSplitKey,
   readStoredDetailWidth,
   resolveDetailWidthPx,
-  snapDetailWidthPx,
   writeStoredDetailWidth,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
@@ -967,13 +966,11 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   };
 
   const commitDetailWidth = (detailPx: number, persist: boolean): void => {
-    const snapped = persist
-      ? snapDetailWidthPx({ ...splitMeasure(), detailPx })
-      : clampDetailWidthPx({ ...splitMeasure(), detailPx });
-    liveDetailPx = snapped;
+    const next = clampDetailWidthPx({ ...splitMeasure(), detailPx });
+    liveDetailPx = next;
     applyPaneSplit();
     if (persist) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view), snapped);
+      writeStoredDetailWidth(storage, paneSplitKey(model.view), next);
       liveDetailPx = null;
       virt.refresh();
     }
@@ -983,11 +980,14 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (splitDrag === null) return;
     const pointerId = splitDrag.pointerId;
     const moved = splitDrag.moved;
-    if (moved && liveDetailPx !== null) commitDetailWidth(liveDetailPx, true);
-    else liveDetailPx = null;
+    if (moved && liveDetailPx !== null) {
+      writeStoredDetailWidth(storage, paneSplitKey(model.view), liveDetailPx);
+    }
+    liveDetailPx = null;
     splitDrag = null;
     workspace.classList.remove("is-resizing");
     if (splitter.hasPointerCapture(pointerId)) splitter.releasePointerCapture(pointerId);
+    if (moved) virt.refresh();
   };
 
   const syncFilterDisclosure = (): void => {
