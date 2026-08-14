@@ -1087,3 +1087,22 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1012 | 9 | 2000 | Deep Shadow Maps | graphics |
 
 _Recount after `archive-2026-08-14`: **1012** unique title cards on main._
+
+## Frontier 2026-08-14
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md` + last night's archive 1001–1012), dirt ban, and a cheap Broadside/Anoptic/ano/RTS POS filter: **96**. Keepers: **10** (keep rate **0.104**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1013 | 10 | 2026 | QuoteBench: How Matched Scores Can Hide Command-Path Failures | agents |
+| 1014 | 10 | 2026 | vToken: Token-Level Virtualization for Reclaimable KV Caches | agents |
+| 1015 | 9 | 2026 | Practice Makes Unsafe: Skill Misevolution in Self-Improving LLM Agents | agents |
+| 1016 | 9 | 2026 | Ready Cohorts: Bounding GPU Opportunity and Avoiding Host Round Trips in LLM-Agent Control | agents |
+| 1017 | 9 | 2026 | Total Recall at What Cost? Benchmarking the Serving Cost of Agentic Memory Systems | agents |
+| 1018 | 9 | 2026 | Correct Is Not Governed: Provenance Integrity in Agentic Workflows | agents |
+| 1019 | 9 | 2026 | Formally Verified Lock-Free Software Transactional Memory for Scientific Measurement | engines |
+| 1020 | 8 | 2026 | Vero: Can AI Agents Build Formally Verified Software Repositories? | languages |
+| 1021 | 8 | 2026 | A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family | engines |
+| 1022 | 8 | 2026 | Introducing Grok 4.6 | agents |
+
+_Recount after `frontier-2026-08-14`: **1022** unique title cards on main._
