@@ -197,26 +197,9 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 
 {
   // Reveal only on selection change or List/Cards switch — never on filter/item churn.
-  assert.equal(
-    shouldRevealOnSet({ selectionChanged: true, viewChanged: false, itemsChanged: false }),
-    true,
-  );
-  assert.equal(
-    shouldRevealOnSet({ selectionChanged: false, viewChanged: true, itemsChanged: false }),
-    true,
-  );
-  assert.equal(
-    shouldRevealOnSet({ selectionChanged: false, viewChanged: false, itemsChanged: true }),
-    false,
-  );
-  assert.equal(
-    shouldRevealOnSet({ selectionChanged: false, viewChanged: false, itemsChanged: false }),
-    false,
-  );
-  assert.equal(
-    shouldRevealOnSet({ selectionChanged: true, viewChanged: false, itemsChanged: true }),
-    true,
-  );
+  assert.equal(shouldRevealOnSet({ selectionChanged: true, viewChanged: false }), true);
+  assert.equal(shouldRevealOnSet({ selectionChanged: false, viewChanged: true }), true);
+  assert.equal(shouldRevealOnSet({ selectionChanged: false, viewChanged: false }), false);
 }
 
 {

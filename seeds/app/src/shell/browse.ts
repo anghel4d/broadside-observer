@@ -1,9 +1,10 @@
 import type { CardId, SeedCard } from "../domain/schema.ts";
 import { SEED_CARD_COLS_VAR, cardGridMetricsFromCss } from "./cardMetrics.ts";
-import { measureGridColumns } from "./gridNav.ts";
+import { rootRem } from "./layout.ts";
 import type { ViewMode } from "./view.ts";
 import {
   fillSizes,
+  gridColumns,
   gridItemBounds,
   gridRowCount,
   gridSlice,
@@ -41,12 +42,6 @@ export type BrowseVirtualizer = {
 const LIST_OVERSCAN = 8;
 const GRID_OVERSCAN_ROWS = 3;
 const EDGE_PAD = 6;
-
-function rootRem(): number {
-  const raw = getComputedStyle(document.documentElement).fontSize;
-  const px = Number.parseFloat(raw);
-  return Number.isFinite(px) && px > 0 ? px : 16;
-}
 
 export function createBrowseVirtualizer(
   pane: HTMLElement,
@@ -93,13 +88,7 @@ export function createBrowseVirtualizer(
     const m = remMetrics();
     const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
     const prev = Number.isFinite(lastColsWritten) ? lastColsWritten : undefined;
-    return measureGridColumns({
-      templateColumns: undefined,
-      width: inner,
-      track: m.gridCardWidth,
-      gap: m.gridGap,
-      ...(prev !== undefined ? { prevCols: prev } : {}),
-    });
+    return gridColumns(inner, m.gridCardWidth, m.gridGap, prev);
   };
 
   const syncColumnCount = (): number => {
@@ -318,7 +307,6 @@ export function createBrowseVirtualizer(
       shouldRevealOnSet({
         selectionChanged: selChanged,
         viewChanged,
-        itemsChanged: idsChanged,
       })
     ) {
       if (selChanged && selectedId === null && !viewChanged) {

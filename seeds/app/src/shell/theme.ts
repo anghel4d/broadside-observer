@@ -1,3 +1,5 @@
+import { closestControl, syncAriaChecked } from "./html.ts";
+
 export const THEMES = ["light", "dark"] as const;
 export type ThemeMode = (typeof THEMES)[number];
 
@@ -42,10 +44,7 @@ export function applyTheme(theme: ThemeMode, doc: Document = document): void {
 }
 
 export function syncThemeToggle(root: HTMLElement, theme: ThemeMode): void {
-  for (const node of root.querySelectorAll("#theme-toggle [data-theme]")) {
-    if (!(node instanceof HTMLElement)) continue;
-    node.setAttribute("aria-checked", node.dataset.theme === theme ? "true" : "false");
-  }
+  syncAriaChecked(root, "#theme-toggle [data-theme]", "theme", theme);
 }
 
 /** Apply `data-theme` without a catalog re-render. Stored value always wins; OS is followed only when unset. */
@@ -64,9 +63,7 @@ export function bindThemeControls(
 
   const toggle = root.querySelector("#theme-toggle");
   toggle?.addEventListener("click", (event) => {
-    const button = (event.target instanceof Element ? event.target : null)?.closest(
-      "button[data-theme]",
-    );
+    const button = closestControl(event.target, "button[data-theme]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.theme === undefined) return;
     const next = parseTheme(button.dataset.theme);
     if (next === null) return;
