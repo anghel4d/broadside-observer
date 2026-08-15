@@ -8,7 +8,6 @@
   --faint: light-dark(#7a8494, #8b94a6);
   --line: light-dark(#cfd5de, #2a3140);
   --accent: light-dark(#3b6388, #8eabc9);
-  --accent-strong: color-mix(in oklab, var(--accent) 70%, var(--ink));
   --hover: color-mix(in oklab, var(--panel-2) 86%, var(--accent));
   --focus-ring: color-mix(in oklab, var(--accent) 65%, var(--ink));
   --chip: light-dark(#e4e9f0, #232a38);
@@ -18,17 +17,8 @@
   --head-shadow: light-dark(rgb(26 33 48 / 0.14), rgb(0 0 0 / 0.7));
   --chip-topic: light-dark(#dce6f0, #1e2a3a);
   --chip-topic-line: light-dark(#b0c4d6, #3a4d66);
-  --chip-batch: light-dark(#dde8df, #1e2a24);
-  --chip-batch-line: light-dark(#b3c6b6, #3a5348);
-  --chip-pool: light-dark(#e6e0ee, #262033);
-  --chip-pool-line: light-dark(#c4b8d2, #4a3f5e);
   --chip-lineage: light-dark(#d7e3ee, #1a2838);
   --chip-lineage-line: light-dark(#a8bfd4, #3d5a78);
-  --chip-rank: light-dark(#eee6dc, #2a2620);
-  --chip-rank-line: light-dark(#d0c4b4, #5a5040);
-  --chip-year: light-dark(#e4e8ee, #1c2430);
-  --chip-relevance: light-dark(#e4eadc, #242a1e);
-  --chip-relevance-line: light-dark(#c2ccb0, #4a5438);
   --off-filter-bg: light-dark(#e7efe6, #1c241c);
   --off-filter-line: light-dark(#b5c6b2, #3d4a3a);
   --off-filter-ink: light-dark(#2c3d2e, #c5d4c0);
@@ -1065,37 +1055,9 @@ button:focus-visible {
   border-color: var(--chip-topic-line);
 }
 
-.chip-batch {
-  background: var(--chip-batch);
-  border-color: var(--chip-batch-line);
-}
-
-.chip-pool {
-  background: var(--chip-pool);
-  border-color: var(--chip-pool-line);
-}
-
 .chip-lineage {
   background: var(--chip-lineage);
   border-color: var(--chip-lineage-line);
-}
-
-.chip-rank {
-  background: var(--chip-rank);
-  border-color: var(--chip-rank-line);
-}
-
-.chip-year {
-  background: var(--chip-year);
-}
-
-.chip-relevance {
-  background: var(--chip-relevance);
-  border-color: var(--chip-relevance-line);
-}
-
-.chip-venue {
-  color: var(--muted);
 }
 
 a.chip-lineage-doc,

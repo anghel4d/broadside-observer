@@ -39,7 +39,7 @@ import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
 import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
-import { attr, closestControl, escapeHtml } from "./html.ts";
+import { attr, closestControl, escapeHtml, syncAriaChecked } from "./html.ts";
 import {
   BROWSE_MIN_REM,
   COMPACT_MEDIA,
@@ -51,10 +51,10 @@ import {
   isCardsSheetLayout,
   isCardsSheetVisible,
   isSideSplitLayout,
-  paneSplitKey,
   persistDetailWidthPx,
   readStoredDetailWidth,
   resolveDetailWidthPx,
+  rootRem,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
@@ -140,6 +140,25 @@ function selectCard(model: Model, id: CardId): Model {
   return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet };
 }
 
+function moveAlong(
+  model: Model,
+  nextIndex: (index: number, count: number) => number,
+  forward: boolean,
+): Model {
+  const visible = applyQuery(model.corpus, model.query);
+  if (visible.length === 0) return model;
+  const currentId = routeId(model.route);
+  const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
+  const pick =
+    index < 0
+      ? forward
+        ? visible[0]
+        : visible[visible.length - 1]
+      : visible[nextIndex(index, visible.length)];
+  if (pick === undefined || pick.id === currentId) return model;
+  return { ...model, route: { _tag: "Card", id: pick.id } };
+}
+
 function update(model: Model, msg: Msg): Model {
   switch (msg._tag) {
     case "SetSearch":
@@ -182,35 +201,14 @@ function update(model: Model, msg: Msg): Model {
       if (hit === null) return model;
       return selectCard(model, hit.id);
     }
-    case "Move": {
-      const visible = applyQuery(model.corpus, model.query);
-      if (visible.length === 0) return model;
-      const currentId = routeId(model.route);
-      const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
-      if (index < 0) {
-        const pick = msg.delta > 0 ? visible[0] : visible[visible.length - 1];
-        return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
-      }
-      const nextIndex = Math.min(visible.length - 1, Math.max(0, index + msg.delta));
-      const next = visible[nextIndex];
-      if (next === undefined || next.id === currentId) return model;
-      return { ...model, route: { _tag: "Card", id: next.id } };
-    }
-    case "MoveGrid": {
-      const visible = applyQuery(model.corpus, model.query);
-      if (visible.length === 0) return model;
-      const currentId = routeId(model.route);
-      const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
-      if (index < 0) {
-        const forward = msg.dir === "j" || msg.dir === "l";
-        const pick = forward ? visible[0] : visible[visible.length - 1];
-        return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
-      }
-      const nextIndex = moveGridIndex(index, msg.cols, visible.length, msg.dir);
-      const next = visible[nextIndex];
-      if (next === undefined || next.id === currentId) return model;
-      return { ...model, route: { _tag: "Card", id: next.id } };
-    }
+    case "Move":
+      return moveAlong(model, (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)), msg.delta > 0);
+    case "MoveGrid":
+      return moveAlong(
+        model,
+        (index, count) => moveGridIndex(index, msg.cols, count, msg.dir),
+        msg.dir === "j" || msg.dir === "l",
+      );
     case "Hash": {
       const route = parseRoute(msg.hash);
       return {
@@ -248,8 +246,8 @@ function yearFromInput(raw: string): Year | null {
   return parsed.success ? parsed.data : null;
 }
 
-function parseSort(value: string): SortKey | null {
-  for (const key of SORT_KEYS) {
+function parseKey<T extends string>(keys: readonly T[], value: string): T | null {
+  for (const key of keys) {
     if (key === value) return key;
   }
   return null;
@@ -258,13 +256,6 @@ function parseSort(value: string): SortKey | null {
 function parseCardId(value: string): CardId | null {
   const parsed = CardIdSchema.safeParse(value);
   return parsed.success ? parsed.data : null;
-}
-
-function parseFilterKey(value: string): FilterKey | null {
-  for (const key of FILTER_KEYS) {
-    if (key === value) return key;
-  }
-  return null;
 }
 
 function parseRank(raw: string): SeedRank | null {
@@ -281,36 +272,6 @@ function filterKey(query: Query): string {
   return activeFilters(query)
     .map((filter) => `${filter.key}:${filter.label}`)
     .join("\n");
-}
-
-function topicSelectValue(filter: TopicFilter): string {
-  return filter._tag === "All" ? "" : filter.topic;
-}
-
-function batchSelectValue(filter: BatchFilter): string {
-  return filter._tag === "All" ? "" : filter.batch;
-}
-
-function poolSelectValue(filter: PoolFilter): string {
-  switch (filter._tag) {
-    case "All":
-      return "";
-    case "None":
-      return "__none__";
-    case "One":
-      return filter.pool;
-  }
-}
-
-function lineageSelectValue(filter: LineageFilter): string {
-  switch (filter._tag) {
-    case "All":
-      return "";
-    case "None":
-      return "__none__";
-    case "One":
-      return filter.lineage;
-  }
 }
 
 const THEME_SUN_ICON =
@@ -511,21 +472,21 @@ function renderListRow(
         </button>`;
 }
 
+const EMPTY_BROWSE = `<p class="empty">No cards match the current filters.</p>`;
+
+function virtPlane(slice: Slice, inner: string): string {
+  return `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px;min-height:${slice.total}px">${inner}</div>`;
+}
+
 function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null, slice: Slice): string {
-  if (visible.length === 0) {
-    return `<p class="empty">No cards match the current filters.</p>`;
-  }
-  const items: string[] = [
-    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px;min-height:${slice.total}px">`,
-    `<ul class="card-list">`,
-  ];
+  if (visible.length === 0) return EMPTY_BROWSE;
+  const items: string[] = [];
   for (let i = slice.start; i < slice.end; i++) {
     const card = visible[i];
     if (card === undefined) continue;
     items.push(`<li>${renderListRow(card, selectedId, i, visible.length)}</li>`);
   }
-  items.push(`</ul></div>`);
-  return items.join("");
+  return virtPlane(slice, `<ul class="card-list">${items.join("")}</ul>`);
 }
 
 function cardFaceChips(card: SeedCard): string {
@@ -538,13 +499,8 @@ function cardFaceChips(card: SeedCard): string {
 }
 
 function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null, slice: Slice): string {
-  if (visible.length === 0) {
-    return `<p class="empty">No cards match the current filters.</p>`;
-  }
-  const items: string[] = [
-    `<div class="virt-plane" style="padding-top:${slice.padTop}px;padding-bottom:${slice.padBottom}px;min-height:${slice.total}px">`,
-    `<div class="card-grid">`,
-  ];
+  if (visible.length === 0) return EMPTY_BROWSE;
+  const items: string[] = [];
   for (let i = slice.start; i < slice.end; i++) {
     const card = visible[i];
     if (card === undefined) continue;
@@ -559,8 +515,7 @@ function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
         <span class="seed-card-takeaway">${escapeHtml(plainText(card.sections.takeaway))}</span>
       </button>`);
   }
-  items.push(`</div></div>`);
-  return items.join("");
+  return virtPlane(slice, `<div class="card-grid">${items.join("")}</div>`);
 }
 
 const renderBrowse: BrowseRender = (view, visible, selectedId, slice) =>
@@ -689,13 +644,6 @@ function syncLocation(route: Route, view: ViewMode): void {
   history.replaceState(null, "", next);
 }
 
-function syncViewToggle(root: HTMLElement, view: ViewMode): void {
-  for (const node of root.querySelectorAll("#view-toggle [data-view]")) {
-    if (!(node instanceof HTMLElement)) continue;
-    node.setAttribute("aria-checked", node.dataset.view === view ? "true" : "false");
-  }
-}
-
 function isTypingTarget(target: EventTarget | null): boolean {
   return (
     target instanceof HTMLInputElement ||
@@ -703,12 +651,6 @@ function isTypingTarget(target: EventTarget | null): boolean {
     target instanceof HTMLTextAreaElement ||
     (target instanceof HTMLElement && target.isContentEditable)
   );
-}
-
-function rootRem(): number {
-  const raw = getComputedStyle(document.documentElement).fontSize;
-  const px = Number.parseFloat(raw);
-  return Number.isFinite(px) && px > 0 ? px : 16;
 }
 
 export function startApp(root: HTMLElement, corpus: Corpus): void {
@@ -793,7 +735,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
     const measure = splitMeasure();
     if (measure.workspacePx <= 0) return;
-    const key = paneSplitKey(model.view);
+    const key = model.view;
     const stored = liveDetailPx ?? readStoredDetailWidth(storage, key);
     const detailPx = resolveDetailWidthPx({ ...measure, storedPx: stored });
     const detailMin = DETAIL_MIN_REM * measure.rem;
@@ -816,7 +758,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     liveDetailPx = next;
     applyPaneSplit();
     if (persist) {
-      persistDetailWidthPx(storage, paneSplitKey(model.view), { ...measure, detailPx: next });
+      persistDetailWidthPx(storage, model.view, { ...measure, detailPx: next });
       liveDetailPx = null;
       virt.refresh();
     }
@@ -829,7 +771,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const moved = splitDrag.moved;
     const measure = splitMeasure();
     if (moved && liveDetailPx !== null) {
-      persistDetailWidthPx(storage, paneSplitKey(model.view), {
+      persistDetailWidthPx(storage, model.view, {
         ...measure,
         detailPx: liveDetailPx,
       });
@@ -892,10 +834,16 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
 
   const syncFilterControls = (query: Query): void => {
     if (document.activeElement !== queryInput) queryInput.value = query.search;
-    topicSelect.value = topicSelectValue(query.topic);
-    batchSelect.value = batchSelectValue(query.batch);
-    poolSelect.value = poolSelectValue(query.pool);
-    lineageSelect.value = lineageSelectValue(query.lineage);
+    topicSelect.value = query.topic._tag === "All" ? "" : query.topic.topic;
+    batchSelect.value = query.batch._tag === "All" ? "" : query.batch.batch;
+    poolSelect.value =
+      query.pool._tag === "All" ? "" : query.pool._tag === "None" ? "__none__" : query.pool.pool;
+    lineageSelect.value =
+      query.lineage._tag === "All"
+        ? ""
+        : query.lineage._tag === "None"
+          ? "__none__"
+          : query.lineage.lineage;
     if (document.activeElement !== yearMinInput) {
       yearMinInput.value = query.year.min === null ? "" : String(query.year.min);
     }
@@ -918,7 +866,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
     workspace.dataset.view = vm.view;
     applyPaneSplit();
-    syncViewToggle(root, vm.view);
+    syncAriaChecked(root, "#view-toggle [data-view]", "view", vm.view);
     syncFilterControls(vm.query);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
     if (painted === null || painted.filterKey !== filters) {
@@ -982,64 +930,64 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   queryInput.addEventListener("input", () => {
     onSearch();
   });
-  topicSelect.addEventListener("change", () => {
-    if (topicSelect.value === "") {
-      dispatch({ _tag: "SetTopic", filter: { _tag: "All" } });
-      return;
-    }
-    const topic = TopicSchema.safeParse(topicSelect.value);
-    if (topic.success) dispatch({ _tag: "SetTopic", filter: { _tag: "One", topic: topic.data } });
-  });
-  batchSelect.addEventListener("change", () => {
-    if (batchSelect.value === "") {
-      dispatch({ _tag: "SetBatch", filter: { _tag: "All" } });
-      return;
-    }
-    const batch = SeedBatchSchema.safeParse(batchSelect.value);
-    if (batch.success) dispatch({ _tag: "SetBatch", filter: { _tag: "One", batch: batch.data } });
-  });
-  poolSelect.addEventListener("change", () => {
-    if (poolSelect.value === "") {
-      dispatch({ _tag: "SetPool", filter: { _tag: "All" } });
-      return;
-    }
-    if (poolSelect.value === "__none__") {
-      dispatch({ _tag: "SetPool", filter: { _tag: "None" } });
-      return;
-    }
-    const pool = PoolSchema.safeParse(poolSelect.value);
-    if (pool.success) dispatch({ _tag: "SetPool", filter: { _tag: "One", pool: pool.data } });
-  });
-  lineageSelect.addEventListener("change", () => {
-    if (lineageSelect.value === "") {
-      dispatch({ _tag: "SetLineage", filter: { _tag: "All" } });
-      return;
-    }
-    if (lineageSelect.value === "__none__") {
-      dispatch({ _tag: "SetLineage", filter: { _tag: "None" } });
-      return;
-    }
-    const lineage = LineageSchema.safeParse(lineageSelect.value);
-    if (lineage.success) dispatch({ _tag: "SetLineage", filter: { _tag: "One", lineage: lineage.data } });
-  });
-  yearMinInput.addEventListener("input", () => {
-    const raw = yearMinInput.value.trim();
-    if (raw === "") dispatch({ _tag: "SetYearMin", value: null });
+  const bindFacet = <T>(
+    select: HTMLSelectElement,
+    schema: { readonly safeParse: (value: string) => { success: true; data: T } | { success: false } },
+    all: Msg,
+    one: (value: T) => Msg,
+    none?: Msg,
+  ): void => {
+    select.addEventListener("change", () => {
+      if (select.value === "") {
+        dispatch(all);
+        return;
+      }
+      if (none !== undefined && select.value === "__none__") {
+        dispatch(none);
+        return;
+      }
+      const parsed = schema.safeParse(select.value);
+      if (parsed.success) dispatch(one(parsed.data));
+    });
+  };
+  bindFacet(topicSelect, TopicSchema, { _tag: "SetTopic", filter: { _tag: "All" } }, (topic) => ({
+    _tag: "SetTopic",
+    filter: { _tag: "One", topic },
+  }));
+  bindFacet(batchSelect, SeedBatchSchema, { _tag: "SetBatch", filter: { _tag: "All" } }, (batch) => ({
+    _tag: "SetBatch",
+    filter: { _tag: "One", batch },
+  }));
+  bindFacet(
+    poolSelect,
+    PoolSchema,
+    { _tag: "SetPool", filter: { _tag: "All" } },
+    (pool) => ({ _tag: "SetPool", filter: { _tag: "One", pool } }),
+    { _tag: "SetPool", filter: { _tag: "None" } },
+  );
+  bindFacet(
+    lineageSelect,
+    LineageSchema,
+    { _tag: "SetLineage", filter: { _tag: "All" } },
+    (lineage) => ({ _tag: "SetLineage", filter: { _tag: "One", lineage } }),
+    { _tag: "SetLineage", filter: { _tag: "None" } },
+  );
+  const onYearInput = (input: HTMLInputElement, tag: "SetYearMin" | "SetYearMax"): void => {
+    const raw = input.value.trim();
+    if (raw === "") dispatch({ _tag: tag, value: null });
     else {
       const year = yearFromInput(raw);
-      if (year !== null) dispatch({ _tag: "SetYearMin", value: year });
+      if (year !== null) dispatch({ _tag: tag, value: year });
     }
+  };
+  yearMinInput.addEventListener("input", () => {
+    onYearInput(yearMinInput, "SetYearMin");
   });
   yearMaxInput.addEventListener("input", () => {
-    const raw = yearMaxInput.value.trim();
-    if (raw === "") dispatch({ _tag: "SetYearMax", value: null });
-    else {
-      const year = yearFromInput(raw);
-      if (year !== null) dispatch({ _tag: "SetYearMax", value: year });
-    }
+    onYearInput(yearMaxInput, "SetYearMax");
   });
   sortSelect.addEventListener("change", () => {
-    const sort = parseSort(sortSelect.value);
+    const sort = parseKey(SORT_KEYS, sortSelect.value);
     if (sort !== null) dispatch({ _tag: "SetSort", sort });
   });
   sortDirButton.addEventListener("click", () => {
@@ -1111,7 +1059,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (!isSideSplitLayout(compactLayout.matches)) return;
     event.preventDefault();
     endSplitDrag();
-    clearStoredDetailWidth(storage, paneSplitKey(model.view));
+    clearStoredDetailWidth(storage, model.view);
     applyPaneSplit();
     virt.refresh();
   });
@@ -1123,30 +1071,30 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     dispatch({ _tag: "Reset" });
   });
   filterPills.addEventListener("click", (event) => {
-    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-clear]");
+    const button = closestControl(event.target, "button[data-clear]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.clear === undefined) return;
-    const key = parseFilterKey(button.dataset.clear);
+    const key = parseKey(FILTER_KEYS, button.dataset.clear);
     if (key !== null) dispatch({ _tag: "ClearFilter", key });
   });
   browse.addEventListener("click", (event) => {
-    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-id]");
+    const button = closestControl(event.target, "button[data-id]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.id === undefined) return;
     const id = parseCardId(button.dataset.id);
     if (id !== null) dispatch({ _tag: "Select", id });
   });
   detail.addEventListener("click", (event) => {
-    const dismiss = (event.target instanceof Element ? event.target : null)?.closest("button[data-sheet]");
+    const dismiss = closestControl(event.target, "button[data-sheet]");
     if (dismiss instanceof HTMLButtonElement && dismiss.dataset.sheet === "close") {
       dispatch({ _tag: "SetCardsSheet", value: false });
       return;
     }
-    const off = (event.target instanceof Element ? event.target : null)?.closest("button[data-off]");
+    const off = closestControl(event.target, "button[data-off]");
     if (off instanceof HTMLButtonElement) {
       if (off.dataset.off === "clear") dispatch({ _tag: "Reset" });
       else if (off.dataset.off === "first") flashFirstMatch();
       return;
     }
-    const copy = (event.target instanceof Element ? event.target : null)?.closest("button[data-copy-link]");
+    const copy = closestControl(event.target, "button[data-copy-link]");
     if (copy instanceof HTMLButtonElement) {
       const id = parseCardId(copy.dataset.copyLink ?? "");
       const href =
@@ -1187,7 +1135,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       return;
     }
 
-    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-filter]");
+    const button = closestControl(event.target, "button[data-filter]");
     if (!(button instanceof HTMLButtonElement)) return;
     const kind = button.dataset.filter;
     const value = button.dataset.value;
@@ -1264,7 +1212,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       event.preventDefault();
       const rem = rootRem();
       const delta = event.key === "ArrowLeft" || event.key === "H" ? rem : -rem;
-      const key = paneSplitKey(model.view);
+      const key = model.view;
       const current = resolveDetailWidthPx({
         ...splitMeasure(),
         storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),

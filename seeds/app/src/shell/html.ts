@@ -7,9 +7,7 @@ export function escapeHtml(value: string): string {
     .replaceAll("'", "&#39;");
 }
 
-export function attr(value: string): string {
-  return escapeHtml(value);
-}
+export const attr = escapeHtml;
 
 /** DOM `nodeType`: 1 = Element, 3 = Text. */
 export type Eventish = {
@@ -29,13 +27,6 @@ export function resolveEventNode<T extends Eventish>(target: T | null | undefine
   return target;
 }
 
-export function eventElement(target: EventTarget | null): Element | null {
-  const node = resolveEventNode(target as Eventish | null);
-  if (node == null) return null;
-  if (typeof Element !== "undefined" && node instanceof Element) return node;
-  return null;
-}
-
 /** Resolve a control from a click that may have landed on a text node or child. */
 export function closestFromTarget<T extends Eventish>(
   target: T | null | undefined,
@@ -51,4 +42,16 @@ export function closestControl(target: EventTarget | null, selector: string): El
   if (hit == null) return null;
   if (typeof Element !== "undefined" && hit instanceof Element) return hit;
   return null;
+}
+
+export function syncAriaChecked(
+  root: ParentNode,
+  selector: string,
+  dataKey: string,
+  value: string,
+): void {
+  for (const node of root.querySelectorAll(selector)) {
+    if (!(node instanceof HTMLElement)) continue;
+    node.setAttribute("aria-checked", node.dataset[dataKey] === value ? "true" : "false");
+  }
 }

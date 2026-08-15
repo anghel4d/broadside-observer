@@ -258,7 +258,6 @@ export function scrollToShow(
 export type SetRevealChange = {
   readonly selectionChanged: boolean;
   readonly viewChanged: boolean;
-  readonly itemsChanged: boolean;
 };
 
 /**

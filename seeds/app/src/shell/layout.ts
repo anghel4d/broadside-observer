@@ -41,12 +41,15 @@ export function isCardsSheetVisible(args: CardsSheetArgs): boolean {
   return isCardsSheetLayout(args.view, args.compact) && args.sheetOpen && args.hasSelection;
 }
 
-export function paneSplitKey(view: ViewMode): PaneSplitKey {
-  return view === "list" ? "list" : "cards";
-}
-
 export function isSideSplitLayout(compact: boolean): boolean {
   return !compact;
+}
+
+/** Root `font-size` in px. Splitter nudges and tile metrics are rem-based. */
+export function rootRem(doc: Document = document): number {
+  const raw = getComputedStyle(doc.documentElement).fontSize;
+  const px = Number.parseFloat(raw);
+  return Number.isFinite(px) && px > 0 ? px : 16;
 }
 
 export function parsePaneSplitMap(raw: string | null | undefined): PaneSplitMap {
@@ -156,11 +159,7 @@ export function browseWidthPx(workspacePx: number, detailPx: number, gutterPx: n
   return Math.max(0, workspacePx - gutterPx - detailPx);
 }
 
-/**
- * Detail width for a pointer at `clientX` in a workspace whose left edge is
- * `workspaceLeft`. Detail is the right-hand pane, so moving the pointer right
- * shrinks detail. No column snap — clamp is applied by the caller.
- */
+/** Detail width from pointer X in workspace coords. Caller clamps. */
 export function detailWidthFromClientX(args: {
   readonly clientX: number;
   readonly workspaceLeft: number;
@@ -170,7 +169,7 @@ export function detailWidthFromClientX(args: {
   return args.workspacePx - (args.clientX - args.workspaceLeft) - args.gutterPx / 2;
 }
 
-/** Clamp-only persist. Must not snap to Cards column tracks. */
+/** Clamp, then store. No column-track snap. */
 export function persistDetailWidthPx(
   storage: Pick<Storage, "getItem" | "setItem"> | null,
   key: PaneSplitKey,

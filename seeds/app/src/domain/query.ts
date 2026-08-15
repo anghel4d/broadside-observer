@@ -166,15 +166,6 @@ export function selectionState(
   return first === undefined ? { _tag: "None" } : { _tag: "Visible", card: first };
 }
 
-export function selectedCard(
-  corpus: Corpus,
-  visible: ReadonlyArray<SeedCard>,
-  id: CardId | null,
-): SeedCard | null {
-  const state = selectionState(corpus, visible, id);
-  return state._tag === "None" ? null : state.card;
-}
-
 export const FILTER_KEYS = ["search", "topic", "batch", "pool", "lineage", "year"] as const;
 export type FilterKey = (typeof FILTER_KEYS)[number];
 

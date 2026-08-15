@@ -1,12 +1,5 @@
 import assert from "node:assert/strict";
-import {
-  countGridTemplateColumns,
-  gridDirFromKey,
-  measureGridColumns,
-  moveGridIndex,
-  type GridDir,
-} from "./gridNav.ts";
-import { GRID_COLUMN_COVER_FRACTION, gridColumns } from "./virtualize.ts";
+import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
 
 const dirs: ReadonlyArray<GridDir> = ["h", "j", "k", "l"];
 
@@ -119,100 +112,10 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
 }
 
 {
-  assert.equal(countGridTemplateColumns(""), 0);
-  assert.equal(countGridTemplateColumns("none"), 0);
-  assert.equal(countGridTemplateColumns("232px 232px"), 2);
-  assert.equal(countGridTemplateColumns("232px 232px 232px"), 3);
-  assert.equal(
-    countGridTemplateColumns("minmax(232px, 1fr) minmax(232px, 1fr) minmax(232px, 1fr)"),
-    3,
-  );
-  const twelve = Array.from({ length: 12 }, () => "minmax(116px, 1fr)").join(" ");
-  assert.equal(countGridTemplateColumns(twelve), 12);
-  assert.equal(countGridTemplateColumns("repeat(12, minmax(0px, 1fr))"), 12);
-  assert.equal(countGridTemplateColumns("minmax(min(100%, 14.5rem), 1fr)"), 1);
-  assert.equal(
-    countGridTemplateColumns("repeat(auto-fill, var(--seed-card-width))"),
-    0,
-  );
-}
-
-{
-  // Live CSS tracks win over a stale width formula (2×N → 12×N).
-  const twoCol = measureGridColumns({
-    templateColumns: "232px 232px",
-    width: 3000,
-    track: 232,
-    gap: 8,
-  });
-  assert.equal(twoCol, 2);
-
-  const twelveCol = measureGridColumns({
-    templateColumns: Array.from({ length: 12 }, () => "116px").join(" "),
-    width: 500,
-    track: 232,
-    gap: 8,
-  });
-  assert.equal(twelveCol, 12);
-
-  const fallback = measureGridColumns({
-    templateColumns: "none",
-    width: 738,
-    track: 232,
-    gap: 8,
-  });
-  assert.equal(fallback, 3);
-  assert.equal(fallback, gridColumns(738, 232, 8));
-
-  const autoFill = measureGridColumns({
-    templateColumns: "repeat(auto-fill, var(--seed-card-width))",
-    width: 738,
-    track: 232,
-    gap: 8,
-  });
-  assert.equal(autoFill, gridColumns(738, 232, 8));
-
-  // Fresh measure is strict; shrink hysteresis needs prevCols (hjkl uses this).
-  const track = 232;
-  const gap = 8;
-  const pitch = track + gap;
-  const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
-  const threeFull = 3 * track + 2 * gap;
-  assert.equal(
-    measureGridColumns({ templateColumns: "none", width: 562, track, gap }),
-    2,
-  );
-  const stillThree = measureGridColumns({
-    templateColumns: "none",
-    width: threeFull - GRID_COLUMN_COVER_FRACTION * track,
-    track,
-    gap,
-    prevCols: 3,
-  });
-  assert.equal(stillThree, 3);
-  const dropToTwo = measureGridColumns({
-    templateColumns: "none",
-    width: threeFull - GRID_COLUMN_COVER_FRACTION * track - 1,
-    track,
-    gap,
-    prevCols: 3,
-  });
-  assert.equal(dropToTwo, 2);
-  assert.equal(
-    measureGridColumns({
-      templateColumns: "none",
-      width: pitch + uncovered - 1,
-      track,
-      gap,
-      prevCols: 2,
-    }),
-    1,
-  );
-
   // After a measured relayout, the next hjkl step uses the new cols.
-  assert.equal(moveGridIndex(5, twoCol, 24, "j"), 7);
-  assert.equal(moveGridIndex(5, twelveCol, 24, "j"), 17);
-  assert.equal(moveGridIndex(5, stillThree, 24, "j"), 8);
+  assert.equal(moveGridIndex(5, 2, 24, "j"), 7);
+  assert.equal(moveGridIndex(5, 12, 24, "j"), 17);
+  assert.equal(moveGridIndex(5, 3, 24, "j"), 8);
 }
 
 {

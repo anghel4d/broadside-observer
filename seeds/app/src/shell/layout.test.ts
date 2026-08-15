@@ -19,7 +19,6 @@ import {
   isCardsSheetLayout,
   isCardsSheetVisible,
   isSideSplitLayout,
-  paneSplitKey,
   parsePaneSplitMap,
   persistDetailWidthPx,
   readStoredDetailWidth,
@@ -73,8 +72,6 @@ assert.equal(
 
 assert.equal(isSideSplitLayout(false), true);
 assert.equal(isSideSplitLayout(true), false);
-assert.equal(paneSplitKey("list"), "list");
-assert.equal(paneSplitKey("cards"), "cards");
 
 assert.deepEqual(parsePaneSplitMap(null), {});
 assert.deepEqual(parsePaneSplitMap(""), {});
