@@ -5,6 +5,7 @@
 # Repository metadata and project description.
 !/.gitignore
 !/README.md
+!/AGENTS.md
 
 # GitHub Actions (Pages deploy, etc.).
 !/.github/
