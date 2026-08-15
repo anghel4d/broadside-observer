@@ -307,7 +307,11 @@ export function createBrowseVirtualizer(
       lastSlice = null;
       reindex();
     }
-    if (viewChanged) lastSlice = null;
+    if (viewChanged) {
+      lastSlice = null;
+      lastBox = { width: -1, height: -1 };
+      lastColsWritten = Number.NaN;
+    }
     if (
       shouldRevealOnSet({
         selectionChanged: selChanged,

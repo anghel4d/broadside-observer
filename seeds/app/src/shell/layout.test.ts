@@ -15,11 +15,13 @@ import {
   clampDetailWidthPx,
   clearStoredDetailWidth,
   defaultDetailWidthPx,
+  detailWidthFromClientX,
   isCardsSheetLayout,
   isCardsSheetVisible,
   isSideSplitLayout,
   paneSplitKey,
   parsePaneSplitMap,
+  persistDetailWidthPx,
   readStoredDetailWidth,
   resolveDetailWidthPx,
   writeStoredDetailWidth,
@@ -29,6 +31,7 @@ import {
   SEED_CARD_INSET_REM,
   SEED_CARD_WIDTH_REM,
 } from "./cardMetrics.ts";
+import { GRID_COLUMN_COVER_FRACTION } from "./virtualize.ts";
 
 assert.equal(COMPACT_MAX_PX, 980);
 assert.equal(COMPACT_MEDIA, "(max-width: 980px)");
@@ -231,6 +234,82 @@ assert.equal(
   assert.ok(
     compactBlock.includes(".pane-split") && compactBlock.includes("display: none"),
     "compact layout must hide the side splitter",
+  );
+  assert.ok(css.includes("#view-toggle"), "view toggle must stack above theme so clicks are not stolen");
+}
+
+{
+  const rem = 16;
+  const gutter = SPLIT_GUTTER_PX;
+  const workspacePx = 1200;
+  const workspaceLeft = 80;
+  const startX = 700;
+  const startDetail = detailWidthFromClientX({
+    clientX: startX,
+    workspaceLeft,
+    workspacePx,
+    gutterPx: gutter,
+  });
+  const movedLeft = detailWidthFromClientX({
+    clientX: startX - 40,
+    workspaceLeft,
+    workspacePx,
+    gutterPx: gutter,
+  });
+  const movedRight = detailWidthFromClientX({
+    clientX: startX + 40,
+    workspaceLeft,
+    workspacePx,
+    gutterPx: gutter,
+  });
+  assert.equal(movedLeft, startDetail + 40);
+  assert.equal(movedRight, startDetail - 40);
+
+  const measure = {
+    view: "list" as const,
+    workspacePx,
+    gutterPx: gutter,
+    rem,
+  };
+  const nearMax = workspacePx - gutter - BROWSE_MIN_REM * rem;
+  const clampedMax = clampDetailWidthPx({ ...measure, detailPx: nearMax });
+  const jumped = clampDetailWidthPx({
+    ...measure,
+    workspacePx: workspacePx - 20,
+    detailPx: nearMax,
+  });
+  assert.equal(clampedMax, nearMax);
+  assert.notEqual(
+    jumped,
+    nearMax,
+    "a mid-drag workspacePx change retargets the clamp — freeze width while dragging",
+  );
+
+  const memory = new Map<string, string>();
+  const storage = {
+    getItem: (key: string) => memory.get(key) ?? null,
+    setItem: (key: string, value: string) => {
+      memory.set(key, value);
+    },
+  };
+  const persisted = persistDetailWidthPx(storage, "list", { ...measure, detailPx: movedLeft });
+  assert.equal(persisted, movedLeft);
+  assert.equal(readStoredDetailWidth(storage, "list"), Math.round(movedLeft));
+  const cardsInner = browseWidthPx(workspacePx, movedLeft, gutter);
+  const track = SEED_CARD_WIDTH_REM * rem;
+  const gap = SEED_CARD_GAP_REM * rem;
+  const inset = 2 * SEED_CARD_INSET_REM * rem;
+  const pitch = track + gap;
+  const cols = Math.max(
+    1,
+    Math.floor((cardsInner - inset + gap + GRID_COLUMN_COVER_FRACTION * track) / pitch),
+  );
+  const snappedBrowse = cols * track + Math.max(0, cols - 1) * gap + inset;
+  const snappedDetail = workspacePx - gutter - snappedBrowse;
+  assert.notEqual(
+    persisted,
+    snappedDetail,
+    "persist must stay clamp-only; column snap must not return",
   );
 }
 

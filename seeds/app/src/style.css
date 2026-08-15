@@ -168,6 +168,15 @@ kbd {
   background: var(--panel-2);
   border: 1px solid var(--line);
   border-radius: 8px;
+  position: relative;
+}
+
+#view-toggle {
+  z-index: 1;
+}
+
+#theme-toggle {
+  z-index: 0;
 }
 
 .seg button {
@@ -180,6 +189,9 @@ kbd {
   font: inherit;
   font-size: 0.8rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
   transition: background-color 120ms ease, color 120ms ease;
 
   &:hover {
