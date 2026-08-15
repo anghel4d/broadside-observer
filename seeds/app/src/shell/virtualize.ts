@@ -99,10 +99,10 @@ export function listSlice(
 }
 
 /**
- * Fraction of a card the splitter may cover before a *shrink* drops a column.
- * Tunable: 0.95 means the rightmost tile stays until ~95% of it is clipped
- * (remaining visible width of the last card ≥ ~5% of card width).
- * Grow / first paint never uses this slack.
+ * Fraction of a card the splitter may cover before a column disappears,
+ * and the sliver that must be visible before it appears again.
+ * Tunable: 0.95 means appear/disappear at ~5% remaining visible width.
+ * First paint (no `prevCols`) stays strict and never uses this slack.
  */
 export const GRID_COLUMN_COVER_FRACTION = 0.95;
 
@@ -110,7 +110,7 @@ export const GRID_COLUMN_COVER_FRACTION = 0.95;
  * How many full `track` columns fit in `innerWidth` with `gap` between them.
  * Same as CSS `repeat(auto-fill, track)`: N fits iff
  * `innerWidth >= N*track + (N-1)*gap` i.e. `floor((innerWidth + gap) / pitch)`.
- * A fresh measure / grow must use this — slack must not invent a column.
+ * First paint uses this so a load does not clip (562/232/8 stays 2).
  */
 export function gridColumnsStrict(innerWidth: number, track: number, gap: number): number {
   if (innerWidth <= 0 || track <= 0) return 1;
@@ -123,15 +123,16 @@ export function gridColumnsStrict(innerWidth: number, track: number, gap: number
  * Cards column count for a content box of `innerWidth` with fixed `track`
  * width and `gap` between tracks.
  *
- * Asymmetric hysteresis:
- * - Grow / first paint (`prevCols` missing or ≤ the strict fit): only add a
- *   column when a full track + gap fits (`gridColumnsStrict`).
- * - Shrink (`prevCols` > strict): keep that count until
- *   `GRID_COLUMN_COVER_FRACTION` of the last card is hidden, then drop to
- *   the strict fit. One column remains even when that tile is >95% covered.
+ * Left edge of column N is `(N-1)*pitch`. Threshold
+ * `T(N) = (N-1)*pitch + (1 - fraction)*track`.
  *
- * Let `pitch = track + gap` and `uncovered = (1 - fraction) * track`.
- * Keep N≥2 while shrinking iff `innerWidth >= (N-1)*pitch + uncovered`.
+ * - First paint (`prevCols` missing): `gridColumnsStrict` so 562/232/8 stays 2.
+ * - Grow (`prevCols` set): add N when `innerWidth >= T(N)`. Do not wait for
+ *   a full tile (712 for 3 cols).
+ * - Shrink (`prevCols` set): keep N while `innerWidth >= T(N)`, then drop.
+ *   One column remains even when that tile is >95% covered.
+ *
+ * 1px hysteresis: appear at `>= T`, drop at `< T`.
  */
 export function gridColumns(
   innerWidth: number,
@@ -141,13 +142,11 @@ export function gridColumns(
 ): number {
   const strict = gridColumnsStrict(innerWidth, track, gap);
   if (prevCols === undefined || !Number.isFinite(prevCols) || prevCols < 1) return strict;
-  const prev = Math.max(1, Math.floor(prevCols));
-  if (prev <= strict) return strict;
+  if (innerWidth <= 0 || track <= 0) return 1;
   const pitch = track + Math.max(0, gap);
-  const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
-  const keepMin = (prev - 1) * pitch + uncovered;
-  if (innerWidth + 1e-9 >= keepMin) return prev;
-  return strict;
+  if (pitch <= 0) return 1;
+  const coverSlack = GRID_COLUMN_COVER_FRACTION * track;
+  return Math.max(1, Math.floor((innerWidth + Math.max(0, gap) + coverSlack) / pitch));
 }
 
 export function gridRowCount(count: number, columns: number): number {

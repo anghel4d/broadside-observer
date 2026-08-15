@@ -34,7 +34,7 @@ export type BrowseVirtualizer = {
   readonly reveal: (id: CardId | null) => void;
   readonly flash: (id: CardId) => void;
   readonly refresh: () => void;
-  /** Live Cards column count from `gridColumns` (strict grow, shrink hysteresis). */
+  /** Live Cards column count from `gridColumns` (strict first paint, sliver appear/disappear). */
   readonly columns: () => number;
   readonly disconnect: () => void;
 };
