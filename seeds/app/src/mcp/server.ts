@@ -6,7 +6,7 @@ import { getSeed, querySeeds } from "./respond.ts";
 export const SERVER_NAME = "broadside-seeds";
 export const SERVER_VERSION = "0.1.0";
 
-export const QUERY_SEEDS_DESCRIPTION = `Search Broadside Observer seed cards (no LLM). Tokenized AND over title, authors, topics, takeaway, lineage, and venue via applyQuery.
+export const QUERY_SEEDS_DESCRIPTION = `Search Broadside Observer seed cards (no LLM). Tokenized AND over title, authors, topics, takeaway, and lineage via applyQuery.
 
 Call shape: query_seeds {"query":"<tokens>"} with optional {"id":"<card-id>","topic":"<slug>","lineage":"<slug>","year_min":YYYY,"year_max":YYYY,"limit":20}.
 query is required unless id is set. limit defaults to 20, max 50.
@@ -41,7 +41,7 @@ export function createSeedServer(corpus: Corpus): McpServer {
         query: z
           .string()
           .optional()
-          .describe("AND search tokens over title, authors, topics, takeaway, lineage, venue. Required unless id is set. Exact #123 or 123 uniquely matching seed_rank returns that full card."),
+          .describe("AND search tokens over title, authors, topics, takeaway, lineage. Required unless id is set. Exact #123 or 123 uniquely matching seed_rank returns that full card."),
         id: z
           .string()
           .optional()

@@ -119,7 +119,7 @@ query_seeds parameters:
 - query (string, required unless id is set)
 - id, topic, lineage, year_min, year_max, limit (optional)
 
-What query matches: title, authors, topics, takeaway, lineage, venue (AND tokens).
+What query matches: title, authors, topics, takeaway, lineage (AND tokens).
 
 Examples:
 - ${EXAMPLE_QUERY_RADIANCE}

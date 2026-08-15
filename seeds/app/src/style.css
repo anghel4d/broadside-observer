@@ -416,8 +416,7 @@ button:focus-visible {
 }
 
 .sort-dir,
-.copy-link,
-.copy-cite {
+.copy-link {
   font: inherit;
   color: var(--ink);
   background: var(--panel-2);
@@ -440,8 +439,7 @@ button:focus-visible {
 }
 
 .sort-dir:hover,
-.copy-link:hover,
-.copy-cite:hover {
+.copy-link:hover {
   border-color: color-mix(in oklab, var(--line) 55%, var(--accent));
   background: var(--hover);
 }
@@ -457,17 +455,9 @@ button:focus-visible {
   min-width: 0;
 }
 
-.detail-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+.copy-link {
   flex: 0 0 auto;
-}
-
-.copy-link,
-.copy-cite {
-  flex: 0 0 auto;
-  margin-top: 0;
+  margin-top: 0.12rem;
   padding: 0.18rem 0.45rem;
   font-size: 0.72rem;
   letter-spacing: 0.02em;

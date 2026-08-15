@@ -155,4 +155,3 @@ export function resolveDetailWidthPx(args: SplitMeasure & { readonly storedPx: n
 export function browseWidthPx(workspacePx: number, detailPx: number, gutterPx: number): number {
   return Math.max(0, workspacePx - gutterPx - detailPx);
 }
-
