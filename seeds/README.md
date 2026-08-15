@@ -33,7 +33,7 @@ arxiv: null          # or id
 doi: null
 source: "https://..."
 topics: [region-memory-capabilities]
-seed_rank: 1         # global INDEX order (unique 1–1000)
+seed_rank: 1         # global INDEX id (unique 1–1000)
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"      # optional: systems | graphics | realtime | engines | game-ai | agents | languages | maths-foundations | ...

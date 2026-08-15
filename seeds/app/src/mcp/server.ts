@@ -13,7 +13,7 @@ query is required unless id is set. limit defaults to 20, max 50.
 
 Response branching (do not guess):
 - 0 hits: text starting with "No matching seed cards" plus NEXT: and copy-pasteable calls query_seeds {"query":"..."} / get_seed {"id":"..."}.
-- 1 hit: full seed card. Also when id matches, or query is exact rank "#123" / "123" that uniquely matches seed_rank.
+- 1 hit: full seed card. Also when file-stem id matches, or query is exact id "#123" / "123" that uniquely matches seed_rank.
 - 2+ hits: first lines are NEXT: call get_seed {"id":"<card-id>"} then a compact list (title, year, authors, takeaway, id). Never dump full cards. If truncated: Showing N of M with a NEXT: get_seed {"id":"..."} line.
 
 Copy id from a list hit into get_seed {"id":"<card-id>"}. Empty query with no id/topic/lineage/year returns the 0-hit usage text.`;
@@ -41,7 +41,7 @@ export function createSeedServer(corpus: Corpus): McpServer {
         query: z
           .string()
           .optional()
-          .describe("AND search tokens over title, authors, topics, takeaway, lineage. Required unless id is set. Exact #123 or 123 uniquely matching seed_rank returns that full card."),
+          .describe("AND search tokens over title, authors, topics, takeaway, lineage. Required unless id is set. Exact #123 or 123 uniquely matching the numeric id returns that full card."),
         id: z
           .string()
           .optional()

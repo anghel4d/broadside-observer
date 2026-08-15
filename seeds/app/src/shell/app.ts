@@ -100,7 +100,7 @@ type Msg =
   | { readonly _tag: "Hash"; readonly hash: string };
 
 const SORT_LABEL = {
-  rank: "Rank",
+  rank: "Id",
   year: "Year",
   title: "Title",
   relevance: "Relevance",
@@ -370,8 +370,8 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
           <button type="button" class="sort-dir" id="sort-dir" aria-pressed="false" title="Reverse sort order" aria-label="Reverse sort order">↕</button>
         </div>
         <label class="jump-field">
-          Rank
-          <input id="jump-rank" type="text" inputmode="numeric" placeholder="#" autocomplete="off" spellcheck="false" aria-label="Jump to rank" />
+          Id
+          <input id="jump-rank" type="text" inputmode="numeric" placeholder="#" autocomplete="off" spellcheck="false" aria-label="Jump to id" />
         </label>
       </div>
       <button type="button" class="reset" id="reset">Reset</button>
@@ -579,7 +579,7 @@ function renderDetail(
   ].join("");
 
   const provenance = [
-    `<span class="prov-item">rank ${card.seed_rank}</span>`,
+    `<span class="prov-item">id ${card.seed_rank}</span>`,
     `<span class="prov-item">${card.year}</span>`,
     `<button type="button" class="prov-filter" data-filter="batch" data-value="${attr(card.seed_batch)}">${escapeHtml(card.seed_batch)}</button>`,
     ...(card.pool === null

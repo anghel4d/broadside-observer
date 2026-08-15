@@ -43,6 +43,8 @@ const card = SeedCardSchema.parse({
 const markdown = formatDiscordCard(card);
 assert.match(markdown, /^# Attention \\\*Is\\\* All You Need\n/u);
 assert.match(markdown, /\*\*Authors:\*\* Ashish Vaswani, Noam Shazeer/u);
+assert.match(markdown, /\*\*Id:\*\* #13/u);
+assert.doesNotMatch(markdown, /\*\*Rank:\*\*/u);
 assert.match(markdown, /\*\*arXiv:\*\* https:\/\/arxiv\.org\/abs\/1706\.03762/u);
 assert.match(markdown, /\*\*Cites\*\*\n- FlashAttention · 2022 · https:\/\/arxiv\.org\/abs\/2205\.14135/u);
 assert.match(markdown, /\*\*See\*\*\n- `089-flashattention-fast-and-memory-efficient-exact-attention-wit`/u);
