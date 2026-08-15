@@ -13,7 +13,7 @@ topics:
 seed_rank: 23
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+pool: "game-ai"
 relevance_score: 10
 cites:
   - title: "Real-Time Strategy Games: A New AI Research Challenge"

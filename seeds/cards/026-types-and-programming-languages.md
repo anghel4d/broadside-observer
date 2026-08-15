@@ -13,7 +13,7 @@ topics:
 seed_rank: 26
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hand_topup"
+pool: "languages"
 relevance_score: 10
 cites:
   - title: "A Theory of Type Polymorphism in Programming"

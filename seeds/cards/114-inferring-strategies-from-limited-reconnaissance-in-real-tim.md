@@ -17,7 +17,7 @@ topics:
 seed_rank: 114
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+pool: "game-ai"
 relevance_score: 9
 cites:
   - title: "A Bayesian model for opening prediction in RTS games with application to StarCraft"

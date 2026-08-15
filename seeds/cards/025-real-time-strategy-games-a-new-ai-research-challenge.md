@@ -12,7 +12,7 @@ topics:
 seed_rank: 25
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+pool: "game-ai"
 relevance_score: 10
 cites:
   - title: "Call for AI Research in RTS Games"

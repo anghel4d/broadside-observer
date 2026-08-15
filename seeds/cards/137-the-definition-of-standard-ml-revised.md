@@ -16,7 +16,7 @@ topics:
 seed_rank: 137
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "hand_topup"
+pool: "languages"
 relevance_score: 9
 cites:
   - title: "The Definition of Standard ML"

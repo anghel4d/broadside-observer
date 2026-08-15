@@ -14,7 +14,7 @@ topics:
 seed_rank: 115
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+pool: "game-ai"
 relevance_score: 9
 cites:
   - title: "A data mining approach to strategy prediction"

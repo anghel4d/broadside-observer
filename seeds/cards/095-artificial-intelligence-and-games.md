@@ -16,7 +16,7 @@ topics:
 seed_rank: 95
 seed_batch: "prefill-2026-08-13"
 reviewed: "2026-08-13"
-pool: "scratch_curated.json"
+pool: "game-ai"
 relevance_score: 9
 cites:
   - title: "Forward Modeling for Partial Observation Strategy Games - A StarCraft Defogger"
