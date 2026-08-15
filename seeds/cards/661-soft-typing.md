@@ -20,56 +20,40 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "A Practical Soft Type System for Scheme"
-    url: "https://doi.org/10.1145/239912.239917"
-    year: 1997
+  - title: "A Theory of Type Polymorphism in Programming"
+    url: "https://doi.org/10.1016/0022-0000(78)90014-4"
+    year: 1978
     arxiv: null
-    doi: "10.1145/239912.239917"
-  - title: "A Syntactic Approach to Type Soundness"
-    url: "https://doi.org/10.1006/inco.1994.1093"
-    year: 1994
-    arxiv: null
-    doi: "10.1006/inco.1994.1093"
+    doi: "10.1016/0022-0000(78)90014-4"
   - title: "The Revised^5 Report on the Algorithmic Language Scheme"
     url: "https://doi.org/10.1023/A:1010051815785"
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
 see:
-  - "662-a-practical-soft-type-system-for-scheme"
-  - "660-a-syntactic-approach-to-type-soundness"
+  - "629-a-theory-of-type-polymorphism-in-programming"
   - "675-the-revised-5-report-on-the-algorithmic-language-scheme"
-  - "026-types-and-programming-languages"
 ---
 
 # Soft Typing
 
 ## One-sentence takeaway
 
-Soft typing inserts minimal run-time checks so a static type discipline can accept nearly all programs.
+Cartwright and Fagan's PLDI 1991 soft type system infers types for untyped programs and inserts the *minimum* run-time checks that restore soundness, instead of rejecting the program.
 
 ## Why it matters here
 
-Classic soft-typing root — ancestor thinking for gradual/optional typing without claiming full static rejection.
+Ano sitting on untyped or gradually-checked host code (C, shader text, agent scripts) wants this contract: static types as an optimizer and debugger, not a hard gate that refuses to run.
 
 ## Key ideas
 
-- Static types as optimization/filter, not hard gate.
-- Automatic insertion of checks at soft type mismatches.
-- Designed for untyped functional languages (Scheme lineage).
-- Pairs with Wright–Cartwright practical soft typing.
+- A soft type is a static approximation; mismatch is a *check*, not a type error that aborts compilation.
+- The checker proves some primitive operations safe and leaves the rest flagged; those flags are exactly the residual dynamic tests.
+- Aimed at Scheme-like untyped functional languages; Hindley–Milner is the starting inference engine, relaxed so almost every program still types.
+- PLDI 1991, DOI 10.1145/113445.113469. Wright–Cartwright 1997 is the later implemented Soft Scheme, not this paper.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/113445.113469](https://doi.org/10.1145/113445.113469)
-- URL: https://doi.org/10.1145/113445.113469

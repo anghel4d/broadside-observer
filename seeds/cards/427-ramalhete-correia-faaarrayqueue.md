@@ -63,10 +63,6 @@ Practical Anoptic choice when you want FAA scalability in portable C++/Java with
 
 ## Caveats
 
-- Not a peer-reviewed conference paper; industrial/blog+code artifact — still widely cited in later PPoPP work.
-- Needs hazard pointers (or similar) for node reclamation.
-- Watch producer/consumer imbalance pathologies shared with LCRQ-style FAA tickets.
-
 ## Links
 
 - Code: https://github.com/pramalhe/ConcurrencyFreaks/blob/master/CPP/queues/array/FAAArrayQueue.hpp

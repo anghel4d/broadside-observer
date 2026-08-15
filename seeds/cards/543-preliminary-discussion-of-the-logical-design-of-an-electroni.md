@@ -27,17 +27,17 @@ cites:
     arxiv: null
     doi: "10.5479/sil.538961.39088011475779"
   - title: "Planning and Coding of Problems for an Electronic Computing Instrument"
-    url: "https://www.ias.edu/electronic-computer-project"
+    url: "https://www.ias.edu/sites/default/files/library/pdfs/ecp/planningcodingof0103inst.pdf"
     year: 1947
     arxiv: null
     doi: null
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
-    url: "https://www.npl.co.uk/famous-faces/alan-turing"
+    url: "https://www.npl.co.uk/getattachment/ea5c6585-0929-4713-962c-2306f8dcf1f2/turing-proposal-Alan-LR.pdf?lang=en-US"
     year: 1946
     arxiv: null
     doi: null
   - title: "The Preparation of Programs for an Electronic Digital Computer"
-    url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
+    url: "https://archive.org/details/preparationofpro00wilk"
     year: 1951
     arxiv: null
     doi: null
@@ -52,23 +52,21 @@ see:
 
 ## One-sentence takeaway
 
-Burks–Goldstine–von Neumann specify the IAS machine's logical design—the practical von Neumann architecture blueprint.
+Burks, Goldstine, and von Neumann specify the IAS machine: parallel bit-arithmetic, a 40-bit word, and an instruction set that later CPUs copied worldwide.
 
 ## Why it matters here
 
-More implementable than the EDVAC draft; ancestor of nearly all subsequent CPU organization diagrams.
+More implementable than the EDVAC draft. Anoptic's CPU-side story (word formats, organs, a code one can actually write) starts here; Part II of the same series is the flow-diagram coding manual (card 544).
 
 ## Key ideas
 
-- Memory word formats and instruction set sketch.
-- Parallel bit arithmetic organ.
-- Clear separation of organs refined from EDVAC.
-- IAS machine as template for copies worldwide.
+- Dated 28 June 1946; Part I of the IAS Electronic Computer Project report sequence.
+- Memory word formats, a compact order code, and a parallel arithmetic organ rather than EDVAC's serial bit stream.
+- Clearer separation of organs than the 1945 draft, aimed at a machine that could be built at Princeton and cloned (MANIAC, ILLIAC, JOHNNIAC, …).
+- Explicitly the companion to the later *Planning and Coding* volumes.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.ias.edu/sites/default/files/library/pdfs/ecp.preliminarydiscussion.pdf
+- IAS PDF: https://www.ias.edu/sites/default/files/library/pdfs/ecp.preliminarydiscussion.pdf

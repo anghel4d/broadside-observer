@@ -22,15 +22,10 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
-    url: "https://arxiv.org/abs/2605.06716"
-    year: 2026
-    arxiv: "2605.06716"
-    doi: null
-  - title: "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory"
-    url: "https://arxiv.org/abs/2605.19952"
-    year: 2026
-    arxiv: "2605.19952"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
     doi: null
   - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
     url: "https://arxiv.org/abs/2305.16291"
@@ -38,8 +33,7 @@ cites:
     arxiv: "2305.16291"
     doi: null
 see:
-  - "056-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
-  - "064-rethinking-how-to-remember-beyond-atomic-facts-in-lifelong-l"
+  - "004-memgpt-towards-llms-as-operating-systems"
   - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
 ---
 
@@ -47,25 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-Long-term memory has emerged as a foundational component of autonomous Large Language Model (LLM) agents, enabling continuous adaptation, lifelong multimodal learning, and sophisticated reasoning.
+SSGM decouples memory evolution from execution by running consistency checks, temporal decay, and dynamic access control before any consolidation.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety G)
+A standing Broadside/ano observer that writes its own long-term memory can leak sensitive context into the store and drift under iterative summarization; SSGM is a governance layer for that write path.
 
 ## Key ideas
 
-- Long-term memory has emerged as a foundational component of autonomous Large Language Model (LLM) agents, enabling continuous adaptation, lifelong multimodal learning, and sophisticated reasoning.
-- However, as memory systems transition from static retrieval databases to dynamic, agentic mechanisms, critical concerns regarding memory governance, semantic drift, and privacy vulnerabilities have surfaced.
-- While recent surveys have focused extensively on memory retrieval efficiency, they largely overlook the emergent risks of memory corruption in highly dynamic environments.
-- To address these emerging challenges, we propose the Stability and Safety-Governed Memory (SSGM) framework, a conceptual governance architecture.
-- SSGM decouples memory evolution from execution by enforcing consistency verif
+- As memory moves from static retrieval DBs to agentic write/update loops, the dominant risks become governance, semantic drift, and privacy, not retrieval latency.
+- Recent surveys emphasize retrieval efficiency and underplay memory corruption in dynamic environments.
+- Topology-induced knowledge leakage is the failure where sensitive contexts get solidified into long-term storage via graph or associative links.
+- Semantic drift is knowledge degradation through iterative summarization; SSGM's decay and consistency gates are meant to stop it before writeback.
+- The paper is a conceptual architecture plus a taxonomy of memory-corruption risks, not a trained system.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2603.11768](https://arxiv.org/abs/2603.11768)
-- URL: https://arxiv.org/abs/2603.11768
+- PDF: https://arxiv.org/pdf/2603.11768

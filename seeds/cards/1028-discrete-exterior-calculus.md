@@ -53,9 +53,6 @@ Why you might love this: Anoptic already lives on meshes (meshlets, radiance cas
 
 ## Caveats
 
-- Formal: operators are chosen to mirror the smooth theory; convergence proofs are mostly left to later work (Hirani thesis 2003 is the companion).
-- Primal vector fields are defined for flat meshes in this paper; curved embeddings need the later DEC-on-surfaces literature.
-- Adaptive Fluid Cohomology (2607.12001) is a 2026 application (harmonic transfer under remeshing) — not reminted; this card is the foundation.
 
 ## Links
 

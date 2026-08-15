@@ -5,10 +5,10 @@ authors:
 - Brian Beckman
 - Gavin Bierman
 year: 2006
-venue: OOPSLA
+venue: SIGMOD
 arxiv: null
-doi: 10.1145/1167473.1167478
-source: "https://doi.org/10.1145/1167473.1167478"
+doi: 10.1145/1142473.1142552
+source: "https://doi.org/10.1145/1142473.1142552"
 topics:
 - linq
 - typed-sql
@@ -20,32 +20,29 @@ reviewed: 2026-08-13
 pool: languages
 relevance_score: 9
 lineage: type-safety
-cites:
-  []
+cites: []
 ---
 
 # LINQ: Reconciling Object, Relations and XML in the .NET Framework
 
 ## One-sentence takeaway
 
-Language-integrated query with expression trees bridging objects and relational/XML data.
+LINQ reifies C# comprehensions as expression trees so the same query syntax can execute in-process or be translated by a provider into SQL or XQuery, with types flowing across the boundary.
 
 ## Why it matters here
 
-Canonical typed embedding of query into a general-purpose language.
+Canonical typed embedding of query into a general-purpose language — the pattern Broadside would copy if GRID COMMAND grew a typed query DSL that sometimes runs locally and sometimes becomes SQL/DataFusion.
 
 ## Key ideas
 
-- Expression trees as reified query ASTs.
-- Comprehension syntax for queries.
-- Provider model for SQL/XML.
+- Query comprehensions desugar to standard monadic operators (`Select`, `Where`, `SelectMany`, `GroupBy`) over `IEnumerable` / `IQueryable`.
+- `Expression<T>` trees are the AST the provider inspects; this is what makes the same lambda a delegate *or* a remote plan.
+- Provider model: LINQ to Objects, LINQ to SQL, LINQ to XML share the surface and swap the back end.
+- Standard sequence operators plus deferred execution mean composition is just function composition until enumeration.
+- SIGMOD 2006 (DOI 10.1145/1142473.1142552), not OOPSLA; a related OOPSLA companion is Meijer's VB9 talk.
 
 ## Caveats
 
-- Impedance mismatch remains at edges.
-- Provider translation may be leaky.
-
 ## Links
 
-- DOI: [10.1145/1167473.1167478](https://doi.org/10.1145/1167473.1167478)
-- URL: https://doi.org/10.1145/1167473.1167478
+- DOI: [10.1145/1142473.1142552](https://doi.org/10.1145/1142473.1142552)

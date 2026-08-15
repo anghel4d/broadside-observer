@@ -17,24 +17,17 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
+  - title: "Linearizability of Persistent Memory Objects under a Full-System-Crash Failure Model"
+    url: "https://doi.org/10.1007/978-3-662-53426-7_23"
+    year: 2016
     arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
+    doi: "10.1007/978-3-662-53426-7_23"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
 ---
 
@@ -42,25 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-Persistent memory (PM) is an emerging class of storage technology that combines the benefits of DRAM and SSD.
+Durable linearizability is not enough for exactly-once PM structures; memento objects are per-thread PM checkpoints that make CAS, insert, and delete detectable across both full-system and thread crashes.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Practical Detectability for Persistent Lock-Free Data Structures).
+Anoptic editor transactions and Broadside replay logs want "did this command land?" after a crash, not merely a linearizable heap; detectability is that extra bit.
 
 ## Key ideas
 
-- Persistent memory (PM) is an emerging class of storage technology that combines the benefits of DRAM and SSD.
-- This characteristic inspires research on persistent objects in PM with fine-grained concurrency control.
-- Among such objects, persistent lock-free data structures (DSs) are particularly interesting thanks to their efficiency and scalability.
-- One of the most widely used correctness criteria for persistent lock-free DSs is durable linearizability (Izraelevitz et.
-- However, durable linearizability is insufficient to use persistent DSs for fault-tolerant systems requiring exactly-once semantics for storage systems, because we may not be able to detect whether an operation is performed when a crash occurs.
+- Izraelevitz durable linearizability does not tell a recovering client whether its in-flight operation completed.
+- The framework supplies detectable primitives (space-efficient CAS, insert, delete) and a systematic DRAM-to-PM transform.
+- Mementos are lightweight, precise, per-thread checkpoints in persistent memory.
+- A DRAM scratchpad keeps detectable structures close in speed to non-detectable ones.
+- Case study: lock-free and combining queues plus hash tables that beat prior detectable designs and match non-detectable ones. Recovers from both machine and thread crashes.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2203.07621](https://arxiv.org/abs/2203.07621)
-- URL: https://arxiv.org/abs/2203.07621
+- PDF: https://arxiv.org/pdf/2203.07621

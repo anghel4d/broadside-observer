@@ -60,9 +60,6 @@ ano is an embedded array/columnar language that will grow interpreters, CUDA/SPI
 
 ## Caveats
 
-- The 2009 JFP paper is the archival version of APLAS 2007; cite both, mint once.
-- Extensible effects, typed HOAS, and finally-tagless-plus-GADTs are later craft; this card is the classic embedding technique, not a full effect story.
-- Performance still depends on the host compiler inlining the combinators; a C/ano runtime would re-stage rather than hope GHC does.
 
 ## Links
 

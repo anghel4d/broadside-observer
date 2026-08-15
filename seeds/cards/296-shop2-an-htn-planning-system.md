@@ -1,8 +1,13 @@
 ---
-
 title: "SHOP2: An HTN Planning System"
 authors:
-  - "Dana Nau et al."
+  - "Dana S. Nau"
+  - "Tsz-Chiu Au"
+  - "Okhtay Ilghami"
+  - "Ugur Kuter"
+  - "J. William Murdock"
+  - "Dan Wu"
+  - "Fusun Yaman"
 year: 2003
 venue: "JAIR"
 arxiv: null
@@ -43,21 +48,23 @@ see:
 
 ## One-sentence takeaway
 
-HTN planning used in game AI.
+SHOP2 plans by recursively decomposing tasks with methods whose preconditions are evaluated in the current world state, so the planner always knows what is true "now" and can interleave planning with execution-style reasoning.
 
 ## Why it matters here
 
-HTN planning used in game AI.
+GRID COMMAND officers issuing multi-step orders (secure LZ, then extract, then exfil) are HTN problems. SHOP2 is the academic system game HTNs (F.E.A.R.'s GOAP is the other pole) actually descend from.
 
 ## Key ideas
 
-- HTN planning used in game AI.
+- Hierarchical Task Network: a method rewrites a compound task into a partially ordered network of subtasks; primitive tasks map to STRIPS-like operators.
+- Ordered task decomposition: SHOP2 expands tasks in the order they will be executed, so precondition tests see a fully known current state — no open-world guessing.
+- Supports typed terms, axioms, and (in SHOP2 vs SHOP) partial order among subtasks plus extra domain axioms.
+- Won the 2002 International Planning Competition's distinguished-performance award; JAIR 20:379–404, 2003.
+- Full author list restored (was "Dana Nau et al."). Muñoz-Avila / Cao / Lotem / Mitchell are earlier SHOP authors, not this paper.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1613/jair.1141](https://doi.org/10.1613/jair.1141)
-- URL: https://doi.org/10.1613/jair.1141
+- IBM Research record: https://research.ibm.com/publications/shop2-an-htn-planning-system

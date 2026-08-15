@@ -16,35 +16,28 @@ reviewed: 2026-08-13
 pool: maths-foundations
 relevance_score: 9
 lineage: algorithms-and-complexity
-cites:
-- title: The Use of Multiple Measurements in Taxonomic Problems
-  url: "https://doi.org/10.1111/j.1469-1809.1936.tb02137.x"
-  year: 1936
-  arxiv: null
-  doi: 10.1111/j.1469-1809.1936.tb02137.x
+cites: []
+see: []
 ---
 
 # Analysis of a Complex of Statistical Variables into Principal Components
 
 ## One-sentence takeaway
 
-Hotelling principal component analysis — classic linear dimensionality reduction.
+Hotelling’s principal components are successive orthogonal linear combinations of the observed variables that maximize remaining variance, recovered from the eigenstructure of the covariance (or correlation) matrix.
 
 ## Why it matters here
 
-First cut for compressing telemetry and features in Anoptic analytics.
+This is the first-cut compressor for Anoptic telemetry, Broadside embedding spaces, and any ano feature table that needs a few decorrelated axes before a downstream model.
 
 ## Key ideas
 
-- Orthogonal components maximizing variance.
-- Eigenstructure of covariance.
-- Dimensionality reduction and decorrelation.
-- Ancestor of SVD-based PCA practice.
+- The first component solves $\max_{\|a\|=1}a^\top\Sigma a$; further components add orthogonality constraints.
+- Solutions are the eigenvectors of $\Sigma$ ordered by eigenvalue — the same computation as an SVD of the centered data matrix.
+- Components both reduce dimension and remove linear correlation, which is why they remain the default whitening step.
+- Pearson (1901) had the geometric least-squares view; Hotelling names the method and gives the psychometric/statistical development.
 
 ## Caveats
-
-- Linear only.
-- Scaling and missing data are practical hazards.
 
 ## Links
 

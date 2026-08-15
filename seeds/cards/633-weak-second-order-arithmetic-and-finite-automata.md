@@ -24,7 +24,7 @@ cites:
     arxiv: null
     doi: "10.1147/rd.32.0114"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.cs.cmu.edu/~cdm/resources/Kleene1951.pdf"
     year: 1956
     arxiv: null
     doi: null
@@ -33,39 +33,31 @@ cites:
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-  - title: "The Concept of Truth in Formalized Languages"
-    url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
-    year: 1933
-    arxiv: null
-    doi: null
 see:
   - "619-finite-automata-and-their-decision-problems"
   - "530-representation-of-events-in-nerve-nets-and-finite-automata"
   - "601-on-certain-formal-properties-of-grammars"
-  - "631-the-concept-of-truth-in-formalized-languages"
 ---
 
 # Weak Second-Order Arithmetic and Finite Automata
 
 ## One-sentence takeaway
 
-Büchi connects weak MSO with finite automata—logic↔automata bridge for infinite words later too.
+Büchi proves that weak (finite-set) monadic second-order arithmetic of one successor has exactly the same expressive power as finite automata, so the theory is decidable.
 
 ## Why it matters here
 
-Founding logic-automata connection; model checking ancestry.
+Founding logic↔automata bridge and the ancestry of model checking. GRID COMMAND / engine temporal queries that compile to automata are this idea; Büchi’s later ω-automata paper extends it to infinite words.
 
 ## Key ideas
 
-- Weak second-order arithmetic.
-- Finite automata decidability links.
-- Path to Büchi automata on ω-words.
+- WS1S = weak MSO over (ℕ, +1); quantification is over *finite* sets of positions.
+- A formula defines a regular language of finite words, and every regular language is so definable.
+- Decidability of WS1S follows from the automata decision procedures of Rabin–Scott / Kleene.
+- Path to Büchi automata on infinite words (1962) and to S1S / Rabin’s tree theorem.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1002/malq.19600060105](https://doi.org/10.1002/malq.19600060105)
-- URL: https://doi.org/10.1002/malq.19600060105

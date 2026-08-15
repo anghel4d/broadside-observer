@@ -18,49 +18,39 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "CoGraM: Context-sensitive granular optimization method with rollback for robust model fusion"
-    url: "https://arxiv.org/abs/2512.03610"
-    year: 2025
-    arxiv: "2512.03610"
+  - title: "Lightweight Asynchronous Snapshots for Distributed Dataflows"
+    url: "https://arxiv.org/abs/1506.08603"
+    year: 2015
+    arxiv: "1506.08603"
     doi: null
-  - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
-    url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
-    year: 2017
+  - title: "A survey of rollback-recovery protocols in message-passing systems"
+    url: "https://doi.org/10.1145/568522.568525"
+    year: 2002
     arxiv: null
-    doi: null
-  - title: "GGPO Rollback Networking"
-    url: "https://github.com/pond3r/ggpo"
-    year: 2006
-    arxiv: null
-    doi: null
-see:
-  - "263-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
-  - "197-ggpo-rollback-networking"
+    doi: "10.1145/568522.568525"
 ---
 
 # LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data Pipelines
 
 ## One-sentence takeaway
 
-This paper introduces LOG.io, a comprehensive solution designed for correct rollback recovery and fine-grain data lineage capture in distributed data pipelines.
+LOG.io is a non-blocking, log-based rollback protocol for serverless data pipelines that also records event-granularity lineage between any two operators at under 1.5% overhead.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (LOG.io: Unified Rollback Recovery and Data Lineage Capture for Distributed Data ).
+Broadside replay and Anoptic command-stream recovery need the same pair of properties: independent operator restart plus a lineage log that can answer "which inputs produced this output."
 
 ## Key ideas
 
-- This paper introduces LOG.io, a comprehensive solution designed for correct rollback recovery and fine-grain data lineage capture in distributed data pipelines.
-- It is tailored for serverless scalable architectures and uses a log-based rollback recovery protocol.
-- LOG.io supports a general programming model, accommodating non-deterministic operators, interactions with external systems, and arbitrary custom code.
-- It is non-blocking, allowing failed operators to recover independently without interrupting other active operators, thereby leveraging data parallelization, and it facilitates dynamic scaling of operators during pipeline execution.
-- Performance evaluations, conducted within the SAP Data Intelligence system, compare LOG.io with the Asynchronous Barrier Snapshotting (ABS) protocol, originally implemented in Flink.
+- Programming model allows non-deterministic operators, external I/O, and arbitrary custom code — not just pure dataflow.
+- Failed operators recover from the log without pausing healthy peers, so data-parallelism stays live during recovery.
+- Operators can be rescaled while the pipeline is running.
+- Versus Flink's Asynchronous Barrier Snapshotting inside SAP Data Intelligence: LOG.io matches or beats ABS with stragglers at moderate event rates (~10 Hz) and loses otherwise, unless extra data-parallelism is applied.
+- Lineage is captured at event grain between any operator pair; measured tax is under 1.5% in every experiment.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2512.16038](https://arxiv.org/abs/2512.16038)
-- URL: https://arxiv.org/abs/2512.16038
+- PDF: https://arxiv.org/pdf/2512.16038

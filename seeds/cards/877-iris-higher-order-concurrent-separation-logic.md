@@ -8,10 +8,10 @@ authors:
 - Lars Birkedal
 - Derek Dreyer
 year: 2018
-venue: JACM
+venue: Journal of Functional Programming
 arxiv: null
-doi: 10.1145/3211960
-source: "https://doi.org/10.1145/3211960"
+doi: 10.1017/S0956796818000151
+source: "https://doi.org/10.1017/S0956796818000151"
 topics:
 - iris
 - separation-logic
@@ -23,32 +23,30 @@ reviewed: 2026-08-13
 pool: languages
 relevance_score: 9
 lineage: type-safety
-cites:
-  []
+cites: []
 ---
 
 # Iris: Higher-Order Concurrent Separation Logic
 
 ## One-sentence takeaway
 
-A higher-order concurrent separation logic framework in Coq used across RustBelt and beyond.
+Iris is a Coq framework for higher-order concurrent separation logic: ghost state, invariants, and fancy updates are user-defined, so one logic hosts RustBelt, weak-memory proofs, and language soundness theorems.
 
 ## Why it matters here
 
-The proof engine behind modern type-safety-for-systems results.
+This is the proof engine behind modern "this unsafe block / this lock-free queue / this type system is actually safe" results. If Anoptic ever machine-checks an engine invariant, Iris is the default metalogic.
 
 ## Key ideas
 
-- Higher-order ghost state.
-- Invariants and fancy updates.
-- Modular library specifications.
+- Higher-order ghost state (cameras / resource algebras) lets a proof invent the ghost resources a library needs, rather than baking them into the logic.
+- Invariants and fancy updates (`|=▷=`) model impredicative shared-state reasoning and later-modality step-indexing.
+- The 2018 JFP paper ("Iris from the Ground Up") is the archival tutorial/foundation; earlier POPL/ICFP papers introduced pieces of the stack.
+- Not a programming-language type system — a logic in which you *define* type systems and library specs.
+- The card's previous ACM DOI `10.1145/3211960` is unrelated (WearSys '18). Correct DOI is 10.1017/S0956796818000151.
 
 ## Caveats
 
-- Steep learning curve.
-- Not itself a programming language type system.
-
 ## Links
 
-- DOI: [10.1145/3211960](https://doi.org/10.1145/3211960)
-- URL: https://doi.org/10.1145/3211960
+- DOI: [10.1017/S0956796818000151](https://doi.org/10.1017/S0956796818000151)
+- Project: https://iris-project.org

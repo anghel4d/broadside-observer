@@ -60,8 +60,6 @@ The living ancestor of every continuation-stealing job system Anoptic/ano might 
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/209936.209958](https://doi.org/10.1145/209936.209958)

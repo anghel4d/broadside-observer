@@ -67,9 +67,6 @@ This is the concurrency paper the Anoptic store and ano standing-rules loop have
 
 ## Caveats
 
-- Formal model, not a drop-in scheduler. Do not cite as “Flecs is nondeterministic so throw it out.”
-- Determinism claims are for the Core ECS fragment; structural mutation, commands, and network I/O still need explicit barriers (ano already has those).
-- Complements, does not replace, card 200 (archetype semantics).
 
 ## Links
 

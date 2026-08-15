@@ -26,41 +26,29 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-  - title: "A Logical Calculus of the Ideas Immanent in Nervous Activity"
-    url: "https://doi.org/10.1007/BF02478259"
-    year: 1943
-    arxiv: null
-    doi: "10.1007/BF02478259"
-  - title: "Computing Machinery and Intelligence"
-    url: "https://doi.org/10.1093/mind/LIX.236.433"
-    year: 1950
-    arxiv: null
-    doi: "10.1093/mind/LIX.236.433"
 see:
   - "561-cybernetics-or-control-and-communication-in-the-animal-and-t"
-  - "565-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
-  - "519-computing-machinery-and-intelligence"
 ---
 
 # Behavior, Purpose and Teleology
 
 ## One-sentence takeaway
 
-Negative feedback explains purposeful behavior without mysticism—cybernetics before the book.
+Rosenblueth, Wiener, and Bigelow define purpose as negative-feedback control, stripping teleology of mysticism five years before *Cybernetics*.
 
 ## Why it matters here
 
-Conceptual root of goal-directed agents as feedback systems.
+GRID COMMAND agents look goal-directed because they close error loops, not because they have inner essences; this 1943 note is that reduction.
 
 ## Key ideas
 
-- Purposeful = feedback-controlled.
-- Negative vs positive feedback.
-- 1943 Philosophy of Science.
+- Active behavior is classified as purposeful or non-purposeful according to whether it is controlled by the error from a goal.
+- Negative feedback stabilizes; positive feedback runs away. Purpose is the former.
+- Servomechanisms and organisms share the same circular-causal diagram, so "teleology" is an engineering predicate.
+- The paper is the conceptual seed of the 1948 book and of later cybernetics meetings.
+- Published in *Philosophy of Science* 10(1), January 1943.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

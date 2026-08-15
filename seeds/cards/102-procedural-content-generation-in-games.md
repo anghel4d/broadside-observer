@@ -44,21 +44,25 @@ see:
 
 ## One-sentence takeaway
 
-Textbook covering constructive, search-based, and learning-based methods for generating game content.
+PCG is the algorithmic creation of playable game content — levels, maps, rules, quests, items, terrain — with limited or indirect human input, surveyed here as constructive, search-based, constraint, and experience-driven methods plus how to evaluate them.
 
 ## Why it matters here
 
-PCG textbook covering constructive, search, and learning methods for Broadside world generation.
+Broadside / GRID COMMAND worldgen needs the same split the book uses: a fast constructive pass that always emits a playable map, search or ASP when you have an explicit fitness, and an evaluation story so generated fleets and terrain are not just pretty noise.
 
 ## Key ideas
 
-- Textbook covering constructive, search-based, and learning-based methods for generating game content.
+- Constructive methods (ch. 3) build dungeons and platformer levels in one pass — cellular automata, room placement, agents — with predictable runtime and no inner evaluate/regenerate loop.
+- Search-based PCG (ch. 2, 9) treats content as an optimization problem: a representation, a search space, variation operators, and a fitness function, usually an evolutionary algorithm.
+- Constraint and grammar chapters cover ASP mazes (ch. 8), L-systems / vegetation (ch. 5), fractals and noise for landscapes (ch. 4), and planning for quests and story (ch. 7).
+- Experience-driven PCG (ch. 10) closes a player–content–experience loop so the generator is steered by a model of affect or skill, not only by designer parameters.
+- Mixed-initiative tools (ch. 11) and generator evaluation (ch. 12) are first-class: Tanagra-style human+solver editors, plus explicit tests for speed, reliability, controllability, and diversity.
+- Taxonomy axes that actually change the implementation: online vs offline, necessary vs optional content, generic vs adaptive, constructive vs generate-and-test.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1007/978-3-319-42716-4](https://doi.org/10.1007/978-3-319-42716-4)
+- Author PDFs: https://www.pcgbook.com/
 - URL: https://doi.org/10.1007/978-3-319-42716-4

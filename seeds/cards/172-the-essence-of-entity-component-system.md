@@ -4,7 +4,7 @@ authors:
   - "Anisha Tasnim"
   - "Tian Zhao"
 year: 2026
-venue: "arXiv"
+venue: "ACM SAC"
 arxiv: "2606.14919"
 doi: "10.1145/3748522.3779910"
 source: "https://arxiv.org/abs/2606.14919"
@@ -49,26 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Modern game engines increasingly adopt the Entity Component System (ECS) paradigm as a data-oriented alternative to traditional object-oriented architecture.
+Tasnim and Zhao give archetype ECS a formal state-transition semantics — spawn, compose, migrate, run systems — and show the archetype layout wins frame rate and stability against alternative designs in a Tower Defense sim.
 
 ## Why it matters here
 
-ECS theory/practice for the store ano queries and commands; Determinism/replay relevant to ano barriers and sim replay.
+This is the paper that treats ano's world as a mathematical object: archetype identity, component composition, and structural mutation become compositional transitions, which is what you need before you can talk about determinism and parallel system schedules.
 
 ## Key ideas
 
-- Modern game engines increasingly adopt the Entity Component System (ECS) paradigm as a data-oriented alternative to traditional object-oriented architecture.
-- While ECS promotes modularity and performance through the separation of data and behavior, its practical efficiency depends heavily on the underlying data layout.
-- Despite widespread adoption in frameworks, such as Unity DOTS, Bevy, and Flecs, the semantics of the archetype ECS remain informal and implementation-dependent, limiting rigorous reasoning about determinism, system scheduling, and structural mutations.
-- This work formalizes and experimentally evaluates the archetype ECS.
-- The formal model captures entity creation, component composition, system execution, and archetype migration as compositional state transitions, establishing
+- Archetype ECS is widely implemented (Unity DOTS, Bevy, Flecs) but its semantics have been informal and vendor-specific.
+- The model captures entity creation, component composition, system execution, and archetype migration as compositional state transitions and states the core layout invariants.
+- Practical efficiency is treated as a layout theorem: systems iterate dense columns of entities that share a signature.
+- A Tower Defense experiment compares archetype ECS to alternative designs under identical conditions; archetype wins frame rate and frame stability via cache behaviour and consistent access.
+- Formal invariants plus the experiment are offered as a basis for reasoning about correctness and parallelism, not just as an engine tour.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2606.14919](https://arxiv.org/abs/2606.14919)
 - DOI: [10.1145/3748522.3779910](https://doi.org/10.1145/3748522.3779910)
-- URL: https://arxiv.org/abs/2606.14919

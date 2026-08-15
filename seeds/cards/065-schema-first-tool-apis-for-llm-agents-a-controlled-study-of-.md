@@ -21,49 +21,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
-    url: "https://arxiv.org/abs/2606.09774"
-    year: 2026
-    arxiv: "2606.09774"
+  - title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    url: "https://arxiv.org/abs/2302.04761"
+    year: 2023
+    arxiv: "2302.04761"
     doi: null
-  - title: "The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration"
-    url: "https://arxiv.org/abs/2603.22862"
-    year: 2026
-    arxiv: "2603.22862"
-    doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
     doi: null
 see:
-  - "051-auto-configuring-scientific-simulators-with-lightweight-codi"
-  - "066-the-evolution-of-tool-use-in-llm-agents-from-single-tool-cal"
+  - "086-toolformer-language-models-can-teach-themselves-to-use-tools"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance
 
 ## One-sentence takeaway
 
-Tool use has become central to modern LLM agents, yet interface design is rarely isolated as an experimental variable.
+Holding tool semantics fixed, JSON Schema contracts cut interface misuse versus free-form docs, but in this local-model pilot they do not raise end-task success or cut semantic misuse.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Bu)
+Ano tool surfaces and GRID COMMAND command schemas should still be schema-first for contract adherence; this study is the warning that schemas do not fix bad action selection under a tight local-inference budget.
 
 ## Key ideas
 
-- Tool use has become central to modern LLM agents, yet interface design is rarely isolated as an experimental variable.
-- This paper studies whether schema based tool contracts and structured validation diagnostics improve reliability under strict interaction budgets.
-- We evaluate three conditions that preserve identical tool semantics and information content: free form documentation, JSON Schema specifications, and JSON Schema with structured diagnostics.
-- We implement a deterministic software engineering sandbox with logs, metrics, configurations, and repository tasks, and evaluate a fully crossed pilot with one open local model, three seeds, three interface conditions, and four budgets.
-- We report end task success, interface misuse, execution failures, semantic misuse, recovery behavior, and
+- Three conditions keep identical tool semantics and information content: free-form documentation, JSON Schema, and JSON Schema plus structured diagnostics.
+- The sandbox is a deterministic software-engineering environment (logs, metrics, configs, repo tasks) crossed with one open local model, three seeds, and four interaction budgets.
+- Metrics include end-task success, interface misuse, execution failures, semantic misuse, recovery, and overhead.
+- Success stays zero across conditions; schema conditions reduce interface misuse only.
+- Dominant remaining bottlenecks are semantic action quality and timeout-sensitive tasks under constrained local inference.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2603.13404](https://arxiv.org/abs/2603.13404)
-- URL: https://arxiv.org/abs/2603.13404
+- PDF: https://arxiv.org/pdf/2603.13404

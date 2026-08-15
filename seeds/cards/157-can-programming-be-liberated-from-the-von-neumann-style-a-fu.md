@@ -84,21 +84,23 @@ see:
 
 ## One-sentence takeaway
 
-Backus's Turing lecture introducing FP and criticizing von Neumann languages; proposes an algebra of programs.
+Backus's Turing lecture blames von Neumann languages for a word-at-a-time bottleneck and proposes FP: programs built from combining forms that obey an algebra of equivalences.
 
 ## Why it matters here
 
-FP algebra and bulk combining forms are cousins of ano's masked bulk updates vs scalar scripting.
+Ano's masked bulk updates versus scalar scripting is the same split: combining forms (map, reduce, construct, compose) should be the default over the world store, with an algebra that lets you rewrite them rather than debug loops.
 
 ## Key ideas
 
-- Backus's Turing lecture introducing FP and criticizing von Neumann languages; proposes an algebra of programs.
+- The von Neumann bottleneck is the word-at-a-time traffic between CPU and mutable store that conventional languages force the programmer to choreograph.
+- FP programs are expressions built from primitive functions and combining forms — composition, construction, condition, apply-to-all, insert — not assignment sequences.
+- An algebra of programs gives algebraic identities so one FP expression can be transformed into another without a store model.
+- Applicative state transition (AST) systems are sketched as a way to recover controlled state without returning to von Neumann style.
+- The lecture is a design argument, not a compiler paper: change the language so bulk combining forms are primitive, then optimize the algebra.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/359576.359579](https://doi.org/10.1145/359576.359579)
-- URL: https://dl.acm.org/doi/10.1145/359576.359579
+- ACM: https://dl.acm.org/doi/10.1145/359576.359579

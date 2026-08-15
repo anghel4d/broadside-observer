@@ -5,8 +5,8 @@ authors:
 year: 1993
 venue: "Theoretical Computer Science"
 arxiv: null
-doi: "10.1016/0304-3975(93)90181-Q"
-source: "https://doi.org/10.1016/0304-3975(93)90181-Q"
+doi: "10.1016/0304-3975(93)90181-R"
+source: "https://doi.org/10.1016/0304-3975(93)90181-R"
 topics:
   - linear-logic
   - concurrency
@@ -24,61 +24,31 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-  - title: "Communicating sequential processes"
-    url: "https://doi.org/10.1016/0011-684x(85)90108-x"
-    year: 1985
+  - title: "Linear Types can Change the World!"
+    url: "https://homepages.inf.ed.ac.uk/wadler/papers/linear/linear.ps"
+    year: 1990
     arxiv: null
-    doi: "10.1016/0011-684x(85)90108-x"
+    doi: null
   - title: "Communicating Sequential Processes"
-    url: "https://openlibrary.org/books/OL2859591M/Communicating_sequential_processes"
+    url: null
     year: 1985
     arxiv: null
     doi: null
-  - title: "Linear Types can Change the World"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.31.5002"
-    year: 1990
+  - title: "Communication and Concurrency"
+    url: null
+    year: 1989
     arxiv: null
     doi: null
-  - title: "Communication and concurrency"
-    url: "https://doi.org/10.1016/0167-6423(90)90076-p"
-    year: 1990
-    arxiv: null
-    doi: "10.1016/0167-6423(90)90076-p"
-  - title: "Fiftieth volume of theoretical computer science"
-    url: "https://doi.org/10.1016/0304-3975(88)90001-1"
-    year: 1988
-    arxiv: null
-    doi: "10.1016/0304-3975(88)90001-1"
-  - title: "The implementation of functional programming languages"
-    url: "https://doi.org/10.1016/0141-9331(87)90510-2"
-    year: 1987
-    arxiv: null
-    doi: "10.1016/0141-9331(87)90510-2"
-  - title: "The Lambda Calculus - Its Syntax and Semantics"
+  - title: "The Lambda Calculus: Its Syntax and Semantics"
     url: "https://doi.org/10.1016/c2009-0-14341-6"
     year: 1984
     arxiv: null
     doi: "10.1016/c2009-0-14341-6"
-  - title: "Principal type-schemes for functional programs"
-    url: "https://doi.org/10.1145/582153.582176"
-    year: 1982
-    arxiv: null
-    doi: "10.1145/582153.582176"
   - title: "Call-by-name, call-by-value and the λ-calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-  - title: "Communication and Concurrency"
-    url: "http://www3.ub.tu-berlin.de/ihv/001691318.pdf"
-    year: 1989
-    arxiv: null
-    doi: null
-  - title: "The Mechanical Evaluation of Expressions"
-    url: "https://doi.org/10.1093/comjnl/6.4.308"
-    year: 1964
-    arxiv: null
-    doi: "10.1093/comjnl/6.4.308"
 see:
   - "040-linear-logic"
   - "046-communicating-sequential-processes"
@@ -89,21 +59,24 @@ see:
 
 ## One-sentence takeaway
 
-Gives concurrent computational interpretations of linear logic proofs as processes.
+Curry–Howard for Girard's linear logic: intuitionistic LL is a resource-sensitive refinement of the λ-calculus that controls evaluation order and storage, while classical LL is a concurrent process calculus with Chemical Abstract Machine dynamics.
 
 ## Why it matters here
 
-Abramsky: proofs as concurrent processes — bridge from LL to interaction and sessions.
+Proofs-as-processes is the bridge from linear types to session-shaped interaction; Broadside/ano concurrent agents inherit the idea that a typing is already a protocol.
 
 ## Key ideas
 
-- Gives concurrent computational interpretations of linear logic proofs as processes.
+- The paper takes Girard's "logic well-suited to be the interface between logic and computer science" and supplies the missing attractive computational reading: propositions as types, proofs as programs, cut-elimination as computation.
+- Intuitionistic linear logic yields a refined λ-calculus. Linearity gives finer control of evaluation order and storage allocation than intuitionistic logic, while keeping the "programs are proofs" invariant.
+- Classical linear logic yields a concurrent-process interpretation whose operational semantics is in the style of Berry and Boudol's Chemical Abstract Machine (molecules floating in a solution, reactions when complementary agents meet).
+- Two advertised payoffs: a new route to parallel implementation of functional languages, and concurrent programming whose correctness is guaranteed by the typing rather than by an extra model-check.
+- The classical reading is the ancestor of later "propositions as sessions" work; Honda (1993) already cites the 1990 Imperial College technical report this journal paper expands.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1016/0304-3975(93)90181-Q](https://doi.org/10.1016/0304-3975(93)90181-Q)
-- URL: https://doi.org/10.1016/0304-3975(93)90181-Q
+- DOI: [10.1016/0304-3975(93)90181-R](https://doi.org/10.1016/0304-3975(93)90181-R)
+- Oxford record / PostScript: https://www.cs.ox.ac.uk/publications/publication1872-abstract.html
+- Author PS.GZ: https://www.cs.ox.ac.uk/files/296/cill.ps.gz

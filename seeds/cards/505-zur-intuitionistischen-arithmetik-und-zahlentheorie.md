@@ -6,7 +6,7 @@ year: 1933
 venue: "Ergebnisse eines mathematischen Kolloquiums"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/search?q=Zur+intuitionistischen+Arithmetik+und+Zahlentheorie+Gödel"
+source: "https://academic.oup.com/book/55022/chapter/422805871"
 topics:
   - intuitionistic-arithmetic
   - godel
@@ -19,7 +19,7 @@ relevance_score: 8
 lineage: foundations-of-computing
 cites:
   - title: "Eine Interpretation des intuitionistischen Aussagenkalküls"
-    url: "https://www.worldcat.org/search?q=Eine+Interpretation+des+intuitionistischen+Aussagenkalküls"
+    url: "https://academic.oup.com/book/55022"
     year: 1933
     arxiv: null
     doi: null
@@ -29,7 +29,7 @@ cites:
     arxiv: null
     doi: "10.1111/j.1746-8361.1958.tb01464.x"
   - title: "Introduction to Metamathematics"
-    url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
+    url: "https://openlibrary.org/works/OL5959470W/Introduction_to_metamathematics"
     year: 1952
     arxiv: null
     doi: null
@@ -43,22 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Gödel shows classical arithmetic is interpretable in intuitionistic arithmetic—constructivity is stronger than it looked.
+Gödel's negative translation interprets every theorem of classical Peano arithmetic as a theorem of intuitionistic arithmetic, so HA is not weaker than PA on \(\Pi^0_2\) sentences.
 
 ## Why it matters here
 
-Underwrites 'extract programs from proofs' optimism later realized in type theory.
+This is why "extract a program from a proof" is not wishful thinking: a classical \(\forall\exists\) number-theoretic claim already has an intuitionistic shadow from which a realizing function can be read. Ano and any later typed-effects compiler sit on that shadow.
 
 ## Key ideas
 
-- Negative translation / double-negation style interpretation.
-- Classical Π⁰₂ consequences from intuitionistic proofs.
-- Companion to Dialectica decades later.
+- Double-negation / negative translation sends classical connectives to intuitionistic ones so that PA \(\vdash A\) implies HA \(\vdash A^N\).
+- For \(\Pi^0_2\) statements the translation is essentially the original formula, so a classical existence proof already yields an intuitionistic one.
+- Consistency of PA therefore reduces to consistency of HA.
+- Twenty-five years later the Dialectica interpretation (card 503) turns those intuitionistic proofs into explicit System-T functionals.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/search?q=Zur+intuitionistischen+Arithmetik+und+Zahlentheorie+Gödel
+- Collected Works I chapter: https://academic.oup.com/book/55022/chapter/422805871
+- Original: Ergebnisse eines mathematischen Kolloquiums 4 (1933), 34–38

@@ -64,8 +64,6 @@ Engine-facing cousin of mimalloc/jemalloc: span/page/block size classes with che
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - GitHub: https://github.com/mjansson/rpmalloc

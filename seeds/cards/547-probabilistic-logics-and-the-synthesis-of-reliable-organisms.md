@@ -6,7 +6,7 @@ year: 1956
 venue: "In Shannon & McCarthy (eds.), Automata Studies"
 arxiv: null
 doi: null
-source: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+source: "https://www.dna.caltech.edu/courses/cs191/paperscs191/VonNeumann56.pdf"
 topics:
   - fault-tolerance
   - reliability
@@ -20,7 +20,7 @@ relevance_score: 9
 lineage: foundations-of-computing
 cites:
   - title: "The General and Logical Theory of Automata"
-    url: "https://www.worldcat.org/title/cerebral-mechanisms-in-behavior/oclc/1123456"
+    url: "https://www.vordenker.de/ggphilosophy/jvn_the-general-and-logical-theory-of-automata.pdf"
     year: 1951
     arxiv: null
     doi: null
@@ -50,22 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Von Neumann shows how to synthesize reliable computation from noisy gates via redundancy—fault tolerance as logic.
+Von Neumann shows that majority multiplexing can drive the error probability of a circuit built from noisy gates down exponentially in the redundancy, so reliable computation is a logical construction rather than a materials miracle.
 
 ## Why it matters here
 
-Ancestor of error-correcting execution and reliable systems thinking in engines/sim.
+Ancestor of fault-tolerant execution in engines and of any Anoptic story that treats lock-free buses, ECC, and redundant job lanes as *logic*. Moore–Shannon (card 560) is the relay-theoretic twin; Hamming is the coding-theoretic one.
 
 ## Key ideas
 
-- Majority organ multiplexing.
-- Error probabilities under composition.
-- Automata Studies pairing with Shannon/McCarthy.
+- Each wire is replaced by a bundle; a majority organ restores the intended bit, so independent gate failures become a binomial tail.
+- Error probability under composition is analysed so that a fixed per-gate failure rate still yields an arbitrarily reliable automaton at a multiplicative cost in size.
+- Lives in Shannon & McCarthy, *Automata Studies* (Princeton, 1956), next to Kleene's regular events.
+- Motivated by the unreliability of 1940s–50s components and by the nervous system as an existence proof.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691079165/automata-studies
+- Caltech PDF: https://www.dna.caltech.edu/courses/cs191/paperscs191/VonNeumann56.pdf
+- Princeton *Automata Studies*: https://press.princeton.edu/books/paperback/9780691079165/automata-studies

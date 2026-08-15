@@ -35,21 +35,20 @@ see:
 
 ## One-sentence takeaway
 
-Masked self-attention on graph neighbourhoods (GAT) — attention without assuming a grid, and a key exhibit for Geometric Deep Learning.
+GAT stacks masked self-attention over graph neighbourhoods so each node weights its neighbours without spectral inversions or a fixed grid, and matches then-SOTA on Cora, Citeseer, Pubmed, and inductive PPI.
 
 ## Why it matters here
 
-Attention as a morphism on a graph, not a sequence. Weaves/GDL both need this non-grid case.
+Attention as a morphism on a graph, not a sequence. Weaves and geometric deep learning both need this non-grid case; Anoptic/GRID entity graphs are the same shape.
 
 ## Key ideas
 
 - ICLR 2018; arXiv:1710.10903. OpenReview `rJXMpikCZ`.
-- Nodes attend over neighbours; no costly inversions; inductive and transductive.
-- Cora/Citeseer/Pubmed and PPI benchmarks.
+- A layer computes attention coefficients only on existing edges (masked softmax), then aggregates neighbour features — no Laplacian eigendecomposition, no upfront global graph operator.
+- Multi-head attention stabilizes the coefficients; the same layer works transductively (citation nets) and inductively (unseen PPI test graphs).
+- Addresses several spectral-GNN failure modes at once: dependence on a known Laplacian, costly matrix ops, and poor transfer to new graphs.
 
 ## Caveats
-
-- Architecture paper. Categorical content is indirect (via GDL / Weaves citations).
 
 ## Links
 

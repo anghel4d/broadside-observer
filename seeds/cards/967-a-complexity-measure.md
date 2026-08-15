@@ -25,21 +25,20 @@ cites:
 
 ## One-sentence takeaway
 
-Cyclomatic complexity v(G) = e − n + 2p: the classic structured-testing / independent-path metric Lizard still reports (GNU 9.40 vs uutils 3.30).
+McCabe defines cyclomatic complexity \(v(G)=e-n+2p\) as the number of linearly independent paths through a control-flow graph, and argues that this number is the right size for a structured testing basis.
 
 ## Why it matters here
 
-The number behind 'Rust looks simpler'. Also a reminder that hidden control flow (destructors, `?`) does not count.
+This is the number behind 'Rust looks simpler' in the uutils paper: Lizard averages \(v(G)\) per function at 9.40 for GNU C vs 3.30 for Rust. Also a reminder that hidden control flow — destructors, `?`, macros — does not sit on that graph.
 
 ## Key ideas
 
 - IEEE TSE SE-2(4):308–320, 1976. DOI `10.1109/TSE.1976.233837`.
-- Complexity as the number of independent paths; testing implications.
-- uutils paper: this is what Lizard averages per function.
+- \(e\) edges, \(n\) nodes, \(p\) connected components; for a single connected CFG with one entry/exit this is \(e-n+2\).
+- Testing implication: you need at least \(v(G)\) tests to cover a basis of paths; McCabe suggests keeping functions near \(v(G)\le 10\).
+- uutils paper: this is what Lizard (and rust-code-analysis) average; the comparison is real and also incomplete for RAII/`?`.
 
 ## Caveats
-
-- 1976 control-flow metric. Does not see Rust destructors or C macros honestly; the paper notes this.
 
 ## Links
 

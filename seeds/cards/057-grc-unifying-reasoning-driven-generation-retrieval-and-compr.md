@@ -22,50 +22,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch"
-    url: "https://arxiv.org/abs/2606.26607"
-    year: 2026
-    arxiv: "2606.26607"
-    doi: null
-  - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
-    url: "https://arxiv.org/abs/2305.16291"
-    year: 2023
-    arxiv: "2305.16291"
-    doi: null
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
     arxiv: "2309.06180"
     doi: null
+  - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: "https://arxiv.org/abs/2005.11401"
+    year: 2020
+    arxiv: "2005.11401"
+    doi: null
 see:
-  - "061-moebius-serving-mixture-of-expert-models-with-seamless-runti"
-  - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
   - "002-efficient-memory-management-for-large-language-model-serving"
+  - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
 ---
 
 # GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression
 
 ## One-sentence takeaway
 
-Text embedding and generative tasks are usually trained separately based on large language models (LLMs) nowadays.
+GRC trains generation, reasoning-enhanced embedding, and context compression into one forward pass via meta latent tokens, then serves them with hybrid paged attention.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression)
+Ano RAG and Broadside digest pipelines currently train and deploy embedders, generators, and compressors separately; GRC is a single-pass alternative with O(1)-length latent memory as updatable KV.
 
 ## Key ideas
 
-- Text embedding and generative tasks are usually trained separately based on large language models (LLMs) nowadays.
-- This causes a large amount of training cost and deployment effort.
-- Context compression is also a challenging and pressing task, which is vital to reasoning-driven generation, and agentic tasks requiring long context and continual learning.
-- In this paper, we explore how to unify reasoning-driven generation, reasoning-enhanced text representation and context compression tasks in one forward pass for LLMs.
-- Through meta latent tokens and a unified generative, representative and compressive tuning approach, we propose a training framework named GRC that bridges the three tasks.
+- Separate embedding and generative training wastes data and multiplies deployment surfaces; context compression is the missing third task for long-horizon agents.
+- Trained models keep LEGO-style modularity at inference while accomplishing all three objectives in one pass, tripling data utilization during training.
+- Self-reason-latent embeds are a new embedding style; latent memory-augmented generation uses compressed, internalized KV of O(1) length as writable memory.
+- Hybrid paged attention speeds the resulting mixed generation/retrieval/compression traffic.
+- Experiments cover reasoning-intensive retrieval, generative tasks, document compression, latency, and RAG settings.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2605.09100](https://arxiv.org/abs/2605.09100)
-- URL: https://arxiv.org/abs/2605.09100
+- PDF: https://arxiv.org/pdf/2605.09100

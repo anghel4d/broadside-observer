@@ -6,7 +6,7 @@ year: 1987
 venue: "Prentice-Hall"
 arxiv: null
 doi: null
-source: "https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/"
+source: "https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages-2/"
 topics:
   - functional-compilers
   - g-machine
@@ -19,16 +19,6 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Report on the Programming Language Haskell: A Non-strict, Purely Functional Language"
-    url: "https://doi.org/10.1145/130697.130699"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/130697.130699"
-  - title: "The Lazy Lambda Calculus"
-    url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
-    year: 1990
-    arxiv: null
-    doi: null
   - title: "Call-by-Name, Call-by-Value and the λ-Calculus"
     url: "https://doi.org/10.1016/0304-3975(75)90017-1"
     year: 1975
@@ -39,35 +29,44 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
+  - title: "Miranda: A Non-strict Functional Language with Polymorphic Types"
+    url: "https://doi.org/10.1007/3-540-15975-4_26"
+    year: 1985
+    arxiv: null
+    doi: "10.1007/3-540-15975-4_26"
+  - title: "A Theory of Type Polymorphism in Programming"
+    url: "https://doi.org/10.1016/0022-0000(78)90014-4"
+    year: 1978
+    arxiv: null
+    doi: "10.1016/0022-0000(78)90014-4"
 see:
-  - "703-report-on-the-programming-language-haskell-a-non-strict-pure"
-  - "692-the-lazy-lambda-calculus"
   - "627-call-by-name-call-by-value-and-the-lambda-calculus"
   - "617-the-mechanical-evaluation-of-expressions"
+  - "716-miranda-a-non-strict-functional-language-with-polymorphic-ty"
+  - "629-a-theory-of-type-polymorphism-in-programming"
 ---
 
 # The Implementation of Functional Programming Languages
 
 ## One-sentence takeaway
 
-Classic monograph on implementing lazy functional languages (G-machine, graph reduction, etc.).
+Lazy functional languages become real compilers by translating to lambda calculus, reducing shared graphs, and finally emitting G-machine code that updates nodes in place.
 
 ## Why it matters here
 
-The SPJ implementation book — how non-strict functional languages became real compilers.
+If ano or an Anoptic DSL ever compiles bulk array combinators or a lazy query over GRID COMMAND state, this is the implementation spine — pattern-match compilation, type checking, graph reduction, then a specialized abstract machine — not a Naïve Scheme interpreter.
 
 ## Key ideas
 
-- Graph reduction and the G-machine.
-- Compilation techniques for laziness.
-- Bridge from lambda calculus to runnable code.
-- Direct ancestor of GHC implementation culture.
+- Part I compiles a Miranda-class source to lambda calculus, with full chapters on pattern matching (Wadler) and Hindley–Milner type checking (Hancock).
+- Part II starts from a toy graph reducer and adds sharing, updating, and alternative reduction strategies so call-by-need is an operational fact.
+- Part III is the G-machine: a compiled graph reducer whose instruction set is the performance jump over interpretive reduction.
+- Turner’s combinator and Miranda work, Landin’s SECD, and Plotkin’s CBN/CBV distinction are the cited ancestry.
+- The 1987 Prentice-Hall text is the document GHC’s culture still points at; chapters also by Wadler, Hancock, and Turner.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/
+- Publication: https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages-2/
+- PDF: https://www.microsoft.com/en-us/research/wp-content/uploads/1987/01/slpj-book-1987-small.pdf

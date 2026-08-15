@@ -49,21 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-DieHard uses randomization and replication in the allocator to probabilistically tolerate memory errors.
+DieHard approximates an infinite heap: objects are placed uniformly at random in a heap at least twice as large as needed, so overflows and use-after-free hit empty slots with high probability.
 
 ## Why it matters here
 
-Allocator as fault isolation; useful foil for deterministic game heaps.
+This is the allocator-as-fault-isolation foil for Anoptic’s deterministic game heaps. Randomized placement and optional replica voting buy crash survival; a frame-budget engine usually wants the opposite — dense, predictable arenas — but DieHard names the reliability trade those arenas refuse.
 
 ## Key ideas
 
-- DieHard uses randomization and replication in the allocator to probabilistically tolerate memory errors.
+- Stand-alone mode replaces `malloc` with power-of-two size-class bitmaps; allocation probes random slots and never stores metadata next to objects.
+- Overflows that would smash a boundary tag land in padding; double/`free` of junk pointers are ignored after a bitmap check.
+- Replicated mode runs several copies with different seeds and compares output, catching uninitialized reads that a single randomized heap cannot.
+- Analytic M-approximation: expected minimum object separation grows with the overprovisioning factor; SPECint2000 overhead averaged about 8% in the paper.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/1133981.1134000](https://doi.org/10.1145/1133981.1134000)
-- URL: https://doi.org/10.1145/1133981.1134000
+- Author PDF: https://people.cs.umass.edu/~emery/pubs/fp014-berger.pdf

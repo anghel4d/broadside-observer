@@ -47,24 +47,22 @@ see:
 
 ## One-sentence takeaway
 
-The rapid evolution of Large Language Model (LLM) agents has produced diverse interaction paradigms, yet few production systems integrate multiple paradigms within a unified architecture.
+The buddyMe authors run generator–evaluator orchestration, ReAct tool loops, and memory-augmented interaction in one production framework and measure where each paradigm actually helps or wastes work.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; shapes harness/ACI design and model-vs-harness failure localization (Multi-Paradigm Agent Interaction in Practice:A Systematic Analysis of Generator-Evaluator,)
+Anoptic observers need the same composition: a cheap pre-review, a ReAct tool loop against the world, and an adversarial check before a digest is published — with numbers on redundant tool calls, not just architecture diagrams.
 
 ## Key ideas
 
-- The rapid evolution of Large Language Model (LLM) agents has produced diverse interaction paradigms, yet few production systems integrate multiple paradigms within a unified architecture.
-- This paper presents a systematic analysis of three principal agent interaction paradigms, including Multi-Agent Orchestration (Generator-Evaluator), ReAct Tool-Use Loops, and Memory-Augmented Interaction, as implemented in buddyMe, an open-source multi-model agent programming framework.
-- We formalize a five-stage processing pipeline: Requirement Pre-Review -> Task Decomposition -> ReAct Execution -> Real-Execution Verification -> Adversarial Evaluation Discussion, and establish a six-dimensional evaluation schema with weighted scoring.
-- Through four empirical case studies drawn from real-world deployment lo
+- Three paradigms share one pipeline: requirement pre-review → task decomposition → ReAct execution → real-execution verification → adversarial evaluation.
+- A six-dimensional weighted evaluation schema is used on four live deployment logs (museum guide, scheduled weather, tour planning, and related tasks).
+- Generator–evaluator pre-review catches requirement omissions in 20% of complex tasks; 80% pass first inspection.
+- The ReAct loop is stable but produces about 30% redundant tool invocations.
+- Adversarial evaluator–defender discussion reaches consensus in 2–3 rounds for nearly 70% of cases and mostly refines content rather than reversing logic; the paper also compares buddyMe to CrewAI, AutoGen, LangGraph, MemGPT, and A-Mem.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2605.16821](https://arxiv.org/abs/2605.16821)
-- URL: https://arxiv.org/abs/2605.16821

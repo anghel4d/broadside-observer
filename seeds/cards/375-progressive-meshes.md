@@ -16,16 +16,6 @@ reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 8
 cites:
-  - title: "A volumetric method for building complex models from range images"
-    url: "https://doi.org/10.1145/237170.237269"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/237170.237269"
-  - title: "Multiresolution analysis of arbitrary meshes"
-    url: "https://doi.org/10.1145/218380.218440"
-    year: 1995
-    arxiv: null
-    doi: "10.1145/218380.218440"
   - title: "Mesh optimization"
     url: "https://doi.org/10.1145/166117.166119"
     year: 1993
@@ -36,67 +26,33 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1145/133994.134010"
-  - title: "Arithmetic coding for data compression"
-    url: "https://doi.org/10.1145/214762.214771"
-    year: 1987
-    arxiv: null
-    doi: "10.1145/214762.214771"
-  - title: "Multiresolution analysis for surfaces of arbitrary topological type"
-    url: "https://doi.org/10.1145/237748.237750"
-    year: 1997
-    arxiv: null
-    doi: "10.1145/237748.237750"
-  - title: "Multi-resolution 3D approximations for rendering complex scenes"
-    url: "https://doi.org/10.1007/978-3-642-78114-8_29"
-    year: 1993
-    arxiv: null
-    doi: "10.1007/978-3-642-78114-8_29"
-  - title: "Spherical wavelets"
-    url: "https://doi.org/10.1145/218380.218439"
-    year: 1995
-    arxiv: null
-    doi: "10.1145/218380.218439"
-  - title: "Re-tiling polygonal surfaces"
-    url: "https://doi.org/10.1145/133994.134008"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/133994.134008"
   - title: "Geometry compression"
     url: "https://doi.org/10.1145/218380.218391"
     year: 1995
     arxiv: null
     doi: "10.1145/218380.218391"
-  - title: "Decimation of triangle meshes"
-    url: "https://doi.org/10.1145/142920.134010"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/142920.134010"
-  - title: "Adaptive display algorithm for interactive frame rates during visualization of complex virtual environments"
-    url: "https://doi.org/10.1145/166117.166149"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/166117.166149"
 ---
 
 # Progressive Meshes
 
 ## One-sentence takeaway
 
-Progressive mesh LOD.
+Store a mesh as a coarse base plus a sequence of vertex splits so you can stream, geomorph, and view-dependently refine a single representation.
 
 ## Why it matters here
 
-Progressive mesh LOD.
+This is the continuous-LOD encoding behind every later PM / geomorph / meshlet hierarchy. Anoptic can treat a progressive mesh as a compressed archive: pull as many splits as the camera budget allows, geomorph the frontier, never keep N discrete LOD models.
 
 ## Key ideas
 
-- Progressive mesh LOD.
+- Inverse of an edge collapse is a vertex split; a PM is `M0` plus `vsplit_1 … vsplit_n` reconstructing `Mn`.
+- The same stream supports smooth geomorphs (interpolate split vertices) and view-dependent refinement (apply only the splits that matter on screen).
+- Selective refinement + a vertex hierarchy lets you keep silhouette / close-up detail without refining the back of the mesh.
+- Doubles as a compression scheme: connectivity and attributes ride along the split records.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1145/237170.237216](https://doi.org/10.1145/237170.237216)
-- URL: https://doi.org/10.1145/237170.237216
+- DOI: https://doi.org/10.1145/237170.237216
+- Author page: https://hhoppe.com/proj/pm/

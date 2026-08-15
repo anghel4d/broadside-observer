@@ -63,9 +63,6 @@ Historical carrier of T-Machine entity-system ideas into indie engines; useful f
 
 ## Caveats
 
-- Performance model is JVM-era bitset/bag, not modern chunked archetypes.
-- Multiple forks; cite artemis-odb as the living reference.
-
 ## Links
 
 - URL: https://github.com/junkdog/artemis-odb

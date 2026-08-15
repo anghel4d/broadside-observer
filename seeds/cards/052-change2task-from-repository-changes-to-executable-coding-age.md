@@ -30,15 +30,10 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
-    doi: null
-  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
-    url: "https://arxiv.org/abs/2604.03964"
-    year: 2026
-    arxiv: "2604.03964"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
   - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     url: "https://arxiv.org/abs/2405.15793"
@@ -46,7 +41,7 @@ cites:
     arxiv: "2405.15793"
     doi: null
 see:
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
@@ -54,25 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Scaling coding agents requires a continuing supply of executable data for training, benchmarking, and continuous evaluation.
+Change2Task turns merged pull requests into verified coding-agent tasks on healthy modern revisions of the same repository, reconstructing task state by patch reversal, code mapping, or agent reconstruction.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments)
+Broadside and standing research loops need a continuing supply of executable, provenance-grounded coding tasks; Change2Task is a factory for those environments rather than a one-off SWE-bench scrape.
 
 ## Key ideas
 
-- Scaling coding agents requires a continuing supply of executable data for training, benchmarking, and continuous evaluation.
-- Each task must couple a realistic software state with a specification, development tools, and reliable verification.
-- To expand this supply, we present Change2Task, a system grounded in repository history that converts merged pull requests into verified tasks on healthy modern revisions of the same repository.
-- It aligns historical evidence with evolved code, reconstructs task states through Patch Reversal, Code Mapping, or Agent Reconstruction, and validates the lifecycle from a healthy base to a task state and a restored state.
-- By deriving multiple tasks grounded in developer evidence from maintained environments, Change2Task provides executable data for coding agent
+- Each task couples a realistic software state with a specification, development tools, and reliable verification on a maintained modern base.
+- Historical evidence is aligned with evolved code, then the lifecycle is validated from healthy base → task state → restored state.
+- Five task families are constructed: bug fix, feature addition, test generation, API migration, and security repair.
+- From 1,130 eligible source changes the pipeline reaches 79.6% verified construction success and recovers 29.2% more verified tasks than a PR-based construction baseline.
+- Historical and reconstructed cases agree on agent outcomes up to 98.0%; reusing modern bases cuts measured pipeline expenditure by 10.8%.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2607.28591](https://arxiv.org/abs/2607.28591)
-- URL: https://arxiv.org/abs/2607.28591
+- PDF: https://arxiv.org/pdf/2607.28591

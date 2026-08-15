@@ -3,10 +3,10 @@ title: Virtual Time and Global States of Distributed Systems
 authors:
 - Friedemann Mattern
 year: 1989
-venue: Parallel and Distributed Algorithms
+venue: Workshop on Parallel and Distributed Algorithms
 arxiv: null
 doi: null
-source: "https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf"
+source: "https://vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"
 topics:
 - vector-clocks
 - distributed-systems
@@ -36,24 +36,21 @@ see:
 
 ## One-sentence takeaway
 
-Mattern vector time / global states — independent vector-clock foundation with cut theory.
+Mattern models virtual time as a lattice of clock vectors isomorphic to causality, characterizes consistent global states as antichains in that lattice, and gives a snapshot algorithm that tolerates out-of-order messages.
 
 ## Why it matters here
 
-Companion to Fidge; standard citation for consistent cuts.
+This is the cut-theory companion to Fidge: the citation for consistent snapshots and “concurrency = incomparable timestamps” when Anoptic or GRID COMMAND debugs a distributed sim.
 
 ## Key ideas
 
-- Vector time model.
-- Consistent global snapshots.
-- Concurrency as incomparability.
-- Influences Chandy-Lamport readings.
+- Clock vectors form a lattice; $V(a)\le V(b)$ iff $a$ can causally affect $b$, so concurrent events are exactly the incomparable pairs.
+- A consistent global state (cut) is a downward-closed set of events with no message received before it is sent — an antichain in vector time.
+- The paper relates this lattice to Minkowski-style space-time and to Chandy–Lamport snapshots.
+- A new snapshot algorithm is given that does not require FIFO channels.
 
 ## Caveats
 
-- Workshop/book chapter venue variants.
-- Operational snapshot algorithms are separate papers.
-
 ## Links
 
-- URL: https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf
+- Author PDF (ETH): https://vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf

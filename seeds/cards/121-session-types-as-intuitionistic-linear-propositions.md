@@ -7,7 +7,7 @@ year: 2010
 venue: "CONCUR 2010, LNCS 6269"
 arxiv: null
 doi: "10.1007/978-3-642-15375-4_16"
-source: "https://link.springer.com/chapter/10.1007/978-3-642-15375-4_16"
+source: "https://www.cs.cmu.edu/~fp/papers/concur10.pdf"
 topics:
   - session-types
   - linear-logic
@@ -20,40 +20,25 @@ pool: "maths-foundations"
 relevance_score: 9
 cites:
   - title: "Language primitives and type discipline for structured communication-based programming"
-    url: "https://doi.org/10.1007/bfb0053567"
+    url: "https://doi.org/10.1007/BFb0053567"
     year: 1998
     arxiv: null
-    doi: "10.1007/bfb0053567"
+    doi: "10.1007/BFb0053567"
   - title: "Computational interpretations of linear logic"
-    url: "https://doi.org/10.1016/0304-3975(93)90181-r"
+    url: "https://doi.org/10.1016/0304-3975(93)90181-R"
     year: 1993
     arxiv: null
-    doi: "10.1016/0304-3975(93)90181-r"
+    doi: "10.1016/0304-3975(93)90181-R"
   - title: "Types for dyadic interaction"
     url: "https://doi.org/10.1007/3-540-57208-2_35"
     year: 1993
     arxiv: null
     doi: "10.1007/3-540-57208-2_35"
-  - title: "Types for Dynamic Interaction"
-    url: "http://dl.acm.org/citation.cfm?id=646728.703349"
-    year: 1993
-    arxiv: null
-    doi: null
-  - title: "Programming Languages and Systems"
-    url: "http://doi.org/10.1007/b102225"
-    year: 2004
-    arxiv: null
-    doi: "10.1007/b102225"
-  - title: "Lecture Notes in Computer Science 1205"
-    url: "https://doi.org/10.1108/ir.1999.04926fae.001"
-    year: 1999
-    arxiv: null
-    doi: "10.1108/ir.1999.04926fae.001"
   - title: "The Pi-Calculus: A Theory of Mobile Processes"
-    url: "http://bvbr.bib-bvb.de:8991/F?func=service&amp;doc_library=BVB01&amp;local_base=BVB01&amp;doc_number=009553282&amp;sequence=000002&amp;line_number=0001&amp;func_code=DB_RECORDS&amp;service_type=MEDIA"
+    url: "https://doi.org/10.1017/CBO9780511624193"
     year: 2001
     arxiv: null
-    doi: "10.1017/9781316134924?locatt=mode:legacy"
+    doi: "10.1017/CBO9780511624193"
   - title: "Subtyping for session types in the pi calculus"
     url: "https://doi.org/10.1007/s00236-005-0177-z"
     year: 2005
@@ -64,21 +49,11 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1093/logcom/2.3.297"
-  - title: "Sensoria Process Calculi for Service-Oriented Computing"
-    url: "https://doi.org/10.1007/978-3-540-75336-0_3"
-    year: 2007
-    arxiv: null
-    doi: "10.1007/978-3-540-75336-0_3"
   - title: "Functions as processes"
-    url: "https://doi.org/10.1017/s0960129500001407"
+    url: "https://doi.org/10.1017/S0960129500001407"
     year: 1992
     arxiv: null
-    doi: "10.1017/s0960129500001407"
-  - title: "Sessions and Session Types: An Overview"
-    url: "https://doi.org/10.1007/978-3-642-14458-5_1"
-    year: 2010
-    arxiv: null
-    doi: "10.1007/978-3-642-14458-5_1"
+    doi: "10.1017/S0960129500001407"
 see:
   - "136-language-primitives-and-type-discipline-for-structured-commu"
   - "143-computational-interpretations-of-linear-logic"
@@ -89,21 +64,24 @@ see:
 
 ## One-sentence takeaway
 
-Establishes a propositions-as-sessions correspondence with intuitionistic linear logic.
+Caires and Pfenning type the π-calculus so that sequents of dual intuitionistic linear logic are session typings: a proof of Γ; Δ ⊢ C extracts to a process that offers protocol C, and π-reductions are cut-elimination steps.
 
 ## Why it matters here
 
-Sessions as linear propositions — modern concurrency types rooted in Girard/Abramsky.
+GRID COMMAND and ano need typed channels, not ad-hoc message enums: ILL connectives are the protocol algebra (send, recv, choice, shared server), and the cut rule is composition-plus-hiding — the same shape as wiring two agents across a linear mailbox.
 
 ## Key ideas
 
-- Establishes a propositions-as-sessions correspondence with intuitionistic linear logic.
+- Types sit on names, not terms. `A ⊸ B` is “input a channel of type A, then continue as B”; `A ⊗ B` is “output a fresh A-channel, then continue as B”; `1` is a finished session; `A ⊕ B` / `A & B` are select vs offer; `!A` is a shared server that can spawn arbitrarily many A-sessions.
+- Dual contexts: unrestricted Γ (weaken/contract; shared servers) vs linear Δ (session endpoints). Intuitionistic `!` forces locality of shared names while session names may be delegated.
+- πDILL judgments `Γ; Δ ⊢ P :: z:C` match DILL sequents after erasing the process; cut / cut! are “compose and hide” on a linear session or a replicated server.
+- Subject reduction is operational correspondence: every π-reduction is a proof reduction, every proof conversion is a reduction or a structural congruence, and typed systems enjoy global progress (no deadlock across any number of open sessions).
+- A buy/quote server is literally `(N ⊸ I ⊸ (N ⊗ 1)) & (N ⊸ (I ⊗ 1))`; the client selects right, sends a product id, and receives a price — the same term is a DILL derivation.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
+- PDF (CMU): https://www.cs.cmu.edu/~fp/papers/concur10.pdf
 - DOI: [10.1007/978-3-642-15375-4_16](https://doi.org/10.1007/978-3-642-15375-4_16)
-- URL: https://link.springer.com/chapter/10.1007/978-3-642-15375-4_16
+- Springer: https://link.springer.com/chapter/10.1007/978-3-642-15375-4_16

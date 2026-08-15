@@ -46,23 +46,20 @@ see:
 
 ## One-sentence takeaway
 
-2026-08-13 GA of the hosted V4-Pro checkpoint (`deepseek-v4-pro` → DeepSeek-V4-Pro-0813): stronger agent scores, native Responses API, and low/high/max thinking effort — no new arXiv; architecture remains the V4 paper.
+2026-08-13 general availability of the hosted V4-Pro checkpoint (`deepseek-v4-pro` → DeepSeek-V4-Pro-0813): stronger agent scores, a native Responses API, and low/high/max thinking effort — no new arXiv; architecture remains the V4 paper.
 
 ## Why it matters here
 
-Product end of the first-party stack. The April preview report (`1263`, arXiv:2606.19348) is still the architecture; this changelog is the GA API/model drop agents actually call.
+Product end of the first-party stack. The April preview report (arXiv:2606.19348) is still the architecture; this changelog is the GA API/model drop agents actually call.
 
 ## Key ideas
 
 - Changelog dated 2026-08-13: https://api-docs.deepseek.com/updates — APP, Web, and API; call `deepseek-v4-pro` unchanged.
 - Agent-focused GA numbers (provider-reported): HLE 42.7 / 60.0 (w/ tools); Terminal Bench 2.1 87.9; NL2Repo 61.5; Cybergym 83.3; DeepSWE 62.7; Toolathlon-Verified 74.1; Agents' Last Exam 25.7; AutomationBench (Public) 31.8; DSBench-FullStack 71.1; DSBench-Hard 67.2.
 - Native OpenAI Responses API (Codex-adapted). Thinking effort for V4-Pro and V4-Flash: low / high / max.
-- Peak/off-peak API pricing announced, effective 16:00 UTC on 2026-08-16. Context remains 1M (same CSA+HCA / mHC / Muon stack as `1263`).
+- Peak/off-peak API pricing announced, effective 16:00 UTC on 2026-08-16. Context remains 1M (same CSA+HCA / mHC / Muon stack as the V4 paper). No new open checkpoint on 2026-08-13; treat 0813 as a hosted post-train.
 
 ## Caveats
-
-- Changelog card, not a paper. No new arXiv on 2026-08-13; cite `1263` / 2606.19348 for architecture.
-- Benchmarks are first-party; HF still hosts the April preview weights at mint time. Treat 0813 as a hosted post-train, not a new open checkpoint.
 
 ## Links
 

@@ -17,37 +17,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: An Algorithm for the Organization of Information
-  url: "https://en.wikipedia.org/wiki/AVL_tree"
-  year: 1962
-  arxiv: null
-  doi: null
-see:
-- "763-an-algorithm-for-the-organization-of-information"
+cites: []
+see: []
 ---
 
 # Organization and Maintenance of Large Ordered Indices
 
 ## One-sentence takeaway
 
-B-trees for external-memory ordered indices.
+Bayer–McCreight B-trees pack many keys per page-sized node so an ordered index on external memory has logarithmic height in *pages*, not in pointers.
 
 ## Why it matters here
 
-Databases, filesystems, and packfiles — the storage-oriented search tree.
+This is the storage-oriented search tree behind databases, filesystems, and Broadside packfile / replay indexes — high fanout, few I/Os, ancestor of every B+ leaf-linked variant.
 
 ## Key ideas
 
-- High fanout aligned to pages.
-- Split/merge maintenance.
-- Logarithmic height with few I/Os.
-- Ancestor of B+ variants.
+- A node of order $m$ holds between $\lceil m/2\rceil$ and $m$ children (root excepted), so height is $O(\log_m n)$.
+- Insert splits a full node and pushes the median up; delete merges or redistributes underflowing siblings.
+- Nodes are sized to a disk page, turning each comparison level into one I/O.
+- B+ trees keep all records in leaves and use internal nodes only as a fence-key index — the industrial default.
 
 ## Caveats
-
-- Page-size tuning dominates.
-- LSM trees compete for write-heavy workloads.
 
 ## Links
 

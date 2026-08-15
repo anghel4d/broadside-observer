@@ -59,9 +59,6 @@ Why you might love this: ano is a columnar/array language that will grow packed 
 
 ## Caveats
 
-- Extended abstract: simply-typed finite ADTs, 8-bit sum tags, no dependent sizes yet.
-- Currently printers/parsers (round-trip through the convenient type), not a full compiler of operations onto the packed representation.
-- Ribbit / OxCaml layouts are the engineering cousins; this card is the rig-equality technique, not those compilers.
 
 ## Links
 

@@ -51,9 +51,6 @@ Why you might love this: combinatorics-on-words (Morse–Hedlund, Christoffel, c
 
 ## Caveats
 
-- Constructed tiles need not be topological disks (they can even be disconnected); minimising topology is open.
-- The 3-tile self-similar example uses the hierarchical structure; the general quadratic algorithm does not.
-- Hat itself is not reminted here — this card is the word→lattice→tiles machine.
 
 ## Links
 

@@ -44,25 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation.
+Agentless solves SWE-bench Lite with a fixed localize–repair–validate pipeline and no autonomous tool loop, posting 32% (96 fixes) at $0.70 — above the open agent baselines the authors compare.
 
 ## Why it matters here
 
-shapes harness/ACI design and model-vs-harness failure localization (Agentless: Demystifying LLM-based Software Engineering Agents)
+Before Broadside or Anoptic grows another ReAct coding agent, this is the baseline that must lose: a dumb three-phase harness may already be the model, and “the agent chose the wrong tool” may be harness theatre.
 
 ## Key ideas
 
-- Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation.
-- More recently, researchers and industry practitioners have developed various autonomous LLM agents to perform end-to-end software development tasks.
-- These agents are equipped with the ability to use tools, run commands, observe feedback from the environment, and plan for future actions.
-- However, the complexity of these agent-based approaches, together with the limited abilities of current LLMs, raises the following question: Do we really have to employ complex autonomous software agents?
-- To attempt to answer this question, we build Agentless -- an agentless approach to automatically solve software develo
+- Autonomous SWE agents plan, call tools, and observe the environment; Agentless asks whether that complexity is required.
+- The pipeline is localization, then repair, then patch validation, with the LLM never choosing the next action or driving a shell.
+- On SWE-bench Lite the authors report 32.00% (96 correct fixes) at $0.70, the best among compared open systems at the time.
+- Manual audit of Lite finds issues with leaked ground-truth patches or misleading descriptions; SWE-bench Lite-S drops those for a stricter comparison.
+- The paper's claim is methodological: reset the baseline for autonomous SWE agents to this simple, interpretable pipeline.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2407.01489](https://arxiv.org/abs/2407.01489)
-- URL: https://arxiv.org/abs/2407.01489

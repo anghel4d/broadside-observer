@@ -3,7 +3,7 @@ title: "Theorems for Free!"
 authors:
   - "Philip Wadler"
 year: 1989
-venue: "FPCA 1989"
+venue: "FPCA"
 arxiv: null
 doi: "10.1145/99370.99404"
 source: "https://doi.org/10.1145/99370.99404"
@@ -18,11 +18,11 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 cites:
-  - title: "Principal type-schemes for functional programs"
-    url: "https://doi.org/10.1145/582153.582176"
-    year: 1982
+  - title: "Types, Abstraction and Parametric Polymorphism"
+    url: "http://dblp.uni-trier.de/db/conf/ifip/ifip83.html#Reynolds83"
+    year: 1983
     arxiv: null
-    doi: "10.1145/582153.582176"
+    doi: null
   - title: "A theory of type polymorphism in programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
@@ -33,72 +33,31 @@ cites:
     year: 1989
     arxiv: null
     doi: "10.1145/75277.75283"
-  - title: "Proofs and types"
-    url: "https://openalex.org/W159715351"
-    year: 1989
-    arxiv: null
-    doi: null
-  - title: "Miranda: A non-strict functional language with polymorphic types"
-    url: "https://doi.org/10.1007/3-540-15975-4_26"
-    year: 1985
-    arxiv: null
-    doi: "10.1007/3-540-15975-4_26"
-  - title: "Towards a theory of type structure"
-    url: "https://doi.org/10.1007/3-540-06859-7_148"
-    year: 1974
-    arxiv: null
-    doi: "10.1007/3-540-06859-7_148"
-  - title: "The system F of variable types, fifteen years later"
-    url: "https://doi.org/10.1016/0304-3975(86)90044-7"
-    year: 1986
-    arxiv: null
-    doi: "10.1016/0304-3975(86)90044-7"
-  - title: "Introduction to functional programming"
-    url: "https://ora.ox.ac.uk/objects/uuid:2667827f-4277-4060-975c-52e0f43a3682"
-    year: 1988
-    arxiv: null
-    doi: null
-  - title: "Types, Abstraction and Parametric Polymorphism."
-    url: "http://dblp.uni-trier.de/db/conf/ifip/ifip83.html#Reynolds83"
-    year: 1983
-    arxiv: null
-    doi: null
-  - title: "Functorial polymorphism"
-    url: "https://doi.org/10.1016/0304-3975(90)90151-7"
-    year: 1990
-    arxiv: null
-    doi: "10.1016/0304-3975(90)90151-7"
-  - title: "A proposal for standard ML"
-    url: "https://doi.org/10.1145/800055.802035"
-    year: 1984
-    arxiv: null
-    doi: "10.1145/800055.802035"
-  - title: "Polymorphism is not set-theoretic"
-    url: "https://doi.org/10.1007/3-540-13346-1_7"
-    year: 1984
-    arxiv: null
-    doi: "10.1007/3-540-13346-1_7"
+see:
+  - "641-types-abstraction-and-parametric-polymorphism"
+  - "645-how-to-make-ad-hoc-polymorphism-less-ad-hoc"
 ---
 
 # Theorems for Free!
 
 ## One-sentence takeaway
 
-Shows polymorphic types yield free equational theorems via Reynolds parametricity.
+Reynolds parametricity means a polymorphic type is a theorem: `map`, `head`, and `fold` satisfy equational laws that follow from their types alone, with no look at the code.
 
 ## Why it matters here
 
-Parametricity as free theorems — type-driven equations for polymorphic ano APIs.
+ano’s rank-polymorphic array API should come with free theorems — `map f ∘ map g = map (f ∘ g)` is not a test, it is the type. This paper is how you extract those equations.
 
 ## Key ideas
 
-- Shows polymorphic types yield free equational theorems via Reynolds parametricity.
+- A term of type `∀α. α → α` is (intensionally) the identity; `∀α. [α] → [α]` can only permute, drop, or duplicate, never inspect elements.
+- Wadler turns Reynolds’s relational interpretation into a programmer’s cookbook: read the type, write the relation, get the equation.
+- Works for algebraic datatypes via initial-algebra / fold fusion; this is the formal root of “shortcut deforestation” slogans.
+- Parametricity fails in the presence of seq, unboxed types, or ad-hoc overloading — which is why the paper also cites Wadler–Blott type classes from the same year.
+- FPCA 1989; DOI 10.1145/99370.99404. Author reprints are widely mirrored.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/99370.99404](https://doi.org/10.1145/99370.99404)
-- URL: https://doi.org/10.1145/99370.99404

@@ -20,56 +20,53 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Domains for Denotational Semantics"
-    url: "https://doi.org/10.1007/BFb0012801"
-    year: 1982
+  - title: "Toward a Mathematical Semantics for Computer Languages"
+    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
+    year: 1971
     arxiv: null
-    doi: "10.1007/BFb0012801"
-  - title: "A Structural Approach to Operational Semantics"
-    url: "https://doi.org/10.1016/j.jlap.2004.05.001"
-    year: 1981
+    doi: null
+  - title: "A Unified Approach to Global Program Optimization"
+    url: "https://doi.org/10.1145/512927.512945"
+    year: 1973
     arxiv: null
-    doi: "10.1016/j.jlap.2004.05.001"
+    doi: "10.1145/512927.512945"
+  - title: "Property Extraction in Well-Founded Property Sets"
+    url: "https://doi.org/10.1109/TSE.1975.6312840"
+    year: 1975
+    arxiv: null
+    doi: "10.1109/TSE.1975.6312840"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-  - title: "The Type and Effect Discipline"
-    url: "https://doi.org/10.1006/inco.1994.1037"
-    year: 1994
-    arxiv: null
-    doi: "10.1006/inco.1994.1037"
 see:
-  - "656-domains-for-denotational-semantics"
-  - "658-a-structural-approach-to-operational-semantics"
+  - "612-toward-a-mathematical-semantics-for-computer-languages"
   - "592-an-axiomatic-basis-for-computer-programming"
-  - "142-the-type-and-effect-discipline"
 ---
 
 # Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs by Construction or Approximation of Fixpoints
 
 ## One-sentence takeaway
 
-Founding abstract-interpretation paper: systematic sound approximation of program semantics via lattices/fixpoints.
+Sound static analysis is the construction of a coarser lattice of program properties whose extreme fixpoints over-approximate the concrete Scott–Strachey semantics.
 
 ## Why it matters here
 
-Cousot–Cousot 1977 is the static-analysis root — how sound program analyses should be justified.
+Anoptic’s engine, GRID COMMAND planners, and agent scripts all need analyses that never lie about aliasing, effects, or bounds. Cousot–Cousot 1977 is the justification that a cheap abstract interpreter over ECS state or shader IR is still a theorem about the real run, not a heuristic.
 
 ## Key ideas
 
-- Concrete vs abstract semantics.
-- Galois connections and sound approximation.
-- Fixpoint computation for analyses.
-- Unifies many ad-hoc data-flow analyses.
+- A program denotes computations in a concrete universe; an abstract interpretation re-executes that denotation in a simpler lattice so the result is a guaranteed summary of the real run.
+- Local transfer functions are monotone maps on a complete semilattice; global properties are extreme fixpoints of the resulting equation system (Tarski).
+- Abstraction is a consistency relation between interpretations: a coarser analysis must not contradict a finer one, and in particular must be consistent with the formal semantics.
+- Classical data-flow algorithms (Kildall, Wegbreit) are recovered as finite Kleene iteration; widening/narrowing approximate infinite chains.
+- The running example is the rule of signs: cheap, incomplete, still strong enough for the questions a compiler is allowed to ask.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/512950.512973](https://doi.org/10.1145/512950.512973)
-- URL: https://doi.org/10.1145/512950.512973
+- Author PDF: https://www.di.ens.fr/~cousot/publications.www/CousotCousot-POPL-77-ACM-p238--252-1977.pdf
+- Author page: https://www.di.ens.fr/~cousot/COUSOTpapers/POPL77.shtml

@@ -63,8 +63,6 @@ Modern size-class heap concern: placement and hugepage coverage matter as much a
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - USENIX: https://www.usenix.org/conference/osdi21/presentation/hunter

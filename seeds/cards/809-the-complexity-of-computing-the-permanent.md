@@ -18,18 +18,12 @@ pool: maths-foundations
 relevance_score: 9
 lineage: algorithms-and-complexity
 cites:
-- title: A Theory of the Learnable
-  url: "https://doi.org/10.1145/1968.1972"
-  year: 1984
-  arxiv: null
-  doi: 10.1145/1968.1972
 - title: The Complexity of Theorem-Proving Procedures
   url: "https://doi.org/10.1145/800157.805047"
   year: 1971
   arxiv: null
   doi: 10.1145/800157.805047
 see:
-- "780-a-theory-of-the-learnable"
 - "724-the-complexity-of-theorem-proving-procedures"
 ---
 
@@ -37,23 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Permanent is #P-complete — founding counting complexity.
+Valiant defines #P and proves that computing the permanent of a 0-1 matrix — equivalently, counting perfect matchings in a bipartite graph — is #P-complete, even though the determinant of the same matrix is in P.
 
 ## Why it matters here
 
-Explains why counting matchings/solutions is harder than decision.
+Decision NP-completeness does not tell you the cost of counting solutions. Matchings, parse forests, and “how many plans satisfy this GRID COMMAND constraint” sit on the permanent side of that split; determinant-style cancellation is the rare algebraic gift, not the default.
 
 ## Key ideas
 
-- #P class of counting problems.
-- Permanent vs determinant contrast.
-- Seeds later Toda theorem connections.
-- Valiant counting program.
+- #P is the class of functions that count accepting paths of a polynomial-time nondeterministic Turing machine.
+- A parsimonious-style reduction from counting satisfying assignments shows the permanent is #P-hard; it is obviously in #P.
+- The determinant is a signed permanent: the sign pattern is what makes Gaussian elimination work, and dropping the signs restores hardness.
+- The paper founds counting complexity; Toda’s theorem and Jerrum–Sinclair–Vigoda approximation of the permanent are later chapters.
 
 ## Caveats
-
-- Approximation of permanent is a separate positive story.
-- Decision NP-completeness does not automatically give counting hardness.
 
 ## Links
 

@@ -48,21 +48,23 @@ see:
 
 ## One-sentence takeaway
 
-Boids flocking classic.
+Boids flock from three local rules — separation, alignment, and cohesion — with no global leader or scripted path.
 
 ## Why it matters here
 
-Boids flocking classic.
+GRID COMMAND crowds and Anoptic ambient units can be an ECS system over neighbor queries; the 1987 model is still the baseline before ORCA or continuum fields.
 
 ## Key ideas
 
-- Boids flocking classic.
+- Each boid is a particle with geometric flight model plus a localized behavioral controller.
+- Separation steers away from neighbors that are too close; alignment matches nearby heading; cohesion steers toward the local centroid.
+- Neighborhood is a limited-radius, limited-FOV perception volume, so the simulation is O(neighbors) rather than a global planner.
+- Obstacle avoidance and goal seeking layer on the same acceleration-summing mixer used later in the 1999 steering catalog.
+- The SIGGRAPH film showed that these local rules produce splitting, rejoining, and milling that look like real flocks.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/37401.37406](https://doi.org/10.1145/37401.37406)
-- URL: https://doi.org/10.1145/37401.37406
+- Author reprint: https://www.red3d.com/cwr/papers/1987/boids.html

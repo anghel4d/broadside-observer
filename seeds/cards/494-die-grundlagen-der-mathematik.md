@@ -6,7 +6,7 @@ year: 1928
 venue: "Abhandlungen aus dem mathematischen Seminar der Hamburgischen Universität"
 arxiv: null
 doi: "10.1007/BF01661237"
-source: "https://link.springer.com/article/10.1007/BF01661237"
+source: "https://doi.org/10.1007/BF01661237"
 topics:
   - hilbert-program
   - consistency
@@ -18,48 +18,38 @@ pool: "maths-foundations"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
-    url: "https://doi.org/10.1007/BF01700692"
-    year: 1931
-    arxiv: null
-    doi: "10.1007/BF01700692"
+  - title: "On the Infinite"
+    url: "https://doi.org/10.1007/BF01206605"
+    year: 1926
+    doi: "10.1007/BF01206605"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
-    arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-  - title: "Investigations into Logical Deduction"
-    url: "https://doi.org/10.1007/BF01201353"
-    year: 1935
-    arxiv: null
-    doi: "10.1007/BF01201353"
 see:
-  - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
+  - "493-on-the-infinite"
   - "491-grundzuge-der-theoretischen-logik"
-  - "632-investigations-into-logical-deduction"
 ---
 
 # Die Grundlagen der Mathematik
 
 ## One-sentence takeaway
 
-Hilbert's Hamburg address restates the consistency program just before Gödel's incompleteness results arrived.
+Hilbert's 1927 Hamburg address restates the consistency program — arithmetic must be proved consistent by finitary inspection of proofs — at the public peak immediately before Gödel's incompleteness results.
 
 ## Why it matters here
 
-Timestamp for the crisis: the program's public peak immediately before incompleteness.
+Timestamp for the crisis Broadside's foundations spine narrates: the program's last confident statement, then incompleteness.
 
 ## Key ideas
 
-- Consistency of arithmetic as central problem.
-- Proof theory as mathematics of proofs.
-- Direct prelude to Gödel 1931.
+- Proof theory as mathematics of proofs: treat formal derivations as concrete objects and show no derivation ends in \(0=1\).
+- Consistency of arithmetic (and then analysis) is the central outstanding problem of the program.
+- Same year as Hilbert–Ackermann's *Grundzüge*; together they are the 1928 package Gödel responds to in 1930–31.
+- Published 1928 in the Hamburg *Abhandlungen* (DOI 10.1007/BF01661237).
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1007/BF01661237](https://doi.org/10.1007/BF01661237)
-- URL: https://link.springer.com/article/10.1007/BF01661237

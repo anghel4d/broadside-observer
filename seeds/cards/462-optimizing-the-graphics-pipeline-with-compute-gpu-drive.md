@@ -1,5 +1,4 @@
 ---
-
 title: "Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques"
 authors:
   - "Graham Wihlidal"
@@ -22,39 +21,30 @@ cites:
   - title: "GPU-Driven Rendering Pipelines"
     url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
     year: 2015
-    arxiv: null
-    doi: null
-  - title: "Nanite: A Deep Dive"
-    url: "https://advances.realtimerendering.com/"
-    year: 2021
-    arxiv: null
-    doi: null
 see:
   - "015-gpu-driven-rendering-pipelines"
-  - "090-nanite-a-deep-dive"
 ---
+
 # Optimizing the Graphics Pipeline with Compute — GPU-Driven Rendering Techniques
 
 ## One-sentence takeaway
 
-Frostbite-era compute culling/compaction that popularized GPU-resident scene submission alongside Haar/Aaltonen.
+Wihlidal moves Frostbite's cull, LOD, and draw compaction into compute so the GPU builds compacted indirect argument buffers just-in-time instead of waiting on a CPU-built command list.
 
 ## Why it matters here
 
-Complements the 2015 Advances talk and foreshadows Nanite-style cluster pipelines.
+Anoptic's GPU-driven path is this talk plus Haar/Aaltonen: resident scene, Hi-Z occlusion, compacted executes — the industrial pattern Nanite later specialized into clustered LOD.
 
 ## Key ideas
 
-- Move cull/LOD/compaction into compute.
-- Indirect execute with compacted draw lists.
-- Depth pyramid / Hi-Z occlusion tests on GPU.
+- Compute shaders perform per-instance and per-cluster frustum, occlusion, and LOD tests against a hierarchical depth pyramid.
+- Surviving draws are compacted into indirect execute buffers so the graphics pipe never walks rejected geometry.
+- Aimed at AMD GCN / DirectX 12 triangle throughput: preprocess geometry "just in time" rather than on the CPU command recorder.
+- Pairs with the 2015 SIGGRAPH Advances GPU-driven pipelines talk as the Frostbite-era public recipe.
 
 ## Caveats
 
-- Talk availability varies; pair with Haar/Aaltonen PDF.
-- Mesh shaders supersede some older patterns.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
-
 ## Links
 
-- URL: https://www.gdcvault.com/play/1023275/Optimizing-the-Graphics-Pipeline-with
+- GDC Vault: https://www.gdcvault.com/play/1023275/Optimizing-the-Graphics-Pipeline-with
+- Slides: https://ubm-twvideo01.s3.amazonaws.com/o1/vault/gdc2016/Presentations/Wihlidal_Graham_OptimizingTheGraphics.pdf

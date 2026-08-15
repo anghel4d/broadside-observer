@@ -36,18 +36,17 @@ The paper that makes string diagrams a theorem: graphical tensor calculus is the
 
 ## Why it matters here
 
-Root of Selinger's survey and of every NCD/Weaves wire. If ano ever grows a string-diagram surface, this is the math.
+Root of Selinger's survey and of every NCD/Weaves wire. If ano ever grows a string-diagram surface, this is the math that says the picture is the morphism.
 
 ## Key ideas
 
-- Adv. Math. 88(1):55–112, 1991. DOI `10.1016/0001-8708(91)90003-P`.
+- *Advances in Mathematics* 88(1):55–112, 1991. DOI `10.1016/0001-8708(91)90003-P`.
 - Progressive graphs / planar diagrams as a formal language for monoidal calculation.
-- Selinger 2010 (card 133) is the survey that points here; Weaves inherits the wires.
+- Selinger 2010 (card 117) is the survey that points here; Weaves inherits the wires.
+- Classic CT; no ML. Cited as diagrammatic foundation, not as an architecture paper.
 
 ## Caveats
 
-- Classic CT; no ML. Cited by Weaves as diagrammatic foundation, not as an architecture paper.
-
 ## Links
 
-- DOI: https://doi.org/10.1016/0001-8708(91)90003-P
+- DOI: [10.1016/0001-8708(91)90003-P](https://doi.org/10.1016/0001-8708(91)90003-P)

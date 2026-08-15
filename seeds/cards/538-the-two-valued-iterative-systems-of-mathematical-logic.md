@@ -43,22 +43,21 @@ see:
 
 ## One-sentence takeaway
 
-Post classifies clones of Boolean functions—explaining which gate sets are functionally complete.
+Post classifies every clone of Boolean functions—the lattice that says exactly which gate sets (NAND, NOR, majority+not, …) are functionally complete.
 
 ## Why it matters here
 
-Foundations of circuit universality; pairs with Shannon switching theory.
+Foundations of circuit universality, and the reason Anoptic can compile arbitrary standing-rule predicates down to a chosen gate library. Pairs with Shannon's switching theory: Shannon shows how to realize a Boolean function; Post says which primitives can express every function.
 
 ## Key ideas
 
-- Post's lattice of Boolean clones.
-- Functional completeness criteria.
-- Bridge from logic to switching circuits.
+- An *iterative system* (clone) is a set of Boolean functions closed under composition and containing the projections.
+- Post's lattice enumerates all such clones; the maximal ones under the full clone of all Boolean functions give the functional-completeness criteria.
+- NAND alone, NOR alone, and several other small bases sit at the top of the lattice.
+- Written 1921, published as Princeton Annals of Mathematics Study 5 in 1941.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691095707/the-two-valued-iterative-systems-of-mathematical-logic
+- Princeton: https://press.princeton.edu/books/paperback/9780691095707/the-two-valued-iterative-systems-of-mathematical-logic

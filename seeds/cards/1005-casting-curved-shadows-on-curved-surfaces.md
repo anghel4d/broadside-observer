@@ -50,9 +50,6 @@ Anoptic already has cascaded, variance, and imperfect shadow maps (356, 359, 402
 
 ## Caveats
 
-- Hard shadows only; penumbrae, cascaded splits, VSM, and deep visibility functions are later papers (keep Deep Shadow Maps as the 2000 companion, not a remint of this).
-- The 1978 Z-buffer has no 24-bit depth or hardware PCF; reproducing the paper literally on Vulkan still needs slope-scale bias and a comparison sampler.
-- DOI 10.1145/800248.807402 is the SIGGRAPH '78 proceedings paper.
 
 ## Links
 

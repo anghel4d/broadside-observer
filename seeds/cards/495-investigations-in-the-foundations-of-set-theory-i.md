@@ -18,48 +18,33 @@ pool: "maths-foundations"
 relevance_score: 8
 lineage: foundations-of-computing
 cites:
-  - title: "The Consistency of the Axiom of Choice and of the Generalized Continuum Hypothesis with the Axioms of Set Theory"
-    url: "https://press.princeton.edu/books/paperback/9780691079271/the-consistency-of-the-continuum-hypothesis"
-    year: 1940
-    arxiv: null
-    doi: null
-  - title: "Principia Mathematica, Volume I"
-    url: "https://archive.org/details/PrincipiaMathematicaVol1"
-    year: 1910
-    arxiv: null
-    doi: null
-  - title: "The Concept of Truth in Formalized Languages"
-    url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
-    year: 1933
-    arxiv: null
-    doi: null
+  - title: "Mathematical Problems (Hilbert's Problems)"
+    url: "https://www.ams.org/bull/1902-08-10/S0002-9904-1902-00923-3/S0002-9904-1902-00923-3.pdf"
+    year: 1900
+    doi: "10.1090/S0002-9904-1902-00923-3"
 see:
-  - "501-the-consistency-of-the-axiom-of-choice-and-of-the-generalize"
-  - "488-principia-mathematica-volume-i"
-  - "631-the-concept-of-truth-in-formalized-languages"
+  - "487-mathematical-problems-hilbert-s-problems"
 ---
 
 # Investigations in the foundations of set theory I
 
 ## One-sentence takeaway
 
-Zermelo's axiomatization made set theory a formal theory—background ontology for types, domains, and denotational semantics.
+Zermelo's 1908 axiomatization replaces the naive comprehension that produced Russell's paradox with a short list of axioms — extensionality, elementary sets, separation, power set, union, choice, infinity — so set theory becomes a formal theory.
 
 ## Why it matters here
 
-ZF/ZFC is the ambient universe when Anoptic talks about mathematical semantics and inductive definitions.
+ZF/ZFC is the ambient universe when Anoptic talks about mathematical semantics and inductive definitions; this is the first published axiom list.
 
 ## Key ideas
 
-- Separation axiom to block paradoxes.
-- Choice axiom explicit.
-- Foundation for later ZF/ZFC.
+- *Aussonderung* (separation): only subsets of an already given set defined by a definite property exist, blocking the Russell set.
+- Choice is stated explicitly as an axiom, not a theorem — the paper that made the axiom of choice a named hypothesis.
+- Infinity guarantees an inductive set; together with the others this is the core of later ZF (Fraenkel/Skolem replacement and regularity come later).
+- *Math. Ann.* 65:261–281; DOI 10.1007/BF01449999.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1007/BF01449999](https://doi.org/10.1007/BF01449999)
-- URL: https://doi.org/10.1007/BF01449999

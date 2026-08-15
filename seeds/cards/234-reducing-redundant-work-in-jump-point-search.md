@@ -1,5 +1,4 @@
 ---
-
 title: "Reducing Redundant Work in Jump Point Search"
 authors:
   - "Shizhe Zhao"
@@ -38,24 +37,23 @@ see:
 
 ## One-sentence takeaway
 
-JPS (Jump Point Search) is a state-of-the-art optimal algorithm for online grid-based pathfinding.
+Constrained JPS (CJPS) is an online fix for two JPS pathologies — repeated successor scans of the same map region, and expansion of suboptimal nodes — and is up to 7× faster on large game maps and 14× on crafted worst cases.
 
 ## Why it matters here
 
-Classical game/RTS AI technique (non-LLM) for GRID COMMAND lineage (Reducing Redundant Work in Jump Point Search).
+GRID COMMAND maps change as buildings and units appear; a purely online JPS that does not rescan the same empty rooms is the pathfinder you want when the grid is not a static bake.
 
 ## Key ideas
 
-- JPS (Jump Point Search) is a state-of-the-art optimal algorithm for online grid-based pathfinding.
-- Widely used in games and other navigation scenarios, JPS nevertheless can exhibit pathological behaviours which are not well studied: (i) it may repeatedly scan the same area of the map to find successors; (ii) it may generate and expand suboptimal search nodes.
-- In this work, we examine the source of these pathological behaviours, show how they can occur in practice, and propose a purely online approach, called Constrained JPS (CJPS), to tackle them efficiently.
-- Experimental results show that CJPS has low overheads and is often faster than JPS in dynamically changing grid environments: by up to 7x in large game maps and up to 14x in pathological scenarios.
+- Stock JPS can scan the same corridor many times looking for successors, and can generate nodes that are already known to be suboptimal.
+- Both pathologies show up on real game maps, not only on synthetic traps.
+- CJPS stays online: no offline jump-point precomputation, so dynamic obstacles are allowed.
+- Overheads are low enough that CJPS is often faster than JPS even when the pathologies are mild.
+- Peak gains: 7× on large game maps, 14× on pathological instances.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2306.15928](https://arxiv.org/abs/2306.15928)
-- URL: https://arxiv.org/abs/2306.15928
+- PDF: https://arxiv.org/pdf/2306.15928

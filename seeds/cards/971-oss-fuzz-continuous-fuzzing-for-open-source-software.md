@@ -35,22 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-Google's free continuous-fuzzing service for selected OSS — uutils is on it, so coreutils fuzzing is not a hobby job.
+Serebryany's USENIX Security '17 invited talk presents OSS-Fuzz: Google hosts coverage-guided fuzzing (libFuzzer/ASan, later more engines) for selected open-source projects so memory bugs are found continuously, not in one-off campaigns.
 
 ## Why it matters here
 
-The production fuzzing story for a foundation package. If you ship Unix userland, this is the expected bar.
+uutils is on OSS-Fuzz, so coreutils fuzzing is not a hobby job. If Anoptic ships Unix-shaped userland or a parser that faces untrusted input, this is the expected bar — hosted, regression-gated, and replayable locally.
 
 ## Key ideas
 
-- USENIX Security '17 presentation (not a full paper).
-- Hosted libFuzzer/ASan (and later engines) at Google scale for open source.
-- uutils: first-class in the dev workflow; anyone can also run the harnesses locally.
+- Talk/slides, not a refereed paper; still the canonical citation for the service.
+- Project authors write in-process harnesses; Google scales the corpus, sanitizers, and crash triage, then files bugs back to maintainers.
+- Built on the 2016 libFuzzer+ASan practice; later grew ClusterFuzz, more sanitizers, and more languages.
+- uutils: first-class in the dev workflow; anyone can also run the same harnesses locally. Combined with GNU-as-oracle differential fuzzing, this is how a foundation package stays honest.
 
 ## Caveats
-
-- Talk/slides, not a refereed paper. Still the canonical citation for OSS-Fuzz.
 
 ## Links
 
 - USENIX: https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/serebryany
+- Service: https://google.github.io/oss-fuzz/

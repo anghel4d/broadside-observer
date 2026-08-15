@@ -3,7 +3,7 @@ title: IP = PSPACE
 authors:
 - Adi Shamir
 year: 1992
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/146585.146609
 source: "https://doi.org/10.1145/146585.146609"
@@ -17,18 +17,17 @@ pool: maths-foundations
 relevance_score: 9
 lineage: algorithms-and-complexity
 cites:
-- title: Proof Verification and the Hardness of Approximation Problems
-  url: "https://doi.org/10.1145/278298.278306"
-  year: 1998
+- title: Algebraic Methods for Interactive Proof Systems
+  url: "https://doi.org/10.1145/146585.146605"
+  year: 1992
   arxiv: null
-  doi: 10.1145/278298.278306
+  doi: 10.1145/146585.146605
 - title: Relativizations of the P =? NP Question
   url: "https://doi.org/10.1137/0204037"
   year: 1975
   arxiv: null
   doi: 10.1137/0204037
 see:
-- "801-proof-verification-and-the-hardness-of-approximation-problem"
 - "734-relativizations-of-the-p-np-question"
 ---
 
@@ -36,23 +35,20 @@ see:
 
 ## One-sentence takeaway
 
-Shamir theorem: interactive proofs capture PSPACE.
+Shamir shows that public-coin interactive proofs capture exactly PSPACE by arithmetizing quantified Boolean formulas so a polynomial-time verifier can check a #SAT-style sum-check over a finite field.
 
 ## Why it matters here
 
-Showcase that interaction plus randomness equals vast space-bounded power.
+It is the cleanest demonstration that interaction plus randomness can certify computations far beyond NP — the same arithmetization later feeds PCPs, and it is the conceptual ancestor of “spot-check a huge trace” thinking that Broadside-style agents inherit whenever they outsource a long proof.
 
 ## Key ideas
 
-- Arithmetization of quantified Boolean formulas.
-- Public-coin IP protocols.
-- Collapses IP to PSPACE.
-- Non-relativizing technique exemplar.
+- Lund–Fortnow–Karloff–Nisan had already put the polynomial hierarchy in IP; Shamir tightens the upper bound to PSPACE by handling alternating quantifiers.
+- A QBF is rewritten as an arithmetic expression over a finite field; the prover claims the value of a low-degree multivariate polynomial, and the verifier reduces dimension one variable at a time.
+- The protocol is public-coin: the verifier’s messages are just random field elements.
+- The technique does not relativize, matching the Baker–Gill–Solovay lesson that oracle worlds cannot settle the interesting proof-system collapses.
 
 ## Caveats
-
-- Lund et al. earlier showed PH in IP; Shamir tightens to PSPACE.
-- Theoretical protocol, not a practical UI.
 
 ## Links
 

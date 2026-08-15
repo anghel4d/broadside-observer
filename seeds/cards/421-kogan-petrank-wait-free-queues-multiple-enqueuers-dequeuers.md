@@ -64,10 +64,6 @@ Defines the wait-free queue program Anoptic cares about when fairness under pree
 
 ## Caveats
 
-- Helping and descriptors add latency/complexity; later fast-path/slow-path and FAA designs usually faster.
-- Needs memory reclamation strategy for descriptors/nodes outside GC.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/1941553.1941585](https://doi.org/10.1145/1941553.1941585)

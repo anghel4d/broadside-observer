@@ -56,24 +56,22 @@ see:
 
 ## One-sentence takeaway
 
-Church proves the Entscheidungsproblem unsolvable via λ-definability—effective calculability as λ-calculus.
+Church identifies effective calculability with λ-definability and proves there is no algorithm for the Entscheidungsproblem of first-order logic.
 
 ## Why it matters here
 
-One half of the Church–Turing thesis birth announcement; λ is still Anoptic's semantic mother tongue.
+One half of the Church–Turing birth announcement: the other half is Turing's a-machines. Ano still speaks λ, so this is the paper that says "if you can compute it, you can write it as a λ-term"—the semantic mother tongue of every later typed-array and effects card.
 
 ## Key ideas
 
-- λ-definable functions as effective calculability.
-- Undecidability of the Entscheidungsproblem.
-- Parallel to Turing 1936 with different primitives.
-- Sets up Church–Turing thesis.
+- Effective calculability is defined as λ-definability (Church's thesis, stated as a definition).
+- The Entscheidungsproblem—decide validity of an arbitrary first-order formula—is shown unsolvable by reduction to an unsolvable problem about λ-conversion.
+- Parallel 1936 result to Turing's PLMS paper, using conversion instead of tape machines.
+- The companion JSL note (card 508) restates the unsolvability claim in the form logicians cite.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2371045](https://doi.org/10.2307/2371045)
-- URL: https://doi.org/10.2307/2371045
+- JSTOR: https://www.jstor.org/stable/2371045

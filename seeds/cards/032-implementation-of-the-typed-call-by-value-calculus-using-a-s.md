@@ -21,61 +21,11 @@ cites:
     year: 1988
     arxiv: null
     doi: "10.1145/73560.73564"
-  - title: "The Definition of Standard ML"
-    url: "https://doi.org/10.7551/mitpress/2319.001.0001"
-    year: 1997
-    arxiv: null
-    doi: "10.7551/mitpress/2319.001.0001"
-  - title: "Compiling with Continuations"
-    url: "https://doi.org/10.1017/cbo9780511609619"
-    year: 1991
-    arxiv: null
-    doi: "10.1017/cbo9780511609619"
-  - title: "Principal type-schemes for functional programs"
-    url: "https://doi.org/10.1145/582153.582176"
-    year: 1982
-    arxiv: null
-    doi: "10.1145/582153.582176"
   - title: "A theory of type polymorphism in programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-  - title: "The Art of Computer Programming. Volume 1: Fundamental Algorithms."
-    url: "https://doi.org/10.2307/2283757"
-    year: 1969
-    arxiv: null
-    doi: "10.2307/2283757"
-  - title: "ML for the Working Programmer"
-    url: "https://doi.org/10.1017/cbo9780511811326"
-    year: 1996
-    arxiv: null
-    doi: "10.1017/cbo9780511811326"
-  - title: "A real-time garbage collector based on the lifetimes of objects"
-    url: "https://doi.org/10.1145/358141.358147"
-    year: 1983
-    arxiv: null
-    doi: "10.1145/358141.358147"
-  - title: "Type inference with polymorphic recursion"
-    url: "https://doi.org/10.1145/169701.169692"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/169701.169692"
-  - title: "List processing in real time on a serial computer"
-    url: "https://doi.org/10.1145/359460.359470"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359460.359470"
-  - title: "Algebraic reconstruction of types and effects"
-    url: "https://doi.org/10.1145/99583.99623"
-    year: 1991
-    arxiv: null
-    doi: "10.1145/99583.99623"
-  - title: "Co-induction in relational semantics"
-    url: "https://doi.org/10.1016/0304-3975(91)90033-x"
-    year: 1991
-    arxiv: null
-    doi: "10.1016/0304-3975(91)90033-x"
 see:
   - "150-polymorphic-effect-systems"
 ---
@@ -84,21 +34,22 @@ see:
 
 ## One-sentence takeaway
 
-Translates typed call-by-value lambda-calculus to a region-based runtime via region and effect inference.
+Tofte and Talpin translate typed CBV λ-calculus into a target that allocates into a stack of regions whose lifetimes are inferred from a type-and-effect analysis — the original region-inference paper.
 
 ## Why it matters here
 
-Foundational region stack paper; ano/anoptic arenas follow allocate-by-region, free-wholesale.
+This is the compilation shape ano already uses: infer (or declare) an arena, bump-allocate, pop the arena. The 1997 journal paper proves it; this POPL paper is the algorithm that shipped in the ML Kit.
 
 ## Key ideas
 
-- Translates typed call-by-value lambda-calculus to a region-based runtime via region and effect inference.
+- Region and effect inference is a constraint problem on top of ordinary HM-style types: each type constructor carries a region variable, each term an effect set.
+- The target language has `new r`, `e at r`, and `release r`. Regions are LIFO, so release is pointer reset, not a scan.
+- Call-by-value is essential: under CBN a delayed computation could outlive the region it was typed in.
+- The paper shows how polymorphic let, recursion, and references interact with region lifetimes — references are the hard case and motivate later resetting.
+- Related work it sits on: Lucassen–Gifford polymorphic effects, Milner polymorphism, Appel-style continuation compilation.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/174675.177855](https://doi.org/10.1145/174675.177855)
-- URL: https://doi.org/10.1145/174675.177855

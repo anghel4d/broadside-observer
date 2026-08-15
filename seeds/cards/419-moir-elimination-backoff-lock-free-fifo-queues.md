@@ -54,10 +54,6 @@ Useful when Anoptic producer/consumer bursts cancel each other — backoff via e
 
 ## Caveats
 
-- Helps most when concurrent opposite operations are frequent; pure producer storms still hit the queue spine.
-- Implementation complexity and timing windows are non-trivial.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/1073970.1074013](https://doi.org/10.1145/1073970.1074013)

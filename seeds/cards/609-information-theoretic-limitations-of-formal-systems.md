@@ -29,43 +29,35 @@ cites:
     arxiv: null
     doi: "10.1145/321356.321363"
   - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+    url: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
     year: 1965
     arxiv: null
     doi: null
-  - title: "A Theory of Program Size Formally Identical to Information Theory"
-    url: "https://doi.org/10.1145/321892.321894"
-    year: 1975
-    arxiv: null
-    doi: "10.1145/321892.321894"
 see:
   - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - "607-on-the-length-of-programs-for-computing-finite-binary-sequen"
   - "604-three-approaches-to-the-quantitative-definition-of-informati"
-  - "608-a-theory-of-program-size-formally-identical-to-information-t"
 ---
 
 # Information-Theoretic Limitations of Formal Systems
 
 ## One-sentence takeaway
 
-Chaitin shows incompleteness via incompressibility—Gödel with program-size glasses.
+Chaitin recasts Gödel incompleteness as a complexity bound: a formal system of complexity n cannot prove that a string has complexity much larger than n.
 
 ## Why it matters here
 
-Ties incompleteness spine to AIT; Broadside epistemology candy.
+This is the incompleteness spine wearing AIT glasses — the reason "we proved this trace is incompressible" is not something a small checker can generally do, and the conceptual parent of later Ω / unprovable randomness claims.
 
 ## Key ideas
 
-- Unprovability of random strings' randomness.
-- Complexity bounds on formal systems.
-- Bridge Gödel–Kolmogorov–Chaitin.
+- If a theory T has a description of length n, it can prove only finitely many statements of the form "C(x) ≥ m" for m ≫ n.
+- Random (incompressible) strings exist in abundance, but T cannot certify the randomness of those that outrun its own size.
+- The argument is information-theoretic rather than diagonal-via-provability-predicate, though it is a cousin of Gödel 1931.
+- Sets up the later prefix-free / Ω incompleteness results in the 1975 JACM paper.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/321812.321814](https://doi.org/10.1145/321812.321814)
-- URL: https://doi.org/10.1145/321812.321814

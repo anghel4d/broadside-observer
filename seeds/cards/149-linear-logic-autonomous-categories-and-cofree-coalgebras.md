@@ -6,7 +6,7 @@ year: 1989
 venue: "Contemporary Mathematics 92"
 arxiv: null
 doi: null
-source: "https://bookstore.ams.org/conm-92"
+source: "https://www.math.mcgill.ca/rags/nets/llsac.pdf"
 topics:
   - linear-logic
   - category-theory
@@ -17,46 +17,36 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
 cites:
-  - title: "Computational lambda-calculus and monads"
-    url: "https://doi.org/10.1109/lics.1989.39155"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/lics.1989.39155"
   - title: "Linear Logic"
     url: "https://doi.org/10.1016/0304-3975(87)90045-4"
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
-    url: "https://arxiv.org/abs/0903.0340"
-    year: 2011
-    arxiv: "0903.0340"
-    doi: "10.1007/978-3-642-12821-9_2"
 see:
-  - "037-computational-lambda-calculus-and-monads"
   - "040-linear-logic"
-  - "018-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Linear Logic, *-Autonomous Categories and Cofree Coalgebras
 
 ## One-sentence takeaway
 
-Gives categorical semantics of linear logic using *-autonomous categories and coalgebras.
+Girard's linear logic is the internal language of a *-autonomous category (closed symmetric monoidal, finite products, closed involution), and the exponential `!` is a cotriple that turns cartesian comonoids into tensorial comonoids so the Kleisli category of `!` is cartesian closed.
 
 ## Why it matters here
 
-Seely's categorical model of linear logic via *-autonomous categories — CT↔LL bridge.
+This is the CT↔LL dictionary Broadside's linear/session side depends on: dualizing object as `(-)⊥`, tensor vs. cartesian product, and `!` as the "of course" comonad that restores ordinary intuitionistic function space.
 
 ## Key ideas
 
-- Gives categorical semantics of linear logic using *-autonomous categories and coalgebras.
+- Analogous to the CCC / simply-typed λ-calculus correspondence. The linear structure is a *-autonomous category `G`: closed symmetric monoidal, with finite products and a closed involution (Barr).
+- Multiplicative connectives live in the monoidal closed structure (`⊗`, `⊸`, dualizing object); additives are the cartesian products/coproducts.
+- Girard's exponential `!` is a cotriple (comonad) on `G`. It carries the canonical comonoid structure on `A` with respect to cartesian product to a comonoid structure on `!A` with respect to tensor — i.e. `!` manufactures the "reusable" objects that linear logic otherwise forbids.
+- The Kleisli category of that cotriple is cartesian closed, which is why intuitionistic logic embeds into linear logic via `A → B  ≔  !A ⊸ B`.
+- Short (Contemporary Mathematics 92, 1989, pp. 371–382). The author's abstract page states the characterisation in one paragraph; the PDF is the paper.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://bookstore.ams.org/conm-92
+- PDF: https://www.math.mcgill.ca/rags/nets/llsac.pdf
+- Abstract: https://www.math.mcgill.ca/rags/nets/llsac.abstract.html

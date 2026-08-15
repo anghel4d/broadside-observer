@@ -24,7 +24,7 @@ cites:
   arxiv: null
   doi: 10.1090/S0025-5718-1965-0178586-1
 - title: Multiplication of Multidigit Numbers on Automata
-  url: "https://en.wikipedia.org/wiki/Karatsuba_algorithm"
+  url: "https://www.mathnet.ru/eng/dan26729"
   year: 1962
   arxiv: null
   doi: null
@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Schonhage-Strassen integer multiplication via FFT — near-linear multiplication.
+Schönhage–Strassen multiply $n$-bit integers by FFT convolution over a Fermat ring, in $O(n\log n\log\log n)$ bit operations — the first near-linear integer multiply.
 
 ## Why it matters here
 
-Classic asymptotic integer multiply used conceptually in big-int libraries.
+This is the asymptotic engine inside GMP-class big-int libraries once Karatsuba/Toom stop winning, and the conceptual parent of every NTT multiply an Anoptic/ano numeric path might grow into.
 
 ## Key ideas
 
-- FFT convolution for integer multiply.
-- O(n log n log log n) classic bound.
-- Transfers DFT techniques to integers.
-- Bridge to Furer / Harvey-van der Hoeven.
+- Integer multiplication is cyclic convolution of digit vectors, evaluated by a discrete Fourier transform.
+- Working in $\mathbb{Z}/(2^{2^k}+1)\mathbb{Z}$ keeps twiddles as bit rotations, avoiding floating-point FFT error.
+- The 1971 bound $O(n\log n\log\log n)$ stood until Fürer (2007) and Harvey–van der Hoeven (2019, $O(n\log n)$).
+- Practical thresholds are huge; implementations are delicate about ring size and carry correction.
 
 ## Caveats
-
-- Practical thresholds are huge.
-- Implementation is delicate.
 
 ## Links
 

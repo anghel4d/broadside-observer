@@ -1,67 +1,33 @@
 ---
-title: Communicating Sequential Processes
+title: "Communicating Sequential Processes"
 authors:
-- C. A. R. Hoare
+  - "C. A. R. Hoare"
 year: 1978
-venue: CACM
+venue: "Communications of the ACM"
 arxiv: null
-doi: 10.1145/359576.359585
-source: https://doi.org/10.1145/359576.359585
+doi: "10.1145/359576.359585"
+source: "https://doi.org/10.1145/359576.359585"
 topics:
-- concurrency
-- archive
+  - concurrency
+  - archive
 seed_rank: 46
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: languages
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "languages"
 relevance_score: 10
 cites:
-  - title: "A Calculus of Communicating Systems"
-    url: "https://doi.org/10.1007/3-540-10235-3"
-    year: 1980
-    arxiv: null
-    doi: null
   - title: "Guarded commands, nondeterminacy and formal derivation of programs"
     url: "https://doi.org/10.1145/360933.360975"
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
-  - title: "Proof of correctness of data representations"
-    url: "https://doi.org/10.1007/bf00289507"
-    year: 1972
+  - title: "A Calculus of Communicating Systems"
+    url: "https://doi.org/10.1007/3-540-10235-3"
+    year: 1980
     arxiv: null
-    doi: "10.1007/bf00289507"
-  - title: "Design of a separable transition-diagram compiler"
-    url: "https://doi.org/10.1145/366663.366704"
-    year: 1963
-    arxiv: null
-    doi: "10.1145/366663.366704"
-  - title: "Structured Programming"
-    url: "https://doi.org/10.1038/244318b0"
-    year: 1973
-    arxiv: null
-    doi: "10.1038/244318b0"
-  - title: "Report on the algorithmic language ALGOL 60"
-    url: "https://doi.org/10.1145/367236.367262"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367236.367262"
-  - title: "The Programming Language Concurrent Pascal"
-    url: "https://doi.org/10.1007/978-1-4612-6315-9_19"
-    year: 1978
-    arxiv: null
-    doi: "10.1007/978-1-4612-6315-9_19"
-  - title: "The Programming Language Concurrent Pascal"
-    url: "https://doi.org/10.1007/978-1-4757-3472-0_11"
-    year: 1975
-    arxiv: null
-    doi: "10.1007/978-1-4757-3472-0_11"
-  - title: "Performance predictions for extended paged memories"
-    url: "https://doi.org/10.1007/bf00264288"
-    year: 1971
-    arxiv: null
-    doi: "10.1007/bf00264288"
+    doi: "10.1007/3-540-10235-3"
 see:
+  - "591-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
   - "043-a-calculus-of-communicating-systems"
 ---
 
@@ -69,21 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-CSP introduces synchronized communication as the structuring principle for concurrent programs.
+Hoare’s 1978 CACM paper proposes that concurrent programs be structured as sequential processes that synchronize by *unbuffered* named input/output — no shared variables, no buffers, Dijkstra guards for choice.
 
 ## Why it matters here
 
-Foundational concurrent process algebra; informs deterministic multi-system engine design.
+Deterministic multi-system Anoptic design is CSP-shaped: systems rendezvous on messages rather than mutate a shared heap. occam, Go channels, and a lot of game-netcode folklore sit on this paper.
 
 ## Key ideas
 
-- CSP introduces synchronized communication as the structuring principle for concurrent programs.
+- A process is a sequential program; parallelism is `P || Q`. The only interaction is `P!e` (output) meeting `Q?x` (input) on a named channel, as a single atomic event.
+- Guarded commands (from Dijkstra 1975) select among ready communications; if several guards are ready, the choice is nondeterministic.
+- Shared memory is deliberately excluded so interference proofs become composition proofs.
+- Examples include a bounded buffer (ironically built *from* processes, not assumed), a dining-philosophers treatment, and a prime sieve — the paper is as much a manifesto as a calculus.
+- The later 1985 Prentice-Hall book *Communicating Sequential Processes* is the full theory (failures/divergences); cite the CACM paper for the original proposal. Milner’s CCS (1980) is the independent algebraic twin.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/359576.359585](https://doi.org/10.1145/359576.359585)
-- URL: https://doi.org/10.1145/359576.359585

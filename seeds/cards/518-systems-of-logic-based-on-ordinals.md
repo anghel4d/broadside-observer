@@ -50,22 +50,20 @@ see:
 
 ## One-sentence takeaway
 
-Turing's Princeton thesis explores ordinal logics—transfinite progressions of theories escaping incompleteness stepwise.
+Turing's Princeton thesis builds ordinal logics: a transfinite progression of theories, each adjoining the consistency statement of its predecessor, indexed by Kleene's notations for recursive ordinals.
 
 ## Why it matters here
 
-Deep link from incompleteness to proof strength; ancestor of proof-theoretic ordinals talk.
+Incompleteness is not a wall but a climb. Any Anoptic story about self-certifying systems, proof strength, or "add the next axiom and continue" is downstream of these O-logics and of the oracle machines (o-machines) introduced along the way.
 
 ## Key ideas
 
-- O-machines / ordinal logics.
-- Incompleteness as fuel for ascending theories.
-- Early relative computability ideas.
-- PhD work under Church.
+- An ordinal logic is a recursive assignment of formal systems to notations in Kleene's \(\mathcal{O}\).
+- Each successor step adds a consistency (or reflection) statement; limit steps take unions along a notation.
+- Completeness fails in general, but the construction isolates how much incompleteness can be climbed past at each recursive ordinal.
+- Introduces oracle machines as a tool for relative computability—the ancestor of Turing reducibility.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

@@ -56,23 +56,20 @@ see:
 
 ## One-sentence takeaway
 
-Project Hyper-Connections' residual mixing onto the Birkhoff polytope (Sinkhorn-Knopp doubly-stochastic maps) so identity-mapping stability survives a widened residual stream — then V4 ships it.
+mHC projects ByteDance Hyper-Connections' residual mixing onto the Birkhoff polytope via Sinkhorn-Knopp doubly-stochastic maps so identity-mapping stability survives a widened n-stream residual — then V4 ships it as the default residual.
 
 ## Why it matters here
 
-Macro-architecture for residual topology. ResNet identity mapping restored under n-stream residuals; 6.7% overhead at n=4. The residual story Weaves would draw as a term.
+Macro-architecture for residual topology. ResNet identity mapping restored under n-stream residuals at 6.7% overhead (n=4). The residual story Weaves would draw as a term; Engram and V4 both take mHC as default.
 
 ## Key ideas
 
-- arXiv:2512.24880. ByteDance Hyper-Connections widen the residual stream and learn mixing matrices, but composites explode (amax gain ~3000) and wreck identity mapping.
-- mHC: Sinkhorn-Knopp (~20 iters) projects H_res onto doubly-stochastic matrices; H_pre/post via sigmoid. Spectral norm ≤1, closed under multiply, mean-preserving convex mixes.
+- arXiv:2512.24880. Unconstrained Hyper-Connections widen the residual stream and learn mixing matrices, but composites explode (amax gain ~3000) and wreck identity mapping.
+- mHC: ~20 Sinkhorn-Knopp iterations project \(H_{\mathrm{res}}\) onto doubly-stochastic matrices; \(H_{\mathrm{pre/post}}\) via sigmoid. Spectral norm ≤1, closed under multiply, mean-preserving convex mixes.
 - TileLang fused kernels, selective recompute, DualPipe overlap; n=4 costs +6.7% time. 27B: −0.021 loss vs baseline, more stable than unconstrained HC.
-- Used as default residual in Engram (1261) and DeepSeek-V4 (1263).
+- Used as default residual in Engram and DeepSeek-V4. Birkhoff is one manifold choice; the paper invites others.
 
 ## Caveats
-
-- Manifold choice (Birkhoff) is one option; the paper invites others.
-- n=4 is the reported production setting; wider streams change I/O math.
 
 ## Links
 

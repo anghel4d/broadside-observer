@@ -37,24 +37,21 @@ see:
 
 ## One-sentence takeaway
 
-Sedgewick Algorithms — the code-first classic (later algs4 with Wayne).
+Sedgewick’s *Algorithms* (1983; later *Algorithms*, 4th ed. with Kevin Wayne) teaches sorting, searching, graphs, and strings from working code and empirical cost models rather than from theorem-first exposition.
 
 ## Why it matters here
 
-Practical algorithms text emphasizing implementations and empirical study.
+This is the code-first complement to CLRS for Anoptic/ano implementers: red-black and union-find as programs you can time, plus the algs4 site as the living artifact.
 
 ## Key ideas
 
-- Code-centric exposition.
-- Sorting/searching/graphs emphasis.
-- Bridges theory to runnable programs.
-- One card max; prefer algs4 site for modern code.
+- First edition 1983 (Addison-Wesley); the current teaching site is algs4.cs.princeton.edu with Java implementations.
+- Emphasis on cache behavior, input models, and doubling experiments next to big-O.
+- Core path is elementary sorts → mergesort/quicksort → BSTs/red-black → hash tables → undirected/directed graphs → strings.
+- One card for the book family; prefer the algs4 site over hunting a 1983 ISBN when you need the code.
 
 ## Caveats
 
-- Multiple editions over decades.
-- Less theorem-heavy than CLRS.
-
 ## Links
 
-- URL: https://algs4.cs.princeton.edu/
+- algs4 site: https://algs4.cs.princeton.edu/

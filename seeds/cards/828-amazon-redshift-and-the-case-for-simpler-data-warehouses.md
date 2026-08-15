@@ -3,13 +3,13 @@ title: Amazon Redshift and the Case for Simpler Data Warehouses
 authors:
 - Anurag Gupta
 - Deepak Agarwal
-- Derek S. Tan
+- Derek Tan
 - Jakub Kulesza
 - Rahul Pathak
 - Stefano Stefani
 - Vidhya Srinivasan
 year: 2015
-venue: ""
+venue: SIGMOD
 arxiv: null
 doi: 10.1145/2723372.2742795
 source: "https://doi.org/10.1145/2723372.2742795"
@@ -22,30 +22,27 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
 # Amazon Redshift and the Case for Simpler Data Warehouses
 
 ## One-sentence takeaway
 
-Influential database systems paper (2015).
+Redshift is AWS’s columnar, MPP warehouse built by taking ParAccel’s shared-nothing engine and making the operational surface small: one-click provisioning, baked-in columnar compression and zone maps, and a deliberately limited knob set so customers get C-Store-class scans without a DBA staff.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+It is the “good-enough warehouse” foil to Snowflake’s elastic split and to Vertica’s knob-heavy commercial C-Store. When Broadside just needs SQL over a few TB of cards and traces, Redshift’s lesson is: hide the MPP, keep the column store.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- Storage is columnar with automatic compression encodings and zone maps; a leader node plans, compute slices scan local blocks in a classic shared-nothing layout.
+- The product thesis is simplicity: snapshot/restore, resize, and vacuum are first-class, while exotic tuner knobs are omitted on purpose.
+- Workload isolation is coarse (WLM queues) rather than warehouse-per-workload elasticity — the contrast Snowflake later exploits.
+- The paper reports production adoption numbers and argues that most warehouse customers were over-served by Teradata-class complexity.
 
 ## Caveats
-
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
 
 ## Links
 

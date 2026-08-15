@@ -36,21 +36,19 @@ see:
 
 ## One-sentence takeaway
 
-The standard 2016 textbook of deep learning — Weaves cites it as the informal baseline its algebra is meant to replace.
+Goodfellow, Bengio, and Courville's 2016 MIT Press textbook is the standard informal account of pre-Transformer deep learning — MLPs, convnets, sequence models, and backprop — that Weaves cites as the baseline its algebra is meant to replace.
 
 ## Why it matters here
 
-Background literacy, not a Broadside-specific result. Kept as a compact card because the Weaves bib treats it as a first-class reference.
+Background literacy, not a Broadside-specific result. Kept because the Weaves bibliography treats the book as a first-class reference for the informal broadcasting and layer-composition story that NCD/Weaves then make compositional.
 
 ## Key ideas
 
-- MIT Press 2016; https://www.deeplearningbook.org/
-- Covers the pre-Transformer mainstream (MLPs, convnets, seq models, backprop).
-- Weaves' complaint: books/pseudocode still don't handle broadcasting compositionally.
+- Free HTML at https://www.deeplearningbook.org/; MIT Press DOI `10.7551/mitpress/7137.001.0001`.
+- Three parts: applied-math background, modern practice (feedforward nets, conv, recurrence, regularization), and research topics (autoencoders, representation learning, structured probabilistic models).
+- The architecture cards (AlexNet / ResNet / Transformer) carry the specifics; this card is the textbook that still writes broadcasting in pseudocode rather than as a morphism.
 
 ## Caveats
-
-- Textbook. No need to over-cite; the architecture cards (AlexNet/ResNet/Transformer) carry the specifics.
 
 ## Links
 

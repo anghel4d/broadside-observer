@@ -31,7 +31,7 @@ cites:
     arxiv: null
     doi: "10.1073/pnas.43.2.236"
   - title: "On the unsolvability of the problem of reducibility of the theory of algorithms"
-    url: "https://www.worldcat.org/search?q=Muchnik+reducibility+1956"
+    url: "https://www.mathnet.ru/rus/person46479"
     year: 1956
     arxiv: null
     doi: null
@@ -51,23 +51,22 @@ see:
 
 ## One-sentence takeaway
 
-Kleene–Post build incomparable degrees by finite extension—degree theory as explicit construction.
+Kleene and Post construct incomparable Turing degrees below \(0'\) by finite extension, showing the degree universe is already rich before anyone solves Post's r.e. problem.
 
 ## Why it matters here
 
-Shows the r.e./Turing-degree universe is rich; method ancestor of priority constructions.
+Method ancestor of every later priority construction. When Broadside talks about "structure inside undecidability," this is the first paper that *builds* incomparable degrees rather than merely defining reducibility.
 
 ## Key ideas
 
-- Finite-extension constructions.
-- Incomparable degrees below 0'.
-- Sets the stage for Friedberg–Muchnik.
+- A Turing degree is an equivalence class of sets under mutual Turing reducibility.
+- Finite-extension (forcing-style) constructions produce sets \(A, B \leq_T 0'\) with \(A \nleq_T B\) and \(B \nleq_T A\).
+- The constructed degrees need not be r.e.; Post's problem (incomparable *r.e.* degrees) remains open here and is solved by Friedberg–Muchnik.
+- Sets the combinatorial pattern—meet requirements one by one, injuring earlier ones only finitely often—that priority methods will refine.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/1969708](https://doi.org/10.2307/1969708)
-- URL: https://doi.org/10.2307/1969708
+- JSTOR: https://www.jstor.org/stable/1969708

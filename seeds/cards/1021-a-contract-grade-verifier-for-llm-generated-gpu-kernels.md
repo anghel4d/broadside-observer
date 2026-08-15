@@ -59,9 +59,6 @@ Anoptic is C/Vulkan and we will eventually let agents emit compute shaders / mes
 
 ## Caveats
 
-- Primary corpus is Triton/KernelBench-shaped, forward-only (two gates idle). CUDA residual on Sakana is a weaker 20.2%.
-- Native kernel envelope is narrow (dk=128, chunk=64, B200). Not a Vulkan/SPIR-V story.
-- Authors are a healthcare-ML shop; dual headline (verifier + GDN kernel) is a bit of a sandwich.
 
 ## Links
 

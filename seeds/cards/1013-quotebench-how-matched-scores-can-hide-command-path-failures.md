@@ -60,9 +60,6 @@ GRID COMMAND and any Anoptic agent that shells out (build, git, shader compile, 
 
 ## Caveats
 
-- One-shot POSIX/Bash only; no PowerShell, multi-turn recovery, or real SSH networking.
-- Nested transport is a controlled stress that reproduces `ssh localhost "R"` damage, not a prevalence estimate.
-- Effort ladders are provider-specific operating points, not comparable compute.
 
 ## Links
 

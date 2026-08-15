@@ -10,7 +10,7 @@ authors:
 year: 2024
 venue: "IEEE Micro"
 arxiv: "2403.14123"
-doi: null
+doi: "10.1109/MM.2024.3373763"
 source: "https://arxiv.org/abs/2403.14123"
 topics:
   - "memory-wall"
@@ -40,22 +40,23 @@ see:
 
 ## One-sentence takeaway
 
-FLOPS have scaled ~3.0×/2yr vs DRAM ~1.6× and interconnect ~1.4× — decoder Transformers are memory-bandwidth bound, so architecture/training/serving have to change.
+Server FLOPS have scaled ~3.0×/2yr versus DRAM ~1.6× and interconnect ~1.4× — decoder Transformers are memory-bandwidth bound, so architecture, training, and serving have to change.
 
 ## Why it matters here
 
-Why FlashAttention-style IO-awareness (and Weaves' weaves/tiling) exists: the wall is memory, not matmuls. Agent serving cares.
+Why FlashAttention-style IO-awareness (and Weaves' weaves/tiling) exists: the wall is memory, not matmuls. Agent serving on GRID COMMAND hardware cares about the same ratio.
 
 ## Key ideas
 
-- IEEE Micro; arXiv:2403.14123 (RiseLab line, earlier 2021 essay).
-- Encoder vs decoder: decoders especially hit the bandwidth wall.
-- Prescription: redesign models, training, and deployment around memory, not peak FLOPS.
+- IEEE Micro 44(3):33–39, May/June 2024; arXiv:2403.14123; DOI `10.1109/MM.2024.3373763`. RiseLab line, earlier 2021 essay.
+- Encoder vs decoder: decoders especially hit the bandwidth wall because generation is memory-bound.
+- Prescription: redesign models, training, and deployment around memory movement, not peak FLOPS.
+- Systems/architecture essay, not categorical; Weaves cites it as motivation for IO-aware algebra.
 
 ## Caveats
-
-- Systems/architecture essay, not categorical. Weaves cites it as motivation for IO-aware algebra.
 
 ## Links
 
 - arXiv: [2403.14123](https://arxiv.org/abs/2403.14123)
+- PDF: https://arxiv.org/pdf/2403.14123
+- DOI: [10.1109/MM.2024.3373763](https://doi.org/10.1109/MM.2024.3373763)

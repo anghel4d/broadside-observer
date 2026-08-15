@@ -29,43 +29,37 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
-    url: "https://arxiv.org/abs/2606.19667"
-    year: 2026
-    arxiv: "2606.19667"
-    doi: null
-  - title: "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU"
-    url: "https://arxiv.org/abs/2604.15464"
-    year: 2026
-    arxiv: "2604.15464"
+  - title: "SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills"
+    url: "https://arxiv.org/abs/2308.16369"
+    year: 2023
+    arxiv: "2308.16369"
     doi: null
 see:
   - "002-efficient-memory-management-for-large-language-model-serving"
-  - "062-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
+  - "082-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
 ---
 
 # LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism
 
 ## One-sentence takeaway
 
-The context window of large language models (LLMs) is rapidly increasing, leading to a huge variance in resource usage between different requests as well as between different phases of the same request.
+Elastic sequence parallelism lets LoongServe change the degree of sequence parallelism in real time so long-context prefill and decode no longer share a static layout.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence P)
+Ano long-context agents and Broadside RAG prefills have huge per-request and per-phase resource variance; ESP is the serving analog of not pinning one parallelism forever.
 
 ## Key ideas
 
-- The context window of large language models (LLMs) is rapidly increasing, leading to a huge variance in resource usage between different requests as well as between different phases of the same request.
-- Restricted by static parallelism strategies, existing LLM serving systems cannot efficiently utilize the underlying resources to serve variable-length requests in different phases.
-- To address this problem, we propose a new parallelism paradigm, elastic sequence parallelism (ESP), to elastically adapt to the variance between different requests and phases.
-- Based on ESP, we design and build LoongServe, an LLM serving system that (1) improves computation efficiency by elastically adjusting the degree of parallelism in real-time, (2) improves communication efficiency by reducing key-value cache
+- Static parallelism cannot efficiently serve variable-length requests whose prefill and decode phases need different amounts of compute and memory.
+- ESP elastically adjusts parallelism live, reduces KV-cache migration, overlaps partial decode communication with compute, and cuts KV fragmentation across instances.
+- Against chunked prefill, peak throughput rises up to 3.85×; against prefill–decode disaggregation, up to 5.81× on diverse real-world traces.
+- Communication efficiency comes from cheaper KV migration plus compute/comms overlap on partial decodes.
+- GPU memory efficiency comes from less cross-instance KV fragmentation.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.09526](https://arxiv.org/abs/2404.09526)
-- URL: https://arxiv.org/abs/2404.09526
+- PDF: https://arxiv.org/pdf/2404.09526

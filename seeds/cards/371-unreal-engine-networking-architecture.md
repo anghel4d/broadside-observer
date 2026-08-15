@@ -1,10 +1,9 @@
 ---
-
-title: "Unreal Engine Networking Architecture"
+title: "Unreal Networking Architecture"
 authors:
-  - "Tim Sweeney / Epic"
+  - "Tim Sweeney"
 year: 1999
-venue: "Epic docs"
+venue: "Epic MegaGames"
 arxiv: null
 doi: null
 source: "https://docs.unrealengine.com/udk/Three/NetworkingOverview.html"
@@ -17,11 +16,6 @@ pool: "realtime"
 relevance_score: 8
 lineage: game-networking
 cites:
-  - title: "Quake III Arena Networking Source"
-    url: "https://github.com/id-Software/Quake-III-Arena"
-    year: 1999
-    arxiv: null
-    doi: null
   - title: "Source Multiplayer Networking"
     url: "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking"
     year: 2001
@@ -33,30 +27,31 @@ cites:
     arxiv: null
     doi: null
 see:
-  - "412-quake-iii-arena-networking-source"
   - "300-source-multiplayer-networking"
   - "269-client-side-prediction-server-reconciliation"
 ---
 
-# Unreal Engine Networking Architecture
+# Unreal Networking Architecture
 
 ## One-sentence takeaway
 
-Actor replication model.
+Sweeney’s 1999 note defines Unreal’s authoritative-server model: actors replicate by role, relevancy, and property/RPC channels rather than by lockstepping the whole world.
 
 ## Why it matters here
 
-Actor replication model.
+If Broadside ever grows a multiplayer layer, this — not lockstep — is the default FPS/sim architecture: server owns state, clients own input, relevancy culls the actor set, and simulated proxies interpolate. Anoptic ECS replication would be the same idea with components instead of `AActor`.
 
 ## Key ideas
 
-- Actor replication model.
+- Roles: `ROLE_Authority` on the server, `ROLE_AutonomousProxy` for the owning client, `ROLE_SimulatedProxy` for everyone else.
+- Replication is per-property and per-RPC, not a full world snapshot; `bNetRelevant` / priority / dormancy decide who hears about an actor.
+- Server is authoritative; clients predict locally and get corrected. Bandwidth is spent on relevant, high-priority channels first.
+- The 1999 `Network.htm` essay is the origin; UDK Three/NetworkingOverview and modern Epic “Networking Overview” pages are the living descendants.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://docs.unrealengine.com/udk/Three/NetworkingOverview.html
+- UDK overview (stable): https://docs.unrealengine.com/udk/Three/NetworkingOverview.html
+- Historical essay: http://unreal.epicgames.com/Network.htm
+- Current Epic overview: https://dev.epicgames.com/documentation/unreal-engine/networking-overview-for-unreal-engine

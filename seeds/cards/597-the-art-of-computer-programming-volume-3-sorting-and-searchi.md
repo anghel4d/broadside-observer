@@ -29,36 +29,30 @@ cites:
     year: 1969
     arxiv: null
     doi: null
-  - title: "Structured Programming with go to Statements"
-    url: "https://doi.org/10.1145/356635.356640"
-    year: 1974
-    arxiv: null
-    doi: "10.1145/356635.356640"
 see:
   - "595-the-art-of-computer-programming-volume-1-fundamental-algorit"
   - "596-the-art-of-computer-programming-volume-2-seminumerical-algor"
-  - "598-structured-programming-with-go-to-statements"
 ---
 
 # The Art of Computer Programming, Volume 3: Sorting and Searching
 
 ## One-sentence takeaway
 
-TAOCP Vol. 3 is the encyclopedic analysis of sorting and searching.
+TAOCP Volume 3 is the encyclopedic analysis of internal/external sorting, selection, and searching, including hashing and balanced trees.
 
 ## Why it matters here
 
-Default depth cite for ordering/search structures in engines.
+ECS queries, spatial indexes, and asset catalogs are sorting/searching problems. This 1973 volume is the default depth cite before claiming a new structure.
 
 ## Key ideas
 
-- Sorting networks and methods catalog.
-- Searching / hashing analysis.
-- Exhaustive combinatorial care.
+- Combinatorial analysis of insertion, exchange, selection, merging, and distribution sorts, with exact leading terms.
+- External sorting (multiway merge, replacement selection) treats memory hierarchy as part of the algorithm.
+- Searching: digital trees, balanced trees, hashing, and the analysis of collisions and occupancy.
+- First edition Addison-Wesley 1973; later editions add newer structures without abandoning the catalog method.
+- Completes the original three-volume core of TAOCP with Volumes 1 and 2.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

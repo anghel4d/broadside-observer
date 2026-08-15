@@ -55,23 +55,20 @@ see:
 
 ## One-sentence takeaway
 
-Fine-grained routed experts plus isolated shared experts: the MoE recipe V2/V3 keep — more specialization, less redundant common knowledge in routed experts.
+DeepSeekMoE splits GShard's \(N\) experts into \(mN\) finer ones (activating \(mK\)) and isolates \(K_s\) shared experts for common knowledge, so routed experts specialize instead of redundantly storing the same priors.
 
 ## Why it matters here
 
-The MoE primitive Weaves encodes when it walks DeepSeek-V3. Agent-stack relevant as a sparse compute pattern, not just a brand.
+The MoE primitive Weaves encodes when it walks DeepSeek-V3. Agent-stack relevant as a sparse compute pattern: more experts, thinner experts, shared experts for the boring residual — not just a brand name.
 
 ## Key ideas
 
-- arXiv:2401.06066. Two moves vs GShard: segment N experts into mN finer ones and activate mK; isolate Ks shared experts for common knowledge.
-- DeepSeekMoE 2B ≈ GShard 2.9B with 1.5× fewer expert params/compute; 16B ≈ Llama-2 7B at ~40% compute; 145B ≈ DeepSeek 67B at 28.5% (maybe 18.2%) compute.
-- Shared-expert isolation is the trick that later V2/V3 MoE layers still use.
-- Starting point for auxiliary-loss-free balancing (1248) and V3's 671B/37B MoE.
+- arXiv:2401.06066. Two moves vs GShard top-\(K\)-of-\(N\): finer segmentation for combinatorial expert combinations, plus shared-expert isolation so common knowledge is not copied into every routed expert.
+- DeepSeekMoE 2B ≈ GShard 2.9B with 1.5× fewer expert params/compute, and nearly matches a dense 2B. 16B ≈ Llama-2 7B at ~40% compute. 145B ≈ DeepSeek 67B at 28.5% (maybe 18.2%) compute.
+- Shared-expert isolation is the trick V2/V3 MoE layers still use; auxiliary-loss balancing is still in this paper (loss-free bias comes later).
+- Starting point for auxiliary-loss-free balancing and for V3's 671B/37B MoE.
 
 ## Caveats
-
-- Still uses auxiliary-loss balancing here; V3 switches to loss-free bias (1248).
-- 2B/16B/145B are the reported scales — not the later 671B V3.
 
 ## Links
 

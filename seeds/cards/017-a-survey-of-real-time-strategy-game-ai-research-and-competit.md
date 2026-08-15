@@ -1,8 +1,7 @@
 ---
-
 title: "A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft"
 authors:
-  - "Santiago Ontanon"
+  - "Santiago Ontañón"
   - "Gabriel Synnaeve"
   - "Alberto Uriarte"
   - "Florian Richoux"
@@ -24,46 +23,48 @@ reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 10
 cites:
-  - title: "StarCraft II: A New Challenge for Reinforcement Learning"
-    url: "https://arxiv.org/abs/1708.04782"
-    year: 2017
-    arxiv: "1708.04782"
-    doi: null
-  - title: "The StarCraft Multi-Agent Challenge"
-    url: "https://arxiv.org/abs/1902.04043"
-    year: 2019
-    arxiv: "1902.04043"
-    doi: null
-  - title: "Build Order Optimization in StarCraft"
-    url: "https://www.aaai.org/"
+  - title: "Build-Order Optimization in StarCraft"
+    url: "https://skatgame.net/mburo/ps/build.pdf"
     year: 2011
     arxiv: null
     doi: null
+  - title: "Call for AI Research in RTS Games"
+    url: "https://cdn.aaai.org/Workshops/2004/WS-04-04/WS04-04-028.pdf"
+    year: 2004
+    arxiv: null
+    doi: null
+  - title: "Real-Time Strategy Games: A New AI Research Challenge"
+    url: "https://www.ijcai.org/Proceedings/03/Papers/265.pdf"
+    year: 2003
+    arxiv: null
+    doi: null
 see:
-  - "014-starcraft-ii-a-new-challenge-for-reinforcement-learning"
-  - "010-the-starcraft-multi-agent-challenge"
   - "118-build-order-optimization-in-starcraft"
+  - "023-call-for-ai-research-in-rts-games"
+  - "025-real-time-strategy-games-a-new-ai-research-challenge"
 ---
 
 # A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft
 
 ## One-sentence takeaway
 
-Surveys RTS AI with emphasis on StarCraft as a unified testbed, summarizing challenges, approaches, competition bots, and open problems.
+The 2013 TCIAIG survey is the map of pre-AlphaStar StarCraft AI: Brood War as the unified testbed, a taxonomy of strategy / tactics / micro, and a scorecard of AIIDE, CIG, and SSCAIT bots.
 
 ## Why it matters here
 
-Canonical StarCraft RTS-AI survey; map of solved vs open problems for Broadside seeding.
+Broadside’s RTS reading list still starts here — what was actually solved (pathfinding, build-order search) versus still open (opponent modeling under fog, integrated strategy). GRID COMMAND inherits that split.
 
 ## Key ideas
 
-- Surveys RTS AI with emphasis on StarCraft as a unified testbed, summarizing challenges, approaches, competition bots, and open problems.
+- StarCraft: Brood War, via BWAPI, became the de facto research RTS because it is closed-source, partially observable, and has a large human ladder plus three annual competitions.
+- The survey decomposes the problem into strategy (build orders, tech, scouting), tactics (army positioning, drops), and reactive control (micro, targeting), plus the integration problem of stitching them.
+- Dominant 2013 techniques: potential fields, case-based reasoning, Monte-Carlo planning, build-order search (Churchill), and hand-authored finite-state managers — not end-to-end RL.
+- Competitions (AIIDE, CIG, SSCAIT) are treated as the evaluation protocol; the paper catalogs bot architectures and which subproblems they actually attempt.
+- Stated open problems — fog-of-war inference, robust strategy adaptation, and a single agent that does both macro and micro — are exactly what SC2LE and AlphaStar later attack.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1109/TCIAIG.2013.2286295](https://doi.org/10.1109/TCIAIG.2013.2286295)
-- URL: https://doi.org/10.1109/TCIAIG.2013.2286295
+- Author PDF: https://www.cs.mun.ca/~dchurchill/publications/pdf/starcraft_survey.pdf

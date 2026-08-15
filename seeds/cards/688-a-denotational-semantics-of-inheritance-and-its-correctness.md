@@ -6,8 +6,8 @@ authors:
 year: 1989
 venue: "OOPSLA"
 arxiv: null
-doi: "10.1145/74877.74884"
-source: "https://doi.org/10.1145/74877.74884"
+doi: "10.1145/74877.74922"
+source: "https://doi.org/10.1145/74877.74922"
 topics:
   - inheritance
   - denotational-semantics
@@ -20,16 +20,6 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "A Theory of Objects"
-    url: "https://doi.org/10.1007/978-1-4419-8598-9"
-    year: 1996
-    arxiv: null
-    doi: "10.1007/978-1-4419-8598-9"
-  - title: "Mixin-Based Inheritance"
-    url: "https://doi.org/10.1145/97945.97982"
-    year: 1990
-    arxiv: null
-    doi: "10.1145/97945.97982"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
@@ -41,8 +31,6 @@ cites:
     arxiv: null
     doi: "10.1145/6041.6042"
 see:
-  - "669-a-theory-of-objects"
-  - "689-mixin-based-inheritance"
   - "687-self-the-power-of-simplicity"
   - "668-on-understanding-types-data-abstraction-and-polymorphism"
 ---
@@ -51,25 +39,21 @@ see:
 
 ## One-sentence takeaway
 
-Gives a denotational account of inheritance (wrappers/fixed points) with a correctness argument.
+Cook and Palsberg interpret a class as a wrapper (a function from self to a record of methods) and inheritance as composition of wrappers before the self-fixed-point is taken.
 
 ## Why it matters here
 
-The Cook inheritance semantics classic — clarifies what self/super mean mathematically.
+This is the math of `self`/`super`: why method lookup is a fixed point, and why mixins later compose. The old card DOI was Chambers–Ungar–Lee's SELF *implementation* paper.
 
 ## Key ideas
 
-- Inheritance as a fixed-point generator over wrappers.
-- Semantic correctness relative to an operational reading.
-- Influences typed OO and mixin work.
-- Pairs with Abadi–Cardelli and Bracha–Cook mixins.
+- A class denotes a generator `self ↦ {m1 = …, m2 = …}`; instantiation is the least fixed point of that generator.
+- Inheritance wraps the parent generator so `super` sees the parent's methods and `self` still refers to the complete child.
+- Correctness is relative to an operational reading of method lookup; the two agree on the resulting objects.
+- OOPSLA 1989, DOI 10.1145/74877.74922. Journal version: *Information and Computation* 114 (1994), DOI 10.1006/inco.1994.1090. Bracha–Cook mixins are the next card.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1145/74877.74884](https://doi.org/10.1145/74877.74884)
-- URL: https://doi.org/10.1145/74877.74884
+- DOI: [10.1145/74877.74922](https://doi.org/10.1145/74877.74922)

@@ -36,41 +36,32 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-  - title: "A Framework for Defining Logics"
-    url: "https://doi.org/10.1145/138027.138040"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/138027.138040"
 see:
   - "639-the-system-f-of-variable-types-fifteen-years-later"
   - "648-an-intuitionistic-theory-of-types-predicative-part"
   - "647-the-formulae-as-types-notion-of-construction"
-  - "651-a-framework-for-defining-logics"
 ---
 
 # The Calculus of Constructions
 
 ## One-sentence takeaway
 
-Defines the Calculus of Constructions: a higher-order dependent type theory that became Coq's core.
+Coquand and Huet define the Calculus of Constructions: a higher-order dependent type theory with impredicative Prop that became the core of Coq.
 
 ## Why it matters here
 
-CoC is the classic dependent-type calculus bridging System F and Martin-Löf — essential for proof-assistant literacy.
+CoC is the classic dependent-type calculus bridging System F and Martin-Löf — essential proof-assistant literacy, and the system one means when saying “Coq’s kernel is a PTS / λC”.
 
 ## Key ideas
 
-- Impredicative Prop with dependent function spaces.
-- Higher-order logic embedded in a typed lambda calculus.
-- Implementation substrate for early Coq.
-- Sits between Girard System F and MLTT in the lambda cube.
+- Dependent function spaces plus an impredicative universe of propositions (Prop).
+- Higher-order logic is embedded in a typed λ-calculus; proofs are terms.
+- Strong normalization is proved, so type-checking is decidable and the logic is consistent (relative to the usual caveats).
+- *Information and Computation* 76 (1988), pp. 95–120; implementation substrate for early Coq. Sits at the λC corner of Barendregt’s lambda cube.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/0890-5401(88)90005-3](https://doi.org/10.1016/0890-5401(88)90005-3)
-- URL: https://doi.org/10.1016/0890-5401(88)90005-3
+- Open PDF: https://www.asc.ohio-state.edu/pollard.4/type/readings/coc88.pdf

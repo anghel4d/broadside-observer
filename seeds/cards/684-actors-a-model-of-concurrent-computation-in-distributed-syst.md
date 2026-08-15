@@ -24,16 +24,6 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-  - title: "Making Reliable Distributed Systems in the Presence of Software Errors"
-    url: "https://erlang.org/download/armstrong_thesis_2003.pdf"
-    year: 2003
-    arxiv: null
-    doi: null
-  - title: "Concurrent Programming in ML"
-    url: "https://doi.org/10.1017/CBO9780511574962"
-    year: 1999
-    arxiv: null
-    doi: "10.1017/CBO9780511574962"
   - title: "A Calculus of Communicating Systems"
     url: "https://link.springer.com/book/10.1007/3-540-10235-3"
     year: 1980
@@ -41,8 +31,6 @@ cites:
     doi: null
 see:
   - "683-viewing-control-structures-as-patterns-of-passing-messages"
-  - "700-making-reliable-distributed-systems-in-the-presence-of-softw"
-  - "699-concurrent-programming-in-ml"
   - "043-a-calculus-of-communicating-systems"
 ---
 
@@ -50,25 +38,22 @@ see:
 
 ## One-sentence takeaway
 
-Agha's monograph formalizing and systematizing the Actor model for distributed computation.
+Agha's 1986 MIT Press monograph turns Hewitt's actor vision into a model you can implement: actor semantics, fairness, and composition for distributed systems.
 
 ## Why it matters here
 
-The book-form Actors classic — more formal and systems-facing than Hewitt 1977 alone.
+The book-form Actors classic — more formal and systems-facing than Hewitt 1977, the citation to put next to Erlang and CML when Anoptic needs a concurrent-object story that is not just "message passing."
 
 ## Key ideas
 
-- Actor semantics for concurrent/distributed systems.
-- Fairness, mobility, and composition issues.
-- Bridge from Hewitt's vision to implementable models.
-- Standard citation beside Hewitt and Erlang/CML.
+- An actor is defined by its acquaintances and its replacement behaviour; configuration evolution is the operational semantics.
+- Fairness (every sent message is eventually received) is part of the model, not an implementation accident.
+- Mobility and open systems: new actors and new addresses appear as computation proceeds, which is the distributed-systems content CCS does not give you for free.
+- MIT Press 1986, DOI 10.7551/mitpress/1086.001.0001. Armstrong 2003 is the industrial reliability thesis, not this book.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.7551/mitpress/1086.001.0001](https://doi.org/10.7551/mitpress/1086.001.0001)
-- URL: https://mitpress.mit.edu/9780262511414/actors/
+- MIT Press: https://mitpress.mit.edu/9780262511414/actors/

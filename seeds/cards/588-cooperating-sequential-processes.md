@@ -33,37 +33,31 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-  - title: "A Calculus of Communicating Systems"
-    url: "https://doi.org/10.1007/3-540-10235-3"
-    year: 1980
-    arxiv: null
-    doi: null
 see:
   - "586-the-structure-of-the-the-multiprogramming-system"
   - "587-solution-of-a-problem-in-concurrent-programming-control"
   - "046-communicating-sequential-processes"
-  - "043-a-calculus-of-communicating-systems"
 ---
 
 # Cooperating Sequential Processes
 
 ## One-sentence takeaway
 
-Dijkstra's CSP notes (the cooperating processes monograph) introduce semaphores and classic sync problems.
+EWD123 introduces `P`/`V` semaphores and works the classic synchronization problems — this is Dijkstra's cooperating-processes monograph, not Hoare's CSP.
 
 ## Why it matters here
 
-Not Hoare's CSP—this is the semaphore bible; name collision is historical.
+Engine queues, worker pools, and renderer/simulation handoff are producer–consumer. Use this card for semaphores; use card 046 for Hoare's later calculus.
 
 ## Key ideas
 
-- P/V semaphores.
-- Producer–consumer, dining philosophers.
-- EWD123 lineage.
+- A semaphore is an integer with atomic `P` (wait/down) and `V` (signal/up); mutual exclusion and scheduling are both expressible.
+- Producer–consumer with a bounded buffer is the first extended example.
+- Dining philosophers, sleeping barber, and related hazards show deadlock and starvation as design errors.
+- The 1965/68 Eindhoven notes circulated as EWD123 and were printed in Genuys (ed.), *Programming Languages* (Academic Press, 1968).
+- Name collision with Hoare 1978 is historical; the two artifacts solve different problems.
 
 ## Caveats
-
-- Do not confuse with Hoare's Communicating Sequential Processes (already card 047).
 
 ## Links
 

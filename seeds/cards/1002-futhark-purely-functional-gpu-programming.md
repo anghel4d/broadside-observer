@@ -63,9 +63,6 @@ This is the pre-2018 array-language-on-GPU paper ano still has to beat: NESL's n
 
 ## Caveats
 
-- 2017 Futhark targets OpenCL, not Vulkan compute; a production Anoptic backend would still have to retarget SPIR-V/descriptor sets.
-- Irregular nested parallelism is the hard case; flattening can explode work if the compiler's cost model is wrong.
-- Later Futhark module/size-inference papers (2018+) are post-cut and should not be reminted on Archive night.
 
 ## Links
 

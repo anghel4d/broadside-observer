@@ -30,22 +30,23 @@ see:
 
 ## One-sentence takeaway
 
-A tiny notation/library (`rearrange`/`reduce`/`repeat`) that makes tensor axis manipulation explicit and less bug-prone than `view`/`permute`.
+Rogozhnikov replaces silent `reshape`/`permute`/`view` chains with a declarative Einstein-like pattern language (`rearrange` / `reduce` / `repeat`) that names axes, checks ranks, and ports across NumPy, PyTorch, JAX, and TensorFlow.
 
 ## Why it matters here
 
-The working programmer's named-axis layer. Weaves' Einstein operations are the categorical version of this.
+This is the working programmer's named-axis layer. Weaves' Einstein operations are the categorical reading of the same surface: if ano/GRID tensors are going to broadcast safely, they need this kind of explicit axis algebra, not implicit dimension order.
 
 ## Key ideas
 
-- ICLR 2022; OpenReview `oapKSVM2bcj`.
-- Einstein-like patterns instead of silent dimension order.
-- Widely adopted in research code; cited by Weaves as the practical einsum surface.
+- ICLR 2022 oral (OpenReview `oapKSVM2bcj`). Patterns such as `'b c h w -> b (c h w)'` or patch splits `'b c (h ph) (w pw) -> b h w (c ph pw)'` make intended structure visible.
+- Three primitives cover rearrangement, reduction (`mean`/`sum`/…), and repetition; the same string is the documentation, the type check, and the kernel schedule hint.
+- Dimension consistency is checked at the pattern, so a rank or size mismatch fails at the call rather than as a later `view` crash.
+- One notation across frameworks; widely adopted in research code and cited by Weaves as the practical einsum surface.
 
 ## Caveats
-
-- Library paper. Named Tensor Notation is the corresponding writing system; Weaves is the category.
 
 ## Links
 
 - OpenReview: https://openreview.net/forum?id=oapKSVM2bcj
+- PDF: https://openreview.net/pdf?id=oapKSVM2bcj
+- Library: https://github.com/arogozhnikov/einops

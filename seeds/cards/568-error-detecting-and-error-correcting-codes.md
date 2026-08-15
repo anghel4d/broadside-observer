@@ -28,43 +28,30 @@ cites:
     year: 1949
     arxiv: null
     doi: "10.1109/JRPROC.1949.233620"
-  - title: "Communication Theory of Secrecy Systems"
-    url: "https://doi.org/10.1002/j.1538-7305.1949.tb00928.x"
-    year: 1949
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1949.tb00928.x"
-  - title: "Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable Components"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
 see:
   - "553-a-mathematical-theory-of-communication"
   - "569-notes-on-digital-coding"
-  - "555-communication-theory-of-secrecy-systems"
-  - "547-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
 ---
 
 # Error Detecting and Error Correcting Codes
 
 ## One-sentence takeaway
 
-Hamming codes detect and correct errors with parity geometry—reliability as coding.
+Hamming shows how parity-check geometry detects and corrects single errors, inventing Hamming distance and the codes that make digital memory usable.
 
 ## Why it matters here
 
-Pairs with Shannon: noise is inevitable; codes make digital systems possible.
+Shannon said noise is inevitable; Hamming made codes that let the engine, the net, and the log store bits anyway.
 
 ## Key ideas
 
-- Hamming distance.
-- Single-error correcting / double-error detecting codes.
-- Parity-check geometry.
-- Bell Labs practice → theory.
+- Distance between codewords is the number of differing positions; minimum distance \(d\) corrects \(\lfloor(d-1)/2\rfloor\) errors.
+- The \((7,4)\) Hamming code uses three parity bits placed at powers of two so the syndrome is the error location.
+- Single-error-correcting, double-error-detecting (SECDED) follows by adding an overall parity bit.
+- The work came out of weekend Bell Labs machine checks that stopped on every parity fail.
+- Published BSTJ April 1950; Golay's 1949 note is the independent perfect-code counterpart.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

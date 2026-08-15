@@ -5,7 +5,7 @@ authors:
   - "Bruno Gavranović"
   - "Paul Wilson"
 year: 2021
-venue: "Applied Category Theory / arXiv"
+venue: "arXiv:cs.LG"
 arxiv: "2106.07032"
 doi: null
 source: "https://arxiv.org/abs/2106.07032"
@@ -32,21 +32,20 @@ see:
 
 ## One-sentence takeaway
 
-Survey of the 2010s–2021 wave of category theory applied to ML: gradient-based learning, probability, equivariance.
+Shiebler, Gavranović, and Wilson survey the 2010s–2021 wave of category theory applied to machine learning, organizing it around gradient-based learning, probability, and equivariance rather than proving a new theorem.
 
 ## Why it matters here
 
-Map of the CDL neighbourhood before Gavranović 2024 / Weaves 2026. Reading order for the lineage.
+This is the map of the categorical-deep-learning neighbourhood before Gavranović 2024 and Weaves 2026: a reading order for lenses, string diagrams, and supervised-learning-as-functor, written by the same circle Broadside already cites.
 
 ## Key ideas
 
-- arXiv:2106.07032; ACT 2021.
-- Documents motivations and common themes rather than proving a new theorem.
-- Authors overlap the lenses / string-diagram / CDL position papers in this spine.
+- Motivation: category theory as a shared language across disciplines, now leaking into ML architectures and training stories.
+- Three clusters: (1) gradient-based learning as a compositional process (lenses / backprop-as-functor), (2) categorical probability and generative models, (3) equivariance and geometric deep learning.
+- Documents common themes — compositionality, parameter-update as a morphism, symmetry as a group action — instead of a single formalism.
+- Snapshot dated June 2021; later NCD/Weaves work is outside its horizon.
 
 ## Caveats
-
-- Survey snapshot (2021). Does not include NCDs/Weaves (later).
 
 ## Links
 

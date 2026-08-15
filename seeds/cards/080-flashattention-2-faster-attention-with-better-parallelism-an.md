@@ -1,60 +1,59 @@
 ---
-title: 'FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning'
+title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
 authors:
-- Tri Dao
+  - "Tri Dao"
 year: 2023
-venue: arXiv:cs.LG
-arxiv: '2307.08691'
+venue: "arXiv:cs.LG"
+arxiv: "2307.08691"
 doi: null
-source: https://arxiv.org/abs/2307.08691
+source: "https://arxiv.org/abs/2307.08691"
 topics:
-- kv-serving
-- inference-systems
-- transformer
-- foundations
+  - kv-serving
+  - inference-systems
+  - transformer
+  - foundations
 seed_rank: 80
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: agents
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "agents"
 relevance_score: 9
 cites:
-- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
-  url: https://arxiv.org/abs/2205.14135
-  year: 2022
-  arxiv: '2205.14135'
-  doi: null
-- title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
-  url: https://arxiv.org/abs/2407.08608
-  year: 2024
-  arxiv: '2407.08608'
-  doi: null
+  - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+    url: "https://arxiv.org/abs/2205.14135"
+    year: 2022
+    arxiv: "2205.14135"
+    doi: null
+  - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
+    url: "https://arxiv.org/abs/2407.08608"
+    year: 2024
+    arxiv: "2407.08608"
+    doi: null
 see:
-- "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
-- "073-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "073-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
 # FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning
 
 ## One-sentence takeaway
 
-Scaling Transformers to longer sequence lengths has been a major problem in the last several years, promising to improve performance in language modeling and high-resolution image understanding, as well as to unlock new applications in code, audio, and video generation.
+FlashAttention-2 roughly doubles FA1 by cutting non-matmul FLOPs, parallelizing even a single head across thread blocks, and reducing shared-memory traffic inside a block.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; foundational substrate for every LLM agent stack (FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning)
+Long-context ano agents were leaving 60–75% of A100 FLOPs on the table with FA1; FA2 is the work-partitioning fix that made exact attention approach GEMM efficiency.
 
 ## Key ideas
 
-- Scaling Transformers to longer sequence lengths has been a major problem in the last several years, promising to improve performance in language modeling and high-resolution image understanding, as well as to unlock new applications in code, audio, and video generation.
-- The attention layer is the main bottleneck in scaling to longer sequences, as its runtime and memory increase quadratically in the sequence length.
-- FlashAttention exploits the asymmetric GPU memory hierarchy to bring significant memory saving (linear instead of quadratic) and runtime speedup (2-4$\times$ compared to optimized baselines), with no approximation.
-- However, FlashAttention is still not nearly as fast as optimized matrix-multiply (GEMM) operations, reaching only 25-40\% of the theoretical maximum FLOPs/s.
+- FA1 already made attention IO-aware and linear in memory, but hit only 25–40% of peak FLOPs/s because of poor occupancy and extra shared-memory traffic.
+- Algorithm tweaks drop non-matmul FLOPs so more of the work sits on Tensor Cores.
+- Parallelism across sequence for a single head raises occupancy; warp-level work split cuts communication through shared memory.
+- Result is about 2× over FlashAttention, 50–73% of peak on A100, close to GEMM.
+- End-to-end GPT-style training reaches 225 TFLOPs/s per A100 (72% MFU).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2307.08691](https://arxiv.org/abs/2307.08691)
-- URL: https://arxiv.org/abs/2307.08691
+- PDF: https://arxiv.org/pdf/2307.08691

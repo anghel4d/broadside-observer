@@ -37,41 +37,11 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1145/954666.971189"
-  - title: "A calculus for assignments in higher-order languages"
-    url: "https://doi.org/10.1145/41625.41654"
-    year: 1987
-    arxiv: null
-    doi: "10.1145/41625.41654"
   - title: "An efficient way to find the side effects of procedure calls and the aliases of variables"
     url: "https://doi.org/10.1145/567752.567756"
     year: 1979
     arxiv: null
     doi: "10.1145/567752.567756"
-  - title: "Computation of aliases and support sets"
-    url: "https://doi.org/10.1145/41625.41650"
-    year: 1987
-    arxiv: null
-    doi: "10.1145/41625.41650"
-  - title: "A practical interprocedural data flow analysis algorithm"
-    url: "https://doi.org/10.1145/359588.359596"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359588.359596"
-  - title: "Interprocedural data flow analysis in the presence of pointers, procedure variables, and label variables"
-    url: "https://doi.org/10.1145/567446.567455"
-    year: 1980
-    arxiv: null
-    doi: "10.1145/567446.567455"
-  - title: "Notes on the design of Euclid"
-    url: "https://doi.org/10.1145/390018.808307"
-    year: 1977
-    arxiv: null
-    doi: "10.1145/390018.808307"
-  - title: "An interprocedural data flow analysis algorithm"
-    url: "https://doi.org/10.1145/512950.512962"
-    year: 1977
-    arxiv: null
-    doi: "10.1145/512950.512962"
   - title: "Types and Effects Towards the Integration of Functional and Imperative Programming."
     url: "https://apps.dtic.mil/sti/pdfs/ADA186930.pdf"
     year: 1987
@@ -85,21 +55,22 @@ see:
 
 ## One-sentence takeaway
 
-Introduces polymorphic type-and-effect systems for tracking side effects and enabling optimizations.
+A kinded type system with three description kinds — types (returned values), effects (observable side-effects), and regions (store areas those effects hit) — plus polymorphism over all three, used to discover scheduling constraints for parallel compilation.
 
 ## Why it matters here
 
-Origin of type-and-effect systems and effect masking — ancestor of region inference and ano purity.
+This is the origin of type-and-effect systems and of effect masking: ano purity and region-style capability disciplines start here, not with later reconstruction papers.
 
 ## Key ideas
 
-- Introduces polymorphic type-and-effect systems for tracking side effects and enabling optimizations.
+- Descriptions come in three kinds. An expression has a type, an effect, and its effects are located in regions of the store. You can abstract a term over a type variable, an effect variable, or a region variable — FX-87-style polymorphism at every kind.
+- Unobservable side-effects can be masked. Effect soundness says the statically computed effect is a conservative approximation of the actual trace, so a function whose effects are confined to regions that do not escape can be treated as pure by its caller.
+- The point of the analysis is scheduling: independent effects (different regions, or read/read) may run in parallel without changing sequential semantics. FX experimental data is offered as evidence that this is usable for compiling to parallel machines.
+- Lineage is Reynolds's syntactic control of interference, Gifford–Lucassen 1986 (integrating functional and imperative), and Lucassen's 1987 MIT thesis. Talpin–Jouvelot later reconstruct the same three kinds implicitly.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/73560.73564](https://doi.org/10.1145/73560.73564)
-- URL: https://doi.org/10.1145/73560.73564
+- IBM Research record: https://research.ibm.com/publications/polymorphic-effect-systems

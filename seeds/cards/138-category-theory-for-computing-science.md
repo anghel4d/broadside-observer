@@ -20,65 +20,30 @@ pool: "maths-foundations"
 relevance_score: 9
 cites:
   - title: "Basic category theory for computer scientists"
-    url: "https://doi.org/10.5860/choice.30-0347"
-    year: 1992
+    url: "https://mitpress.mit.edu/9780262660716/basic-category-theory-for-computer-scientists/"
+    year: 1991
     arxiv: null
-    doi: "10.5860/choice.30-0347"
+    doi: null
   - title: "Sheaves in Geometry and Logic"
     url: "https://doi.org/10.1007/978-1-4612-0927-0"
-    year: 1994
-    arxiv: null
-    doi: "10.1007/978-1-4612-0927-0"
-  - title: "Fundamentals of Algebraic Specification 2"
-    url: "https://doi.org/10.1007/978-3-642-61284-8"
-    year: 1990
-    arxiv: null
-    doi: "10.1007/978-3-642-61284-8"
-  - title: "Proofs and types"
-    url: "https://openalex.org/W159715351"
-    year: 1989
-    arxiv: null
-    doi: null
-  - title: "Domains for denotational semantics"
-    url: "https://doi.org/10.1007/bfb0012801"
-    year: 1982
-    arxiv: null
-    doi: "10.1007/bfb0012801"
-  - title: "An Introduction to the Theory of Lists"
-    url: "https://doi.org/10.1007/978-3-642-87374-4_1"
-    year: 1987
-    arxiv: null
-    doi: "10.1007/978-3-642-87374-4_1"
-  - title: "Basic concepts of enriched category theory"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.144.9438"
-    year: 1982
-    arxiv: null
-    doi: null
-  - title: "Categorical Combinators, Sequential Algorithms, and Functional Programming"
-    url: "https://doi.org/10.1007/978-1-4612-0317-9"
-    year: 1993
-    arxiv: null
-    doi: "10.1007/978-1-4612-0317-9"
-  - title: "Accessible Categories: The Foundations of Categorical Model Theory"
-    url: "https://doi.org/10.1090/conm/104"
-    year: 1989
-    arxiv: null
-    doi: "10.1090/conm/104"
-  - title: "Categories for Types"
-    url: "https://doi.org/10.1017/cbo9781139172707"
-    year: 1994
-    arxiv: null
-    doi: "10.1017/cbo9781139172707"
-  - title: "Review of the elements of 2-categories"
-    url: "https://doi.org/10.1007/bfb0063101"
-    year: 1974
-    arxiv: null
-    doi: "10.1007/bfb0063101"
-  - title: "Categories and Computer Science"
-    url: "https://doi.org/10.1017/cbo9780511608872"
     year: 1992
     arxiv: null
-    doi: "10.1017/cbo9780511608872"
+    doi: "10.1007/978-1-4612-0927-0"
+  - title: "Proofs and Types"
+    url: "https://www.paultaylor.eu/stable/prot.pdf"
+    year: 1989
+    arxiv: null
+    doi: null
+  - title: "Categories for Types"
+    url: "https://doi.org/10.1017/CBO9781139172707"
+    year: 1993
+    arxiv: null
+    doi: "10.1017/CBO9781139172707"
+  - title: "Categorical Combinators, Sequential Algorithms, and Functional Programming"
+    url: "https://doi.org/10.1007/978-1-4612-0317-9"
+    year: 1990
+    arxiv: null
+    doi: "10.1007/978-1-4612-0317-9"
 see:
   - "034-basic-category-theory-for-computer-scientists"
 ---
@@ -87,21 +52,22 @@ see:
 
 ## One-sentence takeaway
 
-Category theory developed for computer science, including sketches and cartesian closed categories.
+A sketch is a finite graph plus chosen diagrams, cones and cocones; its models in a category are the algebras, and the theory of the sketch is the classifying category those models factor through.
 
 ## Why it matters here
 
-CS-flavored CT with sketches — practical companion to Mac Lane for PL people.
+This is the CS-flavoured companion to Mac Lane: cartesian closed categories for typed λ-calculus, and sketches as the finite-spec tool for “what is an ano DSL / ECS schema, categorically.” Reach for it when a signature-plus-equations story needs a name.
 
 ## Key ideas
 
-- Category theory developed for computer science, including sketches and cartesian closed categories.
+- Three views of a category, held in parallel: a workspace you compute in, a mathematical object, and a formal theory of structure.
+- Linear sketches (graph + diagrams) through finite-product sketches (multisorted universal algebra) to finite-limit sketches (partial operations whose domains are limits).
+- Cartesian closed categories as the semantics of simply-typed λ-calculus; limits/colimits developed with computing-science examples rather than as an end in themselves.
+- The category of sketches: morphisms of sketches induce reduct functors on models, so specifications themselves form a category.
+- Written for CS readers: conceptual development first, with the formal proofs available but not the only path through the book.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.math.mcgill.ca/barr/papers/ctcs.pdf
+- Author PDF: [math.mcgill.ca/barr/papers/ctcs.pdf](https://www.math.mcgill.ca/barr/papers/ctcs.pdf)

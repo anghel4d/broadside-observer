@@ -30,7 +30,7 @@ cites:
     arxiv: null
     doi: "10.1090/S0002-9947-1943-0007371-8"
   - title: "Introduction to Metamathematics"
-    url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
+    url: "https://openlibrary.org/works/OL5959470W/Introduction_to_metamathematics"
     year: 1952
     arxiv: null
     doi: null
@@ -44,23 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Kleene's ordinal notations (O) become the language of recursive ordinals and higher recursion theory.
+Kleene's system \(\mathcal{O}\) is a recursive notation system for constructive ordinals—the language in which Turing's ordinal logics and the hyperarithmetic hierarchy are later written.
 
 ## Why it matters here
 
-Ties to Turing ordinal logics and modern proof-theoretic ordinals.
+Proof-theoretic ordinals, "how far can we climb past incompleteness," and any later talk of recursive well-founded trees in Anoptic verification all inherit this notation. Turing's 1939 thesis indexes theories by notations in \(\mathcal{O}\).
 
 ## Key ideas
 
-- System O of ordinal notations.
-- Constructive ordinals.
-- Basis for hyperarithmetic hierarchy.
+- Natural numbers are used as *notations* for ordinals: successor and limit constructors are themselves recursive operations on codes.
+- Not every notation denotes, and the same ordinal may have many notations; \(\mathcal{O}\) is a \(\Pi^1_1\)-complete set of well-founded codes.
+- Constructive / recursive ordinals are exactly those with a notation in \(\mathcal{O}\).
+- Basis for the hyperarithmetic hierarchy and for later proof-theoretic ordinal analysis.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2267778](https://doi.org/10.2307/2267778)
-- URL: https://doi.org/10.2307/2267778
+- JSTOR: https://www.jstor.org/stable/2267778

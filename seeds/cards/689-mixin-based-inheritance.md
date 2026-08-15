@@ -22,20 +22,10 @@ relevance_score: 10
 lineage: programming-language-foundations
 cites:
   - title: "A Denotational Semantics of Inheritance and Its Correctness"
-    url: "https://doi.org/10.1145/74877.74884"
+    url: "https://doi.org/10.1145/74877.74922"
     year: 1989
     arxiv: null
-    doi: "10.1145/74877.74884"
-  - title: "A Theory of Objects"
-    url: "https://doi.org/10.1007/978-1-4419-8598-9"
-    year: 1996
-    arxiv: null
-    doi: "10.1007/978-1-4419-8598-9"
-  - title: "SELF: The Power of Simplicity"
-    url: "https://doi.org/10.1145/38765.38828"
-    year: 1987
-    arxiv: null
-    doi: "10.1145/38765.38828"
+    doi: "10.1145/74877.74922"
   - title: "On Understanding Types, Data Abstraction, and Polymorphism"
     url: "https://doi.org/10.1145/6041.6042"
     year: 1985
@@ -43,8 +33,6 @@ cites:
     doi: "10.1145/6041.6042"
 see:
   - "688-a-denotational-semantics-of-inheritance-and-its-correctness"
-  - "669-a-theory-of-objects"
-  - "687-self-the-power-of-simplicity"
   - "668-on-understanding-types-data-abstraction-and-polymorphism"
 ---
 
@@ -52,25 +40,21 @@ see:
 
 ## One-sentence takeaway
 
-Formalizes mixins as composable inheritance abstractions separate from classes.
+Bracha and Cook separate mixins from classes: a mixin is a composable inheritance modifier, a function from superclass to subclass, not a node in a single linear hierarchy.
 
 ## Why it matters here
 
-Mixin inheritance classic — still the vocabulary for trait/mixin composition in modern languages.
+Still the vocabulary for trait/mixin composition in Scala, Dart, and any ano "add this behaviour to that entity type" feature — compositionality versus the class tree.
 
 ## Key ideas
 
-- Mixins as first-class inheritance modifiers.
-- Compositionality versus linear class hierarchies.
-- Influences traits, Scala mixins, and related designs.
-- Builds on Cook's inheritance semantics.
+- Inheritance as wrapper composition (Cook 1989) lets you name the wrapper; that name is the mixin.
+- Mixins compose independently of any particular superclass; a class is what you get after applying a sequence of mixins to a base.
+- Linear class hierarchies are the special case where each mixin is applied once and forgotten; multiple inheritance problems become mixin-order problems.
+- OOPSLA/ECOOP 1990, DOI 10.1145/97945.97982. Later "traits" work is a refinement, not this paper.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/97945.97982](https://doi.org/10.1145/97945.97982)
-- URL: https://doi.org/10.1145/97945.97982

@@ -56,8 +56,6 @@ PC/console job pools often target TSO; fence-free take is a real win when steal 
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/2541940.2541987](https://doi.org/10.1145/2541940.2541987)

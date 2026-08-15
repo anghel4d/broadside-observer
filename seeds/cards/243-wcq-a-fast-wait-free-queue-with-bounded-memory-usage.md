@@ -4,7 +4,7 @@ authors:
   - "Ruslan Nikolaev"
   - "Binoy Ravindran"
 year: 2022
-venue: "arXiv:cs.DC"
+venue: "SPAA 2022"
 arxiv: "2201.02179"
 doi: "10.1145/3490148.3538572"
 source: "https://arxiv.org/abs/2201.02179"
@@ -66,26 +66,24 @@ see:
 
 ## One-sentence takeaway
 
-The concurrency literature presents a number of approaches for building non-blocking, FIFO, multiple-producer and multiple-consumer (MPMC) queues.
+wCQ lifts Nikolaev's SCQ to wait-freedom with a fast-path/slow-path variant that also bounds memory, so it does not become blocking when the heap is exhausted the way YMC does.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (wCQ: A Fast Wait-Free Queue with Bounded Memory Usage).
+Anoptic MPMC command and job queues need wait-freedom without LCRQ's memory blow-up; wCQ is the SCQ-shaped design that finally has both.
 
 ## Key ideas
 
-- The concurrency literature presents a number of approaches for building non-blocking, FIFO, multiple-producer and multiple-consumer (MPMC) queues.
-- However, only a fraction of them have high performance.
-- In addition, many queue designs, such as LCRQ, trade memory usage for better performance.
-- The recently proposed SCQ design achieves both memory efficiency as well as excellent performance.
-- Unfortunately, both LCRQ and SCQ are only lock-free.
+- LCRQ is fast but memory-hungry and only lock-free; SCQ is fast and lean but still only lock-free.
+- Prior wait-free queues are either slow or have unbounded memory — YMC in particular blocks once memory runs out, forfeiting wait-freedom.
+- wCQ starts from SCQ and applies its own fast-path/slow-path helping to become wait-free with a memory bound.
+- Measured on x86 and PowerPC, performance is often on par with the best lock-free queues.
+- SPAA 2022 (doi 10.1145/3490148.3538572).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2201.02179](https://arxiv.org/abs/2201.02179)
 - DOI: [10.1145/3490148.3538572](https://doi.org/10.1145/3490148.3538572)
-- URL: https://arxiv.org/abs/2201.02179
+- PDF: https://arxiv.org/pdf/2201.02179

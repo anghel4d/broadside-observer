@@ -7,7 +7,7 @@ authors:
 - Madhu Sudan
 - Mario Szegedy
 year: 1998
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/278298.278306
 source: "https://doi.org/10.1145/278298.278306"
@@ -46,23 +46,20 @@ see:
 
 ## One-sentence takeaway
 
-PCP theorem — NP has probabilistically checkable proofs, implying strong hardness of approximation.
+ALMSS prove NP ⊆ PCP[log n, O(1)]: every NP language has probabilistically checkable proofs that a verifier can accept or reject by reading O(1) randomly chosen bits after using O(log n) random coins, and the same machinery yields gap-producing reductions that make many approximation ratios NP-hard.
 
 ## Why it matters here
 
-Modern complexity pillar explaining why many approximation ratios are tight.
+GRID COMMAND planning, matchmaking, and combinatorial search hit the same wall Johnson opened in 1974: once a problem is NP-hard, the interesting question is which approximation ratios are still easy. This paper is why “good enough” ratios are often themselves intractable, so Anoptic-side heuristics need explicit gap awareness rather than hoping a 2-approx always exists.
 
 ## Key ideas
 
-- Spot-checking proofs with few queries.
-- NP in PCP(log n, O(1)).
-- Hardness of approximation corollaries.
-- ALMSS lineage.
+- A PCP verifier tosses O(log n) coins, queries a constant number of proof bits, and accepts valid proofs with probability 1 while rejecting far-from-valid proofs with constant probability.
+- The characterization NP = PCP[log n, O(1)] is obtained by arithmetizing NP computations and composing inner/outer proof systems so query complexity collapses to a constant.
+- Gap-producing reductions turn the PCP soundness gap into inapproximability: for Max-3SAT, Clique, Chromatic Number, and Set Cover, beating certain constant or polylog ratios is already NP-hard.
+- The argument sits on the interactive-proof arithmetization line (LFKN / Shamir) rather than on relativizing diagonalization.
 
 ## Caveats
-
-- Proof is heavy; landmark card not a tutorial.
-- Arora-Safra concurrent milestone.
 
 ## Links
 

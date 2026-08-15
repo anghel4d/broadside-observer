@@ -24,16 +24,16 @@ cites:
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-  - title: "The ZINC Experiment: An Economical Implementation of the ML Language"
-    url: "https://xavierleroy.org/publi/ZINC.pdf"
-    year: 1990
-    arxiv: null
-    doi: null
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
+  - title: "Inductive Definitions in the System Coq: Rules and Properties"
+    url: "https://doi.org/10.1007/BFb0037116"
+    year: 1993
+    arxiv: null
+    doi: "10.1007/BFb0037116"
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
@@ -41,8 +41,8 @@ cites:
     doi: "10.1145/363235.363259"
 see:
   - "650-the-calculus-of-constructions"
-  - "706-the-zinc-experiment-an-economical-implementation-of-the-ml-l"
   - "658-a-structural-approach-to-operational-semantics"
+  - "720-inductive-definitions-in-the-system-coq-rules-and-properties"
   - "592-an-axiomatic-basis-for-computer-programming"
 ---
 
@@ -50,25 +50,24 @@ see:
 
 ## One-sentence takeaway
 
-Shows a realistic compiler back-end can be proved correct in Coq — the CompCert program.
+A realistic compiler from Cminor to PowerPC assembly is programmed in Coq so each pass is proved to preserve observable behavior of the source.
 
 ## Why it matters here
 
-CompCert is the verified-compilation classic — proof assistants meeting industrial compiler aspiration.
+Anoptic’s C + Vulkan stack and any future ano-to-SPIR-V or ano-to-C backend live or die on “the compiler did not invent a race.” CompCert is the existence proof that a production-shaped back-end can carry a machine-checked semantic-preservation theorem.
 
 ## Key ideas
 
-- Semantic preservation theorems for compilation passes.
-- Coq as a vehicle for compiler correctness.
-- Realistic subset of C as source language.
-- Sets the bar for verified systems software.
+- The compiler is a Coq function; extraction yields the executable. Correctness is a theorem, not a test suite.
+- Four intermediate languages sit between Cminor and PowerPC; each pass has a simulation or refinement argument.
+- The theorem is semantic preservation of observable I/O, not full source-level equivalence of every internal state.
+- Inductive types and the Calculus of Constructions (via Coq) are the proof language; SOS-style operational semantics are the specification language.
+- POPL 2006, pp. 42–54, is the paper that launched CompCert as a research program rather than a toy compiler.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/1111037.1111042](https://doi.org/10.1145/1111037.1111042)
-- URL: https://doi.org/10.1145/1111037.1111042
+- Author PDF: https://xavierleroy.org/publi/compiler-certif.pdf
+- Author page: https://xavierleroy.org/bibrefs/Leroy-compcert-06.html

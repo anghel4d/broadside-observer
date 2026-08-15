@@ -1,12 +1,12 @@
 ---
 title: "Using Relational Databases for Entity-Component Systems"
 authors:
-  - "various / DB-ECS explorations"
-year: 2015
-venue: "Industry + academic notes"
+  - "Richard Fabian"
+year: 2018
+venue: "Data-Oriented Design"
 arxiv: null
 doi: null
-source: "https://www.gamedeveloper.com/programming/the-entity-component-system-an-awesome-game-design-pattern-in-c-part-1-"
+source: "https://www.dataorienteddesign.com/dodbook/node5.html"
 topics:
   - ecs
   - relational
@@ -22,47 +22,36 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-  - title: "Flecs: A Fast Entity Component System for C99"
+  - title: "Flecs: A Fast Entity Component System for C & C++"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
     arxiv: null
     doi: null
-  - title: "Flecs Relationships and Queries"
-    url: "https://www.flecs.dev/flecs/"
-    year: 2021
-    arxiv: null
-    doi: null
-  - title: "The Essence of Entity Component System"
-    url: "https://arxiv.org/abs/2606.14919"
-    year: 2026
-    arxiv: "2606.14919"
-    doi: null
 see:
   - "284-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - "260-flecs-a-fast-entity-component-system-for-c99"
-  - "314-flecs-relationships-and-queries"
-  - "172-the-essence-of-entity-component-system"
 ---
 
 # Using Relational Databases for Entity-Component Systems
 
 ## One-sentence takeaway
 
-Frames ECS as relational tables where systems are queries/joins over component relations.
+Fabian’s DOD chapter treats an ECS as a relational schema: entity IDs are keys, component types are tables, and systems are queries / joins over those tables.
 
 ## Why it matters here
 
-Relational view of components-as-tables — bridge toward ano query DNA without LLM noise.
+This is the cleanest statement of why ano looks like a database. GRID COMMAND systems should be written as “select entities that have Transform ⋈ Velocity ⋈ Health,” not as object graphs. Flecs relationships are the same idea with first-class edges.
 
 ## Key ideas
 
-- Frames ECS as relational tables where systems are queries/joins over component relations.
+- Entity → primary key; component type → relation; component instance → row; field → column; system → a query that streams matching rows.
+- Normalization arguments from databases apply: don’t store the same transform in three objects; join when you need it.
+- Many-to-many gameplay links (inventory, squad membership, rooms↔doors) are junction tables, not pointers stuffed into components.
+- The Game Developer ECS-in-C++ series is a popular intro; the DOD book chapter is the actual relational treatment this card is about.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.gamedeveloper.com/programming/the-entity-component-system-an-awesome-game-design-pattern-in-c-part-1-
+- DOD book, relational chapter: https://www.dataorienteddesign.com/dodbook/node5.html
+- Alternate node: https://www.dataorienteddesign.com/dodmain/node11.html

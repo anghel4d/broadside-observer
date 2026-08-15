@@ -6,7 +6,7 @@ year: 1949
 venue: "Wiley"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/organization-of-behavior/oclc/523"
+source: "https://archive.org/details/in.ernet.dli.2015.226341"
 topics:
   - hebbian-learning
   - neuroscience
@@ -23,42 +23,30 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-  - title: "Intelligent Machinery"
-    url: "https://www.npl.co.uk/getattachment/about-us/History/Famous-faces/Alan-Turing/80916595-Intelligent-Machinery.pdf?lang=en-GB"
-    year: 1948
-    arxiv: null
-    doi: null
-  - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
-    url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
-    year: 1948
-    arxiv: null
-    doi: null
 see:
   - "565-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
-  - "520-intelligent-machinery"
-  - "561-cybernetics-or-control-and-communication-in-the-animal-and-t"
 ---
 
 # The Organization of Behavior
 
 ## One-sentence takeaway
 
-Hebb's rule—neurons that fire together wire together—founding learning theory for networks.
+Hebb proposes that when cell A repeatedly takes part in firing cell B, A's efficiency in firing B increases — learning as organized neural activity.
 
 ## Why it matters here
 
-Learning update epistemology behind later connectionism and modern ML ancestry.
+Every later connectionist and agent-learning update is a descendant of this "fire together, wire together" rule, even when the algebra is SGD.
 
 ## Key ideas
 
-- Hebbian synapse.
-- Cell assemblies.
-- Behavior from neural organization.
+- The Hebb synapse is a local, correlational growth rule, not a global error signal.
+- Cell assemblies are reverberating coalitions that persist after the stimulus and constitute short-term thought.
+- Phase sequences chain assemblies into longer behavior; perception and learning share the same organization.
+- The book is a neuropsychological theory of the whole organism, not only a synaptic slogan.
+- Original: Wiley, New York, 1949; modern reprints follow the Erlbaum 2002 text.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/organization-of-behavior/oclc/523
+- URL: https://archive.org/details/in.ernet.dli.2015.226341

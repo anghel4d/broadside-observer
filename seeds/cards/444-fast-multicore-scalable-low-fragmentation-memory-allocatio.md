@@ -9,7 +9,7 @@ year: 2015
 venue: "OOPSLA"
 arxiv: "1503.09006"
 doi: "10.1145/2814270.2814294"
-source: "https://doi.org/10.1145/2814270.2814294"
+source: "https://arxiv.org/abs/1503.09006"
 topics:
   - memory-allocation
   - size-class
@@ -60,8 +60,6 @@ Virtual-span / oversized VA trick is a useful sibling to Mesh’s page aliasing 
 - Aims to beat prior fast allocators while using less memory.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 

@@ -4,7 +4,7 @@ authors:
 - Michael L. Fredman
 - Robert Endre Tarjan
 year: 1987
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/28869.28874
 source: "https://doi.org/10.1145/28869.28874"
@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Fibonacci heaps give amortized O(1) decrease-key, speeding Dijkstra and MST algorithms.
+Fibonacci heaps support insert and decrease-key in amortized $O(1)$ and delete-min in amortized $O(\log n)$, so Dijkstra becomes $O(E+V\log V)$ and several MST algorithms pick up matching improvements.
 
 ## Why it matters here
 
-Theoretical priority-queue breakthrough behind many textbook graph bounds.
+This is the theoretical priority-queue bound behind textbook shortest-path and MST results that GRID COMMAND pathfinding and Anoptic nav-mesh papers still cite — even when production code uses a binary heap.
 
 ## Key ideas
 
-- Lazy linking and marking.
-- Amortized decrease-key O(1).
-- Improves Dijkstra to O(E + V log V).
-- Influences later heap designs.
+- A collection of heap-ordered trees is linked lazily; marking plus cascading cuts keeps the maximum degree $O(\log n)$.
+- Decrease-key cuts a node from its parent and plants it as a new root in $O(1)$ amortized time via a potential on trees and marks.
+- With this heap, Dijkstra on a graph with $V$ vertices and $E$ edges is $O(E+V\log V)$ rather than $O((E+V)\log V)$.
+- The same structure improves Edmonds’ branching algorithm and several other network-optimization classics.
 
 ## Caveats
-
-- Poor constants — rarely used raw in production.
-- Important for theory and design ideas.
 
 ## Links
 

@@ -60,9 +60,6 @@ Agent sessions are append-heavy and eviction-shaped (skills, traces, long GRID C
 
 ## Caveats
 
-- Prototype on vLLM 0.18, single-GPU decode; TP/multi-group and copy-on-write shared prefixes are sketched, not shipped.
-- Quality of dropped tokens is the eviction policy’s job; vToken only preserves the retained set (ROUGE-L Δ ≈ 0).
-- Planner-side opportunity checks dominate measured CPU overhead; copy/decode HBM contention still exists under stress.
 
 ## Links
 

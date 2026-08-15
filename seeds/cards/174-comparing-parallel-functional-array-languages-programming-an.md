@@ -13,8 +13,11 @@ authors:
   - "Sven-Bodo Scholz"
   - "Artjoms Sinkarovs"
   - "Tom Smeding"
+  - "Phil Trinder"
+  - "Ivo Gabe de Wolff"
+  - "Alexandros Nikolaos Ziogas"
 year: 2025
-venue: "arXiv"
+venue: "arXiv:cs.PL"
 arxiv: "2505.08906"
 doi: null
 source: "https://arxiv.org/abs/2505.08906"
@@ -51,25 +54,22 @@ see:
 
 ## One-sentence takeaway
 
-Parallel functional array languages are an emerging class of programming languages that promise to combine low-effort parallel programming with good performance and performance portability.
+The authors implement N-body, MultiGrid, Quickhull, and Flash Attention in Accelerate, APL, DaCe, Futhark, and SaC, then compare multicore and GPU performance from one source per language against hand-tuned baselines.
 
 ## Why it matters here
 
-Array-language DNA directly adjacent to ano/BQN twins.
+Ano/BQN twins live in this family: the claim to test is whether a single rank-polymorphic source can produce competitive CPU and GPU kernels. This paper is the current head-to-head.
 
 ## Key ideas
 
-- Parallel functional array languages are an emerging class of programming languages that promise to combine low-effort parallel programming with good performance and performance portability.
-- We systematically compare the designs and implementations of five different functional array languages: Accelerate, APL, DaCe, Futhark, and SaC.
-- We demonstrate the expressiveness of functional array programming by means of four challenging benchmarks, namely N-body simulation, MultiGrid, Quickhull, and Flash Attention.
-- These benchmarks represent a range of application domains and parallel computational models.
-- We argue that the functional array code is much shorter and more comprehensible than the hand-optimized baseline implementations because it omits architecture-specific aspects.
+- Five functional array languages are compared systematically on design, implementation, and generated parallel code.
+- Four benchmarks span distinct parallel models: N-body, MultiGrid, Quickhull, and Flash Attention.
+- Functional array programs are argued to be shorter because they omit architecture-specific scheduling; the compilers emit both 32-core EPYC and NVIDIA A30 binaries from one source.
+- Performance is reported across 39 benchmark instances, with a per-language autopsy of why each wins or loses on each kernel and device.
+- Mature members of the family are claimed to be competitive with conventional hand-optimized techniques, not merely more elegant.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2505.08906](https://arxiv.org/abs/2505.08906)
-- URL: https://arxiv.org/abs/2505.08906

@@ -18,50 +18,42 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Wait-Free Updates and Range Search using Uruv
 
 ## One-sentence takeaway
 
-CRUD operations, along with range queries make a highly useful abstract data type (ADT), employed by many dynamic analytics tasks.
+Uruv is a proactive, linearizable wait-free B+tree: a balanced search index over a linked list that finally gives CRUD plus range queries a fully wait-free implementation.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Wait-Free Updates and Range Search using Uruv).
+Anoptic entity indexes and GRID COMMAND spatial buckets need wait-free range scans that cannot be blocked by a stalled updater; Uruv is the first practical wait-free B+tree the seed spine has for that ADT.
 
 ## Key ideas
 
-- CRUD operations, along with range queries make a highly useful abstract data type (ADT), employed by many dynamic analytics tasks.
-- Despite its wide applications, to our knowledge, no fully wait-free data structure is known to support this ADT.
-- In this paper, we introduce Uruv, a proactive linearizable and practical wait-free concurrent data structure that implements the ADT mentioned above.
-- Structurally, Uruv installs a balanced search index on the nodes of a linked list.
-- Uruv is the first wait-free and proactive solution for concurrent B+tree.
+- CRUD + range is a common analytics ADT; no prior structure was fully wait-free for it.
+- Structure: linked-list leaves with a balanced search index installed on top.
+- "Proactive" means helping is arranged so a slow thread does not pin the range scan.
+- First wait-free and proactive concurrent B+tree in the authors' accounting.
+- Beats prior lock-free B+trees on dictionary ops and a recent lock-free range-query design.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2307.14744](https://arxiv.org/abs/2307.14744)
-- URL: https://arxiv.org/abs/2307.14744
+- PDF: https://arxiv.org/pdf/2307.14744

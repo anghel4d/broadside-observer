@@ -3,7 +3,7 @@ title: Authoritative Sources in a Hyperlinked Environment
 authors:
 - Jon M. Kleinberg
 year: 1999
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/324133.324140
 source: "https://doi.org/10.1145/324133.324140"
@@ -30,23 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-HITS: hubs and authorities mutually reinforcing scores on a query-focused subgraph.
+HITS iterates hub and authority scores on a query-focused subgraph so a page is an authority if good hubs point to it and a hub if it points to good authorities.
 
 ## Why it matters here
 
-Complementary link-analysis classic to PageRank for bipartite endorsement.
+This is the bipartite-endorsement foil to PageRank: the right ranking story when Broadside or GRID COMMAND wants “who curates” versus “who is cited,” not a single global eigenvector.
 
 ## Key ideas
 
-- Hub score and authority score iteration.
-- Query-dependent base set.
-- Spectral view of co-citation.
-- Influenced topic-sensitive ranking.
+- A query seeds a base set (search hits plus their in- and out-neighbors); HITS then runs only on that subgraph.
+- Update $a\leftarrow A^\top h$ and $h\leftarrow Aa$ (or the symmetric pair of iterates) and renormalize; the principal singular vectors of the adjacency matrix are the limit.
+- Mutual reinforcement separates concentrated authorities from pages that merely compile links.
+- The same spectral view later feeds topic-sensitive and query-dependent ranking.
 
 ## Caveats
-
-- Query-time subgraph costly at web scale.
-- Topic drift noted in follow-ons.
 
 ## Links
 

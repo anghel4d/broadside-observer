@@ -32,22 +32,20 @@ see:
 
 ## One-sentence takeaway
 
-DeepEncoder V2 reorders visual tokens by semantics before the LLM — two cascaded 1D causal reasoners instead of raster-scan 2D, aiming at layout-aware OCR.
+DeepEncoder V2 reorders visual tokens by image semantics before the LLM reads them, turning raster-scan 2D into two cascaded 1D causal reasoners so layout (reading order, tables, UI flow) is a learned sequence rather than a fixed PE.
 
 ## Why it matters here
 
-Follow-on to optical compression (1257): the encoder itself becomes a causal reorderer. Layout-heavy agent perception (UI, docs, sheets).
+Follow-on to optical compression: the encoder itself becomes a causal reorderer. Layout-heavy agent perception — UI, docs, sheets — is exactly where raster order lies.
 
 ## Key ideas
 
-- arXiv:2601.20552. Conventional VLMs feed vision tokens in raster order with fixed PE; humans scan by structure.
+- arXiv:2601.20552. Conventional VLMs feed vision tokens in raster order with fixed positional encodings; humans scan by structure.
 - DeepEncoder V2 dynamically reorders visual tokens from image semantics, then the LLM reads that 1D causal stream.
-- Thesis: 2D understanding via two cascaded 1D causal structures. Weights: https://github.com/deepseek-ai/DeepSeek-OCR-2
+- Thesis: 2D understanding via two cascaded 1D causal structures (encoder reorder, then language model).
+- Exploratory encoder paper, not a general VLM replacement. Causal reorder is learned — adversarial layouts are an open failure mode.
 
 ## Caveats
-
-- Exploratory encoder paper; not a general VLM replacement.
-- Causal reorder is learned — failure modes on adversarial layouts are open.
 
 ## Links
 

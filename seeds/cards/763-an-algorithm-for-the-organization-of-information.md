@@ -7,7 +7,7 @@ year: 1962
 venue: Doklady Akademii Nauk SSSR
 arxiv: null
 doi: null
-source: "https://en.wikipedia.org/wiki/AVL_tree"
+source: "https://www.mathnet.ru/eng/dan26964"
 topics:
 - balanced-trees
 - avl
@@ -17,50 +17,30 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: algorithms-and-complexity
-cites:
-- title: A Dichromatic Framework for Balanced Trees
-  url: "https://doi.org/10.1109/SFCS.1978.3"
-  year: 1978
-  arxiv: null
-  doi: 10.1109/SFCS.1978.3
-- title: Self-Adjusting Binary Search Trees
-  url: "https://doi.org/10.1145/3828.3835"
-  year: 1985
-  arxiv: null
-  doi: 10.1145/3828.3835
-- title: Organization and Maintenance of Large Ordered Indices
-  url: "https://doi.org/10.1007/BF00288683"
-  year: 1972
-  arxiv: null
-  doi: 10.1007/BF00288683
-see:
-- "765-a-dichromatic-framework-for-balanced-trees"
-- "766-self-adjusting-binary-search-trees"
-- "764-organization-and-maintenance-of-large-ordered-indices"
+cites: []
+see: []
 ---
 
 # An Algorithm for the Organization of Information
 
 ## One-sentence takeaway
 
-AVL trees — height-balanced BSTs with logarithmic updates.
+AVL trees keep every node’s two subtrees within height one, so search, insert, and delete stay $O(\log n)$ via single and double rotations on the unbalanced ancestor.
 
 ## Why it matters here
 
-First balanced-tree classic; used where strict balance beats red-black constants.
+This is the first balanced BST, still the right ordered map when Anoptic / ano need stricter height than red-black and can pay a few extra rotations on update.
 
 ## Key ideas
 
-- Balance factor invariant.
-- Single/double rotations.
-- Guaranteed O(log n) height.
-- Opens balanced-search-tree field.
+- The balance factor of a node is $h_\text{right}-h_\text{left}\in\{-1,0,+1\}$; a $\pm 2$ triggers a rotation.
+- Single rotation fixes a same-side insert; double rotation fixes a zigzag.
+- Height is at most $\approx 1.44\log_2 n$, tighter than red-black’s $2\log_2 n$.
+- Original: *Dokl. Akad. Nauk SSSR* 146:2 (1962), 263–266; English in *Soviet Mathematics — Doklady* 3 (1962), 1259–1263.
 
 ## Caveats
 
-- More rotations than red-black on some workloads.
-- Original Doklady; many textbook expositions.
-
 ## Links
 
-- URL: https://en.wikipedia.org/wiki/AVL_tree
+- Math-Net.Ru: [dan26964](https://www.mathnet.ru/eng/dan26964)
+- English overview: https://en.wikipedia.org/wiki/AVL_tree

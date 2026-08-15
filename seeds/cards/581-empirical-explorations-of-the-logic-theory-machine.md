@@ -25,41 +25,29 @@ cites:
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-  - title: "Report on a General Problem-Solving Program"
-    url: "https://bitsavers.org/pdf/rand/ipl/"
-    year: 1959
-    arxiv: null
-    doi: null
-  - title: "Elements of a Theory of Human Problem Solving"
-    url: "https://doi.org/10.1037/h0048495"
-    year: 1958
-    arxiv: null
-    doi: "10.1037/h0048495"
 see:
   - "580-the-logic-theory-machine-a-complex-information-processing-sy"
-  - "582-report-on-a-general-problem-solving-program"
-  - "583-elements-of-a-theory-of-human-problem-solving"
 ---
 
 # Empirical Explorations of the Logic Theory Machine
 
 ## One-sentence takeaway
 
-Newell–Shaw–Simon report empirical LT behavior—AI as experimental science on programs.
+Newell, Shaw, and Simon report how Logic Theorist actually performed on *Principia* theorems — AI as an experimental science of programs.
 
 ## Why it matters here
 
-Shows AI papers as experiments, not only definitions.
+Agent papers in this corpus should publish traces and failure modes, not only architectures. This 1957 WJCC paper is that genre's ancestor.
 
 ## Key ideas
 
-- Performance on Principia problems.
-- IPL implementation details.
-- Heuristic adequacy discussion.
+- LT proved 38 of the first 52 theorems in *Principia* Chapter 2, with runtimes and search sizes tabulated.
+- IPL implementation details (list memory, association lists) are treated as part of the scientific object.
+- Heuristic adequacy is empirical: which methods fire, where the search explodes, which proofs look "human."
+- The paper is the measurement companion to the 1956 system description.
+- McCarthy later cites it as the prior art the Advice Taker is *not* — heuristics in code versus heuristics in sentences.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

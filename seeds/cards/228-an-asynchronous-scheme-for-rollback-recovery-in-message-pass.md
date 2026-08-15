@@ -3,7 +3,7 @@ title: "An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurre
 authors:
   - "Germán Vidal"
 year: 2023
-venue: "arXiv:cs.PL"
+venue: "ACM SAC 2024"
 arxiv: "2401.00087"
 doi: "10.1145/3605098.3636051"
 source: "https://arxiv.org/abs/2401.00087"
@@ -25,77 +25,37 @@ cites:
     year: 2002
     arxiv: null
     doi: "10.1145/568522.568525"
-  - title: "Multiparty asynchronous session types"
-    url: "https://doi.org/10.1145/1328438.1328472"
-    year: 2008
-    arxiv: null
-    doi: "10.1145/1328438.1328472"
-  - title: "Rollback Recovery in Session-Based Programming"
-    url: "https://doi.org/10.1007/978-3-031-35361-1_11"
-    year: 2023
-    arxiv: null
-    doi: "10.1007/978-3-031-35361-1_11"
   - title: "A theory of reversibility for Erlang"
     url: "https://doi.org/10.1016/j.jlamp.2018.06.004"
     year: 2018
     arxiv: null
     doi: "10.1016/j.jlamp.2018.06.004"
-  - title: "Causal-Consistent Replay Reversible Semantics for Message Passing Concurrent Programs"
-    url: "https://doi.org/10.3233/fi-2021-2005"
-    year: 2021
-    arxiv: null
-    doi: "10.3233/fi-2021-2005"
-  - title: "Reversible Choreographies via Monitoring in Erlang"
-    url: "https://doi.org/10.1007/978-3-319-93767-0_6"
-    year: 2018
-    arxiv: null
-    doi: "10.1007/978-3-319-93767-0_6"
-  - title: "Playing with Bisimulation in Erlang"
-    url: "https://doi.org/10.1007/978-3-030-21485-2_6"
-    year: 2019
-    arxiv: null
-    doi: "10.1007/978-3-030-21485-2_6"
-  - title: "Transactional actors: communication in transactions"
-    url: "https://doi.org/10.1145/3141865.3141866"
-    year: 2017
-    arxiv: null
-    doi: "10.1145/3141865.3141866"
-  - title: "A General Approach to Derive Uncontrolled Reversible Semantics"
-    url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CONCUR.2020.33"
-    year: 2020
-    arxiv: null
-    doi: "10.4230/lipics.concur.2020.33"
-  - title: "Transactors"
-    url: "https://doi.org/10.1145/1040305.1040322"
-    year: 2005
-    arxiv: null
-    doi: "10.1145/1040305.1040322"
+see:
+  - "785-time-clocks-and-the-ordering-of-events-in-a-distributed-syst"
 ---
 
 # An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurrent Programming Languages
 
 ## One-sentence takeaway
 
-Rollback recovery strategies are well-known in concurrent and distributed systems.
+A checkpoint-based rollback for shared-nothing message-passing languages adds `check`, `commit`, and `rollback` as asynchronous operators so recovery can be implemented by source-to-source instrumentation with no coordinator.
 
 ## Why it matters here
 
-Realtime/sim/netcode discipline for deterministic or low-latency games (An Asynchronous Scheme for Rollback Recovery in Message-Passing Concurrent Progr).
+GGPO-style netcode and Anoptic deterministic lockstep both need a language-level rollback story that does not stop the world; Vidal's three operators are the PL version of that protocol.
 
 ## Key ideas
 
-- Rollback recovery strategies are well-known in concurrent and distributed systems.
-- In this context, recovering from unexpected failures is even more relevant given the non-deterministic nature of execution, which means that it is practically impossible to foresee all possible process interactions.
-- In this work, we consider a message-passing concurrent programming language where processes interact through message sending and receiving, but shared memory is not allowed.
-- In this context, we design a checkpoint-based rollback recovery strategy that does not need a central coordination.
-- For this purpose, we extend the language with three new operators: check, commit, and rollback.
+- Target language: processes communicate only by send/receive; no shared memory.
+- Recovery is checkpoint-based and fully decentralized — no central coordinator.
+- Three new operators: check (take a checkpoint), commit (discard it), rollback (restore).
+- Asynchrony is required so a source-to-source transform can implement the protocol without adding blocking runtime services.
+- Non-determinism of message interleavings is why exhaustive prediction of failures is impossible and rollback is the recovery tool. ACM SAC 2024.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2401.00087](https://arxiv.org/abs/2401.00087)
 - DOI: [10.1145/3605098.3636051](https://doi.org/10.1145/3605098.3636051)
-- URL: https://arxiv.org/abs/2401.00087
+- PDF: https://arxiv.org/pdf/2401.00087

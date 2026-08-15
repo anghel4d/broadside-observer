@@ -1,60 +1,46 @@
 ---
-title: Linear Automaton Transformations (Nerode congruence)
+title: Linear Automaton Transformations
 authors:
-- Anil Nerode
+  - Anil Nerode
 year: 1958
 venue: Proceedings of the AMS
 arxiv: null
 doi: 10.1090/S0002-9939-1958-0135681-9
 source: "https://doi.org/10.1090/S0002-9939-1958-0135681-9"
 topics:
-- automata
-- myhill-nerode
+  - automata
+  - myhill-nerode
 seed_rank: 737
 seed_batch: perfects-algorithms-2026-08-13
 reviewed: 2026-08-13
 pool: maths-foundations
 relevance_score: 8
 lineage: algorithms-and-complexity
-cites:
-- title: Myhill–Nerode Theorem (Myhill technical notes)
-  url: "https://en.wikipedia.org/wiki/Myhill%E2%80%93Nerode_theorem"
-  year: 1957
-  arxiv: null
-  doi: null
-- title: Finite Automata and Their Decision Problems
-  url: "https://doi.org/10.1147/rd.32.0114"
-  year: 1959
-  arxiv: null
-  doi: 10.1147/rd.32.0114
-see:
-- "736-myhill-nerode-theorem-myhill-technical-notes"
-- "619-finite-automata-and-their-decision-problems"
+cites: []
+see: []
 ---
 
-# Linear Automaton Transformations (Nerode congruence)
+# Linear Automaton Transformations
 
 ## One-sentence takeaway
 
-Nerode’s congruence perspective underpins Myhill–Nerode regularity characterization.
+Nerode’s right-congruence on strings — \(x \sim_L y\) iff for every continuation \(z\), \(xz \in L \Leftrightarrow yz \in L\) — has finite index exactly when \(L\) is regular.
 
 ## Why it matters here
 
-Canonical minimality criterion for DFAs in compilers and protocols.
+This is the canonical minimality criterion for DFAs: the congruence classes *are* the states of the unique minimal automaton. Compilers, protocol recognizers, and any Anoptic lexer/parser sit on this fact.
 
 ## Key ideas
 
-- Right-congruence on strings.
-- Finitely many classes iff regular.
-- Unique minimal DFA up to isomorphism.
-- Pairs with Myhill.
+- The Nerode congruence is a right congruence; finite index iff the language is regular.
+- The quotient automaton is unique up to isomorphism among deterministic recognizers.
+- The paper’s title is about linear transformations realized by automata; the congruence is the tool that became the theorem.
+- Myhill 1957 is the independent companion; Rabin–Scott 1959 is the decision-problem sequel.
+- Proc. Amer. Math. Soc. 9(4), August 1958, pp. 541–544.
 
 ## Caveats
-
-- Prefer Hopcroft–Ullman for polished exposition.
-- Bibliographic trail spans notes and papers.
 
 ## Links
 
 - DOI: [10.1090/S0002-9939-1958-0135681-9](https://doi.org/10.1090/S0002-9939-1958-0135681-9)
-- URL: https://doi.org/10.1090/S0002-9939-1958-0135681-9
+- AMS: https://www.ams.org/journals/proc/1958-009-04/S0002-9939-1958-0135681-9/

@@ -33,23 +33,20 @@ see:
 
 ## One-sentence takeaway
 
-AKS — deterministic polynomial-time primality testing.
+Agrawal, Kayal, and Saxena give a deterministic polynomial-time primality test: n is prime iff (X + a)ⁿ ≡ Xⁿ + a (mod Xʳ − 1, n) for a short explicit range of a and a suitably chosen r, with no appeal to unproven hypotheses.
 
 ## Why it matters here
 
-Landmark derandomization/number-theory result; PRIMES in P.
+RSA-style public-key machinery (and any Anoptic/GRID COMMAND identity layer that samples primes) already used Miller–Rabin in practice; AKS is the complexity-theoretic full stop that PRIMES is unconditionally in P, not merely in coRP or in P under ERH.
 
 ## Key ideas
 
-- Cyclotomic/polynomial identity approach.
-- Unconditional deterministic poly-time.
-- Ends reliance on unproven hypotheses for poly-time primality.
-- Theoretical rather than practical vs Miller-Rabin.
+- The identity (X + a)ⁿ = Xⁿ + a in characteristic n characterizes prime n; working modulo a cyclotomic Xʳ − 1 keeps the polynomials small enough to evaluate in poly(log n) time.
+- r is chosen so that the order of n modulo r is large, which makes the polynomial identity imply n is a prime power (then a perfect-power check finishes).
+- The original paper’s exponent is high (roughly Õ(log¹² n)); later Lenstra–Pomerance variants improve the exponent, but the unconditional membership is already here.
+- Miller–Rabin remains the engineering test; AKS is the derandomization landmark.
 
 ## Caveats
-
-- Not the fastest practical test.
-- MR still dominates engineering.
 
 ## Links
 

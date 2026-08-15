@@ -11,7 +11,7 @@ authors:
   - "Ruichao Yang"
   - "Jing Ma"
 year: 2026
-venue: "ACL"
+venue: "arXiv:cs.AI"
 arxiv: "2605.06716"
 doi: null
 source: "https://arxiv.org/abs/2605.06716"
@@ -27,50 +27,48 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
-    url: "https://arxiv.org/abs/2603.11768"
-    year: 2026
-    arxiv: "2603.11768"
-    doi: null
-  - title: "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory"
-    url: "https://arxiv.org/abs/2605.19952"
-    year: 2026
-    arxiv: "2605.19952"
-    doi: null
   - title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
     url: "https://arxiv.org/abs/2305.16291"
     year: 2023
     arxiv: "2305.16291"
     doi: null
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
+    doi: null
+  - title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
+    url: "https://arxiv.org/abs/2303.11366"
+    year: 2023
+    arxiv: "2303.11366"
+    doi: null
 see:
-  - "058-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
-  - "064-rethinking-how-to-remember-beyond-atomic-facts-in-lifelong-l"
   - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - "004-memgpt-towards-llms-as-operating-systems"
+  - "081-reflexion-language-agents-with-verbal-reinforcement-learning"
 ---
 
 # From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms
 
 ## One-sentence takeaway
 
-Large Language Model (LLM)-based agents have fundamentally reshaped artificial intelligence by integrating external tools and planning capabilities.
+The survey frames LLM-agent memory as an evolution from Storage (trajectory preservation) through Reflection (trajectory refinement) to Experience (trajectory abstraction).
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms)
+Broadside's provenance store and ano's standing loops sit exactly on this Storage → Reflection → Experience axis; the survey is a map for which memory mechanism belongs at which layer of the agent/ECS stack.
 
 ## Key ideas
 
-- Large Language Model (LLM)-based agents have fundamentally reshaped artificial intelligence by integrating external tools and planning capabilities.
-- While memory mechanisms have emerged as the architectural cornerstone of these systems, current research remains fragmented, oscillating between operating system engineering and cognitive science.
-- This theoretical divide prevents a unified view of technological synthesis and a coherent evolutionary perspective.
-- To bridge this gap, this survey proposes a novel evolutionary framework for LLM agent memory mechanisms, formalizing the development process into three stages: Storage (trajectory preservation), Reflection (trajectory refinement), and Experience (trajectory abstraction).
-- We first formally define these three stages before analyzing the t
+- Current memory work is split between OS-style paging/engineering and cognitive-science metaphors, which blocks a unified design vocabulary.
+- Three drivers push the evolution: long-range consistency, dynamic environments, and continual learning.
+- The Experience stage is characterized by two frontier mechanisms: proactive exploration and cross-trajectory abstraction.
+- Storage keeps raw traces; Reflection rewrites them into reusable lessons; Experience compresses many traces into transferable skills.
+- The authors offer design principles and a roadmap rather than a single system, aimed at next-generation persistent agents.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2605.06716](https://arxiv.org/abs/2605.06716)
-- URL: https://arxiv.org/abs/2605.06716
+- PDF: https://arxiv.org/pdf/2605.06716

@@ -23,15 +23,10 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
-    url: "https://arxiv.org/abs/2607.12267"
-    year: 2026
-    arxiv: "2607.12267"
-    doi: null
-  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
-    url: "https://arxiv.org/abs/2304.03442"
+  - title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
+    url: "https://arxiv.org/abs/2303.11366"
     year: 2023
-    arxiv: "2304.03442"
+    arxiv: "2303.11366"
     doi: null
   - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
     url: "https://arxiv.org/abs/2210.03629"
@@ -39,8 +34,7 @@ cites:
     arxiv: "2210.03629"
     doi: null
 see:
-  - "068-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
-  - "003-generative-agents-interactive-simulacra-of-human-behavior"
+  - "081-reflexion-language-agents-with-verbal-reinforcement-learning"
   - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
@@ -48,24 +42,23 @@ see:
 
 ## One-sentence takeaway
 
-Large language model (LLM) agents achieve impressive single-task performance but commonly exhibit repeated failures, inefficient exploration, and limited cross-task adaptability.
+MPR consolidates verbal reflections into a predicate-like Meta-Policy Memory and applies it at inference via soft memory-guided decoding plus hard rule admissibility checks, without weight updates.
 
 ## Why it matters here
 
-shapes harness/ACI design and model-vs-harness failure localization; architecture patterns for long-running observers and interactive agents (Meta-Policy Reflexion: Reusable Reflective Memory and Rule Admissibility for Resource-Effi)
+Reflexion traces in ano are usually episode-local; MPR is the upgrade that turns those traces into a reusable, enforceable policy for the next task.
 
 ## Key ideas
 
-- Large language model (LLM) agents achieve impressive single-task performance but commonly exhibit repeated failures, inefficient exploration, and limited cross-task adaptability.
-- Existing reflective strategies (e.g., Reflexion, ReAct) improve per-episode behavior but typically produce ephemeral, task-specific traces that are not reused across tasks.
-- Reinforcement-learning based alternatives can produce transferable policies but require substantial parameter updates and compute.
-- In this work we introduce Meta-Policy Reflexion (MPR): a hybrid framework that consolidates LLM-generated reflections into a structured, predicate-like Meta-Policy Memory (MPM) and applies that memory at inference time through two complementary mechanisms soft memory-guided decoding and hard rule admissibility check
+- Reflexion/ReAct improve a single episode but leave ephemeral, task-specific traces; RL alternatives transfer but need parameter updates.
+- Meta-Policy Memory is structured and predicate-like, not free-form diary text.
+- Soft guidance biases decoding toward remembered corrections; hard admissibility (HAC) blocks unsafe or invalid actions.
+- Evaluation follows an AlfWorld-style text-agent protocol; reported gains are in execution accuracy and robustness versus Reflexion, with HAC adding stability.
+- Failure modes and scaling, including multimodal and multi-agent extensions, are discussed rather than claimed as solved.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2509.03990](https://arxiv.org/abs/2509.03990)
-- URL: https://arxiv.org/abs/2509.03990
+- PDF: https://arxiv.org/pdf/2509.03990

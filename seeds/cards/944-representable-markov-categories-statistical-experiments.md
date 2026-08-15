@@ -34,23 +34,23 @@ see:
 
 ## One-sentence takeaway
 
-Markov categories as the setting for probability; representability lets you talk about kernels to/from spaces of distributions — Weaves takes BorelStoch from here.
+Markov categories are the setting for probability; representability lets you talk about kernels to and from spaces of distributions — Weaves takes BorelStoch from here.
 
 ## Why it matters here
 
-BorelStoch is the B in Weaves' [B;A]. This is the probability substrate, not the array part.
+BorelStoch is the $B$ in Weaves' $[B;A]$. This is the probability substrate, not the array part: standard Borel spaces and measurable Markov kernels.
 
 ## Key ideas
 
-- TCS 961:113896, 2023; arXiv:2010.07416.
-- Blackwell–Sherman–Stein in this language; second-order stochastic dominance.
-- BorelStoch: standard Borel spaces and measurable Markov kernels.
+- TCS 961:113896, 2023; arXiv:2010.07416; DOI `10.1016/j.tcs.2023.113896`.
+- Recasts Blackwell–Sherman–Stein comparison of statistical experiments, plus second-order stochastic dominance, in Markov-category language.
+- Representability is the extra structure that makes 'the space of distributions' an object the category can see.
+- Weaves uses BorelStoch as a datatype/probability universe; it does not develop BSS.
 
 ## Caveats
-
-- Heavy CT/probability. Weaves uses BorelStoch as a datatype/probability universe; it does not develop BSS.
 
 ## Links
 
 - arXiv: [2010.07416](https://arxiv.org/abs/2010.07416)
-- DOI: https://doi.org/10.1016/j.tcs.2023.113896
+- PDF: https://arxiv.org/pdf/2010.07416
+- DOI: [10.1016/j.tcs.2023.113896](https://doi.org/10.1016/j.tcs.2023.113896)

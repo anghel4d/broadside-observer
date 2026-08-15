@@ -44,25 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-Multi-Version Concurrency Control (MVCC) is a common mechanism for achieving linearizable range queries in database systems and concurrent data-structures.
+EEMARQ is the first MVCC range-query scheme that pairs multi-version nodes with lock-free reclamation, so insert, delete, contains, and range stay fully lock-free.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (EEMARQ: Efficient Lock-Free Range Queries with Memory Reclamation).
+Anoptic spatial indexes cannot take a lock or a blocking epoch just to answer "units in this AABB"; EEMARQ is the range-query design that does not give up reclamation to get linearizable scans.
 
 ## Key ideas
 
-- Multi-Version Concurrency Control (MVCC) is a common mechanism for achieving linearizable range queries in database systems and concurrent data-structures.
-- The core idea is to keep previous versions of nodes to serve range queries, while still providing atomic reads and updates.
-- Existing concurrent data-structure implementations, that support linearizable range queries, are either slow, use locks, or rely on blocking reclamation schemes.
-- We present EEMARQ, the first scheme that uses MVCC with lock-free memory reclamation to obtain a fully lock-free data-structure supporting linearizable inserts, deletes, contains, and range queries.
-- Evaluation shows that EEMARQ outperforms existing solutions across most workloads, with lower space overhead and while providing full lock freedom.
+- MVCC keeps old node versions so a range scan can ride a snapshot while writers update in place.
+- Prior linearizable range structures were slow, used locks, or depended on blocking reclaimers.
+- Combining MVCC with a lock-free reclaimer is the actual contribution — versions do not leak and do not block.
+- Evaluation: faster than existing solutions on most workloads, with lower space overhead.
+- Full lock-freedom is preserved for all four operations.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2210.17086](https://arxiv.org/abs/2210.17086)
-- URL: https://arxiv.org/abs/2210.17086
+- PDF: https://arxiv.org/pdf/2210.17086

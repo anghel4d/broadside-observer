@@ -4,7 +4,7 @@ authors:
   - "Ryunosuke Endo"
   - "Tachio Terauchi"
 year: 2025
-venue: "arXiv"
+venue: "arXiv:cs.LO"
 arxiv: "2508.12572"
 doi: null
 source: "https://arxiv.org/abs/2508.12572"
@@ -41,25 +41,22 @@ see:
 
 ## One-sentence takeaway
 
-It is well known that the reachability problem for simply-typed lambda calculus with recursive definitions and finite base-type values (finitary PCF) is decidable.
+Adding answer-type modification makes reachability decidable again for finitary PCF with effect handlers, via a CPS translation back to handler-free finitary PCF — even though ATM both admits and rejects programs the ATM-free system treats differently.
 
 ## Why it matters here
 
-Effect systems/handlers inform ano masked command effects and handlers.
+If ano command handlers are going to be verified rather than just typed, this is the known island of decidability: ATM is not merely more types, it is a restriction that restores a reduction to ordinary finitary PCF.
 
 ## Key ideas
 
-- It is well known that the reachability problem for simply-typed lambda calculus with recursive definitions and finite base-type values (finitary PCF) is decidable.
-- A recent paper by Dal Lago and Ghyselen has shown that the same problem becomes undecidable when the language is extended with algebraic effect and handlers (effect handlers).
-- We show that, perhaps surprisingly, the problem becomes decidable even with effect handlers when the type system is extended with answer type modification (ATM).
-- A natural intuition may find the result contradictory, because one would expect allowing ATM makes more programs typable.
-- Indeed, this intuition is correct in that there are programs that are typable with ATM but not without it, as we shall show in the paper.
+- Reachability is decidable for finitary PCF and becomes undecidable once algebraic effect handlers are added (Dal Lago and Ghyselen).
+- With answer-type modification, reachability is decidable again; the proof is a CPS translation that eliminates handlers.
+- ATM is not a pure enlargement: some programs type only with ATM, and some type only without it.
+- Recursive-function-free ATM-typable programs with handlers terminate; without ATM they need not.
+- The authors also refute a stronger claim from a contemporaneous weaker decidability result.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2508.12572](https://arxiv.org/abs/2508.12572)
-- URL: https://arxiv.org/abs/2508.12572

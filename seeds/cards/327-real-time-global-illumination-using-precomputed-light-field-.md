@@ -1,12 +1,15 @@
 ---
 title: "Real-Time Global Illumination using Precomputed Light Field Probes"
 authors:
-  - "Morgan McGuire et al."
+  - "Morgan McGuire"
+  - "Mike Mara"
+  - "Derek Nowrouzezahrai"
+  - "David Luebke"
 year: 2017
 venue: "I3D"
 arxiv: null
-doi: null
-source: "https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes"
+doi: "10.1145/3105762.3105774"
+source: "https://research.nvidia.com/publication/2017-02_real-time-global-illumination-using-precomputed-light-field-probes"
 topics:
   - gi
   - probes
@@ -42,22 +45,23 @@ see:
 
 ## One-sentence takeaway
 
-Precomputed light-field probes store radiance + visibility for real-time glossy/diffuse GI — the direct ancestor of DDGI.
+Light-field probes store incoming radiance and geometric visibility at world-space locations so a real-time shader can reconstruct glossy and diffuse GI for a moving camera from precomputed (or rarely updated) probe content.
 
 ## Why it matters here
 
-Industrial probe foil on the Radiance Cascades spine: world-space radiance probes that DDGI dynamizes and that Split RC sparsifies against.
+This I3D 2017 paper is the probe representation DDGI later dynamizes with ray tracing and that Radiance Cascades sparsifies; it is the industrial ancestor on Anoptic’s GI spine.
 
 ## Key ideas
 
-- Place light-field probes in the scene that encode incoming radiance and geometric visibility.
-- Supports dynamic viewers with precomputed or infrequently updated probe content.
-- Sets up the irradiance-field-with-visibility representation refined by DDGI.
+- Each probe encodes a light field — not just irradiance — plus a visibility representation so lookups can reject probes occluded from the shaded point.
+- Viewers are fully dynamic; probe contents are precomputed or updated infrequently, which is the limitation DDGI removes.
+- Interpolation of nearby probes with visibility tests is what stops light leaks through thin walls, the same problem later “scaling probe GI” papers keep fighting.
+- Glossy and diffuse both come from the same stored field; later DDGI drops the glossy path and keeps the irradiance + visibility octahedra.
+- NVIDIA research page is the canonical landing; DOI 10.1145/3105762.3105774.
 
 ## Caveats
 
-- Original formulation leans on precomputation; DDGI removes much of that for dynamic lights/geometry.
-
 ## Links
 
-- URL: https://research.nvidia.com/publication/real-time-global-illumination-using-precomputed-light-field-probes
+- NVIDIA: https://research.nvidia.com/publication/2017-02_real-time-global-illumination-using-precomputed-light-field-probes
+- DOI: [10.1145/3105762.3105774](https://doi.org/10.1145/3105762.3105774)

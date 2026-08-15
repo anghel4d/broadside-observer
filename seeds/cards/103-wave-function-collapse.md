@@ -22,59 +22,36 @@ cites:
   year: 2007
   arxiv: null
   doi: 10.1145/1230100.1230119
-- title: Procedural Content Generation in Games
-  url: https://doi.org/10.1007/978-3-319-42716-4
-  year: 2016
-  arxiv: null
-  doi: null
-- title: Procedural Content Generation via Machine Learning (PCGML)
-  url: https://arxiv.org/abs/1702.00539
-  year: 2018
-  arxiv: '1702.00539'
-  doi: null
-- title: MarkovJunior
-  url: https://github.com/mxgmn/MarkovJunior
-  year: 2022
-  arxiv: null
-  doi: null
-- title: The Algorithmic Beauty of Plants (L-Systems)
-  url: http://algorithmicbotany.org/papers/#abop
-  year: 1990
-  arxiv: null
-  doi: null
-- title: 'Search-Based Procedural Content Generation: A Taxonomy and Survey'
-  url: https://doi.org/10.1109/TCIAIG.2011.2148116
-  year: 2011
+- title: Texture Synthesis by Non-parametric Sampling
+  url: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/papers/efros-iccv99.pdf
+  year: 1999
   arxiv: null
   doi: null
 see:
 - "459-example-based-model-synthesis"
-- "102-procedural-content-generation-in-games"
-- "012-procedural-content-generation-via-machine-learning-pcgml"
-- "481-markovjunior"
-- "415-the-algorithmic-beauty-of-plants-l-systems"
-- "019-search-based-procedural-content-generation-a-taxonomy-and-su"
 ---
 
 # Wave Function Collapse
 
 ## One-sentence takeaway
 
-Modern PCG algorithm used in many indie tools.
+WFC fills an output bitmap so that every NxN window is a pattern from a single example image, by repeatedly collapsing the lowest-entropy region and propagating adjacency constraints.
 
 ## Why it matters here
 
-Modern PCG algorithm used in many indie tools.
+Anoptic / Broadside map and tileset generation can take a hand-authored exemplar and grow a larger coherent grid without writing a custom grammar — the same observe/propagate loop works for 2D tiles and, more expensively, voxels.
 
 ## Key ideas
 
-- Modern PCG algorithm used in many indie tools.
+- Local similarity: (C1) the output may contain only NxN patterns present in the input (N is typically 3); (weak C2) pattern frequencies over many outputs should match the input histogram.
+- The "wave" is a grid of superpositions. Observation picks the unobserved cell with lowest Shannon entropy and samples a pattern; propagation forbids neighbor patterns that contradict the new adjacency, implemented as AC-4-style constraint propagation.
+- Two models: overlapping (patterns extracted from a bitmap, optionally with rotations/reflections) and simple tiled (explicit tiles plus adjacency, with a D4 symmetry system so you do not enumerate every oriented pair).
+- A contradiction is a cell whose coefficient vector is all false. Deciding whether a nontrivial completion exists is NP-hard; in practice contradictions are rare and the usual recovery is restart.
+- Direct descendant of Merrell's model synthesis (AC-3 over tiles from an example). Gumin adds overlapping patterns, the lowest-entropy heuristic (kills scanline directional bias), and visualization of partial waves. Easy tilesets never contradict and therefore never form long-range structure.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
 
 ## Links
 
 - URL: https://github.com/mxgmn/WaveFunctionCollapse
+- Demo video: https://youtu.be/DOQTr2Xmlz0

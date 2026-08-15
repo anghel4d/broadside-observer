@@ -6,8 +6,8 @@ authors:
 year: 1988
 venue: "ACM TOPLAS"
 arxiv: null
-doi: "10.1145/44501.44504"
-source: "https://doi.org/10.1145/44501.44504"
+doi: "10.1145/44501.45065"
+source: "https://doi.org/10.1145/44501.45065"
 topics:
   - existential-types
   - abstract-data-types
@@ -30,46 +30,36 @@ cites:
     year: 1985
     arxiv: null
     doi: "10.1145/6041.6042"
-  - title: "A Theory of Type Polymorphism in Programming"
-    url: "https://doi.org/10.1016/0022-0000(78)90014-4"
-    year: 1978
+  - title: "Programming with Abstract Data Types"
+    url: "https://doi.org/10.1145/800233.807045"
+    year: 1974
     arxiv: null
-    doi: "10.1016/0022-0000(78)90014-4"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
+    doi: "10.1145/800233.807045"
 see:
   - "641-types-abstraction-and-parametric-polymorphism"
   - "668-on-understanding-types-data-abstraction-and-polymorphism"
-  - "629-a-theory-of-type-polymorphism-in-programming"
-  - "137-the-definition-of-standard-ml-revised"
+  - "686-programming-with-abstract-data-types"
 ---
 
 # Abstract Types Have Existential Type
 
 ## One-sentence takeaway
 
-Shows abstract data types are captured by existential types in a typed lambda calculus.
+Mitchell and Plotkin type an abstract data type as an existential package: pack a representation with its operations, unpack only under a locally fresh type name.
 
 ## Why it matters here
 
-The ADT↔∃ type classic — how modules/abstraction should be typed even outside full ML modules.
+This is how ano modules and any Anoptic "sealed component API" should be typed even without full ML functors — representation independence is an ∃, not a comment. The old card DOI was Olderog–Apt fairness.
 
 ## Key ideas
 
-- Existential pack/unpack as ADT introduction/elimination.
-- Representation independence via existentials.
-- Connects to Reynolds abstraction and Cardelli–Wegner taxonomy.
-- Journal version of the POPL 85 result.
+- A data algebra (type + operations), as in CLU/Ada/ML abstypes, is a value of type `∃t. τ(t)`; pack/unpack are the intro/elim forms.
+- SOL, a second-order typed λ-calculus, lets data algebras be passed as arguments and returned as results.
+- Representation independence follows: two packages with related representations are indistinguishable by clients who only unpack.
+- TOPLAS 10(3):470–502, 1988, DOI 10.1145/44501.45065 (journal form of POPL 85, DOI 10.1145/318593.318606).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1145/44501.44504](https://doi.org/10.1145/44501.44504)
-- URL: https://doi.org/10.1145/44501.44504
+- DOI: [10.1145/44501.45065](https://doi.org/10.1145/44501.45065)

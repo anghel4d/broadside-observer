@@ -50,23 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Post independently formulates computation as combinatory processes—fourth 1936 model alongside Church/Turing/Kleene.
+Post independently formulates computation as a worker following a finite list of instructions in a symbol space—the fourth 1936 model alongside Church, Turing, and Kleene.
 
 ## Why it matters here
 
-Completeness of the 1936 moment: many formalisms, one effective calculability.
+Completeness of the 1936 moment: many formalisms, one effective calculability. Anoptic rewrite engines, production rules, and GRID COMMAND triggers sit closer to Post's "worker plus box of symbols" than to a Turing tape.
 
 ## Key ideas
 
-- Worker following instructions in a symbol space.
-- Independent of Turing/Church timing.
-- Leads to tag systems and production systems.
+- A *worker* applies a finite set of direction boxes to a two-way infinite sequence of marks, generating or erasing symbols according to the scanned box.
+- Formulated independently of Turing and Church, and published in the same year.
+- The process is the seed of Post's later tag systems, production systems, and the 1943 combinatorial reductions.
+- Together with the other 1936 papers, makes "algorithm" look absolute rather than machine-specific.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2268534](https://doi.org/10.2307/2268534)
-- URL: https://doi.org/10.2307/2268534
+- JSTOR: https://www.jstor.org/stable/2268534

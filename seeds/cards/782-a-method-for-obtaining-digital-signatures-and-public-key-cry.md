@@ -38,23 +38,20 @@ see:
 
 ## One-sentence takeaway
 
-RSA — trapdoor permutation from factoring for encryption and signatures.
+RSA is the trapdoor permutation $x\mapsto x^e\bmod n$ on $n=pq$: encrypt with public $(n,e)$, invert with $d$ where $ed\equiv 1\pmod{\varphi(n)}$, and sign by applying $d$ first.
 
 ## Why it matters here
 
-Most famous public-key scheme; still a compatibility bedrock.
+This is still the compatibility bedrock for certificates, package signatures, and any Anoptic/Broadside artifact that has to verify on a machine that only speaks RSA.
 
 ## Key ideas
 
-- n=pq modulus with exponents e,d.
-- Encryption and signature duality.
-- Relies on factoring/RSA problem hardness.
-- Launched broad PKC deployment.
+- Keygen: pick primes $p,q$, publish $n=pq$ and exponent $e$, keep $d=e^{-1}\bmod\varphi(n)$.
+- Encryption and signature are the same permutation run in opposite directions.
+- Security is argued from the difficulty of factoring $n$ (and the RSA problem of taking $e$-th roots modulo $n$).
+- The paper launched public-key deployment; later work added OAEP/PSS padding because raw RSA is not CCA-safe.
 
 ## Caveats
-
-- Padding (OAEP/PSS) mandatory — raw RSA unsafe.
-- Key sizes and side channels dominate real security.
 
 ## Links
 

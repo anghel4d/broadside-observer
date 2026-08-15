@@ -21,51 +21,30 @@ cites:
   - title: "Grundlagen der kombinatorischen Logik"
     url: "https://doi.org/10.2307/2370619"
     year: 1930
-    arxiv: null
     doi: "10.2307/2370619"
-  - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
-    url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
-    year: 1969
-    arxiv: null
-    doi: "10.1090/S0002-9947-1969-0241465-X"
-  - title: "A Formulation of the Simple Theory of Types"
-    url: "https://doi.org/10.2307/2266170"
-    year: 1940
-    arxiv: null
-    doi: "10.2307/2266170"
-  - title: "Cartesian Closed Categories and Typed λ-Calculi"
-    url: "https://doi.org/10.1007/3-540-17162-2_38"
-    year: 1986
-    arxiv: null
-    doi: null
 see:
   - "497-grundlagen-der-kombinatorischen-logik"
-  - "628-the-principal-type-scheme-of-an-object-in-combinatory-logic"
-  - "510-a-formulation-of-the-simple-theory-of-types"
-  - "151-cartesian-closed-categories-and-typed-calculi"
 ---
 
 # Functionality in Combinatory Logic
 
 ## One-sentence takeaway
 
-Curry's functionality concept is an early form of propositions-as-types thinking inside combinatory logic.
+Curry assigns combinators *functional characters* — type-like classifications such as \(F\alpha\beta\) for “function from \(\alpha\) to \(\beta\)” — so a term's construction is also a derivation that it has that character.
 
 ## Why it matters here
 
-Prehistory of Curry–Howard; wire to typed λ and modern effect/type systems already in the corpus.
+Prehistory of Curry–Howard: the same paper lineage that later meets typed λ and the effect/type systems already in the corpus.
 
 ## Key ideas
 
-- Functional characters as type-like classifications.
-- Bridge from combinators to typed calculi.
-- Ancestor of principal types / Hindley.
+- Functionality is a primitive illative notion, not a set-theoretic graph: \(F\) classifies combinators by how they transform other combinators.
+- A well-formed combination that has a functional character is already a typed term; ill-typed combinations are simply not theorems.
+- Direct ancestor of Hindley's principal-type algorithm for combinatory logic (1969) and of the propositions-as-types slogan.
+- Short PNAS note (20:584–590, 1934) condensing the typed fragment of the 1930 foundation.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1073/pnas.20.11.584](https://doi.org/10.1073/pnas.20.11.584)
-- URL: https://doi.org/10.1073/pnas.20.11.584

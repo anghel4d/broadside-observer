@@ -56,9 +56,6 @@ Why you might love this: the Weaves / string-diagram spine (933, 951, 944) alrea
 
 ## Caveats
 
-- BStoch^⊗, not the full FStoch^⊗ — the non-enriched axiomatisation does not exist for arbitrary dimensions.
-- KL is not a metric (asymmetric, infinite on singular pairs); the enrichment is a quantitative theory, not a law of cosines.
-- Builds on a prior total-variation axiomatisation; this card is the relative-entropy completeness result, not that paper.
 
 ## Links
 

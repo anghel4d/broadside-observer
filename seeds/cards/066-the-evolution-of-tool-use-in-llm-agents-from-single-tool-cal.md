@@ -34,49 +34,48 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
-    url: "https://arxiv.org/abs/2606.09774"
-    year: 2026
-    arxiv: "2606.09774"
+  - title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    url: "https://arxiv.org/abs/2302.04761"
+    year: 2023
+    arxiv: "2302.04761"
     doi: null
-  - title: "Schema First Tool APIs for LLM Agents: A Controlled Study of Tool Misuse, Recovery, and Budgeted Performance"
-    url: "https://arxiv.org/abs/2603.13404"
-    year: 2026
-    arxiv: "2603.13404"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
     doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
     doi: null
 see:
-  - "051-auto-configuring-scientific-simulators-with-lightweight-codi"
-  - "065-schema-first-tool-apis-for-llm-agents-a-controlled-study-of-"
+  - "086-toolformer-language-models-can-teach-themselves-to-use-tools"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration
 
 ## One-sentence takeaway
 
-Tool use enables large language models (LLMs) to access external information, invoke software systems, and act in digital environments beyond what can be solved from model parameters alone.
+The survey relocates the tool-use problem from "pick the right API once" to long-horizon multi-tool orchestration under intermediate state, execution feedback, and safety/cost/verifiability constraints.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (The Evolution of Tool Use in LLM Agents: From Single-Tool Call to Multi-Tool Orchestration)
+Ano, GRID COMMAND, and Broadside agents already live on the orchestration side of that split; the six-dimension taxonomy is a checklist for harness design rather than another single-call benchmark.
 
 ## Key ideas
 
-- Tool use enables large language models (LLMs) to access external information, invoke software systems, and act in digital environments beyond what can be solved from model parameters alone.
-- Early research mainly studied whether a model could select and execute a correct single tool call.
-- As agent systems evolve, however, the central problem has shifted from isolated invocation to multi-tool orchestration over long trajectories with intermediate state, execution feedback, changing environments, and practical constraints such as safety, cost, and verifiability.
-- We comprehensively review recent progress in multi-tool LLM agents and analyzes the state of the art in this rapidly developing area.
-- First, we unify task formulations and distinguish single-call tool use from long-horizon orchestrati
+- Early work asked whether a model could select and execute one correct tool call; current systems must plan over changing environments with feedback.
+- Six organizing dimensions: inference-time planning and execution, training and trajectory construction, safety and control, efficiency under resource constraints, capability completeness in open environments, and benchmark design.
+- Application slices cover software engineering, enterprise workflows, GUIs, and mobile systems.
+- Single-call tool use and long-horizon orchestration are treated as distinct task formulations, not the same leaderboard.
+- The closing agenda is reliable, scalable, verifiable multi-tool agents.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2603.22862](https://arxiv.org/abs/2603.22862)
-- URL: https://arxiv.org/abs/2603.22862
+- PDF: https://arxiv.org/pdf/2603.22862

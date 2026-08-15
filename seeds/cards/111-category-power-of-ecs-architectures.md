@@ -17,11 +17,6 @@ pool: "engines"
 relevance_score: 9
 lineage: ecs-data-oriented
 cites:
-  - title: "Data-Oriented Design and C++"
-    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
-    year: 2014
-    arxiv: null
-    doi: null
   - title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)"
     url: "https://gamesfromwithin.com/data-oriented-design"
     year: 2009
@@ -48,21 +43,23 @@ see:
 
 ## One-sentence takeaway
 
-DOD book widely cited in engine circles.
+A component-based object is only the sum of its parts: once components live in manager arrays and existence is just a row of data, there is no entity object left to own an update.
 
 ## Why it matters here
 
-DOD book widely cited in engine circles.
+This is the DOD argument for why ano / GRID COMMAND entities should be implicit IDs over SoA component tables rather than Unity-style GameObject bags — systems iterate types, not instances, so jobs stay cache-local and parallel.
 
 ## Key ideas
 
-- DOD book widely cited in engine circles.
+- Split a monolithic Player into purpose-sized components (render, input, inventory, animation); functionality cuts across those facts, so meaning belongs in transforms, not in the class that happens to store the fields.
+- Hand each component type to a manager that ticks every instance of that type together: all physics before all renders, or on another thread, with no per-entity `Update()` crossing a language or vtable boundary.
+- Existence is data. An entity is the current configuration of components, like a table row; drop the Player class and new entity kinds appear by composition without new code.
+- Unity GameObject-style compound objects still iterate root instances. A true ECS makes the entity intangible and the component arrays first-class, which is what unlocks SoA layout and designer-driven feature packs.
+- Gas Powered Games' Dungeon Siege write-up is the early published game case: the entity type itself cannot do anything; attributes and behaviour come only from attached components.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.dataorienteddesign.com/dodbook/
+- Book: https://www.dataorienteddesign.com/dodbook/
+- Chapter: https://www.dataorienteddesign.com/dodbook/node5.html

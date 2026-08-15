@@ -6,9 +6,9 @@ authors:
   - "Leonardo de Moura"
 year: 2019
 venue: "APLAS"
-arxiv: "1908.05006"
-doi: null
-source: "https://arxiv.org/abs/1908.05006"
+arxiv: null
+doi: "10.1007/978-3-030-34175-6_13"
+source: "https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/"
 topics:
   - allocators
   - engine
@@ -56,21 +56,25 @@ see:
 
 ## One-sentence takeaway
 
-mimalloc is Anoptic's global allocator.
+mimalloc shards three free lists per ~64 KiB page — allocation, local-free, and atomic thread-free — so the malloc fast path stays lock-free and a slow generic path runs on a predictable cadence for deferred RC and remote frees.
 
 ## Why it matters here
 
-mimalloc is Anoptic's global allocator.
+Anoptic’s global allocator is this paper: page-local lists, no bump pointer, bounded worst-case free of large RC graphs. ano/Koka/Lean-style short-lived objects and engine frame churn want the same locality story.
 
 ## Key ideas
 
-- mimalloc is Anoptic's global allocator.
+- One free list per size class scatters a newly built structure across the heap; a free list per page keeps sequential mallocs inside one 64 KiB slab. Replacing Lean 3’s single list with sharding alone bought >25% on some 1 GiB-heap benchmarks.
+- Thread-free lists are also per-page, so remote frees do not contend globally and can be batch-swapped onto the owner’s list.
+- The local-free list guarantees the generic path runs after a fixed number of allocations (temporal cadence), which is when deferred reference-count decrements and heartbeat work run — no extra fast-path branch.
+- No bump pointer: a second conditional and predictable sequential addresses both hurt; a randomized initial free list is also a security win.
+- Core is ~3500 LOC versus ~20–25k for tcmalloc/jemalloc; Redis numbers in the TR are +7% vs tcmalloc and +14% vs jemalloc, with similar peak RSS.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- arXiv: [1908.05006](https://arxiv.org/abs/1908.05006)
-- URL: https://arxiv.org/abs/1908.05006
+- MSR: https://www.microsoft.com/en-us/research/publication/mimalloc-free-list-sharding-in-action/
+- PDF: https://www.microsoft.com/en-us/research/wp-content/uploads/2019/06/mimalloc-tr-v1.pdf
+- DOI: [10.1007/978-3-030-34175-6_13](https://doi.org/10.1007/978-3-030-34175-6_13)
+- Code: https://github.com/microsoft/mimalloc

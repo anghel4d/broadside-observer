@@ -64,8 +64,6 @@ Canonical industrial proof that work-stealing-schedulers task pools scale in man
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/337449.337465](https://doi.org/10.1145/337449.337465)

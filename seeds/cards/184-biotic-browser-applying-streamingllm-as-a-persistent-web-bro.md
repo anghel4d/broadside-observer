@@ -41,23 +41,22 @@ see:
 
 ## One-sentence takeaway
 
-This paper presents "Biotic Browser," an innovative AI assistant leveraging StreamingLLM to transform web navigation and task execution.
+Biotic Browser is a StreamingLLM web copilot that keeps a long-running browsing session in an attention-sink-style context so multi-step web tasks can continue without a hard context reset.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests (Biotic Browser: Applying StreamingLLM as a Persistent Web Browsing Co-Pilot)
+A Broadside observer that lives in a browser tab has this exact problem: the session is longer than the window. StreamingLLM-style persistent context is the cheap mechanism; the paper is an HCI sketch of that copilot, not a new retrieval index.
 
 ## Key ideas
 
-- This paper presents "Biotic Browser," an innovative AI assistant leveraging StreamingLLM to transform web navigation and task execution.
-- Characterized by its ability to simulate the experience of a passenger in an autonomous vehicle, the Biotic Browser excels in managing extended interactions and complex, multi-step web-based tasks.
-- It marks a significant advancement in AI technology, particularly in the realm of long-term context management, and offers promising applications for enhancing productivity and efficiency in both personal and professional settings.
+- The interaction metaphor is a passenger in an autonomous vehicle: the user supervises a persistent browsing agent rather than issuing one-shot queries.
+- StreamingLLM is used so the attention context can roll forward across extended, multi-step web tasks.
+- Long-term context management, not a new planner, is presented as the technical contribution.
+- The work is positioned for personal and professional productivity rather than as a SWE-bench-style agent.
+- The abstract is short; treat the paper as a system sketch around StreamingLLM, not as a large controlled eval.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2411.10454](https://arxiv.org/abs/2411.10454)
-- URL: https://arxiv.org/abs/2411.10454

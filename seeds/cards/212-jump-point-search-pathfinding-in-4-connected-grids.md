@@ -1,5 +1,4 @@
 ---
-
 title: "Jump Point Search Pathfinding in 4-connected Grids"
 authors:
   - "Johannes Baum"
@@ -36,25 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-This work introduces JPS4, a novel pathfinding algorithm for 4-connected grid maps.
+JPS4 ports Harabor-style jump points onto 4-connected grids with a canonical ordering and successor function that prune the search online.
 
 ## Why it matters here
 
-Classical game/RTS AI technique (non-LLM) for GRID COMMAND lineage (Jump Point Search Pathfinding in 4-connected Grids).
+GRID COMMAND tiles are often 4-connected (cardinal moves only); JPS8's diagonal jumps do not apply, so this is the pruning analog for that topology.
 
 ## Key ideas
 
-- This work introduces JPS4, a novel pathfinding algorithm for 4-connected grid maps.
-- JPS4 builds upon the Jump Point Search (JPS8) algorithm, originally designed for 8-connected environments.
-- To achieve efficient pathfinding on 4-connected grids, JPS4 employs a canonical ordering and a successor function that enable online graph pruning.
-- This reduces the search space by minimizing unnecessary node expansions.
-- The core concept of JPS4 as well as JPS8 lies in the utilization of jump points.
+- JPS8 assumes 8-connected movement; JPS4 rebuilds the jump rules for cardinal-only grids.
+- A canonical ordering plus a successor function skip symmetric paths so most empty cells are never expanded.
+- Jump points sit at obstacle corners and reinitialize the canonical ordering so the search cannot miss a necessary detour.
+- Benchmarks beat A* on high-obstacle-density maps; A* stays faster on open maps.
+- The paper argues optimality of the 4-connected jump rules and positions JPS4 as a game-pathfinding alternative to A*.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2501.14816](https://arxiv.org/abs/2501.14816)
-- URL: https://arxiv.org/abs/2501.14816
+- PDF: https://arxiv.org/pdf/2501.14816

@@ -24,19 +24,13 @@ cites:
     year: 1945
     arxiv: null
     doi: "10.2307/1990284"
-  - title: "A survey of graphical languages for monoidal categories"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.216.4918"
-    year: 2009
-    arxiv: null
-    doi: null
   - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
     url: "https://arxiv.org/abs/0903.0340"
-    year: 2011
+    year: 2009
     arxiv: "0903.0340"
     doi: "10.1007/978-3-642-12821-9_2"
 see:
   - "050-general-theory-of-natural-equivalences"
-  - "117-a-survey-of-graphical-languages-for-monoidal-categories"
   - "018-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
@@ -44,22 +38,24 @@ see:
 
 ## One-sentence takeaway
 
-Invitation to applied category theory via seven sketches including orders, databases, and monoidal categories.
+Seven paired tours — each an application (databases, circuits, dynamical systems, …) next to a structure (adjuncts, enrichment, toposes, …) — invite builders into applied category theory with no CT prerequisite.
 
 ## Why it matters here
 
-Applied CT for builders: databases, lenses, wiring diagrams — close to Anoptic interconnect thinking.
+Anoptic interconnect, typed wiring, and database-shaped state are exactly the sketches this book teaches: orders, monoidal wiring diagrams, and lenses rather than free-floating abstraction.
 
 ## Key ideas
 
-- Invitation to applied category theory via seven sketches including orders, databases, and monoidal categories.
+- The book is a tour, not a treatise: each sketch is meant to unlock later reading rather than exhaust a topic.
+- Concrete running examples include databases, electric circuits, and dynamical systems.
+- Matching structures include adjoint functors, enriched categories, monoidal categories, and toposes.
+- Preprint is 341+xii pages (arXiv 1803.05316); the Cambridge volume is *An Invitation to Applied Category Theory* (DOI 10.1017/9781108668804).
+- No prior category theory is assumed.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [1803.05316](https://arxiv.org/abs/1803.05316)
+- PDF: https://arxiv.org/pdf/1803.05316
 - DOI: [10.1017/9781108668804](https://doi.org/10.1017/9781108668804)
-- URL: https://arxiv.org/abs/1803.05316

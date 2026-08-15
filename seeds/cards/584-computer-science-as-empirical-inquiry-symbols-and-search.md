@@ -20,52 +20,40 @@ pool: "agents"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Report on a General Problem-Solving Program"
-    url: "https://bitsavers.org/pdf/rand/ipl/"
-    year: 1959
-    arxiv: null
-    doi: null
   - title: "The Logic Theory Machine: A Complex Information Processing System"
     url: "https://doi.org/10.1109/TIT.1956.1056797"
     year: 1956
     arxiv: null
     doi: "10.1109/TIT.1956.1056797"
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
+  - title: "Report on a General Problem-Solving Program"
+    url: "https://iiif.library.cmu.edu/file/Simon_box00008_fld00538_bdl0001_doc0001/Simon_box00008_fld00538_bdl0001_doc0001.pdf"
+    year: 1959
     arxiv: null
-    doi: "10.1145/367177.367199"
-  - title: "Computing Machinery and Intelligence"
-    url: "https://doi.org/10.1093/mind/LIX.236.433"
-    year: 1950
-    arxiv: null
-    doi: "10.1093/mind/LIX.236.433"
+    doi: null
 see:
-  - "582-report-on-a-general-problem-solving-program"
   - "580-the-logic-theory-machine-a-complex-information-processing-sy"
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
-  - "519-computing-machinery-and-intelligence"
+  - "582-report-on-a-general-problem-solving-program"
 ---
 
 # Computer Science as Empirical Inquiry: Symbols and Search
 
 ## One-sentence takeaway
 
-Newell & Simon state the Physical Symbol System Hypothesis and the heuristic search hypothesis.
+Newell and Simon state two empirical laws: a physical symbol system has the necessary and sufficient means for general intelligence, and intelligence is heuristic search.
 
 ## Why it matters here
 
-Clearest mid-70s creed of symbolic AI; still the foil for later connectionism/LLMs.
+This 1976 Turing Award lecture is still the creed — or the foil — for every Broadside agent that is either a symbol manipulator or a learned approximator of one.
 
 ## Key ideas
 
-- Physical symbol systems are necessary/sufficient for general intelligence (hypothesis).
-- Heuristic search as problem-solving law.
-- Turing Award lecture form.
+- A physical symbol system is a machine that manipulates token structures according to processes that themselves are token structures.
+- The Physical Symbol System Hypothesis: such systems are necessary and sufficient for general intelligent action.
+- The heuristic search hypothesis: problems are solved by generating and testing in a large space, guided by rules of thumb.
+- Computer science is an empirical natural science of these systems, not only a branch of mathematics.
+- The lecture looks back over LT and GPS as the experimental base.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

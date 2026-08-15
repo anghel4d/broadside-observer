@@ -18,46 +18,35 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
 cites:
-  - title: "Adjointness in Foundations"
-    url: "https://doi.org/10.1111/j.1746-8361.1969.tb01194.x"
-    year: 1969
+  - title: "The Mathematics of Sentence Structure"
+    url: "https://doi.org/10.1080/00029890.1958.11991991"
+    year: 1958
     arxiv: null
-    doi: "10.1111/j.1746-8361.1969.tb01194.x"
-  - title: "Introduction to Higher Order Categorical Logic"
-    url: "https://doi.org/10.1017/cbo9780511620263"
-    year: 1986
-    arxiv: null
-    doi: "10.1017/cbo9780511620263"
-  - title: "Categorical Logic and Type Theory"
-    url: "https://www.elsevier.com/books/categorical-logic-and-type-theory/jacobs/978-0-444-50170-7"
-    year: 1999
-    arxiv: null
-    doi: null
+    doi: "10.1080/00029890.1958.11991991"
 see:
-  - "160-adjointness-in-foundations"
-  - "041-introduction-to-higher-order-categorical-logic"
-  - "135-categorical-logic-and-type-theory"
+  - "163-the-mathematics-of-sentence-structure"
 ---
 
 # Deductive Systems and Categories I. Syntactic Calculus and Residuated Categories
 
 ## One-sentence takeaway
 
-Connects categorial grammar with residuated categories; foundational for Lambek calculus.
+Lambek recasts his syntactic calculus as the internal language of residuated categories, so grammatical cancellation is residual adjointness rather than a one-off type-arithmetic trick.
 
 ## Why it matters here
 
-Lambek syntactic calculus — grammar as residuation; bridges Japanese-informed morphology interests.
+NL game-command grammars and Japanese-informed morphology want this: left and right residuals are the two slashes of categorial grammar, and the category is the semantics of “which phrases compose.”
 
 ## Key ideas
 
-- Connects categorial grammar with residuated categories; foundational for Lambek calculus.
+- The syntactic calculus of types with product and two residuals (\(\backslash\), \(/\)) is given a categorical semantics in residuated monoidal categories.
+- A residuated category has a tensor whose left and right residuals are adjoints, matching the introduction and elimination rules of the Lambek calculus.
+- Deductive systems are treated as presentations of categories, so cut and composition are the same operation.
+- Completeness and coherence results connect provability in the calculus to the existence of morphisms.
+- This paper is the categorical companion to the 1958 sentence-structure calculus, not a replacement for it.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1007/BF01702865](https://doi.org/10.1007/BF01702865)
-- URL: https://doi.org/10.1007/BF01702865

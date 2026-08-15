@@ -45,23 +45,21 @@ see:
 
 ## One-sentence takeaway
 
-DeepSeek's SC'24 cluster paper: 10k PCIe A100s approximating DGX-A100 at half cost and −40% energy via HFReduce, HaiScale, 3FS, and a congestion-free compute-storage network.
+DeepSeek's SC'24 cluster paper: Fire-Flyer 2 puts 10,000 PCIe A100s on a congestion-free compute-storage network and claims DGX-A100-class throughput at half the cost and −40% energy, via HFReduce allreduce plus HaiScale / 3FS / HAI-Platform overlapping compute and communication.
 
 ## Why it matters here
 
-The cluster that trained the lab's early LLMs. Co-design counterpart to the later ISCA V3 hardware note (1256).
+The cluster that trained the lab's early LLMs. Co-design counterpart to the later ISCA V3 hardware note: Anoptic/GRID should treat interconnect and storage as part of the model, not as a cloud invoice.
 
 ## Key ideas
 
-- arXiv:2408.14158 / SC '24. Fire-Flyer 2: 10,000 PCIe A100 GPUs; claimed DGX-class throughput at ~½ cost, −40% energy.
-- HFReduce for faster allreduce; Computation-Storage Integrated Network kept congestion-free.
-- Software stack: HaiScale (training), 3FS (parallel FS / KV-cache-on-disk), HAI-Platform. Overlap compute and communication for scale.
-- Affiliation DeepSeek-AI / High-Flyer Quant; the production substrate under DeepSeek LLM→V2.
+- arXiv:2408.14158 / SC '24. Affiliation DeepSeek-AI / High-Flyer Quant; production substrate under DeepSeek LLM → V2.
+- HFReduce accelerates allreduce on PCIe A100s that lack DGX-class NVLink islands.
+- Computation-Storage Integrated Network kept congestion-free so training and the 3FS parallel filesystem share a fabric.
+- Software stack: HaiScale (training), 3FS (parallel FS / KV-cache-on-disk), HAI-Platform. Overlap is the scalability story.
+- A100/PCIe-era; V3 trains on H800s with DualPipe/FP8 — different generation.
 
 ## Caveats
-
-- A100/PCIe-era cluster; V3 trains on H800s (1256) with DualPipe/FP8 — different generation.
-- Industry HPC paper; not an architecture paper.
 
 ## Links
 

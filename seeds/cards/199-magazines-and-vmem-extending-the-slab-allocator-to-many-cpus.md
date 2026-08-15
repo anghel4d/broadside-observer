@@ -24,16 +24,6 @@ cites:
     year: 1994
     arxiv: null
     doi: null
-  - title: "TCMalloc: Thread-Caching Malloc"
-    url: "https://gperftools.github.io/gperftools/tcmalloc.html"
-    year: 2007
-    arxiv: null
-    doi: null
-  - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
-    url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
-    year: 2006
-    arxiv: null
-    doi: null
   - title: "Hoard: A Scalable Memory Allocator for Multithreaded Applications"
     url: "https://doi.org/10.1145/378993.379232"
     year: 2000
@@ -41,8 +31,6 @@ cites:
     doi: "10.1145/378993.379232"
 see:
   - "202-the-slab-allocator-an-object-caching-kernel-memory-allocator"
-  - "442-tcmalloc-thread-caching-malloc"
-  - "288-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
   - "301-hoard-a-scalable-memory-allocator-for-multithreaded-applicat"
 ---
 
@@ -50,21 +38,23 @@ see:
 
 ## One-sentence takeaway
 
-Extends slabs with per-CPU magazines and a general virtual memory resource allocator (vmem) for scalable multiprocessor allocation.
+Bonwick and Adams add per-CPU magazine caches for linear allocator scaling and a general vmem resource allocator that can back slabs — and satisfy variable-size allocations in constant time.
 
 ## Why it matters here
 
-Per-CPU magazines + vmem layer: the multipool / resource-arena pattern games rediscover constantly.
+Game multipools and resource arenas keep rediscovering this stack: a magazine (or thread cache) on the fast path, a slab or size-class layer, and a vmem-like arena for the backing resource, not one global malloc.
 
 ## Key ideas
 
-- Extends slabs with per-CPU magazines and a general virtual memory resource allocator (vmem) for scalable multiprocessor allocation.
+- Classical slab locking does not scale; the magazine layer is a per-processor cache of objects that makes the fast path lock-free enough to scale linearly with CPU count.
+- vmem is a universal backing store for slabs and a general resource allocator (address space, IDs, …), not only kernel heap pages.
+- The authors present vmem as the first resource allocator that can satisfy arbitrary-size allocations in constant time.
+- System benchmarks (LADDIS, SPECweb99) show >50% gains; a userspace port, libumem, beats then-current user allocators and can manage non-memory resources.
+- Magazines plus vmem are the two extensions that take slab from “object cache” to “multiprocessor resource system.”
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many
+- USENIX page: https://www.usenix.org/conference/2001-usenix-annual-technical-conference/magazines-and-vmem-extending-slab-allocator-many
+- PDF: http://usenix.org/publications/library/proceedings/usenix01/full_papers/bonwick/bonwick.pdf

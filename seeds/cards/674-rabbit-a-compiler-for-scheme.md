@@ -25,16 +25,6 @@ cites:
     year: 1975
     arxiv: null
     doi: null
-  - title: "Compiling with Continuations"
-    url: "https://doi.org/10.1017/CBO9780511609619"
-    year: 1992
-    arxiv: null
-    doi: "10.1017/CBO9780511609619"
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/155090.155113"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
@@ -42,8 +32,6 @@ cites:
     doi: "10.1145/800194.805852"
 see:
   - "673-scheme-an-interpreter-for-extended-lambda-calculus"
-  - "667-compiling-with-continuations"
-  - "666-the-essence-of-compiling-with-continuations"
   - "630-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
@@ -51,24 +39,21 @@ see:
 
 ## One-sentence takeaway
 
-Shows Scheme can be compiled efficiently via CPS conversion — the classic Scheme compiler thesis.
+Steele's 1978 thesis compiles Scheme by converting to continuation-passing style, then emitting MACLISP, proving a lexically scoped Lisp can be fast.
 
 ## Why it matters here
 
-RABBIT is the CPS-compiler ancestor of Appel/Flanagan lines and of 'Scheme is compilable'.
+RABBIT is the CPS-compiler ancestor of Appel, Flanagan–ANF, and every "Scheme is compilable" claim Anoptic would reuse for an ano host.
 
 ## Key ideas
 
-- CPS as compiler intermediate form for Scheme.
-- Closure analysis and environment strategies.
-- Demonstrates lexical Lisp performance credibility.
-- Direct precursor to Compiling with Continuations culture.
+- CPS conversion makes every call a tail call and every intermediate a name, so the back end is essentially a register allocator plus closure constructor.
+- Environment and closure strategies (what to close over, when to copy) are analysed rather than left to the interpreter.
+- The compiler is written in Scheme and bootstrapped; the point is credibility against Lisp compilers of the day, not a new source language.
+- MIT AI TR-474, 1978; DSpace handle 1721.1/6913. Appel 1992 scales the same idea to SML/NJ.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://dspace.mit.edu/handle/1721.1/6913
+- DSpace: https://dspace.mit.edu/handle/1721.1/6913

@@ -58,8 +58,6 @@ Bridge from multipool scalability (Hoard) to lock-free remote free paths later s
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/996893.996848](https://doi.org/10.1145/996893.996848)

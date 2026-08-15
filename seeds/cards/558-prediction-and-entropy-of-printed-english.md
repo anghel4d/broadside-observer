@@ -24,41 +24,29 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "Three Models for the Description of Language"
-    url: "https://doi.org/10.1109/TIT.1956.1056813"
-    year: 1956
-    arxiv: null
-    doi: "10.1109/TIT.1956.1056813"
-  - title: "A Formal Theory of Inductive Inference, Parts I–II"
-    url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
-    year: 1964
-    arxiv: null
-    doi: "10.1016/S0019-9958(64)90223-2"
 see:
   - "553-a-mathematical-theory-of-communication"
-  - "599-three-models-for-the-description-of-language"
-  - "610-a-formal-theory-of-inductive-inference-parts-i-ii"
 ---
 
 # Prediction and Entropy of Printed English
 
 ## One-sentence takeaway
 
-Shannon estimates English entropy via human prediction games—language modeling before LLMs.
+Shannon estimates the entropy of English by having people guess the next letter, bounding the rate between roughly 0.6 and 1.3 bits per character.
 
 ## Why it matters here
 
-Direct conceptual ancestor of statistical language models; Broadside agents pool resonance.
+Broadside language agents are statistical predictors of the same kind; this experiment is the first measured cross-entropy of a human language model.
 
 ## Key ideas
 
-- n-gram style entropy estimates.
-- Human subjects as predictors.
-- Redundancy of English quantified.
+- n-gram frequencies give decreasing entropy estimates as n grows, but tables blow up before long-range structure is captured.
+- A human subject, shown a prefix, guesses the next letter; the guess rank yields an upper bound on conditional entropy.
+- A second experiment lets the subject see previous failures, producing a tighter estimate of residual uncertainty.
+- Printed English is highly redundant — on the order of 50–75% — so prediction and compression are the same job.
+- The paper is the direct ancestor of perplexity: a predictor's bit-rate is a property of the language.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

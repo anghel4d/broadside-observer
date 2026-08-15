@@ -1,5 +1,4 @@
 ---
-
 title: "FrameGraph: Extensible Rendering Architecture in Frostbite"
 authors:
   - "Yuriy O'Donnell"
@@ -23,7 +22,7 @@ cites:
     arxiv: null
     doi: null
   - title: "Nanite: A Deep Dive"
-    url: "https://advances.realtimerendering.com/"
+    url: "https://advances.realtimerendering.com/s2021/Karis_Nanite_SIGGRAPH_Advances_2021_final.pdf"
     year: 2021
     arxiv: null
     doi: null
@@ -36,21 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-Frame graph architecture for modern engine render passes.
+Frostbite's FrameGraph is a DAG of render passes and transient resources with setup, compile, and execute phases, so features stay modular while the compiler aliases memory and inserts barriers.
 
 ## Why it matters here
 
-Frame graph architecture for modern engine render passes.
+Anoptic/engine render graphs need exactly this split: authors declare passes and resources; the frame compiler owns lifetimes, aliasing, and async compute.
 
 ## Key ideas
 
-- Frame graph architecture for modern engine render passes.
+- One engine must serve many Frostbite games, so rendering features cannot be a single hardcoded pass list.
+- Passes declare reads/writes during setup; compile derives resource lifetimes, barriers, and ESRAM/aliasing; execute runs the compiled graph.
+- Transient resources are allocated for their live range only; a cited 4K DX12 example drops working set from about 1042 MB to 472 MB.
+- A blackboard lets decoupled features exchange handles without a central pass object knowing every consumer.
+- GDC 2017 talk by Yuriy O'Donnell (Frostbite / EA); GDC Vault is the canonical landing page.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.gdcvault.com/play/1024612/FrameGraph-Extensible-Rendering-Architecture-in
+- GDC Vault: https://www.gdcvault.com/play/1024612/FrameGraph-Extensible-Rendering-Architecture-in

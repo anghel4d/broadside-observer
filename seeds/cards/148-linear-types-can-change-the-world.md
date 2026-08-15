@@ -6,7 +6,7 @@ year: 1990
 venue: "IFIP TC2 Working Conference on Programming Concepts and Methods"
 arxiv: null
 doi: null
-source: "https://homepages.inf.ed.ac.uk/wadler/topics/linear-logic.html"
+source: "https://homepages.inf.ed.ac.uk/wadler/papers/linear/linear.ps"
 topics:
   - linear-types
   - linear-logic
@@ -23,59 +23,31 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-  - title: "Separation logic: a logic for shared mutable data structures"
-    url: "https://doi.org/10.1109/lics.2002.1029817"
-    year: 2003
-    arxiv: null
-    doi: "10.1109/lics.2002.1029817"
-  - title: "Region-Based Memory Management"
-    url: "https://doi.org/10.1006/inco.1996.2613"
-    year: 1997
-    arxiv: null
-    doi: "10.1006/inco.1996.2613"
-  - title: "Computational interpretations of linear logic"
-    url: "https://doi.org/10.1016/0304-3975(93)90181-r"
-    year: 1993
-    arxiv: null
-    doi: "10.1016/0304-3975(93)90181-r"
-  - title: "Region-based memory management in cyclone"
-    url: "https://doi.org/10.1145/512529.512563"
-    year: 2002
-    arxiv: null
-    doi: "10.1145/512529.512563"
-  - title: "Typed memory management in a calculus of capabilities"
-    url: "https://doi.org/10.1145/292540.292564"
-    year: 1999
-    arxiv: null
-    doi: "10.1145/292540.292564"
 see:
   - "040-linear-logic"
-  - "134-separation-logic-a-logic-for-shared-mutable-data-structures"
-  - "030-region-based-memory-management"
-  - "143-computational-interpretations-of-linear-logic"
-  - "133-region-based-memory-management-in-cyclone"
-  - "028-typed-memory-management-in-a-calculus-of-capabilities"
 ---
 
 # Linear Types Can Change the World!
 
 ## One-sentence takeaway
 
-Argues for linear types inspired by linear logic to control resource usage.
+A linear type must be used exactly once — neither duplicated nor discarded — so the value needs no reference counting or GC and may be updated in place, including destructive array update.
 
 ## Why it matters here
 
-Linear types for resource control — ancestor of arena/capability discipline.
+This is the slogan-level justification for ano/engine uniqueness and arena reuse: if the type says there is one outstanding handle, mutation is just a change to the world, not a copy.
 
 ## Key ideas
 
-- Argues for linear types inspired by linear logic to control resource usage.
+- Girard's linear logic suggests a type system for functional languages that "supports operations that change the world." Linear values are like the world: you cannot copy them and you cannot throw them away.
+- Because there is a unique outstanding use, the implementation can overwrite the unique object. Array update becomes a proven in-place write rather than a dataflow analysis hope (Hudak and Bloss) or a purely syntactic single-thread check (Schmidt).
+- Sharing is not banned outright: the "of course" (`!`) types allow it, but shared values are either recomputed or held behind a pointer to a closure — neither is as cheap as the unique case. Sequencing (`before`/`in`) is required so that all reads of a structure finish before it is overwritten.
+- Positioned as a practical complement to Lafont's and Holmström's more elegant linear languages: less ambitious, closer to an implementable functional language with update.
+- Schmidt's single-threading captures "no duplication" of the store but says nothing about "no discarding"; linear types enforce both.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://homepages.inf.ed.ac.uk/wadler/topics/linear-logic.html
+- Author topic page: https://homepages.inf.ed.ac.uk/wadler/topics/linear-logic.html
+- Author PostScript: https://homepages.inf.ed.ac.uk/wadler/papers/linear/linear.ps

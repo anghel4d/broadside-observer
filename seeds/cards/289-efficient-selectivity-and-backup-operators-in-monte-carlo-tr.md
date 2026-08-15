@@ -3,10 +3,10 @@ title: "Efficient Selectivity and Backup Operators in Monte-Carlo Tree Search"
 authors:
   - "Rémi Coulom"
 year: 2006
-venue: "CG"
+venue: "Computers and Games 2006"
 arxiv: null
 doi: "10.1007/978-3-540-75538-8_7"
-source: "https://doi.org/10.1007/978-3-540-75538-8_7"
+source: "https://www.remi-coulom.fr/CG2006/CG2006.pdf"
 topics:
   - mcts
 seed_rank: 289
@@ -21,40 +21,10 @@ cites:
     arxiv: null
     doi: "10.1016/0004-3702(75)90019-3"
   - title: "Reinforcement Learning: An Introduction"
-    url: "https://doi.org/10.1109/tnn.2004.842673"
-    year: 2005
-    arxiv: null
-    doi: "10.1109/tnn.2004.842673"
-  - title: "Lecture Notes in Computer Science 1205"
-    url: "https://doi.org/10.1108/ir.1999.04926fae.001"
-    year: 1999
-    arxiv: null
-    doi: "10.1108/ir.1999.04926fae.001"
-  - title: "Reinforcement Learning: An Introduction"
     url: "https://doi.org/10.1109/tnn.1998.712192"
     year: 1998
     arxiv: null
     doi: "10.1109/tnn.1998.712192"
-  - title: "Reinforcement Learning:"
-    url: "https://doi.org/10.1108/k.1998.27.9.1093.3"
-    year: 1998
-    arxiv: null
-    doi: "10.1108/k.1998.27.9.1093.3"
-  - title: "Simulation Budget Allocation for Further Enhancing the Efficiency of Ordinal Optimization"
-    url: "https://doi.org/10.1023/a:1008349927281"
-    year: 2000
-    arxiv: null
-    doi: "10.1023/a:1008349927281"
-  - title: "Learning to Predict by the Methods of Temporal Differences"
-    url: "https://doi.org/10.1023/a:1022633531479"
-    year: 1988
-    arxiv: null
-    doi: "10.1023/a:1022633531479"
-  - title: "Introduction to Reinforcement Learning"
-    url: "http://portal.acm.org/citation.cfm?id=551283"
-    year: 1998
-    arxiv: null
-    doi: null
   - title: "A Sparse Sampling Algorithm for Near-Optimal Planning in Large Markov Decision Processes"
     url: "https://doi.org/10.1023/a:1017932429737"
     year: 2002
@@ -65,16 +35,6 @@ cites:
     year: 2001
     arxiv: null
     doi: "10.1016/s0004-3702(01)00127-8"
-  - title: "An Adaptive Sampling Algorithm for Solving Markov Decision Processes"
-    url: "https://doi.org/10.1287/opre.1040.0145"
-    year: 2005
-    arxiv: null
-    doi: "10.1287/opre.1040.0145"
-  - title: "A Simulated Annealing Algorithm with Constant Temperature for Discrete Stochastic Optimization"
-    url: "https://doi.org/10.1287/mnsc.45.5.748"
-    year: 1999
-    arxiv: null
-    doi: "10.1287/mnsc.45.5.748"
 see:
   - "379-an-analysis-of-alpha-beta-pruning"
 ---
@@ -83,21 +43,23 @@ see:
 
 ## One-sentence takeaway
 
-MCTS backup/selectivity classic.
+Coulom's Crazy Stone paper grows one Monte-Carlo tree simulation at a time, allocates visits by a Gaussian "probability of being best" urgency, and backs up a mix of mean and robust-max so the root value is neither too optimistic nor too averaged.
 
 ## Why it matters here
 
-MCTS backup/selectivity classic.
+This is the MCTS that predates UCT-as-brand-name and that GRID COMMAND planners can steal: anytime, no branch cut-off, selectivity at the level of a single playout. Useful for tactical search where alpha-beta has no quiet leaves.
 
 ## Key ideas
 
-- MCTS backup/selectivity classic.
+- Do not separate a min-max phase from a Monte-Carlo phase. Every simulation is stored; nodes track count, sum, and sum-of-squares.
+- Nodes start as "external" (heuristic random play) and become "internal" after a visit threshold, at which point move selection follows urgency.
+- Urgency `u_i = exp(−2.4 (μ₀−μᵢ)² / 2(σ₀²+σᵢ²)) + εᵢ` never quite reaches zero, so a currently-bad move can still be a killer after deeper search.
+- Mean backup underestimates; max backup overestimates lucky leaves. The Mix operator blends robust-max (most-visited child) with the mean, fitted by a TD-like procedure on 1,500 self-play positions.
+- Crazy Stone won the 10th KGS computer-Go tournament and beat Indigo 61–39; still behind GNU Go on equal time. CG 2006, DOI 10.1007/978-3-540-75538-8_7.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
+- Author PDF: https://www.remi-coulom.fr/CG2006/CG2006.pdf
 - DOI: [10.1007/978-3-540-75538-8_7](https://doi.org/10.1007/978-3-540-75538-8_7)
-- URL: https://doi.org/10.1007/978-3-540-75538-8_7

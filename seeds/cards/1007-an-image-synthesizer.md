@@ -43,9 +43,6 @@ The library has Perlin's 2002 "Improving Noise" (365) but not the 1985 paper tha
 
 ## Caveats
 
-- 1985 noise is the original lattice-gradient construction; simplex/improved noise is 2001–2002 (already a card). Do not treat this as the current hash.
-- PSE is a historical shading language, not RenderMan SL or GLSL; the idea migrated into both.
-- Perlin did not patent; the Academy later gave a Technical Achievement award for the technique.
 
 ## Links
 

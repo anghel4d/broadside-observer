@@ -1,9 +1,9 @@
 ---
-title: "Proximity Queries and Penetration Depth with GJK/EPA"
+title: "Proximity Queries and Penetration Depth Computation on 3D Game Objects"
 authors:
   - "Gino van den Bergen"
 year: 2001
-venue: "book/chapter"
+venue: "GDC"
 arxiv: null
 doi: null
 source: "https://graphics.stanford.edu/courses/cs468-01-fall/Papers/van-den-bergen.pdf"
@@ -16,45 +16,34 @@ reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 8
 cites:
-  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
-    url: "https://arxiv.org/abs/0903.0340"
-    year: 2011
-    arxiv: "0903.0340"
-    doi: "10.1007/978-3-642-12821-9_2"
-  - title: "A Fast Procedure for Computing the Distance Between Complex Objects (GJK)"
-    url: "https://doi.org/10.1109/56.2083"
-    year: 1988
-    arxiv: null
-    doi: "10.1109/56.2083"
   - title: "A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space"
     url: "https://doi.org/10.1109/56.2083"
     year: 1988
     arxiv: null
-    doi: null
+    doi: "10.1109/56.2083"
 see:
-  - "018-physics-topology-logic-and-computation-a-rosetta-stone"
   - "308-a-fast-procedure-for-computing-the-distance-between-complex-"
 ---
 
-# Proximity Queries and Penetration Depth with GJK/EPA
+# Proximity Queries and Penetration Depth Computation on 3D Game Objects
 
 ## One-sentence takeaway
 
-EPA penetration depth with GJK.
+GJK finds the closest points of two convex shapes; when they overlap, Expanding Polytope Algorithm grows the simplex into the Minkowski difference until it hits the origin, giving a penetration vector.
 
 ## Why it matters here
 
-EPA penetration depth with GJK.
+Anoptic’s narrowphase is GJK/EPA whether the bodies are capsules, hulls, or Minkowski sums of both. This GDC 2001 write-up is the game-engine recipe: support mappings, cached simplices, and EPA as the penetration-depth partner GJK never had.
 
 ## Key ideas
 
-- EPA penetration depth with GJK.
+- GJK iterates a simplex in A⊖B toward the origin; termination with the origin outside means disjoint, and the closest-feature witness is free.
+- On intersection the simplex contains the origin but does not give a usable penetration; EPA expands it into a polytope whose nearest facet is the minimum translation vector.
+- Both algorithms need only a support function, so capsules, boxes, cylinders, and convex hulls share one code path.
+- Practical notes: warm-start from last frame’s simplex, and fall back when EPA’s polytope becomes degenerate.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://graphics.stanford.edu/courses/cs468-01-fall/Papers/van-den-bergen.pdf
+- Stanford course PDF: https://graphics.stanford.edu/courses/cs468-01-fall/Papers/van-den-bergen.pdf

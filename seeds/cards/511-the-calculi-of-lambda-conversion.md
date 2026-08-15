@@ -61,23 +61,21 @@ see:
 
 ## One-sentence takeaway
 
-Church's monograph is the classic systematic exposition of λ-conversion—syntax, substitution, and calculi.
+Church's 1941 monograph is the systematic book on λ-conversion: substitution, λI versus λK, normal forms, and the link to effective calculability.
 
 ## Why it matters here
 
-The book-form root under every later λ / monad / effects card in the corpus.
+Every later λ / monad / effects card in the corpus sits on this notation. Ano still writes abstraction and application the way this book standardized them; Landin, McCarthy, and Moggi are commentary.
 
 ## Key ideas
 
-- λI and λK calculi.
-- Conversion, normal forms, substitution discipline.
-- Ties to effective calculability.
-- Princeton Annals study that standardized notation.
+- Distinguishes the λI-calculus (abstraction only when the variable occurs free) from the λK-calculus (unrestricted abstraction, including constant functions).
+- Develops conversion, α-renaming, substitution with capture-avoidance, and the Church–Rosser property as the discipline of equality.
+- Treats λ-definable functions of natural numbers as the official notion of effective calculability inherited from the 1936 papers.
+- Princeton Annals of Mathematics Study that fixed the modern syntax of λ.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion
+- Princeton: https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion

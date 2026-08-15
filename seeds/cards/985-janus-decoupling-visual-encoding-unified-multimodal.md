@@ -45,22 +45,20 @@ see:
 
 ## One-sentence takeaway
 
-Unified understand+generate Transformer with decoupled visual encoders — one path for understanding, one for generation — so a single encoder no longer has to serve both granularities.
+Janus is an autoregressive unified understand+generate Transformer that splits visual encoding into two pathways — semantic features for understanding, fine-grained tokens for generation — so a single encoder (Chameleon-style) no longer has to serve both granularities.
 
 ## Why it matters here
 
-DeepSeek's Chameleon-killer: keep one LLM, split the vision tokenizers. Janus-Pro (1253) is the scale-up.
+DeepSeek's answer to unified multimodal models: keep one LLM, split the vision tokenizers. Anoptic agent perception that both reads a UI and emits an image wants this decoupling, not one encoder fighting itself.
 
 ## Key ideas
 
-- arXiv:2410.13848. Technical report. Autoregressive unified model; separate visual encoding pathways, shared transformer.
-- Motivation: understanding wants semantic features, generation wants fine-grained tokens; a single encoder (Chameleon-style) fights itself.
-- Claimed above prior unified models and matching task-specific ones on the respective benches.
+- arXiv:2410.13848. Technical report. Separate visual encoding pathways, shared transformer.
+- Motivation: understanding wants semantic features, generation wants fine-grained tokens; a single encoder degrades understanding in particular.
+- Each path can pick its own encoder; the LLM still sees one token stream.
+- Claimed above prior unified models and matching task-specific ones on the respective benches. Janus-Pro is the scale-up; JanusFlow swaps AR image tokens for rectified flow.
 
 ## Caveats
-
-- Understand/generate still share the LLM; only the visual encoder is decoupled.
-- JanusFlow explores rectified-flow generation instead of pure AR image tokens.
 
 ## Links
 

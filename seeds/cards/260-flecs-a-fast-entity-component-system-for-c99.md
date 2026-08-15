@@ -37,11 +37,6 @@ cites:
     year: 2018
     arxiv: null
     doi: null
-  - title: "Using Relational Databases for Entity-Component Systems"
-    url: "https://www.gamedeveloper.com/programming/the-entity-component-system-an-awesome-game-design-pattern-in-c-part-1-"
-    year: 2015
-    arxiv: null
-    doi: null
 see:
   - "284-entity-systems-are-the-future-of-mmog-development-t-machine-"
   - "319-entt-gaming-meets-modern-c"
@@ -54,21 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Flecs provides a high-performance ECS with expressive queries, relationships, and hierarchies in C99.
+Flecs is a zero-dependency C99/C++17 archetype ECS with a real query language, first-class entity relationships, hierarchies, prefabs, and a lockless multi-core pipeline.
 
 ## Why it matters here
 
-Query language + relationships in ECS — closest OSS cousin to ano-shaped thinking.
+This is the closest open-source cousin to ano-shaped thinking: entities as IDs, components in archetypes, queries as the API, relationships instead of scene-graph blobs. GRID COMMAND can steal the query/relationship model without taking the runtime.
 
 ## Key ideas
 
-- Flecs provides a high-performance ECS with expressive queries, relationships, and hierarchies in C99.
+- Archetype/SoA storage built to walk millions of entities per frame; systems are queries with a phase.
+- Relationships (`(Likes, Bob)`) are stored as components, so hierarchies and prefabs are queries, not a parallel scene graph.
+- Flecs Query Language supports joins, inheritance, and variables; observers fire on component events.
+- Lockless scheduler fans systems across cores; reflection + JSON enable runtime components and a web explorer.
+- Dual API: C99 core and a C++17 layer that does not wrap STL containers.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://github.com/SanderMertens/flecs
+- GitHub: https://github.com/SanderMertens/flecs
+- Docs: https://www.flecs.dev/flecs/

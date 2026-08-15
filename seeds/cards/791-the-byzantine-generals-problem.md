@@ -5,7 +5,7 @@ authors:
 - Robert Shostak
 - Marshall Pease
 year: 1982
-venue: ACM TOPLAS
+venue: ACM Transactions on Programming Languages and Systems
 arxiv: null
 doi: 10.1145/357172.357176
 source: "https://doi.org/10.1145/357172.357176"
@@ -24,37 +24,28 @@ cites:
   year: 1980
   arxiv: null
   doi: 10.1145/322186.322188
-- title: Practical Byzantine Fault Tolerance
-  url: "https://pmg.csail.mit.edu/papers/osdi99.pdf"
-  year: 1999
-  arxiv: null
-  doi: null
 see:
 - "792-reaching-agreement-in-the-presence-of-faults"
-- "793-practical-byzantine-fault-tolerance"
 ---
 
 # The Byzantine Generals Problem
 
 ## One-sentence takeaway
 
-Byzantine generals: agreement with arbitrary faults needs more than 3f processes in the classic oral model.
+With oral (unsigned) messages, $3f+1$ lieutenants are necessary and sufficient to reach interactive consistency despite $f$ Byzantine traitors; signed messages drop the bound to $f+2$ (or $f+1$ with more rounds).
 
 ## Why it matters here
 
-Defines adversarial fault tolerance for consensus mindsets.
+This is the adversarial-fault model for any GRID COMMAND matchmaker, replay verifier, or Broadside replica that must survive lying peers, not just crashes.
 
 ## Key ideas
 
-- Oral vs signed message models.
-- 3f+1 lower bound (oral).
-- Recursive OM algorithm.
-- Separates crash vs Byzantine worlds.
+- Interactive consistency: all loyal lieutenants agree on the same vector of commander values, and if the commander is loyal that value is his actual order.
+- Oral model: the recursive OM($f$) algorithm forwards values through all paths of length $f+1$; majority at each level filters $f$ liars when $n>3f$.
+- A three-general scenario shows $3f$ is impossible without signatures: a loyal lieutenant cannot tell a lying commander from a lying peer.
+- Signed-message SM($f$) authenticates the commander’s order so forgeries are evident; the bound relaxes because traitors cannot invent a signed conflicting order.
 
 ## Caveats
-
-- Bounds depend on synchrony and crypto assumptions.
-- Modern BFT refines practical protocols.
 
 ## Links
 

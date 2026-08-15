@@ -49,9 +49,6 @@ The library has Coulom's 2006 selectivity/backup paper (289) and F.E.A.R. GOAP (
 
 ## Caveats
 
-- 2006 UCT is single-agent MDP planning; adversarial trees, RAVE, progressive widening, and AlphaGo-style value nets are later.
-- Exploration constants are notoriously domain-sensitive; the paper's theory assumes rewards scaled into a known range.
-- Do not remint the Coulom card; cite it. This is the bandit analysis, that is the game-tree engineering.
 
 ## Links
 

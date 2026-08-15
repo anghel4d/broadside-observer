@@ -24,11 +24,6 @@ cites:
   year: 1960
   arxiv: null
   doi: 10.1145/321033.321034
-- title: The Complexity of Theorem-Proving Procedures
-  url: "https://doi.org/10.1145/800157.805047"
-  year: 1971
-  arxiv: null
-  doi: 10.1145/800157.805047
 see:
 - "804-a-computing-procedure-for-quantification-theory"
 - "724-the-complexity-of-theorem-proving-procedures"
@@ -38,23 +33,20 @@ see:
 
 ## One-sentence takeaway
 
-DPLL backtracking SAT procedure — ancestor of modern CDCL solvers.
+Davis, Logemann, and Loveland replace Davis–Putnam’s memory-hungry variable elimination with a backtracking search that splits on a literal, applies unit propagation and pure-literal elimination, and is the direct ancestor of modern CDCL SAT solvers.
 
 ## Why it matters here
 
-Practical SAT spine behind verification, planning, and synthesis tools.
+Verification, planning, and synthesis tools that Anoptic/GRID COMMAND might call still run a DPLL spine: watched literals and VSIDS are later engineering, but the split / propagate / backtrack skeleton is this 1962 program.
 
 ## Key ideas
 
-- Unit propagation.
-- Pure literal elimination.
-- Chronological backtracking search.
-- Root of MiniSat/Chaff lineage.
+- The Davis–Putnam resolution/elimination rule is swapped for chronological case-splitting so the procedure stays in roughly linear workspace.
+- Unit clauses immediately force their remaining literal; pure literals can be assigned without search.
+- The implementation is a concrete IBM 704 program for propositional theorem proving, not only a recurrences-on-paper algorithm.
+- Cook’s later NP-completeness of SAT explains why the search is exponential in the worst case yet still the practical engine.
 
 ## Caveats
-
-- CDCL watched literals/VSIDS are later.
-- Worst-case exponential remains.
 
 ## Links
 

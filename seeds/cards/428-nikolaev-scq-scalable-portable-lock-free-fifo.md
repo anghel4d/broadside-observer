@@ -63,10 +63,6 @@ Direct parent of wCQ; preferred academic lock-free ring when Anoptic wants LCRQ 
 
 ## Caveats
 
-- Wait-freedom comes later (wCQ); SCQ itself is lock-free.
-- API/implementation details differ across author releases — pin a commit when shipping.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - arXiv: [1908.04511](https://arxiv.org/abs/1908.04511)

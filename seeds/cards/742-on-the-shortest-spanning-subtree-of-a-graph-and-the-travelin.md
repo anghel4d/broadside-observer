@@ -1,66 +1,46 @@
 ---
 title: On the Shortest Spanning Subtree of a Graph and the Traveling Salesman Problem
 authors:
-- Joseph B. Kruskal
+  - Joseph B. Kruskal
 year: 1956
 venue: Proceedings of the AMS
 arxiv: null
 doi: 10.1090/S0002-9939-1956-0078686-7
 source: "https://doi.org/10.1090/S0002-9939-1956-0078686-7"
 topics:
-- mst
-- kruskal
+  - mst
+  - kruskal
 seed_rank: 742
 seed_batch: perfects-algorithms-2026-08-13
 reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: Shortest Connection Networks and Some Generalizations
-  url: "https://doi.org/10.1002/j.1538-7305.1957.tb01515.x"
-  year: 1957
-  arxiv: null
-  doi: 10.1002/j.1538-7305.1957.tb01515.x
-- title: Efficiency of a Good But Not Linear Set Union Algorithm
-  url: "https://doi.org/10.1145/321879.321884"
-  year: 1975
-  arxiv: null
-  doi: 10.1145/321879.321884
-- title: A Note on Two Problems in Connexion with Graphs
-  url: "https://doi.org/10.1007/BF01386390"
-  year: 1959
-  arxiv: null
-  doi: 10.1007/BF01386390
-see:
-- "743-shortest-connection-networks-and-some-generalizations"
-- "808-efficiency-of-a-good-but-not-linear-set-union-algorithm"
-- "310-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
+cites: []
+see: []
 ---
 
 # On the Shortest Spanning Subtree of a Graph and the Traveling Salesman Problem
 
 ## One-sentence takeaway
 
-Kruskal’s MST: sort edges, add if they join distinct components.
+Sort the edges by weight and add an edge when it joins distinct components — Kruskal’s MST — and the same tree is a building block for TSP approximations.
 
 ## Why it matters here
 
-Canonical sparse MST; drives union-find pedagogy and map tooling.
+Sparse map graphs, nav meshes, and wiring-style GRID COMMAND layouts want this greedy MST. Correctness is the cut/cycle property; speed is union-find (later Tarjan). Prim is the dense-graph twin.
 
 ## Key ideas
 
-- Greedy edge intake by weight.
-- Cycle avoidance via components.
-- Cut/matroid correctness.
-- Pairs with efficient disjoint-set union.
+- Greedy intake of lightest unused edge that does not close a cycle yields a minimum spanning tree.
+- The paper also notes the MST’s relation to the traveling salesman problem (tree doubling / tour bounds).
+- No efficient disjoint-set structure is supplied; that engineering arrives with Hopcroft–Ullman / Tarjan union-find.
+- Proc. Amer. Math. Soc. 7(1), 1956, pp. 48–50.
+- Prim 1957 (and Jarník 1930) grow one tree instead of a forest.
 
 ## Caveats
-
-- Needs good Union-Find to shine.
-- Prim often faster on dense graphs.
 
 ## Links
 
 - DOI: [10.1090/S0002-9939-1956-0078686-7](https://doi.org/10.1090/S0002-9939-1956-0078686-7)
-- URL: https://doi.org/10.1090/S0002-9939-1956-0078686-7
+- AMS: https://www.ams.org/journals/proc/1956-007-01/S0002-9939-1956-0078686-7/

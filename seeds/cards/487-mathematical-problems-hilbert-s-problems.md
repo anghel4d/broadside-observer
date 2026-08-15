@@ -5,8 +5,8 @@ authors:
 year: 1900
 venue: "International Congress of Mathematicians, Paris"
 arxiv: null
-doi: null
-source: "https://mathcs.clarku.edu/~djoyce/hilbert/problems.html"
+doi: "10.1090/S0002-9904-1902-00923-3"
+source: "https://www.ams.org/bull/1902-08-10/S0002-9904-1902-00923-3/S0002-9904-1902-00923-3.pdf"
 topics:
   - metamathematics
   - entscheidungsproblem
@@ -17,55 +17,28 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
-cites:
-  - title: "Grundzüge der theoretischen Logik"
-    url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
-    year: 1928
-    arxiv: null
-    doi: "10.1007/978-3-642-86848-1"
-  - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
-    url: "https://doi.org/10.1007/BF01700692"
-    year: 1931
-    arxiv: null
-    doi: "10.1007/BF01700692"
-  - title: "A Note on the Entscheidungsproblem"
-    url: "https://doi.org/10.2307/2268565"
-    year: 1936
-    arxiv: null
-    doi: "10.2307/2268565"
-  - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
-    url: "https://doi.org/10.1112/plms/s2-42.1.230"
-    year: 1936
-    arxiv: null
-    doi: "10.1112/plms/s2-42.1.230"
-see:
-  - "491-grundzuge-der-theoretischen-logik"
-  - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
-  - "508-a-note-on-the-entscheidungsproblem"
-  - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
 # Mathematical Problems (Hilbert's Problems)
 
 ## One-sentence takeaway
 
-Hilbert's 1900 Paris lecture framed the Entscheidungsproblem and a century of foundational programs that computing would later settle negatively.
+Hilbert's 1900 Paris lecture sets twenty-three problems, including the continuum hypothesis and a finite decision procedure for mathematical statements, that become the charter Gödel, Church, and Turing later settle.
 
 ## Why it matters here
 
-Anoptic/Broadside treat computation as epistemology: Hilbert's problem list is the charter that Gödel, Church, and Turing answered.
+Anoptic/Broadside treat computation as epistemology: this list is the public problem-setting that incompleteness and the Entscheidungsproblem answer, not a paper about machines.
 
 ## Key ideas
 
-- Twenty-three problems including continuum hypothesis and consistency of arithmetic.
-- Entscheidungsproblem: decide validity of first-order formulas by a finite procedure.
-- Hilbert program: finitistic consistency proofs for mathematics.
-- Sets the agenda for Principia, Gödel incompleteness, and computability.
+- Problem 2 asks for a finitistic consistency proof of the arithmetic axioms; problem 10 asks for a decision procedure for Diophantine equations.
+- The Entscheidungsproblem — decide validity of a first-order formula by a finite procedure — is the logical form later named in Hilbert–Ackermann.
+- Hilbert program: secure infinitary mathematics by finitistic reasoning about proofs themselves.
+- English working text is Mary Winston Newson's 1902 *Bulletin of the AMS* translation (8:437–479) of the 1901 *Archiv* version.
 
 ## Caveats
 
-- The lecture is not itself a formal paper on computation; cite as problem-setting context.
-
 ## Links
 
-- URL: https://mathcs.clarku.edu/~djoyce/hilbert/problems.html
+- AMS translation PDF: https://www.ams.org/bull/1902-08-10/S0002-9904-1902-00923-3/S0002-9904-1902-00923-3.pdf
+- HTML transcription: https://mathcs.clarku.edu/~djoyce/hilbert/problems.html

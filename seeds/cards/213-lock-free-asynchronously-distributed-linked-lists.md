@@ -18,50 +18,48 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
+  - title: "A Pragmatic Implementation of Non-Blocking Linked-Lists"
+    url: "https://doi.org/10.1007/3-540-45414-4_21"
+    year: 2001
     arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
+    doi: "10.1007/3-540-45414-4_21"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
+  - "298-a-pragmatic-implementation-of-non-blocking-linked-lists"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Lock-free Asynchronously Distributed Linked Lists
 
 ## One-sentence takeaway
 
-Modern databases use dynamic search structures that store an enormous amount of data, and often serve them using multi-threaded algorithms to support the ever-increasing throughput needs.
+DiLi is a conditionally lock-free, linearizable linked list that can be asynchronously split into sublists and load-balanced across machines without downtime.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Lock-free Asynchronously Distributed Linked Lists).
+Anoptic world state and GRID COMMAND spatial indexes eventually outgrow one NUMA node; a list that partitions itself while staying lock-free is the distributed analog of a Harris list.
 
 ## Key ideas
 
-- Modern databases use dynamic search structures that store an enormous amount of data, and often serve them using multi-threaded algorithms to support the ever-increasing throughput needs.
-- When this throughput need exceeds the capacity of the machine hosting the structure, one either needs to replace the underlying hardware (an option that is typically not viable and introduces a long down time) or make the data structure distributed.
-- Static partitioning of the data structure for distribution is not desirable, as it is prone to uneven load distribution over time, and having to change the partitioning scheme later will require downtime.
-- The goal of this paper is to extend a concurrent data structure to distributed data structures that provide dynamic load balancing while preserving important properties such as lock freedom.
-- With this intuition, first, we introduce the notion of conditional lock-freedom which extends the notion of lock-free computation with reasonable assumptions about communication between processes.
+- Conditional lock-freedom extends lock-freedom with modest assumptions about inter-process communication.
+- Client operations remain find, insert, and remove of a key; partitioning and migration are extra primitives that preserve those progress guarantees.
+- Static key-range sharding is rejected because load drifts and a later re-shard would take the structure offline.
+- Concurrent performance is comparable to skip lists and better on write-heavy workloads; the distributed mode then scales horizontally.
+- Sublists move between machines asynchronously, so a hot range can be split without stopping readers.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2510.06387](https://arxiv.org/abs/2510.06387)
-- URL: https://arxiv.org/abs/2510.06387
+- PDF: https://arxiv.org/pdf/2510.06387

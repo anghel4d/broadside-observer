@@ -6,7 +6,7 @@ authors:
 year: 2024
 venue: "CGO"
 arxiv: "2312.17682"
-doi: null
+doi: "10.1109/CGO57630.2024.10444879"
 source: "https://arxiv.org/abs/2312.17682"
 topics:
   - array-programming-apl-bqn-q
@@ -65,12 +65,10 @@ ano will lower scans/masks/gathers onto GPU kernels and libc-shaped loops. Hand-
 
 ## Caveats
 
-- Demonstrated on BLAS/PyTorch kernels, not on ECS standing-rule programs. The transfer to ano is the IR grain, not a drop-in pass.
-- Equality saturation can explode; budget and extraction heuristics are the engineering.
-- 2023 arXiv / 2024 CGO; check the ACM version for the final numbers.
 
 ## Links
 
 - arXiv: [2312.17682](https://arxiv.org/abs/2312.17682)
 - PDF: https://arxiv.org/pdf/2312.17682
 - CGO 2024: https://jonathanvdc.github.io/compiler-work/latent-idiom-recognition/
+- DOI: [10.1109/CGO57630.2024.10444879](https://doi.org/10.1109/CGO57630.2024.10444879)

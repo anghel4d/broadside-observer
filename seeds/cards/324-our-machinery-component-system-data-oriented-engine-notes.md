@@ -7,7 +7,7 @@ year: 2018
 venue: "Our Machinery Blog"
 arxiv: null
 doi: null
-source: "https://ourmachinery.com/post/ecs-and-rendering/"
+source: "https://ruby0x1.github.io/machinery_blog_archive/post/ecs-and-rendering/index.html"
 topics:
   - ecs
   - engine
@@ -43,21 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Discusses practical ECS design choices interacting with rendering and engine modules.
+The Machinery’s renderer never iterates “every entity and draw it”: ECS plugins expose `tm_ci_render_i` / `tm_ci_shader_i` callbacks, the engine culls per viewer, and a render graph owns GPU work.
 
 ## Why it matters here
 
-Practitioner ECS+rendering integration notes from Bitsquid lineage.
+This is the Bitsquid-lineage answer to “how does an ECS talk to a modern renderer,” which is exactly the Anoptic problem of feeding GRID COMMAND views without baking mesh types into the engine core.
 
 ## Key ideas
 
-- Discusses practical ECS design choices interacting with rendering and engine modules.
+- The ECS itself is a plugin. Components opt into rendering through two interfaces: renderables (cull + draw) and shader/aux objects (lights, probes, post, graph extensions).
+- A frame gathers editor viewports, lets plugins inject render-graph modules, culls lights/probes, runs shader-update callbacks, builds the graph, then culls renderables for every generated viewer.
+- Visibility is a bit stream consumed by broad parallel component passes, aimed at hundreds of thousands of components per frame.
+- Viewers are first-class (editor camera, shadow camera, reflection probe), so the same component data is culled once per view rather than drawn ad hoc.
+- Original `ourmachinery.com/post/ecs-and-rendering/` is offline; the 2018-10-23 archive is the stable copy.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://ourmachinery.com/post/ecs-and-rendering/
+- Archive: https://ruby0x1.github.io/machinery_blog_archive/post/ecs-and-rendering/index.html

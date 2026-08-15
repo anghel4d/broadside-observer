@@ -29,46 +29,32 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-  - title: "Proofs and Types"
-    url: "https://www.paultaylor.eu/stable/Proofs%2BTypes.html"
-    year: 1989
-    arxiv: null
-    doi: null
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
 see:
   - "627-call-by-name-call-by-value-and-the-lambda-calculus"
   - "617-the-mechanical-evaluation-of-expressions"
-  - "652-proofs-and-types"
-  - "026-types-and-programming-languages"
 ---
 
 # The Lambda Calculus: Its Syntax and Semantics
 
 ## One-sentence takeaway
 
-The encyclopedic reference on untyped lambda calculus syntax, reduction, and models.
+The untyped λ-calculus is developed as a mathematical object: conversion, reduction strategies, solvability, Böhm trees, and models, not as a programming-language tutorial.
 
 ## Why it matters here
 
-Barendregt's λ-calculus book is the standard mathematical reference behind every PL lambda discussion.
+Every Anoptic discussion of closures, substitution, or “what does this combinator mean” bottoms out in this book. Cite Barendregt for the theorems; cite TAPL/PFPL for the typed programming-language reading.
 
 ## Key ideas
 
-- Systematic treatment of reduction and convertibility.
-- Böhm trees, solvability, and classical theorems.
-- Models of the lambda calculus.
-- Companion to typed accounts in TAPL/PFPL/Proofs and Types.
+- Syntax, α-conversion, β-reduction, and the Church–Rosser theorem are treated as the core equational theory.
+- Solvability, Böhm trees, and the theory of sensible λ-theories classify which terms behave like programs.
+- Models (term models, D∞, Pω) show that the equational theory has a denotational reading.
+- Reduction strategies and standardization sit beside Plotkin’s CBN/CBV distinction rather than replacing it.
+- The 1984 revised North-Holland volume (Studies in Logic 103) is the standard reference edition.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/C2009-0-14309-X](https://doi.org/10.1016/C2009-0-14309-X)
-- URL: https://doi.org/10.1016/C2009-0-14309-X
+- ScienceDirect volume: https://www.sciencedirect.com/bookseries/studies-in-logic-and-the-foundations-of-mathematics/vol/103/suppl/C

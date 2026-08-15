@@ -5,8 +5,8 @@ authors:
 year: 1986
 venue: "AI Magazine"
 arxiv: null
-doi: null
-source: "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537"
+doi: "10.1609/aimag.v7i2.537"
+source: "https://doi.org/10.1609/aimag.v7i2.537"
 topics:
   - blackboard
 seed_rank: 378
@@ -20,18 +20,12 @@ cites:
     year: 1980
     arxiv: null
     doi: "10.1145/356810.356816"
-  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
-    url: "https://arxiv.org/abs/2304.03442"
-    year: 2023
-    arxiv: "2304.03442"
-    doi: null
   - title: "Steering Behaviors For Autonomous Characters"
     url: "https://www.red3d.com/cwr/steer/"
     year: 1999
     arxiv: null
     doi: null
 see:
-  - "003-generative-agents-interactive-simulacra-of-human-behavior"
   - "201-steering-behaviors-for-autonomous-characters"
 ---
 
@@ -39,21 +33,22 @@ see:
 
 ## One-sentence takeaway
 
-Blackboard architecture for multi-expert AI.
+Nii’s survey names the architecture Hearsay-II made famous: independent knowledge sources read and write a shared, leveled blackboard, scheduled by a controller rather than by a single call graph.
 
 ## Why it matters here
 
-Blackboard architecture for multi-expert AI.
+GRID COMMAND / Broadside already want many specialists (path, cover, fire, comms) that do not own the world. A blackboard is the non-LLM way to let them collaborate: post hypotheses on a shared store, let the next KS fire when its precondition appears. That is closer to ano queries than to a behavior-tree sequence.
 
 ## Key ideas
 
-- Blackboard architecture for multi-expert AI.
+- Three pieces: the blackboard (hierarchical solution state), knowledge sources (condition → action specialists), and a control component that picks which KS runs next.
+- Levels of abstraction (signal → syllable → word in Hearsay-II; perception → tactic → order in a game) let specialists work at different grains on the same problem.
+- Opportunistic, not pipeline: a KS fires when its data appears, so partial, uncertain contributions can still make progress.
+- Control can be another KS (agenda, ratings) rather than a hardcoded scheduler — the part most game “blackboards” skip.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537
+- DOI: https://doi.org/10.1609/aimag.v7i2.537
+- AI Magazine page: https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537

@@ -21,11 +21,6 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-  - title: "Artemis Entity System Framework"
-    url: "https://github.com/junkdog/artemis-odb"
-    year: 2011
-    arxiv: null
-    doi: null
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
@@ -33,7 +28,6 @@ cites:
     doi: null
 see:
   - "284-entity-systems-are-the-future-of-mmog-development-t-machine-"
-  - "449-artemis-entity-system-framework"
   - "285-evolve-your-hierarchy"
 ---
 
@@ -41,20 +35,21 @@ see:
 
 ## One-sentence takeaway
 
-Explains ECS via Ash: entities, components, and systems matched through families/nodes.
+Lord’s Ash framework treats a system’s working set as a *family* (or *node*): a linked list of entities that currently have a required component tuple, updated incrementally as components are added or removed.
 
 ## Why it matters here
 
-Clear node/family formulation of ECS queries.
+Before archetypes and sparse sets, this node/family model was how ActionScript/Flash and many indie engines expressed ECS queries; it is the clearest statement of “a system iterates a typed view, not the world.”
 
 ## Key ideas
 
-- Explains ECS via Ash: entities, components, and systems matched through families/nodes.
+- An entity is an id plus a bag of components. A system never inherits a game-object class; it asks the engine for a family matching its node type (`Position + Motion`, …).
+- Families are maintained incrementally: add/remove component patches the relevant linked lists, so the system’s `update` is a walk of an already-filtered list.
+- This is query-as-data-structure, not query-as-archetype-scan. Cheap to write, pointer-chasy at scale — the reason later engines moved to chunks.
+- Series lives at richardlord.net/blog/ecs/; Ash is the ActionScript implementation, later ported.
+- Directly descends from T-Machine entity systems and Adam Martin / cowboyprogramming “evolve your hierarchy.”
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
 
 ## Links
 

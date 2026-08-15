@@ -26,43 +26,28 @@ cites:
   year: 1997
   arxiv: null
   doi: 10.1145/258533.258660
-- title: "Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems"
-  url: "https://doi.org/10.1007/3-540-45518-3_18"
-  year: 2001
-  arxiv: null
-  doi: 10.1007/3-540-45518-3_18
-- title: "Kademlia: A Peer-to-peer Information System Based on the XOR Metric"
-  url: "https://doi.org/10.1007/3-540-45748-8_5"
-  year: 2002
-  arxiv: null
-  doi: 10.1007/3-540-45748-8_5
 see:
 - "770-consistent-hashing-and-random-trees-distributed-caching-prot"
-- "772-pastry-scalable-decentralized-object-location-and-routing-fo"
-- "773-kademlia-a-peer-to-peer-information-system-based-on-the-xor-"
 ---
 
 # Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications
 
 ## One-sentence takeaway
 
-Chord DHT: O(log N) keyed lookup via finger tables on a consistent-hash ring.
+Chord places nodes and keys on a consistent-hash ring and routes with $O(\log N)$ finger-table hops: the $i$-th finger of node $n$ points at the successor of $n+2^{i-1}$.
 
 ## Why it matters here
 
-Clean DHT design teaching scalable decentralized lookup.
+Chord is the cleanest teaching DHT: the lookup contract Broadside or a GRID COMMAND matchmaker would want if identity were just a key on a ring.
 
 ## Key ideas
 
-- Successor lists plus fingers.
-- Logarithmic hops with high probability.
-- Join/leave stabilization.
-- Builds on consistent hashing.
+- Each node stores a successor list plus $m$ fingers on an $m$-bit identifier circle.
+- Lookup for key $k$ jumps to the farthest known predecessor of $k$, then walks successors — $O(\log N)$ hops with high probability.
+- Join copies keys from the successor; a periodic stabilize protocol repairs successor pointers under churn.
+- Correctness rests on consistent hashing: a node is responsible for the arc back to its predecessor.
 
 ## Caveats
-
-- Churn and security need extra layers.
-- Production often uses Kademlia variants.
 
 ## Links
 

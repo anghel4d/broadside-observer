@@ -6,7 +6,7 @@ year: 1952
 venue: "North-Holland / Van Nostrand"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
+source: "https://openlibrary.org/works/OL5959470W/Introduction_to_metamathematics"
 topics:
   - metamathematics
   - recursive-functions
@@ -50,23 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Kleene's IMM is the encyclopedic mid-century synthesis of recursion theory, proof theory, and computability.
+Kleene's IMM is the mid-century encyclopaedia of recursion theory, proof theory, and intuitionistic systems—the book later computability texts still answer to.
 
 ## Why it matters here
 
-The book every later computability text answers to; default cite for classical recursion theory.
+Default cite for classical recursion theory in the Broadside archive. When Anoptic needs a single reference for primitive versus general recursion, Gödel numbering, or the arithmetical hierarchy, this is the one.
 
 ## Key ideas
 
-- Primitive / general recursive functions.
-- Gödel incompleteness exposition.
-- Intuitionistic systems surveyed.
-- Standard reference for decades.
+- Systematic development of primitive and general recursive functions, including the normal-form and enumeration theorems.
+- Full exposition of Gödel incompleteness in the Herbrand–Gödel–Kleene vocabulary.
+- Surveys intuitionistic arithmetic and the relation of constructive to classical systems.
+- First edition: North-Holland / Noordhoff / Van Nostrand, 1952, x+550 pp. (Bibliotheca Mathematica 1). No original ISBN; later reprints carry 0-7204-2103-9 / 0-444-10088-1.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589
+- Open Library: https://openlibrary.org/works/OL5959470W/Introduction_to_metamathematics
+- WorldCat 1952: https://search.worldcat.org/title/Introduction-to-metamathematics-by-Stephen-Cole-Kleene-../oclc/459805591

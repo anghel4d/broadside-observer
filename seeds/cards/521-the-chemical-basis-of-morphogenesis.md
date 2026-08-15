@@ -30,7 +30,7 @@ cites:
     arxiv: null
     doi: null
   - title: "Theory of Self-Reproducing Automata"
-    url: "https://www.worldcat.org/title/theory-of-self-reproducing-automata/oclc/523589"
+    url: "https://archive.org/details/theoryofselfrepr00vonn_0"
     year: 1966
     arxiv: null
     doi: null
@@ -44,22 +44,20 @@ see:
 
 ## One-sentence takeaway
 
-Turing shows how reaction–diffusion can break symmetry and form biological patterns—computation in nature's PDE guise.
+A pair of reacting and diffusing morphogens can destabilize a homogeneous tissue and spontaneously form spots, stripes, and other biological patterns.
 
 ## Why it matters here
 
-Anoptic simulation lineage: continuous fields, emergent structure, and 'programs' that are physics.
+Anoptic already lives on continuous fields (radiance cascades, reaction-like standing rules, procedural maps). Turing's linear-stability analysis is the original "the PDE is the program" paper: emergent structure without a central planner, which is exactly the grain of GRID COMMAND worldgen and of physics-as-code simulation.
 
 ## Key ideas
 
-- Reaction–diffusion instability.
-- Turing patterns.
-- Linear stability analysis of morphogens.
-- Bridge from discrete machines to continuous dynamics.
+- Two (or more) morphogens react locally and diffuse at different rates; the linearized system about a homogeneous steady state can have a band of unstable spatial frequencies.
+- The resulting "Turing patterns" are selected by geometry and diffusion constants, not by a pre-drawn template.
+- Worked examples include dappling, tentacle arrangement, and gastrulation-scale instabilities.
+- Bridges the discrete universal machine of 1936 to continuous dynamics: computation here is the evolution of a field.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

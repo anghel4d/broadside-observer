@@ -30,45 +30,37 @@ cites:
     year: 1986
     arxiv: null
     doi: null
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
+  - title: "The Categorical Abstract Machine"
+    url: "https://doi.org/10.1016/0167-6423(87)90020-7"
+    year: 1987
     arxiv: null
-    doi: null
-  - title: "Compiling with Continuations"
-    url: "https://doi.org/10.1017/CBO9780511609619"
-    year: 1992
-    arxiv: null
-    doi: "10.1017/CBO9780511609619"
+    doi: "10.1016/0167-6423(87)90020-7"
 see:
   - "617-the-mechanical-evaluation-of-expressions"
   - "665-control-operators-the-secd-machine-and-the-calculus"
-  - "137-the-definition-of-standard-ml-revised"
-  - "667-compiling-with-continuations"
 ---
 
 # The ZINC Experiment: An Economical Implementation of the ML Language
 
 ## One-sentence takeaway
 
-Describes the ZINC abstract machine underlying Caml Light / early OCaml compilation.
+ZINC compiles ML to a compact bytecode abstract machine whose closure and application conventions made Caml Light — and later OCaml’s runtime — cheap enough to ship.
 
 ## Why it matters here
 
-ZINC is the practical ML abstract-machine classic — ancestor of OCaml's runtime model.
+Anoptic already lives in a C + data-oriented world; when a typed functional IR needs a bytecode or closure convention, ZINC is the economical ML machine to steal from, not a tracing JIT and not Landin’s SECD left unmodified.
 
 ## Key ideas
 
-- Economical closure representations.
-- Bytecode abstract machine for ML.
-- Influences Caml Light and OCaml.
-- Pairs with Landin/CEK/Krivine machine lineage.
+- The ZINC machine is a CAM descendant tuned for curried application: cheap partial applications, shared environments, and a compact instruction set.
+- Closures are represented to keep allocation down; the report measures the representation choices, not just the semantics.
+- Separate compilation, a simple module system, and a C runtime are part of the experiment, not afterthoughts.
+- The 1990 INRIA report (RT-0117, ~100 pages) is the design document behind Caml Light’s bytecode and the ancestor of ocamlc.
+- Landin SECD and the Categorical Abstract Machine are the cited machines being specialized.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://xavierleroy.org/publi/ZINC.pdf
+- PDF: https://xavierleroy.org/publi/ZINC.pdf
+- HAL: https://hal.science/inria-00070049

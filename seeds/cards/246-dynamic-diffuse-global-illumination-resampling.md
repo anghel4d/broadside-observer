@@ -40,22 +40,23 @@ see:
 
 ## One-sentence takeaway
 
-Combine screen-space reservoir resampling with sparse world-space probes to raise sample efficiency for multi-bounce diffuse paths.
+Screen-space reservoir resampling plus sparse world-space probes raises sample efficiency for multi-bounce paths that terminate on diffuse events, beating pure path tracing and pure probes at equal time and equal quality.
 
 ## Why it matters here
 
-Probe+resampling hybrid foil beside RC: illustrates the noise/detail trade DDGI-family methods accept and RC tries to dodge.
+This is the DDGI-family foil beside Radiance Cascades: it shows the noise/detail bargain probe+ReSTIR methods accept and that RC tries to dodge with interval merging.
 
 ## Key ideas
 
-- Reservoir resampling in screen space feeds world-space probes for difficult diffuse multi-bounce transport.
-- Equal-time/quality gains over pure path tracing or pure probes on tested scenes.
+- Specular transport has low directional variance per bounce; multi-bounce rough/diffuse paths do not, so a few unidirectional samples stay noisy.
+- Reservoirs in screen space feed world-space probes specifically for those diffuse-terminating contributions.
+- Equal-time and equal-quality experiments beat both a pure path tracer and a pure probe baseline.
+- Combined with commodity denoisers, the hybrid reaches interactive GI in complex scenes.
+- Still stochastic: temporal stability depends on the denoiser and reservoir reuse, unlike noiseless RC merges.
 
 ## Caveats
-
-- Still stochastic; needs temporal stability strategies unlike noiseless RC merges.
 
 ## Links
 
 - arXiv: [2108.05263](https://arxiv.org/abs/2108.05263)
-- URL: https://arxiv.org/abs/2108.05263
+- PDF: https://arxiv.org/pdf/2108.05263

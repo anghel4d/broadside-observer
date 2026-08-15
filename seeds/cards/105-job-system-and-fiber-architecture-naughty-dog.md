@@ -20,7 +20,7 @@ cites:
   url: https://doi.org/10.1145/324133.324234
   year: 1999
   arxiv: null
-  doi: null
+  doi: 10.1145/324133.324234
 - title: Intel Threading Building Blocks
   url: https://www.threadingbuildingblocks.org/
   year: 2007
@@ -41,21 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-Industry job/fiber system reference for ECS tick distribution.
+Naughty Dog's PS4 job system runs every job inside a fiber so `WaitForCounter` parks the fiber — stack and all — while the worker thread immediately runs another job.
 
 ## Why it matters here
 
-Industry job/fiber system reference for ECS tick distribution.
+Anoptic / ano tick distribution wants this exact API: gameplay systems with deep call stacks can kick child work (raycasts, animation slices) and yield without pinning an OS thread for the rest of the frame.
 
 ## Key ideas
 
-- Industry job/fiber system reference for ECS tick distribution.
+- Six worker threads, each locked to a PS4 core. The thread is the execution unit; the fiber is the context (user stack + saved registers). Cooperative only: switches are explicit `sceFiberSwitch`.
+- Fiber pool is 160: 128 fibers with 64 KiB stacks and 32 with 512 KiB stacks. Three priority queues (low / normal / high). No work stealing.
+- The only job-to-job sync is an atomic counter. `RunJobs(decls, n, &counter)` then `WaitForCounter(counter, 0)` moves the caller onto that counter's wait list; completion decrements and wakes waiters.
+- Design goals were the opposite of the PS3 SPU job list: any code can be a job, jobs may yield mid-function (player update kicks raycasts and waits), the user never allocates job storage, one sync primitive. Ease of use beat peak throughput.
+- The Last of Us Remastered ran ~800–1000 jobs per frame. Object updates, animation, raycasts, and command-buffer generation are jobs; sockets / file I/O stay on dedicated system threads that only post jobs.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
 
 ## Links
 
 - URL: https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine
+- Slides: https://media.gdcvault.com/gdc2015/presentations/Gyrling_Christian_Parallelizing_The_Naughty.pdf

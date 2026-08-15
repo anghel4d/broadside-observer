@@ -25,48 +25,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
-    url: "https://arxiv.org/abs/2604.16548"
-    year: 2026
-    arxiv: "2604.16548"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
     doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
-    doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
+  - title: "A-MEM: Agentic Memory for LLM Agents"
+    url: "https://arxiv.org/abs/2502.12110"
+    year: 2025
+    arxiv: "2502.12110"
     doi: null
 see:
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "004-memgpt-towards-llms-as-operating-systems"
+  - "069-a-mem-agentic-memory-for-llm-agents"
 ---
 
 # Retain or Consolidate? Budget-Dependent Operator Selection for Language Agent Memory
 
 ## One-sentence takeaway
 
-Language agents depend on memory across interactions.
+Whether to retain raw memory or apply Merge, Abstract, or Rewrite is a budget-pressure decision: consolidation wins when evidence will not fit, retention wins when it will.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (Retain or Consolidate? Budget-Dependent Operator Selection for Language Agent Memory)
+Broadside digest memory and ano episodic stores face the same retain-vs-compress fork every time the context budget tightens; OAS is an explicit policy for that fork.
 
 ## Key ideas
 
-- Language agents depend on memory across interactions.
-- However, the limited context windows of large language models (LLMs) and their inference costs constrain how much memory can be used at once.
-- Existing systems mainly follow two strategies: memory retention and memory consolidation.
-- Retention keeps raw records and preserves exact details, but relevant evidence may not fit under a tight budget; consolidation compresses and combines records, improving coverage per token but risking the loss of query-critical details.
-- Neither strategy is universally preferable.
+- Retention preserves exact details but may omit evidence under a tight token budget; consolidation covers more per token but can erase query-critical detail.
+- Each operator's utility splits into a coverage effect on omitted evidence and a signed replacement effect on raw evidence that already fits.
+- Offline Abstraction-Safety (OAS) estimates those utilities from pre-generation features with held-out harm calibration.
+- On LongMemEval, consolidation lifts absolute accuracy by up to 48% under tight budgets, while retention is better when the budget is loose; LoCoMo shows the same crossover at a smaller budget.
+- When compression is required, cross-note abstraction and merging beat local rewriting on both datasets.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2607.17545](https://arxiv.org/abs/2607.17545)
-- URL: https://arxiv.org/abs/2607.17545
+- PDF: https://arxiv.org/pdf/2607.17545

@@ -3,10 +3,10 @@ title: "The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Pr
 authors:
   - "Martin Davis (ed.)"
 year: 1965
-venue: "Raven Press"
+venue: "Raven Press; Dover reprint 2004"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/undecidable/oclc/523589"
+source: "https://store.doverpublications.com/products/9780486432281"
 topics:
   - undecidability
   - anthology
@@ -40,7 +40,7 @@ cites:
     arxiv: null
     doi: "10.1090/S0002-9904-1944-08111-1"
   - title: "Computability and Unsolvability"
-    url: "https://www.worldcat.org/title/computability-and-unsolvability/oclc/523"
+    url: "https://store.doverpublications.com/products/9780486614717"
     year: 1958
     arxiv: null
     doi: null
@@ -56,22 +56,21 @@ see:
 
 ## One-sentence takeaway
 
-Davis's anthology collects Gödel, Church, Turing, Rosser, Kleene, Post—the portable canon.
+Davis’s anthology collects Gödel, Church, Turing, Rosser, Kleene, and Post — with editorial notes — as the portable English-language canon of undecidability.
 
 ## Why it matters here
 
-Meta-card: the bound volume Broadside's foundations spine lives inside.
+Meta-card: the bound volume Broadside’s foundations spine lives inside. Cite the anthology for the *collection*; cite the primaries (500, 515, 507, 534) for the theorems.
 
 ## Key ideas
 
-- Primary papers assembled.
-- Editorial notes connecting 1930s results.
-- Standard historical sourcebook.
+- Primary papers assembled in one English volume, several in first widely available translation.
+- Davis’s notes connect the 1930s results to recursive-function / r.e.-set vocabulary.
+- Standard historical sourcebook for incompleteness, unsolvability, and computable functions.
+- Raven Press 1965; Dover 2004 reprint ISBN 978-0-486-43228-1.
 
 ## Caveats
 
-- Anthology card—use to cite collection, not as substitute for primaries.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/undecidable/oclc/523589
+- Dover edition: https://store.doverpublications.com/products/9780486432281

@@ -23,37 +23,28 @@ cites:
   year: 1976
   arxiv: null
   doi: 10.1109/TIT.1976.1055638
-- title: Protocols for Public Key Cryptosystems
-  url: "https://doi.org/10.1109/SP.1980.10006"
-  year: 1980
-  arxiv: null
-  doi: 10.1109/SP.1980.10006
 see:
 - "781-new-directions-in-cryptography"
-- "784-protocols-for-public-key-cryptosystems"
 ---
 
 # Secure Communications Over Insecure Channels
 
 ## One-sentence takeaway
 
-Merkle puzzles — an early public-key agreement scheme alongside DH/RSA.
+Merkle puzzles let Alice publish $N$ encrypted puzzles that Bob can crack in $O(N)$ work while an eavesdropper needs $O(N^2)$ to find the shared puzzle, giving an early public-key agreement without number theory.
 
 ## Why it matters here
 
-Completes the 1970s PKC origin story.
+This completes the 1970s public-key origin story next to Diffie–Hellman and RSA: the quadratic-gap construction that still explains why “asymmetric work” is a design lever for Anoptic matchmaking or Broadside key distribution thought experiments.
 
 ## Key ideas
 
-- Puzzle-based key agreement with asymmetric work.
-- Public-key distribution without prior secrets.
-- Independent public-key discovery narrative.
-- Conceptual kinship to later Merkle structures.
+- Alice generates $N$ puzzles, each encrypting a puzzle ID and a session key under a deliberately weak cipher that costs $O(N)$ to break.
+- Bob picks one puzzle at random, spends $O(N)$ to open it, and returns the ID in the clear; Alice looks up the matching session key.
+- Eve, seeing only the puzzle pile and the ID, must open $O(N)$ puzzles in expectation — $O(N^2)$ work — to hit the same key.
+- The paper is Merkle’s independent public-key discovery, submitted years before the 1978 CACM appearance; it is not the Merkle-tree paper.
 
 ## Caveats
-
-- Quadratic puzzle costs limit practicality vs DH.
-- Do not confuse with Merkle tree paper.
 
 ## Links
 

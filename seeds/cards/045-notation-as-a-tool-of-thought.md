@@ -16,66 +16,16 @@ reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 10
 cites:
-  - title: "A programming language"
-    url: "https://doi.org/10.1145/1460833.1460872"
+  - title: "A Programming Language"
+    url: "https://www.jsoftware.com/papers/APL.htm"
     year: 1962
     arxiv: null
-    doi: "10.1145/1460833.1460872"
+    doi: null
   - title: "Operators"
     url: "https://doi.org/10.1145/357073.357074"
     year: 1979
     arxiv: null
     doi: "10.1145/357073.357074"
-  - title: "An Investigation of the Laws of Thought"
-    url: "https://doi.org/10.1017/cbo9780511693090"
-    year: 2009
-    arxiv: null
-    doi: "10.1017/cbo9780511693090"
-  - title: "Mathematical analysis"
-    url: "http://bibciv.ucla.edu.ve/cgi-win/be_alex.exe?Acceso=T070400008947/0&Nombrebd=bicvucla"
-    year: 1957
-    arxiv: null
-    doi: null
-  - title: "Testing flow graph reducibility"
-    url: "https://doi.org/10.1016/s0022-0000(74)80049-8"
-    year: 1974
-    arxiv: null
-    doi: "10.1016/s0022-0000(74)80049-8"
-  - title: "The evolution of APL"
-    url: "https://doi.org/10.1145/960118.808372"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/960118.808372"
-  - title: "The evolution of APL"
-    url: "https://doi.org/10.1145/800025.1198423"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/800025.1198423"
-  - title: "Review of Digital system implementation by Gerrit A. Blaauw. Prentice Hall, Series in Automatic Computatin 1976."
-    url: "https://doi.org/10.1145/859408.859410"
-    year: 1977
-    arxiv: null
-    doi: "10.1145/859408.859410"
-  - title: "Summation of Series."
-    url: "https://doi.org/10.2307/2003149"
-    year: 1962
-    arxiv: null
-    doi: "10.2307/2003149"
-  - title: "A notation for the GCD and LCM functions"
-    url: "https://doi.org/10.1145/800117.803810"
-    year: 1975
-    arxiv: null
-    doi: "10.1145/800117.803810"
-  - title: "Ein Gesamtschrittverfahren zur Berechnung der Nullstellen von Polynomen"
-    url: "https://doi.org/10.1007/bf02162564"
-    year: 1966
-    arxiv: null
-    doi: "10.1007/bf02162564"
-  - title: "Beckenbach, E. F.: (Herausgeber) Applied Combinatorial Mathematics. John Wiley and Sons, Inc., New York‐London‐Sidney, 1964. 608 S., 104 Fig., Preis 102 s"
-    url: "https://doi.org/10.1002/bimj.19660080310"
-    year: 1966
-    arxiv: null
-    doi: "10.1002/bimj.19660080310"
 see:
   - "049-a-programming-language"
   - "156-operators"
@@ -85,21 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-Iverson's 1979 Turing Award lecture arguing that executable notation can combine mathematical clarity with programmability.
+Iverson’s 1979 Turing Award lecture argues that a well-chosen executable notation — APL — is not sugar on top of thought but the medium in which algorithms become thinkable.
 
 ## Why it matters here
 
-Philosophical charter for ano's surface: executable notation that shapes thinking about masked bulk effects.
+This is ano’s philosophical charter: masked bulk operations, rank, and a small verb vocabulary exist so the programmer can *see* the transform. Notation is a design constraint, not a skin.
 
 ## Key ideas
 
-- Iverson's 1979 Turing Award lecture arguing that executable notation can combine mathematical clarity with programmability.
+- Criteria for a good notation: ease of expressing constructs arising in problems, suggestivity, the ability to subordinate detail, economy, and amenability to formal proofs.
+- APL’s array verbs and operators (reduce, scan, inner/outer product) are exhibited as thoughts you cannot have as easily in scalar loops.
+- Identities (e.g. scan/reduce dualities, inner-product factorizations) are treated as theorems the notation makes obvious — the ancestor of “notation as a tool” for BQN and ano.
+- The lecture is CACM 23(8), August 1980; the talk itself was 1979. Jsoftware hosts the canonical HTML.
+- Companion pieces: the 1962 book *A Programming Language* and the 1979 CACM *Operators* paper.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
+- HTML: https://www.jsoftware.com/papers/tot.htm
 - DOI: [10.1145/358896.358899](https://doi.org/10.1145/358896.358899)
-- URL: https://www.jsoftware.com/papers/tot.htm

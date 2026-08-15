@@ -28,49 +28,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
-    url: "https://arxiv.org/abs/2607.28591"
-    year: 2026
-    arxiv: "2607.28591"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
-    doi: null
-  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
-    url: "https://arxiv.org/abs/2604.03964"
-    year: 2026
-    arxiv: "2604.03964"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
     doi: null
 see:
-  - "052-change2task-from-repository-changes-to-executable-coding-age"
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation
 
 ## One-sentence takeaway
 
-Coding agent infrastructure is shifting from harness engineering toward loop engineering as coding agents are deployed for sustained long-horizon software development.
+LoopsBench evaluates long-horizon coding agents as dependency DAGs of separately testable units, with a flow-aware runtime that releases tests on the ready frontier and keeps finished nodes as regression obligations.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation)
+Standing ano research loops are DAG-shaped work, not single-issue patches; LoopsBench is the evaluation shape that matches that, and it shows even Opus-4.7 + Claude Code only clears 25% of tasks.
 
 ## Key ideas
 
-- Coding agent infrastructure is shifting from harness engineering toward loop engineering as coding agents are deployed for sustained long-horizon software development.
-- Existing benchmarks often center on localized tasks or end-state outcomes, offering limited insight into sustained execution.
-- We introduce LOOPSBENCH, a long-horizon benchmark for loop engineering in coding agent evaluation.
-- Each task is a dependency DAG over separately testable development units with source-evidenced prerequisite edges.
-- LOOPSBENCH comprises 112 tasks from authentic sources spanning 8 programming languages and 9 domains.
+- Harness engineering (tools, sandboxes, ACI) is giving way to loop engineering (how the agent continues, replans, and does not regress).
+- 112 tasks from authentic sources span 8 languages and 9 domains, with more than 5,300 development units and executable tests.
+- Prerequisite edges are source-evidenced; recorded agent plans recover only part of the source DAG.
+- The strongest evaluated configuration (Opus-4.7, Claude Code, outer continuation) resolves 25.00% of tasks; regression events remain visible across loop profiles.
+- Data and code are at microsoft/Loopsbench; project page https://loopsbench.ai/.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2608.00267](https://arxiv.org/abs/2608.00267)
-- URL: https://arxiv.org/abs/2608.00267
+- PDF: https://arxiv.org/pdf/2608.00267
+- Project: https://loopsbench.ai/

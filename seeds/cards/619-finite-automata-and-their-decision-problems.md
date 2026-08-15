@@ -21,25 +21,15 @@ relevance_score: 10
 lineage: foundations-of-computing
 cites:
   - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.cs.cmu.edu/~cdm/resources/Kleene1951.pdf"
     year: 1956
     arxiv: null
     doi: null
-  - title: "On Certain Formal Properties of Grammars"
-    url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
-    year: 1959
-    arxiv: null
-    doi: "10.1016/S0019-9958(59)90362-6"
   - title: "Gedanken-Experiments on Sequential Machines"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.cs.cmu.edu/~cdm/resources/Moore1956-gedanken-experiments.pdf"
     year: 1956
     arxiv: null
     doi: null
-  - title: "Weak Second-Order Arithmetic and Finite Automata"
-    url: "https://doi.org/10.1002/malq.19600060105"
-    year: 1960
-    arxiv: null
-    doi: "10.1002/malq.19600060105"
   - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
     url: "https://doi.org/10.1112/plms/s2-42.1.230"
     year: 1936
@@ -47,9 +37,7 @@ cites:
     doi: "10.1112/plms/s2-42.1.230"
 see:
   - "530-representation-of-events-in-nerve-nets-and-finite-automata"
-  - "601-on-certain-formal-properties-of-grammars"
   - "620-gedanken-experiments-on-sequential-machines"
-  - "633-weak-second-order-arithmetic-and-finite-automata"
   - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
@@ -57,24 +45,21 @@ see:
 
 ## One-sentence takeaway
 
-Rabin–Scott introduce NFAs and prove equivalence to DFAs—nondeterminism as a design tool.
+Rabin and Scott introduce nondeterministic finite automata and prove they define the same languages as deterministic ones, via the subset construction.
 
 ## Why it matters here
 
-Automata theory classic; nondeterminism later explodes into complexity theory.
+Nondeterminism as a *design tool* starts here — the same trick every lexer, regex engine, and later complexity class (NP, etc.) inherits. Ano tokenizers and GRID COMMAND pattern matchers live in this class.
 
 ## Key ideas
 
-- Nondeterministic finite automata.
-- Subset construction.
-- Decision problems for automata.
-- Turing Award–winning paper.
+- An NFA may have several possible next states (or none) on a given symbol; acceptance is existence of a successful run.
+- Subset construction: the DFA whose states are sets of NFA states is equivalent and finite.
+- Two-way automata, nondeterministic two-way automata, and several decision problems (emptiness, equivalence, infinity) are settled.
+- Turing Award paper (1976 citation); *IBM J. Res. Dev.* 3(2), 1959, pp. 114–125.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1147/rd.32.0114](https://doi.org/10.1147/rd.32.0114)
-- URL: https://doi.org/10.1147/rd.32.0114

@@ -17,18 +17,12 @@ pool: maths-foundations
 relevance_score: 10
 lineage: algorithms-and-complexity
 cites:
-- title: An Algorithm for the Machine Calculation of Complex Fourier Series
-  url: "https://doi.org/10.1090/S0025-5718-1965-0178586-1"
-  year: 1965
-  arxiv: null
-  doi: 10.1090/S0025-5718-1965-0178586-1
 - title: Multiplication of Multidigit Numbers on Automata
   url: "https://en.wikipedia.org/wiki/Karatsuba_algorithm"
   year: 1962
   arxiv: null
   doi: null
 see:
-- "757-an-algorithm-for-the-machine-calculation-of-complex-fourier-"
 - "759-multiplication-of-multidigit-numbers-on-automata"
 ---
 
@@ -36,23 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-Strassen sub-cubic matrix multiplication opens the MM exponent omega.
+Strassen multiplies $2\times 2$ blocks with seven multiplications instead of eight, so recursive block multiplication runs in $O(n^{\log_2 7})\approx O(n^{2.807})$ and the matrix-multiplication exponent $\omega$ is strictly less than 3.
 
 ## Why it matters here
 
-Shows algebraic complexity can beat textbook O(n^3).
+It is the existence proof that textbook $O(n^3)$ linear algebra is not the last word — relevant whenever ano or Anoptic numeric kernels treat large GEMM as a cost model rather than a law.
 
 ## Key ideas
 
-- Seven multiplications for 2x2 blocks.
-- omega < 3 via recursion.
-- Launches modern fast MM research.
-- Tradeoffs with stability and constants.
+- The $2\times 2$ identity uses seven bilinear products and eighteen additions; recursion on even $n$ yields $\omega\le\log_2 7$.
+- Inversion, determinant, and $LU$ inherit the same exponent: Gaussian elimination is not optimal for those either.
+- The paper opens the modern hunt for $\omega$, later improved by Pan, Coppersmith–Winograd, and subsequent galactic algorithms.
+- Numerical stability and addition overhead set a large practical crossover against tuned $n^3$ GEMM.
 
 ## Caveats
-
-- Practical crossover n is large.
-- Later omega improvements are often galactic.
 
 ## Links
 

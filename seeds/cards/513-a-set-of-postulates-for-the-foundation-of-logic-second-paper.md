@@ -43,22 +43,21 @@ see:
 
 ## One-sentence takeaway
 
-Church's second postulates paper continues the untyped logical system later shown inconsistent.
+Church's 1933 sequel extends the untyped logical λ-system that Kleene–Rosser would shortly prove inconsistent.
 
 ## Why it matters here
 
-Completes the 1932–33 Church foundation attempt before the paradox and the turn to types.
+Completes the 1932–33 foundation attempt. After the paradox, the same abstraction apparatus is reused as a theory of computation (1936) and then as simple type theory (1940)—the fork ano still lives on.
 
 ## Key ideas
 
-- Extension of 1932 postulates.
-- Historical path to λ as computation, not only logic.
+- Continues the 1932 postulates with further rules for the type-free calculus.
+- Still treats λ as a foundation for logic rather than as a programming notation.
+- Historical path: once the system is known inconsistent, conversion and definability survive as the computational remnant.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/1968172](https://doi.org/10.2307/1968172)
-- URL: https://doi.org/10.2307/1968172
+- JSTOR: https://www.jstor.org/stable/1968172

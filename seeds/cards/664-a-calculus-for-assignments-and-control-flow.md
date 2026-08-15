@@ -1,15 +1,15 @@
 ---
-title: "A Calculus for Assignments and Control Flow"
+title: "A Syntactic Theory of Sequential Control"
 authors:
   - "Matthias Felleisen"
   - "Daniel P. Friedman"
   - "Eugene Kohlbecker"
   - "Bruce Duba"
 year: 1987
-venue: "POPL"
+venue: "Theoretical Computer Science"
 arxiv: null
-doi: "10.1145/41625.41627"
-source: "https://doi.org/10.1145/41625.41627"
+doi: "10.1016/0304-3975(87)90109-5"
+source: "https://doi.org/10.1016/0304-3975(87)90109-5"
 topics:
   - control-operators
   - continuations
@@ -22,56 +22,47 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "On the Expressive Power of Programming Languages"
-    url: "https://doi.org/10.1016/0167-6423(91)90036-W"
-    year: 1991
+  - title: "Call-by-Name, Call-by-Value and the λ-Calculus"
+    url: "https://doi.org/10.1016/0304-3975(75)90017-1"
+    year: 1975
     arxiv: null
-    doi: "10.1016/0167-6423(91)90036-W"
+    doi: "10.1016/0304-3975(75)90017-1"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
-    url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
-    year: 1986
+    url: "https://scholarworks.iu.edu/dspace/items/d85303cb-faee-4396-bf56-b03b35758a47"
+    year: 1987
     arxiv: null
     doi: null
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
+  - title: "The Mechanical Evaluation of Expressions"
+    url: "https://doi.org/10.1093/comjnl/6.4.308"
+    year: 1964
     arxiv: null
-    doi: "10.1145/155090.155113"
-  - title: "The Revised^5 Report on the Algorithmic Language Scheme"
-    url: "https://doi.org/10.1023/A:1010051815785"
-    year: 1998
-    arxiv: null
-    doi: "10.1023/A:1010051815785"
+    doi: "10.1093/comjnl/6.4.308"
 see:
-  - "663-on-the-expressive-power-of-programming-languages"
+  - "627-call-by-name-call-by-value-and-the-lambda-calculus"
   - "665-control-operators-the-secd-machine-and-the-calculus"
-  - "666-the-essence-of-compiling-with-continuations"
-  - "675-the-revised-5-report-on-the-algorithmic-language-scheme"
+  - "617-the-mechanical-evaluation-of-expressions"
 ---
 
-# A Calculus for Assignments and Control Flow
+# A Syntactic Theory of Sequential Control
 
 ## One-sentence takeaway
 
-Gives a syntactic calculus for first-class control with reduction semantics in the Scheme/continuations lineage.
+Felleisen, Friedman, Kohlbecker, and Duba give the λ-calculus an equational theory of `call/cc`-style control: an abort operator 𝒜 and a capture operator 𝒞 with a Church–Rosser subcalculus.
 
 ## Why it matters here
 
-Root Felleisen control calculus — how Scheme-style call/cc became an operational object of study.
+This is the paper the filename gestured at — sequential control as reduction, not as an SECD side condition. The old card DOI (`10.1145/41625.41627`) is Herlihy–Wing linearizability; keep the four-author 1987 TCS result.
 
 ## Key ideas
 
-- Control operators in a λ-calculus with assignment.
-- Reduction semantics for non-local control.
-- Foundation for later prompt/control and delimited continuation work.
-- Influences CEK machine and expressiveness papers.
+- Start from an idealized Scheme with `call/cc`; replace it by 𝒞 (gives the argument the current continuation *without* implicitly invoking it) and 𝒜 (aborts to the argument).
+- A C-rewriting machine evaluates by unique decomposition into an applicative context and a control redex; continuations are reified as tagged contexts.
+- From the machine they derive local notions of reduction plus top-level *computation* rules, prove the diamond property, and obtain a standardization theorem relating calculus and machine.
+- *Theoretical Computer Science* 52 (1987), 205–237, DOI 10.1016/0304-3975(87)90109-5. Assignments are a different 1987 paper (POPL, Felleisen–Friedman only).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1145/41625.41627](https://doi.org/10.1145/41625.41627)
-- URL: https://doi.org/10.1145/41625.41627
+- DOI: [10.1016/0304-3975(87)90109-5](https://doi.org/10.1016/0304-3975(87)90109-5)
+- Author PDF: https://www.cs.tufts.edu/comp/150FP/archive/matthias-felleisen/sequential-control.pdf

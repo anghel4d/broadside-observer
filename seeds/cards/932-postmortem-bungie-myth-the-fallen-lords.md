@@ -49,8 +49,6 @@ This is closer to GRID COMMAND than F.E.A.R. GOAP: tactics are about facing, for
 
 ## Caveats
 
-- Magazine postmortem, not a refereed pathfinding paper. No public source for the exact deviation algorithm.
-- Do not confuse with later Bungie Halo AI (Butcher/Griesemer/Isla), which is a different architecture on a different genre.
 
 ## Links
 

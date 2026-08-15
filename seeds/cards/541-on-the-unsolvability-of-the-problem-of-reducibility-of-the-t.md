@@ -6,7 +6,7 @@ year: 1956
 venue: "Doklady Akademii Nauk SSSR"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/search?q=Muchnik+reducibility+1956"
+source: "https://www.mathnet.ru/rus/person46479"
 topics:
   - priority-method
   - post-problem
@@ -44,22 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Muchnik independently solves Post's problem in the USSR—priority method with different packaging.
+Muchnik independently solves Post's problem in the USSR: there is no single r.e. complete set to which every unsolvable r.e. problem reduces, because incomparable r.e. degrees exist.
 
 ## Why it matters here
 
-Pair with Friedberg; completeness of the 1956–57 priority moment.
+Pair with Friedberg: completeness of the 1956–57 priority moment. Broadside should cite both when it says "undecidable problems are not all equivalent." The Russian-school packaging (Markov's theory of algorithms, Doklady note) is the other half of the same theorem.
 
 ## Key ideas
 
-- Incomparable r.e. degrees.
-- Independent discovery.
-- Russian-school algorithms theory (Markov).
+- Original: А. А. Мучник, «Неразрешимость проблемы сводимости теории алгоритмов», *Доклады АН СССР* 108:2 (1956), 194–197. No DOI; Math-Net author page is the stable landing.
+- Shows there is no universal unsolvable r.e. problem: some r.e. sets do not Turing-reduce to others.
+- Independent of Friedberg's PNAS note; together they are the Friedberg–Muchnik theorem.
+- Followed by Muchnik's longer 1958 *Izvestiya* paper that develops the priority method in full.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/search?q=Muchnik+reducibility+1956
+- Math-Net author record: https://www.mathnet.ru/rus/person46479
+- Bibliographic form: Dokl. Akad. Nauk SSSR 108 (1956), no. 2, 194–197

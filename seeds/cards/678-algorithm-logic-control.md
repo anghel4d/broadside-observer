@@ -24,25 +24,13 @@ cites:
     year: 1974
     arxiv: null
     doi: null
-  - title: "Prolog in 10 Figures"
-    url: "https://doi.org/10.1145/3166.3168"
-    year: 1985
-    arxiv: null
-    doi: "10.1145/3166.3168"
-  - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
-    url: "https://doi.org/10.1109/69.43410"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/69.43410"
   - title: "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs"
-    url: "https://dl.acm.org/doi/10.1145/359576.359579"
+    url: "https://doi.org/10.1145/359576.359579"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359579"
 see:
   - "677-predicate-logic-as-programming-language"
-  - "679-prolog-in-10-figures"
-  - "039-what-you-always-wanted-to-know-about-datalog-and-never-dared"
   - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
@@ -50,25 +38,21 @@ see:
 
 ## One-sentence takeaway
 
-Separates logic (what) from control (how) as the organizing principle of logic programming.
+Kowalski separates the logic of an algorithm (what is true) from its control (how the deduction is scheduled), so you can change search without rewriting the clauses.
 
 ## Why it matters here
 
-The slogan paper — still the right decomposition when embedding query/logic DSLs in ano.
+This is still the right split when embedding a query/planner DSL in ano or GRID COMMAND: keep the rule base stable and swap the control — backtracking, tabling, or a frame-budgeted search.
 
 ## Key ideas
 
-- Logic component vs control component.
-- Program improvement by changing control without changing logic.
-- Clarifies Prolog's operational reading versus pure logic.
-- Widely cited beyond Prolog (search, planners, Datalog engines).
+- Hayes, Bibel, and Pratt had already said computation ≈ controlled deduction; Kowalski works out the programming consequences, including the Codd analogy (relational logic vs retrieval control).
+- Prolog's operational reading (clause order, goal order, cut) is *one* control component, not the meaning of the logic.
+- You improve a program by changing control while leaving the logic invariant — or by enriching the logic while keeping a fixed interpreter.
+- CACM 22(7), July 1979, DOI 10.1145/359131.359136.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/359131.359136](https://doi.org/10.1145/359131.359136)
-- URL: https://doi.org/10.1145/359131.359136

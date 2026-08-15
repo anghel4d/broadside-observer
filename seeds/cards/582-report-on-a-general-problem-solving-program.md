@@ -5,10 +5,10 @@ authors:
   - "J. C. Shaw"
   - "Herbert A. Simon"
 year: 1959
-venue: "IFIP Congress / RAND reports on GPS"
+venue: "IFIP Congress / RAND P-1584"
 arxiv: null
 doi: null
-source: "https://bitsavers.org/pdf/rand/ipl/"
+source: "https://iiif.library.cmu.edu/file/Simon_box00008_fld00538_bdl0001_doc0001/Simon_box00008_fld00538_bdl0001_doc0001.pdf"
 topics:
   - gps
   - means-ends
@@ -31,44 +31,31 @@ cites:
     year: 1958
     arxiv: null
     doi: "10.1037/h0048495"
-  - title: "Computer Science as Empirical Inquiry: Symbols and Search"
-    url: "https://doi.org/10.1145/360303.360308"
-    year: 1976
-    arxiv: null
-    doi: "10.1145/360303.360308"
-  - title: "Programs with Common Sense"
-    url: "https://www-formal.stanford.edu/jmc/mcc59.pdf"
-    year: 1959
-    arxiv: null
-    doi: null
 see:
   - "580-the-logic-theory-machine-a-complex-information-processing-sy"
   - "583-elements-of-a-theory-of-human-problem-solving"
-  - "584-computer-science-as-empirical-inquiry-symbols-and-search"
-  - "576-programs-with-common-sense"
 ---
 
 # Report on a General Problem-Solving Program
 
 ## One-sentence takeaway
 
-GPS applies means–ends analysis across domains—general problem solving as heuristic search.
+GPS factors means–ends analysis and planning out of the subject matter, applying the same object/operator/difference machinery to logic, trig, and algebra.
 
 ## Why it matters here
 
-Ancestor of GOAP/planning threads already in Broadside.
+GOAP and other Broadside planners still reduce "transform object a into b" via differences and operators. This 1959 report is that factorization.
 
 ## Key ideas
 
-- Means–ends analysis.
-- Operators and differences.
-- Domain-general architecture claim.
-- IPL-V implementations.
+- A problem is given as objects and operators; differences name what is wrong; operators are indexed by the differences they reduce.
+- Goal types: transform a into b; apply operator q to a; reduce difference d. Each type has a method that posts easier subgoals.
+- Means–ends analysis matches, reduces the most important difference, then retries the original transform.
+- Planning abstracts operators and solves a coarser problem first, then refines.
+- February 1959 working-paper draft (RAND / Carnegie) is the CMU-archived source; RAND P-1584 is the catalogued paper.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://bitsavers.org/pdf/rand/ipl/
+- URL: https://iiif.library.cmu.edu/file/Simon_box00008_fld00538_bdl0001_doc0001/Simon_box00008_fld00538_bdl0001_doc0001.pdf

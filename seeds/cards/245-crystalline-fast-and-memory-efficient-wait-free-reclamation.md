@@ -49,25 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Historically, memory management based on lock-free reference counting was very inefficient, especially for read-dominated workloads.
+Crystalline is wait-free even with dynamically recycled threads, lets any thread reclaim any other thread's retirees, and balances that work so it is both faster and leaner than EBR as thread counts grow.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Crystalline: Fast and Memory Efficient Wait-Free Reclamation).
+Anoptic job workers come and go; a reclaimer that stays wait-free across thread reuse and does not pin retired nodes to the retiring core is the one that fits a fiber/job pool.
 
 ## Key ideas
 
-- Historically, memory management based on lock-free reference counting was very inefficient, especially for read-dominated workloads.
-- Thus, approaches such as epoch-based reclamation (EBR), hazard pointers (HP), or a combination thereof have received significant attention.
-- EBR exhibits excellent performance but is blocking due to potentially unbounded memory usage.
-- In contrast, HP are non-blocking and achieve good memory efficiency but are much slower.
-- Moreover, HP are only lock-free in the general case.
+- EBR is fast but blocking (unbounded memory); hazard pointers are bounded but slow and only lock-free in general.
+- WFE is wait-free but memory-heavy and weak when oversubscribed; Hyaline is fast and lean but not wait-free.
+- Crystalline wants all three: wait-freedom, high throughput, high memory efficiency.
+- Asynchronous reclamation (any thread can free any retiree) plus an almost-balanced reclaim workload are what deliver the last two.
+- Uses widely available x86-64 / ARM64 instructions; throughput beats typical EBR as the thread count grows.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2108.02763](https://arxiv.org/abs/2108.02763)
-- URL: https://arxiv.org/abs/2108.02763
+- PDF: https://arxiv.org/pdf/2108.02763

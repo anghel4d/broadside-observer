@@ -58,24 +58,23 @@ see:
 
 ## One-sentence takeaway
 
-Autonomous agents that accomplish complex computer tasks with minimal human interventions have the potential to transform human-computer interaction, significantly enhancing accessibility and productivity.
+OSWorld is a real Ubuntu/Windows/macOS computer environment with 369 execution-graded open-ended tasks; humans exceed 72% success while the best LLM/VLM agent of the paper reaches 12%.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments)
+Computer-use agents for Broadside and GRID COMMAND cannot be scored on static screenshots. OSWorld is the harness pattern: real apps, initial-state setup, execution-based eval — and it shows GUI grounding, not planning prose, is the current cliff.
 
 ## Key ideas
 
-- Autonomous agents that accomplish complex computer tasks with minimal human interventions have the potential to transform human-computer interaction, significantly enhancing accessibility and productivity.
-- However, existing benchmarks either lack an interactive environment or are limited to environments specific to certain applications or domains, failing to reflect the diverse and complex nature of real-world computer use, thereby limiting the scope of tasks and agent scalability.
-- To address this issue, we introduce OSWorld, the first-of-its-kind scalable, real computer environment for multimodal agents, supporting task setup, execution-based evaluation, and interactive learning across various operating systems such as Ubuntu, Windows, and macOS.
-- OSWorld can serve as a unified, integrated
+- Prior benchmarks either lack a live environment or lock the agent into one app or domain.
+- OSWorld provides task setup, execution-based evaluation, and interactive learning across three desktop operating systems.
+- The accompanying benchmark has 369 tasks over real web and desktop apps, OS file I/O, and multi-app workflows, each with a setup config and a custom grader.
+- Human success is over 72.36%; the best model in the paper reaches 12.24%, failing mainly on GUI grounding and operational knowledge.
+- Environment, baselines, and data are published at https://os-world.github.io.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.07972](https://arxiv.org/abs/2404.07972)
-- URL: https://arxiv.org/abs/2404.07972
+- Project: https://os-world.github.io

@@ -28,42 +28,30 @@ cites:
     year: 1970
     arxiv: null
     doi: null
-  - title: "The Structure of the 'THE'-Multiprogramming System"
-    url: "https://doi.org/10.1145/363095.363143"
-    year: 1968
-    arxiv: null
-    doi: "10.1145/363095.363143"
-  - title: "Structured Programming with go to Statements"
-    url: "https://doi.org/10.1145/356635.356640"
-    year: 1974
-    arxiv: null
-    doi: "10.1145/356635.356640"
 see:
   - "625-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
   - "589-notes-on-structured-programming"
-  - "586-the-structure-of-the-the-multiprogramming-system"
-  - "598-structured-programming-with-go-to-statements"
 ---
 
 # Go To Statement Considered Harmful
 
 ## One-sentence takeaway
 
-Dijkstra's letter detonates unstructured goto—structured control as a moral and epistemic stance.
+Dijkstra's letter argues that unrestrained `goto` makes a program's progress unrelatable to a static textual index, wrecking human understanding.
 
 ## Why it matters here
 
-Culture-shift paper for languages; pairs with Böhm–Jacopini and Dijkstra's THE/notes.
+ano and engine control flow are readable only when the coordinate system is the text. This March 1968 CACM letter is why that is treated as a moral fact.
 
 ## Key ideas
 
-- Goto harms understandability.
-- Letter-to-editor form with outsized impact.
-- Fuels structured programming movement.
+- A programmer's understanding needs a discrete coordinate: textual position plus a bounded set of indices (loop counters, call stack).
+- `goto` lets the dynamic instruction pointer wander off that coordinate system; the more gotos, the worse the mismatch.
+- Böhm–Jacopini already showed sequence, selection, and iteration suffice; the letter is about epistemology, not computability.
+- Published as a letter to the editor (CACM 11(3):147–148), titled by Niklaus Wirth, not by Dijkstra.
+- Knuth's 1974 survey is the measured reply; Dijkstra's own *Notes* develop the constructive alternative.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

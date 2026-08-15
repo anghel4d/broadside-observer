@@ -19,7 +19,7 @@ relevance_score: 9
 lineage: foundations-of-computing
 cites:
   - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+    url: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
     year: 1965
     arxiv: null
     doi: null
@@ -29,7 +29,7 @@ cites:
     arxiv: null
     doi: "10.1145/321356.321363"
   - title: "Foundations of the Theory of Probability"
-    url: "https://www.worldcat.org/title/foundations-of-the-theory-of-probability/oclc/523"
+    url: "https://archive.org/details/foundationsofthe00kolm"
     year: 1933
     arxiv: null
     doi: "10.1007/978-3-642-49888-6"
@@ -43,23 +43,21 @@ see:
 
 ## One-sentence takeaway
 
-Martin-Löf defines randomness via constructive null covers—measure-theoretic algorithmic randomness.
+Martin-Löf defines an infinite sequence as random when it lies in no constructive measure-zero set — equivalently, when it passes every effective statistical test.
 
 ## Why it matters here
 
-Third leg of AIT with Kolmogorov/Chaitin; randomness as passing all effective tests.
+Third leg of AIT with Kolmogorov/Chaitin: randomness as *passing all computable tests*, not just incompressibility. That is the right language for "is this engine RNG / hash stream distinguishable from noise by any program we can write?"
 
 ## Key ideas
 
-- Martin-Löf randomness.
-- Constructive measure theory.
-- Equivalences with incompressibility later proved.
+- A Martin-Löf test is a uniformly computable sequence of open sets U_n with μ(U_n) ≤ 2^{−n}; the null cover ∩ U_n is an effective null set.
+- A sequence is random iff it avoids every such cover.
+- The definition is measure-theoretic (Kolmogorov 1933) but restricted to *constructive* null sets, so individual sequences can be called random.
+- Schnorr, Levin, Chaitin later prove equivalence (up to the usual O(1)) with prefix incompressibility of all prefixes.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1016/S0019-9958(66)80018-9](https://doi.org/10.1016/S0019-9958(66)80018-9)
-- URL: https://doi.org/10.1016/S0019-9958(66)80018-9

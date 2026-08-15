@@ -39,41 +39,32 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-  - title: "Can Programming Be Liberated from the von Neumann Style?"
-    url: "https://doi.org/10.1145/359576.359579"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359576.359579"
 see:
   - "617-the-mechanical-evaluation-of-expressions"
   - "618-a-correspondence-between-algol-60-and-church-s-lambda-notati"
   - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
   - "511-the-calculi-of-lambda-conversion"
-  - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # The Next 700 Programming Languages
 
 ## One-sentence takeaway
 
-Landin's ISWIM vision: many surface languages, one semantic core—λ as the next 700 languages' backbone.
+Landin argues that the next 700 languages should share one semantic core — ISWIM, i.e. applied λ-calculus with a thin syntactic skin — rather than each inventing a new evaluator.
 
 ## Why it matters here
 
-Prophecy of language families sharing semantics; FP design charter.
+Prophecy of language families sharing semantics. Ano as an array/ECS skin over a small core is exactly this program; off-side layout and `where` clauses are ISWIM fossils still in Haskell/Python.
 
 ## Key ideas
 
-- ISWIM.
-- Off-side rule.
-- λ-calculus as expressive core.
-- Families of languages vs one-off designs.
+- ISWIM ("If You See What I Mean"): λ plus assignment and a few imperative conveniences, not a new calculus.
+- The off-side rule: layout (indentation) as grouping, instead of begin/end noise.
+- `where` / auxiliary definitions as the user-facing form of let-binding.
+- Families of languages should differ in sugar and libraries, not in the underlying abstract machine.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/365230.365257](https://doi.org/10.1145/365230.365257)
-- URL: https://doi.org/10.1145/365230.365257

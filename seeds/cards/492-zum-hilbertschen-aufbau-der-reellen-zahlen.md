@@ -5,8 +5,8 @@ authors:
 year: 1928
 venue: "Mathematische Annalen"
 arxiv: null
-doi: "10.1007/BF01451579"
-source: "https://doi.org/10.1007/BF01451579"
+doi: "10.1007/BF01459088"
+source: "https://doi.org/10.1007/BF01459088"
 topics:
   - ackermann-function
   - proof-theory
@@ -18,48 +18,33 @@ pool: "maths-foundations"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "General recursive functions of natural numbers"
-    url: "https://doi.org/10.1007/BF01565439"
-    year: 1936
-    arxiv: null
-    doi: "10.1007/BF01565439"
   - title: "Grundzüge der theoretischen Logik"
     url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
     year: 1928
-    arxiv: null
     doi: "10.1007/978-3-642-86848-1"
-  - title: "Introduction to Metamathematics"
-    url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
-    year: 1952
-    arxiv: null
-    doi: null
 see:
-  - "525-general-recursive-functions-of-natural-numbers"
   - "491-grundzuge-der-theoretischen-logik"
-  - "529-introduction-to-metamathematics"
 ---
 
 # Zum Hilbertschen Aufbau der reellen Zahlen
 
 ## One-sentence takeaway
 
-Ackermann exhibited a recursive-but-not-primitive-recursive function, forcing the hierarchy that Kleene and others later systematized.
+Ackermann exhibits a ternary recursive function \(\varphi(a,b,n)\) that iterates addition into multiplication, exponentiation, and beyond, proving there are total computable functions outside the primitive-recursive hierarchy Hilbert needed for a finitary construction of the reals.
 
 ## Why it matters here
 
-Shows why 'recursive' needs careful stratification—relevant to totality, termination, and cost models in ano stacks.
+Shows why "recursive" needs stratification — relevant to totality, termination, and cost models in ano stacks long before Kleene's general recursive functions.
 
 ## Key ideas
 
-- Ackermann function grows faster than any primitive recursive function.
-- Pressures Hilbert's finitistic methods.
-- Ancestor of Grzegorczyk hierarchy and modern complexity hierarchies.
+- Written for Hilbert's higher-type construction of the reals (*Mathematische Annalen* 99:118–133, 1928).
+- The original function is ternary; the familiar two-variable \(A(m,n)\) is a later Péter/Robinson simplification, not Ackermann's notation.
+- \(\varphi\) is defined by nested recursion and grows faster than every primitive recursive function, so primitive recursion is a proper subclass of the computable.
+- Ancestor of the Grzegorczyk hierarchy and of modern arguments that "it terminates" is not the same as "it is primitive recursive."
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- DOI: [10.1007/BF01451579](https://doi.org/10.1007/BF01451579)
-- URL: https://doi.org/10.1007/BF01451579
+- DOI: [10.1007/BF01459088](https://doi.org/10.1007/BF01459088)

@@ -6,7 +6,7 @@ authors:
   - "Youngjin Kwon"
   - "Minsoo Rhu"
 year: 2025
-venue: "arXiv:cs.AR"
+venue: "HPCA 2026"
 arxiv: "2505.13002"
 doi: null
 source: "https://arxiv.org/abs/2505.13002"
@@ -18,9 +18,9 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
-    url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
-    year: 2013
+  - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
+    url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"
+    year: 1994
     arxiv: null
     doi: null
   - title: "Magazines and Vmem: Extending the Slab Allocator to Many CPUs and Arbitrary Resources"
@@ -28,40 +28,32 @@ cites:
     year: 2001
     arxiv: null
     doi: null
-  - title: "The Slab Allocator: An Object-Caching Kernel Memory Allocator"
-    url: "https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps"
-    year: 1994
-    arxiv: null
-    doi: null
 see:
-  - "195-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
-  - "199-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
   - "202-the-slab-allocator-an-object-caching-kernel-memory-allocator"
+  - "199-magazines-and-vmem-extending-the-slab-allocator-to-many-cpus"
 ---
 
 # PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures
 
 ## One-sentence takeaway
 
-The ability to dynamically allocate memory is fundamental in modern programming languages.
+PIM-malloc is a dynamic allocator that actually runs on real general-purpose PIM hardware, 66× faster than the vendor baseline, plus another 31% from a per-PIM-core hardware cache.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memor).
+Anoptic's near-memory / accelerator path cannot assume a host malloc; metadata placement and per-core caches are the same design axes as CPU magazines, just on the PIM side of the memory bus.
 
 ## Key ideas
 
-- The ability to dynamically allocate memory is fundamental in modern programming languages.
-- However, this feature is not adequately supported in current general-purpose PIM devices.
-- To identify key design principles that PIM must consider, we conduct a design space exploration of PIM memory allocators, examining various strategies for metadata placement and management of the allocator.
-- Based on this exploration, we introduce PIM-malloc, a fast and scalable memory allocator for general-purpose PIM that operates on real PIM hardware, achieving a x66 improvement in memory allocation performance.
-- This design is further enhanced with a lightweight, per-PIM core hardware cache, specifically designed for dynamic memory allocation, achieving an additional 31% performance improvement.
+- Current general-purpose PIM devices do not expose a usable malloc, so irregular PIM codes fall back to static buffers.
+- A design-space sweep varies where allocator metadata lives and how free lists are managed across PIM cores.
+- The software allocator alone delivers a 66× allocation-speedup on real PIM hardware.
+- A lightweight per-PIM-core hardware cache specialized for allocation metadata adds a further 31%.
+- Several representative PIM workloads are rewritten against the API to show the programmability win. Accepted to HPCA-32 (2026).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2505.13002](https://arxiv.org/abs/2505.13002)
-- URL: https://arxiv.org/abs/2505.13002
+- PDF: https://arxiv.org/pdf/2505.13002

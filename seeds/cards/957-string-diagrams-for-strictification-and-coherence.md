@@ -1,14 +1,14 @@
 ---
-title: "String diagrams for strictification and coherence"
+title: "String diagrams for Strictification and Coherence"
 authors:
   - "Paul Wilson"
   - "Dan Ghica"
   - "Fabio Zanasi"
 year: 2024
 venue: "Logical Methods in Computer Science"
-arxiv: null
+arxiv: "2201.11738"
 doi: "10.46298/lmcs-20(4:8)2024"
-source: "https://lmcs.episciences.org/13982"
+source: "https://arxiv.org/abs/2201.11738"
 topics:
   - "string-diagrams"
   - "coherence"
@@ -34,27 +34,27 @@ see:
   - "948-the-geometry-of-tensor-calculus-i"
 ---
 
-# String diagrams for strictification and coherence
+# String diagrams for Strictification and Coherence
 
 ## One-sentence takeaway
 
-String diagrams as a tool for strictification and coherence theorems — why you can pretend monoidal categories are strict when you draw wires.
+Wilson, Ghica, and Zanasi give a generators-and-relations string-diagram calculus for *non-strict* monoidal categories, and from it a graphical proof of Mac Lane's strictness and coherence theorems — why you may draw wires as if \(\otimes\) were strictly associative.
 
 ## Why it matters here
 
-The coherence lemma behind every NCD/Weaves diagram. Without it the pictures lie.
+Every NCD/Weaves picture pretends the monoidal structure is strict. This paper is the lemma that says the picture is not lying, and it is written in the same Wilson/Zanasi circle as the string-diagram textbook.
 
 ## Key ideas
 
-- LMCS 20(4):8, 2024. DOI `10.46298/lmcs-20(4:8)2024`.
-- Makes the 'draw it strict' move honest.
-- Same Wilson/Zanasi circle as lenses and the string-diagram textbook.
+- LMCS 20(4):8, 2024 (lmcs:13982). arXiv:2201.11738. Strict monoidal string diagrams were already standard; non-strict ones (associators and unitors as actual wires) were not.
+- A presentation by generators and relations handles applications in digital circuits and programming languages where the associator is not invisibly identity.
+- Correctness of the calculus yields a new proof of Mac Lane's strictness theorem (every monoidal category is monoidally equivalent to a strict one).
+- That in turn gives an elementary graphical proof of coherence, including an inductive construction of the canonical isomorphisms between parenthesizations.
 
 ## Caveats
 
-- Technical CT. Needed as a justification, not as an ML result.
-
 ## Links
 
+- arXiv: [2201.11738](https://arxiv.org/abs/2201.11738)
 - LMCS: https://lmcs.episciences.org/13982
 - DOI: https://doi.org/10.46298/lmcs-20(4:8)2024

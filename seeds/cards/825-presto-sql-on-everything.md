@@ -5,15 +5,18 @@ authors:
 - Martin Traverso
 - Dain Sundstrom
 - David Phillips
-- Xie Wenlei
+- Wenlei Xie
 - Yutian Sun
 - Nezih Yegitbasi
 - Haozhun Jin
+- Eric Hwang
+- Nileema Shingte
+- Christopher Berner
 year: 2019
-venue: ""
+venue: ICDE
 arxiv: null
-doi: 10.1109/icde.2019.00196
-source: "https://doi.org/10.1109/icde.2019.00196"
+doi: 10.1109/ICDE.2019.00196
+source: "https://doi.org/10.1109/ICDE.2019.00196"
 topics:
 - databases
 - contemporary-db
@@ -23,32 +26,29 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
 # Presto: SQL on Everything
 
 ## One-sentence takeaway
 
-Influential database systems paper (2019).
+Presto is Facebook’s ANSI-SQL engine that federates Hive, Kafka, MySQL, and proprietary stores through a coordinator/worker architecture with pipelined, in-memory, vectorized operators and a connector SPI, so one SQL dialect queries everything without first loading it into a warehouse.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+Broadside already lives across heterogeneous sources. Presto (now Trino) is the practical “SQL over adapters” engine sitting next to Calcite: use it when the job is interactive federation, not owning storage.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- A coordinator parses, plans, and schedules; workers execute pipelined fragments and shuffle over the network — no MapReduce materialization between stages.
+- The connector SPI lets a catalog own splits, layouts, and push-downs (projection, predicate, aggregation) so a Hive connector and a Kafka connector look the same to the planner.
+- Execution is vectorized and memory-oriented, with spilling as a backstop; the design target is human-interactive latency on warehouse-scale scans.
+- Isolation and multi-tenancy come from per-query resource tracking rather than from moving data into a dedicated warehouse cluster.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
-- DOI: [10.1109/icde.2019.00196](https://doi.org/10.1109/icde.2019.00196)
-- URL: https://doi.org/10.1109/icde.2019.00196
+- DOI: [10.1109/ICDE.2019.00196](https://doi.org/10.1109/ICDE.2019.00196)
+- URL: https://doi.org/10.1109/ICDE.2019.00196

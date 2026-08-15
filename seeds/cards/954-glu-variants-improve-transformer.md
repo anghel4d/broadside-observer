@@ -30,21 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-Replace Transformer FFN activations with GLU variants (including SwiGLU): a small gated product that became the default FFN in later LLMs.
+Shazeer replaces the Transformer FFN's single activation with a gated product of two linear maps (GLU / ReGLU / GEGLU / SwiGLU / bilinear) and, at matched parameter count, gets better T5 span-filling perplexity than ReLU, GELU, or Swish.
 
 ## Why it matters here
 
-An op Weaves has to broadcast elementwise. Also the FFN that DeepSeek-class models still sit on.
+SwiGLU/GEGLU became the default FFN in later LLMs, including the DeepSeek stack Broadside tracks. It is also an elementwise gated product Weaves has to broadcast honestly: two projections, a pointwise nonlinearity, a Hadamard product, then the output map.
 
 ## Key ideas
 
-- arXiv:2002.05202, 2020.
-- GLU = componentwise product of two linear maps, one gated (sigmoid or variant).
-- Empirically beats ReLU/GELU FFNs in Transformer seq2seq.
+- Classic GLU (Dauphin et al.) is \(\sigma(xW)\otimes xV\); variants swap \(\sigma\) for ReLU, GELU, Swish, or no gate (bilinear).
+- Three weight matrices instead of two, so \(d_{ff}\) is cut by \(2/3\) (3072 → 2048 in the T5-base replica) to hold FLOPs and params fixed.
+- On C4 span-filling, GEGLU and SwiGLU win held-out log-perplexity at 65k and 524k steps; bilinear and ReGLU also beat ReLU/GELU/Swish.
+- Fine-tuning on a GLUE/SuperGLUE/SQuAD mix is noisier but generally favors the GLU family; the note is empirical, not a theory of gating.
 
 ## Caveats
-
-- Short empirical note, not a theory paper. No diagrams.
 
 ## Links
 

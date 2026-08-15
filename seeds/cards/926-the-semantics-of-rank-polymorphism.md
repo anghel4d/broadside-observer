@@ -66,9 +66,6 @@ This is the missing formal spine for ano. BQN/q/APL programmers already think in
 
 ## Caveats
 
-- 2019 preprint / Remora line; not a BQN spec. Mapping Remora ranks onto ano’s column/mask model is design work.
-- Dependent shape types are the usual compilation headache — this paper is the semantics, not the LLVM story (see 1191 for idiom lowering).
-- Evergreen craft, not this week’s novelty; kept because the library had no rank-polymorphism card and ano needs one.
 
 ## Links
 

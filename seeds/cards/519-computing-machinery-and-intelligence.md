@@ -50,22 +50,20 @@ see:
 
 ## One-sentence takeaway
 
-Turing replaces 'Can machines think?' with the Imitation Game—the founding essay of AI as an empirical question.
+Turing replaces "Can machines think?" with the Imitation Game: an interrogator who cannot reliably tell the machine from the woman has no remaining operational question.
 
 ## Why it matters here
 
-Charter document for agents research; Broadside's agents pool sits downstream.
+Charter document for the agents pool. GRID COMMAND's NL orders and Broadside's agent loop inherit the same move: stop arguing about inner light and measure whether the system can hold the conversation (or the standing rule) under adversarial questioning.
 
 ## Key ideas
 
-- Imitation Game / Turing test.
-- Arguments from theology, consciousness, Lovelace, etc. answered.
-- Learning machines sketched.
-- Ties digital computers to cognitive possibility.
+- The Imitation Game isolates verbal performance from embodiment and from the interrogator's prejudices.
+- Replies, in turn, to theological, "heads in the sand," mathematical, consciousness, Lovelace, and extrasensory objections.
+- Sketches learning machines and child-machines as the practical path, not a giant lookup table.
+- Ties the stored-program digital computer of the ACE/EDVAC era to the possibility of intelligence as an empirical engineering claim.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

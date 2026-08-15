@@ -17,47 +17,41 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 cites:
-  - title: "L'integration dans les groupes topologiques et ses applications"
-    url: "https://openalex.org/W1532803486"
-    year: 1951
-    arxiv: null
-    doi: null
   - title: "Group Extensions and Homology"
     url: "https://doi.org/10.2307/1968966"
     year: 1942
     arxiv: null
     doi: "10.2307/1968966"
-  - title: "Algebraic topology"
-    url: "https://openlibrary.org/books/OL24924347M/Algebraic_topology"
-    year: 1942
+  - title: "Categories for the Working Mathematician (2nd ed.)"
+    url: "https://doi.org/10.1007/978-1-4757-4721-8"
+    year: 1998
     arxiv: null
-    doi: null
-  - title: "Entwicklungen von Räumen und ihren Gruppen"
-    url: "http://www.numdam.org/item/CM_1937__4__145_0/"
-    year: 1937
-    arxiv: null
-    doi: null
+    doi: "10.1007/978-1-4757-4721-8"
+see:
+  - "029-categories-for-the-working-mathematician-2nd-ed"
 ---
 
 # General Theory of Natural Equivalences
 
 ## One-sentence takeaway
 
-Introduces categories, functors, and natural transformations via natural equivalences.
+Eilenberg and Mac Lane introduce categories, functors, and natural transformations so that “natural” isomorphisms in homology — the connecting homomorphism, the Hurewicz map — become a definition rather than a handwave.
 
 ## Why it matters here
 
-Birth of categories/functors/natural transformations — compositional vocabulary Anoptic and ano keep rediscovering.
+Every later Broadside card that says functor, natural, or adjoint is speaking this 1945 vocabulary. Compositionality in ano and Anoptic is not a metaphor; it is the same naturality square.
 
 ## Key ideas
 
-- Introduces categories, functors, and natural transformations via natural equivalences.
+- A category is objects plus arrows with associative composition and identities; a functor preserves that structure; a natural transformation is a family of arrows commuting with every functorial image.
+- The motivating examples are homology and cohomology of groups and spaces: previously informal “canonical” maps become natural transformations, and uniqueness theorems become uniqueness of such transformations.
+- Duality (reverse all arrows) is already in the paper, which is why later dualities in algebra and PL feel formal rather than poetic.
+- *Trans. Amer. Math. Soc.* 58 (1945), 231–294; JSTOR / AMS DOI 10.2307/1990284.
+- Mac Lane’s *Categories for the Working Mathematician* (1971/1998) is the textbook expansion; this paper is the birth certificate.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.2307/1990284](https://doi.org/10.2307/1990284)
-- URL: https://doi.org/10.2307/1990284
+- AMS: https://www.ams.org/journals/tran/1945-058-00/S0002-9947-1945-0013131-6/

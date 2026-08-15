@@ -26,24 +26,23 @@ cites:
 
 ## One-sentence takeaway
 
-Introduces refinement types: subtype lattices of refinements over ML types.
+Programmer-declared recursive subtypes of ML datatypes form finite lattices; inference is abstract interpretation over those lattices, so `lastcons nil` is a compile-time error and exhaustive-match warnings go away.
 
 ## Why it matters here
 
-Ancestor of Liquid Types, Dependent ML, and modern refinement checkers.
+This is the ancestor of Liquid Types, Dependent ML, and every “finer than ML, still inferable” checker. If ano ever wants named distinctions (nonempty columns, standard-form bitstrings, head-normal terms) without full Π-types, the move is still: declare a regular-tree subtype, infer over the lattice.
 
 ## Key ideas
 
-- Intersection/refinement lattices.
-- Decidable fragments over ML.
-- Finer static invariants.
+- `rectype` declarations name recursively defined subtypes of an existing `datatype` (e.g. `α singleton = cons(α, nil)`); they do not extend the term language.
+- Only programs already well-typed in ML get refinements; constructors acquire intersection types that record how they act on each lattice point.
+- Intersection is allowed only among refinements of one ML type, which keeps inference decidable and plays with let-polymorphism.
+- Unions arise from `case`/`if`; the induced lattices are regular tree sets, so membership and constructor behavior are computable.
+- Examples: singleton lists, binary naturals in standard form (no leading zeros), head-normal λ-terms — invariants that used to live in comments.
 
 ## Caveats
-
-- Part of the gradual/refinement type-safety shelf.
-- Check mechanization status in follow-ons.
 
 ## Links
 
 - DOI: [10.1145/113445.113468](https://doi.org/10.1145/113445.113468)
-- URL: https://doi.org/10.1145/113445.113468
+- PDF: https://www.cs.cmu.edu/~fp/papers/pldi91.pdf

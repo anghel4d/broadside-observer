@@ -23,49 +23,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 10
 cites:
-  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
-    url: "https://arxiv.org/abs/2605.06716"
-    year: 2026
-    arxiv: "2605.06716"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2023
+    arxiv: "2210.03629"
     doi: null
-  - title: "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
-    url: "https://arxiv.org/abs/2605.09100"
-    year: 2026
-    arxiv: "2605.09100"
-    doi: null
-  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
-    url: "https://arxiv.org/abs/2603.11768"
-    year: 2026
-    arxiv: "2603.11768"
-    doi: null
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
+    doi: "10.1145/3586183.3606763"
 see:
-  - "056-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
-  - "057-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
-  - "058-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
+  - "003-generative-agents-interactive-simulacra-of-human-behavior"
 ---
 
 # Voyager: An Open-Ended Embodied Agent with Large Language Models
 
 ## One-sentence takeaway
 
-We introduce Voyager, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention.
+Voyager is a GPT-4 Minecraft agent that grows an executable skill library under an automatic exploration curriculum and iterative self-verification, unlocking tech-tree milestones up to 15.3× faster than prior SOTA without fine-tuning.
 
 ## Why it matters here
 
-skill libraries and continual evolution match standing research loops (Voyager: An Open-Ended Embodied Agent with Large Language Models)
+This is the standing-loop pattern Broadside wants for skill acquisition: store programs, not traces; retrieve them compositionally; let environment errors rewrite the next attempt. GRID COMMAND units and ano command libraries should grow the same way.
 
 ## Key ideas
 
-- We introduce Voyager, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention.
-- Voyager consists of three key components: 1) an automatic curriculum that maximizes exploration, 2) an ever-growing skill library of executable code for storing and retrieving complex behaviors, and 3) a new iterative prompting mechanism that incorporates environment feedback, execution errors, and self-verification for program improvement.
-- Voyager interacts with GPT-4 via blackbox queries, which bypasses the need for model parameter fine-tuning.
-- The skills developed by Voyager are temporally extended, interpretable, and compositional, which compounds the agent's abilities rapidly and
+- Three parts: an automatic curriculum that proposes progressively harder open-ended goals, a skill library of executable code indexed for retrieval, and an iterative prompting loop that folds in execution errors and self-checks.
+- Skills are temporally extended JavaScript programs, not one-shot actions, so later tasks compose earlier ones instead of relearning mine-wood-then-craft from scratch.
+- Interaction is black-box GPT-4 queries — no gradient updates — which makes the skill store the only persistent learned state.
+- Empirically: 3.3× more unique items, 2.3× longer travel, and up to 15.3× faster key tech-tree unlocks versus prior lifelong Minecraft agents.
+- The library transfers to a fresh world: Voyager solves novel tasks from scratch by retrieving stored skills, while baselines fail to generalize.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2305.16291](https://arxiv.org/abs/2305.16291)
-- URL: https://arxiv.org/abs/2305.16291
+- PDF: https://arxiv.org/pdf/2305.16291
+- Project: https://voyager.minedojo.org/

@@ -66,8 +66,6 @@ Allocator-as-composable-policy matches Anoptic/Lakos instincts: swap size-class,
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/378795.378821](https://doi.org/10.1145/378795.378821)

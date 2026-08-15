@@ -5,7 +5,7 @@ authors:
   - "Amin Timany"
   - "Lars Birkedal"
 year: 2026
-venue: "arXiv"
+venue: "arXiv:cs.PL"
 arxiv: "2607.15876"
 doi: null
 source: "https://arxiv.org/abs/2607.15876"
@@ -43,25 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-We present a new ML-like programming language Yarrow with algebraic effects and region-based memory management.
+Yarrow is an ML-like language with algebraic effects and regions; Yarrow Logic proves region safety for both one-shot and multi-shot handlers, including cases that break ordinary stack discipline.
 
 ## Why it matters here
 
-Effect systems/handlers inform ano masked command effects and handlers; Region/capability/ownership typing aligns with ano arenas and Sky purity.
+Ano arenas plus masked command handlers are exactly this collision: a handler that aborts or multi-shoots cannot be allowed to use a region after the region has been exited. Yarrow Logic is the reasoning pattern.
 
 ## Key ideas
 
-- We present a new ML-like programming language Yarrow with algebraic effects and region-based memory management.
-- Reconciling these programming language features into one language is challenging: the non-local control flow of algebraic effects break the stack discipline of function calls and returns that region-based memory management relies on, and multi-shot effect handlers break the invariant that regions can be exited at most once.
-- We present a program logic, called Yarrow Logic (YL), that supports safe and modular reasoning about regions in the presence of one-shot and multi-shot effect handlers.
-- We prove the logic sound w.r.t.
-- the operational semantics of Yarrow which is inspired by the runtime of OCaml but refined for regions.
+- Non-local handler control breaks the call/return stack that classical region management assumes; multi-shot handlers can exit a region more than once.
+- Yarrow Logic is a program logic for modular reasoning about regions in the presence of both one-shot and multi-shot handlers.
+- The operational semantics is OCaml-inspired but refined for regions; the logic is proved sound against it.
+- Case studies (checkpointing, async, a LIFO structure) allocate only in regions and avoid the GC heap.
+- Semantics, logic, and case studies are formalized in Iris on the Rocq Prover.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2607.15876](https://arxiv.org/abs/2607.15876)
-- URL: https://arxiv.org/abs/2607.15876

@@ -5,8 +5,8 @@ authors:
 year: 1981
 venue: "Algorithmic Languages (de Bakker/van Vliet, eds.)"
 arxiv: null
-doi: null
-source: "https://kilthub.cmu.edu/articles/journal_contribution/The_Essence_of_Algol/6608291"
+doi: "10.1007/978-1-4612-4118-8_4"
+source: "https://doi.org/10.1007/978-1-4612-4118-8_4"
 topics:
   - algol
   - reynolds
@@ -29,45 +29,38 @@ cites:
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
-  - title: "A Structural Approach to Operational Semantics"
-    url: "https://doi.org/10.1016/j.jlap.2004.05.001"
-    year: 1981
+  - title: "Report on the Algorithmic Language ALGOL 60"
+    url: "https://doi.org/10.1145/367236.367262"
+    year: 1960
     arxiv: null
-    doi: "10.1016/j.jlap.2004.05.001"
-  - title: "Separation Logic: A Logic for Shared Mutable Data Structures"
-    url: "https://doi.org/10.1109/LICS.2002.1029817"
-    year: 2002
-    arxiv: null
-    doi: "10.1109/LICS.2002.1029817"
+    doi: "10.1145/367236.367262"
 see:
   - "158-syntactic-control-of-interference"
   - "615-fundamental-concepts-in-programming-languages"
-  - "658-a-structural-approach-to-operational-semantics"
-  - "134-separation-logic-a-logic-for-shared-mutable-data-structures"
+  - "623-report-on-the-algorithmic-language-algol-60"
 ---
 
 # The Essence of Algol
 
 ## One-sentence takeaway
 
-Distills Idealized Algol: a typed combination of lambda calculus with local imperative state.
+Idealized Algol is a typed λ-calculus of phrases — expressions, commands, and acceptors — whose stack discipline and local store are the semantic core of Algol-class languages.
 
 ## Why it matters here
 
-Idealized Algol is the semantics laboratory for local state — companion to Reynolds SCI already in corpus.
+Anoptic’s engine is C with explicit arenas and command/query split, not a heap-λ. Reynolds’s phrase types are the clean model of “this thunk is a command, that one is a pure expression, and they must not interfere,” the same cut Syntactic Control of Interference later enforces.
 
 ## Key ideas
 
-- Procedure mechanism + stack discipline as essence.
-- Typed phrase types for commands/expressions.
-- Influences modern accounts of local store.
-- Pairs with Syntactic Control of Interference.
+- The procedure mechanism plus a stack-allocated local store, not assignment syntax, is what makes Algol Algol.
+- Phrase types distinguish commands, expressions, and acceptors so call-by-name procedures still have a typed meaning.
+- Local variables have block-bounded lifetimes; the semantics is designed so interference can be discussed, then controlled.
+- Strachey’s fundamental concepts and the ALGOL 60 report are the historical substrate; SCI (1978) is the companion discipline.
+- Originally in *Algorithmic Languages* (1981); commonly cited via the 1997 *Algol-like Languages* reprint (pp. 67–88).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://kilthub.cmu.edu/articles/journal_contribution/The_Essence_of_Algol/6608291
+- Reprint DOI: [10.1007/978-1-4612-4118-8_4](https://doi.org/10.1007/978-1-4612-4118-8_4)
+- Springer chapter: https://link.springer.com/chapter/10.1007/978-1-4612-4118-8_4

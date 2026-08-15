@@ -48,25 +48,22 @@ see:
 
 ## One-sentence takeaway
 
-DistServe improves the performance of large language models (LLMs) serving by disaggregating the prefill and decoding computation.
+DistServe puts prefill and decode on different GPUs so TTFT and TPOT can be provisioned independently, then places the two phases to minimize the KV-transfer tax.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories (DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model )
+Agent serving is prefill-heavy (long prompts, tools) and decode-latency-sensitive (interactive observers). Colocating the phases couples those SLOs; disaggregation is the goodput move.
 
 ## Key ideas
 
-- DistServe improves the performance of large language models (LLMs) serving by disaggregating the prefill and decoding computation.
-- Existing LLM serving systems colocate the two phases and batch the computation of prefill and decoding across all users and requests.
-- We find that this strategy not only leads to strong prefill-decoding interferences but also couples the resource allocation and parallelism plans for both phases.
-- LLM applications often emphasize individual latency for each phase: time to first token (TTFT) for the prefill phase and time per output token (TPOT) of each request for the decoding phase.
-- In the presence of stringent latency requirements, existing systems have to prioritize one latency over the other, or over-provision compute resources to meet both.
+- Colocated prefill+decode batches interfere: a new prefill stalls in-flight decodes, and the two phases want different parallelism.
+- Applications care about TTFT (prefill) and TPOT (decode) separately; one colocated plan cannot hit both without overprovisioning.
+- DistServe assigns the phases to different GPUs and co-optimizes resource and parallelism plans per phase against those two SLOs.
+- Placement respects cluster bandwidth so the disaggregated KV handoff stays cheap.
+- Evaluations report 7.4× more requests or 12.6× tighter SLOs than prior systems while keeping >90% of requests inside latency limits.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2401.09670](https://arxiv.org/abs/2401.09670)
-- URL: https://arxiv.org/abs/2401.09670

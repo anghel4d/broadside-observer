@@ -6,7 +6,7 @@ authors:
   - "Xigui Wang"
   - "Xiaocheng Zhou"
 year: 2020
-venue: "arXiv:cs.RO"
+venue: "arXiv cs.RO"
 arxiv: "2011.09117"
 doi: null
 source: "https://arxiv.org/abs/2011.09117"
@@ -18,56 +18,26 @@ reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 9
 cites:
-  - title: "Real-Time Collision Detection"
-    url: "https://doi.org/10.1201/b14581"
-    year: 2004
+  - title: "A Fast Procedure for Computing the Distance Between Complex Objects in Three-Dimensional Space"
+    url: "https://doi.org/10.1109/56.2083"
+    year: 1988
     arxiv: null
-    doi: "10.1201/b14581"
-  - title: "MuJoCo: A physics engine for model-based control"
-    url: "https://doi.org/10.1109/iros.2012.6386109"
-    year: 2012
-    arxiv: null
-    doi: "10.1109/iros.2012.6386109"
-  - title: "FCL: A general purpose library for collision and proximity queries"
-    url: "https://doi.org/10.1109/icra.2012.6225337"
-    year: 2012
-    arxiv: null
-    doi: "10.1109/icra.2012.6225337"
-  - title: "A fast algorithm for incremental distance calculation"
-    url: "https://doi.org/10.1109/robot.1991.131723"
-    year: 2002
-    arxiv: null
-    doi: "10.1109/robot.1991.131723"
-  - title: "Improving the GJK Algorithm for Faster and More Reliable Distance Queries Between Convex Objects"
-    url: "https://doi.org/10.1145/3072959.3083724"
-    year: 2017
-    arxiv: null
-    doi: "10.1145/3072959.3083724"
-  - title: "CGAL"
-    url: "https://doi.org/10.1145/1653771.1653865"
-    year: 2009
-    arxiv: null
-    doi: "10.1145/1653771.1653865"
-  - title: "V-Clip"
-    url: "https://doi.org/10.1145/285857.285860"
-    year: 1998
-    arxiv: null
-    doi: "10.1145/285857.285860"
-  - title: "Real-time collision detection and distance computation on point cloud sensor data"
-    url: "https://doi.org/10.1109/icra.2013.6631081"
-    year: 2013
-    arxiv: null
-    doi: "10.1109/icra.2013.6631081"
-  - title: "Enhancing GJK: computing minimum and penetration distances between convex polyhedra"
-    url: "https://doi.org/10.1109/robot.1997.606761"
-    year: 2002
-    arxiv: null
-    doi: "10.1109/robot.1997.606761"
+    doi: "10.1109/56.2083"
   - title: "A Fast and Robust GJK Implementation for Collision Detection of Convex Objects"
     url: "https://doi.org/10.1080/10867651.1999.10487502"
     year: 1999
     arxiv: null
     doi: "10.1080/10867651.1999.10487502"
+  - title: "Enhancing GJK: Computing Minimum and Penetration Distances between Convex Polyhedra"
+    url: "https://doi.org/10.1109/ROBOT.1997.606761"
+    year: 1997
+    arxiv: null
+    doi: "10.1109/ROBOT.1997.606761"
+  - title: "Real-Time Collision Detection"
+    url: "https://doi.org/10.1201/b14581"
+    year: 2005
+    arxiv: null
+    doi: "10.1201/b14581"
 see:
   - "295-real-time-collision-detection"
 ---
@@ -76,25 +46,22 @@ see:
 
 ## One-sentence takeaway
 
-In this paper, we present a more efficient GJK algorithm to solve the collision detection and distance query problems in 2D.
+A 2D GJK rewrite that classifies the closest simplex with barycentric region codes, then early-outs when only a boolean hit test is needed, beating Bullet, FCL, OpenGJK, Box2D, and Apollo on random convex pairs.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Barycode-based GJK Algorithm).
+Anoptic's physics and pickup traces still sit on GJK-family closest-feature queries. A cheaper 2D distance kernel with a binary-only fast path is the right shape for GRID COMMAND hit tests and for keeping engine collision off the agent tick.
 
 ## Key ideas
 
-- In this paper, we present a more efficient GJK algorithm to solve the collision detection and distance query problems in 2D.
-- We contribute in two aspects: First, we propose a new barycode-based sub-distance algorithm that does not only provide a simple and unified condition to determine the minimum simplex but also improve the efficiency in distant, touching, and overlap cases in distance query.
-- Second, we provide a highly efficient implementation subroutine for collision detection by optimizing the exit conditions of our GJK distance algorithm, which shows dramatic improvements in run-time for applications that only need binary results.
-- We benchmark our methods along with that of the well-known open-source collision detection libraries, such as Bullet, FCL, OpenGJK, Box2D, and Apollo over a range of random datasets.
-- The results indicate that our methods and implementations outperform the state-of-the-art in both collision detection and distance query.
+- Replace Johnson's sub-distance casework with a barycode: the signs of barycentric coordinates pick the Voronoi region of the current simplex in one unified test.
+- The same code path covers distant, touching, and overlapping pairs instead of splitting those cases into separate Johnson branches.
+- A collision-only subroutine tightens GJK exit conditions so a separating-axis witness can stop before a full closest-point solve.
+- Benchmarks against Bullet, FCL, OpenGJK, Box2D, and Apollo on random 2D convex sets show wins for both distance and boolean queries.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2011.09117](https://arxiv.org/abs/2011.09117)
-- URL: https://arxiv.org/abs/2011.09117
+- PDF: https://arxiv.org/pdf/2011.09117

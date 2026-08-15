@@ -4,7 +4,7 @@ authors:
   - "Anton Kaplanyan"
   - "Carsten Dachsbacher"
 year: 2010
-venue: "I3D"
+venue: "I3D 2010"
 arxiv: null
 doi: "10.1145/1730804.1730821"
 source: "https://doi.org/10.1145/1730804.1730821"
@@ -49,25 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-Nested lattices of spherical-harmonics light volumes that propagate indirect light in fully dynamic scenes — CryEngine-era cascaded RTGI.
+Nested lattices of low-order spherical-harmonics light volumes inject RSM virtual point lights and propagate them through a geometry volume, giving fully dynamic indirect light at console budgets.
 
 ## Why it matters here
 
-Key classical foil for Radiance Cascades: LPV already uses cascaded spatial LOD for dynamic GI; RC reframes the cascade idea around radiance intervals and the penumbra hypothesis instead of SH lattice propagation.
+Classical cascade foil for Radiance Cascades: LPV already used nested spatial LOD for dynamic GI. RC reframes the cascade around radiance intervals and the penumbra hypothesis instead of SH lattice hops.
 
 ## Key ideas
 
-- Represent spatial and angular light distribution with lattices + low-order spherical harmonics.
-- Cascaded nested grids follow the camera for high near-field resolution and cheap far coverage.
-- Injects RSM-style indirect sources then propagates through a geometry volume for fuzzy occlusion.
-- Shipped-quality budgets (milliseconds on consoles) made volumetric GI industrially credible.
+- Represent spatial and angular irradiance with a 3D grid of low-order SH coefficients.
+- Cascaded nested grids follow the camera: fine near-field cells, cheap far coverage.
+- Inject secondary sources from reflective shadow maps, then iteratively propagate through an occupancy / geometry volume for fuzzy occlusion.
+- Shipped in CryEngine 3-era titles at millisecond console budgets, which made volumetric GI industrially credible.
+- Low-order SH smears high-frequency directionality; light leaking is the known LPV failure mode.
 
 ## Caveats
-
-- Low-order SH smears high-frequency directionality; light leaking remains a known LPV issue.
-- Card previously titled “LPV in CryEngine 3”; DOI points at the I3D Cascaded LPV paper — title corrected in this lineage pass.
 
 ## Links
 
 - DOI: [10.1145/1730804.1730821](https://doi.org/10.1145/1730804.1730821)
-- URL: https://doi.org/10.1145/1730804.1730821

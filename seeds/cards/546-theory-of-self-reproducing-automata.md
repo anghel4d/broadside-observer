@@ -7,7 +7,7 @@ year: 1966
 venue: "University of Illinois Press (posthumous)"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/theory-of-self-reproducing-automata/oclc/523589"
+source: "https://archive.org/details/theoryofselfrepr00vonn_0"
 topics:
   - self-reproduction
   - cellular-automata
@@ -21,7 +21,7 @@ relevance_score: 10
 lineage: foundations-of-computing
 cites:
   - title: "The General and Logical Theory of Automata"
-    url: "https://www.worldcat.org/title/cerebral-mechanisms-in-behavior/oclc/1123456"
+    url: "https://www.vordenker.de/ggphilosophy/jvn_the-general-and-logical-theory-of-automata.pdf"
     year: 1951
     arxiv: null
     doi: null
@@ -36,7 +36,7 @@ cites:
     arxiv: null
     doi: "10.1098/rstb.1952.0012"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.rand.org/pubs/research_memoranda/RM704.html"
     year: 1956
     arxiv: null
     doi: null
@@ -51,23 +51,22 @@ see:
 
 ## One-sentence takeaway
 
-Von Neumann's universal constructor shows a cellular automaton can carry and copy a description of itself—life as computation.
+Von Neumann's universal constructor is a cellular automaton that reads a tape description of itself, builds the corresponding machine, and copies the tape—life as computation.
 
 ## Why it matters here
 
-Founding cellular automata + self-rep; relevant to procedural simulation and 'code as genome' metaphors in Anoptic.
+Founding cellular automata plus self-reproduction. Anoptic procedural simulation, "code as genome," and any later reconstructible engine state sit on this split: a *phenotypic* constructor plus a *genotypic* description that is copied uninterpreted. Turing's morphogenesis is the continuous cousin; this is the discrete one.
 
 ## Key ideas
 
-- 29-state cellular automaton design.
-- Universal constructor + tape description.
-- Distinction of phenotypic construction vs genotypic copy.
-- Burks edition of unfinished manuscript.
+- A 29-state 2-D cellular automaton hosts a universal constructor that can assemble any machine whose description is on a tape of cells.
+- Self-reproduction is the special case: the tape describes the constructor itself; construction is followed by a separate copy of the tape.
+- Distinguishes kinematic (robot-in-a-warehouse) from cellular models; Burks completes the unfinished cellular manuscript.
+- Posthumous 1966 University of Illinois Press edition, edited and completed by Arthur W. Burks.
 
 ## Caveats
 
-- Posthumous reconstruction by Burks; not a finished von Neumann book.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/theory-of-self-reproducing-automata/oclc/523589
+- Internet Archive: https://archive.org/details/theoryofselfrepr00vonn_0
+- Alternate scan: https://archive.org/details/theoryofselfrepr0000vonn_x7g0

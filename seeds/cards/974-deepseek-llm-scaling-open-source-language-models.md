@@ -35,23 +35,20 @@ see:
 
 ## One-sentence takeaway
 
-First DeepSeek dense stack: 7B/67B models trained on 2T tokens under in-house scaling laws, with SFT+DPO chat variants that beat Llama-2 70B on code/math.
+DeepSeek's first dense stack: 7B and 67B Transformers trained on a continuously expanding 2T-token corpus under in-house scaling laws, then SFT+DPO chat variants that they report above Llama-2 70B on code/math/reasoning and above GPT-3.5 on open-ended evals.
 
 ## Why it matters here
 
-The origin of the DeepSeek lab line Broadside already holds as V3 (1206). Scaling-law + alignment recipe that later MoE/MLA reports assume.
+Origin of the DeepSeek line Broadside already holds as V3. The scaling-law fit, tokenizer, data pipeline, and alignment stack are what later MoE/MLA reports assume rather than re-derive.
 
 ## Key ideas
 
-- arXiv:2401.02954; 7B and 67B dense Transformers; 2T-token pretrain corpus described as continuously expanding.
-- In-house scaling-law study for the two open-source sizes; they argue published scaling curves disagree and re-fit for their setup.
-- Chat models via SFT then DPO; 67B claimed above Llama-2 70B on code, math, and reasoning, and above GPT-3.5 on open-ended evals.
-- Dense ancestor of DeepSeekMoE / V2 / V3 — later papers reuse tokenizer, data pipeline, and alignment stack.
+- arXiv:2401.02954. Published scaling curves disagreed; they re-fit laws for the two open-source sizes (7B, 67B) and used those fits to set the training budget.
+- Pretrain corpus described as 2T tokens and still growing; architecture is a dense Transformer (SwiGLU-class FFN), not MoE and not MLA.
+- Chat models: SFT then DPO on the Base checkpoints. 67B claimed above Llama-2 70B especially on code, math, and reasoning.
+- Dense ancestor of DeepSeekMoE / V2 / V3 — later papers reuse tokenizer, data pipeline, and alignment rather than starting over.
 
 ## Caveats
-
-- Dense, not MoE; no MLA. Subsequent reports supersede the architecture.
-- Benchmarks are 2023–24 vintage; treat numbers as historical, not current SOTA.
 
 ## Links
 

@@ -61,21 +61,22 @@ see:
 
 ## One-sentence takeaway
 
-Shows logical operations including quantifiers arise as adjoint functors.
+Lawvere shows that the basic operations of logic — including the quantifiers — arise as adjoint functors, so the rules of inference are unit/counit laws rather than independently postulated schemas.
 
 ## Why it matters here
 
-Quantifiers as adjoints — pattern behind query-as-right-adjoint in typed ECS languages.
+Typed ECS query is the same pattern: restriction/substitution is a diagonal, existential aggregation is a left adjoint, and universal/“all matching entities” is a right adjoint. Design the query combinators as that adjoint triple, not as ad-hoc folds.
 
 ## Key ideas
 
-- Shows logical operations including quantifiers arise as adjoint functors.
+- Conjunction and implication appear as the product ⊣ exponential adjunction; truth values live in a cartesian closed structure.
+- For a projection or weakening functor \(p^*\), existential quantification is a left adjoint and universal quantification a right adjoint: \(\exists \dashv p^* \dashv \forall\).
+- Equality and substitution fit the same calculus: substitution is reindexing, and equality is the corresponding left adjoint (or unit) data.
+- Foundational systems can be stated as a handful of adjointness axioms instead of a long list of logical rules.
+- Once the adjoints are fixed, the usual βη/triangle identities are the proof theory.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1111/j.1746-8361.1969.tb01194.x](https://doi.org/10.1111/j.1746-8361.1969.tb01194.x)
-- URL: https://doi.org/10.1111/j.1746-8361.1969.tb01194.x

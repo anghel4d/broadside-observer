@@ -55,10 +55,8 @@ Classical real-time GI precursor for the Radiance Cascades spine: Instant Radios
 
 ## Caveats
 
-- Classic SIGGRAPH result; production systems usually use later GPU specializations (RSM/LPV) rather than the 1997 procedure literally.
-- Does not itself introduce cascaded spatial/angular LOD — that arrives with LPV cascades and then Radiance Cascades.
-
 ## Links
 
 - DOI: [10.1145/258734.258769](https://doi.org/10.1145/258734.258769)
 - URL: https://doi.org/10.1145/258734.258769
+- PDF: https://www.cg.tuwien.ac.at/courses/Rendering/InstantRadiosity.pdf

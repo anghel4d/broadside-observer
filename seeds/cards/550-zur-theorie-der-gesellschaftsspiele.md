@@ -43,21 +43,20 @@ see:
 
 ## One-sentence takeaway
 
-Von Neumann's minimax theorem founds game theory—strategic computation before computers.
+Von Neumann proves the minimax theorem for finite two-person zero-sum games: every such game has a value, achieved by mixed strategies.
 
 ## Why it matters here
 
-Downstream of agents/game-AI; mathematical ancestor of adversarial search.
+Mathematical ancestor of adversarial search in GRID COMMAND and of every later game-AI card. Before there is a computer, there is already a theorem that "best play" is a well-defined number; Shannon's chess paper and the 1944 *Theory of Games* book are the two immediate descendants.
 
 ## Key ideas
 
-- Minimax for zero-sum games.
-- Strategic form analysis.
-- Leads to von Neumann–Morgenstern 1944.
+- A finite zero-sum game is a payoff matrix; a mixed strategy is a probability vector over rows (or columns).
+- Minimax: \(\max_x \min_y x^\top A y = \min_y \max_x x^\top A y\), so the game has a unique value.
+- Pure-strategy saddle points are the special case; mixing is what guarantees existence in general.
+- Leads directly to von Neumann–Morgenstern 1944, which adds utility theory and \(n\)-person coalitions.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

@@ -5,7 +5,7 @@ authors:
   - "Guy E. Blelloch"
   - "Yuanhao Wei"
 year: 2022
-venue: "arXiv:cs.DC"
+venue: "PPoPP 2022"
 arxiv: "2201.00813"
 doi: null
 source: "https://arxiv.org/abs/2201.00813"
@@ -17,50 +17,42 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Lock-Free Locks Revisited
 
 ## One-sentence takeaway
 
-This paper presents a new and practical approach to lock-free locks based on helping, which allows the user to write code using fine-grained locks, but run it in a lock-free manner.
+Flock lets you write fine-grained lock-based C++ and run it lock-free: helpers replay the critical section through idempotent loads/stores logged so multiple executions look like one.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Lock-Free Locks Revisited).
+Anoptic still has lock-shaped resource tables; Flock is the path that keeps that code and only swaps the lock implementation, which is how 218's recoverable transform later sits on the same idea.
 
 ## Key ideas
 
-- This paper presents a new and practical approach to lock-free locks based on helping, which allows the user to write code using fine-grained locks, but run it in a lock-free manner.
-- Although lock-free locks have been suggested in the past, they are widely viewed as impractical, have some key limitations, and, as far as we know, have never been implemented.
-- The paper presents some key techniques that make lock-free locks practical and more general.
-- The most important technique is an approach to idempotence -- i.e.
-- making code that runs multiple times appear as if it ran once.
+- Earlier lock-free locks were considered impractical and, the authors say, had never actually been implemented.
+- Idempotence is the key trick: a shared log plus idempotent load/store/LL-SC/alloc/free makes a helped critical section appear once.
+- The library is almost drop-in — user code just uses those idempotent primitives inside the locked region.
+- Flock can run the same data structure in lock-free or ordinary blocking mode.
+- Lock-free mode matches blocking speed on most workloads and wins when threads are oversubscribed. Trees and lists are the evaluated structures. PPoPP 2022.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2201.00813](https://arxiv.org/abs/2201.00813)
-- URL: https://arxiv.org/abs/2201.00813
+- PDF: https://arxiv.org/pdf/2201.00813

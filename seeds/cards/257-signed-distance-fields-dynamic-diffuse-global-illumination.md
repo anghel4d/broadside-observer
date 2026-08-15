@@ -8,7 +8,7 @@ authors:
   - "Xiangjun Tang"
   - "Xiaogang Jin"
 year: 2020
-venue: "arXiv:cs.GR"
+venue: "arXiv cs.GR"
 arxiv: "2007.14394"
 doi: null
 source: "https://arxiv.org/abs/2007.14394"
@@ -36,22 +36,22 @@ see:
 
 ## One-sentence takeaway
 
-Estimate dynamic diffuse GI by combining an SDF scene approx with a discretized irradiance field — multi-bounce without RTX-class probes.
+Dynamic diffuse GI from an SDF scene plus a discretized irradiance field: multi-bounce, no precompute, no RTX-class hardware, and no Monte-Carlo noise.
 
 ## Why it matters here
 
-SDF-domain neighbor of the probe foil branch; relevant when Anoptic already leans on SDFs for gameplay/VFX and wants GI coupling options beside RC.
+If Anoptic already keeps SDFs for gameplay traces and VFX, this is the GI coupling that does not demand a probe lattice or a hardware RT core — a third foil beside DDGI and Radiance Cascades.
 
 ## Key ideas
 
-- SDF approximation of geometry for visibility/occlusion queries.
-- Discretized irradiance field supports dynamic lights/geometry without heavy precomputation.
+- Approximate scene geometry with a signed distance field and use it for visibility / occlusion instead of ray-traced meshes.
+- Discretize irradiance over space so lighting and geometry can move without a bake.
+- Supports multi-bounce diffuse GI in real time on both large open scenes and dense interiors.
+- Claims better scaling than noisy RTGI and fewer light-leak / bounce-cap failure modes than contemporaneous probe methods.
 
 ## Caveats
-
-- SDF fidelity caps lighting accuracy; different failure mode than cascade ringing or probe leaks.
 
 ## Links
 
 - arXiv: [2007.14394](https://arxiv.org/abs/2007.14394)
-- URL: https://arxiv.org/abs/2007.14394
+- PDF: https://arxiv.org/pdf/2007.14394

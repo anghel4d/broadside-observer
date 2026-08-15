@@ -7,7 +7,7 @@ year: 1986
 venue: "Formal Description of Programming Concepts III (IFIP)"
 arxiv: null
 doi: null
-source: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
+source: "https://scholarworks.iu.edu/dspace/items/d85303cb-faee-4396-bf56-b03b35758a47"
 topics:
   - cek
   - secd
@@ -26,16 +26,11 @@ cites:
     year: 1964
     arxiv: null
     doi: "10.1093/comjnl/6.4.308"
-  - title: "The Next 700 Programming Languages"
-    url: "https://doi.org/10.1145/365230.365257"
-    year: 1966
+  - title: "A Syntactic Theory of Sequential Control"
+    url: "https://doi.org/10.1016/0304-3975(87)90109-5"
+    year: 1987
     arxiv: null
-    doi: "10.1145/365230.365257"
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/155090.155113"
+    doi: "10.1016/0304-3975(87)90109-5"
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
@@ -43,8 +38,6 @@ cites:
     doi: "10.1145/800194.805852"
 see:
   - "617-the-mechanical-evaluation-of-expressions"
-  - "616-the-next-700-programming-languages"
-  - "666-the-essence-of-compiling-with-continuations"
   - "630-definitional-interpreters-for-higher-order-programming-langu"
 ---
 
@@ -52,24 +45,21 @@ see:
 
 ## One-sentence takeaway
 
-Derives the CEK machine and relates control operators to Landin's SECD tradition.
+Felleisen and Friedman derive the CEK machine — Control, Environment, Kontinuation — from Landin's SECD by making the continuation an explicit state component that control operators can capture.
 
 ## Why it matters here
 
-CEK is the standard abstract machine teaching tool — bridges Landin SECD to modern reduction semantics.
+CEK is the abstract machine you actually teach and implement for ano interpreters; SECD is the ancestor, CESK/AAM the descendants. The old Northeastern PDF 404s; Indiana TR197 is the stable copy.
 
 ## Key ideas
 
-- CEK: Control, Environment, Kontinuation machine.
-- Explicit continuations as machine state.
-- Connects SECD to contemporary λ-calculus machines.
-- Ancestor of CESK and abstracting abstract machines.
+- SECD's dump is refactored into a first-class continuation register; the resulting CEK transitions are small-step and close under `call/cc`-style operators.
+- Control operators become ordinary machine instructions that reify or replace the K component, instead of informal jumps out of the evaluator.
+- The paper is the 1986 Indiana TR197, published in IFIP FDPC III (1987), pp. 193–217.
+- Direct ancestor of Felleisen's reduction semantics and of Van Horn–Might abstracting abstract machines.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf
+- Indiana TR197: https://scholarworks.iu.edu/dspace/items/d85303cb-faee-4396-bf56-b03b35758a47

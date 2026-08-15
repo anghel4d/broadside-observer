@@ -4,7 +4,7 @@ authors:
 - K. Mani Chandy
 - Leslie Lamport
 year: 1985
-venue: ACM TOCS
+venue: ACM Transactions on Computer Systems
 arxiv: null
 doi: 10.1145/214451.214456
 source: "https://doi.org/10.1145/214451.214456"
@@ -32,23 +32,20 @@ see:
 
 ## One-sentence takeaway
 
-Chandy-Lamport snapshot algorithm for consistent global states.
+Chandy–Lamport records a consistent global state without pausing the system: a process saves its local state and floods a marker on every outgoing FIFO channel; incoming messages before the marker are channel state.
 
 ## Why it matters here
 
-Checkpoint/telemetry consistency primitive for distributed sims.
+This is the checkpoint/telemetry cut for distributed Anoptic sims and Broadside multi-node ingest: a consistent snapshot you can take while the world keeps ticking.
 
 ## Key ideas
 
-- Marker messages on FIFO channels.
-- Consistent cuts without stopping the system.
-- Records local state plus channel state.
-- Foundation for distributed debugging.
+- A cut is consistent if no recorded receive lacks its send — markers implement that rule on FIFO channels.
+- The initiator records its state and sends markers; a process that first sees a marker records its own state, then forwards markers.
+- Messages received on a channel after the local snapshot and before that channel’s marker are saved as in-flight channel state.
+- The recorded state “could have occurred” and is enough to detect stable properties (termination, deadlock) even if it never occurred as a simultaneous freeze.
 
 ## Caveats
-
-- Assumes FIFO channels in classic form.
-- Not a consensus algorithm.
 
 ## Links
 

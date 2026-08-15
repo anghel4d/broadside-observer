@@ -28,78 +28,60 @@ cites:
     arxiv: null
     doi: "10.1038/nature12160"
   - title: "Neural Machine Translation by Jointly Learning to Align and Translate"
-    url: "http://arxiv.org/abs/1409.0473"
+    url: "https://arxiv.org/abs/1409.0473"
     year: 2014
     arxiv: "1409.0473"
-    doi: "10.48550/arxiv.1409.0473"
+    doi: null
   - title: "Sequence to Sequence Learning with Neural Networks"
-    url: "http://arxiv.org/abs/1409.3215"
+    url: "https://arxiv.org/abs/1409.3215"
     year: 2014
     arxiv: "1409.3215"
-    doi: "10.48550/arxiv.1409.3215"
+    doi: null
   - title: "Generating Sequences With Recurrent Neural Networks"
-    url: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.TIME.2019.10"
+    url: "https://arxiv.org/abs/1308.0850"
     year: 2013
-    arxiv: null
-    doi: "10.4230/lipics.fun.2016.3"
+    arxiv: "1308.0850"
+    doi: null
   - title: "Hyperdimensional Computing: An Introduction to Computing in Distributed Representation with High-Dimensional Random Vectors"
     url: "https://doi.org/10.1007/s12559-009-9009-8"
     year: 2009
     arxiv: null
     doi: "10.1007/s12559-009-9009-8"
-  - title: "Parallel &amp; distributed processing"
-    url: "https://doi.org/10.1145/1198555.1198750"
-    year: 2005
-    arxiv: null
-    doi: "10.1145/1198555.1198750"
-  - title: "The cognitive revolution: a historical perspective"
-    url: "https://doi.org/10.1016/s1364-6613(03)00029-9"
-    year: 2003
-    arxiv: null
-    doi: "10.1016/s1364-6613(03)00029-9"
-  - title: "Time Constraints and Resource Sharing in Adults' Working Memory Spans."
-    url: "https://doi.org/10.1037/0096-3445.133.1.83"
-    year: 2004
-    arxiv: null
-    doi: "10.1037/0096-3445.133.1.83"
-  - title: "The evolution of the language faculty: Clarifications and implications"
-    url: "https://doi.org/10.1016/j.cognition.2005.02.005"
-    year: 2005
-    arxiv: null
-    doi: "10.1016/j.cognition.2005.02.005"
   - title: "Long Short-Term Memory"
     url: "https://doi.org/10.1162/neco.1997.9.8.1735"
     year: 1997
     arxiv: null
     doi: "10.1162/neco.1997.9.8.1735"
   - title: "Towards End-To-End Speech Recognition with Recurrent Neural Networks"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.664.3860"
+    url: "https://proceedings.mlr.press/v32/graves14.html"
     year: 2014
     arxiv: null
     doi: null
+see: []
 ---
 
 # Neural Turing Machines
 
 ## One-sentence takeaway
 
-We extend the capabilities of neural networks by coupling them to external memory resources, which they can interact with by attentional processes.
+An NTM is a neural controller plus an N×M memory matrix whose read/write heads are fully differentiable, so the system can be trained by gradient descent to implement copy, sort, and associative recall.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state (Neural Turing Machines)
+This is the cleanest picture of "controller talks to an addressable store" that Broadside agent memory can steal: content addressing when you have a key, location addressing when the name of a slot is what matters, erase-then-add writes so updates do not clobber unused fields.
 
 ## Key ideas
 
-- We extend the capabilities of neural networks by coupling them to external memory resources, which they can interact with by attentional processes.
-- The combined system is analogous to a Turing Machine or Von Neumann architecture but is differentiable end-to-end, allowing it to be efficiently trained with gradient descent.
-- Preliminary results demonstrate that Neural Turing Machines can infer simple algorithms such as copying, sorting, and associative recall from input and output examples.
+- Read is a convex combination r_t = Σ w_t(i) M_t(i). Write is LSTM-style erase then add: M̃(i) = M(i) ⊙ (1 − w(i) e), then M(i) ← M̃(i) + w(i) a. Every head emits a normalised weighting over rows.
+- Content addressing: cosine similarity of a key k_t against each row, sharpened by β_t, softmaxed. Location addressing: interpolate with the previous weighting via gate g_t, rotate by a shift kernel s_t, then sharpen with γ_t. Both mechanisms run on every head.
+- The "blur" is the point: a head can focus on one row or smear across many, which keeps the whole circuit differentiable and biases storage toward sparse non-interfering writes.
+- Tasks: copy a random sequence, repeat-copy, associative recall of an item given a cue, dynamic n-grams, priority sort. LSTM controllers generally beat feed-forward ones; location heads are what let iteration generalise past training lengths.
+- Analogies the authors actually draw: Turing / von Neumann (addressable tape), working memory (central executive + buffer), and the variable-binding critique of connectionism (Fodor & Pylyshyn).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [1410.5401](https://arxiv.org/abs/1410.5401)
+- PDF: https://arxiv.org/pdf/1410.5401
 - URL: https://arxiv.org/abs/1410.5401

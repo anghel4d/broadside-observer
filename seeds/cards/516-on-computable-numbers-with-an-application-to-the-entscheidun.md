@@ -42,20 +42,19 @@ see:
 
 ## One-sentence takeaway
 
-Turing's correction note fixes details in the 1936 computable numbers paper.
+Turing's 1937 PLMS note repairs the universal-machine construction and several definitions in the 1936 computable-numbers paper.
 
 ## Why it matters here
 
-Bibliography completeness for the founding Turing paper.
+Bibliography completeness for the founding Turing paper: quote s2-42 together with this s2-43 correction when the universal machine or circle-freeness definitions are in play.
 
 ## Key ideas
 
-- Errata to PLMS s2-42 paper.
-- Keeps the universal-machine construction accurate.
+- Errata to *Proc. London Math. Soc.* s2-42 (1936–37), 230–265.
+- Adjusts the standard-description encoding and a gap in the argument that certain machines are circular.
+- Leaves the Entscheidungsproblem unsolvability theorem intact.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

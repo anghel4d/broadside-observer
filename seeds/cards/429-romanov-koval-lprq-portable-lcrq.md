@@ -64,10 +64,6 @@ Closes the portability gap for Anoptic/JVM/Go/Kotlin ports that cannot emit CAS2
 
 ## Caveats
 
-- Still an FAA/ring design with LCRQ-family imbalance caveats.
-- Verify memory-reclamation integration for your runtime.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/3572848.3577485](https://doi.org/10.1145/3572848.3577485)

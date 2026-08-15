@@ -42,23 +42,23 @@ see:
 
 ## One-sentence takeaway
 
-Two-level radiance cache that aims between noisy reservoir GI and blurry probes for console-class real-time budgets.
+GI-1.0 is a preprocess-free two-level radiance cache that sits between blurry irradiance probes and noisy reservoir GI for console-class ray budgets.
 
 ## Why it matters here
 
-2023 industrial radiance-caching foil next to Radiance Cascades — another answer to “probes lack detail / path tracing is too noisy.”
+Anoptic's GI fork is choosing among probes, reservoirs, and Radiance Cascades; this AMD/research cache is the industrial foil that keeps rays-per-pixel tiny without a content bake.
 
 ## Key ideas
 
-- Hardware ray queries plus a hierarchical radiance cache to keep rays-per-pixel tiny at high resolutions.
-- Targets content-preprocess-free integration into existing real-time pipelines.
-- Explicitly positioned against probe blur and reservoir noise.
+- Hardware ray queries plus a hierarchical radiance cache so high resolutions still fire only a handful of rays per pixel.
+- Probe-style methods are cheap but lack detail and react slowly to lighting changes; reservoir resampling is detailed but too noisy and too slow for current consoles.
+- The two-level cache is the proposed middle path: more fidelity than probes, less noise and cost than ReSTIR-class methods.
+- No content preprocessing, so it drops into an existing real-time pipeline.
+- Explicitly not an RC variant — compare its cache hierarchy to cascade-interval storage rather than treating them as the same algorithm.
 
 ## Caveats
-
-- AMD/research cache design — compare carefully to RC’s cascade-interval storage; not an RC variant.
 
 ## Links
 
 - arXiv: [2310.19855](https://arxiv.org/abs/2310.19855)
-- URL: https://arxiv.org/abs/2310.19855
+- PDF: https://arxiv.org/pdf/2310.19855

@@ -1,66 +1,46 @@
 ---
 title: "Algorithm 97: Shortest Path"
 authors:
-- Robert W. Floyd
+  - Robert W. Floyd
 year: 1962
 venue: Communications of the ACM
 arxiv: null
 doi: 10.1145/367766.368168
 source: "https://doi.org/10.1145/367766.368168"
 topics:
-- shortest-paths
-- floyd-warshall
+  - shortest-paths
+  - floyd-warshall
 seed_rank: 740
 seed_batch: perfects-algorithms-2026-08-13
 reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: A Theorem on Boolean Matrices
-  url: "https://doi.org/10.1145/321105.321107"
-  year: 1962
-  arxiv: null
-  doi: 10.1145/321105.321107
-- title: A Note on Two Problems in Connexion with Graphs
-  url: "https://doi.org/10.1007/BF01386390"
-  year: 1959
-  arxiv: null
-  doi: 10.1007/BF01386390
-- title: Efficient Algorithms for Shortest Paths in Sparse Networks
-  url: "https://doi.org/10.1145/322003.322004"
-  year: 1977
-  arxiv: null
-  doi: 10.1145/322003.322004
-see:
-- "741-a-theorem-on-boolean-matrices"
-- "310-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
-- "750-efficient-algorithms-for-shortest-paths-in-sparse-networks"
+cites: []
+see: []
 ---
 
 # Algorithm 97: Shortest Path
 
 ## One-sentence takeaway
 
-Floyd’s all-pairs shortest paths via dense DP (Warshall transitive-closure kin).
+All-pairs shortest paths on a dense \(n\times n\) matrix are three nested loops that try each vertex as an intermediate — Floyd’s algorithm, the same skeleton as Warshall closure.
 
 ## Why it matters here
 
-Dense APSP/reachability baseline for small graphs and closures.
+Small complete distance tables (squad-scale nav, effect-graph closure, a few dozen GRID COMMAND regions) should be this triple loop, not \(n\) Dijkstras and not a GPU kernel. Cite Warshall 1962 for the Boolean-closure twin.
 
 ## Key ideas
 
-- Triple-loop DP on intermediate vertices.
-- In-place matrix updates.
-- Same skeleton as Warshall closure.
-- Clear O(n³).
+- In-place update \(a_{ij} \leftarrow \min(a_{ij}, a_{ik}+a_{kj})\) for \(k,i,j\) in \(1..n\).
+- The same control structure computes transitive closure if \(+\)/\(\min\) become \(\lor\)/\(\land\).
+- Clear \(O(n^3)\) time and \(O(n^2)\) memory; no priority queue.
+- CACM 5(6), June 1962, p. 345 — an Algorithm department note, not a long paper.
+- Roy (1959) and Warshall (1962) share credit for the closure form.
 
 ## Caveats
-
-- Not for large sparse graphs.
-- Cite Warshall 1962 for closure credit.
 
 ## Links
 
 - DOI: [10.1145/367766.368168](https://doi.org/10.1145/367766.368168)
-- URL: https://doi.org/10.1145/367766.368168
+- ACM: https://dl.acm.org/doi/10.1145/367766.368168

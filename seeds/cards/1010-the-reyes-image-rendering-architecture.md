@@ -49,9 +49,6 @@ Anoptic is a real-time Vulkan ECS, not prman, but Reyes is the production-engine
 
 ## Caveats
 
-- Offline, micropolygon, CPU-era. Directly implementing Reyes on Vulkan is the wrong port; the transferable bits are dicing, buckets, and shade-before-hide.
-- Transparency/motion blur need an A-buffer of samples per pixel; the 1987 sketch is not a 2026 OIT solution (see depth peeling 410, weighted blended 338).
-- RenderMan the interface ≠ Reyes the algorithm; do not treat this card as the RI spec.
 
 ## Links
 

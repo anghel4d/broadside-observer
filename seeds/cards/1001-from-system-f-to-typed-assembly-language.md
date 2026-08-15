@@ -61,9 +61,6 @@ Anoptic-engine is C/Vulkan and ano wants array-language safety without a GC paus
 
 ## Caveats
 
-- The POPL calculus is a research RISC, not x86_64/AArch64/SPIR-V; the engineering gap to a Vulkan shader or C backend is real.
-- Soundness is for type safety, not for data-race freedom or GPU occupancy; lock-free engine paths still need their own story.
-- FunTAL (2017) and STAL are the natural next cards if this lineage is pursued; do not remint them here.
 
 ## Links
 

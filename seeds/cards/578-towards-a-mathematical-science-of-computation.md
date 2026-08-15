@@ -23,48 +23,37 @@ cites:
     year: 1963
     arxiv: null
     doi: null
-  - title: "Assigning Meanings to Programs"
-    url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
-    year: 1967
-    arxiv: null
-    doi: null
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
     arxiv: null
     doi: "10.1145/363235.363259"
-  - title: "Outline of a Mathematical Theory of Computation"
-    url: "https://www.cs.ox.ac.uk/files/3229/PRG02.pdf"
-    year: 1970
-    arxiv: null
-    doi: null
 see:
   - "577-a-basis-for-a-mathematical-theory-of-computation"
-  - "626-assigning-meanings-to-programs"
   - "592-an-axiomatic-basis-for-computer-programming"
-  - "613-outline-of-a-mathematical-theory-of-computation"
 ---
 
 # Towards a Mathematical Science of Computation
 
 ## One-sentence takeaway
 
-McCarthy argues computation needs a mathematical science of program meaning and correctness.
+McCarthy's IFIP-62 address argues that programming needs a mathematical science of meaning and correctness, and introduces abstract syntax to that end.
 
 ## Why it matters here
 
-Agenda-setting for formal methods and denotational/axiomatic semantics.
+Formal methods and language semantics in the Broadside stack start here as an agenda: prove properties of programs, don't just run them.
 
 ## Key ideas
 
-- Program properties as mathematical claims.
-- IFIP 62 address.
-- Companion to 'Basis' paper.
+- Extends the 1961/63 "Basis" paper from recursive functions to a science of computation presented at IFIP Congress 62.
+- McCarthy later identified this paper as perhaps the first use of the term *abstract syntax*.
+- Program properties are mathematical claims about recursively defined functions and syntactic structure.
+- Abstract syntax separates the tree of a program from any particular concrete notation.
+- Author-hosted HTML/PDF at Stanford is the stable source; the proceedings printing is the IFIP 62 volume.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - URL: https://www-formal.stanford.edu/jmc/towards.html
+- PDF: https://www-formal.stanford.edu/jmc/towards.pdf

@@ -19,65 +19,44 @@ pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "The Mathematical Theory of Communication"
-    url: "https://www.press.uillinois.edu/books/?id=p063522"
+  - title: "Extrapolation, Interpolation, and Smoothing of Stationary Time Series"
+    url: "https://mitpress.mit.edu/9780262730051/extrapolation-interpolation-and-smoothing-of-stationary-time-series/"
     year: 1949
     arxiv: null
     doi: null
-  - title: "Communication Theory of Secrecy Systems"
-    url: "https://doi.org/10.1002/j.1538-7305.1949.tb00928.x"
-    year: 1949
+  - title: "Transmission of Information"
+    url: "https://doi.org/10.1002/j.1538-7305.1928.tb01236.x"
+    year: 1928
     arxiv: null
-    doi: "10.1002/j.1538-7305.1949.tb00928.x"
-  - title: "Communication in the Presence of Noise"
-    url: "https://doi.org/10.1109/JRPROC.1949.232969"
-    year: 1949
+    doi: "10.1002/j.1538-7305.1928.tb01236.x"
+  - title: "Certain Factors Affecting Telegraph Speed"
+    url: "https://doi.org/10.1002/j.1538-7305.1924.tb01361.x"
+    year: 1924
     arxiv: null
-    doi: "10.1109/JRPROC.1949.232969"
-  - title: "Error Detecting and Error Correcting Codes"
-    url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
-    year: 1950
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1950.tb00463.x"
-  - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
-    year: 1965
-    arxiv: null
-    doi: null
-  - title: "A Method for the Construction of Minimum-Redundancy Codes"
-    url: "https://doi.org/10.1109/JRPROC.1952.273898"
-    year: 1952
-    arxiv: null
-    doi: "10.1109/JRPROC.1952.273898"
+    doi: "10.1002/j.1538-7305.1924.tb01361.x"
 see:
-  - "554-the-mathematical-theory-of-communication"
-  - "555-communication-theory-of-secrecy-systems"
-  - "556-communication-in-the-presence-of-noise"
-  - "568-error-detecting-and-error-correcting-codes"
-  - "604-three-approaches-to-the-quantitative-definition-of-informati"
-  - "570-a-method-for-the-construction-of-minimum-redundancy-codes"
+  - "563-extrapolation-interpolation-and-smoothing-of-stationary-time"
 ---
 
 # A Mathematical Theory of Communication
 
 ## One-sentence takeaway
 
-Shannon defines information entropy, channel capacity, and coding theorems—communication as mathematics.
+Shannon defines information entropy, proves source and noisy-channel coding theorems, and makes the bit the unit of communication.
 
 ## Why it matters here
 
-Foundations for compression, noise, and 'information' as a measurable resource in Anoptic systems.
+Anoptic and Broadside treat logs, netcode, and agent observations as scarce channels; this paper is why those streams have a capacity and a compression floor.
 
 ## Key ideas
 
-- Entropy H(X).
-- Source coding theorem.
-- Noisy channel coding theorem / capacity.
-- Bit as unit of information.
+- A discrete source is a stochastic process; its entropy \(H = -\sum p_i\log p_i\) is the average information per symbol.
+- The source coding theorem: entropy is the greatest lower bound on bits per symbol for vanishing error.
+- A noisy channel has a capacity \(C\); rates below \(C\) admit codes with arbitrarily small error, rates above \(C\) do not.
+- Continuous channels get a geometric treatment (signal space, noise spheres) and the famous \(C = W\log(1+P/N)\) bandlimited formula.
+- The two-part BSTJ paper (July and October 1948) is the primary technical source; the 1949 Shannon–Weaver book is a later reprint plus essay.
 
 ## Caveats
-
-- Two-part BSTJ 1948 paper; also 1949 Shannon–Weaver book form.
 
 ## Links
 

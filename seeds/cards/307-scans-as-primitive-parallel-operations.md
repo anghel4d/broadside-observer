@@ -3,7 +3,7 @@ title: "Scans as Primitive Parallel Operations"
 authors:
   - "Guy E. Blelloch"
 year: 1989
-venue: "IEEE TC"
+venue: "IEEE Transactions on Computers"
 arxiv: null
 doi: "10.1109/12.42122"
 source: "https://doi.org/10.1109/12.42122"
@@ -16,16 +16,6 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "The cosmic cube"
-    url: "https://doi.org/10.1145/2465.2467"
-    year: 1985
-    arxiv: null
-    doi: "10.1145/2465.2467"
-  - title: "Data Structures and Network Algorithms"
-    url: "https://doi.org/10.1137/1.9781611970265"
-    year: 1983
-    arxiv: null
-    doi: "10.1137/1.9781611970265"
   - title: "Parallel Prefix Computation"
     url: "https://doi.org/10.1145/322217.322232"
     year: 1980
@@ -36,67 +26,30 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1145/800133.804339"
-  - title: "The NYU Ultracomputer—Designing an MIMD Shared Memory Parallel Computer"
-    url: "https://doi.org/10.1109/tc.1983.1676201"
-    year: 1983
-    arxiv: null
-    doi: "10.1109/tc.1983.1676201"
-  - title: "Parallel Processing with the Perfect Shuffle"
-    url: "https://doi.org/10.1109/t-c.1971.223205"
-    year: 1971
-    arxiv: null
-    doi: "10.1109/t-c.1971.223205"
-  - title: "“Hot spot” contention and combining in multistage interconnection networks"
-    url: "https://doi.org/10.1109/tc.1985.6312198"
-    year: 1985
-    arxiv: null
-    doi: "10.1109/tc.1985.6312198"
-  - title: "An O(logn) parallel connectivity algorithm"
-    url: "https://doi.org/10.1016/0196-6774(82)90008-6"
-    year: 1982
-    arxiv: null
-    doi: "10.1016/0196-6774(82)90008-6"
-  - title: "Parallel tree contraction and its application"
-    url: "https://doi.org/10.1109/sfcs.1985.43"
-    year: 1985
-    arxiv: null
-    doi: "10.1109/sfcs.1985.43"
-  - title: "Parallel merge sort"
-    url: "https://doi.org/10.1109/sfcs.1986.41"
-    year: 1986
-    arxiv: null
-    doi: "10.1109/sfcs.1986.41"
-  - title: "Quicksort"
-    url: "https://doi.org/10.1093/comjnl/5.1.10"
-    year: 1962
-    arxiv: null
-    doi: "10.1093/comjnl/5.1.10"
-  - title: "Sorting on a mesh-connected parallel computer"
-    url: "https://doi.org/10.1145/359461.359481"
-    year: 1977
-    arxiv: null
-    doi: "10.1145/359461.359481"
+see: []
 ---
 
 # Scans as Primitive Parallel Operations
 
 ## One-sentence takeaway
 
-Parallel prefix/scan primitive — GPU and CPU HPC staple.
+Blelloch treats plus-scan and max-scan as unit-time PRAM primitives and shows that doing so simplifies, and often asymptotically speeds up, a long list of parallel algorithms.
 
 ## Why it matters here
 
-Parallel prefix/scan primitive — GPU and CPU HPC staple.
+Every GPU prefix-sum, ECS compact, and GPU-driven cull pass in Broadside is this primitive; the paper is why scan sits next to map/reduce in the engine toolbox.
 
 ## Key ideas
 
-- Parallel prefix/scan primitive — GPU and CPU HPC staple.
+- A scan (parallel prefix) of an associative operator produces every prefix result; on a PRAM it can be implemented in `O(log n)` but the paper argues for treating it as a primitive.
+- Integer add-scan and max-scan already express split, enumerate, and segmented operations used by radix sort, quicksort, and line drawing.
+- Many graph algorithms (connected components, MST via Borůvka-style steps) become cleaner when the machine offers scan instead of only fetch-and-add.
+- Giving scan unit cost removes an `O(log n)` factor that otherwise appears in every algorithm that had to rebuild prefix sums from scratch.
+- The 1989 IEEE TC paper is the usual citation for “scan is a primitive,” later popularized by NESL and then by CUDA CUB/Thrust.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1109/12.42122](https://doi.org/10.1109/12.42122)
-- URL: https://doi.org/10.1109/12.42122
+- PDF: https://people.eecs.berkeley.edu/~culler/cs262b/papers/scan89.pdf

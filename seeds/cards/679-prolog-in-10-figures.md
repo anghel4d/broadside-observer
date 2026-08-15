@@ -5,8 +5,8 @@ authors:
 year: 1985
 venue: "Communications of the ACM"
 arxiv: null
-doi: "10.1145/3166.3168"
-source: "https://doi.org/10.1145/3166.3168"
+doi: "10.1145/214956.214958"
+source: "https://doi.org/10.1145/214956.214958"
 topics:
   - prolog
   - colmerauer
@@ -29,46 +29,30 @@ cites:
     year: 1979
     arxiv: null
     doi: "10.1145/359131.359136"
-  - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
-    url: "https://doi.org/10.1109/69.43410"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/69.43410"
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367177.367199"
 see:
   - "677-predicate-logic-as-programming-language"
   - "678-algorithm-logic-control"
-  - "039-what-you-always-wanted-to-know-about-datalog-and-never-dared"
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
 ---
 
 # Prolog in 10 Figures
 
 ## One-sentence takeaway
 
-Colmerauer's accessible account of Prolog's core mechanisms and Marseille lineage.
+Colmerauer explains Marseille Prolog with ten diagrams: unification, resolution, and backtracking as the mechanisms Japan had just picked for fifth-generation machines.
 
 ## Why it matters here
 
-The Colmerauer classic for Prolog's inventor-side story beside Kowalski's logic reading.
+Inventor-side Prolog, complementary to Kowalski's logic reading — the card you want when GRID COMMAND needs a concrete picture of unification-plus-search rather than a slogan. The old DOI was a 1985 CACM education note.
 
 ## Key ideas
 
-- Unification, resolution, and backtracking illustrated.
-- Marseille Prolog historical framing.
-- Language as practical logic programming.
-- Pairs with Kowalski 1974/1979.
+- Figures carry the load: terms as trees, unification as grafting, SLD resolution as a search tree, backtracking as walking that tree.
+- Historical framing is Marseille Prolog and the 1981 Japanese fifth-generation report, not a formal semantics paper.
+- Prolog is presented as a *practical* logic language whose operational model *is* the language definition most programmers use.
+- CACM 28(12):1296–1310, December 1985, DOI 10.1145/214956.214958.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1145/3166.3168](https://doi.org/10.1145/3166.3168)
-- URL: https://doi.org/10.1145/3166.3168
+- DOI: [10.1145/214956.214958](https://doi.org/10.1145/214956.214958)

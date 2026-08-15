@@ -27,21 +27,20 @@ cites:
 
 ## One-sentence takeaway
 
-The original fuzzing paper: random inputs crashed 24–33% of Unix utilities. uutils' OSS-Fuzz story starts here.
+Miller, Fredriksen, and So threw random junk at Unix command-line utilities and crashed 24–33% of them — the original fuzzing paper, and the ancestor of every later coreutils fuzz campaign.
 
 ## Why it matters here
 
-Foundational systems paper already in the Unix bloodstream. The coreutils rewrite is, among other things, a 36-year reply.
+Foundational systems paper already in the Unix bloodstream. The uutils OSS-Fuzz story is a 36-year reply: same utilities, now under continuous coverage-guided fuzzing instead of a one-off random stream.
 
 ## Key ideas
 
 - CACM 33(12):32–44, 1990. DOI `10.1145/96267.96279`.
-- Fuzz: throw random junk at CLI tools, including coreutils-class commands.
-- Crash rate ~24% then; the method is now continuous (libFuzzer / OSS-Fuzz).
+- Method: generate unstructured random input (and later random argv), pipe it at CLI tools including coreutils-class commands, record crashes and hangs.
+- Crash rates of roughly a quarter to a third of the tested utilities on then-current vendor Unixes; many failures were unchecked `gets`/pointer bugs.
+- The method, not the 1990 binary set, is what survived: libFuzzer, AddressSanitizer, and OSS-Fuzz industrialize the same experiment.
 
 ## Caveats
-
-- 1990 utilities, not GNU 9.9 / uutils 0.4. Historical method paper.
 
 ## Links
 

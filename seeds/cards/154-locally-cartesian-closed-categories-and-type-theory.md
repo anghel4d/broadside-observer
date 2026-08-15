@@ -69,21 +69,22 @@ cites:
 
 ## One-sentence takeaway
 
-Relates locally cartesian closed categories to Martin-Löf dependent type theory.
+Seely interprets Martin-Löf dependent type theory in a locally cartesian closed category by reading a type over a context as an object of a slice and dependent product as the right adjoint to pullback.
 
 ## Why it matters here
 
-LCCC models of dependent types — classic Seely paper every dependent-type implementer meets.
+Any typed ECS or world language that wants Σ/Π over entities is walking into this model: contexts are slices, substitution is pullback, and the known coherence gap is why a real implementation needs explicit substitutions or a stricter category of families.
 
 ## Key ideas
 
-- Relates locally cartesian closed categories to Martin-Löf dependent type theory.
+- A category is locally cartesian closed when every slice \(\mathcal{C}/A\) is cartesian closed, so each context has products and exponentials.
+- A dependent type in context \(A\) is an object of \(\mathcal{C}/A\); substitution along \(f:B\to A\) is pullback of that object.
+- Dependent sum is composition (or the left adjoint to pullback); dependent product is the right adjoint to pullback, i.e. the slice exponential.
+- Identity types and the usual type formers are interpreted by the corresponding universal constructions in the slices.
+- Later work showed the naïve substitution functors are not strictly functorial; the paper is still the classic LCCC semantics every dependent-type implementer meets.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1017/S0305004100061284](https://doi.org/10.1017/S0305004100061284)
-- URL: https://doi.org/10.1017/S0305004100061284

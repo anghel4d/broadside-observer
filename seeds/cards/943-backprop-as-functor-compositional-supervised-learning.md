@@ -7,7 +7,7 @@ authors:
 year: 2019
 venue: "LICS"
 arxiv: "1711.10455"
-doi: null
+doi: "10.1109/LICS.2019.8785665"
 source: "https://arxiv.org/abs/1711.10455"
 topics:
   - "para"
@@ -32,22 +32,23 @@ see:
 
 ## One-sentence takeaway
 
-Supervised learning as composition of parameter-update rules; gradient descent is a monoidal functor from parametrised maps (Para) into that category — the origin of Para in the Weaves stack.
+Supervised learning is composition of parameter-update rules; gradient descent is a monoidal functor from parametrised maps (Para) into that category — the origin of Para in the Weaves stack.
 
 ## Why it matters here
 
-Para is how Weaves hides weights. This is the LICS theorem behind that wrapper.
+Para is how Weaves hides weights. This is the LICS theorem behind that wrapper: learning becomes structure, not a loop written next to the model.
 
 ## Key ideas
 
-- LICS 2019; arXiv:1711.10455.
-- Objects: parametrised maps A → B with parameter space P; composition puts parameters in parallel.
-- Backprop/SGD becomes structure, not a loop one writes next to the model.
+- LICS 2019; arXiv:1711.10455; DOI `10.1109/LICS.2019.8785665`.
+- Objects are parametrised maps $A \to B$ with parameter space $P$; composition puts parameters in parallel.
+- Backprop/SGD is a monoidal functor, so the update rule composes when the model does.
+- Foundational and small: fixed step size, conditions on the error function. Not a DL-architecture language — that is cards 940/941.
 
 ## Caveats
-
-- Foundational and small: fixed step size, conditions on the error function. Not a DL-architecture language.
 
 ## Links
 
 - arXiv: [1711.10455](https://arxiv.org/abs/1711.10455)
+- PDF: https://arxiv.org/pdf/1711.10455
+- DOI: [10.1109/LICS.2019.8785665](https://doi.org/10.1109/LICS.2019.8785665)

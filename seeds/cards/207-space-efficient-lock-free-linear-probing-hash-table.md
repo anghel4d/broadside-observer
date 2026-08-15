@@ -29,10 +29,10 @@ cites:
   arxiv: null
   doi: null
 - title: An Efficient Wait-free Resizable Hash Table
-  url: https://doi.org/10.1145/3490146
-  year: 2022
-  arxiv: null
-  doi: null
+  url: https://doi.org/10.1145/3210377.3210408
+  year: 2018
+  arxiv: '2204.09624'
+  doi: 10.1145/3210377.3210408
 see:
 - "400-hopscotch-hashing"
 - "387-abseil-swiss-tables"
@@ -43,25 +43,23 @@ see:
 
 ## One-sentence takeaway
 
-Linear probing is one of the simplest and most space-efficient approaches to hash table design, and is widely used in sequential settings due to its compact memory layout.
+A lock-free linear-probing table keeps wait-free lookups and reclaimable deletes while adding only a constant number of bits per slot under LL/SC (logarithmic bits under CAS).
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Space-Efficient Lock-Free Linear-Probing Hash Table).
+Anoptic entity maps and GRID COMMAND spatial hashes want open addressing for density; this is the concurrent design that does not blow the per-slot metadata the way earlier lock-free probes do.
 
 ## Key ideas
 
-- Linear probing is one of the simplest and most space-efficient approaches to hash table design, and is widely used in sequential settings due to its compact memory layout.
-- However, designing a concurrent linear-probing hash table with strong liveness guarantees has proved difficult, and only a handful of such algorithms have been proposed, all of which either restrict concurrency or rely on large per-entry metadata, thereby compromising space efficiency.
-- We present a lock-free linear-probing hash table with wait-free lookups that retains the core advantages of sequential linear probing while handling contention gracefully.
-- Our design uses only a small amount of metadata per table entry: a constant number of additional bits when using LL/SC, or a logarithmic number of bits when using CAS.
-- The algorithm is linearizable and lock-free, supports insert, delete, and wait-free lookup operations, and is able to safely reclaim space used by deleted elements without rebuilding the table.
+- Sequential linear probing is compact, but prior concurrent versions either serialize writers or store large per-entry headers.
+- Insert and delete are lock-free and linearizable; lookup is wait-free.
+- Metadata is a handful of extra bits with LL/SC, or O(log n) bits if the primitive is CAS.
+- Deleted keys can be reclaimed in place without rebuilding the table.
+- Amortized step complexity matches sequential linear probing up to per-key contention, assuming no concurrent inserts of the same key.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2606.17315](https://arxiv.org/abs/2606.17315)
-- URL: https://arxiv.org/abs/2606.17315
+- PDF: https://arxiv.org/pdf/2606.17315

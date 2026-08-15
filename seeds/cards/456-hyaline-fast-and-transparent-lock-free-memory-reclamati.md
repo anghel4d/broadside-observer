@@ -1,13 +1,12 @@
 ---
-
 title: "Hyaline: Fast and Transparent Lock-Free Memory Reclamation"
 authors:
   - "Ruslan Nikolaev"
   - "Binoy Ravindran"
-year: 2019
-venue: "PODC (brief); full PLDI 2021"
+year: 2021
+venue: "PLDI"
 arxiv: "1905.07903"
-doi: "10.1145/3293611.3331575"
+doi: "10.1145/3453483.3454090"
 source: "https://arxiv.org/abs/1905.07903"
 topics:
   - reclamation
@@ -19,51 +18,43 @@ pool: "systems"
 relevance_score: 9
 lineage: memory-reclamation
 cites:
-  - title: "Epoch-Based Reclamation / Practical lock-freedom"
+  - title: "Practical Lock-Freedom"
     url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
     year: 2004
-    arxiv: null
-    doi: null
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
-    arxiv: null
     doi: "10.1109/TPDS.2004.8"
-  - title: "Crystalline: Fast and Memory Efficient Wait-Free Reclamation"
-    url: "https://arxiv.org/abs/2104.01142"
-    year: 2021
-    arxiv: "2104.01142"
-    doi: null
+  - title: "Hazard Eras: Non-Blocking Memory Reclamation"
+    url: "https://doi.org/10.1145/3087556.3087588"
+    year: 2017
+    doi: "10.1145/3087556.3087588"
 see:
   - "293-epoch-based-reclamation-practical-lock-freedom"
   - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "245-crystalline-fast-and-memory-efficient-wait-free-reclamation"
+  - "455-hazard-eras-non-blocking-memory-reclamation"
 ---
+
 # Hyaline: Fast and Transparent Lock-Free Memory Reclamation
 
 ## One-sentence takeaway
 
-Reference-counting only in the reclamation phase: EBR-like speed with better robustness than classical epochs.
+Hyaline uses reference counts only while reclaiming, not on every object access, so any thread can free a retired node and the scheme can match EBR speed with HP-like memory bounds.
 
 ## Why it matters here
 
-Bridges toward Crystalline/Universal wait-free SMR while staying deployable for engine-side concurrent maps.
+Engine-side concurrent maps want EBR's enter/leave API without stalled-thread leaks; Hyaline-S plus birth eras is the deployable step toward Crystalline-style wait-free SMR.
 
 ## Key ideas
 
-- Avoid per-read refcount traffic; count during reclaim.
-- Robust variants bound memory with stalled threads.
-- Supports dynamically changing thread counts.
-- Full paper develops snapshot-free transparent schemes (PLDI 2021).
+- Readers call enter/leave around a data-structure operation; retired nodes hang on shared lists whose special counters track how many still-active threads can see them.
+- Because an arbitrary thread may drop a node's last reclaim-phase count, writer-heavy and read-dominated mixes share free work instead of stranding retire lists on the mutator.
+- Hyaline-S adopts HE/IBR birth eras plus a deref wrapper so stalled threads only pin older objects; slot count can grow to keep the scheme robust.
+- General algorithm wants LL/SC or double-width CAS (pointer+counter); Hyaline-1 is a single-width-CAS specialization. Measured ~10% over EBR on bonsai and up to 2× when oversubscribed.
 
 ## Caveats
 
-- Some variants want LL/SC or wide CAS.
-- Family members differ — read the full paper before shipping.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1145/3293611.3331575](https://doi.org/10.1145/3293611.3331575)
-- URL: https://arxiv.org/abs/1905.07903
 - arXiv: [1905.07903](https://arxiv.org/abs/1905.07903)
+- DOI: [10.1145/3453483.3454090](https://doi.org/10.1145/3453483.3454090)

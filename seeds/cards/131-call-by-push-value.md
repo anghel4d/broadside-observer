@@ -6,7 +6,7 @@ year: 2003
 venue: "Semantic Structures in Computation, Springer"
 arxiv: null
 doi: "10.1007/978-94-010-0259-2"
-source: "https://link.springer.com/book/10.1007/978-94-010-0259-2"
+source: "https://pblevy.github.io/papers/thesisqmwphd.pdf"
 topics:
   - call-by-push-value
   - effects
@@ -24,15 +24,10 @@ cites:
     arxiv: null
     doi: "10.1016/0890-5401(91)90052-4"
   - title: "Computational lambda-calculus and monads"
-    url: "https://doi.org/10.1109/lics.1989.39155"
+    url: "https://doi.org/10.1109/LICS.1989.39155"
     year: 1989
     arxiv: null
-    doi: "10.1109/lics.1989.39155"
-  - title: "Evidence for specific control of RNA polymerase synthesis in Escherichia coli."
-    url: "https://pubmed.ncbi.nlm.nih.gov/17319069"
-    year: 1973
-    arxiv: null
-    doi: null
+    doi: "10.1109/LICS.1989.39155"
 see:
   - "035-notions-of-computation-and-monads"
   - "037-computational-lambda-calculus-and-monads"
@@ -42,21 +37,23 @@ see:
 
 ## One-sentence takeaway
 
-Develops call-by-push-value as a calculus subsuming call-by-name and call-by-value.
+CBPV splits types into values (“a value is”) and computations (“a computation does”), and the F ⊣ U adjunction between them is the common substrate of call-by-value and call-by-name once effects are present.
 
 ## Why it matters here
 
-CBPV subsumes CBN/CBV — fine-grained value/computation split every runtime cares about.
+Ano’s effectful evaluators and GRID COMMAND’s agent/runtime split both need a finer grain than “everything is a CBV or CBN lambda.” CBPV is the calculus that names that split: thunks are values, forcing is a computation, and CBV/CBN become two embeddings rather than two languages.
 
 ## Key ideas
 
-- Develops call-by-push-value as a calculus subsuming call-by-name and call-by-value.
+- Value types vs computation types: only computations perform effects; `F A` produces an `A`, `U B` is a thunk of a `B`. CBV is the Kleisli (producer) embedding, CBN the co-Kleisli (thunk) embedding.
+- CK-machine reading: application pushes an argument, forcing pops a thunk — CBPV as explicit push/pop of a value stack, not as another evaluation-order slogan.
+- Concrete models for printing, divergence, global store, errors, erratic choice and control, plus a possible-world model for cell generation and Jump-With-Argument as a continuation implementation.
+- Categorical story: same equational theory interpreted as a strong monad (Moggi), a value/producer structure (Power–Robinson), or a strong adjunction; every concrete model in the thesis is an adjunction model.
+- Pointer-game reading (Hyland–Ong style): opponent question = force a computation, answer = produce a value.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1007/978-94-010-0259-2](https://doi.org/10.1007/978-94-010-0259-2)
-- URL: https://link.springer.com/book/10.1007/978-94-010-0259-2
+- Thesis PDF: [pblevy.github.io/papers/thesisqmwphd.pdf](https://pblevy.github.io/papers/thesisqmwphd.pdf)
+- Springer book: [10.1007/978-94-010-0259-2](https://doi.org/10.1007/978-94-010-0259-2)

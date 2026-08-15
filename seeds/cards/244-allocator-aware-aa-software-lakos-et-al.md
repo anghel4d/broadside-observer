@@ -2,14 +2,12 @@
 title: "Allocator-Aware (AA) Software (Lakos et al.)"
 authors:
   - "John Lakos"
-  - "Vittorio Romeo"
-  - "Rohan McGovern"
-  - "Alisdair Meredith"
-year: 2021
-venue: "CppCon"
+  - "Pablo Halpern"
+year: 2020
+venue: "WG21 P2035R0 / BDE white paper"
 arxiv: null
 doi: null
-source: "https://www.youtube.com/watch?v=0mdcWlkBb_4"
+source: "https://bloomberg.github.io/bde/white_papers/allocator-aware-software.html"
 topics:
   - memory-allocation
   - lakos
@@ -51,21 +49,24 @@ see:
 
 ## One-sentence takeaway
 
-Presents allocator-aware software design: propagating memory suppliers through vocabulary types without hidden global new.
+Halpern and Lakos argue that a fully allocator-aware infrastructure (C++11, BDE, or C++17 PMR) pays for itself via local-allocator speed plus collateral testing and instrumentation, and they recommend the BDE/PMR model today.
 
 ## Why it matters here
 
-Modern Lakos AA vocabulary for propagating allocators through types — maps to arena/region wiring in Anoptic.
+Anoptic arenas and GRID COMMAND frame pools only work if every vocabulary type actually *takes* an allocator; this is the design brief for propagating those suppliers without a hidden `new`.
 
 ## Key ideas
 
-- Presents allocator-aware software design: propagating memory suppliers through vocabulary types without hidden global new.
+- Local allocators have large, well-known performance wins; the real debate is integration cost (training, contracts, misuse).
+- Three shipping AA models — C++11 scoped allocators, Bloomberg BDE, and C++17 `std::pmr` — deliver the same essential benefits at very different maintenance cost.
+- Collateral benefits: object-based instrumentation and the ability to test allocation itself, not only payload correctness.
+- Many objections to AA are classified as hearsay; the paper separates those from the genuine upfront cost.
+- They still advocate adopting AA now for any library with performance-sensitive clients, while researching a language-level scoped-allocator feature that would cut the boilerplate. Canonical artifact is WG21 P2035R0 (2020-01-12).
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.youtube.com/watch?v=0mdcWlkBb_4
+- White paper: https://bloomberg.github.io/bde/white_papers/allocator-aware-software.html
+- PDF (P2035R0): https://bloomberg.github.io/bde-resources/pdfs/P2035R0.pdf
+- Related talk: [Value Proposition: Allocator-Aware (AA) Software — Lakos, CppCon 2019](https://www.youtube.com/watch?v=ebn1C-mTFVk)

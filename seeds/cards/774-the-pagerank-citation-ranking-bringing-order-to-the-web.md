@@ -6,7 +6,7 @@ authors:
 - Rajeev Motwani
 - Terry Winograd
 year: 1999
-venue: Stanford InfoLab Technical Report
+venue: Stanford InfoLab Technical Report 1999-66
 arxiv: null
 doi: null
 source: "https://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/pagerank.pdf"
@@ -34,24 +34,22 @@ see:
 
 ## One-sentence takeaway
 
-PageRank — eigenvector centrality with damping as a web-scale ranking signal.
+PageRank scores a page as the stationary mass of a random surfer who follows a random out-link with probability $d$ and jumps uniformly with probability $1-d$, computed by power iteration on the damped link matrix.
 
 ## Why it matters here
 
-Graph ranking template for authority and link analysis (distinct from card 284 lock-free dynamic variant).
+This is the graph-ranking template for Broadside citation radar and for any Anoptic/GRID COMMAND “who endorses whom” graph — query-independent authority as an eigenvector.
 
 ## Key ideas
 
-- Random surfer with damping factor.
-- Power iteration on the link matrix.
-- Query-independent authority score.
-- Scalable sparse matvec viewpoint.
+- $R(u)=c\sum_{v\to u}R(v)/N_v$ plus a damping / source-of-rank term that kills rank sinks.
+- The random-surfer story justifies the damping factor (classically $0.85$) and turns dangling nodes into a well-posed Markov chain.
+- Computation is a sparse matrix–vector multiply iterated to convergence; the paper already discusses scaling to the 1998 web.
+- The score is query-independent, so it can be baked into an index and combined later with IR features.
 
 ## Caveats
 
-- Tech report; commercial ranking is far richer.
-- Sensitive to link spam without defenses.
-
 ## Links
 
-- URL: https://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/pagerank.pdf
+- PDF: https://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/pagerank.pdf
+- Stanford InfoLab record (1999-66 / SIDL-WP-1999-0120): https://ilpubs.stanford.edu/422/

@@ -49,9 +49,6 @@ GRID COMMAND's NL soldier orders and ano's trigger/production layer sit on Forgy
 
 ## Caveats
 
-- The AAAI'87 paper is the short empirical claim; the long version is TR-87-03 / Miranker's Columbia thesis. Read the long version before betting an engine on the numbers.
-- Modern Rete II / LEAPS / CLIPS/Jess matchers exist; TREAT is the historical alternative, not the 2026 default.
-- Do not confuse with bioacoustics/ORCA keyword collisions already culled from this library.
 
 ## Links
 

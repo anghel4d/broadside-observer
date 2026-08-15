@@ -21,56 +21,36 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "The Early History of Smalltalk"
-    url: "https://doi.org/10.1145/155360.155364"
-    year: 1993
+  - title: "Report on the Algorithmic Language ALGOL 60"
+    url: "https://doi.org/10.1145/367236.367262"
+    year: 1960
     arxiv: null
-    doi: "10.1145/155360.155364"
-  - title: "Smalltalk-80: The Language and Its Implementation"
-    url: "https://dl.acm.org/doi/10.5555/273"
-    year: 1983
-    arxiv: null
-    doi: null
-  - title: "A Theory of Objects"
-    url: "https://doi.org/10.1007/978-1-4419-8598-9"
-    year: 1996
-    arxiv: null
-    doi: "10.1007/978-1-4419-8598-9"
-  - title: "An Axiomatic Basis for Computer Programming"
-    url: "https://doi.org/10.1145/363235.363259"
-    year: 1969
-    arxiv: null
-    doi: "10.1145/363235.363259"
+    doi: "10.1145/367236.367262"
 see:
-  - "680-the-early-history-of-smalltalk"
-  - "682-smalltalk-80-the-language-and-its-implementation"
-  - "669-a-theory-of-objects"
-  - "592-an-axiomatic-basis-for-computer-programming"
+  - "623-report-on-the-algorithmic-language-algol-60"
 ---
 
 # SIMULA: An Algol-Based Simulation Language
 
 ## One-sentence takeaway
 
-Introduces SIMULA 67 ideas: classes and objects as language constructs for simulation (OO root).
+SIMULA extends ALGOL 60 with processes, classes, and prefixing so a discrete-event simulation is written as interacting objects rather than a global event loop.
 
 ## Why it matters here
 
-SIMULA is the OO-class root card — before Smalltalk, classes/instances enter programming languages.
+Anoptic’s ECS and GRID COMMAND entities are the same bet SIMULA made in 1966: the world is a collection of processes with local state and a reactivation point. Classes and prefixing (inheritance) enter programming languages here, before Smalltalk.
 
 ## Key ideas
 
-- Classes, objects, and prefixing/inheritance seeds.
-- Simulation as the motivating domain.
-- Algol-based language design.
-- Historical root for OO beside Kay/Smalltalk.
+- A process is an ALGOL block that can be detached and resumed; the simulation clock and event list are language-level.
+- `class` declarations introduce objects with their own local data and operations; prefixing lets one class extend another.
+- The motivating domain is discrete-event simulation (queues, customers, resources), not “object-oriented programming” as a slogan.
+- The language is explicitly ALGOL-based: block structure, call-by-name, and the 1960 report are the substrate.
+- CACM 9(9), September 1966, pp. 671–678; SIMULA 67 later freezes the class/prefix design this paper introduces.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/365813.365819](https://doi.org/10.1145/365813.365819)
-- URL: https://doi.org/10.1145/365813.365819
+- ACM: https://dl.acm.org/doi/10.1145/365813.365819

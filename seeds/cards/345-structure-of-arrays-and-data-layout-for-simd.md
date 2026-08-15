@@ -6,7 +6,7 @@ year: 2012
 venue: "ISPC docs"
 arxiv: null
 doi: null
-source: "https://ispc.github.io/"
+source: "https://ispc.github.io/ispc.html"
 topics:
   - soa
   - simd
@@ -35,21 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-SoA layout for SIMD/ECS.
+SoA stores each field in its own packed array so a SIMD/SPMD kernel loads eight `x`s with one instruction, instead of gathering `x` out of an array-of-structs stride.
 
 ## Why it matters here
 
-SoA layout for SIMD/ECS.
+Anoptic ECS columns *are* SoA. This card is the layout note that sits under ispc, Unity chunks, and any particle/transform system that wants vector loads rather than scalar structs.
 
 ## Key ideas
 
-- SoA layout for SIMD/ECS.
+- AoS (`struct {x,y,z,w} p[N]`) matches objects; SoA (`x[N], y[N], z[N], w[N]`) matches lanes. Hybrid AoSoA (tiles of 8–16 structs) is the cache-friendly compromise.
+- ispc’s model assumes you can take a varying pointer into a SoA field; the user’s guide is the clearest industry write-up of that contract.
+- Systems that touch one field (cull on `x/z`, integrate `vy`) waste bandwidth in AoS; systems that touch all fields can lose spatial locality in pure SoA — hence chunks/archetypes.
+- Alignment to 16/32/64 bytes and avoiding false sharing across threads are part of the layout, not afterthoughts.
+- No single paper owns this; the ispc user’s guide plus the InPar 2012 paper are the pinned artifacts.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://ispc.github.io/
+- ispc user’s guide: https://ispc.github.io/ispc.html
+- ispc paper: https://ispc.github.io/papers/ispc_inpar_2012.pdf

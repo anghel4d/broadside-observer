@@ -4,7 +4,7 @@ authors:
   - "Carsten Dachsbacher"
   - "Marc Stamminger"
 year: 2005
-venue: "I3D"
+venue: "I3D 2005"
 arxiv: null
 doi: "10.1145/1053427.1053460"
 source: "https://doi.org/10.1145/1053427.1053460"
@@ -50,23 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Capture secondary lights in a shadow-map-like buffer from the light’s view — the GPU-native Instant Radiosity specialization.
+Treat the shadow map as a sampling of directly lit surfaces that become virtual point lights, giving dynamic one-bounce indirect light from the same pass that already computed shadows.
 
 ## Why it matters here
 
-Classical RTGI staple on the Radiance Cascades spine: RSM is the many-light precursor that LPV and later cascade methods historically answer.
+Classical RTGI staple on the Radiance Cascades spine: RSM is the many-light precursor that LPV, imperfect shadow maps, and later cascade methods historically answer. Anoptic GI experiments should know this is where "secondary lights from the light's view" starts.
 
 ## Key ideas
 
-- Treat the shadow map as a sampling of directly lit surfaces that act as VPLs for one-bounce indirect light.
-- Enables dynamic single-bounce GI without precomputed radiosity meshes.
-- Direct ancestor of splatting-indirect and imperfect-shadow-map many-light pipelines.
+- A reflective shadow map stores, per texel, world position, normal, and reflected flux of the surface seen from the light — not just depth.
+- Each texel is a VPL (Keller Instant Radiosity). Gathering or splatting those VPLs approximates one-bounce diffuse GI with no precomputed radiosity mesh.
+- Fully dynamic: lights and geometry can move because the RSM is rebuilt every frame from the same shadow pass.
+- Direct ancestor of splatting-indirect (Dachsbacher 2006) and imperfect-shadow-map many-light pipelines.
+- I3D 2005, DOI 10.1145/1053427.1053460. One-bounce / VPL sampling noise and fill-rate are the production limits.
 
 ## Caveats
-
-- One-bounce / VPL sampling noise and fill-rate limits; not a full multi-bounce cascade solution.
 
 ## Links
 
 - DOI: [10.1145/1053427.1053460](https://doi.org/10.1145/1053427.1053460)
-- URL: https://doi.org/10.1145/1053427.1053460

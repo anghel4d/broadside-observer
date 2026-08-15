@@ -27,48 +27,37 @@ cites:
     year: 2020
     arxiv: null
     doi: null
-  - title: "Unity DOTS Entities Manual"
-    url: "https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html"
-    year: 2020
-    arxiv: null
-    doi: null
   - title: "Bitsquid Data-Driven / Entity system posts"
     url: "https://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html"
     year: 2013
     arxiv: null
     doi: null
-  - title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
-    url: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
-    year: 2017
-    arxiv: null
-    doi: null
 see:
   - "194-data-oriented-design-and-c"
   - "315-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
-  - "383-unity-dots-entities-manual"
   - "268-bitsquid-data-driven-entity-system-posts"
-  - "263-overwatch-gameplay-architecture-and-netcode-ecs-flavored"
 ---
 
 # Unity ECS / DOTS architecture overview (Entities package docs)
 
 ## One-sentence takeaway
 
-Unity Entities stores components in archetype chunks processed by Burst-friendly systems.
+Unity Entities packs components into 16 KiB archetype chunks and runs Burst-compiled `ISystem`/`IJobEntity` jobs over those chunks, with structural changes deferred through an Entity Command Buffer.
 
 ## Why it matters here
 
-Industrial archetype chunk ECS at scale; foil/benchmark for Anoptic layouts.
+This is the industrial-scale archetype ECS Anoptic is measured against: chunk iteration, shared components, enableable components, and a jobified transform hierarchy.
 
 ## Key ideas
 
-- Unity Entities stores components in archetype chunks processed by Burst-friendly systems.
+- An archetype is a unique combination of component types. Entities of one archetype live in chunks; a chunk holds only that archetype and is the unit of iteration and of memory allocation.
+- `IComponentData` is blittable SoA-in-the-chunk; `ISharedComponentData` splits archetypes by value (e.g. mesh); enableable components hide entities without moving them.
+- Systems schedule jobs through the Job system. Safety handles prevent two jobs from aliasing the same component type mutably.
+- `EntityCommandBuffer` playback is the sync point for creates/destroys/adds, so jobs never move entities out from under an iterator.
+- Baking converts GameObjects into entities at convert/build time; runtime stays data-oriented. Docs live at the Entities package URL above.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://docs.unity3d.com/Packages/com.unity.entities@latest
+- Docs: https://docs.unity3d.com/Packages/com.unity.entities@latest

@@ -14,16 +14,11 @@ seed_rank: 386
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
-relevance_score: 7
+relevance_score: 8
 cites:
   - title: "AMD Radeon GPU Profiler"
     url: "https://gpuopen.com/rgp/"
     year: 2017
-    arxiv: null
-    doi: null
-  - title: "Handmade Hero / Hot-Reload Engine Practice"
-    url: "https://hero.handmade.network/"
-    year: 2015
     arxiv: null
     doi: null
   - title: "RenderDoc Graphics Debugger"
@@ -33,7 +28,6 @@ cites:
     doi: null
 see:
   - "388-amd-radeon-gpu-profiler"
-  - "390-handmade-hero-hot-reload-engine-practice"
   - "394-renderdoc-graphics-debugger"
 ---
 
@@ -41,21 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-Frame profiler used by many engines.
+Tracy is a sampling-plus-instrumentation profiler that streams zones, plots, GPU timestamps, locks, and traces to a remote viewer with nanosecond resolution and almost no design-time schema.
 
 ## Why it matters here
 
-Frame profiler used by many engines.
+Anoptic / GRID COMMAND need a always-on frame profiler, not a once-a-quarter VTune session. Tracy’s C API (`ZoneScoped`, `TracyAlloc`, GPU context) drops into a C engine, shows the sim/render overlap, and is what you look at before blaming the GPU.
 
 ## Key ideas
 
-- Frame profiler used by many engines.
+- Hybrid: instrumentation zones for structured timelines, plus sampling call stacks, lock wait analysis, and memory plots in one capture.
+- Client is a few macros; the viewer is a separate process over TCP/shared memory, so you profile a running game.
+- GPU zones (Vulkan/OpenGL/D3D/Metal) sit on the same timeline as CPU zones — the feature that makes it a frame profiler, not just a CPU one.
+- Manual lifetime: you decide what is a frame (`FrameMark`) so pacing bugs show up as uneven frame bars.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://github.com/wolfpld/tracy
+- Repository: https://github.com/wolfpld/tracy
+- Manual: https://github.com/wolfpld/tracy/releases

@@ -7,7 +7,7 @@ year: 1910
 venue: "Cambridge University Press"
 arxiv: null
 doi: null
-source: "https://archive.org/details/PrincipiaMathematicaVol1"
+source: "https://archive.org/details/cu31924001575244"
 topics:
   - logic
   - type-theory
@@ -19,54 +19,37 @@ pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
-    url: "https://doi.org/10.1007/BF01700692"
-    year: 1931
-    arxiv: null
-    doi: "10.1007/BF01700692"
-  - title: "A Formulation of the Simple Theory of Types"
-    url: "https://doi.org/10.2307/2266170"
-    year: 1940
-    arxiv: null
-    doi: "10.2307/2266170"
-  - title: "The Logic Theory Machine: A Complex Information Processing System"
-    url: "https://doi.org/10.1109/TIT.1956.1056797"
-    year: 1956
-    arxiv: null
-    doi: "10.1109/TIT.1956.1056797"
   - title: "Begriffsschrift"
-    url: "https://www.worldcat.org/title/begriffsschrift/oclc/4576402"
+    url: "https://gdz.sub.uni-goettingen.de/id/PPN538957069"
     year: 1879
-    arxiv: null
-    doi: null
+  - title: "Arithmetices principia, nova methodo exposita"
+    url: "https://archive.org/details/arithmeticespri00peangoog"
+    year: 1889
 see:
-  - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
-  - "510-a-formulation-of-the-simple-theory-of-types"
-  - "580-the-logic-theory-machine-a-complex-information-processing-sy"
   - "489-begriffsschrift"
+  - "490-arithmetices-principia-nova-methodo-exposita"
 ---
 
 # Principia Mathematica, Volume I
 
 ## One-sentence takeaway
 
-Principia tried to found mathematics on logic with a ramified type theory—the formal system Gödel and Turing later showed incomplete/undecidable.
+Whitehead and Russell try to found mathematics on a ramified type theory large enough to block paradoxes and small enough, they hoped, that arithmetic becomes a chapter of logic.
 
 ## Why it matters here
 
-The concrete formal system against which incompleteness and computability were proved; still the named target in Gödel 1931's title.
+The concrete formal system named in Gödel 1931's title, and the typed ancestor of the λ-calculi and modern type theories Anoptic already tracks.
 
 ## Key ideas
 
-- Logicist reduction of arithmetic to logic.
-- Theory of types to block paradoxes.
-- Enormous formal development of elementary mathematics.
-- Direct ancestor of typed λ-calculi and modern type theory.
+- Logicist reduction: numbers, relations, and classes are constructed from propositional functions rather than taken as primitive.
+- Ramified theory of types plus the axiom of reducibility to recover impredicative mathematics without Russell's paradox.
+- Volume I (1910) develops the type hierarchy, incomplete symbols, propositional logic, and the start of cardinal arithmetic; volumes II–III follow in 1912–13.
+- Notation and length made the system famous as a target: incompleteness is proved *of Principia-like systems*, not of informal mathematics.
 
 ## Caveats
 
-- Three volumes; this card stands for the project, not a line-by-line digest.
-
 ## Links
 
-- URL: https://archive.org/details/PrincipiaMathematicaVol1
+- Internet Archive: https://archive.org/details/cu31924001575244
+- Gutenberg HTML: https://www.gutenberg.org/ebooks/78050

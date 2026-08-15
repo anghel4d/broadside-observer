@@ -24,51 +24,29 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-  - title: "The Calculus of Constructions"
-    url: "https://doi.org/10.1016/0890-5401(88)90005-3"
-    year: 1988
-    arxiv: null
-    doi: "10.1016/0890-5401(88)90005-3"
-  - title: "A Framework for Defining Logics"
-    url: "https://doi.org/10.1145/138027.138040"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/138027.138040"
-  - title: "Implementing Mathematics with Nuprl"
-    url: "http://www.nuprl.org/book/"
-    year: 1986
-    arxiv: null
-    doi: null
 see:
   - "647-the-formulae-as-types-notion-of-construction"
-  - "650-the-calculus-of-constructions"
-  - "651-a-framework-for-defining-logics"
-  - "654-implementing-mathematics-with-nuprl"
 ---
 
 # An Intuitionistic Theory of Types: Predicative Part
 
 ## One-sentence takeaway
 
-Lays out predicative intuitionistic type theory with dependent types as a foundation for constructive mathematics.
+Martin-Löf lays out predicative intuitionistic type theory with dependent types (Π, Σ, identity, universes) as a foundation for constructive mathematics.
 
 ## Why it matters here
 
-Root MLTT paper for dependent types — the conceptual parent of Agda/Epigram-style thinking and of LF's dependent Π.
+Root MLTT paper for dependent types — conceptual parent of Agda/Epigram-style thinking and of LF’s dependent Π. The type theory Broadside keeps next to ano starts here, not in Coq’s impredicative Prop.
 
 ## Key ideas
 
-- Dependent types as a constructive foundation.
-- Predicative hierarchy versus impredicative System F.
-- Propositions-as-types in a full type theory.
-- Basis for later programming-in-MLTT books and Nuprl/Agda lineages.
+- Dependent function (Π) and pair (Σ) types; a type may mention a value.
+- Predicative universe hierarchy, in contrast to Girard’s impredicative System F.
+- Propositions-as-types is now a full type theory, not just a slogan about implication.
+- *Logic Colloquium ’73*, Studies in Logic 80, North-Holland, 1975. Later programming-in-MLTT books and Nuprl/Agda lineages start from this core.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/S0049-237X(08)71945-1](https://doi.org/10.1016/S0049-237X(08)71945-1)
-- URL: https://doi.org/10.1016/S0049-237X(08)71945-1

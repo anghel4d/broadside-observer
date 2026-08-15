@@ -3,10 +3,10 @@ title: "Computability and Unsolvability"
 authors:
   - "Martin Davis"
 year: 1958
-venue: "McGraw-Hill"
+venue: "McGraw-Hill; Dover reprint 1985"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/computability-and-unsolvability/oclc/523"
+source: "https://store.doverpublications.com/products/9780486614717"
 topics:
   - computability
   - davis
@@ -33,38 +33,31 @@ cites:
     year: 1952
     arxiv: null
     doi: null
-  - title: "The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions"
-    url: "https://www.worldcat.org/title/undecidable/oclc/523589"
-    year: 1965
-    arxiv: null
-    doi: null
 see:
   - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
   - "507-an-unsolvable-problem-of-elementary-number-theory"
   - "529-introduction-to-metamathematics"
-  - "636-the-undecidable-basic-papers-on-undecidable-propositions-uns"
 ---
 
 # Computability and Unsolvability
 
 ## One-sentence takeaway
 
-Davis's book standardizes computability expositions and frames Hilbert's tenth problem lineage.
+Davis’s 1958 textbook standardizes recursive-function / Turing-machine computability for a generation and already frames Hilbert’s tenth problem as the next unsolvability target.
 
 ## Why it matters here
 
-Textbook carrier; Davis also edited The Undecidable anthology tying Gödel–Church–Turing–Post.
+Textbook carrier for the foundations spine. Davis also edited *The Undecidable* (636); together they are how Gödel–Church–Turing–Post reached people who were not reading 1930s German journals.
 
 ## Key ideas
 
-- Recursive function expositions.
-- Unsolvability examples.
-- Path to DPRM/Hilbert tenth.
+- Partial recursive functions, r.e. sets, and many-one / Turing reducibility presented as a single toolkit.
+- Classic unsolvability examples (halting, word problems) worked in uniform style.
+- Early systematic treatment of Diophantine sets — the path to the DPRM theorem / Hilbert’s tenth.
+- McGraw-Hill 1958; Dover 1985 reprint (ISBN 978-0-486-61471-7) is the in-print edition.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/computability-and-unsolvability/oclc/523
+- Dover edition: https://store.doverpublications.com/products/9780486614717

@@ -3,7 +3,7 @@ title: "RenderDoc Graphics Debugger"
 authors:
   - "Baldur Karlsson"
 year: 2014
-venue: "GitHub"
+venue: "renderdoc.org"
 arxiv: null
 doi: null
 source: "https://renderdoc.org/"
@@ -16,11 +16,6 @@ reviewed: "2026-08-13"
 pool: "graphics"
 relevance_score: 7
 cites:
-  - title: "Handmade Hero / Hot-Reload Engine Practice"
-    url: "https://hero.handmade.network/"
-    year: 2015
-    arxiv: null
-    doi: null
   - title: "GPU-Driven Rendering Pipelines"
     url: "https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf"
     year: 2015
@@ -32,7 +27,6 @@ cites:
     arxiv: null
     doi: null
 see:
-  - "390-handmade-hero-hot-reload-engine-practice"
   - "015-gpu-driven-rendering-pipelines"
   - "386-tracy-frame-profiler"
 ---
@@ -41,21 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-Industry GPU capture tool.
+RenderDoc captures a single frame of Vulkan/D3D/OpenGL/Metal work and lets you inspect every command, binding, shader disassembly, and output target after the fact.
 
 ## Why it matters here
 
-Industry GPU capture tool.
+Anoptic is a Vulkan engine; a bad descriptor set or a meshlet pass that writes the wrong image is a capture, not a guess. RenderDoc is the correctness tool (bindings, images, pipeline state); Tracy/RGP are the performance tools. Keep all three.
 
 ## Key ideas
 
-- Industry GPU capture tool.
+- In-process or injected capture: replay the recorded command stream without the original app, with pixel history and shader debug.
+- API-agnostic UI over Vulkan, D3D11/12, OpenGL, GLES, and (later) Metal — one workflow across backends.
+- Overlay / hotkey capture is the loop: hit F12, inspect the draw that looks wrong, fix the engine, recapture.
+- Open source (MIT) and the de-facto industry frame debugger outside vendor-only tools.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://renderdoc.org/
+- Site: https://renderdoc.org/
+- Source: https://github.com/baldurk/renderdoc

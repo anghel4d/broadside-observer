@@ -5,7 +5,7 @@ authors:
   - "Mark H. M. Winands"
   - "H. Jaap van den Herik"
 year: 2008
-venue: "CG"
+venue: "Computers and Games"
 arxiv: null
 doi: "10.1007/978-3-540-87608-3_6"
 source: "https://doi.org/10.1007/978-3-540-87608-3_6"
@@ -23,75 +23,40 @@ cites:
     year: 2007
     arxiv: null
     doi: "10.1007/978-3-540-75538-8_7"
-  - title: "An analysis of alpha-beta pruning"
-    url: "https://doi.org/10.1016/0004-3702(75)90019-3"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/0004-3702(75)90019-3"
   - title: "Bandit Based Monte-Carlo Planning"
     url: "https://doi.org/10.1007/11871842_29"
     year: 2006
     arxiv: null
     doi: "10.1007/11871842_29"
-  - title: "PROGRESSIVE STRATEGIES FOR MONTE-CARLO TREE SEARCH"
-    url: "https://doi.org/10.1142/s1793005708001094"
-    year: 2008
-    arxiv: null
-    doi: "10.1142/s1793005708001094"
-  - title: "Bandit Algorithms for Tree Search"
-    url: "http://arxiv.org/abs/1408.2028"
-    year: 2014
-    arxiv: "1408.2028"
-    doi: "10.48550/arxiv.1408.2028"
-  - title: "MOGO WINS 19x19 GO TOURNAMENT"
-    url: "https://doi.org/10.3233/icg-2007-30211"
-    year: 2007
-    arxiv: null
-    doi: "10.3233/icg-2007-30211"
-  - title: "Modiﬁcation of UCT with Patterns in Monte-Carlo Go"
-    url: "https://inria.hal.science/inria-00117266"
-    year: 2006
-    arxiv: null
-    doi: null
-  - title: "Exploration exploitation in Go: UCT for Monte-Carlo Go"
-    url: "https://hal.science/hal-00115330"
-    year: 2006
-    arxiv: null
-    doi: null
   - title: "On the Parallelization of UCT"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.66.4751"
+    url: "https://hal.science/hal-00189437"
     year: 2007
-    arxiv: null
-    doi: null
-  - title: "Monte-Carlo strategies for computer Go"
-    url: "https://cris.maastrichtuniversity.nl/en/publications/31b38156-afda-43ca-9977-1a6aed3b5926"
-    year: 2006
     arxiv: null
     doi: null
 see:
   - "289-efficient-selectivity-and-backup-operators-in-monte-carlo-tr"
-  - "379-an-analysis-of-alpha-beta-pruning"
 ---
 
 # Parallel Monte-Carlo Tree Search
 
 ## One-sentence takeaway
 
-Parallel MCTS.
+Chaslot et al. compare leaf, root, and tree parallelization of MCTS and show that root parallelization wins on 13×13 Go unless virtual loss plus local mutexes make shared-tree search scale.
 
 ## Why it matters here
 
-Parallel MCTS.
+Broadside / GRID COMMAND planners that grow a search tree per tick need a parallelism story that is not “take a global lock around UCT.” Leaf vs root vs tree is the menu: independent trees merge at the root, or one shared tree with virtual-loss repulsion so worker threads do not clone the same line.
 
 ## Key ideas
 
-- Parallel MCTS.
+- Leaf parallelization: one thread walks the tree, then N independent playouts fire from the same leaf — simple, but wait-for-slowest and no information sharing.
+- Root parallelization: N independent MCTS trees, scores summed at the root; almost linear GPS speedup and, in Mango, the best strength-speedup at short time controls.
+- Tree parallelization: one shared tree; a global mutex caps speedup, local per-node mutexes plus Coulom’s virtual loss keep threads from stampeding the same child.
+- Strength-speedup (time to match a single-thread Elo) is the right metric; raw games/second can lie.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1007/978-3-540-87608-3_6](https://doi.org/10.1007/978-3-540-87608-3_6)
-- URL: https://doi.org/10.1007/978-3-540-87608-3_6
+- DOI: https://doi.org/10.1007/978-3-540-87608-3_6
+- Author PDF: https://dke.maastrichtuniversity.nl/m.winands/documents/multithreadedMCTS2.pdf

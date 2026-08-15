@@ -66,8 +66,6 @@ Direct ancestor of modern remote-free / message-passing deallocation designs (sn
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/1133956.1133968](https://doi.org/10.1145/1133956.1133968)

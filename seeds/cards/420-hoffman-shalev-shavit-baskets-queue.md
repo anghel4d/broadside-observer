@@ -59,10 +59,6 @@ Key theoretical/practical step after MS for Anoptic: reduce tail serialization w
 
 ## Caveats
 
-- Basket semantics can surprise intuition about strict node order inside a concurrency window.
-- Still CAS-based linked structure; later FAA/ring designs often win raw throughput.
-- Confirm Springer LNCS 4878 chapter DOI if citing formally; PDF above is canonical author copy.
-
 ## Links
 
 - PDF: https://people.csail.mit.edu/shanir/publications/Baskets%20Queue.pdf

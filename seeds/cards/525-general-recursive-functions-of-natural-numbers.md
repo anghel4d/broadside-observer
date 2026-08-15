@@ -49,21 +49,20 @@ see:
 
 ## One-sentence takeaway
 
-Kleene defines general recursive functions and equates them with λ-definability—third pillar of 1936 computability.
+Kleene defines general recursive functions via Herbrand–Gödel equation systems and proves they coincide with Church's λ-definable functions.
 
 ## Why it matters here
 
-Recursive function theory is the algebraic face of computability used throughout proof theory and PL.
+Third pillar of the 1936 computability cluster, and the algebraic face Anoptic inherits whenever it talks about primitive recursion, μ-recursion, or "this column is a total function of those columns." Proof theory and PL both still quote this definition.
 
 ## Key ideas
 
-- Herbrand–Gödel–Kleene general recursion.
-- Equivalence with Church's λ-definability.
-- μ-operator / least-number operator era begins.
+- A function is general recursive if it is the unique solution of a finite system of equations built from zero, successor, and substitution, allowing a least-number search.
+- Equivalence with λ-definability is proved here and amplified in the companion Duke paper (card 526).
+- Primitive recursive functions sit strictly inside; the μ-operator is what buys partiality and full computability.
+- Together with Church, Turing, and Post 1936, makes "effectively calculable" look notation-independent.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

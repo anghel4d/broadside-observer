@@ -5,7 +5,7 @@ authors:
   - "Claudio Gutierrez"
   - "Daniel Hernández"
 year: 2026
-venue: "arXiv"
+venue: "arXiv:cs.DB"
 arxiv: "2605.00417"
 doi: null
 source: "https://arxiv.org/abs/2605.00417"
@@ -43,24 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-The paper analyzes and characterizes the algebraic and logical structure of the multiset semantics for SPARQL patterns involving AND, UNION, FILTER, EXCEPT, and SELECT.
+Angles, Gutierrez, and Hernández prove that SPARQL patterns under multiset semantics, a multiset relational algebra, and non-recursive Datalog with safe negation and multiplicities are expressively equivalent.
 
 ## Why it matters here
 
-Datalog/deductive evaluation relevant to ano standing rules over columnar ECS; Relational/query foundations for selection-as-reference.
+Ano standing rules over a columnar ECS are a Datalog/relational fragment that must respect bag semantics: joins and filters on components are not set-theoretic, and SPARQL-style AND/UNION/EXCEPT is the right comparison point.
 
 ## Key ideas
 
-- The paper analyzes and characterizes the algebraic and logical structure of the multiset semantics for SPARQL patterns involving AND, UNION, FILTER, EXCEPT, and SELECT.
-- To do this, we align SPARQL with two well-established query languages: Datalog and Relational Algebra.
-- Specifically, we study (i) a version of non-recursive Datalog with safe negation extended to support multisets, and (ii) a multiset relational algebra comprising projection, selection, natural join, arithmetic union, and except.
-- We prove that these three formalisms are expressively equivalent under multiset semantics.
+- The fragment studied is SPARQL AND, UNION, FILTER, EXCEPT, and SELECT, interpreted with multiplicities rather than set semantics.
+- The Datalog side is non-recursive Datalog with safe negation, extended so predicates carry bag multiplicities.
+- The algebra has projection, selection, natural join, arithmetic union, and except, all in the multiset reading.
+- The three formalisms are shown to have the same expressive power, so equivalences and rewrites can move freely among them.
+- The result is a characterization of the algebraic/logical structure of SPARQL bags, not a new engine.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2605.00417](https://arxiv.org/abs/2605.00417)
-- URL: https://arxiv.org/abs/2605.00417

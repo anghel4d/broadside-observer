@@ -36,23 +36,23 @@ see:
 
 ## One-sentence takeaway
 
-Tensors with named axes, so broadcasting and lifts (batch, heads) do not depend on silent axis order — a notation paper that papers and compilers both needed.
+Give every tensor axis a name so broadcasting, batching, and multi-head lifts do not depend on silent positional order.
 
 ## Why it matters here
 
-Directly adjacent to ano and to Weaves' axis-stride category: names, not positions, are the interface.
+Directly adjacent to ano and to Weaves' axis-stride category: names, not positions, are the interface. Einops is the library; this is the notation paper compilers and papers both needed.
 
 ## Key ideas
 
-- TMLR 2023; arXiv:2102.13196.
-- Lifts low-order ops to minibatches / multi-head attention without reshaping folklore.
-- Includes a differential-calculus story in the same notation.
+- TMLR January 2023; arXiv:2102.13196; OpenReview `hVT7SHlilx`.
+- Low-order ops lift to minibatches and multi-head attention without reshape folklore.
+- Includes a differential-calculus story in the same named-axis notation.
+- Notation proposal, not a semantics — Weaves supplies the category.
 
 ## Caveats
-
-- Notation proposal, not a semantics. Weaves supplies the category; einops supplies the library.
 
 ## Links
 
 - arXiv: [2102.13196](https://arxiv.org/abs/2102.13196)
+- PDF: https://arxiv.org/pdf/2102.13196
 - OpenReview: https://openreview.net/forum?id=hVT7SHlilx

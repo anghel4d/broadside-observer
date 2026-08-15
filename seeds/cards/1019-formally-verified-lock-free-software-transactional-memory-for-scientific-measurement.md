@@ -60,9 +60,6 @@ Anoptic-engine is C, lock-free buses, ECS — this is the systems-variety crème
 
 ## Caveats
 
-- Formal claims are bounded configs (depth 3, width 2, 2–3 threads); ∀T safety is a projection conjecture plus 128-thread stress, not a cutoff proof.
-- Individual-thread starvation still possible under adversarial schedulers; wait-freedom is not claimed.
-- Workload is NMR/ODMR measurement, not a game loop; Python/MCP path is new relative to the 16-year C++ core.
 
 ## Links
 

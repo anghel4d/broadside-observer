@@ -6,7 +6,7 @@ year: 2005
 venue: "MIT Press"
 arxiv: null
 doi: null
-source: "https://www.cis.upenn.edu/~bcpierce/attapl/"
+source: "https://mitpress.mit.edu/9780262552677/advanced-topics-in-types-and-programming-languages/"
 topics:
   - types
   - pierce
@@ -24,11 +24,6 @@ cites:
     year: 2002
     arxiv: null
     doi: null
-  - title: "Practical Foundations for Programming Languages"
-    url: "https://doi.org/10.1017/CBO9781316576892"
-    year: 2016
-    arxiv: null
-    doi: "10.1017/CBO9781316576892"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
@@ -41,7 +36,6 @@ cites:
     doi: null
 see:
   - "026-types-and-programming-languages"
-  - "646-practical-foundations-for-programming-languages"
   - "650-the-calculus-of-constructions"
   - "148-linear-types-can-change-the-world"
 ---
@@ -50,24 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-Edited volume of advanced type-system chapters (dependent types, modules, substructural types, etc.).
+ATTAPL is a sequel to TAPL: expert chapters on substructural types, dependent types, effects and regions, TAL/PCC, logical relations, and ML modules, not a second introductory textbook.
 
 ## Why it matters here
 
-ATTAPL is the sequel shelf to TAPL — deep dives without minting every chapter as its own card.
+When Broadside needs a typed assembly story, a region/effect reading of engine memory, or an ML-module account of subsystems, open the relevant ATTAPL chapter instead of minting a new card for every advanced type-system paper.
 
 ## Key ideas
 
-- Modules, type refinements, dependent types surveys.
-- Substructural and effectful type systems.
-- Expert-authored chapters as a curriculum.
-- Companion to TAPL and PFPL.
+- Ten invited chapters: substructural types, dependent types, effect types and regions, typed assembly language, proof-carrying code, logical relations, typed operational reasoning, ML modules, type definitions, ML type inference.
+- Assumes TAPL-level operational semantics and type-system technique; it is a curriculum, not a monograph with one thesis.
+- Substructural and effect chapters are the ones that speak to Anoptic’s linear/region instincts; TAL/PCC speak to verified backends.
+- Coquand–Huet CoC and Wadler’s linear types are representative cited ancestors of the advanced chapters.
+- MIT Press hardcover 2004/2005 (ISBN 978-0-262-16228-9); later paperback 978-0-262-55267-7.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.cis.upenn.edu/~bcpierce/attapl/
+- MIT Press: https://mitpress.mit.edu/9780262552677/advanced-topics-in-types-and-programming-languages/
+- Author page: https://www.cis.upenn.edu/~bcpierce/attapl/

@@ -31,21 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-A C-to-Rust reengineering of Unix `sed`, examining safety, abstractions, and generative-AI assistance — the sibling rewrite uutils is now targeting (diffutils/findutils/sed).
+Spinellis reports a C-to-Rust reengineering of Unix `sed`, examining memory safety, the abstractions the rewrite forced, and where generative-AI assistance helped or hindered — a single-tool sibling of the uutils coreutils swap.
 
 ## Why it matters here
 
-Same Unix-foundations move as coreutils, one tool deep. GRID COMMAND text pipelines live here.
+Same Unix-foundations move as coreutils, one tool deep. GRID COMMAND text pipelines live in `sed`-shaped stream edits; this is the experience report for rewriting that substrate rather than wrapping it.
 
 ## Key ideas
 
 - IEEE Software 42(5):21–25, 2025. DOI `10.1109/MS.2025.3579008`.
-- Port + design + later I/O-optimization columns (Spinellis 2025 follow-ups).
-- uutils cites it as the next-package horizon, not as a competitor.
+- Port plus design, not a drop-in GNU-sed compatibility study at Ubuntu scale; later Spinellis columns take I/O optimization as a follow-up.
+- Safety and abstraction are the claimed wins; generative-AI assistance is treated as a real part of the workflow, with limits.
+- uutils cites it as the next-package horizon (diffutils/findutils/sed), not as a competitor.
 
 ## Caveats
-
-- Single-tool experience report, not a drop-in GNU sed compatibility study at Ubuntu scale.
 
 ## Links
 

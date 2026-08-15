@@ -1,7 +1,10 @@
 ---
-title: "Gigavoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering"
+title: "GigaVoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering"
 authors:
-  - "Cyril Crassin et al."
+  - "Cyril Crassin"
+  - "Fabrice Neyret"
+  - "Sylvain Lefebvre"
+  - "Elmar Eisemann"
 year: 2009
 venue: "I3D"
 arxiv: null
@@ -17,90 +20,45 @@ pool: "graphics"
 relevance_score: 8
 lineage: radiance-cascades
 cites:
-  - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
-    url: "https://doi.org/10.1145/1944745.1944787"
-    year: 2011
-    arxiv: null
-    doi: "10.1145/1944745.1944787"
   - title: "Fast volume rendering using a shear-warp factorization of the viewing transformation"
     url: "https://doi.org/10.1145/192161.192283"
     year: 1994
     arxiv: null
     doi: "10.1145/192161.192283"
-  - title: "Real-Time Volume Graphics"
-    url: "https://doi.org/10.1201/b10629"
-    year: 2006
-    arxiv: null
-    doi: "10.1201/b10629"
-  - title: "High-quality pre-integrated volume rendering using hardware-accelerated pixel shading"
-    url: "https://doi.org/10.1145/383507.383515"
-    year: 2001
-    arxiv: null
-    doi: "10.1145/383507.383515"
-  - title: "A single-pass GPU ray casting framework for interactive out-of-core rendering of massive volumetric datasets"
-    url: "https://doi.org/10.1007/s00371-008-0261-9"
-    year: 2008
-    arxiv: null
-    doi: "10.1007/s00371-008-0261-9"
-  - title: "Interactive k-d tree GPU raytracing"
-    url: "https://doi.org/10.1145/1230100.1230129"
-    year: 2007
-    arxiv: null
-    doi: "10.1145/1230100.1230129"
   - title: "Perfect spatial hashing"
     url: "https://doi.org/10.1145/1141911.1141926"
     year: 2006
     arxiv: null
     doi: "10.1145/1141911.1141926"
-  - title: "Relief texture mapping"
-    url: "https://doi.org/10.1145/344779.344947"
-    year: 2000
+  - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
+    url: "https://doi.org/10.1145/1944745.1944787"
+    year: 2011
     arxiv: null
-    doi: "10.1145/344779.344947"
-  - title: "Synthesis of bidirectional texture functions on arbitrary surfaces"
-    url: "https://doi.org/10.1145/566570.566634"
-    year: 2002
-    arxiv: null
-    doi: "10.1145/566570.566634"
-  - title: "Real-time volume graphics"
-    url: "https://doi.org/10.1145/1103900.1103929"
-    year: 2004
-    arxiv: null
-    doi: "10.1145/1103900.1103929"
-  - title: "Volumetric reconstruction and interactive rendering of trees from photographs"
-    url: "https://doi.org/10.1145/1015706.1015785"
-    year: 2004
-    arxiv: null
-    doi: "10.1145/1015706.1015785"
-  - title: "Glift"
-    url: "https://doi.org/10.1145/1122501.1122505"
-    year: 2006
-    arxiv: null
-    doi: "10.1145/1122501.1122505"
+    doi: "10.1145/1944745.1944787"
 see:
   - "272-interactive-indirect-illumination-using-voxel-cone-tracing"
 ---
 
-# Gigavoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering
+# GigaVoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering
 
 ## One-sentence takeaway
 
-Ray-guided streaming of sparse voxel DAGs/octrees that made detailed voxel rendering practical — substrate for VXGI.
+GigaVoxels keeps a sparse voxel octree on the GPU and streams only the bricks a cone/ray actually needs, so multi-gigavoxel scenes fit in video memory.
 
 ## Why it matters here
 
-Voxel pipeline precursor on the RC epistemology: GigaVoxels underpins the Crassin cone-tracing GI line.
+Anoptic’s radiance-cascade / voxel-GI line inherits this substrate: Crassin’s later cone-tracing GI is GigaVoxels plus irradiance. Ray-guided brick residency is the same budget problem as streaming RC probes or clipmap terrain without stalling the frame.
 
 ## Key ideas
 
-- Stream voxel bricks on demand guided by rays, keeping GPU memory bounded.
-- Enables high-detail volumetric representations used by later interactive GI.
+- Encode volume data as a sparse octree of bricks; empty space is skipped by the N-tree, not by a dense 3D texture.
+- Rays (and cones) drive an asynchronous producer-consumer: misses enqueue brick loads, hits keep marching, so GPU memory stays bounded.
+- Mipmapped bricks plus cone tracing give cheap LOD and approximate visibility — the mechanism VXGI later uses for indirect lighting.
+- Filtering and gradient estimation live in the brick cache, so magnification does not explode bandwidth.
 
 ## Caveats
 
-- Rendering/streaming paper first; GI application arrives with voxel cone tracing.
-
 ## Links
 
-- DOI: [10.1145/1507149.1507152](https://doi.org/10.1145/1507149.1507152)
-- URL: https://doi.org/10.1145/1507149.1507152
+- DOI: https://doi.org/10.1145/1507149.1507152
+- I3D 2009: https://i3dsymposium.org/2009/papers.html

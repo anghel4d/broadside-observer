@@ -34,18 +34,18 @@ Self-contained, mathematically precise algorithms for Transformer components and
 
 ## Why it matters here
 
-The pseudocode Weaves wants to replace with terms. Useful as a checklist of ops any algebra must cover.
+The pseudocode Weaves wants to replace with terms. Useful as a checklist of ops any algebra must cover: attention, residuals, layer-norm, training loops, and the main variants.
 
 ## Key ideas
 
 - arXiv:2207.09238; 16 pages, 15 algorithms.
 - Covers architecture blocks, training, and prominent model variants — not empirical SOTA.
 - Assumes MLP-level literacy; no category theory.
+- Algorithms document, not a semantics. Complements Weaves rather than competing with it.
 
 ## Caveats
-
-- Algorithms document, not a semantics. Complements Weaves rather than competing with it.
 
 ## Links
 
 - arXiv: [2207.09238](https://arxiv.org/abs/2207.09238)
+- PDF: https://arxiv.org/pdf/2207.09238

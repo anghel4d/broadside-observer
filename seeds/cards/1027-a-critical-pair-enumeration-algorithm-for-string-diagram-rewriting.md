@@ -66,9 +66,6 @@ Why you might love this: interaction nets (147) and Weaves already treat graphs 
 
 ## Caveats
 
-- Left-connectedness is essential; general DPOI would need formal path extensions.
-- Haskell currently over-reports isomorphic gluings; iso-pruning is future work.
-- No Frobenius on the nose (convex matches); the Bonchi I Frobenius case is a different combinatorial setting.
 
 ## Links
 

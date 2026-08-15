@@ -1,5 +1,4 @@
 ---
-
 title: "Releasing Memory with Optimistic Access: A Hybrid Approach to Memory Reclamation and Allocation in Lock-Free Programs"
 authors:
   - "Pedro Moreno"
@@ -24,7 +23,7 @@ cites:
     year: 2004
     arxiv: null
     doi: "10.1109/TPDS.2004.8"
-  - title: "Epoch-Based Reclamation / Practical lock-freedom"
+  - title: "Practical lock-freedom"
     url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
     year: 2004
     arxiv: null
@@ -44,25 +43,23 @@ see:
 
 ## One-sentence takeaway
 
-Lock-free data structures are an important tool for the development of concurrent programs as they provide scalability, low latency and avoid deadlocks, livelocks and priority inversion.
+LRMalloc is extended so Optimistic Access can actually return pages to the OS: OA is allowed to read reclaimed memory, and the allocator plus virtual memory make that safe and reusable.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Releasing Memory with Optimistic Access: A Hybrid Approach to Memory Reclamation).
+Anoptic lock-free structures want OA's speed without a private recycling arena that never gives memory back; tying reclamation to the process allocator is the missing piece.
 
 ## Key ideas
 
-- Lock-free data structures are an important tool for the development of concurrent programs as they provide scalability, low latency and avoid deadlocks, livelocks and priority inversion.
-- However, they require some sort of additional support to guarantee memory reclamation.
-- The Optimistic Access (OA) method has most of the desired properties for memory reclamation, but since it allows memory to be accessed after being reclaimed, it is incompatible with the traditional memory management model.
-- This renders it unable to release memory to the memory allocator/operating system, and, as such, it requires a complex memory recycling mechanism.
-- In this paper, we extend the lock-free general purpose memory allocator LRMalloc to support the OA method.
+- Optimistic Access has the progress/memory-bound properties people want, but it reads nodes after they are retired, which a normal malloc/free model forbids.
+- That incompatibility forced a complex in-allocator recycling loop that never released memory to the rest of the process.
+- Teaching LRMalloc about OA simplifies the reclaimer and lets other subsystems reuse the same pages.
+- Virtual-memory tricks then let truly idle pages go back to the operating system.
+- Hybrid claim: reclamation and allocation have to be designed together once you allow post-reclaim reads.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2302.06520](https://arxiv.org/abs/2302.06520)
-- URL: https://arxiv.org/abs/2302.06520
+- PDF: https://arxiv.org/pdf/2302.06520

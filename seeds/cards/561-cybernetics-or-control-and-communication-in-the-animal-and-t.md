@@ -34,44 +34,31 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-  - title: "The Computer and the Brain"
-    url: "https://yalebooks.yale.edu/book/9780300181111/the-computer-and-the-brain/"
-    year: 1958
-    arxiv: null
-    doi: null
-  - title: "The Human Use of Human Beings"
-    url: "https://www.worldcat.org/title/human-use-of-human-beings/oclc/523"
-    year: 1950
-    arxiv: null
-    doi: null
 see:
   - "564-behavior-purpose-and-teleology"
   - "553-a-mathematical-theory-of-communication"
   - "565-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
-  - "548-the-computer-and-the-brain"
-  - "562-the-human-use-of-human-beings"
 ---
 
 # Cybernetics: Or Control and Communication in the Animal and the Machine
 
 ## One-sentence takeaway
 
-Wiener names cybernetics: feedback, control, and communication unify animals and machines.
+Wiener names cybernetics as the unified study of feedback, information, and control in animals and machines.
 
 ## Why it matters here
 
-Systems-thinking charter for simulation, agents, and closed-loop ano architectures.
+Anoptic and GRID COMMAND are closed-loop systems: sensors, estimators, and actuators. This book is the charter for treating those loops as one science.
 
 ## Key ideas
 
-- Feedback as central mechanism.
-- Information and entropy in control.
-- Interdisciplinary animal/machine program.
-- 1948 first edition; 1961 second.
+- Negative feedback, not vital force, is what makes behavior look purposeful; oscillation and hunting are the failure modes of the same loop.
+- Statistical communication and time-series prediction (the wartime filter work) are the mathematics of control under noise.
+- Nervous systems, servomechanisms, and computing machines are instances of the same circular-causal architecture.
+- Information and entropy appear as control resources, in dialogue with Shannon's contemporaneous theory.
+- First edition 1948 (Hermann / MIT); the 1961 second edition adds chapters on learning and self-reproducing machines.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

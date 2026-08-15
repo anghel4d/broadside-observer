@@ -6,7 +6,7 @@ year: 1996
 venue: "EGWR"
 arxiv: null
 doi: null
-source: "https://graphics.stanford.edu/papers/photon/"
+source: "https://graphics.stanford.edu/~henrik/papers/ewr7/ewr7.html"
 topics:
   - gi
   - photon
@@ -26,56 +26,11 @@ cites:
     year: 1994
     arxiv: null
     doi: "10.1145/192161.192286"
-  - title: "Measuring and modeling anisotropic reflection"
-    url: "https://doi.org/10.1145/133994.134078"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/133994.134078"
-  - title: "Optimally combining sampling techniques for Monte Carlo rendering"
-    url: "https://doi.org/10.1145/218380.218498"
-    year: 1995
-    arxiv: null
-    doi: "10.1145/218380.218498"
-  - title: "Distributed ray tracing"
-    url: "https://doi.org/10.1145/800031.808590"
-    year: 1984
-    arxiv: null
-    doi: "10.1145/800031.808590"
   - title: "Multidimensional binary search trees used for associative searching"
     url: "https://doi.org/10.1145/361002.361007"
     year: 1975
     arxiv: null
     doi: "10.1145/361002.361007"
-  - title: "Modeling the interaction of light between diffuse surfaces"
-    url: "https://doi.org/10.1145/800031.808601"
-    year: 1984
-    arxiv: null
-    doi: "10.1145/800031.808601"
-  - title: "Measuring and modeling anisotropic reflection"
-    url: "https://doi.org/10.1145/142920.134078"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/142920.134078"
-  - title: "Modeling the interaction of light between diffuse surfaces"
-    url: "https://doi.org/10.1145/964965.808601"
-    year: 1984
-    arxiv: null
-    doi: "10.1145/964965.808601"
-  - title: "Importance Driven Path Tracing using the Photon Map"
-    url: "https://doi.org/10.1007/978-3-7091-9430-0_31"
-    year: 1995
-    arxiv: null
-    doi: "10.1007/978-3-7091-9430-0_31"
-  - title: "Wavelet radiosity"
-    url: "https://doi.org/10.1145/166117.166146"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/166117.166146"
-  - title: "Distributed ray tracing"
-    url: "https://doi.org/10.1145/964965.808590"
-    year: 1984
-    arxiv: null
-    doi: "10.1145/964965.808590"
 see:
   - "152-the-rendering-equation"
 ---
@@ -84,21 +39,22 @@ see:
 
 ## One-sentence takeaway
 
-Photon mapping classic.
+Trace photons from the lights into a kd-tree, then render with distribution ray tracing that uses a dense caustic map plus a coarse global map for radiance estimates, sampling, and shadow culling.
 
 ## Why it matters here
 
-Photon mapping classic.
+Photon maps are the offline GI classic that still explains caustics, final gather, and “store flux, estimate radiance with k-nearest.” Anoptic RC / DDGI are the real-time cousins: same split between a cheap cached field and an accurate first bounce.
 
 ## Key ideas
 
-- Photon mapping classic.
+- Two maps: a high-density caustic map visualized directly, and a low-density global map used as a radiance cache / importance guide — not as the beauty pass.
+- Shadow photons (hits after the first surface along a light ray) skip most shadow rays in fully lit or fully occluded regions.
+- Radiance estimate: expand a sphere until it holds N photons, divide by πr², optionally cone-filter to kill blur at discontinuities.
+- Compared with Radiance on Cornell-box variants, the two-pass method was several times faster at similar quality because recursion dies after the first diffuse bounce.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://graphics.stanford.edu/papers/photon/
+- Author page: https://graphics.stanford.edu/~henrik/papers/ewr7/ewr7.html
+- Extended PDF: https://graphics.stanford.edu/~henrik/papers/ewr7/egwr96.pdf

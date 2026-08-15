@@ -55,9 +55,6 @@ anoptic-engine is C. The library already has Cyclone's region paper (133) and To
 
 ## Caveats
 
-- Cyclone the language is dormant; the ideas live in Rust, Checked C, and capability/region calculi, not in a maintained C toolchain you can flip on.
-- This USENIX paper is the overview; soundness of the region system is the Grossman et al. PLDI/TR companion already in the library as 133.
-- Performance numbers are 2002-era and do not include SIMD/SoA engine idioms.
 
 ## Links
 

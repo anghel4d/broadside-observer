@@ -28,17 +28,12 @@ cites:
     year: 2024
     arxiv: "2408.14425"
     doi: "10.1093/rasti/rzae062"
-  - title: "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes"
-    url: "https://arxiv.org/abs/2607.20384"
-    year: 2026
-    arxiv: "2607.20384"
   - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
     url: "https://jcgt.org/published/0008/02/01/"
     year: 2019
 see:
   - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
   - "453-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
-  - "208-split-radiance-cascades-real-time-global-illumination-via-sp"
   - "318-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
@@ -46,24 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-Holographic Radiance Cascades keep high spatial resolution perpendicular to sample directions, yielding 2D GI visually matching reference at real-time rates.
+Holographic Radiance Cascades keep high spatial resolution perpendicular to sample directions, matching a 2D path-traced reference at 1.85 ms for 512² on a laptop RTX 3080.
 
 ## Why it matters here
 
-Seeded RC variant on the Anoptic spine: shows how to fix small-penumbra / hard-shadow weaknesses of naive RC while staying single-shot and scene-agnostic in 2D.
+Anoptic's 2D/fluence RC spine needs this holographic probe layout to fix small-penumbra and hard-shadow failures of naive interval merging without going stochastic.
 
 ## Key ideas
 
-- Multi-level radiance probes with ray intervals composed instead of full conventional ray traces.
-- Holographic probe layout preserves resolution perpendicular to the march, improving hard shadows and volumetrics.
-- Builds on Sannikov RC and cites bilinear-style fixes from Osborne & Sannikov.
-- Memory scaling O(N×X²) is the stated barrier to naive 3D HRC.
+- Multi-level radiance probes compose short ray intervals instead of tracing full conventional rays.
+- The holographic layout preserves resolution perpendicular to the march, which is what buys hard shadows and volumetrics.
+- Cost is constant for a given scene size: 1.85 ms at 512×512 and 7.67 ms at 1024×1024 on an RTX 3080 Laptop.
+- Single-shot and scene-agnostic: no temporal accumulation and no content preprocess.
+- Memory scaling O(N×X²) is the stated barrier to a naive 3D holographic cascade.
 
 ## Caveats
-
-- Best understood as a 2D/fluence method; 3D remains open (see Split RC and community Surfel/UV-space variants).
 
 ## Links
 
 - arXiv: [2505.02041](https://arxiv.org/abs/2505.02041)
-- URL: https://arxiv.org/abs/2505.02041
+- PDF: https://arxiv.org/pdf/2505.02041

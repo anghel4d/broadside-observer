@@ -23,47 +23,35 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-  - title: "Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules"
-    url: "https://doi.org/10.1145/355592.365646"
-    year: 1966
-    arxiv: null
-    doi: "10.1145/355592.365646"
   - title: "A Discipline of Programming"
-    url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
+    url: "https://research.tue.nl/en/publications/a-discipline-of-programming/"
     year: 1976
-    arxiv: null
-    doi: null
-  - title: "Assigning Meanings to Programs"
-    url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
-    year: 1967
     arxiv: null
     doi: null
 see:
   - "585-go-to-statement-considered-harmful"
-  - "625-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
   - "590-a-discipline-of-programming"
-  - "626-assigning-meanings-to-programs"
 ---
 
 # Notes on Structured Programming
 
 ## One-sentence takeaway
 
-Dijkstra's notes elevate program structure and stepwise refinement into a discipline.
+EWD249 turns the goto letter into a constructive discipline: stepwise refinement, program families, and structure as the way we keep programs in our heads.
 
 ## Why it matters here
 
-Methodology companion to the goto letter; craft epistemology for Broadside languages.
+Broadside language craft — small, refinable units with a clear coordinate system — is this methodology, not only the 1968 slogan.
 
 ## Key ideas
 
-- Stepwise refinement.
-- Program families / structure.
-- EWD249 / Dahl–Dijkstra–Hoare book form.
+- A program is developed as a sequence of refinements from a problem statement, each step leaving a still-correct abstract program.
+- Structure (sequencing, selection, repetition, procedures) is chosen so the text remains the understanding coordinate.
+- Program families: one designs a set of related programs, not a single brittle artifact.
+- Circulated 1970 as EWD249; printed with Dahl and Hoare in *Structured Programming* (Academic Press, 1972).
+- *A Discipline of Programming* later supplies the predicate-transformer calculus behind the same craft.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

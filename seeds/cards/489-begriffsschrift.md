@@ -6,7 +6,7 @@ year: 1879
 venue: "Halle: Louis Nebert"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/begriffsschrift/oclc/4576402"
+source: "https://gdz.sub.uni-goettingen.de/id/PPN538957069"
 topics:
   - logic
   - frege
@@ -17,48 +17,28 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
 lineage: foundations-of-computing
-cites:
-  - title: "Principia Mathematica, Volume I"
-    url: "https://archive.org/details/PrincipiaMathematicaVol1"
-    year: 1910
-    arxiv: null
-    doi: null
-  - title: "Grundzüge der theoretischen Logik"
-    url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
-    year: 1928
-    arxiv: null
-    doi: "10.1007/978-3-642-86848-1"
-  - title: "The Concept of Truth in Formalized Languages"
-    url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
-    year: 1933
-    arxiv: null
-    doi: null
-see:
-  - "488-principia-mathematica-volume-i"
-  - "491-grundzuge-der-theoretischen-logik"
-  - "631-the-concept-of-truth-in-formalized-languages"
 ---
 
 # Begriffsschrift
 
 ## One-sentence takeaway
 
-Frege's ideography introduced modern quantificational logic—the substrate of every later completeness and incompleteness theorem.
+Frege's 1879 ideography is the first fully formal quantificational logic: a two-dimensional notation for implication, negation, and the universal quantifier in which proofs are gapless symbol manipulations.
 
 ## Why it matters here
 
-Without Frege's formal language there is no Hilbert program target and no clean statement of decidability.
+Without this formal language there is no clean Hilbert-program target and no precise Entscheidungsproblem; every later completeness or incompleteness theorem sits on Frege's quantifiers.
 
 ## Key ideas
 
-- Two-dimensional begriffsschrift notation for quantifiers and implication.
-- Distinction of sense/reference later, but here: formal inference.
-- Ancestor of first-order logic used by Gödel and Church.
+- A *Begriffsschrift* (concept-script) modelled on arithmetic notation, not on subject–predicate grammar, so nested quantification is writable.
+- Primitive devices: the content stroke, judgment stroke, implication (condition stroke), negation, and the concavity for generality.
+- Identity of content and substitution rules let derivations be checked without leftover natural-language glue.
+- Direct ancestor of the first-order language Hilbert–Ackermann axiomatize and Gödel arithmetizes.
 
 ## Caveats
 
-- Notation is alien to modern readers; prefer modern reconstructions for working use.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/begriffsschrift/oclc/4576402
+- GDZ scan: https://gdz.sub.uni-goettingen.de/id/PPN538957069
+- Zenodo PDF: https://zenodo.org/records/6330677

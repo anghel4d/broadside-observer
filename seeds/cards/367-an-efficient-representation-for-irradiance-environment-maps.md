@@ -18,16 +18,12 @@ pool: "graphics"
 relevance_score: 8
 lineage: radiance-cascades
 cites:
-  - title: "Precomputed Radiance Transfer"
-    url: "https://doi.org/10.1145/566570.566612"
-    year: 2002
-    doi: "10.1145/566570.566612"
   - title: "The Irradiance Volume"
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
+    arxiv: null
     doi: "10.1109/38.656788"
 see:
-  - "366-precomputed-radiance-transfer"
   - "451-the-irradiance-volume"
 ---
 
@@ -35,22 +31,22 @@ see:
 
 ## One-sentence takeaway
 
-Order-2 spherical harmonics suffice to represent irradiance environment maps for diffuse shading.
+Diffuse irradiance from a distant environment is so low-frequency that nine SH coefficients (order 2) reconstruct it to ~1% error.
 
 ## Why it matters here
 
-Angular-basis micro-classic on the RC thread: explains why so many probe/LPV systems store SH irradiance rather than full radiance.
+This is why Anoptic probe / LPV / RC irradiance buffers store SH, not a full cube map per probe: the Lambertian kernel is a low-pass filter, so the angular budget belongs on radiance, not irradiance.
 
 ## Key ideas
 
-- Diffuse irradiance from distant illumination is very low-frequency — 9 SH coefficients often suffice.
-- Became the default compact representation inside LPV and many probe GI systems.
+- Convolution of an environment map with a clamped-cosine becomes a per-band scale in SH; only bands ℓ ≤ 2 survive at useful amplitude.
+- A 9-coefficient vector per color channel evaluates irradiance as a quadratic polynomial in the surface normal — a few madds in a pixel shader.
+- Distant-lighting assumption: no near-field occlusion, no local emitters. Pair with PRT or a probe volume when that breaks.
+- Became the default compact irradiance encoding inside LPV, light probes, and many baked GI systems.
 
 ## Caveats
 
-- Distant/environment lighting assumption; not a full dynamic GI solution.
-
 ## Links
 
-- DOI: [10.1145/383259.383317](https://doi.org/10.1145/383259.383317)
-- URL: https://doi.org/10.1145/383259.383317
+- DOI: https://doi.org/10.1145/383259.383317
+- Author PDF: https://cseweb.ucsd.edu/~ravir/papers/envmap/envmap.pdf

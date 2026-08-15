@@ -3,7 +3,7 @@ title: "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence
 authors:
   - "DeepSeek-AI"
 year: 2026
-venue: "arXiv:cs.CL / Hugging Face tech report"
+venue: "arXiv:cs.CL"
 arxiv: "2606.19348"
 doi: null
 source: "https://arxiv.org/abs/2606.19348"
@@ -31,13 +31,13 @@ cites:
     arxiv: "2205.14135"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
-    year: 2024
+    year: 2023
     arxiv: "2307.08691"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-  - title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
+  - title: "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling"
     url: "https://arxiv.org/abs/2603.05451"
     year: 2026
     arxiv: "2603.05451"
@@ -78,24 +78,20 @@ see:
 
 ## One-sentence takeaway
 
-Preview MoE pair — V4-Pro 1.6T/49B act and V4-Flash 284B/13B act — with 1M context via CSA+HCA hybrid attention, mHC residuals, and Muon; Pro uses 27% decode FLOPs and 10% KV vs V3.2 at 1M.
+Preview MoE pair — V4-Pro 1.6T/49B active and V4-Flash 284B/13B active — with 1M context via Compressed Sparse Attention plus Heavily Compressed Attention, mHC residuals, and Muon; at 1M tokens Pro uses ~27% decode FLOPs and ~10% KV versus V3.2.
 
 ## Why it matters here
 
-Current end of the lab stack. Million-token default context is the agent-horizon change. HF PDF is the canonical tech report (also arXiv 2606.19348).
+Current end of the lab stack. Million-token default context is the agent-horizon change for Broadside/GRID: a whole repo, a long sim log, or a multi-document brief as one window rather than a retrieval hack.
 
 ## Key ideas
 
-- arXiv:2606.19348 + HF PDF https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf (Apr 2026 preview).
-- Hybrid attention: Compressed Sparse Attention (CSA) + Heavily Compressed Attention (HCA). At 1M tokens, V4-Pro ≈ 27% single-token infer FLOPs and 10% KV vs V3.2.
-- mHC residuals (1260); Muon optimizer (Jordan et al., not a DeepSeek paper — cite, don't mint). Pretrain >32T tokens; FP4 experts + FP8 mixed; thinking / non-thinking modes.
-- Checkpoints: https://huggingface.co/collections/deepseek-ai/deepseek-v4 . API models deepseek-v4-pro / deepseek-v4-flash.
+- arXiv:2606.19348; also the HF PDF https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf (Apr 2026 preview).
+- Hybrid attention: CSA + HCA. At 1M tokens, V4-Pro ≈ 27% single-token infer FLOPs and 10% KV vs V3.2.
+- mHC residuals; Muon optimizer (Jordan et al., not a DeepSeek paper). Pretrain >32T tokens; FP4 experts + FP8 mixed; thinking / non-thinking modes.
+- Checkpoints: https://huggingface.co/collections/deepseek-ai/deepseek-v4 . API models `deepseek-v4-pro` / `deepseek-v4-flash`. Preview / 'towards' report, not a final dense eval dump.
 
 ## Caveats
-
-- Preview / 'towards' report, not a final dense eval dump. Pro-Max is the max-reasoning mode.
-- Muon is Keller Jordan / follow-ons, not first-party DeepSeek — don't mint a Muon card here.
-- FlashMLA remains a kernel repo, not a paper.
 
 ## Links
 

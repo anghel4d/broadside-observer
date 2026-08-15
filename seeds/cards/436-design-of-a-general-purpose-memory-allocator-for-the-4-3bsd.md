@@ -53,8 +53,6 @@ Pre-Bonwick size-class kernel practice; shows why segregated free lists became t
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - PDF: https://docs-archive.freebsd.org/44doc/papers/kernmalloc.pdf

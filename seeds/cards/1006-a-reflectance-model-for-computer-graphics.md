@@ -56,9 +56,6 @@ Disney, UE4, and Frostbite PBR (344, 270, 267) are already in the library; the 1
 
 ## Caveats
 
-- SIGGRAPH 1981 is the debut; the commonly cited archival text is TOG 1(1) 1982 (doi 10.1145/357290.357293). Same model; do not mint both.
-- Beckmann distribution and the original geometric term are not GGX/Smith; modern engines swapped the D and G factors while keeping the microfacet skeleton.
-- Energy conservation and reciprocity as used in 2010s PBR are later hygiene, not theorems proved here.
 
 ## Links
 

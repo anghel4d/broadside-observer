@@ -65,8 +65,6 @@ Industrial magazine/thread-cache pattern at Google scale; Temeraire and modern t
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - HTML: https://gperftools.github.io/gperftools/tcmalloc.html

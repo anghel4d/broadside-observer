@@ -3,7 +3,7 @@ title: "Arithmetices principia, nova methodo exposita"
 authors:
   - "Giuseppe Peano"
 year: 1889
-venue: "Bocca, Turin"
+venue: "Fratres Bocca, Turin"
 arxiv: null
 doi: null
 source: "https://archive.org/details/arithmeticespri00peangoog"
@@ -18,47 +18,32 @@ pool: "maths-foundations"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
-    url: "https://doi.org/10.1007/BF01700692"
-    year: 1931
-    arxiv: null
-    doi: "10.1007/BF01700692"
-  - title: "Introduction to Metamathematics"
-    url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
-    year: 1952
-    arxiv: null
-    doi: null
-  - title: "Grundzüge der theoretischen Logik"
-    url: "https://link.springer.com/book/10.1007/978-3-642-86848-1"
-    year: 1928
-    arxiv: null
-    doi: "10.1007/978-3-642-86848-1"
+  - title: "Begriffsschrift"
+    url: "https://gdz.sub.uni-goettingen.de/id/PPN538957069"
+    year: 1879
 see:
-  - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
-  - "529-introduction-to-metamathematics"
-  - "491-grundzuge-der-theoretischen-logik"
+  - "489-begriffsschrift"
 ---
 
 # Arithmetices principia, nova methodo exposita
 
 ## One-sentence takeaway
 
-Peano's axioms crystallized natural-number arithmetic as a formal object—the home ground of incompleteness and recursive function theory.
+Peano's 1889 pamphlet axiomatizes the natural numbers with 0, successor, and induction, written in a symbolic Latin that treats arithmetic as a formal object rather than a collection of obvious truths.
 
 ## Why it matters here
 
-PA/PRA are the default formal arithmetics when Broadside discusses proof, totality, and computable functions.
+PA/PRA are the default formal arithmetics when Broadside discusses proof, totality, and computable functions; this is the source text, later Dedekind–Peano formulations notwithstanding.
 
 ## Key ideas
 
-- Successor-based axiomatization of N.
-- Latin/symbolic exposition aiming at full formalization.
-- Bridge from 19th-c foundations to Hilbert-era metamathematics.
+- Primitive signs for zero and successor; axioms that successor is injective and misses zero; induction as the defining property of \(\mathbb{N}\).
+- Explicit aim: write proofs so that each step is a permitted transformation of symbols.
+- Bridge from 19th-century foundations (Dedekind, Frege, Grassmann) to the Hilbert-era metamathematics that takes PA as the test theory.
+- Forty-odd pages, Latin, Bocca 1889; the Harvard/IA scan `arithmeticespri00peangoog` is the usual open copy.
 
 ## Caveats
 
-- Often cited via later Dedekind–Peano formulations; pin the 1889 text when historicizing.
-
 ## Links
 
-- URL: https://archive.org/details/arithmeticespri00peangoog
+- Internet Archive: https://archive.org/details/arithmeticespri00peangoog

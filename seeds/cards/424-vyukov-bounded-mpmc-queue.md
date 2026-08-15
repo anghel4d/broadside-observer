@@ -57,10 +57,6 @@ Default craft reference for Anoptic fixed-capacity job/event rings — copied in
 
 ## Caveats
 
-- Bounded; full/empty returns failure (or must be wrapped with waiting).
-- Progress/formality weaker than academic lock-/wait-free queues — still the right tool often.
-- Exact first-publication year on 1024cores is fuzzy; 2010 is conventional for this lineage pass.
-
 ## Links
 
 - URL: https://www.1024cores.net/home/lock-free-algorithms/queues/bounded-mpmc-queue

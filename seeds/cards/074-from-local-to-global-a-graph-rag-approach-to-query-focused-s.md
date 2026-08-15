@@ -25,48 +25,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
-    url: "https://arxiv.org/abs/2309.06180"
-    year: 2023
-    arxiv: "2309.06180"
-    doi: null
-  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
-    url: "https://arxiv.org/abs/2604.16548"
-    year: 2026
-    arxiv: "2604.16548"
-    doi: null
   - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
     url: "https://arxiv.org/abs/2005.11401"
     year: 2020
     arxiv: "2005.11401"
     doi: null
+  - title: "Dense Passage Retrieval for Open-Domain Question Answering"
+    url: "https://arxiv.org/abs/2004.04906"
+    year: 2020
+    arxiv: "2004.04906"
+    doi: null
 see:
-  - "002-efficient-memory-management-for-large-language-model-serving"
   - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+  - "092-dense-passage-retrieval-for-open-domain-question-answering"
 ---
 
 # From Local to Global: A Graph RAG Approach to Query-Focused Summarization
 
 ## One-sentence takeaway
 
-The use of retrieval-augmented generation (RAG) to retrieve relevant information from an external knowledge source enables large language models (LLMs) to answer questions over private and/or previously unseen document collections.
+GraphRAG answers corpus-level questions by building an entity graph, pregenerating community summaries, then reducing those partial answers into a final response.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests (From Local to Global: A Graph RAG Approach to Query-Focused Summarization)
+Broadside digest queries are often "what are the themes in this corpus?", which vanilla RAG cannot retrieve; GraphRAG is the query-focused summarization path over a private text store.
 
 ## Key ideas
 
-- The use of retrieval-augmented generation (RAG) to retrieve relevant information from an external knowledge source enables large language models (LLMs) to answer questions over private and/or previously unseen document collections.
-- However, RAG fails on global questions directed at an entire text corpus, such as "What are the main themes in the dataset?", since this is inherently a query-focused summarization (QFS) task, rather than an explicit retrieval task.
-- Prior QFS methods, meanwhile, do not scale to the quantities of text indexed by typical RAG systems.
-- To combine the strengths of these contrasting methods, we propose GraphRAG, a graph-based approach to question answering over private text corpora that scales with both the generality of user questions and the quantity of source text.
+- Standard RAG fails on global questions because they are QFS, not top-k retrieval; prior QFS methods do not scale to RAG-sized corpora.
+- Stage one extracts an entity knowledge graph from source documents; stage two pregenerates summaries for communities of related entities.
+- At query time each community summary produces a partial answer; those partials are summarized again for the user.
+- On global sensemaking questions over ~1M-token datasets, GraphRAG beats conventional RAG on comprehensiveness and diversity.
+- The method is aimed at private or previously unseen collections, not only public QA benchmarks.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.16130](https://arxiv.org/abs/2404.16130)
-- URL: https://arxiv.org/abs/2404.16130
+- PDF: https://arxiv.org/pdf/2404.16130

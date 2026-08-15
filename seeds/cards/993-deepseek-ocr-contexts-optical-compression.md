@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Render text as images and decode with a tiny MoE: <10× optical compression at 97% OCR, a serious attempt at 2D long-context memory.
+Render text as images and decode with a tiny MoE: DeepEncoder plus a DeepSeek3B-MoE-A570M decoder keeps <10× optical compression (text tokens / vision tokens) at ~97% OCR, a probe of 2D long-context memory.
 
 ## Why it matters here
 
-Context compression as vision — an agent-memory idea (pages in, tokens out). Production: 200k+ pages/day on one A100-40G.
+Context compression as vision — an agent-memory idea (pages in, tokens out). Production claim: 200k+ pages/day on one A100-40G. GRID COMMAND document ingestion can treat a page as a cheap visual latent instead of a token blow-up.
 
 ## Key ideas
 
-- arXiv:2510.18234. DeepEncoder + DeepSeek3B-MoE-A570M decoder. Encoder keeps activations low at high res while emitting few vision tokens.
-- <10× compression (text tokens / vision tokens) → ~97% OCR; ~20× still ~60%.
+- arXiv:2510.18234. Encoder keeps activations low at high res while emitting few vision tokens.
+- <10× compression → ~97% OCR; ~20× still ~60%.
 - OmniDocBench: beats GOT-OCR2.0 at 100 vision tokens/page vs 256; beats MinerU2.0 at <800 vs 6000+ tokens/page.
-- Framed as a probe of historical long-context compression and LLM memory forgetting.
+- Framed as a probe of historical long-context compression and LLM memory forgetting, not as a general VLM. Decoder is 3B-MoE, not V3.
 
 ## Caveats
-
-- OCR accuracy is not general long-context LM quality. Optical compression is a research probe.
-- Decoder is 3B-MoE, not V3.
 
 ## Links
 

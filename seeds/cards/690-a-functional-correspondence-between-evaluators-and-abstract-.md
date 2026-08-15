@@ -34,8 +34,8 @@ cites:
     arxiv: null
     doi: "10.1145/773184.773202"
   - title: "Control Operators, the SECD Machine, and the λ-Calculus"
-    url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
-    year: 1986
+    url: "https://scholarworks.iu.edu/dspace/items/d85303cb-faee-4396-bf56-b03b35758a47"
+    year: 1987
     arxiv: null
     doi: null
   - title: "The Mechanical Evaluation of Expressions"
@@ -54,25 +54,21 @@ see:
 
 ## One-sentence takeaway
 
-Shows systematic derivation of abstract machines from evaluators via CPS and defunctionalization.
+Ager, Biernacki, Danvy, and Midtgaard extract Landin/CEK/Krivine-style machines from high-level evaluators by CPS-transforming and then defunctionalizing the continuation.
 
 ## Why it matters here
 
-The functional-correspondence paper — turns Reynolds/Danvy methodology into a repeatable recipe for machines.
+This is the repeatable recipe for an ano interpreter: write the evaluator, CPS it, defunctionalize, and you *have* the abstract machine — instead of inventing CEK by hand.
 
 ## Key ideas
 
-- CPS + defunctionalization extracts abstract machines.
-- Correspondences among evaluators, CPS interpreters, and machines.
-- Unifies Landin/CEK/Krivine-style artifacts with high-level defs.
-- Companion to Reynolds definitional interpreters and Danvy defunctionalization.
+- Reynolds's definitional interpreters plus Danvy's defunctionalization become a correspondence: each evaluation-order choice yields a known machine.
+- Call-by-value evaluators produce CEK-like machines; call-by-name produces Krivine-like ones; the continuation's data type *is* the stack.
+- The derivation goes both ways in spirit: machines can be refunctionalized back into evaluators.
+- PPDP 2003, DOI 10.1145/888251.888254.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/888251.888254](https://doi.org/10.1145/888251.888254)
-- URL: https://doi.org/10.1145/888251.888254

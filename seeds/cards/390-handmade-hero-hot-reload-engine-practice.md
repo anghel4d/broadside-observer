@@ -2,7 +2,7 @@
 title: "Handmade Hero / Hot-Reload Engine Practice"
 authors:
   - "Casey Muratori"
-year: 2015
+year: 2014
 venue: "Handmade Hero"
 arxiv: null
 doi: null
@@ -14,7 +14,7 @@ seed_rank: 390
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
-relevance_score: 7
+relevance_score: 8
 cites:
   - title: "RenderDoc Graphics Debugger"
     url: "https://renderdoc.org/"
@@ -35,21 +35,22 @@ see:
 
 ## One-sentence takeaway
 
-Live code reload culture for engines.
+Muratori’s series treats the game as a reloadable DLL: a tiny platform layer owns OS, audio, and input, and `LoadLibrary`/`GetProcAddress` swaps the game code while heap and assets stay put.
 
 ## Why it matters here
 
-Live code reload culture for engines.
+Anoptic is a C engine that should iterate like a scripting host without a scripting host. Handmade Hero is the playbook: stable platform ABI, no global OS calls in game code, and a frame of downtime instead of a 30-second relink. That loop is how GRID COMMAND gameplay gets tuned.
 
 ## Key ideas
 
-- Live code reload culture for engines.
+- Split `platform` vs `game`: the platform never unloads; the game DLL exports `UpdateAndRender` (and friends) and is rebound when the file changes.
+- Persistent memory is a pair of arenas handed across the ABI so reloads do not free the world.
+- Debug builds stay simple — no hot-patch of individual functions, just a whole-module swap — which is enough for gameplay iteration.
+- The public artifact is the Handmade Network project page plus the video series; there is no paper.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://hero.handmade.network/
+- Handmade Network: https://hero.handmade.network/
+- Series index: https://handmadehero.org/

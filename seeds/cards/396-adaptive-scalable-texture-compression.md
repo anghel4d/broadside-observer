@@ -1,12 +1,16 @@
 ---
 title: "Adaptive Scalable Texture Compression"
 authors:
-  - "Jorn Nystad et al."
+  - "Jørn Nystad"
+  - "Anders Lassen"
+  - "Andy Pomianowski"
+  - "Sean Ellis"
+  - "Thomas J. Olson"
 year: 2012
 venue: "HPG"
 arxiv: null
-doi: null
-source: "https://www.khronos.org/astc/"
+doi: "10.2312/EGGH/HPG12/105-114"
+source: "https://doi.org/10.2312/EGGH/HPG12/105-114"
 topics:
   - compression
   - textures
@@ -17,86 +21,43 @@ pool: "engines"
 relevance_score: 7
 cites:
   - title: "Image Compression Using Block Truncation Coding"
-    url: "https://doi.org/10.1109/tcom.1979.1094560"
+    url: "https://doi.org/10.1109/TCOM.1979.1094560"
     year: 1979
     arxiv: null
-    doi: "10.1109/tcom.1979.1094560"
-  - title: "<i>i</i> PACKMAN"
+    doi: "10.1109/TCOM.1979.1094560"
+  - title: "iPACKMAN: High-Quality, Low-Complexity Texture Compression for Mobile Phones"
     url: "https://doi.org/10.1145/1071866.1071877"
     year: 2005
     arxiv: null
     doi: "10.1145/1071866.1071877"
-  - title: "Table‐based Alpha Compression"
-    url: "https://doi.org/10.1111/j.1467-8659.2009.01409.x"
-    year: 2009
-    arxiv: null
-    doi: "10.1111/j.1467-8659.2009.01409.x"
-  - title: "Graphics for the masses"
-    url: "https://doi.org/10.1145/1201775.882348"
+  - title: "Texture Compression using Low-Frequency Signal Modulation"
+    url: "https://doi.org/10.2312/EGGH/EGGH03/105-114"
     year: 2003
     arxiv: null
-    doi: "10.1145/1201775.882348"
-  - title: "High dynamic range texture compression for graphics hardware"
-    url: "https://doi.org/10.1145/1141911.1141944"
-    year: 2006
-    arxiv: null
-    doi: "10.1145/1141911.1141944"
-  - title: "Graphics for the masses"
-    url: "https://doi.org/10.1145/882262.882348"
-    year: 2003
-    arxiv: null
-    doi: "10.1145/882262.882348"
-  - title: "PACKMAN"
-    url: "https://doi.org/10.1145/1186223.1186306"
-    year: 2004
-    arxiv: null
-    doi: "10.1145/1186223.1186306"
-  - title: "Talisman"
-    url: "https://doi.org/10.1145/237170.237274"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/237170.237274"
-  - title: "Rendering from compressed textures"
-    url: "https://doi.org/10.1145/237170.237276"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/237170.237276"
-  - title: "ETC2: texture compression using invalid combinations"
-    url: "http://www.jacobstrom.com/publications/StromPetterssonGH07.pdf"
-    year: 2007
-    arxiv: null
-    doi: "10.5555/1280094.1280102"
-  - title: "Texture compression using low-frequency signal modulation"
-    url: "https://dblp.uni-trier.de/db/conf/egh/egh2003.html#Fenney03"
-    year: 2003
-    arxiv: null
-    doi: "10.5555/844174.844187"
-  - title: "Compression of Digital Images by Block Truncation Coding: A Survey"
-    url: "https://doi.org/10.1093/comjnl/37.4.308"
-    year: 1994
-    arxiv: null
-    doi: "10.1093/comjnl/37.4.308"
+    doi: "10.2312/EGGH/EGGH03/105-114"
 ---
 
 # Adaptive Scalable Texture Compression
 
 ## One-sentence takeaway
 
-ASTC texture compression.
+ASTC is one block-based format that covers 1–4 components, LDR and HDR, 2D and 3D, at bit rates from 8 bpp down to under 1 bpp by changing the block footprint.
 
 ## Why it matters here
 
-ASTC texture compression.
+Anoptic’s Vulkan path should treat ASTC as the default compressed texture, not DXT-or-bust. One format for color, normals, HDR, and 3D density means the streaming budget is a block size, not a pile of vendor codecs.
 
 ## Key ideas
 
-- ASTC texture compression.
+- Fixed 128-bit blocks; the footprint (4×4 … 12×12, plus 3D sizes) sets the bit rate, so quality scales without a new codec.
+- Bounded integer sequence encoding (BISE) packs weights more efficiently than power-of-two bitfields, which is how the fine bit-rate ladder works.
+- Optional partitions give a block several endpoint pairs so mixed-content tiles (edges, decals) don’t smear.
+- Orthogonal: any channel count at any rate, LDR or HDR — the design goal no prior mobile/desktop format hit.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.khronos.org/astc/
+- DOI: https://doi.org/10.2312/EGGH/HPG12/105-114
+- HPG 2012 PDF: https://highperformancegraphics.org/previous/www_2012/media/Papers/HPG2012_Papers_Nystad.pdf
+- Khronos ASTC: https://www.khronos.org/astc/

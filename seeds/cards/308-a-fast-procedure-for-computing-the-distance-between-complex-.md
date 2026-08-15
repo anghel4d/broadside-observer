@@ -5,7 +5,7 @@ authors:
   - "D. W. Johnson"
   - "S. S. Keerthi"
 year: 1988
-venue: "IEEE RA"
+venue: "IEEE Journal on Robotics and Automation"
 arxiv: null
 doi: "10.1109/56.2083"
 source: "https://doi.org/10.1109/56.2083"
@@ -18,89 +18,45 @@ reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 9
 cites:
-  - title: "Proximity Queries and Penetration Depth with GJK/EPA"
-    url: "https://graphics.stanford.edu/courses/cs448b-00-winter/"
-    year: 2001
-    arxiv: null
-    doi: null
-  - title: "Real-Time Obstacle Avoidance for Manipulators and Mobile Robots"
-    url: "https://doi.org/10.1177/027836498600500106"
-    year: 1986
-    arxiv: null
-    doi: "10.1177/027836498600500106"
-  - title: "Spatial Planning: A Configuration Space Approach"
-    url: "https://doi.org/10.1109/tc.1983.1676196"
-    year: 1983
-    arxiv: null
-    doi: "10.1109/tc.1983.1676196"
   - title: "Convex Analysis"
     url: "https://doi.org/10.1515/9781400873173"
     year: 1970
     arxiv: null
     doi: "10.1515/9781400873173"
-  - title: "A subdivision algorithm in configuration space for findpath with rotation"
-    url: "https://doi.org/10.1109/tsmc.1985.6313352"
-    year: 1985
-    arxiv: null
-    doi: "10.1109/tsmc.1985.6313352"
-  - title: "On the “piano movers'” problem I. The case of a two‐dimensional rigid polygonal body moving amidst polygonal barriers"
-    url: "https://doi.org/10.1002/cpa.3160360305"
+  - title: "Spatial Planning: A Configuration Space Approach"
+    url: "https://doi.org/10.1109/tc.1983.1676196"
     year: 1983
     arxiv: null
-    doi: "10.1002/cpa.3160360305"
+    doi: "10.1109/tc.1983.1676196"
   - title: "Distance functions and their application to robot path planning in the presence of obstacles"
     url: "https://doi.org/10.1109/jra.1985.1087003"
     year: 1985
     arxiv: null
     doi: "10.1109/jra.1985.1087003"
-  - title: "Collision Detection for Moving Polyhedra"
-    url: "https://doi.org/10.1109/tpami.1986.4767773"
-    year: 1986
-    arxiv: null
-    doi: "10.1109/tpami.1986.4767773"
-  - title: "Computational Geometry—A Survey"
-    url: "https://doi.org/10.1109/tc.1984.1676388"
-    year: 1984
-    arxiv: null
-    doi: "10.1109/tc.1984.1676388"
-  - title: "A linear algorithm for determining the separation of convex polyhedra"
-    url: "https://doi.org/10.1016/0196-6774(85)90007-0"
-    year: 1985
-    arxiv: null
-    doi: "10.1016/0196-6774(85)90007-0"
-  - title: "Determining the minimum translational distance between two convex polyhedra"
-    url: "https://doi.org/10.1109/robot.1986.1087645"
-    year: 1986
-    arxiv: null
-    doi: "10.1109/robot.1986.1087645"
-  - title: "On fast computation of distance between line segments"
-    url: "https://doi.org/10.1016/0020-0190(85)90032-8"
-    year: 1985
-    arxiv: null
-    doi: "10.1016/0020-0190(85)90032-8"
-see:
-  - "370-proximity-queries-and-penetration-depth-with-gjk-epa"
+see: []
 ---
 
 # A Fast Procedure for Computing the Distance Between Complex Objects (GJK)
 
 ## One-sentence takeaway
 
-GJK distance — core of many physics engines.
+GJK computes the Euclidean distance between two convex objects by iteratively building a simplex in their Minkowski difference until it contains the origin or proves a separating plane.
 
 ## Why it matters here
 
-GJK distance — core of many physics engines.
+Every Anoptic/Broadside rigid-body narrowphase that talks to GJK/EPA inherits this 1988 procedure; support mappings let you collide hulls, capsules, and cylinders without an explicit mesh Boolean.
 
 ## Key ideas
 
-- GJK distance — core of many physics engines.
+- Distance between convex sets `A` and `B` is the distance from the origin to `A − B`; a support function `s_{A−B}(d) = s_A(d) − s_B(−d)` never needs the full Minkowski difference.
+- Each iteration adds the support point in the current search direction and reduces the simplex (point / segment / triangle / tetrahedron) to the feature closest to the origin.
+- When the origin is outside, the new search direction is the vector from that closest feature; when it is inside, the objects intersect and distance is zero.
+- Complexity is essentially independent of surface complexity as long as support is cheap, which is why game physics keeps GJK rather than SAT on high-poly hulls.
+- EPA (Expanding Polytope Algorithm) is the later penetration-depth companion; this paper is the distance algorithm itself.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1109/56.2083](https://doi.org/10.1109/56.2083)
-- URL: https://doi.org/10.1109/56.2083
+- PDF: https://graphics.stanford.edu/courses/cs164-09-spring/Handouts/paper_GJKoriginal.pdf

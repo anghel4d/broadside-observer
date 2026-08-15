@@ -23,37 +23,28 @@ cites:
   year: 1997
   arxiv: null
   doi: 10.1145/258533.258660
-- title: "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications"
-  url: "https://doi.org/10.1145/964723.383071"
-  year: 2001
-  arxiv: null
-  doi: 10.1145/964723.383071
 see:
 - "770-consistent-hashing-and-random-trees-distributed-caching-prot"
-- "771-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap"
 ---
 
 # Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems
 
 ## One-sentence takeaway
 
-Pastry prefix-routing DHT with locality-aware neighbor sets.
+Pastry routes a message to the live node whose identifier is numerically closest to a key by matching successive ID prefixes, using a routing table, a leaf set, and a proximity-aware neighborhood set.
 
 ## Why it matters here
 
-Companion classic to Chord; locality heuristics matter for deployments.
+Pastry is the locality-aware sibling of Chord: the design to steal from when Anoptic or Broadside care about RTT, not just hop count, on a peer overlay.
 
 ## Key ideas
 
-- Prefix matching on node IDs.
-- Leaf sets plus routing tables.
-- Exploits network proximity.
-- Object location and routing API.
+- Node IDs and keys are 128-bit; each routing-table row $i$ holds nodes that share an $i$-digit prefix and differ on the next digit.
+- The leaf set of $L$ numerically closest IDs guarantees correctness even if the prefix table is stale.
+- Among candidates for a prefix slot, Pastry prefers a nearby node in network delay, so paths are short in both hops and milliseconds.
+- The API is object location plus application-level routing — the substrate for PAST storage and Scribe pub/sub.
 
 ## Caveats
-
-- Protocol details evolved in follow-ons.
-- Compare with Kademlia for modern P2P.
 
 ## Links
 

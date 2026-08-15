@@ -24,11 +24,6 @@ cites:
     year: 1978
     arxiv: null
     doi: null
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/155090.155113"
   - title: "The Definition of Standard ML (Revised)"
     url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
     year: 1997
@@ -41,7 +36,6 @@ cites:
     doi: "10.1145/800194.805852"
 see:
   - "674-rabbit-a-compiler-for-scheme"
-  - "666-the-essence-of-compiling-with-continuations"
   - "137-the-definition-of-standard-ml-revised"
   - "630-definitional-interpreters-for-higher-order-programming-langu"
 ---
@@ -50,25 +44,21 @@ see:
 
 ## One-sentence takeaway
 
-Book-length account of CPS-based compilation as practiced in SML/NJ.
+Appel's book is the SML/NJ recipe: CPS as the compiler IR on which you do closure conversion, spilling, and representation decisions, not merely a denotational trick.
 
 ## Why it matters here
 
-The industrial-strength CPS compilation monograph — complements Flanagan et al. and Steele RABBIT.
+If ano or an Anoptic host compiler ever lowers through continuations, this is the industrial-strength account — Steele showed Scheme *can* compile; Appel shows how a production ML compiler actually does.
 
 ## Key ideas
 
-- CPS as compiler intermediate language.
-- Closure conversion, register allocation, and representation choices.
-- Lessons from Standard ML of New Jersey.
-- Standard reference beside Steele's RABBIT.
+- CPS conversion makes control and data flow the same graph: every call is a tail call, every intermediate is a variable, every continuation is a function.
+- The back half of the book is the SML/NJ pipeline: closure conversion (including callee-save / display choices), spilling to a stack or heap, and datatype representation.
+- Prior ML knowledge is not assumed; the method is claimed for most languages, illustrated on Standard ML.
+- CUP 1992 (copyright 1991), DOI 10.1017/CBO9780511609619. Flanagan–Sabry–Duba–Felleisen 1993 is the later "you can have this without CPS" reply.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1017/CBO9780511609619](https://doi.org/10.1017/CBO9780511609619)
-- URL: https://doi.org/10.1017/CBO9780511609619

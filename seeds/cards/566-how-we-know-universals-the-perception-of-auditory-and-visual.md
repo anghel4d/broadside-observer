@@ -24,41 +24,29 @@ cites:
     year: 1943
     arxiv: null
     doi: "10.1007/BF02478259"
-  - title: "The Organization of Behavior"
-    url: "https://www.worldcat.org/title/organization-of-behavior/oclc/523"
-    year: 1949
-    arxiv: null
-    doi: null
-  - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
-    url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
-    year: 1948
-    arxiv: null
-    doi: null
 see:
   - "565-a-logical-calculus-of-the-ideas-immanent-in-nervous-activity"
-  - "567-the-organization-of-behavior"
-  - "561-cybernetics-or-control-and-communication-in-the-animal-and-t"
 ---
 
 # How We Know Universals: The Perception of Auditory and Visual Forms
 
 ## One-sentence takeaway
 
-Pitts–McCulloch model invariant perception via network architectures—early computational neuroscience.
+Pitts and McCulloch design nets that recognize a shape or a chord regardless of size, position, or pitch by averaging over a transformation group.
 
 ## Why it matters here
 
-Extends 1943 calculus toward perception; agents/sensing resonance.
+Invariant perception is the sensing problem for Broadside agents: recognize the same entity after camera motion, scale, or retiming.
 
 ## Key ideas
 
-- Group invariance ideas in nets.
-- Visual/auditory form recognition.
-- Cybernetics-era math biology.
+- Universals (a triangle, a melody) are equivalence classes under groups of transformations.
+- A layered net can scan those transformations and collapse the orbit into a single invariant predicate.
+- Visual form and auditory pitch/time are treated with the same group-average architecture.
+- The 1947 paper is the perceptual sequel to the 1943 logical calculus.
+- The construction is a cybernetics-era ancestor of convolutional and group-equivariant networks.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

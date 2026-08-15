@@ -20,11 +20,6 @@ pool: "languages"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "Toward a Mathematical Semantics for Computer Languages"
-    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
-    year: 1971
-    arxiv: null
-    doi: null
   - title: "A Correspondence Between ALGOL 60 and Church's Lambda-Notation"
     url: "https://doi.org/10.1145/363744.363749"
     year: 1965
@@ -41,7 +36,6 @@ cites:
     arxiv: null
     doi: "10.1145/367236.367262"
 see:
-  - "612-toward-a-mathematical-semantics-for-computer-languages"
   - "618-a-correspondence-between-algol-60-and-church-s-lambda-notati"
   - "616-the-next-700-programming-languages"
   - "623-report-on-the-algorithmic-language-algol-60"
@@ -51,24 +45,21 @@ see:
 
 ## One-sentence takeaway
 
-Strachey freezes L-values/R-values, environments, and store—vocabulary of imperative language semantics.
+Strachey names the working parts of an imperative language — L-values vs R-values, environments, stores, and the distinction between binding and assignment.
 
 ## Why it matters here
 
-Still the words compilers and semanticists use; pairs with Landin and Scott–Strachey.
+Still the words compilers and semanticists use. Anoptic/ano assignment into SoA rows is an L-value story; GRID COMMAND bindings are an environment story. Pair with Landin and Scott–Strachey.
 
 ## Key ideas
 
-- L-value vs R-value.
-- Environments and stores.
-- CPL/early semantic vocabulary.
-- Published widely via HOSC 2000 reprint.
+- An L-value is a location (something assignable); an R-value is the contents of a location.
+- Environments map identifiers to denotations; the store maps locations to values — two different "memories".
+- First-class functions, parametric polymorphism, and CPL-era features are already discussed as semantic problems.
+- 1967 Copenhagen lectures; the citable text is the HOSC 13 (2000) reprint, DOI 10.1023/A:1010000313106.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- DOI: [10.1023/A:1010000313106](https://doi.org/10.1023/A:1010000313106)
-- URL: https://doi.org/10.1023/A:1010000313106
+- HOSC reprint DOI: [10.1023/A:1010000313106](https://doi.org/10.1023/A:1010000313106)

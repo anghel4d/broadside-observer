@@ -36,8 +36,8 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-  - title: "Implementing Mathematics with Nuprl"
-    url: "http://www.nuprl.org/book/"
+  - title: "Implementing Mathematics with the Nuprl Proof Development System"
+    url: "https://nuprl-web.cs.cornell.edu/book/"
     year: 1986
     arxiv: null
     doi: null
@@ -52,24 +52,21 @@ see:
 
 ## One-sentence takeaway
 
-The standard introductory monograph for programming in Martin-Löf type theory.
+Nordström, Petersson, and Smith turn Martin-Löf's judgmental type theory into a programmer's book: sets, propositions, and inductive families are the constructs you write, not just the rules you cite.
 
 ## Why it matters here
 
-Readable MLTT programming book — fills the gap between Howard/MLTT papers and proof-assistant practice.
+Ano's sized/dependent array story is closer to this MLTT presentation than to System F; the book is how you learn to program in the theory Anoptic would extract kernels from, not only how to quote it.
 
 ## Key ideas
 
-- Sets, propositions, and inductive families as programming constructs.
-- Derivation rules presented for working programmers/logicians.
-- Bridge from MLTT papers to implemented type checkers.
-- Influences Agda/Epigram pedagogical lineage.
+- Four judgment forms (A set, A = B, a ∈ A, a = b ∈ A) are primitive; propositions-as-sets is a derived reading, not a slogan pasted on.
+- Π, Σ, +, Id, W/well-orderings, and universes à la Martin-Löf are given with introduction, elimination, and equality rules intended for use.
+- The 1990 OUP text is the standard introduction; Chalmers hosts the out-of-print edition.
+- Direct ancestor of the Agda/Epigram teaching line; Nuprl is the contemporary implemented cousin, not a replacement.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.cse.chalmers.se/research/group/logic/book/
+- Chalmers edition: https://www.cse.chalmers.se/research/group/logic/book/

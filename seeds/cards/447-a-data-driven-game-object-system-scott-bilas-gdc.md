@@ -58,9 +58,6 @@ Pre-ECS composition root: IDs, component plugins, and data-assembled objects —
 
 ## Caveats
 
-- Component OOP with virtual message handlers — not yet SoA/archetype DOD storage.
-- Skrit/script binding details are engine-specific; treat as architectural pattern, not a portable library.
-
 ## Links
 
 - URL: https://this.scottbilas.com/files/pubs/2002/gdc-san-jose/GameObjects.pdf

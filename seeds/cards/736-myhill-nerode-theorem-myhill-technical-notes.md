@@ -1,59 +1,46 @@
 ---
-title: Myhill–Nerode Theorem (Myhill technical notes)
+title: "Finite Automata and the Representation of Events"
 authors:
-- John Myhill
+  - John Myhill
 year: 1957
-venue: WADC Technical Note / automata notes
+venue: "WADC Technical Report 57-624"
 arxiv: null
 doi: null
-source: "https://en.wikipedia.org/wiki/Myhill%E2%80%93Nerode_theorem"
+source: "https://books.google.com/books?id=QjZwISLU4rAC"
 topics:
-- automata
-- myhill-nerode
+  - automata
+  - myhill-nerode
 seed_rank: 736
 seed_batch: perfects-algorithms-2026-08-13
 reviewed: 2026-08-13
 pool: maths-foundations
 relevance_score: 8
 lineage: algorithms-and-complexity
-cites:
-- title: Linear Automaton Transformations (Nerode congruence)
-  url: "https://doi.org/10.1090/S0002-9939-1958-0135681-9"
-  year: 1958
-  arxiv: null
-  doi: 10.1090/S0002-9939-1958-0135681-9
-- title: Finite Automata and Their Decision Problems
-  url: "https://doi.org/10.1147/rd.32.0114"
-  year: 1959
-  arxiv: null
-  doi: 10.1147/rd.32.0114
-see:
-- "737-linear-automaton-transformations-nerode-congruence"
-- "619-finite-automata-and-their-decision-problems"
+cites: []
+see: []
 ---
 
-# Myhill–Nerode Theorem (Myhill technical notes)
+# Finite Automata and the Representation of Events
 
 ## One-sentence takeaway
 
-Myhill’s contribution to the Myhill–Nerode characterization of regular languages.
+Myhill’s 1957 WADC notes characterize regular events by a finite-index equivalence on strings — the Myhill half of the Myhill–Nerode theorem.
 
 ## Why it matters here
 
-Algebraic heart of DFA minimization with Nerode.
+DFA minimization and “is this protocol regular?” questions in compilers, netcode, and agent scripts rest on this algebraic criterion. Pair with Nerode 1958; textbooks polish the statement this report first writes down.
 
 ## Key ideas
 
-- Equivalence of strings w.r.t. a language.
-- Regularity iff finite index.
-- Algebraic view of automata.
-- Standard theorem name Myhill–Nerode.
+- Two strings are equivalent relative to an event if no continuation distinguishes them; regularity is finite index of that relation.
+- The equivalence classes are the states of a canonical automaton recognizing the event.
+- The write-up is a chapter in *Fundamental Concepts in the Theory of Systems*, WADC TR 57-624, pp. 112–137 (ASTIA AD 155741).
+- Nerode’s 1958 congruence paper is the independent companion; Rabin–Scott 1959 is the decision-problem sequel.
+- Original notes are less accessible than Hopcroft–Ullman; the theorem name is Myhill–Nerode.
 
 ## Caveats
 
-- Original notes less accessible than textbooks.
-- Cite Nerode alongside.
-
 ## Links
 
-- URL: https://en.wikipedia.org/wiki/Myhill%E2%80%93Nerode_theorem
+- Google Books volume: https://books.google.com/books?id=QjZwISLU4rAC
+- CiNii record: https://cir.nii.ac.jp/crid/1570854176000165888

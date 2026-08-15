@@ -66,8 +66,6 @@ Policy caution for engine multipools: prefer a strong general heap (mimalloc/jem
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/582419.582421](https://doi.org/10.1145/582419.582421)

@@ -34,45 +34,31 @@ cites:
     year: 1971
     arxiv: null
     doi: null
-  - title: "Computational lambda-calculus and monads"
-    url: "https://doi.org/10.1109/LICS.1989.39155"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/LICS.1989.39155"
-  - title: "Call-by-Push-Value"
-    url: "https://www.cs.bham.ac.uk/~pbl/papers/lix3.pdf"
-    year: 2003
-    arxiv: null
-    doi: null
 see:
   - "511-the-calculi-of-lambda-conversion"
   - "617-the-mechanical-evaluation-of-expressions"
   - "612-toward-a-mathematical-semantics-for-computer-languages"
-  - "037-computational-lambda-calculus-and-monads"
-  - "131-call-by-push-value"
 ---
 
 # Call-by-name, call-by-value and the λ-calculus
 
 ## One-sentence takeaway
 
-Plotkin relates CBV/CBN evaluation to λ-theories—operational semantics with precision.
+Plotkin isolates two λ-calculi — β-reduction (call-by-name) and a value-restricted β_v (call-by-value) — and proves each is in correspondence with its natural evaluation machine.
 
 ## Why it matters here
 
-Already cited by Moggi card 038; mint the primary for foundations lineage.
+Already cited by the Moggi monad cards: this is the paper that makes CBV vs CBN a *calculus* distinction, not a slogan. Ano evaluation order and any effectful language (Moggi, Levy CBPV) start from these two theories.
 
 ## Key ideas
 
-- Plotkin's PCF era beginnings.
-- Correspondence between calculi and machines.
-- LCF/operational methods.
+- Call-by-name matches the ordinary λ-calculus; call-by-value needs a calculus that only substitutes *values*.
+- Operational machines (SECD-style) are shown equivalent to the corresponding calculi (Plotkin correspondence / “adequacy”).
+- Continuation-passing translations relate the two conventions.
+- *TCS* 1 (1975), pp. 125–159 — the operational-semantics half of the PCF/LCF era.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1016/0304-3975(75)90017-1](https://doi.org/10.1016/0304-3975(75)90017-1)
-- URL: https://doi.org/10.1016/0304-3975(75)90017-1

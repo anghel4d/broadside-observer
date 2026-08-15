@@ -7,10 +7,10 @@ authors:
   - "Patricia Gee"
   - "Andrew Stewart"
 year: 2011
-venue: "technical paper"
+venue: "LMAX technical paper"
 arxiv: null
 doi: null
-source: "https://lmax-exchange.github.io/disruptor/"
+source: "https://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf"
 topics:
   - lockfree
   - queues
@@ -36,11 +36,6 @@ cites:
     year: 1990
     arxiv: null
     doi: "10.1145/78969.78972"
-  - title: "Mechanical Sympathy / Disruptor technical paper"
-    url: "https://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf"
-    year: 2011
-    arxiv: null
-    doi: null
 see:
   - "031-michael-scott-lock-free-queue"
   - "424-vyukov-bounded-mpmc-queue"
@@ -51,21 +46,23 @@ see:
 
 ## One-sentence takeaway
 
-Mechanical sympathy ring buffer.
+The Disruptor is a preallocated ring buffer plus sequence barriers: producers claim slots by incrementing a cursor, consumers wait on that cursor, and mechanical-sympathy layout (no linked nodes, padded counters) keeps the whole path out of the allocator and out of false sharing.
 
 ## Why it matters here
 
-Mechanical sympathy ring buffer.
+Ano frame graphs and Broadside netcode want a single-producer or few-producer pipeline that never mallocs on the tick; this 2011 LMAX paper is the design those “mechanical sympathy” queues copy.
 
 ## Key ideas
 
-- Mechanical sympathy ring buffer.
+- Preallocate every slot. The queue never allocates after startup, so GC / malloc jitter disappears.
+- A `Sequence` per producer/consumer is a padded atomic counter. Claiming `n` slots is one CAS on the cursor; consumers read entries up to the minimum published sequence they depend on.
+- Multi-consumer graphs are expressed as barriers (A happens-before B) rather than extra queues, so one event is processed in stages without copying.
+- Compared with java.util.concurrent queues, they report orders-of-magnitude lower latency at LMAX’s exchange volumes, mostly from removing contention and linked-node cache misses.
+- Canonical PDF: https://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf — pin that, not only the project landing page.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://lmax-exchange.github.io/disruptor/
+- Paper: https://lmax-exchange.github.io/disruptor/files/Disruptor-1.0.pdf
+- Project: https://lmax-exchange.github.io/disruptor/

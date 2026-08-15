@@ -34,40 +34,31 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1145/130697.130699"
-  - title: "On Full Abstraction for PCF: I, II, and III"
-    url: "https://doi.org/10.1006/inco.2000.2917"
-    year: 2000
-    arxiv: null
-    doi: "10.1006/inco.2000.2917"
 see:
   - "627-call-by-name-call-by-value-and-the-lambda-calculus"
   - "657-lcf-considered-as-a-programming-language"
   - "703-report-on-the-programming-language-haskell-a-non-strict-pure"
-  - "693-on-full-abstraction-for-pcf-i-ii-and-iii"
 ---
 
 # The Lazy Lambda Calculus
 
 ## One-sentence takeaway
 
-Gives a domain-theoretic and operational account tailored to lazy functional computation.
+Abramsky rebuilds λ-calculus observationally around *weak* head-normal form — what Miranda/LML/Haskell actually evaluate to — and gives it a canonical domain and a Plotkin-style operational theory.
 
 ## Why it matters here
 
-Abramsky lazy λ-calculus — the semantics card for Haskell-style non-strictness beside Plotkin CBN.
+Haskell-style non-strictness is not Plotkin CBN plus folklore: λx.Ω is a value here and Ω is not. Any lazy ano stream or non-strict kernel needs this distinction.
 
 ## Key ideas
 
-- Lazy observational equivalence.
-- Domain model aligned with lazy evaluation.
-- Bridge from Plotkin CBN to practical lazy languages.
-- Companion to full-abstraction/game-semantics line.
+- Real lazy implementations stop at weak head normal form (no reduction under λ); Barendregt's standard theory identifies all unsolvables, so λx.Ω = Ω, which is the wrong equation for those languages.
+- Applicative bisimulation on closed terms (and its contextual equivalent) is the observational preorder; Ω is least, YK is greatest, β holds, η holds only conditionally on convergence.
+- A domain equation for applicative transition systems yields a canonical model, a domain logic, and a short computational-adequacy proof (converges iff non-bottom).
+- Chapter in Turner's *Research Topics in Functional Programming*, 1990; author PDF at Oxford. Abramsky notes a 2006 TeX date on that file — same paper.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf
+- Author PDF: https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf

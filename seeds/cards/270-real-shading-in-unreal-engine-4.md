@@ -3,7 +3,7 @@ title: "Real Shading in Unreal Engine 4"
 authors:
   - "Brian Karis"
 year: 2013
-venue: "SIGGRAPH Courses"
+venue: "SIGGRAPH 2013 Courses"
 arxiv: null
 doi: null
 source: "https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf"
@@ -39,21 +39,22 @@ see:
 
 ## One-sentence takeaway
 
-UE4 PBR notes — industry standard.
+Karis's SIGGRAPH 2013 notes lock UE4 onto GGX, a split-sum IBL approximation, and a metalness workflow — the de-facto real-time PBR baseline every later engine course answers.
 
 ## Why it matters here
 
-UE4 PBR notes — industry standard.
+Anoptic's default BRDF and IBL should cite this, not folklore. The split-sum environment BRDF LUT and the punctual-light normalization are the two formulas you will re-derive if you skip the notes.
 
 ## Key ideas
 
-- UE4 PBR notes — industry standard.
+- Microfacet specular with GGX/Trowbridge-Reitz NDF, Smith-Schlick geometry, and Schlick Fresnel.
+- Dielectric/metal switch via a metalness mask; base color is albedo for dielectrics and F0 for metals.
+- Image-based lighting via the split-sum approximation: prefiltered environment map times a 2D BRDF integration LUT in (N·V, roughness).
+- Punctual lights use a normalization that keeps energy plausible as roughness changes.
+- Course notes hosted on Unreal Engine CDN; SIGGRAPH 2013 Physically Based Shading course.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf
+- Course notes: https://cdn2.unrealengine.com/Resources/files/2013SiggraphPresentationsNotes-26915738.pdf

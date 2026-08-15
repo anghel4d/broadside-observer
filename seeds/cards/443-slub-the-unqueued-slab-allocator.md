@@ -58,8 +58,6 @@ Living kernel successor of the slab epistemology; reminds engine pools that meta
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - LWN: https://lwn.net/Articles/229984/

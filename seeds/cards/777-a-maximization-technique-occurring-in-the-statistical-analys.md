@@ -34,23 +34,20 @@ see:
 
 ## One-sentence takeaway
 
-Baum-Welch EM training for hidden Markov models.
+Baum–Welch trains a hidden Markov model by alternating a forward–backward E-step (expected transition and emission counts) with an M-step that renormalizes those counts, never decreasing observed-data likelihood.
 
 ## Why it matters here
 
-Classic unsupervised sequence-model estimation before modern neural seq models.
+This is the classic unsupervised sequence estimator sitting under GRID COMMAND order/speech models and any Anoptic tracker that still has an HMM before the neural net took over.
 
 ## Key ideas
 
-- Forward-backward expectations.
-- Non-decreasing likelihood.
-- EM special case for HMMs.
-- Pairs with Viterbi at inference.
+- A probabilistic function of a Markov chain is today’s HMM: hidden transitions plus an emission distribution per state.
+- Forward variables $\alpha_t(i)$ and backward variables $\beta_t(i)$ give posterior occupancy and pairwise transition counts in $O(T|\text{states}|^2)$.
+- The re-estimation maps are an instance of expectation–maximization; each iteration is monotonically non-decreasing in likelihood.
+- At inference time the trained model is usually decoded with Viterbi, not with the forward–backward posteriors.
 
 ## Caveats
-
-- Local optima; initialization matters.
-- Neural methods supersede for many tasks.
 
 ## Links
 

@@ -4,7 +4,7 @@ authors:
   - "Devang Jhabakh Jai"
   - "Sudeep Das"
 year: 2020
-venue: "arXiv:cs.DC"
+venue: "arXiv cs.DC"
 arxiv: "2009.04403"
 doi: null
 source: "https://arxiv.org/abs/2009.04403"
@@ -42,24 +42,22 @@ see:
 
 ## One-sentence takeaway
 
-We consider the problem of memory holes in slab allocators, where an item entered into memory occupies more memory than it actually requires due to a difference between the nearest larger slab class size and the size of the entered item.
+A greedy pass over observed item sizes rewrites Memcached's default slab class table so objects sit closer to a class boundary, cutting internal fragmentation when the size mix is stable.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Learning Slab Classes to Alleviate Memory Holes in Memcached).
+Ano heaps and component pools waste the same way: a size-class table that does not match the live histogram leaves holes. Learning classes from traffic is the allocator analog of specializing archetypes to the actual component mix.
 
 ## Key ideas
 
-- We consider the problem of memory holes in slab allocators, where an item entered into memory occupies more memory than it actually requires due to a difference between the nearest larger slab class size and the size of the entered item.
-- We solve this problem by using a greedy algorithm that analyses the pattern of the sizes of items previously entered into the memory and accordingly re-configuring the default slab classes to better suit the learned traffic pattern to minimize memory holes.
-- Using this approach for a consistent data pattern, in our findings, has yielded significant reductions in memory wastage.
-- We consider Memcached as it is one of the most widely used implementations of slab allocators today, and has native support to reconfigure its default slab classes.
+- A memory hole is the slack between an item's true size and the next larger slab class; it is internal fragmentation, not external.
+- The algorithm histograms recently inserted sizes and greedily rebuilds the class table to cover that mix.
+- Memcached is the vehicle because it already exposes runtime slab-class reconfiguration.
+- On a consistent size pattern the authors report large drops in wasted bytes; the method assumes the mix stays put long enough to learn.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2009.04403](https://arxiv.org/abs/2009.04403)
-- URL: https://arxiv.org/abs/2009.04403
+- PDF: https://arxiv.org/pdf/2009.04403

@@ -6,8 +6,8 @@ authors:
 year: 1994
 venue: "Information and Computation"
 arxiv: null
-doi: "10.1006/inco.1994.1037"
-source: "https://doi.org/10.1006/inco.1994.1037"
+doi: "10.1006/inco.1994.1046"
+source: "https://doi.org/10.1006/inco.1994.1046"
 topics:
   - typed-programming-systems
   - region-memory-capabilities
@@ -17,87 +17,51 @@ reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 9
 cites:
-  - title: "Introduction to automata theory, languages and computation"
-    url: "https://doi.org/10.1016/0378-4754(81)90068-9"
-    year: 1981
-    arxiv: null
-    doi: "10.1016/0378-4754(81)90068-9"
-  - title: "Elements of the Theory of Computation"
-    url: "https://doi.org/10.1145/300307.1040360"
-    year: 1998
-    arxiv: null
-    doi: "10.1145/300307.1040360"
-  - title: "Rational Series and Their Languages"
-    url: "https://doi.org/10.1007/978-3-642-73235-5"
+  - title: "Polymorphic Effect Systems"
+    url: "https://doi.org/10.1145/73560.73564"
     year: 1988
     arxiv: null
-    doi: "10.1007/978-3-642-73235-5"
-  - title: "Automata-Theoretic Aspects of Formal Power Series"
-    url: "https://doi.org/10.1007/978-1-4612-6264-0"
-    year: 1978
-    arxiv: null
-    doi: "10.1007/978-1-4612-6264-0"
-  - title: "On the complexity of omega -automata"
-    url: "https://doi.org/10.1109/sfcs.1988.21948"
-    year: 1988
-    arxiv: null
-    doi: "10.1109/sfcs.1988.21948"
-  - title: "The Design and Analysis of Computer Algorithms"
-    url: "https://openalex.org/W1655990431"
-    year: 1974
-    arxiv: null
-    doi: null
-  - title: "Complete systems ofB-rational identities"
-    url: "https://doi.org/10.1016/0304-3975(91)90395-i"
+    doi: "10.1145/73560.73564"
+  - title: "Algebraic Reconstruction of Types and Effects"
+    url: "https://doi.org/10.1145/99583.99623"
     year: 1991
     arxiv: null
-    doi: "10.1016/0304-3975(91)90395-i"
-  - title: "On kleene algebras and closed semirings"
-    url: "https://doi.org/10.1007/bfb0029594"
-    year: 2005
-    arxiv: null
-    doi: "10.1007/bfb0029594"
-  - title: "Une remarque sur les systèmes complets d'identités rationnelles"
-    url: "https://doi.org/10.1051/ita/1990240404191"
-    year: 1990
-    arxiv: null
-    doi: "10.1051/ita/1990240404191"
-  - title: "The kleene and the Parikh Theorem in complete semirings"
-    url: "https://doi.org/10.1007/3-540-18088-5_17"
+    doi: "10.1145/99583.99623"
+  - title: "Types and Effects Towards the Integration of Functional and Imperative Programming"
+    url: "https://apps.dtic.mil/sti/pdfs/ADA186930.pdf"
     year: 1987
     arxiv: null
-    doi: "10.1007/3-540-18088-5_17"
-  - title: "A Semiring on Convex Polygons and Zero-Sum Cycle Problems"
-    url: "https://doi.org/10.1137/0219061"
-    year: 1990
-    arxiv: null
-    doi: "10.1137/0219061"
-  - title: "Regular algebra and finite machines"
-    url: "https://openalex.org/W1570949334"
-    year: 1971
-    arxiv: null
     doi: null
+  - title: "A theory of type polymorphism in programming"
+    url: "https://doi.org/10.1016/0022-0000(78)90014-4"
+    year: 1978
+    arxiv: null
+    doi: "10.1016/0022-0000(78)90014-4"
+see:
+  - "150-polymorphic-effect-systems"
 ---
 
 # The Type and Effect Discipline
 
 ## One-sentence takeaway
 
-Presents a polymorphic type-and-effect system with effect masking for safe effectful programming.
+An ML-style reconstruction algorithm infers types, regions (alias sets of references), and effects (`init`/`read`/`write` on those regions) for a call-by-value core with `new`/`get`/`set`, then uses subeffecting and effect masking so a computation can be treated as pure when its store actions are unobservable.
 
 ## Why it matters here
 
-Canonical type-and-effect discipline underpinning region memory and effect polymorphism for ano.
+Ano and the engine's effect polymorphism sit on this discipline: arrows carry a latent effect, regions partition the store, and masking is how a block that touches only private memory looks pure to its caller.
 
 ## Key ideas
 
-- Presents a polymorphic type-and-effect system with effect masking for safe effectful programming.
+- Three static domains. Types include `unit`, refs `ref_ρ(τ)`, and functions `τ --σ--> τ'` whose latent effect `σ` is the body's effect at application. Regions abstract sets of possibly aliased locations. Effects are `0`, `init(ρ)`, `read(ρ)`, `write(ρ)`, union, and effect variables.
+- Subeffecting (`σ ⊇ σ'`) is the effect analogue of subtyping. It is what lets the two arms of a conditional, or the two sides of an assignment, be coerced to a common upper bound — the example `{if true (lambda (x) x) (lambda (x) (get (new x)))}` is accepted here and rejected by earlier effect-matching systems.
+- Reconstruction computes a maximal type (in the usual substitution order), a lower bound on the effect, and a region assignment that minimizes spurious aliasing. Let-generalization is restricted to non-expansive expressions (variables, lambdas, and lets of those), following Tofte.
+- Consistency: a dynamic trace of `init`/`read`/`write` on concrete locations is related to the static effect by a store model that maps each location to a region and type. Expanding the store preserves the relation.
+- The applications they name are stack allocation of references whose region does not escape, and parallel code generation that preserves sequential semantics because non-interfering effects are known statically.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1006/inco.1994.1037](https://doi.org/10.1006/inco.1994.1037)
-- URL: https://doi.org/10.1006/inco.1994.1037
+- DOI: [10.1006/inco.1994.1046](https://doi.org/10.1006/inco.1994.1046)
+- PDF (UCLA copy of the journal article): https://web.cs.ucla.edu/~palsberg/tba/papers/talpin-jouvelot-iandc94.pdf

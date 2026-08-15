@@ -3,18 +3,21 @@ title: "LLM-PySC2: Starcraft II learning environment for Large Language Models"
 authors:
   - "Zongyuan Li"
   - "Yanan Ni"
-  - "Run Jia"
-  - "Yue Wu"
-  - "Jingze Cheng"
-  - "Fanqi Lin"
-  - "Xuebo Liu"
-  - "Yong Liu"
-  - "Weilin Yuan"
+  - "Runnan Qi"
+  - "Lumin Jiang"
+  - "Chang Lu"
+  - "Xiaojie Xu"
+  - "Xiangbei Liu"
   - "Penghui Li"
-  - "Fuqing Cui"
-  - "Yaodong Yang"
+  - "Yunzheng Guo"
+  - "Zhe Ma"
+  - "Huanyu Li"
+  - "Hui Wu"
+  - "Xian Guo"
+  - "Kuihua Huang"
+  - "Xuebo Zhang"
 year: 2024
-venue: "arXiv"
+venue: "arXiv:cs.AI"
 arxiv: "2411.05348"
 doi: null
 source: "https://arxiv.org/abs/2411.05348"
@@ -45,27 +48,29 @@ cites:
     doi: "10.1038/s41586-019-1724-z"
 see:
   - "076-large-language-models-play-starcraft-ii-benchmarks-and-a-cha"
+  - "009-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforc"
 ---
 
 # LLM-PySC2: Starcraft II learning environment for Large Language Models
 
 ## One-sentence takeaway
 
-Environment enabling LLMs to use the complete PySC2 action space with multi-agent collaboration support.
+LLM-PySC2 is the first SC2 environment that exposes the full PySC2 action space, multimodal observations, and wiki knowledge to LLMs, with asynchronous queries so latency does not grow with agent count.
 
 ## Why it matters here
 
-Full PySC2 action space for LLMs with multi-agent support — Broadside LLM-agent harness reference.
+GRID COMMAND's LLM-vs-RTS harness wants this interface: complete actions, not a toy subset, plus multi-agent collaboration. The paper also documents the failure mode — hallucinations and bad coordination without task-specific instructions.
 
 ## Key ideas
 
-- Environment enabling LLMs to use the complete PySC2 action space with multi-agent collaboration support.
+- Prior SC2 stacks do not let an LLM drive the hundreds of PySC2 actions or coordinate multiple agents natively.
+- The environment supplies the complete action space, multimodal info, and game-wiki knowledge.
+- An asynchronous query architecture keeps LLM latency roughly constant as the agent population grows.
+- Macro-decision and micro-operation evals use SMAC plus new scenarios; LLMs can win some complex games but are not consistently correct, especially in the recovered action space and in multi-agent settings.
+- Without task-relevant instructions, pretrained models hallucinate and collaborate inefficiently; SC2 remains a hard decision-making benchmark in the LLM era.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2411.05348](https://arxiv.org/abs/2411.05348)
-- URL: https://arxiv.org/abs/2411.05348

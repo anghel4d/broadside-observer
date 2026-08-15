@@ -17,55 +17,27 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
-cites:
-  - title: "Grundlagen der kombinatorischen Logik"
-    url: "https://doi.org/10.2307/2370619"
-    year: 1930
-    arxiv: null
-    doi: "10.2307/2370619"
-  - title: "The Calculi of Lambda-Conversion"
-    url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
-    year: 1941
-    arxiv: null
-    doi: null
-  - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
-    url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
-    year: 1969
-    arxiv: null
-    doi: "10.1090/S0002-9947-1969-0241465-X"
-  - title: "The Mechanical Evaluation of Expressions"
-    url: "https://doi.org/10.1093/comjnl/6.4.308"
-    year: 1964
-    arxiv: null
-    doi: "10.1093/comjnl/6.4.308"
-see:
-  - "497-grundlagen-der-kombinatorischen-logik"
-  - "511-the-calculi-of-lambda-conversion"
-  - "628-the-principal-type-scheme-of-an-object-in-combinatory-logic"
-  - "617-the-mechanical-evaluation-of-expressions"
 ---
 
 # Über die Bausteine der mathematischen Logik
 
 ## One-sentence takeaway
 
-Schönfinkel eliminated bound variables via combinators S, K (and friends)—the root of combinatory logic and compilation-as-abstraction-elimination.
+Schönfinkel eliminates bound variables by showing that a handful of combinators — especially \(S\) and \(K\) — generate all applicative combinations, so abstraction is a compilable, not primitive, operation.
 
 ## Why it matters here
 
-Direct ancestor of SKI calculi, graph reduction, and 'compile lambda to combinators' pipelines still used in FP VMs.
+Direct ancestor of SKI calculi, graph reduction, and "compile lambda to combinators" pipelines still used in FP VMs Anoptic might emit.
 
 ## Key ideas
 
-- Combinators as complete basis for logic without bound variables.
-- Anticipates Curry's systematic combinatory logic.
-- Shows abstraction is eliminable—key compiler insight.
+- A complete basis for logic without bound variables: application plus a small set of higher-order constants.
+- Anticipates Curry's systematic combinatory logic (1930) and Church's λ-calculus as a parallel variable-free foundation.
+- The compiler insight: any λ-term can be rewritten to combinators, so environments and capture-avoiding substitution are eliminable.
+- *Math. Ann.* 92:305–316, 1924; presented by Bernays after Schönfinkel left academic life.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1007/BF01458017](https://doi.org/10.1007/BF01458017)
-- URL: https://doi.org/10.1007/BF01458017

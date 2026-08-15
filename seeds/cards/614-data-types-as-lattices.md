@@ -33,39 +33,31 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-  - title: "Call-by-Push-Value"
-    url: "https://www.cs.bham.ac.uk/~pbl/papers/lix3.pdf"
-    year: 2003
-    arxiv: null
-    doi: null
 see:
   - "613-outline-of-a-mathematical-theory-of-computation"
   - "612-toward-a-mathematical-semantics-for-computer-languages"
   - "511-the-calculi-of-lambda-conversion"
-  - "131-call-by-push-value"
 ---
 
 # Data Types as Lattices
 
 ## One-sentence takeaway
 
-Scott develops data types as lattices/domains—recursive types via domain equations.
+Scott solves domain equations D ≅ [D → D] (and richer type constructors) so recursive and function types exist as lattices, giving a model of the untyped λ-calculus.
 
 ## Why it matters here
 
-Mathematical home of recursive types and λ-models.
+Mathematical home of recursive types. When ano talks about arrays-of-arrays, closures, or a type that mentions itself, this is the existence proof that the equation has a solution.
 
 ## Key ideas
 
-- Domain equations.
-- Lattice-theoretic data types.
-- Models of untyped λ.
+- Inverse-limit construction of a domain D with D ≅ [D → D], Scott's D_∞ model.
+- Lattice / continuous-lattice structure on data types; function space is itself a lattice.
+- Recursive type specifications are domain equations, not just syntactic fold/unfold.
+- Retracts and projections let one carve smaller types out of a universal domain.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1137/0205040](https://doi.org/10.1137/0205040)
-- URL: https://doi.org/10.1137/0205040

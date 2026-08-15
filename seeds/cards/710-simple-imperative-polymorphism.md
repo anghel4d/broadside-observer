@@ -29,11 +29,6 @@ cites:
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
   - title: "A Syntactic Approach to Type Soundness"
     url: "https://doi.org/10.1006/inco.1994.1093"
     year: 1994
@@ -42,7 +37,6 @@ cites:
 see:
   - "672-type-inference-for-polymorphic-references"
   - "640-principal-type-schemes-for-functional-programs"
-  - "137-the-definition-of-standard-ml-revised"
   - "660-a-syntactic-approach-to-type-soundness"
 ---
 
@@ -50,25 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-Advocates the value restriction as a simple, sound rule for polymorphism in the presence of effects.
+Generalize a let-bound expression only when it is a syntactic value; the value restriction restores soundness for ML polymorphism in the presence of `ref` without a full effect system.
 
 ## Why it matters here
 
-The value-restriction paper — the practical fix taught beside Tofte's refs+polymorphism analysis.
+Ano and any ML-family DSL Anoptic grows will hit Tofte’s polymorphic-reference hole the first time someone writes `let r = ref []`. Wright’s rule is the one-line fix SML’97 and OCaml adopted; implement that before inventing a region/effect discipline.
 
 ## Key ideas
 
-- Restrict generalization to syntactic values.
-- Simple alternative to complex effect-based disciplines.
-- Adopted by SML'97 and other MLs.
-- Pairs with Tofte 1990 and Damas–Milner.
+- Damas–Milner let-polymorphism plus ML references is unsound if non-values are generalized (`let r = ref [] in …`).
+- Restricting generalization to syntactic values (λ, constructors, already-bound identifiers) is sound and cheap to implement.
+- The rule is coarser than Tofte’s effect-based analysis but needs no effect variables in the type checker.
+- Wright–Felleisen syntactic type soundness is the metatheoretic setting; SML’97 ships the restriction.
+- Some later systems weaken the restriction (OCaml’s relaxed value restriction) without abandoning the idea.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/BF01019944](https://doi.org/10.1007/BF01019944)
-- URL: https://doi.org/10.1007/BF01019944
+- Springer: https://link.springer.com/article/10.1007/BF01019944

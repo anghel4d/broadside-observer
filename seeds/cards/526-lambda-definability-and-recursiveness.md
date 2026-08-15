@@ -43,20 +43,19 @@ see:
 
 ## One-sentence takeaway
 
-Kleene proves λ-definability ≡ general recursiveness—gluing Church and recursion theory.
+Kleene gives the explicit translations that prove λ-definable functions are exactly the general recursive ones.
 
 ## Why it matters here
 
-Technical hinge among Church, Kleene, and later Turing equivalences.
+Technical hinge among Church, Kleene, and later Turing equivalences. When ano treats a λ-combinator as a total (or partial) recursive column transform, this is the paper that licensed the identification.
 
 ## Key ideas
 
-- Explicit translations.
-- Strengthens the 'absolute' character of effective calculability.
+- One direction compiles a Herbrand–Gödel equation system into a λ-term; the other extracts an equation system from a λ-definition.
+- Together with the *Mathematische Annalen* paper, makes "absolute" effective calculability look independent of the host notation.
+- Turing's 1937 JSL paper then adds the machine vertex of the same triangle.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

@@ -39,20 +39,15 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
+  - title: "WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?"
+    url: "https://arxiv.org/abs/2403.07718"
+    year: 2024
+    arxiv: "2403.07718"
     doi: null
-  - title: "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
-    url: "https://arxiv.org/abs/2606.10677"
-    year: 2026
-    arxiv: "2606.10677"
-    doi: null
-  - title: "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory"
-    url: "https://arxiv.org/abs/2606.25161"
-    year: 2026
-    arxiv: "2606.25161"
+  - title: "WebArena: A Realistic Web Environment for Building Autonomous Agents"
+    url: "https://arxiv.org/abs/2307.13854"
+    year: 2023
+    arxiv: "2307.13854"
     doi: null
 ---
 
@@ -60,25 +55,23 @@ cites:
 
 ## One-sentence takeaway
 
-The BrowserGym ecosystem addresses the growing need for efficient evaluation and benchmarking of web agents, particularly those leveraging automation and Large Language Models (LLMs).
+BrowserGym unifies web-agent benchmarks behind one gym-like observation/action space, and AgentLab is the companion framework for building, testing, and analyzing those agents.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (The BrowserGym Ecosystem for Web Agent Research)
+Computer-use evaluation for ano and Broadside is otherwise a pile of incompatible harnesses; BrowserGym is the shared ACI plus the first large multi-benchmark LLM comparison on it.
 
 ## Key ideas
 
-- The BrowserGym ecosystem addresses the growing need for efficient evaluation and benchmarking of web agents, particularly those leveraging automation and Large Language Models (LLMs).
-- Many existing benchmarks suffer from fragmentation and inconsistent evaluation methodologies, making it challenging to achieve reliable comparisons and reproducible results.
-- In an earlier work, Drouin et al.
-- (2024) introduced BrowserGym which aims to solve this by providing a unified, gym-like environment with well-defined observation and action spaces, facilitating standardized evaluation across diverse benchmarks.
-- We propose an extended BrowserGym-based ecosystem for web agent research, which unifies existing benchmarks from the literature and includes AgentLab, a complementary framework that aids in agent
+- Prior web-agent benchmarks were fragmented, so model comparisons were not reproducible.
+- The original BrowserGym environment (Drouin et al., 2024) defined the gym-like interface; this paper extends it into an ecosystem that absorbs existing literature benchmarks.
+- AgentLab covers agent creation, testing, and experiment management while new benchmarks can still be plugged in.
+- First large-scale multi-benchmark run: 6 SOTA LLMs × 6 popular web-agent benchmarks.
+- Claude-3.5-Sonnet leads almost every benchmark; GPT-4o wins the vision-heavy ones. Robust real-world web agents remain an open problem.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2412.05467](https://arxiv.org/abs/2412.05467)
-- URL: https://arxiv.org/abs/2412.05467
+- PDF: https://arxiv.org/pdf/2412.05467

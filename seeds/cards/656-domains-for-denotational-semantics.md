@@ -1,9 +1,9 @@
 ---
 title: "Domains for Denotational Semantics"
 authors:
-  - "Dana Scott"
+  - "Dana S. Scott"
 year: 1982
-venue: "ICALP / LNCS"
+venue: "ICALP / LNCS 140"
 arxiv: null
 doi: "10.1007/BFb0012801"
 source: "https://doi.org/10.1007/BFb0012801"
@@ -28,46 +28,36 @@ cites:
     year: 1971
     arxiv: null
     doi: null
-  - title: "LCF Considered as a Programming Language"
-    url: "https://doi.org/10.1016/0304-3975(77)90044-5"
-    year: 1977
+  - title: "Outline of a Mathematical Theory of Computation"
+    url: "https://www.cs.ox.ac.uk/files/3222/PRG02.pdf"
+    year: 1970
     arxiv: null
-    doi: "10.1016/0304-3975(77)90044-5"
-  - title: "Fundamental Concepts in Programming Languages"
-    url: "https://doi.org/10.1023/A:1010000313106"
-    year: 1967
-    arxiv: null
-    doi: "10.1023/A:1010000313106"
+    doi: null
 see:
   - "614-data-types-as-lattices"
   - "612-toward-a-mathematical-semantics-for-computer-languages"
-  - "657-lcf-considered-as-a-programming-language"
-  - "615-fundamental-concepts-in-programming-languages"
+  - "613-outline-of-a-mathematical-theory-of-computation"
 ---
 
 # Domains for Denotational Semantics
 
 ## One-sentence takeaway
 
-Survey-style account of domains as the mathematical universe for denotational semantics.
+Scott's ICALP 1982 survey recasts domains — approximation, continuity, and computability — as the working universe in which a programming language gets a denotation.
 
 ## Why it matters here
 
-Standard Scott citation when you need domains, not just the 1976 lattices paper.
+When ano needs a meaning for recursion, streams, or a non-terminating GPU producer, this is the Scott citation that is about *using* domains, not the 1976 lattices construction paper.
 
 ## Key ideas
 
-- Domains, approximation, and computability.
-- How to interpret programming-language constructs domain-theoretically.
-- Connects earlier lattice models to PL practice.
-- Pairs with Plotkin PCF and Strachey lectures.
+- A domain is a partial order of approximations with directed suprema; computable maps are continuous (preserve those suprema).
+- Function space, products, and lifted domains interpret abstraction, pairing, and partiality; least fixed points interpret recursion.
+- Connects the earlier complete-lattice models (Scott 1976; Scott–Strachey PRG notes) to the information-system / neighborhood presentation used in later PL work.
+- LNCS 140 chapter, DOI 10.1007/BFb0012801 — the card to pair with Plotkin PCF, not a substitute for it.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/BFb0012801](https://doi.org/10.1007/BFb0012801)
-- URL: https://doi.org/10.1007/BFb0012801

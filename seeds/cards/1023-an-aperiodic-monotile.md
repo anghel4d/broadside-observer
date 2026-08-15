@@ -55,9 +55,6 @@ Why you might love this: Hilbert's 18th (card 487) asked which shapes tile, and 
 
 ## Caveats
 
-- Reflections of the hat appear in every tiling; the Spectre (2305.17743) is the strictly chiral cousin, not reminted here.
-- The 2024 Combinatorial Theory article is the archival version of the 2023 preprint; mint once.
-- Not a drop-in WFC tileset — substitution + continuum family is the technique, not a 13-gon sprite.
 
 ## Links
 

@@ -23,49 +23,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
+  - title: "Language Models are Few-Shot Learners"
+    url: "https://arxiv.org/abs/2005.14165"
+    year: 2020
+    arxiv: "2005.14165"
+    doi: null
   - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
     url: "https://arxiv.org/abs/2210.03629"
     year: 2022
     arxiv: "2210.03629"
     doi: null
-  - title: "Auto-Configuring Scientific Simulators with Lightweight Coding-Agent Adapters"
-    url: "https://arxiv.org/abs/2606.09774"
-    year: 2026
-    arxiv: "2606.09774"
-    doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
-    doi: null
 see:
+  - "093-language-models-are-few-shot-learners"
   - "007-react-synergizing-reasoning-and-acting-in-language-models"
-  - "051-auto-configuring-scientific-simulators-with-lightweight-codi"
 ---
 
 # Toolformer: Language Models Can Teach Themselves to Use Tools
 
 ## One-sentence takeaway
 
-Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale.
+Toolformer self-supervises API calls — which tool, when, with what arguments, how to splice the result — from a handful of demonstrations per API, then trains next-token prediction around those calls.
 
 ## Why it matters here
 
-shapes harness/ACI design and model-vs-harness failure localization (Toolformer: Language Models Can Teach Themselves to Use Tools)
+This is the pre-agent origin of ano tool use: a language model that inserts calculator, search, QA, translation, and calendar calls into its own generation.
 
 ## Key ideas
 
-- Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale.
-- They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel.
-- In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds.
-- We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction.
-- This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API.
+- Large LMs still fail at arithmetic and factual lookup where tiny specialized models succeed; APIs close that gap without giving up LM generality.
+- Supervision is self-generated: the model proposes calls, keeps those that actually help future token prediction, and trains on the filtered traces.
+- Tool set: calculator, a QA system, two search engines, a translation system, and a calendar.
+- Zero-shot downstream performance rises substantially, often matching much larger models, without losing core language-modeling ability.
+- No large human tool-use corpus is required beyond a few demos per API.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2302.04761](https://arxiv.org/abs/2302.04761)
-- URL: https://arxiv.org/abs/2302.04761
+- PDF: https://arxiv.org/pdf/2302.04761

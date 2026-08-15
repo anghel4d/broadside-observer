@@ -22,49 +22,48 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
-    url: "https://arxiv.org/abs/2604.16548"
-    year: 2026
-    arxiv: "2604.16548"
-    doi: null
-  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
-    url: "https://arxiv.org/abs/2607.28591"
-    year: 2026
-    arxiv: "2607.28591"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
   - title: "MemGPT: Towards LLMs as Operating Systems"
     url: "https://arxiv.org/abs/2310.08560"
     year: 2023
     arxiv: "2310.08560"
     doi: null
+  - title: "Reflexion: Language Agents with Verbal Reinforcement Learning"
+    url: "https://arxiv.org/abs/2303.11366"
+    year: 2023
+    arxiv: "2303.11366"
+    doi: null
 see:
-  - "052-change2task-from-repository-changes-to-executable-coding-age"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
   - "004-memgpt-towards-llms-as-operating-systems"
+  - "081-reflexion-language-agents-with-verbal-reinforcement-learning"
 ---
 
 # Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution
 
 ## One-sentence takeaway
 
-Resolving a real software issue with a large language model (LLM) agent is a long repair episode, often tens to hundreds of steps spanning exploration, hypothesis, implementation, and verification.
+PMCoder couples a hierarchical phase planner with episodic memory so the current plan phase conditions retrieval and memory-derived trajectory statistics drive stuck detection and replanning.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution)
+Ano issue loops already span exploration, hypothesis, edit, and verify; PMCoder is the argument that planning and memory have to condition each other, and that verification should come from execution, not the agent's own claims.
 
 ## Key ideas
 
-- Resolving a real software issue with a large language model (LLM) agent is a long repair episode, often tens to hundreds of steps spanning exploration, hypothesis, implementation, and verification.
-- Success depends on both the base model's local reasoning and the agent's ability to maintain an evolving plan and remember observations across phases.
-- Existing repository-level agents typically strengthen planning or memory in isolation, leaving long trajectories vulnerable to stale evidence, repeated failed edits, and verification inferred from the agent's own claims instead of execution evidence.
-- We present PMCoder, an issue-resolution agent that couples a hierarchical phase planner with episodic memory.
-- The coupling is bidirectional: the current plan phase conditions memory retrieval, while m
+- Real issue resolution is a long repair episode (tens to hundreds of steps); isolated planning or isolated memory leaves stale evidence, repeated failed edits, and self-reported "done".
+- The coupling is bidirectional: plan phase gates what memory is retrieved; trajectory statistics from memory trigger replans.
+- When available, issue-reproduction verdicts ground verification in execution evidence rather than completion claims.
+- On SWE-bench Verified, PMCoder resolves about 25 more cases (+5.0 pp) than a harness-matched baseline; Verified-500 ports to Claude Haiku 4.5, DeepSeek-V4-Flash, and OpenHands keep at least +2.8 pp.
+- Ablations show the joint planner-memory system beats either component alone and reduces repeated failed actions, empty-patch exits, and context-window exhaustion.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2608.06811](https://arxiv.org/abs/2608.06811)
-- URL: https://arxiv.org/abs/2608.06811
+- PDF: https://arxiv.org/pdf/2608.06811

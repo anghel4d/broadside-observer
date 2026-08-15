@@ -11,7 +11,7 @@ authors:
   - "Zhou Yu"
   - "Pengfei Zuo"
 year: 2024
-venue: "arXiv:cs.CL"
+venue: "USENIX ATC"
 arxiv: "2403.19708"
 doi: null
 source: "https://arxiv.org/abs/2403.19708"
@@ -50,25 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Interacting with humans through multi-turn conversations is a fundamental feature of large language models (LLMs).
+CachedAttention keeps per-conversation KV in a hierarchical cache across turns, overlaps fetch/save with compute, and decouples positional encoding so truncated histories do not invalidate saved caches.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttent)
+Observer chats and multi-turn GRID COMMAND sessions re-prefill the same history every turn if the engine is stateless. Hierarchical KV plus scheduler-aware placement is how that cost comes down without dropping the conversation.
 
 ## Key ideas
 
-- Interacting with humans through multi-turn conversations is a fundamental feature of large language models (LLMs).
-- However, existing LLM serving engines executing multi-turn conversations are inefficient due to the need to repeatedly compute the key-value (KV) caches of historical tokens, incurring high serving costs.
-- To address the problem, this paper proposes CachedAttention, a new attention mechanism that enables reuse of KV caches across multi-turn conversations, significantly reducing the repetitive computation overheads.
-- CachedAttention maintains a hierarchical KV caching system that leverages cost-effective memory/storage mediums to save KV caches for all requests.
-- To reduce KV cache access overheads from slow mediums, CachedAttention employs layer-wise pre-loading and asynchronous
+- Multi-turn serving recomputes KV for historical tokens on every turn unless those tensors are stored and reused.
+- A hierarchical KV system parks caches on cheaper memory and storage tiers, not only in GPU HBM.
+- Layer-wise pre-load and asynchronous save overlap slow I/O with GPU compute.
+- Scheduler-aware fetch/eviction places soon-needed KV in the fastest tier using job-scheduler hints.
+- Positional encoding is decoupled and caches are truncated so a sliding context window does not invalidate saved KV; reported gains include up to 87% lower TTFT, 7.8× prefill throughput, and 70% lower end-to-end cost.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2403.19708](https://arxiv.org/abs/2403.19708)
-- URL: https://arxiv.org/abs/2403.19708

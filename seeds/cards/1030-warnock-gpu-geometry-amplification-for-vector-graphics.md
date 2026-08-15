@@ -55,9 +55,6 @@ Anoptic still needs resolution-independent 2D — UI chrome, Japanese surface gl
 
 ## Caveats
 
-- Named for Warnock's imaging model, not the Warnock hidden-surface algorithm; do not confuse the two.
-- Paper is ACM HPG 2026 (DOI only, no arXiv). Mesh-shader path assumes hardware Anoptic already targets; tessellation fallback is for older GPUs.
-- Text *shaping* (HarfBuzz / Unicode) is upstream of this; Warnock renders the resulting paths.
 
 ## Links
 

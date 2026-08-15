@@ -59,9 +59,6 @@ Anoptic will keep hitting “I need to swing two pointers / a packed header and 
 
 ## Caveats
 
-- Preprint; not yet a drop-in replacement for Harris–Fraser–Pratt (card 445). Re-read before pinning an implementation.
-- Hardware DCAS/CAS2 (where it exists) still wins for the two-word case; this is the portable software path.
-- Helping + SMR still compose — pair with 1187/1188, do not ignore reclamation.
 
 ## Links
 

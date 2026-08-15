@@ -58,9 +58,6 @@ This is the agentic-serving systems paper of the window: not another KV trick, b
 
 ## Caveats
 
-- Trace route-key is a conditioning proxy, not verified semantic fusion; do not multiply trace shares by CUDA speedups.
-- Zero service / unlimited capacity in the offline model; A is not measured.
-- Four named GPU placements, not a hardware-population claim. Independent researcher.
 
 ## Links
 

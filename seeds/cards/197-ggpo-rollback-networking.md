@@ -48,32 +48,35 @@ cites:
   arxiv: null
   doi: null
 see:
-- "027-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
-- "016-deterministic-lockstep"
-- "269-client-side-prediction-server-reconciliation"
-- "465-virtual-time-time-warp-optimistic-distributed-simulation"
-- "471-ggpo-overview-and-design-notes"
+  - "027-1500-archers-on-a-28-8-network-programming-in-age-of-empires"
+  - "016-deterministic-lockstep"
+  - "198-fix-your-timestep"
+  - "269-client-side-prediction-server-reconciliation"
+  - "465-virtual-time-time-warp-optimistic-distributed-simulation"
+  - "471-ggpo-overview-and-design-notes"
 ---
 
 # GGPO Rollback Networking
 
 ## One-sentence takeaway
 
-Canonical rollback netcode library.
+GGPO is the canonical rollback netcode library: each peer predicts remote inputs, and on a mismatch it rolls the sim back and resimulates forward with the corrected input stream.
 
 ## Why it matters here
 
-Canonical rollback netcode library.
+GRID COMMAND lockstep without rollback feels like 2001. Rollback is how you hide RTT, and it demands a deterministic fixed-timestep sim — the same contract as cards 016 and 198.
 
 ## Key ideas
 
-- Canonical rollback netcode library.
+- Peers exchange input, not state; each side speculatively advances using predicted remote input.
+- On a confirmed mismatch the session rewinds to the last agreed frame and resimulates with the real inputs.
+- A small input delay trades responsiveness against rollback frequency.
+- The sim must be deterministic: same inputs from the same frame produce the same world, or resimulation diverges.
+- The public library (pond3r/ggpo) is the reference implementation fighting games and other rollback titles fork.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://github.com/pond3r/ggpo
+- Source: https://github.com/pond3r/ggpo
+- Design notes: https://github.com/pond3r/ggpo/blob/master/README.md

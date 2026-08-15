@@ -58,10 +58,6 @@ Teaches the Anoptic pattern of “fast common path, fix-up rare path” that lat
 
 ## Caveats
 
-- Still needs careful memory reclamation (hazard pointers / GC) in unmanaged runtimes.
-- Optimistic repairs complicate proofs and implementations versus textbook MS.
-- Seed card; verify journal vs DISC versions before citation.
-
 ## Links
 
 - DOI: [10.1007/978-3-540-30186-8_9](https://doi.org/10.1007/978-3-540-30186-8_9)

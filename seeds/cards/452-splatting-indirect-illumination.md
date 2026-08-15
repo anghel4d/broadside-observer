@@ -27,39 +27,30 @@ cites:
     url: "https://doi.org/10.1145/258734.258769"
     year: 1997
     doi: "10.1145/258734.258769"
-  - title: "Cascaded Light Propagation Volumes for Real-Time Indirect Illumination"
-    url: "https://doi.org/10.1145/1730804.1730821"
-    year: 2010
-    doi: "10.1145/1730804.1730821"
 see:
   - "292-reflective-shadow-maps"
   - "450-instant-radiosity"
-  - "277-light-propagation-volumes-in-cryengine-3"
 ---
 
 # Splatting Indirect Illumination
 
 ## One-sentence takeaway
 
-GPU deferred-splatting of secondary lights sampled from reflective shadow maps — the practical RSM→many-light bridge.
+Dachsbacher and Stamminger turn reflective-shadow-map pixels into GPU-splatted secondary lights so one-bounce indirect lighting accumulates in a deferred pass whose cost tracks splat count, not scene polygon count.
 
 ## Why it matters here
 
-Tight Instant-Radiosity/RSM successor on the classical RTGI spine; shows how VPL contributions became real-time before volumetric propagation (LPV) and cascades.
+This is the practical Instant-Radiosity/RSM bridge Anoptic GI history needs: many-light VPLs became real-time before volumetric propagation and radiance cascades.
 
 ## Key ideas
 
-- Uses an extended shadow map (RSM) to place secondary lights on directly lit surfaces.
-- Accumulates indirect contribution by splatting in a deferred shading pass, decoupling cost from scene polygon count.
-- GPU importance sampling selects VPLs; splat shape adapts for glossy responses/caustics.
-- Important stepping stone between RSM (2005) and later LPV / many-light industrial GI.
+- An extended shadow map (RSM) stores position, normal, and flux for each directly lit texel and treats those texels as virtual point lights.
+- Indirect contribution is rasterized by splatting each selected VPL into a deferred shading buffer, decoupling fill from geometric complexity.
+- GPU importance sampling picks which RSM pixels become VPLs; splat kernels adapt for glossy lobes and simple caustics.
+- Demonstrates interactive one-bounce GI on then-current GPUs as the industrial stepping stone after RSM (2005).
 
 ## Caveats
-
-- Fill-rate and VPL sampling artifacts remain; later work reduces overdraw with multiresolution and other tricks.
-- Still a many-light method — complementary foil to probe/cascade-interval schemes.
 
 ## Links
 
 - DOI: [10.1145/1111411.1111428](https://doi.org/10.1145/1111411.1111428)
-- URL: https://doi.org/10.1145/1111411.1111428

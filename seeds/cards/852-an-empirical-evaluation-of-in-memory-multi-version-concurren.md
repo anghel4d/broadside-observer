@@ -21,31 +21,41 @@ pool: systems
 relevance_score: 9
 lineage: contemporary-databases
 cites:
-  []
+  - title: "Speedy Transactions in Multicore In-Memory Databases"
+    url: "https://doi.org/10.1145/2517349.2522713"
+    year: 2013
+    arxiv: null
+    doi: "10.1145/2517349.2522713"
+  - title: "High-Performance Concurrency Control Mechanisms for Main-Memory Databases"
+    url: "https://doi.org/10.14778/2095686.2095689"
+    year: 2011
+    arxiv: null
+    doi: "10.14778/2095686.2095689"
+see:
+  - "851-speedy-transactions-in-multicore-in-memory-databases"
 ---
 
 # An empirical evaluation of in-memory multi-version concurrency control
 
 ## One-sentence takeaway
 
-Influential database systems paper (2017).
+On a 40-core in-memory DBMS, MVCC's four knobs — protocol, version storage, GC, and index pointers — each have a different bottleneck; latch-free and serializable variants from the disk era do not automatically win.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+Anoptic / GRID COMMAND keep multiple live versions of world state (prediction vs commit, replay vs live). This paper is the checklist for which version chain, GC, and index-indirection choice actually scales when the working set is already in RAM.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- Four serializable protocols implemented uniformly in Peloton: MVTO, MVOCC, MV2PL (no-wait), and certifiers (SSI / SSN). MVOCC avoids header writes on reads but validates the whole read set; MV2PL packs txn-id + read-cnt into one CAS word.
+- Three version layouts: append-only (O2N vs N2O chains), time-travel table, and delta/rollback segments. N2O needs either index updates or a mapping table; O2N walks long chains unless GC is aggressive.
+- GC is either tuple-level vacuum, cooperative, or transaction-level; index management is logical (stable TupleId / primary key) vs physical pointers that must be rewritten on every new version.
+- Almost every new OLTP engine of the 2010s is MVCC, but there is no standard combination — Oracle/Postgres/InnoDB, Hekaton, HyPer, HANA, and MemSQL all pick different cells of this matrix.
+- Speculative reads of uncommitted versions and eager update-of-readers cut aborts but reintroduce centralized dependency counters that collapse past a few dozen cores.
 
 ## Caveats
-
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
 
 ## Links
 
 - DOI: [10.14778/3067421.3067427](https://doi.org/10.14778/3067421.3067427)
-- URL: https://doi.org/10.14778/3067421.3067427
+- PDF: https://www.vldb.org/pvldb/vol10/p781-Wu.pdf

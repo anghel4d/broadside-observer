@@ -24,46 +24,42 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents"
-    url: "https://arxiv.org/abs/2608.10037"
-    year: 2026
-    arxiv: "2608.10037"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
     doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
+  - title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    url: "https://arxiv.org/abs/2302.04761"
+    year: 2023
+    arxiv: "2302.04761"
     doi: null
-  - title: "UAV-CodeAgents: Scalable UAV Mission Planning via Multi-Agent ReAct and Vision-Language Reasoning"
-    url: "https://arxiv.org/abs/2505.07236"
-    year: 2025
-    arxiv: "2505.07236"
-    doi: null
+see:
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
+  - "086-toolformer-language-models-can-teach-themselves-to-use-tools"
 ---
 
 # ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents
 
 ## One-sentence takeaway
 
-Tool-augmented vision-language agents can acquire external perceptual evidence through OCR, detection, segmentation, and other tools, but executing every proposed tool call is costly and sometimes unnecessary.
+ToolGate is an external execute/skip controller that intercepts a ReAct-style VLM tool proposal before the tool output enters context, cutting token cost to 64–69% of unrestricted ReAct.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (ToolGate: Token-Efficient Pre-Call Control for Tool-Augmented Vision-Language Agents)
+Vision-tool spam (OCR, detect, segment) will hit any GRID COMMAND or Broadside computer-use loop; ToolGate is pre-call admission control rather than another better detector.
 
 ## Key ideas
 
-- Tool-augmented vision-language agents can acquire external perceptual evidence through OCR, detection, segmentation, and other tools, but executing every proposed tool call is costly and sometimes unnecessary.
-- We study the pre-call control problem: after a ReAct-style VLM agent proposes a perceptual tool call, should the call be executed, or skipped before its output enters the context?
-- Across five benchmarks, we find that the baseline agent exhibits poor local selectivity: helpful and harmful calls occur at similar rates (11.8% vs.
-- 9.9%), while most calls do not change the immediate forced-answer prediction.
-- We introduce ToolGate, a lightweight external controller that predicts execute/skip decisions from trajectory text and simple structural features.
+- The decision is made after the agent proposes a perceptual tool call and before that call's output is written into the trajectory.
+- Across five benchmarks the baseline has poor local selectivity: helpful vs harmful calls occur at 11.8% vs 9.9%, and most calls do not change the immediate forced-answer prediction.
+- The controller reads trajectory text plus simple structural features; it is not a finetune of the VLM.
+- On two Qwen3-VL backbones, cross-domain accuracy holds while tokens drop to 64–69% of unrestricted ReAct; matched-domain training on Qwen3-VL-30B adds +1.65 average accuracy.
+- The claim is that VLM agents need control over when a tool output is worth paying for, not only better tools.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2606.03054](https://arxiv.org/abs/2606.03054)
-- URL: https://arxiv.org/abs/2606.03054
+- PDF: https://arxiv.org/pdf/2606.03054

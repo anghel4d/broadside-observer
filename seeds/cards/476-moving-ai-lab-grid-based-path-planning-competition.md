@@ -1,67 +1,55 @@
 ---
-title: Moving AI Lab / Grid-Based Path Planning Competition
+title: "Moving AI Lab / Grid-Based Path Planning Competition"
 authors:
-- Nathan Sturtevant
-- Daniel Harabor
-- et al.
-year: 2015
-venue: GPPC/MovingAI
+  - "Nathan Sturtevant"
+  - "Daniel Harabor"
+year: 2012
+venue: "MovingAI / GPPC"
 arxiv: null
 doi: null
-source: https://movingai.com/GPPC/
+source: "https://movingai.com/GPPC/"
 topics:
-- pathfinding
-- benchmarks
+  - pathfinding
+  - benchmarks
 seed_rank: 476
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: game-ai
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "game-ai"
 relevance_score: 8
 lineage: pathfinding
 cites:
-- title: Online Graph Pruning for Pathfinding on Grid Maps
-  url: https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761
-  year: 2011
-  arxiv: null
-  doi: null
-- title: Ultra-Fast Optimal Pathfinding without Runtime Search
-  url: https://doi.org/10.1609/aiide.v7i1.12443
-  year: 2011
-  arxiv: null
-  doi: 10.1609/aiide.v7i1.12443
-- title: Improving Jump Point Search
-  url: https://www.aaai.org/ocs/index.php/ICAPS/ICAPS14/paper/view/8820
-  year: 2014
-  arxiv: null
-  doi: null
+  - title: "Benchmarks for Grid-Based Pathfinding"
+    url: "https://doi.org/10.1109/TCIAIG.2012.2197681"
+    year: 2012
+    doi: "10.1109/TCIAIG.2012.2197681"
+  - title: "Online Graph Pruning for Pathfinding on Grid Maps"
+    url: "https://doi.org/10.1609/aaai.v25i1.7994"
+    year: 2011
+    doi: "10.1609/aaai.v25i1.7994"
 see:
-- "196-online-graph-pruning-for-pathfinding-on-grid-maps"
-- "480-ultra-fast-optimal-pathfinding-without-runtime-search"
-- "266-improving-jump-point-search"
+  - "196-online-graph-pruning-for-pathfinding-on-grid-maps"
 ---
 
 # Moving AI Lab / Grid-Based Path Planning Competition
 
 ## One-sentence takeaway
 
-GPPC/MovingAI benchmarks standardized grid pathfinding comparisons for JPS, CPD, subgoals, etc.
+MovingAI and the Grid-Based Path Planning Competition give a shared corpus of game/room/maze/city maps plus standard metrics so JPS, CPD, subgoal, and other grid planners can be compared on the same instances.
 
 ## Why it matters here
 
-Evaluation harness for GRID COMMAND pathfinding choices.
+Evaluation harness for GRID COMMAND pathfinding: quote a MovingAI map and a GPPC metric instead of a homemade corridor when claiming a search is fast.
 
 ## Key ideas
 
-- Common maps and metrics for grid planners.
-- Hosted comparisons among JPS+/CPD/subgoal entries.
-- Keeps academic to game AI dialogue honest.
-- Living benchmark portal.
+- Sturtevant's 2012 TCIAIG paper released Dragon Age / Baldur's Gate / Warcraft / room / maze / city grids with canonical scenarios.
+- GPPC (hosted at movingai.com/GPPC) runs timed competitions for any-angle and grid algorithms, including JPS+/CPD/subgoal entries.
+- Common metrics: path length, node expansions, preprocessed memory, and first-move lag.
+- Living portal; cite the specific map set and year when reporting numbers, not just "MovingAI."
 
 ## Caveats
 
-- Portal aggregates many papers — cite specific algorithms for claims.
-- Dynamic multi-agent RTS loads differ from static single-agent GPPC.
-
 ## Links
 
-- URL: https://movingai.com/GPPC/
+- GPPC: https://movingai.com/GPPC/
+- Map sets: https://movingai.com/benchmarks/

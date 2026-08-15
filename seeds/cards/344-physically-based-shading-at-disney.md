@@ -25,11 +25,6 @@ cites:
     year: 2014
     arxiv: null
     doi: null
-  - title: "Filament Physically Based Rendering Guide"
-    url: "https://google.github.io/filament/Filament.md.html"
-    year: 2019
-    arxiv: null
-    doi: null
 see:
   - "270-real-shading-in-unreal-engine-4"
   - "267-moving-frostbite-to-physically-based-rendering"
@@ -39,21 +34,22 @@ see:
 
 ## One-sentence takeaway
 
-Disney BRDF principled model.
+Burley’s 2012 course notes define the Disney principled BRDF: a small set of artist-facing parameters (baseColor, roughness, metallic, specular, sheen, clearcoat, …) that still integrate a microfacet specular lobe with energy-aware diffuse.
 
 ## Why it matters here
 
-Disney BRDF principled model.
+Every Anoptic/Broadside material graph is this parameterization or a subset; UE4 and Frostbite PBR notes are ports of the same model into real-time constraints.
 
 ## Key ideas
 
-- Disney BRDF principled model.
+- Artists hated academic parameter names. Disney remaps physically based knobs onto intuitive sliders and enforces plausible ranges.
+- Specular is a GGX/GTR microfacet lobe with a roughness-remap; metallic interpolates between dielectric Fresnel and tinted conductor Fresnel.
+- Diffuse is not Lambert: a retro-reflective term (and later Disney 2015’s diffuse-roughness) keeps energy as roughness rises.
+- Clearcoat is a second specular lobe; sheen models grazing cloth. Subsurface is a separate parameter, not a hacked wrap light.
+- SIGGRAPH 2012 *Practical Physically Based Shading* course. Canonical PDF at the Disney Animation URL above.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf
+- PDF: https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf

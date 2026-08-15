@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Shamir secret sharing via polynomial interpolation thresholds.
+Shamir splits a secret into n field elements on a random degree-(t−1) polynomial so that any t shares interpolate the secret and any t−1 shares are information-theoretically independent of it.
 
 ## Why it matters here
 
-Threshold custody for keys and distributed trust designs.
+Threshold custody for signing keys, shared world-seed material, and “any k of n operators can unlock this GRID COMMAND capability” are this construction. It is the simplest information-theoretic primitive sitting next to Diffie–Hellman / RSA in the Broadside crypto shelf.
 
 ## Key ideas
 
-- Degree-(t-1) polynomial over a finite field.
-- Any t shares reconstruct; t-1 reveal nothing.
-- Information-theoretic security.
-- Simple and widely deployed.
+- Encode the secret as the constant term of a random polynomial over a finite field larger than both the secret and n.
+- Distribute evaluations at n distinct nonzero points; Lagrange interpolation at 0 recovers the secret from any t points.
+- Security is information-theoretic: t−1 points are consistent with every possible secret.
+- No computational assumption is required, unlike the public-key papers this note sits beside.
 
 ## Caveats
-
-- Share authenticity needs MAC/signatures.
-- Field/size choices matter.
 
 ## Links
 

@@ -1,66 +1,63 @@
 ---
-title: Attention Is All You Need
+title: "Attention Is All You Need"
 authors:
-- Ashish Vaswani
-- Noam Shazeer
-- Niki Parmar
-- Jakob Uszkoreit
-- Llion Jones
-- Aidan N. Gomez
-- Lukasz Kaiser
-- Illia Polosukhin
+  - "Ashish Vaswani"
+  - "Noam Shazeer"
+  - "Niki Parmar"
+  - "Jakob Uszkoreit"
+  - "Llion Jones"
+  - "Aidan N. Gomez"
+  - "Lukasz Kaiser"
+  - "Illia Polosukhin"
 year: 2017
-venue: arXiv:cs.CL
-arxiv: '1706.03762'
+venue: "NeurIPS"
+arxiv: "1706.03762"
 doi: null
-source: https://arxiv.org/abs/1706.03762
+source: "https://arxiv.org/abs/1706.03762"
 topics:
-- transformer
-- foundations
+  - transformer
+  - foundations
 seed_rank: 13
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: agents
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "agents"
 relevance_score: 10
 cites:
-- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
-  url: https://arxiv.org/abs/2205.14135
-  year: 2022
-  arxiv: '2205.14135'
-  doi: null
-- title: Language Models are Few-Shot Learners
-  url: https://arxiv.org/abs/2005.14165
-  year: 2020
-  arxiv: '2005.14165'
-  doi: null
+  - title: "Neural Machine Translation by Jointly Learning to Align and Translate"
+    url: "https://arxiv.org/abs/1409.0473"
+    year: 2015
+    arxiv: "1409.0473"
+    doi: null
+  - title: "Language Models are Few-Shot Learners"
+    url: "https://arxiv.org/abs/2005.14165"
+    year: 2020
+    arxiv: "2005.14165"
+    doi: null
 see:
-- "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
-- "093-language-models-are-few-shot-learners"
+  - "093-language-models-are-few-shot-learners"
 ---
 
 # Attention Is All You Need
 
 ## One-sentence takeaway
 
-The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration.
+The Transformer drops recurrence and convolution entirely: stacked multi-head self-attention plus position encodings trains WMT En–De to 28.4 BLEU in a fraction of the GPU-days of the previous SOTA.
 
 ## Why it matters here
 
-foundational substrate for every LLM agent stack (Attention Is All You Need)
+Every Broadside agent, every AlphaStar policy head, and every later FlashAttention paper sits on this block. Understanding QKV, masking, and why recurrence died is prerequisite, not trivia.
 
 ## Key ideas
 
-- The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration.
-- The best performing models also connect the encoder and decoder through an attention mechanism.
-- We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.
-- Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train.
-- Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU.
+- Encoder–decoder RNNs and convs were sequential in depth or time; attention was only a bridge. Here attention is the layer.
+- Multi-head self-attention lets each position mix information from the whole sequence in O(1) sequential steps, with heads specializing (syntax vs long-range).
+- Positional encodings (sinusoids in the paper) inject order because the model has no recurrence.
+- WMT 2014 En–De 28.4 BLEU (>+2 over prior ensembles); En–Fr 41.8 BLEU after 3.5 days on eight GPUs.
+- The same architecture transfers to English constituency parsing with both large and limited data, which is why it escaped MT.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [1706.03762](https://arxiv.org/abs/1706.03762)
-- URL: https://arxiv.org/abs/1706.03762
+- PDF: https://arxiv.org/pdf/1706.03762

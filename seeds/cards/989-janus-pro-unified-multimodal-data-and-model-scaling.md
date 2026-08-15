@@ -37,22 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Janus scaled: better training recipe, more data, larger models — jumps on multimodal understanding and text-to-image instruction following, plus stabler T2I.
+Janus-Pro keeps the decoupled-encoder unified AR architecture and scales three levers — training recipe, data, and model size — producing jumps on multimodal understanding and text-to-image instruction following plus stabler T2I than Janus.
 
 ## Why it matters here
 
-The Janus that people actually downloaded. Same decoupled-encoder idea, more compute.
+The Janus people actually downloaded. Same understand/generate split, more compute. If Anoptic wants one checkpoint that both reads a screenshot and emits an image, this is the scaled artifact, not a new architecture.
 
 ## Key ideas
 
-- arXiv:2501.17811. Three levers: optimized training strategy, expanded data, larger model size.
-- Gains on both understanding benches and T2I instruction-following; more stable image generation than Janus.
-- Code/models public; overlap note with 2410.13848 (same architecture, scaled).
+- arXiv:2501.17811. Optimized training strategy, expanded data, larger models — no new visual-encoder split.
+- Gains on understanding benches and T2I instruction-following; image generation is reported more stable than Janus.
+- Code and models public on the Janus repo; overlap with 2410.13848 is intentional (same architecture, scaled).
+- Still a unified AR model, not VL2's MoE-MLA understanding stack; JanusFlow is the flow-matching cousin.
 
 ## Caveats
-
-- Scaling paper, not a new architecture. JanusFlow is the flow-matching cousin.
-- Still a unified AR model, not VL2's MoE-MLA understanding stack.
 
 ## Links
 

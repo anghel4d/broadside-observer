@@ -19,11 +19,11 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Guarded Commands, Nondeterminacy and Formal Derivation of Programs"
-    url: "https://doi.org/10.1145/360933.360975"
-    year: 1975
+  - title: "Notes on Structured Programming"
+    url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
+    year: 1970
     arxiv: null
-    doi: "10.1145/360933.360975"
+    doi: null
   - title: "An Axiomatic Basis for Computer Programming"
     url: "https://doi.org/10.1145/363235.363259"
     year: 1969
@@ -34,41 +34,33 @@ cites:
     year: 1967
     arxiv: null
     doi: "10.1090/psapm/019/0235771"
-  - title: "Can Programming Be Liberated from the von Neumann Style? A Functional Style and Its Algebra of Programs"
-    url: "https://dl.acm.org/doi/10.1145/359576.359579"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359576.359579"
 see:
-  - "591-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+  - "589-notes-on-structured-programming"
   - "592-an-axiomatic-basis-for-computer-programming"
   - "626-assigning-meanings-to-programs"
-  - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # Program Development by Stepwise Refinement
 
 ## One-sentence takeaway
 
-Articulates stepwise refinement as a disciplined program development method.
+A program is developed by successive refinement of both control structure and data, each step replacing a named action by a more detailed one until the text is executable.
 
 ## Why it matters here
 
-Wirth refinement classic — structured programming methodology beside Dijkstra/Hoare verification cards.
+GRID COMMAND, agent scripts, and engine subsystems are written the same way Wirth demonstrates: start from a named intention (“resolve visibility”, “plan a path”), refine the data and the steps, and keep the structure visible. This is the methodology card beside Dijkstra’s structured-programming notes and Hoare’s axioms.
 
 ## Key ideas
 
-- Top-down refinement of programs and data.
-- Clarity of structure as an engineering goal.
-- Influences Pascal-era pedagogy and design.
-- Pairs with Dijkstra GCL and Hoare logic.
+- Refinement is simultaneous on algorithms and data representations, not a later “optimize the structs” pass.
+- Each refinement step should be small enough that its correctness is locally obvious; the 8-queens development is the worked example.
+- Clarity of structure is an engineering goal, not a comment style — the program text *is* the design history.
+- The paper sits in the structured-programming moment with Dijkstra EWD249 and Hoare/Floyd meanings of programs.
+- CACM 14(4), April 1971, pp. 221–227.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/362575.362577](https://doi.org/10.1145/362575.362577)
-- URL: https://doi.org/10.1145/362575.362577
+- ACM: https://dl.acm.org/doi/10.1145/362575.362577

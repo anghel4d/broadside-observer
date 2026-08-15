@@ -4,7 +4,7 @@ authors:
   - "David Chase"
   - "Yossi Lev"
 year: 2005
-venue: "SPAA"
+venue: "SPAA 2005"
 arxiv: null
 doi: "10.1145/1073970.1073974"
 source: "https://doi.org/10.1145/1073970.1073974"
@@ -64,21 +64,21 @@ see:
 
 ## One-sentence takeaway
 
-Chase-Lev deque used by almost every modern job system.
+Chase-Lev replaces Cilk's THE protocol with a circular array that the owner grows lock-free, so push/pop stay wait-free on one end and steal is a single CAS on the other.
 
 ## Why it matters here
 
-Chase-Lev deque used by almost every modern job system.
+This is the deque under almost every modern job system, including whatever ano uses for ECS/system fan-out. If the owner never fights a thief except at the last element, you can afford one deque per worker.
 
 ## Key ideas
 
-- Chase-Lev deque used by almost every modern job system.
+- Owner pushes and pops at the bottom with no atomics in the common case; thieves CAS the top index.
+- The backing store is a power-of-two circular buffer. When it fills, the owner allocates a larger array and copies — other threads still see a consistent snapshot via an epoch-ish top/bottom pair.
+- Fixes the fixed-size limitation of the original Cilk THE deque without taking a lock on grow.
+- SPAA 2005, DOI 10.1145/1073970.1073974. Later papers (Lé et al. 2013, formal verification 2023) are about compiling this algorithm onto weaker memory models, not replacing it.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/1073970.1073974](https://doi.org/10.1145/1073970.1073974)
-- URL: https://doi.org/10.1145/1073970.1073974

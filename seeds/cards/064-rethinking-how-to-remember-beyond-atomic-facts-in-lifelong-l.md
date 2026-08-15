@@ -24,49 +24,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
-    url: "https://arxiv.org/abs/2605.06716"
-    year: 2026
-    arxiv: "2605.06716"
+  - title: "A-MEM: Agentic Memory for LLM Agents"
+    url: "https://arxiv.org/abs/2502.12110"
+    year: 2025
+    arxiv: "2502.12110"
     doi: null
-  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
-    url: "https://arxiv.org/abs/2603.11768"
-    year: 2026
-    arxiv: "2603.11768"
-    doi: null
-  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
-    url: "https://arxiv.org/abs/2604.03964"
-    year: 2026
-    arxiv: "2604.03964"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
     doi: null
 see:
-  - "056-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
-  - "058-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
+  - "069-a-mem-agentic-memory-for-llm-agents"
+  - "004-memgpt-towards-llms-as-operating-systems"
 ---
 
 # Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory
 
 ## One-sentence takeaway
 
-To enable reliable long-term interaction, LLM agents require a memory system that can faithfully store, efficiently retrieve, and deeply reason over accumulated dialogue history.
+TriMem keeps three coexisting memory granularities — source-anchored raw dialogue, atomic facts, and synthesized profiles — and evolves extraction prompts with TextGrad instead of weight updates.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory)
+Fact-only memory in a long-running Broadside observer throws away the provenance trail the digest stack is built on; TriMem keeps the raw source next to the extracted fact.
 
 ## Key ideas
 
-- To enable reliable long-term interaction, LLM agents require a memory system that can faithfully store, efficiently retrieve, and deeply reason over accumulated dialogue history.
-- Most existing methods adopt an extracted fact based paradigm: handcrafted static prompts compress raw dialogues into atomic facts, which are then stored, matched, and injected into downstream reasoning.
-- Nevertheless, such fact-centric designs inevitably discard fine-grained details in original dialogues and fail to support deep reasoning over scattered isolated facts.
-- Moreover, static prompts cannot maintain consistent extraction granularity across diverse dialogue styles.
-- To address these limitations, we propose TriMem, which maintains three coexisting representation granularities, including raw dialogue segments
+- Static-prompt fact extraction discards fine-grained dialogue detail, cannot reason over scattered isolated facts, and cannot hold extraction granularity across dialogue styles.
+- Raw segments are stored with source identifiers for fidelity; atomic facts support cheap retrieval; profiles aggregate dispersed facts for deeper reasoning.
+- TextGrad iteratively rewrites extraction and profiling prompts from response-quality feedback, so the memory policy evolves without parameter updates.
+- On LoCoMo and PerLTQA across multiple LLM backbones, TriMem beats strong memory baselines.
+- Code: https://TMLR-TriMem.github.io.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2605.19952](https://arxiv.org/abs/2605.19952)
-- URL: https://arxiv.org/abs/2605.19952
+- PDF: https://arxiv.org/pdf/2605.19952
+- Project: https://TMLR-TriMem.github.io

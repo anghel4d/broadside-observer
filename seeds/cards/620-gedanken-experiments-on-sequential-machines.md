@@ -3,10 +3,10 @@ title: "Gedanken-Experiments on Sequential Machines"
 authors:
   - "Edward F. Moore"
 year: 1956
-venue: "In Automata Studies (Shannon & McCarthy)"
+venue: "In Automata Studies (Shannon & McCarthy), Annals of Mathematics Studies 34"
 arxiv: null
 doi: null
-source: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+source: "https://www.cs.cmu.edu/~cdm/resources/Moore1956-gedanken-experiments.pdf"
 topics:
   - moore-machines
   - automata
@@ -23,48 +23,42 @@ cites:
     year: 1955
     arxiv: null
     doi: "10.1002/j.1538-7305.1955.tb03788.x"
-  - title: "Finite Automata and Their Decision Problems"
-    url: "https://doi.org/10.1147/rd.32.0114"
-    year: 1959
-    arxiv: null
-    doi: "10.1147/rd.32.0114"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.cs.cmu.edu/~cdm/resources/Kleene1951.pdf"
     year: 1956
     arxiv: null
     doi: null
-  - title: "A Universal Turing Machine with Two Internal States"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
+  - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
+    url: "https://doi.org/10.1112/plms/s2-42.1.230"
+    year: 1936
     arxiv: null
-    doi: null
+    doi: "10.1112/plms/s2-42.1.230"
 see:
   - "621-a-method-for-synthesizing-sequential-circuits"
-  - "619-finite-automata-and-their-decision-problems"
   - "530-representation-of-events-in-nerve-nets-and-finite-automata"
-  - "559-a-universal-turing-machine-with-two-internal-states"
+  - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
 ---
 
 # Gedanken-Experiments on Sequential Machines
 
 ## One-sentence takeaway
 
-Moore's gedanken-experiments found sequential machine testing and Moore-machine outputs-on-states.
+Moore studies what an experimenter can learn about a finite-state black box from input/output experiments, and defines the machine model whose output depends only on the current state.
 
 ## Why it matters here
 
-Automata Studies classic; testing/state-identification roots.
+Testing and state-identification roots — the same questions one asks of an Anoptic subsystem that only exposes a command bus. Moore machines (output-on-state) pair with Mealy (output-on-transition) as the FSM taxonomy.
 
 ## Key ideas
 
-- Experiments to identify machine state.
-- Moore machine model.
-- Automata Studies volume.
+- A Moore machine outputs a symbol determined by the *state*, not the incoming transition.
+- Simple vs multiple experiments: one copy vs several copies of the unknown machine.
+- Distinguishability of states, and an analogue of an uncertainty principle: some pairs of states cannot be told apart by a single experiment without disturbing the machine.
+- *Automata Studies* (AMS 34), Princeton, 1956, pp. 129–153.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691079165/automata-studies
+- Chapter PDF: https://www.cs.cmu.edu/~cdm/resources/Moore1956-gedanken-experiments.pdf
+- Volume: https://press.princeton.edu/books/paperback/9780691079165/automata-studies

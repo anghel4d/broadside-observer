@@ -3,7 +3,7 @@ title: "A Pragmatic Implementation of Non-Blocking Linked-Lists"
 authors:
   - "Timothy L. Harris"
 year: 2001
-venue: "DISC"
+venue: "DISC 2001"
 arxiv: null
 doi: "10.1007/3-540-45414-4_21"
 source: "https://doi.org/10.1007/3-540-45414-4_21"
@@ -25,56 +25,11 @@ cites:
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
-  - title: "Thread scheduling for multiprogrammed multiprocessors"
-    url: "https://doi.org/10.1145/277651.277678"
-    year: 1998
-    arxiv: null
-    doi: "10.1145/277651.277678"
-  - title: "Thread Scheduling for Multiprogrammed Multiprocessors"
-    url: "https://doi.org/10.1007/s00224-001-0004-z"
-    year: 2001
-    arxiv: null
-    doi: "10.1007/s00224-001-0004-z"
-  - title: "The model checker SPIN"
-    url: "https://doi.org/10.1109/32.588521"
-    year: 1997
-    arxiv: null
-    doi: "10.1109/32.588521"
-  - title: "Garbage collection: algorithms for automatic dynamic memory management"
-    url: "http://swbplus.bsz-bw.de/bsz256122571cov.htm"
-    year: 1996
-    arxiv: null
-    doi: null
-  - title: "A methodology for implementing highly concurrent data objects"
-    url: "https://doi.org/10.1145/161468.161469"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/161468.161469"
   - title: "Lock-free linked lists using compare-and-swap"
     url: "https://doi.org/10.1145/224964.224988"
     year: 1995
     arxiv: null
     doi: "10.1145/224964.224988"
-  - title: "dSPIN: A Dynamic Extension of SPIN"
-    url: "https://doi.org/10.1007/3-540-48234-2_20"
-    year: 1999
-    arxiv: null
-    doi: "10.1007/3-540-48234-2_20"
-  - title: "The synergy between non-blocking synchronization and operating system structure"
-    url: "https://doi.org/10.1145/238721.238767"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/238721.238767"
-  - title: "A Lock-Free Multiprocessor OS Kernel"
-    url: "https://doi.org/10.1145/142111.993246"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/142111.993246"
-  - title: "A performance evaluation of lock-free synchronization protocols"
-    url: "https://doi.org/10.1145/197917.197975"
-    year: 1994
-    arxiv: null
-    doi: "10.1145/197917.197975"
 see:
   - "203-linearizability-a-correctness-condition-for-concurrent-objec"
   - "036-wait-free-synchronization"
@@ -85,21 +40,22 @@ see:
 
 ## One-sentence takeaway
 
-Harris linked list — practical lock-free list baseline.
+Harris marks a node's next-pointer with a spare bit to logically delete it, then physically swings the predecessor's pointer with CAS — the lock-free list every later map and skip-list copies.
 
 ## Why it matters here
 
-Harris linked list — practical lock-free list baseline.
+This is the practical lock-free list baseline. Ano intrusive lists, wait-free queues, and epoch/hazard reclaimers all assume this mark-then-swing protocol.
 
 ## Key ideas
 
-- Harris linked list — practical lock-free list baseline.
+- Two-phase delete: (1) CAS a mark bit into `node.next` so concurrent inserters see the node as gone; (2) CAS the predecessor from `node` to `node.next`.
+- Helping: a thread that sees a marked successor finishes the physical unlink before retrying its own operation, so the list cannot get stuck behind a crashed deleter.
+- Uses only single-word CAS (the mark lives in a pointer low bit). No DCAS, unlike Valois 1995.
+- Linearizable search / insert / delete; the search may return a node that is already marked, so callers must re-validate.
+- DISC 2001, DOI 10.1007/3-540-45414-4_21. Duplicate "Thread scheduling" cites dropped.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1007/3-540-45414-4_21](https://doi.org/10.1007/3-540-45414-4_21)
-- URL: https://doi.org/10.1007/3-540-45414-4_21

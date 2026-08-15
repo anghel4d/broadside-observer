@@ -43,21 +43,20 @@ see:
 
 ## One-sentence takeaway
 
-Kleene surveys and extends predicate hierarchies—roadmap of definability strength.
+Kleene extends the 1943 arithmetical hierarchy through the hyperarithmetic levels, indexing definability strength by notations in \(\mathcal{O}\).
 
 ## Why it matters here
 
-Companion to 1943; clarifies hyperarithmetic vs arithmetical.
+Companion to the 1943 paper and to Turing's ordinal logics: once Anoptic cares about "this property is not merely r.e. but sits at a recursive ordinal of quantification," this is the roadmap. It is also the definability ladder later descriptive-set-theory cards inherit.
 
 ## Key ideas
 
-- Hierarchy theorems.
-- Links to constructive ordinals.
-- Survey flavor with new results.
+- Surveys the arithmetical hierarchy and proves hierarchy theorems (each level properly contains the one below).
+- Climbs past \(\Delta^1_1\) into the hyperarithmetic hierarchy, using recursive ordinals as indices.
+- Ties predicate complexity to constructive ordinals rather than to runtime.
+- Written as a BAMS address: part survey, part new theorems.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

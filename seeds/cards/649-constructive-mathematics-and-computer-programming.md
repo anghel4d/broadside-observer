@@ -29,46 +29,30 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-  - title: "The Calculus of Constructions"
-    url: "https://doi.org/10.1016/0890-5401(88)90005-3"
-    year: 1988
-    arxiv: null
-    doi: "10.1016/0890-5401(88)90005-3"
-  - title: "Practical Foundations for Programming Languages"
-    url: "https://doi.org/10.1017/CBO9781316576892"
-    year: 2016
-    arxiv: null
-    doi: "10.1017/CBO9781316576892"
 see:
   - "648-an-intuitionistic-theory-of-types-predicative-part"
   - "647-the-formulae-as-types-notion-of-construction"
-  - "650-the-calculus-of-constructions"
-  - "646-practical-foundations-for-programming-languages"
 ---
 
 # Constructive Mathematics and Computer Programming
 
 ## One-sentence takeaway
 
-Argues constructive type theory is simultaneously a programming language and a foundation for mathematics.
+Martin-Löf argues that constructive type theory *is* a programming language: a proof of a specification is a program, and running it is proof reduction.
 
 ## Why it matters here
 
-The manifesto that programming = proof construction — frames why Broadside keeps type theory next to PL.
+The manifesto that programming = proof construction — the reason Broadside keeps type theory next to PL and why an ano specification could in principle be inhabited by a checked term.
 
 ## Key ideas
 
-- Programs as constructive proofs of specifications.
-- Type theory as a wide-spectrum language.
-- Clarifies computational content of intuitionistic logic.
-- Influences Coq/Agda/Nuprl cultures of program extraction.
+- A specification is a type; a program meeting it is a term of that type.
+- Computational content of intuitionistic logic is exactly the reduction behaviour of the corresponding typed terms.
+- Type theory is offered as a wide-spectrum language, from machine-near combinators to mathematical constructions.
+- *LMPS VI* (Hannover 1979 / North-Holland 1982). Influences Coq/Agda/Nuprl cultures of program extraction.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/S0049-237X(09)70189-2](https://doi.org/10.1016/S0049-237X(09)70189-2)
-- URL: https://doi.org/10.1016/S0049-237X(09)70189-2

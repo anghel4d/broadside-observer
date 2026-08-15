@@ -19,53 +19,34 @@ pool: "languages"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "The FORTRAN Automatic Coding System"
-    url: "https://doi.org/10.1145/1455567.1455599"
-    year: 1957
-    arxiv: null
-    doi: "10.1145/1455567.1455599"
   - title: "The Preparation of Programs for an Electronic Digital Computer"
-    url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
+    url: "https://archive.org/details/programsforelect00wilk"
     year: 1951
     arxiv: null
     doi: null
-  - title: "Planning and Coding of Problems for an Electronic Computing Instrument"
-    url: "https://www.ias.edu/electronic-computer-project"
-    year: 1947
-    arxiv: null
-    doi: null
-  - title: "Über den allgemeinen Plankalkül als Mittel zur Formulierung schematisch-kombinativer Aufgaben"
-    url: "https://www.zib.de/zuse/Inhalt/Komplexe/Plankalkuel.htm"
-    year: 1948
-    arxiv: null
-    doi: null
 see:
-  - "622-the-fortran-automatic-coding-system"
   - "572-the-preparation-of-programs-for-an-electronic-digital-comput"
-  - "544-planning-and-coding-of-problems-for-an-electronic-computing-"
-  - "573-uber-den-allgemeinen-plankalkul-als-mittel-zur-formulierung-"
 ---
 
 # The Education of a Computer
 
 ## One-sentence takeaway
 
-Hopper argues machines should learn programmer intent—early vision of compilers and automatic programming (A-0 lineage).
+Hopper argues that a computer should be taught programmer intent through subroutine catalogs and compiling routines — the A-0 vision of automatic programming.
 
 ## Why it matters here
 
-Compiler history root; languages pool spine before Fortran/Algol.
+ano and the Broadside languages stack are compiler descendants of this demand: stop writing machine code; make the machine absorb the method.
 
 ## Key ideas
 
-- Automatic programming agenda.
-- Subroutines and catalogs.
-- A-0 / early compiler practice at Remington Rand.
-- Education metaphor for machines.
+- A compiling routine selects and relocates library subroutines from a catalog, filling in arguments the programmer named.
+- The "education" metaphor: the machine accumulates reusable methods rather than being re-instructed from zero each job.
+- Practice is Remington Rand / UNIVAC A-0 and its successors, presented at the 1952 ACM national meeting.
+- Information hiding starts here: the user names an operation, not its machine-code expansion.
+- The paper is an agenda, not a compiler textbook; Fortran and ALGOL later industrialize the same idea.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

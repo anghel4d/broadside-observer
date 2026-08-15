@@ -7,8 +7,8 @@ authors:
 year: 1992
 venue: "Information and Computation"
 arxiv: null
-doi: "10.1016/0890-5401(92)90008-3"
-source: "https://doi.org/10.1016/0890-5401(92)90008-3"
+doi: "10.1016/0890-5401(92)90008-4"
+source: "https://doi.org/10.1016/0890-5401(92)90008-4"
 topics:
   - pi-calculus
   - milner
@@ -31,46 +31,30 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-  - title: "Session Types as Intuitionistic Linear Propositions"
-    url: "https://link.springer.com/chapter/10.1007/978-3-642-15375-4_16"
-    year: 2010
-    arxiv: null
-    doi: "10.1007/978-3-642-15375-4_16"
-  - title: "The Join Calculus: A Language for Distributed Mobile Programming"
-    url: "https://doi.org/10.1007/3-540-45699-6_5"
-    year: 2000
-    arxiv: null
-    doi: "10.1007/3-540-45699-6_5"
 see:
   - "043-a-calculus-of-communicating-systems"
   - "046-communicating-sequential-processes"
-  - "121-session-types-as-intuitionistic-linear-propositions"
-  - "696-the-join-calculus-a-language-for-distributed-mobile-programm"
 ---
 
 # A Calculus of Mobile Processes, I
 
 ## One-sentence takeaway
 
-Defines the π-calculus: concurrent processes with channel-name mobility.
+The π-calculus extends CCS with name-passing: a process can send a channel on a channel, and restriction then extrudes so the receiver shares a previously private name.
 
 ## Why it matters here
 
-π-calculus is the mobile-concurrency classic beside CCS/CSP already in corpus — essential for session-type ancestry.
+Mobile-concurrency classic beside CCS/CSP already in the corpus — the process calculus session types and any GRID COMMAND "hand this mailbox to that unit" story actually sit on. Old card DOI ended in `-3` (404).
 
 ## Key ideas
 
-- Name-passing mobility beyond CCS.
-- Scope extrusion as the key interaction pattern.
-- Bisimulation theory for mobile processes.
-- Foundation for session types and modern process languages.
+- Syntax: inaction, choice, parallel, restriction, and prefix `x̄y.P` / `x(y).P` (output/input of a name). Replication handles infinite behaviour.
+- Scope extrusion is the characteristic reaction: `(νy)(x̄y.P | Q) | x(z).R → (νy)(P | Q | R{y/z})` when y is fresh to R.
+- Bisimulation is rebuilt for name-passing (late/early distinctions appear already in this paper and its companion Part II).
+- *Information and Computation* 100(1):1–40, September 1992, DOI 10.1016/0890-5401(92)90008-4. Part II is the same volume.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1016/0890-5401(92)90008-3](https://doi.org/10.1016/0890-5401(92)90008-3)
-- URL: https://doi.org/10.1016/0890-5401(92)90008-3
+- DOI: [10.1016/0890-5401(92)90008-4](https://doi.org/10.1016/0890-5401(92)90008-4)

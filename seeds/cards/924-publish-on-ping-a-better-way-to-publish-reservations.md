@@ -65,9 +65,6 @@ Hazard pointers are the correct *robust* SMR for a game process that cannot stal
 
 ## Caveats
 
-- Signal-based: not portable to every console/GPU-side queue, and signal latency is a scheduling artifact.
-- Need a story for threads that mask signals or sit in uninterruptible GPU waits — engines must pick the ping mechanism (signal, APC, job mailbox).
-- Complements card 1187 (EBR vs allocators): HP-robust when you need it, EBR-cheap when you do not.
 
 ## Links
 

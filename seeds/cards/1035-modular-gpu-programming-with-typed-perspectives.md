@@ -56,9 +56,6 @@ Anoptic mesh shaders, radiance-cascade probes, and ano GPU kernels are all "per-
 
 ## Caveats
 
-- Embedded Python DSL → CUDA, not SPIR-V. Pair with Vcc (1031) if the Anoptic path is Vulkan.
-- Data-race freedom is explicitly *not* a goal (non-injective partitions race; last writer wins). Descend is the race-oriented sibling.
-- Pipelines must be unrolled into named slots so the sync graph can see them — ergonomic pain the authors admit.
 
 ## Links
 

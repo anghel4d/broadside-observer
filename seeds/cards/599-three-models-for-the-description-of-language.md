@@ -20,20 +20,15 @@ relevance_score: 10
 lineage: foundations-of-computing
 cites:
   - title: "Syntactic Structures"
-    url: "https://www.worldcat.org/title/syntactic-structures/oclc/523"
+    url: "https://doi.org/10.1515/9783112316009"
     year: 1957
     arxiv: null
-    doi: null
+    doi: "10.1515/9783112316009"
   - title: "On Certain Formal Properties of Grammars"
     url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
     year: 1959
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
-  - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
@@ -42,7 +37,6 @@ cites:
 see:
   - "600-syntactic-structures"
   - "601-on-certain-formal-properties-of-grammars"
-  - "530-representation-of-events-in-nerve-nets-and-finite-automata"
   - "558-prediction-and-entropy-of-printed-english"
 ---
 
@@ -50,22 +44,21 @@ see:
 
 ## One-sentence takeaway
 
-Chomsky compares finite-state, phrase-structure, and transformational models—birth of the hierarchy mindset.
+Chomsky shows finite-state Markov sources cannot generate English, then compares phrase-structure and transformational models as stronger descriptions.
 
 ## Why it matters here
 
-Formal language theory enters from linguistics; parsers and grammars follow.
+Parsers, grammars, and the Chomsky hierarchy in the languages pool start at this 1956 IRE-IT paper, not at the 1957 book.
 
 ## Key ideas
 
-- Finite-state inadequacy for English.
-- Phrase-structure grammars.
-- Transformational component sketched.
-- Same IRE IT issue era as Logic Theorist.
+- Model 1: finite-state (n-gram / Markov) devices; English has unbounded nested dependencies they cannot capture.
+- Model 2: phrase-structure (context-free style) grammars generate constituent trees but still miss systematic relations between sentences.
+- Model 3: a transformational component maps kernel sentences to passives, questions, and other related forms.
+- The paper is the technical seed of *Syntactic Structures* and of later formal-language theory.
+- Same IRE Information Theory issue era as Logic Theorist.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

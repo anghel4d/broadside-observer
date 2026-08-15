@@ -26,50 +26,34 @@ cites:
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
   - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
-    url: "https://doi.org/10.1090/S0002-9947-1969-0253909-0"
+    url: "https://doi.org/10.1090/S0002-9947-1969-0253905-6"
     year: 1969
     arxiv: null
-    doi: "10.1090/S0002-9947-1969-0253909-0"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
+    doi: "10.1090/S0002-9947-1969-0253905-6"
 see:
   - "629-a-theory-of-type-polymorphism-in-programming"
   - "628-the-principal-type-scheme-of-an-object-in-combinatory-logic"
-  - "137-the-definition-of-standard-ml-revised"
-  - "026-types-and-programming-languages"
 ---
 
 # Principal Type-Schemes for Functional Programs
 
 ## One-sentence takeaway
 
-Presents Algorithm W and proves it computes principal type-schemes for Milner's polymorphic type system.
+Damas and Milner present Algorithm W and prove it computes a principal type-scheme for every typable term of Milner’s 1978 polymorphic type system.
 
 ## Why it matters here
 
-The inference algorithm card — what compilers implement when they say Hindley–Milner.
+The inference *algorithm* card — what a compiler implements when it says Hindley–Milner. Ano type inference, if it stays prenex, is W plus whatever constraints (rows, ranks, effects) we add later.
 
 ## Key ideas
 
-- Algorithm W: unification-based principal-type inference.
-- Completeness relative to Milner's type system.
-- Practical route from polymorphic theory to compiler implementation.
-- Still the mental model for HM extensions (refs, rows, constraints).
+- Algorithm W: walk the term, generate unification problems, generalize at `let`.
+- Completeness: if a term has any type, W finds a principal scheme of which every other type is an instance.
+- Soundness relative to the 1978 JCSS type system, not a new type theory.
+- Still the mental model for HM extensions (refs, rows, type classes, constraints).
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/582153.582176](https://doi.org/10.1145/582153.582176)
-- URL: https://doi.org/10.1145/582153.582176

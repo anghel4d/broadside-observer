@@ -27,11 +27,6 @@ cites:
     year: 2018
     arxiv: null
     doi: null
-  - title: "Legion ECS (Amethyst)"
-    url: "https://github.com/amethyst/legion"
-    year: 2019
-    arxiv: null
-    doi: null
   - title: "Flecs: A Fast Entity Component System for C99"
     url: "https://github.com/SanderMertens/flecs"
     year: 2019
@@ -40,7 +35,6 @@ cites:
 see:
   - "315-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - "325-unity-ecs-dots-architecture-overview-entities-package-docs"
-  - "385-legion-ecs-amethyst"
   - "260-flecs-a-fast-entity-component-system-for-c99"
 ---
 
@@ -48,21 +42,23 @@ see:
 
 ## One-sentence takeaway
 
-Rust archetype ECS design.
+Bevy’s ECS is an archetype-chunk store driven by Rust systems that declare `Query`/`Res`/`Commands` parameters, so the scheduler can parallelize systems whose component sets do not alias mutably.
 
 ## Why it matters here
 
-Rust archetype ECS design.
+This is the closest open-source cousin to an Anoptic/ano Rust ECS: entities, components as structs, exclusive world access via `Commands`, and a stage/schedule that looks like a frame graph for CPU work.
 
 ## Key ideas
 
-- Rust archetype ECS design.
+- An `Entity` is a generational id; components are ordinary Rust types stored in archetypes keyed by the set of types on that entity.
+- Systems are functions. The parameter list is the query: `Query<&Transform, With<Player>>`, `Res<Time>`, `EventReader<T>`, `Commands`.
+- The scheduler builds a conflict graph from those parameters and runs non-conflicting systems in parallel across a thread pool.
+- Structural changes are deferred through `Commands` so iteration stays valid until a sync point; then entities move between archetypes.
+- Change detection (`Added`/`Changed`) and exclusive systems (`&mut World`) cover the cases queries cannot express.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://bevyengine.org/learn/quick-start/getting-started/ecs/
+- Book: https://bevyengine.org/learn/quick-start/getting-started/ecs/
+- crate docs: https://docs.rs/bevy_ecs/latest/bevy_ecs/

@@ -28,36 +28,30 @@ cites:
     year: 1972
     arxiv: null
     doi: "10.1007/BF00289507"
-  - title: "Report on the Algorithmic Language ALGOL 60"
-    url: "https://doi.org/10.1145/367236.367262"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367236.367262"
 see:
   - "592-an-axiomatic-basis-for-computer-programming"
   - "593-proof-of-correctness-of-data-representations"
-  - "623-report-on-the-algorithmic-language-algol-60"
 ---
 
 # Procedures and Parameters: An Axiomatic Approach
 
 ## One-sentence takeaway
 
-Hoare extends axiomatic methods to procedures and parameter passing.
+Hoare extends Hoare logic with proof rules for procedure declaration and call, including the aliasing traps of parameter passing.
 
 ## Why it matters here
 
-Fills the gap between straight-line Hoare logic and real languages.
+Real ano and engine code is not straight-line: calls, `var` parameters, and shared locations break the assignment axiom unless the rules say how.
 
 ## Key ideas
 
-- Procedure call rules.
-- Parameter mechanisms.
-- Semantic pitfalls of aliasing.
+- A procedure has a specification that callers use without opening the body.
+- Call-by-value, call-by-name, and call-by-reference need different axioms; aliasing can invalidate the assignment axiom.
+- Recursion is handled by assuming the specification while proving the body.
+- Printed in Engeler (ed.), *Symposium on Semantics of Algorithmic Languages*, Springer LNCS / Lecture Notes in Mathematics 188, 1971.
+- Together with the 1972 data-representation paper, this is how Hoare logic meets ALGOL-scale languages.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

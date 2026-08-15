@@ -1,61 +1,62 @@
 ---
-title: Recast Navigation / Detour
+title: "Recast Navigation / Detour"
 authors:
-- Mikko Mononen
+  - "Mikko Mononen"
 year: 2009
-venue: GitHub / GDC
+venue: "GitHub / GDC"
 arxiv: null
 doi: null
-source: https://github.com/recastnavigation/recastnavigation
+source: "https://github.com/recastnavigation/recastnavigation"
 topics:
-- navmesh
+  - navmesh
 seed_rank: 281
-seed_batch: systems-prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: game-ai
+seed_batch: "systems-prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "game-ai"
 relevance_score: 9
 lineage: pathfinding
 cites:
-- title: Simplified 3D Movement and Pathfinding Using Navigation Meshes
-  url: https://www.gamedevs.org/uploads/simplified-3d-movement-and-pathfinding-using-navigation-meshes.pdf
-  year: 2000
-  arxiv: null
-  doi: null
-- title: Near Optimal Hierarchical Pathfinding (HPA*)
-  url: https://doi.org/10.1613/jair.1423
-  year: 2004
-  arxiv: null
-  doi: 10.1613/jair.1423
-- title: Understanding Goal-Based Vector Field / Flow Field Pathfinding
-  url: https://howtorts.github.io/
-  year: 2010
-  arxiv: null
-  doi: null
+  - title: "Simplified 3D Movement and Pathfinding Using Navigation Meshes"
+    url: "https://www.gamedevs.org/uploads/simplified-3d-movement-and-pathfinding-using-navigation-meshes.pdf"
+    year: 2000
+    arxiv: null
+    doi: null
+  - title: "Near Optimal Hierarchical Path-Finding"
+    url: "https://webdocs.cs.ualberta.ca/~jonathan/PREVIOUS/Grad/Papers/jogd.pdf"
+    year: 2004
+    arxiv: null
+    doi: null
+  - title: "Understanding Goal-Based Vector Field / Flow Field Pathfinding"
+    url: "https://web.archive.org/web/20201111190441/https://gamedevelopment.tutsplus.com/tutorials/understanding-goal-based-vector-field-pathfinding--gamedev-9007"
+    year: 2013
+    arxiv: null
+    doi: null
 see:
-- "302-simplified-3d-movement-and-pathfinding-using-navigation-mesh"
-- "294-near-optimal-hierarchical-pathfinding-hpa"
-- "279-understanding-goal-based-vector-field-flow-field-pathfinding"
+  - "302-simplified-3d-movement-and-pathfinding-using-navigation-mesh"
+  - "294-near-optimal-hierarchical-pathfinding-hpa"
+  - "279-understanding-goal-based-vector-field-flow-field-pathfinding"
 ---
 
 # Recast Navigation / Detour
 
 ## One-sentence takeaway
 
-Industry-standard navmesh toolkit.
+Recast voxelizes triangle soup into a walkable heightfield, watershed-partitions it into a navmesh, and Detour A*-searches that mesh with string-pulling, off-mesh links, and crowd steering.
 
 ## Why it matters here
 
-Industry-standard navmesh toolkit.
+This is the industry-standard navmesh toolkit GRID COMMAND should wrap, not reimplement. Recast is bake; Detour is runtime query — keep that split.
 
 ## Key ideas
 
-- Industry-standard navmesh toolkit.
+- Recast: rasterize input geometry to a heightfield, filter ledges and low spans, erode by agent radius, then watershed / monotone partition into convex polygons.
+- Detour: tiled navmesh, A* on the dual graph, funnel / string-pull to a corner-optimal polyline, off-mesh connections for jumps and teleports.
+- Crowd module adds local avoidance (ORCA-flavored) on top of the mesh so many agents share one navmesh.
+- Tiling lets you stream and rebuild regions without rebaking the world.
+- Started by Mikko Mononen around 2009; now the `recastnavigation` org. Used by Unity, Unreal, and countless custom engines.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://github.com/recastnavigation/recastnavigation
+- GitHub: https://github.com/recastnavigation/recastnavigation

@@ -43,13 +43,13 @@ cites:
     arxiv: "2205.14135"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
-    year: 2024
+    year: 2023
     arxiv: "2307.08691"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-  - title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
+  - title: "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling"
     url: "https://arxiv.org/abs/2603.05451"
     year: 2026
     arxiv: "2603.05451"
@@ -75,23 +75,20 @@ see:
 
 ## One-sentence takeaway
 
-Trainable hierarchical sparse attention (compress + select + sliding window) with Triton kernels aligned to GQA/MQA — matches or beats full attention at 27B, big speedups at 64K. ACL 2025 Best Paper; internship at DeepSeek-AI.
+NSA is trainable hierarchical sparse attention — compressed block tokens, top-n selected blocks, and a sliding window, gated per query — implemented with Triton kernels aligned to GQA/MQA so a head group shares sparse KV; at 27B it matches or beats full attention and is up to 9×/6× faster than FA-2 Triton at 64K.
 
 ## Why it matters here
 
-The sparse-attention ancestor of V3.2's DSA and V4's CSA/HCA. Hardware-aligned the same way FA is — cite 105/096/089/1222, don't remint kernels.
+Sparse-attention ancestor of V3.2's DSA and V4's CSA/HCA. Hardware-aligned the same way FlashAttention is: cite the FA line and don't remint kernels. Long-context GRID agents need this, not naive scatter sparsity.
 
 ## Key ideas
 
-- arXiv:2502.11089. Three gated branches per query: compressed block tokens, top-n selected blocks, sliding window. Implemented for GQA/MQA so a group shares sparse KV.
-- Natively trained (not post-hoc inference sparsity). 27B GQA+DeepSeekMoE, 270B tokens at 8K then YaRN to 32K.
-- Matches/exceeds full attention on general, LongBench, AIME-distill; up to 9× fwd / 6× bwd vs FA-2 Triton at 64K; decode memory traffic ~11.6× less at 64K.
-- First author Yuan: PKU internship at DeepSeek-AI; Liang Wenfeng coauthor. Claimed applied toward million-token next-gen (see V4).
+- arXiv:2502.11089. ACL 2025 Best Paper. First author Yuan: PKU internship at DeepSeek-AI; Liang Wenfeng coauthor.
+- Three gated branches per query; natively trained (not post-hoc inference sparsity). 27B GQA+DeepSeekMoE, 270B tokens at 8K then YaRN to 32K.
+- Matches/exceeds full attention on general, LongBench, and AIME-distill; decode memory traffic ~11.6× less at 64K.
+- Requires custom kernels; naive sparse attention will not hit the reported speedups. V3.2's DSA is the production cousin, not a drop-in NSA.
 
 ## Caveats
-
-- 27B research backbone, not V3-671B. V3.2's DSA is the production sparse attention, not a drop-in NSA.
-- Requires custom kernels; naive scatter sparse attention will not hit the reported speedups.
 
 ## Links
 

@@ -31,19 +31,18 @@ AlexNet: the 2012 ImageNet CNN that opened modern deep learning — CACM 2017 re
 
 ## Why it matters here
 
-The CNN Weaves still has to broadcast. Historical root of the architecture zoo.
+The CNN Weaves still has to broadcast. Historical root of the architecture zoo; ReLU + dropout + GPU training is the recipe that made depth practical.
 
 ## Key ideas
 
 - NeurIPS 2012 original; CACM 60(6):84–90, May 2017 reprint. DOI `10.1145/3065386`.
-- Deep convnet + ReLU + dropout + GPU training on ImageNet.
+- Deep convnet + ReLU + dropout + two-GPU training on ImageNet.
 - Weaves cites the CACM reprint; year 2017 matches that venue.
+- Reprint, not a new result. No categorical content.
 
 ## Caveats
 
-- Reprint, not a new result. No categorical content.
-
 ## Links
 
-- DOI: https://doi.org/10.1145/3065386
+- DOI: [10.1145/3065386](https://doi.org/10.1145/3065386)
 - NeurIPS 2012: https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html

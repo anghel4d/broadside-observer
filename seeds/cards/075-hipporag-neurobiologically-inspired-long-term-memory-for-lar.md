@@ -23,49 +23,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms"
-    url: "https://arxiv.org/abs/2605.06716"
-    year: 2026
-    arxiv: "2605.06716"
+  - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: "https://arxiv.org/abs/2005.11401"
+    year: 2020
+    arxiv: "2005.11401"
     doi: null
-  - title: "Governing Evolving Memory in LLM Agents: Risks, Mechanisms, and the Stability and Safety Governed Memory (SSGM) Framework"
-    url: "https://arxiv.org/abs/2603.11768"
-    year: 2026
-    arxiv: "2603.11768"
-    doi: null
-  - title: "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory"
-    url: "https://arxiv.org/abs/2605.19952"
-    year: 2026
-    arxiv: "2605.19952"
+  - title: "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
+    url: "https://arxiv.org/abs/2404.16130"
+    year: 2024
+    arxiv: "2404.16130"
     doi: null
 see:
-  - "056-from-storage-to-experience-a-survey-on-the-evolution-of-llm-"
-  - "058-governing-evolving-memory-in-llm-agents-risks-mechanisms-and"
-  - "064-rethinking-how-to-remember-beyond-atomic-facts-in-lifelong-l"
+  - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
+  - "074-from-local-to-global-a-graph-rag-approach-to-query-focused-s"
 ---
 
 # HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models
 
 ## One-sentence takeaway
 
-In order to thrive in hostile and ever-changing natural environments, mammalian brains evolved to store large amounts of knowledge about the world and continually integrate new information while avoiding catastrophic forgetting.
+HippoRAG builds a knowledge graph over new experiences and retrieves with Personalized PageRank, mimicking hippocampal indexing so multi-hop integration does not require iterative retrieval.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models)
+Ano long-term memory and Broadside corpus integration need single-step multi-hop retrieval that stays cheap as the store grows; HippoRAG is that hippocampal-index pattern.
 
 ## Key ideas
 
-- In order to thrive in hostile and ever-changing natural environments, mammalian brains evolved to store large amounts of knowledge about the world and continually integrate new information while avoiding catastrophic forgetting.
-- Despite the impressive accomplishments, large language models (LLMs), even with retrieval-augmented generation (RAG), still struggle to efficiently and effectively integrate a large amount of new experiences after pre-training.
-- In this work, we introduce HippoRAG, a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences.
-- HippoRAG synergistically orchestrates LLMs, knowledge graphs, and the Personalized PageRank algorithm to mimic the different rol
+- Even RAG-equipped LLMs struggle to integrate large amounts of post-pretrain experience without catastrophic forgetting or expensive multi-step retrieval.
+- LLMs play the neocortical role (schema/knowledge), the KG plus Personalized PageRank play the hippocampal index.
+- On multi-hop QA, HippoRAG beats then-SOTA RAG methods by up to 20%.
+- Single-step HippoRAG matches or beats iterative IRCoT while being 10–30× cheaper and 6–13× faster; composing the two still helps.
+- Code and data: https://github.com/OSU-NLP-Group/HippoRAG.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2405.14831](https://arxiv.org/abs/2405.14831)
-- URL: https://arxiv.org/abs/2405.14831
+- PDF: https://arxiv.org/pdf/2405.14831
+- Code: https://github.com/OSU-NLP-Group/HippoRAG

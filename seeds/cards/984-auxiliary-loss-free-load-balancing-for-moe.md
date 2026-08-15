@@ -44,23 +44,20 @@ see:
 
 ## One-sentence takeaway
 
-Expert-wise routing bias updated from recent load, no auxiliary loss: breaks the balance-vs-LM-gradient dilemma that V3 then ships at 671B.
+Loss-Free Balancing adds an expert-wise bias to routing scores before top-K, then updates that bias from recent load — no auxiliary loss, so load balance no longer injects interference gradients into the LM objective.
 
 ## Why it matters here
 
-The MoE load-balancing trick V3 (1206) pioneers at scale. Small paper, large production consequence.
+The MoE load-balancing trick V3 ships at 671B. Small paper, large production consequence: you can keep experts busy without fighting the language-model gradient.
 
 ## Key ideas
 
-- arXiv:2408.15664. Before top-K, add an expert-wise bias to routing scores; after the batch, bump bias up/down from load violation (sign update, rate u≈0.001).
+- arXiv:2408.15664. Before top-K, add a per-expert bias; after the batch, bump the bias up or down from load violation (sign update, rate \(u \approx 0.001\)).
 - Bias affects selection only, not the gating weights that mix expert outputs — so no extra LM-interfering gradients.
-- Vs aux-loss: better val PPL and far better MaxVio_global (0.04 vs 0.5–0.7) on 1B/3B DeepSeekMoE. Vs Expert-Choice: no future-token leakage.
-- Compatible with expert parallelism: computation-batch MaxVio improves as EP widens.
+- Vs aux-loss: better val PPL and far better MaxVio_global (0.04 vs 0.5–0.7) on 1B/3B DeepSeekMoE trained up to 200B tokens. Vs Expert-Choice: no future-token leakage.
+- Compatible with expert parallelism: computation-batch MaxVio improves as EP widens. Validated at 1B/3B; V3 is the scale-up report.
 
 ## Caveats
-
-- Validated at 1B/3B, not 671B — V3 is the scale-up report.
-- Bias is extra-graph; it is a controller, not a learned module.
 
 ## Links
 

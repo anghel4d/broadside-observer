@@ -56,23 +56,20 @@ see:
 
 ## One-sentence takeaway
 
-Cold-starts from V3 subgoal decomposition into Lean 4, then RL; Prover-V2-671B hits 88.9% miniF2F and 49/658 PutnamBench — informal and formal math starting to meet.
+Prover-V2 cold-starts from V3 subgoal decomposition into Lean 4, then RL: prompt V3 to split a theorem, prove the subgoals, synthesize a CoT, and use that as the RL start — Prover-V2-671B hits 88.9% miniF2F and 49/658 PutnamBench.
 
 ## Why it matters here
 
-V3 as a formal-math agent: recursive subgoals + RL. Closest lab artifact to an agent that writes a checked plan.
+V3 as a formal-math agent: recursive subgoals plus RL. Closest lab artifact to an agent that writes a checked plan, which is the GRID COMMAND-shaped loop (decompose, act, verify) in Lean.
 
 ## Key ideas
 
-- arXiv:2504.21801. Pipeline: prompt V3 to decompose → prove subgoals → synthesize CoT + V3 step-by-step as RL cold start.
-- Unifies informal (V3-style) and formal (Lean) reasoning in one model. DeepSeek-Prover-V2-671B.
+- arXiv:2504.21801. Unifies informal (V3-style) and formal (Lean) reasoning in one 671B model.
+- Pipeline: V3 decomposes → subgoals are proved → CoT + V3 step-by-step become the RL cold start, then Lean feedback trains the policy.
 - 88.9% MiniF2F-test; 49/658 PutnamBench; 6/15 formalized AIME 24–25 (V3 majority-vote informal: 8/15).
-- New ProverBench (325 formalized problems incl. 15 AIME).
+- New ProverBench: 325 formalized problems including 15 AIME. Distilled variants exist for actual use; 671B is the headline.
 
 ## Caveats
-
-- Still Lean 4. Gap to informal V3 on AIME is small but not gone.
-- 671B is the headline; distilled variants exist for actual use.
 
 ## Links
 

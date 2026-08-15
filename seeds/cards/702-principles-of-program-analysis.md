@@ -26,51 +26,49 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1145/512950.512973"
-  - title: "The Type and Effect Discipline"
-    url: "https://doi.org/10.1006/inco.1994.1037"
-    year: 1994
-    arxiv: null
-    doi: "10.1006/inco.1994.1037"
-  - title: "Polymorphic Effect Systems"
-    url: "https://doi.org/10.1145/73560.73564"
-    year: 1988
-    arxiv: null
-    doi: "10.1145/73560.73564"
   - title: "A Structural Approach to Operational Semantics"
     url: "https://doi.org/10.1016/j.jlap.2004.05.001"
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
+  - title: "Polymorphic Effect Systems"
+    url: "https://doi.org/10.1145/73560.73564"
+    year: 1988
+    arxiv: null
+    doi: "10.1145/73560.73564"
+  - title: "The Type and Effect Discipline"
+    url: "https://doi.org/10.1006/inco.1994.1037"
+    year: 1994
+    arxiv: null
+    doi: "10.1006/inco.1994.1037"
 see:
   - "701-abstract-interpretation-a-unified-lattice-model-for-static-a"
-  - "142-the-type-and-effect-discipline"
-  - "150-polymorphic-effect-systems"
   - "658-a-structural-approach-to-operational-semantics"
+  - "150-polymorphic-effect-systems"
+  - "142-the-type-and-effect-discipline"
 ---
 
 # Principles of Program Analysis
 
 ## One-sentence takeaway
 
-Standard textbook systematizing data-flow, constraint-based, and abstract-interpretation analyses.
+One textbook presents data-flow, constraint, abstract-interpretation, and type-and-effect analyses as four calculi over the same WHILE language, with shared monotonicity and precision lemmas.
 
 ## Why it matters here
 
-The PPA book card — teaching/reference bridge from Cousot 1977 to engineering static analyses.
+When Broadside or the engine needs a reaching-defs, liveness, or effect analysis on ano/ECS IR, this is the cookbook that turns Cousot’s lattice story into transfer functions, worklists, and constraint solvers you can implement.
 
 ## Key ideas
 
-- Data-flow frameworks with monotonicity/precision tradeoffs.
-- Constraint-based and type-and-effect style analyses.
-- Abstract interpretation presented for practitioners.
-- Companion to Cousot–Cousot and effect systems in corpus.
+- A common WHILE language is given operational and denotational semantics so every later analysis is proved against the same reference.
+- Classical bit-vector data-flow (available expressions, live variables, very busy expressions, reaching definitions) is developed as a monotone framework with MFP/MOP solutions.
+- Constraint-based analysis and control-flow analysis sit between data-flow and types; type-and-effect systems reconstruct the same facts as annotated typings.
+- Abstract interpretation is presented with Galois connections, widening, and reduced products so the four styles can be compared on precision and cost.
+- Complexity and implementation chapters treat worklist iteration, widening schedules, and the usual precision/speed tradeoffs.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/978-3-662-03811-6](https://doi.org/10.1007/978-3-662-03811-6)
-- URL: https://doi.org/10.1007/978-3-662-03811-6
+- Springer: https://link.springer.com/book/10.1007/978-3-662-03811-6

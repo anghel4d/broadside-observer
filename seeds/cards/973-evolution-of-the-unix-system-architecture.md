@@ -31,21 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Longitudinal study of Unix architecture: modularization, layering, and the growth of factoring — the historical backdrop uutils claims to continue (many small functions, shared libs).
+Spinellis and Avgeriou track Unix architecture across decades and find a long trend toward modularization, layering, and factoring — many small functions and shared libraries rather than a growing monolith.
 
 ## Why it matters here
 
-Why 'rewrite coreutils' is an architecture paper, not just a language paper. Unix evolved by splitting; uutils claims the same trend.
+Why 'rewrite coreutils' is an architecture paper, not just a language paper. Unix evolved by splitting; uutils claims the same trend when it reports more functions (2800 vs 1400) in the Rust rewrite.
 
 ## Key ideas
 
 - IEEE TSE 47(6):1134–1163, 2021. DOI `10.1109/TSE.2019.2892146`.
-- Exploratory case study of Unix system architecture over decades.
-- uutils: more functions (2800 vs 1400) as the modern continuation of that modularization.
+- Exploratory case study of Unix-the-system (kernels and userland over historical releases), not a GNU-coreutils-only measurement.
+- Documents layering and the growth of factoring: functionality moves into smaller units and shared libraries as the system ages.
+- Ledru et al. read their 2800-vs-1400 function counts as the modern continuation of that modularization.
 
 ## Caveats
-
-- About Unix-the-system, not GNU coreutils specifically. The 2800-vs-1400 comparison is Ledru et al.'s reading.
 
 ## Links
 

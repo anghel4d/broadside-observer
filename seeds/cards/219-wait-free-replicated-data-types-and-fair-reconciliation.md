@@ -17,24 +17,17 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Conflict-free Replicated Data Types"
+    url: "https://doi.org/10.1007/978-3-642-24550-3_29"
+    year: 2011
+    arxiv: null
+    doi: "10.1007/978-3-642-24550-3_29"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
 ---
 
@@ -42,25 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-Replication ensures data availability in fault-prone distributed systems.
+Eventual state-machine replication is formalized with extra stability (a growing common prefix) and fairness (no client starves), then implemented by DAG-merging replicas with reconciliation functions that guarantee both.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Wait-free Replicated Data Types and Fair Reconciliation).
+Broadside multiplayer and Anoptic editor replicas are CRDT-shaped: wait-free local apply is easy, but without a stable prefix and fairness a client can be reordered forever. This is the spec those merges should meet.
 
 ## Key ideas
 
-- Replication ensures data availability in fault-prone distributed systems.
-- The celebrated CAP theorem stipulates that replicas cannot guarantee both strong consistency and availability under network partitions.
-- A popular alternative, adopted by CRDTs, is to relax consistency to be eventual.
-- It enables progress to be wait-free, as replicas can serve requests immediately.
-- Yet, wait-free replication faces a key challenge: due to asynchrony and concurrency, operations may be constantly reordered, leading to results inconsistent with their original contexts and preventing them from stabilizing over time.
+- CAP forces a choice; CRDTs pick wait-free availability and live with reordering.
+- Unbounded reordering means an operation may never stabilize and a client may starve.
+- The paper names the CRDT problem *eventual state-machine replication* and adds two axioms: a growing stable prefix shared by all replicas, and no-starvation fairness.
+- Replicas exchange local views and merge them with a reconciliation function over a DAG of operations.
+- Concrete reconciliation functions are given that restore stability and fairness for any replicated data type in the framework.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2508.18193](https://arxiv.org/abs/2508.18193)
-- URL: https://arxiv.org/abs/2508.18193
+- PDF: https://arxiv.org/pdf/2508.18193

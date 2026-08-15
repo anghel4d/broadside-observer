@@ -4,10 +4,10 @@ authors:
   - "Noam Chomsky"
   - "Marcel-Paul Schützenberger"
 year: 1963
-venue: "In Computer Programming and Formal Systems"
+venue: "Computer Programming and Formal Systems (Studies in Logic and the Foundations of Mathematics 35)"
 arxiv: null
-doi: null
-source: "https://www.worldcat.org/search?q=Algebraic+Theory+of+Context-Free+Languages"
+doi: "10.1016/S0049-237X(08)72023-8"
+source: "https://doi.org/10.1016/S0049-237X(08)72023-8"
 topics:
   - context-free
   - algebraic-language-theory
@@ -30,7 +30,7 @@ cites:
     arxiv: null
     doi: "10.1109/TIT.1956.1056813"
   - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+    url: "https://www.cs.cmu.edu/~cdm/resources/Kleene1951.pdf"
     year: 1956
     arxiv: null
     doi: null
@@ -44,22 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-Chomsky–Schützenberger connect CFLs to algebraic generating functions—language theory as algebra.
+Chomsky and Schützenberger recast context-free languages as supports of algebraic formal power series, so CFL structure becomes a theorem about noncommutative generating functions.
 
 ## Why it matters here
 
-Mathematical depth behind parsing theory.
+This is the algebraic reason a CFG has a generating function and why Dyck/ palindrome-style nesting is the canonical hard core of parsing — the same nesting ano's surface syntax and GRID COMMAND command grammars have to decide how to accept.
 
 ## Key ideas
 
-- Algebraic power series.
-- CFL structure theorems.
-- Schützenberger school bridge.
+- Formal power series with noncommuting variables encode word counts; CFLs are the supports of algebraic series.
+- The Chomsky–Schützenberger representation theorem: every CFL is a homomorphic image of the intersection of a Dyck language with a regular language.
+- Pushdown / parenthesis structure is isolated as the combinatorial essence of context-freeness.
+- Kleene's regular events sit inside the algebraic hierarchy as the rational series.
+- The paper is the North-Holland chapter (Braffort–Hirschberg, *Computer Programming and Formal Systems*, 1963), pp. 118–161.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/search?q=Algebraic+Theory+of+Context-Free+Languages
+- DOI: [10.1016/S0049-237X(08)72023-8](https://doi.org/10.1016/S0049-237X(08)72023-8)
+- ScienceDirect chapter: https://www.sciencedirect.com/science/article/pii/S0049237X08720238

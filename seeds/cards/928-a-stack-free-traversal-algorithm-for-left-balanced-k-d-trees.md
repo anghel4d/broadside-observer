@@ -6,7 +6,7 @@ year: 2025
 venue: "JCGT"
 arxiv: "2210.12859"
 doi: null
-source: "https://jcgt.org/published/0014/01/03/"
+source: "https://arxiv.org/abs/2210.12859"
 topics:
   - vulkan-realtime-rendering
   - mesh-shaders-gpu-driven
@@ -58,9 +58,6 @@ JCGT-shaped craft: a two-page algorithm you can type into a compute shader. Anop
 
 ## Caveats
 
-- k-d trees, not BVHs: for triangle meshes you still want a BVH; this is the point-set / photon / probe / nearest-neighbour cousin.
-- Left-balanced = complete tree; dynamic inserts are not the point (rebuild, like a BVH).
-- Stackless BVH literature (Hapala, Laine restart trail, Binder–Keller) is the sibling — do not cite this as a BVH paper.
 
 ## Links
 

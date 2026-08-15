@@ -50,21 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Foundational work-stealing-schedulers analysis for job systems.
+Blumofe and Leiserson analyze randomized work stealing and prove time, space, and communication bounds that made Cilk-style schedulers the default for irregular parallel job systems.
 
 ## Why it matters here
 
-Foundational work-stealing-schedulers analysis for job systems.
+Ano/engine job graphs are multithreaded computations with highly irregular grain. Work stealing — idle workers pull from victims' deques — is the scheduler this paper justifies, not a heuristic pulled from a thread pool.
 
 ## Key ideas
 
-- Foundational work-stealing-schedulers analysis for job systems.
+- Each worker keeps a double-ended queue of ready tasks; it pushes/pops locally and steals from a random victim when idle.
+- Expected execution time is \(T_1/P + O(T_\infty)\), matching the obvious lower bounds up to constants.
+- Space and communication bounds follow from the busy-leaves property and the randomized steal policy.
+- The model is a strict multithreaded computation (Cilk's dag), not a bag of independent jobs.
+- This JACM paper is the theory behind Cilk, later Chase–Lev deques, and Fork/Join-style runtimes.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/324133.324234](https://doi.org/10.1145/324133.324234)
-- URL: https://doi.org/10.1145/324133.324234

@@ -1,10 +1,9 @@
 ---
-
 title: "Safe Memory Reclamation for Dynamic Lock-Free Objects Using Atomic Reads and Writes"
 authors:
   - "Maged M. Michael"
 year: 2002
-venue: "PODC"
+venue: "PODC 2002"
 arxiv: null
 doi: "10.1145/571825.571829"
 source: "https://doi.org/10.1145/571825.571829"
@@ -38,21 +37,22 @@ see:
 
 ## One-sentence takeaway
 
-Predecessor framing for hazard-pointer reclamation.
+Michael's PODC 2002 paper is the original hazard-pointer algorithm: a thread publishes the pointer it is about to dereference, and a retire list is scanned against every published hazard before free.
 
 ## Why it matters here
 
-Predecessor framing for hazard-pointer reclamation.
+This is the wait-free-compatible reclaimer ano reaches for when epochs would stall. The 2004 TPDS journal version (card 024) is the polished write-up; this is the conference original.
 
 ## Key ideas
 
-- Predecessor framing for hazard-pointer reclamation.
+- Each thread owns a small array of hazard pointers. Before dereferencing a shared node, write that pointer into a hazard slot (with a store-load barrier).
+- `retire(node)` appends to a local list. When the list is long enough, scan all hazard slots; any node not currently hazarded may be freed.
+- Only atomic reads and writes — no DCAS, no per-object refcounts, no quiescent-state tracking.
+- Bounds unreclaimed junk by O(threads × hazards per thread), independent of how long a thread sleeps *after* dropping its hazards.
+- PODC 2002, DOI 10.1145/571825.571829. Followed by the 2004 IEEE TPDS "Hazard Pointers" article.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/571825.571829](https://doi.org/10.1145/571825.571829)
-- URL: https://doi.org/10.1145/571825.571829

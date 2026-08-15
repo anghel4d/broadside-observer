@@ -53,21 +53,22 @@ see:
 
 ## One-sentence takeaway
 
-Argues for entities as IDs with components in tables, systems as transforms — especially for large online worlds.
+Martin's 2007 series defines the public ECS trinity — entity = ID, component = pure data in a table, system = a transform over those tables — as the only architecture that scales to MMO-sized worlds.
 
 ## Why it matters here
 
-Early public ECS articulation that shaped indie/engine discourse.
+This is the blog that named the pattern ano implements. Quote part 1 when someone asks why a unit is not a C++ object.
 
 ## Key ideas
 
-- Argues for entities as IDs with components in tables, systems as transforms — especially for large online worlds.
+- An entity is only an integer. It has no methods and no inheritance.
+- Components are rows in per-type tables (position, health, inventory), addressed by that integer.
+- Systems iterate the tables they care about; a new behavior is a new system, not a new subclass.
+- Deep GameObject hierarchies explode in an MMO because every special case wants a new leaf and every leaf carries the blob.
+- Five-part series starting 3 September 2007; Artemis, EnTT, and Flecs all cite this vocabulary.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/
+- Part 1: http://t-machine.org/index.php/2007/09/03/entity-systems-are-the-future-of-mmog-development-part-1/

@@ -36,22 +36,22 @@ see:
 
 ## One-sentence takeaway
 
-Lecture notes treating tensor networks as a diagrammatic / categorical calculus — the quantum-side ancestor of neural circuit diagrams.
+Lecture notes that treat tensor networks as a diagrammatic / categorical calculus — the quantum-side ancestor of neural circuit diagrams.
 
 ## Why it matters here
 
-String-diagram literacy for anyone reading Weaves. Tensor-network wiring is the older sibling of NCD wires.
+String-diagram literacy for anyone reading Weaves. Tensor-network wiring is the older sibling of NCD wires; Joyal–Street plus Penrose is the shared geometry.
 
 ## Key ideas
 
-- arXiv:1912.10049, 2019 lecture notes.
-- Penrose-style graphical tensor calculus applied to quantum many-body / ML-adjacent networks.
-- Cited by Weaves as diagrammatic prior art alongside Joyal–Street and Selinger.
+- arXiv:1912.10049, 2019 lecture notes (quant-ph).
+- Penrose-style graphical tensor calculus applied to quantum many-body systems and ML-adjacent networks.
+- Cited by Weaves as diagrammatic prior art alongside Joyal–Street (card 948) and Selinger’s survey (card 117).
+- Methodological citation: quantum tensor networks are not DL broadcasting.
 
 ## Caveats
-
-- Notes, not a theorem paper. Quantum tensor networks are not DL broadcasting; the citation is methodological.
 
 ## Links
 
 - arXiv: [1912.10049](https://arxiv.org/abs/1912.10049)
+- PDF: https://arxiv.org/pdf/1912.10049

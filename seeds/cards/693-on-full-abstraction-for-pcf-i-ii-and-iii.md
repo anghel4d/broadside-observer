@@ -25,11 +25,6 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-  - title: "Full Abstraction for PCF (AJM)"
-    url: "https://doi.org/10.1006/inco.2000.2930"
-    year: 2000
-    arxiv: null
-    doi: "10.1006/inco.2000.2930"
   - title: "The Lazy Lambda Calculus"
     url: "https://www.cs.ox.ac.uk/people/samson.abramsky/lazy.pdf"
     year: 1990
@@ -42,7 +37,6 @@ cites:
     doi: "10.1007/BFb0012801"
 see:
   - "657-lcf-considered-as-a-programming-language"
-  - "694-full-abstraction-for-pcf-ajm"
   - "692-the-lazy-lambda-calculus"
   - "656-domains-for-denotational-semantics"
 ---
@@ -51,25 +45,21 @@ see:
 
 ## One-sentence takeaway
 
-Solves Plotkin's full-abstraction problem for PCF via innocent game semantics.
+Hyland and Ong give PCF a fully abstract model: a term denotes an *innocent* strategy in a dialogue game, and observational equivalence is equality of those strategies.
 
 ## Why it matters here
 
-Hyland–Ong games classic — the resolution of the PCF full-abstraction problem Plotkin opened.
+This is one of the two 2000 solutions to the full-abstraction problem Plotkin opened in 1977 — the reason a later Anoptic/ano denotational story can be intensional (plays, not continuous functions).
 
 ## Key ideas
 
-- Innocent strategies as denotations of PCF terms.
-- Full abstraction for PCF.
-- Founding pillar of game semantics for programming languages.
-- Pairs with Abramsky–Jagadeesan–Malacaria.
+- A type is a game (Opponent/Player moves); a term is a strategy; *innocence* restricts a strategy to depend only on the relevant view of the history, matching sequential functional computation.
+- Composition is interaction plus hiding; the model is adequate and fully abstract for PCF without adding parallel-or or other non-definable functionals.
+- The paper is three parts in one article: the games, the interpretation, and the definability/full-abstraction argument.
+- *Information and Computation* 163, 2000, DOI 10.1006/inco.2000.2917. AJM is the independent contemporary solution.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1006/inco.2000.2917](https://doi.org/10.1006/inco.2000.2917)
-- URL: https://doi.org/10.1006/inco.2000.2917

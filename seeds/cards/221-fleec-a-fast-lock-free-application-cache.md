@@ -5,7 +5,7 @@ authors:
   - "Nuno M. Preguiça"
   - "João M. Lourenço"
 year: 2024
-venue: "arXiv:cs.DC"
+venue: "INForum 2023 / arXiv:cs.DC"
 arxiv: "2406.09428"
 doi: null
 source: "https://arxiv.org/abs/2406.09428"
@@ -18,11 +18,11 @@ pool: "systems"
 relevance_score: 9
 cites:
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
+    url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
+    doi: "10.1109/TPDS.2004.8"
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
@@ -42,24 +42,23 @@ see:
 
 ## One-sentence takeaway
 
-When compared to blocking concurrency, non-blocking concurrency can provide higher performance in parallel shared-memory contexts, especially in high contention scenarios.
+FLeeC is a Memcached-compatible application cache whose main tables accept any number of concurrent readers and writers via lock-free eviction and lock-free lookups.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (FLeeC: a Fast Lock-Free Application Cache).
+Anoptic and Broadside both keep hot key/value working sets (entity lookups, command dedup); a drop-in Memcached that does not serialize eviction is the cache analog of a lock-free hash map.
 
 ## Key ideas
 
-- When compared to blocking concurrency, non-blocking concurrency can provide higher performance in parallel shared-memory contexts, especially in high contention scenarios.
-- This paper proposes FLeeC, an application-level cache system based on Memcached, which leverages re-designed data structures and non-blocking (or lock-free) concurrency to improve performance by allowing any number of concurrent writes and reads to its main data structures, even in high-contention scenarios.
-- We discuss and evaluate its new algorithms, which allow a lock-free eviction policy and lock-free fast lookups.
-- FLeeC can be used as a plug-in replacement for the original Memcached, and its new algorithms and concurrency control strategies result in considerable performance improvements (up to 6x).
+- Blocking Memcached pays for mutexes on the hash table and LRU under write contention.
+- FLeeC redesigns those structures so inserts, lookups, and evictions stay non-blocking even when many cores hit the same keys.
+- The new eviction policy and lookup path are the two algorithms the paper isolates and measures.
+- It is a plug-in replacement for stock Memcached.
+- Reported speedups reach 6× on high-contention workloads (INForum 2023).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2406.09428](https://arxiv.org/abs/2406.09428)
-- URL: https://arxiv.org/abs/2406.09428
+- PDF: https://arxiv.org/pdf/2406.09428

@@ -24,47 +24,41 @@ cites:
     year: 1968
     arxiv: null
     doi: "10.1145/362929.362947"
-  - title: "Flow Diagrams, Turing Machines and Languages with Only Two Formation Rules"
-    url: "https://doi.org/10.1145/355592.365646"
-    year: 1966
-    arxiv: null
-    doi: "10.1145/355592.365646"
-  - title: "The Art of Computer Programming, Volume 1: Fundamental Algorithms"
-    url: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
-    year: 1968
-    arxiv: null
-    doi: null
   - title: "Notes on Structured Programming"
     url: "https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD249.PDF"
     year: 1970
     arxiv: null
     doi: null
+  - title: "The Art of Computer Programming, Volume 1: Fundamental Algorithms"
+    url: "https://www-cs-faculty.stanford.edu/~knuth/taocp.html"
+    year: 1968
+    arxiv: null
+    doi: null
 see:
   - "585-go-to-statement-considered-harmful"
-  - "625-flow-diagrams-turing-machines-and-languages-with-only-two-fo"
-  - "595-the-art-of-computer-programming-volume-1-fundamental-algorit"
   - "589-notes-on-structured-programming"
+  - "595-the-art-of-computer-programming-volume-1-fundamental-algorit"
 ---
 
 # Structured Programming with go to Statements
 
 ## One-sentence takeaway
 
-Knuth nuances the goto debate with performance and clarity case studies—structured programming without dogma.
+Knuth surveys the goto debate with worked examples where a jump is the clearest, fastest, or only honest expression of the control flow.
 
 ## Why it matters here
 
-Balances Dijkstra's letter; craft judgment over slogan.
+Engine hot paths and state machines sometimes need an early exit or a common epilogue. This 1974 *Computing Surveys* paper is the anti-dogma brief.
 
 ## Key ideas
 
-- Situations where goto clarifies.
-- Structured programming survey depth.
-- Empirical/analytical tone.
+- Structured programming is a way of thinking, not a ban on a lexical token.
+- Case studies (error exits, multi-level breaks, coroutines, decision tables) show when `goto` reduces complexity.
+- Efficiency is measured, not asserted: some "structured" rewrites add flags and tests that hide the original intent.
+- The paper is a long, careful reply to Dijkstra 1968 and a complement to EWD249.
+- Published *ACM Computing Surveys* 6(4):261–301, December 1974.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

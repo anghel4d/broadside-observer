@@ -24,12 +24,12 @@ cites:
     arxiv: null
     doi: "10.1007/BF01700692"
   - title: "Zur intuitionistischen Arithmetik und Zahlentheorie"
-    url: "https://www.worldcat.org/search?q=Zur+intuitionistischen+Arithmetik+und+Zahlentheorie+Gödel"
+    url: "https://academic.oup.com/book/55022/chapter/422805871"
     year: 1933
     arxiv: null
-    doi: null
+    doi: "10.1093/oso/9780195147209.003.0064"
   - title: "Introduction to Metamathematics"
-    url: "https://www.worldcat.org/title/introduction-to-metamathematics/oclc/523589"
+    url: "https://openlibrary.org/works/OL5959470W/Introduction_to_metamathematics"
     year: 1952
     arxiv: null
     doi: null
@@ -49,22 +49,20 @@ see:
 
 ## One-sentence takeaway
 
-Gödel's Dialectica interpretation translates intuitionistic arithmetic into a quantifier-free theory of functionals of finite type.
+Gödel's Dialectica interpretation rewrites every theorem of intuitionistic arithmetic as a quantifier-free statement about computable functionals of finite type.
 
 ## Why it matters here
 
-Bridge from proof theory to higher-type computability—ancestor of modern functional interpretations and extraction.
+This is the ancestor of program extraction: a constructive proof is already a higher-type functional, which is exactly the grain ano wants when it compiles standing rules and typed combinators rather than interpreting a proof tape. System T is the first serious calculus of primitive-recursive functionals that later typed-array and effects work still lives under.
 
 ## Key ideas
 
-- Dialectica (functional) interpretation.
-- System T of primitive recursive functionals.
-- Consistency/relative interpretation technique.
-- Ties intuitionistic proof to higher-type computation.
+- Each formula \(A\) is assigned a quantifier-free Dialectica translate \(A_D\) of the shape \(\exists y\,\forall z\, A_D(y,z)\), with \(y,z\) finite-type functionals.
+- The host theory is Gödel's System T: typed combinators plus primitive recursion at all finite types.
+- If Heyting arithmetic proves \(A\), T computes a realizing term \(t\) such that \(T \vdash \forall z\, A_D(t,z)\).
+- The interpretation gives a relative consistency proof for arithmetic by reducing it to the quantifier-free calculus of these functionals.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

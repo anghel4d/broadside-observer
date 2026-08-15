@@ -27,7 +27,7 @@ cites:
   year: 2016
   arxiv: null
   doi: null
-- title: Mesh Shaders in the Vulkan Ecosystem
+- title: Introduction to Turing Mesh Shaders
   url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
   year: 2018
   arxiv: null
@@ -41,24 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-We propose a codec specifically designed for meshlet compression, optimized for rapid data-parallel GPU decompression within a mesh shader.
+A mesh-shader codec decompresses meshlets on the GPU from optimal generalized triangle strips, hitting 16:1 index compression and 0.59 ms for 15.5 M triangles on a 7900 XTX.
 
 ## Why it matters here
 
-Real-time graphics technique relevant to Anoptic Vulkan/meshlet/GI path (Towards Practical Meshlet Compression).
+Anoptic's Vulkan meshlet path is bandwidth-bound; on-chip decode inside the mesh shader is how you keep Nanite-class geometry without a huge index buffer in VRAM.
 
 ## Key ideas
 
-- We propose a codec specifically designed for meshlet compression, optimized for rapid data-parallel GPU decompression within a mesh shader.
-- Our compression strategy orders triangles in optimal generalized triangle strips (GTSs), which we generate by formulating the creation as a mixed integer linear program (MILP).
-- Our method achieves index buffer compression rates of 16:1 compared to the vertex pipeline and crack-free vertex attribute quantization based on user preference.
-- The 15.5 million triangles of our teaser image decompress and render in 0.59 ms on an AMD Radeon RX 7900 XTX.
+- Triangle order is chosen by a mixed-integer linear program that produces optimal generalized triangle strips.
+- Decode is data-parallel and meant to run inside a mesh shader, not as a compute preprocess.
+- Index buffers compress 16:1 versus the conventional vertex pipeline; vertex attributes use crack-free quantization at a user-chosen rate.
+- Teaser scene (15.5 million triangles) decompresses and renders in 0.59 ms on an AMD Radeon RX 7900 XTX.
+- Practical goal is a codec you would actually ship, not a compression-ratio-only result.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.06359](https://arxiv.org/abs/2404.06359)
-- URL: https://arxiv.org/abs/2404.06359
+- PDF: https://arxiv.org/pdf/2404.06359

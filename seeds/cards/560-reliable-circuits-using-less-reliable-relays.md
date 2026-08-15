@@ -30,36 +30,30 @@ cites:
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-  - title: "Error Detecting and Error Correcting Codes"
-    url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
-    year: 1950
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1950.tb00463.x"
 see:
   - "547-probabilistic-logics-and-the-synthesis-of-reliable-organisms"
   - "552-a-symbolic-analysis-of-relay-and-switching-circuits"
-  - "568-error-detecting-and-error-correcting-codes"
 ---
 
 # Reliable circuits using less reliable relays
 
 ## One-sentence takeaway
 
-Moore–Shannon design reliable circuits from unreliable relays—engineering twin to von Neumann's probabilistic logics.
+Moore and Shannon show how to wire crummy relays into two-terminal networks whose failure probability can be driven arbitrarily low.
 
 ## Why it matters here
 
-Fault-tolerant hardware epistemology alongside von Neumann 1956.
+Fault-tolerant Broadside subsystems — redundant sensors, voting, retry — are the same redundancy-versus-error curve, just not in relays.
 
 ## Key ideas
 
-- Redundant relay schemes.
-- Probabilistic failure models.
-- Pairs with Automata Studies themes.
+- Relays fail stuck-open or stuck-closed with known probabilities; a network's make and break probabilities are computed from the topology.
+- Iterated "hammock" and bridge compositions multiply reliability: more copies, smaller error.
+- The construction is the engineering twin of von Neumann's 1956 probabilistic logics, specialized to two-terminal contact networks.
+- Design is combinatorial, not statistical coding: topology is the code.
+- Published in two Franklin Institute parts in 1956, the same year as Automata Studies.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

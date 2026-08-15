@@ -1,55 +1,47 @@
 ---
 title: Depth-First Search and Linear Graph Algorithms
 authors:
-- Robert Tarjan
+  - Robert Tarjan
 year: 1972
 venue: SIAM J. Comput.
 arxiv: null
 doi: 10.1137/0201010
 source: "https://doi.org/10.1137/0201010"
 topics:
-- graph-algorithms
-- dfs
-- tarjan
+  - graph-algorithms
+  - dfs
+  - tarjan
 seed_rank: 748
 seed_batch: perfects-algorithms-2026-08-13
 reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: Efficiency of a Good But Not Linear Set Union Algorithm
-  url: "https://doi.org/10.1145/321879.321884"
-  year: 1975
-  arxiv: null
-  doi: 10.1145/321879.321884
-see:
-- "808-efficiency-of-a-good-but-not-linear-set-union-algorithm"
+cites: []
+see: []
 ---
 
 # Depth-First Search and Linear Graph Algorithms
 
 ## One-sentence takeaway
 
-DFS-based linear-time algorithms for biconnected components and related structure.
+A single DFS with discovery times and low-link values computes biconnected components, bridges, and articulation points in linear time.
 
 ## Why it matters here
 
-Template for SCC/bridges/articulation points in dependency and nav graphs.
+Dependency graphs, nav topology, and “what breaks if this entity dies” questions in Anoptic are BCC/bridge/articulation queries. Tarjan 1972 is the template; the later SCC presentation uses the same timestamps.
 
 ## Key ideas
 
-- Discovery/low-link timestamps.
-- Biconnected components in linear time.
-- DFS forest as algorithmic skeleton.
-- Pairs with later SCC presentations.
+- Number vertices in discovery order; `low[v]` is the least discovery time reachable from \(v\) via tree edges plus one back edge.
+- A vertex is an articulation point when a child cannot climb above it; a tree edge is a bridge when the child cannot climb to it.
+- Biconnected components fall out of a stack discipline on the same walk.
+- The paper also treats strongly connected components; later expositions sometimes split SCC into a separate write-up.
+- SIAM J. Comput. 1(2), 1972, pp. 146–160. Recursion depth is a practical caveat on huge graphs.
 
 ## Caveats
-
-- Verify exact lemma for SCC vs BCC.
-- Recursion depth can matter in practice.
 
 ## Links
 
 - DOI: [10.1137/0201010](https://doi.org/10.1137/0201010)
-- URL: https://doi.org/10.1137/0201010
+- SIAM: https://epubs.siam.org/doi/10.1137/0201010

@@ -28,36 +28,30 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "How We Know Universals: The Perception of Auditory and Visual Forms"
-    url: "https://doi.org/10.1007/BF02478291"
-    year: 1947
-    arxiv: null
-    doi: "10.1007/BF02478291"
 see:
   - "568-error-detecting-and-error-correcting-codes"
   - "553-a-mathematical-theory-of-communication"
-  - "566-how-we-know-universals-the-perception-of-auditory-and-visual"
 ---
 
 # Notes on Digital Coding
 
 ## One-sentence takeaway
 
-Golay introduces the perfect binary Golay code in a half-page note—coding theory's early jewel.
+Golay's half-page IRE note announces the perfect binary \((23,12)\) and ternary \((11,6)\) codes that later bear his name.
 
 ## Why it matters here
 
-Companion to Hamming; perfect codes as existence miracles.
+Perfect codes are existence miracles in the same packing geometry Hamming uses; Broadside reliability lore needs both cards.
 
 ## Key ideas
 
-- (23,12) Golay code hint.
-- Extremely short announcement.
-- Later significance enormous.
+- A perfect code saturates the Hamming (sphere-packing) bound: spheres of radius \(t\) around codewords partition the space.
+- The binary Golay code has length 23, dimension 12, minimum distance 7 (triple-error-correcting).
+- The ternary Golay code is the \((11,6,5)\) companion.
+- The note is a correspondence, not a development; the constructions were unpacked by later coding theory.
+- Dated 1949, it slightly precedes Hamming's 1950 BSTJ paper in print.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

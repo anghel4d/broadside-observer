@@ -19,11 +19,6 @@ pool: "languages"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Report on the Algorithmic Language ALGOL 60"
-    url: "https://doi.org/10.1145/367236.367262"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367236.367262"
   - title: "The FORTRAN Automatic Coding System"
     url: "https://doi.org/10.1145/1455567.1455599"
     year: 1957
@@ -35,7 +30,6 @@ cites:
     arxiv: null
     doi: "10.1016/S0019-9958(59)90362-6"
 see:
-  - "623-report-on-the-algorithmic-language-algol-60"
   - "622-the-fortran-automatic-coding-system"
   - "601-on-certain-formal-properties-of-grammars"
 ---
@@ -44,22 +38,21 @@ see:
 
 ## One-sentence takeaway
 
-Backus's IAL paper introduces a metalanguage that becomes BNF—grammars for grammars.
+Backus’s ICIP 1959 IAL paper introduces a metalinguistic formula notation — the immediate parent of BNF — so a language’s syntax can be written as a grammar.
 
 ## Why it matters here
 
-Syntax notation root before Algol 60 report.
+Syntax-notation root before the Algol 60 report. Every ano/GRID COMMAND grammar file is this idea: a metalanguage whose sentences are productions, not English.
 
 ## Key ideas
 
-- Metalinguistic formulas.
-- Zurich ACM-GAMM IAL.
-- Path to Algol 60 BNF.
+- Metalinguistic formulas with `::=` / alternatives describe the proposed Zurich IAL (Algol 58).
+- The metalanguage is itself a formal grammar, so syntax is no longer an informal appendix.
+- Semantics are still sketched in prose; the lasting contribution is the syntax notation Naur will polish into BNF.
+- Software Preservation Society hosts the canonical scan of the Paris ICIP paper.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf
+- Scan: https://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf

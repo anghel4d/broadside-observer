@@ -60,9 +60,6 @@ Type-safety is a standing cluster, and last night’s Archive just minted TAL (1
 
 ## Caveats
 
-- Lean 4 only; concurrent/temporal protocols mostly absent.
-- Full-solve metric is all-or-nothing; ~$106 per completed repo at the top config.
-- Spec semantic completeness still human-reviewed; audit certifies formal satisfiability, not intent.
 
 ## Links
 

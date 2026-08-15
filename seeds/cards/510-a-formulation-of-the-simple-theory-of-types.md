@@ -43,7 +43,7 @@ cites:
     url: "https://doi.org/10.1007/3-540-17162-2_38"
     year: 1986
     arxiv: null
-    doi: null
+    doi: "10.1007/3-540-17162-2_38"
 see:
   - "511-the-calculi-of-lambda-conversion"
   - "512-a-set-of-postulates-for-the-foundation-of-logic"
@@ -56,24 +56,22 @@ see:
 
 ## One-sentence takeaway
 
-Church's simple theory of types (λ→ with types) is the root of modern typed functional languages and HOL.
+Church's simple type theory is typed λ-calculus over a hierarchy of individuals and truth-values—the root of HOL and of every simply-typed functional language.
 
 ## Why it matters here
 
-Direct ancestor of simply-typed λ, System F's simply-typed core, and Broadside's type-theory cards.
+Direct ancestor of ano's typed core and of the HOL/Isabelle/Lean simple-type kernels Broadside cites. After the Kleene–Rosser paradox sank untyped logical λ, this is the retreat that made λ a programming language instead of a contradictory foundation.
 
 ## Key ideas
 
-- Types as a hierarchy over individuals.
-- Typed λ-abstraction and application.
-- Avoids Kleene–Rosser paradox that sank untyped logic.
-- Foundation for HOL/Isabelle/LEAN simple-type cores.
+- Types are generated from \(o\) (propositions) and \(\iota\) (individuals) by the function-type constructor \(\alpha\beta\).
+- Abstraction and application are typed; well-typed terms cannot encode the Kleene–Rosser paradox.
+- Equality, descriptions, and quantification live at each type, giving a working higher-order logic.
+- This is *simple* types, not dependent types: do not conflate with Martin-Löf.
 
 ## Caveats
-
-- 'Simple' types ≠ dependent types; do not conflate with Martin-Löf.
 
 ## Links
 
 - DOI: [10.2307/2266170](https://doi.org/10.2307/2266170)
-- URL: https://doi.org/10.2307/2266170
+- JSTOR: https://www.jstor.org/stable/2266170

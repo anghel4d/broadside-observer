@@ -20,55 +20,39 @@ relevance_score: 10
 lineage: programming-language-foundations
 cites:
   - title: "Programming with Abstract Data Types"
-    url: "https://doi.org/10.1145/942572.807045"
+    url: "https://doi.org/10.1145/800233.807045"
     year: 1974
     arxiv: null
-    doi: "10.1145/942572.807045"
+    doi: "10.1145/800233.807045"
   - title: "Abstract Types Have Existential Type"
-    url: "https://doi.org/10.1145/44501.44504"
+    url: "https://doi.org/10.1145/44501.45065"
     year: 1988
     arxiv: null
-    doi: "10.1145/44501.44504"
-  - title: "On Understanding Types, Data Abstraction, and Polymorphism"
-    url: "https://doi.org/10.1145/6041.6042"
-    year: 1985
-    arxiv: null
-    doi: "10.1145/6041.6042"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
+    doi: "10.1145/44501.45065"
 see:
   - "686-programming-with-abstract-data-types"
   - "670-abstract-types-have-existential-type"
-  - "668-on-understanding-types-data-abstraction-and-polymorphism"
-  - "137-the-definition-of-standard-ml-revised"
 ---
 
 # A History of CLU
 
 ## One-sentence takeaway
 
-Liskov's HOPL history of CLU and the development of abstract data types in programming languages.
+Liskov's HOPL-II history of CLU is the story of putting abstract data types into a language: clusters with sealed representations, iterators, exceptions, and parameterized types.
 
 ## Why it matters here
 
-CLU is the ADT-in-languages classic — clusters, iterators, and exception disciplines still echo in modern PL design.
+CLU is the ADT-in-languages classic — the linguistic ancestor of every later "interface vs representation" module Anoptic or ano would write, and of the Liskov substitution culture that followed.
 
 ## Key ideas
 
-- Clusters as linguistic ADTs.
-- Iterators and exception handling as language features.
-- Type-safe abstraction with sealed representations.
-- Historical path to Liskov substitution principle culture.
+- CLU was the first implemented language with direct linguistic support for data abstraction; a cluster is the ADT, not a comment convention.
+- Iterators (`yield`) and a termination-oriented exception mechanism are first-class language features, not library patterns.
+- Parameterized types keep abstraction from becoming monomorphic; representation is sealed from clients.
+- HOPL-II / *SIGPLAN Notices* 28(3), 1993, DOI 10.1145/155360.155367. The 1974 Liskov–Zilles paper is the idea; this is the language.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/155360.155367](https://doi.org/10.1145/155360.155367)
-- URL: https://doi.org/10.1145/155360.155367

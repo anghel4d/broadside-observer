@@ -66,9 +66,6 @@ Anoptic’s lock-free buses will sit on EBR-class reclamation *and* mimalloc/jem
 
 ## Caveats
 
-- Diagnosis of a performance cliff, not a new SMR algorithm. Pair with DEBRA/HP cards for the actual recipes.
-- Allocator internals (mimalloc/jemalloc/tcmalloc) change; re-measure on the heap Anoptic actually ships.
-- Does not argue against EBR — it argues against *unbounded* epochs on top of batching heaps.
 
 ## Links
 

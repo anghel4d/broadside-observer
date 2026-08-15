@@ -16,37 +16,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: "Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web"
-  url: "https://doi.org/10.1145/258533.258660"
-  year: 1997
-  arxiv: null
-  doi: 10.1145/258533.258660
-see:
-- "770-consistent-hashing-and-random-trees-distributed-caching-prot"
+cites: []
+see: []
 ---
 
 # Space/Time Trade-offs in Hash Coding with Allowable Errors
 
 ## One-sentence takeaway
 
-Bloom filters: compact approximate set membership with one-sided errors.
+A Bloom filter stores a set as $k$ hash-addressed bits so membership tests have no false negatives and a tunable false-positive rate, using far less space than the keys themselves.
 
 ## Why it matters here
 
-Caches, DB indexes, distributed joins — classic systems probabilistic structure.
+This is the compact negative-cache for Broadside ingest, Anoptic asset existence tests, and distributed “have I seen this chunk?” checks before touching disk or the network.
 
 ## Key ideas
 
-- Multiple hash bits per key.
-- No false negatives; tunable false positives.
-- Space much smaller than storing keys.
-- Spawns counting/Cuckoo filter lineage.
+- Insert sets $k$ bits chosen by $k$ independent hashes; query returns “in” only if all $k$ bits are set.
+- False negatives are impossible; false-positive probability is $\approx(1-e^{-kn/m})^k$ for $m$ bits and $n$ keys.
+- Optimal $k$ is $(m/n)\ln 2$, about $1.44\log_2(1/\varepsilon)$ bits per key for error $\varepsilon$.
+- Counting Bloom filters, cuckoo filters, and blocked Bloom filters are the industrial descendants.
 
 ## Caveats
-
-- Deletes need counting variants.
-- Hash quality and sizing dominate.
 
 ## Links
 

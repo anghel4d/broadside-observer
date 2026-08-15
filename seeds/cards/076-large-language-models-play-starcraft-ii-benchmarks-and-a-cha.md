@@ -1,7 +1,7 @@
 ---
 title: "Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach"
 authors:
-  - "Wenbo Ma"
+  - "Weiyu Ma"
   - "Qirui Mi"
   - "Yongcheng Zeng"
   - "Xue Yan"
@@ -47,21 +47,23 @@ see:
 
 ## One-sentence takeaway
 
-Introduces TextStarCraft II for evaluating LLMs in SC2 and proposes Chain of Summarization for strategic decisions.
+TextStarCraft II exposes StarCraft II as a textual environment, and Chain of Summarization compresses raw frames then multi-frame game state into strategic commands an LLM can issue.
 
 ## Why it matters here
 
-TextStarCraft II + Chain of Summarization — NL interface to RTS decisions for GRID COMMAND/Broadside.
+GRID COMMAND and Broadside already want natural-language RTS control; TextStarCraft II plus CoS is the interface pattern — summarize the foggy frame, then decide.
 
 ## Key ideas
 
-- Introduces TextStarCraft II for evaluating LLMs in SC2 and proposes Chain of Summarization for strategic decisions.
+- AlphaStar-style agents are strong at micro but weak at long-term interpretable strategy; the paper tests whether LLMs can fill that gap.
+- Single-frame summarization turns raw observations into text; multi-frame summarization analyzes game info, recommends commands, and emits strategy.
+- Human experts judge the LLM agents close to an eight-year average SC2 player; agents beat the built-in AI at Harder (Lv5).
+- Evaluation splits knowledge/planning interviews from in-game win rate and CoS ablations.
+- Code and demo videos are released with the paper.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2312.11865](https://arxiv.org/abs/2312.11865)
-- URL: https://arxiv.org/abs/2312.11865
+- PDF: https://arxiv.org/pdf/2312.11865

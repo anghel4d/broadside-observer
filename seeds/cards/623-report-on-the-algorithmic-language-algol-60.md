@@ -41,52 +41,30 @@ cites:
     year: 1957
     arxiv: null
     doi: "10.1145/1455567.1455599"
-  - title: "A Correspondence Between ALGOL 60 and Church's Lambda-Notation"
-    url: "https://doi.org/10.1145/363744.363749"
-    year: 1965
-    arxiv: null
-    doi: "10.1145/363744.363749"
-  - title: "On Certain Formal Properties of Grammars"
-    url: "https://doi.org/10.1016/S0019-9958(59)90362-6"
-    year: 1959
-    arxiv: null
-    doi: "10.1016/S0019-9958(59)90362-6"
-  - title: "An Axiomatic Basis for Computer Programming"
-    url: "https://doi.org/10.1145/363235.363259"
-    year: 1969
-    arxiv: null
-    doi: "10.1145/363235.363259"
 see:
   - "624-the-syntax-and-semantics-of-the-proposed-international-algeb"
   - "622-the-fortran-automatic-coding-system"
-  - "618-a-correspondence-between-algol-60-and-church-s-lambda-notati"
-  - "601-on-certain-formal-properties-of-grammars"
-  - "592-an-axiomatic-basis-for-computer-programming"
 ---
 
 # Report on the Algorithmic Language ALGOL 60
 
 ## One-sentence takeaway
 
-Algol 60 + BNF define modern language description—block structure, recursion, and grammar as standard.
+The Algol 60 report defines a block-structured, recursive language *and* the metalanguage (BNF) used to define it, becoming the template for every later language definition.
 
 ## Why it matters here
 
-Mother language of PL design; BNF becomes universal notation.
+Mother language of PL design. Ano’s nested scopes, call-by-name-vs-value debates, and any grammar we write down in BNF/EBNF are Algol 60 descendants; Naur’s editorial shaping is why the report is readable.
 
 ## Key ideas
 
-- Backus–Naur Form.
-- Block structure and recursion.
-- Call by name.
-- IFIP / ACM report.
-- Naur editorial shaping.
+- Backus–Naur Form as the official syntax notation (refining Backus’s 1959 IAL metalanguage).
+- Block structure, nested scopes, and recursive procedures as standard features.
+- Call by name (thunks) as the default parameter mechanism — the feature Landin and later Plotkin have to explain.
+- Joint CACM 3(5) / *Numerische Mathematik* 2 publication, 1960; Peter Naur editor.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/367236.367262](https://doi.org/10.1145/367236.367262)
-- URL: https://doi.org/10.1145/367236.367262

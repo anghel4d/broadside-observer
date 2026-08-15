@@ -23,11 +23,6 @@ cites:
     year: 1967
     arxiv: null
     doi: null
-  - title: "A Discipline of Programming"
-    url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
-    year: 1976
-    arxiv: null
-    doi: null
   - title: "Proof of Correctness of Data Representations"
     url: "https://doi.org/10.1007/BF00289507"
     year: 1972
@@ -38,45 +33,31 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1007/BFb0059696"
-  - title: "Separation Logic: A Logic for Shared Mutable Data Structures"
-    url: "https://doi.org/10.1109/LICS.2002.1029817"
-    year: 2002
-    arxiv: null
-    doi: "10.1109/LICS.2002.1029817"
-  - title: "Communicating Sequential Processes"
-    url: "https://doi.org/10.1145/359576.359585"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359576.359585"
 see:
   - "626-assigning-meanings-to-programs"
-  - "590-a-discipline-of-programming"
   - "593-proof-of-correctness-of-data-representations"
   - "594-procedures-and-parameters-an-axiomatic-approach"
-  - "134-separation-logic-a-logic-for-shared-mutable-data-structures"
-  - "046-communicating-sequential-processes"
 ---
 
 # An Axiomatic Basis for Computer Programming
 
 ## One-sentence takeaway
 
-Hoare triples {P}S{Q} give programming an axiomatic semantics—proof rules for assignment, sequencing, while.
+Hoare gives programming an axiom system: `{P} S {Q}` means if `P` holds and `S` terminates, then `Q` holds, with rules for assignment, sequence, and `while`.
 
 ## Why it matters here
 
-Root of program verification; wires to separation logic card 151 and CSP 047.
+Verification of engine invariants and agent protocols is still Hoare logic (or a descendant such as separation logic). This 1969 CACM paper is the root.
 
 ## Key ideas
 
-- Hoare triple.
-- Axiom of assignment.
-- Consequence and while rules.
-- Partial correctness framing.
+- The axiom of assignment: `{P[e/x]} x := e {P}`.
+- Consequence, composition, and iteration rules let proofs follow program structure.
+- The framing is partial correctness; termination is a separate argument.
+- Floyd's 1967 flowchart assertions are the acknowledged predecessor; Hoare axiomatizes an Algol-like text.
+- Later papers add procedures (1971) and data representations (1972); Reynolds 2002 lifts the same triples to the heap.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

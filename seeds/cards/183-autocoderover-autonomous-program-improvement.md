@@ -6,7 +6,7 @@ authors:
   - "Zhiyu Fan"
   - "Abhik Roychoudhury"
 year: 2024
-venue: "arXiv:cs.SE"
+venue: "ISSTA"
 arxiv: "2404.05427"
 doi: null
 source: "https://arxiv.org/abs/2404.05427"
@@ -46,25 +46,22 @@ see:
 
 ## One-sentence takeaway
 
-Researchers have made significant progress in automating the software development process in the past decades.
+AutoCodeRover patches GitHub issues by walking the AST with class/method-structured search and optional spectrum-based fault localization, reaching 19% on SWE-bench-lite at about $0.43.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (AutoCodeRover: Autonomous Program Improvement)
+Anoptic engine repair should search a program, not a bag of files: class/method retrieval plus tests-as-spectrum is the SE-shaped alternative to a general tool-using agent, and the cost number is the one to beat.
 
 ## Key ideas
 
-- Researchers have made significant progress in automating the software development process in the past decades.
-- Recent progress in Large Language Models (LLMs) has significantly impacted the development process, where developers can use LLM-based programming assistants to achieve automated coding.
-- Nevertheless, software engineering involves the process of program improvement apart from coding, specifically to enable software maintenance (e.g.
-- bug fixing) and software evolution (e.g.
-- In this paper, we propose an automated approach for solving GitHub issues to autonomously achieve program improvement.
+- The outlook is software-engineering-first: the project is an AST, not a directory the LLM greps.
+- Iterative code search uses class and method structure to retrieve a root-cause context.
+- When a test suite exists, spectrum-based fault localization further narrows that context.
+- On 300 SWE-bench-lite issues the authors report 19% resolved, above the then-reported SWE-agent figure, at $0.43 average.
+- The intended future is autonomous improvement of already-generated code, not only issue-to-patch demos.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.05427](https://arxiv.org/abs/2404.05427)
-- URL: https://arxiv.org/abs/2404.05427

@@ -50,23 +50,21 @@ see:
 
 ## One-sentence takeaway
 
-Turing's NPL report invents 'unorganized machines' and education of networks—AI and neural ideas before the Mind essay.
+Turing's 1948 NPL report treats intelligence as the education of "unorganized machines"—randomly connected networks trained by pleasure/pain interference—two years before the Mind essay.
 
 ## Why it matters here
 
-Shows Turing's AI program as engineering + learning, not only the test; relevant to agents and simulation.
+Shows Turing's AI program as engineering plus learning, not only the Imitation Game. Anoptic agents and simulation stacks sit closer to this report (networks, reward, discipline of a child-machine) than to the later popular "test."
 
 ## Key ideas
 
-- Unorganized machines as randomly connected networks.
-- Pleasure/pain reward teaching.
-- Critique of objections to machine intelligence.
-- Written 1948; published later.
+- Unorganized machines are randomly wired networks of neuron-like elements, in the McCulloch–Pitts grain.
+- Pleasure and pain signals interfere with the wiring so the net can be educated rather than fully programmed.
+- Answers the usual objections to machine intelligence already, in internal-report form.
+- Circulated at NPL in 1948; first formal book publication is *Machine Intelligence* 5 (1969).
 
 ## Caveats
 
-- Report circulated 1948; first formal publication delayed—cite carefully.
-
 ## Links
 
-- URL: https://www.npl.co.uk/getattachment/about-us/History/Famous-faces/Alan-Turing/80916595-Intelligent-Machinery.pdf?lang=en-GB
+- NPL PDF: https://www.npl.co.uk/getattachment/about-us/History/Famous-faces/Alan-Turing/80916595-Intelligent-Machinery.pdf?lang=en-GB

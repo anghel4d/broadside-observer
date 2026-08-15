@@ -20,9 +20,9 @@ pool: "languages"
 relevance_score: 9
 cites:
   - title: "Comparing Parallel Functional Array Languages: Programming and Performance"
-    url: "https://doi.org/10.1145/3652598.3652618"
-    year: 2024
-    arxiv: null
+    url: "https://arxiv.org/abs/2505.08906"
+    year: 2025
+    arxiv: "2505.08906"
     doi: null
   - title: "Notation as a Tool of Thought"
     url: "https://doi.org/10.1145/358896.358899"
@@ -33,7 +33,7 @@ cites:
     url: "https://doi.org/10.1109/TC.1986.1676477"
     year: 1986
     arxiv: null
-    doi: null
+    doi: "10.1109/TC.1986.1676477"
   - title: "A Programming Language"
     url: "https://doi.org/10.1145/1460833.1460872"
     year: 1962
@@ -66,9 +66,6 @@ Why you might love this: it is array-language engineering with SPJ and Fitzgibbo
 
 ## Caveats
 
-- Explicitly drops general higher-order code; do not cite this as a universal reverse-AD recipe.
-- 2025 preprint; check the latest version before pinning algorithm details.
-- No claim this is implemented in BQN/ano — the bridge is grain and combinators, not a drop-in compiler.
 
 ## Links
 

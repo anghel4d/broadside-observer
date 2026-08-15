@@ -1,13 +1,12 @@
 ---
-
 title: "Applying Goal-Oriented Action Planning to Games"
 authors:
   - "Jeff Orkin"
 year: 2003
-venue: "AI Game Programming Wisdom / Orkin pages"
+venue: "AI Game Programming Wisdom 2"
 arxiv: null
 doi: null
-source: "https://alumni.media.mit.edu/~jorkin/goap.html"
+source: "https://web.archive.org/web/20230912173044/https://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf"
 topics:
   - goap
   - planning
@@ -22,39 +21,30 @@ cites:
   - title: "STRIPS: A New Approach to the Application of Theorem Proving to Problem Solving"
     url: "https://doi.org/10.1016/0004-3702(71)90010-5"
     year: 1971
-    arxiv: null
     doi: "10.1016/0004-3702(71)90010-5"
-  - title: "Three States and a Plan: The AI of F.E.A.R."
-    url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
-    year: 2006
-    arxiv: null
-    doi: null
 see:
   - "309-strips-a-new-approach-to-the-application-of-theorem-proving-"
-  - "022-three-states-and-a-plan-the-ai-of-f-e-a-r"
 ---
+
 # Applying Goal-Oriented Action Planning to Games
 
 ## One-sentence takeaway
 
-GOAP as practical STRIPS-style planning for NPCs — prelude to the F.E.A.R. GDC talk.
+Orkin recasts STRIPS-style planning for real-time NPCs: goals pick a desired world-state fragment, actions carry preconditions/effects/costs, and A* searches backward from the goal to assemble a plan.
 
 ## Why it matters here
 
-Pairs with F.E.A.R. 2006 as the actionable classical planning stack for squad AI.
+This is the written GOAP architecture later shipped in F.E.A.R.; GRID COMMAND squad AI should cite this chapter for the planner, then the 2006 GDC talk for the production FSM-plus-plan split.
 
 ## Key ideas
 
-- Goals + world state + action preconditions/effects.
-- A* over action space rather than hand-authored FSMs.
-- Separates goals from action implementations.
+- World state is a compact set of facts; a goal is a target assignment (KillEnemy ⇒ EnemyDead).
+- Each action lists preconditions, effects, a numeric cost, and optional context checks that prune infeasible operators at search time.
+- The planner regresses from the unsatisfied goal through action effects, using A* so cheaper tactics win without hard-coded sequences.
+- Motivated by *No One Lives Forever 2* and later applied to *F.E.A.R.*: adding one new action (kick door, dive window) makes it available to every goal that can use it.
 
 ## Caveats
 
-- Planning cost grows with action vocabulary.
-- Complementary to BTs/utility, not a universal replacement.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
-
 ## Links
 
-- URL: https://alumni.media.mit.edu/~jorkin/goap.html
+- Archived draft PDF: https://web.archive.org/web/20230912173044/https://alumni.media.mit.edu/~jorkin/GOAP_draft_AIWisdom2_2003.pdf

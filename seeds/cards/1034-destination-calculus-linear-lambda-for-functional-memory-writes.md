@@ -63,9 +63,6 @@ ano wants Futhark-style in-place arrays *and* the ability to grow ECS/SoA rows a
 
 ## Caveats
 
-- Core calculus, not a drop-in ano backend. Haskell prototype exists; mapping the mode system onto ano's standing rules is the actual engineering.
-- Closely related to Futhark uniqueness and to 921/922 arenas — do not remint those; this is the *construction-order* dual of in-place update.
-- First-class destinations stored in holes are the new power *and* the new footgun; ages are mandatory.
 
 ## Links
 

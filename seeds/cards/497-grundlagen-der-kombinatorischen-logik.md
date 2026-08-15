@@ -21,51 +21,30 @@ cites:
   - title: "Über die Bausteine der mathematischen Logik"
     url: "https://doi.org/10.1007/BF01458017"
     year: 1924
-    arxiv: null
     doi: "10.1007/BF01458017"
-  - title: "Functionality in Combinatory Logic"
-    url: "https://doi.org/10.1073/pnas.20.11.584"
-    year: 1934
-    arxiv: null
-    doi: "10.1073/pnas.20.11.584"
-  - title: "The Calculi of Lambda-Conversion"
-    url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
-    year: 1941
-    arxiv: null
-    doi: null
-  - title: "The Principal Type-Scheme of an Object in Combinatory Logic"
-    url: "https://doi.org/10.1090/S0002-9947-1969-0241465-X"
-    year: 1969
-    arxiv: null
-    doi: "10.1090/S0002-9947-1969-0241465-X"
 see:
   - "496-uber-die-bausteine-der-mathematischen-logik"
-  - "498-functionality-in-combinatory-logic"
-  - "511-the-calculi-of-lambda-conversion"
-  - "628-the-principal-type-scheme-of-an-object-in-combinatory-logic"
 ---
 
 # Grundlagen der kombinatorischen Logik
 
 ## One-sentence takeaway
 
-Curry systematized combinatory logic as a foundation, parallel to Church's λ-calculus.
+Curry's 1930 *American Journal of Mathematics* paper turns Schönfinkel's combinators into a systematic foundation — illative combinatory logic — in which application and a few primitive combinators replace bound variables.
 
 ## Why it matters here
 
-Together with Schönfinkel and Church, this is the variable-free/functional spine behind modern FP semantics.
+Together with Schönfinkel and Church, this is the variable-free/functional spine behind modern FP semantics and the later Curry–Howard reading of types.
 
 ## Key ideas
 
-- Illative combinatory logic program.
-- Combinators as primitive, λ as sugar.
-- Seeds Curry–Howard later via functionality.
+- Combinators are primitive; λ-abstraction is recoverable sugar via bracket abstraction.
+- Illative combinatory logic aims to found mathematics, not merely to rewrite terms.
+- Parallel to Church's contemporaneous λ-calculus rather than a derivative of it.
+- Seeds the functionality concept developed in Curry 1934 and, much later, principal-type algorithms.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2370619](https://doi.org/10.2307/2370619)
-- URL: https://doi.org/10.2307/2370619

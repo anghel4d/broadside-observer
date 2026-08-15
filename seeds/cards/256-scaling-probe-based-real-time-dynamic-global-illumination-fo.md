@@ -6,7 +6,7 @@ authors:
   - "Josef Spjut"
   - "Morgan McGuire"
 year: 2020
-venue: "arXiv:cs.GR"
+venue: "JCGT / arXiv cs.GR"
 arxiv: "2009.10796"
 doi: null
 source: "https://arxiv.org/abs/2009.10796"
@@ -38,23 +38,24 @@ see:
 
 ## One-sentence takeaway
 
-Production hardening of DDGI: bias, state machines, cascaded volumes, and engine-integration lessons from RTXGI/Unity/UE4.
+Production DDGI adds a single self-shadow bias, a probe state machine, cascaded volumes, and irradiance-as-prefiltered-radiance so RTXGI, Unity, and UE4 can ship irradiance-field GI.
 
 ## Why it matters here
 
-Shows what industrial probe GI needed to ship — useful checklist when comparing Anoptic RC experiments to DDGI reality.
+This is the industrial checklist when Anoptic compares Radiance Cascades experiments to what actually shipped: bias knobs, work pruning, cascade layout, and glossy reuse — not a new GI theory.
 
 ## Key ideas
 
-- Single self-shadow bias parameter and probe state machine to prune useless work.
-- Cascaded probe volumes for large worlds; reuse irradiance as prefiltered radiance for glossy recursion.
-- Documents adoption path into NVIDIA RTXGI SDK and major engines.
+- One artist-facing "self-shadow" bias replaces a pile of per-probe hacks.
+- A probe state machine skips updates that cannot change the final image; extra heuristics shorten lighting transitions.
+- Multiresolution cascaded probe volumes cover large worlds without a uniform dense grid.
+- Stored irradiance is reused as prefiltered radiance for recursive glossy reflection.
+- Lessons come from folding DDGI into the NVIDIA RTXGI SDK and into Unity / UE4 / proprietary titles.
 
 ## Caveats
-
-- Engineering paper on DDGI extensions; not a new GI paradigm.
 
 ## Links
 
 - arXiv: [2009.10796](https://arxiv.org/abs/2009.10796)
-- URL: https://arxiv.org/abs/2009.10796
+- JCGT: http://www.jcgt.org/published/0010/02/01/
+- PDF: https://arxiv.org/pdf/2009.10796

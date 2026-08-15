@@ -60,21 +60,23 @@ see:
 
 ## One-sentence takeaway
 
-Acton presents data-oriented design as organizing code around data transformation and cache reality rather than object hierarchies.
+Acton's CppCon talk treats data-oriented design as organizing code around the transforms and cache-line reality of the data, not around object hierarchies and virtual calls.
 
 ## Why it matters here
 
-The sermon Anoptic already lives by: throughput, SoA, solve for data.
+This is the sermon Anoptic already runs: SoA component columns, systems as bulk transforms, solve for the data you actually touch this frame. C++ class graphs are the anti-pattern the talk dismantles.
 
 ## Key ideas
 
-- Acton presents data-oriented design as organizing code around data transformation and cache reality rather than object hierarchies.
+- The unit of design is the transform of an array of data, not a web of objects exchanging messages.
+- Hardware facts — cache lines, prefetch, branch prediction, false sharing — are first-class constraints, not later “optimization.”
+- Structure-of-arrays and contiguous iteration beat pointer-rich object graphs for the workloads games actually run.
+- Inheritance and virtual dispatch are called out as default tools that hide data flow and destroy locality.
+- The talk is a design method, illustrated in C++, not a library: look at the bytes, then write the loop.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.youtube.com/watch?v=rX0ItVEVjHc
+- Talk: https://www.youtube.com/watch?v=rX0ItVEVjHc
+- CppCon 2014

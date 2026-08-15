@@ -64,23 +64,20 @@ see:
 
 ## One-sentence takeaway
 
-First-party ISCA'25 industry paper: how V3 actually ran on 2,048 H800s — MLA, MoE comms, FP8, DualPipe, multi-plane NIC topology — and what hardware should look like next.
+First-party ISCA'25 industry paper on how V3 actually ran on 2,048 H800s — MLA memory, MoE communication, FP8 mixed precision, DualPipe, multi-plane NIC topology — and what hardware should look like next.
 
 ## Why it matters here
 
-The hardware reading of 1206. Memory-wall / FA-adjacent; this is DeepSeek's own co-design note, not a third-party MLA teardown.
+The hardware reading of the V3 report. Memory-wall / FlashAttention-adjacent; this is DeepSeek's own co-design note, not a third-party MLA teardown. GRID-level cluster work should steal DualPipe/DeepEP ideas rather than cargo-cult H800 topology.
 
 ## Key ideas
 
 - arXiv:2505.09343, ISCA '25 Industry Track. V3 trained on 2,048 NVIDIA H800 GPUs.
-- Walks MLA (memory), MoE (compute/comm tradeoff), FP8 mixed-precision, Multi-Plane Network Topology.
+- Walks MLA (memory), MoE (compute/comm tradeoff), FP8 mixed-precision, and Multi-Plane Network Topology.
 - Forward-looking: low-precision units, scale-up/scale-out convergence, low-latency fabrics.
-- Pairs with Fire-Flyer (1247, A100 era) as the H800-era report. DualPipe/DeepEP live in the V3 stack.
+- Pairs with Fire-Flyer (A100 era) as the H800-era report. DualPipe/DeepEP live in the V3 stack. H800 NVLink/IB split shapes several choices.
 
 ## Caveats
-
-- Industry track reflections, not a new model. Architecture details canonical in 1206.
-- H800-specific constraints (NVLink/IB split) shape several choices; don't cargo-cult onto unrelated clusters.
 
 ## Links
 

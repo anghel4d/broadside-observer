@@ -6,7 +6,7 @@ year: 1937
 venue: "Journal of Symbolic Logic"
 arxiv: null
 doi: "10.2307/2268810"
-source: "https://www.jstor.org/stable/2268810"
+source: "https://doi.org/10.2307/2268810"
 topics:
   - church-turing-thesis
   - church
@@ -49,23 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-Church's review of Turing explicitly equates λ-definability with Turing computability—the thesis in print.
+Church's 1937 JSL review of Turing is the printed speech-act that equates λ-definability with Turing computability.
 
 ## Why it matters here
 
-Best short primary cite for 'Church–Turing thesis' as a historical speech act.
+Best short primary cite for the Church–Turing thesis as a historical identification, not a later textbook slogan. When Anoptic says "Turing = Church," this review plus Turing's own 1937 equivalence paper (card 517) are the two sentences that did it.
 
 ## Key ideas
 
-- Declares equivalence of the two notions of effective calculability.
-- Names the identification that textbooks call the thesis.
-- Connects AJM 1936 to PLMS 1936/37.
+- Accepts Turing's a-machines as capturing the same informal idea of effective calculability that Church had defined via λ.
+- Explicitly identifies the two notions, which is what later writers call the thesis.
+- Connects the AJM 1936 paper to the PLMS 1936/37 pair in one paragraph.
+- A review, not a theorem paper: pair it with the two 1936 primaries.
 
 ## Caveats
-
-- Review, not a long theorem paper; pair with the two 1936 primaries.
 
 ## Links
 
 - DOI: [10.2307/2268810](https://doi.org/10.2307/2268810)
-- URL: https://www.jstor.org/stable/2268810
+- JSTOR: https://www.jstor.org/stable/2268810

@@ -3,10 +3,10 @@ title: "The Consistency of the Axiom of Choice and of the Generalized Continuum 
 authors:
   - "Kurt Gödel"
 year: 1940
-venue: "Annals of Mathematics Studies, Princeton"
+venue: "Annals of Mathematics Studies 3, Princeton University Press"
 arxiv: null
 doi: null
-source: "https://press.princeton.edu/books/paperback/9780691079271/the-consistency-of-the-continuum-hypothesis"
+source: "https://archive.org/details/consistencyofaxi0054gode"
 topics:
   - set-theory
   - constructible-universe
@@ -43,22 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Gödel's constructible universe L shows AC and GCH are consistent relative to ZF—model theory as engineering of mathematical universes.
+If ZF is consistent, so is ZF plus the axiom of choice and the generalized continuum hypothesis, because both hold in the constructible inner model \(L\).
 
 ## Why it matters here
 
-Template for 'build a model to calibrate axioms'—the same habit denotational semantics uses for languages.
+Anoptic and ano treat axioms as engineering knobs: you build a model that makes the desired laws true, then run the rest of the stack inside it. \(L\) is the original inner-model construction of that habit—the same move denotational semantics later uses when it interprets a language in a carefully chosen universe rather than arguing from the ambient set theory.
 
 ## Key ideas
 
-- Constructible hierarchy L.
-- Relative consistency of AC + GCH.
-- Inner model method.
+- The constructible hierarchy \(L\) is built by iterating definable power-set along the ordinals; every set in \(L\) has a first-order definition over an earlier stage.
+- Gödel proves \(V = L\) implies both AC (via a global well-ordering of \(L\)) and GCH (cardinals in \(L\) behave as if \(2^{\aleph_\alpha} = \aleph_{\alpha+1}\)).
+- Relative consistency is obtained by showing that if ZF has a model, then the class \(L\) of that model is itself a model of ZF + AC + GCH.
+- The inner-model method—restrict attention to a definable transitive class that satisfies the axioms—becomes the template for later large-cardinal and forcing-relative results.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691079271/the-consistency-of-the-continuum-hypothesis
+- Internet Archive: https://archive.org/details/consistencyofaxi0054gode
+- Princeton reprint: https://press.princeton.edu/books/paperback/9780691079271/the-consistency-of-the-continuum-hypothesis

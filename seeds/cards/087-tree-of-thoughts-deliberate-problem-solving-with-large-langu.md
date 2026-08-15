@@ -32,39 +32,33 @@ cites:
     year: 2022
     arxiv: "2210.03629"
     doi: null
-  - title: "Track, Rank, Crack: Epistemic Working Memory Scales Multi-Hop Reasoning in Language Agents"
-    url: "https://arxiv.org/abs/2607.12267"
-    year: 2026
-    arxiv: "2607.12267"
-    doi: null
 see:
   - "088-chain-of-thought-prompting-elicits-reasoning-in-large-langua"
   - "007-react-synergizing-reasoning-and-acting-in-language-models"
-  - "068-track-rank-crack-epistemic-working-memory-scales-multi-hop-r"
 ---
 
 # Tree of Thoughts: Deliberate Problem Solving with Large Language Models
 
 ## One-sentence takeaway
 
-Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference.
+Tree of Thoughts searches a tree of coherent intermediate thoughts with self-evaluation, lookahead, and backtracking, instead of committing to one left-to-right chain.
 
 ## Why it matters here
 
-planning/reasoning loops underlie autoresearch experiment selection (Tree of Thoughts: Deliberate Problem Solving with Large Language Models)
+Autoresearch experiment selection and GRID COMMAND planning need exploration, not a single CoT; ToT is the deliberate-search wrapper around an LM.
 
 ## Key ideas
 
-- Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference.
-- This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role.
-- To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving.
-- ToT allows LMs to perform deliberate decision making by considering multiple different reasoning paths and self-evaluating choices to deci
+- Token-level left-to-right decoding cannot look ahead or recover from an early bad choice.
+- Thoughts are coherent text units that serve as intermediate problem-solving steps, generalizing chain-of-thought prompting.
+- The LM proposes candidates, evaluates them, and can backtrack — BFS/DFS over thoughts rather than tokens.
+- Game of 24: GPT-4 + CoT solves 4%; ToT reaches 74%. Also evaluated on Creative Writing and Mini Crosswords.
+- Prompts and code: https://github.com/princeton-nlp/tree-of-thought-llm.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2305.10601](https://arxiv.org/abs/2305.10601)
-- URL: https://arxiv.org/abs/2305.10601
+- PDF: https://arxiv.org/pdf/2305.10601
+- Code: https://github.com/princeton-nlp/tree-of-thought-llm

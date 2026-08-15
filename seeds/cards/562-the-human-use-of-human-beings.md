@@ -6,7 +6,7 @@ year: 1950
 venue: "Houghton Mifflin"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/human-use-of-human-beings/oclc/523"
+source: "https://archive.org/details/humanuseofhuma1954wien"
 topics:
   - cybernetics
   - society
@@ -23,42 +23,30 @@ cites:
     year: 1948
     arxiv: null
     doi: null
-  - title: "Behavior, Purpose and Teleology"
-    url: "https://doi.org/10.1086/286788"
-    year: 1943
-    arxiv: null
-    doi: "10.1086/286788"
-  - title: "A Universal Turing Machine with Two Internal States"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
 see:
   - "561-cybernetics-or-control-and-communication-in-the-animal-and-t"
-  - "564-behavior-purpose-and-teleology"
-  - "559-a-universal-turing-machine-with-two-internal-states"
 ---
 
 # The Human Use of Human Beings
 
 ## One-sentence takeaway
 
-Wiener popularizes cybernetics' social stakes—automation, communication, and human dignity.
+Wiener recasts cybernetics for a public audience: communication, not muscle, is the scarce social resource, and automation without that view degrades people.
 
 ## Why it matters here
 
-Ethical/social companion to Cybernetics; relevant when agents meet institutions.
+When Broadside agents sit inside institutions, this is the book that asks what the loop is for — control of humans, or communication among them.
 
 ## Key ideas
 
-- Communication vs control in society.
-- Warnings about automation.
-- Public cybernetics.
+- Society is a communication network; entropy and message quality, not just energy, decide whether it coheres.
+- Feedback applied to people (assembly lines, command economies, advertising) can be as pathological as an unstable servo.
+- The 1950 Houghton Mifflin text is the first edition; Wiener substantially rewrote it for the 1954 second edition, the version most reprints follow.
+- Learning machines and automatic factories are treated as social facts, not laboratory toys.
+- Dignity is framed as the right to be a communicative node rather than a replaceable actuator.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/human-use-of-human-beings/oclc/523
+- URL: https://archive.org/details/humanuseofhuma1954wien

@@ -25,55 +25,35 @@ cites:
     arxiv: null
     doi: "10.1007/BF01700692"
   - title: "Die Grundlagen der Mathematik"
-    url: "https://link.springer.com/article/10.1007/BF01661237"
+    url: "https://doi.org/10.1007/BF01661237"
     year: 1928
     arxiv: null
     doi: "10.1007/BF01661237"
-  - title: "The Concept of Truth in Formalized Languages"
-    url: "https://www.worldcat.org/title/logic-semantics-metamathematics/oclc/523"
-    year: 1933
-    arxiv: null
-    doi: null
-  - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
-    url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
-    year: 1958
-    arxiv: null
-    doi: "10.1111/j.1746-8361.1958.tb01464.x"
-  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
-    url: "https://arxiv.org/abs/0903.0340"
-    year: 2009
-    arxiv: "0903.0340"
-    doi: "0903.0340"
 see:
   - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
   - "494-die-grundlagen-der-mathematik"
-  - "631-the-concept-of-truth-in-formalized-languages"
-  - "503-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
-  - "018-physics-topology-logic-and-computation-a-rosetta-stone"
 ---
 
 # Investigations into Logical Deduction
 
 ## One-sentence takeaway
 
-Gentzen invents natural deduction and sequent calculus and proves cut-elimination—modern proof theory begins.
+Gentzen invents natural deduction (NJ/NK) and sequent calculus (LJ/LK) and proves the Hauptsatz — every proof can be rewritten without cuts.
 
 ## Why it matters here
 
-Proof theory operating system; ancestor of type theory and proof assistants.
+Proof theory’s operating system and the ancestor of type theory / proof assistants. Cut-elimination is why a typed IR can normalize, and why Coq/Agda/Nuprl sit next to ano on the Broadside shelf.
 
 ## Key ideas
 
-- NK/NJ natural deduction.
-- LK/LJ sequent calculi.
-- Hauptsatz (cut elimination).
-- Consistency of arithmetic via proof theory (1936 follow-on).
+- Natural deduction: introduction and elimination rules for each connective, close to informal mathematical reasoning.
+- Sequent calculus: left and right rules acting on Γ ⊢ Δ, designed so cut-elimination is provable.
+- Hauptsatz (cut elimination): a cut-free proof has the subformula property and yields consistency of pure logic.
+- Two-part *Math. Z.* paper, 1934–35; the 1936 consistency-of-arithmetic follow-on uses transfinite induction up to ε₀.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- DOI: [10.1007/BF01201353](https://doi.org/10.1007/BF01201353)
-- URL: https://doi.org/10.1007/BF01201353
+- Part I DOI: [10.1007/BF01201353](https://doi.org/10.1007/BF01201353)
+- Part II DOI: [10.1007/BF01201363](https://doi.org/10.1007/BF01201363)

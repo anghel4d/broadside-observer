@@ -23,50 +23,53 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 8
 cites:
-  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
-    url: "https://arxiv.org/abs/2607.28591"
-    year: 2026
-    arxiv: "2607.28591"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
-  - title: "CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents"
-    url: "https://arxiv.org/abs/2608.05886"
-    year: 2026
-    arxiv: "2608.05886"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
     doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
+  - title: "Agentless: Demystifying LLM-based Software Engineering Agents"
+    url: "https://arxiv.org/abs/2407.01489"
+    year: 2024
+    arxiv: "2407.01489"
+    doi: null
+  - title: "AutoCodeRover: Autonomous Program Improvement"
+    url: "https://arxiv.org/abs/2404.05427"
+    year: 2024
+    arxiv: "2404.05427"
     doi: null
 see:
-  - "052-change2task-from-repository-changes-to-executable-coding-age"
-  - "053-codegrep-an-rl-trained-retrieval-agent-for-llm-coding-agents"
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
+  - "182-agentless-demystifying-llm-based-software-engineering-agents"
+  - "183-autocoderover-autonomous-program-improvement"
 ---
 
 # HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale
 
 ## One-sentence takeaway
 
-Large Language Models (LLMs) have revolutionized software engineering (SE), showcasing remarkable proficiency in various coding tasks.
+HyperAgent is a four-agent SE system — Planner, Navigator, Code Editor, Executor — aimed at many languages and task types rather than a single SWE-bench specialist.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (HyperAgent: Generalist Software Engineering Agents to Solve Coding Tasks at Scale)
+A generalist Anoptic coding crew should look like this lifecycle (plan, navigate the repo, edit, execute), and it should be scored on issue resolution, repo-level generation, and repair together, not on one leaderboard.
 
 ## Key ideas
 
-- Large Language Models (LLMs) have revolutionized software engineering (SE), showcasing remarkable proficiency in various coding tasks.
-- Despite recent advancements that have enabled the creation of autonomous software agents utilizing LLMs for end-to-end development tasks, these systems are typically designed for specific SE functions.
-- We introduce HyperAgent, an innovative generalist multi-agent system designed to tackle a wide range of SE tasks across different programming languages by mimicking the workflows of human developers.
-- HyperAgent features four specialized agents-Planner, Navigator, Code Editor, and Executor-capable of handling the entire lifecycle of SE tasks, from initial planning to final verification.
-- HyperAgent sets new benchmarks in diverse SE tasks, including GitHub issue
+- Most LLM SE agents are specialized to one function; HyperAgent is explicitly generalist across languages and task kinds.
+- Four roles cover the lifecycle: a central Planner plus Navigator, Editor, and Executor child agents talking over an async message queue.
+- On SWE-bench Verified / Lite, HyperAgent-Full-1 reports 33.00% / 26.00% resolved; Lite-1 is cheaper ($0.45) at 30.20% / 25.33%.
+- RepoExec Pass@5 is 53.33% with auto-retrieved context; Defects4J fault localization Acc@1 is 59.70%, with 82 and 110 correct repairs on v1.2 and v2.
+- Ablations show dropping Navigator or Editor hurts resolve rate most; the authors also ship a public GitHub implementation.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2409.16299](https://arxiv.org/abs/2409.16299)
-- URL: https://arxiv.org/abs/2409.16299

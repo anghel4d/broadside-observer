@@ -19,39 +19,31 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: "MapReduce: Simplified Data Processing on Large Clusters"
-  url: "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters"
-  year: 2004
-  arxiv: null
-  doi: null
-see:
-- "796-mapreduce-simplified-data-processing-on-large-clusters"
+cites: []
+see: []
 ---
 
 # The Google File System
 
 ## One-sentence takeaway
 
-GFS: large-chunk, single-master, replication-centric file system for datacenter batch workloads.
+GFS stores files as 64 MB chunks on commodity chunkservers, keeps metadata on a single master, and replicates chunks so a datacenter full of failing disks still delivers sequential throughput to batch producers.
 
 ## Why it matters here
 
-Blueprint for HDFS and large-scale analytics storage assumptions.
+This is the storage contract behind MapReduce and HDFS — the model for Broadside corpora and Anoptic replay dumps that are write-append, huge, and allowed to be slightly stale rather than POSIX-strict.
 
 ## Key ideas
 
-- Chunkservers plus master metadata.
-- Replication for fault tolerance.
-- Append-oriented relaxed consistency for throughput.
-- Co-designed with MapReduce workloads.
+- Files are sequences of large chunks; clients talk to the master only for metadata, then read/write chunks directly.
+- The master assigns chunk handles, tracks replica locations, and issues leases to a primary replica that serializes mutations.
+- Default triple replication plus a relaxed consistency model (atomic record append, defined writes, possible duplicate appends) matches producer-consumer batch workloads.
+- Diagnosed from Google’s actual workload: multi-GB files, sequential reads, concurrent appenders, and component failure as the common case.
 
 ## Caveats
-
-- Single master was a deliberate tradeoff later revisited.
-- Not a POSIX NAS replacement.
 
 ## Links
 
 - DOI: [10.1145/945445.945450](https://doi.org/10.1145/945445.945450)
-- URL: https://doi.org/10.1145/945445.945450
+- Google Research: https://research.google/pubs/the-google-file-system/
+- PDF: https://storage.googleapis.com/gweb-research2023-media/pubtools/4446.pdf

@@ -41,21 +41,22 @@ see:
 
 ## One-sentence takeaway
 
-Custom allocator hierarchy in a shipped engine.
+Bitsquid never calls global `new`: every subsystem takes an `Allocator&`, and the shipped hierarchy is heap, scratch/frame arena, page, and pool allocators composed by ownership.
 
 ## Why it matters here
 
-Custom allocator hierarchy in a shipped engine.
+Ano's frame arenas and subsystem heaps are this post. The interface-plus-scratch pattern is how you keep the renderer, physics, and ECS from fighting one global malloc.
 
 ## Key ideas
 
-- Custom allocator hierarchy in a shipped engine.
+- An abstract `Allocator` with `allocate` / `deallocate` is passed into every system; default `new` is banned.
+- Scratch (frame) allocators reset en masse at frame end — the per-frame arena pattern.
+- Pool allocators serve fixed-size component records; page allocators back large streaming blocks.
+- Parent/child allocators let you scope a temporary heap under a permanent one and dump it without walking objects.
+- September 2010 Bitsquid blog post; the same design survived into Autodesk Stingray.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://bitsquid.blogspot.com/2010/09/custom-memory-allocation-in-c.html
+- Post: https://bitsquid.blogspot.com/2010/09/custom-memory-allocation-in-c.html

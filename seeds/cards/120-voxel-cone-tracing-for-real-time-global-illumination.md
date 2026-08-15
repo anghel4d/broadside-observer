@@ -1,7 +1,11 @@
 ---
 title: "Voxel Cone Tracing for Real-Time Global Illumination"
 authors:
-  - "Cyril Crassin et al."
+  - "Cyril Crassin"
+  - "Fabrice Neyret"
+  - "Miguel Sainz"
+  - "Simon Green"
+  - "Elmar Eisemann"
 year: 2011
 venue: "I3D"
 arxiv: null
@@ -17,10 +21,6 @@ pool: "engines"
 relevance_score: 9
 lineage: radiance-cascades
 cites:
-  - title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
-    url: "https://doi.org/10.1145/1944745.1944787"
-    year: 2011
-    doi: "10.1145/1944745.1944787"
   - title: "GigaVoxels: Ray-Guided Streaming for Efficient and Detailed Voxel Rendering"
     url: "https://doi.org/10.1145/1507149.1507152"
     year: 2009
@@ -29,37 +29,32 @@ cites:
     url: "https://doi.org/10.1145/1730804.1730821"
     year: 2010
     doi: "10.1145/1730804.1730821"
-  - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
-    url: "https://github.com/Raikiri/RadianceCascadesPaper"
-    year: 2023
 see:
-  - "272-interactive-indirect-illumination-using-voxel-cone-tracing"
   - "352-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
   - "277-light-propagation-volumes-in-cryengine-3"
-  - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
 ---
 
 # Voxel Cone Tracing for Real-Time Global Illumination
 
 ## One-sentence takeaway
 
-Sparse voxel octree + cone tracing approximates glossy/diffuse indirect bounces for interactive GI (same work as the I3D VXGI paper).
+Inject direct radiance into a sparse voxel octree, mipmap it as Gaussian lobes, then gather two-bounce GI by tracing a handful of cones through the hierarchy — five wide for diffuse, one tight specular cone whose aperture is the Phong exponent.
 
 ## Why it matters here
 
-Classical voxel RTGI foil for Radiance Cascades; keep as the short-title twin of card 348.
+Anoptic / engine RTGI needs a mesh-independent gather that stays temporally stable under dynamic lights; VXGI is the classical cone-in-octree foil that Radiance Cascades later re-cuts into interval cascades.
 
 ## Key ideas
 
-- Voxelize scene into a hierarchical structure and gather irradiance by tracing cones through mipmapped voxels.
-- Captures mid-frequency indirect lighting without full path tracing.
-- Duplicate seed of 348 (same DOI) — prefer 348 for VXGI cites when linking.
+- Three GPU passes: splat light-view-map photons into octree leaves (atomic add + six-axis neighbour repair for duplicated brick corners), filter incoming radiance / NDF / occlusion up the tree, then deferred-shade visible fragments by cone-tracing the octree.
+- Voxelization rasterizes the mesh on the three axes at leaf resolution and subdivides the pointer octree on the fly; static geometry is timestamped so only movers rebuild. Bricks are $3\times3\times3$ with samples on node corners so hardware trilinear works without a one-voxel halo.
+- Cone step looks up the mip level matching the cone radius and accumulates with the emission-absorption model $c := \alpha c + (1-\alpha)\alpha_2 c_2$. Same integrator estimates ambient occlusion as a visibility-only hemisphere of cones.
+- Directional data is one isotropic Gaussian lobe per voxel ($\sigma^2 = (1-|D|)/|D|$); shading convolves BRDF lobe, NDF, and view-cone lobe. Two bounces, Lambertian and glossy, 25–70 fps on a GTX 480, almost independent of triangle count.
+- Compared with LPV-style diffusion grids, the sparse octree plus ray-like gather keeps mid-frequency glossy highlights and avoids the low-resolution flicker of nested regular volumes.
 
 ## Caveats
-
-- Duplicate of 348-interactive-indirect-illumination-using-voxel-cone-tracing; do not treat as a second distinct paper.
 
 ## Links
 
 - DOI: [10.1145/1944745.1944787](https://doi.org/10.1145/1944745.1944787)
-- URL: https://doi.org/10.1145/1944745.1944787
+- Author PDF: https://research.nvidia.com/sites/default/files/pubs/2011-09_Interactive-Indirect-Illumination/GIVoxels-pg2011-authors.pdf

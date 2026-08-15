@@ -36,22 +36,23 @@ see:
 
 ## One-sentence takeaway
 
-Mozilla/uutils-adjacent Rust library that extracts maintainability metrics (including cognitive/cyclomatic complexity) from source — the second analyzer in the coreutils comparison.
+Mozilla's rust-code-analysis walks syntax trees to emit eleven maintainability metrics — cyclomatic complexity, SLOC/LLOC/CLOC, Halstead, maintainability index, argument and exit counts — across several languages from one Rust library and CLI.
 
 ## Why it matters here
 
-How Ledru et al. cross-check Lizard. Same people later rewrite coreutils; metrics tooling first.
+This is the second analyzer in the 2026 uutils comparison (alongside Lizard), and Ledru is a co-author: metrics tooling first, then the coreutils rewrite. Anoptic/GRID can quote complexity and leverage in the same units rather than inventing a dashboard.
 
 ## Key ideas
 
-- SoftwareX 12:100635, 2020. DOI `10.1016/j.softx.2020.100635`.
-- Used in the 2026 uutils paper alongside Lizard; results agree in direction (Rust much less complex than C).
-- Ledru is a co-author — continuity from analysis tooling to the rewrite.
+- SoftwareX 12:100635, 2020. Open-access DOI `10.1016/j.softx.2020.100635`. No arXiv record; Politecnico di Torino hosts a copy.
+- Tree-sitter-style syntax trees feed language-agnostic metric extractors, so C and Rust (and more) share one implementation.
+- Used in Ledru et al. 2026 to cross-check Lizard: both report Rust coreutils far less cyclomatic than GNU C (directionally 3.30 vs 9.40).
+- Continuity of people: Ledru moves from this library to shipping uutils as Ubuntu's default coreutils.
 
 ## Caveats
-
-- Metrics library, not a rewrite paper. Complexity numbers still depend on what you count (destructors, macros).
 
 ## Links
 
 - DOI: https://doi.org/10.1016/j.softx.2020.100635
+- ScienceDirect: https://www.sciencedirect.com/science/article/pii/S2352711020303484
+- GitHub: https://github.com/mozilla/rust-code-analysis

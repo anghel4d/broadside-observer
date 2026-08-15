@@ -3,10 +3,10 @@ title: "The Mathematical Language AUTOMATH, Its Usage, and Some of Its Extension
 authors:
   - "N. G. de Bruijn"
 year: 1970
-venue: "Symposium on Automatic Demonstration / LNCS"
+venue: "Symposium on Automatic Demonstration / LNM 125"
 arxiv: null
-doi: "10.1007/3-540-07163-7_8"
-source: "https://doi.org/10.1007/3-540-07163-7_8"
+doi: "10.1007/BFb0060623"
+source: "https://doi.org/10.1007/BFb0060623"
 topics:
   - automath
   - de-bruijn
@@ -19,56 +19,40 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "The Calculus of Constructions"
-    url: "https://doi.org/10.1016/0890-5401(88)90005-3"
-    year: 1988
-    arxiv: null
-    doi: "10.1016/0890-5401(88)90005-3"
-  - title: "A Framework for Defining Logics"
-    url: "https://doi.org/10.1145/138027.138040"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/138027.138040"
-  - title: "The Formulae-as-Types Notion of Construction"
-    url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
-    year: 1980
+  - title: "The Calculi of Lambda-Conversion"
+    url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
+    year: 1941
     arxiv: null
     doi: null
-  - title: "An Intuitionistic Theory of Types: Predicative Part"
-    url: "https://doi.org/10.1016/S0049-237X(08)71945-1"
-    year: 1975
+  - title: "A Formulation of the Simple Theory of Types"
+    url: "https://doi.org/10.2307/2266170"
+    year: 1940
     arxiv: null
-    doi: "10.1016/S0049-237X(08)71945-1"
+    doi: "10.2307/2266170"
 see:
-  - "650-the-calculus-of-constructions"
-  - "651-a-framework-for-defining-logics"
-  - "647-the-formulae-as-types-notion-of-construction"
-  - "648-an-intuitionistic-theory-of-types-predicative-part"
+  - "511-the-calculi-of-lambda-conversion"
+  - "708-the-lambda-calculus-its-syntax-and-semantics"
 ---
 
 # The Mathematical Language AUTOMATH, Its Usage, and Some of Its Extensions
 
 ## One-sentence takeaway
 
-Introduces AUTOMATH, the pioneering proof-checking language with dependent types and de Bruijn indices.
+AUTOMATH is a machine-checked mathematical vernacular whose typed λ-calculus, block structure, and nameless binding (de Bruijn indices) let a computer verify a book of mathematics.
 
 ## Why it matters here
 
-Prehistory of proof assistants — de Bruijn indices and AUTOMATH are obligatory classics beside CoC/Nuprl.
+Every later LF/Coq/Agda binding story, and any ano IR that wants nameless terms, starts here — 1970, before Martin-Löf's published type theory and long before CoC.
 
 ## Key ideas
 
-- Machine-checked mathematical vernacular.
-- Dependent typed lambda calculus for proof encoding.
-- de Bruijn indices for binding representation.
-- Direct ancestor of modern LF/Coq/Agda binding discipline.
+- Two function mechanisms: context/block structure for mathematical dependence, plus "essentially Church's lambda conversion calculus" for explicit functions.
+- Definitional equality is unfolding plus λ-conversion; a line of AUTOMATH is a checked definition, not a tactic script.
+- de Bruijn indices eliminate name clash so the checker never α-renames.
+- LNM 125, pp. 29–61; the often-quoted DOI `10.1007/3-540-07163-7_8` is a different Springer chapter. Reprinted in *Selected Papers on Automath* (1994).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1007/3-540-07163-7_8](https://doi.org/10.1007/3-540-07163-7_8)
-- URL: https://doi.org/10.1007/3-540-07163-7_8
+- DOI: [10.1007/BFb0060623](https://doi.org/10.1007/BFb0060623)

@@ -59,9 +59,6 @@ Provenance-first agent memory is first-class on the radar. GRID COMMAND orders, 
 
 ## Caveats
 
-- Small authored fixtures, local Phi-4, seeds as stability not new tasks. No enterprise prevalence or human-load numbers.
-- Not a general accuracy enhancer; not superiority over citation-verifying RAG.
-- Next claim-bearing study must be independently authored. Author is Microsoft-employed; work is independent.
 
 ## Links
 

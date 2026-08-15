@@ -55,21 +55,22 @@ see:
 
 ## One-sentence takeaway
 
-Lakos argues for local (scoped) allocators and multipool strategies so allocation policy is a first-class combinatorial property of C++ components.
+Lakos argues that allocation policy belongs in the type and the object graph: scoped local allocators and multipools should propagate through allocator-aware components instead of every subsystem calling global `new`.
 
 ## Why it matters here
 
-Polymorphic local allocators, multipool, and allocator-aware interfaces — the Lakos discipline for engine subsystems.
+Engine subsystems — frame arenas, component pools, network scratch — are Lakos local allocators. The discipline is combinatorial: a component that does not take an allocator will silently heap-allocate and break the frame budget.
 
 ## Key ideas
 
-- Lakos argues for local (scoped) allocators and multipool strategies so allocation policy is a first-class combinatorial property of C++ components.
+- Global malloc is the wrong default in large C++ systems; allocation strategy is part of a component's contract.
+- Local/scoped allocators (monotonic, multipool, polymorphic) let a subsystem decide where its memory comes from.
+- Allocator-aware types carry and propagate that policy so containers and messages do not bounce back to the heap.
+- Multipool and size-class strategies sit under the same interface, so policy can change without rewriting clients.
+- The talk is the Bloomberg/Lakos model later expanded as allocator-aware (AA) software.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.youtube.com/watch?v=nZNd5FjSquk
+- Talk: https://www.youtube.com/watch?v=nZNd5FjSquk

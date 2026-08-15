@@ -67,9 +67,6 @@ Anoptic *is* an arena engine (frame arenas, job arenas, meshlet scratch). Tofteâ
 
 ## Caveats
 
-- Type-system paper, not an Anoptic runtime. Do not treat shadow arenas as a drop-in for the current bump allocators.
-- Reachability-type surface syntax is still a research UI; ano should steal the *distinctions*, not the notation.
-- Complements Yarrow (card 202: effects + regions) rather than replacing it.
 
 ## Links
 

@@ -25,53 +25,46 @@ cites:
     year: 1995
     arxiv: null
     doi: "10.1007/3-540-60368-9_19"
-  - title: "Composing High-Performance Memory Allocators"
-    url: "https://doi.org/10.1145/378795.378821"
-    year: 2001
+  - title: "Cilk: An Efficient Multithreaded Runtime System"
+    url: "https://doi.org/10.1145/209936.209958"
+    year: 1995
     arxiv: null
-    doi: "10.1145/378795.378821"
-  - title: "Scalable Lock-Free Dynamic Memory Allocation"
-    url: "https://doi.org/10.1145/996893.996848"
-    year: 2004
-    arxiv: null
-    doi: "10.1145/996893.996848"
+    doi: "10.1145/209936.209958"
   - title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
     url: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
     year: 2006
     arxiv: null
     doi: null
-  - title: "DieHard: Probabilistic Memory Safety for Unsafe Languages"
-    url: "https://doi.org/10.1145/1133981.1134000"
-    year: 2006
-    arxiv: null
-    doi: "10.1145/1133981.1134000"
+  - title: "mimalloc: Free List Sharding in Action"
+    url: "https://arxiv.org/abs/1908.05006"
+    year: 2019
+    arxiv: "1908.05006"
+    doi: null
 see:
   - "306-dynamic-storage-allocation-a-survey-and-critical-review"
-  - "438-composing-high-performance-memory-allocators"
-  - "440-scalable-lock-free-dynamic-memory-allocation"
-  - "288-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
-  - "405-diehard-probabilistic-memory-safety-for-unsafe-languages"
 ---
 
 # Hoard: A Scalable Memory Allocator for Multithreaded Applications
 
 ## One-sentence takeaway
 
-Hoard provides scalable concurrent allocation with per-processor heaps while bounding allocator-induced fragmentation.
+Hoard pairs per-processor heaps with a global heap and transfers nearly-empty superblocks so multithreaded malloc stays scalable without unbounded producer-consumer blowup.
 
 ## Why it matters here
 
-Avoids heap blowup under threads; cautionary + design notes for Anoptic's mimalloc world.
+Anoptic already sits on mimalloc; Hoard is the paper that named allocator-induced false sharing and heap blowup, the two failure modes that still decide whether a game-thread heap stays in cache or pages.
 
 ## Key ideas
 
-- Hoard provides scalable concurrent allocation with per-processor heaps while bounding allocator-induced fragmentation.
+- A single locked heap serializes malloc/free; naive per-thread heaps either false-share cache lines or never return freed memory to the allocating thread.
+- Superblocks are page-multiple arrays of one size class. Each is owned by exactly one heap at a time, so concurrent mallocs cannot split one cache line across processors.
+- When a per-processor heap is more than fraction `f` empty and holds more than `K` superblocks of slack, Hoard moves one mostly-empty superblock to the global heap, bounding blowup by a constant rather than by `P` or worse.
+- The emptiness invariant is `(u_i ≥ a_i − K·S) ∨ (u_i ≥ (1−f)a_i)`; summed over heaps this gives `A(t) = O(U(t) + P)`.
+- On 14 processors Hoard was up to 60× faster than Solaris malloc and 18× faster than the next concurrent allocator they measured, with low average fragmentation.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/378993.379232](https://doi.org/10.1145/378993.379232)
-- URL: https://doi.org/10.1145/378993.379232
+- Author PDF: https://www.cs.umass.edu/~emery/pubs/berger-asplos2000.pdf

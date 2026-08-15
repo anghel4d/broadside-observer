@@ -6,7 +6,7 @@ year: 1956
 venue: "In Shannon & McCarthy (eds.), Automata Studies, Princeton"
 arxiv: null
 doi: null
-source: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
+source: "https://www.rand.org/pubs/research_memoranda/RM704.html"
 topics:
   - regular-events
   - finite-automata
@@ -50,23 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Kleene introduces regular events and the Kleene star—finite automata ≡ regular expressions.
+Kleene proves that McCulloch–Pitts nerve nets and finite automata recognize exactly the regular events—the algebra of union, concatenation, and iteration that later becomes regular expressions.
 
 ## Why it matters here
 
-Founding theorem of formal languages; lexer/parser and protocol state-machine epistemology.
+Founding theorem of formal languages, and the reason Anoptic lexers, protocol state-machines, and GRID COMMAND trigger patterns can be compiled to finite tables. The Kleene star is the iteration combinator every later parser and regex engine still uses.
 
 ## Key ideas
 
-- Regular events algebra.
-- Nerve nets and automata equivalence theorems.
-- Kleene star / union / concatenation.
-- Automata Studies volume with Shannon & McCarthy.
+- Starts from McCulloch–Pitts neurons (discrete time, excitatory/inhibitory synapses) and abstracts to finite automata.
+- *Definite events* depend on a fixed finite window of input; *regular events* close definite events under \(\lor\), concatenation, and \(E^*F\).
+- Representation theorem: every regular event is realized by a nerve net (with a two-step lag) and conversely.
+- Written as RAND RM-704 (15 December 1951); the canonical publication is Shannon & McCarthy, *Automata Studies* (Princeton, 1956), pp. 3–42.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://press.princeton.edu/books/paperback/9780691079165/automata-studies
+- RAND RM-704: https://www.rand.org/pubs/research_memoranda/RM704.html
+- Princeton *Automata Studies*: https://press.princeton.edu/books/paperback/9780691079165/automata-studies

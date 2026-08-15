@@ -36,23 +36,20 @@ see:
 
 ## One-sentence takeaway
 
-Valiant PAC learning framework — probably approximately correct learnability.
+Valiant’s PAC model says a concept class is learnable if a polynomial-time algorithm, given samples from any distribution, returns a hypothesis that is $\varepsilon$-accurate with probability $1-\delta$.
 
 ## Why it matters here
 
-Founded computational learning theory; vocabulary for sample complexity.
+This is the vocabulary for sample complexity whenever Broadside, GRID COMMAND, or an Anoptic agent claims to “learn” a classifier from traces rather than just fit a net.
 
 ## Key ideas
 
-- Accuracy/confidence parameters.
-- Polynomial sample and time requirements.
-- Concept class learnability.
-- Seeds VC-dimension and boosting theory.
+- Two parameters: accuracy $\varepsilon$ (how far the hypothesis may be from the target) and confidence $\delta$ (how often the draw may be unlucky).
+- Both sample size and running time must be polynomial in $1/\varepsilon$, $1/\delta$, and the representation size.
+- Learnability is a property of a *class* of concepts, not of a single function.
+- The framework seeds VC-dimension sample bounds, Occam algorithms, and later boosting theory.
 
 ## Caveats
-
-- Classic PAC is distribution-free worst-case.
-- Does not itself train deep nets.
 
 ## Links
 

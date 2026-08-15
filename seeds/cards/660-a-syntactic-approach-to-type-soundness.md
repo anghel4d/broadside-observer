@@ -25,51 +25,41 @@ cites:
     year: 1981
     arxiv: null
     doi: "10.1016/j.jlap.2004.05.001"
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
-  - title: "Practical Foundations for Programming Languages"
-    url: "https://doi.org/10.1017/CBO9781316576892"
-    year: 2016
-    arxiv: null
-    doi: "10.1017/CBO9781316576892"
   - title: "On the Expressive Power of Programming Languages"
     url: "https://doi.org/10.1016/0167-6423(91)90036-W"
     year: 1991
     arxiv: null
     doi: "10.1016/0167-6423(91)90036-W"
+  - title: "The Definition of Standard ML (Revised)"
+    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
+    year: 1997
+    arxiv: null
+    doi: null
 see:
   - "658-a-structural-approach-to-operational-semantics"
-  - "026-types-and-programming-languages"
-  - "646-practical-foundations-for-programming-languages"
   - "663-on-the-expressive-power-of-programming-languages"
+  - "137-the-definition-of-standard-ml-revised"
 ---
 
 # A Syntactic Approach to Type Soundness
 
 ## One-sentence takeaway
 
-Shows type soundness via syntactic progress and preservation — the modern textbook proof method.
+Wright and Felleisen prove type soundness entirely on the term syntax: subject reduction plus the untypability of faulty expressions, the method TAPL later calls progress and preservation.
 
 ## Why it matters here
 
-The Wright–Felleisen method behind almost every TAPL-style safety proof Anoptic would write.
+This is the proof recipe Anoptic would use for an ano type checker or a GRID COMMAND DSL — reduction semantics, no domain model required, and it already scales to refs, exceptions, and `let`-polymorphism.
 
 ## Key ideas
 
-- Progress + preservation imply type soundness.
-- Avoids heavy denotational models for safety.
-- Works with reduction semantics / SOS.
-- Standard citation in language-design papers.
+- Subject reduction: if `Γ ⊢ e : τ` and `e → e′` then `Γ ⊢ e′ : τ`. Alone this is not safety; a typed term could still get stuck on a type error.
+- Faulty expressions (the stuck type-error forms) are shown untypable; together the two facts imply a closed well-typed program never reaches an unmodeled runtime type error.
+- The development is for an ML fragment with Hindley–Milner `let`, references, and control; substitution and replacement lemmas carry the preservation cases.
+- *Information and Computation* 115(1):38–94, 1994, DOI 10.1006/inco.1994.1093.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1006/inco.1994.1093](https://doi.org/10.1006/inco.1994.1093)
-- URL: https://doi.org/10.1006/inco.1994.1093

@@ -9,7 +9,7 @@ authors:
 year: 2022
 venue: "ESOP"
 arxiv: "2103.01931"
-doi: null
+doi: "10.1007/978-3-030-99336-8_1"
 source: "https://arxiv.org/abs/2103.01931"
 topics:
   - "lenses"
@@ -35,22 +35,24 @@ see:
 
 ## One-sentence takeaway
 
-Gradient descent as lenses + parametric maps + reverse-derivative categories — ADAM/AdaGrad/Nesterov and MSE/softmax as instances of one semantics, including Boolean circuits.
+Gradient descent is lenses plus parametric maps plus reverse-derivative categories, so ADAM/AdaGrad/Nesterov and MSE/softmax become instances of one semantics — including on Boolean circuits.
 
 ## Why it matters here
 
-The missing learning half of Weaves (which defers differentiability). Para/lenses are how weights and updates compose.
+The missing learning half of Weaves, which explicitly defers differentiability. Para/lenses are how weights and updates compose; this is the ESOP theorem.
 
 ## Key ideas
 
-- ESOP 2022; arXiv:2103.01931.
-- Unifies optimizers and losses; works beyond smooth maps (discrete/Boolean).
-- Python implementation accompanies the semantics.
+- ESOP 2022, LNCS 13240, pp. 1–28; arXiv:2103.01931; DOI `10.1007/978-3-030-99336-8_1`.
+- Unifies optimizers and losses in one reverse-derivative / lens language.
+- Works beyond smooth maps: discrete and Boolean circuits are in scope.
+- A Python implementation accompanies the semantics.
+- Extended by the 2024 parametric-lenses paper (card 941).
 
 ## Caveats
-
-- About learning dynamics, not architecture broadcasting. Pair with Parametric Lenses 2024 (extended).
 
 ## Links
 
 - arXiv: [2103.01931](https://arxiv.org/abs/2103.01931)
+- PDF: https://arxiv.org/pdf/2103.01931
+- DOI: [10.1007/978-3-030-99336-8_1](https://doi.org/10.1007/978-3-030-99336-8_1)

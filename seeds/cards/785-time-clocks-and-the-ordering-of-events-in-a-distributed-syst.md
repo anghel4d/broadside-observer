@@ -16,55 +16,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: Timestamps in Message-Passing Systems That Preserve the Partial Ordering
-  url: "https://en.wikipedia.org/wiki/Vector_clock"
-  year: 1988
-  arxiv: null
-  doi: null
-- title: Virtual Time and Global States of Distributed Systems
-  url: "https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf"
-  year: 1989
-  arxiv: null
-  doi: null
-- title: "Distributed Snapshots: Determining Global States of Distributed Systems"
-  url: "https://doi.org/10.1145/214451.214456"
-  year: 1985
-  arxiv: null
-  doi: 10.1145/214451.214456
-- title: The Part-Time Parliament
-  url: "https://doi.org/10.1145/279227.279229"
-  year: 1998
-  arxiv: null
-  doi: 10.1145/279227.279229
-see:
-- "786-timestamps-in-message-passing-systems-that-preserve-the-part"
-- "787-virtual-time-and-global-states-of-distributed-systems"
-- "788-distributed-snapshots-determining-global-states-of-distribut"
-- "789-the-part-time-parliament"
+cites: []
+see: []
 ---
 
 # Time, Clocks, and the Ordering of Events in a Distributed System
 
 ## One-sentence takeaway
 
-Happens-before and Lamport logical clocks — partial order of distributed events.
+Lamport defines happens-before as the least partial order closed under program order and message send/receive, then implements it with scalar logical clocks that satisfy $a\to b\implies C(a)<C(b)$.
 
 ## Why it matters here
 
-Root of causality tracking for Anoptic/GRID COMMAND distributed sims and logs.
+This is the causality primitive for Anoptic/GRID COMMAND lockstep logs, Broadside distributed ingest, and any multi-node sim that must order events without a shared wall clock.
 
 ## Key ideas
 
-- Happens-before partial order.
-- Logical clocks obey causality.
-- Distributed state machine motivation.
-- Foundation for vector clocks.
+- $a\to b$ if $a$ precedes $b$ in the same process, or $a$ is a send and $b$ the matching receive, or they are chained by such steps.
+- Each process keeps a counter, increments on every event, and piggybacks the counter on messages; the receiver takes $\max(\text{local},\text{msg})+1$.
+- Logical time totally orders events consistently with causality but cannot *detect* concurrency ($C(a)<C(b)$ does not imply $a\to b$).
+- The paper motivates distributed state machines: agree on a total order of commands by ordering their logical timestamps.
 
 ## Caveats
-
-- Logical time is not synchronized real time.
-- Clock skew needs NTP/PTP separately.
 
 ## Links
 

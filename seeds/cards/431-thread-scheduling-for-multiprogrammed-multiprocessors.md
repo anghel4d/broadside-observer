@@ -57,8 +57,6 @@ Defines the owner-bottom / thief-top deque contract every modern job pool still 
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/277651.277678](https://doi.org/10.1145/277651.277678)

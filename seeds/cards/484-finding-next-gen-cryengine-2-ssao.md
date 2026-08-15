@@ -1,59 +1,47 @@
 ---
-title: 'Finding Next Gen: CryEngine 2 (SSAO)'
+title: "Finding Next Gen: CryEngine 2 (SSAO)"
 authors:
-- Martin Mittring
+  - "Martin Mittring"
 year: 2007
-venue: SIGGRAPH Course
+venue: "SIGGRAPH Courses / Advances in Real-Time Rendering"
 arxiv: null
 doi: null
-source: https://www.crytek.com/download/Presentations/FindingNextGen-CryEngine2.pdf
+source: "https://advances.realtimerendering.com/s2007/Mittring-Finding_NextGen_CryEngine2(Siggraph07 Course Notes).pdf"
 topics:
-- ssao
-- ao
+  - ssao
+  - ao
 seed_rank: 484
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: graphics
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "graphics"
 relevance_score: 8
 lineage: ambient-occlusion
 cites:
-  - title: "Approximating Dynamic Global Illumination in Image Space (SSDO)"
-    url: "https://doi.org/10.1145/1507149.1507168"
-    year: 2009
-    arxiv: null
-    doi: "10.1145/1507149.1507168"
-  - title: "Horizon-Based Ambient Occlusion"
-    url: "https://developer.nvidia.com/gpugems/gpugems3/part-ii-light-and-shadows/chapter-14-horizon-based-ambient-occlusion"
-    year: 2008
-    arxiv: null
-    doi: null
-see:
-  - "398-approximating-dynamic-global-illumination-in-image-space-ssd"
-  - "401-horizon-based-ambient-occlusion"
+  - title: "Dynamic Ambient Occlusion and Indirect Lighting"
+    url: "https://developer.nvidia.com/gpugems/gpugems2/part-i-geometric-complexity/chapter-14-dynamic-ambient-occlusion-and-indirect"
+    year: 2005
 ---
 
 # Finding Next Gen: CryEngine 2 (SSAO)
 
 ## One-sentence takeaway
 
-Crytek SSAO popularized screen-space ambient occlusion as a real-time GI approximation.
+Mittring's CryEngine 2 course notes popularize screen-space ambient occlusion: a full-screen pass that samples the existing depth buffer in a hemisphere, compares depths, and darkens nearby occluded ambient lighting.
 
 ## Why it matters here
 
-Baseline for HBAO and later AO comparisons outside the radiance-cascades spine.
+Industrial catalyst for every later AO post-process Anoptic might ship (HBAO, GTAO); the cheap contact-shadow layer that sits beside — not instead of — probe/cascade GI.
 
 ## Key ideas
 
-- Sample depth-buffer hemisphere to estimate occlusion.
-- Screenspace approximation — no scene BVH.
-- Industrial adoption catalyst for AO post-processes.
-- Parent of HBAO refinements.
+- Sample nearby pixels in the depth buffer, fade influence with distance, and apply the result primarily to ambient rather than direct light.
+- Per-pixel rotation of a spherical sample set (4×4 noise / reflect across a random plane) cuts the sample count; a depth-aware blur hides the remaining noise.
+- Fully dynamic — no precomputed volume — but quality depends on tessellation and depth precision.
+- Section 8.5.4.3 of the SIGGRAPH 2007 Advances course notes is the detailed writeup; the companion slide deck summarizes the same pass.
 
 ## Caveats
 
-- Course notes; PDF hosts move.
-- Not physically based GI.
-
 ## Links
 
-- URL: https://www.crytek.com/download/Presentations/FindingNextGen-CryEngine2.pdf
+- Course notes: https://advances.realtimerendering.com/s2007/Mittring-Finding_NextGen_CryEngine2(Siggraph07%20Course%20Notes).pdf
+- Slides: https://www.advances.realtimerendering.com/s2007/Mittring-Finding_NextGen_CryEngine2(Siggraph07).pdf

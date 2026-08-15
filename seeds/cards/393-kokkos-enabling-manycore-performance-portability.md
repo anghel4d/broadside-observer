@@ -1,11 +1,11 @@
 ---
-title: "Kokkos: Enabling manycore performance portability"
+title: "Kokkos: Enabling manycore performance portability through polymorphic memory access patterns"
 authors:
   - "H. Carter Edwards"
   - "Christian R. Trott"
   - "Daniel Sunderland"
 year: 2014
-venue: "JPDC"
+venue: "Journal of Parallel and Distributed Computing"
 arxiv: null
 doi: "10.1016/j.jpdc.2014.07.003"
 source: "https://doi.org/10.1016/j.jpdc.2014.07.003"
@@ -20,88 +20,38 @@ relevance_score: 7
 cites:
   - title: "StarPU: a unified platform for task scheduling on heterogeneous multicore architectures"
     url: "https://doi.org/10.1002/cpe.1631"
-    year: 2010
+    year: 2011
     arxiv: null
     doi: "10.1002/cpe.1631"
   - title: "Intel Threading Building Blocks"
-    url: "https://doi.org/10.7551/mitpress/9486.003.0016"
-    year: 2015
+    url: "https://doi.org/10.5555/1352079"
+    year: 2007
     arxiv: null
-    doi: "10.7551/mitpress/9486.003.0016"
-  - title: "Intel threading building blocks"
-    url: "https://dl.acm.org/doi/10.5555/1352079.1352134"
-    year: 2008
-    arxiv: null
-    doi: "10.5555/1352079.1352134"
-  - title: "Efficient Management of Parallelism in Object-Oriented Numerical Software Libraries"
-    url: "https://doi.org/10.1007/978-1-4612-1986-6_8"
-    year: 1997
-    arxiv: null
-    doi: "10.1007/978-1-4612-1986-6_8"
-  - title: "Fast Parallel Algorithms for Short-Range Molecular Dynamics"
-    url: "https://doi.org/10.1006/jcph.1995.1039"
-    year: 1995
-    arxiv: null
-    doi: "10.1006/jcph.1995.1039"
-  - title: "OmpSs: A PROPOSAL FOR PROGRAMMING HETEROGENEOUS MULTI-CORE ARCHITECTURES"
-    url: "https://doi.org/10.1142/s0129626411000151"
-    year: 2011
-    arxiv: null
-    doi: "10.1142/s0129626411000151"
-  - title: "CHARM++"
-    url: "https://doi.org/10.1145/165854.165874"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/165854.165874"
-  - title: "A class of parallel tiled linear algebra algorithms for multicore architectures"
-    url: "https://doi.org/10.1016/j.parco.2008.10.002"
-    year: 2008
-    arxiv: null
-    doi: "10.1016/j.parco.2008.10.002"
-  - title: "hwloc: A Generic Framework for Managing Hardware Affinities in HPC Applications"
-    url: "https://doi.org/10.1109/pdp.2010.67"
-    year: 2010
-    arxiv: null
-    doi: "10.1109/pdp.2010.67"
-  - title: "XKaapi: A Runtime System for Data-Flow Task Programming on Heterogeneous Architectures"
-    url: "https://doi.org/10.1109/ipdps.2013.66"
-    year: 2013
-    arxiv: null
-    doi: "10.1109/ipdps.2013.66"
-  - title: "High performance RDMA-based MPI implementation over InfiniBand"
-    url: "https://doi.org/10.1145/782814.782855"
-    year: 2003
-    arxiv: null
-    doi: "10.1145/782814.782855"
-  - title: "Patterns for parallel programming"
-    url: "https://bvbr.bib-bvb.de:443/F?func=service&doc_library=BVB01&local_base=BVB01&doc_number=013099212&sequence=000002&line_number=0001&func_code=DB_RECORDS&service_type=MEDIA"
-    year: 2004
-    arxiv: null
-    doi: null
+    doi: "10.5555/1352079"
 see:
   - "397-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo"
-  - "403-intel-threading-building-blocks"
 ---
 
-# Kokkos: Enabling manycore performance portability
+# Kokkos: Enabling manycore performance portability through polymorphic memory access patterns
 
 ## One-sentence takeaway
 
-Kokkos execution/memory spaces.
+Kokkos separates how you loop (`parallel_for` / `parallel_reduce` on an execution space) from how arrays are laid out (`View` on a memory space) so the same kernel can target CUDA, OpenMP, or serial without a rewrite.
 
 ## Why it matters here
 
-Kokkos execution/memory spaces.
+Anoptic is C + Vulkan, not C++/Kokkos, but the split is the lesson: don’t bake “AoS on the host” into every kernel. GRID COMMAND compute that might later move to a different backend should name the access pattern once (layout, space) and keep the math generic.
 
 ## Key ideas
 
-- Kokkos execution/memory spaces.
+- `View<T**>` is a multidimensional array whose layout (row/column, striding, padding) is a template policy, not a coding convention.
+- Execution spaces (Serial, OpenMP, Cuda, …) and memory spaces (Host, CudaUVM, …) are independent; mapping between them is explicit.
+- Work is dispatched as parallel patterns (`for`, `reduce`, `scan`) rather than raw threads, so the runtime picks a team/league mapping per device.
+- Performance portability is the claim: one source, competitive with native CUDA/OpenMP on each platform in the paper’s mini-apps.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1016/j.jpdc.2014.07.003](https://doi.org/10.1016/j.jpdc.2014.07.003)
-- URL: https://doi.org/10.1016/j.jpdc.2014.07.003
+- DOI: https://doi.org/10.1016/j.jpdc.2014.07.003
+- Kokkos site: https://kokkos.org/

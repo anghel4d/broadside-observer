@@ -4,10 +4,10 @@ authors:
 - A. Karatsuba
 - Yu. Ofman
 year: 1962
-venue: Soviet Physics Doklady
+venue: Doklady Akademii Nauk SSSR / Soviet Physics Doklady
 arxiv: null
 doi: null
-source: "https://en.wikipedia.org/wiki/Karatsuba_algorithm"
+source: "https://www.mathnet.ru/eng/dan26729"
 topics:
 - karatsuba
 - fast-multiplication
@@ -17,44 +17,30 @@ reviewed: 2026-08-13
 pool: maths-foundations
 relevance_score: 8
 lineage: algorithms-and-complexity
-cites:
-- title: Schnelle Multiplikation grosser Zahlen
-  url: "https://doi.org/10.1007/BF02242355"
-  year: 1971
-  arxiv: null
-  doi: 10.1007/BF02242355
-- title: Gaussian Elimination is Not Optimal
-  url: "https://doi.org/10.1007/BF02165411"
-  year: 1969
-  arxiv: null
-  doi: 10.1007/BF02165411
-see:
-- "760-schnelle-multiplikation-grosser-zahlen"
-- "758-gaussian-elimination-is-not-optimal"
+cites: []
+see: []
 ---
 
 # Multiplication of Multidigit Numbers on Automata
 
 ## One-sentence takeaway
 
-Karatsuba O(n^log2(3)) multiplication via three half-size products.
+Karatsuba–Ofman multiply two $n$-digit integers with three half-size products instead of four, giving the first practical $O(n^{\log_2 3})\approx O(n^{1.585})$ multiplication.
 
 ## Why it matters here
 
-First practical subquadratic multiply; still used under FFT thresholds.
+This is still the default big-int kernel below the FFT threshold in language runtimes and in any ano / Anoptic path that does large modular arithmetic or exact geometric predicates.
 
 ## Key ideas
 
-- Divide integers into halves.
-- Three recursive multiplies plus shifts/adds.
-- Beats schoolbook O(n^2).
-- Ancestor of Toom-Cook and Schonhage-Strassen.
+- Split each operand into high and low halves; the cross term is recovered from $(a+b)(c+d)-ac-bd$, so only three recursive multiplies are required.
+- Recurrence $T(n)=3T(n/2)+O(n)$ solves to $O(n^{\log_2 3})$, beating schoolbook $O(n^2)$.
+- The note is two pages in *Doklady* 145:2 (1962); the English translation is *Soviet Physics Doklady* 7 (1963), 595–596.
+- Direct ancestor of Toom–Cook (more parts) and of Schönhage–Strassen (FFT convolution).
 
 ## Caveats
 
-- Original note is short.
-- FFT multiply wins for huge n.
-
 ## Links
 
-- URL: https://en.wikipedia.org/wiki/Karatsuba_algorithm
+- Math-Net.Ru: [dan26729](https://www.mathnet.ru/eng/dan26729)
+- English Wikipedia overview: https://en.wikipedia.org/wiki/Karatsuba_algorithm

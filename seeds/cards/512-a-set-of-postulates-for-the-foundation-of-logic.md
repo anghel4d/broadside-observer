@@ -49,23 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-Church's 1932 postulates introduce the free-variable λ-calculus as a foundation—before the Kleene–Rosser paradox forced retreat to types.
+Church's 1932 postulates introduce free-variable λ-abstraction as a logical foundation—before Kleene–Rosser showed the system inconsistent.
 
 ## Why it matters here
 
-Origin story of λ; explains why typed λ and combinatory logic both exist.
+Origin story of λ as a language, not yet as a programming calculus. The inconsistency is why typed λ and combinatory logic both exist: Schönfinkel–Curry combinators stay type-free and consistent enough to compute, while Church retreats to simple types in 1940.
 
 ## Key ideas
 
-- λ as logical foundation attempt.
-- Leads to inconsistency (Kleene–Rosser).
-- Motivates simple type theory 1940.
+- Attempts to found all of logic on a type-free calculus of functions and abstraction.
+- λ appears here as a logical primitive, not yet as a model of computation.
+- Kleene and Rosser later derive a paradox from the unrestricted system, forcing the 1940 type hierarchy.
+- Companion 1933 paper (card 513) extends the postulates before the collapse.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/1968337](https://doi.org/10.2307/1968337)
-- URL: https://doi.org/10.2307/1968337
+- JSTOR: https://www.jstor.org/stable/1968337

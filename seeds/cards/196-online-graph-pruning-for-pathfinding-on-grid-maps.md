@@ -18,64 +18,42 @@ pool: game-ai
 relevance_score: 10
 lineage: pathfinding
 cites:
-- title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
-  url: https://doi.org/10.1109/TSSC.1968.300136
-  year: 1968
-  arxiv: null
-  doi: 10.1109/TSSC.1968.300136
-- title: Near Optimal Hierarchical Pathfinding (HPA*)
-  url: https://doi.org/10.1613/jair.1423
-  year: 2004
-  arxiv: null
-  doi: 10.1613/jair.1423
-- title: Improving Jump Point Search
-  url: https://ojs.aaai.org/index.php/ICAPS/article/view/13620
-  year: 2014
-  arxiv: null
-  doi: null
-- title: 'JPS+: An Extreme A* Speed Optimization for Static Uniform Cost Grids'
-  url: https://www.gameaipro.com/GameAIPro2/GameAIPro2_Chapter14_JPS_Plus_An_Extreme_A_Star_Speed_Optimization_for_Static_Uniform_Cost_Grids.pdf
-  year: 2015
-  arxiv: null
-  doi: null
-- title: Reducing Redundant Work in Jump Point Search
-  url: https://arxiv.org/abs/2307.05824
-  year: 2023
-  arxiv: '2307.05824'
-  doi: null
-- title: Ultra-Fast Optimal Pathfinding without Runtime Search
-  url: https://doi.org/10.1609/aiide.v7i1.12443
-  year: 2011
-  arxiv: null
-  doi: 10.1609/aiide.v7i1.12443
+  - title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
+    url: https://doi.org/10.1109/TSSC.1968.300136
+    year: 1968
+    arxiv: null
+    doi: 10.1109/TSSC.1968.300136
+  - title: Near Optimal Hierarchical Pathfinding (HPA*)
+    url: https://doi.org/10.1613/jair.1423
+    year: 2004
+    arxiv: null
+    doi: 10.1613/jair.1423
 see:
-- "205-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
-- "294-near-optimal-hierarchical-pathfinding-hpa"
-- "266-improving-jump-point-search"
-- "454-jps-plus-extreme-a-star-speed-optimization-static-grids"
-- "234-reducing-redundant-work-in-jump-point-search"
-- "480-ultra-fast-optimal-pathfinding-without-runtime-search"
+  - "205-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
+  - "294-near-optimal-hierarchical-pathfinding-hpa"
 ---
 
 # Online Graph Pruning for Pathfinding on Grid Maps
 
 ## One-sentence takeaway
 
-JPS — grid pathfinding speedup for RTS.
+Jump Point Search prunes symmetric shortest-path prefixes on uniform-cost grids so A* expands far fewer nodes while remaining optimal.
 
 ## Why it matters here
 
-JPS — grid pathfinding speedup for RTS.
+RTS and GRID COMMAND pathfinding on grid maps is this problem: eight-connected uniform cost, huge open space, many units. JPS is the online prune that makes A* cheap enough without a precomputed nav abstraction.
 
 ## Key ideas
 
-- JPS — grid pathfinding speedup for RTS.
+- On uniform grids, many shortest paths are symmetric; expanding all of them is wasted work.
+- Jump points are turning or forced-neighbour locations; the search jumps over the empty straight-line runs between them.
+- The algorithm is still optimally correct for uniform-cost grids because pruned nodes cannot lie on a unique shortest path.
+- Search is online and needs no precomputation, unlike some hierarchical grid methods.
+- Node expansions drop sharply versus vanilla A* on typical game maps, which is why JPS became the default grid speedup.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761
+- DOI: [10.1609/aaai.v25i1.7994](https://doi.org/10.1609/aaai.v25i1.7994)
+- AAAI: https://ojs.aaai.org/index.php/AAAI/article/view/7994

@@ -54,7 +54,6 @@ GRID COMMAND's "talk to a fireteam" problem is Halo 3's encounter problem: desig
 
 ## Caveats
 
-- Slide deck / GDC talk, not a long paper. Distinct from Dave Mark & Kevin Dill's *Building a Better Battle* utility/DAMN talk (card 351).
 
 ## Links
 

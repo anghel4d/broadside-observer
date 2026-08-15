@@ -19,53 +19,39 @@ pool: "agents"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
+  - title: "Empirical Explorations of the Logic Theory Machine"
+    url: "https://doi.org/10.1145/1455567.1455605"
+    year: 1957
     arxiv: null
-    doi: "10.1145/367177.367199"
-  - title: "The Logic Theory Machine: A Complex Information Processing System"
-    url: "https://doi.org/10.1109/TIT.1956.1056797"
+    doi: "10.1145/1455567.1455605"
+  - title: "The Inversion of Functions Defined by Turing Machines"
+    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
     year: 1956
-    arxiv: null
-    doi: "10.1109/TIT.1956.1056797"
-  - title: "Situations, Actions, and Causal Laws"
-    url: "https://www-formal.stanford.edu/jmc/"
-    year: 1963
-    arxiv: null
-    doi: null
-  - title: "Report on a General Problem-Solving Program"
-    url: "https://bitsavers.org/pdf/rand/ipl/"
-    year: 1959
     arxiv: null
     doi: null
 see:
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
-  - "580-the-logic-theory-machine-a-complex-information-processing-sy"
-  - "579-situations-actions-and-causal-laws"
-  - "582-report-on-a-general-problem-solving-program"
+  - "581-empirical-explorations-of-the-logic-theory-machine"
 ---
 
 # Programs with Common Sense
 
 ## One-sentence takeaway
 
-McCarthy's Advice Taker proposes declarative knowledge and inference as the path to common-sense AI.
+McCarthy's Advice Taker is to improve by being told declarative sentences, automatically drawing the immediate logical consequences that count as common sense.
 
 ## Why it matters here
 
-Charter for knowledge representation; agents pool epistemology.
+Broadside agents still split "what is true" from "what to do." This 1959 Teddington paper is the charter for that declarative control surface.
 
 ## Key ideas
 
-- Advice Taker architecture.
-- Declarative sentences as program.
-- Situation-facing common sense.
-- 1958/59 Teddington paper.
+- A program has common sense if it deduces a sufficiently wide class of immediate consequences of anything it is told and already knows.
+- Heuristics live in the language, not only in the interpreter — unlike Logic Theorist, whose search tactics were wired into code.
+- The airport example: `at`, `walkable`/`drivable`, `canachult`, and `want(at(I,airport))` yield `do(go(desk,car,walking))`.
+- Immediate deduction is cheap and syntax-directed; intelligence is in choosing which premise lists to feed it.
+- Designed as a joint project with Minsky (McCarthy later notes that wish was one-sided). Yehoshua Bar-Hillel's discussion attacks the transitivity of `at`.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

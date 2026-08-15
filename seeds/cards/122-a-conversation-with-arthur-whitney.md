@@ -42,21 +42,24 @@ see:
 
 ## One-sentence takeaway
 
-Interview with Arthur Whitney on A+, k, q, and kdb+; discusses columnar storage and terse array notation.
+Whitney tells Cantrill that k/q/kdb+ is a ~50-primitive array language with no libraries, column-oriented since 1974, and rewritten from scratch every few years so the notation itself is the comment.
 
 ## Why it matters here
 
-Primary-source k/q/kdb intuition: columnar stores and terse array notation — ano's stated q/kdb analogy.
+ano’s stated q/kdb analogy is this interview in miniature: columns as first-class vectors, a tiny primitive set, hot working set in RAM, and sequential column I/O — the same bets GRID COMMAND’s ECS tables have to make.
 
 ## Key ideas
 
-- Interview with Arthur Whitney on A+, k, q, and kdb+; discusses columnar storage and terse array notation.
+- The language is the database. K has no reserved words (ASCII punctuation only); Q rewrites the monadic cases as words for sales/readability but is the same 2000-K implementation plus a ~50-op table library written in K.
+- Column stores are the default: “same data type, so of course you store it by column.” Intraday tables stay time-ordered in memory; at close they sort a billion rows by instrument then time and write sequential column files. A “all IBM activity that day” query is four seeks plus a sequential read of the needed columns.
+- Hot data lives in DRAM (then 128 GB for ~1B × 20–30-byte records). Realtime analytics never aggregate the firehose; they maintain 10–20 smaller state tables (book, running calcs) for O(1) or binary-search lookup.
+- Notation as a tool of thought: Iverson’s matrix products (`or . and`, `+ . min`) replace an hour of nested loops. Whitney rewrites a snippet 10–20 times until it cannot get shorter; customers’ comment-to-code ratio is often > 1, his is ~0.
+- He throws the C implementation away every cycle (parser, tokenizer, printer included). Semantics stay ~95% the same; memory allocation, reference-count reuse of unique vectors, and code size change under the hood. `each` is the parallel operator; there are no control structures.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
+- ACM Queue: https://queue.acm.org/detail.cfm?id=1531242
 - DOI: [10.1145/1531243.1531242](https://doi.org/10.1145/1531243.1531242)
-- URL: https://queue.acm.org/detail.cfm?id=1531242
+- Wayback (full text): https://web.archive.org/web/20150906033131/http://queue.acm.org/detail.cfm?id=1531242

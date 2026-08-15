@@ -23,41 +23,29 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "Communication in the Presence of Noise"
-    url: "https://doi.org/10.1109/JRPROC.1949.232969"
-    year: 1949
-    arxiv: null
-    doi: "10.1109/JRPROC.1949.232969"
-  - title: "Error Detecting and Error Correcting Codes"
-    url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
-    year: 1950
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1950.tb00463.x"
 see:
   - "553-a-mathematical-theory-of-communication"
-  - "556-communication-in-the-presence-of-noise"
-  - "568-error-detecting-and-error-correcting-codes"
 ---
 
 # Communication Theory of Secrecy Systems
 
 ## One-sentence takeaway
 
-Shannon founds modern cryptography theoretically: perfect secrecy, key entropy, and cryptanalysis as information.
+Shannon treats a cipher as a communication system with a secret key and proves that perfect secrecy requires the key to be at least as large as the message.
 
 ## Why it matters here
 
-Security epistemology for networked agents/sim; companion to MTC.
+Agent-to-engine and observer channels in Broadside are secrecy systems in Shannon's sense: residual information after intercept is a first-class quantity, not a slogan.
 
 ## Key ideas
 
-- Perfect secrecy (one-time pad optimality).
-- Secrecy systems as communication with a key.
-- Declassified from wartime work.
+- A secrecy system is a family of invertible transformations indexed by a key with a known prior.
+- Perfect secrecy means the ciphertext is statistically independent of the plaintext; the one-time pad meets the bound and is essentially unique at equality.
+- Unicity distance estimates how much ciphertext a cryptanalyst needs before the key (and message) become determined.
+- Equivocation \(H(K\mid E)\) and \(H(M\mid E)\) track how uncertainty about key and message falls as more cryptogram is seen.
+- The paper declassifies wartime Bell Labs work and is the theoretical charter of modern cryptography.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

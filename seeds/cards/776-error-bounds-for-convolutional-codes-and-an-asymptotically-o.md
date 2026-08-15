@@ -3,7 +3,7 @@ title: Error Bounds for Convolutional Codes and an Asymptotically Optimum Decodi
 authors:
 - Andrew J. Viterbi
 year: 1967
-venue: IEEE Trans. Information Theory
+venue: IEEE Transactions on Information Theory
 arxiv: null
 doi: 10.1109/TIT.1967.1054010
 source: "https://doi.org/10.1109/TIT.1967.1054010"
@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Viterbi decoding — DP on a trellis — later the standard algorithm for HMMs too.
+Viterbi decoding finds the maximum-likelihood path through a convolutional-code trellis by add-compare-select, and the same DP later became the standard MAP path algorithm for HMMs.
 
 ## Why it matters here
 
-Ubiquitous MAP path inference in speech, comms, and sequence labeling.
+This is the trellis shortest-path that GRID COMMAND sequence labelers, speech/command decoders, and any Anoptic HMM-style tracker still run: one column of states, keep the survivor.
 
 ## Key ideas
 
-- Trellis heaviest/shortest path.
-- Add-compare-select recursion.
-- Error bounds for convolutional codes.
-- Generalizes cleanly to HMMs.
+- A convolutional encoder is a finite-state machine; received symbols label edges of its time-unrolled trellis.
+- At each depth the decoder retains, for every state, only the best path into that state (add-compare-select).
+- The paper proves exponential error bounds that show the decoder is asymptotically optimum for convolutional codes.
+- Replacing Hamming/Euclidean branch metrics with $\log p(\text{obs}\mid\text{state})$ yields Viterbi for hidden Markov models.
 
 ## Caveats
-
-- Original framing is coding theory.
-- Numerical underflow needs log-domain care.
 
 ## Links
 

@@ -26,11 +26,6 @@ cites:
     year: 2007
     arxiv: null
     doi: null
-  - title: "Fast, Multicore-Scalable, Low-Fragmentation Memory Allocation through Large Virtual Memory and Global Data Structures (scalloc)"
-    url: "https://doi.org/10.1145/2814270.2814294"
-    year: 2015
-    arxiv: "1503.09006"
-    doi: "10.1145/2814270.2814294"
   - title: "mimalloc: Free List Sharding in Action"
     url: "https://arxiv.org/abs/1908.05006"
     year: 2019
@@ -38,8 +33,6 @@ cites:
     doi: null
 see:
   - "288-a-scalable-concurrent-malloc-3-implementation-for-freebsd-je"
-  - "442-tcmalloc-thread-caching-malloc"
-  - "444-fast-multicore-scalable-low-fragmentation-memory-allocatio"
   - "011-mimalloc-free-list-sharding-in-action"
 ---
 
@@ -47,21 +40,23 @@ see:
 
 ## One-sentence takeaway
 
-SuperMalloc optimizes large-address-space multithreaded allocation with careful page and size-class strategies.
+SuperMalloc treats a 64-bit address space as cheap: it carves huge virtual ranges into power-of-two size classes and uses per-thread caches plus optional hardware transactional memory so most malloc/free never touch a lock.
 
 ## Why it matters here
 
-Aggressive 64-bit multithreaded malloc engineering notes.
+Anoptic already assumes a fat 64-bit VA; this ISMM 2015 allocator is the extreme version of that bet, and a useful foil for mimalloc/snmalloc page and size-class choices.
 
 ## Key ideas
 
-- SuperMalloc optimizes large-address-space multithreaded allocation with careful page and size-class strategies.
+- Objects live in large virtually reserved chunks whose size class is obvious from the address, so lookup of metadata is an address-bit trick rather than a page-map walk.
+- Per-thread caches absorb the common case; cross-thread frees go through carefully batched structures. HTM (RTM on Haswell) is an optional fast path for the contended case.
+- Reported: about 2.1× faster than the best comparison allocator at 1 thread, 2.75× at 8 threads with HTM, 3.4× at 32 threads without HTM.
+- The paper is unapologetically “use the VA, ignore 32-bit,” which matches current game-engine practice and rules the design out of embedded/32-bit targets.
+- ISMM 2015, DOI 10.1145/2754169.2754178. Author PDF: https://people.csail.mit.edu/bradley/papers/Kuszmaul15.pdf
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/2754169.2754178](https://doi.org/10.1145/2754169.2754178)
-- URL: https://doi.org/10.1145/2754169.2754178
+- PDF: https://people.csail.mit.edu/bradley/papers/Kuszmaul15.pdf

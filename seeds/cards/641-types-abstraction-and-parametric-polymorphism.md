@@ -3,10 +3,10 @@ title: "Types, Abstraction and Parametric Polymorphism"
 authors:
   - "John C. Reynolds"
 year: 1983
-venue: "IFIP Congress"
+venue: "IFIP Congress (Information Processing 83)"
 arxiv: null
 doi: null
-source: "https://people.mpi-sws.org/~dreyer/tor/papers/reynolds.pdf"
+source: "https://www.cs.cmu.edu/~crary/819-f09/Reynolds83.pdf"
 topics:
   - parametricity
   - reynolds
@@ -24,50 +24,35 @@ cites:
     year: 1974
     arxiv: null
     doi: "10.1007/3-540-06859-7_148"
-  - title: "Theorems for Free!"
-    url: "https://doi.org/10.1145/99370.99404"
-    year: 1989
-    arxiv: null
-    doi: "10.1145/99370.99404"
   - title: "A Theory of Type Polymorphism in Programming"
     url: "https://doi.org/10.1016/0022-0000(78)90014-4"
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
 see:
   - "637-towards-a-theory-of-type-structure"
-  - "038-theorems-for-free"
   - "629-a-theory-of-type-polymorphism-in-programming"
-  - "026-types-and-programming-languages"
 ---
 
 # Types, Abstraction and Parametric Polymorphism
 
 ## One-sentence takeaway
 
-Gives the relational/parametric reading of polymorphism: abstractions cannot inspect types.
+Reynolds gives polymorphism a relational semantics: a polymorphic term maps related arguments to related results, so it cannot inspect the hidden type.
 
 ## Why it matters here
 
-The parametricity paper behind Wadler's free theorems and behind treating polymorphic ano interfaces as information-hiding.
+The parametricity paper behind Wadler’s free theorems and behind treating polymorphic ano interfaces as information-hiding. If a GRID COMMAND API is ∀α. …, clients (and the compiler) may assume representation independence.
 
 ## Key ideas
 
-- Parametricity as a semantic abstraction principle.
-- Relational interpretation of polymorphic types.
-- Connects type abstraction to representation independence.
-- Direct precursor to Theorems for Free!
+- Identity extension / relational interpretation: each type denotes a relation, and ∀α. τ denotes the intersection over all relations for α.
+- A well-typed polymorphic term is parametric: it acts uniformly at every type.
+- Representation independence of abstract types is the special case where the hidden representation is related to itself by an invariant.
+- IFIP ’83 (Paris), *Information Processing 83*, North-Holland, pp. 513–523. CMU hosts the usual scan.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://people.mpi-sws.org/~dreyer/tor/papers/reynolds.pdf
+- PDF: https://www.cs.cmu.edu/~crary/819-f09/Reynolds83.pdf

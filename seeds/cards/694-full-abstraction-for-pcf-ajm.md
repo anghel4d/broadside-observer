@@ -1,5 +1,5 @@
 ---
-title: "Full Abstraction for PCF (AJM)"
+title: "Full Abstraction for PCF"
 authors:
   - "Samson Abramsky"
   - "Radha Jagadeesan"
@@ -48,29 +48,25 @@ see:
   - "143-computational-interpretations-of-linear-logic"
 ---
 
-# Full Abstraction for PCF (AJM)
+# Full Abstraction for PCF
 
 ## One-sentence takeaway
 
-AJM game semantics giving a fully abstract model of PCF (parallel independent solution to Hyland–Ong).
+Abramsky, Jagadeesan, and Malacaria independently solve Plotkin's PCF full-abstraction problem with a games-and-strategies model, without extending the language.
 
 ## Why it matters here
 
-AJM full-abstraction card — the other founding game-semantics solution beside Hyland–Ong.
+AJM is the other founding game-semantics paper beside Hyland–Ong — same problem, different dialogue discipline — and the one that sits closer to Abramsky's linear-logic / lazy-λ line already in the corpus.
 
 ## Key ideas
 
-- Games and strategies as a denotational medium.
-- Full abstraction for PCF without extending the language.
-- Independent contemporary solution to Plotkin's problem.
-- Launches a major semantics research program.
+- Types are games, programs are (history-sensitive, well-bracketed) strategies; composition is interaction.
+- Full abstraction: two PCF terms are observationally equivalent iff they denote the same strategy. Parallel-or is not forced into the model.
+- Published the same year, same journal as Hyland–Ong; the two papers launched game semantics as a PL research program (later: state, control, names).
+- *Information and Computation* 163, 2000, DOI 10.1006/inco.2000.2930. Card title keeps the "(AJM)" disambiguator in the filename only.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1006/inco.2000.2930](https://doi.org/10.1006/inco.2000.2930)
-- URL: https://doi.org/10.1006/inco.2000.2930

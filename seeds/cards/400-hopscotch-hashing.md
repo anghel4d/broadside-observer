@@ -1,64 +1,58 @@
 ---
-title: Hopscotch Hashing
+title: "Hopscotch Hashing"
 authors:
-- Maurice Herlihy
-- Nir Shavit
-- Moran Tzafrir
+  - "Maurice Herlihy"
+  - "Nir Shavit"
+  - "Moran Tzafrir"
 year: 2008
-venue: DISC
+venue: "DISC"
 arxiv: null
-doi: 10.1007/978-3-540-87779-0_14
-source: https://doi.org/10.1007/978-3-540-87779-0_14
+doi: "10.1007/978-3-540-87779-0_24"
+source: "https://doi.org/10.1007/978-3-540-87779-0_24"
 topics:
-- hashtable
-- lockfree
+  - hashtable
+  - lockfree
 seed_rank: 400
-seed_batch: systems-prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: systems
+seed_batch: "systems-prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "systems"
 relevance_score: 7
 lineage: open-addressing
 cites:
-- title: Robin Hood Hashing
-  url: https://cs.uwaterloo.ca/research/tr/1986/CS-86-14.pdf
-  year: 1986
-  arxiv: null
-  doi: null
-- title: Abseil Swiss Tables
-  url: https://abseil.io/about/design/swisstables
-  year: 2017
-  arxiv: null
-  doi: null
-- title: Space-Efficient Lock-Free Linear-Probing Hash Table
-  url: https://arxiv.org/abs/2601.00000
-  year: 2026
-  arxiv: "2601.00000"
-  doi: null
+  - title: "Cuckoo Hashing"
+    url: "https://doi.org/10.1016/j.jalgor.2003.12.002"
+    year: 2004
+    arxiv: null
+    doi: "10.1016/j.jalgor.2003.12.002"
+  - title: "Split-Ordered Lists: Lock-Free Extensible Hash Tables"
+    url: "https://doi.org/10.1145/1147954.1147958"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1147954.1147958"
 see:
-- "416-robin-hood-hashing"
-- "387-abseil-swiss-tables"
-- "207-space-efficient-lock-free-linear-probing-hash-table"
+  - "387-abseil-swiss-tables"
 ---
 
 # Hopscotch Hashing
 
 ## One-sentence takeaway
 
-Concurrent hopscotch hashing.
+Hopscotch keeps every key within H slots of its hash bucket (H = 32) by displacing earlier keys toward a hole, so `contains` is a constant-time bitmap walk of one or two cache lines.
 
 ## Why it matters here
 
-Concurrent hopscotch hashing.
+Anoptic / GRID COMMAND maps that stay 80–90% full should not fall back to chained `ConcurrentHashMap` or to cuckoo’s 50% comfort zone. Hopscotch is the open-addressing design Swiss tables later SIMD’d: neighborhood bitmap, wait-free reads, lock per bucket for writers.
 
 ## Key ideas
 
-- Concurrent hopscotch hashing.
+- A virtual bucket is the home slot plus the next H−1; a hop-information word marks which of those slots belong to this home.
+- Insert linear-probes for a hole, then “hops” occupants backward so the hole walks toward the home — the displacement chain cannot cycle.
+- `contains`/`remove` are deterministic O(1); overflow of a neighborhood (probability 1/H! under uniform hashing) triggers resize.
+- Concurrent version: wait-free readers ignore the lock; add/remove take the bucket lock. On Niagara II it beat Lea’s CHM by 2–3× at high load.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1007/978-3-540-87779-0_14](https://doi.org/10.1007/978-3-540-87779-0_14)
-- URL: https://doi.org/10.1007/978-3-540-87779-0_14
+- DOI: https://doi.org/10.1007/978-3-540-87779-0_24
+- Author PDF: https://people.csail.mit.edu/shanir/publications/disc2008_submission_98.pdf

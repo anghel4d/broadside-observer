@@ -57,10 +57,6 @@ Prefer this shape for Anoptic many-to-one shard inboxes before paying for full M
 
 ## Caveats
 
-- Not linearizable in the strong academic sense (author notes); push can briefly block the consumer in a tiny window.
-- MPSC only — wrong tool for multi-consumer.
-- Year convention 2010 for 1024cores publication era.
-
 ## Links
 
 - URL: https://www.1024cores.net/home/lock-free-algorithms/queues/non-intrusive-mpsc-node-based-queue

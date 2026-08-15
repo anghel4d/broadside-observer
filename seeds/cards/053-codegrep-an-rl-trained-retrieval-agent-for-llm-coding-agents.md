@@ -21,24 +21,23 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
-    url: "https://arxiv.org/abs/2607.28591"
-    year: 2026
-    arxiv: "2607.28591"
-    doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
   - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
     url: "https://arxiv.org/abs/2405.15793"
     year: 2024
     arxiv: "2405.15793"
     doi: null
+  - title: "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
+    url: "https://arxiv.org/abs/2402.03300"
+    year: 2024
+    arxiv: "2402.03300"
+    doi: null
 see:
-  - "052-change2task-from-repository-changes-to-executable-coding-age"
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
@@ -46,24 +45,23 @@ see:
 
 ## One-sentence takeaway
 
-Modern LLM coding agents such as Claude Code and OpenHands share a common inefficiency: they spend much of their token budget finding the file to patch, rather than patching it.
+A 14B retrieval agent trained with GRPO issues multi-turn parallel grep/glob/read calls and hands candidate files to a frozen coding agent, cutting exploration tokens without dropping resolve rate.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (CodeGrep: An RL-Trained Retrieval Agent for LLM Coding Agents)
+Ano coding agents and Broadside issue loops spend most of the budget finding the file; CodeGrep isolates that search as a trained specialist rather than letting the main agent wander the tree.
 
 ## Key ideas
 
-- Modern LLM coding agents such as Claude Code and OpenHands share a common inefficiency: they spend much of their token budget finding the file to patch, rather than patching it.
-- On SWE-Bench Verified, a 30B OpenHands agent averages 23 rounds and 631K tokens per resolved issue, with many calls spent on grep, glob, and view_file during repository exploration.
-- We introduce CodeGrep, a 14B retrieval agent trained end-to-end with GRPO to issue multi-turn parallel grep, glob, and read tool calls and return candidate files to a frozen downstream coding agent.
-- On all 500 SWE-Bench Verified instances, CodeGrep preserves resolve rate while substantially improving efficiency: 27.0% versus 25.8% for the no-retrieval baseline, with 15% fewer rounds and 19% fewer tokens on resolved instances.
+- On SWE-Bench Verified a 30B OpenHands agent averages 23 rounds and 631K tokens per resolved issue, much of it spent on grep, glob, and view_file.
+- Across 500 Verified instances CodeGrep holds resolve rate (27.0% vs 25.8% no-retrieval) while using 15% fewer rounds and 19% fewer tokens on resolved cases.
+- Downstream utility follows a precision threshold: BM25 at 0.375 degrades the agent, Jina at 0.445 is neutral, CodeGrep at 0.677 is where retrieval starts reducing rollout cost.
+- Supervision is mined from 67K open-source agent trajectories with CATM; training runs in a Git-worktree environment for multi-turn agent RL.
+- Applying the efficiency signal at the advantage layer rather than the reward layer reduces KL drift and translates into downstream token savings.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2608.05886](https://arxiv.org/abs/2608.05886)
-- URL: https://arxiv.org/abs/2608.05886
+- PDF: https://arxiv.org/pdf/2608.05886

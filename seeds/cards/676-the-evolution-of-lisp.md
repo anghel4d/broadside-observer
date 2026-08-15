@@ -36,41 +36,31 @@ cites:
     year: 1978
     arxiv: null
     doi: null
-  - title: "The Revised^5 Report on the Algorithmic Language Scheme"
-    url: "https://doi.org/10.1023/A:1010051815785"
-    year: 1998
-    arxiv: null
-    doi: "10.1023/A:1010051815785"
 see:
   - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
   - "673-scheme-an-interpreter-for-extended-lambda-calculus"
   - "674-rabbit-a-compiler-for-scheme"
-  - "675-the-revised-5-report-on-the-algorithmic-language-scheme"
 ---
 
 # The Evolution of Lisp
 
 ## One-sentence takeaway
 
-HOPL history of Lisp dialects, design conflicts, and the road to Common Lisp/Scheme divergence.
+Steele and Gabriel's HOPL-II paper traces Lisp from the PDP-6 era through Interlisp, MacLisp, Lisp machines, and the split into industrial Common Lisp and the small, pure Scheme dialect.
 
 ## Why it matters here
 
-Best single historical card for Lisp family politics and technical forks Broadside should remember.
+This is the single historical card for why Broadside's Lisp family is two cultures — messy-powerful and small-powerful — and why ano should pick a dialect on purpose rather than inherit one by accident.
 
 ## Key ideas
 
-- Dialect ecology from LISP 1.5 through Common Lisp and Scheme.
-- Design tensions: purity vs pragmatism.
-- Standardization battles and community memory.
-- Pairs with McCarthy 1960 and Scheme/RABBIT cards.
+- Evolution was driven as much by lab rivalry and hacker one-upmanship as by requirements; the result is still two living poles, not one language.
+- Feature post-mortems (successes and failures) are the technical core: what distinguished Lisp from ALGOL-family languages, and which experiments died.
+- Lisp as a laboratory for designing *other* languages is an explicit theme, not a side remark.
+- HOPL-II / *SIGPLAN Notices* 28(3), 1993, DOI 10.1145/155360.155373. Picks up where McCarthy's HOPL-I paper stopped.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/155360.155373](https://doi.org/10.1145/155360.155373)
-- URL: https://doi.org/10.1145/155360.155373

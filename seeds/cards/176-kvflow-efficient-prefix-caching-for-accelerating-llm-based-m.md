@@ -50,25 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Large language model (LLM) based agentic workflows have become a popular paradigm for coordinating multiple specialized agents to solve complex tasks.
+KVFlow replaces LRU prefix-cache eviction with a workflow-aware policy derived from an Agent Step Graph, and prefetches the next agent's KV from CPU to GPU before that agent runs.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; architecture patterns for long-running observers and interactive agents (KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows)
+Long-running Broadside observers and multi-agent GRID COMMAND loops share huge system prompts. LRU dropping a prompt one step before reuse is exactly the miss pattern this paper measures and fixes.
 
 ## Key ideas
 
-- Large language model (LLM) based agentic workflows have become a popular paradigm for coordinating multiple specialized agents to solve complex tasks.
-- To improve serving efficiency, existing LLM systems employ prefix caching to reuse key-value (KV) tensors corresponding to agents' fixed prompts, thereby avoiding redundant computation across repeated invocations.
-- However, current systems typically evict KV caches using a Least Recently Used (LRU) policy, which fails to anticipate future agent usage and often discards KV caches shortly before their reuse.
-- This leads to frequent cache misses and substantial recomputation or swapping overhead.
-- We present KVFlow, a workflow-aware KV cache management framework tailored for agentic workloads.
+- Agentic serving reuses KV tensors of fixed agent prompts, but LRU cannot see the next activation and evicts them immediately before reuse.
+- An Agent Step Graph assigns each agent a steps-to-execution distance that drives node-level eviction in a tree-structured prefix cache.
+- Shared prefixes across agents are managed explicitly rather than as unrelated LRU entries.
+- A fully overlapped prefetch loads the next step's tensors from CPU to GPU on background threads so generation does not stall on a miss.
+- Against SGLang with hierarchical radix cache, KVFlow reports up to 1.83× on single large-prompt workflows and 2.19× with many concurrent workflows.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2507.07400](https://arxiv.org/abs/2507.07400)
-- URL: https://arxiv.org/abs/2507.07400

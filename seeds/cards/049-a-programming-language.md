@@ -15,42 +15,42 @@ reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 10
 cites:
+  - title: "Notation as a Tool of Thought"
+    url: "https://www.jsoftware.com/papers/tot.htm"
+    year: 1980
+    arxiv: null
+    doi: "10.1145/358896.358899"
   - title: "A Method for the Construction of Minimum-Redundancy Codes"
-    url: "https://doi.org/10.1109/jrproc.1952.273898"
+    url: "https://doi.org/10.1109/JRPROC.1952.273898"
     year: 1952
     arxiv: null
-    doi: "10.1109/jrproc.1952.273898"
-  - title: "Sorting on Electronic Computer Systems"
-    url: "https://doi.org/10.1145/320831.320833"
-    year: 1956
-    arxiv: null
-    doi: "10.1145/320831.320833"
-  - title: "An analysis of a logical machine using parenthesis-free notation"
-    url: "https://doi.org/10.1090/s0025-5718-1954-0061484-4"
-    year: 1954
-    arxiv: null
-    doi: "10.1090/s0025-5718-1954-0061484-4"
+    doi: "10.1109/JRPROC.1952.273898"
+see:
+  - "045-notation-as-a-tool-of-thought"
 ---
 
 # A Programming Language
 
 ## One-sentence takeaway
 
-Iverson's foundational book presenting a consistent array-oriented notation for algorithms that later became APL.
+Iverson’s 1962 Wiley book presents a consistent array notation for algorithms — selection by logical vectors, reduction, matrix product — that IBM later implemented as APL.
 
 ## Why it matters here
 
-Root of ano's APL/BQN DNA: array primitives, selection by logical vectors, and notation-as-thought.
+Root of ano’s DNA: rank-polymorphic verbs, compress/replicate, and “the program is the math.” The 1980 Turing lecture is the manifesto; this book is the notation.
 
 ## Key ideas
 
-- Iverson's foundational book presenting a consistent array-oriented notation for algorithms that later became APL.
+- Written as a *notation for thought* before a running interpreter existed; chapters treat evaluation, programs, sorting, and linear algebra in the same glyph vocabulary.
+- Arrays are first-class; scalar operations extend pointwise, and operators (reduction, scan, inner/outer product) are already the intellectual core.
+- Selection by a Boolean vector (compress) is the ancestor of masked SIMD and of ano’s `where` selections over ECS columns.
+- Distinguish the 286-page Wiley book from the shorter 1962 AFIPS Spring Joint Computer Conference paper of the same title.
+- Canonical public texts: Jsoftware HTML transcription and the Computer History Museum scan. No book DOI.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.jsoftware.com/papers/APL.htm
+- Jsoftware: https://www.jsoftware.com/papers/APL.htm
+- HTML book: https://www.jsoftware.com/papers/APL1.htm
+- CHM scan: https://softwarepreservation.computerhistory.org/apl/book/APROGRAMMINGLANGUAGE.pdf

@@ -62,9 +62,6 @@ ano's bump arenas and Sky purity boundaries are regions; 030/032 still assume st
 
 ## Caveats
 
-- This is a core calculus, not a source language; inference of capabilities and the C FFI are out of scope.
-- Alias Types / L3 (locations + linear capabilities at TAL level) are the assembly-side cousins; cite, don't remint.
-- Spegion (922) and Yarrow (173) are modern region/effect recombinations; this card is the 2006 reduction, not those.
 
 ## Links
 

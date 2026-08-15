@@ -1,11 +1,14 @@
 ---
-title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
+title: "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling"
 authors:
   - "Ted Zadouri"
   - "Markus Hoehnerbach"
   - "Jay Shah"
+  - "Timmy Liu"
+  - "Vijay Thakkar"
+  - "Tri Dao"
 year: 2026
-venue: "arXiv:cs.LG"
+venue: "arXiv:cs.CL"
 arxiv: "2603.05451"
 doi: null
 source: "https://arxiv.org/abs/2603.05451"
@@ -26,7 +29,7 @@ cites:
     arxiv: "2205.14135"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
-    year: 2024
+    year: 2023
     arxiv: "2307.08691"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
@@ -38,25 +41,25 @@ see:
   - "073-flashattention-3-fast-and-accurate-attention-with-asynchrony"
 ---
 
-# FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling
+# FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling
 
 ## One-sentence takeaway
 
-Fourth FlashAttention generation: algorithm and kernel pipelining co-designed for asymmetric hardware scaling, continuing the Dao/Shah IO-aware attention line.
+Zadouri, Hoehnerbach, Shah, Liu, Thakkar, and Dao retarget exact attention at Blackwell: tensor cores doubled while shared-memory bandwidth and exp units did not, so FA-4 pipelines larger async MMA tiles, software-emulates exponentials, and uses tensor memory / 2-CTA MMA in the backward pass.
 
 ## Why it matters here
 
-Completes the FA spine Weaves cites (1–4). Hardware half of the napkin/weaves story.
+Completes the FlashAttention spine Weaves cites (1–4). GRID-level GPU work should treat softmax and data movement as first-class bottlenecks, not just GEMM occupancy — the same IO story as FA-1, now on asymmetric hardware.
 
 ## Key ideas
 
-- arXiv:2603.05451, 2026.
-- Co-design of algorithm + kernel pipeline, not just another tile size.
-- Asymmetric hardware scaling is the new constraint (memory/compute imbalance, cf. memory wall).
+- FA-3 was Hopper/H100 (async + warp specialization). Blackwell B200/GB200 shifts the bottleneck: matmul is relatively cheaper; softmax exp and smem traffic dominate.
+- Forward: redesigned fully-async MMA pipelines, larger tiles, FMA-polynomial exp, and conditional online-softmax rescaling to skip work.
+- Backward: tensor memory plus 2-CTA MMA cuts smem traffic and atomic adds on \(dQ\); a deterministic backward mode is included for reproducible training.
+- Implemented in Python-embedded CuTe-DSL rather than C++ templates: 20–30× faster compile (≈2.5s vs 55s forward) at full expressivity.
+- Reported on B200 BF16: up to 1.3× vs cuDNN 9.13, 2.7× vs Triton, 1613 TFLOPs/s (71% peak).
 
 ## Caveats
-
-- Kernel paper. Does not use NCDs; Weaves/Napkin are the diagrammatic reading of the same IO problem.
 
 ## Links
 

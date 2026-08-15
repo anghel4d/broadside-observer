@@ -18,15 +18,10 @@ reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 9
 cites:
-  - title: "Do Orcas Have Semantic Language? Machine Learning to Predict Orca Behaviors Using Partially Labeled Vocalization Data"
-    url: "https://arxiv.org/abs/2302.10983"
-    year: 2023
-    arxiv: "2302.10983"
-    doi: null
-  - title: "Benchmarking ORCA PT-1 Boson Sampler in Simulation"
-    url: "https://arxiv.org/abs/2505.23217"
-    year: 2025
-    arxiv: "2505.23217"
+  - title: "Behavior Trees in Robotics and AI: An Introduction"
+    url: "https://arxiv.org/abs/1709.00084"
+    year: 2017
+    arxiv: "1709.00084"
     doi: null
   - title: "Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environments"
     url: "https://arxiv.org/abs/2407.16771"
@@ -34,6 +29,7 @@ cites:
     arxiv: "2407.16771"
     doi: null
 see:
+  - "460-behavior-trees-in-robotics-and-ai-an-introduction"
   - "225-topology-guided-orca-smooth-multi-agent-motion-planning-in-c"
 ---
 
@@ -41,25 +37,23 @@ see:
 
 ## One-sentence takeaway
 
-In this study, we propose task planning framework for multiple robots that builds on a behavior tree (BT).
+A single coalesced behavior tree assigns tasks to many robots over DDS, with per-robot recovery BTs and shared action variables, demonstrated on three mobiles cycling four goals.
 
 ## Why it matters here
 
-Classical game/RTS AI technique (non-LLM) for GRID COMMAND lineage (Behavior Tree-Based Task Planning for Multiple Mobile Robots using a Data Distri).
+GRID COMMAND squad AI is already behavior-tree shaped; this paper is the multi-agent, async-tick version — one planner tree, many bodies, a comms bus instead of a single-root tick.
 
 ## Key ideas
 
-- In this study, we propose task planning framework for multiple robots that builds on a behavior tree (BT).
-- BTs communicate with a data distribution service (DDS) to send and receive data.
-- Since the standard BT derived from one root node with a single tick is unsuitable for multiple robots, a novel type of BT action and improved nodes are proposed to control multiple robots through a DDS asynchronously.
-- To plan tasks for robots efficiently, a single task planning unit is implemented with the proposed task types.
-- The task planning unit assigns tasks to each robot simultaneously through a single coalesced BT.
+- A classic single-root, single-tick BT cannot drive multiple robots asynchronously.
+- New action types and node variants talk to a Data Distribution Service so ticks and results move without a shared clock.
+- One task-planning unit owns a coalesced BT and assigns work to every robot at once.
+- If a robot faults, a second BT on the robot enters recovery; the action is a DDS-shared variable the planner can rewrite.
+- Hardware demo: three mobile robots alternating among four goal poses under that single planner.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2201.10918](https://arxiv.org/abs/2201.10918)
-- URL: https://arxiv.org/abs/2201.10918
+- PDF: https://arxiv.org/pdf/2201.10918

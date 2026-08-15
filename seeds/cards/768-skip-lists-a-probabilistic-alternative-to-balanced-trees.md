@@ -23,7 +23,7 @@ cites:
   arxiv: null
   doi: 10.1109/SFCS.1978.3
 - title: An Algorithm for the Organization of Information
-  url: "https://en.wikipedia.org/wiki/AVL_tree"
+  url: "https://www.mathnet.ru/eng/dan26964"
   year: 1962
   arxiv: null
   doi: null
@@ -36,23 +36,20 @@ see:
 
 ## One-sentence takeaway
 
-Skip lists — randomized layered linked lists with expected logarithmic search.
+A skip list is a layered linked list whose node heights are geometric random variables, giving expected $O(\log n)$ search, insert, and delete without rotations or balance bits.
 
 ## Why it matters here
 
-Simple concurrent-friendly ordered maps; Redis zset kinship.
+Skip lists are the concurrent-friendly ordered map (Redis zsets, lock-free maps) that Anoptic job queues and GRID COMMAND leaderboards can implement without red-black rotation races.
 
 ## Key ideas
 
-- Random tower heights.
-- Expected O(log n) search/insert.
-- Easier to reason about than some balanced trees.
-- Good base for concurrent variants.
+- Level-0 is a sorted singly linked list; each node is promoted to the next level independently with probability $p$ (classically $1/2$).
+- Search walks the highest list, dropping a level when the next key would overshoot — expected $O(\log n)$ hops.
+- Insert and delete only splice a random-height tower; no global rebalance.
+- The structure is easier to make concurrent than a rotated tree because updates touch a local tower rather than rotating ancestors.
 
 ## Caveats
-
-- Randomness needed for balance.
-- Worst-case unbounded without hardening.
 
 ## Links
 

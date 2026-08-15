@@ -23,41 +23,29 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "Communication Theory of Secrecy Systems"
-    url: "https://doi.org/10.1002/j.1538-7305.1949.tb00928.x"
-    year: 1949
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1949.tb00928.x"
-  - title: "Extrapolation, Interpolation, and Smoothing of Stationary Time Series"
-    url: "https://mitpress.mit.edu/9780262730051/extrapolation-interpolation-and-smoothing-of-stationary-time-series/"
-    year: 1949
-    arxiv: null
-    doi: null
 see:
   - "553-a-mathematical-theory-of-communication"
-  - "555-communication-theory-of-secrecy-systems"
-  - "563-extrapolation-interpolation-and-smoothing-of-stationary-time"
 ---
 
 # Communication in the Presence of Noise
 
 ## One-sentence takeaway
 
-Shannon's IRE paper presents channel capacity with noise for an engineering audience.
+Shannon recasts bandlimited signals as points in a high-dimensional sphere and derives channel capacity for an engineering audience at the IRE.
 
 ## Why it matters here
 
-Complement to BSTJ MTC; often the EE cite.
+This is the geometric picture behind noisy telemetry and sim-to-observer links: distinguishable signals are packed spheres, and power/bandwidth set how many fit.
 
 ## Key ideas
 
-- Geometric view of signals in noise.
-- Capacity formulas for bandlimited channels.
-- Engineering exposition.
+- A signal of duration \(T\) and bandwidth \(W\) is a point in a space of about \(2TW\) dimensions.
+- White Gaussian noise turns each transmitted point into a sphere of known radius; reliable communication is sphere packing.
+- Capacity of the power-limited bandlimited Gaussian channel is \(C = W\log(1+P/N)\) bits per second.
+- Sampling and the 2TW theorem connect the continuous waveform to a discrete vector channel.
+- The IRE paper is the EE-facing companion to the 1948 BSTJ memoir, not a replacement for it.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

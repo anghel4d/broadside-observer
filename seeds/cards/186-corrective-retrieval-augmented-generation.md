@@ -43,25 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Large language models (LLMs) inevitably exhibit hallucinations since the accuracy of generated texts cannot be secured solely by the parametric knowledge they encapsulate.
+CRAG inserts a lightweight retrieval evaluator that grades the retrieved set and then triggers one of several actions — use, refine, or fall back to web search — before generation.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests (Corrective Retrieval Augmented Generation)
+Broadside cannot assume the first retrieval is right. An evaluator-gated corrective step, plus decompose-then-recompose of the documents that survive, is the robustness pattern for provenance-rich digests.
 
 ## Key ideas
 
-- Large language models (LLMs) inevitably exhibit hallucinations since the accuracy of generated texts cannot be secured solely by the parametric knowledge they encapsulate.
-- Although retrieval-augmented generation (RAG) is a practicable complement to LLMs, it relies heavily on the relevance of retrieved documents, raising concerns about how the model behaves if retrieval goes wrong.
-- To this end, we propose the Corrective Retrieval Augmented Generation (CRAG) to improve the robustness of generation.
-- Specifically, a lightweight retrieval evaluator is designed to assess the overall quality of retrieved documents for a query, returning a confidence degree based on which different knowledge retrieval actions can be triggered.
-- Since retrieval from static and limited corpora can only return sub-opt
+- Vanilla RAG fails hard when the retrieved documents are irrelevant; the generator then hallucinates with extra confidence.
+- A small evaluator returns a confidence that selects among knowledge actions rather than always concatenating the top-k.
+- Static corpora are treated as incomplete, so large-scale web search is an explicit fallback action.
+- A decompose-then-recompose pass keeps salient spans and drops irrelevant retrieved text.
+- CRAG is plug-and-play on other RAG methods and is reported to help on four short- and long-form datasets.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2401.15884](https://arxiv.org/abs/2401.15884)
-- URL: https://arxiv.org/abs/2401.15884

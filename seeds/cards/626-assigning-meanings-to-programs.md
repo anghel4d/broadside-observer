@@ -18,19 +18,9 @@ pool: "languages"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "An Axiomatic Basis for Computer Programming"
-    url: "https://doi.org/10.1145/363235.363259"
-    year: 1969
-    arxiv: null
-    doi: "10.1145/363235.363259"
   - title: "Checking a Large Routine"
     url: "https://www.turingarchive.org/browse.php/b/8"
     year: 1949
-    arxiv: null
-    doi: null
-  - title: "A Discipline of Programming"
-    url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
-    year: 1976
     arxiv: null
     doi: null
   - title: "Towards a Mathematical Science of Computation"
@@ -39,9 +29,7 @@ cites:
     arxiv: null
     doi: null
 see:
-  - "592-an-axiomatic-basis-for-computer-programming"
   - "523-checking-a-large-routine"
-  - "590-a-discipline-of-programming"
   - "578-towards-a-mathematical-science-of-computation"
 ---
 
@@ -49,22 +37,21 @@ see:
 
 ## One-sentence takeaway
 
-Floyd assigns assertions to flowchart commands—program proving before Hoare's axiomatic polish.
+Floyd annotates flowchart commands with inductive assertions so that a program’s partial correctness is a finite set of verification conditions on those assertions.
 
 ## Why it matters here
 
-Direct predecessor of Hoare 1969; verification spine.
+Direct predecessor of Hoare 1969 and of every “assert in the engine / ano IR” story. Turing 1949 already wanted this; Floyd makes the method a proof system on flowcharts.
 
 ## Key ideas
 
-- Inductive assertions method.
-- Flowchart annotation.
-- Partial correctness arguments.
+- Attach a predicate to each flowchart arc; the command between two arcs must make the outgoing assertion follow from the incoming one.
+- Assignment, branching, and loops each have a local verification condition (the loop needs an invariant).
+- Partial correctness: if the program terminates, the postcondition holds; termination is a separate argument.
+- AMS *Mathematical Aspects of Computer Science* (1967). Necula’s scan is the usual open PDF.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf
+- PDF: https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf

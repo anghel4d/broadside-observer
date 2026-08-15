@@ -24,51 +24,41 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/0304-3975(75)90017-1"
-  - title: "On Full Abstraction for PCF: I, II, and III"
-    url: "https://doi.org/10.1006/inco.2000.2917"
-    year: 2000
-    arxiv: null
-    doi: "10.1006/inco.2000.2917"
-  - title: "Full Abstraction for PCF (AJM)"
-    url: "https://doi.org/10.1006/inco.2000.2930"
-    year: 2000
-    arxiv: null
-    doi: "10.1006/inco.2000.2930"
   - title: "Domains for Denotational Semantics"
     url: "https://doi.org/10.1007/BFb0012801"
     year: 1982
     arxiv: null
     doi: "10.1007/BFb0012801"
+  - title: "Toward a Mathematical Semantics for Computer Languages"
+    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
+    year: 1971
+    arxiv: null
+    doi: null
 see:
   - "627-call-by-name-call-by-value-and-the-lambda-calculus"
-  - "693-on-full-abstraction-for-pcf-i-ii-and-iii"
-  - "694-full-abstraction-for-pcf-ajm"
   - "656-domains-for-denotational-semantics"
+  - "612-toward-a-mathematical-semantics-for-computer-languages"
 ---
 
 # LCF Considered as a Programming Language
 
 ## One-sentence takeaway
 
-Defines PCF and studies its denotational semantics — the seed of the full-abstraction problem.
+Plotkin isolates PCF — typed λ-calculus plus ground types, conditionals, and recursion — and shows Scott's domain model is adequate but not fully abstract.
 
 ## Why it matters here
 
-PCF is the typed calculus everyone uses for semantics case studies; this is the paper.
+PCF is the typed calculus every later Anoptic/ano semantics case study is quietly using; this 1977 TCS paper is where full abstraction becomes a problem rather than a slogan.
 
 ## Key ideas
 
-- PCF: typed lambda calculus with recursion and ground types.
-- Adequacy relative to a domain model.
-- Opens the full-abstraction problem later solved by game semantics.
-- Companion to Plotkin CBN/CBV and SOS.
+- PCF is the programming-language reading of Edinburgh LCF's logic: simply typed combinators with `fix`, booleans/naturals, and a call-by-name operational semantics.
+- Computational adequacy: a term converges operationally iff its domain denotation is non-bottom.
+- Full abstraction fails: there are continuous functionals (parallel-or is the famous one) that no PCF term denotes, so observational equivalence is finer than domain equality.
+- TCS 5 (1977), DOI 10.1016/0304-3975(77)90044-5. Hyland–Ong and AJM games (2000) are the later solutions, not this paper.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/0304-3975(77)90044-5](https://doi.org/10.1016/0304-3975(77)90044-5)
-- URL: https://doi.org/10.1016/0304-3975(77)90044-5

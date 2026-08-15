@@ -30,23 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-Ukkonen’s online linear-time suffix tree construction.
+Ukkonen’s algorithm grows a suffix tree left-to-right, one character at a time, in $O(n)$ on integer alphabets by using suffix links and an implicit “active point” so unfinished leaves stay open.
 
 ## Why it matters here
 
-Canonical suffix-tree builder for substring/stringology features.
+Online suffix trees are the right structure when an Anoptic or Broadside stream must answer substring queries on a text that is still arriving — replay, chat, or incremental pack indexes.
 
 ## Key ideas
 
-- Online left-to-right construction.
-- Suffix links.
-- O(n) with integer alphabets under standard assumptions.
-- Cleaner than Weiner for teaching.
+- After $i$ characters the tree represents every suffix of $T[1..i]$; character $i+1$ is folded in without rebuilding.
+- Suffix links jump from the node for $aW$ to the node for $W$, so the algorithm walks the current suffixes in amortized constant time per character.
+- Open leaves are represented by an implicit end pointer; they all grow when the text extends.
+- The presentation is substantially simpler to implement and teach than Weiner’s original right-to-left construction.
 
 ## Caveats
-
-- Large constants vs suffix arrays.
-- Implementation detail-heavy.
 
 ## Links
 

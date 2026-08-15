@@ -49,23 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-Church's short JSL note states the unsolvability of the Entscheidungsproblem in the form logicians cite.
+Church's short JSL note is the form in which "first-order validity is undecidable" entered the logic literature.
 
 ## Why it matters here
 
-Companion to the AJM paper; the crisp cite for 'FOL validity is undecidable.'
+Companion to the longer AJM paper: when Broadside or an Anoptic verifier says a standing-rule fragment is undecidable, this is the crisp primary cite, not a textbook restatement.
 
 ## Key ideas
 
-- Direct Entscheidungsproblem unsolvability claim.
-- Uses λ-definability / effective calculability.
-- Correction note followed the same year.
+- Direct statement that there is no recursive procedure deciding validity in the restricted functional calculus.
+- Uses λ-definability / effective calculability as developed in the AJM paper.
+- Hilbert–Ackermann *Grundzüge* is the target formulation of the Entscheidungsproblem.
+- A same-year correction (card 509) patches a gap in the reduction.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2268565](https://doi.org/10.2307/2268565)
-- URL: https://doi.org/10.2307/2268565
+- JSTOR: https://www.jstor.org/stable/2268565

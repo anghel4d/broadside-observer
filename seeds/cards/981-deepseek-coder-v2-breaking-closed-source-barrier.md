@@ -40,22 +40,20 @@ see:
 
 ## One-sentence takeaway
 
-Continue-pretrains a V2 checkpoint on +6T tokens into an MoE code model claimed comparable to GPT-4-Turbo on code; 86→338 languages, 16K→128K context.
+Continue-pretrains an intermediate DeepSeek-V2 checkpoint on +6T tokens into an MoE code model claimed comparable to GPT-4-Turbo on code, expanding language coverage 86→338 and context 16K→128K while holding general-language performance.
 
 ## Why it matters here
 
-The code specialist sitting on V2 MLA/MoE. Coding-agent relevant; later V3/V3.2 absorb the capability rather than keeping a separate coder brand.
+The code specialist sitting on V2 MLA/MoE. Coding-agent relevant for ano/GRID COMMAND; later V3/V3.2 absorb the capability rather than keeping a separate coder brand.
 
 ## Key ideas
 
-- arXiv:2406.11931. Further pretrain from an intermediate DeepSeek-V2 checkpoint with 6T additional tokens.
-- Keeps V2 general-language performance while jumping on code and math vs Coder-33B.
-- Language coverage 86→338; context 16K→128K. Claimed above GPT-4-Turbo / Claude 3 Opus / Gemini 1.5 Pro on coding and math benches.
+- arXiv:2406.11931. Not a new architecture — MLA and DeepSeekMoE are inherited from V2.
+- Continued pretrain jumps coding and math vs Coder-33B and vs the V2 generalist, without dropping general-language benches.
+- 338 programming languages and 128K context are the product-facing deltas vs the dense Coder v1 line.
+- Mid-2024 closed-source comparisons (GPT-4-Turbo, Claude 3 Opus, Gemini 1.5 Pro) are snapshots, not a standing ranking.
 
 ## Caveats
-
-- MoE code model, not a new architecture — MLA/MoE are inherited from V2.
-- Closed-source comparisons are mid-2024 snapshots.
 
 ## Links
 

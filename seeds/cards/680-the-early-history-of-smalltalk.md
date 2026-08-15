@@ -35,41 +35,31 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-  - title: "A Theory of Objects"
-    url: "https://doi.org/10.1007/978-1-4419-8598-9"
-    year: 1996
-    arxiv: null
-    doi: "10.1007/978-1-4419-8598-9"
 see:
   - "681-design-principles-behind-smalltalk"
   - "682-smalltalk-80-the-language-and-its-implementation"
   - "683-viewing-control-structures-as-patterns-of-passing-messages"
-  - "669-a-theory-of-objects"
 ---
 
 # The Early History of Smalltalk
 
 ## One-sentence takeaway
 
-Kay's HOPL history of Smalltalk as a personal computing and object-oriented systems vision.
+Kay's HOPL-II history recasts 1960s ARPA interactive computing as a *new thing* — Dynabook, overlapping windows, and objects that only communicate by messages — of which Smalltalk was the first complete realization.
 
 ## Why it matters here
 
-Canonical Smalltalk history card — objects, messaging, and the Dynabook vision behind modern OO.
+This is the object/message origin story Broadside should cite when an Anoptic entity or a GRID COMMAND unit is tempted to become a "class hierarchy" instead of a protected cell that only talks through messages.
 
 ## Key ideas
 
-- Objects and messaging as the computational metaphor.
-- Personal dynamic media lineage (Dynabook).
-- Iterations from Smalltalk-72 through-80.
-- Pairs with Ingalls design principles and the Blue Book.
+- The sixties were not a better mainframe; exponential cost/volume demanded personal media, a Montessori-style UI, and a biological metaphor (universal cells, no naked data/control structures).
+- Early Smalltalk iterations (72 through 80) were deliberately extreme so the new style had to be invented rather than bolted onto old languages.
+- Personal dynamic media (the Dynabook) is the goal; the language is the means.
+- HOPL-II / *SIGPLAN Notices* 28(3), 1993, DOI 10.1145/155360.155364. Pair with Ingalls 1981 and the Blue Book.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/155360.155364](https://doi.org/10.1145/155360.155364)
-- URL: https://doi.org/10.1145/155360.155364

@@ -19,11 +19,6 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Type Inference with Polymorphic Recursion"
-    url: "https://doi.org/10.1145/169701.169692"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/169701.169692"
   - title: "Principal Type-Schemes for Functional Programs"
     url: "https://doi.org/10.1145/582153.582176"
     year: 1982
@@ -34,41 +29,32 @@ cites:
     year: 1978
     arxiv: null
     doi: "10.1016/0022-0000(78)90014-4"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
 see:
-  - "671-type-inference-with-polymorphic-recursion"
   - "640-principal-type-schemes-for-functional-programs"
   - "629-a-theory-of-type-polymorphism-in-programming"
-  - "137-the-definition-of-standard-ml-revised"
 ---
 
 # Polymorphic Type Schemes and Recursive Definitions
 
 ## One-sentence takeaway
 
-Introduces polymorphic recursion (Mycroft style) beyond standard Hindley–Milner let-polymorphism.
+A recursively defined identifier may be used at many instances of its own type scheme — Mycroft-style polymorphic recursion — which ordinary Hindley–Milner let-polymorphism forbids.
 
 ## Why it matters here
 
-Mycroft polymorphic recursion — the feature Henglein later proves hard; historically first.
+Nested or rank-polymorphic array code and certain agent-memory traversals want exactly this: a recursive function whose body instantiates the function at a different type. Mycroft introduces the feature; Henglein later shows inference is equivalent to semi-unification and undecidable in general.
 
 ## Key ideas
 
-- Allow recursive definitions at polymorphic types.
-- Extends Milner discipline.
-- Requires care in inference (semi-unification).
-- Companion to Henglein 1993 and Damas–Milner.
+- Damas–Milner generalizes only after a non-recursive binding; a `fix`/`let rec` identifier is monomorphic in its own body.
+- Mycroft allows the recursive occurrence to carry a type scheme, so the body may instantiate it at several types.
+- The resulting system is strictly more expressive (nested datatypes, some polytypic traversals) and no longer has complete unification-based inference.
+- Companion later result: Henglein 1993 reduces inference to semi-unification.
+- LNCS 167, International Symposium on Programming, 1984.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/3-540-12925-1_41](https://doi.org/10.1007/3-540-12925-1_41)
-- URL: https://doi.org/10.1007/3-540-12925-1_41
+- Springer: https://link.springer.com/chapter/10.1007/3-540-12925-1_41

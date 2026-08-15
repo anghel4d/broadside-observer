@@ -22,31 +22,35 @@ pool: languages
 relevance_score: 9
 lineage: type-safety
 cites:
-  []
+  - title: "Threesomes, With and Without Blame"
+    url: "https://doi.org/10.1145/1706299.1706325"
+    year: 2010
+    arxiv: null
+    doi: "10.1145/1706299.1706325"
+see:
+  - "893-threesomes-with-and-without-blame"
 ---
 
 # Blame for All
 
 ## One-sentence takeaway
 
-Unifies blame tracking with parametric polymorphism for gradual typing.
+Polymorphic gradual typing can still assign blame correctly: casts on ∀-types use sealing so parametricity and the blame theorem hold together.
 
 ## Why it matters here
 
-Shows polymorphic gradual boundaries can remain blame-correct—key for ML interop.
+Shows ML-style polymorphism is not an excuse to drop blame at typed/untyped boundaries — relevant if Anoptic ever mixes a polymorphic typed core with untyped agent scripts.
 
 ## Key ideas
 
-- Blame with parametricity.
-- Cast calculi for System F.
-- Seals and dynamic type representations.
+- Extends the blame calculus from simple types to System F; the hard case is a polymorphic value crossing into untyped code and back.
+- Seals / dynamic type representations implement parametricity at runtime so an untyped context cannot discover a type parameter.
+- Blame theorem still holds: a failed cast blames the untyped (or wrongly-annotated) side, never well-typed polymorphic code.
+- Complements threesomes (space-efficient coercions) and the later gradual-guarantee criteria.
+- POPL 2011, DOI 10.1145/1926385.1926409.
 
 ## Caveats
-
-- Part of the gradual/refinement type-safety shelf.
-- Check mechanization status in follow-ons.
 
 ## Links
 
 - DOI: [10.1145/1926385.1926409](https://doi.org/10.1145/1926385.1926409)
-- URL: https://doi.org/10.1145/1926385.1926409

@@ -57,8 +57,6 @@ Shows when Anoptic tasks are naturally idempotent (retry-safe graph work, rebuil
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/1504176.1504186](https://doi.org/10.1145/1504176.1504186)

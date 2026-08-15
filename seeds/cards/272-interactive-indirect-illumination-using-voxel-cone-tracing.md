@@ -1,9 +1,13 @@
 ---
 title: "Interactive Indirect Illumination Using Voxel Cone Tracing"
 authors:
-  - "Cyril Crassin et al."
+  - "Cyril Crassin"
+  - "Fabrice Neyret"
+  - "Miguel Sainz"
+  - "Simon Green"
+  - "Elmar Eisemann"
 year: 2011
-venue: "I3D"
+venue: "I3D 2011"
 arxiv: null
 doi: "10.1145/1944745.1944787"
 source: "https://doi.org/10.1145/1944745.1944787"
@@ -31,10 +35,6 @@ cites:
   - title: "Radiance Cascades: A Novel Approach to Calculating Global Illumination"
     url: "https://github.com/Raikiri/RadianceCascadesPaper"
     year: 2023
-  - title: "Voxel Cone Tracing for Real-Time Global Illumination"
-    url: "https://doi.org/10.1145/1944745.1944787"
-    year: 2011
-    doi: "10.1145/1944745.1944787"
 see:
   - "352-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
   - "277-light-propagation-volumes-in-cryengine-3"
@@ -47,23 +47,21 @@ see:
 
 ## One-sentence takeaway
 
-Interactive VXGI: voxel cone tracing gathers indirect illumination from a sparse voxel representation in real time.
+Voxelize the scene into a sparse octree and gather indirect light with a handful of mip-filtered cones instead of hundreds of rays, giving interactive multi-bounce-ish GI with strong near-field contact.
 
 ## Why it matters here
 
-Primary voxel-cone-tracing foil on the Radiance Cascades thread — the industrial alternative RC is often measured against for contact detail vs large-scale light.
+Primary industrial foil on the Radiance Cascades thread: VXGI wins contact shadows and local bounce, then loses on voxel update cost and resolution. Anoptic should know exactly what RC is being measured against.
 
 ## Key ideas
 
-- Build a voxelized scene representation (often SVO) and approximate gathering with cones instead of many rays.
-- Mip filtering along cones yields soft occlusion and multi-bounce-ish indirect at interactive rates.
-- Strong near-field contact response; memory/update cost of voxels is the usual production pain point.
+- Build a sparse voxel octree (GigaVoxels lineage) of incoming radiance / occupancy.
+- Approximate a cosine-weighted gather as a few cones; mip-mapping along each cone yields soft occlusion and a cheap multi-bounce look.
+- Excellent near-field response; memory and incremental rebuild of the voxel volume are the production tax.
+- I3D 2011, DOI 10.1145/1944745.1944787. Full author list restored (was "Crassin et al.").
 
 ## Caveats
-
-- Voxel resolution and update cost dominate; not geometry-agnostic the way RC claims to be.
 
 ## Links
 
 - DOI: [10.1145/1944745.1944787](https://doi.org/10.1145/1944745.1944787)
-- URL: https://doi.org/10.1145/1944745.1944787

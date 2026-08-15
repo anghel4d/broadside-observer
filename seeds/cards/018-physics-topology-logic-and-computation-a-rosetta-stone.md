@@ -20,88 +20,49 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 cites:
-  - title: "Quantum Invariants of Knots and 3-Manifolds"
-    url: "https://doi.org/10.1515/9783110221848"
-    year: 2010
+  - title: "Categories for the Working Mathematician (2nd ed.)"
+    url: "https://doi.org/10.1007/978-1-4757-4721-8"
+    year: 1998
     arxiv: null
-    doi: "10.1515/9783110221848"
-  - title: "<i>Quantum Computation and Quantum Information</i>"
-    url: "https://doi.org/10.1119/1.1463744"
-    year: 2002
+    doi: "10.1007/978-1-4757-4721-8"
+  - title: "Linear Logic"
+    url: "https://doi.org/10.1016/0304-3975(87)90045-4"
+    year: 1987
     arxiv: null
-    doi: "10.1119/1.1463744"
-  - title: "Demonstrating the viability of universal quantum computation using teleportation and single-qubit operations"
-    url: "https://doi.org/10.1038/46503"
-    year: 1999
+    doi: "10.1016/0304-3975(87)90045-4"
+  - title: "Computational lambda-calculus and monads"
+    url: "https://doi.org/10.1109/LICS.1989.39155"
+    year: 1989
     arxiv: null
-    doi: "10.1038/46503"
-  - title: "Lectures on Tensor Categories and Modular Functors"
-    url: "https://doi.org/10.1090/ulect/021"
-    year: 2000
-    arxiv: null
-    doi: "10.1090/ulect/021"
-  - title: "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?"
-    url: "https://doi.org/10.1103/physrev.47.777"
-    year: 1935
-    arxiv: null
-    doi: "10.1103/physrev.47.777"
-  - title: "The Collected Papers of Gerhard Gentzen"
-    url: "https://doi.org/10.1016/s0049-237x(08)x7039-9"
-    year: 1969
-    arxiv: null
-    doi: "10.1016/s0049-237x(08)x7039-9"
-  - title: "Operads in Algebra, Topology and Physics"
-    url: "https://doi.org/10.1090/surv/096"
-    year: 2007
-    arxiv: null
-    doi: "10.1090/surv/096"
-  - title: "Sheaves in Geometry and Logic: A First Introduction to Topos Theory"
-    url: "http://ci.nii.ac.jp/ncid/BA26361245"
-    year: 2018
-    arxiv: null
-    doi: null
-  - title: "Dagger Compact Closed Categories and Completely Positive Maps"
-    url: "https://doi.org/10.1016/j.entcs.2006.12.018"
-    year: 2007
-    arxiv: null
-    doi: "10.1016/j.entcs.2006.12.018"
-  - title: "Toposes, Triples and Theories"
-    url: "https://doi.org/10.1007/978-1-4899-0021-0"
-    year: 1985
-    arxiv: null
-    doi: "10.1007/978-1-4899-0021-0"
-  - title: "An Introduction to Substructural Logics"
-    url: "https://doi.org/10.4324/9780203016244"
-    year: 2002
-    arxiv: null
-    doi: "10.4324/9780203016244"
-  - title: "Anyons and the quantum Hall effect—A pedagogical review"
-    url: "https://doi.org/10.1016/j.aop.2007.10.008"
-    year: 2007
-    arxiv: null
-    doi: "10.1016/j.aop.2007.10.008"
+    doi: "10.1109/LICS.1989.39155"
+see:
+  - "029-categories-for-the-working-mathematician-2nd-ed"
+  - "040-linear-logic"
+  - "037-computational-lambda-calculus-and-monads"
 ---
 
 # Physics, Topology, Logic and Computation: A Rosetta Stone
 
 ## One-sentence takeaway
 
-Dictionary relating physics, topology, logic, and computation via monoidal categories.
+Closed symmetric monoidal categories are the common language in which Feynman diagrams, cobordisms, proofs, and programs are the same pictures — a 73-page dictionary that assumes no prior CT.
 
 ## Why it matters here
 
-Rosetta Stone closed-categories ↔ logics ↔ typed λ ↔ physics — gem for language+engine builders.
+ano’s typed commands, linear resources, and string-diagram thinking are this Rosetta Stone applied to an engine: compact closed structure is how physics-style wiring becomes a compiler IR.
 
 ## Key ideas
 
-- Dictionary relating physics, topology, logic, and computation via monoidal categories.
+- A linear operator is formally like a cobordism; the same string diagrams denote quantum processes, topological cobordisms, sequent proofs, and typed programs.
+- The precise setting is a closed symmetric monoidal category: tensor is parallel composition, the internal hom is implication / function type, and cups and caps are cups and caps.
+- Table-stakes translations: states ↔ proofs of propositions ↔ programs of a type; entanglement ↔ sharing; the no-cloning theorem ↔ linearity.
+- Written as exposition for Coecke’s *New Structures for Physics*; the authors claim no new theorem, only a usable dictionary.
+- The last third walks through the quantum-computation and topology sides so a PL reader can see why compact closure is not optional once you want duals.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [0903.0340](https://arxiv.org/abs/0903.0340)
+- PDF: https://arxiv.org/pdf/0903.0340
 - DOI: [10.1007/978-3-642-12821-9_2](https://doi.org/10.1007/978-3-642-12821-9_2)
-- URL: https://arxiv.org/abs/0903.0340

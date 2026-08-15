@@ -18,18 +18,12 @@ pool: systems
 relevance_score: 8
 lineage: algorithms-and-complexity
 cites:
-- title: On-Line Construction of Suffix Trees
-  url: "https://doi.org/10.1007/BF01206331"
-  year: 1995
-  arxiv: null
-  doi: 10.1007/BF01206331
 - title: Fast Pattern Matching in Strings
   url: "https://doi.org/10.1137/0206024"
   year: 1977
   arxiv: null
   doi: 10.1137/0206024
 see:
-- "756-on-line-construction-of-suffix-trees"
 - "751-fast-pattern-matching-in-strings"
 ---
 
@@ -37,23 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Suffix arrays as a space-practical alternative to suffix trees for string search.
+A suffix array is the sorted list of a string’s suffixes (plus an LCP array), giving suffix-tree queries at a fraction of the pointer overhead by binary-searching the ordered suffixes.
 
 ## Why it matters here
 
-Bioinformatics and compressors; lighter than suffix trees in practice.
+This is the practical full-text index for Broadside corpora, replay logs, and ano source: $O(n)$ integers instead of a pointer-heavy suffix tree, still answering “where does this substring occur?”.
 
 ## Key ideas
 
-- Sorted suffixes with LCP ideas.
-- Binary search for patterns.
-- Less pointer overhead than suffix trees.
-- Spawned DC3/SA-IS constructors.
+- Store the starting positions of all suffixes in lexicographic order; a pattern search is a pair of binary searches that bound the matching interval.
+- Longest-common-prefix information accelerates search and supports longest-repeat / unique-substring queries.
+- Construction in the paper is $O(n\log n)$ via doubling; later DC3 and SA-IS make linear-time builders the default.
+- On the same text the structure is several times smaller than a suffix tree and maps cleanly onto contiguous arrays.
 
 ## Caveats
-
-- Paper’s construction is not modern SA-IS.
-- Suffix trees still nicer for some queries.
 
 ## Links
 

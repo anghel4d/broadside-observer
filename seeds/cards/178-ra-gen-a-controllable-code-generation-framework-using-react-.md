@@ -47,25 +47,22 @@ see:
 
 ## One-sentence takeaway
 
-Code generation models based on large language models (LLMs) have gained wide adoption, but challenges remain in ensuring safety, accuracy, and controllability, especially for complex tasks.
+RA-Gen splits controllable code generation across Planner, ReAct Searcher, CodeGen, and Extractor agents so tool use, reasoning traces, and safety checks stay inspectable.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (RA-Gen: A Controllable Code Generation Framework Using ReAct for Multi-Agent Task Executio)
+A Broadside or Anoptic coding agent that emits engine patches needs this kind of split: plan, search with visible ReAct traces, generate, extract — and a measured security rate, not an opaque one-shot completion.
 
 ## Key ideas
 
-- Code generation models based on large language models (LLMs) have gained wide adoption, but challenges remain in ensuring safety, accuracy, and controllability, especially for complex tasks.
-- Existing methods often lack dynamic integration of external tools, transparent reasoning, and user control over safety.
-- To address these issues, we propose a controllable code generation framework utilizing the ReAct paradigm for multi-agent task execution.
-- This framework is a multi-agent system designed to enable efficient, precise, and interpretable code generation through dynamic interactions between LLMs and external resources.
-- The framework adopts a collaborative architecture comprising four specialized agents: a Planner for task decomposition, a Searcher that leverages the ReAct framework for rea
+- Single-model code generation is treated as insufficient for safety, accuracy, and user control on complex tasks.
+- Four agents collaborate: Planner decomposes, Searcher runs ReAct with external tools, CodeGen writes code, Extractor pulls structured data.
+- The Searcher alternates reasoning traces and actions so internal knowledge and search engines are mixed under user-visible control.
+- On SVEN with CodeQL the framework reports a 94.8% security rate, above the compared baselines.
+- Transparency of the ReAct trace is offered as the controllability mechanism, not a post-hoc filter alone.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2510.08665](https://arxiv.org/abs/2510.08665)
-- URL: https://arxiv.org/abs/2510.08665

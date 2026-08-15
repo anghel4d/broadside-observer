@@ -19,20 +19,10 @@ relevance_score: 9
 lineage: foundations-of-computing
 cites:
   - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+    url: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
     year: 1965
     arxiv: null
     doi: null
-  - title: "A Theory of Program Size Formally Identical to Information Theory"
-    url: "https://doi.org/10.1145/321892.321894"
-    year: 1975
-    arxiv: null
-    doi: "10.1145/321892.321894"
-  - title: "Information-Theoretic Limitations of Formal Systems"
-    url: "https://doi.org/10.1145/321812.321814"
-    year: 1974
-    arxiv: null
-    doi: "10.1145/321812.321814"
   - title: "A Formal Theory of Inductive Inference, Parts I–II"
     url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
     year: 1964
@@ -40,8 +30,6 @@ cites:
     doi: "10.1016/S0019-9958(64)90223-2"
 see:
   - "604-three-approaches-to-the-quantitative-definition-of-informati"
-  - "608-a-theory-of-program-size-formally-identical-to-information-t"
-  - "609-information-theoretic-limitations-of-formal-systems"
   - "610-a-formal-theory-of-inductive-inference-parts-i-ii"
 ---
 
@@ -49,23 +37,21 @@ see:
 
 ## One-sentence takeaway
 
-Chaitin independently develops program-size complexity and incompressibility—AIT's other parent.
+Chaitin independently defines the complexity of a finite binary string as the length of a shortest Turing-machine program that emits it, and proves that almost all strings are incompressible.
 
 ## Why it matters here
 
-Pair with Kolmogorov 1965; incompleteness via complexity later.
+Pair with Kolmogorov 1965: two independent parents of AIT. Chaitin's machine-and-program-size packaging is the one that later produces incompleteness-via-complexity (609) and prefix Ω.
 
 ## Key ideas
 
-- Program-size complexity.
-- Almost-all strings incompressible.
-- JACM 1966.
+- Program-size complexity of an n-bit string is the size of a shortest program for a fixed universal machine.
+- Counting argument: at most 2^k programs of length < k, so most n-bit strings satisfy C(x) ≥ n − O(1).
+- A string is random when it has no description shorter than itself; pattern is identified with compressibility.
+- The paper is JACM 13(4), 1966, pp. 547–569 — Chaitin's first AIT paper, written as an undergraduate.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/321356.321363](https://doi.org/10.1145/321356.321363)
-- URL: https://doi.org/10.1145/321356.321363

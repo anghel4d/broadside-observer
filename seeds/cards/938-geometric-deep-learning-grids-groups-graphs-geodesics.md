@@ -38,22 +38,22 @@ see:
 
 ## One-sentence takeaway
 
-Erlangen-style unification of CNNs, GNNs, RNNs, and Transformers as architectures that respect geometric priors (grids, groups, graphs, geodesics, gauges).
+An Erlangen-style unification of CNNs, GNNs, RNNs, and Transformers as architectures that respect geometric priors — grids, groups, graphs, geodesics, and gauges.
 
 ## Why it matters here
 
-The 'why these architectures' counterpart to Weaves' 'how to write them as terms'. Equivariance is the geometric twin of broadcasting.
+The 'why these architectures' counterpart to Weaves' 'how to write them as terms'. Equivariance is the geometric twin of broadcasting: both are about which axes a map is allowed to see.
 
 ## Key ideas
 
-- arXiv:2104.13478 (proto-book, 156 pp).
-- Two principles: representation/feature learning, and local gradient methods; the rest is geometry.
-- Constructive: prior physical symmetry → architecture, not just post-hoc taxonomy.
+- arXiv:2104.13478, 156-page proto-book.
+- Two principles do most of the work: representation/feature learning, and local gradient methods; the rest is the geometry of the domain.
+- Constructive programme: start from a physical symmetry and derive the architecture, rather than taxonomizing existing nets after the fact.
+- Transformers and GAT sit inside the same picture as convnets once the domain (set, graph, group) is named.
 
 ## Caveats
-
-- Work-in-progress monograph, not a single theorem. Does not give a term calculus; Weaves does.
 
 ## Links
 
 - arXiv: [2104.13478](https://arxiv.org/abs/2104.13478)
+- PDF: https://arxiv.org/pdf/2104.13478

@@ -24,50 +24,29 @@ cites:
     year: 1979
     arxiv: null
     doi: "10.1145/359131.359136"
-  - title: "Prolog in 10 Figures"
-    url: "https://doi.org/10.1145/3166.3168"
-    year: 1985
-    arxiv: null
-    doi: "10.1145/3166.3168"
-  - title: "What You Always Wanted to Know About Datalog (And Never Dared to Ask)"
-    url: "https://doi.org/10.1109/69.43410"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/69.43410"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
 see:
   - "678-algorithm-logic-control"
-  - "679-prolog-in-10-figures"
-  - "039-what-you-always-wanted-to-know-about-datalog-and-never-dared"
-  - "137-the-definition-of-standard-ml-revised"
 ---
 
 # Predicate Logic as Programming Language
 
 ## One-sentence takeaway
 
-Argues Horn-clause predicate logic is a programming language — the logic-programming manifesto.
+Kowalski's IFIP 74 paper reads a Horn clause `B if A1 and … and An` as a procedure: to solve B, solve the Ai — so a proof procedure *is* an interpreter.
 
 ## Why it matters here
 
-Kowalski's root logic-programming paper — why Prolog/Datalog sit on Broadside's languages shelf.
+This is why Prolog and Datalog sit on Broadside's languages shelf, and why a GRID COMMAND planner can treat a rule base as a program rather than as documentation.
 
 ## Key ideas
 
-- Horn clauses as procedures.
-- Procedural interpretation of logical implication.
-- Separation later crystallized as Algorithm = Logic + Control.
-- Foundation for Prolog with Colmerauer's Marseille work.
+- Clausal form is the programming notation; a goal statement is a query; SLD-style resolution is the operational semantics.
+- The procedural interpretation of implication is the manifesto; Colmerauer's Marseille Prolog is the contemporary implementation, not this paper.
+- Computation = deduction under a control strategy — the slogan crystallized five years later as Algorithm = Logic + Control.
+- IFIP Congress 1974, Stockholm, North-Holland, pp. 569–574. Author PDF on Kowalski's Imperial page.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.doc.ic.ac.uk/~rak/papers/IFIP74.pdf
+- Author PDF: https://www.doc.ic.ac.uk/~rak/papers/IFIP74.pdf

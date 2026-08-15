@@ -31,23 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Boyer–Moore sublinear average-case search with bad-character and good-suffix shifts.
+Boyer–Moore compares the pattern from its last character and jumps the window using a bad-character shift and a good-suffix shift, so many texts are searched in fewer than $n$ inspections.
 
 ## Why it matters here
 
-Conceptual parent of high-speed textual search.
+This is the conceptual parent of high-speed `memmem` / asset-path / log search in the Anoptic toolchain: large alphabets and long needles skip most of the haystack.
 
 ## Key ideas
 
-- Compare from pattern end.
-- Bad-character heuristic.
-- Good-suffix heuristic.
-- Sublinear in practice on large alphabets.
+- Alignment is tested from the right end of the pattern, so a mismatch on a rare last character can slide the window almost a full pattern length.
+- The bad-character heuristic shifts so the mismatched text character lines up with its rightmost occurrence in the pattern (or past the window if it does not occur).
+- The good-suffix heuristic shifts to the next alignment that preserves a just-matched suffix of the pattern.
+- Expected inspections on natural-language alphabets are sublinear in $n$; the paper reports substantial speedups over naive and KMP-style left-to-right search.
 
 ## Caveats
-
-- Worst-case needs Galil-style refinements.
-- Binary/DNA alphabets change tradeoffs.
 
 ## Links
 

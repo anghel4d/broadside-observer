@@ -1,39 +1,34 @@
 ---
-title: 'FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision'
+title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision"
 authors:
-- Jay Shah
-- Ganesh Bikshandi
-- Ying Zhang
-- Vijay Thakkar
-- Pradeep Ramani
-- Tri Dao
+  - "Jay Shah"
+  - "Ganesh Bikshandi"
+  - "Ying Zhang"
+  - "Vijay Thakkar"
+  - "Pradeep Ramani"
+  - "Tri Dao"
 year: 2024
-venue: arXiv:cs.LG
-arxiv: '2407.08608'
+venue: "arXiv:cs.LG"
+arxiv: "2407.08608"
 doi: null
-source: https://arxiv.org/abs/2407.08608
+source: "https://arxiv.org/abs/2407.08608"
 topics:
-- rag
-- retrieval
-- kv-serving
-- inference-systems
-- transformer
-- foundations
+  - rag
+  - retrieval
+  - kv-serving
+  - inference-systems
+  - transformer
+  - foundations
 seed_rank: 73
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: agents
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "agents"
 relevance_score: 9
 cites:
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
     year: 2023
     arxiv: "2307.08691"
-    doi: null
-  - title: "CriticalKV: Optimizing KV Cache Eviction from an Output Perturbation Perspective"
-    url: "https://arxiv.org/abs/2502.03805"
-    year: 2025
-    arxiv: "2502.03805"
     doi: null
   - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
     url: "https://arxiv.org/abs/2205.14135"
@@ -49,24 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications.
+FlashAttention-3 uses Hopper asynchrony (warp-specialized TMA/Tensor Core overlap, interleaved matmul/softmax) and FP8 block quantization to push H100 attention to 75% FP16 utilization and near 1.2 PFLOPs/s FP8.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision)
+Every ano/Broadside long-context decode is attention-bound on Hopper-class GPUs; FA3 is the kernel that actually uses the TMA and FP8 units FA2 left idle.
 
 ## Key ideas
 
-- Attention, as a core layer of the ubiquitous Transformer architecture, is the bottleneck for large language models and long-context applications.
-- FlashAttention elaborated an approach to speed up attention on GPUs through minimizing memory reads/writes.
-- However, it has yet to take advantage of new capabilities present in recent hardware, with FlashAttention-2 achieving only 35% utilization on the H100 GPU.
-- We develop three main techniques to speed up attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to (1) overlap overall computation and data movement via warp-specialization and (2) interleave block-wise matmul and softmax operations, and (3) block quantization and incoherent processing that leverages hardware support for FP8 low-precision.
+- FlashAttention-2 reaches only about 35% utilization on H100 because it does not exploit Hopper's async copy and low-precision hardware.
+- Warp specialization overlaps bulk data movement (TMA) with Tensor Core math; block-wise matmul and softmax are interleaved rather than fully staged.
+- Incoherent processing plus block quantization makes FP8 attention numerically stabler: 2.6× lower error than a baseline FP8 attention.
+- FP16 hits up to 740 TFLOPs/s (75% utilization) and 1.5–2.0× over prior FlashAttention on H100.
+- The algorithm remains exact attention in FP16; FP8 is the low-precision path.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2407.08608](https://arxiv.org/abs/2407.08608)
-- URL: https://arxiv.org/abs/2407.08608
+- PDF: https://arxiv.org/pdf/2407.08608

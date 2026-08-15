@@ -49,23 +49,21 @@ see:
 
 ## One-sentence takeaway
 
-Turing proves Turing-computable ⇔ λ-definable—technical backbone of the Church–Turing thesis.
+Turing proves a function of natural numbers is computable by an a-machine if and only if it is λ-definable.
 
 ## Why it matters here
 
-The equivalence theorem Broadside should cite when saying 'Turing = Church'.
+The equivalence theorem Broadside should cite when it says "Turing = Church." Church's review *names* the identification; this paper *proves* both simulations, which is what lets ano treat λ-terms and machine models as interchangeable semantics.
 
 ## Key ideas
 
-- Explicit simulation both ways.
-- Solidifies effective calculability as absolute.
-- Companion to Church's review.
+- Constructs, for each Turing machine, a λ-term that represents its computed function, and conversely compiles each λ-definable function into an a-machine.
+- Together with Kleene's λ ↔ general-recursive proof, makes effective calculability look absolute rather than notation-relative.
+- Companion to Church's 1937 review; do not confuse this JSL paper with the PLMS computable-numbers article.
 
 ## Caveats
-
-- JSTOR/DOI indexes sometimes confuse this with the PLMS paper; title is Computability and λ-Definability.
 
 ## Links
 
 - DOI: [10.2307/2268280](https://doi.org/10.2307/2268280)
-- URL: https://doi.org/10.2307/2268280
+- JSTOR: https://www.jstor.org/stable/2268280

@@ -30,46 +30,30 @@ cites:
     year: 1982
     arxiv: null
     doi: "10.1145/582153.582176"
-  - title: "Theorems for Free!"
-    url: "https://doi.org/10.1145/99370.99404"
-    year: 1989
-    arxiv: null
-    doi: "10.1145/99370.99404"
-  - title: "Report on the Programming Language Haskell: A Non-strict, Purely Functional Language"
-    url: "https://doi.org/10.1145/130697.130699"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/130697.130699"
 see:
   - "629-a-theory-of-type-polymorphism-in-programming"
   - "640-principal-type-schemes-for-functional-programs"
-  - "038-theorems-for-free"
-  - "703-report-on-the-programming-language-haskell-a-non-strict-pure"
 ---
 
 # How to Make Ad-Hoc Polymorphism Less Ad Hoc
 
 ## One-sentence takeaway
 
-Introduces type classes as a disciplined alternative to ad-hoc overloading in Hindley–Milner languages.
+Wadler and Blott introduce type classes: a named collection of overloaded operations, resolved by the type checker, that extends Hindley–Milner without destroying principal types.
 
 ## Why it matters here
 
-The type-class paper — how Haskell-style overloading stays compatible with principal types.
+The type-class paper — how Haskell-style overloading (`Eq`, `Num`, later `Monad`) stays compatible with inferred polymorphism. If ano grows ad-hoc overloading (numeric arrays, pretty-print, serialise), this is the disciplined alternative to C++-style ad hoc.
 
 ## Key ideas
 
-- Type classes separate overloading from parametric polymorphism.
-- Dictionary-passing as an implementation reading.
-- Extends HM without destroying principal types.
-- Foundation for Haskell's Num/Eq/Monad class hierarchy.
+- A class declares a suite of operations; an instance supplies them at a particular type.
+- Dictionary-passing is the implementation reading: the compiler inserts a record of functions.
+- Predicates on type schemes (`Eq α ⇒ α → α → Bool`) keep principal types.
+- POPL 1989, pp. 60–76; foundation of Haskell’s class hierarchy.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/75277.75283](https://doi.org/10.1145/75277.75283)
-- URL: https://doi.org/10.1145/75277.75283

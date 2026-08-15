@@ -71,21 +71,23 @@ cites:
 
 ## One-sentence takeaway
 
-Develops theory and practice of operators in APL: higher-order constructs that produce functions from functions.
+Iverson treats APL operators as higher-order constructors that take functions (and sometimes arrays) and produce new functions — reduction, scan, inner/outer product, and axis are the canonical cases.
 
 ## Why it matters here
 
-Operators-as-combinators foreshadow ano's higher-order array effects and conjugation patterns.
+Ano's fold, scan, mask, and conjugation are this operator layer over columnar arrays: the primitive is a function, the combinator is an operator, and the language should not collapse the two.
 
 ## Key ideas
 
-- Develops theory and practice of operators in APL: higher-order constructs that produce functions from functions.
+- Functions map arrays to arrays; operators map functions (and sometimes data) to functions, so `/`, `\`, `.`, and `∘.` are not just more primitives.
+- Reduction and scan are the sequential and prefix operators on a binary function; inner and outer product are the two-dimensional relatives.
+- Axis and related operators reorient which dimension a function acts on without rewriting the function.
+- The paper develops both the algebraic identities these operators obey and the practical notation that keeps them first-class.
+- Distinguishing operator from function is what lets a small vocabulary generate a large space of array programs.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/357062.357064](https://doi.org/10.1145/357062.357064)
-- URL: https://dl.acm.org/doi/10.1145/357062.357064
+- ACM: https://dl.acm.org/doi/10.1145/357062.357064

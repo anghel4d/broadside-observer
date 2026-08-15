@@ -51,9 +51,6 @@ Anoptic is C + Vulkan. Today every meshlet/RC/compute pass is a second language 
 
 ## Caveats
 
-- Freestanding dialect: non-header-only libc/libstdc++ will not run on the GPU without extra work.
-- Research compiler (HPG 2025); production Anoptic would still need a SPIR-V maintenance story and mesh-shader entry points, not just compute/path-trace.
-- Divergence / control-flow lowering is the hard part — Uniformity Analysis in WGSL (PLDI 2026, inspected, not kept) is the sibling correctness story.
 
 ## Links
 

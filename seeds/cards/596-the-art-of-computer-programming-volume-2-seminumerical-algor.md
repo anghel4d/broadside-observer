@@ -25,7 +25,7 @@ cites:
     arxiv: null
     doi: null
   - title: "Various techniques used in connection with random digits"
-    url: "https://www.worldcat.org/title/monte-carlo-method/oclc/523"
+    url: "https://mcnp.lanl.gov/pdf_files/nbs_vonneumann.pdf"
     year: 1951
     arxiv: null
     doi: null
@@ -34,37 +34,31 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1093/qjmam/1.1.287"
-  - title: "A Mathematical Theory of Communication"
-    url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
-    year: 1948
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1948.tb01338.x"
 see:
   - "595-the-art-of-computer-programming-volume-1-fundamental-algorit"
   - "549-various-techniques-used-in-connection-with-random-digits"
   - "524-rounding-off-errors-in-matrix-processes"
-  - "553-a-mathematical-theory-of-communication"
 ---
 
 # The Art of Computer Programming, Volume 2: Seminumerical Algorithms
 
 ## One-sentence takeaway
 
-TAOCP Vol. 2 treats RNGs and arithmetic—seminumerical algorithms as first-class science.
+TAOCP Volume 2 treats random-number generation and computer arithmetic as algorithms with proofs, not as numerical folklore.
 
 ## Why it matters here
 
-Pairs with von Neumann random notes and Turing rounding; simulation numerics.
+Simulation RNGs and multi-precision paths in the engine are seminumerical in Knuth's sense: discrete algorithms whose correctness is statistical or algebraic.
 
 ## Key ideas
 
-- Random number generation analysis.
-- Multi-precision arithmetic.
-- Statistical tests for RNGs.
+- Linear congruential and related generators are analyzed; spectral and other statistical tests are part of the design, not an afterthought.
+- The volume is the standard depth cite for "what is a good RNG" before modern cryptographic PRNGs.
+- Seminumerical arithmetic: multi-precision integers, floating conversion, gcd, modular methods.
+- First edition 1969; later editions absorb new generators and arithmetic algorithms without changing the charter.
+- Pairs with von Neumann's 1951 random-digits notes and Turing's rounding-error paper.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

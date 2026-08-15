@@ -3,7 +3,7 @@ title: "A Universal Turing Machine with Two Internal States"
 authors:
   - "Claude E. Shannon"
 year: 1956
-venue: "In Automata Studies"
+venue: "Automata Studies (Annals of Mathematics Studies 34)"
 arxiv: null
 doi: null
 source: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
@@ -23,41 +23,29 @@ cites:
     year: 1936
     arxiv: null
     doi: "10.1112/plms/s2-42.1.230"
-  - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
-  - title: "Finite Automata and Their Decision Problems"
-    url: "https://doi.org/10.1147/rd.32.0114"
-    year: 1959
-    arxiv: null
-    doi: "10.1147/rd.32.0114"
 see:
   - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
-  - "530-representation-of-events-in-nerve-nets-and-finite-automata"
-  - "619-finite-automata-and-their-decision-problems"
 ---
 
 # A Universal Turing Machine with Two Internal States
 
 ## One-sentence takeaway
 
-Shannon builds a universal Turing machine with only two states—minimality games that probe universality.
+Shannon constructs a universal Turing machine with only two internal states by shifting complexity into a larger tape alphabet.
 
 ## Why it matters here
 
-Shows how thin universality can be; pairs with Turing 1936 and Minsky later.
+Universality is a budget, not a mystery: ano runtimes can be tiny if the encoding of "the machine being simulated" is allowed to get fat.
 
 ## Key ideas
 
-- State/symbol tradeoffs.
-- Universality with 2 states.
-- Automata Studies volume.
+- Any Turing machine can be recoded so that its finite control has two states and a sufficiently large symbol set, or one symbol and many states.
+- The two-state universal machine stores the simulated machine's transition table on the tape and uses the state bit as a carry of control.
+- State/symbol tradeoffs are quantitative: shrinking one resource inflates the other.
+- The paper sits in Shannon–McCarthy's 1956 *Automata Studies* volume (AMS 34), pages 157–165.
+- Minimality here is about description size of the interpreter, the same instinct as later small universal machines.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

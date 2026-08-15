@@ -4,7 +4,7 @@ authors:
 - Whitfield Diffie
 - Martin E. Hellman
 year: 1976
-venue: IEEE Trans. Information Theory
+venue: IEEE Transactions on Information Theory
 arxiv: null
 doi: 10.1109/TIT.1976.1055638
 source: "https://doi.org/10.1109/TIT.1976.1055638"
@@ -18,18 +18,12 @@ pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
 cites:
-- title: A Method for Obtaining Digital Signatures and Public-Key Cryptosystems
-  url: "https://doi.org/10.1145/359340.359342"
-  year: 1978
-  arxiv: null
-  doi: 10.1145/359340.359342
 - title: Secure Communications Over Insecure Channels
   url: "https://doi.org/10.1145/359460.359473"
   year: 1978
   arxiv: null
   doi: 10.1145/359460.359473
 see:
-- "782-a-method-for-obtaining-digital-signatures-and-public-key-cry"
 - "783-secure-communications-over-insecure-channels"
 ---
 
@@ -37,23 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Public-key cryptography and Diffie-Hellman key exchange.
+Diffie–Hellman separate encryption and decryption keys and give a public-key agreement: two parties publish $g^a$ and $g^b$ and share $g^{ab}$ without a prior secret.
 
 ## Why it matters here
 
-Root of modern secure channels; systems-critical classic.
+This is the root of every TLS-style channel Anoptic, Broadside, or a GRID COMMAND matchmaker will ever open — public-key distribution instead of couriered shared secrets.
 
 ## Key ideas
 
-- Separate encryption and decryption keys.
-- DH over finite cyclic groups.
-- Digital signatures foreshadowed.
-- Ends only-shared-secret key distribution.
+- A public-key cryptosystem publishes an encryption transformation whose inverse stays private.
+- The DH protocol works in a finite cyclic group: security is the discrete-logarithm / computational Diffie–Hellman assumption.
+- Digital signatures are sketched as the dual of public-key encryption (authenticate by decrypting with the private key).
+- The paper ends the “only shared-secret key distribution” era and sets the stage for RSA a year later.
 
 ## Caveats
-
-- Authentication (MITM) essential in practice.
-- Post-quantum migration now required for long-lived systems.
 
 ## Links
 

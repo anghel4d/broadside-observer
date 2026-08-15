@@ -51,23 +51,21 @@ see:
 
 ## One-sentence takeaway
 
-236B MoE / 21B active, 128K context: introduces Multi-head Latent Attention (compress KV into a latent) plus DeepSeekMoE — the architecture V3 inherits.
+V2 is a 236B-total / 21B-active MoE with 128K context that introduces Multi-head Latent Attention — KV compressed into a latent — on top of DeepSeekMoE, cutting KV 93.3% vs DeepSeek 67B and raising max generation throughput 5.76×.
 
 ## Why it matters here
 
-MLA is the KV-cache trick Weaves uses V3 to illustrate. Hardware-relevant: 93.3% KV reduction vs DeepSeek 67B.
+MLA is the KV-cache trick Weaves uses V3 to illustrate. Hardware-relevant for any Broadside/GRID long-context agent: you do not want a full KV cache at 128K, and V3 inherits this architecture rather than inventing a new attention.
 
 ## Key ideas
 
-- arXiv:2405.04434. 236B total, 21B activated; 8.1T pretrain tokens; 128K context.
-- MLA: compress KV cache into a latent vector — 93.3% KV reduction vs DeepSeek 67B; 5.76× max generation throughput.
-- DeepSeekMoE reused from 1239; 42.5% training-cost save vs DeepSeek 67B.
-- SFT + RL post-train. V3 (1206) is this architecture scaled (671B/37B) plus loss-free balancing and MTP.
+- arXiv:2405.04434. 8.1T pretrain tokens; SFT + RL post-train. Even at 21B active, claimed top-tier among then-open models.
+- MLA: compress the KV cache into a latent vector so decode memory traffic collapses; 93.3% KV reduction vs the dense 67B ancestor.
+- DeepSeekMoE reused: fine-grained routed experts plus shared experts. 42.5% training-cost save vs DeepSeek 67B.
+- Still auxiliary-loss MoE balancing; V3 adds loss-free bias and multi-token prediction on a 671B/37B scale-up of this same MLA+MoE skeleton.
+- MLA is not sparse attention; NSA/DSA/CSA come in 2025–26.
 
 ## Caveats
-
-- Still auxiliary-loss MoE balancing; V3's loss-free trick is later (1248/1206).
-- MLA is not sparse attention; NSA/DSA/CSA come in 2025–26.
 
 ## Links
 

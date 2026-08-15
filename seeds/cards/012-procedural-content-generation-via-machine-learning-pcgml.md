@@ -1,11 +1,10 @@
 ---
-
 title: "Procedural Content Generation via Machine Learning (PCGML)"
 authors:
   - "Adam Summerville"
   - "Sam Snodgrass"
   - "Matthew Guzdial"
-  - "Christoffer Holmgard"
+  - "Christoffer Holmgård"
   - "Amy K. Hoover"
   - "Aaron Isaksen"
   - "Andy Nealen"
@@ -29,11 +28,6 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1109/TCIAIG.2011.2148116"
-  - title: "Wave Function Collapse"
-    url: "https://github.com/mxgmn/WaveFunctionCollapse"
-    year: 2016
-    arxiv: null
-    doi: null
   - title: "Experience-Driven Procedural Content Generation"
     url: "https://doi.org/10.1109/TCIAIG.2011.2159716"
     year: 2011
@@ -41,7 +35,6 @@ cites:
     doi: "10.1109/TCIAIG.2011.2159716"
 see:
   - "019-search-based-procedural-content-generation-a-taxonomy-and-su"
-  - "103-wave-function-collapse"
   - "119-experience-driven-procedural-content-generation"
 ---
 
@@ -49,22 +42,24 @@ see:
 
 ## One-sentence takeaway
 
-Surveys procedural content generation via machine learning, covering representations, models, and evaluation practices.
+PCGML trains models on existing game content — levels, maps, stories, cards — so generation, repair, and critique become sample-and-complete rather than search or hand-authored grammars.
 
 ## Why it matters here
 
-PCGML survey — ML-based generation path for Broadside levels/maps/entities.
+GRID COMMAND maps and entity tables are functional content with tiny labeled sets. This survey is the menu of representations (tiles, graphs, sequences) Broadside should try before inventing a new generator.
 
 ## Key ideas
 
-- Surveys procedural content generation via machine learning, covering representations, models, and evaluation practices.
+- PCGML is defined against search-based, solver-based, and constructive PCG: the generator is a model of existing content, not a fitness function or a grammar.
+- Scope is functional content (platformer levels, maps, IF stories, CCG cards), not sprites or SFX.
+- Because the model is of existing work, the same machinery supports mixed-initiative design, compression, repair, and automated critique — not only autonomous generation.
+- Methods covered: LSTMs and convnets, autoencoders, Markov / n-gram / multi-dimensional Markov chains, clustering, and matrix factorization.
+- Open problems that still bite: tiny datasets, missing training data, multi-layer structure (geometry vs mechanics), style transfer, and using PCG itself as a game mechanic.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [1702.00539](https://arxiv.org/abs/1702.00539)
+- PDF: https://arxiv.org/pdf/1702.00539
 - DOI: [10.1109/TG.2018.2846639](https://doi.org/10.1109/TG.2018.2846639)
-- URL: https://arxiv.org/abs/1702.00539

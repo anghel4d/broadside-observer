@@ -44,23 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Post proves the word problem for semigroups unsolvable—rewriting systems can encode computation.
+Post proves the word problem for finitely presented semigroups is unsolvable: there is no algorithm that, given a finite set of string equations, decides whether two words are equivalent.
 
 ## Why it matters here
 
-Direct ancestor of undecidability in term rewriting and string rewrite systems used in tools/PLs.
+Direct ancestor of undecidability in term rewriting, string-diagram rewriting, and any ano/Anoptic tool that treats rewrite rules as a programming language. If the rules can encode a tag system, equality of terms is not a compiler pass.
 
 ## Key ideas
 
-- Semi-Thue systems.
-- Word problem undecidable.
-- Connects to Post correspondence problem era.
+- A semi-Thue system is a finite set of productions \(u \to v\) on words; a Thue system is the symmetric case (equations).
+- Post reduces an unsolvable combinatorial problem (via the 1943 tag-system work) to "are these two words equivalent modulo the equations?"
+- Independently, Markov obtained the same unsolvability in the USSR; the result is often called the Markov–Post theorem.
+- Sets up the later Post correspondence problem and the Boone–Novikov unsolvability of the group word problem.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2267226](https://doi.org/10.2307/2267226)
-- URL: https://doi.org/10.2307/2267226
+- JSTOR: https://www.jstor.org/stable/2267226

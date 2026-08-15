@@ -1,58 +1,59 @@
 ---
-title: Linear Logic
+title: "Linear Logic"
 authors:
-- Jean-Yves Girard
+  - "Jean-Yves Girard"
 year: 1987
-venue: Theoretical Computer Science
+venue: "Theoretical Computer Science"
 arxiv: null
-doi: 10.1016/0304-3975(87)90045-4
-source: https://doi.org/10.1016/0304-3975(87)90045-4
+doi: "10.1016/0304-3975(87)90045-4"
+source: "https://doi.org/10.1016/0304-3975(87)90045-4"
 topics:
-- linear-logic
-- girard
-- proof-theory
-- resources
-- category-theory
+  - linear-logic
+  - girard
+  - proof-theory
+  - resources
+  - category-theory
 seed_rank: 40
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: languages
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "languages"
 relevance_score: 10
 cites:
-- title: Session Types as Intuitionistic Linear Propositions
-  url: https://doi.org/10.1007/978-3-642-23217-6_15
-  year: 2011
-  arxiv: null
-  doi: null
-- title: Notions of Computation and Monads
-  url: https://doi.org/10.1016/0890-5401(91)90052-4
-  year: 1991
-  arxiv: null
-  doi: 10.1016/0890-5401(91)90052-4
+  - title: "Investigations into Logical Deduction"
+    url: "https://doi.org/10.1007/978-3-642-48397-4"
+    year: 1969
+    arxiv: null
+    doi: null
+  - title: "Session Types as Intuitionistic Linear Propositions"
+    url: "https://doi.org/10.1007/978-3-642-23217-6_15"
+    year: 2011
+    arxiv: null
+    doi: "10.1007/978-3-642-23217-6_15"
 see:
-- "121-session-types-as-intuitionistic-linear-propositions"
-- "035-notions-of-computation-and-monads"
+  - "632-investigations-into-logical-deduction"
+  - "121-session-types-as-intuitionistic-linear-propositions"
 ---
 
 # Linear Logic
 
 ## One-sentence takeaway
 
-Introduces linear logic by refining classical/intuitionistic connectives into resource-conscious connectives.
+Girard refines classical and intuitionistic connectives into resource-sensitive ones — multiplicative ⊗/⅋, additive &/⊕, and exponentials !/? — so a hypothesis may be used exactly once unless explicitly reusable.
 
 ## Why it matters here
 
-Girard linear logic — resource-sensitive logic behind linear types, session types, and capability thinking.
+Linear types, session types, and capability calculi all quote this paper. ano’s one-shot commands and Anoptic’s consume-on-use GPU buffers are the same discipline: weakening and contraction are not free.
 
 ## Key ideas
 
-- Introduces linear logic by refining classical/intuitionistic connectives into resource-conscious connectives.
+- Structural rules of Gentzen sequent calculus (weakening, contraction) are the source of “a hypothesis may be used as often as you like”; linear logic removes them by default.
+- Multiplicatives (⊗, ⅋, ⊸) handle independent combination; additives (&, ⊕) handle choice; the two layers are not interchangeable, which is the whole point.
+- Exponentials !A and ?A restore controlled reuse: !A is “as many A as you want,” the logical form of a reusable reference or a boxed thunk.
+- Proof nets give a geometry of interaction that later becomes GoI, geometry of tensor networks, and string-diagram semantics.
+- TCS 50 (1987); this is the founding paper, not the later *Linear Logic: its syntax and semantics* tutorial.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1016/0304-3975(87)90045-4](https://doi.org/10.1016/0304-3975(87)90045-4)
-- URL: https://doi.org/10.1016/0304-3975(87)90045-4

@@ -34,11 +34,6 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
-    url: "https://arxiv.org/abs/2606.19667"
-    year: 2026
-    arxiv: "2606.19667"
-    doi: null
 see:
   - "082-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
   - "002-efficient-memory-management-for-large-language-model-serving"
@@ -48,25 +43,24 @@ see:
 
 ## One-sentence takeaway
 
-Each LLM serving request goes through two phases.
+Sarathi-Serve schedules stall-free batches by splitting prefills into near-equal chunks so new requests join without pausing in-flight decodes.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories (Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve)
+Interactive ano agents need decode tokens to keep flowing while a new long prompt arrives; stall-free chunked prefills are the scheduler that makes that possible.
 
 ## Key ideas
 
-- Each LLM serving request goes through two phases.
-- The first is prefill which processes the entire input prompt and produces the first output token and the second is decode which generates the rest of output tokens, one-at-a-time.
-- Prefill iterations have high latency but saturate GPU compute due to parallel processing of the input prompt.
-- In contrast, decode iterations have low latency but also low compute utilization because a decode iteration processes only a single token per request.
-- This makes batching highly effective for decodes and consequently for overall throughput.
+- Prefill is compute-heavy and high-latency; decode is cheap per token but under-utilizes the GPU unless batched.
+- Interleaving whole prefills with decodes creates pipeline bubbles and a brutal throughput–latency tradeoff.
+- Chunked prefills plus stall-free admission keep batches uniform, so pipeline-parallel stages stay balanced.
+- Versus vLLM: 2.6× serving capacity for Mistral-7B on one A100, up to 3.7× for Yi-34B on two A100s, and up to 5.6× end-to-end on pipeline-parallel Falcon-180B.
+- Source: https://github.com/microsoft/sarathi-serve.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2403.02310](https://arxiv.org/abs/2403.02310)
-- URL: https://arxiv.org/abs/2403.02310
+- PDF: https://arxiv.org/pdf/2403.02310
+- Code: https://github.com/microsoft/sarathi-serve

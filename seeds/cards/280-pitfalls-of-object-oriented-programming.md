@@ -3,10 +3,10 @@ title: "Pitfalls of Object Oriented Programming"
 authors:
   - "Tony Albrecht"
 year: 2009
-venue: "Sony / GDC slides"
+venue: "Sony / GCAP / GDC slides"
 arxiv: null
 doi: null
-source: "https://www.researchgate.net/publication/308689769_Pitfalls_of_object_oriented_programming"
+source: "https://www.gamedevs.org/uploads/pitfalls-of-object-oriented-programming.pdf"
 topics:
   - dod
   - ecs
@@ -48,21 +48,22 @@ see:
 
 ## One-sentence takeaway
 
-Cache-hostile OOP pitfalls → DOD.
+Albrecht's Sony talk shows a pointer-chasing scene graph dying in cache and branch predictors, then rebuilds it as contiguous homogeneous arrays — the slide deck that sold data-oriented design to a generation of engine programmers.
 
 ## Why it matters here
 
-Cache-hostile OOP pitfalls → DOD.
+This is the sermon ano's archetype storage already believes. Quote it when someone wants a virtual `GameObject::Update()` back.
 
 ## Key ideas
 
-- Cache-hostile OOP pitfalls → DOD.
+- Encapsulated object graphs scatter hot fields across cache lines; virtual calls blow the BTB; "clean" OOP becomes memory-bound.
+- Measure: a naïve scene-graph update is dominated by cache misses, not arithmetic.
+- Fix: structure-of-arrays / packed components, iterate homogeneously, update transforms as a stream.
+- Inheritance hierarchies also create the blob class (functionality hoisted to the root so every leaf pays).
+- Gamedevs.org hosts the canonical PDF. ResearchGate was a secondary landing page, not the artifact.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.researchgate.net/publication/308689769_Pitfalls_of_object_oriented_programming
+- PDF: https://www.gamedevs.org/uploads/pitfalls-of-object-oriented-programming.pdf

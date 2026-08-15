@@ -34,25 +34,23 @@ see:
 
 ## One-sentence takeaway
 
-Chase-Lev deque is a concurrent data structure designed for efficient load balancing in multiprocessor scheduling.
+A Coq mechanization in concurrent separation logic proves linearizability of an unbounded, realistic Chase-Lev deque and extends the proof toward safe reclamation and relaxed memory.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Formal Verification of Chase-Lev Deque in Concurrent Separation Logic).
+Anoptic's work-stealing job system is a Chase-Lev deque; this is the proof that the algorithm we would actually ship — unbounded, not a toy ring — is linearizable.
 
 ## Key ideas
 
-- Chase-Lev deque is a concurrent data structure designed for efficient load balancing in multiprocessor scheduling.
-- It employs a work-stealing-schedulers strategy, where each thread possesses its own work-stealing-schedulers deque to store tasks, and idle threads steal tasks from other threads.
-- However, given the inherent risk of bugs in software, particularly in a multiprocessor environment, it is crucial to formally establish the correctness of programs and data structures.
-- To our knowledge, no formal verification work for the Chase-Lev deque has met three key criteria: (1) utilizing a minimal trusted computing base, (2) using a realistic and unrestricted implementation, and (3) proving a strong specification.
-- In this thesis, we address this gap by presenting the formal verification of the Chase-Lev deque using a concurrent separation logic.
+- Prior Chase-Lev proofs missed at least one of: small TCB, unrestricted implementation, strong spec.
+- The thesis hits all three: Coq + concurrent separation logic, unbounded task capacity, linearizability.
+- Owner push/pop and thief steal are the operations under proof.
+- An extension covers safe memory reclamation of retired array blocks.
+- A further sketch targets the weak-memory Chase-Lev used in real C++/Rust runtimes.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2309.03642](https://arxiv.org/abs/2309.03642)
-- URL: https://arxiv.org/abs/2309.03642
+- PDF: https://arxiv.org/pdf/2309.03642

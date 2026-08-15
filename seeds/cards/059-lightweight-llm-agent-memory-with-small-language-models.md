@@ -29,48 +29,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
-    url: "https://arxiv.org/abs/2604.16548"
-    year: 2026
-    arxiv: "2604.16548"
+  - title: "A-MEM: Agentic Memory for LLM Agents"
+    url: "https://arxiv.org/abs/2502.12110"
+    year: 2025
+    arxiv: "2502.12110"
     doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
-    doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
     doi: null
 see:
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "069-a-mem-agentic-memory-for-llm-agents"
+  - "004-memgpt-towards-llms-as-operating-systems"
 ---
 
 # Lightweight LLM Agent Memory with Small Language Models
 
 ## One-sentence takeaway
 
-Although LLM agents can leverage tools for complex tasks, they still need memory to maintain cross-turn consistency and accumulate reusable information in long-horizon interactions.
+LightMem runs retrieval, writing, and long-term consolidation on small language models, with online work under a fixed budget and consolidation moved offline.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (Lightweight LLM Agent Memory with Small Language Models)
+Ano cannot spend a frontier-model call on every memory write during a long GRID COMMAND or Broadside session; LightMem is STM/MTM/LTM paging driven by SLMs with 83 ms median retrieval.
 
 ## Key ideas
 
-- Although LLM agents can leverage tools for complex tasks, they still need memory to maintain cross-turn consistency and accumulate reusable information in long-horizon interactions.
-- However, retrieval-based external memory systems incur low online overhead but suffer from unstable accuracy due to limited query construction and candidate filtering.
-- In contrast, many systems use repeated large-model calls for online memory operations, improving accuracy but accumulating latency over long interactions.
-- We propose LightMem, a lightweight memory system for better agent memory driven by Small Language Models (SLMs).
-- LightMem modularizes memory retrieval, writing, and long-term consolidation, and separates online processing from offline consolidation to enable efficient memory invocation under bo
+- Pure vector memory is cheap online but unstable because query construction and candidate filtering are weak; large-model online memory is accurate but latency compounds.
+- Memory is split into STM (immediate conversational context), MTM (reusable interaction summaries), and LTM (consolidated knowledge), keyed by user id for multi-user isolation.
+- Online selection is two-stage: vector coarse retrieval, then semantic-consistency re-ranking under a fixed retrieval budget.
+- Offline, reusable interaction evidence is abstracted and incrementally merged into LTM.
+- On LoCoMo, LightMem gains about 2.5 F1 over A-MEM across model scales, with 83 ms median retrieval and 581 ms end-to-end.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2604.07798](https://arxiv.org/abs/2604.07798)
-- URL: https://arxiv.org/abs/2604.07798
+- PDF: https://arxiv.org/pdf/2604.07798
+- ACL 2026 (main)

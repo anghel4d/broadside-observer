@@ -74,21 +74,23 @@ lineage: concurrent-data-structures
 
 ## One-sentence takeaway
 
-Defines linearizability — correctness lens for Anoptic lock-free structures.
+A concurrent object is linearizable if every operation appears to take effect instantaneously at a single point between its invocation and response, matching some sequential history of the object's spec.
 
 ## Why it matters here
 
-Defines linearizability — correctness lens for Anoptic lock-free structures.
+Every Anoptic lock-free queue, pool, and job deque is judged against this local sequential-spec test; it is stronger than sequential consistency and composes across objects.
 
 ## Key ideas
 
-- Defines linearizability — correctness lens for Anoptic lock-free structures.
+- Histories are sequences of invocations and responses; linearizability requires a linearization point inside each operation's interval.
+- The condition is local: a system is linearizable iff each object is, so correctness proofs do not need a global schedule.
+- It is non-blocking as a specification: a pending invocation can always be completed without waiting for other processes.
+- Compared with sequential consistency, linearizability preserves real-time order across processes, which sequential consistency may rearrange.
+- Sequential specifications stay ordinary pre/post conditions; concurrency is confined to the linearization argument.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/78969.78972](https://doi.org/10.1145/78969.78972)
-- URL: https://doi.org/10.1145/78969.78972
+- ACM Digital Library: https://dl.acm.org/doi/10.1145/78969.78972

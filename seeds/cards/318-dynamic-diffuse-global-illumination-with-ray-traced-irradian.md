@@ -1,7 +1,10 @@
 ---
 title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
 authors:
-  - "Zander Majercik et al."
+  - "Zander Majercik"
+  - "Jean-Philippe Guertin"
+  - "Derek Nowrouzezahrai"
+  - "Morgan McGuire"
 year: 2019
 venue: "JCGT"
 arxiv: null
@@ -52,23 +55,23 @@ see:
 
 ## One-sentence takeaway
 
-DDGI: world-space irradiance probes updated with hardware ray tracing for dynamic diffuse GI in production engines.
+DDGI stores a world-space irradiance field in a grid of probes, updates those probes with hardware ray tracing, and reconstructs leak-resistant irradiance with a visibility-aware moment interpolant.
 
 ## Why it matters here
 
-Primary industrial probe foil for Radiance Cascades — what shipped SDKs/engines actually run while RC variants chase noiseless cascades and sparse 3D probes.
+This is the industrial probe GI that Radiance Cascades is measured against: Anoptic can ship DDGI-style probes while RC variants chase noiseless cascades.
 
 ## Key ideas
 
-- Maintain a grid of irradiance probes with visibility octohedra, updated by tracing rays from probe positions.
-- Supports dynamic lighting and geometry without full path-traced indirect at every pixel.
-- Became NVIDIA RTXGI / engine-default language for probe GI.
+- Classic irradiance volumes become a compact encoding of the full irradiance field, updated every frame from rays traced at probe positions rather than from precomputed lightmaps.
+- Each probe stores irradiance plus a small visibility/depth representation (octahedral maps) so interpolation can reject probes that are on the other side of a wall.
+- The filtered query uses a moment-based, visibility-aware interpolant instead of trilinear blending of huge spherical textures.
+- Lighting and geometry can move; only the probe field is refreshed, not a full per-pixel path trace.
+- Shipped as NVIDIA RTXGI and became the default language for probe GI in engines. JCGT 8(2), 2019.
 
 ## Caveats
 
-- Probe spacing limits detail; light leaks need bias heuristics (see Scaling Probe-Based…).
-- Diffuse-focused; glossy indirect needs other pathways.
-
 ## Links
 
-- URL: https://jcgt.org/published/0008/02/01/
+- JCGT: https://jcgt.org/published/0008/02/01/
+- PDF: https://jcgt.org/published/0008/02/01/paper.pdf

@@ -30,12 +30,12 @@ cites:
     arxiv: null
     doi: "10.1007/BF02478259"
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
-    url: "https://www.npl.co.uk/famous-faces/alan-turing"
+    url: "https://www.npl.co.uk/getattachment/ea5c6585-0929-4713-962c-2306f8dcf1f2/turing-proposal-Alan-LR.pdf?lang=en-US"
     year: 1946
     arxiv: null
     doi: null
   - title: "Planning and Coding of Problems for an Electronic Computing Instrument"
-    url: "https://www.ias.edu/electronic-computer-project"
+    url: "https://www.ias.edu/sites/default/files/library/pdfs/ecp/planningcodingof0103inst.pdf"
     year: 1947
     arxiv: null
     doi: null
@@ -56,24 +56,22 @@ see:
 
 ## One-sentence takeaway
 
-Von Neumann's EDVAC draft articulates the stored-program computer—the logical organs of a universal machine as engineering.
+Von Neumann's June 1945 draft puts program and data in one memory and names the logical organs of a stored-program computer: CA, CC, M, I, and O.
 
 ## Why it matters here
 
-The architectural ontology behind almost every ano runtime: program and data in one memory.
+The architectural ontology behind almost every Anoptic runtime: instructions are just another column in memory. Backus's later revolt (card 157) only makes sense against this draft; ACE and the IAS machine are the two immediate engineering replies.
 
 ## Key ideas
 
-- Stored-program concept widely circulated.
-- Logical organs: CA, CC, M, I/O.
-- McCulloch–Pitts neural analogy for gates.
-- Credit controversy with Eckert/Mauchly Moore School team.
+- Circulated at the Moore School; von Neumann is sole author of the text that spread, though the ideas were collaborative with Eckert, Mauchly, and the EDVAC team.
+- Logical organs: central arithmetic (CA), central control (CC), memory (M), input (I), output (O).
+- Gates are discussed in McCulloch–Pitts neural language—neurons as switching elements.
+- Stored-program concept: the same memory holds numbers and the coded orders that operate on them.
 
 ## Caveats
 
-- Ideas were collaborative; von Neumann sole-authored the draft that spread.
-
 ## Links
 
-- DOI: [10.5479/sil.538961.39088011475779](https://doi.org/10.5479/sil.538961.39088011475779)
-- URL: https://web.mit.edu/STS.035/www/PDFs/edvac.pdf
+- MIT scan: https://web.mit.edu/STS.035/www/PDFs/edvac.pdf
+- Smithsonian DOI: [10.5479/sil.538961.39088011475779](https://doi.org/10.5479/sil.538961.39088011475779)

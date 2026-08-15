@@ -1,12 +1,14 @@
 ---
 title: "Forward Modeling for Partial Observation Strategy Games - A StarCraft Defogger"
 authors:
-  - "Jonas Gehring"
-  - "Da Ju"
-  - "Vegard Mella"
-  - "Daniel Gant"
-  - "Nicolas Usunier"
   - "Gabriel Synnaeve"
+  - "Zeming Lin"
+  - "Jonas Gehring"
+  - "Dan Gant"
+  - "Vegard Mella"
+  - "Vasil Khalidov"
+  - "Nicolas Carion"
+  - "Nicolas Usunier"
 year: 2018
 venue: "NeurIPS"
 arxiv: "1812.00054"
@@ -23,10 +25,10 @@ pool: "game-ai"
 relevance_score: 9
 cites:
   - title: "StarCraft II: A New Challenge for Reinforcement Learning"
-    url: "http://arxiv.org/abs/1708.04782"
+    url: "https://arxiv.org/abs/1708.04782"
     year: 2017
     arxiv: "1708.04782"
-    doi: "10.48550/arxiv.1708.04782"
+    doi: null
   - title: "A Bayesian model for opening prediction in RTS games with application to StarCraft"
     url: "https://doi.org/10.1109/cig.2011.6032018"
     year: 2011
@@ -47,21 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Formulates RTS defogging as forward modeling from partial observations and evaluates encoder-decoder models on StarCraft.
+Defogging is cast as state estimation plus future-state prediction from partial RTS observations, implemented as a conv+recurrent encoder–decoder trained on human StarCraft: Brood War replays.
 
 ## Why it matters here
 
-Neural defogger for StarCraft state estimation — key partial-observability technique.
+GRID COMMAND and Broadside bots fight in fog; this is neural occupancy/unit prediction that a rule-based bot can actually consume.
 
 ## Key ideas
 
-- Formulates RTS defogging as forward modeling from partial observations and evaluates encoder-decoder models on StarCraft.
+- Proxy tasks and baselines test whether the model learned basic game rules versus high-level dynamics.
+- CNNs capture spatial structure; recurrent layers capture sequential correlation across the fog of war.
+- Downstream, enemy-unit predictions are plugged into a then-SOTA rule-based StarCraft bot and raise win rates against strong community bots.
+- Training data is a large corpus of human Brood War games, not only self-play.
+- NeurIPS 2018 (Advances in Neural Information Processing Systems 31, 10759–10770).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [1812.00054](https://arxiv.org/abs/1812.00054)
-- URL: https://arxiv.org/abs/1812.00054
+- PDF: https://arxiv.org/pdf/1812.00054

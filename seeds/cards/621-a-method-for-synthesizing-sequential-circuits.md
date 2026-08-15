@@ -18,48 +18,34 @@ pool: "systems"
 relevance_score: 8
 lineage: foundations-of-computing
 cites:
-  - title: "Gedanken-Experiments on Sequential Machines"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
   - title: "A Symbolic Analysis of Relay and Switching Circuits"
     url: "https://doi.org/10.1109/T-AIEE.1938.5057767"
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-  - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
 see:
-  - "620-gedanken-experiments-on-sequential-machines"
   - "552-a-symbolic-analysis-of-relay-and-switching-circuits"
-  - "530-representation-of-events-in-nerve-nets-and-finite-automata"
 ---
 
 # A Method for Synthesizing Sequential Circuits
 
 ## One-sentence takeaway
 
-Mealy synthesizes sequential circuits with outputs on transitions—Mealy machines.
+Mealy gives a synthesis procedure for sequential switching circuits whose output is a function of the current state *and* the current input — the Mealy machine.
 
 ## Why it matters here
 
-Pair with Moore; standard FSM taxonomy.
+Pair with Moore 1956: the two standard FSM output conventions. Engine input routers, protocol codecs, and GRID COMMAND command decoders are almost always Mealy (react on the arriving symbol, don't wait a clock).
 
 ## Key ideas
 
-- Transition-output model.
-- Synthesis procedure.
-- Bell Labs switching lineage.
+- Output is written on the *transition*, so a circuit can respond in the same step as the input.
+- A systematic reduction / assignment of internal states from an informal specification of input/output sequences.
+- Bell Labs switching lineage: Shannon's relay algebra plus a sequential state table.
+- *Bell System Technical Journal* 34(5), 1955, pp. 1045–1079.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1002/j.1538-7305.1955.tb03788.x](https://doi.org/10.1002/j.1538-7305.1955.tb03788.x)
-- URL: https://doi.org/10.1002/j.1538-7305.1955.tb03788.x

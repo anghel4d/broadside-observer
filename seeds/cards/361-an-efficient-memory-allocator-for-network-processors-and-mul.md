@@ -1,15 +1,15 @@
 ---
-title: "An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF)"
+title: "TLSF: A New Dynamic Memory Allocator for Real-Time Systems"
 authors:
-  - "M. Masmano"
-  - "I. Ripoll"
-  - "A. Crespo"
-  - "J. Real"
+  - "Miguel Masmano"
+  - "Ismael Ripoll"
+  - "Alfons Crespo"
+  - "Jorge Real"
 year: 2004
-venue: "Real-Time Systems / ECRTS lineage"
+venue: "ECRTS"
 arxiv: null
-doi: null
-source: "http://www.gii.upv.es/tlsf/"
+doi: "10.1109/ECRTS.2004.35"
+source: "https://doi.org/10.1109/ECRTS.2004.35"
 topics:
   - memory-allocation
   - realtime
@@ -41,25 +41,26 @@ see:
   - "202-the-slab-allocator-an-object-caching-kernel-memory-allocator"
 ---
 
-# An Efficient Memory Allocator for Network Processors and Multiprocessors (TLSF)
+# TLSF: A New Dynamic Memory Allocator for Real-Time Systems
 
 ## One-sentence takeaway
 
-TLSF (Two-Level Segregated Fit) provides bounded-time malloc/free suitable for real-time systems.
+Two-Level Segregated Fit gives malloc/free with bounded Θ(1) time by indexing free lists with a two-level bitmap and immediately coalescing.
 
 ## Why it matters here
 
-O(1) real-time allocator — relevant when sim ticks have hard budgets.
+Anoptic sim ticks and GRID COMMAND agent spawns cannot stall on a first-fit walk of a free list. TLSF is the real-time allocator you reach for when a frame budget is hard and you still need general-purpose sizes instead of pure arenas.
 
 ## Key ideas
 
-- TLSF (Two-Level Segregated Fit) provides bounded-time malloc/free suitable for real-time systems.
+- First-level index is a power-of-two size class; second-level splits each class into a fixed number of ranges, addressed by a bitmap so the good-fit list is a couple of bit-scan operations.
+- Immediate coalescing on free keeps fragmentation in check without a periodic sweep.
+- Designed for network processors and multiprocessors where worst-case allocation latency matters more than average throughput.
+- The historical project page is http://www.gii.upv.es/tlsf/; the archival paper is ECRTS 2004 (doi:10.1109/ECRTS.2004.35).
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: http://www.gii.upv.es/tlsf/
+- DOI: https://doi.org/10.1109/ECRTS.2004.35
+- Project page: http://www.gii.upv.es/tlsf/

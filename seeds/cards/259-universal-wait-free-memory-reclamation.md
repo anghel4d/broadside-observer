@@ -1,11 +1,10 @@
 ---
-
 title: "Universal Wait-Free Memory Reclamation"
 authors:
   - "Ruslan Nikolaev"
   - "Binoy Ravindran"
 year: 2020
-venue: "arXiv:cs.DC"
+venue: "PPoPP 2020 / arXiv cs.DC"
 arxiv: "2001.01999"
 doi: "10.1145/3332466.3374540"
 source: "https://arxiv.org/abs/2001.01999"
@@ -44,26 +43,24 @@ see:
 
 ## One-sentence takeaway
 
-In this paper, we present a universal memory reclamation scheme, Wait-Free Eras (WFE), for deleted memory blocks in wait-free concurrent data structures.
+Wait-Free Eras (WFE) lifts lock-free Hazard Eras to a universal wait-free reclaimer so a wait-free data structure no longer has to marry lock-free hazard pointers or blocking epochs.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Universal Wait-Free Memory Reclamation).
+If ano queues and ECS storages advertise wait-freedom, the reclaimer cannot be the thing that blocks. WFE is the "keep the progress guarantee all the way to free()" design, with a Hazard-Pointers-shaped API.
 
 ## Key ideas
 
-- In this paper, we present a universal memory reclamation scheme, Wait-Free Eras (WFE), for deleted memory blocks in wait-free concurrent data structures.
-- WFE's key innovation is that it is completely wait-free.
-- Although some prior techniques provide similar guarantees for certain data structures, they lack support for arbitrary wait-free data structures.
-- Consequently, developers are typically forced to marry their wait-free data structures with lock-free Hazard Pointers or (potentially blocking) epoch-based memory reclamation.
-- Since both these schemes provide weaker progress guarantees, they essentially forfeit the strong progress guarantee of wait-free data structures.
+- Prior wait-free reclaimers were structure-specific; WFE is universal — any wait-free object can use it.
+- Extends Ramalhete and Correia's Hazard Eras rather than classic hazard pointers or EBR, because those two cannot be made wait-free in general.
+- Implementable with the atomics on x86-64 and AArch64; API is mostly drop-in for hazard-pointer code.
+- Throughput sits near epoch-based reclamation and original Hazard Eras while restoring wait-freedom.
+- PPoPP 2020 paper; arXiv:2001.01999.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2001.01999](https://arxiv.org/abs/2001.01999)
 - DOI: [10.1145/3332466.3374540](https://doi.org/10.1145/3332466.3374540)
-- URL: https://arxiv.org/abs/2001.01999
+- PDF: https://arxiv.org/pdf/2001.01999

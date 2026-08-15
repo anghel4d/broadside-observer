@@ -4,7 +4,7 @@ authors:
 - Daniel Dominic Sleator
 - Robert Endre Tarjan
 year: 1985
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/3828.3835
 source: "https://doi.org/10.1145/3828.3835"
@@ -19,7 +19,7 @@ relevance_score: 8
 lineage: algorithms-and-complexity
 cites:
 - title: An Algorithm for the Organization of Information
-  url: "https://en.wikipedia.org/wiki/AVL_tree"
+  url: "https://www.mathnet.ru/eng/dan26964"
   year: 1962
   arxiv: null
   doi: null
@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Splay trees: rotate-to-root access with amortized logarithmic bounds.
+Splay trees rotate the accessed key to the root (zig / zig-zig / zig-zag) and need no balance bits; a potential-function argument gives amortized $O(\log n)$ per operation plus working-set and static-optimality properties.
 
 ## Why it matters here
 
-Amortized analysis showcase; adaptive to working sets.
+This is the amortized-analysis showcase for adaptive maps: recently touched ECS keys, UI trees, and compiler symbol tables migrate to cheap depth without an explicit LRU.
 
 ## Key ideas
 
-- Splaying rotations.
-- Amortized O(log n) via potential.
-- Working-set properties.
-- No explicit balance fields.
+- Every access, insert, or delete finishes by splaying the relevant node to the root, restructuring the tree as a side effect.
+- The potential is a sum of subtree-size logarithms; each splay’s amortized cost is $O(\log n)$.
+- Working-set bound: accessing an item among the $t$ most recent costs amortized $O(\log t)$.
+- No stored balance factors, so nodes are just left/right/parent pointers — but a single operation can still be linear.
 
 ## Caveats
-
-- High constants.
-- Single ops can be linear worst-case.
 
 ## Links
 

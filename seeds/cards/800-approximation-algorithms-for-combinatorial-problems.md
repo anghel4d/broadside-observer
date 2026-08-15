@@ -22,37 +22,28 @@ cites:
   year: 1979
   arxiv: null
   doi: null
-- title: Proof Verification and the Hardness of Approximation Problems
-  url: "https://doi.org/10.1145/278298.278306"
-  year: 1998
-  arxiv: null
-  doi: 10.1145/278298.278306
 see:
 - "727-computers-and-intractability-a-guide-to-the-theory-of-np-com"
-- "801-proof-verification-and-the-hardness-of-approximation-problem"
 ---
 
 # Approximation Algorithms for Combinatorial Problems
 
 ## One-sentence takeaway
 
-Johnson 1974 opens systematic approximation algorithms for NP-hard combinatorial problems.
+Johnson 1974 systematically studies polynomial algorithms that guarantee a bounded ratio to optimal for NP-hard combinatorial problems, with set cover’s $H_n$ greedy bound as the emblematic analysis.
 
 ## Why it matters here
 
-Shows how to cope when Garey-Johnson hardness blocks exact algorithms.
+This is how GRID COMMAND planners and Anoptic packers cope when exact combinatorial search is NP-hard: measure the worst-case ratio, do not pretend Garey–Johnson vanished.
 
 ## Key ideas
 
-- Performance guarantees vs optimal.
-- Greedy set-cover style analyses.
-- Early approximation taxonomy.
-- Bridge from NP-completeness to approximation.
+- Defines performance guarantee as the worst-case ratio (or difference) between the heuristic’s cost and OPT.
+- Analyzes greedy and local-search heuristics for set cover, graph coloring, bin packing, and related problems.
+- Shows that “almost always good” is a different claim from “ratio $\le\rho$ on every instance.”
+- Opens the approximation-algorithms field that PCP / hardness-of-approximation later maps from the other side.
 
 ## Caveats
-
-- Modern hardness-of-approximation (PCP) came later.
-- Survey-scale follow-ons expanded hugely.
 
 ## Links
 

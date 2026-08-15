@@ -6,7 +6,7 @@ year: 1946
 venue: "National Physical Laboratory report"
 arxiv: null
 doi: null
-source: "https://www.npl.co.uk/famous-faces/alan-turing"
+source: "https://www.npl.co.uk/getattachment/ea5c6585-0929-4713-962c-2306f8dcf1f2/turing-proposal-Alan-LR.pdf?lang=en-US"
 topics:
   - ace
   - computer-architecture
@@ -35,7 +35,7 @@ cites:
     arxiv: null
     doi: null
   - title: "The Preparation of Programs for an Electronic Digital Computer"
-    url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
+    url: "https://archive.org/details/preparationofpro00wilk"
     year: 1951
     arxiv: null
     doi: null
@@ -50,23 +50,22 @@ see:
 
 ## One-sentence takeaway
 
-Turing's ACE report is a full stored-program computer design—architecture as applied computability.
+Turing's ACE report is a complete stored-program machine design—instruction set, delay-line memory, subroutine discipline—written by the author of the universal machine.
 
 ## Why it matters here
 
-Pairs with EDVAC: UK stored-program vision from the author of the universal machine.
+Pairs with EDVAC as the UK stored-program vision. Anoptic's runtime (program and data in one memory, libraries of kernels, speed as a first-class constraint) is closer to ACE's "detailed code and a library" culture than to a pure logic paper.
 
 ## Key ideas
 
-- Detailed ACE instruction design.
-- Emphasis on subroutine libraries and speed.
-- Explicit engagement with von Neumann's EDVAC draft.
-- Pilot ACE lineage.
+- Drafted late 1945, submitted to the NPL Executive Committee in February 1946; archive title *Proposed Electronic Calculator*.
+- Specifies a mercury delay-line store, a compact instruction code, and an emphasis on subroutine libraries so the human does not recode elementary operations.
+- Explicitly engages von Neumann's EDVAC draft while pushing a different engineering trade (fewer tubes, more ingenious coding).
+- Lineage runs through Pilot ACE (1950) and the later production ACE.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.npl.co.uk/famous-faces/alan-turing
+- NPL PDF: https://www.npl.co.uk/getattachment/ea5c6585-0929-4713-962c-2306f8dcf1f2/turing-proposal-Alan-LR.pdf?lang=en-US
+- Turing Archive ACE index: https://www.alanturing.net/turing_archive/archive/index/aceindex.html

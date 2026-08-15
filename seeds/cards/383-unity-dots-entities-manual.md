@@ -14,12 +14,12 @@ seed_rank: 383
 seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
-relevance_score: 7
+relevance_score: 8
 lineage: ecs-data-oriented
 cites:
-  - title: "Unity ECS / DOTS architecture overview (Entities package docs)"
-    url: "https://docs.unity3d.com/Packages/com.unity.entities@latest"
-    year: 2018
+  - title: "Data-Oriented Design and C++"
+    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
+    year: 2014
     arxiv: null
     doi: null
   - title: "Archetypal ECS storage and iteration (chunked archetypes pattern)"
@@ -27,36 +27,31 @@ cites:
     year: 2020
     arxiv: null
     doi: null
-  - title: "Data-Oriented Design and C++"
-    url: "https://www.youtube.com/watch?v=rX0ItVEVjHc"
-    year: 2014
-    arxiv: null
-    doi: null
 see:
-  - "325-unity-ecs-dots-architecture-overview-entities-package-docs"
-  - "315-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
   - "194-data-oriented-design-and-c"
+  - "315-archetypal-ecs-storage-and-iteration-chunked-archetypes-patt"
 ---
 
 # Unity DOTS Entities Manual
 
 ## One-sentence takeaway
 
-Chunk iteration / Jobs integration.
+Entities 0.17 documents Unity’s chunked-archetype ECS: entities with the same component set live in 16 KiB chunks, and systems iterate those chunks (optionally via Jobs/Burst) rather than hopping objects.
 
 ## Why it matters here
 
-Chunk iteration / Jobs integration.
+This is the industrial cousin of Anoptic / ano: archetypes, chunk iteration, structural-change barriers, and a jobified system graph. Read it as a worked example of what a production ECS API looks like — and of the costs (sync points, baking, companion GameObjects) Unity paid to get there.
 
 ## Key ideas
 
-- Chunk iteration / Jobs integration.
+- Archetype = set of component types; a chunk holds a SoA slab of one archetype, cache-line friendly for linear system loops.
+- `Entities.ForEach` / `IJobEntity` schedule work over matching chunks; Burst compiles the inner loop.
+- Structural changes (add/remove component, instantiate) move entities between chunks and are deferred to sync points so jobs can run safely.
+- Conversion / baking turns authoring GameObjects into entities; runtime is not the MonoBehaviour scene graph.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html
+- Entities 0.17 manual: https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html
+- Current package docs: https://docs.unity3d.com/Packages/com.unity.entities@latest

@@ -19,7 +19,7 @@ relevance_score: 8
 lineage: foundations-of-computing
 cites:
   - title: "The Consistency of the Axiom of Choice and of the Generalized Continuum Hypothesis with the Axioms of Set Theory"
-    url: "https://press.princeton.edu/books/paperback/9780691079271/the-consistency-of-the-continuum-hypothesis"
+    url: "https://archive.org/details/consistencyofaxi0054gode"
     year: 1940
     arxiv: null
     doi: null
@@ -43,23 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Gödel argues CH is a meaningful, currently undecided mathematical question—not a matter of linguistic convention.
+Gödel treats the continuum hypothesis as a definite mathematical question that current axioms leave open, and predicts that new axioms of infinity may settle it.
 
 ## Why it matters here
 
-Frames independence results as scientific, not merely formalist games—tone-setting for 'open foundations' attitudes.
+Broadside's archive spine is full of independence and completeness results; this essay is the tone-setting argument that an undecided question is still a scientific one. When Anoptic debates whether a standing rule, type, or simulation axiom is "just convention," Gödel's reply is: keep looking for the next axiom that forces a unique answer.
 
 ## Key ideas
 
-- CH status after relative consistency.
-- Prediction that new axioms may settle CH.
-- 1947 essay; revised 1964.
+- After the 1940 relative-consistency proof, CH is not refutable from ZF + AC, but Gödel refuses to read that as "CH has no meaning."
+- He argues that set theory describes an objective universe of sets, so \(2^{\aleph_0} = \aleph_1\) is either true or false there.
+- The essay sketches why \(V = L\) looks too thin to be the whole universe and why large-cardinal axioms might decide CH.
+- The 1964 revised version (in Benacerraf–Putnam) restates the same program after Cohen's independence result.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2305611](https://doi.org/10.2307/2305611)
-- URL: https://doi.org/10.2307/2305611
+- JSTOR: https://www.jstor.org/stable/2305611

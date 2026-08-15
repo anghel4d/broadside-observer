@@ -30,46 +30,30 @@ cites:
     year: 1993
     arxiv: null
     doi: "10.1145/155360.155364"
-  - title: "A Theory of Objects"
-    url: "https://doi.org/10.1007/978-1-4419-8598-9"
-    year: 1996
-    arxiv: null
-    doi: "10.1007/978-1-4419-8598-9"
-  - title: "A Denotational Semantics of Inheritance and Its Correctness"
-    url: "https://doi.org/10.1145/74877.74884"
-    year: 1989
-    arxiv: null
-    doi: "10.1145/74877.74884"
 see:
   - "682-smalltalk-80-the-language-and-its-implementation"
   - "680-the-early-history-of-smalltalk"
-  - "669-a-theory-of-objects"
-  - "688-a-denotational-semantics-of-inheritance-and-its-correctness"
 ---
 
 # SELF: The Power of Simplicity
 
 ## One-sentence takeaway
 
-Introduces SELF: prototype-based OO with extreme simplicity and later aggressive VM optimization culture.
+Ungar and Smith replace classes with prototypes: every object is a cloneable collection of slots, and inheritance is parent-pointer delegation.
 
 ## Why it matters here
 
-SELF is the prototype/OO-VM classic that fed Java HotSpot ideas — important systems-OO card beside Smalltalk.
+SELF is the prototype/OO-VM classic that fed Java HotSpot and JavaScript's prototypal story — the systems-OO card beside Smalltalk when Anoptic wonders whether entities need a class table.
 
 ## Key ideas
 
-- Prototypes instead of classes.
-- Uniform object model with slots.
-- Sets up later SELF VM optimization papers.
-- Influences JavaScript's prototypal storytelling and HotSpot lineage.
+- No classes and no types in the language: an object has slots that hold values or methods; cloning plus slot addition is how you specialize.
+- Messages look up through parent slots; `self` is the original receiver, so parents are shared behaviour, not templates.
+- Extreme simplicity is the point; the later SELF VMs (maps, PICs, adaptive optimization) are why HotSpot looks the way it does, but those are follow-on papers.
+- OOPSLA 1987, DOI 10.1145/38765.38828.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/38765.38828](https://doi.org/10.1145/38765.38828)
-- URL: https://doi.org/10.1145/38765.38828

@@ -29,43 +29,30 @@ cites:
     year: 1973
     arxiv: null
     doi: null
-  - title: "The Preparation of Programs for an Electronic Digital Computer"
-    url: "https://www.worldcat.org/title/preparation-of-programs-for-an-electronic-digital-computer/oclc/523"
-    year: 1951
-    arxiv: null
-    doi: null
-  - title: "The FORTRAN Automatic Coding System"
-    url: "https://doi.org/10.1145/1455567.1455599"
-    year: 1957
-    arxiv: null
-    doi: "10.1145/1455567.1455599"
 see:
   - "596-the-art-of-computer-programming-volume-2-seminumerical-algor"
   - "597-the-art-of-computer-programming-volume-3-sorting-and-searchi"
-  - "572-the-preparation-of-programs-for-an-electronic-digital-comput"
-  - "622-the-fortran-automatic-coding-system"
 ---
 
 # The Art of Computer Programming, Volume 1: Fundamental Algorithms
 
 ## One-sentence takeaway
 
-TAOCP Vol. 1 sets the literate, analysis-first standard for algorithms and information structures.
+TAOCP Volume 1 sets the literate, MIX-machine standard for analyzing fundamental algorithms and information structures.
 
 ## Why it matters here
 
-Craft bible; MIX and meticulous analysis as Broadside craft culture.
+Engine data structures — lists, trees, packing, allocation — are still argued in Knuth's style: exact counts, not folklore. This is the craft bible.
 
 ## Key ideas
 
-- Mathematical analysis of algorithms.
-- Information structures.
-- MIX machine pedagogy.
-- Lifelong multi-volume project begins.
+- Mathematical preliminaries (MMIX later replaces MIX) give a uniform cost model for every later algorithm.
+- Information structures: sequential and linked allocation, arrays, trees, multilinked structures, garbage collection.
+- Analysis of algorithms is a first-class subject: generating functions, worst/average case, exact leading terms.
+- First edition Addison-Wesley 1968; later editions keep the same charter while updating the machine and the exercises.
+- Author page `https://www-cs-faculty.stanford.edu/~knuth/taocp.html` is the stable landing page for the series.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

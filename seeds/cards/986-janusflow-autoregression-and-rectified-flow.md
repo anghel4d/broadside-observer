@@ -43,22 +43,20 @@ see:
 
 ## One-sentence takeaway
 
-Puts rectified flow inside the LLM for image generation, still with decoupled encoders and representation alignment; CVPR 2025.
+JanusFlow trains a rectified-flow image generator inside the LLM — still with Janus's decoupled encoders and an added representation-alignment loss — rather than emitting AR image tokens or bolting on a UNet.
 
 ## Why it matters here
 
-Shows the Janus LLM can host a flow matching head without a UNet-shaped fork. Useful if Anoptic ever wants AR+flow in one term.
+Shows the Janus LLM can host a flow-matching head without a UNet-shaped fork. Useful if Anoptic ever wants AR understanding and flow generation in one term.
 
 ## Key ideas
 
-- arXiv:2411.07975, accepted CVPR 2025. Minimalist: train rectified flow in the LLM framework, no heavy architectural add-ons.
-- Keeps Janus's decoupled understanding/generation encoders and adds representation alignment during unified training.
-- Claimed comparable to specialists and above other unified models.
+- arXiv:2411.07975, accepted CVPR 2025. Minimalist: rectified flow lives in the LLM framework, no heavy architectural add-ons.
+- Keeps decoupled understanding/generation encoders; representation alignment during unified training keeps the two paths from drifting.
+- Claimed comparable to specialist generators and above other unified models.
+- Parallel to Janus-Pro (data/model scale of AR Janus), not a replacement of the AR image-token path. Understanding remains autoregressive.
 
 ## Caveats
-
-- Parallel to Janus-Pro (data/model scale of AR Janus), not a replacement of the AR image-token path.
-- Flow matching is the generation story; understanding is still AR.
 
 ## Links
 

@@ -46,23 +46,20 @@ see:
 
 ## One-sentence takeaway
 
-Continues Coder-Base-v1.5 7B on 120B math tokens and introduces GRPO — the PPO variant R1 later scales into a reasoning recipe.
+Continues Coder-Base-v1.5 7B on 120B math-related Common-Crawl tokens (plus NL/code) and introduces GRPO — a PPO variant that drops the critic and uses group-relative advantages — reaching 51.7% on competition MATH without tools or voting.
 
 ## Why it matters here
 
-GRPO is the RL primitive behind R1 (1252). For Broadside: a verifiable-reward RL loop that coding/math agents can actually run.
+GRPO is the RL primitive behind R1. For Broadside: a verifiable-reward RL loop that coding/math agents can actually run, cheaper in memory than PPO because there is no value model.
 
 ## Key ideas
 
-- arXiv:2402.03300. DeepSeekMath 7B: continue-pretrain Coder-Base-v1.5 7B with 120B math-related Common-Crawl tokens plus NL/code.
-- 51.7% on competition MATH without tools or voting; 60.9% with self-consistency @64. Claimed near Gemini-Ultra / GPT-4 on that bench.
-- Group Relative Policy Optimization (GRPO): PPO variant that drops the critic and uses group-relative advantages — much cheaper memory than PPO.
-- Data-selection pipeline over public web math is the other half of the result.
+- arXiv:2402.03300. Data-selection pipeline over public web math is half the result; the other half is the RL algorithm.
+- 51.7% MATH single-sample; 60.9% with self-consistency @64. Claimed near Gemini-Ultra / GPT-4 on that 2024 bench.
+- Group Relative Policy Optimization: sample a group of outputs per prompt, normalize advantages inside the group, skip the critic. Same recipe R1 later scales onto V3.
+- This paper is math SFT+RL on a 7B dense model, not the later pure-RL R1-Zero recipe.
 
 ## Caveats
-
-- 7B dense, not the later 671B R1. GRPO here is math-SFT+RL, not the pure-RL R1-Zero recipe.
-- MATH numbers are 2024; treat as the origin of GRPO, not current math SOTA.
 
 ## Links
 

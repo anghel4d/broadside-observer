@@ -41,18 +41,18 @@ Position paper: categorical deep learning is not a niche — it is an algebraic 
 
 ## Why it matters here
 
-The manifesto Weaves quietly implements. If you only read one CDL position piece, this is it.
+The manifesto Weaves quietly implements. If you only read one CDL position piece, this is it: algebra of architectures, not just string diagrams of one net.
 
 ## Key ideas
 
 - ICML 2024 position; arXiv:2402.15332.
 - Claims an algebraic (not merely diagrammatic) theory of architectures.
-- Sits with Cruttwell/Gavranović lenses and Shiebler et al. 2021 survey.
+- Sits with Cruttwell/Gavranović lenses (cards 940/941) and the Shiebler et al. 2021 survey (card 955).
+- Position, not a complete calculus; Weaves 2026 is the broadcasting-and-implementation follow-through.
 
 ## Caveats
-
-- Position, not a complete calculus. Weaves 2026 is the broadcasting-and-implementation follow-through.
 
 ## Links
 
 - arXiv: [2402.15332](https://arxiv.org/abs/2402.15332)
+- PDF: https://arxiv.org/pdf/2402.15332

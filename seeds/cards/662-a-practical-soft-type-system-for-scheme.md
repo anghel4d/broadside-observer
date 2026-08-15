@@ -35,41 +35,31 @@ cites:
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010051815785"
-  - title: "RABBIT: A Compiler for Scheme"
-    url: "https://dspace.mit.edu/handle/1721.1/6913"
-    year: 1978
-    arxiv: null
-    doi: null
 see:
   - "661-soft-typing"
   - "660-a-syntactic-approach-to-type-soundness"
   - "675-the-revised-5-report-on-the-algorithmic-language-scheme"
-  - "674-rabbit-a-compiler-for-scheme"
 ---
 
 # A Practical Soft Type System for Scheme
 
 ## One-sentence takeaway
 
-Engineering a practical soft type system for Scheme with inferred soft types and inserted checks.
+Soft Scheme infers recursive union types for R4RS Scheme and erases every run-time check the inference can prove unnecessary, including on assignment and first-class continuations.
 
 ## Why it matters here
 
-The practical soft-typing card for Scheme — complements Cartwright–Fagan and Wright–Felleisen soundness.
+This is the implemented ancestor of "accept the program, inject the residual checks" — the contract you want if ano ever soft-types host Scheme/Lisp or agent scripts instead of rejecting them.
 
 ## Key ideas
 
-- Soft types implemented for a realistic Scheme subset.
-- Balances static guarantees with dynamic acceptance.
-- Influences later gradual typing narratives.
-- Shows soft typing beyond a toy calculus.
+- Underlying system generalizes Hindley–Milner with recursive types and a limited union type, so Scheme's uncurried, variable-arity procedures still have principal soft types.
+- The typechecker *eliminates* provably-redundant primitive checks and *flags* the rest as potential errors; flagged sites stay as dynamic tests.
+- Handles the whole of R4RS that matters: `set!`, `call/cc`, and multiple return values are in the formalized fragment.
+- TOPLAS 19(1), 1997, DOI 10.1145/239912.239917. Cartwright–Fagan 1991 is the idea; this is the system.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/239912.239917](https://doi.org/10.1145/239912.239917)
-- URL: https://doi.org/10.1145/239912.239917

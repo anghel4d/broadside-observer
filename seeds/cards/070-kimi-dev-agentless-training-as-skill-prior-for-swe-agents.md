@@ -38,50 +38,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "Change2Task: From Repository Changes to Executable Coding Agent Tasks and Environments"
-    url: "https://arxiv.org/abs/2607.28591"
-    year: 2026
-    arxiv: "2607.28591"
+  - title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    url: "https://arxiv.org/abs/2310.06770"
+    year: 2023
+    arxiv: "2310.06770"
     doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
-    doi: null
-  - title: "LoopsBench: From Harness Engineering to Loop Engineering in Coding Agent Evaluation"
-    url: "https://arxiv.org/abs/2608.00267"
-    year: 2026
-    arxiv: "2608.00267"
+  - title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+    url: "https://arxiv.org/abs/2405.15793"
+    year: 2024
+    arxiv: "2405.15793"
     doi: null
 see:
-  - "052-change2task-from-repository-changes-to-executable-coding-age"
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
-  - "060-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
+  - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
 # Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents
 
 ## One-sentence takeaway
 
-Large Language Models (LLMs) are increasingly applied to software engineering (SWE), with SWE-bench as a key benchmark.
+Reasoning-intensive Agentless training induces localization, edit, and self-reflection skill priors that transfer into SWE-Agent rollouts after a small SFT adaptation.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (Kimi-Dev: Agentless Training as Skill Prior for SWE-Agents)
+Ano can train cheap, verifiable single-turn skills and then drop them into a multi-turn harness, instead of treating Agentless workflows and SWE-Agents as rival stacks.
 
 ## Key ideas
 
-- Large Language Models (LLMs) are increasingly applied to software engineering (SWE), with SWE-bench as a key benchmark.
-- Solutions are split into SWE-Agent frameworks with multi-turn interactions and workflow-based Agentless methods with single-turn verifiable steps.
-- We argue these paradigms are not mutually exclusive: reasoning-intensive Agentless training induces skill priors, including localization, code edit, and self-reflection that enable efficient and effective SWE-Agent adaptation.
-- In this work, we first curate the Agentless training recipe and present Kimi-Dev, an open-source SWE LLM achieving 60.4\% on SWE-bench Verified, the best among workflow approaches.
-- With additional SFT adaptation on 5k publicly-available trajectories, Kimi-Dev powers SWE-Agents to 48.6\% pass@1, on par wit
+- SWE-Agent frameworks are multi-turn interactive; Agentless methods are single-turn verifiable steps. The paper treats them as sequential, not exclusive.
+- Kimi-Dev is an open SWE LLM that hits 60.4% on SWE-bench Verified under the workflow (Agentless) setting, best among that class at publication.
+- After SFT on 5k public trajectories, the same weights power SWE-Agents to 48.6% pass@1, matching Claude 3.5 Sonnet (241022).
+- Induced priors include localization, code edit, and self-reflection.
+- Code: https://github.com/MoonshotAI/Kimi-Dev.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2509.23045](https://arxiv.org/abs/2509.23045)
-- URL: https://arxiv.org/abs/2509.23045
+- PDF: https://arxiv.org/pdf/2509.23045
+- Code: https://github.com/MoonshotAI/Kimi-Dev

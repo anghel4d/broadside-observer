@@ -41,23 +41,20 @@ see:
 
 ## One-sentence takeaway
 
-Pure RL (GRPO) on V3 incentivizes long chain-of-thought — self-reflection, verification, strategy switching — then distills it into smaller models; R1-Zero needs no human CoT traces.
+Pure GRPO on V3 (R1-Zero) incentivizes long chain-of-thought — self-reflection, verification, strategy switching — without human CoT traces; R1 then adds a cold-start SFT and a cleanup pass so the same reasoning is readable and less harmful, and distills into Qwen/Llama-sized models.
 
 ## Why it matters here
 
-The reasoning-agent paper. GRPO from Math (1241) scaled onto V3 (1206). Distilled checkpoints are what most local agents actually run.
+The reasoning-agent paper. GRPO from Math scaled onto the V3 backbone. Distilled checkpoints are what most local Broadside agents actually run; the recipe is RL-on-verifiable-rewards, not a new architecture.
 
 ## Key ideas
 
 - arXiv:2501.12948. R1-Zero: RL on V3 with verifiable rewards (math/code/STEM), no SFT traces; long CoT and self-reflection emerge.
-- R1: cold-start SFT then RL, plus a rejection-sampling / SFT cleanup, for readability and harmlessness on top of R1-Zero's raw reasoning.
-- Distill R1 traces into Qwen/Llama-sized models; claimed that the big model's reasoning patterns transfer.
-- Recipe is GRPO (1241) + V3 backbone, not a new architecture.
+- R1: cold-start SFT then RL, plus rejection-sampling / SFT cleanup, for readability and harmlessness on top of R1-Zero's raw reasoning.
+- Distill R1 traces into smaller Qwen/Llama models; claimed that the big model's reasoning patterns transfer.
+- Works where you can check answers. Open-ended chat still needs the SFT mix. Safety/censorship of released checkpoints is a separate story from the RL result.
 
 ## Caveats
-
-- Verifiable-reward RL: works where you can check answers. Open-ended chat still needs the SFT mix.
-- Safety/censorship behavior of the released checkpoints is a separate story from the RL result.
 
 ## Links
 

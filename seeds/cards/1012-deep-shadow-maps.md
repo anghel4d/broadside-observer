@@ -50,9 +50,6 @@ Williams 1978 (1005) plus cascaded/VSM (356, 359) cover opaque hard/soft shadows
 
 ## Caveats
 
-- Designed for offline Reyes/RenderMan; a Vulkan 2.0 engine must budget the per-texel function (or a moment/Fourier stand-in) against real-time occupancy.
-- Does not solve colored transmission or spectral participating media; it is scalar visibility.
-- Later moment/Fourier/exponential shadow maps are real-time approximations of the same idea; do not remint those as Archive gems.
 
 ## Links
 

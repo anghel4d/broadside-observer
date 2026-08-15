@@ -49,24 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-In this work, we present StarMalloc, a verified, security-oriented, concurrent memory allocator that can be used as a drop-in replacement in real-world projects.
+StarMalloc is a Steel-verified, security-oriented concurrent allocator that drops into real programs — including Firefox — and stays competitive with ten production mallocs.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (StarMalloc: A Formally Verified, Concurrent, Performant, and Security-Oriented M).
+Anoptic wants a hardened default heap that is not just "fast like mimalloc" but actually proven; StarMalloc is the existence proof that verification, security hardening, and drop-in performance can coexist.
 
 ## Key ideas
 
-- In this work, we present StarMalloc, a verified, security-oriented, concurrent memory allocator that can be used as a drop-in replacement in real-world projects.
-- Using the Steel separation logic framework, we show how to specify and verify StarMalloc, relying on dependent types and modular abstractions to enable efficient verification.
-- As part of StarMalloc, we also develop several generic datastructures and proof libraries directly reusable in future systems verification projects.
-- We finally show that StarMalloc can be used with real-world projects, including the Firefox browser, and evaluate it against 10 state-of-the-art memory allocators, demonstrating its competitiveness.
+- Specified and verified in the Steel concurrent separation-logic framework using dependent types and modular abstractions.
+- Ships reusable verified datastructures and proof libraries for later systems work.
+- Security-oriented: the design targets the usual malloc attack surface rather than being a pure speed hack.
+- Evaluated as a drop-in against 10 state-of-the-art allocators and used with Firefox.
+- Concurrent, so it is not a single-threaded verified toy heap.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2403.09435](https://arxiv.org/abs/2403.09435)
-- URL: https://arxiv.org/abs/2403.09435
+- PDF: https://arxiv.org/pdf/2403.09435

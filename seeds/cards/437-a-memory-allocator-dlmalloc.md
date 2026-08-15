@@ -58,8 +58,6 @@ Still the reference uniprocessor size-class design; jemalloc/tcmalloc/mimalloc a
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - HTML: https://gee.cs.oswego.edu/dl/html/malloc.html

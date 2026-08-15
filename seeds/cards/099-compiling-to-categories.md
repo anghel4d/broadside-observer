@@ -5,8 +5,8 @@ authors:
 year: 2017
 venue: "Proceedings of the ACM on Programming Languages (ICFP)"
 arxiv: null
-doi: "10.1145/3110275"
-source: "https://doi.org/10.1145/3110275"
+doi: "10.1145/3110271"
+source: "https://doi.org/10.1145/3110271"
 topics:
   - category-theory
   - cartesian-closed
@@ -19,87 +19,42 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 9
 cites:
-  - title: "A Syntactic Approach to Type Soundness"
-    url: "https://doi.org/10.1006/inco.1994.1093"
-    year: 1994
+  - title: "General Theory of Natural Equivalences"
+    url: "https://doi.org/10.2307/1990284"
+    year: 1945
     arxiv: null
-    doi: "10.1006/inco.1994.1093"
-  - title: "Principal type-schemes for functional programs"
-    url: "https://doi.org/10.1145/582153.582176"
-    year: 1982
-    arxiv: null
-    doi: "10.1145/582153.582176"
-  - title: "Towards a theory of type structure"
-    url: "https://doi.org/10.1007/3-540-06859-7_148"
-    year: 1974
-    arxiv: null
-    doi: "10.1007/3-540-06859-7_148"
-  - title: "An Intuitionistic Theory of Types: Predicative Part"
-    url: "https://doi.org/10.1016/s0049-237x(08)71945-1"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/s0049-237x(08)71945-1"
-  - title: "Idris, a general-purpose dependently typed programming language: Design and implementation"
-    url: "https://doi.org/10.1017/s095679681300018x"
-    year: 2013
-    arxiv: null
-    doi: "10.1017/s095679681300018x"
-  - title: "Intuitionistic type theory"
-    url: "https://ci.nii.ac.jp/ncid/BA02733323"
-    year: 1984
-    arxiv: null
-    doi: null
-  - title: "Simple unification-based type inference for GADTs"
-    url: "https://doi.org/10.1145/1159803.1159811"
-    year: 2006
-    arxiv: null
-    doi: "10.1145/1159803.1159811"
-  - title: "Giving Haskell a promotion"
-    url: "https://doi.org/10.1145/2103786.2103795"
-    year: 2012
-    arxiv: null
-    doi: "10.1145/2103786.2103795"
-  - title: "Ott: Effective tool support for the working semanticist"
-    url: "https://doi.org/10.1017/s0956796809990293"
-    year: 2010
-    arxiv: null
-    doi: "10.1017/s0956796809990293"
-  - title: "Combining proofs and programs in a dependently typed language"
-    url: "https://doi.org/10.1145/2535838.2535883"
-    year: 2014
-    arxiv: null
-    doi: "10.1145/2535838.2535883"
-  - title: "Visible Type Application"
-    url: "https://doi.org/10.1007/978-3-662-49498-1_10"
-    year: 2016
-    arxiv: null
-    doi: "10.1007/978-3-662-49498-1_10"
-  - title: "Computational higher-dimensional type theory"
-    url: "https://doi.org/10.1145/3009837.3009861"
-    year: 2016
-    arxiv: null
-    doi: "10.1145/3009837.3009861"
+    doi: "10.2307/1990284"
+  - title: "Seven Sketches in Compositionality: An Invitation to Applied Category Theory"
+    url: "https://arxiv.org/abs/1803.05316"
+    year: 2018
+    arxiv: "1803.05316"
+    doi: "10.1017/9781108668804"
+see:
+  - "050-general-theory-of-natural-equivalences"
+  - "094-seven-sketches-in-compositionality-an-invitation-to-applied-"
 ---
 
 # Compiling to Categories
 
 ## One-sentence takeaway
 
-Uses Lambek's CCC correspondence to compile Haskell into non-standard categorical interpretations.
+A GHC plugin rewrites Haskell into cartesian-closed-category combinators once, then each target — circuits, automatic differentiation, incremental computation, interval analysis — is just another `Category` instance.
 
 ## Why it matters here
 
-Elliott: Haskell → CCC interpretations (AD, circuits, matrices) — applied Lambek for builders.
+Anoptic already thinks in wiring and multiple interpretations of the same term; Elliott's CCC compilation is that idea as a compiler pass rather than a deeply embedded DSL.
 
 ## Key ideas
 
-- Uses Lambek's CCC correspondence to compile Haskell into non-standard categorical interpretations.
+- Simply typed lambda calculus is modeled by any CCC, so a typed program can be given many semantics by changing the category.
+- The plugin is independent of the target: new interpretations are ordinary Haskell instances (`Category`, `Cartesian`, `Closed`) outside the compiler.
+- Demonstrated targets include hardware circuits, automatic differentiation, incremental computation, and interval analysis.
+- The technique is positioned as an alternative to deeply embedded DSLs, which force the host language to be quoted rather than compiled.
+- PACMPL 1(ICFP), Article 27; correct DOI is 10.1145/3110271 (not 10.1145/3110275). Author PDF: https://conal.net/papers/compiling-to-categories/compiling-to-categories.pdf.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1145/3110275](https://doi.org/10.1145/3110275)
-- URL: https://doi.org/10.1145/3110275
+- DOI: [10.1145/3110271](https://doi.org/10.1145/3110271)
+- Author PDF: https://conal.net/papers/compiling-to-categories/compiling-to-categories.pdf

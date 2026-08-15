@@ -17,11 +17,11 @@ pool: "systems"
 relevance_score: 9
 cites:
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
+    url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
     arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
+    doi: "10.1109/TPDS.2004.8"
+  - title: "Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms"
     url: "https://doi.org/10.1145/248052.248106"
     year: 1996
     arxiv: null
@@ -41,25 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-We present the first spin-free, kernel-lock-free mutex that cooperates with user-mode schedulers and is formally proven FIFO-fair and linearizable using CSP/FDR.
+A spin-free, kernel-lock-free mutex for cooperatively scheduled ProcessJ processes is proven FIFO-fair and linearizable in CSP/FDR.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Fair Kernel-Lock-Free Claim/Release Protocol for Shared Object Access in Coopera).
+Anoptic fibers and GRID COMMAND sim ticks are cooperative: a claim/release that parks waiters on a lock-free queue instead of spinning or taking a kernel mutex matches that runtime.
 
 ## Key ideas
 
-- We present the first spin-free, kernel-lock-free mutex that cooperates with user-mode schedulers and is formally proven FIFO-fair and linearizable using CSP/FDR.
-- Our fairness oracle and stability-based proof method are reusable across coroutine runtime designs.
-- We designed the claim/release protocol for a process-oriented language -- ProcessJ -- to manage the race for claiming shared inter-process communication channels.
-- Internally, we use a lock-free queue to park waiting processes for gaining access to a shared object, such as exclusive access to a shared channel to read from or write to.
-- The queue ensures control and fairness for processes wishing to access a shared resource, as the protocol handles claim requests in the order they are inserted into the queue.
+- Designed so ProcessJ processes can claim exclusive access to shared IPC channels without a kernel lock or busy-wait.
+- Waiters enqueue on a lock-free queue; release hands the object to the next queued process in FIFO order.
+- CSP models of the protocol and of a mutex spec are checked with FDR to show mutex behavior plus fairness.
+- A reusable fairness oracle and stability-based proof method is offered for other coroutine runtimes.
+- The protocol is linearizable: claim/release appear to take effect in queue order.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2510.10818](https://arxiv.org/abs/2510.10818)
-- URL: https://arxiv.org/abs/2510.10818
+- PDF: https://arxiv.org/pdf/2510.10818

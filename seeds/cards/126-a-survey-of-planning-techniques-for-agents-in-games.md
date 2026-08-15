@@ -1,13 +1,12 @@
 ---
-
 title: "A Survey of Planning Techniques for Agents in Games"
 authors:
-  - "Omicini lineage / Orkin"
+  - "Jeff Orkin"
 year: 2006
-venue: "GDC F.E.A.R."
+venue: "GDC"
 arxiv: null
 doi: null
-source: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
+source: "https://madwomb.com/tutorials/gamedesign/prototyping/gdc2006_JeffOrkin_AI_FEAR.pdf"
 topics:
   - planning
   - game-ai
@@ -18,21 +17,16 @@ pool: "game-ai"
 relevance_score: 9
 lineage: game-ai-planning
 cites:
-  - title: "Three States and a Plan: The AI of F.E.A.R."
-    url: "https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf"
-    year: 2006
-    arxiv: null
-    doi: null
-  - title: "SHOP2: An HTN Planning System"
-    url: "https://doi.org/10.1613/jair.1141"
-    year: 2003
-    arxiv: null
-    doi: "10.1613/jair.1141"
   - title: "Managing Complexity in the Halo 2 AI System"
     url: "https://www.gdcvault.com/play/1020359/Managing-Complexity-in-the-Halo"
     year: 2005
     arxiv: null
     doi: null
+  - title: "STRIPS: A New Approach to the Application of Theorem Proving to Problem Solving"
+    url: "https://doi.org/10.1016/0004-3702(71)90010-5"
+    year: 1971
+    arxiv: null
+    doi: "10.1016/0004-3702(71)90010-5"
 see:
   - "022-three-states-and-a-plan-the-ai-of-f-e-a-r"
   - "296-shop2-an-htn-planning-system"
@@ -43,21 +37,24 @@ see:
 
 ## One-sentence takeaway
 
-F.E.A.R. GOAP talk — classic game AI planning.
+Orkin’s GDC 2006 F.E.A.R. talk is GOAP in a shipped FPS: the animation FSM has three states (Goto, Animate, UseSmartObject), and A* over STRIPS actions on a working-memory world state decides which one to enter.
 
 ## Why it matters here
 
-F.E.A.R. GOAP talk — classic game AI planning.
+GRID COMMAND squads should plan, not grow a 200-state chart. GOAP is the production proof that competing goals plus a blackboard of facts can look coordinated under fire without per-NPC scripts.
 
 ## Key ideas
 
-- GOAP talk — classic game AI planning.
+- Every visible behavior is still “move or play an animation.” Cover, blind-fire, dive-through-window, melee — those are plans, not states. Designers author Goal Sets and Action Sets in the game database; they do not draw transition arrows.
+- Goals compete by priority (Patrol vs KillEnemy). The planner searches for a lowest-cost action sequence whose effects satisfy the winning goal. Soldiers, assassins, and rats share the same goals and look different only because their Action Sets differ.
+- World state is a fixed-size array of four-byte slots (`TargetDead`, `WeaponLoaded`, `AtNode`, …), not STRIPS add/delete lists. Procedural precondition hooks run expensive tests (NavMesh escape path) on demand; `ActivateAction()` writes the FSM state and its parameters.
+- Layering is additive: Attack, then Dodge, then AttackMelee, then Cover / AttackFromCover, then BlindFireFromCover, then Ambush. Adding `TurnOnLights` is one action with a `LightsOn` effect and a precondition on Goto — no visit to every old state machine.
+- Failed plans write facts back into working memory (door is blocked), so re-planning kicks, then dives the window. A proximity squad coordinator issues orders (Get-to-Cover, Advance-Cover, Search) that individual GOAP agents may still refuse if a higher-priority personal goal wins.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf
+- PDF: https://madwomb.com/tutorials/gamedesign/prototyping/gdc2006_JeffOrkin_AI_FEAR.pdf
+- Historical MIT alumni URL (currently 404): https://alumni.media.mit.edu/~jorkin/gdc2006_orkin_jeff_fear.pdf
+- Twin card: `022-three-states-and-a-plan-the-ai-of-f-e-a-r`

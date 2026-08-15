@@ -16,50 +16,42 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Lock-Free Augmented Trees
 
 ## One-sentence takeaway
 
-Augmenting an existing sequential data structure with extra information to support greater functionality is a widely used technique.
+Any field computable from a node and its children can be added to a lock-free tree, yielding linearizable order-statistic tries/BSTs and multi-point queries at sequential cost.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Lock-Free Augmented Trees).
+GRID COMMAND spatial queries and Anoptic ECS range counts want "how many units in this AABB" in log time, not a full scan; this is the concurrent version of an order-statistic tree.
 
 ## Key ideas
 
-- Augmenting an existing sequential data structure with extra information to support greater functionality is a widely used technique.
-- For example, search trees are augmented to build sequential data structures like order-statistic trees, interval trees, tango trees, link/cut trees and many others.
-- We study how to design concurrent augmented tree data structures.
-- We present a new, general technique that can augment a lock-free tree to add any new fields to each tree node, provided the new fields' values can be computed from information in the node and its children.
-- This enables the design of lock-free, linearizable analogues of a wide variety of classical augmented data structures.
+- Sequential augmentation (subtree sizes, interval spans) is how order-statistic, interval, tango, and link/cut trees are built.
+- The concurrent recipe: store extra fields that depend only on the node and its children, and refresh them without locking the whole path.
+- A wait-free trie over {1,…,N} supports linearizable k-th-smallest in O(log N) steps for both updates and queries.
+- The same idea on a lock-free BST gives O(h) order-statistic queries without changing the asymptotic cost of updates.
+- An alternative augmentation drops searches and order-statistics to O(log |S|) at a small extra update cost; arbitrary multi-point / range queries inherit the sequential complexity.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2405.10506](https://arxiv.org/abs/2405.10506)
-- URL: https://arxiv.org/abs/2405.10506
+- PDF: https://arxiv.org/pdf/2405.10506

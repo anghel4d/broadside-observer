@@ -3,7 +3,7 @@ title: Timestamps in Message-Passing Systems That Preserve the Partial Ordering
 authors:
 - Colin J. Fidge
 year: 1988
-venue: Proceedings of the 11th Australian Computer Science Conference
+venue: Australian Computer Science Communications
 arxiv: null
 doi: null
 source: "https://en.wikipedia.org/wiki/Vector_clock"
@@ -23,7 +23,7 @@ cites:
   arxiv: null
   doi: 10.1145/359545.359563
 - title: Virtual Time and Global States of Distributed Systems
-  url: "https://homes.cs.washington.edu/~arvind/cs425/doc/mattern89virtual.pdf"
+  url: "https://vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf"
   year: 1989
   arxiv: null
   doi: null
@@ -36,24 +36,22 @@ see:
 
 ## One-sentence takeaway
 
-Fidge vector clocks — track causal concurrency beyond Lamport scalars.
+Fidge timestamps each event with an $n$-vector of per-process counters so $V(a)<V(b)$ (componentwise) if and only if $a$ happens-before $b$, detecting concurrency that scalar Lamport clocks cannot.
 
 ## Why it matters here
 
-Needed when Lamport clocks alone cannot detect concurrency for replication.
+Vector clocks are what replication, CRDT merges, and GRID COMMAND multiplayer logs need when “concurrent vs causal” is a real distinction, not just a total order for a state machine.
 
 ## Key ideas
 
-- Per-process timestamp vectors.
-- Componentwise max on receive.
-- Detects concurrency vs causality.
-- Pairs with Mattern's independent formulation.
+- Process $i$ increments $V_i$ on each local event and piggybacks the whole vector on messages.
+- On receive, the process takes the componentwise max with the incoming vector, then increments its own component.
+- Incomparable vectors mean concurrent events; this is exactly the happens-before partial order.
+- Independent of Mattern 1989; cite both. The 1988 ACSC paper is *Australian Computer Science Communications* 10(1):56–66.
 
 ## Caveats
 
-- O(n) metadata per message.
-- Cite Mattern 1989 alongside for the concept.
-
 ## Links
 
-- URL: https://en.wikipedia.org/wiki/Vector_clock
+- Wikipedia (stable landing; no DOI): https://en.wikipedia.org/wiki/Vector_clock
+- Companion formulation: https://vs.inf.ethz.ch/publ/papers/VirtTimeGlobStates.pdf

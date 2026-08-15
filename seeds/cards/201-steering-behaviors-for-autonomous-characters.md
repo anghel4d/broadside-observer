@@ -48,21 +48,24 @@ see:
 
 ## One-sentence takeaway
 
-Steering behavior catalog for game AI.
+Reynolds splits autonomous motion into action selection, steering, and locomotion, then catalogs reusable steering primitives that combine into improvisational navigation.
 
 ## Why it matters here
 
-Steering behavior catalog for game AI.
+GRID COMMAND and Anoptic agents need locomotion that is independent of path search: seek, arrive, avoid, follow, and flock as ECS-friendly force mixers rather than one monolithic planner.
 
 ## Key ideas
 
-- Steering behavior catalog for game AI.
+- Three-layer model: strategy/goal setting above, simple vehicle locomotion below, and a middle steering layer that emits a desired acceleration.
+- Primitive behaviors include seek, flee, pursue, evade, arrival, wander, obstacle avoidance, containment, wall/path/flow-field following.
+- Combined behaviors (crowd path following, leader following, unaligned collision avoidance, queuing, flocking) are weighted sums of those primitives.
+- Steering is locomotion-agnostic: the same desired-velocity request can drive a point mass, a simple vehicle, or a more detailed motor model.
+- OpenSteer later packaged the catalog as a C++ sandbox for tuning combinations.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.red3d.com/cwr/steer/
+- Author page: [red3d.com/cwr/steer](https://www.red3d.com/cwr/steer/)
+- GDC 1999 paper (HTML): https://www.red3d.com/cwr/steer/gdc99/
+- GDC 1999 paper (PDF): https://www.red3d.com/cwr/papers/1999/gdc99steer.pdf

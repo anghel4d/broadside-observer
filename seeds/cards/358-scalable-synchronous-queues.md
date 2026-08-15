@@ -44,21 +44,21 @@ see:
 
 ## One-sentence takeaway
 
-Hand-off queues for thread pools.
+A synchronous queue is a handoff: enqueue waits for a dequeue (and vice versa), and Scherer/Lea/Scott make that handoff scale with dual data structures plus spinning-then-parking.
 
 ## Why it matters here
 
-Hand-off queues for thread pools.
+Anoptic job/thread pools and GRID COMMAND worker handoff should not bounce every task through a bounded MPMC buffer. `SynchronousQueue` (this paper, later `java.util.concurrent`) is the rendezvous: a producer gives a job directly to an idle worker, or parks. That is the right primitive when you want “no queueing delay if a consumer is waiting.”
 
 ## Key ideas
 
-- Hand-off queues for thread pools.
+- Dual data structures (Scherer/Scott): nodes carry a reservation that a complementary operation can fulfill, so the same list serves both waiting producers and waiting consumers.
+- Combining / elimination at the stack-like end lets complementary operations pair off without touching a hot tail pointer.
+- The implementation spins briefly (to catch a nearly-arrived partner) then parks, which is why it won the Java 6 `SynchronousQueue` rewrite.
+- Linearizable transfer; non-overlapping transfers proceed concurrently.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1145/1122971.1123012](https://doi.org/10.1145/1122971.1123012)
-- URL: https://doi.org/10.1145/1122971.1123012
+- DOI: https://doi.org/10.1145/1122971.1123012

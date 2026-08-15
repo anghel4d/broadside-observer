@@ -31,45 +31,30 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0004-3702(77)90033-9"
-  - title: "RABBIT: A Compiler for Scheme"
-    url: "https://dspace.mit.edu/handle/1721.1/6913"
-    year: 1978
-    arxiv: null
-    doi: null
-  - title: "The Revised^5 Report on the Algorithmic Language Scheme"
-    url: "https://doi.org/10.1023/A:1010051815785"
-    year: 1998
-    arxiv: null
-    doi: "10.1023/A:1010051815785"
 see:
   - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
   - "683-viewing-control-structures-as-patterns-of-passing-messages"
-  - "674-rabbit-a-compiler-for-scheme"
-  - "675-the-revised-5-report-on-the-algorithmic-language-scheme"
 ---
 
 # Scheme: An Interpreter for Extended Lambda Calculus
 
 ## One-sentence takeaway
 
-Introduces Scheme as a lexically scoped dialect of Lisp exploring Actors ideas via lambda calculus.
+Sussman and Steele's AI Memo 349 introduces Scheme as a lexically scoped Lisp in which actors, functions, and continuations are the same λ-values.
 
 ## Why it matters here
 
-Scheme's birth paper — lexical scope, first-class procedures, and the Steele/Sussman line into RABBIT.
+Lexical scope, first-class procedures, and tail calls enter the Anoptic/ano Lisp story here — not in R5RS, and not in McCarthy 1960. RABBIT is the compiler that made the memo credible.
 
 ## Key ideas
 
-- Lexical scoping restored to Lisp.
-- Procedures and Actors unified via lambda.
-- Tail calls and interpreter experiments.
-- AI Memo 349 as the historical root.
+- Lexical (static) scoping restored to Lisp; dynamic `FUNARG` bugs are not a feature.
+- Hewitt's actors are explored by identifying an actor with a closure: sending a message is applying a procedure.
+- The interpreter is an experiment in control — continuations become first-class almost immediately, and tail calls are the default.
+- MIT AI Memo 349, December 1975; DSpace handle 1721.1/5794. Steele's RABBIT (TR-474, 1978) compiles the same language.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://dspace.mit.edu/handle/1721.1/5794
+- DSpace: https://dspace.mit.edu/handle/1721.1/5794

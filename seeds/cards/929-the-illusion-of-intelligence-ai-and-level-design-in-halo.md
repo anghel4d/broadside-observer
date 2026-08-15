@@ -60,8 +60,6 @@ This is the GRID COMMAND cousin of F.E.A.R. GOAP. Soldiers should look intelligi
 
 ## Caveats
 
-- GDC 2002 published no separate prose paper. The proceedings entry *is* the PPT + speaker notes (Isla's [Greisemer02]). HBO converted that deck to HTML on 2002-04-15.
-- Halo 2/3 (Isla) is the architectural sequel: behavior DAG, orders/styles, objectives.
 
 ## Links
 

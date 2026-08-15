@@ -3,10 +3,10 @@ title: "A Scalable Concurrent malloc(3) Implementation for FreeBSD (jemalloc)"
 authors:
   - "Jason Evans"
 year: 2006
-venue: "BSDCan"
+venue: "BSDCan 2006"
 arxiv: null
 doi: null
-source: "http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
+source: "https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf"
 topics:
   - memory-allocation
   - jemalloc
@@ -54,21 +54,22 @@ see:
 
 ## One-sentence takeaway
 
-jemalloc introduces multiple arenas and careful size-class layout for scalable concurrent malloc on FreeBSD and beyond.
+jemalloc shards the heap into multiple arenas, each with tight size classes and thread-local caches, so concurrent malloc scales instead of funneling every allocation through one lock.
 
 ## Why it matters here
 
-Arena-of-arenas design; still the mental model for many runtime heaps.
+Arena-of-arenas is still the mental model for runtime heaps under ano jobs, ECS pools, and FFI. If you only remember one allocator paper, remember this one.
 
 ## Key ideas
 
-- jemalloc introduces multiple arenas and careful size-class layout for scalable concurrent malloc on FreeBSD and beyond.
+- Multiple arenas (typically a function of CPU count) kill allocator lock contention; threads bind to an arena and only rarely steal.
+- Size-class layout is chosen so internal fragmentation stays bounded and adjacent classes pack into pages cleanly.
+- Thread-local caches / tcache absorb the LIFO burst of short-lived allocations without touching the arena lock.
+- Designed as FreeBSD's libc malloc; later became Firefox's, then a standalone project used across the industry.
+- BSDCan 2006 PDF is the canonical artifact (people.freebsd.org/~jasone).
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: http://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf
+- PDF: https://people.freebsd.org/~jasone/jemalloc/bsdcan2006/jemalloc.pdf

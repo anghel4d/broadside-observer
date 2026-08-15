@@ -63,9 +63,6 @@ Best on-ramp from OOP game code to the Acton/Unity/Flecs performance story Anopt
 
 ## Caveats
 
-- Teaching patterns book, not a research result or production ECS design doc.
-- Does not prescribe archetype vs sparse-set tradeoffs.
-
 ## Links
 
 - URL: https://gameprogrammingpatterns.com/data-locality.html

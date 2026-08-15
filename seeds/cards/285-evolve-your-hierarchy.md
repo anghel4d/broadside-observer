@@ -28,7 +28,7 @@ cites:
     arxiv: null
     doi: null
   - title: "Pitfalls of Object Oriented Programming"
-    url: "https://www.researchgate.net/publication/308689769_Pitfalls_of_object_oriented_programming"
+    url: "https://www.gamedevs.org/uploads/pitfalls-of-object-oriented-programming.pdf"
     year: 2009
     arxiv: null
     doi: null
@@ -48,21 +48,22 @@ see:
 
 ## One-sentence takeaway
 
-Advocates decomposing game object hierarchies into component aggregates to regain flexibility and performance.
+West's Neversoft post-mortem walks a Tony Hawk blob hierarchy through three stages — organized blob, component container, pure aggregation — until a game object is only the sum of its component arrays.
 
 ## Why it matters here
 
-Component composition over deep inheritance — bridge from OOP games to ECS.
+This is the migration story, not the manifesto. Ano does not need to repeat the two-year blob-component phase if we start at pure aggregation.
 
 ## Key ideas
 
-- Advocates decomposing game object hierarchies into component aggregates to regain flexibility and performance.
+- Deep `CEntity` trees force you either to hoist every feature to the root (everyone pays) or to hide it in leaves (nobody reuses).
+- Stage 1: factor the blob into nullable sub-objects. Stage 2: give those a common component base and a list. Stage 3: drop the container object; each column is a component type, each row an entity.
+- Practical lessons: sell it with one working component first; expect a "blob component" for the player; cache cross-component pointers once lookup hits 5% CPU; enforce update order in code because data-driven lists will shuffle.
+- Data-driven composition let designers mint new entity types without a programmer subclass.
+- 5 January 2007, Cowboy Programming; URL keeps the original "heirachy" typo.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/
+- Post: https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/

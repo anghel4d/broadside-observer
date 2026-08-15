@@ -5,9 +5,9 @@ authors:
   - "Gioele Zardini"
 year: 2025
 venue: "TMLR"
-arxiv: null
+arxiv: "2412.03317"
 doi: null
-source: "https://openreview.net/forum?id=pF2ukh7HxA"
+source: "https://arxiv.org/abs/2412.03317"
 topics:
   - "flashattention"
   - "neural-circuit-diagrams"
@@ -28,8 +28,9 @@ cites:
     year: 2024
     arxiv: "2307.08691"
   - title: "Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures"
-    url: "https://openreview.net/forum?id=RyZB4qXEgt"
+    url: "https://arxiv.org/abs/2402.05424"
     year: 2024
+    arxiv: "2402.05424"
 see:
   - "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
   - "080-flashattention-2-faster-attention-with-better-parallelism-an"
@@ -40,22 +41,24 @@ see:
 
 ## One-sentence takeaway
 
-Derives FlashAttention-style IO-aware tiling from neural circuit diagrams rather than from kernel folklore — diagrams as a calculus for memory traffic.
+Extends neural circuit diagrams with GPU hierarchy and resource labels so FlashAttention-style tiling, streaming, and IO models are derived by diagram rewrite rather than by kernel folklore.
 
 ## Why it matters here
 
-Connects the FA lineage already on main (105/096/089) to categorical diagrams. If GRID COMMAND ever reasons about tiled attention, this is the napkin proof.
+Connects the FA lineage already on the shelf to categorical diagrams. If GRID COMMAND or an ano agent ever reasons about tiled attention or other HBM-bound kernels, this is the napkin calculus for memory traffic.
 
 ## Key ideas
 
-- TMLR 2025; OpenReview `pF2ukh7HxA`.
-- Shows NCDs are not just pedagogy: they recover the tiling/IO argument of FlashAttention.
-- Bridge paper between Dao et al. kernels and the 2026 weaves algebra.
+- TMLR 2025 (March); arXiv:2412.03317; OpenReview `pF2ukh7HxA`.
+- Relabellings of a diagram yield high-level streaming and tiling strategies plus a performance model that can absorb quantization and multi-level GPU hierarchies.
+- Intermediate-level pseudocode is itself drawn, so a hardware-aware algorithm can be derived step by step.
+- Recovers why FlashAttention never materializes the full $QK^\top$ matrix in HBM: the SoftMax contraction is streamable.
+- Framework paper, not a new kernel: FA-2/FA-3 remain the hardware implementations; this is the derivation method.
 
 ## Caveats
 
-- Diagrammatic re-derivation, not a new kernel. FA-3/FA-4 remain the hardware papers.
-
 ## Links
 
+- arXiv: [2412.03317](https://arxiv.org/abs/2412.03317)
+- PDF: https://arxiv.org/pdf/2412.03317
 - OpenReview: https://openreview.net/forum?id=pF2ukh7HxA

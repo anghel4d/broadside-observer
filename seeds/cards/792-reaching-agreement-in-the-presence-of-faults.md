@@ -5,7 +5,7 @@ authors:
 - R. Shostak
 - L. Lamport
 year: 1980
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/322186.322188
 source: "https://doi.org/10.1145/322186.322188"
@@ -19,37 +19,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: algorithms-and-complexity
-cites:
-- title: The Byzantine Generals Problem
-  url: "https://doi.org/10.1145/357172.357176"
-  year: 1982
-  arxiv: null
-  doi: 10.1145/357172.357176
-see:
-- "791-the-byzantine-generals-problem"
+cites: []
+see: []
 ---
 
 # Reaching Agreement in the Presence of Faults
 
 ## One-sentence takeaway
 
-Pease-Shostak-Lamport interactive consistency — 1980 precursor to Byzantine generals.
+Pease–Shostak–Lamport formalize interactive consistency for $n$ processors with $f$ arbitrary faults and prove that $n\ge 3f+1$ is necessary and sufficient in the unauthenticated synchronous model.
 
 ## Why it matters here
 
-Original agreement-with-faults formalization; cite with 1982 TOPLAS paper.
+This 1980 JACM paper is the theorem; the 1982 *Byzantine Generals* paper is the story. Cite this one for the interactive-consistency conditions GRID COMMAND or Broadside BFT reasoning actually uses.
 
 ## Key ideas
 
-- Interactive consistency conditions.
-- Faulty processor thresholds.
-- Foundations of BFT agreement.
-- Tied to the generals narrative paper.
+- Interactive consistency: every nonfaulty processor computes the same vector $(v_1,\ldots,v_n)$, and $v_i$ equals processor $i$’s private value whenever $i$ is nonfaulty.
+- Sufficiency: a recursive exchange of values along all paths of length $f+1$, followed by majority, works when $n>3f$.
+- Necessity: with $n\le 3f$ the faulty set can partition the loyal processors so they cannot distinguish who is lying.
+- The model is synchronous rounds with reliable (but forgeable) messages — the oral Byzantine model later named in TOPLAS.
 
 ## Caveats
-
-- Drier than the 1982 generals exposition.
-- Same model caveats about synchrony/crypto.
 
 ## Links
 

@@ -29,45 +29,30 @@ cites:
     year: 1983
     arxiv: null
     doi: null
-  - title: "SELF: The Power of Simplicity"
-    url: "https://doi.org/10.1145/38765.38828"
-    year: 1987
-    arxiv: null
-    doi: "10.1145/38765.38828"
-  - title: "Viewing Control Structures as Patterns of Passing Messages"
-    url: "https://doi.org/10.1016/0004-3702(77)90033-9"
-    year: 1977
-    arxiv: null
-    doi: "10.1016/0004-3702(77)90033-9"
 see:
   - "680-the-early-history-of-smalltalk"
   - "682-smalltalk-80-the-language-and-its-implementation"
-  - "687-self-the-power-of-simplicity"
-  - "683-viewing-control-structures-as-patterns-of-passing-messages"
 ---
 
 # Design Principles Behind Smalltalk
 
 ## One-sentence takeaway
 
-States Smalltalk's design principles: personal mastery, objects all the way down, reactive UI, etc.
+Ingalls's BYTE 1981 essay states Smalltalk's design as principles — personal mastery, objects and messages all the way down, automatic storage, polymorphism, factoring via inheritance — not as a language tour.
 
 ## Why it matters here
 
-Short, sharp OO design principles card — still useful when auditing ano's object/message boundaries.
+Short enough to audit ano's object/message boundaries against: if a part of Anoptic cannot be changed, or works unlike the rest, Ingalls already named the failure mode.
 
 ## Key ideas
 
-- Personal computing and reactive graphics.
-- Uniform object/message model.
-- Language and system as one artifact.
-- Companion to Kay history and Smalltalk-80 book.
+- Personal mastery: a creative individual must be able to comprehend the whole system; any sealed subsystem becomes a barrier.
+- Good design = few unchangeable parts, those parts as general as possible, everything in one uniform framework (communicating objects).
+- Messages decouple intent from method; the receiver, even an integer, decides how `+ 5` happens. Classification, polymorphism, and inheritance are the complexity-management rules on top.
+- BYTE, August 1981. The Virginia HTML is a scan of the Dwight Hughes copy; pair with Kay HOPL and the Blue Book.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html
+- HTML: https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html

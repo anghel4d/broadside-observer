@@ -48,9 +48,6 @@ Lab drops in-window are in scope. This is the xAI answer to “agents that stay 
 
 ## Caveats
 
-- Blog, not a paper: no methods appendix, no independent eval protocol, competitor scores mixed self-report/public.
-- Terminal-Bench and DeepSWE still trail the coding-agent frontier they name.
-- Do not treat this as weights or a harness; Grok Build remains the xAI coding-agent product.
 
 ## Links
 

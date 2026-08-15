@@ -52,10 +52,6 @@ Shows the first major practical pressure on MS-queue hot spots — useful when A
 
 ## Caveats
 
-- Bounded capacity; not a drop-in unbounded MS replacement.
-- Hardware and allocator landscape has moved; treat as historical scalability lesson more than a ship-today recipe.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/378580.378611](https://doi.org/10.1145/378580.378611)

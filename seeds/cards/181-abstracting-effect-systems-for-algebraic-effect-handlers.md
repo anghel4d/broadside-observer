@@ -5,7 +5,7 @@ authors:
 - Taro Sekiyama
 - Atsushi Igarashi
 year: 2024
-venue: arXiv
+venue: arXiv:cs.PL
 arxiv: '2404.16381'
 doi: null
 source: https://arxiv.org/abs/2404.16381
@@ -21,12 +21,12 @@ cites:
   url: https://doi.org/10.1007/978-3-642-00590-9_7
   year: 2009
   arxiv: null
-  doi: null
+  doi: 10.1007/978-3-642-00590-9_7
 - title: Programming with Algebraic Effects and Handlers
   url: https://arxiv.org/abs/1203.1539
   year: 2015
   arxiv: '1203.1539'
-  doi: null
+  doi: 10.1016/j.jlamp.2014.02.001
 - title: 'Koka: Programming with Row Polymorphic Effect Types'
   url: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
   year: 2014
@@ -43,25 +43,22 @@ lineage: algebraic-effects
 
 ## One-sentence takeaway
 
-Many effect systems for algebraic effect handlers are designed to guarantee that all invoked effects are handled adequately.
+λ_EA is an effect system parameterized by an effect algebra: prove the algebra's safety conditions and you inherit type-and-effect safety, then compare existing handler effect systems as different algebras.
 
 ## Why it matters here
 
-Effect systems/handlers inform ano masked command effects and handlers.
+Ano masked commands need an effect collection story — sets, rows, lattices — without rewriting the type system each time. Effect algebras are the interface; safety conditions are the proof obligation.
 
 ## Key ideas
 
-- Many effect systems for algebraic effect handlers are designed to guarantee that all invoked effects are handled adequately.
-- However, respective researchers have developed their own effect systems that differ in how to represent the collections of effects that may happen.
-- This situation results in blurring what is required for the representation and manipulation of effect collections in a safe effect system.
-- In this work, we present a language ${λ_{\mathrm{EA}}}$ equipped with an effect system that abstracts the existing effect systems for algebraic effect handlers.
-- The effect system of ${λ_{\mathrm{EA}}}$ is parameterized over effect algebras, which abstract the representation and manipulation of effect collections in safe effect systems.
+- Existing handler effect systems all want “every invoked effect is handled” but disagree on how to represent the collection of possible effects.
+- λ_EA is parameterized by an effect algebra that abstracts that representation and its operations.
+- Type-and-effect safety is proved once, assuming stated safety conditions on the algebra; a concrete system is safe if its algebra satisfies them.
+- Several published effect systems embed as such algebras; the framework also distinguishes which collections remain safe under lift coercions and type-erasure semantics.
+- New algebras, including ones not previously studied as effect systems, are compared on those extensions.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2404.16381](https://arxiv.org/abs/2404.16381)
-- URL: https://arxiv.org/abs/2404.16381

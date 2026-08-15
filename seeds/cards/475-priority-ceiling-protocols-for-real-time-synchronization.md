@@ -1,84 +1,32 @@
 ---
-title: Priority Ceiling Protocols for Real-Time Synchronization
+title: "Priority Ceiling Protocols for Real-Time Synchronization"
 authors:
-- Lui Sha
-- Ragunathan Rajkumar
-- John P. Lehoczky
+  - "Lui Sha"
+  - "Ragunathan Rajkumar"
+  - "John P. Lehoczky"
 year: 1990
-venue: IEEE Trans. Computers
+venue: "IEEE Transactions on Computers"
 arxiv: null
-doi: 10.1109/12.57058
-source: https://doi.org/10.1109/12.57058
+doi: "10.1109/12.57058"
+source: "https://doi.org/10.1109/12.57058"
 topics:
-- realtime
-- scheduling
+  - realtime
+  - scheduling
 seed_rank: 475
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: realtime
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "realtime"
 relevance_score: 7
 lineage: realtime-scheduling
 cites:
   - title: "Scheduling Algorithms for Multiprogramming in a Hard-Real-Time Environment"
     url: "https://doi.org/10.1145/321738.321743"
     year: 1973
-    arxiv: null
     doi: "10.1145/321738.321743"
   - title: "Priority Inheritance Protocols: An Approach to Real-Time Synchronization"
     url: "https://doi.org/10.1109/12.57055"
     year: 1990
-    arxiv: null
     doi: "10.1109/12.57055"
-  - title: "The rate monotonic scheduling algorithm: exact characterization and average case behavior"
-    url: "https://doi.org/10.1109/real.1989.63567"
-    year: 2003
-    arxiv: null
-    doi: "10.1109/real.1989.63567"
-  - title: "FUNDAMENTAL DESIGN PROBLEMS OF DISTRIBUTED SYSTEMS FOR THE HARD-REAL-TIME ENVIRONMENT"
-    url: "https://hdl.handle.net/1721.1/149573"
-    year: 1983
-    arxiv: null
-    doi: null
-  - title: "A note on preemptive scheduling of periodic, real-time tasks"
-    url: "https://doi.org/10.1016/0020-0190(80)90123-4"
-    year: 1980
-    arxiv: null
-    doi: "10.1016/0020-0190(80)90123-4"
-  - title: "Experience with processes and monitors in Mesa"
-    url: "https://doi.org/10.1145/358818.358824"
-    year: 1980
-    arxiv: null
-    doi: "10.1145/358818.358824"
-  - title: "Scheduling Tasks with Resource Requirements in Hard Real-Time Systems"
-    url: "https://doi.org/10.1109/tse.1987.233201"
-    year: 1987
-    arxiv: null
-    doi: "10.1109/tse.1987.233201"
-  - title: "Preemptive Scheduling Under Time and Resource Constraints"
-    url: "https://doi.org/10.1109/tc.1987.5009518"
-    year: 1987
-    arxiv: null
-    doi: "10.1109/tc.1987.5009518"
-  - title: "Dynamic Task Scheduling in Hard Real-Time Distributed systems"
-    url: "https://doi.org/10.1109/ms.1984.234713"
-    year: 1984
-    arxiv: null
-    doi: "10.1109/ms.1984.234713"
-  - title: "The priority ceiling protocol: A method for minimizing the blocking of high priority Ada tasks"
-    url: "https://doi.org/10.1145/58612.59371"
-    year: 1988
-    arxiv: null
-    doi: "10.1145/58612.59371"
-  - title: "Task Scheduling In Distributed Real-Time Systems"
-    url: "https://doi.org/10.1117/12.943278"
-    year: 1987
-    arxiv: null
-    doi: "10.1117/12.943278"
-  - title: "Performance of real-time bus scheduling algorithms"
-    url: "https://doi.org/10.1145/317499.317538"
-    year: 1986
-    arxiv: null
-    doi: "10.1145/317499.317538"
 see:
   - "380-scheduling-algorithms-for-multiprogramming-in-a-hard-real-ti"
   - "413-priority-inheritance-protocols-an-approach-to-real-time-sync"
@@ -88,25 +36,21 @@ see:
 
 ## One-sentence takeaway
 
-Priority ceiling complements priority inheritance for bounded priority inversion in RT locks.
+The priority ceiling protocol raises a lock's priority to the highest priority of any task that might take it, so a high-priority task is blocked at most once and unbounded priority inversion cannot form.
 
 ## Why it matters here
 
-Living RT sync pair with the priority inheritance card for engine soft-RT threads.
+Paired with the same authors' priority-inheritance paper, this is the analyzable mutex story for engine soft-RT threads that share resources under RMS/EDF.
 
 ## Key ideas
 
-- Raise ceiling to prevent transitive blocking chains.
-- Analyzable blocking bounds for RMS/EDF.
-- Still taught in RTOS courses.
-- Pairs with inheritance protocols.
+- Each resource has a static ceiling = max priority of tasks that lock it; a task may lock only if its priority is strictly higher than the ceilings of resources currently held by others.
+- Blocking time is then bounded by the longest critical section of a lower-priority task — enough to plug into Liu/Layland-style schedulability tests.
+- Prevents both unbounded inversion and chained blocking that plain inheritance still allows.
+- Originally motivated by Ada tasking; still the textbook protocol in RTOS courses and AUTOSAR-style stacks.
 
 ## Caveats
-
-- Overkill for many game-frame job systems.
-- Requires static resource knowledge.
 
 ## Links
 
 - DOI: [10.1109/12.57058](https://doi.org/10.1109/12.57058)
-- URL: https://doi.org/10.1109/12.57058

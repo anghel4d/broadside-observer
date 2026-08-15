@@ -48,25 +48,22 @@ see:
 
 ## One-sentence takeaway
 
-Autonomous agents powered by large language models (LLMs) have the potential to enhance human capabilities, assisting with digital tasks from sending emails to performing data analysis.
+Learn-by-interact synthesizes agent–environment trajectories from documentation and then backward-constructs instructions from those histories, producing training and ICL data with no human annotations.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (Learn-by-interact: A Data-Centric Framework for Self-Adaptive Agents in Realistic Environm)
+Broadside cheap-filter discipline and GRID COMMAND harness work both starve for environment-specific trajectories. Backward construction — log first, invent the instruction from the log — is the data recipe, and the paper shows it beating ordinary RAG for agent ICL.
 
 ## Key ideas
 
-- Autonomous agents powered by large language models (LLMs) have the potential to enhance human capabilities, assisting with digital tasks from sending emails to performing data analysis.
-- The abilities of existing LLMs at such tasks are often hindered by the lack of high-quality agent data from the corresponding environments they interact with.
-- We propose Learn-by-interact, a data-centric framework to adapt LLM agents to any given environments without human annotations.
-- Learn-by-interact synthesizes trajectories of agent-environment interactions based on documentations, and constructs instructions by summarizing or abstracting the interaction histories, a process called backward construction.
-- We assess the quality of our synthetic data by using them in both training-based scenarios and train
+- The bottleneck is not a better agent loop but a lack of high-quality interaction data for the target environment.
+- Trajectories are synthesized from documentation; instructions are then built by summarizing or abstracting those histories (backward construction).
+- The same synthetic data is used for training and for training-free ICL, with retrieval methods specialized to agents rather than generic RAG.
+- On SWE-bench, WebArena, OSWorld, and Spider2-V, ICL with Claude-3.5 improves by up to 12.2% and training Codestral-22B by up to 19.5%; backward construction alone is worth up to 14.0% for training.
+- Ablations credit the synthesized ICL set and the retrieval pipeline over conventional RAG.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2501.10893](https://arxiv.org/abs/2501.10893)
-- URL: https://arxiv.org/abs/2501.10893

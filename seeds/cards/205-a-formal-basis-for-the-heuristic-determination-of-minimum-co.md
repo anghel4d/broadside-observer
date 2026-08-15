@@ -38,7 +38,7 @@ cites:
   url: https://doi.org/10.1613/jair.2994
   year: 2010
   arxiv: null
-  doi: null
+  doi: 10.1613/jair.2994
 see:
 - "310-a-note-on-two-problems-in-connexion-with-graphs-dijkstra"
 - "294-near-optimal-hierarchical-pathfinding-hpa"
@@ -50,21 +50,23 @@ see:
 
 ## One-sentence takeaway
 
-A* foundation for RTS pathing.
+A* expands nodes by f = g + h and is optimally efficient among admissible algorithms whenever h never overestimates remaining cost.
 
 ## Why it matters here
 
-A* foundation for RTS pathing.
+Every GRID COMMAND grid search, JPS variant, and hierarchical planner in the seed spine is an A* descendant; admissibility and consistency are the contract those speedups must preserve.
 
 ## Key ideas
 
-- A* foundation for RTS pathing.
+- Evaluation function f(n) = g(n) + h(n) mixes exact cost from the start with a heuristic estimate to the goal.
+- Admissibility (h ≤ true remaining cost) is sufficient for A* to return a minimum-cost path.
+- Consistency / monotonicity of h lets A* avoid reopening nodes and behave like a best-first Dijkstra with a tighter key.
+- Among algorithms that use the same h, A* expands no more nodes than any other admissible search (up to ties).
+- Dijkstra's algorithm is the special case h = 0; greedy best-first is the special case that ignores g.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1109/TSSC.1968.300136](https://doi.org/10.1109/TSSC.1968.300136)
-- URL: https://doi.org/10.1109/TSSC.1968.300136
+- IEEE Xplore: https://ieeexplore.ieee.org/document/4082128

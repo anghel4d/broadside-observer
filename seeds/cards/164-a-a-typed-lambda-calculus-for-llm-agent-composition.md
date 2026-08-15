@@ -43,25 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Existing LLM agent frameworks lack formal semantics: there is no principled way to determine whether an agent configuration is well-formed or will terminate.
+Liu gives LLM agent frameworks a simply-typed calculus with oracle calls, bounded ReAct fixpoints, probabilistic choice, and mutable environments, then proves type safety and termination in Coq.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization ($λ_A$: A Typed Lambda Calculus for LLM Agent Composition)
+Broadside and GRID COMMAND agent configs should be λ_A-checkable: a standing observer loop is a bounded fixpoint, tools are oracles, and a YAML graph that does not type should fail closed before it is allowed to run.
 
 ## Key ideas
 
-- Existing LLM agent frameworks lack formal semantics: there is no principled way to determine whether an agent configuration is well-formed or will terminate.
-- We present $λ_A$, a typed lambda calculus for agent composition that extends the simply-typed lambda calculus with oracle calls, bounded fixpoints (the ReAct loop), probabilistic choice, and mutable environments.
-- We prove type safety, termination of bounded fixpoints, and soundness of derived lint rules, with full Coq mechanization (1,519 lines, 42 theorems, 0 Admitted).
-- As a practical application, we derive a lint tool that detects structural configuration errors directly from the operational semantics.
-- An evaluation on 835 real-world GitHub agent configurations shows that 94.1% are structurally incomplete under $λ_A$, with YAML-only
+- \(λ_A\) extends the simply-typed λ-calculus with oracle calls, a bounded fixpoint that models the ReAct loop, probabilistic choice, and a mutable environment.
+- Type safety, termination of bounded fixpoints, and soundness of derived lint rules are mechanized in Coq (1,519 lines, 42 theorems, 0 Admitted).
+- A lint tool is extracted from the operational semantics and used on 835 real GitHub agent configurations; 94.1% are structurally incomplete under \(λ_A\).
+- YAML-only lint precision is 54%, rising to 96–100% when YAML is jointly analyzed with Python ASTs on 175 samples — quantifying config/code entanglement.
+- LangGraph, CrewAI, AutoGen, the OpenAI SDK, and Dify embed as typed \(λ_A\) fragments, so the calculus is proposed as a common core.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2604.11767](https://arxiv.org/abs/2604.11767)
-- URL: https://arxiv.org/abs/2604.11767

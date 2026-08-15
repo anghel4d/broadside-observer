@@ -23,7 +23,7 @@ relevance_score: 8
 lineage: unix-foundations
 cites:
   - title: "Differential testing for software"
-    url: "https://www.hpl.hp.com/hpjournal/dtj/vol10num1/vol10num1art9.pdf"
+    url: "https://www.cs.swarthmore.edu/~bylvisa1/cs97/f13/Papers/DifferentialTestingForSoftware.pdf"
     year: 1998
 see:
   - "968-differential-testing-for-software"
@@ -33,21 +33,20 @@ see:
 
 ## One-sentence takeaway
 
-Test transplantation + differential testing against multiple JS engines as cross-oracles — the methodology uutils adapts from browsers to coreutils.
+Lima et al. transplant tests across JavaScript engines and treat disagreements among implementations as bugs — multiple oracles for one language, the methodology uutils later copies from browsers onto GNU vs Rust coreutils.
 
 ## Why it matters here
 
-The cited inspiration for grammar-guided differential fuzzing of uutils vs GNU.
+Cited inspiration for grammar-guided differential fuzzing of uutils against GNU (and Toybox/BusyBox). Same move Anoptic can use whenever two runtimes claim to implement one spec.
 
 ## Key ideas
 
 - Softw. Qual. J. 29(1):129–158, 2021. DOI `10.1007/s11219-020-09537-8`.
-- Multiple implementations of the same language become oracles for each other.
-- uutils copies the pattern: GNU vs Rust vs Toybox/BusyBox.
+- Test transplantation: a case written for one engine is replayed on the others; crashes, divergences, and assertion failures are classified.
+- Differential testing: the same generated or transplanted input is an oracle only relative to peer implementations, not to a formal JS spec.
+- uutils adapts the pattern: GNU is the primary oracle, Toybox/BusyBox extra ones, grammars keep argv in the language of each utility.
 
 ## Caveats
-
-- JS engines, not Unix utilities. The citation is methodological.
 
 ## Links
 

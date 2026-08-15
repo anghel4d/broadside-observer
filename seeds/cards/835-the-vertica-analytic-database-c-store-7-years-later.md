@@ -9,10 +9,10 @@ authors:
 - Lyric Doshi
 - Chuck Bear
 year: 2012
-venue: arXiv (Cornell University)
-arxiv: null
-doi: 10.48550/arxiv.1208.4173
-source: "https://doi.org/10.48550/arxiv.1208.4173"
+venue: Proceedings of the VLDB Endowment
+arxiv: "1208.4173"
+doi: 10.14778/2367502.2367518
+source: "https://arxiv.org/abs/1208.4173"
 topics:
 - databases
 - contemporary-db
@@ -22,32 +22,29 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
 # The Vertica Analytic Database: C-Store 7 Years Later
 
 ## One-sentence takeaway
 
-Influential database systems paper (2012).
+Vertica is the commercial C-Store: projections (sorted, compressed column groups) replace heap-plus-secondary-indexes, a WOS/ROS split absorbs writes, and the execution engine runs SQL over those projections at warehouse scale.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+It is the existence proof that the C-Store design survives contact with paying customers. When Anoptic or Broadside pick a physical layout, think “which projections / sort orders do we materialize,” not “which B-tree indexes.”
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- A table is stored as one or more projections — each a different column subset, sort order, and encoding — so the optimizer picks a physical copy rather than chasing secondary indexes.
+- Writes land in a write-optimized store (WOS) and are moved into read-optimized ROS containers by the Tuple Mover; deletes are marked, not in-place.
+- Encoding/compression is per-column and chosen to stay CPU-operable (RLE on sorted runs is the workhorse).
+- Segmentation (hash / range) plus buddy projections give shared-nothing scale-out and K-safety without a separate replica format.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
-- DOI: [10.48550/arxiv.1208.4173](https://doi.org/10.48550/arxiv.1208.4173)
-- URL: https://doi.org/10.48550/arxiv.1208.4173
+- arXiv: [1208.4173](https://arxiv.org/abs/1208.4173)
+- PVLDB: Vol. 5, No. 12, pp. 1790–1801

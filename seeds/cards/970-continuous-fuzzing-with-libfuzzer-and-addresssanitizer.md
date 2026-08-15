@@ -30,21 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-In-process coverage-guided fuzzing (libFuzzer) plus ASan as a continuous development practice — the engine under uutils' grammar-guided differential tests.
+Serebryany argues that in-process, coverage-guided fuzzing (libFuzzer) plus AddressSanitizer should be a continuous development practice, not a once-a-year fuzz week: the fuzzer lives in CI, shrinks crashing inputs, and catches memory errors as they land.
 
 ## Why it matters here
 
-How you actually run Miller 1990 in 2026 CI. Anoptic/GRID test harnesses want this, not once-a-year fuzz weeks.
+How you actually run Miller 1990 in 2026 CI. Anoptic/GRID test harnesses want this loop, and it is the engine under uutils' grammar-guided differential tests.
 
 ## Key ideas
 
-- IEEE SecDev 2016, p. 157. DOI `10.1109/SecDev.2016.043`.
-- libFuzzer: coverage-directed, in-process, shrinking crashing inputs.
-- uutils: libFuzzer + grammars of command synopses + GNU as cross-oracle.
+- IEEE SecDev 2016, p. 157. DOI `10.1109/SecDev.2016.043`. Short industrial note, not a long paper.
+- libFuzzer: coverage-directed, in-process (no fork-per-input), automatic shrinking of crashing cases.
+- ASan turns silent memory corruption into a deterministic crash the fuzzer can latch onto.
+- uutils: libFuzzer + grammars of command synopses + GNU as a cross-oracle; OSS-Fuzz (2017) is the hosted service built on this library.
 
 ## Caveats
-
-- Short SecDev note. OSS-Fuzz (2017) is the hosted service; this is the library.
 
 ## Links
 

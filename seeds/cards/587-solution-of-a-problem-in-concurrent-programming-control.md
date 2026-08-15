@@ -29,36 +29,30 @@ cites:
     year: 1968
     arxiv: null
     doi: null
-  - title: "Guarded Commands, Nondeterminacy and Formal Derivation of Programs"
-    url: "https://doi.org/10.1145/360933.360975"
-    year: 1975
-    arxiv: null
-    doi: "10.1145/360933.360975"
 see:
   - "586-the-structure-of-the-the-multiprogramming-system"
   - "588-cooperating-sequential-processes"
-  - "591-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
 ---
 
 # Solution of a Problem in Concurrent Programming Control
 
 ## One-sentence takeaway
 
-Dijkstra publishes a mutual-exclusion solution for N processes—concurrent programming control as a problem statement.
+Dijkstra publishes a software mutual-exclusion algorithm for N processes that uses only atomic read/write of shared memory.
 
 ## Why it matters here
 
-Root of mutex/semaphore literature; pairs with THE and Cooperating Sequential Processes.
+Critical sections in the engine and in agent workers are this problem. The 1965 CACM note is the problem statement the field still uses.
 
 ## Key ideas
 
-- Critical section problem.
-- Software mutual exclusion.
-- Leads to semaphores (1965/68 notes).
+- N sequential processes must never be in a critical section together, must not deadlock, and must not require a central scheduler.
+- The solution uses per-process flags and a turn variable; it generalizes Dekker's two-process algorithm.
+- Only atomic load and store are assumed — no test-and-set yet.
+- The note is one page (CACM 8(9):569) and immediately became the standard reference.
+- Semaphores in EWD123 / THE are the higher-level primitive this combinatorial solution motivates.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

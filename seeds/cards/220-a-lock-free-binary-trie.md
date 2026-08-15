@@ -15,50 +15,42 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # A Lock-free Binary Trie
 
 ## One-sentence takeaway
 
-A binary trie is a sequential data structure for a dynamic set on the universe $\{0,\dots,u-1\}$ supporting Search with $O(1)$ worst-case step complexity, and Insert, Delete, and Predecessor operations with $O(\log u)$ worst-case step complexity.
+A wait-free relaxed binary trie (O(1) Search, O(log u) updates) is composed into a lock-free linearizable trie whose updates cost O(c² + log u) amortized, where c measures contention.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (A Lock-free Binary Trie).
+Anoptic entity-id and GRID COMMAND occupancy maps are universe-bounded integer sets; a trie with O(1) Search and a real Predecessor is a better primitive than a generic lock-free BST.
 
 ## Key ideas
 
-- A binary trie is a sequential data structure for a dynamic set on the universe $\{0,\dots,u-1\}$ supporting Search with $O(1)$ worst-case step complexity, and Insert, Delete, and Predecessor operations with $O(\log u)$ worst-case step complexity.
-- We give a wait-free implementation of a relaxed binary trie, using read, write, CAS, and ($\log u$)-bit AND operations.
-- It supports all operations with the same worst-case step complexity as the sequential binary trie.
-- However, Predecessor operations may not return a key when there are concurrent update operations.
-- We use this as a component of a lock-free, linearizable implementation of a binary trie.
+- Sequential binary tries give O(1) Search and O(log u) Insert/Delete/Predecessor on {0,…,u−1}.
+- The relaxed wait-free trie uses read, write, CAS, and (log u)-bit AND, matching those bounds, but Predecessor may return empty under concurrent updates.
+- The lock-free linearizable wrapper restores a correct Predecessor; Search stays O(1) worst-case.
+- Insert and Delete must touch a non-constant number of nodes so Predecessor stays correct — that is why a lock-free trie is harder than a lock-free list.
+- Amortized update cost picks up a c² term that vanishes when contention is low.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2405.06208](https://arxiv.org/abs/2405.06208)
-- URL: https://arxiv.org/abs/2405.06208
+- PDF: https://arxiv.org/pdf/2405.06208

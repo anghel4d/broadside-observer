@@ -56,23 +56,20 @@ see:
 
 ## One-sentence takeaway
 
-VL1's successor: dynamic-tiling high-res vision + DeepSeekMoE/MLA language backbone; Tiny/Small/VL2 at 1.0/2.8/4.5B activated.
+VL1's successor puts a dynamic-tiling high-res vision encoder on a DeepSeekMoE + MLA language backbone, shipping Tiny/Small/VL2 at 1.0 / 2.8 / 4.5B activated parameters for VQA, OCR, documents, tables, charts, and visual grounding.
 
 ## Why it matters here
 
-Puts MLA+MoE under a VL model. Document/chart/OCR understanding is the agent-perception slice.
+Puts MLA+MoE under a VL model. Document/chart/OCR understanding is the agent-perception slice for GRID COMMAND: odd aspect ratios and high-res pages without a dense 67B tax.
 
 ## Key ideas
 
-- arXiv:2412.10302. Dynamic tiling vision encoder for high-res / odd aspect ratios.
-- Language side: DeepSeekMoE + MLA (KV latent) for efficient inference.
-- Three sizes: VL2-Tiny 1.0B act, Small 2.8B, VL2 4.5B. VQA, OCR, document/table/chart, visual grounding.
-- Repo: https://github.com/deepseek-ai/DeepSeek-VL2
+- arXiv:2412.10302. Dynamic tiling adapts the vision encoder to high resolution and non-square aspect ratios instead of a fixed 1024² crop.
+- Language side reuses DeepSeekMoE (fine experts + shared experts) and MLA (latent KV) for cheaper inference.
+- Three sizes keep activated counts small: 1.0B / 2.8B / 4.5B. This is not V3-scale vision.
+- Understanding-focused; Janus remains the unified understand+generate path.
 
 ## Caveats
-
-- Understanding-focused MoE VL, not the unified Janus generate path.
-- Activated counts are small; this is not V3-scale vision.
 
 ## Links
 

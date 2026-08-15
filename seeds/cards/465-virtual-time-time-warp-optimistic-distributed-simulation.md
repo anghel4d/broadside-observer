@@ -1,60 +1,47 @@
 ---
-title: Virtual Time / Time Warp Optimistic Distributed Simulation
+title: "Virtual Time"
 authors:
-- David R. Jefferson
+  - "David R. Jefferson"
 year: 1985
-venue: TOPLAS
+venue: "ACM TOPLAS"
 arxiv: null
-doi: 10.1145/3916.3988
-source: https://doi.org/10.1145/3916.3988
+doi: "10.1145/3916.3988"
+source: "https://doi.org/10.1145/3916.3988"
 topics:
-- rollback
-- simulation
+  - rollback
+  - simulation
 seed_rank: 465
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: realtime
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "realtime"
 relevance_score: 8
 lineage: game-networking
 cites:
-- title: GGPO Rollback Networking
-  url: https://github.com/pond3r/ggpo
-  year: 2006
-  arxiv: null
-  doi: null
-- title: Deterministic Lockstep
-  url: https://gafferongames.com/post/deterministic_lockstep/
-  year: 2014
-  arxiv: null
-  doi: null
-see:
-- "197-ggpo-rollback-networking"
-- "016-deterministic-lockstep"
+  - title: "Distributed Discrete-Event Simulation"
+    url: "https://doi.org/10.1145/6462.6485"
+    year: 1986
+    doi: "10.1145/6462.6485"
 ---
 
-# Virtual Time / Time Warp Optimistic Distributed Simulation
+# Virtual Time
 
 ## One-sentence takeaway
 
-Time Warp is the classic optimistic rollback substrate that game rollback netcode rhymes with.
+Jefferson's Time Warp lets each process advance on its own virtual clock and, on a causality fault, rolls back by sending antimessages that cancel the speculative events already sent.
 
 ## Why it matters here
 
-Intellectual ancestor for GGPO-style speculate-and-rollback (analogy across domains).
+Intellectual ancestor of GGPO-style speculate-and-rollback: same optimistic execute / undo-on-misprediction shape, even though DES virtual time is not fighting-game netcode.
 
 ## Key ideas
 
-- Optimistic execution with antimessages/rollback on causality faults.
-- Global Virtual Time for fossil collection.
-- Decades before fighting-game rollback libraries.
-- Useful vocabulary for systems engineers.
+- Virtual time is a global partial order of events; processes may run ahead of others and later correct.
+- Incorrect messages are annihilated by antimessages; the receiver rolls back to the last correct state and re-executes.
+- Global Virtual Time (GVT) is the minimum unprocessed timestamp across the system and bounds fossil collection of old states.
+- Optimistic alternative to conservative Chandy–Misra lookahead: no blocking wait for safe events.
 
 ## Caveats
-
-- DES Time Warp is not fighting-game netcode — analogy, not identity.
-- Do not cite as a GGPO design doc.
 
 ## Links
 
 - DOI: [10.1145/3916.3988](https://doi.org/10.1145/3916.3988)
-- URL: https://doi.org/10.1145/3916.3988

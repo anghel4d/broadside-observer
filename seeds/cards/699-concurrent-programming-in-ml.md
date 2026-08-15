@@ -25,51 +25,35 @@ cites:
     year: 1997
     arxiv: null
     doi: null
-  - title: "A Calculus of Mobile Processes, I"
-    url: "https://doi.org/10.1016/0890-5401(92)90008-3"
-    year: 1992
-    arxiv: null
-    doi: "10.1016/0890-5401(92)90008-3"
   - title: "Communicating Sequential Processes"
     url: "https://doi.org/10.1145/359576.359585"
     year: 1978
     arxiv: null
     doi: "10.1145/359576.359585"
-  - title: "Making Reliable Distributed Systems in the Presence of Software Errors"
-    url: "https://erlang.org/download/armstrong_thesis_2003.pdf"
-    year: 2003
-    arxiv: null
-    doi: null
 see:
   - "137-the-definition-of-standard-ml-revised"
-  - "695-a-calculus-of-mobile-processes-i"
   - "046-communicating-sequential-processes"
-  - "700-making-reliable-distributed-systems-in-the-presence-of-softw"
 ---
 
 # Concurrent Programming in ML
 
 ## One-sentence takeaway
 
-Presents Concurrent ML: first-class synchronous events composable with ML functions.
+Reppy's Concurrent ML makes synchronous events first-class values: `choose`, `wrap`, and `guard` compose protocols the way ordinary ML functions compose data.
 
 ## Why it matters here
 
-CML is the typed concurrent-language classic — event combinators still influence modern concurrency APIs.
+CML is the typed concurrent-language classic — event combinators still sit under modern `select`/`join` APIs, and they are what you want if ano grows typed rendezvous rather than raw actor mailboxes.
 
 ## Key ideas
 
-- First-class events with choose/wrap.
-- Synchronization as a value-level abstraction.
-- Implemented in SML/NJ lineage.
-- Bridge from process calculi ideas to ML practice.
+- An event is a value describing a potential synchronization; `sync` performs it. `choose` is nondeterministic alternative, `wrap` post-composes a function, `guard` computes the event at sync time.
+- Channels, threads, and timeouts are ordinary libraries on top of that interface; the book then builds a parallel build system, a window manager, and distributed tuple spaces.
+- Implemented in the SML/NJ lineage; a chapter covers implementing concurrency on SML/NJ's first-class continuations.
+- CUP 1999, DOI 10.1017/CBO9780511574962. Process calculi are the theory; this is the ML you write.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1017/CBO9780511574962](https://doi.org/10.1017/CBO9780511574962)
-- URL: https://doi.org/10.1017/CBO9780511574962

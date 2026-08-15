@@ -1,72 +1,71 @@
 ---
-title: Efficient Memory Management for Large Language Model Serving with PagedAttention
+title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
 authors:
-- Woosuk Kwon
-- Zhuohan Li
-- Siyuan Zhuang
-- Ying Sheng
-- Lianmin Zheng
-- Cody Hao Yu
-- Joseph E. Gonzalez
-- Hao Zhang
-- Ion Stoica
+  - "Woosuk Kwon"
+  - "Zhuohan Li"
+  - "Siyuan Zhuang"
+  - "Ying Sheng"
+  - "Lianmin Zheng"
+  - "Cody Hao Yu"
+  - "Joseph E. Gonzalez"
+  - "Hao Zhang"
+  - "Ion Stoica"
 year: 2023
-venue: SOSP
-arxiv: '2309.06180'
-doi: null
-source: https://arxiv.org/abs/2309.06180
+venue: "SOSP"
+arxiv: "2309.06180"
+doi: "10.1145/3600006.3613165"
+source: "https://arxiv.org/abs/2309.06180"
 topics:
-- rag
-- retrieval
-- kv-serving
-- inference-systems
-- transformer
-- foundations
-- llm-serving
+  - rag
+  - retrieval
+  - kv-serving
+  - inference-systems
+  - transformer
+  - foundations
+  - llm-serving
 seed_rank: 2
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: agents
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "agents"
 relevance_score: 10
 cites:
-- title: 'FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness'
-  url: https://arxiv.org/abs/2205.14135
-  year: 2022
-  arxiv: '2205.14135'
-  doi: null
-- title: 'SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills'
-  url: https://arxiv.org/abs/2308.16369
-  year: 2023
-  arxiv: '2308.16369'
-  doi: null
+  - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+    url: "https://arxiv.org/abs/2205.14135"
+    year: 2022
+    arxiv: "2205.14135"
+    doi: null
+  - title: "Orca: A Distributed Serving System for Transformer-Based Generative Models"
+    url: "https://www.usenix.org/conference/osdi22/presentation/yu"
+    year: 2022
+    arxiv: null
+    doi: null
 see:
-- "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
-- "082-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+  - "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
 ---
 
 # Efficient Memory Management for Large Language Model Serving with PagedAttention
 
 ## One-sentence takeaway
 
-High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time.
+PagedAttention treats the KV cache like virtual memory — non-contiguous blocks mapped by a block table — so vLLM can pack requests without reservation waste and share prefixes across sequences.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (Efficient Memory Management for Large Language Model Serving with PagedAttention)
+Every Broadside observer and GRID COMMAND agent is a long, branching decode: if KV pages fragment or duplicate, batch size collapses and the radar loop starves. This is the serving primitive behind prefix reuse, tool-call forks, and multi-session memory.
 
 ## Key ideas
 
-- High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time.
-- However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically.
-- When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size.
-- To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems.
-- On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage.
+- Autoregressive serving is memory-bound on the KV cache, which grows and shrinks per request; contiguous reservation wastes memory to internal and external fragmentation and blocks large batches.
+- PagedAttention splits KV into fixed-size blocks addressed through a per-sequence block table, so physical GPU memory need not be contiguous and unused slots stay unallocated.
+- vLLM shares blocks across sequences that share a prompt prefix (beam search, parallel sampling) via copy-on-write, cutting redundant KV copies.
+- Against FasterTransformer and Orca, vLLM reports 2–4× throughput at the same latency, with larger gains on long sequences and complex decoding.
+- The attention kernel itself becomes OS-like: allocate, map, share, and reclaim pages rather than pre-reserving a max-length slab per request.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2309.06180](https://arxiv.org/abs/2309.06180)
-- URL: https://arxiv.org/abs/2309.06180
+- PDF: https://arxiv.org/pdf/2309.06180
+- DOI: [10.1145/3600006.3613165](https://doi.org/10.1145/3600006.3613165)
+- Code: https://github.com/vllm-project/vllm

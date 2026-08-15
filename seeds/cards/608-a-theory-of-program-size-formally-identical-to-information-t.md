@@ -24,7 +24,7 @@ cites:
     arxiv: null
     doi: "10.1145/321356.321363"
   - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+    url: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
     year: 1965
     arxiv: null
     doi: null
@@ -49,23 +49,21 @@ see:
 
 ## One-sentence takeaway
 
-Chaitin's prefix complexity makes algorithmic information mirror Shannon entropy identities.
+Chaitin switches to self-delimiting (prefix-free) programs so algorithmic information H satisfies the same additive identities as Shannon entropy, via the Kraft inequality.
 
 ## Why it matters here
 
-Technical maturity of AIT; Kraft inequality / self-delimiting programs.
+This is the technically mature AIT: prefix complexity H(x), H(x,y) = H(x) + H(y|x) + O(1), and the setup that makes Chaitin's Ω a well-defined real. Use it whenever Broadside talks about program priors rather than plain C(x).
 
 ## Key ideas
 
-- Self-delimiting machines.
-- Analogues of entropy identities.
-- Sets up Ω later.
+- Programs must be prefix-free so a machine can know when a program has ended without a length header.
+- Kraft's inequality then makes Σ 2^{−H(x)} ≤ 1, the same numerical skeleton as a Shannon code.
+- Joint / conditional program-size identities mirror entropy identities up to O(1).
+- The same prefix-free setting is what later lets Ω = Σ_{U(p)↓} 2^{−|p|} converge.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/321892.321894](https://doi.org/10.1145/321892.321894)
-- URL: https://doi.org/10.1145/321892.321894

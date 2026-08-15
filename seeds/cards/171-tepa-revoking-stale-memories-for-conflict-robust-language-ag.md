@@ -43,25 +43,22 @@ cites:
 
 ## One-sentence takeaway
 
-Long-term memory enables language agents to reuse past facts, preferences, and task experience.
+TEPA makes memory validity an explicit state: keyed precedents are revoked when newer evidence contradicts them, so retrieval cannot keep serving superseded facts.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (TEPA: Revoking Stale Memories for Conflict-Robust Language Agents)
+Broadside digests and GRID COMMAND observer memory must be able to retract. Append-only and last-write-wins both fail under reversal; a revoked-but-auditable precedent is the provenance primitive.
 
 ## Key ideas
 
-- Long-term memory enables language agents to reuse past facts, preferences, and task experience.
-- Persistence also creates a central falsifiability problem: when the world changes, stale memories can remain retrievable and pollute the prompt.
-- We characterize this failure mode as memory pollution: degradation caused by active memories that newer conflicting evidence has superseded.
-- We introduce TEPA, a revocable evidence-memory mechanism that makes validity an explicit state of memory.
-- TEPA represents observations as keyed precedents and revokes active precedents when fresh evidence contradicts them under the same key, allowing retrieval to draw from current evidence while preserving revoked history for audit.
+- Memory pollution is defined as active, still-retrievable memories that newer conflicting evidence has superseded.
+- Observations are stored as keyed precedents; a contradiction under the same key revokes the old precedent without deleting the audit history.
+- Retrieval reads only currently valid evidence; revoked items remain inspectable and can later be re-promoted.
+- In controlled hidden-regime drift and file-backed executable drift, append-only and last-write-wins fall below a no-memory baseline on full reversal, while TEPA stays near 0.95.
+- On clean single-hop MemoryAgentBench, TEPA matches last-write-wins; multi-hop and very long context still fail for retrieval-chain reasons beyond fact-level validity.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2608.07429](https://arxiv.org/abs/2608.07429)
-- URL: https://arxiv.org/abs/2608.07429

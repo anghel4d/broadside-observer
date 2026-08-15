@@ -23,48 +23,43 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle"
-    url: "https://arxiv.org/abs/2604.16548"
-    year: 2026
-    arxiv: "2604.16548"
+  - title: "MemGPT: Towards LLMs as Operating Systems"
+    url: "https://arxiv.org/abs/2310.08560"
+    year: 2023
+    arxiv: "2310.08560"
     doi: null
-  - title: "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
-    url: "https://arxiv.org/abs/2605.20616"
-    year: 2026
-    arxiv: "2605.20616"
-    doi: null
-  - title: "Coupling Planning with Episodic Memory in LLM Agents for Software Issue Resolution"
-    url: "https://arxiv.org/abs/2608.06811"
-    year: 2026
-    arxiv: "2608.06811"
+  - title: "Generative Agents: Interactive Simulacra of Human Behavior"
+    url: "https://arxiv.org/abs/2304.03442"
+    year: 2023
+    arxiv: "2304.03442"
     doi: null
 see:
-  - "055-coupling-planning-with-episodic-memory-in-llm-agents-for-sof"
+  - "004-memgpt-towards-llms-as-operating-systems"
+  - "003-generative-agents-interactive-simulacra-of-human-behavior"
 ---
 
 # A-MEM: Agentic Memory for LLM Agents
 
 ## One-sentence takeaway
 
-While large language model (LLM) agents can effectively use external tools for complex real-world tasks, they require memory systems to leverage historical experiences.
+A-MEM organizes agent memory as a Zettelkasten of notes with contextual descriptions, keywords, and tags, then lets new notes rewrite the attributes of linked historical memories.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (A-MEM: Agentic Memory for LLM Agents)
+Fixed memory schemas in ano/Broadside cannot adapt across task types; A-MEM is the agentic write path that grows a knowledge graph instead of appending a log.
 
 ## Key ideas
 
-- While large language model (LLM) agents can effectively use external tools for complex real-world tasks, they require memory systems to leverage historical experiences.
-- Current memory systems enable basic storage and retrieval but lack sophisticated memory organization, despite recent attempts to incorporate graph databases.
-- Moreover, these systems' fixed operations and structures limit their adaptability across diverse tasks.
-- To address this limitation, this paper proposes a novel agentic memory system for LLM agents that can dynamically organize memories in an agentic way.
-- Following the basic principles of the Zettelkasten method, we designed our memory system to create interconnected knowledge networks through dynamic indexing and linking.
+- Existing memory systems store and retrieve but keep fixed operations and structures, even when they sit on a graph database.
+- Each new memory becomes a structured note; the system then searches historical notes for meaningful links.
+- Memory evolution: integrating a new note can update contextual representations and attributes of already-stored notes.
+- The design pairs Zettelkasten organization with agent-driven decisions about what to link and how to rewrite.
+- Experiments on six foundation models beat then-SOTA memory baselines; eval code is at https://github.com/WujiangXu/A-mem and the system at https://github.com/WujiangXu/A-mem-sys.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2502.12110](https://arxiv.org/abs/2502.12110)
-- URL: https://arxiv.org/abs/2502.12110
+- PDF: https://arxiv.org/pdf/2502.12110
+- Code: https://github.com/WujiangXu/A-mem

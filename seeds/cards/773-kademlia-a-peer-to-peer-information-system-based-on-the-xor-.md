@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Kademlia DHT — XOR-metric routing used by BitTorrent and many P2P systems.
+Kademlia treats node IDs as leaves of a binary tree and uses XOR distance, so every lookup both finds the $k$ closest nodes to a key and refreshes the querier’s $k$-buckets.
 
 ## Why it matters here
 
-More deployed DHT design than Chord/Pastry in the wild.
+This is the DHT that actually shipped (BitTorrent Mainline DHT, Ethereum discovery): the overlay design to copy if Broadside or a GRID COMMAND matchmaker needs a deployed peer lookup.
 
 ## Key ideas
 
-- XOR distance.
-- k-buckets.
-- Parallel iterative lookups.
-- Simple and robust under churn.
+- Distance is $d(x,y)=x\oplus y$; it is unidirectional, so a query for a key always walks toward that key’s neighborhood.
+- Contacts live in $k$-buckets indexed by the leading XOR-bit of the distance; buckets prefer long-lived nodes.
+- Lookups are iterative and $\alpha$-parallel: ask the $\alpha$ closest known nodes, then recurse on the closer replies.
+- Routing-table maintenance is free: every lookup is also a bucket refresh, which is why Kademlia survives churn better than Chord in the wild.
 
 ## Caveats
-
-- Security/eclipse attacks need care.
-- Systems-adjacent companion to algorithms lineage.
 
 ## Links
 

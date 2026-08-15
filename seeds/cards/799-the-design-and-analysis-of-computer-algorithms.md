@@ -8,7 +8,7 @@ year: 1974
 venue: Addison-Wesley
 arxiv: null
 doi: null
-source: "https://en.wikipedia.org/wiki/The_Design_and_Analysis_of_Computer_Algorithms"
+source: "https://www.pearson.com/en-us/subject-catalog/p/design-and-analysis-of-computer-algorithms-the/P200000003488/9780201000290"
 topics:
 - textbook
 - algorithms
@@ -39,24 +39,21 @@ see:
 
 ## One-sentence takeaway
 
-Aho-Hopcroft-Ullman 1974 — early comprehensive algorithms text (AHU).
+Aho–Hopcroft–Ullman 1974 (ISBN 0-201-00029-6) is the first comprehensive algorithms textbook, standardizing asymptotic analysis and a graph/combinatorial core that later books still follow.
 
 ## Why it matters here
 
-Historical algorithms canon before CLRS; still cited for classic presentations.
+AHU is the historical canon behind CLRS and Hopcroft–Ullman automata: the lineage card for how Anoptic/ano algorithm writing inherited “lists, stacks, trees, graphs, and $O$-notation” as a single course.
 
 ## Key ideas
 
-- Asymptotic analysis standardized.
-- Graph and combinatorial algorithms core.
-- Companion spirit to Hopcroft-Ullman automata.
-- One card for the book.
+- Introduces the basic data structures and programming techniques used in efficient algorithms — lists, stacks, queues, trees, graphs.
+- Treats design paradigms (divide-and-conquer, greedy, DP-adjacent techniques) and NP-completeness in one volume.
+- Companion spirit to the later Hopcroft–Ullman automata text; many proofs in the algorithms literature still point here.
+- One card for the book; Pearson still catalogs the 1974 first edition.
 
 ## Caveats
 
-- Superseded pedagogically by CLRS/Sedgewick for many courses.
-- Keep for lineage, not as sole reference.
-
 ## Links
 
-- URL: https://en.wikipedia.org/wiki/The_Design_and_Analysis_of_Computer_Algorithms
+- Pearson catalog: https://www.pearson.com/en-us/subject-catalog/p/design-and-analysis-of-computer-algorithms-the/P200000003488/9780201000290

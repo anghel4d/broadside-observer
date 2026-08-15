@@ -3,7 +3,7 @@ title: "Overwatch Gameplay Architecture and Netcode (ECS-flavored)"
 authors:
   - "Timothy Ford"
 year: 2017
-venue: "GDC"
+venue: "GDC 2017"
 arxiv: null
 doi: null
 source: "https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and"
@@ -49,21 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-GDC talk on Overwatch gameplay architecture, component-oriented simulation, and netcode implications.
+Overwatch's gameplay is a deterministic, component-oriented simulation ticked on the server, with clients predicting the same transform so netcode is a property of the ECS rather than a layer bolted on afterwards.
 
 ## Why it matters here
 
-ECS-ish gameplay + networking discipline at shipped scale.
+Shipped-scale proof that ano-style entities-plus-systems can carry both simulation and prediction. The talk is the architecture Broadside should steal: one gameplay transform, two clocks, no gameplay objects that cannot be replayed.
 
 ## Key ideas
 
-- GDC talk on Overwatch gameplay architecture, component-oriented simulation, and netcode implications.
+- Gameplay state lives in components; systems are deterministic functions of that state plus input, which is what makes prediction and replay possible.
+- Responsiveness comes from client-side prediction of the same systems the server will run, not from letting the client own truth.
+- Precision (hit registration, abilities) is a netcode problem solved by the same component model, not a special-case object graph.
+- Companion GDC 2017 talk by Dan Reed covers Statescript prediction/replication of scripted weapons on the same architecture.
+- Canonical artifact is the GDC Vault session (video); no official public slide PDF from Ford.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and
+- GDC Vault: https://www.gdcvault.com/play/1024001/-Overwatch-Gameplay-Architecture-and
+- YouTube: https://www.youtube.com/watch?v=W3aieHjyNvw

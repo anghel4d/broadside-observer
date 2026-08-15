@@ -69,8 +69,6 @@ Game/engine hosts run on ARM and x86; this paper is the practical recipe for Cha
 
 ## Caveats
 
-- Seed card from lineage epistemology pass; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/2442516.2442524](https://doi.org/10.1145/2442516.2442524)

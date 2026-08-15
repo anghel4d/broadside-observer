@@ -1,5 +1,5 @@
 ---
-title: Coordination avoidance in database systems
+title: Coordination Avoidance in Database Systems
 authors:
 - Peter Bailis
 - Alan Fekete
@@ -9,9 +9,9 @@ authors:
 - Ion Stoica
 year: 2014
 venue: Proceedings of the VLDB Endowment
-arxiv: null
+arxiv: "1402.2237"
 doi: 10.14778/2735508.2735509
-source: "https://doi.org/10.14778/2735508.2735509"
+source: "https://arxiv.org/abs/1402.2237"
 topics:
 - databases
 - contemporary-db
@@ -22,31 +22,35 @@ pool: systems
 relevance_score: 9
 lineage: contemporary-databases
 cites:
-  []
+- title: "Highly Available Transactions: Virtues and Limitations (Extended Version)"
+  url: "https://arxiv.org/abs/1302.0309"
+  year: 2013
+  arxiv: "1302.0309"
+  doi: 10.48550/arXiv.1302.0309
+see:
+- "848-highly-available-transactions-virtues-and-limitations-extend"
 ---
 
-# Coordination avoidance in database systems
+# Coordination Avoidance in Database Systems
 
 ## One-sentence takeaway
 
-Influential database systems paper (2014).
+I-confluence is a criterion on invariants: if every pair of locally valid transactions can be merged into a globally valid state, those transactions need no runtime coordination; Bailis et al. apply it to foreign keys, unique counters, and TPC-C payment/new-order and show large geo-distributed speedups when coordination is skipped.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+GRID COMMAND matchmaking, inventory decrements, and “unique name” constraints are invariants, not a blanket SERIALIZABLE tax. I-confluence is the test for which ECS / SQL constraints can stay coordination-free on a partitioned world sim.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- An invariant I is I-confluent if, whenever two states each satisfy I and arose from a common ancestor by commuting operations, their merge also satisfies I.
+- Many textbook constraints fail (uniqueness of a scarce resource, sequential ids); many others pass (monotonic counters, some foreign keys, replicated grow-only sets).
+- The paper’s system (on top of their HAT / invariant-confluence line) admits uncoordinated commit for I-confluent operations and falls back to coordination only for the rest.
+- TPC-C new-order/payment can be made mostly I-confluent with modest invariant rewrites, which is where the WAN latency win comes from.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
+- arXiv: [1402.2237](https://arxiv.org/abs/1402.2237)
 - DOI: [10.14778/2735508.2735509](https://doi.org/10.14778/2735508.2735509)
-- URL: https://doi.org/10.14778/2735508.2735509

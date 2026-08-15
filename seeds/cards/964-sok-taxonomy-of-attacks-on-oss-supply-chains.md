@@ -28,21 +28,20 @@ cites:
 
 ## One-sentence takeaway
 
-107-vector attack tree on OSS supply chains (code → package distribution), linked to 94 incidents and 33 safeguards — the risk model behind uutils' ×33 crate leverage.
+Ladisa, Plate, Martinez, and Barais build a 107-vector attack tree on OSS supply chains from code contribution through package distribution, link it to 94 public incidents and 33 safeguards, and validate the taxonomy with expert and developer surveys.
 
 ## Why it matters here
 
-Why Anoptic should not swallow 110 crates blindly. The uutils paper cites this as the cost of P3 (no NIH).
+This is the named risk behind uutils' ×33 crate leverage (8 direct → 110 runtime crates). Anoptic should not swallow a Cargo graph blindly; quote this SoK when someone says 'just add a crate'.
 
 ## Key ideas
 
-- IEEE S&P 2023; arXiv:2204.04008. DOI `10.1109/SP46215.2023.00010`.
-- Language/ecosystem-agnostic; expert + developer surveys validate the taxonomy.
-- uutils: 8 direct → 110 runtime crates (213 with dev). This SoK is the named risk.
+- IEEE S&P 2023; arXiv:2204.04008; DOI `10.1109/SP46215.2023.00010`.
+- Language- and ecosystem-agnostic tree: compromise source, build, and distribution; each leaf is a concrete attack vector observed or plausibly instantiated.
+- 94 real incidents are placed on the tree; 33 safeguards (signing, reproducible builds, review gates, lockfiles) are mapped back onto the same nodes.
+- Expert + developer surveys check coverage and naming; the paper is a taxonomy, not a Cargo-specific audit.
 
 ## Caveats
-
-- Taxonomy, not a uutils audit. Does not measure Cargo specifically.
 
 ## Links
 

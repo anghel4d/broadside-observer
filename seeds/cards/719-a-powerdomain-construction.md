@@ -19,56 +19,48 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Domains for Denotational Semantics"
-    url: "https://doi.org/10.1007/BFb0012801"
-    year: 1982
-    arxiv: null
-    doi: "10.1007/BFb0012801"
   - title: "Data Types as Lattices"
     url: "https://doi.org/10.1137/0205046"
     year: 1976
     arxiv: null
     doi: "10.1137/0205046"
-  - title: "LCF Considered as a Programming Language"
-    url: "https://doi.org/10.1016/0304-3975(77)90044-5"
-    year: 1977
-    arxiv: null
-    doi: "10.1016/0304-3975(77)90044-5"
   - title: "Guarded Commands, Nondeterminacy and Formal Derivation of Programs"
     url: "https://doi.org/10.1145/360933.360975"
     year: 1975
     arxiv: null
     doi: "10.1145/360933.360975"
+  - title: "Toward a Mathematical Semantics for Computer Languages"
+    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
+    year: 1971
+    arxiv: null
+    doi: null
 see:
-  - "656-domains-for-denotational-semantics"
   - "614-data-types-as-lattices"
-  - "657-lcf-considered-as-a-programming-language"
   - "591-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
+  - "612-toward-a-mathematical-semantics-for-computer-languages"
 ---
 
 # A Powerdomain Construction
 
 ## One-sentence takeaway
 
-Constructs powerdomains for modeling nondeterministic and concurrent computation in domain theory.
+Nondeterministic programs get a denotational meaning by lifting a domain to a powerdomain of possible results, so choice and recursion still have least fixpoints.
 
 ## Why it matters here
 
-Plotkin powerdomains — the denotational tool for nondeterminism beside Scott domains and Dijkstra GCL.
+GRID COMMAND, combat resolution, and agent planners are full of demonic/angelic choice. Plotkin’s powerdomain is the domain-theoretic object you use when “this command may take several next states” has to be a value, not a footnote — the denotational twin of Dijkstra’s guarded commands.
 
 ## Key ideas
 
-- Powerdomain constructions for nondeterminism.
-- Domain-theoretic semantics for choice.
-- Companion to Scott lattices/domains.
-- Used across concurrent language semantics.
+- A powerdomain is a domain whose elements are (equivalence classes of) sets of possible outcomes, ordered so recursion still makes sense.
+- The construction is designed for countable nondeterminism in programming-language semantics, not for arbitrary set theory.
+- Plotkin’s convex powerdomain sits beside later Smyth (demonic) and Hoare (angelic) variants; this paper is the original construction.
+- Scott’s data types as lattices and Dijkstra’s GCL are the cited neighbours: domains for values, guarded commands for the syntax of choice.
+- SIAM J. Comput. 5(3), 1976, pp. 452–487.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1137/0205035](https://doi.org/10.1137/0205035)
-- URL: https://doi.org/10.1137/0205035
+- SIAM: https://epubs.siam.org/doi/10.1137/0205035

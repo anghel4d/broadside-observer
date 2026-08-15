@@ -77,21 +77,23 @@ cites:
 
 ## One-sentence takeaway
 
-Defines physically based light transport.
+Kajiya writes global illumination as a single three-point integral equation and treats ray tracing, radiosity, and related methods as approximate solvers of that same transport problem.
 
 ## Why it matters here
 
-Defines physically based light transport.
+Anoptic and GRID COMMAND lighting should be approximations to this integral, not a pile of ad-hoc terms: path-traced GI, radiance caches, and real-time probes all inherit the same kernel and the same Monte Carlo options.
 
 ## Key ideas
 
-- Defines physically based light transport.
+- The rendering equation states outgoing intensity as emitted light plus the hemisphere integral of incoming intensity times a bidirectional reflectance kernel and a geometry term.
+- Classical techniques (Whitted ray tracing, radiosity, distributed ray tracing) appear as special-case approximations or discretizations of the same equation.
+- Monte Carlo path tracing is presented as a practical estimator, with importance sampling and related variance-reduction ideas already in view.
+- The three-point form makes occlusion, interreflection, and participating-media extensions share one transport language.
+- Solving the equation, not inventing a new local shading model, is the definition of physically based light transport.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/15922.15902](https://doi.org/10.1145/15922.15902)
-- URL: https://doi.org/10.1145/15922.15902
+- ACM: https://dl.acm.org/doi/10.1145/15922.15902

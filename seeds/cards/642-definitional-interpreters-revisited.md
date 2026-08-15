@@ -24,51 +24,29 @@ cites:
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-  - title: "Defunctionalization at Work"
-    url: "https://doi.org/10.1145/773184.773202"
-    year: 2001
-    arxiv: null
-    doi: "10.1145/773184.773202"
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/155090.155113"
-  - title: "Compiling with Continuations"
-    url: "https://doi.org/10.1017/CBO9780511609619"
-    year: 1992
-    arxiv: null
-    doi: "10.1017/CBO9780511609619"
 see:
   - "630-definitional-interpreters-for-higher-order-programming-langu"
-  - "643-defunctionalization-at-work"
-  - "666-the-essence-of-compiling-with-continuations"
-  - "667-compiling-with-continuations"
 ---
 
 # Definitional Interpreters Revisited
 
 ## One-sentence takeaway
 
-Revisits the 1972 definitional-interpreters essay with modern vocabulary for CPS and defunctionalization.
+Reynolds retells the 1972 essay in 1990s vocabulary, making explicit that CPS and defunctionalization were the two systematic transforms hiding in the original interpreters.
 
 ## Why it matters here
 
-Best secondary key to Reynolds 1972 — clarifies what 'definitional' meant and how it influenced later PE/CPS work.
+Best secondary key to Reynolds 1972 — what “definitional” meant, why the defining language’s evaluation order leaks, and how that line feeds Danvy’s later PE/CPS/defunctionalization work (643) and continuation compilers (666).
 
 ## Key ideas
 
-- Historical framing of CPS and defunctionalization.
-- Clarifies the 1972 transformations for a 1990s audience.
-- Links to continuation and partial-evaluation literature.
-- Pairs with Danvy's later defunctionalization-at-work line.
+- Historical framing of continuation-passing style as a way to pin down evaluation order in the metalanguage.
+- Defunctionalization presented as the inverse of introducing function values — first-order closures plus an apply.
+- Clarifies what the 1972 transformations were doing for a generation that had since named CPS and PE.
+- *HOSC* 11(4), 1998, pp. 355–361.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1023/A:1010075320953](https://doi.org/10.1023/A:1010075320953)
-- URL: https://doi.org/10.1023/A:1010075320953

@@ -3,11 +3,11 @@ title: "An Introduction to String Diagrams for Computer Scientists"
 authors:
   - "Robin Piedeleu"
   - "Fabio Zanasi"
-year: 2025
-venue: "Cambridge University Press"
-arxiv: null
+year: 2023
+venue: "arXiv:cs.LO"
+arxiv: "2305.08768"
 doi: null
-source: "https://www.cambridge.org/core/books/an-introduction-to-string-diagrams-for-computer-scientists/"
+source: "https://arxiv.org/abs/2305.08768"
 topics:
   - "string-diagrams"
   - "monoidal-categories"
@@ -37,23 +37,22 @@ see:
 
 ## One-sentence takeaway
 
-CS-facing textbook on string diagrams: how to calculate with wires without drowning in Mac Lane.
+Piedeleu and Zanasi teach string diagrams as a formal syntax with semantics, starting from formal-language intuitions rather than from Mac Lane, then point to applications across CS, physics, and linguistics.
 
 ## Why it matters here
 
-The readable on-ramp to Selinger/Joyal–Street for anyone implementing NCDs or ano-as-diagrams.
+This is the readable on-ramp for anyone implementing NCD/Weaves wires or treating ano terms as diagrams: you can calculate with boxes and wires without first swallowing a coherence textbook.
 
 ## Key ideas
 
-- CUP 2025; ISBN 9781009625708.
-- Aimed at computer scientists, not just category theorists.
-- Zanasi also on Cruttwell lenses and Wilson–Ghica strictification (this spine).
+- Treats string diagrams as a two-dimensional syntax (boxes, wires, sequential and parallel composition) whose equational theory is justified after the pictures, not before.
+- Builds the monoidal and compact-closed fragment from generators and rewrite rules a programmer can implement, then recovers the usual categorical semantics.
+- After the core calculus, surveys uses in digital circuits, programming languages, quantum processes, and natural language — the same diagrammatic habit Weaves later applies to tensors.
+- Expanded as a 2025 Cambridge Elements volume (ISBN 9781009625708); the arXiv note is the citable open text.
 
 ## Caveats
 
-- Textbook. Cite Selinger 133 for the survey of graphical languages; this is the tutorial.
-
 ## Links
 
-- CUP: https://www.cambridge.org/core/books/an-introduction-to-string-diagrams-for-computer-scientists/
-- ISBN 9781009625708
+- arXiv: [2305.08768](https://arxiv.org/abs/2305.08768)
+- CUP Elements: https://www.cambridge.org/core/elements/an-introduction-to-string-diagrams-for-computer-scientists/3CDAF8F57D2299F0EACA3354E9757CFD

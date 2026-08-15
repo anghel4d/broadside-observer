@@ -19,52 +19,37 @@ pool: "systems"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "The Two-Valued Iterative Systems of Mathematical Logic"
-    url: "https://press.princeton.edu/books/paperback/9780691095707/the-two-valued-iterative-systems-of-mathematical-logic"
-    year: 1941
+  - title: "A Treatise on Universal Algebra"
+    url: "https://archive.org/details/treatiseonuniver00whituoft"
+    year: 1898
     arxiv: null
     doi: null
-  - title: "A Mathematical Theory of Communication"
-    url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
-    year: 1948
+  - title: "The Algebra of Logic"
+    url: "https://archive.org/details/algebbralogic00coutuoft"
+    year: 1914
     arxiv: null
-    doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "The Synthesis of Two-Terminal Switching Circuits"
-    url: "https://doi.org/10.1002/j.1538-7305.1949.tb03624.x"
-    year: 1949
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1949.tb03624.x"
-  - title: "First Draft of a Report on the EDVAC"
-    url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
-    year: 1945
-    arxiv: null
-    doi: "10.5479/sil.538961.39088011475779"
-see:
-  - "538-the-two-valued-iterative-systems-of-mathematical-logic"
-  - "553-a-mathematical-theory-of-communication"
-  - "557-the-synthesis-of-two-terminal-switching-circuits"
-  - "542-first-draft-of-a-report-on-the-edvac"
+    doi: null
 ---
 
 # A Symbolic Analysis of Relay and Switching Circuits
 
 ## One-sentence takeaway
 
-Shannon applies Boolean algebra to relay circuits—logic as electrical engineering.
+Shannon shows that series-parallel relay networks are a physical model of Boolean algebra, so circuit design becomes algebraic simplification.
 
 ## Why it matters here
 
-The moment logic becomes hardware; ancestor of every digital design stack.
+Every digital path in the Broadside engine — gates, masks, ECS enable bits — is the same correspondence Shannon made between hindering functions and propositional connectives.
 
 ## Key ideas
 
-- Series/parallel ≡ AND/OR.
-- Boolean simplification for relays.
-- MIT thesis that founded switching theory.
+- A closed contact is 0 (no hindrance) and an open contact is 1; series combination is Boolean addition and parallel combination is multiplication.
+- Any expression in the two-valued algebra can be realized by a relay network, and algebraic identities yield equivalent cheaper circuits.
+- Hindrance functions are manipulated with Huntington's postulates; dual networks swap series/parallel and 0/1.
+- Multi-terminal and sequential examples (adders, locks, interlocking) show the method is not limited to two-terminal combinational boxes.
+- The 1937 MIT master's thesis, published in AIEE Transactions 1938, is the founding paper of switching theory.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

@@ -6,7 +6,7 @@ year: 1949
 venue: "Report of a Conference on High Speed Automatic Calculating Machines, Cambridge"
 arxiv: null
 doi: null
-source: "https://www.turingarchive.org/browse.php/b/8"
+source: "https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-8"
 topics:
   - program-proof
   - verification
@@ -29,7 +29,7 @@ cites:
     arxiv: null
     doi: "10.1145/363235.363259"
   - title: "Proposal for Development in the Mathematics Division of an Automatic Computing Engine (ACE)"
-    url: "https://www.npl.co.uk/famous-faces/alan-turing"
+    url: "https://www.npl.co.uk/getattachment/ea5c6585-0929-4713-962c-2306f8dcf1f2/turing-proposal-Alan-LR.pdf?lang=en-US"
     year: 1946
     arxiv: null
     doi: null
@@ -43,22 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Turing's early program-proof example anticipates Floyd–Hoare reasoning about loops and invariants.
+Turing annotates a factorial-style machine routine with assertions at each box so that local checks imply the whole program is correct—Floyd–Hoare reasoning eighteen years early.
 
 ## Why it matters here
 
-Prehistory of axiomatic semantics already in the corpus (Hoare, separation logic).
+Prehistory of the axiomatic-semantics spine already in the corpus (Floyd, Hoare, separation logic). When Anoptic or ano wants a standing rule or kernel to carry an invariant, this 1949 EDSAC-conference note is the first worked example of "write the assertions next to the code."
 
 ## Key ideas
 
-- Annotating routines with assertions.
-- Example involving factorial-style computation.
-- 1949 Cambridge conference.
+- Given 24 June 1949 at the inaugural EDSAC conference; printed in the Cambridge *Report of a Conference on High Speed Automatic Calculating Machines*, pp. 67–69.
+- The example computes \(n!\) by a loop; each box of the flow diagram carries a predicate that must hold whenever control reaches it.
+- If every box preserves its neighbours' assertions, the routine as a whole meets its specification.
+- The 1949 typesetting is corrupt; Morris and Jones (1984) reprint a corrected text as "An Early Program Proof by Alan Turing."
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.turingarchive.org/browse.php/b/8
+- Turing Digital Archive AMT/B/8: https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-8
+- Morris–Jones 1984 reprint: https://www.cs.tau.ac.il/~nachumd/term/EarlyProof.pdf

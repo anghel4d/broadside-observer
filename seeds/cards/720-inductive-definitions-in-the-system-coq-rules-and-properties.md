@@ -34,41 +34,33 @@ cites:
     year: 1980
     arxiv: null
     doi: null
-  - title: "Formal Certification of a Compiler Back-end, or: Programming a Compiler with a Proof Assistant"
-    url: "https://doi.org/10.1145/1111037.1111042"
-    year: 2006
-    arxiv: null
-    doi: "10.1145/1111037.1111042"
 see:
   - "650-the-calculus-of-constructions"
   - "648-an-intuitionistic-theory-of-types-predicative-part"
   - "647-the-formulae-as-types-notion-of-construction"
-  - "707-formal-certification-of-a-compiler-back-end-or-programming-a"
 ---
 
 # Inductive Definitions in the System Coq: Rules and Properties
 
 ## One-sentence takeaway
 
-Develops inductive definitions in Coq's type theory — the practical inductive-types discipline.
+Coq gains datatypes and elimination principles by adding strictly positive inductive families to the Calculus of Constructions, with checked rules that preserve the type theory’s metatheory.
 
 ## Why it matters here
 
-Inductive types in Coq classic — how CoC became a programming/proof language with datatypes.
+CompCert, any future verified ano/SPIR-V pass, and Broadside’s formal notes all program in CIC — inductive types plus dependent elimination. This is the paper that turned Coquand–Huet CoC into a language you can write `Inductive` in.
 
 ## Key ideas
 
-- Inductive families in the Calculus of Inductive Constructions.
-- Rules and meta-theoretic properties.
-- Foundation for Coq programming practice.
-- Companion to Coquand–Huet CoC.
+- Inductive families are declared by constructors subject to a strict-positivity condition so the recursor is well-founded.
+- The paper gives formation, introduction, elimination, and computation rules, plus the metatheoretic properties needed to trust the extension.
+- This is the Calculus of Inductive Constructions (CIC) as used in Coq, not a side library of Church-encoded data.
+- Martin-Löf type theory and Howard’s formulae-as-types reading are the cited ancestry; CoC is the host calculus.
+- TLCA 1993 / LNCS 664.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/BFb0037116](https://doi.org/10.1007/BFb0037116)
-- URL: https://doi.org/10.1007/BFb0037116
+- Springer: https://link.springer.com/chapter/10.1007/BFb0037116

@@ -7,8 +7,8 @@ authors:
 year: 1993
 venue: "Journal of the ACM"
 arxiv: null
-doi: "10.1145/138027.138040"
-source: "https://doi.org/10.1145/138027.138040"
+doi: "10.1145/138027.138060"
+source: "https://doi.org/10.1145/138027.138060"
 topics:
   - logical-framework
   - lf
@@ -27,51 +27,47 @@ cites:
     year: 1975
     arxiv: null
     doi: "10.1016/S0049-237X(08)71945-1"
+  - title: "The Formulae-as-Types Notion of Construction"
+    url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
+    year: 1980
+    arxiv: null
+    doi: null
+  - title: "The Mathematical Language AUTOMATH, Its Usage, and Some of Its Extensions"
+    url: "https://doi.org/10.1007/BFb0060623"
+    year: 1970
+    arxiv: null
+    doi: "10.1007/BFb0060623"
   - title: "The Calculus of Constructions"
     url: "https://doi.org/10.1016/0890-5401(88)90005-3"
     year: 1988
     arxiv: null
     doi: "10.1016/0890-5401(88)90005-3"
-  - title: "Practical Foundations for Programming Languages"
-    url: "https://doi.org/10.1017/CBO9781316576892"
-    year: 2016
-    arxiv: null
-    doi: "10.1017/CBO9781316576892"
-  - title: "A Structural Approach to Operational Semantics"
-    url: "https://doi.org/10.1016/j.jlap.2004.05.001"
-    year: 1981
-    arxiv: null
-    doi: "10.1016/j.jlap.2004.05.001"
 see:
   - "648-an-intuitionistic-theory-of-types-predicative-part"
+  - "647-the-formulae-as-types-notion-of-construction"
+  - "655-the-mathematical-language-automath-its-usage-and-some-of-its"
   - "650-the-calculus-of-constructions"
-  - "646-practical-foundations-for-programming-languages"
-  - "658-a-structural-approach-to-operational-semantics"
 ---
 
 # A Framework for Defining Logics
 
 ## One-sentence takeaway
 
-Introduces the Edinburgh Logical Framework (LF): dependent types for encoding logics and their judgments.
+Edinburgh LF is a dependently typed λ-calculus whose judgments-as-types principle turns an object logic's syntax, rules, and proofs into a signature, so proof checking is ordinary LF type checking.
 
 ## Why it matters here
 
-LF is how modern proof assistants and typed IRs encode object logics — Harper–Honsell–Plotkin is the citation.
+Ano and any GRID COMMAND planner that wants a machine-checked IR need a metalanguage for judgments, not another ad-hoc AST validator; LF is the citation for encoding object logics the way Harper later teaches in PFPL.
 
 ## Key ideas
 
-- Canonical LF with dependent Π and higher-order abstract syntax.
-- Judgments-as-types methodology.
-- Encoding object logics via signatures.
-- Journal version of the 1987 LICS paper.
+- Three levels: kinds classify families, families classify objects; the dependent function type `Πx:A.B` is the only binder, with `A → B` when `x` is unused.
+- Judgments-as-types: a judgment becomes a type family, a derivation becomes a canonical object of that type, and hypothetical/schematic judgments are ordinary LF functions.
+- Higher-order abstract syntax: object binding and substitution are inherited from LF, so encodings do not reimplement α-conversion.
+- Adequacy: canonical LF terms in a signature must be in bijection with object-logic derivations; the 1993 JACM paper is the journal form of the 1987 LICS announcement.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1145/138027.138040](https://doi.org/10.1145/138027.138040)
-- URL: https://doi.org/10.1145/138027.138040
+- DOI: [10.1145/138027.138060](https://doi.org/10.1145/138027.138060)

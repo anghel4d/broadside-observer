@@ -27,51 +27,41 @@ cites:
     year: 1992
     arxiv: null
     doi: "10.1017/CBO9780511609619"
+  - title: "RABBIT: A Compiler for Scheme"
+    url: "https://dspace.mit.edu/handle/1721.1/6913"
+    year: 1978
+    arxiv: null
+    doi: null
   - title: "Definitional Interpreters for Higher-Order Programming Languages"
     url: "https://doi.org/10.1145/800194.805852"
     year: 1972
     arxiv: null
     doi: "10.1145/800194.805852"
-  - title: "Defunctionalization at Work"
-    url: "https://doi.org/10.1145/773184.773202"
-    year: 2001
-    arxiv: null
-    doi: "10.1145/773184.773202"
-  - title: "Control Operators, the SECD Machine, and the λ-Calculus"
-    url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
-    year: 1986
-    arxiv: null
-    doi: null
 see:
   - "667-compiling-with-continuations"
+  - "674-rabbit-a-compiler-for-scheme"
   - "630-definitional-interpreters-for-higher-order-programming-langu"
-  - "643-defunctionalization-at-work"
-  - "665-control-operators-the-secd-machine-and-the-calculus"
 ---
 
 # The Essence of Compiling with Continuations
 
 ## One-sentence takeaway
 
-Shows A-normal form captures the essence of CPS for compilers without administrative CPS noise.
+A-normal form names every intermediate value and makes control flow explicit, so a compiler can get the benefits of CPS without administrative λs or a continuation-passing backend.
 
 ## Why it matters here
 
-ANF/CPS classic for compiler IRs — still the mental model when lowering functional ano code.
+Ano lowering and any Anoptic shader/CPU IR that wants "one operation, one name" is ANF, not full CPS; this PLDI 1993 paper is why you can stop CPS-converting the world.
 
 ## Key ideas
 
-- Administrative redexes clutter classic CPS transforms.
-- A-normal form as a practical intermediate style.
-- Connects Source→CPS→machine to Source→ANF→machine.
-- Pairs with Appel Compiling with Continuations and Danvy defunctionalization.
+- Classic CPS transforms introduce administrative redexes (`λk. k M`) that a compiler must immediately β-reduce; those redexes are an artifact of the transform, not of the source.
+- ANF (`let x = e in …` with `e` a value or a primitive application) is the range of a CPS transform after administrative reductions, written back in direct style.
+- Source → ANF → machine matches Source → CPS → machine for the analyses SML/NJ-style compilers actually run (assignment conversion, unsoundness of naïve β, etc.).
+- PLDI 1993, DOI 10.1145/155090.155113 (the later SIGPLAN Notices reprint is 10.1145/173262.155113). Appel 1992 is the CPS-as-IR book this paper answers.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/155090.155113](https://doi.org/10.1145/155090.155113)
-- URL: https://doi.org/10.1145/155090.155113

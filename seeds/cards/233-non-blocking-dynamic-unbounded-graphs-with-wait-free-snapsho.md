@@ -17,50 +17,42 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
-    url: "https://doi.org/10.1109/tpds.2004.8"
-    year: 2004
-    arxiv: null
-    doi: "10.1109/tpds.2004.8"
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
   - title: "Wait-Free Synchronization"
     url: "https://doi.org/10.1145/114005.102808"
     year: 1991
     arxiv: null
     doi: "10.1145/114005.102808"
+  - title: "Linearizability: A Correctness Condition for Concurrent Objects"
+    url: "https://doi.org/10.1145/78969.78972"
+    year: 1990
+    arxiv: null
+    doi: "10.1145/78969.78972"
 see:
-  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "031-michael-scott-lock-free-queue"
   - "036-wait-free-synchronization"
+  - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 ---
 
 # Non-blocking Dynamic Unbounded Graphs with Wait-Free Snapshot
 
 ## One-sentence takeaway
 
-Graphs are arguably one of the most fundamental data-structure used in many domains such as block-chain, networks etc.
+A lock-free, linearizable unbounded graph supports concurrent vertex/edge add, delete, and lookup, plus what the authors claim is the first wait-free snapshot of a concurrent graph.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Non-blocking Dynamic Unbounded Graphs with Wait-Free Snapshot).
+GRID COMMAND influence maps and Anoptic nav/visibility graphs mutate every tick; a wait-free snapshot is how analytics (diameter, betweenness) can run without freezing the mutators.
 
 ## Key ideas
 
-- Graphs are arguably one of the most fundamental data-structure used in many domains such as block-chain, networks etc.
-- Theoretically and practically, improving Graph performance is one of the most studied and omnipresent research problems.
-- In this paper, we have implemented a dynamic unbounded concurrent graph which can perform the add, delete or lookup operations on vertices and edges concurrently.
-- All these methods are lock-free and linearizable.
-- On top of this, we have also implemented the wait-free graph snapshot algorithm.
+- Vertex and edge add/delete/lookup are lock-free and linearizable on a dynamically growing graph.
+- The snapshot is wait-free and is used to compute diameter and betweenness centrality.
+- The snapshot method is presented as generic, reusable for other graph analytics, not only those two metrics.
+- Experiments outperform prior concurrent-graph baselines by a clear margin.
+- Unbounded: the structure is not a fixed-capacity adjacency matrix.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2310.02380](https://arxiv.org/abs/2310.02380)
-- URL: https://arxiv.org/abs/2310.02380
+- PDF: https://arxiv.org/pdf/2310.02380

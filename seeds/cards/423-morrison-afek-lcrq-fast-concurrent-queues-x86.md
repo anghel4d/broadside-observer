@@ -64,10 +64,6 @@ Industrial-grade scalability leap after MS — baseline Anoptic should beat or m
 
 ## Caveats
 
-- CAS2 / portability issues motivated LPRQ, SCQ, FAAArrayQueue.
-- Memory growth of rings under imbalance needs attention.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/2442516.2442527](https://doi.org/10.1145/2442516.2442527)

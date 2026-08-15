@@ -3,7 +3,7 @@ title: "Geometry of Interaction I: Interpretation of System F"
 authors:
   - "Jean-Yves Girard"
 year: 1989
-venue: "Logic Colloquium '88"
+venue: "Logic Colloquium '88 / Studies in Logic and the Foundations of Mathematics"
 arxiv: null
 doi: "10.1016/S0049-237X(08)70271-4"
 source: "https://doi.org/10.1016/S0049-237X(08)70271-4"
@@ -34,41 +34,31 @@ cites:
     year: 1990
     arxiv: null
     doi: "10.1145/96709.96718"
-  - title: "Computational Interpretations of Linear Logic"
-    url: "https://doi.org/10.1016/0304-3975(93)90181-Q"
-    year: 1993
-    arxiv: null
-    doi: "10.1016/0304-3975(93)90181-Q"
 see:
   - "040-linear-logic"
   - "639-the-system-f-of-variable-types-fifteen-years-later"
   - "147-interaction-nets"
-  - "143-computational-interpretations-of-linear-logic"
 ---
 
 # Geometry of Interaction I: Interpretation of System F
 
 ## One-sentence takeaway
 
-Introduces Geometry of Interaction: a dynamic, operator-algebra reading of cut-elimination for System F.
+Girard's Geometry of Interaction interprets System F cut-elimination as feedback in an operator algebra: execution is a path, not a rewrite sequence.
 
 ## Why it matters here
 
-GoI classic — the dynamic semantics twin to linear logic and interaction nets already partially in corpus.
+GoI is the dynamic-semantics twin to linear logic and interaction nets already on the shelf — the citation if ano ever wants token-passing or geometry-style evaluation instead of a CEK loop.
 
 ## Key ideas
 
-- Execution as feedback/interaction, not just term rewriting.
-- System F interpreted via operator-style dynamics.
-- Influences later GoI machines and token-passing implementations.
-- Companion to Interaction Nets (Lafont) and Abramsky LL.
+- A proof-net / typed term becomes an operator; composition is a feedback (the "execution formula"), so cut-elimination is interaction rather than substitution.
+- System F is the test case: second-order quantification has to be interpreted in the same dynamic language as the first-order connectives.
+- Later GoI machines and token-passing implementations (Danos–Regnier, Haghverdi–Scott, etc.) start from this paper; Lafont's interaction nets are the combinatorial cousin.
+- Logic Colloquium '88, *Studies in Logic and the Foundations of Mathematics*, DOI 10.1016/S0049-237X(08)70271-4.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/S0049-237X(08)70271-4](https://doi.org/10.1016/S0049-237X(08)70271-4)
-- URL: https://doi.org/10.1016/S0049-237X(08)70271-4

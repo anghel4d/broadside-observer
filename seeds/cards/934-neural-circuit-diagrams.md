@@ -4,9 +4,9 @@ authors:
   - "Vincent Abbott"
 year: 2024
 venue: "TMLR"
-arxiv: null
+arxiv: "2402.05424"
 doi: null
-source: "https://openreview.net/forum?id=RyZB4qXEgt"
+source: "https://arxiv.org/abs/2402.05424"
 topics:
   - "neural-circuit-diagrams"
   - "string-diagrams"
@@ -36,22 +36,25 @@ see:
 
 ## One-sentence takeaway
 
-String-diagram-style neural circuit diagrams that fully specify DL architectures — a blueprint language later used for FlashAttention-on-a-napkin and the weaves algebra.
+Neural circuit diagrams are a string-diagram language that tracks tensor axes, broadcasting, and the parallel structure of linear maps, so an architecture picture is also an implementation spec.
 
 ## Why it matters here
 
-This is the diagram IR that Weaves/Wires/Morphisms compiles. For ano: a picture that is also a term.
+This is the diagram IR that Weaves/Wires/Morphisms later compiles. For ano: a picture that is also a term — the same grain as a typed array surface that must show how a scan or attention head actually rearranges data.
 
 ## Key ideas
 
-- TMLR 2024; OpenReview `RyZB4qXEgt`.
-- Aims to replace ad-hoc architecture cartoons with diagrams that support communication, implementation, and analysis.
-- Direct ancestor of Abbott–Zardini 2025 (napkin) and 2026 (weaves / pyncd / tsncd).
+- Replaces the usual mix of index-soup linear algebra and ad-hoc boxes with a compositional graphical language whose structure matches code.
+- Axes stay visible while data can still be freely arranged; broadcasting of linear operations is drawn rather than left implicit.
+- Worked architectures: transformer, convolution and its extensions, residual nets, U-Net, vision transformer.
+- A Jupyter notebook is offered as evidence that diagrams correspond closely to implementations.
+- Backprop is redrawn in the same language to read time/space complexity off the diagram.
+- TMLR 2024; arXiv:2402.05424; OpenReview `RyZB4qXEgt`. Ancestor of Abbott–Zardini 2025 (napkin) and 2026 (weaves / pyncd / tsncd).
 
 ## Caveats
 
-- Diagram calculus, not a compiler. Pair with the 2026 implementation paper for executable terms.
-
 ## Links
 
+- arXiv: [2402.05424](https://arxiv.org/abs/2402.05424)
+- PDF: https://arxiv.org/pdf/2402.05424
 - OpenReview: https://openreview.net/forum?id=RyZB4qXEgt

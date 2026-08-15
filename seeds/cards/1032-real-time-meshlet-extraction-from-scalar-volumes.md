@@ -52,9 +52,6 @@ Anoptic already speaks meshlets. GRID COMMAND's procedural world is a scalar fie
 
 ## Caveats
 
-- Meshlet size is not exact; rendering is ~20% slower than offline-clustered meshlets. Fine for exploration / procedural terrain, not a Nanite substitute for authored hero meshes.
-- Volume isosurfaces, not triangle-soup clustering. Authored mesh meshletization remains meshoptimizer / Nanite-class (already in library).
-- Preprint + EGPGV 2026 DOI; code claimed on GitHub via the Weimar page.
 
 ## Links
 

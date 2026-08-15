@@ -1,15 +1,15 @@
 ---
-title: "FaRM: fast remote memory"
+title: "FaRM: Fast Remote Memory"
 authors:
 - Aleksandar Dragojević
 - Dushyanth Narayanan
 - Orion Hodson
 - Miguel Castro
 year: 2014
-venue: Networked Systems Design and Implementation
+venue: NSDI
 arxiv: null
 doi: 10.5555/2616448.2616486
-source: "https://doi.org/10.5555/2616448.2616486"
+source: "https://www.usenix.org/conference/nsdi14/technical-sessions/dragojevi%C4%87"
 topics:
 - databases
 - contemporary-db
@@ -19,32 +19,29 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
-# FaRM: fast remote memory
+# FaRM: Fast Remote Memory
 
 ## One-sentence takeaway
 
-Influential database systems paper (2014).
+FaRM exposes cluster DRAM over RDMA as a shared address space with lock-free remote reads, one-sided writes, and a transaction protocol that uses RDMA and a fast message-oriented commit, delivering millions of ops/s per machine on a transactional key-value store.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+If Anoptic ever spans a rack of simulation or asset machines, FaRM is the “treat remote memory as local, but with transactions” design — not TCP RPCs. The lesson for GRID COMMAND state is: one-sided reads of versioned objects beat a two-sided lock server.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- Objects live in RDMA-registered DRAM; readers fetch them with one-sided RDMA and validate a header version, so the owner’s CPU is off the read path.
+- Transactions combine optimistic reads with RDMA writes / message-based locking for updates; commit is a fast, non-Paxos primary-backup scheme tuned for the lossless datacenter fabric.
+- A custom kernel-bypass networking stack and slab allocator keep request latency in the few-microsecond range.
+- The evaluation’s point is throughput at low latency on a small cluster, not geo-replication; later FaRM papers add recovery and transparency.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
-- DOI: [10.5555/2616448.2616486](https://doi.org/10.5555/2616448.2616486)
-- URL: https://doi.org/10.5555/2616448.2616486
+- USENIX: [NSDI ’14](https://www.usenix.org/conference/nsdi14/technical-sessions/dragojevi%C4%87)
+- PDF: https://www.usenix.org/system/files/conference/nsdi14/nsdi14-paper-dragojevic.pdf

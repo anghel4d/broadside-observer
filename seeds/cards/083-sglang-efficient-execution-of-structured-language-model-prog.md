@@ -35,11 +35,6 @@ cites:
     year: 2023
     arxiv: "2309.06180"
     doi: null
-  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
-    url: "https://arxiv.org/abs/2606.19667"
-    year: 2026
-    arxiv: "2606.19667"
-    doi: null
   - title: "Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU"
     url: "https://arxiv.org/abs/2604.15464"
     year: 2026
@@ -54,25 +49,24 @@ see:
 
 ## One-sentence takeaway
 
-Large language models (LLMs) are increasingly used for complex tasks that require multiple generation calls, advanced prompting techniques, control flow, and structured inputs/outputs.
+SGLang pairs a frontend for multi-call LM programs with a runtime that reuses KV via RadixAttention and decodes structured outputs through compressed finite-state machines.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (SGLang: Efficient Execution of Structured Language Model Programs)
+Ano agent control, RAG pipelines, and JSON tool calls are exactly the multi-generation programs SGLang was built to run without replaying shared prefixes.
 
 ## Key ideas
 
-- Large language models (LLMs) are increasingly used for complex tasks that require multiple generation calls, advanced prompting techniques, control flow, and structured inputs/outputs.
-- However, efficient systems are lacking for programming and executing these applications.
-- We introduce SGLang, a system for efficient execution of complex language model programs.
-- SGLang consists of a frontend language and a runtime.
-- The frontend simplifies programming with primitives for generation and parallelism control.
+- Complex LM apps need multiple generation calls, control flow, and structured I/O, but existing serving stacks treat each call as an isolated prompt.
+- The frontend exposes primitives for generation and parallelism; the runtime implements RadixAttention (prefix-tree KV reuse) and compressed FSMs for constrained decoding.
+- Throughput rises up to 6.4× versus then-SOTA inference systems across LLM and multimodal models.
+- Workloads include agent control, logical reasoning, few-shot benchmarks, JSON decoding, RAG pipelines, and multi-turn chat.
+- Code: https://github.com/sgl-project/sglang.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2312.07104](https://arxiv.org/abs/2312.07104)
-- URL: https://arxiv.org/abs/2312.07104
+- PDF: https://arxiv.org/pdf/2312.07104
+- Code: https://github.com/sgl-project/sglang

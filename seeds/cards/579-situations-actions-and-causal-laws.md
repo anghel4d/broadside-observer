@@ -3,10 +3,10 @@ title: "Situations, Actions, and Causal Laws"
 authors:
   - "John McCarthy"
 year: 1963
-venue: "Stanford AI Memo / later situation calculus literature"
+venue: "Stanford AI Memo AIM-2"
 arxiv: null
-doi: null
-source: "https://www-formal.stanford.edu/jmc/"
+doi: "10.21236/AD0785031"
+source: "https://doi.org/10.21236/AD0785031"
 topics:
   - situation-calculus
   - ai
@@ -24,42 +24,31 @@ cites:
     year: 1959
     arxiv: null
     doi: null
-  - title: "Report on a General Problem-Solving Program"
-    url: "https://bitsavers.org/pdf/rand/ipl/"
-    year: 1959
-    arxiv: null
-    doi: null
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367177.367199"
 see:
   - "576-programs-with-common-sense"
-  - "582-report-on-a-general-problem-solving-program"
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
 ---
 
 # Situations, Actions, and Causal Laws
 
 ## One-sentence takeaway
 
-McCarthy introduces situation calculus—reasoning about actions and change in logic.
+McCarthy's AIM-2 memo introduces situation calculus: situations as objects, fluents that hold in them, and causal laws for the effects of actions.
 
 ## Why it matters here
 
-Ancestor of planning formalisms already in Broadside's game-AI planning lineage.
+Planning agents in GRID COMMAND still reason "if I do A in s, fluent F holds in result(A,s)." This July 1963 memo is that ontology.
 
 ## Key ideas
 
-- Situations as first-class objects.
-- Fluents and results of actions.
-- Logicist robotics/AI program.
+- A situation is a complete state of affairs at an instant; `result(a,s)` names the situation after action `a`.
+- Fluents are functions of situations (location, holding, …); causal laws relate fluents across `result`.
+- Possibility of actions is itself a fluent, so preconditions are logic, not a separate planner DSL.
+- Written for the Advice Taker; DTIC accession AD0785031, 11 pages, 3 July 1963.
+- Reprinted in Minsky's *Semantic Information Processing* (1968); later frame-problem papers refine the same calculus.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www-formal.stanford.edu/jmc/
+- DOI: [10.21236/AD0785031](https://doi.org/10.21236/AD0785031)
+- URL: https://doi.org/10.21236/AD0785031

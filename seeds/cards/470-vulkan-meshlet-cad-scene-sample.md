@@ -1,65 +1,49 @@
 ---
-title: Vulkan Meshlet CAD Scene Sample
+title: "Vulkan Meshlet CAD Scene Sample"
 authors:
-- NVIDIA Developer
+  - "Christoph Kubisch"
 year: 2018
-venue: nvpro-samples
+venue: "NVIDIA nvpro-samples"
 arxiv: null
 doi: null
-source: https://github.com/nvpro-samples/gl_vk_meshlet_cadscene
+source: "https://github.com/nvpro-samples/gl_vk_meshlet_cadscene"
 topics:
-- meshlets
-- vulkan
+  - meshlets
+  - vulkan
 seed_rank: 470
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: engines
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "engines"
 relevance_score: 8
 lineage: gpu-driven-rendering
 cites:
-- title: Mesh Shaders in the Vulkan Ecosystem
-  url: https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/
-  year: 2018
-  arxiv: null
-  doi: null
-- title: meshoptimizer
-  url: https://github.com/zeux/meshoptimizer
-  year: 2016
-  arxiv: null
-  doi: null
-- title: 'Nanite: A Deep Dive'
-  url: https://www.youtube.com/watch?v=e_5kdRpGrpI
-  year: 2021
-  arxiv: null
-  doi: null
+  - title: "Introduction to Turing Mesh Shaders"
+    url: "https://developer.nvidia.com/blog/introduction-turing-mesh-shaders/"
+    year: 2018
 see:
-- "097-mesh-shaders-in-the-vulkan-ecosystem"
-- "482-meshoptimizer"
-- "090-nanite-a-deep-dive"
+  - "097-mesh-shaders-in-the-vulkan-ecosystem"
+  - "261-introduction-to-turing-mesh-shaders"
 ---
 
 # Vulkan Meshlet CAD Scene Sample
 
 ## One-sentence takeaway
 
-Public meshlet CAD sample crystallizes task/mesh shader cluster submission for Vulkan.
+NVIDIA's `gl_vk_meshlet_cadscene` sample feeds CAD meshes as meshlets through Vulkan task/mesh shaders, using the task stage to cull clusters before the mesh shader emits triangles.
 
 ## Why it matters here
 
-Concrete sample alongside Kubisch mesh-shader talks and meshoptimizer.
+Concrete buffer layout and amplification loop to pair with meshoptimizer builders when Anoptic stands up a mesh-shader path.
 
 ## Key ideas
 
-- Meshlet CAD scene as reference layout.
-- Task shaders for cluster culling amplification.
-- Pairs with meshoptimizer builders.
-- Bridge from Turing mesh shaders to engine integration.
+- Meshlets pack a small vertex/index subset plus bounding cone/sphere so a task shader can reject whole clusters.
+- Same content path is demonstrated for both OpenGL NV mesh shaders and Vulkan `VK_NV_mesh_shader` / EXT mesh shaders.
+- CAD scenes (high instance counts, hard edges) stress cluster culling more honestly than game hero meshes.
+- Intended as the public companion to Kubisch's Turing mesh-shader introductions, not as a Nanite-class LOD DAG.
 
 ## Caveats
 
-- Sample code, not a peer-reviewed architecture paper.
-- Nanite-class LOD DAG is a separate leap.
-
 ## Links
 
-- URL: https://github.com/nvpro-samples/gl_vk_meshlet_cadscene
+- Repository: https://github.com/nvpro-samples/gl_vk_meshlet_cadscene

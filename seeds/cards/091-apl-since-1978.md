@@ -5,9 +5,9 @@ authors:
   - "Morten J. Kromberg"
 year: 2020
 venue: "PACMPL (HOPL IV)"
-arxiv: "2005.02839"
+arxiv: null
 doi: "10.1145/3386319"
-source: "https://arxiv.org/abs/2005.02839"
+source: "https://doi.org/10.1145/3386319"
 topics:
   - array-programming-apl-bqn-q
 seed_rank: 91
@@ -16,7 +16,12 @@ reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 9
 cites:
-  - title: "Can programming be liberated from the von Neumann style?"
+  - title: "The Evolution of APL"
+    url: "https://doi.org/10.1145/800025.1198346"
+    year: 1978
+    arxiv: null
+    doi: "10.1145/800025.1198346"
+  - title: "Can programming be liberated from the von Neumann style? A functional style and its algebra of programs"
     url: "https://doi.org/10.1145/359576.359579"
     year: 1978
     arxiv: null
@@ -26,56 +31,6 @@ cites:
     year: 1973
     arxiv: null
     doi: "10.1147/rd.174.0324"
-  - title: "The Art of Computer Programming"
-    url: "https://doi.org/10.13182/nse70-a19705"
-    year: 1970
-    arxiv: null
-    doi: "10.13182/nse70-a19705"
-  - title: "The Art of Computer Programming. Volume 1: Fundamental Algorithms."
-    url: "https://doi.org/10.2307/2283757"
-    year: 1969
-    arxiv: null
-    doi: "10.2307/2283757"
-  - title: "Concrete Mathematics: A Foundation for Computer Science"
-    url: "https://doi.org/10.1063/1.4822863"
-    year: 1989
-    arxiv: null
-    doi: "10.1063/1.4822863"
-  - title: "The Connection Machine"
-    url: "https://doi.org/10.1038/scientificamerican0687-108"
-    year: 1987
-    arxiv: null
-    doi: "10.1038/scientificamerican0687-108"
-  - title: "From Kant to Hilbert: A Source Book in the Foundations of Mathematics"
-    url: "https://doi.org/10.1093/oso/9780198505358.001.0001"
-    year: 2005
-    arxiv: null
-    doi: "10.1093/oso/9780198505358.001.0001"
-  - title: "The Design and Analysis of Computer Algorithms"
-    url: "https://openalex.org/W1655990431"
-    year: 1974
-    arxiv: null
-    doi: null
-  - title: "The Art of Computer Programming: Volume 3: Sorting and Searching"
-    url: "https://cybra.lodz.pl/dlibra/docmetadata?showContent=true&id=28125"
-    year: 1973
-    arxiv: null
-    doi: null
-  - title: "Convolutional neural networks in APL"
-    url: "https://doi.org/10.1145/3315454.3329960"
-    year: 2019
-    arxiv: null
-    doi: "10.1145/3315454.3329960"
-  - title: "Do the Golden State Warriors Have Hot Hands?"
-    url: "https://doi.org/10.1007/s00283-018-9825-3"
-    year: 2018
-    arxiv: null
-    doi: "10.1007/s00283-018-9825-3"
-  - title: "An ELI-to-C compiler: design, implementation, and performance"
-    url: "https://doi.org/10.1145/3091966.3091969"
-    year: 2017
-    arxiv: null
-    doi: "10.1145/3091966.3091969"
 see:
   - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
   - "159-the-design-of-apl"
@@ -85,22 +40,24 @@ see:
 
 ## One-sentence takeaway
 
-HOPL IV survey of APL-family languages since 1978, including J, k, and related dialects.
+Hui and Kromberg's HOPL IV paper picks up Falkoff and Iverson's 1978 history and traces forty years of APL implementations, nested arrays, and the J and k branches.
 
 ## Why it matters here
 
-Modern HOPL survey of APL/J/k lineage — map for situating ano among living array languages.
+This is the living-family map for situating ano among APL, J, and k: which array model, which operators, and which platform deaths selected the dialect.
 
 ## Key ideas
 
-- HOPL IV survey of APL-family languages since 1978, including J, k, and related dialects.
+- After HOPL I, second-generation systems added general arrays (any item may be an array) plus new functions and operators aligned with that model.
+- Most implementations followed IBM APL2 "floating" arrays; SHARP APL kept "grounded" arrays and spawned J (Iverson and Hui) and k (Arthur Whitney).
+- Hardware and OS habitats repeatedly killed interpreters until C implementations bought portability from mainframes to PCs, phones, and watches.
+- Language threads include direct functions, trains, rank, power, key, stencil, under, objects, futures, sparse and infinite arrays, and APL-as-a-service.
+- The paper is 108 pages (PACMPL 4, HOPL, Article 69) and still closes with Iverson's line that APL's evolution is far from finished.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- arXiv: [2005.02839](https://arxiv.org/abs/2005.02839)
 - DOI: [10.1145/3386319](https://doi.org/10.1145/3386319)
-- URL: https://arxiv.org/abs/2005.02839
+- PDF: https://www.sigapl.org/Articles/APL%20Since%201978_3386319.pdf
+- HOPL IV: https://hopl4.sigplan.org/details/hopl-4-papers/1/APL-Since-1978

@@ -19,7 +19,7 @@ relevance_score: 8
 lineage: foundations-of-computing
 cites:
   - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+    url: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
     year: 1965
     arxiv: null
     doi: null
@@ -28,38 +28,30 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "A Theory of Program Size Formally Identical to Information Theory"
-    url: "https://doi.org/10.1145/321892.321894"
-    year: 1975
-    arxiv: null
-    doi: "10.1145/321892.321894"
 see:
   - "604-three-approaches-to-the-quantitative-definition-of-informati"
   - "553-a-mathematical-theory-of-communication"
-  - "608-a-theory-of-program-size-formally-identical-to-information-t"
 ---
 
 # Logical Basis for Information Theory and Probability Theory
 
 ## One-sentence takeaway
 
-Kolmogorov ties algorithmic complexity to probability foundations for an information-theory audience.
+Kolmogorov retells algorithmic complexity for an IEEE information-theory audience and argues it supplies the missing logical foundation that Shannon entropy, being distributional, cannot give for individual objects.
 
 ## Why it matters here
 
-English IEEE carrier of algorithmic information ideas.
+This is the English carrier that put Kolmogorov complexity in front of engineers: the paper to hand someone who already knows Shannon and needs the individual-sequence story behind Broadside's compression-as-learning / AIT cards.
 
 ## Key ideas
 
-- Complexity and probability links.
-- Expository + research hybrid.
-- IT community bridge.
+- Shannon information is a property of a *measure*; algorithmic information is a property of a *string*.
+- Universal machines make K(x) canonical up to O(1), so the definition is not programming-language-relative in any essential way.
+- Complexity yields a definition of a random infinite sequence (incompressibility of prefixes) that can sit beside measure-theoretic almost-sure statements.
+- The note is expository-plus-research: it advertises the 1965 *PPI* paper and the program of relating complexity to probability.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1109/TIT.1968.1054210](https://doi.org/10.1109/TIT.1968.1054210)
-- URL: https://doi.org/10.1109/TIT.1968.1054210

@@ -35,25 +35,23 @@ see:
 
 ## One-sentence takeaway
 
-Monte Carlo Tree Search (MCTS) is a sampling best-first method to search for optimal decisions.
+An evolution strategy (ES-MCTS) replaces the hand-tuned UCT formula with an evolved expression and beats five UCT variants, three star-minimax algorithms, and a random controller at Carcassonne.
 
 ## Why it matters here
 
-Classical game/RTS AI technique (non-LLM) for GRID COMMAND lineage (On the Evolution of the MCTS Upper Confidence Bounds for Trees by Means of Evolu).
+GRID COMMAND planners that already run MCTS can treat the selection formula as a searchable object; this paper is evidence that UCT is not sacred and can be evolved per game.
 
 ## Key ideas
 
-- Monte Carlo Tree Search (MCTS) is a sampling best-first method to search for optimal decisions.
-- The MCTS's popularity is based on its extraordinary results in the challenging two-player based game Go, a game considered much harder than Chess and that until very recently was considered infeasible for Artificial Intelligence methods.
-- The success of MCTS depends heavily on how the tree is built and the selection process plays a fundamental role in this.
-- One particular selection mechanism that has proved to be reliable is based on the Upper Confidence Bounds for Trees, commonly referred as UCT.
-- The UCT attempts to nicely balance exploration and exploitation by considering the values stored in the statistical tree of the MCTS.
+- MCTS quality is dominated by how the tree is grown; UCT is the usual exploration/exploitation knob and needs per-game tuning.
+- Evolutionary algorithms search the space of mathematical expressions that could stand in for UCT.
+- ES-MCTS is the full integration; a weaker "ES partially integrated in MCTS" variant is also reported.
+- Test domain is Carcassonne, not Go — a stochastic, multi-score Eurogame where UCT defaults are less battle-tested.
+- ES-MCTS outperforms all ten baseline controllers, including robust UCT settings.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2112.09697](https://arxiv.org/abs/2112.09697)
-- URL: https://arxiv.org/abs/2112.09697
+- PDF: https://arxiv.org/pdf/2112.09697

@@ -17,43 +17,28 @@ reviewed: 2026-08-13
 pool: maths-foundations
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: Gaussian Elimination is Not Optimal
-  url: "https://doi.org/10.1007/BF02165411"
-  year: 1969
-  arxiv: null
-  doi: 10.1007/BF02165411
-- title: Schnelle Multiplikation grosser Zahlen
-  url: "https://doi.org/10.1007/BF02242355"
-  year: 1971
-  arxiv: null
-  doi: 10.1007/BF02242355
-see:
-- "758-gaussian-elimination-is-not-optimal"
-- "760-schnelle-multiplikation-grosser-zahlen"
+cites: []
+see: []
 ---
 
 # An Algorithm for the Machine Calculation of Complex Fourier Series
 
 ## One-sentence takeaway
 
-Cooley-Tukey FFT: n log n discrete Fourier transform.
+Cooley–Tukey factors an $N$-point DFT into smaller DFTs when $N$ is composite, cutting the arithmetic from $O(N^2)$ to $O(N\log N)$ via twiddle-factor butterflies.
 
 ## Why it matters here
 
-Ubiquitous in signal processing, spectral methods, and fast convolutions.
+FFT is the convolution engine for Anoptic audio, bloom/filter banks, spectral GI debug, and the fast polynomial multiply sitting under big-integer and NTT paths.
 
 ## Key ideas
 
-- Divide-and-conquer twiddle factorization.
-- Radix-2 and general factorizations.
-- DFT from O(n^2) to O(n log n).
-- Enables fast polynomial multiply/convolution.
+- If $N = r_1 r_2$, the transform splits into $r_1$ transforms of length $r_2$ (or vice versa) glued by $W_N^{jk}$ twiddles.
+- Radix-2 is the familiar case: even/odd decimation, $\frac{N}{2}\log_2 N$ complex multiplies in the idealized count.
+- The same factorization gives fast circular convolution and therefore fast polynomial and large-integer multiplication.
+- The paper is the machine-oriented popularization; Gauss had a related factorization, but this is the algorithm that entered numerical software.
 
 ## Caveats
-
-- Gauss had related ideas; Cooley-Tukey popularized the modern algorithm.
-- Bit-reversal/stability are engineering concerns.
 
 ## Links
 

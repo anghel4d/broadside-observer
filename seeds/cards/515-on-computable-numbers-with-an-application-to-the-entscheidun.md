@@ -62,23 +62,21 @@ see:
 
 ## One-sentence takeaway
 
-Turing machines define computable numbers and prove the Entscheidungsproblem unsolvable—the engineering ontology of algorithms.
+Turing defines computable real numbers via a-machines, builds a universal machine, and proves the Entscheidungsproblem unsolvable by showing that "circle-freeness" is undecidable.
 
 ## Why it matters here
 
-The root machine model for ano simulation, complexity talk, and 'what can be computed' epistemology.
+The root machine model for every Anoptic simulation, complexity argument, and "what can be computed" claim. Stored-program talk in the EDVAC/ACE cards is this universal machine turned into engineering.
 
 ## Key ideas
 
-- a-machines / automatic machines.
-- Computable sequences and numbers.
-- Universal machine.
-- Halting/circle-free analysis ⇒ Entscheidungsproblem unsolvability.
-- Appendix relating to Church's λ-definability.
+- An a-machine (automatic machine) has a finite table of behaviour, a scanned square, and an infinite tape of symbols.
+- A computable sequence is one printed by a circle-free machine; a computable number is a real whose binary expansion is such a sequence.
+- The universal machine \(U\) takes a standard description of any a-machine and simulates it.
+- There is no machine that decides, of an arbitrary description, whether the corresponding machine is circle-free; hence first-order validity is undecidable.
+- An appendix sketches the relation to Church's λ-definability; the 1937 correction (card 516) fixes details.
 
 ## Caveats
-
-- Often cited as 1936; journal volume dated 1936–37; DOI is the Wiley PLMS id.
 
 ## Links
 

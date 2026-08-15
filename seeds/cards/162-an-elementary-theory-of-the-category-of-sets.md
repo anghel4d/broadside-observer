@@ -42,21 +42,23 @@ see:
 
 ## One-sentence takeaway
 
-Axiomatizes the category of sets with elementary category-theoretic axioms.
+Lawvere axiomatizes the category of sets by universal properties — terminal object, products, equalizers, exponentials, a natural-numbers object — so Set is characterized without taking “element of” as primitive.
 
 ## Why it matters here
 
-ETCS: sets via universal properties — mental model for designing entity/world structure categorically.
+Entity/world structure can be designed the same way: an entity is a point of a terminal-to-object map, a component family is a display map, and the world is the object that represents those maps, not a bag of structs.
 
 ## Key ideas
 
-- Axiomatizes the category of sets with elementary category-theoretic axioms.
+- ETCS takes the category of sets and functions as the foundational object and writes elementary (first-order) axioms for it.
+- Finite limits, exponentials, and a natural-numbers object replace Zermelian membership as the primitive structure.
+- Elements of an object \(X\) are morphisms \(1\to X\); membership talk is recovered from that.
+- The theory is intended as a usable foundation for mathematics done categorically, not only as a curiosity about Set.
+- Later elementary topos axioms refine this picture; ETCS is the sets-only special case.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1073/pnas.52.6.1506](https://doi.org/10.1073/pnas.52.6.1506)
-- URL: https://doi.org/10.1073/pnas.52.6.1506
+- PNAS: https://www.pnas.org/doi/10.1073/pnas.52.6.1506

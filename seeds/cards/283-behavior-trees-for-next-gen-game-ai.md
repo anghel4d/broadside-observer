@@ -1,13 +1,12 @@
 ---
-
 title: "Behavior Trees for Next-Gen Game AI"
 authors:
   - "Alex J. Champandard"
-year: 2007
+year: 2008
 venue: "AiGameDev / GDC"
 arxiv: null
 doi: null
-source: "https://aigamedev.com/"
+source: "https://web.archive.org/web/20190719084901/http://aigamedev.com/insider/presentations/behavior-trees/"
 topics:
   - behavior-trees
 seed_rank: 283
@@ -24,11 +23,11 @@ cites:
     doi: null
   - title: "Behavior Trees in Robotics and AI: An Introduction"
     url: "https://arxiv.org/abs/1709.00084"
-    year: 2018
+    year: 2017
     arxiv: "1709.00084"
     doi: null
-  - title: "Building a Better Battle: DAMN and Utility Theory for Games"
-    url: "https://www.gdcvault.com/play/1012411/Building-a-Better-Battle-DAMN"
+  - title: "Improving AI Decision Modeling Through Utility Theory"
+    url: "https://media.gdcvault.com/gdc10/slides/MarkDill_ImprovingAIUtilityTheory.pdf"
     year: 2010
     arxiv: null
     doi: null
@@ -42,21 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-BT popularization for games.
+Champandard's AiGameDev / GDC materials turned Halo-style hierarchical FSMs into the now-standard behavior-tree toolkit: selector, sequence, decorator, and parallel nodes ticking leaves that return Success / Failure / Running.
 
 ## Why it matters here
 
-BT popularization for games.
+GRID COMMAND tactical AI will grow a tree whether we like it or not. This is the popularization that made BTs the default over a 200-state FSM; pair it with utility scoring at the leaves rather than nesting more selectors.
 
 ## Key ideas
 
-- BT popularization for games.
+- A BT is a directed tree ticked from the root; control nodes (selector / sequence / parallel) compose leaf actions and conditions.
+- Running is a first-class status, so long actions (reload, path-follow) do not have to finish in one tick or be re-issued.
+- Decorators invert, repeat, or gate children without growing a new class per combination — the reuse story versus FSM edges.
+- Designers can author trees as data; programmers own the leaf vocabulary.
+- Live aigamedev.com URL is dead. Canonical citation is the 2008 AiGameDev presentation (often dated 2007 from GDC Europe). Closest surviving slide deck is the 2010 GDC "Three Ways of Cultivating Game AI" PDF.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://aigamedev.com/
+- Archived talk page: https://web.archive.org/web/20190719084901/http://aigamedev.com/insider/presentations/behavior-trees/
+- 2010 GDC slides: https://media.gdcvault.com/gdc10/slides/ChampandardDaweHernandezCerpa_BehaviorTrees.pdf

@@ -44,23 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Post's thesis proves completeness of propositional logic via truth tables—and introduces many-valued logics.
+Post's 1920 doctoral work, published 1921, proves classical propositional logic complete via truth tables and simultaneously introduces the many-valued systems that later become Post algebras.
 
 ## Why it matters here
 
-Early completeness result before Gödel FOL completeness; also seeds non-classical logics.
+Early completeness result, before Gödel's FOL completeness. Anoptic standing rules and ano boolean columns are two-valued by default; this paper is why that default is a *complete* calculus, and why non-classical many-valued variants are a designed generalization rather than a bug.
 
 ## Key ideas
 
-- Truth-table completeness for classical propositional calculus.
-- Post's lattice of clones / many-valued systems.
-- 1920 doctoral work published 1921.
+- Truth-table method decides every propositional tautology and shows the usual axioms are complete for classical two-valued logic.
+- Generalizes the same table method to \(m\)-valued systems, seeding the lattice of clones developed in the 1941 monograph.
+- 1920 Columbia dissertation published in *American Journal of Mathematics* 43 (1921).
+- Completeness here is propositional only; first-order completeness is Gödel 1930.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2370324](https://doi.org/10.2307/2370324)
-- URL: https://doi.org/10.2307/2370324
+- JSTOR: https://www.jstor.org/stable/2370324

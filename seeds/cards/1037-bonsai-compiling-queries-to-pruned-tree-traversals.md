@@ -62,9 +62,6 @@ GRID COMMAND spatial picks, Anoptic ray/collision, and ano/Flecs-style ECS queri
 
 ## Caveats
 
-- Operator compiler, not a DBMS: no planner, no hash/sort-merge, no cost model. You pick the tree and the operator order.
-- Object hierarchies (BVH/R-tree), not space partitions (k-d / octree) — primitives spanning multiple nodes need dedup they do not do.
-- Geometric predicate implementations (ray-AABB, tri-tri) are still user-supplied kernels; Bonsai derives the *pruning*, not the intersection math.
 
 ## Links
 

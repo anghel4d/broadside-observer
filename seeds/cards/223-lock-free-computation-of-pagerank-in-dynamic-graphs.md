@@ -3,7 +3,7 @@ title: "Lock-Free Computation of PageRank in Dynamic Graphs"
 authors:
   - "Subhajit Sahu"
 year: 2024
-venue: "arXiv:cs.DC"
+venue: "IEEE IPDPSW 2024"
 arxiv: "2407.19562"
 doi: "10.1109/IPDPSW63119.2024.00148"
 source: "https://arxiv.org/abs/2407.19562"
@@ -15,94 +15,46 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "The Art of Multiprocessor Programming"
-    url: "https://doi.org/10.1016/c2011-0-06993-4"
-    year: 2020
-    arxiv: null
-    doi: "10.1016/c2011-0-06993-4"
-  - title: "{SNAP Datasets}: {Stanford} Large Network Dataset Collection"
-    url: "https://openalex.org/W2755088640"
-    year: 2014
-    arxiv: null
-    doi: null
-  - title: "Cores that don't count"
-    url: "https://doi.org/10.1145/3458336.3465297"
-    year: 2021
-    arxiv: null
-    doi: "10.1145/3458336.3465297"
-  - title: "The PageRank Citation Ranking : Bringing Order to the Web"
-    url: "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.31.1768"
+  - title: "The PageRank Citation Ranking: Bringing Order to the Web"
+    url: "http://ilpubs.stanford.edu:8090/422/"
     year: 1999
     arxiv: null
     doi: null
-  - title: "The SuiteSparse Matrix Collection Website Interface"
-    url: "https://doi.org/10.21105/joss.01244"
-    year: 2019
-    arxiv: null
-    doi: "10.21105/joss.01244"
   - title: "Fast incremental and personalized PageRank"
     url: "https://doi.org/10.14778/1929861.1929864"
     year: 2010
     arxiv: null
     doi: "10.14778/1929861.1929864"
-  - title: "Parallel Vertex Color Update on Large Dynamic Networks"
-    url: "https://doi.org/10.1109/hipc56025.2022.00027"
-    year: 2022
-    arxiv: null
-    doi: "10.1109/hipc56025.2022.00027"
-  - title: "Efficient parallel algorithms for dynamic closeness‐ and betweenness centrality"
-    url: "https://doi.org/10.1002/cpe.6650"
-    year: 2021
-    arxiv: null
-    doi: "10.1002/cpe.6650"
   - title: "Dynamic Batch Parallel Algorithms for Updating PageRank"
-    url: "https://doi.org/10.1109/ipdpsw55747.2022.00186"
+    url: "https://doi.org/10.1109/IPDPSW55747.2022.00186"
     year: 2022
     arxiv: null
-    doi: "10.1109/ipdpsw55747.2022.00186"
-  - title: "FPPR: fast pessimistic (dynamic) PageRank to update PageRank in evolving directed graphs on network changes"
-    url: "https://doi.org/10.1007/s13278-022-00968-8"
-    year: 2022
-    arxiv: null
-    doi: "10.1007/s13278-022-00968-8"
-  - title: "MELOPPR: Software/Hardware Co-design for Memory-efficient Low-latency Personalized PageRank"
-    url: "https://doi.org/10.1109/dac18074.2021.9586129"
-    year: 2021
-    arxiv: null
-    doi: "10.1109/dac18074.2021.9586129"
-  - title: "An Improved/Optimized Practical Non-Blocking PageRank Algorithm for Massive Graphs*"
-    url: "https://doi.org/10.1007/s10766-022-00725-6"
-    year: 2022
-    arxiv: null
-    doi: "10.1007/s10766-022-00725-6"
-see:
-  - "124-the-art-of-multiprocessor-programming"
+    doi: "10.1109/IPDPSW55747.2022.00186"
+see: []
 ---
 
 # Lock-Free Computation of PageRank in Dynamic Graphs
 
 ## One-sentence takeaway
 
-PageRank is a metric that assigns importance to the vertices of a graph based on its neighbors and their scores.
+Dynamic Frontier plus a lock-free, fault-tolerant PageRank (DF_LF) updates scores after edge edits without iteration barriers and stays live through random thread delays and crashes.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Lock-Free Computation of PageRank in Dynamic Graphs).
+Anoptic influence / visibility graphs and Broadside citation-style rankings change every tick; a barrier-free iterative solver is how those scores keep moving when a worker stalls.
 
 ## Key ideas
 
-- PageRank is a metric that assigns importance to the vertices of a graph based on its neighbors and their scores.
-- Recently, there has been increasing interest in computing PageRank on dynamic graphs, where the graph structure evolves due to edge insertions and deletions.
-- However, traditional barrier-based approaches for updating PageRanks encounter significant wait times on certain graph structures, leading to high overall runtimes.
-- Additionally, the growing trend of multicore architectures with increased core counts has raised concerns about random thread delays and failures.
-- In this study, we propose a lock-free algorithm for updating PageRank scores on dynamic graphs.
+- Barrier-based dynamic PageRank waits on the slowest vertex partition, which dominates runtime on skewed graphs.
+- Dynamic Frontier first marks only the vertices whose ranks are likely to move after an insert/delete, so most of the graph is skipped.
+- DF_LF then runs two lock-free phases with inter-thread helping, so a delayed or crashed worker does not freeze the iteration.
+- Average speedup is 4.6× versus a lock-free naive-dynamic baseline (ND_LF).
+- Published at IEEE IPDPSW 2024.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2407.19562](https://arxiv.org/abs/2407.19562)
 - DOI: [10.1109/IPDPSW63119.2024.00148](https://doi.org/10.1109/IPDPSW63119.2024.00148)
-- URL: https://arxiv.org/abs/2407.19562
+- PDF: https://arxiv.org/pdf/2407.19562

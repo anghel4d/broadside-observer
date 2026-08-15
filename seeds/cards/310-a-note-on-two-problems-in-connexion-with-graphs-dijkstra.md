@@ -15,41 +15,30 @@ reviewed: '2026-08-13'
 pool: game-ai
 relevance_score: 9
 lineage: pathfinding
-cites:
-- title: A Formal Basis for the Heuristic Determination of Minimum Cost Paths
-  url: https://doi.org/10.1109/TSSC.1968.300136
-  year: 1968
-  arxiv: null
-  doi: 10.1109/TSSC.1968.300136
-- title: Online Graph Pruning for Pathfinding on Grid Maps
-  url: https://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3761
-  year: 2011
-  arxiv: null
-  doi: null
-see:
-- "205-a-formal-basis-for-the-heuristic-determination-of-minimum-co"
-- "196-online-graph-pruning-for-pathfinding-on-grid-maps"
+cites: []
+see: []
 ---
 
 # A Note on Two Problems in Connexion with Graphs (Dijkstra)
 
 ## One-sentence takeaway
 
-Shortest paths baseline.
+Dijkstra’s two-page 1959 note gives the O(n²) algorithm that grows a shortest-path tree from a source by always settling the unsettled vertex with the smallest tentative distance.
 
 ## Why it matters here
 
-Shortest paths baseline.
+Every navmesh, waypoint, and grid search in GRID COMMAND is this algorithm plus a heuristic (A*) or a hierarchy; the paper is also the source of the “minimum spanning tree via repeated shortest links” construction.
 
 ## Key ideas
 
-- Shortest paths baseline.
+- Problem 1: construct a spanning tree of minimum total length. Repeatedly add the shortest edge that connects a new vertex to the tree already built (Prim’s algorithm, independently stated here).
+- Problem 2: find the shortest path from a given source to every other vertex. Maintain a settled set and, at each step, move in the unsettled vertex whose best-known distance is smallest, then relax its outgoing edges.
+- Both procedures use only comparisons and additions of edge lengths; no negative weights are considered.
+- The note is three pages in *Numerische Mathematik* 1 (1959), 269–271, and does not mention priority queues — the binary heap / Fibonacci heap speedups come later.
+- A* (Hart, Nilsson, Raphael 1968) is the admissible-heuristic generalization; Dijkstra is the `h = 0` special case.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1007/BF01386390](https://doi.org/10.1007/BF01386390)
-- URL: https://doi.org/10.1007/BF01386390

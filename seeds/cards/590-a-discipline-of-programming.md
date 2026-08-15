@@ -6,7 +6,7 @@ year: 1976
 venue: "Prentice-Hall"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
+source: "https://research.tue.nl/en/publications/a-discipline-of-programming/"
 topics:
   - predicate-transformers
   - dijkstra
@@ -33,38 +33,32 @@ cites:
     year: 1970
     arxiv: null
     doi: null
-  - title: "Assigning Meanings to Programs"
-    url: "https://people.eecs.berkeley.edu/~necula/Papers/FloydMeaning.pdf"
-    year: 1967
-    arxiv: null
-    doi: null
 see:
   - "591-guarded-commands-nondeterminacy-and-formal-derivation-of-pro"
   - "592-an-axiomatic-basis-for-computer-programming"
   - "589-notes-on-structured-programming"
-  - "626-assigning-meanings-to-programs"
 ---
 
 # A Discipline of Programming
 
 ## One-sentence takeaway
 
-Dijkstra develops weakest preconditions and guarded commands—programming as predicate calculation.
+Dijkstra develops weakest-precondition semantics and derives programs from their specifications by predicate calculation.
 
 ## Why it matters here
 
-Formal core behind later Hoare-logic practice and program derivation.
+When ano or engine code is derived rather than debugged into existence, this 1976 book is the calculus: `wp(S,R)` as the meaning of statement `S`.
 
 ## Key ideas
 
-- Weakest precondition semantics.
-- Guarded commands.
-- Program derivation examples.
+- The weakest precondition `wp(S,R)` is the set of states from which `S` is guaranteed to terminate in `R`.
+- Guarded commands (`if`/`do` with guarded alternatives) are the notation; nondeterminacy is a structured control idea.
+- Chapters work examples — Dutch national flag, linear search, next permutation, convex hull — as derivations, not implementations first.
+- Prentice-Hall Series in Automatic Computation, Englewood Cliffs, 1976, ISBN 0-13-215871-X, 217 pages.
+- Chapter manuscripts are the EWD383–EWD468 sequence in the UT Austin archive.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/discipline-of-programming/oclc/523
+- URL: https://research.tue.nl/en/publications/a-discipline-of-programming/

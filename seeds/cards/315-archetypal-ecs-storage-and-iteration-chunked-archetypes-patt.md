@@ -48,21 +48,23 @@ see:
 
 ## One-sentence takeaway
 
-Archetypal ECS stores entities sharing a component signature in contiguous chunks for SIMD-friendly system iteration.
+An archetype is the set of entities that share one component signature, stored in cache-line-sized chunks of SoA columns so a system walks only matching columns with almost no branching.
 
 ## Why it matters here
 
-Archetype chunk storage is the default high-perf ECS layout to compare against Anoptic SoA.
+This is the high-throughput layout Unity DOTS and Bevy ship, and the foil for Anoptic’s own SoA/ECS: structural changes move entities between chunks; queries become “iterate these archetypes.”
 
 ## Key ideas
 
-- Archetypal ECS stores entities sharing a component signature in contiguous chunks for SIMD-friendly system iteration.
+- Entity id → (archetype, row) indirection; adding or removing a component is a move into another archetype’s chunk, not an in-place flag flip.
+- Chunks pack many entities of one signature so SIMD/Burst/ispc can load one component column at a time.
+- Systems declare a query (required / optional / without). The registry returns the matching archetype list; iteration never visits unrelated entities.
+- Sparse-set ECS (EnTT) is the competing layout: faster structural changes, worse multi-component scan locality.
+- Flecs tables, Bevy archetypes, and Unity chunks are the same idea with different names and different relationship/enable-bit extras.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://docs.rs/bevy_ecs/latest/bevy_ecs/
+- Bevy ECS: https://docs.rs/bevy_ecs/latest/bevy_ecs/
+- Unity Entities: https://docs.unity3d.com/Packages/com.unity.entities@latest

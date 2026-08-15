@@ -1,10 +1,9 @@
 ---
-title: "The Revised^5 Report on the Algorithmic Language Scheme"
+title: "Revised^5 Report on the Algorithmic Language Scheme"
 authors:
   - "Richard Kelsey"
   - "William Clinger"
   - "Jonathan Rees"
-  - "et al."
 year: 1998
 venue: "Higher-Order and Symbolic Computation"
 arxiv: null
@@ -32,46 +31,31 @@ cites:
     year: 1978
     arxiv: null
     doi: null
-  - title: "Soft Typing"
-    url: "https://doi.org/10.1145/113445.113469"
-    year: 1991
-    arxiv: null
-    doi: "10.1145/113445.113469"
-  - title: "The Definition of Standard ML (Revised)"
-    url: "https://mitpress.mit.edu/9780262631815/the-definition-of-standard-ml/"
-    year: 1997
-    arxiv: null
-    doi: null
 see:
   - "673-scheme-an-interpreter-for-extended-lambda-calculus"
   - "674-rabbit-a-compiler-for-scheme"
-  - "661-soft-typing"
-  - "137-the-definition-of-standard-ml-revised"
 ---
 
-# The Revised^5 Report on the Algorithmic Language Scheme
+# Revised^5 Report on the Algorithmic Language Scheme
 
 ## One-sentence takeaway
 
-R5RS: the classic compact Scheme language report that fixed a widely implemented standard.
+R5RS is the compact Scheme standard that requires proper tail calls, first-class continuations, and `syntax-rules` hygienic macros in a report you can read in an afternoon.
 
 ## Why it matters here
 
-Canonical Scheme report card (R5RS preferred over later larger reports for classic status).
+When Broadside cites "Scheme" as a language design, this is the report — smaller than R6RS/R7RS-large, precise enough to compare implementations and to steal macros from.
 
 ## Key ideas
 
-- Small, precise language definition.
-- Tail-call and first-class continuation requirements.
-- Hygienic macros via syntax-rules in R5RS.
-- Baseline for comparing Scheme implementations.
+- The language is defined by a denotational semantics in the report plus a prose specification of libraries; editors Kelsey, Clinger, Rees, dated 20 February 1998.
+- Proper tail recursion and `call-with-current-continuation` are required, not optional quality-of-implementation notes.
+- `syntax-rules` is the hygienic macro system that shipped in the standard (versus earlier `defmacro`-style systems).
+- *Higher-Order and Symbolic Computation* 11(1):7–105, 1998, DOI 10.1023/A:1010051815785. Corrected HTML: standards.scheme.org.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1023/A:1010051815785](https://doi.org/10.1023/A:1010051815785)
-- URL: https://doi.org/10.1023/A:1010051815785
+- Corrected HTML: https://standards.scheme.org/corrected-r5rs/r5rs.html

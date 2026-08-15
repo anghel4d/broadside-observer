@@ -1,5 +1,4 @@
 ---
-
 title: "Example-Based Model Synthesis"
 authors:
   - "Paul Merrell"
@@ -18,45 +17,32 @@ pool: "engines"
 relevance_score: 9
 lineage: procedural-generation
 cites:
-  - title: "Wave Function Collapse"
-    url: "https://github.com/mxgmn/WaveFunctionCollapse"
-    year: 2016
-    arxiv: null
-    doi: null
-  - title: "Procedural Content Generation in Games"
-    url: "https://doi.org/10.1007/978-3-319-42716-4"
-    year: 2016
-    arxiv: null
-    doi: null
-see:
-  - "103-wave-function-collapse"
-  - "102-procedural-content-generation-in-games"
+  - title: "Texture Synthesis by Non-parametric Sampling"
+    url: "https://doi.org/10.1109/ICCV.1999.790383"
+    year: 1999
+    doi: "10.1109/ICCV.1999.790383"
 ---
+
 # Example-Based Model Synthesis
 
 ## One-sentence takeaway
 
-Constraint-based exemplar synthesis that Wave Function Collapse later popularized.
+Merrell grows large 3D models whose every local neighborhood already occurs in a small example, using a global conflict search and divide-and-conquer so the output stays consistent with the exemplar's adjacency constraints.
 
 ## Why it matters here
 
-Corrects the WFC origin story: Merrell 2007 is the algorithmic parent Anoptic PCG should cite.
+Wave Function Collapse is a widely adopted later variant; Anoptic PCG should cite this 2007 constraint-synthesis paper as the algorithmic parent, not only Gumin 2016.
 
 ## Key ideas
 
-- Local neighborhoods match an example model.
-- Global conflict search before committing.
-- Divide-and-conquer subproblems.
-- WFC (Gumin 2016) is a widely adopted variant.
+- Treats model synthesis as matching local neighborhoods of an example mesh or voxel model rather than sampling textures independently.
+- Detects global conflicts before committing a region, then splits the remaining volume into subproblems.
+- Produces larger, structurally valid buildings and interiors from a tiny handmade example.
+- Direct precursor of later adjacency-constraint generators (WFC, MarkovJunior rewrite stages).
 
 ## Caveats
-
-- Original focus more 3D than pixel-art tooling.
-- Large outputs need careful backtracking strategies.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/1230100.1230119](https://doi.org/10.1145/1230100.1230119)
-- URL: https://doi.org/10.1145/1230100.1230119
-- https://paulmerrell.org/model-synthesis/
+- Author page: https://paulmerrell.org/model-synthesis/

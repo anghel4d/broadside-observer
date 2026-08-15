@@ -37,19 +37,19 @@ Residual (skip) connections make 100+ layer nets trainable — ILSVRC 2015 winne
 
 ## Why it matters here
 
-The residual wire is a morphism Weaves has to express. Canonical DL architecture alongside AlexNet/Transformers.
+The residual wire is a morphism Weaves has to express. Canonical DL architecture alongside AlexNet and Transformers; the additive bypass is the categorical interest.
 
 ## Key ideas
 
-- arXiv:1512.03385 (2015); CVPR 2016. 152-layer ImageNet nets; 3.57% ensemble error.
-- Learn residual functions wrt layer inputs rather than unreferenced maps.
+- arXiv:1512.03385 (2015); CVPR 2016. DOI `10.1109/CVPR.2016.90`.
+- Learn residual functions with respect to layer inputs rather than unreferenced maps; 152-layer ImageNet nets; 3.57% ensemble top-5 error.
 - Also lifts detection/segmentation (COCO) via depth of representation.
+- Vision paper, not a semantics; skip connections are the morphism.
 
 ## Caveats
-
-- Vision paper, not a semantics. Skip connections are the categorical interest (additive bypass as a morphism).
 
 ## Links
 
 - arXiv: [1512.03385](https://arxiv.org/abs/1512.03385)
-- DOI: https://doi.org/10.1109/CVPR.2016.90
+- PDF: https://arxiv.org/pdf/1512.03385
+- DOI: [10.1109/CVPR.2016.90](https://doi.org/10.1109/CVPR.2016.90)

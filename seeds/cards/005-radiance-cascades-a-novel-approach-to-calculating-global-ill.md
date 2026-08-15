@@ -81,10 +81,6 @@ Primary Anoptic / Broadside Radiance Cascades reference: the living algorithm th
 
 ## Caveats
 
-- Canonical artifact is still a WIP preprint (Raikiri/RadianceCascadesPaper), not a finished journal version — verify against the latest tex/PDF before tight claims.
-- Naive merges show ringing/bilinear artifacts; community and later papers (Osborne & Sannikov; Holographic RC) document fixes.
-- Dense 3D volumetric storage is expensive; production 3D paths need sparsity (see Split Radiance Cascades).
-
 ## Links
 
 - URL: https://github.com/Raikiri/RadianceCascadesPaper

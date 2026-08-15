@@ -29,43 +29,32 @@ cites:
     year: 1962
     arxiv: null
     doi: null
-  - title: "Toward a Mathematical Semantics for Computer Languages"
-    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
-    year: 1971
-    arxiv: null
-    doi: null
-  - title: "A Correspondence Between ALGOL 60 and Church's Lambda-Notation"
-    url: "https://doi.org/10.1145/363744.363749"
-    year: 1965
-    arxiv: null
-    doi: "10.1145/363744.363749"
 see:
   - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
   - "578-towards-a-mathematical-science-of-computation"
-  - "612-toward-a-mathematical-semantics-for-computer-languages"
-  - "618-a-correspondence-between-algol-60-and-church-s-lambda-notati"
 ---
 
 # A Basis for a Mathematical Theory of Computation
 
 ## One-sentence takeaway
 
-McCarthy sketches mathematical semantics for computation with recursive functions over symbolic data.
+McCarthy treats computation as recursive function equations over symbolic data, with conditional expressions and recursion induction as the proof tools.
 
 ## Why it matters here
 
-Early program semantics before Scott–Strachey; links LISP to theory.
+Before Scott–Strachey denotational semantics, this is how ano-style functional programs were supposed to be defined and proved: equations, not flowcharts.
 
 ## Key ideas
 
-- Recursive function equations as definitions.
-- Symbolic data domains.
-- Toward proving properties of programs.
+- Conditional expressions `(p → a, b)` are given a systematic algebra, including their use inside recursive definitions.
+- Recursion induction proves properties of functions defined by recursive equations without unfolding the implementation.
+- Symbolic expressions (the LISP data domain) are the intended universe; computable functions are those definable this way.
+- Presented 1961 at WJCC and 1962 at Blaricum; printed 1963 in Braffort & Hirschberg's *Computer Programming and Formal Systems*.
+- The companion IFIP-62 address ("Towards…") extends the same program toward abstract syntax.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - URL: https://www-formal.stanford.edu/jmc/basis.html
+- PDF: https://www-formal.stanford.edu/jmc/basis1.pdf

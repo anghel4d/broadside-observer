@@ -1,11 +1,11 @@
 ---
-title: "Roofline: An Insightful Visual Performance Model"
+title: "Roofline: An Insightful Visual Performance Model for Multicore Architectures"
 authors:
   - "Samuel Williams"
   - "Andrew Waterman"
   - "David Patterson"
 year: 2009
-venue: "CiSE"
+venue: "Computing in Science & Engineering"
 arxiv: null
 doi: "10.1109/MCSE.2009.88"
 source: "https://doi.org/10.1109/MCSE.2009.88"
@@ -18,52 +18,33 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 8
 cites:
-  - title: "Kokkos: Enabling manycore performance portability"
-    url: "https://doi.org/10.1016/j.jpdc.2014.07.003"
-    year: 2014
-    arxiv: null
-    doi: "10.1016/j.jpdc.2014.07.003"
-  - title: "ispc: A SPMD Compiler for High-Performance CPU Programming"
-    url: "https://ispc.github.io/papers/ispc_inpar_2012.pdf"
-    year: 2012
+  - title: "Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures"
+    url: "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-134.pdf"
+    year: 2008
     arxiv: null
     doi: null
-  - title: "Scans as Primitive Parallel Operations"
-    url: "https://doi.org/10.1109/12.42122"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/12.42122"
-  - title: "Abseil Swiss Tables"
-    url: "https://abseil.io/about/design/swisstables"
-    year: 2017
-    arxiv: null
-    doi: null
-see:
-  - "393-kokkos-enabling-manycore-performance-portability"
-  - "341-ispc-a-spmd-compiler-for-high-performance-cpu-programming"
-  - "307-scans-as-primitive-parallel-operations"
-  - "387-abseil-swiss-tables"
 ---
 
-# Roofline: An Insightful Visual Performance Model
+# Roofline: An Insightful Visual Performance Model for Multicore Architectures
 
 ## One-sentence takeaway
 
-Roofline thinking for SIMD/cache-bound Anoptic systems.
+Attainable Gflop/s is the minimum of peak flop/s and peak bandwidth times arithmetic intensity, drawn as a roof whose ridge tells you whether to optimize flops or bytes.
 
 ## Why it matters here
 
-Roofline thinking for SIMD/cache-bound Anoptic systems.
+Anoptic meshlet, RC, and ECS gather kernels live on one side or the other of that ridge. Roofline is how you decide whether a GRID COMMAND sim tick is DRAM-bound (SoA layout, prefetch, cache blocking) or ALU-bound (SIMD width, instruction mix) before rewriting the wrong loop.
 
 ## Key ideas
 
-- Roofline thinking for SIMD/cache-bound Anoptic systems.
+- Arithmetic intensity = flop / byte from DRAM; plot it on a log-log chart against attainable performance.
+- The ridge point is peak flop/s divided by peak bandwidth — kernels left of the ridge are memory-bound, right are compute-bound.
+- Ceilings under the roof (no SIMD, no FMA, poor locality, unaligned loads) show which optimization actually moves the needle.
+- The 2008 Berkeley TR (EECS-2008-134) is the long form; CiSE 2009 is the archival short paper.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1109/MCSE.2009.88](https://doi.org/10.1109/MCSE.2009.88)
-- URL: https://doi.org/10.1109/MCSE.2009.88
+- DOI: https://doi.org/10.1109/MCSE.2009.88
+- Berkeley TR PDF: https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-134.pdf

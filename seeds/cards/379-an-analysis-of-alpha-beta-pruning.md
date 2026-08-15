@@ -4,7 +4,7 @@ authors:
   - "Donald E. Knuth"
   - "Ronald W. Moore"
 year: 1975
-venue: "AIJ"
+venue: "Artificial Intelligence"
 arxiv: null
 doi: "10.1016/0004-3702(75)90019-3"
 source: "https://doi.org/10.1016/0004-3702(75)90019-3"
@@ -17,66 +17,16 @@ reviewed: "2026-08-13"
 pool: "game-ai"
 relevance_score: 8
 cites:
-  - title: "Programming a computer to play chess"
-    url: "https://doi.org/10.1070/rm1970v025n02abeh003792"
-    year: 1970
+  - title: "Programming a Computer for Playing Chess"
+    url: "https://doi.org/10.1080/14786445008521796"
+    year: 1950
     arxiv: null
-    doi: "10.1070/rm1970v025n02abeh003792"
-  - title: "The Art of Computer Programming. Volume 1: Fundamental Algorithms."
-    url: "https://doi.org/10.2307/2283757"
-    year: 1969
-    arxiv: null
-    doi: "10.2307/2283757"
-  - title: "Branch-and-Bound Methods: A Survey"
-    url: "https://doi.org/10.1287/opre.14.4.699"
-    year: 1966
-    arxiv: null
-    doi: "10.1287/opre.14.4.699"
-  - title: "Matrix Iterative Analysis"
-    url: "https://doi.org/10.2307/2003862"
-    year: 1963
-    arxiv: null
-    doi: "10.2307/2003862"
-  - title: "Structured Programming with <i>go to</i> Statements"
-    url: "https://doi.org/10.1145/356635.356640"
-    year: 1974
-    arxiv: null
-    doi: "10.1145/356635.356640"
+    doi: "10.1080/14786445008521796"
   - title: "Some Studies in Machine Learning Using the Game of Checkers"
     url: "https://doi.org/10.1147/rd.33.0210"
     year: 1959
     arxiv: null
     doi: "10.1147/rd.33.0210"
-  - title: "The Art of Computer Programming: Volume 3: Sorting and Searching"
-    url: "https://cybra.lodz.pl/dlibra/docmetadata?showContent=true&id=28125"
-    year: 1973
-    arxiv: null
-    doi: null
-  - title: "Sorting and Searching"
-    url: "http://cumincad.architexturez.net//doc/oai-cumincadworks-id-2954"
-    year: 1973
-    arxiv: null
-    doi: null
-  - title: "Matrix Iterative Analysis"
-    url: "https://doi.org/10.1007/978-3-642-05156-2"
-    year: 2000
-    arxiv: null
-    doi: "10.1007/978-3-642-05156-2"
-  - title: "Problem-Solving Methods in Artificial Intelligence"
-    url: "https://openalex.org/W2160645305"
-    year: 1971
-    arxiv: null
-    doi: null
-  - title: "Some Studies in Machine Learning Using the Game of Checkers. II—Recent Progress"
-    url: "https://doi.org/10.1147/rd.116.0601"
-    year: 1967
-    arxiv: null
-    doi: "10.1147/rd.116.0601"
-  - title: "Zur Theorie der Matrices"
-    url: "https://doi.org/10.1007/bf01449896"
-    year: 1907
-    arxiv: null
-    doi: "10.1007/bf01449896"
 see:
   - "381-programming-a-computer-for-playing-chess"
 ---
@@ -85,21 +35,21 @@ see:
 
 ## One-sentence takeaway
 
-Alpha-beta analysis.
+Knuth and Moore prove that α-β examines Θ(b^{d/2}) leaves in the best move-ordering and never more than the full minimax tree, so move ordering — not a fancier search — is the whole game.
 
 ## Why it matters here
 
-Alpha-beta analysis.
+Any GRID COMMAND tactical search that still looks like minimax (weapon ranges, cover graphs, small perfect-information scraps) lives under this bound. Deepen only if you can order moves; otherwise you pay the full b^d.
 
 ## Key ideas
 
-- Alpha-beta analysis.
+- α-β is exactly minimax with two bounds that prune branches which cannot affect the root value.
+- Best-case leaf count is ~2b^{d/2} − 1 (deep cutoffs on every other level); worst case is the entire tree.
+- Node types (PV / CUT / ALL in later jargon) already appear in the analysis: the first successor of a PV node must be searched fully.
+- Justifies iterative deepening + history / killer / TT move ordering as the practical way to approach the best-case bound.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1016/0004-3702(75)90019-3](https://doi.org/10.1016/0004-3702(75)90019-3)
-- URL: https://doi.org/10.1016/0004-3702(75)90019-3
+- DOI: https://doi.org/10.1016/0004-3702(75)90019-3

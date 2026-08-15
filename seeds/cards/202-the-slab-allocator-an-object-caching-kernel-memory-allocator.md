@@ -54,21 +54,23 @@ see:
 
 ## One-sentence takeaway
 
-Bonwick's slab allocator caches initialized objects by size class, reducing fragmentation and constructor cost in kernel heaps.
+Bonwick caches constructed kernel objects in per-size-class slabs so allocation is mostly a list pop and constructors run only when a slab is first filled.
 
 ## Why it matters here
 
-Canonical size-class object caching; mental model for engine pools and multipools.
+Anoptic pools and ECS archetype chunks are the same idea: keep hot object layouts constructed, color them for cache lines, and recycle whole slabs instead of chasing a general heap.
 
 ## Key ideas
 
-- Bonwick's slab allocator caches initialized objects by size class, reducing fragmentation and constructor cost in kernel heaps.
+- A slab is one or more contiguous pages carved into equal-sized object slots for a single cache (inode, vnode, …).
+- Object caching retains constructed state across free/alloc so constructors and destructors are not paid on the fast path.
+- Cache coloring offsets objects inside the slab to spread them across hardware cache lines and reduce associativity conflicts.
+- Per-CPU magazines (in the later Magazines/Vmem follow-on) sit in front of the slab depot so most alloc/free never touch a shared lock.
+- Internal fragmentation is bounded by size-class spacing; external fragmentation is limited because unused slabs can be returned to the page allocator.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps
+- USENIX paper (PostScript): https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.ps
+- USENIX proceedings page: https://www.usenix.org/conference/usenix-summer-1994-technical-conference/slab-allocator-object-caching-kernel-memory

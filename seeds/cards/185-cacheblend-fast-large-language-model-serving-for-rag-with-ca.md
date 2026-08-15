@@ -50,25 +50,23 @@ see:
 
 ## One-sentence takeaway
 
-Large language models (LLMs) often incorporate multiple text chunks in their inputs to provide the necessary contexts.
+CacheBlend reuses precomputed KV caches of retrieved chunks even when they are not a prefix, then selectively recomputes a small token subset so cross-attention is approximately restored.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge Fusion)
+Broadside RAG never has the luxury of a single static prefix: citations arrive as unordered chunks. Fusing their KV caches, and pipelining the recompute with cache fetch, is the serving trick that keeps TTFT honest.
 
 ## Key ideas
 
-- Large language models (LLMs) often incorporate multiple text chunks in their inputs to provide the necessary contexts.
-- To speed up the prefill of the long LLM inputs, one can pre-compute the KV cache of a text and re-use the KV cache when the context is reused as the prefix of another LLM input.
-- However, the reused text chunks are not always the input prefix, which makes precomputed KV caches not directly usable since they ignore the text's cross-attention with the preceding texts.
-- Thus, the benefits of reusing KV caches remain largely unrealized.
-- This paper tackles just one challenge: when an LLM input contains multiple text chunks, how to quickly combine their precomputed KV caches in order to achieve the same generation quality as the expensive full prefill (i.e., without reusing KV cac
+- Prefix-only KV reuse fails for RAG because retrieved texts are not the prompt prefix and their cached keys ignore cross-attention with preceding tokens.
+- CacheBlend reuses each chunk's KV anyway and recomputes KV for a small selected subset of tokens to patch the cross-attention error.
+- That recompute is pipelined with fetching caches from slower storage, so large KV can live off-GPU without adding delay.
+- On three open models and four task datasets the authors report 2.2–3.3× lower TTFT and 2.8–5× higher throughput versus full prefill, without measured quality loss.
+- Implementation lives in the LMCache project.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2405.16444](https://arxiv.org/abs/2405.16444)
-- URL: https://arxiv.org/abs/2405.16444
+- Code: https://github.com/LMCache/LMCache

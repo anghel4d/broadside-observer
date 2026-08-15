@@ -25,54 +25,35 @@ cites:
     year: 1910
     arxiv: null
     doi: null
-  - title: "Report on a General Problem-Solving Program"
-    url: "https://bitsavers.org/pdf/rand/ipl/"
-    year: 1959
+  - title: "Empirical Explorations of the Logic Theory Machine"
+    url: "https://doi.org/10.1145/1455567.1455605"
+    year: 1957
     arxiv: null
-    doi: null
-  - title: "Elements of a Theory of Human Problem Solving"
-    url: "https://doi.org/10.1037/h0048495"
-    year: 1958
-    arxiv: null
-    doi: "10.1037/h0048495"
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367177.367199"
-  - title: "Computing Machinery and Intelligence"
-    url: "https://doi.org/10.1093/mind/LIX.236.433"
-    year: 1950
-    arxiv: null
-    doi: "10.1093/mind/LIX.236.433"
+    doi: "10.1145/1455567.1455605"
 see:
   - "488-principia-mathematica-volume-i"
-  - "582-report-on-a-general-problem-solving-program"
-  - "583-elements-of-a-theory-of-human-problem-solving"
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
-  - "519-computing-machinery-and-intelligence"
+  - "581-empirical-explorations-of-the-logic-theory-machine"
 ---
 
 # The Logic Theory Machine: A Complex Information Processing System
 
 ## One-sentence takeaway
 
-Logic Theorist proves Principia theorems by heuristic search—the first AI program spectacle.
+Logic Theorist searches for *Principia Mathematica* proofs by heuristic substitution and detachment, the first working demonstration of symbolic AI.
 
 ## Why it matters here
 
-Birth of symbolic AI and heuristic search; agents pool root.
+Broadside agents that search a space of symbolic actions — not just sample tokens — are still in this 1956 IRE-IT lineage.
 
 ## Key ideas
 
-- Heuristic theorem proving.
-- List processing on JOHNNIAC.
-- Principia as benchmark corpus.
-- IPL lineage begins.
+- Theorems are list structures; methods (substitution, replacement, detachment, chaining) generate a growing tree of expressions.
+- Heuristics prune and order the tree so the machine does not enumerate the whole propositional calculus.
+- The intended corpus is Whitehead & Russell's *Principia*, treated as a benchmark of human-hard but formally closed problems.
+- Implementation is IPL on JOHNNIAC; the paper is the system description, the 1957 WJCC paper the experimental report.
+- Same 1956 IRE Information Theory issue era as Chomsky's "Three Models."
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

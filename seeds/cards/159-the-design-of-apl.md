@@ -79,21 +79,23 @@ see:
 
 ## One-sentence takeaway
 
-Recounts design principles and evolution of APL as notation and interactive programming language.
+Falkoff and Iverson recount how APL grew from executable mathematical notation into an interactive language, and they state the design principles — uniformity, residual notation, arrays as the only data — that kept the primitive set small.
 
 ## Why it matters here
 
-Design rationale for APL primitives and operators that ano's fold/scan/mask layer inherits.
+Ano's fold/scan/mask layer inherits these choices: one array datatype, operators that act uniformly on any rank, and notation that stays executable rather than becoming a separate comment language.
 
 ## Key ideas
 
-- Recounts design principles and evolution of APL as notation and interactive programming language.
+- APL begins as Iverson's 1962 notation and becomes a language once it is implemented as APL\360 with an interactive terminal loop.
+- Design aims include residual notation (a program remains a readable expression), a single array datatype, and a small set of primitives closed under operators.
+- Identity elements, fill, and empty-array behaviour are treated as part of the design, not as later edge cases.
+- Shared variables and the workspace model are how APL talks to the outside world without abandoning the array algebra.
+- The paper is a design history: every primitive is justified as notation first, implementation second.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
+- Reprint: https://www.jsoftware.com/papers/APLDesign.htm
 - DOI: [10.1147/rd.174.0324](https://doi.org/10.1147/rd.174.0324)
-- URL: https://www.jsoftware.com/papers/APLDesign.htm

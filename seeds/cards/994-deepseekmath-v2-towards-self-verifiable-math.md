@@ -49,23 +49,20 @@ see:
 
 ## One-sentence takeaway
 
-Answer-correct RL saturates AIME; this trains a faithful verifier and a generator that repairs its own proofs — IMO 2025 gold / Putnam 2024 118/120 with scaled test-time compute.
+Answer-correct RL saturates AIME; Math-V2 trains a faithful verifier and a generator that repairs its own proofs, reporting IMO 2025 gold / CMO 2024 gold / Putnam 2024 118/120 with scaled test-time compute.
 
 ## Why it matters here
 
-Closes the 'right answer, wrong proof' hole in R1-style RL. Self-verification is the missing loop for agents on open problems.
+Closes the 'right answer, wrong proof' hole in R1-style RL. Self-verification is the missing loop for agents on open problems: generate, check, repair, and keep the verifier ahead of the generator.
 
 ## Key ideas
 
 - arXiv:2511.22570. Thesis: final-answer RL does not certify reasoning, and many math tasks have no numeric answer.
 - Train an LLM verifier for theorem proving; train a generator with the verifier as reward; incentivize the generator to find and fix issues before finalizing.
-- Scale verification compute to label new hard proofs so the verifier stays ahead of the generator.
-- DeepSeekMath-V2: gold-level IMO 2025 and CMO 2024; 118/120 Putnam 2024 with scaled test-time compute.
+- Scale verification compute to label new hard proofs so the verifier stays ahead of the generator (they discuss the collusion risk if that gap closes).
+- Headline scores use scaled test-time compute, not single-pass.
 
 ## Caveats
-
-- Headline scores use scaled test-time compute, not single-pass.
-- Verifier/generator co-evolution can still collude if the verifier is weak — they discuss keeping a generation-verification gap.
 
 ## Links
 

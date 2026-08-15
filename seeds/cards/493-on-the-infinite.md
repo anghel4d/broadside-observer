@@ -2,11 +2,11 @@
 title: "On the Infinite"
 authors:
   - "David Hilbert"
-year: 1925
+year: 1926
 venue: "Mathematische Annalen (Über das Unendliche)"
 arxiv: null
-doi: null
-source: "https://www.worldcat.org/title/uber-das-unendliche/oclc/883282162"
+doi: "10.1007/BF01206605"
+source: "https://doi.org/10.1007/BF01206605"
 topics:
   - hilbert-program
   - finitism
@@ -18,47 +18,34 @@ pool: "maths-foundations"
 relevance_score: 8
 lineage: foundations-of-computing
 cites:
-  - title: "Die Grundlagen der Mathematik"
-    url: "https://link.springer.com/article/10.1007/BF01661237"
-    year: 1928
-    arxiv: null
-    doi: "10.1007/BF01661237"
-  - title: "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I"
-    url: "https://doi.org/10.1007/BF01700692"
-    year: 1931
-    arxiv: null
-    doi: "10.1007/BF01700692"
-  - title: "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes"
-    url: "https://doi.org/10.1111/j.1746-8361.1958.tb01464.x"
-    year: 1958
-    arxiv: null
-    doi: "10.1111/j.1746-8361.1958.tb01464.x"
+  - title: "Mathematical Problems (Hilbert's Problems)"
+    url: "https://www.ams.org/bull/1902-08-10/S0002-9904-1902-00923-3/S0002-9904-1902-00923-3.pdf"
+    year: 1900
+    doi: "10.1090/S0002-9904-1902-00923-3"
 see:
-  - "494-die-grundlagen-der-mathematik"
-  - "500-uber-formal-unentscheidbare-satze-der-principia-mathematica-"
-  - "503-uber-eine-bisher-noch-nicht-benutzte-erweiterung-des-finiten"
+  - "487-mathematical-problems-hilbert-s-problems"
 ---
 
 # On the Infinite
 
 ## One-sentence takeaway
 
-Hilbert's 'On the Infinite' defends finitistic methods and ideal elements—the philosophical frame Gödel punctured.
+Hilbert's Münster lecture (4 June 1925; *Math. Ann.* 95:161–190, 1926) defends infinitary mathematics as a system of ideal elements that must be secured by finitistic consistency proofs of the real propositions.
 
 ## Why it matters here
 
-Pairs with incompleteness: what 'finitary consistency proof' was supposed to mean.
+Pairs with incompleteness: this is the philosophical frame that says what a "finitary consistency proof" was supposed to mean before Gödel showed arithmetic cannot supply one.
 
 ## Key ideas
 
-- Ideal vs real propositions.
-- Finitary reasoning as secure core.
-- Cantor's paradise shall not be expelled—but must be secured.
+- Distinguishes real (finitary, contentual) propositions from ideal ones that mention completed infinities.
+- "No one shall expel us from the paradise that Cantor has created" — but the paradise must be licensed by a finitary consistency proof.
+- Finitary reasoning about concrete signs and proofs is the secure core; transfinite methods are instruments.
+- Full *Annalen* text is the one to cite; a shorter version appeared in *Jahresbericht der DMV* 36 (1927).
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/uber-das-unendliche/oclc/883282162
+- DOI: [10.1007/BF01206605](https://doi.org/10.1007/BF01206605)
+- GDZ volume: https://gdz.sub.uni-goettingen.de/id/PPN235181684_0095

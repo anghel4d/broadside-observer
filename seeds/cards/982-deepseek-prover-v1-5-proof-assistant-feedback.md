@@ -52,23 +52,20 @@ see:
 
 ## One-sentence takeaway
 
-Adds RL from Lean feedback (RLPAF) and RMaxTS (intrinsic-reward MCTS) on top of Prover-V1; 63.5% miniF2F, 25.3% ProofNet.
+Adds RL from Lean feedback (RLPAF) and RMaxTS — intrinsic-reward MCTS for diverse proof paths — on top of Prover-V1, reaching 63.5% miniF2F and 25.3% ProofNet.
 
 ## Why it matters here
 
-Search+RL over a proof assistant — the agent loop GRID COMMAND-style planners actually look like, just in Lean.
+Search plus RL over a proof assistant is the agent loop GRID COMMAND-style planners actually look like, just in Lean: propose a step, check it, explore alternatives, train on the verified traces.
 
 ## Key ideas
 
-- arXiv:2408.08152. Pretrained on DeepSeekMath-Base with formal-language specialization; SFT on an enhanced V1 dataset.
-- RLPAF: reinforcement learning from proof-assistant feedback.
-- RMaxTS: MCTS with intrinsic-reward exploration for diverse proof paths, beyond V1's single-pass whole proofs.
-- miniF2F 63.5%, undergraduate ProofNet 25.3%.
+- arXiv:2408.08152. Pretrained on DeepSeekMath-Base with formal-language specialization; SFT on an enhanced V1 dataset, then RLPAF.
+- RMaxTS is MCTS with an intrinsic reward that prefers unexplored proof states, beyond V1's single-pass whole proofs.
+- High-school miniF2F 63.5%; undergraduate ProofNet 25.3%.
+- Still Math-base scale; V2 later cold-starts from V3-671B subgoal decomposition.
 
 ## Caveats
-
-- Still Math-base scale; V2 (1255) jumps to V3-671B initialization.
-- Lean 4 specific; not a general reasoning model.
 
 ## Links
 

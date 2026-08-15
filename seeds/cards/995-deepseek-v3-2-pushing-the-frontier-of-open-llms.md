@@ -30,13 +30,13 @@ cites:
     arxiv: "2205.14135"
   - title: "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning"
     url: "https://arxiv.org/abs/2307.08691"
-    year: 2024
+    year: 2023
     arxiv: "2307.08691"
   - title: "FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-Precision"
     url: "https://arxiv.org/abs/2407.08691"
     year: 2024
     arxiv: "2407.08691"
-  - title: "FlashAttention-4: Algorithm and kernel pipelining co-design for asymmetric hardware scaling"
+  - title: "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling"
     url: "https://arxiv.org/abs/2603.05451"
     year: 2026
     arxiv: "2603.05451"
@@ -67,23 +67,21 @@ see:
 
 ## One-sentence takeaway
 
-V3 + DeepSeek Sparse Attention (DSA) + scaled RL + a synthetic agentic-tool pipeline; Speciale claimed gold IMO/IOI 2025 and GPT-5/Gemini-3.0-Pro-class reasoning.
+V3.2 sits DeepSeek Sparse Attention (DSA) on the V3 backbone, scales the RL protocol, and adds a synthetic agentic-tool pipeline; V3.2-Speciale is claimed gold at IMO/IOI 2025 and GPT-5 / Gemini-3.0-Pro-class on reasoning.
 
 ## Why it matters here
 
-The production sparse-attention successor of NSA (1254) on the V3 (1206) backbone. Agentic post-training is the GRID COMMAND-relevant half.
+Production sparse-attention successor of NSA on the V3 backbone. The agentic post-training half — reasoning inside interactive tool environments, not just chat CoT — is the GRID COMMAND-relevant piece.
 
 ## Key ideas
 
-- arXiv:2512.02556. DSA: sparse attention that cuts long-context compute while keeping quality (production cousin of NSA).
-- Scaled RL protocol; V3.2 ≈ GPT-5; V3.2-Speciale claimed above GPT-5, on par with Gemini-3.0-Pro, gold IMO 2025 and IOI 2025.
-- Large-scale agentic task synthesis for tool-use: reasoning inside interactive environments, not just chat CoT.
+- arXiv:2512.02556. DSA cuts long-context compute while keeping quality; it is the production cousin of NSA, not a drop-in of that 27B research kernel.
+- Scaled RL: V3.2 ≈ GPT-5 in their tables; Speciale claimed above GPT-5, on par with Gemini-3.0-Pro, gold IMO 2025 and IOI 2025.
+- Large-scale agentic task synthesis for tool-use: the model is trained to reason inside environments, not only to emit a chain of thought.
 - FlashMLA kernels (GitHub, not a paper) implement dense MLA + DSA sparse paths — cite the repo, don't mint a card.
+- Speciale is a high-compute variant, not the default API model.
 
 ## Caveats
-
-- Speciale is a high-compute variant, not the default API model.
-- DSA is not NSA: related sparse-attention program, different production mechanism.
 
 ## Links
 

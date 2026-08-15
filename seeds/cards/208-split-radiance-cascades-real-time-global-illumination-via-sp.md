@@ -48,24 +48,23 @@ see:
 
 ## One-sentence takeaway
 
-Bring Radiance Cascades into accurate real-time 3D diffuse GI via sparse hashmap world-space probes and ray splitting by hit distance.
+Split Radiance Cascades stores world-space RC probes in a sparse hashmap and assigns traced hit intervals to cascade levels by ray-split distance, enabling real-time 3D diffuse GI.
 
 ## Why it matters here
 
-Living 3D RC successor for Anoptic: directly tackles the volumetric storage wall that kept prior RC demos in 2D or screenspace.
+This is the living 3D RC successor for Anoptic: it attacks the volumetric storage wall that kept prior RC demos in 2D or screenspace.
 
 ## Key ideas
 
-- Sparse hashmap stores world-space probes instead of a dense 3D cascade grid.
-- Ray splitting assigns traced hit intervals to the correct cascade levels from visible surfaces.
-- Targets detail at all scales without the noise/aliasing of undersampled path probes.
-- Evaluated in both single-frame and temporally accumulated modes.
+- Dense 3D cascade grids are prohibitive; a sparse hashmap keeps only world-space probes that matter.
+- Ray splitting traces from visible surfaces and bins each hit interval into the cascade whose spatial/angular budget matches that distance.
+- Near-field light keeps high spatial resolution and low angular resolution; far-field does the reverse, the usual RC trade.
+- Evaluated in both single-frame and temporally accumulated modes on several scenes.
+- Positions itself against noisy path-probe sampling and against 2D/screenspace RC implementations.
 
 ## Caveats
-
-- 2026 arXiv preprint — validate against implementation cost on target GPUs before committing engine architecture.
 
 ## Links
 
 - arXiv: [2607.20384](https://arxiv.org/abs/2607.20384)
-- URL: https://arxiv.org/abs/2607.20384
+- PDF: https://arxiv.org/pdf/2607.20384

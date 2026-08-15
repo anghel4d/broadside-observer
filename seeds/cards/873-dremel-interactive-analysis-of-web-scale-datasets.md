@@ -25,31 +25,42 @@ pool: systems
 relevance_score: 9
 lineage: contemporary-databases
 cites:
-  []
+  - title: "MapReduce: Simplified Data Processing on Large Clusters"
+    url: "https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/"
+    year: 2004
+    arxiv: null
+    doi: null
+  - title: "The Google File System"
+    url: "https://research.google/pubs/the-google-file-system/"
+    year: 2003
+    arxiv: null
+    doi: null
+see:
+  - "795-the-google-file-system"
+  - "796-mapreduce-simplified-data-processing-on-large-clusters"
 ---
 
 # Dremel: Interactive Analysis of Web-Scale Datasets
 
 ## One-sentence takeaway
 
-Columnar nested storage and tree aggregation that became BigQuery's execution model.
+Dremel runs SQL-like aggregations over trillion-row nested tables in seconds by pairing a search-style serving tree with a lossless columnar encoding of Protocol Buffer records.
 
 ## Why it matters here
 
-The interactive analytics ancestor of BigQuery — nested columnar scans at web scale.
+This is the interactive-analytics ancestor of BigQuery — and of every "scan nested logs in place, don't wait for MapReduce" path Broadside will want over GRID COMMAND traces.
 
 ## Key ideas
 
-- Column-oriented storage for nested Protobuf-like records.
-- Multi-level serving tree aggregation.
-- Separates storage format from SQL surface.
+- In-situ nested data on GFS/Bigtable: no load step. A query that would be a chain of MR jobs finishes as one Dremel tree.
+- Column stripes store every leaf path (e.g. `Name.Language.Code`) with repetition and definition levels so record structure is reconstructible from any field subset.
+- Execution is a multi-level serving tree: the query is rewritten downward, partial aggregations flow up, stragglers are tolerated the way a search backend is.
+- Complements MapReduce rather than replacing it: analyze MR output, prototype a pipeline, then industrialize. In production at Google since 2006 on tens-to-thousands of nodes.
+- SQL dialect emits nested results (WITHIN-record aggregation, path expressions) without forcing a flat star schema.
 
 ## Caveats
-
-- Original system is Google-internal; public BigQuery differs in details.
-- Nested model is not a pure relational star-schema warehouse.
 
 ## Links
 
 - DOI: [10.14778/1920841.1920886](https://doi.org/10.14778/1920841.1920886)
-- URL: https://doi.org/10.14778/1920841.1920886
+- PDF: https://www.vldb.org/pvldb/vol3/R29.pdf

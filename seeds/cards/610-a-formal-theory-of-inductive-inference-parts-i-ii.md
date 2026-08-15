@@ -5,8 +5,8 @@ authors:
 year: 1964
 venue: "Information and Control"
 arxiv: null
-doi: "10.1016/S0019-9958(64)90223-2"
-source: "https://doi.org/10.1016/S0019-9958(64)90223-2"
+doi: "10.1016/S0019-9958(64)90131-7"
+source: "https://doi.org/10.1016/S0019-9958(64)90131-7"
 topics:
   - algorithmic-probability
   - solomonoff
@@ -19,16 +19,11 @@ pool: "agents"
 relevance_score: 9
 lineage: foundations-of-computing
 cites:
-  - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
-    year: 1965
+  - title: "A Mathematical Theory of Communication"
+    url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
+    year: 1948
     arxiv: null
-    doi: null
-  - title: "On the Length of Programs for Computing Finite Binary Sequences"
-    url: "https://doi.org/10.1145/321356.321363"
-    year: 1966
-    arxiv: null
-    doi: "10.1145/321356.321363"
+    doi: "10.1002/j.1538-7305.1948.tb01338.x"
   - title: "Prediction and Entropy of Printed English"
     url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
     year: 1951
@@ -40,8 +35,7 @@ cites:
     arxiv: null
     doi: "10.1093/mind/LIX.236.433"
 see:
-  - "604-three-approaches-to-the-quantitative-definition-of-informati"
-  - "607-on-the-length-of-programs-for-computing-finite-binary-sequen"
+  - "553-a-mathematical-theory-of-communication"
   - "558-prediction-and-entropy-of-printed-english"
   - "519-computing-machinery-and-intelligence"
 ---
@@ -50,23 +44,22 @@ see:
 
 ## One-sentence takeaway
 
-Solomonoff defines algorithmic probability and universal induction—prediction via program priors.
+Solomonoff puts a universal prior on programs — M(x) = Σ_{U(p)=x*} 2^{−|p|} — and treats induction as Bayesian prediction under that prior.
 
 ## Why it matters here
 
-Conceptual ancestor of universal intelligence measures and compression-as-learning.
+Conceptual ancestor of every "compression = intelligence" and universal-agent story in the agents pool: GRID COMMAND / Broadside agents that prefer short explanations of traces are approximating this prior, not inventing a new one.
 
 ## Key ideas
 
-- Universal prior over programs.
-- Induction as Bayes with that prior.
-- Two-part Information and Control paper.
+- The universal a priori probability of a string is the mass of all programs that produce it (or a prefix of a continuation).
+- Prediction of the next bit is Bayes with that prior; Occam's razor is the 2^{−|p|} weighting.
+- Part I (DOI 10.1016/S0019-9958(64)90131-7) sets up the prior; Part II (DOI 10.1016/S0019-9958(64)90223-2) develops sequential prediction and applications.
+- Shannon's printed-English prediction experiments are the empirical foil; Turing 1950 is the AI foil.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- DOI: [10.1016/S0019-9958(64)90223-2](https://doi.org/10.1016/S0019-9958(64)90223-2)
-- URL: https://doi.org/10.1016/S0019-9958(64)90223-2
+- Part I DOI: [10.1016/S0019-9958(64)90131-7](https://doi.org/10.1016/S0019-9958(64)90131-7)
+- Part II DOI: [10.1016/S0019-9958(64)90223-2](https://doi.org/10.1016/S0019-9958(64)90223-2)

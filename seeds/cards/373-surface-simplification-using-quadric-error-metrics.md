@@ -22,51 +22,16 @@ cites:
     year: 1996
     arxiv: null
     doi: "10.1145/237170.237216"
-  - title: "Decimation of triangle meshes"
-    url: "https://doi.org/10.1145/133994.134010"
-    year: 1992
-    arxiv: null
-    doi: "10.1145/133994.134010"
   - title: "Mesh optimization"
     url: "https://doi.org/10.1145/166117.166119"
     year: 1993
     arxiv: null
     doi: "10.1145/166117.166119"
-  - title: "Multi-resolution 3D approximations for rendering complex scenes"
-    url: "https://doi.org/10.1007/978-3-642-78114-8_29"
-    year: 1993
+  - title: "Decimation of triangle meshes"
+    url: "https://doi.org/10.1145/133994.134010"
+    year: 1992
     arxiv: null
-    doi: "10.1007/978-3-642-78114-8_29"
-  - title: "Simplification envelopes"
-    url: "https://doi.org/10.1145/237170.237220"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/237170.237220"
-  - title: "View-dependent simplification of arbitrary polygonal environments"
-    url: "https://doi.org/10.1145/258734.258847"
-    year: 1997
-    arxiv: null
-    doi: "10.1145/258734.258847"
-  - title: "Full‐range approximation of triangulated polyhedra."
-    url: "https://doi.org/10.1111/1467-8659.1530067"
-    year: 1996
-    arxiv: null
-    doi: "10.1111/1467-8659.1530067"
-  - title: "Superfaces: polygonal mesh simplification with bounded error"
-    url: "https://doi.org/10.1109/38.491187"
-    year: 1996
-    arxiv: null
-    doi: "10.1109/38.491187"
-  - title: "Multiresolution Surface Modeling Based on Hierarchical Triangulation"
-    url: "https://doi.org/10.1006/cviu.1996.0001"
-    year: 1996
-    arxiv: null
-    doi: "10.1006/cviu.1996.0001"
-  - title: "A Parallel Euclidean Distance Transformation Algorithm"
-    url: "https://doi.org/10.1006/cviu.1996.0002"
-    year: 1996
-    arxiv: null
-    doi: "10.1006/cviu.1996.0002"
+    doi: "10.1145/133994.134010"
 see:
   - "375-progressive-meshes"
 ---
@@ -75,21 +40,22 @@ see:
 
 ## One-sentence takeaway
 
-QEM mesh simplification.
+Collapse edges in the order of a 4×4 quadric that measures squared distance to the planes of neighboring triangles, and you get a fast, high-quality decimation sequence.
 
 ## Why it matters here
 
-QEM mesh simplification.
+Anoptic meshlet / Nanite-style pipelines still score collapses. QEM is the error metric: one symmetric matrix per vertex, addable under a collapse, cheap enough to run on import and good enough that most game LOD chains still use a descendant.
 
 ## Key ideas
 
-- QEM mesh simplification.
+- Each triangle defines a plane; a vertex’s quadric is the sum of outer products of those plane coefficients, so `vᵀQv` is the sum of squared distances.
+- Candidate collapse `(v1, v2) → v̄` costs `(v̄)ᵀ(Q1+Q2)v̄`; pick `v̄` by solving a linear system or falling back to the endpoints / midpoint.
+- A heap of collapse costs plus a few topology checks (mesh inversion, boundary) is the whole algorithm.
+- Attribute / boundary quadrics extend the same idea to UVs and sharp edges.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1145/258734.258849](https://doi.org/10.1145/258734.258849)
-- URL: https://doi.org/10.1145/258734.258849
+- DOI: https://doi.org/10.1145/258734.258849
+- Author PDF: https://www.cs.cmu.edu/~./garland/Papers/quadrics.pdf

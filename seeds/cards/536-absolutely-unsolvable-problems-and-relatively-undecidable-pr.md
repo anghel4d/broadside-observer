@@ -6,7 +6,7 @@ year: 1965
 venue: "In Davis (ed.), The Undecidable (account of 1941 work)"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/undecidable/oclc/523589"
+source: "https://archive.org/details/undecidablebasic0000mart"
 topics:
   - post
   - undecidability
@@ -34,7 +34,7 @@ cites:
     arxiv: null
     doi: "10.2307/2371045"
   - title: "The Undecidable: Basic Papers on Undecidable Propositions, Unsolvable Problems and Computable Functions"
-    url: "https://www.worldcat.org/title/undecidable/oclc/523589"
+    url: "https://archive.org/details/undecidablebasic0000mart"
     year: 1965
     arxiv: null
     doi: null
@@ -49,22 +49,21 @@ see:
 
 ## One-sentence takeaway
 
-Post's unpublished 1941 analysis sharply separates absolute unsolvability from relative undecidability—clarifying Gödel vs Church–Turing.
+Post's unpublished 1941 analysis separates *absolute* unsolvability (no algorithm exists, period) from *relative* undecidability (a sentence independent of a given formal system)—the conceptual hygiene that keeps Gödel from being confused with Church–Turing.
 
 ## Why it matters here
 
-Conceptual hygiene card for Broadside epistemology spine.
+Broadside's epistemology spine needs this distinction every time someone says a standing rule, type, or simulation axiom is "undecidable." Incomplete-for-this-theory is not the same as uncomputable-for-any-machine; Post wrote the memo that says so.
 
 ## Key ideas
 
-- Absolute vs relative undecidability.
-- Post's independent path to incompleteness-style insights.
-- Published via Davis anthology.
+- Written around 1941; first published in Martin Davis, *The Undecidable* (Raven Press, 1965).
+- Absolute unsolvability is a fact about effective procedures; relative undecidability is a fact about a particular axiom system.
+- Records Post's independent path toward incompleteness-style insights, in the production-system vocabulary of his other papers.
+- Pair with the 1944 r.e.-sets address: that paper is the public theorem, this one is the private conceptual cleanup.
 
 ## Caveats
 
-- Written ~1941; published later—date carefully.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/undecidable/oclc/523589
+- Davis anthology: https://archive.org/details/undecidablebasic0000mart

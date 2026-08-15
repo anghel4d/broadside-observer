@@ -21,49 +21,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 10
 lineage: algorithms-and-complexity
-cites:
-- title: "Chord: A Scalable Peer-to-peer Lookup Service for Internet Applications"
-  url: "https://doi.org/10.1145/964723.383071"
-  year: 2001
-  arxiv: null
-  doi: 10.1145/964723.383071
-- title: "Pastry: Scalable, Decentralized Object Location and Routing for Large-Scale Peer-to-Peer Systems"
-  url: "https://doi.org/10.1007/3-540-45518-3_18"
-  year: 2001
-  arxiv: null
-  doi: 10.1007/3-540-45518-3_18
-- title: "Kademlia: A Peer-to-peer Information System Based on the XOR Metric"
-  url: "https://doi.org/10.1007/3-540-45748-8_5"
-  year: 2002
-  arxiv: null
-  doi: 10.1007/3-540-45748-8_5
-see:
-- "771-chord-a-scalable-peer-to-peer-lookup-service-for-internet-ap"
-- "772-pastry-scalable-decentralized-object-location-and-routing-fo"
-- "773-kademlia-a-peer-to-peer-information-system-based-on-the-xor-"
+cites: []
+see: []
 ---
 
 # Consistent Hashing and Random Trees: Distributed Caching Protocols for Relieving Hot Spots on the World Wide Web
 
 ## One-sentence takeaway
 
-Consistent hashing minimizes remapping when nodes join/leave — CDN/DHT load-balancing primitive.
+Consistent hashing maps keys and cache nodes onto a common circle so that adding or removing a node remaps only its neighboring keys, not the whole table.
 
 ## Why it matters here
 
-Essential for distributed caches, shards, and service rings.
+This is the shard/ring primitive for Broadside caches, Anoptic asset CDNs, and any GRID COMMAND service that must rebalance without a full reshuffle.
 
 ## Key ideas
 
-- Hash keys and nodes onto a ring.
-- Only nearby keys move on membership change.
-- Virtual nodes for balance.
-- Foundation for Chord and many CDNs.
+- Hash both object names and node names onto the unit circle; an object lives at the first node clockwise from its hash.
+- When a node joins or leaves, only the keys in its arc move — expected load stays balanced.
+- Virtual nodes (several hash points per physical server) flatten hot spots and capacity differences.
+- The companion “random trees” construction spreads popular objects through a cache hierarchy so a few hot URLs cannot melt a single server.
 
 ## Caveats
-
-- Skew without virtual nodes.
-- Membership/failure detection out of scope.
 
 ## Links
 

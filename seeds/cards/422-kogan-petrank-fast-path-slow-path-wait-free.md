@@ -58,10 +58,6 @@ The dominant engineering pattern behind practical wait-free queues (and wCQ) tha
 
 ## Caveats
 
-- Slow-path descriptors and helping still need careful SMR/allocator design for bounded memory.
-- Patience tuning is workload-sensitive.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/2145816.2145835](https://doi.org/10.1145/2145816.2145835)

@@ -49,23 +49,20 @@ see:
 
 ## One-sentence takeaway
 
-1.3B/7B VL models with a hybrid high-res vision encoder (1024²) and a pretrain recipe that tries not to wreck the LLM while adding vision.
+Open 1.3B/7B vision-language models with a hybrid high-res encoder (1024×1024 at modest overhead), a real-user instruction-tuning taxonomy, and a pretrain recipe that keeps training the LLM from the start so language ability does not collapse when vision is added.
 
 ## Why it matters here
 
-First DeepSeek multimodal. OCR/screenshots/PDFs matter for agent perception; VL2 and Janus supersede the architecture.
+First DeepSeek multimodal. OCR, screenshots, PDFs, and charts are the agent-perception slice; VL2 and Janus later supersede the architecture, but the 'don't wreck the LLM' pretrain rule stays.
 
 ## Key ideas
 
-- arXiv:2403.05525. Hybrid vision encoder for 1024×1024 with relatively low overhead.
-- Data: web screenshots, PDFs, OCR, charts, knowledge content; instruction-tuning taxonomy from real user scenarios.
-- They start LLM training from the beginning of VL pretrain to keep language ability from collapsing.
-- 1.3B and 7B released; claimed competitive VL benches at size while holding language benches.
+- arXiv:2403.05525. Three design axes: diverse real-world data, a use-case taxonomy for instruction tuning, and a hybrid vision encoder that takes 1024² without a huge compute tax.
+- Data includes web screenshots, PDFs, OCR, charts, and knowledge content — the documents an agent actually sees.
+- They start LLM training from the beginning of VL pretrain and manage vision/language competition so language benches do not crater.
+- Understanding-only; Janus is the unified understand+generate fork, VL2 switches the language backbone to DeepSeekMoE + MLA.
 
 ## Caveats
-
-- Understanding-only; Janus (1249) is the unified understand+generate fork.
-- Dense LLM backbone; VL2 switches to DeepSeekMoE + MLA.
 
 ## Links
 

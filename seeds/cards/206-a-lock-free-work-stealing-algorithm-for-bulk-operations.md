@@ -55,25 +55,23 @@ see:
 
 ## One-sentence takeaway
 
-Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing-schedulers deques to reduce contention and improve scalability.
+A specialized lock-free work-stealing queue for a master–worker MIP/decision-diagram solver supports native bulk push/pop under a one-owner, one-stealer concurrency bound.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (A Lock-Free Work-Stealing Algorithm for Bulk Operations).
+Anoptic jobbing often ships work in batches (ECS system waves, path batches); a Chase-Lev-class deque that stays constant-latency on bulk steal is closer to that workload than a general Cilk deque.
 
 ## Key ideas
 
-- Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing-schedulers deques to reduce contention and improve scalability.
-- However, existing algorithms are designed for general-purpose parallel runtimes and often incur overheads that are unnecessary in specialized settings.
-- In this paper, we present a new lock-free work-stealing-schedulers queue tailored for a master-worker framework used in the parallelization of a mixed-integer programming optimization solver based on decision diagrams.
-- Our design supports native bulk operations, grows without bounds, and assumes at most one owner and one concurrent stealer, thereby eliminating the need for heavy synchronization.
-- We provide an informal sketch that our queue is linearizable and lock-free under this restricted concurrency model.
+- Existing lock-free deques target general runtimes and pay synchronization that a single-owner / single-stealer solver does not need.
+- The queue grows without a fixed bound and exposes bulk operations as first-class primitives rather than loops of single pushes.
+- An informal argument claims linearizability and lock-freedom under that restricted concurrency model.
+- Benchmarks show push latency staying flat as batch size grows, unlike C++ Taskflow queues whose latency climbs with batch size.
+- An optimized steal variant cuts steal latency by up to 3×; a large-graph pseudo-workload still scales linearly across implementations.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2603.05766](https://arxiv.org/abs/2603.05766)
-- URL: https://arxiv.org/abs/2603.05766
+- PDF: https://arxiv.org/pdf/2603.05766

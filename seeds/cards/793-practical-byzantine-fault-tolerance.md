@@ -6,8 +6,8 @@ authors:
 year: 1999
 venue: OSDI
 arxiv: null
-doi: null
-source: "https://pmg.csail.mit.edu/papers/osdi99.pdf"
+doi: 10.1145/296806.296824
+source: "https://www.usenix.org/conference/osdi-99/presentation/practical-byzantine-fault-tolerance"
 topics:
 - bft
 - pbft
@@ -38,24 +38,24 @@ see:
 
 ## One-sentence takeaway
 
-PBFT — practical Byzantine fault tolerance for state machine replication.
+PBFT replicates a service with $3f+1$ replicas using a primary and three-phase (pre-prepare / prepare / commit) quorums, so $f$ Byzantine replicas cannot violate linearizability in an asynchronous network.
 
 ## Why it matters here
 
-Engineering sequel to Lamport-Shostak-Pease; makes BFT seem deployable.
+This is the systems sequel that made BFT look deployable: the protocol family a GRID COMMAND matchmaker or Broadside metadata service would actually implement, not OM($f$).
 
 ## Key ideas
 
-- Primary/backup views.
-- Quorum certificates.
-- Safety under Byzantine faults with 3f+1.
-- Triggers modern BFT research.
+- A view has one primary; clients send requests to the primary, which assigns sequence numbers.
+- Prepare certificates prove a quorum agrees on that $(v,n,m)$; commit certificates prove a quorum will execute $m$ at $n$.
+- View change replaces a silent or malicious primary without losing committed requests.
+- Optimizations (MACs instead of public-key signatures on the normal path, request batching) make a Byzantine NFS only ~3% slower than unreplicated NFS in the paper’s measurements.
+- Works in asynchrony for safety; liveness needs eventual timely links, as FLP requires.
 
 ## Caveats
 
-- Leader bottlenecks; later protocols refine.
-- Links generals theory to systems practice.
-
 ## Links
 
-- URL: https://pmg.csail.mit.edu/papers/osdi99.pdf
+- USENIX: https://www.usenix.org/conference/osdi-99/presentation/practical-byzantine-fault-tolerance
+- HTML: http://usenix.org/publications/library/proceedings/osdi99/full_papers/castro/castro_html/castro.html
+- DOI: [10.1145/296806.296824](https://doi.org/10.1145/296806.296824)

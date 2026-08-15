@@ -3,7 +3,7 @@ title: "On Complete Categorical Semantics for Effect Handlers"
 authors:
   - "Satoshi Kura"
 year: 2026
-venue: "arXiv"
+venue: "arXiv:cs.LO"
 arxiv: "2602.03275"
 doi: null
 source: "https://arxiv.org/abs/2602.03275"
@@ -40,25 +40,22 @@ see:
 
 ## One-sentence takeaway
 
-Soundness and completeness with respect to equational theories for programming languages are fundamental properties in the study of categorical semantics.
+Kura gives sound-and-complete categorical models of effect handlers that include not only free-algebra monads but also CPS interpretations, so free models are not the only legitimate semantics.
 
 ## Why it matters here
 
-Effect systems/handlers inform ano masked command effects and handlers; Category/monad structure for composing ano query and effect combinators.
+Ano masked command effects and handlers should not be married to “the free monad is the meaning.” Completeness relative to an equational theory of handling is what lets a CPS or continuation-passing backend be a real model, not a hack.
 
 ## Key ideas
 
-- Soundness and completeness with respect to equational theories for programming languages are fundamental properties in the study of categorical semantics.
-- However, completeness results have not been established for programming languages with algebraic effects and handlers, which raises a question of whether the commonly used models in the literature, i.e., free model monads generated from algebraic theories, are the only valid semantic models for effect handlers.
-- In this paper, we show that this is not the case.
-- We identify the precise characterizations of categorical models of effect handlers that allow us to establish soundness and completeness results with respect to a certain equational theory for effect handling constructs.
-- Notably, this allows us to capture not only free monad models
+- Completeness for languages with algebraic effects and handlers had been missing, leaving open whether free-model monads were the only valid models.
+- The paper isolates the exact categorical structure needed for soundness and completeness against an equational theory of handling constructs.
+- That structure admits both the usual free-algebra monad models and the CPS semantics of handlers.
+- Equational theory, not a particular construction of the monad, is the specification of what handlers mean.
+- The result is a completeness theorem, not a new surface language.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2602.03275](https://arxiv.org/abs/2602.03275)
-- URL: https://arxiv.org/abs/2602.03275

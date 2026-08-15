@@ -4,7 +4,7 @@ authors:
 - Martin Davis
 - Hilary Putnam
 year: 1960
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/321033.321034
 source: "https://doi.org/10.1145/321033.321034"
@@ -37,23 +37,20 @@ see:
 
 ## One-sentence takeaway
 
-Davis-Putnam resolution-based decision procedure for SAT/FOL fragments.
+Davis and Putnam give a ground-resolution procedure that decides propositional satisfiability by systematically eliminating variables, and then lift it to a Herbrand-based attack on first-order validity.
 
 ## Why it matters here
 
-Immediate predecessor to DPLL; historical SAT root.
+It is the immediate predecessor of DPLL: same unit and pure-literal rules, but elimination instead of search — the historical SAT root that later theorem provers and bounded model checkers still cite when they explain their propositional core.
 
 ## Key ideas
 
-- Ground resolution for propositional SAT.
-- Eliminates variables systematically.
-- Leads into DPLL refinements.
-- Links logic and algorithmic search.
+- Propositional SAT is decided by resolving on one variable at a time until the empty clause appears or the formula collapses to true.
+- Unit propagation and pure-literal elimination are already present as simplifications before elimination.
+- First-order validity is reduced to a sequence of ground instances via Herbrand’s theorem, so the propositional engine becomes a quantifier-free subroutine.
+- The elimination rule can explode intermediate clause sets, which is exactly the defect DPLL later repairs by backtracking.
 
 ## Caveats
-
-- Memory blow-up vs DPLL-style search.
-- Mostly historical/algorithmic lineage interest.
 
 ## Links
 

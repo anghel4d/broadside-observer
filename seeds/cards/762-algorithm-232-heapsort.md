@@ -17,43 +17,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 8
 lineage: algorithms-and-complexity
-cites:
-- title: Quicksort
-  url: "https://doi.org/10.1093/comjnl/5.1.10"
-  year: 1962
-  arxiv: null
-  doi: 10.1093/comjnl/5.1.10
-- title: Fibonacci Heaps and Their Uses in Improved Network Optimization Algorithms
-  url: "https://doi.org/10.1145/28869.28874"
-  year: 1987
-  arxiv: null
-  doi: 10.1145/28869.28874
-see:
-- "761-quicksort"
-- "767-fibonacci-heaps-and-their-uses-in-improved-network-optimizat"
+cites: []
+see: []
 ---
 
 # Algorithm 232: Heapsort
 
 ## One-sentence takeaway
 
-Williams heapsort and the binary heap priority queue.
+Williams introduces the binary heap as an array-packed complete tree and heapsort as an in-place $O(n\log n)$ worst-case sort built from sift-up / sift-down.
 
 ## Why it matters here
 
-Priority queues for pathfinding/schedulers; worst-case n log n foil to quicksort.
+Binary heaps are the default priority queue for Anoptic job systems, GRID COMMAND pathfinding, and event schedulers — the same sift operations that make heapsort a worst-case foil to Quicksort.
 
 ## Key ideas
 
-- Array-packed binary heap.
-- Sift-up/sift-down.
-- In-place heapsort.
-- Foundation for Dijkstra implementations.
+- A heap occupies $A[1..n]$ with parent $i$ at $\lfloor i/2\rfloor$; no explicit child pointers.
+- `siftup` inserts; `siftdown` restores the heap after replacing the root — together they implement a priority queue.
+- Heapsort builds a heap then repeatedly extracts the maximum into the tail of the array, using $O(1)$ extra words.
+- Floyd’s linear-time heapify is the usual construction partner; Dijkstra implementations sit on the same structure.
 
 ## Caveats
-
-- Floyd heap-construction often paired.
-- Weaker constants than quicksort on many machines.
 
 ## Links
 

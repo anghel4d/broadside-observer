@@ -4,7 +4,7 @@ authors:
   - "Martín Abadi"
   - "Luca Cardelli"
 year: 1996
-venue: "Springer"
+venue: "Springer (Monographs in Computer Science)"
 arxiv: null
 doi: "10.1007/978-1-4419-8598-9"
 source: "https://doi.org/10.1007/978-1-4419-8598-9"
@@ -26,50 +26,40 @@ cites:
     arxiv: null
     doi: "10.1145/6041.6042"
   - title: "A Denotational Semantics of Inheritance and Its Correctness"
-    url: "https://doi.org/10.1145/74877.74884"
+    url: "https://doi.org/10.1145/74877.74922"
     year: 1989
     arxiv: null
-    doi: "10.1145/74877.74884"
+    doi: "10.1145/74877.74922"
   - title: "SELF: The Power of Simplicity"
     url: "https://doi.org/10.1145/38765.38828"
     year: 1987
     arxiv: null
     doi: "10.1145/38765.38828"
-  - title: "Smalltalk-80: The Language and Its Implementation"
-    url: "https://dl.acm.org/doi/10.5555/273"
-    year: 1983
-    arxiv: null
-    doi: null
 see:
   - "668-on-understanding-types-data-abstraction-and-polymorphism"
   - "688-a-denotational-semantics-of-inheritance-and-its-correctness"
   - "687-self-the-power-of-simplicity"
-  - "682-smalltalk-80-the-language-and-its-implementation"
 ---
 
 # A Theory of Objects
 
 ## One-sentence takeaway
 
-Develops a foundational object calculus with typing, inheritance, and semantics for OO languages.
+Abadi and Cardelli give objects their own calculus — records of methods with update, typed and untyped — instead of encoding OO as a thin layer over λ.
 
 ## Why it matters here
 
-The Abadi–Cardelli book — canonical typed object calculus beside Smalltalk/SELF history cards.
+If Anoptic ever types an entity/component "object" or ano grows first-class method update, this is the λ-calculus analogue for OO, sitting beside Smalltalk/SELF history rather than replacing it.
 
 ## Key ideas
 
-- Object calculi as λ-calculus analogues for OO.
-- Typed and untyped object calculi with inheritance.
-- Semantic and type-theoretic account of method update.
-- Standard reference for OO foundations.
+- An object is a collection of named methods; method invocation and method update are primitive, not sugar for records-of-functions plus a fixpoint.
+- Untyped object calculus first, then first-order and higher-order typed variants; subtyping and variance are developed for method types.
+- Inheritance is explained via the same wrappers/fixed-points Cook used, now inside a typed object calculus rather than a denotational encoding of classes.
+- Springer MCS, 1996, DOI 10.1007/978-1-4419-8598-9. The Blue Book and SELF remain the systems; this is the theory.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1007/978-1-4419-8598-9](https://doi.org/10.1007/978-1-4419-8598-9)
-- URL: https://doi.org/10.1007/978-1-4419-8598-9

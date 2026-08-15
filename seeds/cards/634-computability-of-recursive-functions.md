@@ -50,23 +50,21 @@ see:
 
 ## One-sentence takeaway
 
-Shepherdson–Sturgis popularize unlimited register machines—clean RAM-like computability model.
+Shepherdson and Sturgis introduce unlimited register machines — a handful of increment / decrement / jump instructions on finitely many integer registers — and prove they compute exactly the partial recursive functions.
 
 ## Why it matters here
 
-Pedagogical machine model between Turing machines and real CPUs.
+Pedagogical machine model between Turing machines and real CPUs. Anoptic’s “registers plus a program counter” mental model of a job, and any URM-style IR, is this paper rather than a tape.
 
 ## Key ideas
 
-- URM instruction set.
-- Equivalence with recursive functions.
-- JACM 1963.
+- URM instructions: increment a register, decrement (or test-and-jump if zero), unconditional jump.
+- Equivalence with Kleene’s partial recursive functions and with Turing machines.
+- The model is closer to von Neumann / IAS machines than a tape is, so the computability proof feels like assembly.
+- *JACM* 10(2), 1963, pp. 217–255.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/321160.321170](https://doi.org/10.1145/321160.321170)
-- URL: https://doi.org/10.1145/321160.321170

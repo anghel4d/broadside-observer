@@ -23,41 +23,29 @@ cites:
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "Prediction and Entropy of Printed English"
-    url: "https://doi.org/10.1002/j.1538-7305.1951.tb01366.x"
-    year: 1951
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1951.tb01366.x"
-  - title: "Error Detecting and Error Correcting Codes"
-    url: "https://doi.org/10.1002/j.1538-7305.1950.tb00463.x"
-    year: 1950
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1950.tb00463.x"
 see:
   - "553-a-mathematical-theory-of-communication"
-  - "558-prediction-and-entropy-of-printed-english"
-  - "568-error-detecting-and-error-correcting-codes"
 ---
 
 # A Method for the Construction of Minimum-Redundancy Codes
 
 ## One-sentence takeaway
 
-Huffman trees give optimal prefix codes—practical source coding after Shannon.
+Huffman gives a greedy tree algorithm that builds an optimal prefix code from known symbol frequencies.
 
 ## Why it matters here
 
-Everyday compression algorithm with information-theoretic optimality.
+Everyday compression in logs, assets, and net payloads is still this construction: shortest codes for the most frequent symbols, Kraft-feasible by design.
 
 ## Key ideas
 
-- Greedy tree construction.
-- Optimal prefix codes for known frequencies.
-- Bridge from Shannon theory to practice.
+- Repeatedly merge the two least probable symbols; the resulting binary tree is a minimum-redundancy prefix code.
+- For a known discrete distribution the expected length is optimal among instantaneous codes and lies within one bit of entropy.
+- The method is a constructive answer to Shannon's source-coding existence theorem.
+- Ties can be broken arbitrarily; the code is unique only up to sibling swaps and such choices.
+- Published IRE September 1952; originated as a term-paper answer in Fano's information-theory course.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

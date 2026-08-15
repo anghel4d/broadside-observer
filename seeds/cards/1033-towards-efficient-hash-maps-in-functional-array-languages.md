@@ -62,9 +62,6 @@ ano is an embedded array/columnar language that will need maps — ECS lookups, 
 
 ## Caveats
 
-- Static maps (rebuild to insert). Not a concurrent mutable table for the Anoptic lock-free bus.
-- Histogram construction uses atomics under the hood — the functional story is the *interface*, not the absence of atomics in the compiler.
-- The paper's own conclusion: either add a local-nondeterminism effect, or bite the bullet and make maps a built-in like arrays.
 
 ## Links
 

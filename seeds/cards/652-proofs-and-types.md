@@ -5,7 +5,7 @@ authors:
   - "Yves Lafont"
   - "Paul Taylor"
 year: 1989
-venue: "Cambridge University Press"
+venue: "Cambridge University Press (Cambridge Tracts in Theoretical Computer Science 7)"
 arxiv: null
 doi: null
 source: "https://www.paultaylor.eu/stable/Proofs%2BTypes.html"
@@ -27,6 +27,11 @@ cites:
     year: 1986
     arxiv: null
     doi: "10.1016/0304-3975(86)90044-7"
+  - title: "Une extension de l'interprétation de Gödel à l'analyse, et son application à l'élimination des coupures dans l'analyse et la théorie des types"
+    url: "https://doi.org/10.1016/S0049-237X(08)70843-7"
+    year: 1971
+    arxiv: null
+    doi: "10.1016/S0049-237X(08)70843-7"
   - title: "The Formulae-as-Types Notion of Construction"
     url: "https://www.cs.cmu.edu/~crary/819-f09/Howard80.pdf"
     year: 1980
@@ -37,40 +42,32 @@ cites:
     year: 1987
     arxiv: null
     doi: "10.1016/0304-3975(87)90045-4"
-  - title: "Types and Programming Languages"
-    url: "https://www.cis.upenn.edu/~bcpierce/tapl/"
-    year: 2002
-    arxiv: null
-    doi: null
 see:
   - "639-the-system-f-of-variable-types-fifteen-years-later"
+  - "638-girard-system-f-une-extension-de-linterpretation-de-godel"
   - "647-the-formulae-as-types-notion-of-construction"
   - "040-linear-logic"
-  - "026-types-and-programming-languages"
 ---
 
 # Proofs and Types
 
 ## One-sentence takeaway
 
-Classic lecture notes connecting natural deduction, System F, and the Curry–Howard reading of proofs as programs.
+Girard's 1986–87 Paris VII course, translated by Taylor with Lafont, is the short English book that treats natural deduction, sequent calculus, System F, and coherence-space semantics as one subject.
 
 ## Why it matters here
 
-Best short book for System F + proofs-as-programs; Lafont/Taylor edition is the standard English entry.
+When ano wants parametric polymorphism or a linear resource story for GPU buffers, this is the readable source for System F and the first linear-logic appendix rather than another TAPL chapter.
 
 ## Key ideas
 
-- Natural deduction and sequent calculus for computer scientists.
-- System F developed as a typed programming language.
-- Hints toward linear logic and geometry of interaction.
-- Standard companion to TAPL for the logic side.
+- Natural deduction and sequent calculus are developed side by side; cut-elimination and strong normalisation are proved, not assumed.
+- Curry–Howard is the organising principle: a proof is a program, normalisation is computation, and System F is both a logic and a typed language.
+- Gödel's T and Girard's F get denotational chapters in coherence spaces; sums are the hard case.
+- Lafont's appendix is a first-pass "what is linear logic?"; Taylor adds a semantics-of-F appendix. CUP CTTCS 7, 1989, reprinted 1990; now free from Taylor's site.
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://www.paultaylor.eu/stable/Proofs%2BTypes.html
+- Author page / PDF: https://www.paultaylor.eu/stable/Proofs%2BTypes.html

@@ -1,5 +1,5 @@
 ---
-title: "Precomputed Radiance Transfer"
+title: "Precomputed Radiance Transfer for Real-Time Rendering in Dynamic, Low-Frequency Lighting Environments"
 authors:
   - "Peter-Pike Sloan"
   - "Jan Kautz"
@@ -22,41 +22,37 @@ cites:
   - title: "An Efficient Representation for Irradiance Environment Maps"
     url: "https://doi.org/10.1145/383259.383317"
     year: 2001
+    arxiv: null
     doi: "10.1145/383259.383317"
   - title: "The Irradiance Volume"
     url: "https://doi.org/10.1109/38.656788"
     year: 1998
+    arxiv: null
     doi: "10.1109/38.656788"
-  - title: "Dynamic Diffuse Global Illumination with Ray-Traced Irradiance Fields"
-    url: "https://jcgt.org/published/0008/02/01/"
-    year: 2019
 see:
   - "367-an-efficient-representation-for-irradiance-environment-maps"
   - "451-the-irradiance-volume"
-  - "318-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
 ---
 
-# Precomputed Radiance Transfer
+# Precomputed Radiance Transfer for Real-Time Rendering in Dynamic, Low-Frequency Lighting Environments
 
 ## One-sentence takeaway
 
-Project lighting and transfer into a compact basis so glossy/diffuse responses can be relit from precomputed transport.
+Project a static object’s transport (self-shadow, interreflection) into a low-order SH basis so a dynamic environment map can relight it in real time with a few dot products.
 
 ## Why it matters here
 
-Classical angular-compression foil for the RC spine: PRT shows how SH/basis transport solved dynamic lights with static geometry — the opposite trade RC makes for fully dynamic scenes.
+Radiance cascades and DDGI buy fully dynamic geometry by paying rays every frame. PRT is the opposite trade: bake transport once, relight for free. Anoptic needs the contrast — when a Broadside prop is static, SH/PRT is still the cheapest GI it will ever get.
 
 ## Key ideas
 
-- Precompute how light transfers through a static scene into low-order coefficients.
-- Enables real-time relighting and soft GI effects under the static-geometry assumption.
-- Pairs with irradiance environment map SH projection for distant lighting.
+- Lighting and transfer live in the same spherical-harmonic basis; exit radiance is a matrix–vector product per vertex or texel.
+- Diffuse PRT is a short vector (order-2/3 SH); glossy PRT keeps a transfer matrix so view-dependent lobes survive.
+- Self-transfer includes shadows and interreflections that a plain irradiance environment map cannot see.
+- Assumes static geometry and low-frequency lighting; high-frequency shadows and moving casters are out of scope.
 
 ## Caveats
 
-- Precomputation and static geometry assumptions — not a competitor to dynamic RC/DDGI without heavy extensions.
-
 ## Links
 
-- DOI: [10.1145/566570.566612](https://doi.org/10.1145/566570.566612)
-- URL: https://doi.org/10.1145/566570.566612
+- DOI: https://doi.org/10.1145/566570.566612

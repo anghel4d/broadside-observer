@@ -1,5 +1,4 @@
 ---
-
 title: "ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation"
 authors:
   - "Stephen J. Guy"
@@ -27,42 +26,36 @@ cites:
   - title: "Reciprocal Velocity Obstacles for Real-Time Multi-Agent Navigation"
     url: "https://doi.org/10.1109/ROBOT.2008.4543489"
     year: 2008
-    arxiv: null
     doi: "10.1109/ROBOT.2008.4543489"
-  - title: "Reciprocal n-body Collision Avoidance (ORCA)"
-    url: "https://doi.org/10.1007/978-3-642-19457-3_1"
-    year: 2011
-    arxiv: null
-    doi: "10.1007/978-3-642-19457-3_1"
+  - title: "Motion Planning in Dynamic Environments Using Velocity Obstacles"
+    url: "https://doi.org/10.1177/027836499801700706"
+    year: 1998
+    doi: "10.1177/027836499801700706"
 see:
   - "282-reciprocal-velocity-obstacles-for-real-time-multi-agent-navi"
-  - "273-reciprocal-n-body-collision-avoidance-orca"
+  - "458-motion-planning-in-dynamic-environments-using-velocity"
 ---
+
 # ClearPath: Highly Parallel Collision Avoidance for Multi-Agent Simulation
 
 ## One-sentence takeaway
 
-Casts VO-style avoidance as a parallelizable quadratic program — bridge from VO toward ORCA-scale crowds.
+ClearPath casts each agent's velocity-obstacle constraints as a discrete quadratic program and solves it with SIMD/thread parallelism so thousands of heterogeneous agents stay collision-free in milliseconds.
 
 ## Why it matters here
 
-Shows how reciprocal avoidance becomes a data-parallel kernel before ORCA for large unit counts.
+Shows how reciprocal avoidance becomes a data-parallel kernel before ORCA's half-plane LP — the right shape for GRID COMMAND local avoidance on many units.
 
 ## Key ideas
 
-- Velocity-obstacle constraints as discrete optimization.
-- Thread-level and SIMD parallelism.
-- Dense heterogeneous agent sets in milliseconds.
-- Sits between RVO (2008) and ORCA (2011).
+- Builds on Fiorini/Shiller VOs and van den Berg RVO: each agent selects a velocity outside colliding relative-velocity cones.
+- Reformulates the feasible-velocity search as a parallelizable quadratic program rather than a sequential geometric construction.
+- Demonstrates dense, mixed-radius crowds on CPU SIMD and many-core hardware without a centralized planner.
+- Sits between RVO (2008) and ORCA (2011) as the industrial parallelization of velocity-space avoidance.
 
 ## Caveats
-
-- Not ORCA's LP guarantee proof.
-- Parameter tuning still matters for packing vs visuals.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/1599470.1599494](https://doi.org/10.1145/1599470.1599494)
-- URL: https://doi.org/10.1145/1599470.1599494
-- http://gamma-web.iacs.umd.edu/CA/ClearPath.pdf
+- Author PDF: https://gamma.cs.unc.edu/CA/ClearPath.pdf

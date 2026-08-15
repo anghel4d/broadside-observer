@@ -1,5 +1,5 @@
 ---
-title: "Applied Compositional Thinking for Engineering"
+title: "Applied Compositional Thinking for Engineers"
 authors:
   - "Andrea Censi"
   - "Jonathan Lorand"
@@ -8,7 +8,7 @@ year: 2024
 venue: "work-in-progress book"
 arxiv: null
 doi: null
-source: "https://bit.ly/3qQNrdR"
+source: "https://applied-compositional-thinking.engineering/"
 topics:
   - "applied-category-theory"
   - "compositionality"
@@ -21,33 +21,32 @@ relevance_score: 8
 lineage: categorical-deep-learning
 cites:
   - title: "Co-Design of Complex Systems: From Autonomy to Future Mobility Systems"
-    url: "https://doi.org/10.3929/ethz-b-000620391"
+    url: "https://doi.org/10.3929/ethz-b-000648075"
     year: 2023
-    doi: "10.3929/ethz-b-000620391"
+    doi: "10.3929/ethz-b-000648075"
 see:
   - "959-co-design-of-complex-systems-zardini-phd"
 ---
 
-# Applied Compositional Thinking for Engineering
+# Applied Compositional Thinking for Engineers
 
 ## One-sentence takeaway
 
-WIP book on applied compositional thinking for engineering — the textbook sibling of Zardini's co-design thesis.
+Censi, Lorand, and Zardini's work-in-progress textbook teaches applied category theory as an engineering method — systems analysis, co-design, and compositionality — rather than as a rewrite of Mac Lane.
 
 ## Why it matters here
 
-ACT-for-engineers on-ramp. Same lab as Weaves; composition as a design discipline.
+ACT-for-engineers on-ramp from the same lab Weaves cites. Composition as a design discipline for Anoptic/GRID: interconnect components with typed interfaces instead of hoping a monolith stays coherent.
 
 ## Key ideas
 
-- 2024 work-in-progress; URL https://bit.ly/3qQNrdR (ACT4E).
-- Engineering-facing, not a Mac Lane rewrite.
-- Cited by Weaves as the compositional-thinking backdrop.
+- Canonical site: https://applied-compositional-thinking.engineering/ (the old bit.ly/3qQNrdR redirect is unstable).
+- Engineering-facing: posets, monoidal categories, and co-design problems as tools for building systems, not as abstract algebra for its own sake.
+- Companion to Zardini's 2023 ETH thesis; used in ETH 'Applied Category Theory for Engineering' courses.
+- Weaves cites it as the compositional-thinking backdrop, not as a deep-learning paper.
 
 ## Caveats
 
-- WIP book. Unstable URL (bit.ly). Not a DL paper.
-
 ## Links
 
-- https://bit.ly/3qQNrdR
+- https://applied-compositional-thinking.engineering/

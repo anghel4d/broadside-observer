@@ -36,56 +36,29 @@ cites:
     year: 1952
     arxiv: null
     doi: "10.1145/609784.609798"
-  - title: "Report on the Algorithmic Language ALGOL 60"
-    url: "https://doi.org/10.1145/367236.367262"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367236.367262"
-  - title: "The Syntax and Semantics of the Proposed International Algebraic Language of the Zurich ACM-GAMM Conference"
-    url: "https://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf"
-    year: 1959
-    arxiv: null
-    doi: null
-  - title: "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I"
-    url: "https://doi.org/10.1145/367177.367199"
-    year: 1960
-    arxiv: null
-    doi: "10.1145/367177.367199"
-  - title: "Can Programming Be Liberated from the von Neumann Style?"
-    url: "https://doi.org/10.1145/359576.359579"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359576.359579"
 see:
   - "571-the-education-of-a-computer"
-  - "623-report-on-the-algorithmic-language-algol-60"
-  - "624-the-syntax-and-semantics-of-the-proposed-international-algeb"
-  - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
-  - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
 ---
 
 # The FORTRAN Automatic Coding System
 
 ## One-sentence takeaway
 
-Backus's team ships Fortran—the first widely successful high-level language and compiler.
+Backus's IBM 704 team ships Fortran I — the first widely used high-level language whose compiler produced code competitive with hand-written assembly.
 
 ## Why it matters here
 
-Languages industrial revolution; cite 174 for later Backus FP turn, this for Fortran itself.
+Industrial revolution of languages. Anoptic's C/Vulkan kernels and ano's array loops are still in this bargain: a formula-level notation that a compiler is trusted to schedule. Hopper 1952 is the automatic-programming ancestor; this is the one that stuck.
 
 ## Key ideas
 
-- Formula Translation for IBM 704.
-- Optimizer-conscious compiler.
-- Economic argument vs assembly.
-- Opens HLL era.
+- Source is algebraic formulas plus DO loops, IF, and FORMAT I/O, aimed at scientific IBM 704 users.
+- The compiler is organized as a multi-pass system whose selling point is *optimized* object code, not just translation.
+- Economic argument: programmer time now dominates machine time, so a good compiler pays for itself.
+- *Proc. Western Joint Computer Conference*, 1957, pp. 188–198. Cite as Backus et al.
 
 ## Caveats
-
-- Large author list; Backus leads—use 'Backus et al.' in prose.
 
 ## Links
 
 - DOI: [10.1145/1455567.1455599](https://doi.org/10.1145/1455567.1455599)
-- URL: https://doi.org/10.1145/1455567.1455599

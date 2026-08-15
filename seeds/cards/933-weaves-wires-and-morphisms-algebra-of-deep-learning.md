@@ -22,11 +22,13 @@ relevance_score: 10
 lineage: categorical-deep-learning
 cites:
   - title: "Neural Circuit Diagrams: Robust Diagrams for the Communication, Implementation, and Analysis of Deep Learning Architectures"
-    url: "https://openreview.net/forum?id=RyZB4qXEgt"
+    url: "https://arxiv.org/abs/2402.05424"
     year: 2024
+    arxiv: "2402.05424"
   - title: "FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness"
-    url: "https://openreview.net/forum?id=pF2ukh7HxA"
+    url: "https://arxiv.org/abs/2412.03317"
     year: 2025
+    arxiv: "2412.03317"
   - title: "pyncd: A Python package for the algebraic construction, compilation, and analysis of deep learning models"
     url: "https://github.com/mit-zardini-lab/pyncd"
     year: 2026
@@ -213,10 +215,6 @@ This is the typed-array / notation-as-IR paper Broadside has been missing next t
 
 ## Caveats
 
-- Framework paper: the DeepSeek-V3 encoding is a representation, not a training recipe or a kernel.
-- BorelStoch + affine indexes are a *chosen* semantic base (probability + strided arrays); differentiability is explicitly out of scope here (see Cruttwell/Para/lenses for gradient).
-- Dual-language implementations demonstrate universality of the term system, not production compiler quality.
-- 35-item bibliography mixes software repos (pyncd/tsncd: GitHub only, no cards) with papers.
 
 ## Links
 

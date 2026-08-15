@@ -23,31 +23,36 @@ pool: languages
 relevance_score: 9
 lineage: type-safety
 cites:
-  []
+  - title: "Types for Safe Locking: Static Race Detection for Java"
+    url: "https://doi.org/10.1145/1119479.1119480"
+    year: 2006
+    arxiv: null
+    doi: "10.1145/1119479.1119480"
+see:
+  - "882-types-for-safe-locking-static-race-detection-for-java"
 ---
 
 # Practical Pluggable Types for Java
 
 ## One-sentence takeaway
 
-Checker Framework: pluggable type systems for Java beyond the built-in type system.
+The Checker Framework turns Java 8-style type annotations into a compiler plugin API so nullness, locking, tainting, and other qualifiers become libraries rather than language forks.
 
 ## Why it matters here
 
-Industrial-strength gradual enrichment of Java types (nullness, locking, tainting).
+Industrial-strength gradual enrichment of a host type system — the same move Anoptic would make if it grew pluggable checkers (units, capabilities, taint) on C or a DSL without changing the core language.
 
 ## Key ideas
 
-- Type annotations as pluggable qualifiers.
-- Flow-sensitive local type inference.
-- Sound checkers as libraries.
+- Qualifiers are annotations on existing Java types; each checker is a plugin with its own type lattice, flow-sensitive refinement, and stub files for unannotated libraries.
+- Flow-sensitive local inference means most local variables need no annotation; the burden sits on fields, method signatures, and natives.
+- Soundness is per-checker: the framework gives you AST/CFG hooks, not a single theorem.
+- Direct descendant of the lock-type line (card 882) and ancestor of later Checker Framework releases still used in production Java.
+- ISSTA 2008 is the archival intro; the project then tracked JSR 308 into javac itself.
 
 ## Caveats
-
-- Requires annotations / stub files.
-- Each checker has its own soundness story.
 
 ## Links
 
 - DOI: [10.1145/1390630.1390656](https://doi.org/10.1145/1390630.1390656)
-- URL: https://doi.org/10.1145/1390630.1390656
+- Project: https://checkerframework.org

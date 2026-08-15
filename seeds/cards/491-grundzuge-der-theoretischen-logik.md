@@ -19,30 +19,11 @@ pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "An Unsolvable Problem of Elementary Number Theory"
-    url: "https://doi.org/10.2307/2371045"
-    year: 1936
-    arxiv: null
-    doi: "10.2307/2371045"
-  - title: "A Note on the Entscheidungsproblem"
-    url: "https://doi.org/10.2307/2268565"
-    year: 1936
-    arxiv: null
-    doi: "10.2307/2268565"
-  - title: "On Computable Numbers, with an Application to the Entscheidungsproblem"
-    url: "https://doi.org/10.1112/plms/s2-42.1.230"
-    year: 1936
-    arxiv: null
-    doi: "10.1112/plms/s2-42.1.230"
   - title: "Mathematical Problems (Hilbert's Problems)"
-    url: "https://mathcs.clarku.edu/~djoyce/hilbert/problems.html"
+    url: "https://www.ams.org/bull/1902-08-10/S0002-9904-1902-00923-3/S0002-9904-1902-00923-3.pdf"
     year: 1900
-    arxiv: null
-    doi: null
+    doi: "10.1090/S0002-9904-1902-00923-3"
 see:
-  - "507-an-unsolvable-problem-of-elementary-number-theory"
-  - "508-a-note-on-the-entscheidungsproblem"
-  - "515-on-computable-numbers-with-an-application-to-the-entscheidun"
   - "487-mathematical-problems-hilbert-s-problems"
 ---
 
@@ -50,24 +31,22 @@ see:
 
 ## One-sentence takeaway
 
-Hilbert–Ackermann gave the textbook formulation of first-order logic and the Entscheidungsproblem that Church and Turing proved unsolvable.
+Hilbert and Ackermann give the textbook axiomatization of first-order logic and state the Entscheidungsproblem — find a finite procedure that decides validity of any FOL formula — that Church and Turing prove unsolvable.
 
 ## Why it matters here
 
-The named source Turing cites when reducing the Entscheidungsproblem to the halting problem.
+The named source Turing cites when he reduces the Entscheidungsproblem to the halting problem; Broadside's logic cards start here, not from later popularizations.
 
 ## Key ideas
 
-- Clean axiomatic FOL.
-- Explicit Entscheidungsproblem statement.
-- Hilbert-school proof theory pedagogy.
-- Ackermann function appears in related consistency work.
+- Clean axiomatic propositional and first-order calculi, with the now-standard distinction between validity and provability.
+- Explicit Entscheidungsproblem: a general decision method for the *engere Funktionenkalkül* (first-order logic).
+- Hilbert-school proof-theory pedagogy that later editions (1938, 1949) revise; quote the 1928 first edition for the historical problem statement.
+- Companion to Hilbert's consistency program: logic is the instrument, arithmetic the intended application.
 
 ## Caveats
-
-- Editions differ (1928/1938/1949); cite edition when quoting page-level claims.
 
 ## Links
 
 - DOI: [10.1007/978-3-642-86848-1](https://doi.org/10.1007/978-3-642-86848-1)
-- URL: https://link.springer.com/book/10.1007/978-3-642-86848-1
+- Springer: https://link.springer.com/book/10.1007/978-3-642-86848-1

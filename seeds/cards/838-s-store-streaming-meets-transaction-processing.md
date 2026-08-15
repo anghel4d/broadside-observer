@@ -5,15 +5,20 @@ authors:
 - Nesime Tatbul
 - Stan Zdonik
 - Cansu Aslantas
-- Uğur Çetintemel
+- Ugur Cetintemel
 - Jiang Du
 - Tim Kraska
 - Samuel Madden
+- David Maier
+- Andrew Pavlo
+- Michael Stonebraker
+- Kristin Tufte
+- Hao Wang
 year: 2015
-venue: arXiv (Cornell University)
-arxiv: null
-doi: 10.48550/arxiv.1503.01143
-source: "https://doi.org/10.48550/arxiv.1503.01143"
+venue: arXiv cs.DB
+arxiv: "1503.01143"
+doi: 10.48550/arXiv.1503.01143
+source: "https://arxiv.org/abs/1503.01143"
 topics:
 - databases
 - contemporary-db
@@ -23,32 +28,28 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
 # S-Store: Streaming Meets Transaction Processing
 
 ## One-sentence takeaway
 
-Influential database systems paper (2015).
+S-Store fuses streaming and OLTP inside H-Store: stream windows become transactional stored procedures with ACID boundaries, so a streaming pipeline can share tables with OLTP and still beat Spark Streaming / Storm on the paper’s workloads while offering stronger guarantees.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+GRID COMMAND needs both “this tick’s orders are atomic” and “this sensor stream is continuous.” S-Store is the design that refuses to run those in two systems — model the stream as sequenced transactions on the same in-memory partitioned store.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- A streaming workflow is a graph of stored procedures; each invocation is a transaction over the current window plus shared OLTP tables.
+- Correctness is defined as a hybrid of ACID and stream recovery: exactly-once processing, ordered windows, and isolation from concurrent OLTP.
+- Built on H-Store so single-partition transactions stay in memory with no locks; streaming is extra machinery (windows, triggers, recovery) on that substrate.
+- Throughput on streaming workloads exceeds a pure H-Store encoding of the same job, and matches or beats Storm / Spark Streaming with transactional semantics those engines lack.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
-- DOI: [10.48550/arxiv.1503.01143](https://doi.org/10.48550/arxiv.1503.01143)
-- URL: https://doi.org/10.48550/arxiv.1503.01143
+- arXiv: [1503.01143](https://arxiv.org/abs/1503.01143)

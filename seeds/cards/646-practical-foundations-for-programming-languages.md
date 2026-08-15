@@ -51,25 +51,21 @@ see:
 
 ## One-sentence takeaway
 
-Harper's PFPL: a judgment-driven tour of type systems, dynamics, and language design as one discipline.
+Harper presents language design as twin judgments — statics (typing) and dynamics (evaluation) — with type safety as progress plus preservation.
 
 ## Why it matters here
 
-The other canonical textbook beside TAPL — stronger on dynamics, hypothetical judgments, and modern PFPL-style presentation.
+The other canonical textbook beside TAPL, stronger on hypothetical judgments, dynamics, and modern PFPL-style presentation. The book one would steal a judgment style from when writing ano’s statics/dynamics.
 
 ## Key ideas
 
-- Statics and dynamics as twin judgments.
-- Progress/preservation as the type-safety contract.
-- Covers FE, FPC, Modernized Algol, laziness, parallelism, and more.
-- Natural companion to Harper–Honsell–Plotkin LF and SML Definition.
+- Statics and dynamics as formally twin inductive definitions, not a type system plus an afterthought interpreter.
+- Progress and preservation are the type-safety contract for each language fragment.
+- Tour of FE, FPC, Modernized Algol, laziness, parallelism, and more, each with the same judgment discipline.
+- 2nd ed. CUP 2016, DOI 10.1017/CBO9781316576892; companion to Harper–Honsell–Plotkin LF and the SML Definition.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1017/CBO9781316576892](https://doi.org/10.1017/CBO9781316576892)
-- URL: https://doi.org/10.1017/CBO9781316576892

@@ -1,5 +1,5 @@
 ---
-title: "Apache flink : Stream and batch processing in a single engine"
+title: "Apache Flink: Stream and Batch Processing in a Single Engine"
 authors:
 - Paris Carbone
 - Asterios Katsifodimos
@@ -8,10 +8,10 @@ authors:
 - Seif Haridi
 - Kostas Tzoumas
 year: 2015
-venue: KTH Publication Database DiVA (KTH Royal Institute of Technology)
+venue: IEEE Data Engineering Bulletin
 arxiv: null
 doi: null
-source: null
+source: "https://www.diva-portal.org/smash/get/diva2:1059537/FULLTEXT01.pdf"
 topics:
 - databases
 - contemporary-db
@@ -21,30 +21,29 @@ reviewed: 2026-08-13
 pool: systems
 relevance_score: 9
 lineage: contemporary-databases
-cites:
-  []
+cites: []
 ---
 
-# Apache flink : Stream and batch processing in a single engine
+# Apache Flink: Stream and Batch Processing in a Single Engine
 
 ## One-sentence takeaway
 
-Influential database systems paper (2015).
+Flink treats batch as a finite stream: one pipelined dataflow runtime with stateful operators, event-time windows, and distributed snapshots (asynchronous barrier checkpointing) so streaming, batch, and iterative jobs share an engine.
 
 ## Why it matters here
 
-Contemporary database systems classic for Broadside's data stack shelf.
+GRID COMMAND simulation ticks and Broadside ingest are streams that occasionally want a bounded replay. Flink is the “one runtime, two APIs” design to steal — stateful operators plus consistent checkpoints — rather than standing up Spark *and* a separate CEP bus.
 
 ## Key ideas
 
-- Core architecture contribution.
-- Systems tradeoff articulation.
-- Influenced later open engines.
+- The runtime is a cyclic dataflow of stateful operators; batch is the special case where the input is finite and watermarks eventually close.
+- Event time plus watermarks let windows fire correctly on out-of-order streams; processing time is the low-latency fallback.
+- Asynchronous barrier snapshots checkpoint operator state without stopping the pipeline, giving exactly-once sink semantics when combined with replayable sources.
+- Iterative algorithms (bulk / delta iterations) are first-class cycles in the same dataflow, not an outer driver loop submitting new jobs.
 
 ## Caveats
 
-- Read alongside follow-on open implementations.
-- Industrial details may be proprietary.
-
 ## Links
 
+- PDF: https://www.diva-portal.org/smash/get/diva2:1059537/FULLTEXT01.pdf
+- Bulletin: IEEE Data Engineering Bulletin 38(4), 2015, pp. 28–38

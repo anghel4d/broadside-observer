@@ -1,12 +1,16 @@
 ---
-title: "HPX: A Task Based Programming Model"
+title: "HPX: A Task Based Programming Model in a Global Address Space"
 authors:
-  - "Hartmut Kaiser et al."
+  - "Hartmut Kaiser"
+  - "Thomas Heller"
+  - "Bryce Adelstein-Lelbach"
+  - "Adrian Serio"
+  - "Dietmar Fey"
 year: 2014
-venue: "XSEDE"
-arxiv: "1407.1559"
-doi: null
-source: "https://arxiv.org/abs/1407.1559"
+venue: "PGAS"
+arxiv: null
+doi: "10.1145/2676870.2676883"
+source: "https://doi.org/10.1145/2676870.2676883"
 topics:
   - task-graph
   - hpx
@@ -16,87 +20,40 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 7
 cites:
-  - title: "Random Walk: A Modern Introduction"
-    url: "https://doi.org/10.1017/cbo9780511750854"
-    year: 2010
-    arxiv: null
-    doi: "10.1017/cbo9780511750854"
-  - title: "Random Fragmentation and Coagulation Processes"
-    url: "https://doi.org/10.1017/cbo9780511617768"
-    year: 2006
-    arxiv: null
-    doi: "10.1017/cbo9780511617768"
-  - title: "Cover times, blanket times, and majorizing measures"
-    url: "https://doi.org/10.4007/annals.2012.175.3.8"
-    year: 2012
-    arxiv: null
-    doi: "10.4007/annals.2012.175.3.8"
-  - title: "The Brownian loop soup"
-    url: "https://doi.org/10.1007/s00440-003-0319-6"
-    year: 2004
-    arxiv: null
-    doi: "10.1007/s00440-003-0319-6"
-  - title: "Markovian loop soups: permanental processes and isomorphism theorems"
-    url: "https://doi.org/10.1214/ejp.v19-3255"
-    year: 2014
-    arxiv: null
-    doi: "10.1214/ejp.v19-3255"
-  - title: "A sufficient condition for the continuity of permanental processes with applications to local times of Markov processes"
-    url: "https://doi.org/10.1214/12-aop744"
-    year: 2013
-    arxiv: null
-    doi: "10.1214/12-aop744"
-  - title: "Continuity Conditions for a Class of Second-order Permanental Chaoses"
-    url: "https://doi.org/10.1007/978-3-0348-0490-5_15"
-    year: 2013
-    arxiv: null
-    doi: "10.1007/978-3-0348-0490-5_15"
-  - title: "Intersection local times for interlacements"
-    url: "https://doi.org/10.1016/j.spa.2014.01.002"
-    year: 2014
-    arxiv: null
-    doi: "10.1016/j.spa.2014.01.002"
-  - title: "General Theory of Markov Processes."
-    url: "http://doi.org/10.2307/2982988"
-    year: 1990
-    arxiv: null
-    doi: "10.2307/2982988"
-  - title: "Markov loops and renormalization"
-    url: "https://doi.org/10.1214/09-aop509"
-    year: 2010
-    arxiv: null
-    doi: "10.1214/09-aop509"
-  - title: "Intersection Local Times, Loop Soups and Permanental Wick Powers"
-    url: "https://doi.org/10.1090/memo/1171"
-    year: 2017
-    arxiv: null
-    doi: "10.1090/memo/1171"
-  - title: "An isomorphism theorem for random interlacements"
-    url: "http://hdl.handle.net/20.500.11850/47040"
+  - title: "StarPU: a unified platform for task scheduling on heterogeneous multicore architectures"
+    url: "https://doi.org/10.1002/cpe.1631"
     year: 2011
     arxiv: null
-    doi: "10.3929/ethz-b-000047040"
+    doi: "10.1002/cpe.1631"
+  - title: "Qthreads: An API for programming with millions of lightweight threads"
+    url: "https://doi.org/10.1109/IPDPS.2008.4536359"
+    year: 2008
+    arxiv: null
+    doi: "10.1109/IPDPS.2008.4536359"
+see:
+  - "397-starpu-a-unified-platform-for-task-scheduling-on-heterogeneo"
 ---
 
-# HPX: A Task Based Programming Model
+# HPX: A Task Based Programming Model in a Global Address Space
 
 ## One-sentence takeaway
 
-Futures/task graph runtime.
+HPX extends C++11 futures/`async` across an active global address space so a remote call is the same API as a local one, scheduled as a lightweight HPX-thread.
 
 ## Why it matters here
 
-Futures/task graph runtime.
+Anoptic’s job graph is local; HPX is what that graph looks like when the machine is a cluster. The useful import is the constraint-based style — futures and dataflow LCOs instead of global MPI barriers — which already applies to a single-node GRID COMMAND tick.
 
 ## Key ideas
 
-- Futures/task graph runtime.
+- Active Global Address Space (AGAS): objects have GIDs that survive migration; a parcel is an active message that becomes an HPX-thread at the destination.
+- Same C++ standard API locally and remotely (`async(action, id, args...)` returns `future<R>`); syntax is not a new language.
+- Design against SLOW: hide latency with fine-grained threads, replace global barriers with LCOs (futures, dataflow, mutexes).
+- The previously listed arXiv 1407.1559 is a different paper (Rosen, isomorphism theorems); this work is PGAS 2014, doi:10.1145/2676870.2676883.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- arXiv: [1407.1559](https://arxiv.org/abs/1407.1559)
-- URL: https://arxiv.org/abs/1407.1559
+- DOI: https://doi.org/10.1145/2676870.2676883
+- Author PDF: https://stellar-group.org/pubs/pgas14.pdf

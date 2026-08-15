@@ -56,8 +56,6 @@ If GRID COMMAND soldiers need many simple, readable rules that still compose, th
 
 ## Caveats
 
-- GDC proceeding, not a journal paper. The public text is the Gamasutra write-up of the 2005 talk.
-- Flood swarm used an entirely custom DAG — the "start from a working base" rule has limits.
 
 ## Links
 

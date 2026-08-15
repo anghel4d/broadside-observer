@@ -3,10 +3,10 @@ title: "Foundations of the Theory of Probability"
 authors:
   - "A. N. Kolmogorov"
 year: 1933
-venue: "Springer (Grundbegriffe der Wahrscheinlichkeitsrechnung); English 1950 Chelsea"
+venue: "Springer (Grundbegriffe der Wahrscheinlichkeitsrechnung); English Chelsea 1950"
 arxiv: null
 doi: "10.1007/978-3-642-49888-6"
-source: "https://www.worldcat.org/title/foundations-of-the-theory-of-probability/oclc/523"
+source: "https://archive.org/details/foundationsofthe00kolm"
 topics:
   - probability
   - measure-theory
@@ -17,49 +17,31 @@ reviewed: "2026-08-13"
 pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
-cites:
-  - title: "Three Approaches to the Quantitative Definition of Information"
-    url: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
-    year: 1965
-    arxiv: null
-    doi: null
-  - title: "A Mathematical Theory of Communication"
-    url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
-    year: 1948
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "The Definition of Random Sequences"
-    url: "https://doi.org/10.1016/S0019-9958(66)80018-9"
-    year: 1966
-    arxiv: null
-    doi: "10.1016/S0019-9958(66)80018-9"
-see:
-  - "604-three-approaches-to-the-quantitative-definition-of-informati"
-  - "553-a-mathematical-theory-of-communication"
-  - "611-the-definition-of-random-sequences"
+cites: []
+see: []
 ---
 
 # Foundations of the Theory of Probability
 
 ## One-sentence takeaway
 
-Kolmogorov axiomatizes probability on measure spaces—chance becomes rigorous mathematics.
+Kolmogorov axiomatizes probability as a normalized measure on a σ-algebra, so chance becomes ordinary measure theory rather than a separate informal calculus.
 
 ## Why it matters here
 
-Background ontology for stochastic sim, information, and algorithmic randomness.
+This is the background ontology for stochastic sim, Monte Carlo in the engine, and the later algorithmic-randomness cards: without a measure space there is no well-defined "almost sure" for lockstep noise or agent priors.
 
 ## Key ideas
 
-- Probability as measure.
-- Axioms still standard.
-- 1933 Grundbegriffe.
+- Probability is a countably additive measure P with P(Ω) = 1 on a field of events.
+- Conditional probability and independence are defined from the measure, not taken as primitives.
+- Random variables are measurable functions; expectation is Lebesgue integration.
+- Infinite product spaces and the strong law sit on the same axioms.
+- Original German *Grundbegriffe* (Springer, 1933); standard English is Nathan Morrison's Chelsea translation (1950/1956).
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- DOI: [10.1007/978-3-642-49888-6](https://doi.org/10.1007/978-3-642-49888-6)
-- URL: https://www.worldcat.org/title/foundations-of-the-theory-of-probability/oclc/523
+- Springer reprint DOI: [10.1007/978-3-642-49888-6](https://doi.org/10.1007/978-3-642-49888-6)
+- Chelsea English scan: https://archive.org/details/foundationsofthe00kolm

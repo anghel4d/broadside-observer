@@ -16,45 +16,33 @@ reviewed: "2026-08-13"
 pool: "realtime"
 relevance_score: 10
 cites:
-  - title: "Fix Your Timestep!"
-    url: "https://gafferongames.com/post/fix_your_timestep/"
+  - title: "Integration Basics"
+    url: "https://gafferongames.com/post/integration_basics/"
     year: 2004
     arxiv: null
     doi: null
-  - title: "Floating Point Determinism"
-    url: "https://gafferongames.com/post/floating_point_determinism/"
-    year: 2010
-    arxiv: null
-    doi: null
-  - title: "Deterministic Lockstep"
-    url: "https://gafferongames.com/post/deterministic_lockstep/"
-    year: 2014
-    arxiv: null
-    doi: null
-see:
-  - "276-floating-point-determinism"
-  - "016-deterministic-lockstep"
 ---
 
 # Fix Your Timestep!
 
 ## One-sentence takeaway
 
-Fixed timestep + interpolate — sim loop bible.
+Fiedler’s recipe is a fixed physics `dt` consumed from a frame-time accumulator, with the leftover fraction used to interpolate the rendered state so the sim stays deterministic while the display rate floats.
 
 ## Why it matters here
 
-Fixed timestep + interpolate — sim loop bible.
+Ano and GRID COMMAND need a sim clock that does not track the renderer. This post is the loop: consume `dt`, clamp the spiral of death, interpolate for display, keep lockstep possible.
 
 ## Key ideas
 
-- Fixed timestep + interpolate — sim loop bible.
+- Variable `dt` makes springs explode, objects tunnel, and runs unreproducible; physics must see a stable step.
+- Semi-fixed stepping caps `dt` by subdividing long frames but still takes a remainder step, so results are not bit-identical.
+- The “renderer produces time, simulation consumes it” accumulator integrates only in whole `dt` chunks and carries leftover time forward.
+- Remaining accumulator / `dt` is the blend factor between previous and current state for rendering (including quaternion slerp).
+- Clamp huge frame times (e.g. 0.25s) so a hitch cannot spiral the sim into catching up forever.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://gafferongames.com/post/fix_your_timestep/
+- Article: https://gafferongames.com/post/fix_your_timestep/

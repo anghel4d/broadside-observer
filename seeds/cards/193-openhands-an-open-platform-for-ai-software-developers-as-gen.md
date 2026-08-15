@@ -65,25 +65,23 @@ see:
 
 ## One-sentence takeaway
 
-Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways.
+OpenHands (formerly OpenDevin) is an MIT-licensed platform where agents write code, use a shell, and browse the web inside sandboxes, with multi-agent coordination and a built-in eval harness.
 
 ## Why it matters here
 
-shapes harness/ACI design and model-vs-harness failure localization; evaluation harnesses useful for Broadside cheap-filter discipline (OpenHands: An Open Platform for AI Software Developers as Generalist Agents)
+This is the reference ACI for software-developer agents: sandbox, tools that match a human developer, and a bench suite that already includes SWE-bench and WebArena. Later OpenHands SDK work (card 180) rebuilds this core.
 
 ## Key ideas
 
-- Software is one of the most powerful tools that we humans have at our disposal; it allows a skilled programmer to interact with the world in complex and profound ways.
-- At the same time, thanks to improvements in large language models (LLMs), there has also been a rapid development in AI agents that interact with and affect change in their surrounding environments.
-- In this paper, we introduce OpenHands (f.k.a.
-- OpenDevin), a platform for the development of powerful and flexible AI agents that interact with the world in similar ways to those of a human developer: by writing code, interacting with a command line, and browsing the web.
-- We describe how the platform allows for the implementation of new agents, safe interaction with sandboxed environments for code execution, coordination between m
+- Agents should act like human developers: edit code, run commands, browse docs — not only emit a single patch.
+- The platform supports implementing new agents, sandboxed execution, multi-agent coordination, and plugging in evaluation benchmarks.
+- An evaluation over 15 tasks includes software engineering (SWE-bench) and web browsing (WebArena) among others.
+- The project is community-run (the paper cites 2.1K contributions from 188+ contributors) under MIT.
+- OpenHands is the system; the later Software Agent SDK is the production redesign of its agent components.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2407.16741](https://arxiv.org/abs/2407.16741)
-- URL: https://arxiv.org/abs/2407.16741
+- Code: https://github.com/All-Hands-AI/OpenHands

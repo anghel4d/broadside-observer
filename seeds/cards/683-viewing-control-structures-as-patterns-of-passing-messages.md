@@ -19,19 +19,9 @@ pool: "languages"
 relevance_score: 10
 lineage: programming-language-foundations
 cites:
-  - title: "Actors: A Model of Concurrent Computation in Distributed Systems"
-    url: "https://mitpress.mit.edu/9780262511414/actors/"
-    year: 1986
-    arxiv: null
-    doi: "10.7551/mitpress/1086.001.0001"
   - title: "Scheme: An Interpreter for Extended Lambda Calculus"
     url: "https://dspace.mit.edu/handle/1721.1/5794"
     year: 1975
-    arxiv: null
-    doi: null
-  - title: "A Calculus of Communicating Systems"
-    url: "https://link.springer.com/book/10.1007/3-540-10235-3"
-    year: 1980
     arxiv: null
     doi: null
   - title: "Communicating Sequential Processes"
@@ -40,9 +30,7 @@ cites:
     arxiv: null
     doi: "10.1145/359576.359585"
 see:
-  - "684-actors-a-model-of-concurrent-computation-in-distributed-syst"
   - "673-scheme-an-interpreter-for-extended-lambda-calculus"
-  - "043-a-calculus-of-communicating-systems"
   - "046-communicating-sequential-processes"
 ---
 
@@ -50,25 +38,21 @@ see:
 
 ## One-sentence takeaway
 
-Presents the Actor model: control structures as patterns of asynchronous message passing.
+Hewitt's 1977 Actors paper treats control structures — recursion, iteration, backtracking, futures — as patterns of asynchronous message passing among computational agents with mailboxes.
 
 ## Why it matters here
 
-Root Actors paper — the conceptual parent of concurrent object/message designs (and of Scheme's early explorations).
+Root Actors paper: the conceptual parent of concurrent object/message designs, of Scheme's early actor experiments, and of any GRID COMMAND unit that should be a process, not a shared-memory object.
 
 ## Key ideas
 
-- Actors as computational agents with mailboxes.
-- Control structures recovered as messaging patterns.
-- Rejection of sequential shared-memory as the only model.
-- Influences Agha, Erlang, and modern actor frameworks.
+- An actor has a mail address, a behaviour, and (conceptually) a mailbox; the only interaction is sending a message, which may create more actors.
+- Familiar control structures are recovered as messaging diagrams rather than as primitive language forms; shared-memory sequential control is rejected as the only model.
+- PLANNER's procedural embedding of knowledge is in the background; this paper is the concurrency/control restatement.
+- *Artificial Intelligence* 8(3), 1977, DOI 10.1016/0004-3702(77)90033-9. Agha 1986 is the later monograph; Erlang is the industrial descendant.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1016/0004-3702(77)90033-9](https://doi.org/10.1016/0004-3702(77)90033-9)
-- URL: https://doi.org/10.1016/0004-3702(77)90033-9

@@ -1,67 +1,52 @@
 ---
-title: Masked Software Occlusion Culling
+title: "Masked Software Occlusion Culling"
 authors:
-- Aske Simon Christensen
-- Jesper Van Haller
-- et al. / Intel
+  - "Jon Hasselgren"
+  - "Magnus Andersson"
+  - "Tomas Akenine-Möller"
 year: 2016
-venue: HPG/Intel
+venue: "HPG"
 arxiv: null
-doi: null
-source: https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling.pdf
+doi: "10.2312/hpg.20161189"
+source: "https://www.intel.com/content/www/us/en/developer/articles/technical/masked-software-occlusion-culling.html"
 topics:
-- occlusion
-- gpu-driven
+  - occlusion
+  - gpu-driven
 seed_rank: 479
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: engines
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "engines"
 relevance_score: 8
 lineage: gpu-driven-rendering
 cites:
-- title: Hierarchical Z-Buffer Visibility
-  url: https://doi.org/10.1145/166117.166147
-  year: 1993
-  arxiv: null
-  doi: 10.1145/166117.166147
-- title: GPU-Driven Rendering Pipelines
-  url: https://advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf
-  year: 2015
-  arxiv: null
-  doi: null
-- title: 'Nanite: A Deep Dive'
-  url: https://www.youtube.com/watch?v=e_5kdRpGrpI
-  year: 2021
-  arxiv: null
-  doi: null
+  - title: "Hierarchical Z-Buffer Visibility"
+    url: "https://doi.org/10.1145/166117.166147"
+    year: 1993
+    doi: "10.1145/166117.166147"
 see:
-- "144-hierarchical-z-buffer-visibility"
-- "015-gpu-driven-rendering-pipelines"
-- "090-nanite-a-deep-dive"
+  - "144-hierarchical-z-buffer-visibility"
 ---
 
 # Masked Software Occlusion Culling
 
 ## One-sentence takeaway
 
-Masked software occlusion culling is a living CPU/GPU hybrid visibility technique used beside meshlet pipelines.
+Hasselgren, Andersson, and Akenine-Möller rasterize occluders into a SIMD-friendly masked hierarchical depth buffer on the CPU so visibility tests can interleave with rasterization and still reject ~98% of the triangles a full-resolution Z-buffer would hide.
 
 ## Why it matters here
 
-Practical occlusion sibling to hierarchical Z and Nanite-style cluster rejection.
+Practical CPU occlusion sibling to GPU Hi-Z and meshlet cone culling: feed surviving clusters into a Wihlidal/Haar submit loop when hardware occlusion queries lag a frame.
 
 ## Key ideas
 
-- SIMD bitmasks over depth hierarchy on CPU.
-- Feeds GPU-driven submit/cull loops.
-- Industrial craft paper/sample lineage.
-- Complements meshlets when HW occlusion queries lag.
+- A coverage mask per hierarchical tile lets a conservative depth test stay accurate without storing a full-resolution CPU depth buffer.
+- Reported ~3× faster than prior software occlusion work, with low extra memory.
+- Occluder rasterization and queries interleave, so the engine need not finish a full software Z-prepass before testing boxes.
+- Intel shipped a companion lightweight library; the algorithm is the HPG 2016 paper, not a vendor-only sample.
 
 ## Caveats
 
-- Vendor sample lineage; APIs evolve.
-- Not a replacement for Nanite DAG.
-
 ## Links
 
-- URL: https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling.pdf
+- Intel project: https://www.intel.com/content/www/us/en/developer/articles/technical/masked-software-occlusion-culling.html
+- Preprint PDF: https://www.intel.com/content/dam/develop/external/us/en/documents/masked-software-occlusion-culling-779241.pdf

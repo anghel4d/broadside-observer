@@ -66,9 +66,6 @@ Sized allocations are the type-level version of “this frame arena is 16 MiB an
 
 ## Caveats
 
-- Research language, not a C/Vulkan allocator. Steal the sized-region *invariants*, not the syntax.
-- Effect-based region tracking still needs a story for FFI into GPU buffers and lock-free buses.
-- Pair with card 1185 (reachability arenas) — they attack the same hole from types vs effects.
 
 ## Links
 

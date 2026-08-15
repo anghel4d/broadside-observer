@@ -1,65 +1,55 @@
 ---
-title: 'Koka: Programming with Row Polymorphic Effect Types'
+title: "Koka: Programming with Row Polymorphic Effect Types"
 authors:
-- Daan Leijen
+  - "Daan Leijen"
 year: 2014
-venue: MSFP
-arxiv: null
-doi: null
-source: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
+venue: "MSFP / EPTCS"
+arxiv: "1406.2061"
+doi: "10.4204/EPTCS.153.8"
+source: "https://arxiv.org/abs/1406.2061"
 topics:
-- effects
-- handlers
+  - effects
+  - handlers
 seed_rank: 463
-seed_batch: lineage-shallow-2026-08-13
-reviewed: '2026-08-13'
-pool: languages
+seed_batch: "lineage-shallow-2026-08-13"
+reviewed: "2026-08-13"
+pool: "languages"
 relevance_score: 8
 lineage: algebraic-effects
 cites:
-- title: Handlers of Algebraic Effects
-  url: https://homepages.inf.ed.ac.uk/gdp/publications/Effect_Handlers.pdf
-  year: 2009
-  arxiv: null
-  doi: 10.1007/978-3-642-00590-9_7
-- title: Programming with Algebraic Effects and Handlers
-  url: https://arxiv.org/abs/1203.1539
-  year: 2012
-  arxiv: '1203.1539'
-  doi: null
-- title: Notions of Computation and Monads
-  url: https://doi.org/10.1016/0890-5401(91)90052-4
-  year: 1991
-  arxiv: null
-  doi: 10.1016/0890-5401(91)90052-4
+  - title: "Handlers of Algebraic Effects"
+    url: "https://doi.org/10.1007/978-3-642-00590-9_7"
+    year: 2009
+    doi: "10.1007/978-3-642-00590-9_7"
+  - title: "Notions of Computation and Monads"
+    url: "https://doi.org/10.1016/0890-5401(91)90052-4"
+    year: 1991
+    doi: "10.1016/0890-5401(91)90052-4"
 see:
-- "021-handlers-of-algebraic-effects"
-- "107-programming-with-algebraic-effects-and-handlers"
-- "035-notions-of-computation-and-monads"
+  - "021-handlers-of-algebraic-effects"
+  - "035-notions-of-computation-and-monads"
 ---
 
 # Koka: Programming with Row Polymorphic Effect Types
 
 ## One-sentence takeaway
 
-Row-polymorphic effect types make algebraic-effect style programming practical in a real language (Koka).
+Koka infers Hindley–Milner types whose row-polymorphic effect annotations make a function's possible side effects part of its signature, using duplicate labels so effects compose without monadic plumbing.
 
 ## Why it matters here
 
-Living language successor of Plotkin/Pretnar handlers for Anoptic PL experiments.
+Living language successor of Plotkin/Pretnar handlers: Anoptic PL experiments can read effect rows off inferred types instead of encoding every effect as a monad transformer.
 
 ## Key ideas
 
-- Effect rows infer and abstract effect sets.
-- Handlers as first-class control.
-- Bridges theory papers to an implemented compiler.
-- Influences later effect systems.
+- A type such as `int -> <exn,console> string` states that the function may throw and do console I/O; absence of `exn` is a semantic guarantee, not a comment.
+- Row polymorphism with duplicate labels lets callers abstract over extra unknown effects while inference stays HM-style.
+- Stateful computations can be encapsulated like Haskell `runST`, and the state effect combines with let-polymorphism without imperative type variables or a syntactic value restriction.
+- Implemented in the Koka compiler and exercised on a Markdown processor and a tier-split chat app (MSFP 2014 / EPTCS 153).
 
 ## Caveats
 
-- Language evolves; pin a paper/version when citing APIs.
-- Not the only practical effects design.
-
 ## Links
 
-- URL: https://www.microsoft.com/en-us/research/publication/koka-programming-with-row-polymorphic-effect-types/
+- arXiv: [1406.2061](https://arxiv.org/abs/1406.2061)
+- DOI: [10.4204/EPTCS.153.8](https://doi.org/10.4204/EPTCS.153.8)

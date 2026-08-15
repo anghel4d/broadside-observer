@@ -26,43 +26,37 @@ cites:
     year: 2023
     arxiv: "2305.16291"
     doi: null
-  - title: "SKILLFOUNDRY: Building Self-Evolving Agent Skill Libraries from Heterogeneous Scientific Resources"
-    url: "https://arxiv.org/abs/2604.03964"
-    year: 2026
-    arxiv: "2604.03964"
-    doi: null
-  - title: "SWE-chat: Coding Agent Interactions From Real Users in the Wild"
-    url: "https://arxiv.org/abs/2604.20779"
-    year: 2026
-    arxiv: "2604.20779"
+  - title: "ReAct: Synergizing Reasoning and Acting in Language Models"
+    url: "https://arxiv.org/abs/2210.03629"
+    year: 2022
+    arxiv: "2210.03629"
     doi: null
 see:
   - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
+  - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 
 # Agent Workflow Memory
 
 ## One-sentence takeaway
 
-Despite the potential of language model-based agents to solve real-world tasks such as web navigation, current methods still struggle with long-horizon tasks with complex action trajectories.
+AWM induces reusable web-navigation workflows from past trajectories and selectively injects them to guide later action sequences, offline from train data or online from test queries.
 
 ## Why it matters here
 
-shapes harness/ACI design and model-vs-harness failure localization; skill libraries and continual evolution match standing research loops (Agent Workflow Memory)
+Ano skill libraries and Broadside computer-use loops need reusable routines, not only episodic notes; AWM is the web-agent version of inducing those routines.
 
 ## Key ideas
 
-- Despite the potential of language model-based agents to solve real-world tasks such as web navigation, current methods still struggle with long-horizon tasks with complex action trajectories.
-- In contrast, humans can flexibly solve complex tasks by learning reusable task workflows from past experiences and using them to guide future actions.
-- To build agents that can similarly benefit from this process, we introduce Agent Workflow Memory (AWM), a method for inducing commonly reused routines, i.e., workflows, and selectively providing workflows to the agent to guide subsequent generations.
-- AWM flexibly applies to both offline and online scenarios, where agents induce workflows from training examples beforehand or from test queries on the fly.
-- We experiment on two major web navigation benchmar
+- Long-horizon web tasks fail when the agent cannot reuse structure from earlier successes; humans solve this by learning workflows.
+- Offline AWM mines workflows from training examples; online AWM induces them on the fly from test queries.
+- On Mind2Web and WebArena (1000+ tasks, 200+ domains) AWM lifts relative success 24.6% and 51.1% and shortens successful WebArena trajectories.
+- Online AWM generalizes as train–test gaps widen, gaining 8.9 to 14.0 absolute points in cross-task, website, and domain splits.
+- Workflows are commonly reused routines, not full replayed trajectories.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2409.07429](https://arxiv.org/abs/2409.07429)
-- URL: https://arxiv.org/abs/2409.07429
+- PDF: https://arxiv.org/pdf/2409.07429

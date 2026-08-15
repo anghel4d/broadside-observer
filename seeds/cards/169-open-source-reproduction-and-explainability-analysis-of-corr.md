@@ -40,25 +40,23 @@ see:
 
 ## One-sentence takeaway
 
-Corrective Retrieval Augmented Generation (CRAG) improves the robustness of RAG systems by evaluating retrieved document quality and triggering corrective actions.
+Yalavarthi rebuilds CRAG with Wikipedia search and Phi-3 instead of Google and LLaMA-2, matches the original scores, and uses SHAP to show the T5 retrieval evaluator mostly checks named-entity overlap.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests (Open-Source Reproduction and Explainability Analysis of Corrective Retrieval Augmented Gen)
+Broadside cannot ship a corrective RAG loop that depends on a closed search API, and it should not trust a retrieval evaluator whose “confidence” is entity string match. This paper names both failure modes with an open pipeline.
 
 ## Key ideas
 
-- Corrective Retrieval Augmented Generation (CRAG) improves the robustness of RAG systems by evaluating retrieved document quality and triggering corrective actions.
-- However, the original implementation relies on proprietary components including the Google Search API and closed model weights, limiting reproducibility.
-- In this work, we present a fully open-source reproduction of CRAG, replacing proprietary web search with the Wikipedia API and the original LLaMA-2 generator with Phi-3-mini-4k-instruct.
-- We evaluate on PopQA and ARC-Challenge, demonstrating that our open-source pipeline achieves comparable performance to the original system.
-- Furthermore, we contribute the first explainability analysis of CRAG's T5-based retrieval evaluator using SHAP, revealing that the evaluator primarily reli
+- The original CRAG stack uses proprietary web search and closed generator weights; the reproduction swaps in the Wikipedia API and Phi-3-mini-4k-instruct.
+- On PopQA and ARC-Challenge the open pipeline is reported as comparable to the original CRAG numbers.
+- SHAP analysis of the T5 retrieval evaluator shows it relies primarily on named-entity alignment, not semantic similarity.
+- Domain transfer fails on science questions, which the author flags as a key evaluator failure mode.
+- Code and results are published at the accompanying GitHub reproduction repository.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2603.16169](https://arxiv.org/abs/2603.16169)
-- URL: https://arxiv.org/abs/2603.16169
+- Code: https://github.com/suryayalavarthi/crag-reproduction

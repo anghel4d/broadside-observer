@@ -31,21 +31,20 @@ see:
 
 ## One-sentence takeaway
 
-Technical leverage = how much of your shipped LOC you did not write — a development win and a security concentration risk. uutils is ×33; Gnulib is ×3.3.
+Massacci and Pashchenko define technical leverage as how much of your shipped LOC you did not write: a development win (velocity from reuse) and a security concentration risk (unvetted transitive code).
 
 ## Why it matters here
 
-The metric the coreutils paper uses. Anoptic's crate graph should be quoted in this unit.
+The metric the uutils paper actually quotes. Anoptic's crate graph should be reported in this unit: GNU/Gnulib is ×3.3; uutils/crates is ×33.
 
 ## Key ideas
 
 - ICSE 2021. DOI `10.1109/ICSE43902.2021.00124`.
-- Leverage as opportunity (velocity) and risk (unvetted code).
-- uutils: 90 kLOC → 3 MLOC with deps; GNU: 60 kLOC → 200 kLOC with Gnulib.
+- Leverage = (own + dependency LOC) / own LOC. High leverage is how ecosystems ship fast; it is also how a single compromised crate becomes everyone else's incident.
+- Opportunity and risk are the same number: more reuse, more surface. The paper is an ecosystem measurement, not a coreutils audit.
+- Ledru et al. apply the definition: uutils 90 kLOC → 3 MLOC with deps (×33.3, 110 runtime crates); GNU 60 kLOC → 200 kLOC with Gnulib (×3.3).
 
 ## Caveats
-
-- Ecosystem paper, not a coreutils measurement. The ×33 figure is Ledru et al. applying this definition.
 
 ## Links
 

@@ -4,7 +4,7 @@ authors:
   - "Hossein Naderibeni"
   - "Eric Ruppert"
 year: 2023
-venue: "arXiv:cs.DC"
+venue: "PODC 2023 / arXiv:cs.DC"
 arxiv: "2305.07229"
 doi: null
 source: "https://arxiv.org/abs/2305.07229"
@@ -60,24 +60,23 @@ see:
 
 ## One-sentence takeaway
 
-We present a novel linearizable wait-free queue implementation using single-word CAS instructions.
+A linearizable wait-free MPMC queue built from single-word CAS does enqueue in O(log p) steps and dequeue in O(log² p + log q), breaking the Ω(p) amortized barrier of prior CAS queues.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (A Wait-free Queue with Polylogarithmic Step Complexity).
+Anoptic job queues cannot accept a hidden linear scan of every worker on the worst-case path; this is the first CAS queue whose worst-case steps are polylog in the thread count.
 
 ## Key ideas
 
-- We present a novel linearizable wait-free queue implementation using single-word CAS instructions.
-- Previous lock-free queue implementations from CAS all have amortized step complexity of $Ω(p)$ per operation in worst-case executions, where $p$ is the number of processes that access the queue.
-- Our new wait-free queue takes $O(\log p)$ steps per enqueue and $O(\log^2 p +\log q)$ steps per dequeue, where $q$ is the size of the queue.
-- A bounded-space version of the implementation has $O(\log p \log(p+q))$ amortized step complexity per operation.
+- Every previous lock-free CAS queue has Ω(p) amortized steps per op in some execution, p = number of processes.
+- The new wait-free design uses only single-word CAS.
+- Enqueue is O(log p); dequeue is O(log² p + log q) where q is the current queue length.
+- A bounded-space variant is O(log p · log(p+q)) amortized per operation.
+- Appeared at PODC 2023.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2305.07229](https://arxiv.org/abs/2305.07229)
-- URL: https://arxiv.org/abs/2305.07229
+- PDF: https://arxiv.org/pdf/2305.07229

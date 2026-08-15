@@ -4,7 +4,7 @@ authors:
   - "Sébastien Lagarde"
   - "Charles de Rousiers"
 year: 2014
-venue: "SIGGRAPH Courses"
+venue: "SIGGRAPH 2014 Courses"
 arxiv: null
 doi: null
 source: "https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf"
@@ -41,21 +41,22 @@ see:
 
 ## One-sentence takeaway
 
-Frostbite PBR course notes.
+Frostbite's SIGGRAPH 2014 course is the production cookbook that turned Disney/UE4 theory into a shipped GGX + energy-conserving lighting stack, including area lights, image-based lighting, and a dielectric/metal workflow.
 
 ## Why it matters here
 
-Frostbite PBR course notes.
+Anoptic's material model should start from this document, not from a blog paraphrase. It is the bridge from Karis/Burley notes to a real engine: units, exposure, punctual vs area, and what to bake into probes.
 
 ## Key ideas
 
-- Frostbite PBR course notes.
+- Standardize on a microfacet GGX specular, Lambert (or Disney diffuse) base, and a metalness/reflectance parameterization artists can author.
+- Energy conservation and Fresnel (Schlick, with a fudge for grazing) are non-optional once you mix punctual, area, and IBL terms.
+- Area lights and filtered environment maps are first-class; punctual lights are the special case.
+- Exposure, color spaces, and lighting units have to be specified or every other formula is meaningless.
+- Course notes v3.2 (July 2015) are the canonical PDF; SIGGRAPH 2014 Physically Based Shading in Theory and Practice course.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf
+- Course notes: https://seblagarde.files.wordpress.com/2015/07/course_notes_moving_frostbite_to_pbr_v32.pdf

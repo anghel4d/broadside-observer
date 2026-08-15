@@ -17,7 +17,7 @@ pool: "engines"
 relevance_score: 8
 cites:
   - title: "Vulkan Descriptor Indexing (Bindless)"
-    url: "https://www.khronos.org/blog/descriptor-indexing"
+    url: "https://docs.vulkan.org/guide/latest/extensions/VK_EXT_descriptor_indexing.html"
     year: 2018
     arxiv: null
     doi: null
@@ -26,36 +26,32 @@ cites:
     year: 2018
     arxiv: null
     doi: null
-  - title: "Local Memory Allocators in Large-Scale C++ (Lakos allocator model)"
-    url: "https://www.youtube.com/watch?v=nZNd5FjSquk"
-    year: 2013
-    arxiv: null
-    doi: null
 see:
   - "326-vulkan-descriptor-indexing-bindless"
   - "097-mesh-shaders-in-the-vulkan-ecosystem"
-  - "195-local-memory-allocators-in-large-scale-c-lakos-allocator-mod"
 ---
 
 # Vulkan Memory Allocator (VMA)
 
 ## One-sentence takeaway
 
-Practical GPU memory alloc for Vulkan engines.
+VMA is AMD’s production Vulkan heap layer: it suballocates `VkDeviceMemory` into blocks, picks memory types, and can defragment, so an engine does not call `vkAllocateMemory` per buffer.
 
 ## Why it matters here
 
-Practical GPU memory alloc for Vulkan engines.
+Anoptic’s Vulkan backend needs one opinionated device-local / host-visible allocator; VMA is the library every engine actually ships rather than rolling buddy-on-device-memory from scratch.
 
 ## Key ideas
 
-- Practical GPU memory alloc for Vulkan engines.
+- Vulkan requires the app to choose a memory type, respect `bufferImageGranularity`, and keep allocation counts low. VMA owns those constraints.
+- Allocations go through pools of large `VkDeviceMemory` blocks with TLSF-style suballocation; dedicated allocations are used when the driver prefers them (large images).
+- `VmaAllocation` tracks mapping, persistently mapped HOST_VISIBLE memory, and budget queries against `VK_EXT_memory_budget`.
+- Optional defragmentation moves allocations and issues the needed `vkBind*` / copy commands so the engine can compact heaps between levels.
+- Header-only C++ (`vk_mem_alloc.h`) plus a C API; source at GPUOpen / GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://gpuopen.com/vulkan-memory-allocator/
+- Landing: https://gpuopen.com/vulkan-memory-allocator/
+- Repo: https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator

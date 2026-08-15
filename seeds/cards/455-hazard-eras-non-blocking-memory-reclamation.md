@@ -1,5 +1,4 @@
 ---
-
 title: "Hazard Eras: Non-Blocking Memory Reclamation"
 authors:
   - "Pedro Ramalhete"
@@ -23,48 +22,35 @@ cites:
   - title: "Hazard Pointers: Safe Memory Reclamation for Lock-Free Objects"
     url: "https://doi.org/10.1109/TPDS.2004.8"
     year: 2004
-    arxiv: null
     doi: "10.1109/TPDS.2004.8"
-  - title: "Epoch-Based Reclamation / Practical lock-freedom"
+  - title: "Practical Lock-Freedom"
     url: "https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-579.pdf"
     year: 2004
-    arxiv: null
-    doi: null
-  - title: "Interval-Based Memory Reclamation"
-    url: "https://doi.org/10.1145/3178487.3178488"
-    year: 2018
-    arxiv: null
-    doi: "10.1145/3178487.3178488"
 see:
   - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
   - "293-epoch-based-reclamation-practical-lock-freedom"
-  - "323-interval-based-memory-reclamation"
 ---
+
 # Hazard Eras: Non-Blocking Memory Reclamation
 
 ## One-sentence takeaway
 
-HP-shaped API that reserves eras instead of pointers, often cutting fence traffic on traversals.
+Hazard Eras keep the hazard-pointer API but publish monotonically increasing eras instead of raw pointers, so a traversal can protect a whole interval of births/retirements with far fewer stores and fences.
 
 ## Why it matters here
 
-Anoptic lock-free structures that walk lists/trees pay HP fence costs; Hazard Eras is the practical hybrid before IBR/Hyaline.
+Anoptic lock-free maps and ECS lookups pay HP fence costs on every hop; eras are the practical hybrid before IBR/Hyaline when readers walk long lists.
 
 ## Key ideas
 
-- Readers publish monotonically increasing eras.
-- Same progress conditions as hazard pointers when used carefully.
-- Strong on read-heavy traversals.
-- Implementable with C11/C++11 atomics.
+- Readers reserve the current global era clock rather than each pointer they dereference; a node is reclaimable only when no reserved era overlaps its birth-to-retire interval.
+- Progress matches carefully used hazard pointers: stalled threads bound unreclaimed memory by the eras they hold, not by a global epoch.
+- On their lock-free list microbenchmark, throughput matches HP in the worst case and reaches about 5× HP when traversals dominate.
+- Implementable with C11/C++11 atomics; the brief announcement pairs with the longer Concurrency Freaks writeup.
 
 ## Caveats
-
-- Unreclaimed memory still bounded by reserved eras.
-- Not always faster than HP for queue-like patterns.
-- Seed card from shallow lineage pass; promote before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/3087556.3087588](https://doi.org/10.1145/3087556.3087588)
-- URL: https://doi.org/10.1145/3087556.3087588
-- https://github.com/pramalhe/ConcurrencyFreaks/blob/master/papers/hazarderas-2017.pdf
+- Author PDF: https://github.com/pramalhe/ConcurrencyFreaks/blob/master/papers/hazarderas-2017.pdf

@@ -82,21 +82,22 @@ cites:
 
 ## One-sentence takeaway
 
-Reynolds studies syntactic restrictions that limit interference between program phrases.
+Reynolds gives syntactic restrictions that make interference between program phrases visible in the type structure, so aliased active use of the same storage cannot hide behind ordinary application.
 
 ## Why it matters here
 
-Interference control foreshadows capability and separation ideas for safe parallel ECS mutation.
+Safe parallel ECS mutation is this problem: two systems that both write a component must be treated as interfering phrases, and the type/capability layer should refuse to compose them the way SCI refuses to compose interfering λ-terms.
 
 ## Key ideas
 
-- Reynolds studies syntactic restrictions that limit interference between program phrases.
+- Interference is not just alias analysis after the fact; it is a property of how phrases may share assignable storage.
+- Passive phrases may be aliased freely; active phrases that write storage may not be used in interfering combination.
+- The type system distinguishes these classes so illegal sharing is a type error rather than a runtime race.
+- Procedure application is the dangerous combinator: passing the same writable cell to two active parameters is the canonical banned pattern.
+- The paper is the ancestor of later capability, separation, and disjointness type systems for controlled mutation.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/512760.512766](https://doi.org/10.1145/512760.512766)
-- URL: https://doi.org/10.1145/512760.512766

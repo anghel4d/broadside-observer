@@ -1,9 +1,9 @@
 ---
-title: "Physically Based Modeling Course Notes"
+title: "Physically Based Modeling: Principles and Practice"
 authors:
-  - "David Baraff"
   - "Andrew Witkin"
-year: 2001
+  - "David Baraff"
+year: 1997
 venue: "SIGGRAPH Courses"
 arxiv: null
 doi: null
@@ -16,45 +16,40 @@ reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 8
 cites:
-  - title: "Physics, Topology, Logic and Computation: A Rosetta Stone"
-    url: "https://arxiv.org/abs/0903.0340"
-    year: 2011
-    arxiv: "0903.0340"
-    doi: "10.1007/978-3-642-12821-9_2"
-  - title: "MGPBD: A Multigrid Accelerated Global XPBD Solver"
-    url: "https://arxiv.org/abs/2505.13390"
-    year: 2025
-    arxiv: "2505.13390"
-    doi: "10.1145/3721238.3730720"
-  - title: "KM3NeT/ORCA: status and perspectives for neutrino oscillation and mass hierarchy measurements"
-    url: "https://arxiv.org/abs/2107.10593"
-    year: 2021
-    arxiv: "2107.10593"
-    doi: "10.22323/1.390.0149"
-see:
-  - "018-physics-topology-logic-and-computation-a-rosetta-stone"
-  - "215-mgpbd-a-multigrid-accelerated-global-xpbd-solver"
+  - title: "Physically Based Modeling: Principles and Practice — Particle Dynamics"
+    url: "https://www.cs.cmu.edu/~baraff/sigcourse/notesc.pdf"
+    year: 1997
+    arxiv: null
+    doi: null
+  - title: "Physically Based Modeling: Principles and Practice — Rigid Body Dynamics"
+    url: "https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf"
+    year: 1997
+    arxiv: null
+    doi: null
 ---
 
-# Physically Based Modeling Course Notes
+# Physically Based Modeling: Principles and Practice
 
 ## One-sentence takeaway
 
-Rigid/soft body modeling course.
+Witkin and Baraff’s SIGGRAPH course is the still-standard derivation of particle ODEs, implicit integration, constrained dynamics, and rigid-body equations for graphics.
 
 ## Why it matters here
 
-Rigid/soft body modeling course.
+Anoptic’s physics tick — particles, ragdolls, Broadside debris — is this course in C. The notes are how you write a semi-implicit Euler / implicit cloth step and a constraint Jacobian without cargo-culting a middleware engine.
 
 ## Key ideas
 
-- Rigid/soft body modeling course.
+- Start from F = ma as an ODE; choose an integrator (explicit, semi-implicit, implicit) based on stiffness, not fashion.
+- Implicit methods (Baraff/Witkin cloth) take a linear solve per step so stiff springs do not explode at game dt.
+- Constrained dynamics: Lagrange multipliers / reduced coordinates keep particles on manifolds (rods, contacts) instead of as springs.
+- Rigid bodies get a separate pair of notes: unconstrained 6-DoF motion, then contacts and resting constraints.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.cs.cmu.edu/~baraff/sigcourse/
+- Course index: https://www.cs.cmu.edu/~baraff/sigcourse/
+- Particle notes: https://www.cs.cmu.edu/~baraff/sigcourse/notesc.pdf
+- Rigid-body I: https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf
+- Rigid-body II: https://www.cs.cmu.edu/~baraff/sigcourse/notesd2.pdf

@@ -23,41 +23,29 @@ cites:
     year: 1938
     arxiv: null
     doi: "10.1109/T-AIEE.1938.5057767"
-  - title: "A Mathematical Theory of Communication"
-    url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
-    year: 1948
-    arxiv: null
-    doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "Reliable circuits using less reliable relays"
-    url: "https://doi.org/10.1016/0016-0032(56)90559-2"
-    year: 1956
-    arxiv: null
-    doi: "10.1016/0016-0032(56)90559-2"
 see:
   - "552-a-symbolic-analysis-of-relay-and-switching-circuits"
-  - "553-a-mathematical-theory-of-communication"
-  - "560-reliable-circuits-using-less-reliable-relays"
 ---
 
 # The Synthesis of Two-Terminal Switching Circuits
 
 ## One-sentence takeaway
 
-Shannon studies gate-count synthesis lower/upper bounds—early circuit complexity.
+Shannon proves almost all Boolean functions need exponentially many contacts and gives constructive upper bounds for two-terminal networks.
 
 ## Why it matters here
 
-Ancestor of circuit complexity; pairs with 1938 switching thesis.
+This is circuit complexity before the name existed: gate-count lower bounds for the same Boolean surfaces the engine later compiles into shaders and ECS filters.
 
 ## Key ideas
 
-- Boolean synthesis bounds.
-- Two-terminal network focus.
-- Complexity before 'complexity theory'.
+- A random n-variable function almost surely requires on the order of \(2^n/n\) contacts; most functions are hard.
+- Explicit series-parallel and bridge constructions give matching-order upper bounds for the worst case.
+- Two-terminal (one-input, one-output) networks are the object of study, continuing the 1938 relay algebra.
+- Disjunctive and conjunctive decompositions, and contact sharing, are the synthesis toolkit.
+- The paper is the quantitative sequel to the qualitative Boolean-relay identification.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

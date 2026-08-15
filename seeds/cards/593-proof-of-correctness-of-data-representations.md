@@ -28,36 +28,30 @@ cites:
     year: 1971
     arxiv: null
     doi: "10.1007/BFb0059696"
-  - title: "A Discipline of Programming"
-    url: "https://www.worldcat.org/title/discipline-of-programming/oclc/523"
-    year: 1976
-    arxiv: null
-    doi: null
 see:
   - "592-an-axiomatic-basis-for-computer-programming"
   - "594-procedures-and-parameters-an-axiomatic-approach"
-  - "590-a-discipline-of-programming"
 ---
 
 # Proof of Correctness of Data Representations
 
 ## One-sentence takeaway
 
-Hoare shows how to prove concrete representations correct against abstract specs—abstraction functions.
+Hoare shows how to prove a concrete representation correct against an abstract specification via an abstraction function and a representation invariant.
 
 ## Why it matters here
 
-Data refinement root; ADT correctness methodology.
+ECS components, spatial indexes, and ano values are representations of abstract objects. This 1972 *Acta Informatica* paper is the refinement method.
 
 ## Key ideas
 
-- Abstraction function / representation invariant.
-- Simulation between levels.
-- Acta Informatica classic.
+- An abstraction function maps a concrete state (that satisfies the invariant) to the abstract value it represents.
+- Each concrete operation must simulate the corresponding abstract operation under that function.
+- The representation invariant is preserved by every operation and is assumed by every proof obligation.
+- Clients reason only in the abstract theory; the representation can change without touching their proofs.
+- Founding paper of data refinement / ADT correctness, sitting between 1969 Hoare logic and later module systems.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

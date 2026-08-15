@@ -83,21 +83,23 @@ cites:
 
 ## One-sentence takeaway
 
-Proposes storing relations by columns (decomposition storage model) rather than by rows.
+Copeland and Khoshafian argue that n-ary relations should be stored as per-attribute binary relations of \( \langle \text{surrogate}, \text{value} \rangle \) pairs rather than as n-ary n-tuples.
 
 ## Why it matters here
 
-Classic DSM/columnar storage argument — physical twin of ano's columnar ECS world store.
+This is the physical twin of ano's columnar ECS world store: each component is a DSM column keyed by entity surrogate, so schema evolution, nulls, and attribute-local scans are storage facts rather than ORM accidents.
 
 ## Key ideas
 
-- Proposes storing relations by columns (decomposition storage model) rather than by rows.
+- The n-ary storage model (NSM) clusters a whole tuple; DSM decomposes a relation into one binary relation per attribute, joined logically by invariant surrogates.
+- Surrogates are system-owned identities that survive value updates, so identity is not a primary-key value the user can overwrite.
+- Clustering, compression, and I/O become per-attribute: a query that touches two columns need not bring the other eighteen.
+- Nulls and evolving schemas are cheap because a missing attribute is simply an absent pair, not a wide-row hole.
+- The paper contrasts DSM with NSM on update, retrieval, and storage-cost grounds and treats the decomposition as a physical design, not a new data model.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1145/318898.318923](https://doi.org/10.1145/318898.318923)
-- URL: https://doi.org/10.1145/318898.318923
+- ACM: https://dl.acm.org/doi/10.1145/318898.318923

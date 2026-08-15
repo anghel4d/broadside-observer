@@ -49,23 +49,22 @@ see:
 
 ## One-sentence takeaway
 
-Post isolates tag systems and shows how combinatorial decision problems reduce—simple rewriting with hard undecidability.
+Post isolates tag systems—read a fixed prefix, append a word that depends on it, repeat—and shows that general combinatorial decision problems reduce to them.
 
 ## Why it matters here
 
-Tag systems are minimal 'rewrite as computation'—relevant to procedural generation and rewriting engines.
+Tag systems are the minimal "rewrite as computation" object. Anoptic procedural generation, string-diagram rewriting, and any later production-rule engine sit on this grain: a tiny local rewrite with undecidable global behaviour.
 
 ## Key ideas
 
-- Tag systems defined.
-- Reduction techniques for decision problems.
-- Bridge to Post correspondence later.
+- A tag system has a deletion number \(\beta\) and a production for each alphabet symbol; each step deletes the first \(\beta\) symbols and appends the production of the first.
+- Post shows how apparently richer combinatorial decision problems reduce to the halting/reachability question for tag systems.
+- The paper is the bridge from the 1936 combinatory-process formulation to the 1947 unsolvability of Thue's word problem and to the later Post correspondence problem.
+- Simple rewriting, hard undecidability: the same moral as later term-rewriting and cellular-automaton universality results.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2371809](https://doi.org/10.2307/2371809)
-- URL: https://doi.org/10.2307/2371809
+- JSTOR: https://www.jstor.org/stable/2371809

@@ -2,7 +2,7 @@
 title: "Bitsquid Data-Driven / Entity system posts"
 authors:
   - "Niklas Frykholm"
-year: 2013
+year: 2014
 venue: "Bitsquid Blog"
 arxiv: null
 doi: null
@@ -48,21 +48,22 @@ see:
 
 ## One-sentence takeaway
 
-Describes building a data-oriented entity system with arrays of components and late-bound references.
+Bitsquid/Stingray entities are 64-bit IDs; each component type is a packed array looked up by ID, with no virtual game-object blob and with creation driven from data.
 
 ## Why it matters here
 
-Stingray/Bitsquid entity system: data-driven, ID-based, production-proven.
+This is the production-proven ID-and-arrays design ano sits next to. Late-bound references and per-component arrays are the Bitsquid lesson; Flecs later adds the query language.
 
 ## Key ideas
 
-- Describes building a data-oriented entity system with arrays of components and late-bound references.
+- An entity is an identifier, not a C++ object. Destroying it just invalidates the ID; component arrays stay dense.
+- Each system owns a contiguous array of its component structs plus a map from entity ID to slot.
+- Designers spawn entity types from data (JSON/SJSON), not from compiled subclasses.
+- Late-bound references (IDs, not pointers) let components talk across arrays without dangling into reallocations.
+- August 2014 post "Building a Data-Oriented Entity System" is the canonical write-up of the Bitsquid/Autodesk Stingray approach.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html
+- Post: https://bitsquid.blogspot.com/2014/08/building-data-oriented-entity-system.html

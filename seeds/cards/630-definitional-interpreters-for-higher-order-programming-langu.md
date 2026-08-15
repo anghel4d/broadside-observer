@@ -29,11 +29,6 @@ cites:
     year: 1971
     arxiv: null
     doi: null
-  - title: "Call-by-name, call-by-value and the λ-calculus"
-    url: "https://doi.org/10.1016/0304-3975(75)90017-1"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/0304-3975(75)90017-1"
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
@@ -42,7 +37,6 @@ cites:
 see:
   - "617-the-mechanical-evaluation-of-expressions"
   - "612-toward-a-mathematical-semantics-for-computer-languages"
-  - "627-call-by-name-call-by-value-and-the-lambda-calculus"
   - "615-fundamental-concepts-in-programming-languages"
 ---
 
@@ -50,23 +44,21 @@ see:
 
 ## One-sentence takeaway
 
-Reynolds shows definitional interpreters and introduces continuations in crisp form—meta-circular clarity.
+Reynolds shows that a language can be defined by an interpreter written in a simpler metalanguage, and that continuation-passing and defunctionalization are systematic transforms of that interpreter.
 
 ## Why it matters here
 
-Bridge among Landin, Scott–Strachey, and continuation-passing style.
+Bridge among Landin, Scott–Strachey, and CPS compilers. The “definitional interpreter” move — write the semantics as a runnable program, then transform it — is how one would pin down ano evaluation without waiting for a denotational model.
 
 ## Key ideas
 
-- Definitional interpreters.
-- Continuation-passing style expositions.
-- Higher-order language meta-theory.
+- A definitional interpreter is an executable semantics; meta-circularity is optional and often harmful.
+- Order of evaluation in the *defining* language leaks into the defined language unless the interpreter is written in continuation-passing style.
+- Defunctionalization replaces higher-order function values by a first-order datatype of closures plus an apply function.
+- ACM Annual Conference 1972; HOSC later reprints it. Reynolds revisits the essay in 1998 (card 642).
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1145/800194.805852](https://doi.org/10.1145/800194.805852)
-- URL: https://doi.org/10.1145/800194.805852

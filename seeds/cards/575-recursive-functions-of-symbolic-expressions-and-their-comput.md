@@ -24,60 +24,35 @@ cites:
     year: 1941
     arxiv: null
     doi: null
-  - title: "The Mechanical Evaluation of Expressions"
-    url: "https://doi.org/10.1093/comjnl/6.4.308"
-    year: 1964
-    arxiv: null
-    doi: "10.1093/comjnl/6.4.308"
   - title: "Programs with Common Sense"
     url: "https://www-formal.stanford.edu/jmc/mcc59.pdf"
     year: 1959
     arxiv: null
     doi: null
-  - title: "The FORTRAN Automatic Coding System"
-    url: "https://doi.org/10.1145/1455567.1455599"
-    year: 1957
-    arxiv: null
-    doi: "10.1145/1455567.1455599"
-  - title: "Can Programming Be Liberated from the von Neumann Style?"
-    url: "https://doi.org/10.1145/359576.359579"
-    year: 1978
-    arxiv: null
-    doi: "10.1145/359576.359579"
-  - title: "Computational lambda-calculus and monads"
-    url: "https://doi.org/10.1109/LICS.1989.39155"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/LICS.1989.39155"
 see:
   - "511-the-calculi-of-lambda-conversion"
-  - "617-the-mechanical-evaluation-of-expressions"
   - "576-programs-with-common-sense"
-  - "622-the-fortran-automatic-coding-system"
-  - "157-can-programming-be-liberated-from-the-von-neumann-style-a-fu"
-  - "037-computational-lambda-calculus-and-monads"
 ---
 
 # Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I
 
 ## One-sentence takeaway
 
-McCarthy defines LISP: symbolic expressions, eval/apply, and garbage collection—λ-calculus meets a living language.
+McCarthy defines LISP as recursive functions on S-expressions, with `eval`/`apply` as a universal interpreter and a sketched garbage collector.
 
 ## Why it matters here
 
-Root of functional programming practice; wires Church λ into programmable agents and ano tooling.
+This is the living root of functional practice in ano: lists as data and code, conditional expressions, and machines that reclaim their own cons cells.
 
 ## Key ideas
 
-- S-expressions and M-expressions.
-- eval/apply metacircular interpreter.
-- Automatic memory reclamation sketched.
-- Conditional expressions and recursion as core.
+- Symbolic expressions are atoms and dotted pairs; M-expressions are the meta-language that compiles into S-expressions.
+- Elementary functions `car`, `cdr`, `cons`, `eq`, `atom` plus conditional expressions and recursion suffice for a universal function `eval`.
+- The metacircular interpreter makes the language its own definition; quoting distinguishes data from forms to evaluate.
+- Automatic storage reclamation (mark-and-sweep style) is proposed so the programmer need not `erase`.
+- Published CACM April 1960; Part II was never written. Church's λ-calculus is the acknowledged ancestor.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

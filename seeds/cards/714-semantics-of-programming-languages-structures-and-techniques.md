@@ -29,45 +29,43 @@ cites:
     year: 1977
     arxiv: null
     doi: "10.1016/0304-3975(77)90044-5"
-  - title: "The Formal Semantics of Programming Languages: An Introduction"
-    url: "https://mitpress.mit.edu/9780262731034/the-formal-semantics-of-programming-languages/"
-    year: 1993
-    arxiv: null
-    doi: null
   - title: "Fundamental Concepts in Programming Languages"
     url: "https://doi.org/10.1023/A:1010000313106"
     year: 1967
     arxiv: null
     doi: "10.1023/A:1010000313106"
+  - title: "Toward a Mathematical Semantics for Computer Languages"
+    url: "https://www.cs.ox.ac.uk/files/3228/PRG06.pdf"
+    year: 1971
+    arxiv: null
+    doi: null
 see:
   - "656-domains-for-denotational-semantics"
   - "657-lcf-considered-as-a-programming-language"
-  - "713-the-formal-semantics-of-programming-languages-an-introductio"
   - "615-fundamental-concepts-in-programming-languages"
+  - "612-toward-a-mathematical-semantics-for-computer-languages"
 ---
 
 # Semantics of Programming Languages: Structures and Techniques
 
 ## One-sentence takeaway
 
-Graduate textbook on denotational and operational techniques with domain-theoretic tools.
+Graduate denotational semantics is organized as reusable domain-theoretic constructions — products, function spaces, recursive types, adequacy — rather than as a tour of particular languages.
 
 ## Why it matters here
 
-Gunter's semantics book — the structural/techniques companion to Winskel and Scott domain papers.
+Winskel teaches the three styles on IMP; Gunter is the techniques book you open when an Anoptic language has higher-order store, recursive types, or a full-abstraction question. It is how Scott domains and Plotkin LCF become tools instead of papers.
 
 ## Key ideas
 
-- Domain theory for language semantics.
-- Techniques for adequacy and full abstraction setup.
-- Typed and untyped case studies.
-- Pairs with Scott domains and Plotkin PCF.
+- Universal domains and the usual type constructors are built so language features have standard interpretations.
+- Adequacy and the setup for full abstraction are treated as techniques, with PCF-shaped case studies.
+- Untyped and typed calculi are both in scope; the book is closer to Scott–Plotkin than to a Hoare-logic course.
+- Strachey’s fundamental concepts and Scott–Strachey denotational semantics are the cited roots.
+- MIT Press Foundations of Computing, 1992 (ISBN 978-0-262-57095-4).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- URL: https://mitpress.mit.edu/9780262570954/semantics-of-programming-languages/
+- MIT Press: https://mitpress.mit.edu/9780262570954/semantics-of-programming-languages/

@@ -6,7 +6,7 @@ year: 1965
 venue: "Problemy Peredachi Informatsii / Problems of Information Transmission"
 arxiv: null
 doi: null
-source: "https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf"
+source: "https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf"
 topics:
   - algorithmic-information
   - kolmogorov-complexity
@@ -18,59 +18,48 @@ pool: "maths-foundations"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "Foundations of the Theory of Probability"
-    url: "https://www.worldcat.org/title/foundations-of-the-theory-of-probability/oclc/523"
-    year: 1933
-    arxiv: null
-    doi: "10.1007/978-3-642-49888-6"
-  - title: "On the Length of Programs for Computing Finite Binary Sequences"
-    url: "https://doi.org/10.1145/321356.321363"
-    year: 1966
-    arxiv: null
-    doi: "10.1145/321356.321363"
-  - title: "A Formal Theory of Inductive Inference, Parts I–II"
-    url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
-    year: 1964
-    arxiv: null
-    doi: "10.1016/S0019-9958(64)90223-2"
   - title: "A Mathematical Theory of Communication"
     url: "https://doi.org/10.1002/j.1538-7305.1948.tb01338.x"
     year: 1948
     arxiv: null
     doi: "10.1002/j.1538-7305.1948.tb01338.x"
-  - title: "The Definition of Random Sequences"
-    url: "https://doi.org/10.1016/S0019-9958(66)80018-9"
-    year: 1966
+  - title: "A Formal Theory of Inductive Inference, Parts I–II"
+    url: "https://doi.org/10.1016/S0019-9958(64)90223-2"
+    year: 1964
     arxiv: null
-    doi: "10.1016/S0019-9958(66)80018-9"
+    doi: "10.1016/S0019-9958(64)90223-2"
+  - title: "Foundations of the Theory of Probability"
+    url: "https://archive.org/details/foundationsofthe00kolm"
+    year: 1933
+    arxiv: null
+    doi: "10.1007/978-3-642-49888-6"
 see:
-  - "603-foundations-of-the-theory-of-probability"
-  - "607-on-the-length-of-programs-for-computing-finite-binary-sequen"
-  - "610-a-formal-theory-of-inductive-inference-parts-i-ii"
   - "553-a-mathematical-theory-of-communication"
-  - "611-the-definition-of-random-sequences"
+  - "610-a-formal-theory-of-inductive-inference-parts-i-ii"
+  - "603-foundations-of-the-theory-of-probability"
 ---
 
 # Three Approaches to the Quantitative Definition of Information
 
 ## One-sentence takeaway
 
-Kolmogorov defines information via program length—algorithmic complexity K(x).
+Kolmogorov defines the information in an individual object as the length of a shortest program that prints it, and contrasts that algorithmic quantity with combinatorial and probabilistic (Shannon) measures.
 
 ## Why it matters here
 
-Algorithmic information theory root; randomness as incompressibility.
+This is the root of "randomness = incompressibility" that later cards use for AIT and for thinking about what an agent can actually store: Broadside's provenance and memory budgets are finite programs, not ensemble entropies.
 
 ## Key ideas
 
-- Combinatorial, probabilistic, and algorithmic approaches.
-- Prefix-free / plain complexity lineage begins.
-- Independence via complexity.
+- Three measures of information: combinatorial (log of a class size), probabilistic (Shannon entropy of a distribution), algorithmic (shortest effective description).
+- Algorithmic complexity K(x) is well-defined up to an additive constant once a universal machine is fixed.
+- Most strings are incompressible; a string is "random" when K(x) is close to |x|.
+- Conditional complexity K(x|y) gives a notion of information in x about y that does not need a joint distribution.
+- Original: *Probl. Peredachi Inf.* 1:1 (1965), 3–11 (Math-Net ppi68).
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.math.uni-bonn.de/ag/logik/Events/2021/Kolmogorov-ThreeApproaches.pdf
+- English scan: https://cqi.inf.usi.ch/qic/Kolmogorov_Complexity_1965.pdf
+- Math-Net original: https://www.mathnet.ru/eng/ppi68

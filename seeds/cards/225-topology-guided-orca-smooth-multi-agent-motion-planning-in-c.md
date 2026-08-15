@@ -39,25 +39,23 @@ see:
 
 ## One-sentence takeaway
 
-We present Topology-Guided ORCA as an alternative simulator to replace ORCA for planning smooth multi-agent motions in environments with static obstacles.
+Topology-Guided ORCA feeds ORCA a sequence of waypoints from a topological graph of free space so agents no longer freeze when a static obstacle sits on the straight-line goal.
 
 ## Why it matters here
 
-Classical game/RTS AI technique (non-LLM) for GRID COMMAND lineage (Topology-Guided ORCA: Smooth Multi-Agent Motion Planning in Constrained Environm).
+GRID COMMAND corridors, chokepoints, and base interiors are exactly the constrained maps where vanilla ORCA ignores walls until it is too late; this is the cheap planner-in-front-of-ORCA fix.
 
 ## Key ideas
 
-- We present Topology-Guided ORCA as an alternative simulator to replace ORCA for planning smooth multi-agent motions in environments with static obstacles.
-- Despite the impressive performance in simulating multi-agent crowd motion in free space, ORCA encounters a significant challenge in navigating the agents with the presence of static obstacles.
-- ORCA ignores static obstacles until an agent gets too close to an obstacle, and the agent will get stuck if the obstacle intercepts an agent's path toward the goal.
-- To address this challenge, Topology-Guided ORCA constructs a graph to represent the topology of the traversable region of the environment.
-- We use a path planner to plan a path of waypoints that connects each agent's start and goal positions.
+- Stock ORCA is strong in open space but treats static geometry as a last-moment constraint, so an intercepting wall traps the agent.
+- A graph of the traversable region encodes the topology of free space.
+- A path planner emits waypoints from start to goal; each waypoint becomes ORCA's next preferred-velocity target.
+- Crowd experiments in constrained maps produce smoother, more natural trajectories than bare ORCA.
+- Positioned as a simulator for training social-navigation policies, not only as an online game steering layer. RSS 2024 workshop paper.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2407.16771](https://arxiv.org/abs/2407.16771)
-- URL: https://arxiv.org/abs/2407.16771
+- PDF: https://arxiv.org/pdf/2407.16771

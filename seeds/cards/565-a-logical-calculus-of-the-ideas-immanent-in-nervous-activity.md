@@ -20,36 +20,12 @@ pool: "agents"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "First Draft of a Report on the EDVAC"
-    url: "https://web.mit.edu/STS.035/www/PDFs/edvac.pdf"
-    year: 1945
-    arxiv: null
-    doi: "10.5479/sil.538961.39088011475779"
-  - title: "Representation of Events in Nerve Nets and Finite Automata"
-    url: "https://press.princeton.edu/books/paperback/9780691079165/automata-studies"
-    year: 1956
-    arxiv: null
-    doi: null
-  - title: "Cybernetics: Or Control and Communication in the Animal and the Machine"
-    url: "https://mitpress.mit.edu/9780262730099/cybernetics/"
-    year: 1948
-    arxiv: null
-    doi: null
-  - title: "The Organization of Behavior"
-    url: "https://www.worldcat.org/title/organization-of-behavior/oclc/523"
-    year: 1949
-    arxiv: null
-    doi: null
   - title: "How We Know Universals: The Perception of Auditory and Visual Forms"
     url: "https://doi.org/10.1007/BF02478291"
     year: 1947
     arxiv: null
     doi: "10.1007/BF02478291"
 see:
-  - "542-first-draft-of-a-report-on-the-edvac"
-  - "530-representation-of-events-in-nerve-nets-and-finite-automata"
-  - "561-cybernetics-or-control-and-communication-in-the-animal-and-t"
-  - "567-the-organization-of-behavior"
   - "566-how-we-know-universals-the-perception-of-auditory-and-visual"
 ---
 
@@ -57,22 +33,21 @@ see:
 
 ## One-sentence takeaway
 
-McCulloch–Pitts show networks of idealized neurons can realize propositional/temporal logic—brains as computing.
+McCulloch and Pitts prove that networks of idealized threshold neurons can realize any propositional formula and, with loops, a wide class of temporal predicates.
 
 ## Why it matters here
 
-Cited by von Neumann's EDVAC; founding neural computation and finite automata intuitions.
+Von Neumann's EDVAC "organs" language and every later neural/agent net sit on this identification of brains with computing devices.
 
 ## Key ideas
 
-- Threshold neuron model.
-- Logical primitives via nets.
-- Links neurophysiology to Turing computation.
-- Inspiration for EDVAC 'organs' language.
+- A neuron fires all-or-none when the weighted sum of inputs exceeds a threshold; inhibition is an absolute veto in the original model.
+- Combinational nets compute Boolean functions; cycles give memory and a calculus of time-delayed propositions.
+- Any finite automaton — and, they argue, any Turing-computable behavior with a tape — can be embodied in such a net.
+- The paper is the 1943 founding text of neural computation, published in *Bulletin of Mathematical Biophysics*.
+- Pitts–McCulloch 1947 extends the same nets toward invariant perception.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 

@@ -59,10 +59,6 @@ Provenance-first memory is a standing topic; this is the missing *bill*. Long GR
 
 ## Caveats
 
-- Cost dialogues are synthetic; fact-extraction density may differ in real traces.
-- Single accuracy corpus (LoCoMo persona chat), not task-oriented RTS orders.
-- Hindsight ingest LLM was not per-cell-controlled; exclude it from backbone comparisons.
-- gpt-oss-20b full-history aborted at turn 374 on a serving-stack token-count bug.
 
 ## Links
 

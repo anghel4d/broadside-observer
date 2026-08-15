@@ -19,52 +19,42 @@ reviewed: "2026-08-13"
 pool: "scratch_curated.json"
 relevance_score: 9
 cites:
-  - title: "Reinforcement Learning"
-    url: "https://doi.org/10.2174/9781681089409121010008"
-    year: 2021
-    arxiv: null
-    doi: "10.2174/9781681089409121010008"
-  - title: "Support Vector Machines"
-    url: "https://doi.org/10.1007/978-3-642-27848-8_415-2"
-    year: 2015
-    arxiv: null
-    doi: "10.1007/978-3-642-27848-8_415-2"
-  - title: "Frequent Pattern Mining"
-    url: "https://doi.org/10.1007/978-3-031-17442-1_9"
-    year: 2023
-    arxiv: null
-    doi: "10.1007/978-3-031-17442-1_9"
-  - title: "Monte-Carlo Tree Search"
-    url: "https://doi.org/10.26481/dis.20100930gc"
-    year: 2010
-    arxiv: null
-    doi: "10.26481/dis.20100930gc"
-  - title: "Unsupervised Learning"
-    url: "https://doi.org/10.1007/978-3-662-69995-9_5"
-    year: 2024
-    arxiv: null
-    doi: "10.1007/978-3-662-69995-9_5"
+  - title: "Forward Modeling for Partial Observation Strategy Games - A StarCraft Defogger"
+    url: "https://arxiv.org/abs/1812.00054"
+    year: 2018
+    arxiv: "1812.00054"
+    doi: null
+  - title: "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning"
+    url: "https://arxiv.org/abs/1803.11485"
+    year: 2018
+    arxiv: "1803.11485"
+    doi: null
+see:
+  - "096-forward-modeling-for-partial-observation-strategy-games-a-st"
+  - "098-qmix-monotonic-value-function-factorisation-for-deep-multi-a"
 ---
 
 # Artificial Intelligence and Games
 
 ## One-sentence takeaway
 
-Comprehensive textbook covering game-playing agents, player modeling, and procedural content generation.
+Yannakakis and Togelius's textbook organizes game AI around three jobs — playing games, generating games, and modeling players — rather than around individual algorithms.
 
 ## Why it matters here
 
-Standard textbook synthesizing game AI and PCG — orientation map for Broadside seed digests.
+Broadside's game-AI seed list and GRID COMMAND bots need that three-way map: playing (RTS/MARL), generating (PCG), and modeling (opponents/players).
 
 ## Key ideas
 
-- Comprehensive textbook covering game-playing agents, player modeling, and procedural content generation.
+- First comprehensive textbook aimed at graduate/advanced-undergrad courses and practitioners, with lecture slides and exercises on https://gameaibook.org.
+- Playing covers search, planning, and (in later material) deep RL inside games as testbeds.
+- Generating covers procedural content generation as an AI problem, not only as a content pipeline.
+- Modeling covers player experience, opponent models, and evaluation of human-facing systems.
+- A 2025 second edition (Springer 10.1007/978-3-031-83347-2) adds deep RL, generative models, and an ethics chapter; this card tracks the 2018 first edition named by the seed.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-
 ## Links
 
-- DOI: [10.1007/978-3-319-63519-4](https://doi.org/10.1007/978-3-319-63519-4)
-- URL: https://doi.org/10.1007/978-3-319-63519-4
+- DOI (1st ed.): [10.1007/978-3-319-63519-4](https://doi.org/10.1007/978-3-319-63519-4)
+- Companion site: https://gameaibook.org

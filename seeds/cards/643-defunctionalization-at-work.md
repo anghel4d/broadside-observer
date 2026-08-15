@@ -30,46 +30,30 @@ cites:
     year: 1998
     arxiv: null
     doi: "10.1023/A:1010075320953"
-  - title: "The Essence of Compiling with Continuations"
-    url: "https://doi.org/10.1145/155090.155113"
-    year: 1993
-    arxiv: null
-    doi: "10.1145/155090.155113"
-  - title: "Control Operators, the SECD Machine, and the λ-Calculus"
-    url: "https://www2.ccs.neu.edu/racket/pubs/fdpc3-ff.pdf"
-    year: 1986
-    arxiv: null
-    doi: null
 see:
   - "630-definitional-interpreters-for-higher-order-programming-langu"
   - "642-definitional-interpreters-revisited"
-  - "666-the-essence-of-compiling-with-continuations"
-  - "665-control-operators-the-secd-machine-and-the-calculus"
 ---
 
 # Defunctionalization at Work
 
 ## One-sentence takeaway
 
-Shows defunctionalization as a practical, reversible program transformation used systematically with CPS.
+Danvy and Nielsen turn Reynolds’ defunctionalization into a reversible, pair-with-CPS methodology: higher-order evaluators become first-order abstract machines and back.
 
 ## Why it matters here
 
-Operationalizes Reynolds' defunctionalization for modern interpreter/compiler pipelines.
+Operationalizes Reynolds for modern interpreter/compiler pipelines. The recipe for deriving a CEK-style machine (or an ano bytecode loop) from a high-level evaluator is this paper, not folklore.
 
 ## Key ideas
 
-- Defunctionalization + CPS as a paired methodology.
-- Obtain abstract machines from high-level evaluators.
-- Reversibility: refunctionalization.
-- Connects definitional interpreters to A-normal form and CEK-style machines.
+- Defunctionalize the continuations of a CPS interpreter to obtain an apply function whose constructors *are* the machine’s frames.
+- Refunctionalization is the inverse: recover the higher-order evaluator from the first-order apply.
+- The same pair of transforms connects definitional interpreters to A-normal form and to Landin/Felleisen machines.
+- PPDP 2001, pp. 162–174.
 
 ## Caveats
-
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
 
 ## Links
 
 - DOI: [10.1145/773184.773202](https://doi.org/10.1145/773184.773202)
-- URL: https://doi.org/10.1145/773184.773202

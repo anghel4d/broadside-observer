@@ -26,23 +26,12 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression"
-    url: "https://arxiv.org/abs/2605.09100"
-    year: 2026
-    arxiv: "2605.09100"
-    doi: null
-  - title: "MiniCache: KV Cache Compression in Depth Dimension for Large Language Models"
-    url: "https://arxiv.org/abs/2405.14366"
-    year: 2024
-    arxiv: "2405.14366"
-    doi: null
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
     arxiv: "2309.06180"
     doi: null
 see:
-  - "057-grc-unifying-reasoning-driven-generation-retrieval-and-compr"
   - "002-efficient-memory-management-for-large-language-model-serving"
 ---
 
@@ -50,25 +39,23 @@ see:
 
 ## One-sentence takeaway
 
-Mixture-of-Experts (MoE) architectures scale large language models (LLMs) to hundreds of billions of parameters.
+Moebius switches a live MoE serving engine between tensor parallelism and expert parallelism between decode steps without restarting or dropping in-flight requests.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch)
+Ano serving and GRID COMMAND rollouts swing from bursty high concurrency to long straggler tails; pinning TP or EP forfeits the other side of that curve.
 
 ## Key ideas
 
-- Mixture-of-Experts (MoE) architectures scale large language models (LLMs) to hundreds of billions of parameters.
-- Serving a single MoE model requires multiple GPUs operating in parallel, typically through tensor parallelism (TP) or expert parallelism (EP).
-- The optimal choice depends on the number of in-flight requests: TP is faster at low concurrency, whereas EP wins at high concurrency.
-- Production workloads cross this boundary continually: online serving sees bursty arrivals that subside into quiet periods, and reinforcement-learning rollouts begin as a high-concurrency burst that decays into a long tail of stragglers.
-- Pinning either layout therefore forfeits performance when the workload crosses to the other side.
+- TP is faster at low concurrency, EP at high concurrency; production online serving and RL rollouts continually cross that boundary.
+- EP and TP are two layouts of one model over byte-identical expert weights and KV cache; a switch only changes which rank owns each slice.
+- The irreducible cost is moving owner-changed slices; fused GPU-to-GPU kernels reshard weights and KV at fixed addresses.
+- On 8× H200 serving Qwen3-235B-A22B, Moebius matches the better static layout at every point and beats it 1.16–1.25× on RL rollouts.
+- Each switch takes 215–434 ms; holding both layouts resident costs 2.4% extra memory.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2606.26607](https://arxiv.org/abs/2606.26607)
-- URL: https://arxiv.org/abs/2606.26607
+- PDF: https://arxiv.org/pdf/2606.26607

@@ -59,9 +59,6 @@ Continual skills are a standing Broadside topic, and GRID COMMAND / Anoptic agen
 
 ## Caveats
 
-- Computer-use / coding sandboxes with synthetic secrets; not a claim about every memory/policy update channel.
-- Judges are Gemini-3-Flash / Kimi-K2; headline rates use fixed denominators that treat missing events as zeros.
-- SafeEvolve’s remaining cost is lower carryover *utility* when useful procedures mix with transferable risk.
 
 ## Links
 

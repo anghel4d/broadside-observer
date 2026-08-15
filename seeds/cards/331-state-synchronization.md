@@ -1,5 +1,4 @@
 ---
-
 title: "State Synchronization"
 authors:
   - "Glenn Fiedler"
@@ -42,20 +41,21 @@ see:
 
 ## One-sentence takeaway
 
-State sync vs lockstep tradeoffs.
+Fiedler’s 2015 article argues that most multiplayer games should stream compressed world-state snapshots from a trusted server, not lockstep inputs, once the simulation is too big or too non-deterministic to replay.
 
 ## Why it matters here
 
-State sync vs lockstep tradeoffs.
+GRID COMMAND / Broadside have to pick lockstep vs. state-sync; this is the practical write-up of when snapshots, deltas, and jitter buffers beat deterministic lockstep.
 
 ## Key ideas
 
-- State sync vs lockstep tradeoffs.
+- Lockstep sends inputs and requires identical sims; one desync or a late joiner breaks it. State sync sends the result of the sim.
+- The server is authoritative. Clients render interpolated snapshots and predict local avatars, then correct when the next snapshot arrives.
+- Snapshots are delta-compressed against an ACK’d baseline and prioritized so important objects fill the packet first.
+- Jitter buffer + interpolation delay hide packet-time variance; extrapolation is a last resort.
+- Complements his earlier snapshot-interpolation and deterministic-lockstep posts on gafferongames.com.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
 
 ## Links
 

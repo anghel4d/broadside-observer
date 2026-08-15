@@ -29,7 +29,7 @@ cites:
     arxiv: null
     doi: "10.2307/1969708"
   - title: "On the unsolvability of the problem of reducibility of the theory of algorithms"
-    url: "https://www.worldcat.org/search?q=Muchnik+reducibility+1956"
+    url: "https://www.mathnet.ru/rus/person46479"
     year: 1956
     arxiv: null
     doi: null
@@ -43,23 +43,22 @@ see:
 
 ## One-sentence takeaway
 
-Friedberg solves Post's problem: there exist incomplete nonrecursive r.e. degrees—priority method born.
+Friedberg solves Post's problem: there exist r.e. sets \(A, B\) with \(A \nleq_T B\), \(B \nleq_T A\), and neither recursive—the priority method is born.
 
 ## Why it matters here
 
-Classic 'structure inside r.e. sets' result; methodologically foundational.
+Classic "structure inside r.e. sets" result. Methodologically, priority-with-injury is the pattern every later computability construction (and a surprising number of compiler/scheduler proofs) still copies: satisfy requirement \(R_e\) unless a higher-priority requirement injures it, and argue each requirement is injured only finitely often.
 
 ## Key ideas
 
-- Priority injury method.
-- Positive solution to Post's problem.
-- Independent of Muchnik.
+- Builds two r.e. sets in stages, restraining enumerations so that each reduction \(\Phi_e^A = B\) (and vice versa) is eventually diagonalized.
+- Lower-priority restraints may be injured when a higher-priority requirement acts; finiteness of injury yields the result.
+- Independent of Muchnik's 1956 Doklady note; together they are the Friedberg–Muchnik theorem.
+- Positive solution: incomplete non-recursive r.e. degrees exist.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1073/pnas.43.2.236](https://doi.org/10.1073/pnas.43.2.236)
-- URL: https://doi.org/10.1073/pnas.43.2.236
+- PNAS: https://www.pnas.org/doi/10.1073/pnas.43.2.236

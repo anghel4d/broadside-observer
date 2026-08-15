@@ -1,12 +1,13 @@
 ---
 title: The Art of Multiprocessor Programming
 authors:
-- Herlihy; Shavit
+- Maurice Herlihy
+- Nir Shavit
 year: 2008
-venue: Book
+venue: Morgan Kaufmann
 arxiv: null
 doi: null
-source: ''
+source: https://shop.elsevier.com/books/the-art-of-multiprocessor-programming/herlihy/978-0-12-370591-4
 topics:
 - lockfree
 - concurrency
@@ -27,36 +28,31 @@ cites:
   year: 1991
   arxiv: null
   doi: 10.1145/114005.102808
-- title: 'A Better x86 Memory Model: x86-TSO'
-  url: https://doi.org/10.1145/1785326.1785333
-  year: 2010
-  arxiv: null
-  doi: 10.1145/1785326.1785333
 see:
 - "203-linearizability-a-correctness-condition-for-concurrent-objec"
 - "036-wait-free-synchronization"
-- "485-a-better-x86-memory-model-x86-tso"
 ---
 
 # The Art of Multiprocessor Programming
 
 ## One-sentence takeaway
 
-Standard textbook for concurrent data structures.
+Herlihy and Shavit’s 2008 textbook is the working manual for linearizability: it takes you from mutual exclusion through lock-free stacks, queues, and hash tables, with Java implementations of every structure.
 
 ## Why it matters here
 
-Standard textbook for concurrent data structures.
+Broadside’s job system, command queues, and ECS column swaps are concurrent objects. Linearizability plus the lock-free stack/queue recipes are the contract those structures have to meet; the 2008 first edition is the one this card is pinned to, not the 2020 rewrite.
 
 ## Key ideas
 
-- Standard textbook for concurrent data structures.
+- Linearizability (ch. 3) is the correctness condition: each method call appears to take effect at a single instant between its invocation and response, and that sequential history is legal for the object.
+- Progress comes in grades — deadlock-freedom, lock-freedom, wait-freedom — and consensus number ranks primitives (CAS is universal; a wait-free concurrent object can be built from it).
+- Practical locks first: test-and-set, ticket, MCS/CLH queues, then monitors. Then lock-based lists (coarse, fine, optimistic, lazy) as the template for every later structure.
+- Lock-free stacks and queues (chs. 10–11) are the ABA problem in production form: a CAS on a recycled node succeeds against a stale pointer unless you version it or defer reclamation.
+- Later chapters cover counting networks, concurrent hashing, skiplists, priority queues, work-stealing/futures, barriers, and a first-cut transactional-memory chapter — all with Java code, not pseudocode.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- (see venue/year; link TBD)
+- Elsevier shop (1st ed., ISBN 978-0-12-370591-4): https://shop.elsevier.com/books/the-art-of-multiprocessor-programming/herlihy/978-0-12-370591-4

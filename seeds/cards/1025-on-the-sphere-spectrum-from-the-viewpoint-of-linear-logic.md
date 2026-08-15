@@ -67,9 +67,6 @@ Why you might love this: Girard's two multiplicative connectives finally sit on 
 
 ## Caveats
 
-- A short note, not a new fragment of linear logic; the logical reading is the author's, the constructions are Lydakis / Connes–Consani / Spivak–Srinivasan.
-- Substitution is not symmetric on the nose; smash is. Do not silently treat this as a compact closed or *-autonomous model.
-- Polynomial-functor LDC (the Spivak–Srinivasan companion) is the theorem engine, not reminted.
 
 ## Links
 

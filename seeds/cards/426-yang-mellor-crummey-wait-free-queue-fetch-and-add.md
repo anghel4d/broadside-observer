@@ -76,10 +76,6 @@ Shows Anoptic can demand wait-freedom without surrendering LCRQ-class speed when
 
 ## Caveats
 
-- Requires FAA (and careful epoch SMR); not a pure CAS portability story.
-- Implementation complexity is substantial versus Vyukov rings.
-- Seed card; promote before relying on fine-grained claims.
-
 ## Links
 
 - DOI: [10.1145/2851141.2851168](https://doi.org/10.1145/2851141.2851168)

@@ -28,7 +28,7 @@ cites:
     arxiv: null
     doi: "10.2307/2371045"
   - title: "On Undecidable Propositions of Formal Mathematical Systems"
-    url: "https://www.worldcat.org/title/undecidable/oclc/523589"
+    url: "https://albert.ias.edu/20.500.12111/7996"
     year: 1934
     arxiv: null
     doi: null
@@ -42,22 +42,21 @@ see:
 
 ## One-sentence takeaway
 
-Church's correction tightens the 1936 Entscheidungsproblem note—bibliography hygiene for the thesis papers.
+Church's same-year erratum repairs the reduction in the JSL Entscheidungsproblem note so the unsolvability claim stands.
 
 ## Why it matters here
 
-Keeps the 1936 Church cluster accurate when wiring cites.
+Keeps the 1936 Church cluster accurate when wiring cites: quote the note *and* the correction, or cite the AJM paper, rather than a silently patched textbook version.
 
 ## Key ideas
 
-- Erratum to JSL Entscheidungsproblem note.
-- Shows how fast the 1936 results were iterating.
+- Identifies a gap in the original reduction from an unsolvable number-theoretic problem to FOL validity.
+- Supplies the missing step without changing the conclusion.
+- Shows how fast the 1936 results were iterating—proof, note, and erratum in one year.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.2307/2268319](https://doi.org/10.2307/2268319)
-- URL: https://doi.org/10.2307/2268319
+- JSTOR: https://www.jstor.org/stable/2268319

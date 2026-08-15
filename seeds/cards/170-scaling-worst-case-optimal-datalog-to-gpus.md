@@ -7,7 +7,7 @@ authors:
   - "Sidharth Kumar"
   - "Kristopher Micinski"
 year: 2026
-venue: "arXiv"
+venue: "arXiv:cs.DB"
 arxiv: "2604.20073"
 doi: null
 source: "https://arxiv.org/abs/2604.20073"
@@ -45,25 +45,22 @@ see:
 
 ## One-sentence takeaway
 
-Datalog is a declarative logic-programming language used for complex analytic reasoning workloads such as program analysis and graph analytics.
+SRDatalog is a GPU Datalog engine built on worst-case optimal joins with columnar storage and skew-aware load balancing, avoiding the AGM blowup that binary-join GPU engines hit on DOOP- and ddisasm-class rules.
 
 ## Why it matters here
 
-Datalog/deductive evaluation relevant to ano standing rules over columnar ECS.
+Standing rules over a wide ECS world are multiway joins, not pairwise hash joins. If ano ever evaluates them on GPU, WCOJ plus flat columns is the engine shape — binary join trees will OOM on the same queries.
 
 ## Key ideas
 
-- Datalog is a declarative logic-programming language used for complex analytic reasoning workloads such as program analysis and graph analytics.
-- Datalog's popularity is due to its unique price-point, marrying logic-defined specification with the potential for massive data parallelism.
-- While traditional engines are CPU-based, the memory-bound nature of Datalog has led to increasing interest in leveraging GPUs.
-- These engines beat CPU-based engines by operationalizing iterated relational joins via SIMT-friendly join algorithms.
-- Unfortunately, all existing GPU Datalog engines are built on binary joins, which are inadequate for the complex multi-way queries arising in production systems such as DOOP and ddisasm.
+- Existing GPU Datalog engines implement iterated binary joins; complex program-analysis rules then suffer AGM-bound blowup and run out of memory regardless of join order.
+- Worst-case optimal joins avoid that blowup but map poorly to SIMT under key skew, starving some SMs.
+- SRDatalog uses flat columnar storage and two-phase deterministic allocation so it does not rebuild indices the way static WCOJ systems do.
+- Skew is handled with root-level histogram-guided load balancing, helper-relation splitting, and stream-aligned rule multiplexing.
+- On real program-analysis workloads the authors report 21×–47× geometric-mean speedups over prior engines.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2604.20073](https://arxiv.org/abs/2604.20073)
-- URL: https://arxiv.org/abs/2604.20073

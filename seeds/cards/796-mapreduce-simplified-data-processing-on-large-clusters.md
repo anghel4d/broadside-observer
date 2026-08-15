@@ -31,24 +31,22 @@ see:
 
 ## One-sentence takeaway
 
-MapReduce: map/shuffle/reduce abstraction with automatic fault-tolerant execution.
+MapReduce lets a user write `map(k1,v1)→list(k2,v2)` and `reduce(k2,list(v2))→list(v2)` while the runtime partitions input, schedules workers, shuffles by key, retries failures, and kills stragglers.
 
 ## Why it matters here
 
-Programming model that defined a decade of cluster analytics.
+This is the programming model that defined a decade of cluster analytics and still shapes how Broadside would batch-process a corpus or how GRID COMMAND would roll up replay logs — locality-aware map, shuffle, reduce.
 
 ## Key ideas
 
-- Map then shuffle-by-key then reduce.
-- Runtime handles scheduling, faults, locality.
-- Pairs with GFS.
-- Ancestor of Hadoop/Spark dataflow thinking.
+- Input is split into $M$ map tasks; intermediate keys are hashed into $R$ reduce partitions; the master assigns idle workers.
+- GFS locality: the master prefers a mapper that already holds a replica of the split, so most bytes never leave the machine.
+- Worker failure re-executes in-flight tasks and completed maps (their output lived on the dead disk); completed reduces are already in GFS.
+- Combiners do a local reduce before the shuffle; backup tasks cover stragglers; optional skip-bad-record mode unsticks deterministic crashes.
 
 ## Caveats
 
-- Not ideal for iterative/low-latency workloads.
-- Shuffle is the usual bottleneck.
-
 ## Links
 
-- URL: https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters
+- USENIX: https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters
+- PDF: https://www.usenix.org/legacy/event/osdi04/tech/full_papers/dean/dean.pdf

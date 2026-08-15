@@ -41,25 +41,23 @@ see:
 
 ## One-sentence takeaway
 
-Retrieval-augmented generation (RAG) augments large language models (LLM) by retrieving relevant knowledge, showing promising potential in mitigating LLM hallucinations and enhancing response quality, thereby facilitating the great adoption of LLMs in practice.
+MultiHop-RAG is a news-corpus RAG benchmark whose queries need several supporting passages; existing retrievers and GPT-4/PaLM/Llama2-70B all score poorly once the evidence chain is longer than one hop.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests (MultiHop-RAG: Benchmarking Retrieval-Augmented Generation for Multi-Hop Queries)
+Broadside digests are multi-hop by construction: a claim, a citation, a contradiction. This dataset is the cheap filter for whether a RAG stack can retrieve and then reason over a chain, not a single snippet.
 
 ## Key ideas
 
-- Retrieval-augmented generation (RAG) augments large language models (LLM) by retrieving relevant knowledge, showing promising potential in mitigating LLM hallucinations and enhancing response quality, thereby facilitating the great adoption of LLMs in practice.
-- However, we find that existing RAG systems are inadequate in answering multi-hop queries, which require retrieving and reasoning over multiple pieces of supporting evidence.
-- Furthermore, to our knowledge, no existing RAG benchmarking dataset focuses on multi-hop queries.
-- In this paper, we develop a novel dataset, MultiHop-RAG, which consists of a knowledge base, a large collection of multi-hop queries, their ground-truth answers, and the associated supporting evidence.
-- We detail the procedure of building the dataset, utilizing an En
+- Standard RAG benchmarks do not focus on queries that require multiple pieces of evidence.
+- The release includes a knowledge base (English news), multi-hop queries, gold answers, and supporting evidence, plus a documented construction procedure.
+- Experiment one compares embedding models as retrievers of that evidence; experiment two gives gold or retrieved evidence to GPT-4, PaLM, and Llama2-70B.
+- Both retrieval and answer quality are reported as unsatisfactory for current RAG methods on this distribution.
+- Dataset and a reference RAG system are public at the MultiHop-RAG GitHub repository.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2401.15391](https://arxiv.org/abs/2401.15391)
-- URL: https://arxiv.org/abs/2401.15391
+- Dataset: https://github.com/yixuantt/MultiHop-RAG/

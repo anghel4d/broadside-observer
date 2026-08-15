@@ -4,7 +4,7 @@ authors:
 - Michael Held
 - Richard M. Karp
 year: 1962
-venue: JACM
+venue: Journal of the ACM
 arxiv: null
 doi: 10.1145/321105.321111
 source: "https://doi.org/10.1145/321105.321111"
@@ -24,37 +24,28 @@ cites:
   year: 1957
   arxiv: null
   doi: null
-- title: "Paths, Trees, and Flowers"
-  url: "https://doi.org/10.4153/CJM-1965-045-4"
-  year: 1965
-  arxiv: null
-  doi: 10.4153/CJM-1965-045-4
 see:
 - "805-dynamic-programming"
-- "807-paths-trees-and-flowers"
 ---
 
 # A Dynamic Programming Approach to Sequencing Problems
 
 ## One-sentence takeaway
 
-Held-Karp DP for TSP — O(n^2 2^n) exact exponential algorithm.
+Held and Karp give an exact TSP algorithm that tabulates, for every city subset S and endpoint j, the cheapest path that visits each vertex of S once and ends at j, running in O(n² 2ⁿ) rather than n!.
 
 ## Why it matters here
 
-Canonical exact TSP; template for subset DP on paths.
+It is the canonical subset-DP template: state = (visited set, endpoint). GRID COMMAND patrol / tour heuristics and ano combinatorial kernels still use that state shape even when they switch to branch-and-bound or approximations for larger n.
 
 ## Key ideas
 
-- State over visited sets and endpoint.
-- Exponential yet vastly better than n!.
-- Root of many subset-DP techniques.
-- Linked to later Lagrangian relaxations.
+- Recurrence: C(S, j) = min_{i ∈ S \ {j}} C(S \ {j}, i) + d(i, j), with C({j}, j) = 0 or the depot edge.
+- The exponential is in the subset count, not the permutation count, so n ≈ 20 is exact-solvable and n! is not.
+- The same DP applies to other sequencing / scheduling problems whose state is a processed subset.
+- Later Held–Karp 1-tree Lagrangian relaxations reuse the same tour dual, but that is a follow-on paper.
 
 ## Caveats
-
-- Still exponential — fine for small n only.
-- Large TSP needs heuristics/approx.
 
 ## Links
 

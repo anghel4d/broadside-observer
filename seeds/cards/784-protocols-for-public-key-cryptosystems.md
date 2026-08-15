@@ -30,23 +30,20 @@ see:
 
 ## One-sentence takeaway
 
-Merkle hash trees for public-key and integrity protocols.
+Merkle hash trees commit to $n$ leaves with a single root so an inclusion proof is the $O(\log n)$ sibling hashes along the path, verified by recomputing the root.
 
 ## Why it matters here
 
-Merkle proofs underpin git, blockchains, and authenticated data structures.
+This is the authenticated-data-structure primitive behind git, package indexes, replay manifests, and any Broadside/Anoptic artifact that must prove “this blob was in that tree” without shipping the whole tree.
 
 ## Key ideas
 
-- Binary hash tree commitments.
-- Logarithmic inclusion proofs.
-- Authentication path verification.
-- Widely reused beyond original PKC protocols.
+- Interior nodes store $H(\text{left}\Vert\text{right})$; the published root binds every leaf.
+- An authentication path is the missing sibling at each level; the verifier hashes upward and checks the root.
+- The same tree authenticates one-time signatures (Lamport/Merkle signatures) by committing to a large public-key list.
+- Collision resistance of $H$ is the only cryptographic assumption for the commitment.
 
 ## Caveats
-
-- Needs collision-resistant hash.
-- Many modern variants exist.
 
 ## Links
 

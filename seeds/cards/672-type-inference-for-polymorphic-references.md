@@ -5,8 +5,8 @@ authors:
 year: 1990
 venue: "Information and Computation"
 arxiv: null
-doi: "10.1016/0890-5401(90)90018-C"
-source: "https://doi.org/10.1016/0890-5401(90)90018-C"
+doi: "10.1016/0890-5401(90)90018-D"
+source: "https://doi.org/10.1016/0890-5401(90)90018-D"
 topics:
   - references
   - value-restriction
@@ -35,41 +35,31 @@ cites:
     year: 1997
     arxiv: null
     doi: null
-  - title: "A Syntactic Approach to Type Soundness"
-    url: "https://doi.org/10.1006/inco.1994.1093"
-    year: 1994
-    arxiv: null
-    doi: "10.1006/inco.1994.1093"
 see:
   - "640-principal-type-schemes-for-functional-programs"
   - "629-a-theory-of-type-polymorphism-in-programming"
   - "137-the-definition-of-standard-ml-revised"
-  - "660-a-syntactic-approach-to-type-soundness"
 ---
 
 # Type Inference for Polymorphic References
 
 ## One-sentence takeaway
 
-Settles how polymorphic type inference interacts with mutable references (leading toward the value restriction).
+Tofte shows why naïve Hindley–Milner generalization over `ref`-creating expressions is unsound, then gives a decidable imperative type discipline that Standard ML actually used.
 
 ## Why it matters here
 
-The refs+polymorphism classic — why ML's value restriction exists and why ano mutable cells need care.
+Any ano mutable cell, GPU buffer handle, or GRID COMMAND blackboard typed with let-polymorphism hits this theorem; the later SML'97 value restriction is the engineering simplification of this paper.
 
 ## Key ideas
 
-- Unsoundness of naive polymorphic generalization over refs.
-- Imperative type discipline for ML.
-- Leads to value restriction in SML'97 / Definition revised.
-- Essential companion to Damas–Milner and SML Definition.
+- The classic counterexample: `let r = ref (fn x => x) in (r := (fn x => x+1); (!r) true)` typechecks if `r` is given type `∀α. (α→α) ref`.
+- Free type variables captured in the store typing are the culprit; Tofte's inference tracks which variables may not be generalized.
+- Soundness is proved against an operational semantics; principal types remain, via unification.
+- The same discipline covers polymorphic exceptions. *Information and Computation* 89(1):1–34, 1990, DOI 10.1016/0890-5401(90)90018-D (the old card had `…18-C`, a 404).
 
 ## Caveats
 
-- Seed card from the wisdom-of-the-perfects PL haul; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Verify primary PDF/DOI pagination against your preferred edition before formal citation.
-
 ## Links
 
-- DOI: [10.1016/0890-5401(90)90018-C](https://doi.org/10.1016/0890-5401(90)90018-C)
-- URL: https://doi.org/10.1016/0890-5401(90)90018-C
+- DOI: [10.1016/0890-5401(90)90018-D](https://doi.org/10.1016/0890-5401(90)90018-D)

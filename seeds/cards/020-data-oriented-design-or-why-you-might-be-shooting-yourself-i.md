@@ -3,7 +3,7 @@ title: "Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot 
 authors:
   - "Noel Llopis"
 year: 2009
-venue: "Games Connection"
+venue: "Game Developer Magazine"
 arxiv: null
 doi: null
 source: "https://gamesfromwithin.com/data-oriented-design"
@@ -27,11 +27,6 @@ cites:
     year: 2014
     arxiv: null
     doi: null
-  - title: "Category Power of ECS architectures / Data-Oriented Design book"
-    url: "https://www.dataorienteddesign.com/dodbook/"
-    year: 2013
-    arxiv: null
-    doi: null
   - title: "Evolve Your Hierarchy"
     url: "https://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/"
     year: 2007
@@ -40,7 +35,6 @@ cites:
 see:
   - "280-pitfalls-of-object-oriented-programming"
   - "194-data-oriented-design-and-c"
-  - "111-category-power-of-ecs-architectures"
   - "285-evolve-your-hierarchy"
 ---
 
@@ -48,20 +42,21 @@ see:
 
 ## One-sentence takeaway
 
-Popular DOD essay that shaped ECS practice for games.
+Llopis’s 2009 Inner Product column argues that late-project hitchiness, failed parallelization, and unfixable bugs come from OOP’s per-object trees; design instead around contiguous homogeneous tables transformed in bulk.
 
 ## Why it matters here
 
-Popular DOD essay that shaped ECS practice for games.
+This is the cultural charter for Anoptic ECS and ano’s columnar selections: where there is one enemy there are many, so the unit of design is the array, not the object. GRID COMMAND entities are already this article.
 
 ## Key ideas
 
-- Popular DOD essay that shaped ECS practice for games.
+- The failure mode is familiar: no profiler hotspot, constant cache misses, locks everywhere you try to thread, and features that cannot be added without breaking three other systems.
+- OOP and procedural programming both privilege *code*; data-oriented design privileges the type, layout, and access pattern of the data being transformed.
+- Ideal layout is large blocks of homogeneous records processed sequentially — “turn the whole codebase into a gigantic particle system.” Split an object into components and group like with like.
+- Payoffs listed: trivial parallel splits, instruction- and data-cache reuse, optimizations at the transform-pipeline level, leaf-function modularity, and unit tests that are “make input, call transform, check output.”
+- OOP is reserved for genuine singletons and GUIs; an “enemy” can still exist as a mental object whose bytes live in several tables.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
 
 ## Links
 

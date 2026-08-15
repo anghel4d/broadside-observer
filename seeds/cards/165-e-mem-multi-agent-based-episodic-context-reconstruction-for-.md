@@ -8,7 +8,7 @@ authors:
   - "Bunyod Suvonov"
   - "Jie Li"
 year: 2026
-venue: "ICML"
+venue: "arXiv:cs.AI"
 arxiv: "2601.21714"
 doi: null
 source: "https://arxiv.org/abs/2601.21714"
@@ -45,25 +45,22 @@ cites:
 
 ## One-sentence takeaway
 
-The evolution of Large Language Model (LLM) agents towards System~2 reasoning, characterized by deliberative, high-precision problem-solving, requires maintaining rigorous logical integrity over extended horizons.
+E-mem refuses to compress long agent history into embeddings or graphs up front; assistant agents keep uncompressed episodic segments and locally reason over them before a master agent aggregates evidence.
 
 ## Why it matters here
 
-memory hierarchy/paging maps to provenance-first agent memory and ECS state; retrieval+evidence trails matter for Broadside provenance-rich digests (E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory)
+Broadside provenance wants this split: do not smash a digest trail into a vector on write. Keep the episode, activate the segment, extract evidence, then cite. That is also how an ECS world should page history without destroying it.
 
 ## Key ideas
 
-- The evolution of Large Language Model (LLM) agents towards System~2 reasoning, characterized by deliberative, high-precision problem-solving, requires maintaining rigorous logical integrity over extended horizons.
-- However, prevalent memory preprocessing paradigms suffer from destructive de-contextualization.
-- By compressing complex sequential dependencies into pre-defined structures (e.g., embeddings or graphs), these methods sever the contextual integrity essential for deep reasoning.
-- To address this, we propose E-mem, a framework shifting from Memory Preprocessing to Episodic Context Reconstruction.
-- Inspired by biological engrams, E-mem employs a heterogeneous hierarchical architecture where multiple assistant agents maintain uncompressed memory contexts, while a central master agent orch
+- Preprocessing memory into embeddings or graphs is treated as destructive de-contextualization that severs sequential dependencies needed for System-2 reasoning.
+- A heterogeneous hierarchy has several assistant agents holding uncompressed contexts and a master agent doing global planning.
+- Retrieval is not passive kNN: an assistant reasons inside an activated segment and returns context-aware evidence, then the master aggregates.
+- The design is explicitly analogized to biological engrams: storage stays rich, activation is local, readout is constructive.
+- On LoCoMo, E-mem reports over 54% F1, 7.75% above GAM, while cutting token cost by more than 70%.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2601.21714](https://arxiv.org/abs/2601.21714)
-- URL: https://arxiv.org/abs/2601.21714

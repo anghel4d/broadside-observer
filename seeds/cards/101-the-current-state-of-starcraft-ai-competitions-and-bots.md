@@ -1,7 +1,7 @@
 ---
 title: "The Current State of StarCraft AI Competitions and Bots"
 authors:
-  - "Michal Certicky"
+  - "Michal Čertický"
   - "David Churchill"
 year: 2017
 venue: "AIIDE Workshops"
@@ -33,10 +33,10 @@ cites:
     arxiv: null
     doi: null
   - title: "TorchCraft: a Library for Machine Learning Research on Real-Time Strategy Games"
-    url: "http://arxiv.org/abs/1611.00625"
+    url: "https://arxiv.org/abs/1611.00625"
     year: 2016
     arxiv: "1611.00625"
-    doi: "10.48550/arxiv.1611.00625"
+    doi: null
   - title: "Rock, Paper, StarCraft: Strategy Selection in Real-Time Strategy Games"
     url: "https://doi.org/10.1609/aiide.v12i1.12857"
     year: 2016
@@ -73,10 +73,10 @@ cites:
     arxiv: null
     doi: "10.1007/978-3-319-08234-9_17-1"
   - title: "Automatic Observer Script for StarCraft: Brood War Bot Games (technical report)"
-    url: "http://arxiv.org/abs/1505.00278"
+    url: "https://arxiv.org/abs/1505.00278"
     year: 2015
     arxiv: "1505.00278"
-    doi: "10.48550/arxiv.1505.00278"
+    doi: null
 see:
   - "017-a-survey-of-real-time-strategy-game-ai-research-and-competit"
   - "023-call-for-ai-research-in-rts-games"
@@ -86,21 +86,24 @@ see:
 
 ## One-sentence takeaway
 
-Overview of major StarCraft AI competitions and the bots that compete in them.
+SSCAIT, AIIDE, and CIG are the three annual Brood War ladders, and by 2016–17 the strongest BWAPI bots are hybrids of scripts, combat search, and light ML that still play at amateur human level.
 
 ## Why it matters here
 
-Competition landscape (AIIDE/CIG/SSCAIT) for benchmarking Broadside RTS agents.
+This is the public scoring loop Broadside / GRID COMMAND RTS agents will be compared against: incomplete information, hundreds of simultaneous unit orders, and a frame clock that does not wait for the player.
 
 ## Key ideas
 
-- Overview of major StarCraft AI competitions and the bots that compete in them.
+- All three competitions play full 1v1 StarCraft: Brood War through BWAPI (2009); DeepMind / Facebook / Microsoft interest is noted but the paper is about the academic ladders, not SC2.
+- SSCAIT is year-round and streamed one game at a time (Twitch + SmashCast), with a short tournament phase plus an ~11-month ladder, viewer voting, ELO, and an ICCUP-style rank; ~70 active ladder bots in 2016–17.
+- AIIDE is the oldest (since 2010), forces open source, and runs a two-week round-robin at super-human speed (2016: 21 bots, 90 cycles, 1800 games each). CIG hides the map pool, dropped the open-source rule, and uses a qualifier then an 8-bot final.
+- Representative mechanisms: LetaBot MCTS over squad movement plus Liquipedia-mined build orders; MegaBot as a multi-armed bandit over three specialist bots; Steamhammer combat sim with alpha-beta / portfolio search; tscmoo self-written sim, threat-aware pathing, and RNN experiments for strategy.
+- Participation and game counts have risen since 2010; the authors' claim is amateur-human competence, with expert-human play still ahead.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - DOI: [10.1609/aiide.v13i2.12961](https://doi.org/10.1609/aiide.v13i2.12961)
+- PDF: https://certicky.github.io/files/publications/aiide17-certicky-churchill.pdf
 - URL: https://doi.org/10.1609/aiide.v13i2.12961

@@ -1,55 +1,57 @@
 ---
-title: Types and Programming Languages
+title: "Types and Programming Languages"
 authors:
-- Benjamin C. Pierce
+  - "Benjamin C. Pierce"
 year: 2002
-venue: MIT Press
+venue: "MIT Press"
 arxiv: null
 doi: null
-source: https://www.cis.upenn.edu/~bcpierce/tapl/
+source: "https://www.cis.upenn.edu/~bcpierce/tapl/"
 topics:
-- typed-programming
-- plt
+  - typed-programming
+  - plt
 seed_rank: 26
-seed_batch: prefill-2026-08-13
-reviewed: '2026-08-13'
-pool: hand_topup
+seed_batch: "prefill-2026-08-13"
+reviewed: "2026-08-13"
+pool: "hand_topup"
 relevance_score: 10
 cites:
-- title: Notions of Computation and Monads
-  url: https://doi.org/10.1016/0890-5401(91)90052-4
-  year: 1991
-  arxiv: null
-  doi: 10.1016/0890-5401(91)90052-4
-- title: Region-Based Memory Management
-  url: https://doi.org/10.1006/inco.1996.2613
-  year: 1997
-  arxiv: null
-  doi: null
+  - title: "A Theory of Type Polymorphism in Programming"
+    url: "https://doi.org/10.1016/0022-0000(78)90014-4"
+    year: 1978
+    arxiv: null
+    doi: "10.1016/0022-0000(78)90014-4"
+  - title: "Basic Category Theory for Computer Scientists"
+    url: "https://mitpress.mit.edu/9780262660716/basic-category-theory-for-computer-scientists/"
+    year: 1991
+    arxiv: null
+    doi: null
 see:
-- "035-notions-of-computation-and-monads"
-- "030-region-based-memory-management"
+  - "034-basic-category-theory-for-computer-scientists"
 ---
 
 # Types and Programming Languages
 
 ## One-sentence takeaway
 
-Comprehensive introduction to type systems for programming languages.
+TAPL is the operational, implementation-first textbook of type systems: untyped λ through simply-typed, reconstruction, subtyping, polymorphism, recursive types, and objects, with a running interpreter.
 
 ## Why it matters here
 
-Canonical typed PL reference already cited in Anoptic design notes.
+Anoptic design notes already point here. ano’s type story — reconstruction, effects later, no dependent fireworks — is TAPL’s curriculum, not ATTAPL’s.
 
 ## Key ideas
 
-- Comprehensive introduction to type systems for programming languages.
+- Pierce’s method is pragmatic: each feature is motivated by a program, given operational semantics, then typed, with exercises and a software artifact.
+- Core path: untyped λ → simply-typed λ → type reconstruction → simple extensions (references, exceptions) → subtyping → recursive types → polymorphism (System F, let-polymorphism) → existential packages / objects.
+- The book is deliberately light on category theory; the companion *Advanced Topics in Types and Programming Languages* (2005) is where modules, dependent types, and more live.
+- MIT Press hardcover, 648 pages, ISBN 978-0-262-16209-8; no TAPL-specific DOI (10.7551/mitpress/1104.001.0001 is ATTAPL).
+- Author page at Penn hosts the TOC, errata, and course software that most PL courses still fork.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.cis.upenn.edu/~bcpierce/tapl/
+- Author page: https://www.cis.upenn.edu/~bcpierce/tapl/
+- MIT Press: https://mitpress.mit.edu/9780262162098/types-and-programming-languages/
+- TOC PDF: https://www.cis.upenn.edu/~bcpierce/tapl/contents.pdf

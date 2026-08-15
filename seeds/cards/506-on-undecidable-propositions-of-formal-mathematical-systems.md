@@ -3,10 +3,10 @@ title: "On Undecidable Propositions of Formal Mathematical Systems"
 authors:
   - "Kurt Gödel"
 year: 1934
-venue: "Mimeographed lecture notes, Institute for Advanced Study (Davis anthology)"
+venue: "Mimeographed lecture notes, Institute for Advanced Study"
 arxiv: null
 doi: null
-source: "https://www.worldcat.org/title/undecidable/oclc/523589"
+source: "https://albert.ias.edu/20.500.12111/7996"
 topics:
   - incompleteness
   - godel
@@ -49,22 +49,23 @@ see:
 
 ## One-sentence takeaway
 
-Gödel's 1934 Princeton lectures clarify incompleteness and hint at general recursive functions—midwifing Church–Kleene recursion theory.
+Gödel's 1934 Princeton lectures recast incompleteness in a form that isolates general recursive functions and hands Church and Kleene the vocabulary of the 1936 computability cluster.
 
 ## Why it matters here
 
-Historical hinge between incompleteness and the 1936 computability cluster.
+This is the hinge between the 1931 incompleteness paper and every later "what can a machine decide" argument Anoptic inherits. The Kleene–Rosser notes are the first readable statement of arithmetization plus recursion that Broadside should cite when it talks about self-describing systems.
 
 ## Key ideas
 
-- Cleaner exposition than 1931 for recursion-theoretic eyes.
-- Influence on Church and Kleene at Princeton.
-- Published widely via Davis The Undecidable.
+- Mimeographed notes of the February–May 1934 IAS lectures, taken by S. C. Kleene and J. Barkley Rosser.
+- Cleaner exposition of Gödel numbering, representability, and the first incompleteness theorem than the 1931 paper.
+- Introduces (via Herbrand) the equational schema that Kleene will call general recursive functions.
+- Widely reprinted in Davis, *The Undecidable* (1965); the IAS scan is the original mimeograph.
 
 ## Caveats
 
-- Classic; read primary text before overclaiming modern interpretations.
-
 ## Links
 
-- URL: https://www.worldcat.org/title/undecidable/oclc/523589
+- IAS handle: https://albert.ias.edu/20.500.12111/7996
+- IAS record: https://albert.ias.edu/entities/publication/9587ae8c-4cc2-424f-ac21-8681a9c19d8a
+- Davis anthology: https://archive.org/details/undecidablebasic0000mart

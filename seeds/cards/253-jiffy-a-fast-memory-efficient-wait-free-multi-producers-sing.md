@@ -4,7 +4,7 @@ authors:
   - "Dolev Adas"
   - "Roy Friedman"
 year: 2020
-venue: "arXiv:cs.DB"
+venue: "arXiv cs.DB"
 arxiv: "2010.14189"
 doi: null
 source: "https://arxiv.org/abs/2010.14189"
@@ -54,25 +54,22 @@ see:
 
 ## One-sentence takeaway
 
-In applications such as sharded data processing systems, sharded in-memory key-value stores, data flow programming and load sharing applications, multiple concurrent data producers are feeding requests into the same data consumer.
+Jiffy is a wait-free MPSC queue that drops the helper structures of wait-free MPMC designs, holding throughput out to 128 threads at up to 50% above the next compared queue while using about 90% less memory.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Jiffy: A Fast, Memory Efficient, Wait-Free Multi-Producers Single-Consumer Queue).
+Sharded consumers — one sim thread, one net thread, one GPU submitter — are exactly MPSC. A wait-free, cache-friendly MPSC is the queue you want under ano jobs and GRID COMMAND command ingress, not a general Michael-Scott MPMC.
 
 ## Key ideas
 
-- In applications such as sharded data processing systems, sharded in-memory key-value stores, data flow programming and load sharing applications, multiple concurrent data producers are feeding requests into the same data consumer.
-- This can be naturally realized through concurrent queues, where each consumer pulls its tasks from its dedicated queue.
-- For scalability, wait-free queues are often preferred over lock based structures.
-- The vast majority of wait-free queue implementations, and even lock-free ones, support the multi-producer multi-consumer model.
-- Yet, this comes at a premium, since implementing wait-free multi-producer multi-consumer queues requires utilizing complex helper data structures.
+- Specialize to multi-producer / single-consumer so you never pay for MPMC helping and extra descriptor nodes.
+- Formally linearizable and wait-free; correctness is proved, not sketched.
+- Avoids the pointer-chasing, helper-object footprint of wait-free MPMC queues that thrash caches under many enqueuers.
+- Measured good scaling to 128 threads, ~50% higher throughput than the next best compared design, and ~90% lower memory.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2010.14189](https://arxiv.org/abs/2010.14189)
-- URL: https://arxiv.org/abs/2010.14189
+- PDF: https://arxiv.org/pdf/2010.14189

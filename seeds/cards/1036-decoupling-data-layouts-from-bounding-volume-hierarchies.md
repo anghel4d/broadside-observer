@@ -56,9 +56,6 @@ Anoptic's world queries (ray, closest-point, collision, GRID COMMAND spatial pic
 
 ## Caveats
 
-- Topology is in-scope-fixed; SAH/build quality is orthogonal (they say so). Scheduling (packets, wavefronts, vectorization) is also future work.
-- Derived fields (quantization) are trusted, not round-trip proved. Fine for watertight-enclosing quantizers; not a Coq story.
-- Pairs with Bonsai (1037): Bonsai generates the traversal; Scion lays it out.
 
 ## Links
 

@@ -29,10 +29,10 @@ cites:
     arxiv: "1203.1539"
     doi: null
   - title: "Handling Algebraic Effects"
-    url: "https://doi.org/10.2168/LMCS-9(4:23)2013"
+    url: "https://arxiv.org/abs/1312.1399"
     year: 2013
-    arxiv: null
-    doi: null
+    arxiv: "1312.1399"
+    doi: "10.2168/LMCS-9(4:23)2013"
   - title: "Algebraic Operations and Generic Effects"
     url: "https://doi.org/10.1023/A:1023064908962"
     year: 2003
@@ -71,9 +71,6 @@ Why you might love this: Dal Lago + Sekiyama putting intersection types on handl
 
 ## Caveats
 
-- This is a logical characterisation, not an ano typechecker design.
-- Intersection-type inference is famously expensive in general; "reduces to type inference" is not "cheap."
-- 2026 preprint; compare carefully to HEPCF before repeating the decidability contrast.
 
 ## Links
 

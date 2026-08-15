@@ -19,11 +19,6 @@ pool: "languages"
 relevance_score: 10
 lineage: foundations-of-computing
 cites:
-  - title: "The Next 700 Programming Languages"
-    url: "https://doi.org/10.1145/365230.365257"
-    year: 1966
-    arxiv: null
-    doi: "10.1145/365230.365257"
   - title: "The Calculi of Lambda-Conversion"
     url: "https://press.princeton.edu/books/paperback/9780691083940/the-calculi-of-lambda-conversion"
     year: 1941
@@ -34,45 +29,30 @@ cites:
     year: 1960
     arxiv: null
     doi: "10.1145/367177.367199"
-  - title: "Definitional Interpreters for Higher-Order Programming Languages"
-    url: "https://doi.org/10.1145/800194.805852"
-    year: 1972
-    arxiv: null
-    doi: "10.1145/800194.805852"
-  - title: "Computational lambda-calculus and monads"
-    url: "https://doi.org/10.1109/LICS.1989.39155"
-    year: 1989
-    arxiv: null
-    doi: "10.1109/LICS.1989.39155"
 see:
-  - "616-the-next-700-programming-languages"
   - "511-the-calculi-of-lambda-conversion"
   - "575-recursive-functions-of-symbolic-expressions-and-their-comput"
-  - "630-definitional-interpreters-for-higher-order-programming-langu"
-  - "037-computational-lambda-calculus-and-monads"
 ---
 
 # The Mechanical Evaluation of Expressions
 
 ## One-sentence takeaway
 
-Landin's SECD machine evaluates λ-expressions mechanically—abstract machines for FP.
+Landin's SECD machine — Stack, Environment, Control, Dump — is an explicit abstract machine that evaluates λ-expressions by pushing closures rather than substituting.
 
 ## Why it matters here
 
-Ancestor of CEK/CAM and every bytecode-for-λ story; Backus 174 already cites this.
+Ancestor of CEK/CAM and every bytecode-for-λ story. If ano or a GRID COMMAND expression language ever grows first-class functions, this is the first machine that already knows how to represent a closure.
 
 ## Key ideas
 
-- SECD: Stack, Environment, Control, Dump.
-- Closure representation.
-- Bridge from λ to implementation.
+- Four registers: S (results), E (environment), C (control / code), D (dump of saved (S,E,C) triples for calls).
+- A closure is a pair (code, environment); application pushes a dump frame instead of performing β-substitution.
+- Applicative expressions (AEs) are the source language; the paper is the implementation half of Landin's Algol-as-λ program.
+- *Computer Journal* 6(4), 1964, pp. 308–320.
 
 ## Caveats
-
-- Classic; read primary text before overclaiming modern interpretations.
 
 ## Links
 
 - DOI: [10.1093/comjnl/6.4.308](https://doi.org/10.1093/comjnl/6.4.308)
-- URL: https://doi.org/10.1093/comjnl/6.4.308

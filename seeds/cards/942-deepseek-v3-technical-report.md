@@ -66,22 +66,24 @@ see:
 
 ## One-sentence takeaway
 
-671B MoE (37B active) with Multi-head Latent Attention, auxiliary-loss-free load balancing, and multi-token prediction — the architecture Weaves encodes as a worked example.
+DeepSeek-V3 is a 671B-parameter MoE (37B active) trained on 14.8T tokens with Multi-head Latent Attention, DeepSeekMoE, auxiliary-loss-free load balancing, and multi-token prediction.
 
 ## Why it matters here
 
-The concrete model whose MLA/MoE wiring the 2026 weaves paper turns into terms. Agent-stack relevant on its own.
+The concrete model whose MLA/MoE wiring Weaves 2026 encodes as a worked example. Agent-stack relevant on its own: cheap active-parameter inference with a compressed KV story.
 
 ## Key ideas
 
-- arXiv:2412.19437; 14.8T tokens; 2.788M H800 GPU-hours; claimed stable training (no irrecoverable loss spikes).
-- MLA + DeepSeekMoE inherited from V2; auxiliary-loss-free balancing is the new trick.
+- arXiv:2412.19437; 2.788M H800 GPU-hours; authors report stable training with no irrecoverable loss spikes.
+- MLA + DeepSeekMoE inherited from V2; auxiliary-loss-free balancing (and multi-token prediction) are the V3 increments.
+- 37B active of 671B total is the serving number that makes the architecture interesting as a term, not just as a scoreboard.
 - Checkpoints: https://github.com/deepseek-ai/DeepSeek-V3
+- Industrial tech report, not a categorical paper; Weaves cites it as the architecture to express.
 
 ## Caveats
-
-- Industrial tech report, not a categorical paper. Weaves cites it as the architecture to express, not as a semantics.
 
 ## Links
 
 - arXiv: [2412.19437](https://arxiv.org/abs/2412.19437)
+- PDF: https://arxiv.org/pdf/2412.19437
+- Code: https://github.com/deepseek-ai/DeepSeek-V3

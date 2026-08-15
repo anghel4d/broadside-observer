@@ -21,31 +21,35 @@ pool: languages
 relevance_score: 9
 lineage: type-safety
 cites:
-  []
+  - title: "Gradual Typing for Functional Languages"
+    url: "https://scheme2006.cs.uchicago.edu/13-siek.pdf"
+    year: 2006
+    arxiv: null
+    doi: null
+see:
+  - "886-gradual-typing-for-functional-languages"
 ---
 
 # Design and Evaluation of Gradual Typing for Python
 
 ## One-sentence takeaway
 
-Reticulated Python: gradual typing designed and evaluated for a real dynamic language.
+Reticulated Python is a source-to-source gradual type system for CPython that implements both guarded (proxy) and transient (use-site) casts and measures them on real Python idioms.
 
 ## Why it matters here
 
-Engineering lessons for gradual typing on any dynamic host language.
+Engineering lessons for putting gradual types on a messy dynamic host — identity-sensitive objects, C extensions, and an FFI. The host-language analogue of "type Anoptic's Python-shaped config without forking CPython."
 
 ## Key ideas
 
-- Guarded vs transient implementations.
-- CPython interop.
-- Empirical microbenchmarks.
+- Two enforcement strategies in one translator: guarded wraps values in proxies; transient leaves identity alone and checks at operations.
+- Must interoperate with unmodified CPython objects and C-extension modules; proxies break `is` and some C APIs, which is why transient exists.
+- Type language includes functions, objects, tuples, and `Dyn`; consistency follows Siek–Taha.
+- Microbenchmarks and case studies quantify the proxy vs transient tradeoff well before the 2016/2017 open-world papers.
+- DLS 2014, DOI 10.1145/2661088.2661101. Followed by the open-world TR/POPL development (card 897).
 
 ## Caveats
-
-- Part of the gradual/refinement type-safety shelf.
-- Check mechanization status in follow-ons.
 
 ## Links
 
 - DOI: [10.1145/2661088.2661101](https://doi.org/10.1145/2661088.2661101)
-- URL: https://doi.org/10.1145/2661088.2661101

@@ -20,35 +20,30 @@ cites:
     year: 2011
     arxiv: null
     doi: "10.1016/j.gmod.2011.05.001"
-  - title: "Animation Compression Library"
-    url: "https://github.com/nfrechette/acl"
-    year: 2017
-    arxiv: null
-    doi: null
 see:
   - "346-fabrik-a-fast-iterative-solver-for-the-inverse-kinematics-pr"
-  - "389-animation-compression-library"
 ---
 
 # Motion Matching and The Road to Next-Gen Animation
 
 ## One-sentence takeaway
 
-Motion matching animation tech.
+Clavet’s GDC 2016 Ubisoft talk replaces hand-authored transition graphs with a per-frame nearest-neighbor search over a huge motion database, matching pose, trajectory, and gameplay intent.
 
 ## Why it matters here
 
-Motion matching animation tech.
+GRID COMMAND and Anoptic character locomotion need responsive animation without an unmaintainable state machine; motion matching is the industrial alternative that later learned-motion work still sits on.
 
 ## Key ideas
 
-- Motion matching animation tech.
+- Each frame is a feature vector: current pose (joint positions/velocities), a short predicted root trajectory, and high-level desire (speed, facing, action tags).
+- Every tick, search the database for the frame whose features are closest and whose continuation is valid; jump there instead of blending through a canned transition.
+- Quality comes from data density and good features, not from more graph edges. Ubisoft used it in *For Honor*.
+- Cost is a well-indexed kNN over tens of thousands of frames; the talk covers PCA / grouping tricks to keep it in budget.
+- GDC Vault: “Motion Matching and The Road to Next-Gen Animation,” Simon Clavet, 2016.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://www.gdcvault.com/play/1023280/Motion-Matching-and-The
+- GDC Vault: https://www.gdcvault.com/play/1023280/Motion-Matching-and-The

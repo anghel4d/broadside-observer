@@ -23,37 +23,28 @@ cites:
   year: 1956
   arxiv: null
   doi: 10.4153/CJM-1956-045-5
-- title: A Dynamic Programming Approach to Sequencing Problems
-  url: "https://doi.org/10.1145/321105.321111"
-  year: 1962
-  arxiv: null
-  doi: 10.1145/321105.321111
 see:
 - "744-maximal-flow-through-a-network"
-- "806-a-dynamic-programming-approach-to-sequencing-problems"
 ---
 
 # Paths, Trees, and Flowers
 
 ## One-sentence takeaway
 
-Edmonds blossom algorithm — maximum matching in general graphs in polynomial time.
+Edmonds’ blossom algorithm computes a maximum matching in a general (non-bipartite) graph in polynomial time by shrinking odd cycles — blossoms — so Berge augmenting paths can be found after all.
 
 ## Why it matters here
 
-Landmark that P means more than bipartite matching; blossoms are iconic.
+It is the manifesto that “good characterization / polynomial algorithm” is a real engineering standard, not just bipartite matching or max-flow. Assignment, pairing, and conflict-resolution layers in GRID COMMAND sit on this side of the matching wall.
 
 ## Key ideas
 
-- Shrinking odd blossoms.
-- Augmenting paths in general graphs.
-- Poly-time non-bipartite matching.
-- Edmonds manifesto for good characterization.
+- Berge’s theorem still holds on general graphs, but naive search can loop around odd cycles; a blossom is an odd circuit with a stem back to the free vertex.
+- Shrinking a blossom to a single supervertex restores a search graph in which an augmenting path, if it exists, is visible.
+- The algorithm therefore decides maximum matching in polynomial time, giving a “good characterization” of the matching polytope’s integral vertices.
+- Weighted matching and the blossom inequalities come later; this paper is the unweighted combinatorial engine.
 
 ## Caveats
-
-- Implementation is non-trivial.
-- Weighted variants add complexity.
 
 ## Links
 

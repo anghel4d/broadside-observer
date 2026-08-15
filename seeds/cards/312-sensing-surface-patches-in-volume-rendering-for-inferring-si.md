@@ -17,49 +17,29 @@ seed_batch: "systems-prefill-2026-08-13"
 reviewed: "2026-08-13"
 pool: "engines"
 relevance_score: 8
-cites:
-  - title: "mimalloc: Free List Sharding in Action"
-    url: "https://arxiv.org/abs/1908.05006"
-    year: 2019
-    arxiv: "1908.05006"
-    doi: null
-  - title: "Michael & Scott Lock-Free Queue"
-    url: "https://doi.org/10.1145/248052.248106"
-    year: 1996
-    arxiv: null
-    doi: "10.1145/248052.248106"
-  - title: "FrameGraph: Extensible Rendering Architecture in Frostbite"
-    url: "https://www.gdcvault.com/play/1024612/FrameGraph-Extensible-Rendering-Architecture-in"
-    year: 2017
-    arxiv: null
-    doi: null
-see:
-  - "011-mimalloc-free-list-sharding-in-action"
-  - "031-michael-scott-lock-free-queue"
-  - "100-framegraph-extensible-rendering-architecture-in-frostbite"
+cites: []
+see: []
 ---
 
 # Sensing Surface Patches in Volume Rendering for Inferring Signed Distance Functions
 
 ## One-sentence takeaway
 
-It is vital to recover 3D geometry from multi-view RGB images in many 3D computer vision tasks.
+The method pulls nearby samples onto a small patch at each ray–SDF intersection so volume rendering can apply explicit surface constraints (photo-consistency, depth, normals) instead of only a silhouette rendering loss.
 
 ## Why it matters here
 
-Engine architecture / simulation structure useful for Anoptic ECS craft (Sensing Surface Patches in Volume Rendering for Inferring Signed Distance Functi).
+Anoptic reconstruction and any GRID COMMAND mesh-from-views path that fits an SDF through NeRF-style volume rendering needs a way to talk about the actual surface, not just accumulated density along the ray.
 
 ## Key ideas
 
-- It is vital to recover 3D geometry from multi-view RGB images in many 3D computer vision tasks.
-- The latest methods infer the geometry represented as a signed distance field by minimizing the rendering error on the field through volume rendering.
-- However, it is still challenging to explicitly impose constraints on surfaces for inferring more geometry details due to the limited ability of sensing surfaces in volume rendering.
-- To resolve this problem, we introduce a method to infer signed distance functions (SDFs) with a better sense of surfaces through volume rendering.
-- Using the gradients and signed distances, we establish a small surface patch centered at the estimated intersection along a ray by pulling points randomly sampled nearby.
+- Neural SDFs trained only by volume-rendering RGB error struggle to add geometric detail because the renderer never isolates a surface.
+- At the estimated zero-crossing, gradients and signed distances pull randomly sampled nearby points onto a local patch.
+- That patch is the place to attach multi-view photo-consistency and optional depth/normal priors while the same ray is still being volume-rendered.
+- Evaluated on scene benchmarks against recent NeuS-style baselines; they report sharper geometry without changing the overall volume-rendering pipeline.
+- Appeared at AAAI 2025 (arXiv:2412.16467).
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 

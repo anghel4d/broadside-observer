@@ -23,11 +23,6 @@ reviewed: "2026-08-13"
 pool: "agents"
 relevance_score: 9
 cites:
-  - title: "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
-    url: "https://arxiv.org/abs/2606.19667"
-    year: 2026
-    arxiv: "2606.19667"
-    doi: null
   - title: "Efficient Memory Management for Large Language Model Serving with PagedAttention"
     url: "https://arxiv.org/abs/2309.06180"
     year: 2023
@@ -38,33 +33,38 @@ cites:
     year: 2023
     arxiv: "2308.16369"
     doi: null
+  - title: "SGLang: Efficient Execution of Structured Language Model Programs"
+    url: "https://arxiv.org/abs/2312.07104"
+    year: 2023
+    arxiv: "2312.07104"
+    doi: null
 see:
   - "002-efficient-memory-management-for-large-language-model-serving"
   - "082-sarathi-efficient-llm-inference-by-piggybacking-decodes-with"
+  - "083-sglang-efficient-execution-of-structured-language-model-prog"
 ---
 
 # Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU
 
 ## One-sentence takeaway
 
-Large Language Model (LLM) deployment is increasingly shifting to cost-efficient accelerators like Google's Tensor Processing Units (TPUs), prioritizing both performance and total cost of ownership (TCO).
+Ragged Paged Attention is a Pallas/Mosaic TPU kernel that tiles ragged memory, fuses KV updates with attention, and compiles specialized decode, prefill, and mixed kernels.
 
 ## Why it matters here
 
-informs agent serving, KV reuse, and long-horizon tool trajectories; retrieval+evidence trails matter for Broadside provenance-rich digests (Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU)
+If ano or Broadside serving ever leaves GPU-centric stacks, RPA is the production TPU attention backend already wired into vLLM and SGLang.
 
 ## Key ideas
 
-- Large Language Model (LLM) deployment is increasingly shifting to cost-efficient accelerators like Google's Tensor Processing Units (TPUs), prioritizing both performance and total cost of ownership (TCO).
-- However, existing LLM inference kernels and serving systems remain largely GPU-centric, and there is no well-established approach for efficiently mapping LLM workloads onto TPU architectures--particularly under the dynamic and ragged execution patterns common in modern serving.
-- In this paper, we present Ragged Paged Attention (RPA), a high-performance and flexible attention kernel for TPUs, implemented using Pallas and Mosaic.
-- RPA addresses these challenges through three key techniques: (1) fine-grained tiling to enable efficient dynamic slicing over ragged memory, (2) a custom software p
+- GPU-centric kernels and serving systems do not map cleanly onto TPU under the dynamic, ragged execution of modern serving.
+- Fine-grained tiling enables efficient dynamic slicing over ragged paged KV; a custom software pipeline fuses cache writes with attention.
+- Distribution-aware compilation emits specialized kernels for decode, prefill, and mixed batches rather than one generic path.
+- On Llama 3 8B / TPU7x, RPA reaches 86% memory-bandwidth utilization in decode and 73% model-FLOP utilization in prefill.
+- It is the primary TPU backend in vLLM and SGLang.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2604.15464](https://arxiv.org/abs/2604.15464)
-- URL: https://arxiv.org/abs/2604.15464
+- PDF: https://arxiv.org/pdf/2604.15464

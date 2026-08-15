@@ -47,23 +47,20 @@ see:
 
 ## One-sentence takeaway
 
-Open code models 1.3B–33B trained from scratch on 2T project-level tokens with fill-in-the-blank / 16K window; permissive license, claimed above Codex and GPT-3.5.
+Open code models 1.3B–33B trained from scratch on 2T project-level tokens with fill-in-the-blank at a 16K window; permissive license, claimed above then-open code models and above Codex / GPT-3.5 on several coding benches.
 
 ## Why it matters here
 
-The code-pretrain that DeepSeekMath continues from, and that later Coder-V2/V3 coding evals sit on. Relevant to ano/GRID COMMAND as a coding-agent ancestor.
+The code-pretrain that DeepSeekMath continues from, and that later Coder-V2 / V3 coding evals sit on. Relevant to ano/GRID COMMAND as a coding-agent ancestor: infilling plus project-level context, not just left-to-right file completion.
 
 ## Key ideas
 
-- arXiv:2401.14196; sizes 1.3B–33B; 2T tokens of project-level code.
-- Fill-in-the-blank (FIM) pretraining at 16K context for generation and infilling.
-- Claimed SOTA among open code models and above Codex / GPT-3.5 on several coding benches.
-- Permissive license; repo: https://github.com/deepseek-ai/DeepSeek-Coder
+- arXiv:2401.14196. Dense models, not MoE; 2T tokens of project-level code rather than shuffled file snippets.
+- Fill-in-the-middle (FIM / fill-in-the-blank) at 16K context trains both generation and infilling, which is what an editor agent actually does.
+- Claimed SOTA among open code models of the time; permissive license for research and commercial use.
+- Coder-V2 later continues from a V2 MoE checkpoint instead of this dense line.
 
 ## Caveats
-
-- Dense models; Coder-V2 (1245) continues from V2 MoE instead.
-- 16K context is small by 2026 standards.
 
 ## Links
 

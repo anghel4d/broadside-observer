@@ -27,7 +27,7 @@ cites:
   arxiv: null
   doi: null
 - title: The Design and Analysis of Computer Algorithms
-  url: "https://en.wikipedia.org/wiki/The_Design_and_Analysis_of_Computer_Algorithms"
+  url: "https://www.pearson.com/en-us/subject-catalog/p/design-and-analysis-of-computer-algorithms-the/P200000003488/9780201000290"
   year: 1974
   arxiv: null
   doi: null
@@ -46,24 +46,21 @@ see:
 
 ## One-sentence takeaway
 
-CLRS — the standard comprehensive algorithms textbook (first ed. 1990; later editions ongoing).
+CLRS is the standard comprehensive algorithms text: uniform pseudocode, asymptotic proofs, and chapter-length treatments from sorting and heaps through graph algorithms, FFT, NP-completeness, and approximation.
 
 ## Why it matters here
 
-Shared reference for asymptotics, graph algorithms, and NP-completeness pedagogy.
+This is the shared vocabulary Anoptic, ano, and GRID COMMAND implementations already speak — the book you open for the red-black invariant, Dijkstra with a heap, or the master theorem, not a substitute for the primary papers in this span.
 
 ## Key ideas
 
-- Rigorous pseudocode and proofs.
-- Broad coverage from sorting to FFT to NP-completeness.
-- Common vocabulary across industry and academia.
-- One card max for the textbook.
+- First edition 1990 (CLR); Stein joins later editions. The MIT Press page linked here is the current edition.
+- Rigorous loop invariants and recurrences, not just code dumps.
+- Coverage is deliberately broad: data structures, greedy/DP, amortized analysis, multithreaded algorithms (later eds.), and a full NP-completeness core.
+- One card for the textbook; chapter numbers move between editions.
 
 ## Caveats
 
-- Edition matters for chapter numbers.
-- Not a substitute for primary papers on advanced topics.
-
 ## Links
 
-- URL: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/
+- MIT Press: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/

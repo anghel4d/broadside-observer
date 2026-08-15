@@ -4,7 +4,7 @@ authors:
   - "Duong Nguyen"
   - "Sandeep S. Kulkarni"
 year: 2020
-venue: "arXiv:cs.DC"
+venue: "arXiv cs.DC"
 arxiv: "2007.14218"
 doi: null
 source: "https://arxiv.org/abs/2007.14218"
@@ -16,66 +16,26 @@ reviewed: "2026-08-13"
 pool: "systems"
 relevance_score: 9
 cites:
-  - title: "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs"
-    url: "https://doi.org/10.1109/tc.1979.1675439"
-    year: 1979
-    arxiv: null
-    doi: "10.1109/tc.1979.1675439"
-  - title: "Distributed GraphLab"
-    url: "https://doi.org/10.14778/2212351.2212354"
-    year: 2012
-    arxiv: null
-    doi: "10.14778/2212351.2212354"
-  - title: "Cassandra"
-    url: "https://doi.org/10.1145/1773912.1773922"
-    year: 2010
-    arxiv: null
-    doi: "10.1145/1773912.1773922"
-  - title: "Dynamo"
-    url: "https://doi.org/10.1145/1294261.1294281"
-    year: 2007
-    arxiv: null
-    doi: "10.1145/1294261.1294281"
-  - title: "Eventually consistent"
-    url: "https://doi.org/10.1145/1435417.1435432"
-    year: 2008
-    arxiv: null
-    doi: "10.1145/1435417.1435432"
-  - title: "Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services"
-    url: "https://doi.org/10.1145/564585.564601"
-    year: 2002
-    arxiv: null
-    doi: "10.1145/564585.564601"
-  - title: "Distributed Algorithms"
-    url: "https://doi.org/10.1007/bfb0022433"
-    year: 1992
-    arxiv: null
-    doi: "10.1007/bfb0022433"
   - title: "Self-stabilizing systems in spite of distributed control"
     url: "https://doi.org/10.1145/361179.361202"
     year: 1974
     arxiv: null
     doi: "10.1145/361179.361202"
-  - title: "Complex Networks"
-    url: "https://doi.org/10.1017/9781316216002"
-    year: 2017
+  - title: "Eventually consistent"
+    url: "https://doi.org/10.1145/1435417.1435432"
+    year: 2008
     arxiv: null
-    doi: "10.1017/9781316216002"
-  - title: "Trinity"
-    url: "https://doi.org/10.1145/2463676.2467799"
-    year: 2013
+    doi: "10.1145/1435417.1435432"
+  - title: "Dynamo"
+    url: "https://doi.org/10.1145/1294261.1294281"
+    year: 2007
     arxiv: null
-    doi: "10.1145/2463676.2467799"
-  - title: "Towards robust distributed systems (abstract)"
-    url: "https://doi.org/10.1145/343477.343502"
-    year: 2000
+    doi: "10.1145/1294261.1294281"
+  - title: "Cassandra"
+    url: "https://doi.org/10.1145/1773912.1773922"
+    year: 2010
     arxiv: null
-    doi: "10.1145/343477.343502"
-  - title: "Thinking Like a Vertex"
-    url: "https://doi.org/10.1145/2818185"
-    year: 2015
-    arxiv: null
-    doi: "10.1145/2818185"
+    doi: "10.1145/1773912.1773922"
 see:
   - "472-how-to-make-a-multiprocessor-computer-that-correctly-execute"
 ---
@@ -84,25 +44,23 @@ see:
 
 ## One-sentence takeaway
 
-In this paper, we evaluate and compare the performance of two approaches, namely self-stabilization and rollback, to handling consistency violating faults (\cvf) that occur when a self-stabilizing distributed graph-based program is executed on an eventually consistent key-value store.
+On an eventually consistent KV store, graph programs can either roll back after a consistency-violating read or just keep running and let self-stabilization repair the state — and which wins depends on the graph problem, partition, and latency.
 
 ## Why it matters here
 
-Systems/HPC craft relevant to Anoptic concurrency, allocators, and parallel jobbing (Technical Report: Benefits of Stabilization versus Rollback in Self-Stabilizing ).
+GRID COMMAND and Broadside both live with stale replicas. This report is the rare head-to-head of "rewind the sim" versus "design the update so any garbage state heals," which is the same fork as rollback netcode versus stabilizing world state.
 
 ## Key ideas
 
-- In this paper, we evaluate and compare the performance of two approaches, namely self-stabilization and rollback, to handling consistency violating faults (\cvf) that occur when a self-stabilizing distributed graph-based program is executed on an eventually consistent key-value store.
-- Consistency violating faults are caused by reading wrong values due to weaker level of consistency provided by the key-value store.
-- One way to deal with these faults is to utilize rollback whereas another way is to rely on the property of self-stabilization that is expected to provide recovery from arbitrary states.
-- We evaluate both these approaches in different case studies --planar graph coloring, arbitrary graph coloring, and maximal matching-- as well as for different problem dimensions such as input data characteristics, workload partition, and network latency.
-- We also consider the effect of executing non-stabilizing algorithm with rollback with a similar stabilizing algorithm that does not utilize rollback.
+- A consistency-violating fault (CVF) is simply reading a stale or reordered value from a weak KV store.
+- Two recoveries: explicit rollback to a consistent cut, or Dijkstra-style self-stabilization that converges from an arbitrary configuration.
+- Case studies: planar coloring, general coloring, and maximal matching, swept over data shape, partition, and network latency.
+- Also compares a non-stabilizing algorithm-plus-rollback against a stabilizing algorithm that never rolls back.
+- Companion overlap with arXiv:1910.08248; this is the longer technical report.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2007.14218](https://arxiv.org/abs/2007.14218)
-- URL: https://arxiv.org/abs/2007.14218
+- PDF: https://arxiv.org/pdf/2007.14218

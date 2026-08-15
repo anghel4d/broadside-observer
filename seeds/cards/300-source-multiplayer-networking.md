@@ -1,5 +1,4 @@
 ---
-
 title: "Source Multiplayer Networking"
 authors:
   - "Valve"
@@ -25,7 +24,7 @@ cites:
     doi: null
   - title: "Snapshot Interpolation"
     url: "https://gafferongames.com/post/snapshot_interpolation/"
-    year: 2015
+    year: 2014
     arxiv: null
     doi: null
   - title: "Quake III Arena Networking Source"
@@ -43,21 +42,22 @@ see:
 
 ## One-sentence takeaway
 
-Lag compensation / tick networking classic.
+Source ticks an authoritative server at a fixed rate, clients predict locally and interpolate other entities between snapshots, and the server rewinds hit detection by each attacker's lerp+latency so a crosshair that looked correct still counts.
 
 ## Why it matters here
 
-Lag compensation / tick networking classic.
+This is the FPS netcode Broadside inherits: tick, snapshot, prediction, interpolation, lag compensation. Gambetta and Fiedler are the tutorials; this wiki page is the shipped Valve design.
 
 ## Key ideas
 
-- Lag compensation / tick networking classic.
+- `sv_tickrate` (historically 33 or 66 Hz) is the sim clock. Clients send usercmds; the server simulates and broadcasts entity snapshots.
+- Client-side prediction runs the local player immediately; server reconciliation corrects with the last-acked command number (same pattern Gambetta later taught).
+- Other players are interpolated between two snapshots (`cl_interp`, default 100 ms) so jitter does not pop models.
+- Lag compensation: on each shot the server rewinds every other player to where the shooter *saw* them (latency + lerp), traces, then restores. This is why "I was already around the corner" videos exist.
+- Derived from Quake-family netcode; documented on the Valve Developer Wiki. The wiki is bot-walled from some scrapers; the URL is still the canonical artifact.
 
 ## Caveats
 
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
-- Primary PDF/DOI not yet pinned; verify the canonical artifact before citation.
-
 ## Links
 
-- URL: https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking
+- Wiki: https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking

@@ -4,7 +4,7 @@ authors:
   - "Gordon Plotkin"
   - "Ningning Xie"
 year: 2025
-venue: "arXiv"
+venue: "arXiv:cs.PL"
 arxiv: "2504.03890"
 doi: null
 source: "https://arxiv.org/abs/2504.03890"
@@ -41,25 +41,22 @@ see:
 
 ## One-sentence takeaway
 
-The selection monad on a set consists of selection functions.
+Plotkin and Xie give programmers algebraic handlers that see a choice continuation of future losses, so selection-monad operations can run user-written optimizers instead of only oracle-optimal choices.
 
 ## Why it matters here
 
-Effect systems/handlers inform ano masked command effects and handlers; Relational/query foundations for selection-as-reference.
+Ano command selection — pick a unit, a target, a plan — is a selection-monad problem. Handlers that can inspect the loss of alternative continuations are how a planner effect should be implemented, not a hidden argmin.
 
 ## Key ideas
 
-- The selection monad on a set consists of selection functions.
-- These select an element from the set, based on a loss (dually, reward) function giving the loss resulting from a choice of an element.
-- Abadi and Plotkin used the monad to model a language with operations making choices of computations taking account of the loss that would arise from each choice.
-- However, their choices were optimal, and they asked if they could instead be programmer provided.
-- In this work, we present a novel design enabling programmers to do so.
+- A selection function picks an element of a set given a loss (or reward) function; Abadi and Plotkin used the monad for optimal choice and asked for programmer-supplied strategies.
+- Handlers are enriched with choice continuations in addition to ordinary delimited continuations, exposing future losses to the handler.
+- A higher-order language \(λC\) is given an operational semantics with progress, type soundness, and termination under a mild hierarchical constraint on operation types.
+- That subset also has a selection-monad denotational semantics with soundness and adequacy.
+- A Haskell implementation and a range of programming examples show the design is usable, not only semantic.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2504.03890](https://arxiv.org/abs/2504.03890)
-- URL: https://arxiv.org/abs/2504.03890

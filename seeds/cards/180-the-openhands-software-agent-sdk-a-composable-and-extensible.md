@@ -53,25 +53,22 @@ see:
 
 ## One-sentence takeaway
 
-Agents are now used widely in the process of software development, but building production-ready software engineering agents is a complex task.
+The OpenHands Software Agent SDK rebuilds OpenHands' agent core as a small default interface with sandbox-portable execution, multi-LLM routing, lifecycle control, and built-in security analysis.
 
 ## Why it matters here
 
-retrieval+evidence trails matter for Broadside provenance-rich digests; shapes harness/ACI design and model-vs-harness failure localization (The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Ag)
+This is the production shape of a coding-agent harness: local and remote sandboxes, REST/WebSocket control, VS Code/VNC/CLI faces, and a measured drop in system-attributable failures from V0 to V1. Broadside should steal the SDK boundaries, not the product UI.
 
 ## Key ideas
 
-- Agents are now used widely in the process of software development, but building production-ready software engineering agents is a complex task.
-- Deploying software agents effectively requires flexibility in implementation and experimentation, reliable and secure execution, and interfaces for users to interact with agents.
-- In this paper, we present the OpenHands Software Agent SDK, a toolkit for implementing software development agents that satisfy these desiderata.
-- This toolkit is a complete architectural redesign of the agent components of the popular OpenHands framework for software development agents.
-- To achieve flexibility, we design a simple interface for implementing agents that requires only a few lines of code in the default case, but is easily extensible to more complex full-featur
+- Production agents need three things the paper treats as first-class: a tiny implementation surface, reliable sandboxed execution, and human-facing interfaces.
+- The default agent is a few lines of code; custom tools, memory, and full-featured agents are extensions of that interface.
+- Local-to-remote execution portability, REST/WebSocket services, and visual workspaces (VS Code, VNC, browser) are part of the SDK rather than host-specific glue.
+- Relative to OpenAI, Claude, and Google SDKs, the authors claim native sandboxing, lifecycle control, model-agnostic routing, and security analysis as the distinguishing bundle.
+- Production data is reported to show V1 cutting system-attributable failures versus V0 with negligible event-sourcing overhead.
 
 ## Caveats
-
-- Seed card from bibliographic shortlist; promote to a full `summaries/` digest before relying on fine-grained claims.
 
 ## Links
 
 - arXiv: [2511.03690](https://arxiv.org/abs/2511.03690)
-- URL: https://arxiv.org/abs/2511.03690
