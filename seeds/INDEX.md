@@ -1139,3 +1139,24 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1037 | 9 | 2026 | Bonsai: Compiling Queries to Pruned Tree Traversals | languages |
 
 _Recount after `craft-2026-08-15`: **1037** unique title cards on main._
+
+## Archive 2026-08-16
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/ano/RTS/historical-gem filter: **60**. Keepers: **12** (keep rate **0.200**, hard cap 0.20). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1038 | 10 | 1984 | The A-buffer, an Antialiased Hidden Surface Method | graphics |
+| 1039 | 10 | 1984 | Compositing Digital Images | graphics |
+| 1040 | 10 | 1969 | A Hidden Surface Algorithm for Computer Generated Halftone Pictures | graphics |
+| 1041 | 10 | 1988 | A Ray Tracing Solution for Diffuse Interreflection | graphics |
+| 1042 | 9 | 2005 | Lightcuts: A Scalable Approach to Illumination | graphics |
+| 1043 | 9 | 1977 | Shadow Algorithms for Computer Graphics | graphics |
+| 1044 | 10 | 2003 | Single Assignment C: Efficient Support for High-Level Array Operations in a Functional Setting | languages |
+| 1045 | 10 | 1995 | Rank and Uniformity | languages |
+| 1046 | 10 | 1990 | APL/? | languages |
+| 1047 | 10 | 1997 | Proof-Carrying Code | languages |
+| 1048 | 9 | 1998 | Ownership Types for Flexible Alias Protection | languages |
+| 1049 | 9 | 1995 | Production Matching for Large Learning Systems | languages |
+
+_Recount after `archive-2026-08-16`: **1049** unique title cards on main._
