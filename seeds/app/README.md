@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-`npm run dev` regenerates `src/generated/cards.json` and `public/cards.json` from `../cards/*.md`, then starts Vite. Open the printed local URL (usually `http://localhost:5173`).
+`npm run dev` regenerates `src/generated/cards.json`, `src/generated/cards.json.gz.b64`, and `public/cards.json` from `../cards/*.md`, then starts Vite. Open the printed local URL (usually `http://localhost:5173`).
 
 ## Build a static bundle
 
@@ -23,7 +23,7 @@ npm run build
 This:
 
 1. Parses and schema-validates every `seeds/cards/*.md` file (build fails on violations)
-2. Writes `src/generated/cards.json` (inlined into the app) **and** `public/cards.json` (copied to `dist/cards.json` for GitHub Pages / MCP)
+2. Writes `src/generated/cards.json`, gzip+base64 `src/generated/cards.json.gz.b64` (inlined into the app), **and** `public/cards.json` (copied to `dist/cards.json` for GitHub Pages / remote MCP)
 3. Typechecks the client
 4. Emits a single-file app at `dist/index.html` (catalog inlined; no extra network fetch)
 
@@ -43,7 +43,7 @@ npm run pack && npm run mcp          # stdio (Cursor / Claude Desktop / Codex)
 PORT=3000 npm run mcp:http           # Streamable HTTP at /mcp
 ```
 
-The process loads cards, in order: local `public/cards.json` or `src/generated/cards.json` (or `dist/cards.json`), then the `SEEDS_CARDS_JSON` env path/URL, then `https://anghel4d.github.io/broadside-observer/cards.json`.
+The process loads cards, in order: local `src/generated/cards.json.gz.b64`, then plain `public/cards.json` / `src/generated/cards.json` / `dist/cards.json`, then the `SEEDS_CARDS_JSON` env path/URL (JSON or `.gz.b64`), then `https://anghel4d.github.io/broadside-observer/cards.json`.
 
 Tools:
 
@@ -90,7 +90,7 @@ Corpus × Query  →  [SeedCard]
 - **`src/domain/lineageLabels.ts`** — display titles for known lineage (and pool) slugs. Filter values stay the raw slug; unknown slugs get a light prettify.
 - **`src/domain/parse.ts`** — `parseCard: CardSource → Result<ParseError, SeedCard>`. YAML and markdown quirks are normalized (empty `venue`, `null` arxiv/doi, singleton author/topic, missing optional keys including `lineage` / `cites` / `see`), then decoded. No throwing in the domain core; the packer prints every `Err` and exits non-zero.
 - **`src/domain/corpus.ts` / `query.ts`** — immutable index (haystacks, topic/batch/pool/lineage catalogs, `byArxiv`) and a total `applyQuery`. Search is tokenized AND over a precomputed lowercase haystack (title, authors, topics, lineage, cite titles, takeaway) with a title-weighted score as tie-breaker. In-library links are `see` stems that exist in the corpus, plus a fallback join on matching `arxiv` ids.
-- **`src/mcp/`** — stdio (and optional Streamable HTTP) tools `query_seeds` / `get_seed` over the same `Corpus × Query → [SeedCard]` morphism. Responses are agent-facing text with explicit `NEXT:` / JSON-shaped calls. Full-card dumps include `see: [...]` when non-empty and never emit `card:` on cites. The MCP process reads packed JSON; it does not parse markdown at runtime.
+- **`src/mcp/`** — stdio (and optional Streamable HTTP) tools `query_seeds` / `get_seed` over the same `Corpus × Query → [SeedCard]` morphism. Responses are agent-facing text with explicit `NEXT:` / JSON-shaped calls. Full-card dumps include `see: [...]` when non-empty and never emit `card:` on cites. The MCP process prefers the packer's gzip+base64 catalog, then plain packed JSON; it does not parse markdown at runtime.
 - **`src/shell/`** — IO: packer, DOM. The UI is a tiny Elm loop (`Model × Msg → Model`) whose `update` is pure. The shell is a fixed `100dvh` workspace: search stays put; extra filters collapse on narrow viewports; browse and detail panes scroll independently. The browse pane is windowed (list rows and the Cards grid) so only nearby items are in the DOM. Rendering patches those panes (and a List / Cards view mode stored in `localStorage`, with `?view=cards` in the URL when Cards is active). A draggable splitter resizes browse vs detail. List detail is a centered ~46rem reading column. Compact Cards (≤980px) opens detail as a sheet over the grid instead of a stacked side pane.
 
 Deep links: `#card/<file-stem>`. Cards mode is `?view=cards` (omitted for List). Bibliography is always shown from `cites`. In-library chips come from `see` ∪ arxiv-join and use the same hash route.

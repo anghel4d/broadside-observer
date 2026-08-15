@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "mcp": "tsx src/mcp/stdio.ts",
     "mcp:http": "tsx src/mcp/http.ts",
-    "test": "tsx src/domain/query.test.ts && tsx src/domain/parse.test.ts && tsx src/domain/corpus.test.ts && tsx src/domain/lineageLabels.test.ts && tsx src/domain/packedCatalog.test.ts && tsx src/shell/view.test.ts && tsx src/shell/theme.test.ts && tsx src/shell/tags.test.ts && tsx src/shell/cardMetrics.test.ts && tsx src/shell/virtualize.test.ts && tsx src/shell/layout.test.ts && tsx src/shell/gridNav.test.ts && tsx src/shell/html.test.ts && tsx src/mcp/respond.test.ts"
+    "test": "tsx src/domain/query.test.ts && tsx src/domain/parse.test.ts && tsx src/domain/corpus.test.ts && tsx src/domain/lineageLabels.test.ts && tsx src/domain/packedCatalog.test.ts && tsx src/shell/view.test.ts && tsx src/shell/theme.test.ts && tsx src/shell/tags.test.ts && tsx src/shell/cardMetrics.test.ts && tsx src/shell/virtualize.test.ts && tsx src/shell/layout.test.ts && tsx src/shell/gridNav.test.ts && tsx src/shell/html.test.ts && tsx src/mcp/respond.test.ts && tsx src/mcp/load.test.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

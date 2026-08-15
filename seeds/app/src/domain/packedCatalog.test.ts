@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { gzipSync } from "node:zlib";
-import { inflateGzipBase64, parsePackedCatalog } from "./packedCatalog.ts";
+import { inflateGzipBase64, isGzipBase64Catalog, parsePackedCatalog, textToCatalog } from "./packedCatalog.ts";
 import { SeedCardSchema, type Catalog } from "./schema.ts";
 
 const card = SeedCardSchema.parse({
@@ -45,6 +45,20 @@ assert.equal(decoded.count, 1);
 assert.equal(decoded.cards[0]?.id, card.id);
 assert.equal(decoded.cards[0]?.title, card.title);
 assert.deepEqual(decoded.lineageDocs, []);
+
+assert.equal(isGzipBase64Catalog("cards.json.gz.b64", payload), true);
+assert.equal(isGzipBase64Catalog("cards.json", payload), false);
+assert.equal(isGzipBase64Catalog("cards.json", b64), true);
+
+const fromJson = await textToCatalog(payload, "cards.json");
+assert.equal(fromJson.cards[0]?.id, card.id);
+const fromGzip = await textToCatalog(b64, "cards.json.gz.b64");
+assert.equal(fromGzip.cards[0]?.title, card.title);
+
+await assert.rejects(
+  () => textToCatalog(JSON.stringify({ generatedAt: "x", count: 1, cards: [] }), "cards.json"),
+  /schema decode.*cards\.json/u,
+);
 
 assert.throws(() => parsePackedCatalog("{"), /JSON|Unexpected/u);
 assert.throws(
