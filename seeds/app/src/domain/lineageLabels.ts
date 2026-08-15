@@ -3,7 +3,7 @@
  * Filter values and data keys stay the raw slug; this is display-only.
  */
 
-export const LINEAGE_TITLES: Readonly<Record<string, string>> = {
+const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   "concurrent-data-structures": "Concurrent data structures",
   "work-stealing-schedulers": "Work-stealing schedulers",
   "memory-allocators": "Memory allocators",
@@ -29,7 +29,7 @@ export const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   deepseek: "DeepSeek",
 };
 
-export const POOL_TITLES: Readonly<Record<string, string>> = {
+const POOL_TITLES: Readonly<Record<string, string>> = {
   systems: "Systems",
   engines: "Engines",
   "game-ai": "Game AI",

@@ -4,7 +4,7 @@ import process from "node:process";
 import { textToCatalog } from "../domain/packedCatalog.ts";
 import type { Catalog } from "../domain/schema.ts";
 
-export const PAGES_CARDS_JSON = "https://anghel4d.github.io/broadside-observer/cards.json";
+const PAGES_CARDS_JSON = "https://anghel4d.github.io/broadside-observer/cards.json";
 
 export type CatalogSource = {
   readonly catalog: Catalog;

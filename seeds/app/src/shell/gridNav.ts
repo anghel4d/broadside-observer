@@ -1,7 +1,7 @@
 import { assertNever } from "../domain/never.ts";
 import { clamp } from "./virtualize.ts";
 
-export const GRID_DIRS = ["h", "j", "k", "l"] as const;
+const GRID_DIRS = ["h", "j", "k", "l"] as const;
 export type GridDir = (typeof GRID_DIRS)[number];
 
 /** Map vim / arrow keys onto grid directions. Unknown keys are `null`. */

@@ -15,8 +15,8 @@ import {
   type Year,
 } from "../domain/schema.ts";
 
-export const DEFAULT_LIMIT = 20;
-export const MAX_LIMIT = 50;
+const DEFAULT_LIMIT = 20;
+const MAX_LIMIT = 50;
 
 export const EXAMPLE_QUERY_RADIANCE = `query_seeds {"query":"radiance cascades"}`;
 export const EXAMPLE_QUERY_LOCKFREE = `query_seeds {"query":"lock-free","lineage":"concurrent-data-structures"}`;
@@ -127,7 +127,7 @@ Examples:
 - ${EXAMPLE_GET_SEED}`;
 }
 
-export function formatFullCard(card: SeedCard): string {
+function formatFullCard(card: SeedCard): string {
   const cites =
     card.cites.length === 0 ? "cites: []" : `cites:\n${card.cites.map(formatCite).join("\n")}`;
   const see = card.see.length === 0 ? "" : `see: ${JSON.stringify(card.see)}\n`;
@@ -164,7 +164,7 @@ function formatListItem(card: SeedCard): string {
   ${oneLine(card.sections.takeaway)}`;
 }
 
-export function formatManyHits(cards: ReadonlyArray<SeedCard>, limit: number): string {
+function formatManyHits(cards: ReadonlyArray<SeedCard>, limit: number): string {
   const shown = cards.slice(0, limit);
   const first = shown[0];
   if (first === undefined) return formatZeroHits('query=""');

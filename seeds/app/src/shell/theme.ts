@@ -1,6 +1,6 @@
 import { closestControl, syncAriaChecked } from "./html.ts";
 
-export const THEMES = ["light", "dark"] as const;
+const THEMES = ["light", "dark"] as const;
 export type ThemeMode = (typeof THEMES)[number];
 
 export const THEME_STORAGE_KEY = "broadside.seed-browser.theme";
@@ -37,13 +37,13 @@ export function writeStoredTheme(storage: Pick<Storage, "setItem"> | null, theme
   }
 }
 
-export function applyTheme(theme: ThemeMode, doc: Document = document): void {
+function applyTheme(theme: ThemeMode, doc: Document = document): void {
   doc.documentElement.dataset.theme = theme;
   const meta = doc.querySelector('meta[name="color-scheme"]');
   if (meta instanceof HTMLMetaElement) meta.content = theme;
 }
 
-export function syncThemeToggle(root: HTMLElement, theme: ThemeMode): void {
+function syncThemeToggle(root: HTMLElement, theme: ThemeMode): void {
   syncAriaChecked(root, "#theme-toggle [data-theme]", "theme", theme);
 }
 

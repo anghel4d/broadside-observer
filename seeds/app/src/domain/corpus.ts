@@ -19,7 +19,7 @@ function uniqueSorted<A extends string>(values: Iterable<A>): ReadonlyArray<A> {
   return [...new Set(values)].sort((left, right) => left.localeCompare(right, "en"));
 }
 
-export function haystackFor(card: SeedCard): string {
+function haystackFor(card: SeedCard): string {
   return [
     card.title,
     card.authors.join(" "),

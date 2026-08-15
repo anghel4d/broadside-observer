@@ -121,7 +121,7 @@ function normalizeSee(value: unknown): unknown {
 }
 
 /** Tolerant wire-format cleanup. Does not invent fields; only normalizes encodings. */
-export function normalizeFrontmatter(raw: unknown): unknown {
+function normalizeFrontmatter(raw: unknown): unknown {
   if (raw === null || typeof raw !== "object" || Array.isArray(raw)) return raw;
   const record = raw as Record<string, unknown>;
   return {

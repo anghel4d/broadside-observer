@@ -3,8 +3,8 @@ import { z } from "zod";
 import type { Corpus } from "../domain/corpus.ts";
 import { getSeed, querySeeds } from "./respond.ts";
 
-export const SERVER_NAME = "broadside-seeds";
-export const SERVER_VERSION = "0.1.0";
+const SERVER_NAME = "broadside-seeds";
+const SERVER_VERSION = "0.1.0";
 
 export const QUERY_SEEDS_DESCRIPTION = `Search Broadside Observer seed cards (no LLM). Tokenized AND over title, authors, topics, takeaway, and lineage via applyQuery.
 

@@ -373,7 +373,7 @@ export function createBrowseVirtualizer(
   };
 }
 
-export function setActive(root: HTMLElement, id: CardId | null): void {
+function setActive(root: HTMLElement, id: CardId | null): void {
   for (const node of root.querySelectorAll("[data-id]")) {
     if (!(node instanceof HTMLElement)) continue;
     const on = id !== null && node.dataset.id === id;

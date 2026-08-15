@@ -1,9 +1,9 @@
-export const VIEW_MODES = ["list", "cards"] as const;
+const VIEW_MODES = ["list", "cards"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];
 
 export const DEFAULT_VIEW: ViewMode = "list";
 export const VIEW_STORAGE_KEY = "broadside.seed-browser.view";
-export const VIEW_QUERY_KEY = "view";
+const VIEW_QUERY_KEY = "view";
 
 export function parseViewMode(value: string | null | undefined): ViewMode | null {
   if (value === "list" || value === "cards") return value;
