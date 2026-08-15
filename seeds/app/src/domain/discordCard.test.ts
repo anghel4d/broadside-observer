@@ -49,6 +49,8 @@ assert.match(markdown, /\*\*arXiv:\*\* https:\/\/arxiv\.org\/abs\/1706\.03762/u)
 assert.match(markdown, /\*\*Cites\*\*\n- FlashAttention · 2022 · https:\/\/arxiv\.org\/abs\/2205\.14135/u);
 assert.match(markdown, /\*\*See\*\*\n- `089-flashattention-fast-and-memory-efficient-exact-attention-wit`/u);
 assert.match(markdown, /\*\*One-sentence takeaway\*\*\n\nTransformers \\\*dispense\\\* with recurrence\./u);
+assert.doesNotMatch(markdown, /\*\*Caveats\*\*/u);
+assert.doesNotMatch(markdown, /Seed card\./u);
 assert.doesNotMatch(markdown, /^---$/mu);
 assert.doesNotMatch(markdown, /Retrieved full seed card/u);
 assert.ok(markdown.endsWith("\n"));

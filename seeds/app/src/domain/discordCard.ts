@@ -45,7 +45,7 @@ export function formatDiscordCard(card: SeedCard): string {
     card.see.length === 0
       ? []
       : ["", "**See**", ...card.see.map((id) => `- \`${id}\``)];
-  const sections = SECTION_KEYS.flatMap((key) => [
+  const sections = SECTION_KEYS.filter((key) => key !== "caveats").flatMap((key) => [
     "",
     `**${SECTION_HEADING[key]}**`,
     "",
