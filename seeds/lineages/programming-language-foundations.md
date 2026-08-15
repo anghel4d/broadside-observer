@@ -239,5 +239,5 @@
 
 ## Batch
 
-Seed batch: `perfects-pl-2026-08-13` · pool `languages` · numbers 637–733 · claimed in `_pools/lineage_ranges.json` as `perfects-pl-types`.
+Seed batch: `perfects-pl-2026-08-13` · pool `languages` · numbers 637–733.
 

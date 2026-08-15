@@ -14,7 +14,7 @@ Method:
 Goal: ~1000 NEW candidates focused on HPC / game engines / realtime / classical graphics / classical game AI — **explicitly excluding** modern LLM/transformer/deep-RL agent stacks. Keep top 250 as cards 194–416 (`seed_batch: systems-prefill-2026-08-13`).
 
 Method:
-1. Merge `seeds/_pools/pass2/floors_curated.jsonl` (allocator + ECS floors) first.
+1. Merge the allocator + ECS floors shortlist first.
 2. Hand-curated classics across five pools + many arXiv Atom queries with hard ML ban regex.
 3. Dedupe against pass1 excludes (`exclude_arxiv.txt`, `exclude_titles.txt`) and existing cards.
 4. Diversified top250 with ≥10 memory-allocation and ≥10 ECS seeds.

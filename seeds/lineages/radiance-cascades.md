@@ -95,8 +95,3 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 - **Hybrid with HW RT** — RC-guided NEE / probes+cascades (GI-1.0 adjacency) without collapsing into a NeRF cache.
 - **RTS dynamics** — fully rebuildable, no temporal debt: does RC stay constant-cost with thousands of emissive gameplay FX?
 - **Do not expand** into general NeRF/3DGS neural radiance fields unless a paper is an explicit RC successor.
-
-## Pool artifact
-
-Machine-readable shortlist: [`../_pools/lineage_radiance_cascades.jsonl`](../_pools/lineage_radiance_cascades.jsonl)  
-Number block claim: [`../_pools/lineage_ranges.json`](../_pools/lineage_ranges.json) → `radiance-cascades: 450–453`.

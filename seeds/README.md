@@ -17,7 +17,7 @@ Conventions for new passes:
 5. **Dedupe** — skip works already represented in `cards/` / `radar/seen.json` unless you are deliberately revising a card in place.
 6. **Keep rate** — from a wide candidate pool, keep roughly the best ~25% as seeds (same spirit as the deep-digest filter). Themed passes may bias topics; they should not fork the file format.
 7. **Lineage edges** — when a keeper sits on a known thread, set `lineage`, populate `cites` (bibliography only), and list live in-library targets in `see`. Deep threads also get `lineages/<slug>.md`.
-8. **Pool artifacts optional** — shortlists and merge scripts may live under `_pools/`; only `cards/`, `INDEX.md`, and this README are the human-facing contract.
+8. **Human-facing contract** — only `cards/`, `INDEX.md`, and this README are meant to be read directly.
 
 Scheduled Broadside dayparts (Frontier / Craft / Curiosity / Archive) should default to **seed card first** for keepers that are not yet worth a full `summaries/` digest. Deep digests remain the upgrade path.
 
@@ -90,7 +90,6 @@ Future research passes should fill `lineage` / `cites` / `see` when the edge is 
 |------|------|
 | `cards/` | One markdown card per work (the product) |
 | `INDEX.md` | Browsable table of all seeds across batches |
-| `_pools/` | Scratch shortlists / merge inputs for a pass (not required to read cards) |
 | `../radar/seen.json` | Stable ids already considered |
 | `../radar/seed-pass.md` | Notes on completed prefill / themed passes |
 

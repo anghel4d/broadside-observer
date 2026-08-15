@@ -53,4 +53,4 @@ Parallel / carrier / pedagogy nodes kept on the same lineage slug: Fabian DOD bo
 - **Relationships as data** — Flecs-style edges vs ad-hoc ID fields; important if GRID COMMAND / colony sims encode orbits, ownership, and command graphs relationally.
 - **DOD without ECS cosplay** — Acton/Albrecht cache truths still apply when the store is Arrow/kdb+-shaped rather than Unity Entities-shaped.
 
-`seed_batch` for newly minted gap cards: `lineage-ecs-data-oriented-2026-08-13`. Number block reserved in `_pools/lineage_ranges.json`: **447–449**.
+`seed_batch` for newly minted gap cards: `lineage-ecs-data-oriented-2026-08-13`. Number block reserved: **447–449**.
