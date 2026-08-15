@@ -7,7 +7,7 @@ import {
   HEADING_TO_SECTION,
   SECTION_HEADING,
   SECTION_KEYS,
-  SeedCardSchema,
+  SectionsSchema,
   issuesFromZod,
   type CardId,
   type Frontmatter,
@@ -179,22 +179,11 @@ function parseSections(file: string, body: string): Result<ParseError, Sections>
     return err({ _tag: "MissingSections", file, headings: missing });
   }
 
-  const takeaway = found.takeaway;
-  const why = found.why;
-  const ideas = found.ideas;
-  const caveats = found.caveats;
-  const links = found.links;
-  if (
-    takeaway === undefined ||
-    why === undefined ||
-    ideas === undefined ||
-    caveats === undefined ||
-    links === undefined
-  ) {
-    return err({ _tag: "MissingSections", file, headings: missing });
+  const parsed = SectionsSchema.safeParse(found);
+  if (!parsed.success) {
+    return err({ _tag: "SchemaError", file, issues: issuesFromZod(parsed.error) });
   }
-
-  return ok({ takeaway, why, ideas, caveats, links });
+  return ok(parsed.data);
 }
 
 function cardIdFromFile(file: string): Result<ParseError, CardId> {
@@ -206,17 +195,9 @@ function cardIdFromFile(file: string): Result<ParseError, CardId> {
   return ok(parsed.data);
 }
 
-function assemble(file: string, id: CardId, frontmatter: Frontmatter, sections: Sections): Result<ParseError, SeedCard> {
-  const parsed = SeedCardSchema.safeParse({
-    ...frontmatter,
-    id,
-    file,
-    sections,
-  });
-  if (!parsed.success) {
-    return err({ _tag: "SchemaError", file, issues: issuesFromZod(parsed.error) });
-  }
-  return ok(parsed.data);
+/** Frontmatter, sections, and id were each decoded at their own boundary; the join is total. */
+function assemble(file: string, id: CardId, frontmatter: Frontmatter, sections: Sections): SeedCard {
+  return { ...frontmatter, id, file, sections };
 }
 
 /** `CardSource → ParseResult → SeedCard` */
@@ -225,7 +206,7 @@ export function parseCard(source: CardSource): Result<ParseError, SeedCard> {
     chain(parseYaml(source.file, block.yaml), (raw) =>
       chain(decodeFrontmatter(source.file, raw), (frontmatter) =>
         chain(parseSections(source.file, block.body), (sections) =>
-          chain(cardIdFromFile(source.file), (id) => assemble(source.file, id, frontmatter, sections)),
+          chain(cardIdFromFile(source.file), (id) => ok(assemble(source.file, id, frontmatter, sections))),
         ),
       ),
     ),

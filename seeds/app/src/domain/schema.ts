@@ -84,7 +84,17 @@ export const CiteSchema = z.object({
 
 export type Cite = z.infer<typeof CiteSchema>;
 
-export const FrontmatterSchema = z.object({
+export const SectionsSchema = z.object({
+  takeaway: z.string(),
+  why: z.string(),
+  ideas: z.string(),
+  caveats: z.string(),
+  links: z.string(),
+} satisfies Record<SectionKey, z.ZodString>);
+
+export type Sections = z.infer<typeof SectionsSchema>;
+
+export const SeedCardSchema = z.object({
   title: z.string().min(1),
   authors: z.array(z.string().min(1)).min(1),
   year: YearSchema,
@@ -101,27 +111,20 @@ export const FrontmatterSchema = z.object({
   lineage: LineageSchema.nullable().default(null),
   cites: z.array(CiteSchema).default([]),
   see: z.array(CardIdSchema).default([]),
-});
-
-export type Frontmatter = z.infer<typeof FrontmatterSchema>;
-
-export const SectionsSchema = z.object({
-  takeaway: z.string(),
-  why: z.string(),
-  ideas: z.string(),
-  caveats: z.string(),
-  links: z.string(),
-} satisfies Record<SectionKey, z.ZodString>);
-
-export type Sections = z.infer<typeof SectionsSchema>;
-
-export const SeedCardSchema = FrontmatterSchema.extend({
   id: CardIdSchema,
   file: z.string().min(1),
   sections: SectionsSchema,
 });
 
 export type SeedCard = z.infer<typeof SeedCardSchema>;
+
+/**
+ * YAML-only projection of a card. `id` and `file` come from the filename and
+ * `sections` from the `##` body, so none of the three exist at the YAML boundary.
+ */
+export const FrontmatterSchema = SeedCardSchema.omit({ id: true, file: true, sections: true });
+
+export type Frontmatter = z.infer<typeof FrontmatterSchema>;
 
 export const CatalogSchema = z
   .object({
