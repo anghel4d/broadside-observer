@@ -85,7 +85,7 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 }
 
 {
-  // 14.5rem / 0.5rem at 16px root. Grow and first paint are strict auto-fill.
+  // 14.5rem / 0.5rem at 16px root. First paint is strict; live grow/shrink share T(N).
   const track = 232;
   const gap = 8;
   const pitch = track + gap;
@@ -93,9 +93,12 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
   const minKeep = (n: number): number => (n - 1) * pitch + uncovered;
   const nFull = (n: number): number => n * track + Math.max(0, n - 1) * gap;
+  const sliver = (inner: number): number =>
+    Math.max(1, Math.floor((inner + gap + coverSlack) / pitch));
 
   assert.equal(GRID_COLUMN_COVER_FRACTION, 0.95);
   assert.equal(nFull(3), 712);
+  assert.equal(minKeep(3), 2 * pitch + uncovered);
   assert.equal(gridColumnsStrict(712, track, gap), 3);
   assert.equal(gridColumnsStrict(711, track, gap), 2);
   assert.equal(gridColumns(738, track, gap), 3);
@@ -107,25 +110,33 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
   assert.equal(gridColumns(-10, track, gap), 1);
   assert.equal(gridColumns(738, 0, gap), 1);
 
-  // Live Pages clip: 562 inner / 232 track / 8 gap claimed 3 with symmetric slack.
+  // First paint stays strict: 562 inner / 232 track / 8 gap must not clip a 3rd tile.
   assert.equal(gridColumns(562, track, gap), 2);
   assert.equal(gridColumnsStrict(562, track, gap), 2);
-  assert.equal(gridColumns(562, track, gap, 2), 2);
   assert.ok(nFull(3) > 562);
+  assert.ok(562 >= minKeep(3));
 
-  // Shrink hysteresis: keep 3 until ~95% of that card is covered, then drop to 2.
+  // Shrink: keep 3 while inner >= T(3), then drop. One column always remains.
   assert.equal(minKeep(3), nFull(3) - coverSlack);
   assert.equal(gridColumns(minKeep(3), track, gap, 3), 3);
   assert.equal(gridColumns(minKeep(3) - 1, track, gap, 3), 2);
   assert.equal(gridColumns(562, track, gap, 3), 3);
   assert.equal(gridColumns(nFull(3), track, gap, 3), 3);
 
-  // Grow must not add a column until a full track + gap fits (no 5% sliver).
-  assert.equal(gridColumns(minKeep(4), track, gap), 3);
-  assert.equal(gridColumns(minKeep(4), track, gap, 3), 3);
-  assert.equal(gridColumns(nFull(4) - 1, track, gap, 3), 3);
+  // Grow (prevCols set): add N at the same T(N). Do not wait for a full tile (712).
+  assert.equal(gridColumns(minKeep(3) - 1, track, gap, 2), 2);
+  assert.equal(gridColumns(minKeep(3), track, gap, 2), 3);
+  assert.equal(gridColumns(562, track, gap, 2), 3);
+  assert.equal(gridColumns(711, track, gap, 2), 3);
+  assert.equal(gridColumns(minKeep(4) - 1, track, gap, 3), 3);
+  assert.equal(gridColumns(minKeep(4), track, gap, 3), 4);
+  assert.equal(gridColumns(nFull(4) - 1, track, gap, 3), 4);
   assert.equal(gridColumns(nFull(4), track, gap, 3), 4);
+
+  // First paint still waits for a full tile (no prevCols).
+  assert.equal(gridColumns(minKeep(4), track, gap), 3);
   assert.equal(gridColumns(nFull(3) + 1, track, gap), 3);
+  assert.equal(gridColumns(nFull(4), track, gap), 4);
 
   // One column remains even when the single tile is more than 95% covered.
   assert.equal(gridColumns(minKeep(2), track, gap, 2), 2);
@@ -141,6 +152,13 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
       assert.ok(inner + 1e-9 >= nFull(fresh), `inner=${inner} fresh=${fresh} must fully fit`);
     }
     assert.ok(inner < nFull(fresh + 1), `inner=${inner} must not claim ${fresh + 1}`);
+
+    const live = gridColumns(inner, track, gap, Math.max(1, fresh));
+    assert.equal(live, sliver(inner), `inner=${inner} live must use T(N) sliver`);
+    if (live >= 2) {
+      assert.ok(inner + 1e-9 >= minKeep(live), `inner=${inner} live=${live} appear >= T`);
+    }
+    assert.ok(inner < minKeep(live + 1), `inner=${inner} live must drop before ${live + 1}`);
   }
 
   assert.equal(gridRowCount(571, 3), 191);

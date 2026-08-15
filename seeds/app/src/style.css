@@ -729,7 +729,7 @@ button:focus-visible {
 
 .card-grid {
   display: grid;
-  /* JS `--seed-card-cols` from gridColumns() (strict grow, shrink hysteresis).
+  /* JS `--seed-card-cols` from gridColumns() (strict first paint, sliver appear/disappear).
      Fixed tracks: extra space is empty gutter, never 1fr. */
   grid-template-columns: repeat(var(--seed-card-cols, 1), var(--seed-card-width));
   grid-auto-rows: var(--seed-card-height);
