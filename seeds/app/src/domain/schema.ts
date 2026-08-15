@@ -44,7 +44,6 @@ export const SeedRankSchema = z.number().int().brand<"SeedRank">();
 export type SeedRank = z.infer<typeof SeedRankSchema>;
 
 export const RelevanceScoreSchema = z.number().int().min(1).max(10).brand<"RelevanceScore">();
-export type RelevanceScore = z.infer<typeof RelevanceScoreSchema>;
 
 /** YAML may parse bare ids such as `1710.08840` as numbers. */
 function coerceBibliographicId(value: unknown): unknown {
@@ -62,13 +61,11 @@ export const DoiSchema = z.preprocess(
   coerceBibliographicId,
   z.string().min(1).brand<"Doi">(),
 );
-export type Doi = z.infer<typeof DoiSchema>;
 
 export const IsoDateSchema = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD")
   .brand<"IsoDate">();
-export type IsoDate = z.infer<typeof IsoDateSchema>;
 
 /**
  * Bibliography-only cite. No nested library pointer (`card`); those live on frontmatter `see`.

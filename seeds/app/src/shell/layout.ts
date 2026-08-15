@@ -155,10 +155,6 @@ export function resolveDetailWidthPx(args: SplitMeasure & { readonly storedPx: n
   return clampDetailWidthPx({ ...args, detailPx: desired });
 }
 
-export function browseWidthPx(workspacePx: number, detailPx: number, gutterPx: number): number {
-  return Math.max(0, workspacePx - gutterPx - detailPx);
-}
-
 /** Detail width from pointer X in workspace coords. Caller clamps. */
 export function detailWidthFromClientX(args: {
   readonly clientX: number;

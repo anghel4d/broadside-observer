@@ -11,7 +11,6 @@ import {
   LIST_BROWSE_DEFAULT_REM,
   PANE_SPLIT_STORAGE_KEY,
   SPLIT_GUTTER_PX,
-  browseWidthPx,
   clampDetailWidthPx,
   clearStoredDetailWidth,
   defaultDetailWidthPx,
@@ -31,6 +30,9 @@ import {
   SEED_CARD_WIDTH_REM,
 } from "./cardMetrics.ts";
 import { GRID_COLUMN_COVER_FRACTION } from "./virtualize.ts";
+
+const browseWidthPx = (workspacePx: number, detailPx: number, gutterPx: number): number =>
+  Math.max(0, workspacePx - gutterPx - detailPx);
 
 assert.equal(COMPACT_MAX_PX, 980);
 assert.equal(COMPACT_MEDIA, "(max-width: 980px)");
