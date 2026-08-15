@@ -8,6 +8,7 @@ import {
   type FilterKey,
 } from "../domain/query.ts";
 import { parseRoute, printRoute, routeId } from "../domain/route.ts";
+import { formatDiscordCard } from "../domain/discordCard.ts";
 import { assertNever } from "../domain/never.ts";
 import {
   CardIdSchema,
@@ -279,6 +280,15 @@ const THEME_SUN_ICON =
 
 const THEME_MOON_ICON =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+
+const LINK_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+
+const COPY_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+
+const CHECK_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>';
 
 function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearLo = corpus.yearBounds?.[0];
@@ -610,7 +620,10 @@ function renderDetail(
           ${banner}
           <div class="detail-title-row">
             <h2 id="detail-title" title="${attr(card.title)}"><span class="detail-rank">#${card.seed_rank}</span>${escapeHtml(card.title)}</h2>
-            <button type="button" class="copy-link" data-copy-link="${attr(card.id)}" title="Copy link to this card">Copy link</button>
+            <div class="detail-actions">
+              <button type="button" class="detail-action" data-copy="link" title="Copy link to this view" aria-label="Copy link">${LINK_ICON}</button>
+              <button type="button" class="detail-action" data-copy="card" data-copy-card="${attr(card.id)}" title="Copy card as Discord markdown" aria-label="Copy card">${COPY_ICON}</button>
+            </div>
           </div>
         </header>
         <div class="detail-body">
@@ -651,6 +664,44 @@ function isTypingTarget(target: EventTarget | null): boolean {
     target instanceof HTMLTextAreaElement ||
     (target instanceof HTMLElement && target.isContentEditable)
   );
+}
+
+function copyText(text: string): Promise<boolean> {
+  const fallback = (): boolean => {
+    const field = document.createElement("textarea");
+    field.value = text;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.left = "-9999px";
+    document.body.appendChild(field);
+    field.select();
+    let ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch {
+      ok = false;
+    }
+    field.remove();
+    return ok;
+  };
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+    return navigator.clipboard.writeText(text).then(
+      () => true,
+      () => fallback(),
+    );
+  }
+  return Promise.resolve(fallback());
+}
+
+function flashCopied(button: HTMLButtonElement, ok: boolean): void {
+  const idle = button.innerHTML;
+  button.dataset.copied = ok ? "true" : "false";
+  button.innerHTML = ok ? CHECK_ICON : idle;
+  window.setTimeout(() => {
+    if (!button.isConnected) return;
+    delete button.dataset.copied;
+    button.innerHTML = idle;
+  }, 1200);
 }
 
 export function startApp(root: HTMLElement, corpus: Corpus): void {
@@ -1094,43 +1145,21 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       else if (off.dataset.off === "first") flashFirstMatch();
       return;
     }
-    const copy = closestControl(event.target, "button[data-copy-link]");
+    const copy = closestControl(event.target, "button[data-copy]");
     if (copy instanceof HTMLButtonElement) {
-      const id = parseCardId(copy.dataset.copyLink ?? "");
-      const href =
-        id === null
-          ? location.href
-          : new URL(printRoute({ _tag: "Card", id }), location.href).href;
-      const fallback = (): boolean => {
-        const field = document.createElement("textarea");
-        field.value = href;
-        field.setAttribute("readonly", "");
-        field.style.position = "fixed";
-        field.style.left = "-9999px";
-        document.body.appendChild(field);
-        field.select();
-        let ok = false;
-        try {
-          ok = document.execCommand("copy");
-        } catch {
-          ok = false;
+      const kind = copy.dataset.copy;
+      if (kind === "link") {
+        void copyText(location.href).then((ok) => flashCopied(copy, ok));
+        return;
+      }
+      if (kind === "card") {
+        const id = parseCardId(copy.dataset.copyCard ?? "");
+        const card = id === null ? undefined : corpus.byId.get(id);
+        if (card === undefined) {
+          flashCopied(copy, false);
+          return;
         }
-        field.remove();
-        return ok;
-      };
-      const done = (ok: boolean): void => {
-        copy.textContent = ok ? "Copied" : "Copy failed";
-        window.setTimeout(() => {
-          if (copy.isConnected) copy.textContent = "Copy link";
-        }, 1200);
-      };
-      if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
-        void navigator.clipboard.writeText(href).then(
-          () => done(true),
-          () => done(fallback()),
-        );
-      } else {
-        done(fallback());
+        void copyText(formatDiscordCard(card)).then((ok) => flashCopied(copy, ok));
       }
       return;
     }
