@@ -5,6 +5,7 @@ import {
   fillSizes,
   GRID_COLUMN_COVER_FRACTION,
   gridColumns,
+  gridColumnsStrict,
   gridItemBounds,
   gridRowCount,
   gridSlice,
@@ -84,57 +85,62 @@ const uniform = (count: number, h: number) => prefixSums(fillSizes(count, h));
 }
 
 {
-  // 754px browse − 16px grid padding = 738 inner; 14.5rem/0.5rem at 16px root.
-  // Partial-cover slack: last column stays until ~95% of that card is clipped.
+  // 14.5rem / 0.5rem at 16px root. Grow and first paint are strict auto-fill.
   const track = 232;
   const gap = 8;
   const pitch = track + gap;
   const coverSlack = GRID_COLUMN_COVER_FRACTION * track;
   const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
-  const minInnerFor = (n: number): number => (n - 1) * pitch + uncovered;
+  const minKeep = (n: number): number => (n - 1) * pitch + uncovered;
+  const nFull = (n: number): number => n * track + Math.max(0, n - 1) * gap;
 
   assert.equal(GRID_COLUMN_COVER_FRACTION, 0.95);
-  assert.equal(gridColumns(738, track, gap), 4);
-  assert.equal(gridColumns(500, track, gap), 3);
+  assert.equal(nFull(3), 712);
+  assert.equal(gridColumnsStrict(712, track, gap), 3);
+  assert.equal(gridColumnsStrict(711, track, gap), 2);
+  assert.equal(gridColumns(738, track, gap), 3);
+  assert.equal(gridColumns(500, track, gap), 2);
   assert.equal(gridColumns(200, track, gap), 1);
   assert.equal(gridColumns(100, track, gap), 1);
-  assert.equal(gridColumns(976, track, gap), 5);
+  assert.equal(gridColumns(976, track, gap), 4);
   assert.equal(gridColumns(0, track, gap), 1);
   assert.equal(gridColumns(-10, track, gap), 1);
   assert.equal(gridColumns(738, 0, gap), 1);
 
-  // 3 full cards + 2 gaps = 712. Shrink by up to ~95% of a card → still 3; more → 2.
-  const threeFull = 3 * track + 2 * gap;
-  assert.equal(threeFull, 712);
-  assert.equal(gridColumns(threeFull, track, gap), 3);
-  assert.equal(minInnerFor(3), threeFull - coverSlack);
-  assert.equal(gridColumns(minInnerFor(3), track, gap), 3);
-  assert.equal(gridColumns(minInnerFor(3) - 1, track, gap), 2);
+  // Live Pages clip: 562 inner / 232 track / 8 gap claimed 3 with symmetric slack.
+  assert.equal(gridColumns(562, track, gap), 2);
+  assert.equal(gridColumnsStrict(562, track, gap), 2);
+  assert.equal(gridColumns(562, track, gap, 2), 2);
+  assert.ok(nFull(3) > 562);
 
-  // 4th column appears once a sliver of that card is visible, not at 4 full tiles.
-  assert.equal(gridColumns(minInnerFor(4) - 1, track, gap), 3);
-  assert.equal(gridColumns(minInnerFor(4), track, gap), 4);
-  assert.equal(gridColumns(3 * track + 2 * gap + 1, track, gap), 3);
+  // Shrink hysteresis: keep 3 until ~95% of that card is covered, then drop to 2.
+  assert.equal(minKeep(3), nFull(3) - coverSlack);
+  assert.equal(gridColumns(minKeep(3), track, gap, 3), 3);
+  assert.equal(gridColumns(minKeep(3) - 1, track, gap, 3), 2);
+  assert.equal(gridColumns(562, track, gap, 3), 3);
+  assert.equal(gridColumns(nFull(3), track, gap, 3), 3);
+
+  // Grow must not add a column until a full track + gap fits (no 5% sliver).
+  assert.equal(gridColumns(minKeep(4), track, gap), 3);
+  assert.equal(gridColumns(minKeep(4), track, gap, 3), 3);
+  assert.equal(gridColumns(nFull(4) - 1, track, gap, 3), 3);
+  assert.equal(gridColumns(nFull(4), track, gap, 3), 4);
+  assert.equal(gridColumns(nFull(3) + 1, track, gap), 3);
 
   // One column remains even when the single tile is more than 95% covered.
-  assert.equal(minInnerFor(2), pitch + uncovered);
-  assert.equal(gridColumns(minInnerFor(2), track, gap), 2);
-  assert.equal(gridColumns(minInnerFor(2) - 1, track, gap), 1);
+  assert.equal(gridColumns(minKeep(2), track, gap, 2), 2);
+  assert.equal(gridColumns(minKeep(2) - 1, track, gap, 2), 1);
   assert.equal(gridColumns(1, track, gap), 1);
   assert.equal(gridColumns(uncovered, track, gap), 1);
 
-  // floor((inner + gap + coverSlack) / pitch) matches the keep-N inequality.
-  for (const inner of [1, 50, 200, 251, 252, 491, 492, 712, 731, 732, 971, 972, 1200]) {
-    const cols = gridColumns(inner, track, gap);
-    assert.ok(cols >= 1);
-    if (cols >= 2) {
-      assert.ok(inner + 1e-9 >= minInnerFor(cols), `inner=${inner} cols=${cols}`);
+  for (const inner of [1, 50, 200, 251, 252, 491, 492, 562, 711, 712, 738, 951, 952, 1200]) {
+    const fresh = gridColumns(inner, track, gap);
+    assert.equal(fresh, gridColumnsStrict(inner, track, gap));
+    assert.ok(fresh >= 1);
+    if (fresh >= 2) {
+      assert.ok(inner + 1e-9 >= nFull(fresh), `inner=${inner} fresh=${fresh} must fully fit`);
     }
-    assert.ok(
-      inner < minInnerFor(cols + 1),
-      `inner=${inner} cols=${cols} should reflow before ${cols + 1}`,
-    );
-    assert.equal(cols, Math.max(1, Math.floor((inner + gap + coverSlack) / pitch)));
+    assert.ok(inner < nFull(fresh + 1), `inner=${inner} must not claim ${fresh + 1}`);
   }
 
   assert.equal(gridRowCount(571, 3), 191);

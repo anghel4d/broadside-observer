@@ -39,7 +39,7 @@ import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
 import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
-import { attr, escapeHtml } from "./html.ts";
+import { attr, closestControl, escapeHtml } from "./html.ts";
 import {
   BROWSE_MIN_REM,
   COMPACT_MEDIA,
@@ -47,13 +47,14 @@ import {
   SPLIT_GUTTER_PX,
   clearStoredDetailWidth,
   clampDetailWidthPx,
+  detailWidthFromClientX,
   isCardsSheetLayout,
   isCardsSheetVisible,
   isSideSplitLayout,
   paneSplitKey,
+  persistDetailWidthPx,
   readStoredDetailWidth,
   resolveDetailWidthPx,
-  writeStoredDetailWidth,
 } from "./layout.ts";
 import { renderMarkdown } from "./markdown.ts";
 import { displayTopics } from "./tags.ts";
@@ -752,18 +753,32 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   type SplitDrag = {
     readonly pointerId: number;
     readonly startX: number;
-    readonly startDetail: number;
+    readonly workspaceLeft: number;
+    readonly workspacePx: number;
+    readonly rem: number;
     moved: boolean;
   };
   let splitDrag: SplitDrag | null = null;
   let liveDetailPx: number | null = null;
+  let endingSplit = false;
 
-  const splitMeasure = () => ({
+  const liveSplitMeasure = () => ({
     view: model.view,
     workspacePx: workspace.clientWidth,
     gutterPx: SPLIT_GUTTER_PX,
     rem: rootRem(),
   });
+
+  /** Freeze workspace size while dragging so a scrollbar/reflow cannot retarget the clamp. */
+  const splitMeasure = () =>
+    splitDrag === null
+      ? liveSplitMeasure()
+      : {
+          view: model.view,
+          workspacePx: splitDrag.workspacePx,
+          gutterPx: SPLIT_GUTTER_PX,
+          rem: splitDrag.rem,
+        };
 
   const applyPaneSplit = (): void => {
     const side = isSideSplitLayout(compactLayout.matches);
@@ -796,28 +811,35 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   };
 
   const commitDetailWidth = (detailPx: number, persist: boolean): void => {
-    const next = clampDetailWidthPx({ ...splitMeasure(), detailPx });
+    const measure = splitMeasure();
+    const next = clampDetailWidthPx({ ...measure, detailPx });
     liveDetailPx = next;
     applyPaneSplit();
     if (persist) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view), next);
+      persistDetailWidthPx(storage, paneSplitKey(model.view), { ...measure, detailPx: next });
       liveDetailPx = null;
       virt.refresh();
     }
   };
 
   const endSplitDrag = (): void => {
-    if (splitDrag === null) return;
+    if (splitDrag === null || endingSplit) return;
+    endingSplit = true;
     const pointerId = splitDrag.pointerId;
     const moved = splitDrag.moved;
+    const measure = splitMeasure();
     if (moved && liveDetailPx !== null) {
-      writeStoredDetailWidth(storage, paneSplitKey(model.view), liveDetailPx);
+      persistDetailWidthPx(storage, paneSplitKey(model.view), {
+        ...measure,
+        detailPx: liveDetailPx,
+      });
     }
     liveDetailPx = null;
     splitDrag = null;
     workspace.classList.remove("is-resizing");
     if (splitter.hasPointerCapture(pointerId)) splitter.releasePointerCapture(pointerId);
     if (moved) virt.refresh();
+    endingSplit = false;
   };
 
   const syncFilterDisclosure = (): void => {
@@ -904,6 +926,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     }
 
     const prev = painted;
+    if (prev !== null && prev.view !== vm.view) {
+      void workspace.offsetWidth;
+    }
     virt.set(vm.view, vm.visible, highlight);
     if (prev !== null && prev.view !== vm.view) {
       requestAnimationFrame(() => {
@@ -1028,36 +1053,38 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (rank !== null) dispatch({ _tag: "JumpRank", rank });
   });
   viewToggle.addEventListener("click", (event) => {
-    const button = (event.target instanceof Element ? event.target : null)?.closest("button[data-view]");
-    if (!(button instanceof HTMLButtonElement) || button.dataset.view === undefined) return;
+    const button = closestControl(event.target, "button[data-view]");
+    if (!(button instanceof HTMLButtonElement) || !viewToggle.contains(button)) return;
     const view = parseViewMode(button.dataset.view);
     if (view !== null) dispatch({ _tag: "SetView", view });
   });
   splitter.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || !isSideSplitLayout(compactLayout.matches)) return;
     event.preventDefault();
-    splitter.focus();
-    const measure = splitMeasure();
-    const key = paneSplitKey(model.view);
-    const startDetail = resolveDetailWidthPx({
-      ...measure,
-      storedPx: liveDetailPx ?? readStoredDetailWidth(storage, key),
-    });
+    splitter.focus({ preventScroll: true });
+    const box = workspace.getBoundingClientRect();
     splitDrag = {
       pointerId: event.pointerId,
       startX: event.clientX,
-      startDetail,
+      workspaceLeft: box.left,
+      workspacePx: box.width,
+      rem: rootRem(),
       moved: false,
     };
     splitter.setPointerCapture(event.pointerId);
   });
   splitter.addEventListener("pointermove", (event) => {
     if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
-    const dx = event.clientX - splitDrag.startX;
-    if (!splitDrag.moved && Math.abs(dx) < 3) return;
+    if (!splitDrag.moved && Math.abs(event.clientX - splitDrag.startX) < 3) return;
+    const desired = detailWidthFromClientX({
+      clientX: event.clientX,
+      workspaceLeft: splitDrag.workspaceLeft,
+      workspacePx: splitDrag.workspacePx,
+      gutterPx: SPLIT_GUTTER_PX,
+    });
     splitDrag.moved = true;
     workspace.classList.add("is-resizing");
-    commitDetailWidth(splitDrag.startDetail - dx, false);
+    commitDetailWidth(desired, false);
   });
   splitter.addEventListener("pointerup", (event) => {
     if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
@@ -1067,7 +1094,17 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
     endSplitDrag();
   });
-  splitter.addEventListener("lostpointercapture", () => {
+  splitter.addEventListener("lostpointercapture", (event) => {
+    if (splitDrag === null || event.pointerId !== splitDrag.pointerId) return;
+    if (endingSplit) return;
+    if (event.buttons !== 0) {
+      try {
+        splitter.setPointerCapture(event.pointerId);
+      } catch {
+        endSplitDrag();
+      }
+      return;
+    }
     endSplitDrag();
   });
   splitter.addEventListener("dblclick", (event) => {

@@ -168,6 +168,15 @@ kbd {
   background: var(--panel-2);
   border: 1px solid var(--line);
   border-radius: 8px;
+  position: relative;
+}
+
+#view-toggle {
+  z-index: 1;
+}
+
+#theme-toggle {
+  z-index: 0;
 }
 
 .seg button {
@@ -180,6 +189,9 @@ kbd {
   font: inherit;
   font-size: 0.8rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
   transition: background-color 120ms ease, color 120ms ease;
 
   &:hover {
@@ -709,8 +721,8 @@ button:focus-visible {
 
 .card-grid {
   display: grid;
-  /* JS `--seed-card-cols` from gridColumns() (partial-cover slack). Fixed
-     tracks: extra space is empty gutter or a clipped last column, never 1fr. */
+  /* JS `--seed-card-cols` from gridColumns() (strict grow, shrink hysteresis).
+     Fixed tracks: extra space is empty gutter, never 1fr. */
   grid-template-columns: repeat(var(--seed-card-cols, 1), var(--seed-card-width));
   grid-auto-rows: var(--seed-card-height);
   gap: var(--seed-card-gap);

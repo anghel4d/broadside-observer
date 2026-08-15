@@ -161,7 +161,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
     track: 232,
     gap: 8,
   });
-  assert.equal(fallback, 4);
+  assert.equal(fallback, 3);
   assert.equal(fallback, gridColumns(738, 232, 8));
 
   const autoFill = measureGridColumns({
@@ -172,17 +172,22 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   });
   assert.equal(autoFill, gridColumns(738, 232, 8));
 
-  // Slack fallback: same keep-N threshold as the virtualizer (hjkl uses this).
+  // Fresh measure is strict; shrink hysteresis needs prevCols (hjkl uses this).
   const track = 232;
   const gap = 8;
   const pitch = track + gap;
   const uncovered = (1 - GRID_COLUMN_COVER_FRACTION) * track;
   const threeFull = 3 * track + 2 * gap;
+  assert.equal(
+    measureGridColumns({ templateColumns: "none", width: 562, track, gap }),
+    2,
+  );
   const stillThree = measureGridColumns({
     templateColumns: "none",
     width: threeFull - GRID_COLUMN_COVER_FRACTION * track,
     track,
     gap,
+    prevCols: 3,
   });
   assert.equal(stillThree, 3);
   const dropToTwo = measureGridColumns({
@@ -190,6 +195,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
     width: threeFull - GRID_COLUMN_COVER_FRACTION * track - 1,
     track,
     gap,
+    prevCols: 3,
   });
   assert.equal(dropToTwo, 2);
   assert.equal(
@@ -198,6 +204,7 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
       width: pitch + uncovered - 1,
       track,
       gap,
+      prevCols: 2,
     }),
     1,
   );

@@ -100,15 +100,16 @@ export function countGridTemplateColumns(value: string): number {
 
 /**
  * Prefer the live CSS track list; fall back to the virtualizer's
- * `gridColumns` formula (fixed tracks + partial-cover slack).
+ * `gridColumns` formula (strict grow, shrink hysteresis via `prevCols`).
  */
 export function measureGridColumns(args: {
   readonly templateColumns: string | null | undefined;
   readonly width: number;
   readonly track: number;
   readonly gap: number;
+  readonly prevCols?: number;
 }): number {
   const fromStyle = countGridTemplateColumns(args.templateColumns ?? "");
   if (fromStyle >= 1) return fromStyle;
-  return gridColumns(args.width, args.track, args.gap);
+  return gridColumns(args.width, args.track, args.gap, args.prevCols);
 }

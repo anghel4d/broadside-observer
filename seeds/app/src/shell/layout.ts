@@ -155,3 +155,28 @@ export function resolveDetailWidthPx(args: SplitMeasure & { readonly storedPx: n
 export function browseWidthPx(workspacePx: number, detailPx: number, gutterPx: number): number {
   return Math.max(0, workspacePx - gutterPx - detailPx);
 }
+
+/**
+ * Detail width for a pointer at `clientX` in a workspace whose left edge is
+ * `workspaceLeft`. Detail is the right-hand pane, so moving the pointer right
+ * shrinks detail. No column snap — clamp is applied by the caller.
+ */
+export function detailWidthFromClientX(args: {
+  readonly clientX: number;
+  readonly workspaceLeft: number;
+  readonly workspacePx: number;
+  readonly gutterPx: number;
+}): number {
+  return args.workspacePx - (args.clientX - args.workspaceLeft) - args.gutterPx / 2;
+}
+
+/** Clamp-only persist. Must not snap to Cards column tracks. */
+export function persistDetailWidthPx(
+  storage: Pick<Storage, "getItem" | "setItem"> | null,
+  key: PaneSplitKey,
+  measure: SplitMeasure & { readonly detailPx: number },
+): number {
+  const next = clampDetailWidthPx(measure);
+  writeStoredDetailWidth(storage, key, next);
+  return next;
+}
