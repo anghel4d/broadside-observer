@@ -1122,3 +1122,20 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1029 | 9 | 2026 | A Rig of Transformations | languages |
 
 _Recount after `curiosity-2026-08-15`: **1029** unique title cards on main._
+
+## Craft 2026-08-15
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **64**. Keepers: **8** (keep rate **0.125**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1030 | 10 | 2026 | Warnock: Harnessing GPU Geometry Amplification for Vector Graphics | graphics |
+| 1031 | 10 | 2025 | No More Shading Languages: Compiling C++ to Vulkan Shaders | engines |
+| 1032 | 9 | 2026 | Real-Time Meshlet Extraction from Scalar Volumes | graphics |
+| 1033 | 10 | 2025 | Towards Efficient Hash Maps in Functional Array Languages | languages |
+| 1034 | 9 | 2025 | Destination Calculus: A Linear λ-Calculus for Purely Functional Memory Writes | languages |
+| 1035 | 9 | 2026 | Modular GPU Programming with Typed Perspectives | languages |
+| 1036 | 9 | 2026 | Decoupling Data Layouts from Bounding Volume Hierarchies | engines |
+| 1037 | 9 | 2026 | Bonsai: Compiling Queries to Pruned Tree Traversals | languages |
+
+_Recount after `craft-2026-08-15`: **1037** unique title cards on main._
