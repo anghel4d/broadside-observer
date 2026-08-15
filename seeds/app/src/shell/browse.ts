@@ -33,7 +33,7 @@ export type BrowseVirtualizer = {
   readonly reveal: (id: CardId | null) => void;
   readonly flash: (id: CardId) => void;
   readonly refresh: () => void;
-  /** Live Cards column count from `gridColumns` (same value written to `--seed-card-cols`). */
+  /** Live Cards column count from `gridColumns` (strict grow, shrink hysteresis). */
   readonly columns: () => number;
   readonly disconnect: () => void;
 };
@@ -92,11 +92,13 @@ export function createBrowseVirtualizer(
   const liveColumns = (): number => {
     const m = remMetrics();
     const inner = Math.max(0, pane.clientWidth - m.gridPad * 2);
+    const prev = Number.isFinite(lastColsWritten) ? lastColsWritten : undefined;
     return measureGridColumns({
       templateColumns: undefined,
       width: inner,
       track: m.gridCardWidth,
       gap: m.gridGap,
+      ...(prev !== undefined ? { prevCols: prev } : {}),
     });
   };
 

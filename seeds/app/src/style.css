@@ -721,8 +721,8 @@ button:focus-visible {
 
 .card-grid {
   display: grid;
-  /* JS `--seed-card-cols` from gridColumns() (partial-cover slack). Fixed
-     tracks: extra space is empty gutter or a clipped last column, never 1fr. */
+  /* JS `--seed-card-cols` from gridColumns() (strict grow, shrink hysteresis).
+     Fixed tracks: extra space is empty gutter, never 1fr. */
   grid-template-columns: repeat(var(--seed-card-cols, 1), var(--seed-card-width));
   grid-auto-rows: var(--seed-card-height);
   gap: var(--seed-card-gap);
