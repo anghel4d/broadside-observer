@@ -35,10 +35,10 @@ cites:
     arxiv: "1311.3200"
     doi: null
 see:
-  - "025-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
-  - "032-michael-scott-lock-free-queue"
-  - "037-wait-free-synchronization"
-  - "458-transactional-memory-architectural-support-for-lock-free-dat"
+  - "024-hazard-pointers-safe-memory-reclamation-for-lock-free-object"
+  - "031-michael-scott-lock-free-queue"
+  - "036-wait-free-synchronization"
+  - "377-transactional-memory-architectural-support-for-lock-free-dat"
 ---
 
 # Formally Verified Lock-Free Software Transactional Memory for Scientific Measurement

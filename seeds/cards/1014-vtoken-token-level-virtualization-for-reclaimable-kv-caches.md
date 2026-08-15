@@ -36,9 +36,8 @@ cites:
     doi: null
 see:
   - "002-efficient-memory-management-for-large-language-model-serving"
-  - "071-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
-  - "083-criticalkv-optimizing-kv-cache-eviction-from-an-output-pertu"
-  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "062-ragged-paged-attention-a-high-performance-and-flexible-llm-i"
+  - "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
 ---
 
 # vToken: Token-Level Virtualization for Reclaimable KV Caches

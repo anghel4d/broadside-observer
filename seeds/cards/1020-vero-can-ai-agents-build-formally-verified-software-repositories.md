@@ -36,7 +36,7 @@ cites:
     doi: "10.1145/1629575.1629596"
 see:
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
-  - "100-swe-bench-can-language-models-resolve-real-world-github-issu"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
   - "1001-from-system-f-to-typed-assembly-language"
   - "1011-cyclone-a-safe-dialect-of-c"
 ---

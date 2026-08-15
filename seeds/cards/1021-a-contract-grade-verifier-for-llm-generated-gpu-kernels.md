@@ -35,8 +35,8 @@ cites:
     arxiv: "2606.20128"
     doi: null
 see:
-  - "105-flashattention-fast-and-memory-efficient-exact-attention-wit"
-  - "089-flashattention-3-fast-and-accurate-attention-with-asynchrony"
+  - "089-flashattention-fast-and-memory-efficient-exact-attention-wit"
+  - "073-flashattention-3-fast-and-accurate-attention-with-asynchrony"
   - "1002-futhark-purely-functional-gpu-programming"
 ---
 

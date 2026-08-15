@@ -36,9 +36,9 @@ cites:
     doi: null
 see:
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
-  - "067-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
-  - "079-toolgate-token-efficient-pre-call-control-for-tool-augmented"
-  - "100-swe-bench-can-language-models-resolve-real-world-github-issu"
+  - "060-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
+  - "067-toolgate-token-efficient-pre-call-control-for-tool-augmented"
+  - "084-swe-bench-can-language-models-resolve-real-world-github-issu"
 ---
 
 # QuoteBench: How Matched Scores Can Hide Command-Path Failures

@@ -26,7 +26,7 @@ cites:
     doi: null
 see:
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
-  - "067-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
+  - "060-loopsbench-from-harness-engineering-to-loop-engineering-in-c"
 ---
 
 # Introducing Grok 4.6

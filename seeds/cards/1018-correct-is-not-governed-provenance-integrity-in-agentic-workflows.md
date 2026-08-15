@@ -36,7 +36,7 @@ cites:
     doi: null
 see:
   - "008-retrieval-augmented-generation-for-knowledge-intensive-nlp-t"
-  - "079-toolgate-token-efficient-pre-call-control-for-tool-augmented"
+  - "067-toolgate-token-efficient-pre-call-control-for-tool-augmented"
   - "007-react-synergizing-reasoning-and-acting-in-language-models"
 ---
 

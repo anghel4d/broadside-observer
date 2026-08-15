@@ -36,7 +36,6 @@ cites:
     doi: null
 see:
   - "006-voyager-an-open-ended-embodied-agent-with-large-language-mod"
-  - "074-skillfoundry-building-self-evolving-agent-skill-libraries-fr"
   - "001-swe-agent-agent-computer-interfaces-enable-automated-softwar"
 ---
 
