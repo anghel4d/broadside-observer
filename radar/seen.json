@@ -178,7 +178,18 @@
   "2605.01352",
   "2601.08529",
   "2607.28897",
-  "2604.21749"
+  "2604.21749",
+  "2608.13417",
+  "2608.12946",
+  "2608.12610",
+  "2608.12593",
+  "2608.12426",
+  "2608.12895",
+  "2608.12847",
+  "2608.13120",
+  "2608.13558",
+  "2608.13334",
+  "2608.13552"
  ],
  "titles": [
   "a fast procedure for computing the distance between complex objects (gjk)",
@@ -590,7 +601,20 @@
   "a methodology for implementing highly concurrent data objects",
   "geometry images",
   "ambient occlusion (landis / zhukov)",
-  "the bakery algorithm"
+  "the bakery algorithm",
+  "deepseek harness: everything is a plugin",
+  "a programming paradigm for spatiotemporal composability",
+  "beyond final scores: a systematic evaluation of agents for long-horizon ai research and de",
+  "efficient randomized ll/sc that preserves history independence",
+  "@skills: attention is all you have",
+  "dig-bench: discovery in games",
+  "large language models can follow instructions, but not many at once: phase transitions in",
+  "agent behavioral contracts ii: certifying compositional reliability without assuming indep",
+  "beyond retrieval: query-conditioned reuse of long-horizon agent trajectories",
+  "skillevo: self-renewing evolution gradients from multi-turn interaction feedback",
+  "omniscientist: an omni-modal omni-discipline ai scientist",
+  "ripplemem: from isolated retrieval to associative recollection for long-term agent memory",
+  "playworld: benchmarking world models with agent players over long-horizon objectives"
  ],
  "updated": "2026-08-16",
  "pass2_batch": "systems-prefill-2026-08-13",
@@ -601,6 +625,6 @@
  "craft_count": 8,
  "archive_batch": "archive-2026-08-16",
  "archive_count": 12,
- "frontier_batch": "frontier-2026-08-14",
- "frontier_count": 10
+ "frontier_batch": "frontier-2026-08-16",
+ "frontier_count": 1
 }

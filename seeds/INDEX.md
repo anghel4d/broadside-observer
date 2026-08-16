@@ -1160,3 +1160,13 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1049 | 9 | 1995 | Production Matching for Large Learning Systems | languages |
 
 _Recount after `archive-2026-08-16`: **1049** unique title cards on main._
+
+## Frontier 2026-08-16
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md` + last night's archive 1038–1049), dirt ban, and a cheap Broadside/Anoptic/ano/RTS POS filter: **129**. Keepers: **1** (keep rate **0.008**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1050 | 9 | 2026 | DeepSeek Harness: Everything is a Plugin | agents |
+
+_Recount after `frontier-2026-08-16`: **1050** unique title cards on main._
