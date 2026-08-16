@@ -1170,3 +1170,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1050 | 9 | 2026 | DeepSeek Harness: Everything is a Plugin | agents |
 
 _Recount after `frontier-2026-08-16`: **1050** unique title cards on main._
+
+## Curiosity 2026-08-17
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **55**. Keepers: **7** (keep rate **0.127**, hard cap **0.15**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1051 | 9 | 2010 | Finite element exterior calculus: from Hodge theory to numerical stability | maths-foundations |
+| 1052 | 9 | 2015 | Discrete conformal maps and ideal hyperbolic polyhedra | graphics |
+| 1053 | 9 | 2019 | Projective geometric algebra: A new framework for doing euclidean geometry | graphics |
+| 1054 | 9 | 2018 | Cubical Type Theory: a constructive interpretation of the univalence axiom | languages |
+| 1055 | 9 | 2021 | Idris 2: Quantitative Type Theory in Practice | languages |
+| 1056 | 9 | 2020 | Reverse derivative categories | maths-foundations |
+| 1057 | 8 | 2017 | Profunctor Optics: Modular Data Accessors | languages |
+
+_Recount after `curiosity-2026-08-17`: **1057** unique title cards on main._
