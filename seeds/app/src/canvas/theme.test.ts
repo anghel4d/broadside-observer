@@ -90,6 +90,7 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.ok(host.includes("div:has(> svg)"), "FlowDiagram relative box needs a host selector");
   assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.ok(host.includes("overflow: visible"), "canvas-host must not trap scroll in an inner bar");
+  assert.ok(host.includes("padding-inline: 2rem"), "canvas-host document must inset ≥2rem");
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
@@ -111,21 +112,19 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
     "canvas reading column must be wider than the wiki column",
   );
   assert.equal(reading.includes("max-width: 46rem"), true);
-  assert.ok(css.includes('#app[data-view="canvas"] .detail-body'), "canvas detail chrome needs a scoped padding rule");
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
-      css,
-    ),
-    "canvas detail needs ≥2rem horizontal padding",
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*padding-inline:\s*2rem/.test(reading),
+    "canvas reading-col must carry the ≥2rem inset",
   );
+  assert.ok(css.includes("#app[data-view=\"canvas\"] .canvas-source"), "RAW document needs the same inset");
 
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
+    /#app\[data-view="canvas"\]\s*\.reading-col,\s*#app\[data-view="canvas"\]\s*\.canvas-host,\s*#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding-inline:\s*2rem/.test(
       phone,
     ),
-    "phone canvas must keep 2rem padding",
+    "phone canvas must keep 2rem padding on the column and document",
   );
 }
 

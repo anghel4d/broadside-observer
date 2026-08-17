@@ -859,15 +859,16 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem. */
+/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem.
+   Padding lives on the column and the document, not only the outer pane. */
 #app[data-view="canvas"] .reading-col {
   max-width: 56rem;
+  padding-inline: 2rem;
 }
 
 #app[data-view="canvas"] .detail-head,
 #app[data-view="canvas"] .detail-body {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-inline: 0;
 }
 
 .detail-dismiss {
@@ -988,6 +989,11 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
+  padding-inline: 2rem;
+}
+
+#app[data-view="canvas"] .canvas-source {
+  padding-inline: 2rem;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1640,11 +1646,16 @@ a.chip-see:hover {
     padding-right: 0.75rem;
   }
 
-  /* Canvas keeps 2rem; do not collapse to the phone 0.75rem inset. */
+  /* Canvas keeps inner 2rem on the column and document; do not collapse to 0.75rem. */
+  #app[data-view="canvas"] .reading-col,
+  #app[data-view="canvas"] .canvas-host,
+  #app[data-view="canvas"] .canvas-source {
+    padding-inline: 2rem;
+  }
+
   #app[data-view="canvas"] .detail-head,
   #app[data-view="canvas"] .detail-body {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-inline: 0;
   }
 
   .detail-dismiss {

@@ -113,6 +113,10 @@ assert.equal(scrollerTopForCaret(300, 20, 0, 200), 120);
   assert.equal(/\.canvas-source \{\s*\n\s*height:\s*100%/.test(phone), false);
   assert.equal(/\.detail:has\(\.canvas-host\) \.detail-body \{[^}]*overflow:\s*hidden/.test(phone), false);
   assert.ok(css.includes(".canvas-jump"));
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding-inline:\s*2rem/.test(css),
+    "RAW surface must inset ≥2rem with the reading column",
+  );
 }
 
 console.log("raw.test.ts ok");
