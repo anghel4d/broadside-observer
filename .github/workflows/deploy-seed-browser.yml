@@ -1,36 +1,34 @@
-name: One-shot Anoptic canvas factual correction
+# Build the seed-card browser and deploy it to GitHub Pages.
+# Site: https://anghel4d.github.io/broadside-observer/
+name: Deploy seed browser
 
 on:
   push:
     branches:
       - main
     paths:
+      - "seeds/app/**"
+      - "seeds/cards/**"
+      - "seeds/canvases/**"
+      - "seeds/lineages/**"
       - ".github/workflows/deploy-seed-browser.yml"
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  patch:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout latest main
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Apply audited corrections
-        shell: bash
-        run: |
-          set -euo pipefail
-          git pull --ff-only origin main
-          cat .github/fix-anoptic-canvas.part1.py .github/fix-anoptic-canvas.part2.py > /tmp/fix-anoptic-canvas.py
-          python -m py_compile /tmp/fix-anoptic-canvas.py
-          python /tmp/fix-anoptic-canvas.py
-          rm -f \
-            .github/fix-anoptic-canvas.py.gz.b64 \
-            .github/fix-anoptic-canvas.part1.py \
-            .github/fix-anoptic-canvas.part2.py
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,7 +37,10 @@ jobs:
           cache: npm
           cache-dependency-path: seeds/app/package-lock.json
 
-      - name: Build canvas browser
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build
         working-directory: seeds/app
         env:
           GITHUB_PAGES: "true"
@@ -47,20 +48,18 @@ jobs:
           npm ci
           npm run build
 
-      - name: Commit corrected canvas
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- \
-            seeds/canvases/anoptic-api-algebra-2026-08-17.tsx \
-            .github/fix-anoptic-canvas.py.gz.b64 \
-            .github/fix-anoptic-canvas.part1.py \
-            .github/fix-anoptic-canvas.part2.py
-          if git diff --cached --quiet; then
-            echo "No canvas changes staged" >&2
-            exit 1
-          fi
-          git commit -m "docs: correct anoptic API algebra facts"
-          git push origin HEAD:main
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: seeds/app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
