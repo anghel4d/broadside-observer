@@ -13,6 +13,19 @@ export function jumpCanvasScroller(
   scroller.scrollTop = to === "top" ? 0 : scroller.scrollHeight;
 }
 
+type LineScroller = {
+  scrollTop: number;
+  readonly scrollHeight: number;
+  readonly clientHeight: number;
+};
+
+/** One CSS line-height step. Clamp to [0, max scroll]. No-op if lineHeight is not a positive px. */
+export function scrollByLineHeight(scroller: LineScroller, lineHeight: number, delta: -1 | 1): void {
+  if (!(lineHeight > 0)) return;
+  const max = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+  scroller.scrollTop = Math.min(max, Math.max(0, scroller.scrollTop + delta * lineHeight));
+}
+
 export function lockEditorScroll(el: { scrollTop: number; scrollLeft: number }): void {
   el.scrollTop = 0;
   el.scrollLeft = 0;

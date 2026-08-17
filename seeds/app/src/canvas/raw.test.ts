@@ -7,6 +7,7 @@ import {
   lockEditorScroll,
   paintRawHighlight,
   rawEditorHtml,
+  scrollByLineHeight,
   scrollerTopForCaret,
 } from "./raw.ts";
 import { highlightCanvasSource } from "./highlight.ts";
@@ -40,6 +41,24 @@ import { highlightCanvasSource } from "./highlight.ts";
   assert.equal(scroller.scrollTop, 0);
   jumpCanvasScroller(scroller, "bottom");
   assert.equal(scroller.scrollTop, 900);
+}
+
+{
+  const scroller = { scrollTop: 40, scrollHeight: 900, clientHeight: 200 };
+  scrollByLineHeight(scroller, 20, 1);
+  assert.equal(scroller.scrollTop, 60);
+  scrollByLineHeight(scroller, 20, -1);
+  assert.equal(scroller.scrollTop, 40);
+  scroller.scrollTop = 0;
+  scrollByLineHeight(scroller, 20, -1);
+  assert.equal(scroller.scrollTop, 0);
+  scroller.scrollTop = 695;
+  scrollByLineHeight(scroller, 20, 1);
+  assert.equal(scroller.scrollTop, 700);
+  const before = scroller.scrollTop;
+  scrollByLineHeight(scroller, Number.NaN, 1);
+  scrollByLineHeight(scroller, 0, -1);
+  assert.equal(scroller.scrollTop, before);
 }
 
 {
