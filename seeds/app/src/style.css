@@ -938,6 +938,12 @@ button:focus-visible {
   min-height: 8rem;
 }
 
+/* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
+   HTML node DIVs are siblings of the svg, not inside it. */
+.canvas-host div:has(> svg) {
+  margin-inline: auto;
+}
+
 .canvas-host .cv-stack {
   display: flex;
   flex-direction: column;

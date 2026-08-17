@@ -86,6 +86,9 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.equal(host.includes("var(--muted)"), false, "canvas-host must not force site muted");
   assert.equal(host.includes("var(--panel"), false, "canvas-host must not paint with site panels");
   assert.equal(host.includes("height: auto"), false, "canvas SVG must not be height:auto");
+  assert.equal(css.includes(".canvas-host svg"), false, "do not scale canvas SVG independently of HTML nodes");
+  assert.ok(host.includes("div:has(> svg)"), "FlowDiagram relative box needs a host selector");
+  assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");

@@ -62,6 +62,8 @@ export type HighlightTarget = {
   textContent: string | null;
   innerHTML: string;
   parentElement: { className: string } | null;
+  tagName?: string;
+  style?: { whiteSpace?: string };
 };
 
 function resolveNamedLanguage(name: string): string | undefined {
@@ -82,6 +84,14 @@ function looksLikeAlgebra(code: string): boolean {
 
 function looksLikeHaskell(code: string): boolean {
   return /\bmodule\s+\w+/.test(code) || /::\s*IO\b/.test(code);
+}
+
+/** Eq-style type blocks: a `div` with `white-space: pre`, not `pre`/`code`. */
+export function isEqLikeBlock(el: HighlightTarget): boolean {
+  const tag = el.tagName?.toUpperCase();
+  if (tag === "PRE" || tag === "CODE") return false;
+  if (tag !== undefined && tag !== "DIV") return false;
+  return el.style?.whiteSpace === "pre";
 }
 
 export function resolveCanvasLanguage(code: string, className = ""): string {
@@ -111,12 +121,14 @@ export function highlightCanvasSource(code: string, language?: string, theme = c
   return highlighter.codeToHtml(code, { lang, theme, ...SHIKI_HTML });
 }
 
-/** Paint one `pre`/`code` node. Algebra/plaintext is left as text. */
+/** Paint one `pre`/`code` node, or an Eq-like `div` as Haskell. */
 export function highlightCanvasElement(el: HighlightTarget, theme = canvasShikiTheme()): void {
   if (el.classList.contains("shiki")) return;
   const text = el.textContent ?? "";
   if (text.trim() === "") return;
-  const language = resolveCanvasLanguage(text, `${el.className} ${el.parentElement?.className ?? ""}`);
+  const language = isEqLikeBlock(el)
+    ? "haskell"
+    : resolveCanvasLanguage(text, `${el.className} ${el.parentElement?.className ?? ""}`);
   el.classList.add("shiki");
   if (isPlain(language)) return;
   try {
@@ -126,7 +138,7 @@ export function highlightCanvasElement(el: HighlightTarget, theme = canvasShikiT
   }
 }
 
-/** RENDER-only. Walk painted `pre`/`code` after mount. RAW textarea is not in the host. */
+/** RENDER-only. Walk painted `pre`/`code` and Eq-like `div`s after mount. RAW textarea is not in the host. */
 export function highlightCanvasCode(root: ParentNode): void {
   const theme = canvasShikiTheme();
   for (const pre of root.querySelectorAll("pre")) {
@@ -136,5 +148,9 @@ export function highlightCanvasCode(root: ParentNode): void {
   for (const code of root.querySelectorAll("code")) {
     if (code.parentElement?.tagName === "PRE") continue;
     highlightCanvasElement(code, theme);
+  }
+  for (const div of root.querySelectorAll("div")) {
+    if (!isEqLikeBlock(div)) continue;
+    highlightCanvasElement(div, theme);
   }
 }
