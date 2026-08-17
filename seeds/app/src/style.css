@@ -859,10 +859,15 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem.
-   Padding lives on the column and the document, not only the outer pane. */
+/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem. */
 #app[data-view="canvas"] .reading-col {
   max-width: 56rem;
+}
+
+/* Inset from the splitter and the pane’s right edge. Do not pad
+   .reading-col / .canvas-host — that indents the document inside the
+   56rem column instead of the pane. Head/body keep vertical padding only. */
+#app[data-view="canvas"] .detail-pane {
   padding-inline: 2rem;
 }
 
@@ -989,11 +994,6 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
-  padding-inline: 2rem;
-}
-
-#app[data-view="canvas"] .canvas-source {
-  padding-inline: 2rem;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1646,10 +1646,8 @@ a.chip-see:hover {
     padding-right: 0.75rem;
   }
 
-  /* Canvas keeps inner 2rem on the column and document; do not collapse to 0.75rem. */
-  #app[data-view="canvas"] .reading-col,
-  #app[data-view="canvas"] .canvas-host,
-  #app[data-view="canvas"] .canvas-source {
+  /* Canvas pane keeps 2rem from splitter/edge; do not collapse to 0.75rem. */
+  #app[data-view="canvas"] .detail-pane {
     padding-inline: 2rem;
   }
 
