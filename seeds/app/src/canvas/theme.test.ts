@@ -86,6 +86,9 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.equal(host.includes("var(--muted)"), false, "canvas-host must not force site muted");
   assert.equal(host.includes("var(--panel"), false, "canvas-host must not paint with site panels");
   assert.equal(host.includes("height: auto"), false, "canvas SVG must not be height:auto");
+  assert.equal(css.includes(".canvas-host svg"), false, "do not scale canvas SVG independently of HTML nodes");
+  assert.ok(host.includes("div:has(> svg)"), "FlowDiagram relative box needs a host selector");
+  assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
@@ -95,6 +98,34 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.ok(host.includes(toneHex.warning));
   assert.ok(host.includes(toneHex.info));
   assert.ok(host.includes(toneHex.danger));
+  assert.ok(host.includes("margin-top: 2rem"), "Eq/pre/callout/table need a break between grey blocks");
+  assert.ok(host.includes("white-space: pre"), "Eq-like divs are selected via white-space:pre");
+  assert.equal(host.includes(".cv-h1 {\n  margin-top: 2rem"), false, "do not force 2rem onto headings");
+  assert.equal(host.includes(".cv-text {\n  margin-top: 2rem"), false, "do not force 2rem onto Text");
+
+  const reading = css.slice(css.indexOf(".reading-col {"), css.indexOf(".detail-dismiss {"));
+  assert.ok(/\.reading-col\s*\{[^}]*max-width:\s*46rem/.test(reading), "List/Cards reading column stays 46rem");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*56rem/.test(reading),
+    "canvas reading column must be wider than the wiki column",
+  );
+  assert.equal(reading.includes("max-width: 46rem"), true);
+  assert.ok(css.includes('#app[data-view="canvas"] .detail-body'), "canvas detail chrome needs a scoped padding rule");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
+      css,
+    ),
+    "canvas detail needs ≥2rem horizontal padding",
+  );
+
+  const phone = css.slice(css.indexOf("@media (width <= 560px)"));
+  assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
+      phone,
+    ),
+    "phone canvas must keep 2rem padding",
+  );
 }
 
 console.log("theme.test.ts ok");

@@ -2,8 +2,14 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { compileCanvas } from "./evaluate.ts";
 import { applyStyle, cssPropertyName, cssStyleValue, svgAttributeName, type Child, type VNode } from "./h.ts";
-import { highlightCanvasElement, highlightCanvasSource, resolveCanvasLanguage } from "./highlight.ts";
-import { toneFill, toneHex } from "./theme.ts";
+import {
+  highlightCanvasCode,
+  highlightCanvasElement,
+  highlightCanvasSource,
+  resolveCanvasLanguage,
+  type HighlightTarget,
+} from "./highlight.ts";
+import { canvasPaletteDark, toneFill, toneHex } from "./theme.ts";
 
 const sample = `import { H1, Stack, Text } from "cursor/canvas";
 export default function Demo() {
@@ -147,6 +153,17 @@ if (packed._tag === "Ok") {
   const successCell = successRow.children[0];
   assert.ok(successCell !== null && typeof successCell === "object" && "props" in successCell);
   assert.equal((successCell.props.style as { background: string }).background, toneFill("success"));
+
+  const eqBlocks = nodes.filter((node) => {
+    const style = node.props.style as { whiteSpace?: string } | undefined;
+    return node.type === "div" && style?.whiteSpace === "pre";
+  });
+  assert.ok(eqBlocks.length > 0, "Eq-like type blocks must be divs with white-space:pre");
+  assert.equal(
+    eqBlocks.every((node) => (node.props.style as { background: string }).background === canvasPaletteDark.fillTertiary),
+    true,
+    "Eq fill must stay theme.fill.tertiary",
+  );
 }
 
 {
@@ -168,66 +185,92 @@ if (packed._tag === "Ok") {
   assert.equal(resolveCanvasLanguage("const x = 1;", "language-tsx"), "typescript");
 
   const eq = "Result(V, E) = V + E\nD --reify--> W";
-  assert.equal(resolveCanvasLanguage(eq), "plaintext", "algebra/Eq lines must stay plaintext");
+  assert.equal(resolveCanvasLanguage(eq), "plaintext", "algebra in a pre stays plaintext");
   const eqHtml = highlightCanvasSource(eq);
   assert.equal(eqHtml, eq);
-  assert.equal(/style="color:/i.test(eqHtml), false, "Eq-like pre must not be rainbowed");
+  assert.equal(/style="color:/i.test(eqHtml), false, "algebra-like pre must not be rainbowed");
 
-  const pre = {
-    className: "language-cpp",
-    classList: {
-      names: new Set<string>(),
-      contains(name: string) {
-        return this.names.has(name);
+  function stub(init: {
+    tagName?: string;
+    className?: string;
+    text: string;
+    whiteSpace?: string;
+    background?: string;
+  }): HighlightTarget & { style: { whiteSpace?: string; background?: string }; querySelector: () => null } {
+    return {
+      tagName: init.tagName ?? "PRE",
+      className: init.className ?? "",
+      classList: {
+        names: new Set<string>(),
+        contains(name: string) {
+          return this.names.has(name);
+        },
+        add(name: string) {
+          this.names.add(name);
+        },
       },
-      add(name: string) {
-        this.names.add(name);
+      textContent: init.text,
+      innerHTML: init.text,
+      parentElement: null,
+      style: { whiteSpace: init.whiteSpace, background: init.background },
+      querySelector() {
+        return null;
       },
-    },
-    textContent: "int main() { return 0; }",
-    innerHTML: "int main() { return 0; }",
-    parentElement: null,
-  };
+    };
+  }
+
+  const pre = stub({ className: "language-cpp", text: "int main() { return 0; }" });
   highlightCanvasElement(pre);
   assert.ok(/style="color:/i.test(pre.innerHTML), "language-cpp pre must gain token spans");
+  assert.equal(pre.innerHTML, highlightCanvasSource("int main() { return 0; }", "cpp"));
   assert.ok(pre.classList.contains("shiki"));
 
-  const unlabeled = {
-    className: "",
-    classList: {
-      names: new Set<string>(),
-      contains(name: string) {
-        return this.names.has(name);
-      },
-      add(name: string) {
-        this.names.add(name);
-      },
-    },
-    textContent: sampleBlock,
-    innerHTML: sampleBlock,
-    parentElement: null,
-  };
+  const unlabeled = stub({ text: sampleBlock });
   highlightCanvasElement(unlabeled);
   assert.ok(/style="color:/i.test(unlabeled.innerHTML), "unlabeled C++ pre must gain token spans");
+  assert.equal(unlabeled.innerHTML, highlightCanvasSource(sampleBlock, "cpp"));
 
-  const eqPre = {
-    className: "",
-    classList: {
-      names: new Set<string>(),
-      contains(name: string) {
-        return this.names.has(name);
-      },
-      add(name: string) {
-        this.names.add(name);
-      },
-    },
-    textContent: eq,
-    innerHTML: eq,
-    parentElement: null,
-  };
+  const eqPre = stub({ text: eq });
   highlightCanvasElement(eqPre);
-  assert.equal(eqPre.innerHTML, eq, "plaintext/Eq-like pre must keep original text");
+  assert.equal(eqPre.innerHTML, eq, "algebra-like pre must keep original text");
   assert.ok(eqPre.classList.contains("shiki"));
+
+  const eqLines = "f : A → Result(B, E)\ng : B → Result(C, E)\ng ★ f : A → Result(C, E)";
+  const eqFill = canvasPaletteDark.fillTertiary;
+  const eqDiv = stub({
+    tagName: "DIV",
+    text: eqLines,
+    whiteSpace: "pre",
+    background: eqFill,
+  });
+  highlightCanvasElement(eqDiv);
+  assert.ok(eqDiv.innerHTML.includes("<span"), "Eq-like div must get Haskell token spans");
+  assert.ok(/style="color:/i.test(eqDiv.innerHTML), "Eq-like div must get Haskell token colors");
+  assert.equal(eqDiv.innerHTML, highlightCanvasSource(eqLines, "haskell"));
+  assert.equal(/background(-color)?:/i.test(eqDiv.innerHTML), false, "Shiki inline must not paint editor background");
+  assert.equal(eqDiv.style.background, eqFill, "Eq fill must stay theme.fill.tertiary");
+
+  const walkedCpp = stub({ tagName: "PRE", className: "language-cpp", text: cppSrc });
+  const walkedEq = stub({
+    tagName: "DIV",
+    text: eq,
+    whiteSpace: "pre",
+    background: eqFill,
+  });
+  const skipped = stub({ tagName: "DIV", text: "API shape", whiteSpace: "nowrap" });
+  highlightCanvasCode({
+    querySelectorAll(selector: string) {
+      if (selector === "pre") return [walkedCpp];
+      if (selector === "code") return [];
+      if (selector === "div") return [walkedEq, skipped];
+      return [];
+    },
+  } as unknown as ParentNode);
+  assert.equal(walkedCpp.innerHTML, highlightCanvasSource(cppSrc, "cpp"), "C++ pre must keep cpp tokens");
+  assert.equal(walkedEq.innerHTML, highlightCanvasSource(eq, "haskell"), "Eq div walk must force haskell");
+  assert.equal(skipped.innerHTML, "API shape", "non-Eq divs must not be highlighted");
+  assert.equal(walkedEq.style.background, eqFill);
+  assert.equal(/background(-color)?:/i.test(walkedEq.innerHTML), false);
 }
 
 console.log("evaluate.test.ts ok");
