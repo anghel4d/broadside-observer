@@ -327,6 +327,43 @@ button:focus-visible {
   }
 }
 
+.phone-bar,
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  font: inherit;
+  color: var(--ink);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--line) 55%, var(--accent));
+    background: var(--hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 1px;
+  }
+}
+
+.menu-toggle svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 .filter-fields {
   display: contents;
 }
@@ -859,23 +896,32 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas fills the detail pane. List/Cards keep the 46rem wiki column. */
+/* List/Cards keep the 46rem wiki column. Canvas desktop is the same
+   centering, a bit wider. Phone full-bleeds and insets words on the host. */
 #app[data-view="canvas"] .reading-col {
-  max-width: none;
+  max-width: 66rem;
   width: 100%;
+  margin-inline: auto;
 }
 
 #app[data-view="canvas"] .detail-pane {
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   box-sizing: border-box;
 }
 
 #app[data-view="canvas"] .detail-head {
-  padding: 0 0 0.38rem;
+  padding: 0.4rem 2rem 0.38rem;
+  background: var(--bg);
 }
 
 #app[data-view="canvas"] .detail-body {
   padding: 0;
+}
+
+#app[data-view="canvas"] .canvas-host,
+#app[data-view="canvas"] .canvas-source {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .detail-dismiss {
@@ -996,7 +1042,6 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
-  background: transparent;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1507,7 +1552,7 @@ a.chip-see:hover {
   }
 }
 
-/* Phone (~375–430px). Desktop and 980px compact rules above stay as written. */
+/* Phone. Matches PHONE_MAX_PX in layout.ts. Hamburger chrome; canvas reading is full-bleed. */
 @media (width <= 560px) {
   :root {
     /* Specified rem (not calc) so JS parseCssLengthPx sees a track too wide for 2 cols. */
@@ -1519,6 +1564,41 @@ a.chip-see:hover {
   .filter-pills,
   .workspace {
     max-width: 100%;
+  }
+
+  .phone-bar {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.4rem max(0.75rem, env(safe-area-inset-right, 0px)) 0.4rem
+      max(0.75rem, env(safe-area-inset-left, 0px));
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    min-width: 0;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  #app[data-view="canvas"]:not([data-menu="open"]) .phone-bar {
+    display: none;
+  }
+
+  .topbar,
+  .chrome,
+  .filter-pills {
+    display: none;
+  }
+
+  #app[data-menu="open"] .topbar,
+  #app[data-menu="open"] .chrome {
+    display: flex;
+  }
+
+  #app[data-menu="open"] .filter-pills:not(:empty) {
+    display: flex;
   }
 
   .topbar {
@@ -1619,13 +1699,47 @@ a.chip-see:hover {
     grid-template-rows: minmax(0, 1fr);
   }
 
-  /* Canvas: list sizes to its rows, then caps so Raw/Render keep the pane. */
+  /* Canvas reading fills the pane. The list lives in the hamburger overlay. */
   .workspace[data-view="canvas"] {
-    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
   }
 
-  .workspace[data-view="canvas"] .browse-pane {
-    max-height: 12rem;
+  #app[data-view="canvas"]:not([data-menu="open"]) .browse-pane {
+    display: none;
+  }
+
+  #app[data-menu="open"] .workspace {
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  #app[data-menu="open"] .detail-pane {
+    display: none;
+  }
+
+  #app[data-menu="open"] .browse-pane {
+    display: block;
+    max-height: none;
+    border-bottom: 0;
+  }
+
+  /* Phone: canvas surface is the screen width. Words inset on the host, not the pane. */
+  #app[data-view="canvas"] .reading-col {
+    max-width: none;
+  }
+
+  #app[data-view="canvas"] .detail-pane {
+    padding: 0;
+  }
+
+  #app[data-view="canvas"] .detail-head {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #app[data-view="canvas"] .canvas-host,
+  #app[data-view="canvas"] .canvas-source {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .browse-pane,
@@ -1717,6 +1831,7 @@ a.chip-see:hover {
   .filter-pill-clear,
   .reset,
   .filters-toggle,
+  .menu-toggle,
   .card-row,
   .seed-card,
   .pane-split,

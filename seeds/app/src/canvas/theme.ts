@@ -217,12 +217,12 @@ export function useHostTheme(): CanvasHostTheme {
   return buildHostTheme(kind);
 }
 
-/** RENDER host and RAW overlay share this. Pane is the surface; no nested editor fill. */
+/** RENDER host and RAW overlay share this. Host paints the canvas editor fill; padding is CSS. */
 export function applyCanvasChrome(
   el: { style: { background: string; color: string } },
   theme: CanvasHostTheme = useHostTheme(),
 ): void {
-  el.style.background = "transparent";
+  el.style.background = theme.bg.editor;
   el.style.color = theme.text.primary;
 }
 

@@ -31,10 +31,10 @@ import { applyCanvasChrome, buildHostTheme } from "./theme.ts";
   const light = buildHostTheme("light");
   const el = { style: { background: "x", color: "" } };
   applyCanvasChrome(el, light);
-  assert.equal(el.style.background, "transparent");
+  assert.equal(el.style.background, light.bg.editor);
   assert.equal(el.style.color, light.text.primary);
   applyCanvasChrome(el, dark);
-  assert.equal(el.style.background, "transparent");
+  assert.equal(el.style.background, dark.bg.editor);
   assert.equal(el.style.color, dark.text.primary);
   assert.notEqual(dark.text.primary, light.text.primary, "RAW text tokens must differ in light and dark");
 }

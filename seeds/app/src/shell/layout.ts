@@ -6,6 +6,10 @@ export const PANE_SPLIT_STORAGE_KEY = "broadside.seed-browser.paneSplit";
 export const COMPACT_MAX_PX = 980;
 export const COMPACT_MEDIA = `(max-width: ${COMPACT_MAX_PX}px)`;
 
+/** Phone chrome: hamburger menu. Not the 980px splitter/sheet breakpoint. Keep in sync with `style.css`. */
+export const PHONE_MAX_PX = 560;
+export const PHONE_MEDIA = `(max-width: ${PHONE_MAX_PX}px)`;
+
 /** Splitter column width. Keep in sync with `--split-gutter` in `style.css`. */
 export const SPLIT_GUTTER_PX = 6;
 
