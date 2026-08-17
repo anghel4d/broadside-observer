@@ -32,17 +32,16 @@ jobs:
           git pull --ff-only origin main
           python - <<'PY'
           from pathlib import Path
+          import re
 
           path = Path("seeds/canvases/anoptic-api-algebra-2026-08-17.tsx")
           text = path.read_text(encoding="utf-8")
-          old = """          inputs same outputs. This concept proved none of that. It only
-          proved only that the return is not a Result. DirectOperation itself"""
-          new = """          inputs same outputs. This concept proved none of that. It
-          proved only that the return is not a Result. DirectOperation itself"""
-          if text.count(old) != 1:
-              raise SystemExit(f"expected one duplicate phrase, found {text.count(old)}")
-          text = text.replace(old, new)
-          if "proved only that the return" not in text or "It only\n          proved only" in text:
+          pattern = r"inputs same outputs\. This concept proved none of that\. It only\s+proved only that the return is not a Result\. DirectOperation itself"
+          replacement = "inputs same outputs. This concept proved none of that. It\n          proved only that the return is not a Result. DirectOperation itself"
+          text, count = re.subn(pattern, replacement, text)
+          if count != 1:
+              raise SystemExit(f"expected one duplicate phrase, found {count}")
+          if "It only\n          proved only" in text or "proved only that the return" not in text:
               raise SystemExit("copy correction postcondition failed")
           path.write_text(text, encoding="utf-8")
           PY
