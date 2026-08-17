@@ -740,7 +740,7 @@ nullary`}</CodeBlock>
         <Text>
           Formerly PureOperation. The old name was false. Functional
           programmers hear "pure" and think: no IO, no mutation, same
-          inputs same outputs. This concept proved none of that. It only
+          inputs same outputs. This concept proved none of that. It
           proved only that the return is not a Result. DirectOperation itself
           permits object, void, or reference returns; stronger public
           concepts add their own return constraints.
