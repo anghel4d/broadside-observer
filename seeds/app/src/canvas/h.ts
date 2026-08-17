@@ -110,6 +110,59 @@ export function cssStyleValue(property: string, value: unknown): string | undefi
   return String(value);
 }
 
+/**
+ * JSX camelCase → SVG attribute names. Entries that are already the SVG name
+ * (viewBox, markerWidth, refX) are omitted and pass through.
+ */
+const SVG_ATTR: Record<string, string> = {
+  accentHeight: "accent-height",
+  alignmentBaseline: "alignment-baseline",
+  clipPath: "clip-path",
+  clipRule: "clip-rule",
+  colorInterpolation: "color-interpolation",
+  colorInterpolationFilters: "color-interpolation-filters",
+  dominantBaseline: "dominant-baseline",
+  fillOpacity: "fill-opacity",
+  fillRule: "fill-rule",
+  floodColor: "flood-color",
+  floodOpacity: "flood-opacity",
+  fontFamily: "font-family",
+  fontSize: "font-size",
+  fontSizeAdjust: "font-size-adjust",
+  fontStretch: "font-stretch",
+  fontStyle: "font-style",
+  fontVariant: "font-variant",
+  fontWeight: "font-weight",
+  letterSpacing: "letter-spacing",
+  lightingColor: "lighting-color",
+  markerEnd: "marker-end",
+  markerMid: "marker-mid",
+  markerStart: "marker-start",
+  paintOrder: "paint-order",
+  pointerEvents: "pointer-events",
+  shapeRendering: "shape-rendering",
+  stopColor: "stop-color",
+  stopOpacity: "stop-opacity",
+  strokeDasharray: "stroke-dasharray",
+  strokeDashoffset: "stroke-dashoffset",
+  strokeLinecap: "stroke-linecap",
+  strokeLinejoin: "stroke-linejoin",
+  strokeMiterlimit: "stroke-miterlimit",
+  strokeOpacity: "stroke-opacity",
+  strokeWidth: "stroke-width",
+  textAnchor: "text-anchor",
+  textDecoration: "text-decoration",
+  textRendering: "text-rendering",
+  vectorEffect: "vector-effect",
+  wordSpacing: "word-spacing",
+  writingMode: "writing-mode",
+  xlinkHref: "href",
+};
+
+export function svgAttributeName(name: string): string {
+  return SVG_ATTR[name] ?? name;
+}
+
 function applyStyle(el: HTMLElement | SVGElement, style: unknown): void {
   if (style === null || typeof style !== "object") return;
   const record = style as Record<string, unknown>;
@@ -139,11 +192,12 @@ function applyProp(el: HTMLElement | SVGElement, key: string, value: unknown): v
     el.addEventListener(event, value as EventListener);
     return;
   }
+  const attr = svgAttributeName(key);
   if (value === true) {
-    el.setAttribute(key, "");
+    el.setAttribute(attr, "");
     return;
   }
-  el.setAttribute(key, String(value));
+  el.setAttribute(attr, String(value));
 }
 
 function toNodes(child: Child): Node[] {

@@ -68,6 +68,16 @@ if (packed._tag === "Ok") {
     nodes.some((node) => node.type === "path" && typeof node.props.d === "string"),
     "FlowDiagram must emit cubic edge paths",
   );
+  const edge = nodes.find(
+    (node) => node.type === "path" && typeof node.props.d === "string" && node.props.markerEnd !== undefined,
+  );
+  assert.ok(edge !== undefined, "edge paths must carry camelCase SVG JSX attrs");
+  assert.equal(typeof edge.props.strokeWidth, "number");
+  assert.equal(typeof edge.props.markerEnd, "string");
+  const marker = nodes.find((node) => node.type === "marker");
+  assert.ok(marker !== undefined);
+  assert.equal(marker.props.markerWidth, "8");
+  assert.equal(marker.props.refX, "7");
 
   const labels = new Set(
     nodes

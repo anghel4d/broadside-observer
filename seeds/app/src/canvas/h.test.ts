@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { cssStyleValue } from "./h.ts";
+import { cssStyleValue, svgAttributeName } from "./h.ts";
 
 assert.equal(cssStyleValue("width", 640), "640px");
 assert.equal(cssStyleValue("height", 412), "412px");
@@ -24,5 +24,19 @@ assert.equal(cssStyleValue("lineHeight", "13px"), "13px");
 assert.equal(cssStyleValue("width", undefined), undefined);
 assert.equal(cssStyleValue("display", false), undefined);
 assert.equal(cssStyleValue("width", Number.NaN), undefined);
+
+assert.equal(svgAttributeName("strokeWidth"), "stroke-width");
+assert.equal(svgAttributeName("markerEnd"), "marker-end");
+assert.equal(svgAttributeName("strokeDasharray"), "stroke-dasharray");
+assert.equal(svgAttributeName("fillOpacity"), "fill-opacity");
+assert.equal(svgAttributeName("clipPath"), "clip-path");
+assert.equal(svgAttributeName("markerWidth"), "markerWidth");
+assert.equal(svgAttributeName("markerHeight"), "markerHeight");
+assert.equal(svgAttributeName("refX"), "refX");
+assert.equal(svgAttributeName("refY"), "refY");
+assert.equal(svgAttributeName("viewBox"), "viewBox");
+assert.equal(svgAttributeName("d"), "d");
+assert.equal(svgAttributeName("fill"), "fill");
+assert.equal(svgAttributeName("stroke"), "stroke");
 
 console.log("h.test.ts ok");
