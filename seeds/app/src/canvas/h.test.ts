@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { cssStyleValue, svgAttributeName } from "./h.ts";
+import { applyStyle, cssPropertyName, cssStyleValue, svgAttributeName } from "./h.ts";
 
 assert.equal(cssStyleValue("width", 640), "640px");
 assert.equal(cssStyleValue("height", 412), "412px");
@@ -25,6 +25,11 @@ assert.equal(cssStyleValue("width", undefined), undefined);
 assert.equal(cssStyleValue("display", false), undefined);
 assert.equal(cssStyleValue("width", Number.NaN), undefined);
 
+assert.equal(cssPropertyName("fontSize"), "font-size");
+assert.equal(cssPropertyName("borderRadius"), "border-radius");
+assert.equal(cssPropertyName("left"), "left");
+assert.equal(cssPropertyName("--ink"), "--ink");
+
 assert.equal(svgAttributeName("strokeWidth"), "stroke-width");
 assert.equal(svgAttributeName("markerEnd"), "marker-end");
 assert.equal(svgAttributeName("strokeDasharray"), "stroke-dasharray");
@@ -38,5 +43,36 @@ assert.equal(svgAttributeName("viewBox"), "viewBox");
 assert.equal(svgAttributeName("d"), "d");
 assert.equal(svgAttributeName("fill"), "fill");
 assert.equal(svgAttributeName("stroke"), "stroke");
+
+{
+  const declared: Record<string, string> = {};
+  applyStyle(
+    {
+      style: {
+        setProperty(name, value) {
+          declared[name] = value;
+        },
+      },
+    },
+    {
+      position: "relative",
+      width: 516,
+      height: 738,
+      left: 24,
+      top: 96,
+      fontSize: 14,
+      borderRadius: 6,
+      gap: 4,
+    },
+  );
+  assert.equal(declared.position, "relative");
+  assert.equal(declared.width, "516px");
+  assert.equal(declared.height, "738px");
+  assert.equal(declared.left, "24px");
+  assert.equal(declared.top, "96px");
+  assert.equal(declared["font-size"], "14px");
+  assert.equal(declared["border-radius"], "6px");
+  assert.equal(declared.gap, "4px");
+}
 
 console.log("h.test.ts ok");

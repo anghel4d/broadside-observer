@@ -276,6 +276,8 @@ export function Table({
                     textAlign: columnAlign?.[colIndex] ?? "left",
                     color: theme.text.primary,
                     borderBottom: `1px solid ${theme.stroke.tertiary}`,
+                    // `<tr>` background often computes transparent; paint the cells.
+                    ...(background === undefined ? {} : { background }),
                   },
                 },
                 row[colIndex] ?? "",

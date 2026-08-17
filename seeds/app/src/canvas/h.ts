@@ -110,6 +110,12 @@ export function cssStyleValue(property: string, value: unknown): string | undefi
   return String(value);
 }
 
+/** JSX camelCase style keys → CSS property names for `setProperty`. */
+export function cssPropertyName(property: string): string {
+  if (property.startsWith("--")) return property;
+  return property.replace(/[A-Z]/g, (ch) => `-${ch.toLowerCase()}`);
+}
+
 /**
  * JSX camelCase → SVG attribute names. Entries that are already the SVG name
  * (viewBox, markerWidth, refX) are omitted and pass through.
@@ -163,17 +169,17 @@ export function svgAttributeName(name: string): string {
   return SVG_ATTR[name] ?? name;
 }
 
-function applyStyle(el: HTMLElement | SVGElement, style: unknown): void {
+/** Paint a style object onto a DOM node. Always `setProperty(kebab, value)` so `left`/`width` land as `24px` in the style attribute. */
+export function applyStyle(
+  el: { readonly style: { setProperty(property: string, value: string): void } },
+  style: unknown,
+): void {
   if (style === null || typeof style !== "object") return;
   const record = style as Record<string, unknown>;
   for (const [key, value] of Object.entries(record)) {
     const serialized = cssStyleValue(key, value);
     if (serialized === undefined) continue;
-    if (key.startsWith("--")) {
-      el.style.setProperty(key, serialized);
-      continue;
-    }
-    (el.style as unknown as Record<string, unknown>)[key] = serialized;
+    el.style.setProperty(cssPropertyName(key), serialized);
   }
 }
 

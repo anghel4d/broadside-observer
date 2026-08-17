@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { compileCanvas } from "./evaluate.ts";
-import type { Child, VNode } from "./h.ts";
+import { applyStyle, cssPropertyName, cssStyleValue, svgAttributeName, type Child, type VNode } from "./h.ts";
 import { highlightCanvasElement, highlightCanvasSource, resolveCanvasLanguage } from "./highlight.ts";
-import { toneHex } from "./theme.ts";
+import { toneFill, toneHex } from "./theme.ts";
 
 const sample = `import { H1, Stack, Text } from "cursor/canvas";
 export default function Demo() {
@@ -57,9 +57,34 @@ if (packed._tag === "Ok") {
     return style?.position === "relative" && typeof style.width === "number" && typeof style.height === "number";
   });
   assert.ok(diagram !== undefined, "FlowDiagram relative box must be in the tree");
-  const box = diagram.props.style as { width: number; height: number };
+  const box = diagram.props.style as { width: number; height: number; left?: number; top?: number };
   assert.ok(box.width > 200, "diagram width must be a real layout size");
   assert.ok(box.height > 200, "diagram height must be a real layout size");
+  const boxCss: Record<string, string> = {};
+  applyStyle({ style: { setProperty(name, value) { boxCss[name] = value; } } }, box);
+  assert.equal(boxCss.width, `${box.width}px`);
+  assert.equal(boxCss.height, `${box.height}px`);
+  assert.equal(boxCss.position, "relative");
+
+  const nodeBox = nodes.find((node) => {
+    const style = node.props.style as
+      | { position?: string; left?: number; top?: number; width?: number; height?: number }
+      | undefined;
+    return (
+      style?.position === "absolute" &&
+      typeof style.left === "number" &&
+      typeof style.top === "number" &&
+      typeof style.width === "number" &&
+      typeof style.height === "number"
+    );
+  });
+  assert.ok(nodeBox !== undefined, "flow nodes must have numeric left/top");
+  const nodeCss: Record<string, string> = {};
+  applyStyle({ style: { setProperty(name, value) { nodeCss[name] = value; } } }, nodeBox.props.style);
+  assert.equal(nodeCss.left, `${cssStyleValue("left", (nodeBox.props.style as { left: number }).left)}`);
+  assert.equal(nodeCss.top, `${cssStyleValue("top", (nodeBox.props.style as { top: number }).top)}`);
+  assert.equal(nodeCss.width?.endsWith("px"), true);
+  assert.equal(nodeCss.height?.endsWith("px"), true);
 
   const svg = nodes.find((node) => node.type === "svg");
   assert.ok(svg !== undefined, "FlowDiagram must emit an svg");
@@ -75,6 +100,10 @@ if (packed._tag === "Ok") {
   assert.ok(edge !== undefined, "edge paths must carry camelCase SVG JSX attrs");
   assert.equal(typeof edge.props.strokeWidth, "number");
   assert.equal(typeof edge.props.markerEnd, "string");
+  assert.equal(svgAttributeName("strokeWidth"), "stroke-width");
+  assert.equal(cssPropertyName("fontSize"), "font-size");
+  assert.equal(svgAttributeName("markerEnd"), "marker-end");
+  assert.equal(svgAttributeName("strokeDasharray"), "stroke-dasharray");
   const marker = nodes.find((node) => node.type === "marker");
   assert.ok(marker !== undefined);
   assert.equal(marker.props.markerWidth, "8");
@@ -93,6 +122,8 @@ if (packed._tag === "Ok") {
   const successValue = nodes.find((node) => node.children[0] === "27");
   assert.ok(successValue !== undefined);
   assert.equal((successValue.props.style as { color: string }).color, toneHex.success);
+  const successStat = nodes.find((node) => node.type === "div" && String(node.props.class).includes("cv-stat-success"));
+  assert.ok(successStat !== undefined);
 
   const warningValue = nodes.find((node) => node.children[0] === "2");
   assert.ok(warningValue !== undefined);
@@ -101,6 +132,21 @@ if (packed._tag === "Ok") {
   const infoTitle = nodes.find((node) => node.children[0] === "HEAD is not this spelling yet");
   assert.ok(infoTitle !== undefined);
   assert.equal((infoTitle.props.style as { color: string }).color, toneHex.info);
+
+  assert.equal(nodes.filter((node) => node.type === "pre").length, 42);
+  const warningCallout = nodes.find(
+    (node) => node.type === "aside" && String(node.props.class).includes("cv-callout-warning"),
+  );
+  assert.ok(warningCallout !== undefined);
+  assert.equal((warningCallout.props.style as { background: string }).background, toneFill("warning"));
+
+  const successRow = nodes.find(
+    (node) => node.type === "tr" && String(node.props.class ?? "").includes("cv-tr-success"),
+  );
+  assert.ok(successRow !== undefined);
+  const successCell = successRow.children[0];
+  assert.ok(successCell !== null && typeof successCell === "object" && "props" in successCell);
+  assert.equal((successCell.props.style as { background: string }).background, toneFill("success"));
 }
 
 {

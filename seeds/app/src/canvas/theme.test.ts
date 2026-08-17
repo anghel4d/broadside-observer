@@ -73,6 +73,8 @@ const table = asNode(
 const tbody = asNode(asNode(table.children[0]).children[1]);
 const row = asNode(tbody.children[0]);
 assert.equal((row.props.style as { background: string }).background, toneFill("success"));
+const td = asNode(row.children[0]);
+assert.equal((td.props.style as { background: string }).background, toneFill("success"));
 
 {
   const css = readFileSync(new URL("../style.css", import.meta.url), "utf8");
@@ -85,6 +87,14 @@ assert.equal((row.props.style as { background: string }).background, toneFill("s
   assert.equal(host.includes("var(--panel"), false, "canvas-host must not paint with site panels");
   assert.equal(host.includes("height: auto"), false, "canvas SVG must not be height:auto");
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
+  assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
+  assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
+  assert.ok(host.includes(".cv-callout-warning"), "callout tone classes need CSS");
+  assert.ok(host.includes(".cv-tr-success"), "table row tones need CSS");
+  assert.ok(host.includes(toneHex.success));
+  assert.ok(host.includes(toneHex.warning));
+  assert.ok(host.includes(toneHex.info));
+  assert.ok(host.includes(toneHex.danger));
 }
 
 console.log("theme.test.ts ok");

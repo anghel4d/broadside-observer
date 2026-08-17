@@ -974,6 +974,7 @@ button:focus-visible {
   display: flex;
   gap: 0.55rem;
   padding: 0.45rem 0.55rem;
+  border: 1px solid transparent;
   border-radius: 6px;
 }
 
@@ -999,6 +1000,74 @@ button:focus-visible {
 
 .canvas-host .cv-td-empty {
   text-align: center;
+}
+
+.canvas-host .cv-stat-success .cv-stat-value {
+  color: #1F8A65;
+}
+
+.canvas-host .cv-stat-warning .cv-stat-value {
+  color: #E8A33D;
+}
+
+.canvas-host .cv-stat-info .cv-stat-value {
+  color: #2E79B5;
+}
+
+.canvas-host .cv-stat-danger .cv-stat-value {
+  color: #CF2D56;
+}
+
+.canvas-host .cv-callout-success {
+  background: rgba(31, 138, 101, 0.12);
+  border-color: rgba(31, 138, 101, 0.4);
+}
+
+.canvas-host .cv-callout-warning {
+  background: rgba(232, 163, 61, 0.14);
+  border-color: rgba(232, 163, 61, 0.4);
+}
+
+.canvas-host .cv-callout-info {
+  background: rgba(46, 121, 181, 0.12);
+  border-color: rgba(46, 121, 181, 0.4);
+}
+
+.canvas-host .cv-callout-danger {
+  background: rgba(207, 45, 86, 0.12);
+  border-color: rgba(207, 45, 86, 0.4);
+}
+
+.canvas-host .cv-callout-success .cv-callout-title {
+  color: #1F8A65;
+}
+
+.canvas-host .cv-callout-warning .cv-callout-title {
+  color: #E8A33D;
+}
+
+.canvas-host .cv-callout-info .cv-callout-title {
+  color: #2E79B5;
+}
+
+.canvas-host .cv-callout-danger .cv-callout-title {
+  color: #CF2D56;
+}
+
+.canvas-host .cv-tr-success > .cv-td {
+  background: rgba(31, 138, 101, 0.12);
+}
+
+.canvas-host .cv-tr-warning > .cv-td {
+  background: rgba(232, 163, 61, 0.14);
+}
+
+.canvas-host .cv-tr-info > .cv-td {
+  background: rgba(46, 121, 181, 0.12);
+}
+
+.canvas-host .cv-tr-danger > .cv-td {
+  background: rgba(207, 45, 86, 0.12);
 }
 
 .canvas-host code {
