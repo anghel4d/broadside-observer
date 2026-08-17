@@ -51,12 +51,76 @@ export function Fragment(props: { readonly children?: Child }): Child {
   return props.children ?? null;
 }
 
+/** CSS properties that accept a unitless number (React's isUnitlessNumber set). */
+const UNITLESS = new Set([
+  "animationIterationCount",
+  "aspectRatio",
+  "borderImageOutset",
+  "borderImageSlice",
+  "borderImageWidth",
+  "boxFlex",
+  "boxFlexGroup",
+  "boxOrdinalGroup",
+  "columnCount",
+  "columns",
+  "fillOpacity",
+  "flex",
+  "flexGrow",
+  "flexNegative",
+  "flexOrder",
+  "flexPositive",
+  "flexShrink",
+  "floodOpacity",
+  "fontWeight",
+  "gridArea",
+  "gridColumn",
+  "gridColumnEnd",
+  "gridColumnSpan",
+  "gridColumnStart",
+  "gridRow",
+  "gridRowEnd",
+  "gridRowSpan",
+  "gridRowStart",
+  "lineClamp",
+  "lineHeight",
+  "opacity",
+  "order",
+  "orphans",
+  "scale",
+  "stopOpacity",
+  "strokeDasharray",
+  "strokeDashoffset",
+  "strokeMiterlimit",
+  "strokeOpacity",
+  "strokeWidth",
+  "tabSize",
+  "widows",
+  "zIndex",
+  "zoom",
+]);
+
+/** Serialize a style value. Numeric lengths become `px`; SVG attributes are not styles. */
+export function cssStyleValue(property: string, value: unknown): string | undefined {
+  if (value === null || value === undefined || typeof value === "boolean") return undefined;
+  if (typeof value === "number") {
+    if (!Number.isFinite(value)) return undefined;
+    if (value === 0 || UNITLESS.has(property)) return String(value);
+    return `${value}px`;
+  }
+  return String(value);
+}
+
 function applyStyle(el: HTMLElement | SVGElement, style: unknown): void {
   if (style === null || typeof style !== "object") return;
   const record = style as Record<string, unknown>;
   for (const [key, value] of Object.entries(record)) {
-    if (value === null || value === undefined) continue;
-    (el.style as unknown as Record<string, unknown>)[key] = String(value);
+    const serialized = cssStyleValue(key, value);
+    if (serialized === undefined) continue;
+    if (key.startsWith("--")) {
+      el.style.setProperty(key, serialized);
+      continue;
+    }
+    (el.style as unknown as Record<string, unknown>)[key] = serialized;
   }
 }
 

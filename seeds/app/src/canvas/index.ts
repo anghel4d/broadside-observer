@@ -37,5 +37,16 @@ export type {
   TextProps,
   TextWeight,
 } from "./primitives.ts";
-export { mergeStyle, useHostTheme } from "./theme.ts";
-export type { CanvasHostTheme, CanvasPalette, CanvasTokens } from "./theme.ts";
+export {
+  buildHostTheme,
+  canvasPaletteDark,
+  canvasPaletteLight,
+  canvasTokens,
+  canvasTokensLight,
+  colorPalette,
+  mergeStyle,
+  toneFill,
+  toneHex,
+  useHostTheme,
+} from "./theme.ts";
+export type { CanvasHostTheme, CanvasPalette, CanvasTokens, CategoryPalette } from "./theme.ts";

@@ -935,7 +935,6 @@ button:focus-visible {
 }
 
 .canvas-host {
-  color: var(--ink);
   min-height: 8rem;
 }
 
@@ -950,35 +949,17 @@ button:focus-visible {
 
 .canvas-host .cv-divider {
   width: 100%;
-  border: 0;
-  border-top: 1px solid var(--line);
   margin: 0.2rem 0;
 }
 
-.canvas-host .cv-h1 {
-  margin: 0 0 0.35rem;
-  font-size: 1rem;
-  font-weight: 650;
-  line-height: 1.25;
-}
-
+.canvas-host .cv-h1,
 .canvas-host .cv-h2,
 .canvas-host .cv-h3 {
-  margin: 1.1rem 0 0.35rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
+  margin: 0;
 }
 
 .canvas-host .cv-text {
-  margin: 0 0 0.45rem;
-}
-
-.canvas-host .cv-text-small {
-  font-size: 0.78rem;
-  color: var(--muted);
+  margin: 0;
 }
 
 .canvas-host .cv-stat {
@@ -986,84 +967,38 @@ button:focus-visible {
 }
 
 .canvas-host .cv-stat-value {
-  font-weight: 650;
   font-variant-numeric: tabular-nums;
-}
-
-.canvas-host .cv-stat-label {
-  color: var(--muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .canvas-host .cv-callout {
   display: flex;
   gap: 0.55rem;
   padding: 0.45rem 0.55rem;
-  border: 1px solid var(--line);
-  background: var(--panel-2);
   border-radius: 6px;
-  font-size: 0.82rem;
-}
-
-.canvas-host .cv-callout-warning {
-  border-color: var(--off-filter-line);
-  background: var(--off-filter-bg);
-  color: var(--off-filter-ink);
 }
 
 .canvas-host .cv-callout-title {
-  font-weight: 650;
   margin-bottom: 0.2rem;
 }
 
 .canvas-host .cv-table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--line);
   border-radius: 6px;
-  background: var(--panel);
-}
-
-.canvas-host .cv-table-wrap.is-bare {
-  border: 0;
-  background: transparent;
 }
 
 .canvas-host .cv-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.82rem;
 }
 
 .canvas-host .cv-th,
 .canvas-host .cv-td {
   padding: 0.35rem 0.55rem;
-  border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
 
-.canvas-host .cv-th {
-  color: var(--muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-align: left;
-}
-
 .canvas-host .cv-td-empty {
-  color: var(--faint);
   text-align: center;
-}
-
-.canvas-host .cv-tr-stripe .cv-td {
-  background: var(--panel-2);
-}
-
-.canvas-host svg {
-  max-width: 100%;
-  height: auto;
 }
 
 .off-filter {
