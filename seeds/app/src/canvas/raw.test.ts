@@ -114,6 +114,21 @@ assert.equal(scrollerTopForCaret(300, 20, 0, 200), 120);
     css.indexOf(".canvas-source-highlight {"),
   );
   assert.ok(/padding:\s*0/.test(overlayPad), "overlay layers must not add a second inset");
+  assert.ok(
+    /\.canvas-source-input\s*\{[^}]*caret-color:\s*var\(--ink\)/.test(sourceBlock),
+    "RAW caret must use site ink, not inherit transparent color",
+  );
+  assert.equal(
+    /caret-color:\s*inherit/.test(sourceBlock),
+    false,
+    "RAW caret-color must not inherit while color is transparent",
+  );
+  assert.ok(
+    /\.canvas-source-highlight :is\(span, code, mark, ins, del\)\s*\{[^}]*background:\s*transparent/.test(
+      sourceBlock,
+    ),
+    "overlay token fills must be transparent",
+  );
 }
 
 console.log("raw.test.ts ok");
