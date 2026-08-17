@@ -43,9 +43,9 @@ export function parsePackedCatalog(text: string): Catalog {
   return decoded.data;
 }
 
-/** `unknown → CanvasCatalog` — same Zod denotation the canvas packer uses. */
-export function parsePackedCanvasCatalog(value: unknown): CanvasCatalog {
-  const decoded = CanvasCatalogSchema.safeParse(value);
+/** JSON text → CanvasCatalog. Same denotation the canvas packer writes. */
+export function parsePackedCanvasCatalog(text: string): CanvasCatalog {
+  const decoded = CanvasCatalogSchema.safeParse(JSON.parse(text) as unknown);
   if (!decoded.success) {
     throw new Error(
       `Packed canvases failed schema decode (${decoded.error.issues.length} issues). Rebuild with npm run pack.`,

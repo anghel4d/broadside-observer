@@ -1,11 +1,13 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { gzipSync } from "node:zlib";
 import { CanvasIdSchema, type CanvasCatalog, type SeedCanvas } from "../src/domain/schema.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const canvasesDir = join(here, "../../canvases");
 const generatedFile = join(here, "../src/generated/canvases.json");
+const compressedFile = join(here, "../src/generated/canvases.json.gz.b64");
 
 function isMissingDir(cause: unknown): boolean {
   return typeof cause === "object" && cause !== null && "code" in cause && cause.code === "ENOENT";
@@ -55,6 +57,8 @@ const catalog = {
   canvases,
 } satisfies CanvasCatalog;
 
+const payload = `${JSON.stringify(catalog)}\n`;
 await mkdir(dirname(generatedFile), { recursive: true });
-await writeFile(generatedFile, `${JSON.stringify(catalog)}\n`, "utf8");
-console.log(`Packed ${catalog.count} canvases → ${generatedFile}`);
+await writeFile(generatedFile, payload, "utf8");
+await writeFile(compressedFile, `${gzipSync(payload, { level: 9 }).toString("base64")}\n`, "utf8");
+console.log(`Packed ${catalog.count} canvases → ${generatedFile} and ${compressedFile}`);
