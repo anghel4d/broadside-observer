@@ -1857,16 +1857,12 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
             ],
             [
               "Still checked",
-              "function(...) still requires an admitted callable. The macro cannot smuggle a thrower.",
+              "function(...) requires an underlying admitted callable. In this snapshot, an already-built Function or ResultMorphism is not accepted by the callable inspector.",
             ],
           ]}
         />
-        <CodeBlock>{`ANO_LET(load_scene,
-    ano::lift<^^parse_glb>
-        .and_then(canonicalize_scene)
-        .and_then(cook_scene)
-        .and_then(realize_scene));`}</CodeBlock>
-        <CodeBlock>{`const auto load_scene = ::ano::function(...);`}</CodeBlock>
+        <CodeBlock>{`ANO_LET(parse_scene, &parse_glb);`}</CodeBlock>
+        <CodeBlock>{`const auto parse_scene = ::ano::function(&parse_glb);`}</CodeBlock>
       </Stack>
 
       <Divider />
