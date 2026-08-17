@@ -90,6 +90,16 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.ok(host.includes("div:has(> svg)"), "FlowDiagram relative box needs a host selector");
   assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.ok(host.includes("overflow: visible"), "canvas-host must not trap scroll in an inner bar");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.canvas-host\s*\{[^}]*padding:\s*2rem;[^}]*box-sizing:\s*border-box/.test(
+      host,
+    ),
+    "H1 must sit ~2rem inside the painted canvas-host",
+  );
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css),
+    "RAW overlay surface must match canvas-host’s 2rem inset",
+  );
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
@@ -111,22 +121,18 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
     "canvas reading column must be wider than the wiki column",
   );
   assert.equal(reading.includes("max-width: 46rem"), true);
-  assert.ok(css.includes('#app[data-view="canvas"] .detail-body'), "canvas detail chrome needs a scoped padding rule");
-  assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
-      css,
-    ),
-    "canvas detail needs ≥2rem horizontal padding",
+  assert.equal(
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*padding/.test(reading),
+    false,
+    "reading-col must not add a grey gutter inset",
   );
+  assert.equal(css.includes('#app[data-view="canvas"] .detail-body'), false, "do not pad the grey detail body");
+  assert.equal(css.includes('#app[data-view="canvas"] .detail-head'), false, "do not pad the grey detail head");
 
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
-  assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-head,\s*#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding-left:\s*2rem/.test(
-      phone,
-    ),
-    "phone canvas must keep 2rem padding",
-  );
+  assert.equal(phone.includes('#app[data-view="canvas"] .detail-body'), false);
+  assert.equal(phone.includes('#app[data-view="canvas"] .detail-head'), false);
 }
 
 console.log("theme.test.ts ok");

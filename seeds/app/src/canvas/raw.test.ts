@@ -113,6 +113,15 @@ assert.equal(scrollerTopForCaret(300, 20, 0, 200), 120);
   assert.equal(/\.canvas-source \{\s*\n\s*height:\s*100%/.test(phone), false);
   assert.equal(/\.detail:has\(\.canvas-host\) \.detail-body \{[^}]*overflow:\s*hidden/.test(phone), false);
   assert.ok(css.includes(".canvas-jump"));
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css),
+    "RAW surface must share canvas-host’s 2rem inset",
+  );
+  const overlayPad = css.slice(
+    css.indexOf(".canvas-source-highlight,"),
+    css.indexOf(".canvas-source-highlight {"),
+  );
+  assert.ok(/padding:\s*0/.test(overlayPad), "overlay layers must not add a second inset");
 }
 
 console.log("raw.test.ts ok");
