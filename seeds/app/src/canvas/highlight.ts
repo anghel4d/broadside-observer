@@ -138,7 +138,7 @@ export function highlightCanvasElement(el: HighlightTarget, theme = canvasShikiT
   }
 }
 
-/** RENDER-only. Walk painted `pre`/`code` and Eq-like `div`s after mount. RAW textarea is not in the host. */
+/** RENDER-only. Walk painted `pre`/`code` and Eq-like `div`s after mount. RAW overlay is painted separately. */
 export function highlightCanvasCode(root: ParentNode): void {
   const theme = canvasShikiTheme();
   for (const pre of root.querySelectorAll("pre")) {

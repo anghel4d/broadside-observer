@@ -1,5 +1,14 @@
 import { renderCanvas } from "../canvas/evaluate.ts";
 import {
+  canvasJumpHtml,
+  followCaretInScroller,
+  jumpCanvasScroller,
+  lockEditorScroll,
+  mountRawEditor,
+  paintRawHighlight,
+  rawEditorHtml,
+} from "../canvas/raw.ts";
+import {
   FILTER_KEYS,
   activeFilters,
   applyCanvasQuery,
@@ -677,14 +686,13 @@ function renderCanvasDetail(title: string, surface: CanvasSurface, source: strin
                 <button type="button" role="radio" data-surface="raw" aria-checked="${rawOn ? "true" : "false"}">Raw</button>
                 <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
               </div>
+              ${canvasJumpHtml()}
             </div>
           </div>
         </header>
         <div class="detail-body">
           ${
-            rawOn
-              ? `<textarea id="canvas-source" class="canvas-source" spellcheck="false" autocomplete="off">${escapeHtml(source)}</textarea>`
-              : `<div id="canvas-host" class="canvas-host"></div>`
+            rawOn ? rawEditorHtml(escapeHtml(source)) : `<div id="canvas-host" class="canvas-host"></div>`
           }
         </div>
       </article>
@@ -899,17 +907,21 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  const remountCanvas = (): void => {
-    if (model.view !== "canvas" || model.canvasSurface !== "render") return;
-    const host = detail.querySelector("#canvas-host");
-    if (!(host instanceof HTMLElement)) return;
-    const paintedCanvas = renderCanvas(model.canvasSource, host);
-    if (paintedCanvas._tag === "Err") {
-      host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
+  const paintCanvasSurface = (): void => {
+    if (model.view !== "canvas") return;
+    if (model.canvasSurface === "render") {
+      const host = detail.querySelector("#canvas-host");
+      if (!(host instanceof HTMLElement)) return;
+      const paintedCanvas = renderCanvas(model.canvasSource, host);
+      if (paintedCanvas._tag === "Err") {
+        host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
+      }
+      return;
     }
+    mountRawEditor(detail);
   };
   root.querySelector("#theme-toggle")?.addEventListener("click", () => {
-    remountCanvas();
+    paintCanvasSurface();
   });
 
   let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
@@ -1148,15 +1160,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
           vm.canvasSurface,
           vm.canvasSource,
         );
-        if (vm.canvasSurface === "render") {
-          const host = detail.querySelector("#canvas-host");
-          if (host instanceof HTMLElement) {
-            const paintedCanvas = renderCanvas(vm.canvasSource, host);
-            if (paintedCanvas._tag === "Err") {
-              host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
-            }
-          }
-        }
+        paintCanvasSurface();
       }
     } else if (
       prev === null ||
@@ -1376,11 +1380,37 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     const id = parseCardId(button.dataset.id);
     if (id !== null) dispatch({ _tag: "Select", id });
   });
+  const syncRawOverlay = (textarea: HTMLTextAreaElement): void => {
+    const highlight = detail.querySelector(".canvas-source-highlight");
+    if (highlight instanceof HTMLElement) paintRawHighlight(highlight, textarea.value);
+    followCaretInScroller(detail, textarea);
+  };
+  detail.addEventListener(
+    "scroll",
+    (event) => {
+      if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
+      lockEditorScroll(event.target);
+    },
+    true,
+  );
   detail.addEventListener("input", (event) => {
     if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
     dispatch({ _tag: "SetCanvasSource", value: event.target.value });
+    syncRawOverlay(event.target);
+  });
+  detail.addEventListener("keyup", (event) => {
+    if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
+    followCaretInScroller(detail, event.target);
   });
   detail.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLTextAreaElement && event.target.id === "canvas-source") {
+      followCaretInScroller(detail, event.target);
+    }
+    const jump = closestControl(event.target, "button[data-canvas-jump]");
+    if (jump instanceof HTMLButtonElement && jump.dataset.canvasJump !== undefined) {
+      jumpCanvasScroller(detail, jump.dataset.canvasJump === "bottom" ? "bottom" : "top");
+      return;
+    }
     const surface = closestControl(event.target, "button[data-surface]");
     if (surface instanceof HTMLButtonElement && surface.dataset.surface !== undefined) {
       const next = parseCanvasSurface(surface.dataset.surface);
