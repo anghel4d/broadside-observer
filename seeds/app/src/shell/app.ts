@@ -7,6 +7,7 @@ import {
   mountRawEditor,
   paintRawHighlight,
   rawEditorHtml,
+  scrollByLineHeight,
 } from "../canvas/raw.ts";
 import {
   FILTER_KEYS,
@@ -922,6 +923,12 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
+  const scrollCanvasRenderByLine = (delta: -1 | 1): void => {
+    const host = detail.querySelector("#canvas-host");
+    const lineSource = host instanceof HTMLElement ? host : detail;
+    scrollByLineHeight(detail, Number.parseFloat(getComputedStyle(lineSource).lineHeight), delta);
+  };
+
   const paintCanvasSurface = (): void => {
     if (model.view !== "canvas") return;
     if (model.canvasSurface === "render") {
@@ -1606,6 +1613,18 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       if (dir !== null) {
         event.preventDefault();
         dispatch({ _tag: "MoveGrid", dir, cols: virt.columns() });
+        return;
+      }
+    }
+    if (model.view === "canvas" && model.canvasSurface === "render") {
+      if (event.key === "ArrowDown" || event.key === "j") {
+        event.preventDefault();
+        scrollCanvasRenderByLine(1);
+        return;
+      }
+      if (event.key === "ArrowUp" || event.key === "k") {
+        event.preventDefault();
+        scrollCanvasRenderByLine(-1);
         return;
       }
     }
