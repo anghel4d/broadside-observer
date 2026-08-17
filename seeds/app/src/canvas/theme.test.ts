@@ -196,6 +196,24 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
     "phone must not keep the desktop pane gutter",
   );
   assert.ok(phone.includes(".menu-toggle"), "phone hamburger rules live at 560px");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-title-row\s*>\s*\.menu-toggle\s*\{[^}]*margin-left:\s*auto/.test(
+      phone,
+    ),
+    "phone canvas hamburger pins to the far right of the title row",
+  );
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-title-row\s*>\s*\.menu-toggle\s*\{[^}]*min-height:\s*2\.15rem/.test(
+      phone,
+    ),
+    "phone canvas hamburger matches seg button min-height",
+  );
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-title-row\s*>\s*\.menu-toggle\s*\{[^}]*padding:\s*0\.45rem 0\.58rem/.test(
+      phone,
+    ),
+    "phone canvas hamburger matches seg button padding",
+  );
   assert.ok(phone.includes(".phone-bar"));
   assert.ok(phone.includes('[data-menu="open"]'));
   assert.ok(

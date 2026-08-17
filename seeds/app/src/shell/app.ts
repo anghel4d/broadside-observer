@@ -700,8 +700,8 @@ function renderCanvasDetail(title: string, surface: CanvasSurface, source: strin
                 <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
               </div>
               ${canvasJumpHtml()}
-              ${menuToggleHtml()}
             </div>
+            ${menuToggleHtml()}
           </div>
         </header>
         <div class="detail-body">
