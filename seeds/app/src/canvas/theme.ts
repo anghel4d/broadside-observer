@@ -71,8 +71,7 @@ export type CanvasTokens = {
 };
 
 export type CanvasHostTheme = CanvasTokens & {
-  readonly kind: string;
-  readonly tokens: CanvasTokens;
+  readonly kind: "light" | "dark";
   readonly palette: CanvasPalette;
 };
 
@@ -135,7 +134,7 @@ export const canvasPaletteLight: CanvasPalette = {
 };
 
 /** Shared 7-hue category palette plus cyan/red for our token surface. */
-export const colorPalette: CategoryPalette = {
+const colorPalette: CategoryPalette = {
   gray: "#8888A8E0",
   purple: "#7B64B8F0",
   green: "#1F8A65E8",
@@ -204,22 +203,27 @@ export function buildTokens(palette: CanvasPalette): CanvasTokens {
   };
 }
 
-export const canvasTokens = buildTokens(canvasPaletteDark);
-export const canvasTokensLight = buildTokens(canvasPaletteLight);
-
 export function buildHostTheme(kind: "light" | "dark"): CanvasHostTheme {
-  const tokens = kind === "dark" ? canvasTokens : canvasTokensLight;
   const palette = kind === "dark" ? canvasPaletteDark : canvasPaletteLight;
-  return { ...tokens, kind, tokens, palette };
+  return { ...buildTokens(palette), kind, palette };
 }
 
-/** Host theme from `html[data-theme]`, using canvas palettes rather than site tokens. */
+/** Host theme from `html[data-theme]`. Canvas tokens, not site `--ink/--bg`. */
 export function useHostTheme(): CanvasHostTheme {
   const kind =
     typeof document !== "undefined" && document.documentElement.dataset.theme === "light"
       ? "light"
       : "dark";
   return buildHostTheme(kind);
+}
+
+/** RENDER host and RAW overlay share this. Pane is the surface; no nested editor fill. */
+export function applyCanvasChrome(
+  el: { style: { background: string; color: string } },
+  theme: CanvasHostTheme = useHostTheme(),
+): void {
+  el.style.background = "transparent";
+  el.style.color = theme.text.primary;
 }
 
 export function mergeStyle(

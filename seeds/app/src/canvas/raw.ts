@@ -1,41 +1,9 @@
 import { highlightCanvasSource } from "./highlight.ts";
-import { useHostTheme, type CanvasHostTheme } from "./theme.ts";
-
-/** RAW overlay always highlights as Haskell. Same pane as RENDER, not a second card. */
-export const RAW_HIGHLIGHT_LANG = "haskell";
-
-export type RawChrome = {
-  readonly background: string;
-  readonly color: string;
-  readonly border: string;
-};
-
-export function rawChromeStyle(theme: CanvasHostTheme): RawChrome {
-  return {
-    background: "transparent",
-    color: theme.text.primary,
-    border: "0",
-  };
-}
-
-export function applyRawChrome(
-  el: { style: { background: string; color: string; border: string } },
-  theme: CanvasHostTheme = useHostTheme(),
-): void {
-  const chrome = rawChromeStyle(theme);
-  el.style.background = chrome.background;
-  el.style.color = chrome.color;
-  el.style.border = chrome.border;
-}
+import { applyCanvasChrome, useHostTheme, type CanvasHostTheme } from "./theme.ts";
 
 /** Shiki `structure: "inline"` emits `<br>`; overlay alignment needs real newlines. */
-export function rawHighlightHtml(source: string): string {
-  const html = highlightCanvasSource(source, RAW_HIGHLIGHT_LANG);
-  return html.replace(/<br\s*\/?>/gi, "\n");
-}
-
 export function paintRawHighlight(el: { innerHTML: string }, source: string): void {
-  el.innerHTML = rawHighlightHtml(source);
+  el.innerHTML = highlightCanvasSource(source, "haskell").replace(/<br\s*\/?>/gi, "\n");
 }
 
 export function jumpCanvasScroller(
@@ -89,7 +57,7 @@ export function mountRawEditor(root: ParentNode, theme: CanvasHostTheme = useHos
   const highlight = root.querySelector(".canvas-source-highlight");
   const input = root.querySelector("#canvas-source");
   if (!(wrap instanceof HTMLElement) || !(highlight instanceof HTMLElement)) return;
-  applyRawChrome(wrap, theme);
+  applyCanvasChrome(wrap, theme);
   const source = input instanceof HTMLTextAreaElement ? input.value : "";
   paintRawHighlight(highlight, source);
 }

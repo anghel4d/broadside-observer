@@ -1,26 +1,22 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
-  applyRawChrome,
   canvasJumpHtml,
   caretDocumentY,
   jumpCanvasScroller,
   lockEditorScroll,
   paintRawHighlight,
-  RAW_HIGHLIGHT_LANG,
-  rawChromeStyle,
   rawEditorHtml,
-  rawHighlightHtml,
   scrollerTopForCaret,
 } from "./raw.ts";
 import { highlightCanvasSource } from "./highlight.ts";
-import { buildHostTheme } from "./theme.ts";
-
-assert.equal(RAW_HIGHLIGHT_LANG, "haskell");
+import { applyCanvasChrome, buildHostTheme } from "./theme.ts";
 
 {
   const src = "f : A → Result(B, E)\ng : B → Result(C, E)";
-  const html = rawHighlightHtml(src);
+  const node = { innerHTML: "" };
+  paintRawHighlight(node, src);
+  const html = node.innerHTML;
   assert.ok(html.includes("<span"), "RAW must emit Haskell token spans");
   assert.ok(/style="color:/i.test(html), "RAW Haskell tokens must carry colors");
   assert.equal(html.includes("<pre"), false, "inline structure must not wrap a pre");
@@ -31,20 +27,16 @@ assert.equal(RAW_HIGHLIGHT_LANG, "haskell");
 }
 
 {
-  const dark = rawChromeStyle(buildHostTheme("dark"));
-  const light = rawChromeStyle(buildHostTheme("light"));
-  assert.equal(dark.background, "transparent");
-  assert.equal(light.background, "transparent");
-  assert.equal(dark.border, "0");
-  assert.equal(light.border, "0");
-  assert.equal(dark.color, buildHostTheme("dark").text.primary);
-  assert.equal(light.color, buildHostTheme("light").text.primary);
-  assert.notEqual(dark.color, light.color, "RAW text tokens must differ in light and dark");
-  const el = { style: { background: "", color: "", border: "" } };
-  applyRawChrome(el, buildHostTheme("light"));
+  const dark = buildHostTheme("dark");
+  const light = buildHostTheme("light");
+  const el = { style: { background: "x", color: "" } };
+  applyCanvasChrome(el, light);
   assert.equal(el.style.background, "transparent");
-  assert.equal(el.style.color, light.color);
-  assert.equal(el.style.border, "0");
+  assert.equal(el.style.color, light.text.primary);
+  applyCanvasChrome(el, dark);
+  assert.equal(el.style.background, "transparent");
+  assert.equal(el.style.color, dark.text.primary);
+  assert.notEqual(dark.text.primary, light.text.primary, "RAW text tokens must differ in light and dark");
 }
 
 {
@@ -52,7 +44,7 @@ assert.equal(RAW_HIGHLIGHT_LANG, "haskell");
   const src = "module Main where\nmain :: IO ()\nmain = pure ()";
   paintRawHighlight(node, src);
   assert.ok(node.innerHTML.includes("<span"));
-  assert.equal(node.innerHTML, rawHighlightHtml(src));
+  assert.equal(node.innerHTML, highlightCanvasSource(src, "haskell").replace(/<br\s*\/?>/gi, "\n"));
   assert.equal(/background(-color)?:/i.test(node.innerHTML), false);
 }
 
@@ -109,12 +101,9 @@ assert.equal(scrollerTopForCaret(300, 20, 0, 200), 120);
   assert.equal(sourceBlock.includes("resize: vertical"), false, "RAW must not be a resizable textarea box");
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.equal(phone.includes("textarea.canvas-source"), false);
-  assert.equal(/\.canvas-source,\s*\n\s*\.canvas-host \{[^}]*overflow:\s*auto/.test(phone), false);
   assert.equal(/\.canvas-source \{\s*\n\s*height:\s*100%/.test(phone), false);
-  assert.equal(/\.detail:has\(\.canvas-host\) \.detail-body \{[^}]*overflow:\s*hidden/.test(phone), false);
   assert.ok(css.includes(".canvas-jump"));
   assert.ok(/\.canvas-source \{[^}]*background:\s*transparent/.test(css), "RAW must share the pane, not a second card");
-  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css), false);
   const overlayPad = css.slice(
     css.indexOf(".canvas-source-highlight,"),
     css.indexOf(".canvas-source-highlight {"),

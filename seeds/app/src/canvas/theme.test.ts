@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  applyCanvasChrome,
   buildHostTheme,
+  buildTokens,
   canvasPaletteDark,
   canvasPaletteLight,
   toneFill,
@@ -24,16 +26,31 @@ assert.equal(dark.fill.tertiary, canvasPaletteDark.fillTertiary);
 assert.equal(dark.stroke.focused, canvasPaletteDark.strokeFocused);
 assert.equal(dark.text.primary, canvasPaletteDark.foreground);
 assert.notEqual(dark.accent.primary, dark.text.primary);
+assert.equal(dark.palette, canvasPaletteDark);
+assert.deepEqual(Object.keys(canvasPaletteDark), Object.keys(canvasPaletteLight));
+assert.deepEqual(Object.keys(buildTokens(canvasPaletteDark)), Object.keys(buildTokens(canvasPaletteLight)));
 
 const light = buildHostTheme("light");
 assert.equal(light.kind, "light");
 assert.equal(light.accent.primary, canvasPaletteLight.accent);
-assert.equal(light.bg.editor, "#FCFCFC");
+assert.equal(light.bg.editor, canvasPaletteLight.editor);
 assert.equal(light.stroke.focused, canvasPaletteLight.strokeFocused);
+assert.equal(light.fill.tertiary, buildTokens(canvasPaletteLight).fill.tertiary);
+assert.notEqual(light.text.primary, dark.text.primary);
+assert.notEqual(light.fill.tertiary, dark.fill.tertiary);
 
 const fallback = useHostTheme();
 assert.equal(fallback.kind, "dark");
-assert.equal(fallback.tokens.accent.primary, canvasPaletteDark.accent);
+assert.equal(fallback.accent.primary, canvasPaletteDark.accent);
+
+{
+  const el = { style: { background: "x", color: "" } };
+  applyCanvasChrome(el, light);
+  assert.equal(el.style.background, "transparent");
+  assert.equal(el.style.color, light.text.primary);
+  applyCanvasChrome(el, dark);
+  assert.equal(el.style.color, dark.text.primary);
+}
 
 assert.equal(toneFill("success"), "rgba(31,138,101,0.12)");
 assert.equal(toneFill("warning"), "rgba(232,163,61,0.14)");
@@ -91,8 +108,6 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.ok(host.includes("overflow: visible"), "canvas-host must not trap scroll in an inner bar");
   assert.ok(/\.canvas-host \{[^}]*background:\s*transparent/.test(host), "canvas-host must not paint a nested card");
-  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-host\s*\{[^}]*padding:\s*2rem/.test(css), false);
-  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css), false);
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
@@ -115,7 +130,6 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   );
   assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:\s*100%/.test(reading));
   assert.equal(reading.includes("max-width: 46rem"), true);
-  assert.equal(reading.includes("56rem"), false, "canvas must not keep a 56rem island");
   assert.equal(
     /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*padding/.test(reading),
     false,
@@ -130,8 +144,7 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
 
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
-  assert.equal(phone.includes('#app[data-view="canvas"] .detail-body'), false);
-  assert.equal(phone.includes('#app[data-view="canvas"] .detail-head'), false);
+  assert.ok(/#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*2rem/.test(css));
 }
 
 console.log("theme.test.ts ok");

@@ -1675,11 +1675,6 @@ a.chip-see:hover {
     flex: 1 1 8rem;
   }
 
-  .detail-pane:has(.canvas-source) .reading-col,
-  .detail-pane:has(.canvas-host) .reading-col {
-    max-width: 100%;
-  }
-
   .canvas-source-highlight,
   .canvas-source-input {
     font-size: 1rem;
