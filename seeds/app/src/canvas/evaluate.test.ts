@@ -273,4 +273,11 @@ if (packed._tag === "Ok") {
   assert.equal(/background(-color)?:/i.test(walkedEq.innerHTML), false);
 }
 
+{
+  const src = readFileSync(new URL("./evaluate.ts", import.meta.url), "utf8");
+  assert.equal(src.includes("theme.bg.editor"), false, "do not paint a nested editor card on the host");
+  assert.ok(src.includes('host.style.background = "transparent"'));
+  assert.ok(src.includes("theme.text.primary"));
+}
+
 console.log("evaluate.test.ts ok");

@@ -54,7 +54,7 @@ export function renderCanvas(source: string, host: Element): Result<string, void
     const tree: Child = compiled.value({});
     if (host instanceof HTMLElement) {
       const theme = useHostTheme();
-      host.style.background = theme.bg.editor;
+      host.style.background = "transparent";
       host.style.color = theme.text.primary;
     }
     mount(tree, host);

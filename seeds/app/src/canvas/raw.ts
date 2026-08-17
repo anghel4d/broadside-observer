@@ -1,7 +1,7 @@
 import { highlightCanvasSource } from "./highlight.ts";
 import { useHostTheme, type CanvasHostTheme } from "./theme.ts";
 
-/** RAW overlay always highlights as Haskell. Token colors only; chrome is canvas palettes. */
+/** RAW overlay always highlights as Haskell. Same pane as RENDER, not a second card. */
 export const RAW_HIGHLIGHT_LANG = "haskell";
 
 export type RawChrome = {
@@ -12,9 +12,9 @@ export type RawChrome = {
 
 export function rawChromeStyle(theme: CanvasHostTheme): RawChrome {
   return {
-    background: theme.bg.editor,
+    background: "transparent",
     color: theme.text.primary,
-    border: `1px solid ${theme.stroke.tertiary}`,
+    border: "0",
   };
 }
 

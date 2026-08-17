@@ -14,7 +14,7 @@ import {
   scrollerTopForCaret,
 } from "./raw.ts";
 import { highlightCanvasSource } from "./highlight.ts";
-import { buildHostTheme, canvasPaletteDark, canvasPaletteLight } from "./theme.ts";
+import { buildHostTheme } from "./theme.ts";
 
 assert.equal(RAW_HIGHLIGHT_LANG, "haskell");
 
@@ -33,18 +33,18 @@ assert.equal(RAW_HIGHLIGHT_LANG, "haskell");
 {
   const dark = rawChromeStyle(buildHostTheme("dark"));
   const light = rawChromeStyle(buildHostTheme("light"));
-  assert.equal(dark.background, canvasPaletteDark.editor);
-  assert.equal(light.background, canvasPaletteLight.editor);
-  assert.notEqual(dark.background, light.background, "RAW chrome must differ in light and dark");
+  assert.equal(dark.background, "transparent");
+  assert.equal(light.background, "transparent");
+  assert.equal(dark.border, "0");
+  assert.equal(light.border, "0");
   assert.equal(dark.color, buildHostTheme("dark").text.primary);
   assert.equal(light.color, buildHostTheme("light").text.primary);
-  assert.equal(dark.border, `1px solid ${buildHostTheme("dark").stroke.tertiary}`);
-  assert.notEqual(dark.border, light.border);
+  assert.notEqual(dark.color, light.color, "RAW text tokens must differ in light and dark");
   const el = { style: { background: "", color: "", border: "" } };
   applyRawChrome(el, buildHostTheme("light"));
-  assert.equal(el.style.background, light.background);
+  assert.equal(el.style.background, "transparent");
   assert.equal(el.style.color, light.color);
-  assert.equal(el.style.border, light.border);
+  assert.equal(el.style.border, "0");
 }
 
 {
@@ -113,10 +113,8 @@ assert.equal(scrollerTopForCaret(300, 20, 0, 200), 120);
   assert.equal(/\.canvas-source \{\s*\n\s*height:\s*100%/.test(phone), false);
   assert.equal(/\.detail:has\(\.canvas-host\) \.detail-body \{[^}]*overflow:\s*hidden/.test(phone), false);
   assert.ok(css.includes(".canvas-jump"));
-  assert.ok(
-    /#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css),
-    "RAW surface must share canvas-host’s 2rem inset",
-  );
+  assert.ok(/\.canvas-source \{[^}]*background:\s*transparent/.test(css), "RAW must share the pane, not a second card");
+  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css), false);
   const overlayPad = css.slice(
     css.indexOf(".canvas-source-highlight,"),
     css.indexOf(".canvas-source-highlight {"),

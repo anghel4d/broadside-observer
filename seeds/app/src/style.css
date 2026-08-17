@@ -859,9 +859,23 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem. */
+/* Canvas fills the detail pane. List/Cards keep the 46rem wiki column. */
 #app[data-view="canvas"] .reading-col {
-  max-width: 56rem;
+  max-width: none;
+  width: 100%;
+}
+
+#app[data-view="canvas"] .detail-pane {
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#app[data-view="canvas"] .detail-head {
+  padding: 0 0 0.38rem;
+}
+
+#app[data-view="canvas"] .detail-body {
+  padding: 0;
 }
 
 .detail-dismiss {
@@ -935,7 +949,7 @@ button:focus-visible {
   width: 100%;
   min-height: 8rem;
   overflow: visible;
-  border-radius: 6px;
+  background: transparent;
 }
 
 .canvas-source-highlight,
@@ -944,7 +958,7 @@ button:focus-visible {
   margin: 0;
   padding: 0;
   border: 0;
-  border-radius: 6px;
+  border-radius: 0;
   font-family: ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular", menlo, monospace;
   font-size: 13px;
   line-height: 20px;
@@ -982,17 +996,7 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
-}
-
-/* 2rem inside the painted card. Head/body/reading-col stay site chrome (grey). */
-#app[data-view="canvas"] .canvas-host {
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-#app[data-view="canvas"] .canvas-source {
-  padding: 2rem;
-  box-sizing: border-box;
+  background: transparent;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:

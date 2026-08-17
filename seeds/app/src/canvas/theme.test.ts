@@ -90,16 +90,9 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   assert.ok(host.includes("div:has(> svg)"), "FlowDiagram relative box needs a host selector");
   assert.ok(host.includes("margin-inline: auto"), "FlowDiagram relative box must center");
   assert.ok(host.includes("overflow: visible"), "canvas-host must not trap scroll in an inner bar");
-  assert.ok(
-    /#app\[data-view="canvas"\]\s*\.canvas-host\s*\{[^}]*padding:\s*2rem;[^}]*box-sizing:\s*border-box/.test(
-      host,
-    ),
-    "H1 must sit ~2rem inside the painted canvas-host",
-  );
-  assert.ok(
-    /#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css),
-    "RAW overlay surface must match canvas-host’s 2rem inset",
-  );
+  assert.ok(/\.canvas-host \{[^}]*background:\s*transparent/.test(host), "canvas-host must not paint a nested card");
+  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-host\s*\{[^}]*padding:\s*2rem/.test(css), false);
+  assert.equal(/#app\[data-view="canvas"\]\s*\.canvas-source\s*\{[^}]*padding:\s*2rem/.test(css), false);
   assert.equal(host.includes("text-transform"), false, "headings/labels must not be uppercased by the host");
   assert.equal(host.includes("--off-filter"), false, "callout-warning must not use site off-filter green");
   assert.ok(host.includes(".cv-stat-success"), "stat tone classes need CSS");
@@ -117,17 +110,23 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   const reading = css.slice(css.indexOf(".reading-col {"), css.indexOf(".detail-dismiss {"));
   assert.ok(/\.reading-col\s*\{[^}]*max-width:\s*46rem/.test(reading), "List/Cards reading column stays 46rem");
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*56rem/.test(reading),
-    "canvas reading column must be wider than the wiki column",
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*none/.test(reading),
+    "canvas reading column must fill the pane",
   );
+  assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:\s*100%/.test(reading));
   assert.equal(reading.includes("max-width: 46rem"), true);
+  assert.equal(reading.includes("56rem"), false, "canvas must not keep a 56rem island");
   assert.equal(
     /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*padding/.test(reading),
     false,
-    "reading-col must not add a grey gutter inset",
+    "reading-col must not add a nested inset",
   );
-  assert.equal(css.includes('#app[data-view="canvas"] .detail-body'), false, "do not pad the grey detail body");
-  assert.equal(css.includes('#app[data-view="canvas"] .detail-head'), false, "do not pad the grey detail head");
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*2rem/.test(css),
+    "canvas inset lives on the detail pane",
+  );
+  assert.ok(/#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding:\s*0/.test(css));
+  assert.ok(/#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*padding:\s*0/.test(css));
 
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
