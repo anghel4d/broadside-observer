@@ -1,10 +1,5 @@
 import { renderCanvas } from "../canvas/evaluate.ts";
 import {
-  applyCanvasRenderGrid,
-  collectTextLineBoxes,
-  placeRenderLineCaret,
-} from "../canvas/renderLine.ts";
-import {
   canvasJumpHtml,
   followCaretInScroller,
   jumpCanvasScroller,
@@ -13,13 +8,6 @@ import {
   paintRawHighlight,
   rawEditorHtml,
 } from "../canvas/raw.ts";
-import {
-  applyRawNav,
-  initVimCaret,
-  vimInsertKey,
-  type RawNavEvent,
-  type VimCaret,
-} from "../canvas/vim.ts";
 import {
   FILTER_KEYS,
   activeFilters,
@@ -238,6 +226,15 @@ function pickAlong<T extends { readonly id: string }>(
   return pick;
 }
 
+function moveAlongCanvas(
+  model: Model,
+  nextIndex: (index: number, count: number) => number,
+  forward: boolean,
+): Model {
+  const pick = pickAlong(applyCanvasQuery(model.canvases, model.query), model.canvasId, nextIndex, forward);
+  return pick === undefined ? model : selectCanvas(model, pick.id);
+}
+
 function moveAlong(
   model: Model,
   nextIndex: (index: number, count: number) => number,
@@ -296,9 +293,12 @@ function update(model: Model, msg: Msg): Model {
       return selectCard(model, hit.id);
     }
     case "Move":
-      // Canvas hjkl is document geometry (render lines / raw vim), not file switching.
       return model.view === "canvas"
-        ? model
+        ? moveAlongCanvas(
+            model,
+            (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)),
+            msg.delta > 0,
+          )
         : moveAlong(model, (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)), msg.delta > 0);
     case "MoveGrid":
       return moveAlong(
@@ -840,10 +840,7 @@ function syncLocation(route: Route, view: ViewMode): void {
   history.replaceState(null, "", next);
 }
 
-function isTypingTarget(target: EventTarget | null, rawInsert: boolean): boolean {
-  if (target instanceof HTMLTextAreaElement && target.id === "canvas-source") {
-    return rawInsert;
-  }
+function isTypingTarget(target: EventTarget | null): boolean {
   return (
     target instanceof HTMLInputElement ||
     target instanceof HTMLSelectElement ||
@@ -925,56 +922,6 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
-  let rawCaret: VimCaret = initVimCaret();
-  let renderLineIndex = 0;
-  let painted: Paint | null = null;
-  let filtersOpen = false;
-  let menuOpen = false;
-  let sheetWasVisible = false;
-
-  const canvasSourceField = (): HTMLTextAreaElement | null => {
-    const field = detail.querySelector("#canvas-source");
-    return field instanceof HTMLTextAreaElement ? field : null;
-  };
-
-  const syncRawField = (source: string, caret: VimCaret = rawCaret): void => {
-    const field = canvasSourceField();
-    if (field === null) return;
-    if (field.value !== source) field.value = source;
-    field.readOnly = caret.mode === "normal";
-    field.setSelectionRange(caret.offset, caret.offset);
-    const highlight = detail.querySelector(".canvas-source-highlight");
-    if (highlight instanceof HTMLElement) paintRawHighlight(highlight, field.value);
-    followCaretInScroller(detail, field);
-  };
-
-  const commitRawNav = (event: RawNavEvent, focus: boolean): void => {
-    const field = canvasSourceField();
-    const source = field?.value ?? model.canvasSource;
-    const live: VimCaret =
-      field === null ? rawCaret : { ...rawCaret, offset: field.selectionStart };
-    const next = applyRawNav({ source, caret: live }, event);
-    rawCaret = next.caret;
-    if (field !== null && next.source !== source) field.value = next.source;
-    if (focus || next.caret.mode === "insert") {
-      field?.focus({ preventScroll: true });
-    }
-    if (next.source !== source) dispatch({ _tag: "SetCanvasSource", value: next.source });
-    syncRawField(next.source, next.caret);
-  };
-
-  const stepCanvasRender = (dir: GridDir): void => {
-    const host = detail.querySelector("#canvas-host");
-    if (!(host instanceof HTMLElement)) return;
-    const lines = collectTextLineBoxes(host);
-    const next = applyCanvasRenderGrid(
-      { canvasId: model.canvasId, lineIndex: renderLineIndex, lineCount: lines.length },
-      dir,
-    );
-    renderLineIndex = placeRenderLineCaret(host, detail, next.lineIndex);
-  };
-
   const paintCanvasSurface = (): void => {
     if (model.view !== "canvas") return;
     if (model.canvasSurface === "render") {
@@ -984,15 +931,19 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       if (paintedCanvas._tag === "Err") {
         host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
       }
-      renderLineIndex = placeRenderLineCaret(host, detail, renderLineIndex);
       return;
     }
     mountRawEditor(detail);
-    syncRawField(model.canvasSource);
   };
   root.querySelector("#theme-toggle")?.addEventListener("click", () => {
     paintCanvasSurface();
   });
+
+  let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
+  let painted: Paint | null = null;
+  let filtersOpen = false;
+  let menuOpen = false;
+  let sheetWasVisible = false;
   const compactLayout = window.matchMedia(COMPACT_MEDIA);
   const phoneLayout = window.matchMedia(PHONE_MEDIA);
 
@@ -1225,17 +1176,12 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     const rawField = detail.querySelector("#canvas-source");
     const rawFocused = rawField instanceof HTMLTextAreaElement && document.activeElement === rawField;
     if (vm.view === "canvas") {
-      const identityChanged =
+      const canvasChanged =
         prev === null ||
         prev.view !== "canvas" ||
         prev.canvasId !== (vm.selectedCanvas?.id ?? null) ||
-        prev.canvasSurface !== vm.canvasSurface;
-      if (identityChanged) {
-        rawCaret = initVimCaret();
-        renderLineIndex = 0;
-      }
-      const canvasChanged =
-        identityChanged || (prev !== null && prev.canvasSource !== vm.canvasSource && !rawFocused);
+        prev.canvasSurface !== vm.canvasSurface ||
+        (prev.canvasSource !== vm.canvasSource && !rawFocused);
       if (canvasChanged) {
         detail.innerHTML = renderCanvasDetail(
           vm.selectedCanvas?.title ?? "",
@@ -1491,21 +1437,16 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   );
   detail.addEventListener("input", (event) => {
     if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
-    rawCaret = { ...rawCaret, mode: "insert", offset: event.target.selectionStart };
     dispatch({ _tag: "SetCanvasSource", value: event.target.value });
     syncRawOverlay(event.target);
   });
   detail.addEventListener("keyup", (event) => {
     if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
-    if (rawCaret.mode === "insert") {
-      rawCaret = { ...rawCaret, offset: event.target.selectionStart };
-    }
     followCaretInScroller(detail, event.target);
   });
   detail.addEventListener("click", (event) => {
     if (event.target instanceof HTMLTextAreaElement && event.target.id === "canvas-source") {
       followCaretInScroller(detail, event.target);
-      commitRawNav({ _tag: "ClickEditor", offset: event.target.selectionStart }, true);
     }
     const jump = closestControl(event.target, "button[data-canvas-jump]");
     if (jump instanceof HTMLButtonElement && jump.dataset.canvasJump !== undefined) {
@@ -1572,26 +1513,15 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     }
   });
 
-  document.addEventListener("click", (event) => {
-    if (rawCaret.mode !== "insert") return;
-    const editor = detail.querySelector(".canvas-source");
-    if (editor instanceof HTMLElement && event.target instanceof Node && editor.contains(event.target)) return;
-    commitRawNav({ _tag: "ClickOutside" }, false);
-  });
-
   document.addEventListener("keydown", (event) => {
     if (event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === "Escape") {
       event.preventDefault();
-      if (model.view === "canvas" && model.canvasSurface === "raw" && rawCaret.mode === "insert") {
-        commitRawNav({ _tag: "Escape" }, true);
-        return;
-      }
       if (phoneLayout.matches && menuOpen) {
         closePhoneMenu();
         return;
       }
-      if (isTypingTarget(event.target, rawCaret.mode === "insert")) {
+      if (isTypingTarget(event.target)) {
         if (event.target === queryInput && queryInput.value !== "") {
           queryInput.value = "";
           dispatch({ _tag: "SetSearch", value: "" });
@@ -1622,7 +1552,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       }
       return;
     }
-    if (isTypingTarget(event.target, rawCaret.mode === "insert")) return;
+    if (isTypingTarget(event.target)) return;
     if (event.key === "/") {
       event.preventDefault();
       queryInput.focus();
@@ -1678,30 +1608,6 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
         dispatch({ _tag: "MoveGrid", dir, cols: virt.columns() });
         return;
       }
-    }
-    if (model.view === "canvas") {
-      if (model.canvasSurface === "raw" && rawCaret.mode === "normal") {
-        const insertKey = vimInsertKey(event.key);
-        if (insertKey !== null) {
-          event.preventDefault();
-          commitRawNav({ _tag: "InsertKey", key: insertKey }, true);
-          return;
-        }
-        const dir = gridDirFromKey(event.key);
-        if (dir !== null) {
-          event.preventDefault();
-          commitRawNav({ _tag: "Motion", dir }, true);
-          return;
-        }
-      } else if (model.canvasSurface === "render") {
-        const dir = gridDirFromKey(event.key);
-        if (dir !== null) {
-          event.preventDefault();
-          if (dir === "j" || dir === "k") stepCanvasRender(dir);
-          return;
-        }
-      }
-      return;
     }
     if (event.key === "ArrowDown" || event.key === "j") {
       event.preventDefault();

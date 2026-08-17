@@ -1036,17 +1036,8 @@ button:focus-visible {
 }
 
 .canvas-host {
-  position: relative;
   min-height: 8rem;
   overflow: visible;
-}
-
-.canvas-line-caret {
-  position: absolute;
-  width: 2px;
-  pointer-events: none;
-  background: currentColor;
-  z-index: 1;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
