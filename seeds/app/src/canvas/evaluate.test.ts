@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { compileCanvas } from "./evaluate.ts";
 import type { Child, VNode } from "./h.ts";
-import { highlightCanvasElement, highlightCanvasSource } from "./highlight.ts";
+import { highlightCanvasElement, highlightCanvasSource, resolveCanvasLanguage } from "./highlight.ts";
 import { toneHex } from "./theme.ts";
 
 const sample = `import { H1, Stack, Text } from "cursor/canvas";
@@ -104,18 +104,28 @@ if (packed._tag === "Ok") {
 }
 
 {
-  const cpp = highlightCanvasSource(
-    "auto parse() noexcept -> ano::Result<Texture, Error> { return {}; }",
-    "cpp",
-  );
-  assert.ok(cpp.includes("hljs-"), "C++ must emit highlight.js token spans");
-  assert.ok(cpp.includes("keyword") || cpp.includes("type") || cpp.includes("built_in"), "C++ tokens must be classified");
+  const cppSrc = "auto parse() noexcept -> ano::Result<Texture, Error> { return {}; }";
+  assert.equal(resolveCanvasLanguage(cppSrc), "cpp");
+  const cpp = highlightCanvasSource(cppSrc, "cpp");
+  assert.ok(cpp.includes("<span"), "C++ must emit Shiki token spans");
+  assert.ok(/style="color:/i.test(cpp), "C++ tokens must carry theme colors");
+  assert.equal(cpp.includes("<pre"), false, "inline structure must not wrap another pre");
+
+  const sampleBlock = "ano::Result<Texture, ResourceError>";
+  assert.equal(resolveCanvasLanguage(sampleBlock), "cpp");
+  assert.ok(/style="color:/i.test(highlightCanvasSource(sampleBlock)));
 
   const haskell = highlightCanvasSource("main :: IO ()\nmain = putStrLn \"ok\"", "haskell");
-  assert.ok(haskell.includes("hljs-"), "Haskell must emit highlight.js token spans");
+  assert.ok(/style="color:/i.test(haskell), "Haskell must emit Shiki token colors");
 
-  const autoCpp = highlightCanvasSource("#include <expected>\nint main() { return 0; }");
-  assert.ok(autoCpp.includes("hljs-"), "auto-detect must highlight distinctive C++");
+  assert.equal(resolveCanvasLanguage("#include <expected>\nint main() { return 0; }"), "cpp");
+  assert.equal(resolveCanvasLanguage("const x = 1;", "language-tsx"), "typescript");
+
+  const eq = "Result(V, E) = V + E\nD --reify--> W";
+  assert.equal(resolveCanvasLanguage(eq), "plaintext", "algebra/Eq lines must stay plaintext");
+  const eqHtml = highlightCanvasSource(eq);
+  assert.equal(eqHtml, eq);
+  assert.equal(/style="color:/i.test(eqHtml), false, "Eq-like pre must not be rainbowed");
 
   const pre = {
     className: "language-cpp",
@@ -133,11 +143,11 @@ if (packed._tag === "Ok") {
     parentElement: null,
   };
   highlightCanvasElement(pre);
-  assert.ok(pre.innerHTML.includes("hljs-"), "language-cpp pre must gain token spans");
-  assert.ok(pre.classList.contains("hljs"));
+  assert.ok(/style="color:/i.test(pre.innerHTML), "language-cpp pre must gain token spans");
+  assert.ok(pre.classList.contains("shiki"));
 
-  const hs = {
-    className: "language-haskell",
+  const unlabeled = {
+    className: "",
     classList: {
       names: new Set<string>(),
       contains(name: string) {
@@ -147,12 +157,31 @@ if (packed._tag === "Ok") {
         this.names.add(name);
       },
     },
-    textContent: "main :: IO ()",
-    innerHTML: "main :: IO ()",
+    textContent: sampleBlock,
+    innerHTML: sampleBlock,
     parentElement: null,
   };
-  highlightCanvasElement(hs);
-  assert.ok(hs.innerHTML.includes("hljs-"), "language-haskell pre must gain token spans");
+  highlightCanvasElement(unlabeled);
+  assert.ok(/style="color:/i.test(unlabeled.innerHTML), "unlabeled C++ pre must gain token spans");
+
+  const eqPre = {
+    className: "",
+    classList: {
+      names: new Set<string>(),
+      contains(name: string) {
+        return this.names.has(name);
+      },
+      add(name: string) {
+        this.names.add(name);
+      },
+    },
+    textContent: eq,
+    innerHTML: eq,
+    parentElement: null,
+  };
+  highlightCanvasElement(eqPre);
+  assert.equal(eqPre.innerHTML, eq, "plaintext/Eq-like pre must keep original text");
+  assert.ok(eqPre.classList.contains("shiki"));
 }
 
 console.log("evaluate.test.ts ok");
