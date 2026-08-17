@@ -1,5 +1,5 @@
 import { h, type Child } from "./h.ts";
-import { mergeStyle, useHostTheme } from "./theme.ts";
+import { mergeStyle, toneFill, toneHex, useHostTheme } from "./theme.ts";
 
 type Style = Record<string, string | number>;
 
@@ -45,7 +45,13 @@ export function Row({
 export type DividerProps = { style?: Style };
 export function Divider({ style }: DividerProps): Child {
   const theme = useHostTheme();
-  return h("hr", { class: "cv-divider", style: mergeStyle({ borderColor: theme.stroke.tertiary }, style) });
+  return h(
+    "hr",
+    {
+      class: "cv-divider",
+      style: mergeStyle({ border: 0, borderTop: `1px solid ${theme.stroke.tertiary}` }, style),
+    },
+  );
 }
 
 export type TextWeight = "normal" | "medium" | "semibold" | "bold";
@@ -86,6 +92,7 @@ export function Text({
       style: mergeStyle(
         {
           color,
+          fontSize: size === "small" ? 12 : 14,
           fontWeight: WEIGHT[weight],
           fontStyle: italic === true ? "italic" : "normal",
           ...(truncate === true || truncate === "end"
@@ -103,25 +110,74 @@ export function Text({
 
 export type H1Props = { children?: Child; style?: Style };
 export function H1({ children, style }: H1Props): Child {
-  return h("h1", { class: "cv-h1", style }, children);
+  const theme = useHostTheme();
+  return h(
+    "h1",
+    {
+      class: "cv-h1",
+      style: mergeStyle(
+        { color: theme.text.primary, fontSize: 24, fontWeight: 650, lineHeight: "30px" },
+        style,
+      ),
+    },
+    children,
+  );
 }
 export type H2Props = { children?: Child; style?: Style };
 export function H2({ children, style }: H2Props): Child {
-  return h("h2", { class: "cv-h2", style }, children);
+  const theme = useHostTheme();
+  return h(
+    "h2",
+    {
+      class: "cv-h2",
+      style: mergeStyle(
+        { color: theme.text.primary, fontSize: 18, fontWeight: 600, lineHeight: "24px" },
+        style,
+      ),
+    },
+    children,
+  );
 }
 export type H3Props = { children?: Child; style?: Style };
 export function H3({ children, style }: H3Props): Child {
-  return h("h3", { class: "cv-h3", style }, children);
+  const theme = useHostTheme();
+  return h(
+    "h3",
+    {
+      class: "cv-h3",
+      style: mergeStyle(
+        { color: theme.text.primary, fontSize: 16, fontWeight: 600, lineHeight: "22px" },
+        style,
+      ),
+    },
+    children,
+  );
 }
 
 export type StatTone = "success" | "danger" | "warning" | "info";
 export type StatProps = { value: Child; label: string; tone?: StatTone; style?: Style };
 export function Stat({ value, label, tone, style }: StatProps): Child {
+  const theme = useHostTheme();
+  const valueColor = tone === undefined ? theme.text.primary : (toneHex[tone] ?? theme.text.primary);
   return h(
     "div",
     { class: tone === undefined ? "cv-stat" : `cv-stat cv-stat-${tone}`, style },
-    h("div", { class: "cv-stat-value" }, value),
-    h("div", { class: "cv-stat-label" }, label),
+    h(
+      "div",
+      {
+        class: "cv-stat-value",
+        style: { color: valueColor, fontSize: 22, fontWeight: 700, lineHeight: 1.2 },
+      },
+      value,
+    ),
+    h(
+      "div",
+      {
+        class: "cv-stat-label",
+        style: { color: theme.text.tertiary, fontSize: 12 },
+      },
+      label,
+    ),
   );
 }
 
@@ -134,14 +190,28 @@ export type CalloutProps = {
   style?: Style;
 };
 export function Callout({ children, tone = "neutral", title, icon, style }: CalloutProps): Child {
+  const theme = useHostTheme();
+  const accent = toneHex[tone] ?? toneHex.neutral ?? theme.stroke.primary;
   return h(
     "aside",
-    { class: `cv-callout cv-callout-${tone}`, style },
+    {
+      class: `cv-callout cv-callout-${tone}`,
+      style: mergeStyle(
+        {
+          color: theme.text.primary,
+          background: toneFill(tone),
+          border: `1px solid ${toneFill(tone, 0.4)}`,
+        },
+        style,
+      ),
+    },
     icon === undefined ? null : h("div", { class: "cv-callout-icon" }, icon),
     h(
       "div",
       { class: "cv-callout-body" },
-      title === undefined ? null : h("div", { class: "cv-callout-title" }, title),
+      title === undefined
+        ? null
+        : h("div", { class: "cv-callout-title", style: { color: accent, fontWeight: 650 } }, title),
       children,
     ),
   );
@@ -171,24 +241,45 @@ export function Table({
   style,
   emptyMessage,
 }: TableProps): Child {
+  const theme = useHostTheme();
   const body =
     rows.length === 0
       ? [
           h(
             "tr",
             null,
-            h("td", { colSpan: headers.length, class: "cv-td cv-td-empty" }, emptyMessage ?? "No data"),
+            h(
+              "td",
+              { colSpan: headers.length, class: "cv-td cv-td-empty", style: { color: theme.text.tertiary } },
+              emptyMessage ?? "No data",
+            ),
           ),
         ]
       : rows.map((row, rowIndex) => {
           const tone = rowTone?.[rowIndex];
+          const stripe = striped === true && rowIndex % 2 === 1;
+          const background = tone !== undefined ? toneFill(tone) : stripe ? theme.fill.tertiary : undefined;
           return h(
             "tr",
-            { class: [striped === true && rowIndex % 2 === 1 ? "cv-tr-stripe" : "", tone === undefined ? "" : `cv-tr-${tone}`].filter((part) => part.length > 0).join(" ") || undefined },
+            {
+              class: [stripe ? "cv-tr-stripe" : "", tone === undefined ? "" : `cv-tr-${tone}`]
+                .filter((part) => part.length > 0)
+                .join(" ") || undefined,
+              style: background === undefined ? undefined : { background },
+            },
             headers.map((_, colIndex) =>
               h(
                 "td",
-                { class: "cv-td", style: { textAlign: columnAlign?.[colIndex] ?? "left" } },
+                {
+                  class: "cv-td",
+                  style: {
+                    textAlign: columnAlign?.[colIndex] ?? "left",
+                    color: theme.text.primary,
+                    borderBottom: `1px solid ${theme.stroke.tertiary}`,
+                    // `<tr>` background often computes transparent; paint the cells.
+                    ...(background === undefined ? {} : { background }),
+                  },
+                },
                 row[colIndex] ?? "",
               ),
             ),
@@ -196,7 +287,18 @@ export function Table({
         });
   return h(
     "div",
-    { class: framed ? "cv-table-wrap" : "cv-table-wrap is-bare", style },
+    {
+      class: framed ? "cv-table-wrap" : "cv-table-wrap is-bare",
+      style: mergeStyle(
+        framed
+          ? {
+              border: `1px solid ${theme.stroke.tertiary}`,
+              background: theme.bg.chrome,
+            }
+          : { border: 0, background: "transparent" },
+        style,
+      ),
+    },
     h(
       "table",
       { class: stickyHeader === true ? "cv-table is-sticky" : "cv-table" },
@@ -207,7 +309,21 @@ export function Table({
           "tr",
           null,
           headers.map((header, index) =>
-            h("th", { class: "cv-th", style: { textAlign: columnAlign?.[index] ?? "left" } }, header),
+            h(
+              "th",
+              {
+                class: "cv-th",
+                style: {
+                  textAlign: columnAlign?.[index] ?? "left",
+                  color: theme.text.tertiary,
+                  borderBottom: `1px solid ${theme.stroke.tertiary}`,
+                  ...(stickyHeader === true
+                    ? { position: "sticky", top: 0, background: theme.bg.chrome }
+                    : {}),
+                },
+              },
+              header,
+            ),
           ),
         ),
       ),

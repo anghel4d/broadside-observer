@@ -51,12 +51,135 @@ export function Fragment(props: { readonly children?: Child }): Child {
   return props.children ?? null;
 }
 
-function applyStyle(el: HTMLElement | SVGElement, style: unknown): void {
+/** CSS properties that accept a unitless number (React's isUnitlessNumber set). */
+const UNITLESS = new Set([
+  "animationIterationCount",
+  "aspectRatio",
+  "borderImageOutset",
+  "borderImageSlice",
+  "borderImageWidth",
+  "boxFlex",
+  "boxFlexGroup",
+  "boxOrdinalGroup",
+  "columnCount",
+  "columns",
+  "fillOpacity",
+  "flex",
+  "flexGrow",
+  "flexNegative",
+  "flexOrder",
+  "flexPositive",
+  "flexShrink",
+  "floodOpacity",
+  "fontWeight",
+  "gridArea",
+  "gridColumn",
+  "gridColumnEnd",
+  "gridColumnSpan",
+  "gridColumnStart",
+  "gridRow",
+  "gridRowEnd",
+  "gridRowSpan",
+  "gridRowStart",
+  "lineClamp",
+  "lineHeight",
+  "opacity",
+  "order",
+  "orphans",
+  "scale",
+  "stopOpacity",
+  "strokeDasharray",
+  "strokeDashoffset",
+  "strokeMiterlimit",
+  "strokeOpacity",
+  "strokeWidth",
+  "tabSize",
+  "widows",
+  "zIndex",
+  "zoom",
+]);
+
+/** Serialize a style value. Numeric lengths become `px`; SVG attributes are not styles. */
+export function cssStyleValue(property: string, value: unknown): string | undefined {
+  if (value === null || value === undefined || typeof value === "boolean") return undefined;
+  if (typeof value === "number") {
+    if (!Number.isFinite(value)) return undefined;
+    if (value === 0 || UNITLESS.has(property)) return String(value);
+    return `${value}px`;
+  }
+  return String(value);
+}
+
+/** JSX camelCase style keys → CSS property names for `setProperty`. */
+export function cssPropertyName(property: string): string {
+  if (property.startsWith("--")) return property;
+  return property.replace(/[A-Z]/g, (ch) => `-${ch.toLowerCase()}`);
+}
+
+/**
+ * JSX camelCase → SVG attribute names. Entries that are already the SVG name
+ * (viewBox, markerWidth, refX) are omitted and pass through.
+ */
+const SVG_ATTR: Record<string, string> = {
+  accentHeight: "accent-height",
+  alignmentBaseline: "alignment-baseline",
+  clipPath: "clip-path",
+  clipRule: "clip-rule",
+  colorInterpolation: "color-interpolation",
+  colorInterpolationFilters: "color-interpolation-filters",
+  dominantBaseline: "dominant-baseline",
+  fillOpacity: "fill-opacity",
+  fillRule: "fill-rule",
+  floodColor: "flood-color",
+  floodOpacity: "flood-opacity",
+  fontFamily: "font-family",
+  fontSize: "font-size",
+  fontSizeAdjust: "font-size-adjust",
+  fontStretch: "font-stretch",
+  fontStyle: "font-style",
+  fontVariant: "font-variant",
+  fontWeight: "font-weight",
+  letterSpacing: "letter-spacing",
+  lightingColor: "lighting-color",
+  markerEnd: "marker-end",
+  markerMid: "marker-mid",
+  markerStart: "marker-start",
+  paintOrder: "paint-order",
+  pointerEvents: "pointer-events",
+  shapeRendering: "shape-rendering",
+  stopColor: "stop-color",
+  stopOpacity: "stop-opacity",
+  strokeDasharray: "stroke-dasharray",
+  strokeDashoffset: "stroke-dashoffset",
+  strokeLinecap: "stroke-linecap",
+  strokeLinejoin: "stroke-linejoin",
+  strokeMiterlimit: "stroke-miterlimit",
+  strokeOpacity: "stroke-opacity",
+  strokeWidth: "stroke-width",
+  textAnchor: "text-anchor",
+  textDecoration: "text-decoration",
+  textRendering: "text-rendering",
+  vectorEffect: "vector-effect",
+  wordSpacing: "word-spacing",
+  writingMode: "writing-mode",
+  xlinkHref: "href",
+};
+
+export function svgAttributeName(name: string): string {
+  return SVG_ATTR[name] ?? name;
+}
+
+/** Paint a style object onto a DOM node. Always `setProperty(kebab, value)` so `left`/`width` land as `24px` in the style attribute. */
+export function applyStyle(
+  el: { readonly style: { setProperty(property: string, value: string): void } },
+  style: unknown,
+): void {
   if (style === null || typeof style !== "object") return;
   const record = style as Record<string, unknown>;
   for (const [key, value] of Object.entries(record)) {
-    if (value === null || value === undefined) continue;
-    (el.style as unknown as Record<string, unknown>)[key] = String(value);
+    const serialized = cssStyleValue(key, value);
+    if (serialized === undefined) continue;
+    el.style.setProperty(cssPropertyName(key), serialized);
   }
 }
 
@@ -75,11 +198,12 @@ function applyProp(el: HTMLElement | SVGElement, key: string, value: unknown): v
     el.addEventListener(event, value as EventListener);
     return;
   }
+  const attr = svgAttributeName(key);
   if (value === true) {
-    el.setAttribute(key, "");
+    el.setAttribute(attr, "");
     return;
   }
-  el.setAttribute(key, String(value));
+  el.setAttribute(attr, String(value));
 }
 
 function toNodes(child: Child): Node[] {

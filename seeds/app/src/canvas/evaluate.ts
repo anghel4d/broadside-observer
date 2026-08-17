@@ -2,6 +2,8 @@ import { transform } from "sucrase";
 import { err, ok, type Result } from "../domain/result.ts";
 import * as canvas from "./index.ts";
 import { Fragment, h, mount, type Child, type Component } from "./h.ts";
+import { highlightCanvasCode } from "./highlight.ts";
+import { useHostTheme } from "./theme.ts";
 
 function requireCanvas(specifier: string): typeof canvas {
   if (specifier === "cursor/canvas") return canvas;
@@ -50,7 +52,13 @@ export function renderCanvas(source: string, host: Element): Result<string, void
   if (compiled._tag === "Err") return compiled;
   try {
     const tree: Child = compiled.value({});
+    if (host instanceof HTMLElement) {
+      const theme = useHostTheme();
+      host.style.background = theme.bg.editor;
+      host.style.color = theme.text.primary;
+    }
     mount(tree, host);
+    highlightCanvasCode(host);
     return ok(undefined);
   } catch (cause) {
     const message = cause instanceof Error ? cause.message : String(cause);

@@ -76,82 +76,150 @@ export type CanvasHostTheme = CanvasTokens & {
   readonly palette: CanvasPalette;
 };
 
-function token(css: CSSStyleDeclaration, name: string, fallback: string): string {
-  const value = css.getPropertyValue(name).trim();
-  return value === "" ? fallback : value;
+/** Cursor canvas dark palette (8-digit hex is #RRGGBBAA). */
+export const canvasPaletteDark: CanvasPalette = {
+  foreground: "#E4E4E4EB",
+  foregroundSecondary: "#E4E4E48D",
+  foregroundTertiary: "#E4E4E45E",
+  foregroundQuaternary: "#E4E4E442",
+  editor: "#181818",
+  chrome: "#141414",
+  sidebar: "#141414",
+  elevated: "#181818",
+  fillPrimary: "#E4E4E430",
+  fillSecondary: "#E4E4E41E",
+  fillTertiary: "#E4E4E411",
+  fillQuaternary: "#E4E4E40A",
+  strokePrimary: "#E4E4E433",
+  strokeSecondary: "#E4E4E41F",
+  strokeTertiary: "#E4E4E414",
+  strokeFocused: "#599CE7",
+  accent: "#599CE7",
+  buttonBackground: "#599CE7",
+  buttonForeground: "#191c22",
+  buttonHoverBackground: "#6AABE9",
+  link: "#87c3ff",
+  diffInsertedLine: "#3FA26633",
+  diffRemovedLine: "#B8004933",
+  diffStripAdded: "#3FA2668F",
+  diffStripRemoved: "#FC6B838F",
+};
+
+/** Cursor canvas light palette. */
+export const canvasPaletteLight: CanvasPalette = {
+  foreground: "#141414F0",
+  foregroundSecondary: "#141414BD",
+  foregroundTertiary: "#1414148A",
+  foregroundQuaternary: "#1414145C",
+  editor: "#FCFCFC",
+  chrome: "#F8F8F8",
+  sidebar: "#F3F3F3",
+  elevated: "#FCFCFC",
+  fillPrimary: "#14141433",
+  fillSecondary: "#14141424",
+  fillTertiary: "#14141414",
+  fillQuaternary: "#1414140F",
+  strokePrimary: "#14141433",
+  strokeSecondary: "#1414141F",
+  strokeTertiary: "#14141414",
+  strokeFocused: "#3685BF",
+  accent: "#3685BF",
+  buttonBackground: "#3685BF",
+  buttonForeground: "#FCFCFC",
+  buttonHoverBackground: "#2E76AB",
+  link: "#3685BF",
+  diffInsertedLine: "#1F8A651F",
+  diffRemovedLine: "#CF2D5614",
+  diffStripAdded: "#1F8A65CC",
+  diffStripRemoved: "#CF2D56CC",
+};
+
+/** Shared 7-hue category palette plus cyan/red for our token surface. */
+export const colorPalette: CategoryPalette = {
+  gray: "#8888A8E0",
+  purple: "#7B64B8F0",
+  green: "#1F8A65E8",
+  yellow: "#E8C030E0",
+  cyan: "#2A9A8AE0",
+  pink: "#C85898E0",
+  blue: "#2E79B5E0",
+  orange: "#F0A040E0",
+  red: "#CF2D56E0",
+};
+
+/**
+ * Semantic tones used by Stat, Callout, and Table row highlighting.
+ * Values are painted with these; labels stay tertiary.
+ */
+export const toneHex: Record<string, string> = {
+  success: "#1F8A65",
+  danger: "#CF2D56",
+  warning: "#E8A33D",
+  info: "#2E79B5",
+  neutral: "#8888A8",
+  added: "#1F8A65",
+  deleted: "#CF2D56",
+  renamed: "#5A6CC0",
+};
+
+export function buildTokens(palette: CanvasPalette): CanvasTokens {
+  return {
+    bg: {
+      editor: palette.editor,
+      chrome: palette.chrome,
+      elevated: palette.elevated,
+    },
+    text: {
+      primary: palette.foreground,
+      secondary: palette.foregroundSecondary,
+      tertiary: palette.foregroundTertiary,
+      quaternary: palette.foregroundQuaternary,
+      link: palette.link,
+      onAccent: palette.buttonForeground,
+    },
+    stroke: {
+      primary: palette.strokePrimary,
+      secondary: palette.strokeSecondary,
+      tertiary: palette.strokeTertiary,
+      focused: palette.strokeFocused,
+    },
+    fill: {
+      primary: palette.fillPrimary,
+      secondary: palette.fillSecondary,
+      tertiary: palette.fillTertiary,
+      quaternary: palette.fillQuaternary,
+    },
+    accent: {
+      primary: palette.accent,
+      control: palette.buttonBackground,
+      controlHover: palette.buttonHoverBackground,
+    },
+    diff: {
+      insertedLine: palette.diffInsertedLine,
+      removedLine: palette.diffRemovedLine,
+      stripAdded: palette.diffStripAdded,
+      stripRemoved: palette.diffStripRemoved,
+    },
+    category: colorPalette,
+  };
 }
 
-/** Host theme from the seed-browser light/dark tokens — no second palette. */
+export const canvasTokens = buildTokens(canvasPaletteDark);
+export const canvasTokensLight = buildTokens(canvasPaletteLight);
+
+export function buildHostTheme(kind: "light" | "dark"): CanvasHostTheme {
+  const tokens = kind === "dark" ? canvasTokens : canvasTokensLight;
+  const palette = kind === "dark" ? canvasPaletteDark : canvasPaletteLight;
+  return { ...tokens, kind, tokens, palette };
+}
+
+/** Host theme from `html[data-theme]`, using canvas palettes rather than site tokens. */
 export function useHostTheme(): CanvasHostTheme {
   const kind =
     typeof document !== "undefined" && document.documentElement.dataset.theme === "light"
       ? "light"
       : "dark";
-  const css = typeof document !== "undefined" ? getComputedStyle(document.documentElement) : null;
-  const read = (name: string, fallback: string): string =>
-    css === null ? fallback : token(css, name, fallback);
-  const ink = read("--ink", "currentColor");
-  const muted = read("--muted", ink);
-  const faint = read("--faint", muted);
-  const bg = read("--bg", "transparent");
-  const panel = read("--panel", bg);
-  const panel2 = read("--panel-2", panel);
-  const browse = read("--browse", panel);
-  const line = read("--line", muted);
-  const accent = read("--accent", ink);
-  const chip = read("--chip", panel2);
-  const active = read("--active", chip);
-  const hover = read("--hover", active);
-  const focus = read("--focus-ring", accent);
-  const offBg = read("--off-filter-bg", panel2);
-  const offLine = read("--off-filter-line", line);
-  const tokens: CanvasTokens = {
-    bg: { editor: bg, chrome: panel, elevated: panel2 },
-    text: { primary: ink, secondary: muted, tertiary: faint, quaternary: faint, link: accent, onAccent: bg },
-    stroke: { primary: line, secondary: line, tertiary: line, focused: focus },
-    fill: { primary: active, secondary: chip, tertiary: panel2, quaternary: browse },
-    accent: { primary: accent, control: accent, controlHover: hover },
-    diff: { insertedLine: offBg, removedLine: chip, stripAdded: offLine, stripRemoved: line },
-    category: {
-      gray: faint,
-      purple: accent,
-      green: offLine,
-      yellow: muted,
-      cyan: accent,
-      pink: muted,
-      blue: accent,
-      orange: muted,
-      red: ink,
-    },
-  };
-  const palette: CanvasPalette = {
-    foreground: ink,
-    foregroundSecondary: muted,
-    foregroundTertiary: faint,
-    foregroundQuaternary: faint,
-    editor: bg,
-    chrome: panel,
-    sidebar: browse,
-    elevated: panel2,
-    fillPrimary: active,
-    fillSecondary: chip,
-    fillTertiary: panel2,
-    fillQuaternary: browse,
-    strokePrimary: line,
-    strokeSecondary: line,
-    strokeTertiary: line,
-    strokeFocused: focus,
-    accent,
-    buttonBackground: accent,
-    buttonForeground: bg,
-    buttonHoverBackground: hover,
-    link: accent,
-    diffInsertedLine: offBg,
-    diffRemovedLine: chip,
-    diffStripAdded: offLine,
-    diffStripRemoved: line,
-  };
-  return { ...tokens, kind, tokens, palette };
+  return buildHostTheme(kind);
 }
 
 export function mergeStyle(
@@ -159,4 +227,16 @@ export function mergeStyle(
   override?: Record<string, string | number>,
 ): Record<string, string | number> {
   return override === undefined ? base : { ...base, ...override };
+}
+
+/** Tint a `#RRGGBB` tone for fills. Warning uses a slightly stronger alpha. */
+export function toneFill(tone: string, alpha = tone === "warning" ? 0.14 : 0.12): string {
+  const hex = toneHex[tone] ?? toneHex.neutral ?? "#8888A8";
+  const rgb = hex.startsWith("#") ? hex.slice(1) : hex;
+  if (rgb.length !== 6) return hex;
+  const r = Number.parseInt(rgb.slice(0, 2), 16);
+  const g = Number.parseInt(rgb.slice(2, 4), 16);
+  const b = Number.parseInt(rgb.slice(4, 6), 16);
+  if (!Number.isFinite(r) || !Number.isFinite(g) || !Number.isFinite(b)) return hex;
+  return `rgba(${r},${g},${b},${alpha})`;
 }
