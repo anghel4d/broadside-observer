@@ -59,6 +59,7 @@ import {
   BROWSE_MIN_REM,
   COMPACT_MEDIA,
   DETAIL_MIN_REM,
+  PHONE_MEDIA,
   SPLIT_GUTTER_PX,
   clearStoredDetailWidth,
   clampDetailWidthPx,
@@ -393,6 +394,9 @@ const THEME_SUN_ICON =
 const THEME_MOON_ICON =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
 
+const MENU_ICON =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+
 const LINK_ICON =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
 
@@ -407,6 +411,11 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearHi = corpus.yearBounds?.[1];
   const lightOn = theme === "light";
   return `
+    <div class="phone-bar" id="phone-bar">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="chrome browse" aria-expanded="false" aria-label="Menu">
+        ${MENU_ICON}
+      </button>
+    </div>
     <header class="topbar">
       <div class="brand">
         <h1>Seed browser</h1>
@@ -687,6 +696,9 @@ function renderCanvasDetail(title: string, surface: CanvasSurface, source: strin
                 <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
               </div>
               ${canvasJumpHtml()}
+              <button type="button" class="menu-toggle" aria-controls="chrome browse" aria-expanded="false" aria-label="Menu">
+                ${MENU_ICON}
+              </button>
             </div>
           </div>
         </header>
@@ -883,6 +895,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   root.innerHTML = shellHtml(corpus, initialView, initialTheme);
   bindThemeControls(root, storage);
   root.dataset.view = initialView;
+  root.dataset.menu = "closed";
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
@@ -927,8 +940,10 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
   let painted: Paint | null = null;
   let filtersOpen = false;
+  let menuOpen = false;
   let sheetWasVisible = false;
   const compactLayout = window.matchMedia(COMPACT_MEDIA);
+  const phoneLayout = window.matchMedia(PHONE_MEDIA);
 
   type SplitDrag = {
     readonly pointerId: number;
@@ -1029,6 +1044,24 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     chrome.classList.toggle("is-filters-open", filtersOpen);
     filtersToggle.setAttribute("aria-expanded", filtersOpen ? "true" : "false");
     filtersToggle.hidden = !narrow;
+  };
+
+  const syncPhoneMenu = (refresh = false): void => {
+    if (!phoneLayout.matches) menuOpen = false;
+    root.dataset.menu = menuOpen ? "open" : "closed";
+    const expanded = menuOpen ? "true" : "false";
+    for (const node of root.querySelectorAll(".menu-toggle")) {
+      if (!(node instanceof HTMLButtonElement)) continue;
+      node.hidden = !phoneLayout.matches;
+      node.setAttribute("aria-expanded", expanded);
+    }
+    if (refresh) virt.refresh();
+  };
+
+  const closePhoneMenu = (): void => {
+    if (!menuOpen) return;
+    menuOpen = false;
+    syncPhoneMenu(true);
   };
 
   const syncSheetChrome = (vm: ViewModel, detailHadFocus: boolean): void => {
@@ -1173,6 +1206,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     }
 
     syncSheetChrome(vm, detailHadFocus);
+    syncPhoneMenu();
 
     painted = {
       detail: detailId,
@@ -1369,16 +1403,29 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     const key = parseKey(FILTER_KEYS, button.dataset.clear);
     if (key !== null) dispatch({ _tag: "ClearFilter", key });
   });
+  root.addEventListener("click", (event) => {
+    const toggle = closestControl(event.target, "button.menu-toggle");
+    if (!(toggle instanceof HTMLButtonElement)) return;
+    if (!phoneLayout.matches) return;
+    menuOpen = !menuOpen;
+    syncPhoneMenu(true);
+  });
   browse.addEventListener("click", (event) => {
     const button = closestControl(event.target, "button[data-id]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.id === undefined) return;
     if (model.view === "canvas") {
       const id = parseCanvasId(button.dataset.id);
-      if (id !== null) dispatch({ _tag: "SelectCanvas", id });
+      if (id !== null) {
+        dispatch({ _tag: "SelectCanvas", id });
+        closePhoneMenu();
+      }
       return;
     }
     const id = parseCardId(button.dataset.id);
-    if (id !== null) dispatch({ _tag: "Select", id });
+    if (id !== null) {
+      dispatch({ _tag: "Select", id });
+      closePhoneMenu();
+    }
   });
   const syncRawOverlay = (textarea: HTMLTextAreaElement): void => {
     const highlight = detail.querySelector(".canvas-source-highlight");
@@ -1475,6 +1522,10 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     if (event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === "Escape") {
       event.preventDefault();
+      if (phoneLayout.matches && menuOpen) {
+        closePhoneMenu();
+        return;
+      }
       if (isTypingTarget(event.target)) {
         if (event.target === queryInput && queryInput.value !== "") {
           queryInput.value = "";
@@ -1597,6 +1648,15 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     compactLayout.addEventListener("change", onCompactChange);
   } else {
     compactLayout.addListener(onCompactChange);
+  }
+  const onPhoneChange = (): void => {
+    if (!phoneLayout.matches) menuOpen = false;
+    syncPhoneMenu(true);
+  };
+  if (typeof phoneLayout.addEventListener === "function") {
+    phoneLayout.addEventListener("change", onPhoneChange);
+  } else {
+    phoneLayout.addListener(onPhoneChange);
   }
   const splitObserver = new ResizeObserver(() => {
     applyPaneSplit();

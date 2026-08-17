@@ -10,6 +10,8 @@ import {
   DETAIL_MIN_REM,
   LIST_BROWSE_DEFAULT_REM,
   PANE_SPLIT_STORAGE_KEY,
+  PHONE_MAX_PX,
+  PHONE_MEDIA,
   SPLIT_GUTTER_PX,
   clampDetailWidthPx,
   clearStoredDetailWidth,
@@ -36,6 +38,9 @@ const browseWidthPx = (workspacePx: number, detailPx: number, gutterPx: number):
 
 assert.equal(COMPACT_MAX_PX, 980);
 assert.equal(COMPACT_MEDIA, "(max-width: 980px)");
+assert.equal(PHONE_MAX_PX, 560);
+assert.equal(PHONE_MEDIA, "(max-width: 560px)");
+assert.notEqual(PHONE_MAX_PX, COMPACT_MAX_PX, "phone hamburger must not reuse the 980px sheet breakpoint");
 
 assert.equal(isCardsSheetLayout("cards", true), true);
 assert.equal(isCardsSheetLayout("cards", false), false);
@@ -243,6 +248,28 @@ assert.equal(
     "compact layout must hide the side splitter",
   );
   assert.ok(css.includes("#view-toggle"), "view toggle must stack above theme so clicks are not stolen");
+  assert.ok(
+    css.includes(`@media (width <= ${PHONE_MAX_PX}px)`),
+    "style.css phone breakpoint must match PHONE_MAX_PX",
+  );
+  const beforePhone = css.slice(0, css.indexOf(`@media (width <= ${PHONE_MAX_PX}px)`));
+  assert.ok(
+    /\.phone-bar,\s*\n\s*\.menu-toggle\s*\{[^}]*display:\s*none/.test(beforePhone),
+    "desktop must not show the hamburger",
+  );
+  assert.equal(beforePhone.includes('[data-menu="open"]'), false, "hamburger overlay is phone-only");
+  const phoneBlock = css.slice(css.indexOf(`@media (width <= ${PHONE_MAX_PX}px)`));
+  assert.ok(phoneBlock.includes(".menu-toggle"), "hamburger CSS belongs in the 560px query");
+  assert.ok(phoneBlock.includes(".phone-bar"));
+  assert.ok(phoneBlock.includes('[data-menu="open"]'));
+}
+
+{
+  const app = readFileSync(new URL("./app.ts", import.meta.url), "utf8");
+  assert.ok(app.includes("PHONE_MEDIA"), "phone menu must use PHONE_MEDIA, not COMPACT_MEDIA");
+  assert.ok(app.includes("menu-toggle"));
+  assert.ok(app.includes("dataset.menu"));
+  assert.ok(app.includes("aria-controls"));
 }
 
 {

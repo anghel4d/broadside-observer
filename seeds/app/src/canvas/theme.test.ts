@@ -127,22 +127,31 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   const reading = css.slice(css.indexOf(".reading-col {"), css.indexOf(".detail-dismiss {"));
   assert.ok(/\.reading-col\s*\{[^}]*max-width:\s*46rem/.test(reading), "List/Cards reading column stays 46rem");
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*none/.test(reading),
-    "canvas reading column must fill the pane",
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*66rem/.test(reading),
+    "desktop canvas reading column is a centered 66rem column",
   );
   assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:\s*100%/.test(reading));
+  assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*margin-inline:\s*auto/.test(reading));
   assert.equal(reading.includes("max-width: 46rem"), true);
+  assert.equal(
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*none/.test(reading),
+    false,
+    "desktop canvas must not full-bleed the reading column",
+  );
   assert.equal(
     /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*padding/.test(reading),
     false,
     "reading-col must not add a nested inset",
   );
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*2rem/.test(css),
-    "desktop canvas pane keeps a 2rem inset",
+    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*0 2rem 2rem/.test(css),
+    "desktop canvas pane keeps side inset, not top padding",
   );
   assert.ok(/#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding:\s*0/.test(css));
-  assert.ok(/#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*padding:\s*0/.test(css));
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*background:\s*var\(--bg\)/.test(css),
+    "sticky canvas head must paint an opaque stick region",
+  );
   assert.ok(
     /#app\[data-view="canvas"\]\s*\.canvas-host,[\s\S]*?padding-left:\s*2rem/.test(reading),
     "desktop canvas-host pads words 2rem",
@@ -152,19 +161,29 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
   const phone = css.slice(css.indexOf("@media (width <= 560px)"));
   assert.ok(phone.includes("padding-left: 0.75rem"), "phone list/cards inset stays 0.75rem");
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding-left:\s*0/.test(phone),
-    "phone canvas pane is full-bleed horizontally",
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*none/.test(phone),
+    "phone canvas reading column full-bleeds",
   );
-  assert.ok(/#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding-right:\s*0/.test(phone));
+  assert.ok(
+    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*0;/.test(phone),
+    "phone canvas pane is full-bleed",
+  );
   assert.ok(
     /#app\[data-view="canvas"\]\s*\.canvas-host,[\s\S]*?padding-left:\s*1rem/.test(phone),
     "phone canvas-host pads words 1rem",
   );
   assert.ok(/#app\[data-view="canvas"\]\s*\.canvas-source[\s\S]*?padding-right:\s*1rem/.test(phone));
   assert.equal(
-    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*2rem/.test(phone),
+    /#app\[data-view="canvas"\]\s*\.detail-pane\s*\{[^}]*padding:\s*0 2rem 2rem/.test(phone),
     false,
     "phone must not keep the desktop pane gutter",
+  );
+  assert.ok(phone.includes(".menu-toggle"), "phone hamburger rules live at 560px");
+  assert.ok(phone.includes(".phone-bar"));
+  assert.ok(phone.includes('[data-menu="open"]'));
+  assert.ok(
+    phone.includes("#app[data-view=\"canvas\"]:not([data-menu=\"open\"]) .browse-pane"),
+    "phone canvas list lives in the hamburger, not a 12rem strip",
   );
 }
 
