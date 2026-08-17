@@ -1186,3 +1186,20 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1057 | 8 | 2017 | Profunctor Optics: Modular Data Accessors | languages |
 
 _Recount after `curiosity-2026-08-17`: **1057** unique title cards on main._
+
+## Craft 2026-08-17
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **56**. Keepers: **8** (keep rate **0.143**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1058 | 10 | 2025 | Real-time procedural resurfacing using GPU mesh shader | graphics |
+| 1059 | 10 | 2026 | Global Pass Barriers Without Per-Resource RHI Tracking: A Cross-Vendor Study with Blade | engines |
+| 1060 | 10 | 2026 | A Compiler for Operations on Relations with Bag Semantics | languages |
+| 1061 | 9 | 2026 | Uniformity Analysis in the WebGPU Shading Language | languages |
+| 1062 | 9 | 2026 | Refined Remora: Constraining Array Shapes | languages |
+| 1063 | 9 | 2026 | Memory-Efficient Bounding Volume Hierarchies with Merged Nodes for Hardware Ray Tracing | engines |
+| 1064 | 9 | 2026 | Hierarchical Reinforcement Learning in StarCraft Micromanagement with Influence Maps and Cluster-based Scripts | game-ai |
+| 1065 | 9 | 2025 | GPU-Friendly Laplacian Texture Blending | graphics |
+
+_Recount after `craft-2026-08-17`: **1065** unique title cards on main._
