@@ -11,8 +11,12 @@ function isMissingDir(cause: unknown): boolean {
   return typeof cause === "object" && cause !== null && "code" in cause && cause.code === "ENOENT";
 }
 
+function isCanvasFile(name: string): boolean {
+  return name.endsWith(".tsx");
+}
+
 function stemTitle(file: string): { readonly id: string; readonly title: string } {
-  const stem = file.replace(/\.canvas\.tsx$/u, "");
+  const stem = file.replace(/\.canvas\.tsx$/u, "").replace(/\.tsx$/u, "");
   return { id: stem, title: stem };
 }
 
@@ -24,7 +28,7 @@ try {
   else throw cause;
 }
 
-const files = names.filter((name) => name.endsWith(".canvas.tsx")).sort((left, right) => left.localeCompare(right, "en"));
+const files = names.filter(isCanvasFile).sort((left, right) => left.localeCompare(right, "en"));
 const seen = new Map<string, string>();
 const canvases: SeedCanvas[] = [];
 
