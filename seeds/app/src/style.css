@@ -1418,30 +1418,246 @@ a.chip-see:hover {
   }
 }
 
+/* Phone (~375–430px). Desktop and 980px compact rules above stay as written. */
 @media (width <= 560px) {
+  :root {
+    /* Specified rem (not calc) so JS parseCssLengthPx sees a track too wide for 2 cols. */
+    --seed-card-width: 33rem;
+  }
+
+  .topbar,
+  .chrome,
+  .filter-pills,
   .workspace {
-    grid-template-rows: minmax(7.5rem, 34%) minmax(0, 1fr);
+    max-width: 100%;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.65rem;
+    padding: 0.5rem max(0.75rem, env(safe-area-inset-right, 0px)) 0.45rem
+      max(0.75rem, env(safe-area-inset-left, 0px));
+  }
+
+  .topbar-tools {
+    flex: 1 0 100%;
+    justify-content: space-between;
+    gap: 0.4rem;
+  }
+
+  .status {
+    flex: 0 1 auto;
+    font-size: 0.72rem;
+  }
+
+  .seg button {
+    padding: 0.45rem 0.58rem;
+    min-height: 2.15rem;
+  }
+
+  #theme-toggle button {
+    min-width: 2.15rem;
+    min-height: 2.15rem;
+  }
+
+  .chrome {
+    padding: 0.45rem max(0.75rem, env(safe-area-inset-right, 0px)) 0.5rem
+      max(0.75rem, env(safe-area-inset-left, 0px));
+  }
+
+  .chrome .search-field {
+    flex: 1 0 100%;
+    min-width: 0;
+  }
+
+  input,
+  select,
+  textarea.canvas-source,
+  button.reset,
+  .filters-toggle {
+    min-height: 2.15rem;
+    font-size: 1rem;
+  }
+
+  .chrome.is-filters-open .filter-fields:not([hidden]) > * {
+    flex: 1 1 calc(50% - 0.35rem);
+    min-width: 0;
+  }
+
+  .chrome.is-filters-open .year-fields,
+  .chrome.is-filters-open .sort-field {
+    flex: 1 1 100%;
+  }
+
+  .year-fields {
+    min-width: 0;
+  }
+
+  .year-inputs input {
+    width: auto;
+    min-width: 0;
+  }
+
+  .sort-field label {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .filter-pills {
+    padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.75rem, env(safe-area-inset-right, 0px));
+  }
+
+  .filter-pill {
+    max-width: 100%;
+  }
+
+  .filter-pill-value {
+    max-width: min(12rem, 55vw);
+  }
+
+  .filter-pill-clear {
+    min-width: 2.15rem;
+    min-height: 2.15rem;
+  }
+
+  /* List: equal stack so browse and detail are both usable. Cards keeps the sheet. */
+  .workspace {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .workspace[data-view="cards"] {
     grid-template-rows: minmax(0, 1fr);
   }
 
-  .search-field {
-    flex: 1 1 100%;
+  /* Canvas: list sizes to its rows, then caps so Raw/Render keep the pane. */
+  .workspace[data-view="canvas"] {
+    grid-template-rows: auto minmax(0, 1fr);
   }
 
-  .topbar {
-    padding: 0.5rem 0.75rem 0.45rem;
+  .workspace[data-view="canvas"] .browse-pane {
+    max-height: 12rem;
   }
 
-  .chrome {
-    padding: 0.45rem 0.75rem 0.5rem;
+  .browse-pane,
+  .detail-pane {
+    scrollbar-gutter: auto;
   }
 
-  .filter-pills {
+  .card-grid {
+    grid-template-columns: minmax(0, var(--seed-card-width));
+    justify-items: stretch;
+  }
+
+  .seed-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .detail-head,
+  .detail-body {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .detail-dismiss {
+    min-height: 2.15rem;
+    padding: 0.4rem 0.7rem;
+    align-items: center;
+  }
+
+  .detail-title-row,
+  .detail-actions {
+    flex-wrap: wrap;
+  }
+
+  #canvas-surface {
+    flex: 0 0 auto;
+  }
+
+  .authors,
+  .prov-venue {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .cite-url {
+    flex: 1 1 8rem;
+  }
+
+  .detail-pane:has(.canvas-source),
+  .detail-pane:has(.canvas-host) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-pane:has(.canvas-source) .reading-col,
+  .detail-pane:has(.canvas-host) .reading-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail:has(.canvas-source),
+  .detail:has(.canvas-host) {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail:has(.canvas-source) .detail-body,
+  .detail:has(.canvas-host) .detail-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 0.75rem;
+  }
+
+  .canvas-source,
+  .canvas-host {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .canvas-source {
+    height: 100%;
+    resize: none;
+  }
+
+  .canvas-host .cv-stack,
+  .canvas-host .cv-row,
+  .canvas-host .cv-callout,
+  .canvas-host .cv-callout-body,
+  .canvas-host .cv-table-wrap {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .canvas-host .cv-row {
+    overflow-x: auto;
+  }
+
+  .canvas-host .cv-stat {
+    min-width: 0;
+    flex: 1 1 5rem;
+  }
+
+  .canvas-host .cv-callout-body,
+  .canvas-host .cv-th,
+  .canvas-host .cv-td,
+  .canvas-host .cv-text {
+    overflow-wrap: anywhere;
   }
 }
 
