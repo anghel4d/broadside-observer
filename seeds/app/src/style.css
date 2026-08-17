@@ -1420,6 +1420,11 @@ a.chip-see:hover {
 
 /* Phone (~375–430px). Desktop and 980px compact rules above stay as written. */
 @media (width <= 560px) {
+  :root {
+    /* Specified rem (not calc) so JS parseCssLengthPx sees a track too wide for 2 cols. */
+    --seed-card-width: 33rem;
+  }
+
   .topbar,
   .chrome,
   .filter-pills,
@@ -1436,13 +1441,13 @@ a.chip-see:hover {
   }
 
   .topbar-tools {
-    flex: 1 1 12rem;
-    justify-content: flex-start;
+    flex: 1 0 100%;
+    justify-content: space-between;
     gap: 0.4rem;
   }
 
   .status {
-    flex: 1 0 auto;
+    flex: 0 1 auto;
     font-size: 0.72rem;
   }
 
@@ -1461,8 +1466,8 @@ a.chip-see:hover {
       max(0.75rem, env(safe-area-inset-left, 0px));
   }
 
-  .search-field {
-    flex: 1 1 100%;
+  .chrome .search-field {
+    flex: 1 0 100%;
     min-width: 0;
   }
 
@@ -1528,11 +1533,11 @@ a.chip-see:hover {
 
   /* Canvas: list sizes to its rows, then caps so Raw/Render keep the pane. */
   .workspace[data-view="canvas"] {
-    grid-template-rows: minmax(0, max-content) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
   }
 
   .workspace[data-view="canvas"] .browse-pane {
-    max-height: 38%;
+    max-height: 12rem;
   }
 
   .browse-pane,
@@ -1541,7 +1546,7 @@ a.chip-see:hover {
   }
 
   .card-grid {
-    grid-template-columns: repeat(var(--seed-card-cols, 1), minmax(0, var(--seed-card-width)));
+    grid-template-columns: minmax(0, var(--seed-card-width));
     justify-items: stretch;
   }
 
