@@ -183,12 +183,7 @@ if (packed._tag === "Ok") {
 
   assert.equal(resolveCanvasLanguage("#include <expected>\nint main() { return 0; }"), "cpp");
   assert.equal(resolveCanvasLanguage("const x = 1;", "language-tsx"), "typescript");
-
-  const eq = "Result(V, E) = V + E\nD --reify--> W";
-  assert.equal(resolveCanvasLanguage(eq), "plaintext", "algebra in a pre stays plaintext");
-  const eqHtml = highlightCanvasSource(eq);
-  assert.equal(eqHtml, eq);
-  assert.equal(/style="color:/i.test(eqHtml), false, "algebra-like pre must not be rainbowed");
+  assert.equal(resolveCanvasLanguage("module Main where\nmain :: IO ()"), "haskell");
 
   function stub(init: {
     tagName?: string;
@@ -230,11 +225,7 @@ if (packed._tag === "Ok") {
   assert.ok(/style="color:/i.test(unlabeled.innerHTML), "unlabeled C++ pre must gain token spans");
   assert.equal(unlabeled.innerHTML, highlightCanvasSource(sampleBlock, "cpp"));
 
-  const eqPre = stub({ text: eq });
-  highlightCanvasElement(eqPre);
-  assert.equal(eqPre.innerHTML, eq, "algebra-like pre must keep original text");
-  assert.ok(eqPre.classList.contains("shiki"));
-
+  const eq = "Result(V, E) = V + E\nD --reify--> W";
   const eqLines = "f : A → Result(B, E)\ng : B → Result(C, E)\ng ★ f : A → Result(C, E)";
   const eqFill = canvasPaletteDark.fillTertiary;
   const eqDiv = stub({
@@ -271,6 +262,12 @@ if (packed._tag === "Ok") {
   assert.equal(skipped.innerHTML, "API shape", "non-Eq divs must not be highlighted");
   assert.equal(walkedEq.style.background, eqFill);
   assert.equal(/background(-color)?:/i.test(walkedEq.innerHTML), false);
+}
+
+{
+  const src = readFileSync(new URL("./evaluate.ts", import.meta.url), "utf8");
+  assert.ok(src.includes("applyCanvasChrome"));
+  assert.equal(src.includes("theme.bg.editor"), false, "do not paint a nested editor card on the host");
 }
 
 console.log("evaluate.test.ts ok");

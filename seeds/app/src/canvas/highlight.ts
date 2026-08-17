@@ -15,6 +15,8 @@ import xml from "@shikijs/langs/xml";
 import githubDark from "@shikijs/themes/github-dark";
 import githubLight from "@shikijs/themes/github-light";
 
+import { useHostTheme } from "./theme.ts";
+
 /**
  * Fine-grained Shiki core + JS regex engine.
  * `createHighlighter` from `shiki` pulls the kitchen-sink language map (and wasm);
@@ -50,8 +52,8 @@ const LOADED = new Set([...highlighter.getLoadedLanguages(), ...PLAIN]);
 
 const LANGUAGE_CLASS = /(?:^|\s)(?:language|lang)-([a-z0-9+#._-]+)/i;
 
-/** Token colors only; `structure: "inline"` skips Shiki's editor background. */
-export const CANVAS_SHIKI_THEMES = {
+/** Token colors only; chrome is `useHostTheme()`. `structure: "inline"` skips Shiki's editor background. */
+const SHIKI_TOKEN_THEME = {
   light: "github-light",
   dark: "github-dark",
 } as const;
@@ -78,16 +80,12 @@ function languageFromClass(className: string): string | undefined {
   return resolveNamedLanguage(name);
 }
 
-function looksLikeAlgebra(code: string): boolean {
-  return /-->/.test(code) || /[→×π★]/.test(code) || /Result\s*\([^)]*\)\s*=/.test(code);
-}
-
 function looksLikeHaskell(code: string): boolean {
   return /\bmodule\s+\w+/.test(code) || /::\s*IO\b/.test(code);
 }
 
 /** Eq-style type blocks: a `div` with `white-space: pre`, not `pre`/`code`. */
-export function isEqLikeBlock(el: HighlightTarget): boolean {
+function isEqLikeBlock(el: HighlightTarget): boolean {
   const tag = el.tagName?.toUpperCase();
   if (tag === "PRE" || tag === "CODE") return false;
   if (tag !== undefined && tag !== "DIV") return false;
@@ -97,15 +95,12 @@ export function isEqLikeBlock(el: HighlightTarget): boolean {
 export function resolveCanvasLanguage(code: string, className = ""): string {
   const named = languageFromClass(className);
   if (named !== undefined) return named;
-  if (looksLikeAlgebra(code)) return "plaintext";
   if (looksLikeHaskell(code)) return "haskell";
   return "cpp";
 }
 
 function canvasShikiTheme(): "github-light" | "github-dark" {
-  return typeof document !== "undefined" && document.documentElement.dataset.theme === "light"
-    ? CANVAS_SHIKI_THEMES.light
-    : CANVAS_SHIKI_THEMES.dark;
+  return SHIKI_TOKEN_THEME[useHostTheme().kind];
 }
 
 function isPlain(language: string): boolean {
@@ -121,7 +116,7 @@ export function highlightCanvasSource(code: string, language?: string, theme = c
   return highlighter.codeToHtml(code, { lang, theme, ...SHIKI_HTML });
 }
 
-/** Paint one `pre`/`code` node, or an Eq-like `div` as Haskell. */
+/** Paint one `pre`/`code` node, or an Eq-like `div` as Haskell. Same Shiki path as RAW. */
 export function highlightCanvasElement(el: HighlightTarget, theme = canvasShikiTheme()): void {
   if (el.classList.contains("shiki")) return;
   const text = el.textContent ?? "";
@@ -130,15 +125,14 @@ export function highlightCanvasElement(el: HighlightTarget, theme = canvasShikiT
     ? "haskell"
     : resolveCanvasLanguage(text, `${el.className} ${el.parentElement?.className ?? ""}`);
   el.classList.add("shiki");
-  if (isPlain(language)) return;
   try {
-    el.innerHTML = highlighter.codeToHtml(text, { lang: language, theme, ...SHIKI_HTML });
+    el.innerHTML = highlightCanvasSource(text, language, theme);
   } catch {
     // leave the original text
   }
 }
 
-/** RENDER-only. Walk painted `pre`/`code` and Eq-like `div`s after mount. RAW textarea is not in the host. */
+/** RENDER-only. Walk painted `pre`/`code` and Eq-like `div`s after mount. RAW overlay is painted separately. */
 export function highlightCanvasCode(root: ParentNode): void {
   const theme = canvasShikiTheme();
   for (const pre of root.querySelectorAll("pre")) {

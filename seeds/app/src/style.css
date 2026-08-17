@@ -859,15 +859,23 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem. */
+/* Canvas fills the detail pane. List/Cards keep the 46rem wiki column. */
 #app[data-view="canvas"] .reading-col {
-  max-width: 56rem;
+  max-width: none;
+  width: 100%;
 }
 
-#app[data-view="canvas"] .detail-head,
+#app[data-view="canvas"] .detail-pane {
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#app[data-view="canvas"] .detail-head {
+  padding: 0 0 0.38rem;
+}
+
 #app[data-view="canvas"] .detail-body {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0;
 }
 
 .detail-dismiss {
@@ -935,18 +943,60 @@ button:focus-visible {
 }
 
 .canvas-source {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  position: relative;
   width: 100%;
-  min-height: 28rem;
-  resize: vertical;
-  font-family: ui-monospace, "SFMono-Regular", menlo, monospace;
-  font-size: 0.78rem;
-  line-height: 1.45;
+  min-height: 8rem;
+  overflow: visible;
+  background: transparent;
+}
+
+.canvas-source-highlight,
+.canvas-source-input {
+  grid-area: 1 / 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-family: ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular", menlo, monospace;
+  font-size: 13px;
+  line-height: 20px;
   tab-size: 2;
+  white-space: pre;
+  overflow: hidden;
+  width: 100%;
+  min-height: 8rem;
+  resize: none;
+  field-sizing: content;
+}
+
+.canvas-source-highlight {
+  pointer-events: none;
+  background: transparent;
+}
+
+.canvas-source-input {
+  appearance: none;
+  color: transparent;
+  background: transparent;
+  caret-color: inherit;
+}
+
+.canvas-source-input::selection {
+  color: transparent;
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+.canvas-source:focus-within {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 1px;
 }
 
 .canvas-host {
   min-height: 8rem;
+  overflow: visible;
+  background: transparent;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1512,7 +1562,6 @@ a.chip-see:hover {
 
   input,
   select,
-  textarea.canvas-source,
   button.reset,
   .filters-toggle {
     min-height: 2.15rem;
@@ -1600,13 +1649,6 @@ a.chip-see:hover {
     padding-right: 0.75rem;
   }
 
-  /* Canvas keeps 2rem; do not collapse to the phone 0.75rem inset. */
-  #app[data-view="canvas"] .detail-head,
-  #app[data-view="canvas"] .detail-body {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .detail-dismiss {
     min-height: 2.15rem;
     padding: 0.4rem 0.7rem;
@@ -1618,7 +1660,8 @@ a.chip-see:hover {
     flex-wrap: wrap;
   }
 
-  #canvas-surface {
+  #canvas-surface,
+  .canvas-jump {
     flex: 0 0 auto;
   }
 
@@ -1632,53 +1675,10 @@ a.chip-see:hover {
     flex: 1 1 8rem;
   }
 
-  .detail-pane:has(.canvas-source),
-  .detail-pane:has(.canvas-host) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .detail-pane:has(.canvas-source) .reading-col,
-  .detail-pane:has(.canvas-host) .reading-col {
-    flex: 1 1 auto;
-    min-width: 0;
-    min-height: 0;
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .detail:has(.canvas-source),
-  .detail:has(.canvas-host) {
-    flex: 1 1 auto;
-    min-height: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .detail:has(.canvas-source) .detail-body,
-  .detail:has(.canvas-host) .detail-body {
-    flex: 1 1 auto;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-bottom: 0.75rem;
-  }
-
-  .canvas-source,
-  .canvas-host {
-    flex: 1 1 auto;
-    min-width: 0;
-    min-height: 0;
-    overflow: auto;
-  }
-
-  .canvas-source {
-    height: 100%;
-    resize: none;
+  .canvas-source-highlight,
+  .canvas-source-input {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .canvas-host .cv-stack,

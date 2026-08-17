@@ -38,12 +38,11 @@ export type {
   TextWeight,
 } from "./primitives.ts";
 export {
+  applyCanvasChrome,
   buildHostTheme,
+  buildTokens,
   canvasPaletteDark,
   canvasPaletteLight,
-  canvasTokens,
-  canvasTokensLight,
-  colorPalette,
   mergeStyle,
   toneFill,
   toneHex,

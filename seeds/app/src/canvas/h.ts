@@ -26,7 +26,7 @@ const SVG = new Set([
   "use",
 ]);
 
-export function flatten(children: ReadonlyArray<Child>): Child[] {
+function flatten(children: ReadonlyArray<Child>): Child[] {
   const out: Child[] = [];
   for (const child of children) {
     if (child === null || child === undefined || child === false || child === true) continue;
