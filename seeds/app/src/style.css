@@ -859,7 +859,8 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* Canvas fills the detail pane. List/Cards keep the 46rem wiki column. */
+/* Canvas fills the detail pane. List/Cards keep the 46rem wiki column.
+   Desktop keeps a 2rem pane inset; phone full-bleeds and insets words on the host. */
 #app[data-view="canvas"] .reading-col {
   max-width: none;
   width: 100%;
@@ -876,6 +877,12 @@ button:focus-visible {
 
 #app[data-view="canvas"] .detail-body {
   padding: 0;
+}
+
+#app[data-view="canvas"] .canvas-host,
+#app[data-view="canvas"] .canvas-source {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .detail-dismiss {
@@ -996,7 +1003,6 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
-  background: transparent;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1626,6 +1632,23 @@ a.chip-see:hover {
 
   .workspace[data-view="canvas"] .browse-pane {
     max-height: 12rem;
+  }
+
+  /* Phone: canvas surface is the screen width. Words inset on the host, not the pane. */
+  #app[data-view="canvas"] .detail-pane {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #app[data-view="canvas"] .detail-head {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #app[data-view="canvas"] .canvas-host,
+  #app[data-view="canvas"] .canvas-source {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .browse-pane,

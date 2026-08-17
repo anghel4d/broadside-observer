@@ -267,7 +267,7 @@ if (packed._tag === "Ok") {
 {
   const src = readFileSync(new URL("./evaluate.ts", import.meta.url), "utf8");
   assert.ok(src.includes("applyCanvasChrome"));
-  assert.equal(src.includes("theme.bg.editor"), false, "do not paint a nested editor card on the host");
+  assert.equal(src.includes("theme.bg.editor"), false, "evaluate leaves host fill to applyCanvasChrome");
 }
 
 console.log("evaluate.test.ts ok");
