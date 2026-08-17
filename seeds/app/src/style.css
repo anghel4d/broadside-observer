@@ -896,22 +896,18 @@ button:focus-visible {
   min-width: 0;
 }
 
-/* List/Cards keep the 46rem wiki column. Canvas desktop is the same
-   centering, a bit wider. Phone full-bleeds and insets words on the host. */
+/* Canvas desktop: same centering as List/Cards, 66rem instead of 46rem. */
 #app[data-view="canvas"] .reading-col {
   max-width: 66rem;
-  width: 100%;
-  margin-inline: auto;
 }
 
 #app[data-view="canvas"] .detail-pane {
   padding: 0 2rem 2rem;
-  box-sizing: border-box;
 }
 
 #app[data-view="canvas"] .detail-head {
-  padding: 0.4rem 2rem 0.38rem;
-  background: var(--bg);
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #app[data-view="canvas"] .detail-body {
@@ -1690,16 +1686,13 @@ a.chip-see:hover {
     min-height: 2.15rem;
   }
 
-  /* List: equal stack so browse and detail are both usable. Cards keeps the sheet. */
+  /* List: equal stack so browse and detail are both usable. Cards sheet and
+     canvas reading each take the full pane (canvas list is the hamburger). */
   .workspace {
     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   }
 
-  .workspace[data-view="cards"] {
-    grid-template-rows: minmax(0, 1fr);
-  }
-
-  /* Canvas reading fills the pane. The list lives in the hamburger overlay. */
+  .workspace[data-view="cards"],
   .workspace[data-view="canvas"] {
     grid-template-rows: minmax(0, 1fr);
   }
@@ -1772,6 +1765,29 @@ a.chip-see:hover {
   .detail-title-row,
   .detail-actions {
     flex-wrap: wrap;
+  }
+
+  #app[data-view="canvas"] .detail-title-row {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #app[data-view="canvas"] .detail-title-row h2 {
+    flex: 0 1 auto;
+  }
+
+  #app[data-view="canvas"] .detail-actions {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #app[data-view="canvas"] .detail-title-row > .menu-toggle {
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    min-height: 2.15rem;
+    padding: 0.45rem 0.58rem;
   }
 
   #canvas-surface,

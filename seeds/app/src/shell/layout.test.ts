@@ -268,6 +268,10 @@ assert.equal(
   const app = readFileSync(new URL("./app.ts", import.meta.url), "utf8");
   assert.ok(app.includes("PHONE_MEDIA"), "phone menu must use PHONE_MEDIA, not COMPACT_MEDIA");
   assert.ok(app.includes("menu-toggle"));
+  assert.ok(
+    /\$\{canvasJumpHtml\(\)\}\s*<\/div>\s*\$\{menuToggleHtml\(\)\}/.test(app),
+    "canvas hamburger is last in the title row, not inside detail-actions",
+  );
   assert.ok(app.includes("dataset.menu"));
   assert.ok(app.includes("aria-controls"));
 }

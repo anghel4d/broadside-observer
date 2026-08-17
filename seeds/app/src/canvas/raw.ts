@@ -39,7 +39,7 @@ export function scrollerTopForCaret(
 }
 
 export function canvasJumpHtml(): string {
-  return `<div class="seg canvas-jump" id="canvas-jump" role="group" aria-label="Jump in canvas">
+  return `<div class="seg canvas-jump" role="group" aria-label="Jump in canvas">
                 <button type="button" data-canvas-jump="top">Top</button>
                 <button type="button" data-canvas-jump="bottom">Bottom</button>
               </div>`;

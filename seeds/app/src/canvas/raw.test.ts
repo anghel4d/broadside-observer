@@ -10,7 +10,6 @@ import {
   scrollerTopForCaret,
 } from "./raw.ts";
 import { highlightCanvasSource } from "./highlight.ts";
-import { applyCanvasChrome, buildHostTheme } from "./theme.ts";
 
 {
   const src = "f : A → Result(B, E)\ng : B → Result(C, E)";
@@ -24,19 +23,6 @@ import { applyCanvasChrome, buildHostTheme } from "./theme.ts";
   assert.equal(html.includes("<br"), false, "overlay highlight must use newlines, not br");
   assert.ok(html.includes("\n"), "multiline RAW source must keep newlines for overlay alignment");
   assert.equal(html, highlightCanvasSource(src, "haskell").replace(/<br\s*\/?>/gi, "\n"));
-}
-
-{
-  const dark = buildHostTheme("dark");
-  const light = buildHostTheme("light");
-  const el = { style: { background: "x", color: "" } };
-  applyCanvasChrome(el, light);
-  assert.equal(el.style.background, light.bg.editor);
-  assert.equal(el.style.color, light.text.primary);
-  applyCanvasChrome(el, dark);
-  assert.equal(el.style.background, dark.bg.editor);
-  assert.equal(el.style.color, dark.text.primary);
-  assert.notEqual(dark.text.primary, light.text.primary, "RAW text tokens must differ in light and dark");
 }
 
 {

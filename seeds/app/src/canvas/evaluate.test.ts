@@ -38,7 +38,7 @@ export default function Demo() { return <H1>x</H1>; }
 assert.equal(badImport._tag, "Err");
 
 const packed = compileCanvas(
-  readFileSync(new URL("../../../canvases/anoptic-api-algebr-2026-08-17.tsx", import.meta.url), "utf8"),
+  readFileSync(new URL("../../../canvases/anoptic-api-algebra-2026-08-17.tsx", import.meta.url), "utf8"),
 );
 assert.equal(packed._tag, "Ok");
 if (packed._tag === "Ok") {
@@ -121,7 +121,7 @@ if (packed._tag === "Ok") {
       .flatMap((node) => node.children)
       .filter((child): child is string => typeof child === "string"),
   );
-  for (const label of ["API shape", "algebra", "Result(V, E)", "Function", "and_then", "pair", "src / owner"]) {
+  for (const label of ["C habit", "Result(V, E)", "Function", "and_then", "pair", "the engine"]) {
     assert.ok(labels.has(label), `missing flow node ${label}`);
   }
 
@@ -135,7 +135,7 @@ if (packed._tag === "Ok") {
   assert.ok(warningValue !== undefined);
   assert.equal((warningValue.props.style as { color: string }).color, toneHex.warning);
 
-  const infoTitle = nodes.find((node) => node.children[0] === "HEAD is not this spelling yet");
+  const infoTitle = nodes.find((node) => node.children[0] === "cc4696c0 is still an active work in progress");
   assert.ok(infoTitle !== undefined);
   assert.equal((infoTitle.props.style as { color: string }).color, toneHex.info);
 
