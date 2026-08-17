@@ -1,1 +1,1 @@
-Packed `.canvas.tsx` files for the seed browser Canvas view. First canvas is `result-compose-surface.canvas.tsx` (imports `cursor/canvas` only). If this file is a stand-in, replace it in place with the exact source — do not rewrite the import surface.
+Packed `.canvas.tsx` files for the seed browser Canvas view. Import only `cursor/canvas`.
