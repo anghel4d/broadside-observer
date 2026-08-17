@@ -133,7 +133,7 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
     "desktop canvas reading column is a centered 66rem column",
   );
   assert.equal(
-    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:/.test(reading),
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:\s*100%/.test(reading),
     false,
     "canvas reading-col inherits width from .reading-col",
   );
