@@ -1203,3 +1203,23 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1065 | 9 | 2025 | GPU-Friendly Laplacian Texture Blending | graphics |
 
 _Recount after `craft-2026-08-17`: **1065** unique title cards on main._
+
+## Archive 2026-08-18
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/ano/RTS/historical-gem filter: **55**. Keepers: **11** (keep rate **0.200**, hard cap 0.20). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1066 | 10 | 1987 | Rendering Antialiased Shadows with Depth Maps | graphics |
+| 1067 | 10 | 1990 | Comprehensible Rendering of 3-D Shapes | graphics |
+| 1068 | 10 | 1991 | A Rapid Hierarchical Radiosity Algorithm | graphics |
+| 1069 | 9 | 1988 | Display of Surfaces from Volume Data | graphics |
+| 1070 | 10 | 1998 | The Clipmap: A Virtual Mipmap | engines |
+| 1071 | 9 | 1988 | A Parallel Algorithm for Polygon Rasterization | engines |
+| 1072 | 10 | 1970 | An APL Machine | languages |
+| 1073 | 10 | 1983 | Two-Level Morphology: A General Computational Model for Word-Form Recognition and Production | languages |
+| 1074 | 10 | 2004 | Applying Conditional Random Fields to Japanese Morphological Analysis | languages |
+| 1075 | 10 | 2007 | Stream Fusion: From Lists to Streams to Nothing at All | languages |
+| 1076 | 10 | 1972 | Understanding Natural Language | game-ai |
+
+_Recount after `archive-2026-08-18`: **1076** unique title cards on main._
