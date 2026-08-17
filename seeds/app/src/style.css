@@ -864,18 +864,6 @@ button:focus-visible {
   max-width: 56rem;
 }
 
-/* Inset from the splitter and the pane’s right edge. Do not pad
-   .reading-col / .canvas-host — that indents the document inside the
-   56rem column instead of the pane. Head/body keep vertical padding only. */
-#app[data-view="canvas"] .detail-pane {
-  padding-inline: 2rem;
-}
-
-#app[data-view="canvas"] .detail-head,
-#app[data-view="canvas"] .detail-body {
-  padding-inline: 0;
-}
-
 .detail-dismiss {
   display: none;
   appearance: none;
@@ -954,7 +942,7 @@ button:focus-visible {
 .canvas-source-input {
   grid-area: 1 / 1;
   margin: 0;
-  padding: 12px 14px;
+  padding: 0;
   border: 0;
   border-radius: 6px;
   font-family: ui-monospace, "Cascadia Code", Consolas, "SFMono-Regular", menlo, monospace;
@@ -994,6 +982,12 @@ button:focus-visible {
 .canvas-host {
   min-height: 8rem;
   overflow: visible;
+}
+
+/* 2rem inside the painted card. Head/body/pane stay site chrome (grey). */
+#app[data-view="canvas"] .canvas-host,
+#app[data-view="canvas"] .canvas-source {
+  padding: 2rem;
 }
 
 /* Center FlowDiagram's relative box. Do not max-width/height:auto the SVG:
@@ -1644,16 +1638,6 @@ a.chip-see:hover {
   .detail-body {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-  }
-
-  /* Canvas pane keeps 2rem from splitter/edge; do not collapse to 0.75rem. */
-  #app[data-view="canvas"] .detail-pane {
-    padding-inline: 2rem;
-  }
-
-  #app[data-view="canvas"] .detail-head,
-  #app[data-view="canvas"] .detail-body {
-    padding-inline: 0;
   }
 
   .detail-dismiss {
