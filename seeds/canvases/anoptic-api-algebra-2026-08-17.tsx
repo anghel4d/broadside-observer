@@ -237,8 +237,8 @@ function Mark({ children }: { children: string }) {
 
 const flowNodes: FlowNode[] = [
   { id: "habit", label: "C / C++ habits", detail: "status, out-param, null, or exception" },
-  { id: "result", label: "Result(V, E)", detail: "one value, two ways", mono: true, emphasis: true },
-  { id: "function", label: "Function", detail: "a callable that returns that", mono: true },
+  { id: "result", label: "Result(V, E)", detail: "one active alternative", mono: true, emphasis: true },
+  { id: "function", label: "ResultMorphism", detail: "a Function whose call returns Result", mono: true },
   { id: "kleisli", label: "and_then", detail: "success feeds the next step", mono: true },
   { id: "pair", label: "pair", detail: "same input, first failure wins", mono: true },
   { id: "src", label: "the engine", detail: "the call actually runs here" },
@@ -306,8 +306,7 @@ export default function ResultComposeSurface() {
           The fallible carrier. People usually think of a failed call as a
           side channel: an errno, a bool return, an exception unwinding past
           the answer. Here the answer is the side channel. Exactly one
-          inhabitant exists. Success containing Value, or failure containing
-          Error. Never both. Never neither.
+          alternative is active: success containing Value (or no payload when Value is void), or failure containing Error. Never both. Never neither.
         </Text>
         <Text>
           `ano::Result&lt;Value, Error&gt;` is a using-alias for
@@ -346,8 +345,8 @@ export default function ResultComposeSurface() {
               "The Lean result model proves that regrouping bind preserves the extensional result. C++ callable construction, storage, and arbitrary side effects are outside that theorem.",
             ],
             [
-              "Admissible error",
-              "Moving the error cannot throw. Failure is not allowed to become a third control path.",
+              "Admitted Anoptic error",
+              "Helpers and morphism concepts require ResultError; the bare Result alias does not.",
             ],
           ]}
         />
@@ -495,8 +494,8 @@ using Error   = ...;`}</CodeBlock>
               "A surrounding Result&lt;V, E&gt; context names V and converts the unexpected value. failure does not.",
             ],
             [
-              "Nothrow move",
-              "The error is moved in. ResultError already required that.",
+              "Nothrow construction",
+              "StoredError is constructed from the forwarded argument without throwing; ResultError separately requires nothrow move construction.",
             ],
           ]}
         />
@@ -740,8 +739,7 @@ nullary`}</CodeBlock>
           Formerly PureOperation. The old name was false. Functional
           programmers hear "pure" and think: no IO, no mutation, same
           inputs same outputs. This concept proved none of that. It only
-          proved that the operation returns an ordinary value rather than a
-          Result.
+          proved that the operation's return type is not a Result; that return may be an object type or void.
         </Text>
         <Text>
           A mapper that publishes renderer state can satisfy it. That is
@@ -752,7 +750,7 @@ nullary`}</CodeBlock>
         <Table
           headers={["What it proves", "What it does not"]}
           rows={[
-            ["Returns an ordinary value, not a Result", "No IO"],
+            ["Returns a non-Result type, possibly void", "No IO"],
             ["NonthrowingOperation already held", "No mutation"],
             ["A prerequisite classification for transform/error-map checks", "Same inputs, same outputs"],
           ]}
@@ -812,10 +810,7 @@ nullary`}</CodeBlock>
         <Text>
           Now it is a fallible step, and this is the first place the word
           morphism earns its keep. In ordinary math a morphism is a
-          structure-preserving map from A to B. In C the closest habit is
-          just "a function from A to B." fopen is FILE* fopen(path). You
-          give a path, you get a pointer. The failure, if you remember to
-          look, is a null on the side.
+          structure-preserving map from A to B. In C the closest habit is just "a function from A to B." A familiar example is `FILE *fopen(filename, mode)`: the input pair maps to a pointer, with failure represented by a null pointer.
         </Text>
         <Text>
           A Result-morphism keeps the failure in the type. It is not A to
@@ -827,7 +822,7 @@ nullary`}</CodeBlock>
         <Table
           headers={["Habit", "Type of the step"]}
           rows={[
-            ["C function", "A to B. Failure is null, errno, or a write to an out-param."],
+            ["C convention", "A to B at the type level; failure may be encoded by a sentinel, status/errno convention, or out-parameter protocol."],
             ["C++ exception", "A to B. Failure unwinds. The return type lies on the failure path."],
             ["Result-morphism", "A to Result of B. Both ways are in the return."],
           ]}
@@ -1027,7 +1022,7 @@ g ★ f : A → Result(C, E)`}</Eq>
           rows={[
             [
               "Mapper is direct",
-              "m : B to C, ordinary return. DirectOperation, not a Result. May still mutate the world.",
+              "For non-void B, m : B to C; for void success it may be nullary. Its return is not a Result, and it may still mutate the world.",
             ],
             [
               "Error preserved",
@@ -1244,7 +1239,7 @@ W → Result(A × B, E)`}</Eq>
           rows={[
             [
               "Fallible step",
-              "(state, item) to Result of state. Same E as the scan's source.",
+              "(state, item) to Result of state. Its Error must match the Error supplied by the enclosing scan constraint.",
             ],
             [
               "Short-circuit",
@@ -1329,15 +1324,14 @@ W → Result(A × B, E)`}</Eq>
           It stores Operation as a `[[no_unique_address]]` member. An empty
           Operation may add no distinct member storage in a larger layout,
           but every standalone C++ object, including Function, has nonzero
-          `sizeof`. There is no type erasure or vtable; a direct call and
-          inlining are optimization opportunities, not size guarantees.
+          `sizeof`. Function itself adds no type-erasure or virtual-dispatch layer. Whether Operation performs virtual dispatch is a property of Operation itself; inlining remains an optimizer decision.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Statically typed",
-              "The Operation is in the type. No void*, no type erasure, no vtable.",
+              "The Operation is in the type. Function adds no type-erasure or virtual-dispatch layer.",
             ],
             [
               "Empty-friendly",
@@ -1390,7 +1384,7 @@ W → Result(A × B, E)`}</Eq>
             ["ResultOperation", "The concept that admitted the underlying callable."],
           ]}
         />
-        <CodeBlock>{`template<class Operation>
+        <CodeBlock>{`template<ResultOperation Operation>
 using ResultMorphism = Function<Operation>;`}</CodeBlock>
       </Stack>
 
@@ -1415,7 +1409,7 @@ using ResultMorphism = Function<Operation>;`}</CodeBlock>
         />
         <Text>
           Concretely: `load_scene(bytes)` is ordinary C++ call syntax. The
-          algebra ran at compile time. The work runs now.
+          C++ constraints were checked at compile time; the Lean laws were proved separately. The wrapped work runs now.
         </Text>
         <CodeBlock>{`auto result = load_scene(bytes);`}</CodeBlock>
         <CodeBlock>{`operation()
@@ -1663,7 +1657,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
               "Reflected function, noexcept, arity 0 or 1, and a std::expected return. ResultError is checked only when ResultOperation/ResultMorphism is required.",
             ],
             [
-              "Zero storage",
+              "Empty operation",
               "The lifted operation is empty. The standalone Function is still nonzero-sized; its direct call may inline to parse_glb.",
             ],
             [
@@ -1761,12 +1755,12 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
               "Success is (A, B). You keep both answers.",
             ],
             [
-              "Variadic is repeated pair",
-              "pair(a, b, c) is pair(pair(a, b), c), reassociated. Same machine.",
+              "Variadic is a left fold",
+              "pair(a, b, c) is implemented as pair(pair(a, b), c), yielding std::pair<std::pair<A, B>, C>.",
             ],
             [
-              "Concrete variadic order",
-              "The implementation left-nests pair(a, b, c) as ((A, B), C) and invokes a, b, then c. Different nesting changes the tuple type.",
+              "Evaluation order",
+              "The left fold invokes a, then b, then c; the first failure stops the remainder.",
             ],
           ]}
         />
@@ -1808,8 +1802,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
         </Row>
         <Text>
           The public AllPairable concept disappears with all. The
-          implementation still has to prove that a whole parameter pack can
-          be paired, one adjacent pair at a time. That predicate stays
+          implementation still has to prove that a whole parameter pack can be paired by the same left fold used by pair_impl. That predicate stays
           private. It is a requirement of pair, not an operation you name
           in user code.
         </Text>
@@ -1831,15 +1824,10 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>27 public</Mark>
-          <H3>ANO_LET(name, operation)</H3>
+          <H3>ANO_LET(name, ...)</H3>
         </Row>
         <Text>
-          A local name for a Function. Scope-local, namespace-respecting.
-          Conceptually it is const auto name = ano::function(...). The
-          macro exists because the declaration grammar is awkward once
-          reflection splices and long chains get involved. It does not
-          typecheck. Concepts, reflection, and the concrete Function type
-          still do that.
+          A thin declaration macro. It expands to `const auto name = ::ano::function(__VA_ARGS__)`; the surrounding scope determines where the name lives. The macro does not perform typechecking itself. Concepts, reflection, and Function do that.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1849,8 +1837,8 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
               "It expands to a const auto. No new type. No new law.",
             ],
             [
-              "Local",
-              "A name in this scope. Not a global registry. Not a string key.",
+              "Ordinary declaration",
+              "The name lives wherever the macro expands. It is not a registry or string key.",
             ],
             [
               "Still checked",
@@ -1863,7 +1851,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
         .and_then(canonicalize_scene)
         .and_then(cook_scene)
         .and_then(realize_scene));`}</CodeBlock>
-        <CodeBlock>{`const auto load_scene = ano::function(...);`}</CodeBlock>
+        <CodeBlock>{`const auto load_scene = ::ano::function(...);`}</CodeBlock>
       </Stack>
 
       <Divider />
