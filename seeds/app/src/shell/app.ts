@@ -208,22 +208,31 @@ function selectCanvas(model: Model, id: CanvasId): Model {
   return { ...model, canvasId: id, canvasSource: hit.source };
 }
 
+function pickAlong<T extends { readonly id: string }>(
+  items: ReadonlyArray<T>,
+  currentId: string | null,
+  nextIndex: (index: number, count: number) => number,
+  forward: boolean,
+): T | undefined {
+  if (items.length === 0) return undefined;
+  const index = currentId === null ? -1 : items.findIndex((item) => item.id === currentId);
+  const pick =
+    index < 0
+      ? forward
+        ? items[0]
+        : items[items.length - 1]
+      : items[nextIndex(index, items.length)];
+  if (pick === undefined || pick.id === currentId) return undefined;
+  return pick;
+}
+
 function moveAlongCanvas(
   model: Model,
   nextIndex: (index: number, count: number) => number,
   forward: boolean,
 ): Model {
-  const visible = applyCanvasQuery(model.canvases, model.query);
-  if (visible.length === 0) return model;
-  const index = model.canvasId === null ? -1 : visible.findIndex((canvas) => canvas.id === model.canvasId);
-  const pick =
-    index < 0
-      ? forward
-        ? visible[0]
-        : visible[visible.length - 1]
-      : visible[nextIndex(index, visible.length)];
-  if (pick === undefined || pick.id === model.canvasId) return model;
-  return selectCanvas(model, pick.id);
+  const pick = pickAlong(applyCanvasQuery(model.canvases, model.query), model.canvasId, nextIndex, forward);
+  return pick === undefined ? model : selectCanvas(model, pick.id);
 }
 
 function moveAlong(
@@ -231,18 +240,8 @@ function moveAlong(
   nextIndex: (index: number, count: number) => number,
   forward: boolean,
 ): Model {
-  const visible = applyQuery(model.corpus, model.query);
-  if (visible.length === 0) return model;
-  const currentId = routeId(model.route);
-  const index = currentId === null ? -1 : visible.findIndex((card) => card.id === currentId);
-  const pick =
-    index < 0
-      ? forward
-        ? visible[0]
-        : visible[visible.length - 1]
-      : visible[nextIndex(index, visible.length)];
-  if (pick === undefined || pick.id === currentId) return model;
-  return { ...model, route: { _tag: "Card", id: pick.id } };
+  const pick = pickAlong(applyQuery(model.corpus, model.query), routeId(model.route), nextIndex, forward);
+  return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
 }
 
 function update(model: Model, msg: Msg): Model {
@@ -406,15 +405,20 @@ const COPY_ICON =
 const CHECK_ICON =
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>';
 
+function menuToggleHtml(id?: string): string {
+  const idAttr = id === undefined ? "" : ` id="${attr(id)}"`;
+  return `<button type="button" class="menu-toggle"${idAttr} aria-controls="chrome browse" aria-expanded="false" aria-label="Menu">
+        ${MENU_ICON}
+      </button>`;
+}
+
 function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
   const lightOn = theme === "light";
   return `
     <div class="phone-bar" id="phone-bar">
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="chrome browse" aria-expanded="false" aria-label="Menu">
-        ${MENU_ICON}
-      </button>
+      ${menuToggleHtml("menu-toggle")}
     </div>
     <header class="topbar">
       <div class="brand">
@@ -696,9 +700,7 @@ function renderCanvasDetail(title: string, surface: CanvasSurface, source: strin
                 <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
               </div>
               ${canvasJumpHtml()}
-              <button type="button" class="menu-toggle" aria-controls="chrome browse" aria-expanded="false" aria-label="Menu">
-                ${MENU_ICON}
-              </button>
+              ${menuToggleHtml()}
             </div>
           </div>
         </header>
@@ -1133,8 +1135,11 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     const detailId = vm.selected?.id ?? null;
     const filters = filterKey(vm.query);
     const hasVisible = vm.visible.length > 0;
-    const shownFilters =
-      vm.view === "canvas" ? activeFilters(vm.query).filter((filter) => filter.key === "search") : activeFilters(vm.query);
+    const pillsQuery =
+      vm.view === "canvas"
+        ? FILTER_KEYS.reduce((query, key) => (key === "search" ? query : clearFilter(query, key)), vm.query)
+        : vm.query;
+    const shownFilters = activeFilters(pillsQuery);
     const activeCount = shownFilters.length;
     status.textContent =
       vm.view === "canvas"
@@ -1148,17 +1153,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     syncFilterControls(vm.query);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
     if (painted === null || painted.filterKey !== filters || painted.view !== vm.view) {
-      filterPills.innerHTML =
-        vm.view === "canvas"
-          ? renderFilterPills({
-              ...vm.query,
-              topic: { _tag: "All" },
-              batch: { _tag: "All" },
-              pool: { _tag: "All" },
-              lineage: { _tag: "All" },
-              year: { min: null, max: null },
-            })
-          : renderFilterPills(vm.query);
+      filterPills.innerHTML = renderFilterPills(pillsQuery);
     }
 
     const prev = painted;
@@ -1604,16 +1599,6 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     ) {
       event.preventDefault();
       dispatch({ _tag: "SetCardsSheet", value: true });
-      return;
-    }
-    if (model.view === "canvas") {
-      if (event.key === "ArrowDown" || event.key === "j") {
-        event.preventDefault();
-        dispatch({ _tag: "Move", delta: 1 });
-      } else if (event.key === "ArrowUp" || event.key === "k") {
-        event.preventDefault();
-        dispatch({ _tag: "Move", delta: -1 });
-      }
       return;
     }
     if (model.view === "cards") {

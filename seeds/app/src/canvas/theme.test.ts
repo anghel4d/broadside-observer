@@ -126,12 +126,22 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
 
   const reading = css.slice(css.indexOf(".reading-col {"), css.indexOf(".detail-dismiss {"));
   assert.ok(/\.reading-col\s*\{[^}]*max-width:\s*46rem/.test(reading), "List/Cards reading column stays 46rem");
+  assert.ok(/\.reading-col\s*\{[^}]*width:\s*100%/.test(reading), "List/Cards reading column is centered");
+  assert.ok(/\.reading-col\s*\{[^}]*margin-inline:\s*auto/.test(reading));
   assert.ok(
     /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*66rem/.test(reading),
     "desktop canvas reading column is a centered 66rem column",
   );
-  assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:\s*100%/.test(reading));
-  assert.ok(/#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*margin-inline:\s*auto/.test(reading));
+  assert.equal(
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*width:/.test(reading),
+    false,
+    "canvas reading-col inherits width from .reading-col",
+  );
+  assert.equal(
+    /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*margin-inline:/.test(reading),
+    false,
+    "canvas reading-col inherits centering from .reading-col",
+  );
   assert.equal(reading.includes("max-width: 46rem"), true);
   assert.equal(
     /#app\[data-view="canvas"\]\s*\.reading-col\s*\{[^}]*max-width:\s*none/.test(reading),
@@ -148,9 +158,16 @@ assert.equal((td.props.style as { background: string }).background, toneFill("su
     "desktop canvas pane keeps side inset, not top padding",
   );
   assert.ok(/#app\[data-view="canvas"\]\s*\.detail-body\s*\{[^}]*padding:\s*0/.test(css));
+  assert.ok(/\.detail-head\s*\{[^}]*position:\s*sticky/.test(css), "sticky head is the List/Cards rule");
+  assert.ok(/\.detail-head\s*\{[^}]*background:\s*var\(--bg\)/.test(css), "sticky head fill is shared");
+  assert.equal(
+    /#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*background/.test(css),
+    false,
+    "canvas head reuses .detail-head fill instead of a second stick region",
+  );
   assert.ok(
-    /#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*background:\s*var\(--bg\)/.test(css),
-    "sticky canvas head must paint an opaque stick region",
+    /#app\[data-view="canvas"\]\s*\.detail-head\s*\{[^}]*padding-left:\s*2rem/.test(css),
+    "desktop canvas head matches host word inset",
   );
   assert.ok(
     /#app\[data-view="canvas"\]\s*\.canvas-host,[\s\S]*?padding-left:\s*2rem/.test(reading),

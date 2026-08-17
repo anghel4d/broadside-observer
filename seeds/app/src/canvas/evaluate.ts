@@ -47,12 +47,12 @@ export function compileCanvas(source: string): Result<string, Component> {
   }
 }
 
-export function renderCanvas(source: string, host: Element): Result<string, void> {
+export function renderCanvas(source: string, host: HTMLElement): Result<string, void> {
   const compiled = compileCanvas(source);
   if (compiled._tag === "Err") return compiled;
   try {
     const tree: Child = compiled.value({});
-    if (host instanceof HTMLElement) applyCanvasChrome(host);
+    applyCanvasChrome(host);
     mount(tree, host);
     highlightCanvasCode(host);
     return ok(undefined);

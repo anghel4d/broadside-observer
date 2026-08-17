@@ -156,9 +156,6 @@ export const toneHex: Record<string, string> = {
   warning: "#E8A33D",
   info: "#2E79B5",
   neutral: "#8888A8",
-  added: "#1F8A65",
-  deleted: "#CF2D56",
-  renamed: "#5A6CC0",
 };
 
 export function buildTokens(palette: CanvasPalette): CanvasTokens {

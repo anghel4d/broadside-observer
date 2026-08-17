@@ -38,7 +38,7 @@ export default function Demo() { return <H1>x</H1>; }
 assert.equal(badImport._tag, "Err");
 
 const packed = compileCanvas(
-  readFileSync(new URL("../../../canvases/anoptic-api-algebr-2026-08-17.tsx", import.meta.url), "utf8"),
+  readFileSync(new URL("../../../canvases/anoptic-api-algebra-2026-08-17.tsx", import.meta.url), "utf8"),
 );
 assert.equal(packed._tag, "Ok");
 if (packed._tag === "Ok") {
