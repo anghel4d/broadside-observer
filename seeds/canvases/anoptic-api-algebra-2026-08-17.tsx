@@ -306,7 +306,9 @@ export default function ResultComposeSurface() {
           The fallible carrier. People usually think of a failed call as a
           side channel: an errno, a bool return, an exception unwinding past
           the answer. Here the answer is the side channel. Exactly one
-          alternative is active: success containing Value (or no payload when Value is void), or failure containing Error. Never both. Never neither.
+          alternative is active: success containing Value (or no payload when
+          Value is void), or failure containing Error. Never both. Never
+          neither.
         </Text>
         <Text>
           `ano::Result&lt;Value, Error&gt;` is a using-alias for
@@ -739,7 +741,9 @@ nullary`}</CodeBlock>
           Formerly PureOperation. The old name was false. Functional
           programmers hear "pure" and think: no IO, no mutation, same
           inputs same outputs. This concept proved none of that. It only
-          proved that the operation's return type is not a Result; that return may be an object type or void.
+          proved only that the return is not a Result. DirectOperation itself
+          permits object, void, or reference returns; stronger public
+          concepts add their own return constraints.
         </Text>
         <Text>
           A mapper that publishes renderer state can satisfy it. That is
@@ -750,7 +754,7 @@ nullary`}</CodeBlock>
         <Table
           headers={["What it proves", "What it does not"]}
           rows={[
-            ["Returns a non-Result type, possibly void", "No IO"],
+            ["Return is not a Result; object, void, or reference are possible", "No IO"],
             ["NonthrowingOperation already held", "No mutation"],
             ["A prerequisite classification for transform/error-map checks", "Same inputs, same outputs"],
           ]}
@@ -810,7 +814,10 @@ nullary`}</CodeBlock>
         <Text>
           Now it is a fallible step, and this is the first place the word
           morphism earns its keep. In ordinary math a morphism is a
-          structure-preserving map from A to B. In C the closest habit is just "a function from A to B." A familiar example is `FILE *fopen(filename, mode)`: the input pair maps to a pointer, with failure represented by a null pointer.
+          structure-preserving map from A to B. In C the closest habit is
+          just "a function from A to B." A familiar example is
+          `FILE *fopen(filename, mode)`: the input pair maps to a pointer,
+          with failure represented by a null pointer.
         </Text>
         <Text>
           A Result-morphism keeps the failure in the type. It is not A to
@@ -1239,7 +1246,7 @@ W → Result(A × B, E)`}</Eq>
           rows={[
             [
               "Fallible step",
-              "(state, item) to Result of state. Its Error must match the Error supplied by the enclosing scan constraint.",
+              "(state, item) to Result of state. Its Error is the concept's Error template argument; Scannable supplies the source operation's Error.",
             ],
             [
               "Short-circuit",
@@ -1324,7 +1331,9 @@ W → Result(A × B, E)`}</Eq>
           It stores Operation as a `[[no_unique_address]]` member. An empty
           Operation may add no distinct member storage in a larger layout,
           but every standalone C++ object, including Function, has nonzero
-          `sizeof`. Function itself adds no type-erasure or virtual-dispatch layer. Whether Operation performs virtual dispatch is a property of Operation itself; inlining remains an optimizer decision.
+          `sizeof`. Function itself adds no type-erasure or virtual-dispatch
+          layer. Whether Operation performs virtual dispatch is a property of
+          Operation itself; inlining remains an optimizer decision.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1339,11 +1348,11 @@ W → Result(A × B, E)`}</Eq>
             ],
             [
               "Private storage",
-              "You do not brace-initialize one by hand. lift, function, and the composition methods are the doors.",
+              "You do not brace-initialize one by hand. lift, function, pair, and the composition methods are the public doors.",
             ],
             [
               "Nothrow store",
-              "Moving the operation into the Function cannot throw. Same rule as ResultError, now for the callable.",
+              "Construction from the supplied operation and the stored operation's move construction must both be noexcept.",
             ],
           ]}
         />
@@ -1409,7 +1418,8 @@ using ResultMorphism = Function<Operation>;`}</CodeBlock>
         />
         <Text>
           Concretely: `load_scene(bytes)` is ordinary C++ call syntax. The
-          C++ constraints were checked at compile time; the Lean laws were proved separately. The wrapped work runs now.
+          C++ constraints were checked at compile time; the Lean laws were
+          proved separately. The wrapped work runs now.
         </Text>
         <CodeBlock>{`auto result = load_scene(bytes);`}</CodeBlock>
         <CodeBlock>{`operation()
@@ -1698,7 +1708,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           rows={[
             [
               "Nothrow store",
-              "Moving the operation in cannot throw.",
+              "Construction from the supplied value and the stored operation's move construction must both be noexcept.",
             ],
             [
               "Admitted callable",
@@ -1760,7 +1770,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
             ],
             [
               "Evaluation order",
-              "The left fold invokes a, then b, then c; the first failure stops the remainder.",
+              "When the returned Function is called, the left fold invokes a, then b, then c; the first failure stops the remainder.",
             ],
           ]}
         />
@@ -1802,7 +1812,9 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
         </Row>
         <Text>
           The public AllPairable concept disappears with all. The
-          implementation still has to prove that a whole parameter pack can be paired by the same left fold used by pair_impl. That predicate stays
+          implementation still has to prove that a whole parameter pack can
+          be paired by the same left fold used by pair_impl. That predicate
+          stays
           private. It is a requirement of pair, not an operation you name
           in user code.
         </Text>
@@ -1827,7 +1839,10 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           <H3>ANO_LET(name, ...)</H3>
         </Row>
         <Text>
-          A thin declaration macro. It expands to `const auto name = ::ano::function(__VA_ARGS__)`; the surrounding scope determines where the name lives. The macro does not perform typechecking itself. Concepts, reflection, and Function do that.
+          A thin declaration macro. It expands to
+          `const auto name = ::ano::function(__VA_ARGS__)`; the surrounding
+          scope determines where the name lives. The macro does not perform
+          typechecking itself. Concepts, reflection, and Function do that.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1902,7 +1917,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           ["scan_into", "scan, bounded, deferred, caller-buffer", "Public"],
           ["Function", "value, callable, storage", "Public"],
           ["ResultMorphism", "alias, arrow, role", "Public"],
-          ["ANO_LET", "macro, local, grammar", "Public"],
+          ["ANO_LET", "macro, declaration, grammar", "Public"],
         ]}
       />
     </Stack>
