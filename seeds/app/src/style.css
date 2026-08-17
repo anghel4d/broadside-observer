@@ -859,6 +859,17 @@ button:focus-visible {
   min-width: 0;
 }
 
+/* Canvas is a composed document, not a wiki card. List/Cards keep 46rem. */
+#app[data-view="canvas"] .reading-col {
+  max-width: 56rem;
+}
+
+#app[data-view="canvas"] .detail-head,
+#app[data-view="canvas"] .detail-body {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .detail-dismiss {
   display: none;
   appearance: none;
@@ -942,6 +953,16 @@ button:focus-visible {
    HTML node DIVs are siblings of the svg, not inside it. */
 .canvas-host div:has(> svg) {
   margin-inline: auto;
+}
+
+/* Eq / CodeBlock / Callout / Table: ~2rem between grey blocks.
+   Do not raise .cv-stack gap — H1/Text at the top stay tight. */
+.canvas-host pre,
+.canvas-host .cv-callout,
+.canvas-host .cv-table-wrap,
+.canvas-host div[style*="white-space: pre"],
+.canvas-host div[style*="white-space:pre"] {
+  margin-top: 2rem;
 }
 
 .canvas-host .cv-stack {
@@ -1577,6 +1598,13 @@ a.chip-see:hover {
   .detail-body {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  /* Canvas keeps 2rem; do not collapse to the phone 0.75rem inset. */
+  #app[data-view="canvas"] .detail-head,
+  #app[data-view="canvas"] .detail-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .detail-dismiss {
