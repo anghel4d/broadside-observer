@@ -1767,6 +1767,29 @@ a.chip-see:hover {
     flex-wrap: wrap;
   }
 
+  #app[data-view="canvas"] .detail-title-row {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #app[data-view="canvas"] .detail-title-row h2 {
+    flex: 0 1 auto;
+  }
+
+  #app[data-view="canvas"] .detail-actions {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  #app[data-view="canvas"] .detail-title-row > .menu-toggle {
+    margin-left: auto;
+    width: auto;
+    height: auto;
+    min-height: 2.15rem;
+    padding: 0.45rem 0.58rem;
+  }
+
   #canvas-surface,
   .canvas-jump {
     flex: 0 0 auto;
