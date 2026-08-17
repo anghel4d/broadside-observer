@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { compileCanvas } from "./evaluate.ts";
 import type { Child, VNode } from "./h.ts";
+import { highlightCanvasElement, highlightCanvasSource } from "./highlight.ts";
 import { toneHex } from "./theme.ts";
 
 const sample = `import { H1, Stack, Text } from "cursor/canvas";
@@ -100,6 +101,58 @@ if (packed._tag === "Ok") {
   const infoTitle = nodes.find((node) => node.children[0] === "HEAD is not this spelling yet");
   assert.ok(infoTitle !== undefined);
   assert.equal((infoTitle.props.style as { color: string }).color, toneHex.info);
+}
+
+{
+  const cpp = highlightCanvasSource(
+    "auto parse() noexcept -> ano::Result<Texture, Error> { return {}; }",
+    "cpp",
+  );
+  assert.ok(cpp.includes("hljs-"), "C++ must emit highlight.js token spans");
+  assert.ok(cpp.includes("keyword") || cpp.includes("type") || cpp.includes("built_in"), "C++ tokens must be classified");
+
+  const haskell = highlightCanvasSource("main :: IO ()\nmain = putStrLn \"ok\"", "haskell");
+  assert.ok(haskell.includes("hljs-"), "Haskell must emit highlight.js token spans");
+
+  const autoCpp = highlightCanvasSource("#include <expected>\nint main() { return 0; }");
+  assert.ok(autoCpp.includes("hljs-"), "auto-detect must highlight distinctive C++");
+
+  const pre = {
+    className: "language-cpp",
+    classList: {
+      names: new Set<string>(),
+      contains(name: string) {
+        return this.names.has(name);
+      },
+      add(name: string) {
+        this.names.add(name);
+      },
+    },
+    textContent: "int main() { return 0; }",
+    innerHTML: "int main() { return 0; }",
+    parentElement: null,
+  };
+  highlightCanvasElement(pre);
+  assert.ok(pre.innerHTML.includes("hljs-"), "language-cpp pre must gain token spans");
+  assert.ok(pre.classList.contains("hljs"));
+
+  const hs = {
+    className: "language-haskell",
+    classList: {
+      names: new Set<string>(),
+      contains(name: string) {
+        return this.names.has(name);
+      },
+      add(name: string) {
+        this.names.add(name);
+      },
+    },
+    textContent: "main :: IO ()",
+    innerHTML: "main :: IO ()",
+    parentElement: null,
+  };
+  highlightCanvasElement(hs);
+  assert.ok(hs.innerHTML.includes("hljs-"), "language-haskell pre must gain token spans");
 }
 
 console.log("evaluate.test.ts ok");
