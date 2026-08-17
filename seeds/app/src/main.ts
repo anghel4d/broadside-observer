@@ -1,6 +1,7 @@
 import compressedCatalog from "./generated/cards.json.gz.b64?raw";
+import packedCanvases from "./generated/canvases.json";
 import { buildCorpus } from "./domain/corpus.ts";
-import { inflateGzipBase64, parsePackedCatalog } from "./domain/packedCatalog.ts";
+import { parsePackedCanvasCatalog, inflateGzipBase64, parsePackedCatalog } from "./domain/packedCatalog.ts";
 import { startApp } from "./shell/app.ts";
 import "./style.css";
 
@@ -18,4 +19,4 @@ if (!(root instanceof HTMLElement)) {
   throw new Error("Missing #app");
 }
 
-startApp(root, buildCorpus(catalog.cards, catalog.lineageDocs));
+startApp(root, buildCorpus(catalog.cards, catalog.lineageDocs), parsePackedCanvasCatalog(packedCanvases).canvases);

@@ -20,7 +20,7 @@ export const CARDS_DETAIL_RATIO = 0.42;
 export const CARDS_DETAIL_MIN_DEFAULT_REM = 28;
 export const CARDS_DETAIL_MAX_DEFAULT_REM = 34;
 
-const PANE_SPLIT_KEYS = ["list", "cards"] as const;
+const PANE_SPLIT_KEYS = ["canvas", "list", "cards"] as const;
 export type PaneSplitKey = (typeof PANE_SPLIT_KEYS)[number];
 export type PaneSplitMap = { readonly [K in PaneSplitKey]?: number };
 
@@ -135,11 +135,13 @@ export type SplitMeasure = {
 
 export function defaultDetailWidthPx(args: SplitMeasure): number {
   const { view, workspacePx, gutterPx, rem } = args;
-  if (view === "list") return workspacePx - gutterPx - LIST_BROWSE_DEFAULT_REM * rem;
-  const ratio = workspacePx * CARDS_DETAIL_RATIO;
-  const lo = CARDS_DETAIL_MIN_DEFAULT_REM * rem;
-  const hi = CARDS_DETAIL_MAX_DEFAULT_REM * rem;
-  return Math.min(hi, Math.max(lo, ratio));
+  if (view === "cards") {
+    const ratio = workspacePx * CARDS_DETAIL_RATIO;
+    const lo = CARDS_DETAIL_MIN_DEFAULT_REM * rem;
+    const hi = CARDS_DETAIL_MAX_DEFAULT_REM * rem;
+    return Math.min(hi, Math.max(lo, ratio));
+  }
+  return workspacePx - gutterPx - LIST_BROWSE_DEFAULT_REM * rem;
 }
 
 export function clampDetailWidthPx(args: SplitMeasure & { readonly detailPx: number }): number {

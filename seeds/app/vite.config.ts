@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import { viteSingleFile } from "vite-plugin-singlefile";
 
@@ -9,6 +10,11 @@ export default defineConfig({
   // Local `file://` / `vite preview` keep a relative base.
   base: process.env.GITHUB_PAGES === "true" ? pagesBase : "./",
   plugins: [viteSingleFile()],
+  resolve: {
+    alias: {
+      "cursor/canvas": fileURLToPath(new URL("./src/canvas/index.ts", import.meta.url)),
+    },
+  },
   build: {
     target: "es2022",
   },

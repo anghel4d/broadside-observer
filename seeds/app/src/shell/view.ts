@@ -1,12 +1,28 @@
-const VIEW_MODES = ["list", "cards"] as const;
+const VIEW_MODES = ["canvas", "list", "cards"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];
 
 export const DEFAULT_VIEW: ViewMode = "list";
 export const VIEW_STORAGE_KEY = "broadside.seed-browser.view";
 const VIEW_QUERY_KEY = "view";
 
+export const CANVAS_SURFACES = ["raw", "render"] as const;
+export type CanvasSurface = (typeof CANVAS_SURFACES)[number];
+export const DEFAULT_CANVAS_SURFACE: CanvasSurface = "render";
+export const CANVAS_BUFFER_KEY = "broadside.seed-browser.canvas-buffer";
+
+export type CanvasBuffer = {
+  readonly source: string;
+  readonly id: string | null;
+  readonly surface: CanvasSurface;
+};
+
 export function parseViewMode(value: string | null | undefined): ViewMode | null {
-  if (value === "list" || value === "cards") return value;
+  if (value === "canvas" || value === "list" || value === "cards") return value;
+  return null;
+}
+
+export function parseCanvasSurface(value: string | null | undefined): CanvasSurface | null {
+  if (value === "raw" || value === "render") return value;
   return null;
 }
 
@@ -38,6 +54,42 @@ export function writeStoredView(storage: Pick<Storage, "setItem"> | null, view: 
   if (storage === null) return;
   try {
     storage.setItem(VIEW_STORAGE_KEY, view);
+  } catch {
+    // private mode / blocked storage
+  }
+}
+
+export function parseCanvasBuffer(raw: string | null | undefined): CanvasBuffer | null {
+  if (raw == null || raw === "") return null;
+  try {
+    const parsed: unknown = JSON.parse(raw);
+    if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+    const record = parsed as Record<string, unknown>;
+    if (typeof record.source !== "string") return null;
+    const surface = parseCanvasSurface(typeof record.surface === "string" ? record.surface : null);
+    const id = typeof record.id === "string" && record.id.length > 0 ? record.id : null;
+    return { source: record.source, id, surface: surface ?? DEFAULT_CANVAS_SURFACE };
+  } catch {
+    return null;
+  }
+}
+
+export function readStoredCanvasBuffer(storage: Pick<Storage, "getItem"> | null): CanvasBuffer | null {
+  if (storage === null) return null;
+  try {
+    return parseCanvasBuffer(storage.getItem(CANVAS_BUFFER_KEY));
+  } catch {
+    return null;
+  }
+}
+
+export function writeStoredCanvasBuffer(
+  storage: Pick<Storage, "setItem"> | null,
+  buffer: CanvasBuffer,
+): void {
+  if (storage === null) return;
+  try {
+    storage.setItem(CANVAS_BUFFER_KEY, JSON.stringify(buffer));
   } catch {
     // private mode / blocked storage
   }

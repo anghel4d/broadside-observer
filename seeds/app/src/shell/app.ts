@@ -1,6 +1,8 @@
+import { renderCanvas } from "../canvas/evaluate.ts";
 import {
   FILTER_KEYS,
   activeFilters,
+  applyCanvasQuery,
   applyQuery,
   clearFilter,
   findCardByRank,
@@ -11,6 +13,7 @@ import { parseRoute, printRoute, routeId } from "../domain/route.ts";
 import { formatDiscordCard } from "../domain/discordCard.ts";
 import { assertNever } from "../domain/never.ts";
 import {
+  CanvasIdSchema,
   CardIdSchema,
   LineageSchema,
   PoolSchema,
@@ -23,12 +26,14 @@ import {
   YearSchema,
   defaultQuery,
   type BatchFilter,
+  type CanvasId,
   type CardId,
   type Lineage,
   type LineageFilter,
   type PoolFilter,
   type Query,
   type Route,
+  type SeedCanvas,
   type SeedCard,
   type SeedRank,
   type SortKey,
@@ -63,19 +68,27 @@ import { bindThemeControls, readStoredTheme, resolveTheme, THEME_MEDIA, type The
 import type { Slice } from "./virtualize.ts";
 import {
   browserStorage,
+  parseCanvasSurface,
   parseViewMode,
   printViewSearch,
+  readStoredCanvasBuffer,
   resolveView,
+  writeStoredCanvasBuffer,
   writeStoredView,
+  type CanvasSurface,
   type ViewMode,
 } from "./view.ts";
 
 type Model = {
   readonly corpus: Corpus;
+  readonly canvases: ReadonlyArray<SeedCanvas>;
   readonly query: Query;
   readonly route: Route;
   readonly view: ViewMode;
   readonly cardsSheet: boolean;
+  readonly canvasId: CanvasId | null;
+  readonly canvasSource: string;
+  readonly canvasSurface: CanvasSurface;
 };
 
 type Msg =
@@ -90,6 +103,9 @@ type Msg =
   | { readonly _tag: "ToggleSortDir" }
   | { readonly _tag: "SetView"; readonly view: ViewMode }
   | { readonly _tag: "SetCardsSheet"; readonly value: boolean }
+  | { readonly _tag: "SelectCanvas"; readonly id: CanvasId }
+  | { readonly _tag: "SetCanvasSource"; readonly value: string }
+  | { readonly _tag: "SetCanvasSurface"; readonly surface: CanvasSurface }
   | { readonly _tag: "ClearFilter"; readonly key: FilterKey }
   | { readonly _tag: "Reset" }
   | { readonly _tag: "Select"; readonly id: CardId }
@@ -114,6 +130,10 @@ type ViewModel = {
   readonly cardsSheet: boolean;
   readonly corpus: Corpus;
   readonly query: Query;
+  readonly visibleCanvases: ReadonlyArray<SeedCanvas>;
+  readonly selectedCanvas: SeedCanvas | null;
+  readonly canvasSource: string;
+  readonly canvasSurface: CanvasSurface;
 };
 
 type Paint = {
@@ -122,16 +142,46 @@ type Paint = {
   readonly hasVisible: boolean;
   readonly filterKey: string;
   readonly view: ViewMode;
+  readonly canvasId: CanvasId | null;
+  readonly canvasSurface: CanvasSurface;
+  readonly canvasSource: string;
 };
 
-function init(corpus: Corpus, hash: string, view: ViewMode): Model {
+function restoreCanvas(
+  canvases: ReadonlyArray<SeedCanvas>,
+  buffer: { readonly source: string; readonly id: string | null; readonly surface: CanvasSurface } | null,
+): { readonly id: CanvasId | null; readonly source: string; readonly surface: CanvasSurface } {
+  if (buffer !== null) {
+    const parsed = buffer.id === null ? null : CanvasIdSchema.safeParse(buffer.id);
+    return {
+      id: parsed?.success === true ? parsed.data : null,
+      source: buffer.source,
+      surface: buffer.surface,
+    };
+  }
+  const first = canvases[0];
+  return { id: first?.id ?? null, source: first?.source ?? "", surface: "render" };
+}
+
+function init(
+  corpus: Corpus,
+  canvases: ReadonlyArray<SeedCanvas>,
+  hash: string,
+  view: ViewMode,
+  buffer: { readonly source: string; readonly id: string | null; readonly surface: CanvasSurface } | null,
+): Model {
   const route = parseRoute(hash);
+  const canvas = restoreCanvas(canvases, buffer);
   return {
     corpus,
+    canvases,
     query: defaultQuery,
     route,
     view,
     cardsSheet: view === "cards" && route._tag === "Card",
+    canvasId: canvas.id,
+    canvasSource: canvas.source,
+    canvasSurface: canvas.surface,
   };
 }
 
@@ -139,6 +189,31 @@ function selectCard(model: Model, id: CardId): Model {
   const sheet = model.view === "cards" ? true : model.cardsSheet;
   if (routeId(model.route) === id && model.cardsSheet === sheet) return model;
   return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet };
+}
+
+function selectCanvas(model: Model, id: CanvasId): Model {
+  const hit = model.canvases.find((canvas) => canvas.id === id);
+  if (hit === undefined) return model;
+  if (model.canvasId === id && model.canvasSource === hit.source) return model;
+  return { ...model, canvasId: id, canvasSource: hit.source };
+}
+
+function moveAlongCanvas(
+  model: Model,
+  nextIndex: (index: number, count: number) => number,
+  forward: boolean,
+): Model {
+  const visible = applyCanvasQuery(model.canvases, model.query);
+  if (visible.length === 0) return model;
+  const index = model.canvasId === null ? -1 : visible.findIndex((canvas) => canvas.id === model.canvasId);
+  const pick =
+    index < 0
+      ? forward
+        ? visible[0]
+        : visible[visible.length - 1]
+      : visible[nextIndex(index, visible.length)];
+  if (pick === undefined || pick.id === model.canvasId) return model;
+  return selectCanvas(model, pick.id);
 }
 
 function moveAlong(
@@ -184,6 +259,12 @@ function update(model: Model, msg: Msg): Model {
       return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
     case "SetCardsSheet":
       return model.cardsSheet === msg.value ? model : { ...model, cardsSheet: msg.value };
+    case "SelectCanvas":
+      return selectCanvas(model, msg.id);
+    case "SetCanvasSource":
+      return model.canvasSource === msg.value ? model : { ...model, canvasSource: msg.value };
+    case "SetCanvasSurface":
+      return model.canvasSurface === msg.surface ? model : { ...model, canvasSurface: msg.surface };
     case "ClearFilter":
       return { ...model, query: clearFilter(model.query, msg.key) };
     case "Reset":
@@ -203,7 +284,13 @@ function update(model: Model, msg: Msg): Model {
       return selectCard(model, hit.id);
     }
     case "Move":
-      return moveAlong(model, (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)), msg.delta > 0);
+      return model.view === "canvas"
+        ? moveAlongCanvas(
+            model,
+            (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)),
+            msg.delta > 0,
+          )
+        : moveAlong(model, (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)), msg.delta > 0);
     case "MoveGrid":
       return moveAlong(
         model,
@@ -226,6 +313,13 @@ function update(model: Model, msg: Msg): Model {
 function project(model: Model): ViewModel {
   const visible = applyQuery(model.corpus, model.query);
   const state = selectionState(model.corpus, visible, routeId(model.route));
+  const visibleCanvases = applyCanvasQuery(model.canvases, model.query);
+  const selectedCanvas =
+    model.canvasId === null
+      ? (visibleCanvases[0] ?? null)
+      : (visibleCanvases.find((canvas) => canvas.id === model.canvasId) ??
+        model.canvases.find((canvas) => canvas.id === model.canvasId) ??
+        null);
   return {
     visible,
     selected: state._tag === "None" ? null : state.card,
@@ -234,6 +328,10 @@ function project(model: Model): ViewModel {
     cardsSheet: model.cardsSheet,
     corpus: model.corpus,
     query: model.query,
+    visibleCanvases,
+    selectedCanvas,
+    canvasSource: model.canvasSource,
+    canvasSurface: model.canvasSurface,
   };
 }
 
@@ -256,6 +354,11 @@ function parseKey<T extends string>(keys: readonly T[], value: string): T | null
 
 function parseCardId(value: string): CardId | null {
   const parsed = CardIdSchema.safeParse(value);
+  return parsed.success ? parsed.data : null;
+}
+
+function parseCanvasId(value: string): CanvasId | null {
+  const parsed = CanvasIdSchema.safeParse(value);
   return parsed.success ? parsed.data : null;
 }
 
@@ -293,7 +396,6 @@ const CHECK_ICON =
 function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
   const yearLo = corpus.yearBounds?.[0];
   const yearHi = corpus.yearBounds?.[1];
-  const listOn = view === "list";
   const lightOn = theme === "light";
   return `
     <header class="topbar">
@@ -303,8 +405,9 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
       </div>
       <div class="topbar-tools">
         <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
-          <button type="button" role="radio" data-view="list" aria-checked="${listOn ? "true" : "false"}">List</button>
-          <button type="button" role="radio" data-view="cards" aria-checked="${listOn ? "false" : "true"}">Cards</button>
+          <button type="button" role="radio" data-view="canvas" aria-checked="${view === "canvas" ? "true" : "false"}">Canvas</button>
+          <button type="button" role="radio" data-view="list" aria-checked="${view === "list" ? "true" : "false"}">List</button>
+          <button type="button" role="radio" data-view="cards" aria-checked="${view === "cards" ? "true" : "false"}">Cards</button>
         </div>
         <div class="seg" id="theme-toggle" role="radiogroup" aria-label="Theme">
           <button type="button" role="radio" data-theme="light" aria-label="Light" aria-checked="${lightOn ? "true" : "false"}">${THEME_SUN_ICON}</button>
@@ -322,21 +425,21 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
         Filters
       </button>
       <div class="filter-fields" id="filter-fields">
-        <label>
+        <label class="facet-card">
           Topic
           <select id="topic">
             ${option("", "All topics", true)}
             ${corpus.topics.map((topic) => option(topic, topic, false)).join("")}
           </select>
         </label>
-        <label>
+        <label class="facet-card">
           Batch
           <select id="batch">
             ${option("", "All batches", true)}
             ${corpus.batches.map((batch) => option(batch, batch, false)).join("")}
           </select>
         </label>
-        <label>
+        <label class="facet-card">
           Pool
           <select id="pool">
             ${option("", "All pools", true)}
@@ -344,7 +447,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
             ${corpus.pools.map((pool) => option(pool, labelForPool(pool), false)).join("")}
           </select>
         </label>
-        <label>
+        <label class="facet-card">
           Lineage
           <select id="lineage">
             ${option("", "All lineages", true)}
@@ -352,7 +455,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
             ${corpus.lineages.map((lineage) => option(lineage, labelForLineage(lineage), false)).join("")}
           </select>
         </label>
-        <div class="year-fields">
+        <div class="year-fields facet-card">
           <span class="field-label">Year</span>
           <span class="year-inputs">
             <input id="yearMin" type="number" inputmode="numeric" min="1000" max="3000" placeholder="${yearLo ?? "from"}" aria-label="Year from" />
@@ -369,7 +472,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
           </label>
           <button type="button" class="sort-dir" id="sort-dir" aria-pressed="false" title="Reverse sort order" aria-label="Reverse sort order">↕</button>
         </div>
-        <label class="jump-field">
+        <label class="jump-field facet-card">
           Id
           <input id="jump-rank" type="text" inputmode="numeric" placeholder="#" autocomplete="off" spellcheck="false" aria-label="Jump to id" />
         </label>
@@ -462,24 +565,27 @@ function renderLineageChip(card: SeedCard, corpus: Corpus): string {
   return `${chip(labelForLineage(card.lineage), "lineage", card.lineage)}${notes}`;
 }
 
-function renderListRow(
-  card: SeedCard,
-  selectedId: CardId | null,
-  index: number,
-  count: number,
-): string {
-  const active = card.id === selectedId;
-  const authors = card.authors.slice(0, 2).join(", ") + (card.authors.length > 2 ? " et al." : "");
-  return `<button type="button" class="card-row${active ? " is-active" : ""}" data-id="${attr(card.id)}" tabindex="-1" aria-current="${active ? "true" : "false"}" aria-setsize="${count}" aria-posinset="${index + 1}" title="${attr(card.title)}">
-          <span class="row-meta">
-            <span class="rank">#${card.seed_rank}</span>
+function renderListRow(args: {
+  readonly id: string;
+  readonly title: string;
+  readonly selected: boolean;
+  readonly index: number;
+  readonly count: number;
+  readonly meta: string;
+  readonly sub: string;
+}): string {
+  return `<button type="button" class="card-row${args.selected ? " is-active" : ""}" data-id="${attr(args.id)}" tabindex="-1" aria-current="${args.selected ? "true" : "false"}" aria-setsize="${args.count}" aria-posinset="${args.index + 1}" title="${attr(args.title)}">
+          <span class="row-meta">${args.meta}</span>
+          <span class="row-title" title="${attr(args.title)}">${escapeHtml(args.title)}</span>
+          <span class="row-sub">${escapeHtml(args.sub)}</span>
+        </button>`;
+}
+
+function cardListMeta(card: SeedCard): string {
+  return `<span class="rank">#${card.seed_rank}</span>
             <span class="year">${card.year}</span>
             ${card.pool === null ? "" : `<span class="pool">${escapeHtml(labelForPool(card.pool))}</span>`}
-            ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(labelForLineage(card.lineage))}</span>`}
-          </span>
-          <span class="row-title" title="${attr(card.title)}">${escapeHtml(card.title)}</span>
-          <span class="row-sub">${escapeHtml(authors)}</span>
-        </button>`;
+            ${card.lineage === null ? "" : `<span class="lineage">${escapeHtml(labelForLineage(card.lineage))}</span>`}`;
 }
 
 const EMPTY_BROWSE = `<p class="empty">No cards match the current filters.</p>`;
@@ -494,7 +600,18 @@ function renderList(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
   for (let i = slice.start; i < slice.end; i++) {
     const card = visible[i];
     if (card === undefined) continue;
-    items.push(`<li>${renderListRow(card, selectedId, i, visible.length)}</li>`);
+    const authors = card.authors.slice(0, 2).join(", ") + (card.authors.length > 2 ? " et al." : "");
+    items.push(
+      `<li>${renderListRow({
+        id: card.id,
+        title: card.title,
+        selected: card.id === selectedId,
+        index: i,
+        count: visible.length,
+        meta: cardListMeta(card),
+        sub: authors,
+      })}</li>`,
+    );
   }
   return virtPlane(slice, `<ul class="card-list">${items.join("")}</ul>`);
 }
@@ -529,7 +646,51 @@ function renderGrid(visible: ReadonlyArray<SeedCard>, selectedId: CardId | null,
 }
 
 const renderBrowse: BrowseRender = (view, visible, selectedId, slice) =>
-  view === "list" ? renderList(visible, selectedId, slice) : renderGrid(visible, selectedId, slice);
+  view === "cards" ? renderGrid(visible, selectedId, slice) : renderList(visible, selectedId, slice);
+
+function renderCanvasList(visible: ReadonlyArray<SeedCanvas>, selectedId: string | null): string {
+  if (visible.length === 0) return `<p class="empty">No canvases match the current filters.</p>`;
+  const items = visible.map((canvas, index) => {
+    return `<li>${renderListRow({
+      id: canvas.id,
+      title: canvas.title,
+      selected: canvas.id === selectedId,
+      index,
+      count: visible.length,
+      meta: `<span class="year">canvas</span>`,
+      sub: canvas.file,
+    })}</li>`;
+  });
+  return `<ul class="card-list">${items.join("")}</ul>`;
+}
+
+function renderCanvasDetail(title: string, surface: CanvasSurface, source: string): string {
+  const rawOn = surface === "raw";
+  return `
+    <div class="reading-col">
+      <article class="detail">
+        <header class="detail-head">
+          <div class="detail-title-row">
+            <h2 id="detail-title" title="${attr(title)}">${escapeHtml(title === "" ? "Canvas" : title)}</h2>
+            <div class="detail-actions">
+              <div class="seg" id="canvas-surface" role="radiogroup" aria-label="Canvas surface">
+                <button type="button" role="radio" data-surface="raw" aria-checked="${rawOn ? "true" : "false"}">Raw</button>
+                <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="detail-body">
+          ${
+            rawOn
+              ? `<textarea id="canvas-source" class="canvas-source" spellcheck="false" autocomplete="off">${escapeHtml(source)}</textarea>`
+              : `<div id="canvas-host" class="canvas-host"></div>`
+          }
+        </div>
+      </article>
+    </div>
+  `;
+}
 
 function renderFilterPills(query: Query): string {
   const filters = activeFilters(query);
@@ -704,7 +865,7 @@ function flashCopied(button: HTMLButtonElement, ok: boolean): void {
   }, 1200);
 }
 
-export function startApp(root: HTMLElement, corpus: Corpus): void {
+export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyArray<SeedCanvas>): void {
   const storage = browserStorage();
   const initialView = resolveView(location.search, storage);
   const initialTheme = resolveTheme(
@@ -713,6 +874,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   );
   root.innerHTML = shellHtml(corpus, initialView, initialTheme);
   bindThemeControls(root, storage);
+  root.dataset.view = initialView;
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
   const queryInput = requireElement<HTMLInputElement>(root, "query");
@@ -737,7 +899,20 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
-  let model = init(corpus, location.hash, initialView);
+  const remountCanvas = (): void => {
+    if (model.view !== "canvas" || model.canvasSurface !== "render") return;
+    const host = detail.querySelector("#canvas-host");
+    if (!(host instanceof HTMLElement)) return;
+    const paintedCanvas = renderCanvas(model.canvasSource, host);
+    if (paintedCanvas._tag === "Err") {
+      host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
+    }
+  };
+  root.querySelector("#theme-toggle")?.addEventListener("click", () => {
+    remountCanvas();
+  });
+
+  let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
   let painted: Paint | null = null;
   let filtersOpen = false;
   let sheetWasVisible = false;
@@ -913,31 +1088,79 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     const detailId = vm.selected?.id ?? null;
     const filters = filterKey(vm.query);
     const hasVisible = vm.visible.length > 0;
-    const activeCount = activeFilters(vm.query).length;
-    status.textContent = `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
+    const shownFilters =
+      vm.view === "canvas" ? activeFilters(vm.query).filter((filter) => filter.key === "search") : activeFilters(vm.query);
+    const activeCount = shownFilters.length;
+    status.textContent =
+      vm.view === "canvas"
+        ? `${vm.visibleCanvases.length} shown · ${model.canvases.length} packed`
+        : `${vm.visible.length} shown · ${vm.corpus.cards.length} packed`;
+    root.dataset.view = vm.view;
     workspace.dataset.view = vm.view;
+    browse.setAttribute("aria-label", vm.view === "canvas" ? "Canvas list" : "Card list");
     applyPaneSplit();
     syncAriaChecked(root, "#view-toggle [data-view]", "view", vm.view);
     syncFilterControls(vm.query);
     filtersToggle.textContent = activeCount > 0 ? `Filters (${activeCount})` : "Filters";
-    if (painted === null || painted.filterKey !== filters) {
-      filterPills.innerHTML = renderFilterPills(vm.query);
+    if (painted === null || painted.filterKey !== filters || painted.view !== vm.view) {
+      filterPills.innerHTML =
+        vm.view === "canvas"
+          ? renderFilterPills({
+              ...vm.query,
+              topic: { _tag: "All" },
+              batch: { _tag: "All" },
+              pool: { _tag: "All" },
+              lineage: { _tag: "All" },
+              year: { min: null, max: null },
+            })
+          : renderFilterPills(vm.query);
     }
 
     const prev = painted;
     if (prev !== null && prev.view !== vm.view) {
       void workspace.offsetWidth;
     }
-    virt.set(vm.view, vm.visible, highlight);
-    if (prev !== null && prev.view !== vm.view) {
-      requestAnimationFrame(() => {
-        virt.refresh();
-      });
+    if (vm.view === "canvas") {
+      virt.set("canvas", [], null);
+      browse.innerHTML = renderCanvasList(vm.visibleCanvases, vm.selectedCanvas?.id ?? null);
+    } else {
+      virt.set(vm.view, vm.visible, highlight);
+      if (prev !== null && prev.view !== vm.view) {
+        requestAnimationFrame(() => {
+          virt.refresh();
+        });
+      }
     }
 
     const detailHadFocus = detail.contains(document.activeElement);
-    if (
+    const rawField = detail.querySelector("#canvas-source");
+    const rawFocused = rawField instanceof HTMLTextAreaElement && document.activeElement === rawField;
+    if (vm.view === "canvas") {
+      const canvasChanged =
+        prev === null ||
+        prev.view !== "canvas" ||
+        prev.canvasId !== (vm.selectedCanvas?.id ?? null) ||
+        prev.canvasSurface !== vm.canvasSurface ||
+        (prev.canvasSource !== vm.canvasSource && !rawFocused);
+      if (canvasChanged) {
+        detail.innerHTML = renderCanvasDetail(
+          vm.selectedCanvas?.title ?? "",
+          vm.canvasSurface,
+          vm.canvasSource,
+        );
+        if (vm.canvasSurface === "render") {
+          const host = detail.querySelector("#canvas-host");
+          if (host instanceof HTMLElement) {
+            const paintedCanvas = renderCanvas(vm.canvasSource, host);
+            if (paintedCanvas._tag === "Err") {
+              host.innerHTML = `<p class="empty-detail">${escapeHtml(paintedCanvas.error)}</p>`;
+            }
+          }
+        }
+      }
+    } else if (
       prev === null ||
+      prev.view === "canvas" ||
       prev.detail !== detailId ||
       prev.offFilter !== vm.offFilter ||
       prev.hasVisible !== hasVisible
@@ -953,6 +1176,9 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       hasVisible,
       filterKey: filters,
       view: vm.view,
+      canvasId: vm.selectedCanvas?.id ?? null,
+      canvasSurface: vm.canvasSurface,
+      canvasSource: vm.canvasSource,
     };
   };
 
@@ -964,6 +1190,18 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
     if (msg._tag === "SetView" && splitDrag === null) {
       liveDetailPx = null;
+    }
+    if (
+      msg._tag === "SetView" ||
+      msg._tag === "SelectCanvas" ||
+      msg._tag === "SetCanvasSource" ||
+      msg._tag === "SetCanvasSurface"
+    ) {
+      writeStoredCanvasBuffer(storage, {
+        source: model.canvasSource,
+        id: model.canvasId,
+        surface: model.canvasSurface,
+      });
     }
     patch(model);
   };
@@ -1130,10 +1368,25 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
   browse.addEventListener("click", (event) => {
     const button = closestControl(event.target, "button[data-id]");
     if (!(button instanceof HTMLButtonElement) || button.dataset.id === undefined) return;
+    if (model.view === "canvas") {
+      const id = parseCanvasId(button.dataset.id);
+      if (id !== null) dispatch({ _tag: "SelectCanvas", id });
+      return;
+    }
     const id = parseCardId(button.dataset.id);
     if (id !== null) dispatch({ _tag: "Select", id });
   });
+  detail.addEventListener("input", (event) => {
+    if (!(event.target instanceof HTMLTextAreaElement) || event.target.id !== "canvas-source") return;
+    dispatch({ _tag: "SetCanvasSource", value: event.target.value });
+  });
   detail.addEventListener("click", (event) => {
+    const surface = closestControl(event.target, "button[data-surface]");
+    if (surface instanceof HTMLButtonElement && surface.dataset.surface !== undefined) {
+      const next = parseCanvasSurface(surface.dataset.surface);
+      if (next !== null) dispatch({ _tag: "SetCanvasSurface", surface: next });
+      return;
+    }
     const dismiss = closestControl(event.target, "button[data-sheet]");
     if (dismiss instanceof HTMLButtonElement && dismiss.dataset.sheet === "close") {
       dispatch({ _tag: "SetCardsSheet", value: false });
@@ -1249,7 +1502,7 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
       commitDetailWidth(current + delta, true);
       return;
     }
-    if (painted?.offFilter) {
+    if (painted?.offFilter && model.view !== "canvas") {
       if (event.key === "Enter") {
         event.preventDefault();
         flashFirstMatch();
@@ -1270,6 +1523,16 @@ export function startApp(root: HTMLElement, corpus: Corpus): void {
     ) {
       event.preventDefault();
       dispatch({ _tag: "SetCardsSheet", value: true });
+      return;
+    }
+    if (model.view === "canvas") {
+      if (event.key === "ArrowDown" || event.key === "j") {
+        event.preventDefault();
+        dispatch({ _tag: "Move", delta: 1 });
+      } else if (event.key === "ArrowUp" || event.key === "k") {
+        event.preventDefault();
+        dispatch({ _tag: "Move", delta: -1 });
+      }
       return;
     }
     if (model.view === "cards") {

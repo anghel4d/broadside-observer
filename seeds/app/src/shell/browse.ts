@@ -179,6 +179,7 @@ export function createBrowseVirtualizer(
   };
 
   const paint = (force: boolean): void => {
+    if (view === "canvas") return;
     if (cards.length === 0) {
       if (force || lastSlice !== null || pane.childElementCount === 0) {
         pane.innerHTML = render(view, cards, selectedId, {
@@ -298,6 +299,7 @@ export function createBrowseVirtualizer(
       lastSlice = null;
       reindex();
     }
+    if (view === "canvas") return;
     if (viewChanged) {
       lastSlice = null;
       lastBox = { width: -1, height: -1 };

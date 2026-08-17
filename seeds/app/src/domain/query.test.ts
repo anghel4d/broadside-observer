@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { buildCorpus } from "./corpus.ts";
 import {
   activeFilters,
+  applyCanvasQuery,
   applyQuery,
   clearFilter,
   findCardByRank,
@@ -12,6 +13,7 @@ import {
 import {
   LineageSchema,
   PoolSchema,
+  SeedCanvasSchema,
   SeedCardSchema,
   SeedRankSchema,
   defaultQuery,
@@ -236,6 +238,40 @@ assert.equal(missing, null);
 const offList = applyQuery(corpus, lineage);
 const stillFound = findCardByRank(offList, corpus.cards, SeedRankSchema.parse(2));
 assert.equal(stillFound?.id, "001-alpha");
+
+const canvases = [
+  SeedCanvasSchema.parse({
+    id: "result-compose-surface",
+    title: "result-compose-surface",
+    file: "result-compose-surface.canvas.tsx",
+    source: "export default function ResultComposeSurface() { return null; }",
+  }),
+  SeedCanvasSchema.parse({
+    id: "other-board",
+    title: "other-board",
+    file: "other-board.canvas.tsx",
+    source: "stack table",
+  }),
+];
+assert.equal(applyCanvasQuery(canvases, defaultQuery).map((canvas) => canvas.id).join(","), "other-board,result-compose-surface");
+assert.equal(
+  applyCanvasQuery(canvases, { ...defaultQuery, search: "compose" })[0]?.id,
+  "result-compose-surface",
+);
+assert.equal(applyCanvasQuery(canvases, { ...defaultQuery, search: "missing" }).length, 0);
+assert.equal(
+  applyCanvasQuery(canvases, { ...defaultQuery, sortReversed: true })[0]?.id,
+  "result-compose-surface",
+);
+assert.equal(
+  applyCanvasQuery(canvases, {
+    ...defaultQuery,
+    topic: { _tag: "One", topic: cards[0]!.topics[0]! },
+    search: "board",
+  })[0]?.id,
+  "other-board",
+  "card facets must not filter canvases",
+);
 
 const autoFirst = selectionState(corpus, byRank, null);
 assert.equal(autoFirst._tag, "Visible");

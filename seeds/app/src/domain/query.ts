@@ -3,10 +3,12 @@ import { assertNever } from "./never.ts";
 import type { Corpus } from "./corpus.ts";
 import type {
   BatchFilter,
+  CanvasId,
   CardId,
   LineageFilter,
   PoolFilter,
   Query,
+  SeedCanvas,
   SeedCard,
   SeedRank,
   SortKey,
@@ -76,16 +78,19 @@ function matchesSearch(
   return tokens.every((token) => haystack.includes(token));
 }
 
-/** Title hits outweigh haystack hits; used as a stable tie-breaker. */
-export function searchScore(card: SeedCard, haystack: string, tokens: ReadonlyArray<string>): number {
+function titleHaystackScore(title: string, haystack: string, tokens: ReadonlyArray<string>): number {
   if (tokens.length === 0) return 0;
-  const title = card.title.toLowerCase();
   let score = 0;
   for (const token of tokens) {
     if (title.includes(token)) score += 3;
     if (haystack.includes(token)) score += 1;
   }
   return score;
+}
+
+/** Title hits outweigh haystack hits; used as a stable tie-breaker. */
+export function searchScore(card: SeedCard, haystack: string, tokens: ReadonlyArray<string>): number {
+  return titleHaystackScore(card.title.toLowerCase(), haystack, tokens);
 }
 
 function comparePrimary(left: SeedCard, right: SeedCard, sort: SortKey): number {
@@ -135,6 +140,44 @@ export function applyQuery(corpus: Corpus, query: Query): ReadonlyArray<SeedCard
   }
 
   filtered.sort((left, right) => compareCards(left, right, query.sort, scores));
+  if (query.sortReversed) filtered.reverse();
+  return filtered;
+}
+
+function canvasHaystack(canvas: SeedCanvas): string {
+  return `${canvas.title}\n${canvas.file}\n${canvas.source}`.toLowerCase();
+}
+
+function compareCanvases(
+  left: SeedCanvas,
+  right: SeedCanvas,
+  sort: SortKey,
+  scores: ReadonlyMap<CanvasId, number>,
+): number {
+  if (sort === "relevance") {
+    const scoreDelta = (scores.get(right.id) ?? 0) - (scores.get(left.id) ?? 0);
+    if (scoreDelta !== 0) return scoreDelta;
+  }
+  const title = left.title.localeCompare(right.title, "en");
+  if (title !== 0) return title;
+  return left.id.localeCompare(right.id, "en");
+}
+
+/** Same search/sort bar, pointed at packed canvases. Card facets are ignored. */
+export function applyCanvasQuery(
+  canvases: ReadonlyArray<SeedCanvas>,
+  query: Query,
+): ReadonlyArray<SeedCanvas> {
+  const tokens = tokenize(query.search);
+  const scores = new Map<CanvasId, number>();
+  const filtered: SeedCanvas[] = [];
+  for (const canvas of canvases) {
+    const haystack = canvasHaystack(canvas);
+    if (!matchesSearch(tokens, haystack)) continue;
+    scores.set(canvas.id, titleHaystackScore(canvas.title.toLowerCase(), haystack, tokens));
+    filtered.push(canvas);
+  }
+  filtered.sort((left, right) => compareCanvases(left, right, query.sort, scores));
   if (query.sortReversed) filtered.reverse();
   return filtered;
 }

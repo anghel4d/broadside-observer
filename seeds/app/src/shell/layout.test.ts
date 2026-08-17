@@ -41,6 +41,8 @@ assert.equal(isCardsSheetLayout("cards", true), true);
 assert.equal(isCardsSheetLayout("cards", false), false);
 assert.equal(isCardsSheetLayout("list", true), false);
 assert.equal(isCardsSheetLayout("list", false), false);
+assert.equal(isCardsSheetLayout("canvas", true), false);
+assert.equal(isCardsSheetLayout("canvas", false), false);
 
 assert.equal(
   isCardsSheetVisible({ view: "cards", compact: true, sheetOpen: true, hasSelection: true }),
@@ -81,6 +83,7 @@ assert.deepEqual(parsePaneSplitMap("nope"), {});
 assert.deepEqual(parsePaneSplitMap("[]"), {});
 assert.deepEqual(parsePaneSplitMap("null"), {});
 assert.deepEqual(parsePaneSplitMap('{"list":512}'), { list: 512 });
+assert.deepEqual(parsePaneSplitMap('{"canvas":480}'), { canvas: 480 });
 assert.deepEqual(parsePaneSplitMap('{"list":0,"cards":-4,"extra":"32"}'), {});
 assert.deepEqual(parsePaneSplitMap('{"list":400.2,"cards":512,"extra":1}'), { list: 400.2, cards: 512 });
 assert.deepEqual(
@@ -148,6 +151,11 @@ assert.equal(
     rem,
   });
   assert.equal(browseWidthPx(1400, listWide, gutter), LIST_BROWSE_DEFAULT_REM * rem);
+  assert.equal(
+    defaultDetailWidthPx({ view: "canvas", workspacePx: 1400, gutterPx: gutter, rem }),
+    listWide,
+    "Canvas uses the List browse rail default",
+  );
 
   const cardsLaptop = defaultDetailWidthPx({
     view: "cards",
