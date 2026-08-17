@@ -1,4 +1,4 @@
-import { CatalogSchema, type Catalog } from "./schema.ts";
+import { CanvasCatalogSchema, CatalogSchema, type CanvasCatalog, type Catalog } from "./schema.ts";
 
 /** Inflate the packer's gzip+base64 catalog payload to JSON text. */
 export async function inflateGzipBase64(b64: string): Promise<string> {
@@ -38,6 +38,17 @@ export function parsePackedCatalog(text: string): Catalog {
   if (!decoded.success) {
     throw new Error(
       `Packed catalog failed schema decode (${decoded.error.issues.length} issues). Rebuild with npm run pack.`,
+    );
+  }
+  return decoded.data;
+}
+
+/** JSON text → CanvasCatalog. Same denotation the canvas packer writes. */
+export function parsePackedCanvasCatalog(text: string): CanvasCatalog {
+  const decoded = CanvasCatalogSchema.safeParse(JSON.parse(text) as unknown);
+  if (!decoded.success) {
+    throw new Error(
+      `Packed canvases failed schema decode (${decoded.error.issues.length} issues). Rebuild with npm run pack.`,
     );
   }
   return decoded.data;

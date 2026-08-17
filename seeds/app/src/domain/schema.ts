@@ -137,6 +137,29 @@ export const CatalogSchema = z
 
 export type Catalog = z.infer<typeof CatalogSchema>;
 
+export const CanvasIdSchema = z.string().min(1).brand<"CanvasId">();
+export type CanvasId = z.infer<typeof CanvasIdSchema>;
+
+export const SeedCanvasSchema = z.object({
+  id: CanvasIdSchema,
+  title: z.string().min(1),
+  file: z.string().min(1),
+  source: z.string(),
+});
+export type SeedCanvas = z.infer<typeof SeedCanvasSchema>;
+
+export const CanvasCatalogSchema = z
+  .object({
+    generatedAt: z.string().min(1),
+    count: z.number().int().nonnegative(),
+    canvases: z.array(SeedCanvasSchema),
+  })
+  .refine((catalog) => catalog.count === catalog.canvases.length, {
+    message: "count must equal canvases.length",
+    path: ["count"],
+  });
+export type CanvasCatalog = z.infer<typeof CanvasCatalogSchema>;
+
 export type TopicFilter = { readonly _tag: "All" } | { readonly _tag: "One"; readonly topic: Topic };
 export type BatchFilter =
   | { readonly _tag: "All" }

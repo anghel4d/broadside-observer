@@ -20,7 +20,7 @@ Score the remaining candidates against the descriptions, query hints, and priori
 
 ### Stage C2 — Seed cards (standing library)
 
-Keepers that are worth lasting attention but not yet a full digest become **seed cards** under [`seeds/cards/`](seeds/cards/). Every card uses the same frontmatter and section layout (see [`seeds/README.md`](seeds/README.md)). This is an ongoing library, not a one-time prefill: future research passes append new `NNN-*.md` cards, update [`seeds/INDEX.md`](seeds/INDEX.md), and record ids in `radar/seen.json`. Promote a seed to `summaries/` when it deserves a deep read; leave the card in place.
+Keepers that are worth lasting attention but not yet a full digest become **seed cards** under [`seeds/cards/`](seeds/cards/). Every card uses the same frontmatter and section layout (see [`seeds/README.md`](seeds/README.md)). This is an ongoing library, not a one-time prefill: future research passes append new `NNN-*.md` cards, update [`seeds/INDEX.md`](seeds/INDEX.md), and record ids in `radar/seen.json`. Promote a seed to `summaries/` when it deserves a deep read; leave the card in place. The hosted seed browser also has a **Canvas** view (`?view=canvas`) for `seeds/canvases/*.tsx` on the same page.
 
 ### Stage D — Deep read
 

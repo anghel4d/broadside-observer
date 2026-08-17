@@ -9,6 +9,7 @@ on:
     paths:
       - "seeds/app/**"
       - "seeds/cards/**"
+      - "seeds/canvases/**"
       - "seeds/lineages/**"
       - ".github/workflows/deploy-seed-browser.yml"
   workflow_dispatch:

@@ -2,4 +2,6 @@ node_modules/
 dist/
 src/generated/cards.json
 src/generated/cards.json.gz.b64
+src/generated/canvases.json
+src/generated/canvases.json.gz.b64
 public/cards.json
