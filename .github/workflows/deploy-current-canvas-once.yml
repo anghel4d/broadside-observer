@@ -1,0 +1,71 @@
+name: Deploy corrected canvas once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/deploy-current-canvas-once.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: seeds/app/package-lock.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build current canvas browser
+        working-directory: seeds/app
+        env:
+          GITHUB_PAGES: "true"
+        run: |
+          npm ci
+          npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: seeds/app/dist
+
+      - name: Remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/deploy-current-canvas-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- .github/workflows/deploy-current-canvas-once.yml
+          git commit -m "chore: remove one-shot canvas deployment"
+          git push origin HEAD:main
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy corrected canvas
+        id: deployment
+        uses: actions/deploy-pages@v5
