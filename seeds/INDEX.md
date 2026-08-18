@@ -1223,3 +1223,18 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1076 | 10 | 1972 | Understanding Natural Language | game-ai |
 
 _Recount after `archive-2026-08-18`: **1076** unique title cards on main._
+
+## Frontier 2026-08-18
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Broadside/Anoptic/ano POS filter: **87**. Keepers: **6** (keep rate **0.069**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1077 | 10 | 2026 | Learning Agent Execution for KV-Cache Management in Agentic Serving | agents |
+| 1078 | 10 | 2026 | Aborted but Not Forgotten: KV-Cache Retention Breaks Rollback Consistency in Language Agents | agents |
+| 1079 | 9 | 2026 | HELIX: Model-Harness Co-evolution for Recursive Self-Improvement | agents |
+| 1080 | 9 | 2026 | GraniKV: Asymmetric Granularity KV-Cache Paging for Multi-Agent Systems with Long Shared Prefix | agents |
+| 1081 | 9 | 2026 | From LLM Inference to Agentic Workloads: Characterization and Implications for Serving Systems | agents |
+| 1082 | 8 | 2026 | GPU implementation of a resource-constrained virtual machine | languages |
+
+_Recount after `frontier-2026-08-18`: **1082** unique title cards on main._
