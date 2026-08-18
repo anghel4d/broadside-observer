@@ -423,7 +423,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
     </div>
     <header class="topbar">
       <div class="brand">
-        <h1>Seed browser</h1>
+        <h1>Observer</h1>
         <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> list · <kbd>hjkl</kbd> cards · <kbd>Esc</kbd> clear.</p>
       </div>
       <div class="topbar-tools">

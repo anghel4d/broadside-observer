@@ -1,4 +1,4 @@
-# Seed card browser
+# Observer
 
 A tiny, self-contained TypeScript app for browsing the uniform markdown cards in [`../cards/`](../cards/). No backend, auth, database, or LLM features. A build step parses every card through a Zod schema and packs the validated catalog into JSON; the UI is a pure query over that in-memory corpus.
 
