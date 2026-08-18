@@ -1238,3 +1238,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1082 | 8 | 2026 | GPU implementation of a resource-constrained virtual machine | languages |
 
 _Recount after `frontier-2026-08-18`: **1082** unique title cards on main._
+
+## Curiosity 2026-08-19
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **52**. Keepers: **7** (keep rate **0.135**, hard cap **0.15**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1083 | 9 | 2007 | Riemann-Roch and Abel-Jacobi theory on a finite graph | maths-foundations |
+| 1084 | 9 | 2013 | The magnitude of metric spaces | maths-foundations |
+| 1085 | 10 | 2017 | The sphere packing problem in dimension 8 | maths-foundations |
+| 1086 | 9 | 2002 | Cluster algebras I: Foundations | maths-foundations |
+| 1087 | 9 | 2023 | Two-level type theory and applications | languages |
+| 1088 | 9 | 2001 | Discrete mechanics and variational integrators | physics |
+| 1089 | 9 | 1977 | Life at low Reynolds number | biology |
+
+_Recount after `curiosity-2026-08-19`: **1089** unique title cards on main._
