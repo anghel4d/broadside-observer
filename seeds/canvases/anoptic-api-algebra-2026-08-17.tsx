@@ -12,9 +12,7 @@ import {
   computeDAGLayout,
   useHostTheme,
 } from "cursor/canvas";
-
 const MONO = "ui-monospace, 'Cascadia Code', Consolas, monospace";
-
 type FlowNode = {
   id: string;
   label: string;
@@ -22,9 +20,7 @@ type FlowNode = {
   mono?: boolean;
   emphasis?: boolean;
 };
-
 type FlowEdge = { from: string; to: string; label?: string };
-
 function FlowDiagram(props: {
   markerId: string;
   nodes: FlowNode[];
@@ -50,7 +46,6 @@ function FlowDiagram(props: {
   const specById = new Map(props.nodes.map((n) => [n.id, n]));
   const labelFor = (from: string, to: string) =>
     props.edges.find((e) => e.from === from && e.to === to)?.label;
-
   return (
     <div style={{ overflowX: "auto" }}>
       <div
@@ -173,7 +168,6 @@ function FlowDiagram(props: {
     </div>
   );
 }
-
 function Eq({ children }: { children: string }) {
   const theme = useHostTheme();
   return (
@@ -194,7 +188,6 @@ function Eq({ children }: { children: string }) {
     </div>
   );
 }
-
 function CodeBlock({ children }: { children: string }) {
   const theme = useHostTheme();
   return (
@@ -217,7 +210,6 @@ function CodeBlock({ children }: { children: string }) {
     </pre>
   );
 }
-
 function Mark({ children }: { children: string }) {
   const theme = useHostTheme();
   return (
@@ -234,16 +226,14 @@ function Mark({ children }: { children: string }) {
     </span>
   );
 }
-
 const flowNodes: FlowNode[] = [
-  { id: "habit", label: "C / C++ habits", detail: "status, out-param, null, or exception" },
-  { id: "result", label: "Result(V, E)", detail: "one active alternative", mono: true, emphasis: true },
-  { id: "function", label: "ResultMorphism", detail: "a Function whose call returns Result", mono: true },
+  { id: "habit", label: "C habit", detail: "status + out-param, or throw" },
+  { id: "result", label: "Result(V, E)", detail: "one value, two ways", mono: true, emphasis: true },
+  { id: "function", label: "Function", detail: "a callable that returns that", mono: true },
   { id: "kleisli", label: "and_then", detail: "success feeds the next step", mono: true },
   { id: "pair", label: "pair", detail: "same input, first failure wins", mono: true },
   { id: "src", label: "the engine", detail: "the call actually runs here" },
 ];
-
 const flowEdges: FlowEdge[] = [
   { from: "habit", to: "result", label: "both ways in one box" },
   { from: "result", to: "function" },
@@ -252,24 +242,20 @@ const flowEdges: FlowEdge[] = [
   { from: "kleisli", to: "src" },
   { from: "pair", to: "src" },
 ];
-
 export default function ResultComposeSurface() {
   return (
     <Stack gap={22}>
       <Stack gap={8}>
         <H1>Anoptic API Algebra</H1>
         <Text>
-          Welcome to the public language for fallible work in Anoptic. You
-          already know the low-level C and C++ habits: a function returns a
-          status while the real answer lives in an out-parameter, returns a
-          null sentinel, or in C++ throws an exception. These are different
-          control mechanisms for the same two-way outcome. The call can go two
-          ways. Here both ways live in one value. Once you see that value,
-          the rest of these headers is just how those values chain, map, and
-          pair. This tour walks the pieces one at a time.
+          This document describes the public language for fallible
+          computation in Anoptic. A C function typically reports failure
+          through a status code, a null pointer, or an exception, while the
+          successful value occupies a separate channel. Here both outcomes
+          occupy one value. The remaining declarations specify how such
+          values are constructed, chained, mapped, and paired.
         </Text>
       </Stack>
-
       <FlowDiagram
         markerId="general-flow"
         nodes={flowNodes}
@@ -279,182 +265,166 @@ export default function ResultComposeSurface() {
         rankGap={54}
         nodeGap={28}
       />
-
       <Row gap={24} wrap>
-        <Stat value="27" label="documented public entries" tone="success" />
-        <Stat value="8" label="documented private helpers" />
-        <Stat value="2" label="retired names" tone="warning" />
-        <Stat value="26cec0f5" label="source snapshot" tone="success" />
+        <Stat value="26" label="public names" tone="success" />
+        <Stat value="8" label="private signatures" />
+        <Stat value="3" label="deleted collisions" tone="warning" />
+        <Stat value="295759e3" label="HEAD hyper-c-resourcemgr" />
       </Row>
-
-      <Callout tone="info" title="Historical snapshot: anoptic-engine@26cec0f5">
-        This tour describes commit 26cec0f5. It is the child of commit
-        cc4696c0, which changed the proof notation to constructor order; it
-        is not a claim about the current default branch.
+      <Callout tone="info" title="cc4696c0 is still an active work in progress">
+        Algebraic traits, topologies, and API are all subject to change.
       </Callout>
-
       <Divider />
-
       <H2>anoptic_results.h</H2>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>1 public</Mark>
           <H3>Result&lt;Value, Error&gt;</H3>
         </Row>
         <Text>
-          The fallible carrier. People usually think of a failed call as a
-          side channel: an errno, a bool return, an exception unwinding past
-          the answer. Here the answer is the side channel. Exactly one
-          alternative is active: success containing Value (or no payload when
-          Value is void), or failure containing Error. Never both. Never
-          neither.
+          Result is a tagged sum. A value of this type holds exactly one
+          inhabitant: a success of type Value, or a failure of type Error.
+          It never holds both. It never holds neither. Status codes, null
+          pointers, and exceptions report failure on a channel separate from
+          the successful value. Result stores both outcomes in one object.
         </Text>
         <Text>
-          `ano::Result&lt;Value, Error&gt;` is a using-alias for
-          `std::expected&lt;Value, Error&gt;`, not a wrapper with separate
-          storage. Anoptic adds concepts, helpers, callable wrappers,
-          composition nodes, and a separate Lean semantic model around that
-          alias. Runtime representation is exactly the selected standard
-          library implementation of `std::expected`; the extra admission
-          rules live at compile time.
+          The representation is a wrapper around
+          `std::expected&lt;Value, Error&gt;`. The header adds a closed set of
+          construction and composition laws, and compile-time admission for
+          the types and callables that may participate. The in-memory layout
+          remains that of expected. The algebra is the set of rules under
+          which a route is well-formed. The compiler rejects a route that
+          violates those rules.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Tagged sum",
-              "The box holds a value or an error. Like a C union with a tag, or Haskell Either. Not a pair. Not value-and-maybe-error.",
+              "The object holds a value or an error. A tagged union, equivalently Either. Not a pair. Not value-and-maybe-error.",
             ],
             [
               "Bind",
-              "Feed a success into the next fallible step. An error skips the rest and comes out as the answer.",
+              "A success is fed to the next fallible step. An error skips remaining steps and is the result.",
             ],
             [
               "Map success",
-              "Change the value. Keep the same error type. Failure is untouched.",
+              "Rewrite the value. The error type is unchanged. Failure is untouched.",
             ],
             [
               "Map error",
-              "Change the error. Keep the same value. Success is untouched.",
+              "Rewrite the error. The value type is unchanged. Success is untouched.",
             ],
             [
               "Fail-fast pair",
-              "Two checks on one input. Left runs first. First failure wins. If both would fail, you see the left error.",
+              "Two checks on one input. The left check runs first. The first failure is the result. If both would fail, the result is the left error.",
             ],
             [
-              "Semantic associativity",
-              "The Lean result model proves that regrouping bind preserves the extensional result. C++ callable construction, storage, and arbitrary side effects are outside that theorem.",
+              "Associativity",
+              "Grouping a chain does not change which steps run. (f then g) then h is the same work as f then (g then h).",
             ],
             [
-              "Admitted Anoptic error",
-              "Helpers and morphism concepts require ResultError; the bare Result alias does not.",
+              "Admissible error",
+              "Moving the error cannot throw. Failure is not permitted to become a third control path.",
             ],
           ]}
         />
         <Text>
-          Concretely, that means you can write a parse-then-cook-then-realize
-          route and the first failure is the result. You do not write
-          `if (!r) return r;` at each step. An error type that throws when
-          moved is not admitted by the Anoptic helpers and composition
-          concepts that require ResultError; the Result alias itself is still
-          just `std::expected`. A function that returns a bare Texture is not
-          a fallible step. The compiler says so before anything runs.
+          A parse-then-cook-then-realize route therefore yields the first
+          failure as its result. Intermediate steps do not write
+          `if (!r) return r;`. A type that throws on move is not a legal
+          error. A function that returns a bare Texture is not a fallible
+          step. Both violations are diagnosed at compile time.
         </Text>
-        <Eq>{`R_E(V) = E + V`}</Eq>
+        <Eq>{`Result(V, E) = V + E`}</Eq>
         <CodeBlock>{`ano::Result<Texture, ResourceError>`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>2 public</Mark>
           <H3>ResultError&lt;Error&gt;</H3>
         </Row>
         <Text>
-          ResultError is the admission ticket for Anoptic helpers and
-          composition concepts that require a safely movable error. It proves
-          one mechanical fact: the stored error type is nothrow move
-          constructible. Merely naming `ano::Result&lt;V, E&gt;` does not apply
-          the concept.
+          ResultError is the admission constraint on the failure inhabitant.
+          It currently requires one mechanical property: E can be moved into
+          a Result without throwing.
         </Text>
         <Text>
-          Why that, and not some grander "is an error" theory? Because the
-          whole point of Result is that failure is data. If moving E throws,
-          the failure path just became an exception. That is a third control
-          path, which is exactly the C++ habit we refused. So this is a
-          property of the error representation, not a second algebra.
+          Failure in Result is data. If a move of E throws, the failure path
+          becomes an exception, which is a third control path. ResultError
+          therefore constrains the error representation. It is not a second
+          algebra, and it does not classify types as conceptually erroneous.
         </Text>
         <Table
           headers={["If this holds", "Then"]}
           rows={[
             [
               "E is nothrow-movable",
-              "The error meets ResultError and may enter the Anoptic surfaces that require it; individual helpers impose their own construction constraints.",
+              "A failed Result can be returned, stored, and forwarded as ordinary data.",
             ],
             [
               "E throws on move",
-              "Rejected wherever ResultError is required; not rejected merely by naming ano::Result&lt;V, E&gt;.",
+              "The type is rejected. A throw cannot be hidden inside the error side.",
             ],
           ]}
         />
         <CodeBlock>{`static_assert(ano::ResultError<ResourceError>);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>3 public</Mark>
           <H3>ResultCarrier&lt;Type&gt;</H3>
         </Row>
         <Text>
-          Sometimes you are not holding `Result&lt;Texture, ResourceError&gt;`
-          by that spelling. You have a typedef, a const reference, an alias
-          that cooked down to expected. ResultCarrier answers one question:
-          after you strip aliases, references, and cv-qualification, is this
-          exactly a `std::expected` specialization, which is also what
-          `ano::Result` aliases?
+          ResultCarrier is a concept that recognizes a Result after
+          normalization. The input need not be spelled
+          `Result&lt;Texture, ResourceError&gt;`. A typedef, a const
+          reference, or an alias that reduces to expected may still
+          qualify. Aliases, references, and cv-qualification are stripped
+          first. The remaining type must be exactly a Result.
         </Text>
         <Text>
-          It uses reflection to look at the template and its two arguments.
-          You ask "is it?" You do not unpack Value and Error yourself. That
-          unpacking is an implementation job.
+          Recognition uses reflection on the template and its two arguments.
+          The concept answers yes or no. It does not expose Value and Error.
+          Decomposition is an implementation concern.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Normalizes first",
-              "Aliases, references, and const/volatile are stripped. The spelling does not matter.",
+              "Aliases, references, and const/volatile are stripped. Spelling is irrelevant.",
             ],
             [
               "Exact template",
-              "After that, it must be expected of two types. Not a pair. Not optional.",
+              "After normalization the type must be expected of two types. Not a pair. Not optional.",
             ],
             [
               "Yes or no",
-              "A concept. It does not hand you Value and Error. That is ResultSignature.",
+              "A concept. It does not yield Value and Error. That is ResultSignature.",
             ],
           ]}
         />
         <CodeBlock>{`static_assert(ano::ResultCarrier<
     const ano::Result<Texture, ResourceError>&>);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::ResultSignature&lt;Type&gt;</H3>
         </Row>
         <Text>
-          Formerly ResultAlgebra. The old name claimed this struct was the
-          algebra. It is not. It is a reflected decomposition: here is the
-          carrier, here is Value, here is Error. Like reading the fields of
-          a struct with offsetof, not like proving how those fields compose.
+          Formerly ResultAlgebra. That name treated the struct as the
+          algebra. The struct is a reflected decomposition: the carrier, the
+          Value, and the Error. The operation is analogous to reading the
+          fields of a struct with offsetof. It does not state how those
+          fields compose.
         </Text>
         <Text>
-          It becomes private because users ask whether something is a
+          The type is private. Callers ask whether a type is a
           ResultCarrier. Implementation code performs the decomposition.
-          Naming the unpack publicly invited people to treat a typedef sheet
-          as a law.
+          A public unpack invited treating a typedef sheet as a law.
         </Text>
         <Table
           headers={["Field", "In English"]}
@@ -470,169 +440,178 @@ export default function ResultComposeSurface() {
 using Value   = ...;
 using Error   = ...;`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>4 public</Mark>
           <H3>failure(error)</H3>
         </Row>
         <Text>
-          You have an error in your hand and need the failure constructor.
-          `failure` returns `std::unexpected&lt;StoredError&gt;`, not a Result.
-          In a return or construction context expecting `Result&lt;V, E&gt;`,
-          `std::expected` consumes that unexpected value and builds its error
-          state. V comes from the destination type; `failure` never names or
-          constructs it.
+          failure injects an error into a Result. Given a value of type E,
+          it constructs the failure inhabitant of V + E. A C function would
+          return EINVAL and rely on the caller to treat that integer as a
+          status. The destination Result already has type V + E, so V is
+          supplied by contextual conversion. The success type need not be
+          named at the call site.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Injection",
-              "E goes in. std::unexpected&lt;StoredError&gt; comes out. You did not construct a Value.",
+              "E is the input. A Result is the output. No Value is constructed.",
             ],
             [
               "Contextual V",
-              "A surrounding Result&lt;V, E&gt; context names V and converts the unexpected value. failure does not.",
+              "The return slot names V. failure does not.",
             ],
             [
-              "Nothrow construction",
-              "StoredError is constructed from the forwarded argument without throwing; ResultError separately requires nothrow move construction.",
+              "Nothrow move",
+              "The error is moved in. ResultError already required that.",
             ],
           ]}
         />
-        <Eq>{`failure : E → unexpected(E)\nunexpected(E) ↪ Result(V, E) = E + V`}</Eq>
+        <Eq>{`E  →  V + E`}</Eq>
         <CodeBlock>{`return ano::failure(ResourceError::invalidFormat);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>5 public</Mark>
           <H3>result_if(condition, error)</H3>
         </Row>
         <Text>
-          Sometimes success has no payload. The header was valid. The magic
-          matched. You just needed a yes. That is a unit-valued result:
-          success is empty, failure still carries E. Think of it as a
-          check modeled as E + 1 instead of aborting or setting errno.
+          result_if is the unit-valued conditional guard. Require this
+          condition. Succeed with nothing when true. Return this error when
+          false. The type is Result(Unit, E), written 1 + E. There is no
+          other overload.
         </Text>
         <Text>
-          If the condition is true you get a void success. If it is false
-          you get that error. Later `.and_then` will skip the rest of the
-          route on the false path, same as any other failure.
+          A payload is not an argument to result_if. It is introduced
+          afterward by composition. transform runs an infallible callable
+          only after success. and_then runs a fallible callable only after
+          success. The callable object is constructed eagerly. Its body is
+          not invoked when the guard fails.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
-              "Unit success",
-              "True means empty success. There is no payload to unwrap.",
+              "Unit guard",
+              "True stores empty success. False stores E.",
             ],
             [
-              "Error on false",
-              "False means that E. Same as failure(error), gated by a bool.",
+              "Single primitive",
+              "Bool × E to Result(Unit, E). Payload construction is derived.",
             ],
             [
-              "Binds like any Result",
-              "A later and_then skips on false. The check is a real step in the route.",
+              "Lazy continuation",
+              "transform introduces V on success. and_then starts another fallible step.",
+            ],
+            [
+              "Complementary directions",
+              "transform: success permits a value to exist. and_then: an existing success permits the next fallible step. Not an inverse. Failure discards the successful path.",
             ],
           ]}
         />
-        <Eq>{`result_if : Bool × E → E + 1`}</Eq>
+        <Eq>{`result_if : Bool × E → Result(Unit, E)
+transform : Result(Unit, E) × (Unit → V) → Result(V, E)
+and_then  : Result(A, E) × (A → Result(B, E)) → Result(B, E)`}</Eq>
         <CodeBlock>{`auto valid = ano::result_if(
     header.magic == glbMagic,
     ResourceError::invalidFormat);`}</CodeBlock>
-      </Stack>
-
-      <Stack gap={8}>
-        <Row gap={8} align="center">
-          <Mark>6 public</Mark>
-          <H3>result_if(condition, value, error)</H3>
-        </Row>
-        <Text>
-          Same idea, now with a payload. True picks the value. False picks
-          the error. And… wait. Both arguments are evaluated before the
-          function runs. This is an ordinary C++ function, not a macro and
-          not a lazy `?:` with a short-circuiting right-hand side.
-        </Text>
-        <Text>
-          That is the trap. If `bytes[offset]` would be out of range, you
-          cannot rely on the condition to save you from evaluating it. The
-          condition decides which inhabitant is stored. It does not decide
-          which argument is computed. Keep the expensive or unsafe work
-          outside, or behind a branch you wrote yourself.
-        </Text>
-        <Table
-          headers={["Property", "In English"]}
-          rows={[
-            [
-              "Selects a side",
-              "True stores V. False stores E. Exactly one inhabitant.",
-            ],
-            [
-              "Eager",
-              "Both V and E are evaluated before entry. The bool does not short-circuit C++ argument passing.",
-            ],
-            [
-              "Binds like any Result",
-              "True then next(value). False then that error, and next does not run.",
-            ],
-          ]}
-        />
-        <Eq>{`result_if : Bool × V × E → E + V`}</Eq>
         <CodeBlock>{`return ano::result_if(
+        offset < bytes.size(),
+        ParseError::outOfBounds)
+    .transform([&]() noexcept {
+        return bytes[offset];
+    });`}</CodeBlock>
+        <CodeBlock>{`return ano::result_if(
+        offset < bytes.size(),
+        ParseError::outOfBounds)
+    .and_then([&]() noexcept -> ano::Result<Value, ParseError> {
+        return decode(bytes[offset]);
+    });`}</CodeBlock>
+        <Text>
+          Calling transform on the std::expected carrier does not itself
+          enforce Anoptic's reflected noexcept admission. That admission
+          belongs to the composition surface. The examples are safe when
+          the lambda is explicitly noexcept.
+        </Text>
+      </Stack>
+      <Callout tone="warning" title="Deleted: result_if(condition, value, error)">
+        The three-argument overload was an ordinary C++ function. Both
+        value and error were evaluated before entry. A bounds check could
+        not protect bytes[offset]. The derived form is result_if(c, e)
+        followed by transform of a unit-to-V callable. That spelling
+        evaluates the payload only on success and reuses the proved map
+        and bind laws.
+      </Callout>
+      <Eq>{`result_if(c, v, e)  ≅  result_if(c, e).map(() ↦ v)`}</Eq>
+      <Table
+        headers={["Before", "After"]}
+        rows={[
+          [
+            "Payload passed as an eager argument",
+            "Payload enclosed in a lazy callable",
+          ],
+          [
+            "Unsafe expression runs before the check",
+            "Callable body runs only on success",
+          ],
+          [
+            "Three-argument overload",
+            "Unit guard plus transform or and_then",
+          ],
+        ]}
+      />
+      <CodeBlock>{`return ano::result_if(
     offset < bytes.size(),
     bytes[offset],
     ParseError::outOfBounds);`}</CodeBlock>
-      </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>7 public</Mark>
           <H3>has_error(result, error)</H3>
         </Row>
         <Text>
-          Sometimes you do not want to open the success side at all. You
-          just want to know whether this failure is the truncated-file
-          case, so you can recover, and leave every other error alone.
-          has_error looks at the error inhabitant and compares it.
+          has_error tests whether a Result holds a particular failure.
+          It inspects the error inhabitant and compares it to the given
+          error. A typical use is to recover from one named case, such as
+          a truncated file, and to leave every other error unchanged. The
+          success side is not opened.
         </Text>
         <Text>
-          The comparison itself must be legal and nonthrowing. If `==`
-          could throw, asking "which error?" would become another exception
-          path. On success the answer is false. You did not touch the
-          Texture.
+          The comparison must be well-formed and nonthrowing. If `==`
+          could throw, classifying the error would introduce a third
+          control path. On success the function returns false. The success
+          inhabitant is not read.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Failure only",
-              "Success is false. The value is not read.",
+              "Success yields false. The value is not read.",
             ],
             [
               "Typed compare",
-              "The error you pass must be comparable to the Result's E, without throwing.",
+              "The given error must be comparable to the Result's E without throwing.",
             ],
             [
               "No unwrap",
-              "You did not take the error out. You asked whether it was this one.",
+              "The error is not extracted. The function reports whether it equals the given case.",
             ],
           ]}
         />
         <CodeBlock>{`if (ano::has_error(result, ParseError::truncated))
     recover();`}</CodeBlock>
       </Stack>
-
       <Divider />
-
       <H2>anoptic_compose.h</H2>
       <Text>
-        results.h gave you the box. compose.h is about callables that return
-        that box, and the ways those callables may be stuck together. Four
-        words show up in the names. They are ordinary programming ideas with
-        inherited vocabulary, not a second subject you were supposed to
-        already know.
+        results.h defines the Result carrier. compose.h defines callables that
+        return that carrier and the operations that compose those callables.
+        Four words appear in the names. Each is a standard programming idea
+        with inherited vocabulary.
       </Text>
       <Table
         headers={["Word", "The C picture", "Here"]}
@@ -640,51 +619,50 @@ using Error   = ...;`}</CodeBlock>
           [
             "Morphism",
             "A function from A to B.",
-            "A function from A to Result of B. The box is part of the type.",
+            "A function from A to Result of B. The carrier is part of the type.",
           ],
           [
             "Kleisli",
-            "g(f(x)), when f returns exactly what g wants.",
-            "g of the success inside f(x). If f failed, g never runs.",
+            "g(f(x)), when f returns exactly what g requires.",
+            "g applied to the success value inside f(x). On failure, g is not invoked.",
           ],
           [
             "Map",
-            "for each slot, write f(slot). The container shape stays.",
-            "Run f on the value inside the box, or on the error. The box stays a Result.",
+            "For each slot, apply f. The container shape is unchanged.",
+            "Apply f to the value inside the carrier, or to the error. The result remains a Result.",
           ],
           [
             "Fold",
-            "A for-loop with an accumulator. One running value, one answer.",
-            "The loop body (state, item) to next state. We scan, we do not hide a reduce.",
+            "A loop with an accumulator. One running value, one answer.",
+            "The step (state, item) produces the next state. The scan is explicit. It is not a hidden reduce.",
           ],
         ]}
       />
       <Text>
-        Each word gets its own section when the name that uses it appears.
-        Before that, three private signatures do the unpacking. Reflection
-        reads a function the way ResultCarrier reads a type.
+        Each word is defined in the section that first uses it. Three private
+        signatures unpack callables first. Reflection inspects a function the
+        way ResultCarrier inspects a type.
       </Text>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::OperationSignature&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          Formerly OperationAlgebra. Same lie as ResultAlgebra. This is the
-          reflected shape of an ordinary callable: what it is, what it
-          takes, what domain that parameter denotes, what it returns, and
-          whether it takes no argument. Signature information. Not a law
-          about composition.
+          Formerly OperationAlgebra. The type is the reflected shape of an
+          ordinary callable. It records the callable, the parameter, the
+          domain that parameter denotes, the return type, and whether the
+          callable is nullary. Those fields are signature information. They
+          are not composition laws.
         </Text>
         <Table
           headers={["Field", "In English"]}
           rows={[
-            ["Operation", "The callable type we inspected."],
-            ["Parameter", "The first argument as declared, or void."],
-            ["Domain", "That parameter with references and cv stripped."],
-            ["Return", "What the call returns. May or may not be a Result."],
-            ["nullary", "True when there is no argument."],
+            ["Operation", "The inspected callable type."],
+            ["Parameter", "The first declared argument, or void."],
+            ["Domain", "That parameter with references and cv-qualifiers removed."],
+            ["Value / Return", "The call's return type. The type may or may not be a Result."],
+            ["nullary", "True when the callable takes no argument."],
           ]}
         />
         <CodeBlock>{`OperationAlgebra<Operation>`}</CodeBlock>
@@ -692,22 +670,21 @@ using Error   = ...;`}</CodeBlock>
         <CodeBlock>{`Operation
 Parameter
 Domain
-Return
+Value
 nullary`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::ResultOperationSignature&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          Formerly ResultOperationAlgebra. Now the return type is a Result,
-          so the signature also names Carrier, Value, and Error. Internal
-          code writes `using Signature = ...` and gets on with it. It no
-          longer claims that each inspected function possesses its own
-          algebra. The algebra is the composition laws. The function is just
-          one arrow that was admitted.
+          Formerly ResultOperationAlgebra. Because the return type is a
+          Result, the signature also names Carrier, Value, and Error.
+          Internal code binds the type with `using Signature = ...`. The
+          name does not assert that each inspected function possesses its
+          own algebra. The algebra is the composition laws. The function is
+          one admitted arrow.
         </Text>
         <Table
           headers={["Field", "In English"]}
@@ -731,32 +708,30 @@ nullary`}</CodeBlock>
         <CodeBlock>{`using Signature =
     detail::ResultOperationSignature<Operation>;`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::DirectOperation&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          Formerly PureOperation. The old name was false. Functional
-          programmers hear "pure" and think: no IO, no mutation, same
-          inputs same outputs. This concept proved none of that. It
-          proved only that the return is not a Result. DirectOperation itself
-          permits object, void, or reference returns; stronger public
-          concepts add their own return constraints.
+          Formerly PureOperation. PureOperation did not establish purity.
+          Purity requires no IO, no mutation, and equal outputs for equal
+          inputs. This concept established none of those properties. It
+          established only that the operation returns an ordinary value
+          rather than a Result.
         </Text>
         <Text>
-          A mapper that publishes renderer state can satisfy it. That is
-          direct. It is plainly not pure. It becomes private because callers
-          ordinarily care about ResultTransformable or ErrorMappable, not
-          the internal classification used to establish those concepts.
+          A mapper that publishes renderer state can satisfy the concept.
+          That callable is direct and not pure. The concept is private
+          because callers use ResultTransformable or ErrorMappable, not the
+          internal classification that establishes those concepts.
         </Text>
         <Table
           headers={["What it proves", "What it does not"]}
           rows={[
-            ["Return is not a Result; object, void, or reference are possible", "No IO"],
+            ["Returns an ordinary value, not a Result", "No IO"],
             ["NonthrowingOperation already held", "No mutation"],
-            ["A prerequisite classification for transform/error-map checks", "Same inputs, same outputs"],
+            ["Usable as a transform or error mapper", "Same inputs, same outputs"],
           ]}
         />
         <CodeBlock>{`PureOperation<Operation>`}</CodeBlock>
@@ -765,73 +740,72 @@ nullary`}</CodeBlock>
     publish_output(target, output);
 }`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>8 public</Mark>
           <H3>NonthrowingOperation&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          The first public gate on a callable. Before we talk about
-          morphisms or boxes, we need a function the compiler can actually
-          see and call. Reflection finds a concrete declaration. The shape
-          is supported: no argument, or one argument. The invocation is
-          noexcept.
+          NonthrowingOperation is the first public admission condition on a
+          callable. The compiler must be able to observe and invoke the
+          function. Reflection finds a concrete declaration. The supported
+          arities are 0 and 1. The invocation is noexcept.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Visible declaration",
-              "Not an overload set, not a template we cannot instantiate. One callable we can inspect.",
+              "Not an overload set and not a template that cannot be instantiated. One inspectable callable.",
             ],
             [
               "Arity 0 or 1",
-              "Either a thunk, or a function of one input. Two-argument callables are for fold steps, later.",
+              "A thunk, or a function of one input. Two-argument callables belong to fold steps.",
             ],
             [
               "noexcept",
-              "The call itself cannot throw. Failure, if any, has to come back as data.",
+              "The call cannot throw. Failure, if any, is returned as data.",
             ],
             [
               "Silent on Result",
-              "int qualifies. Result qualifies. This gate does not care which.",
+              "int qualifies. Result qualifies. The concept does not distinguish them.",
             ],
           ]}
         />
         <Text>
-          Concretely, this is "we can call this without a throw," not "this
-          is a fallible step." A function that returns int can pass. So can
-          one that returns Result. The next concept adds the box.
+          The concept asserts that the callable can be invoked without a
+          throw. It does not assert that the callable is a fallible step.
+          A function that returns int can satisfy it. A function that
+          returns Result can satisfy it. ResultOperation adds the Result
+          requirement.
         </Text>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>9 public</Mark>
           <H3>ResultOperation&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          Now it is a fallible step, and this is the first place the word
-          morphism earns its keep. In ordinary math a morphism is a
-          structure-preserving map from A to B. In C the closest habit is
-          just "a function from A to B." A familiar example is
-          `FILE *fopen(filename, mode)`: the input pair maps to a pointer,
-          with failure represented by a null pointer.
+          A ResultOperation is a fallible step. Morphism is defined here.
+          In ordinary mathematics a morphism is a structure-preserving map
+          from A to B. The corresponding C habit is a function from A to B.
+          fopen has type FILE* fopen(path). The argument is a path. The
+          return is a pointer. Failure is a null pointer, outside the
+          success type.
         </Text>
         <Text>
-          A Result-morphism keeps the failure in the type. It is not A to
-          B. It is A to Result of B. The structure it preserves is the box:
-          a success can be fed to the next step, a failure is already an
-          answer. People also say "arrow" for the same idea. Same picture,
-          shorter word.
+          Definition. A Result-morphism is a function from A to Result of B,
+          not from A to B. Failure belongs to the return type. The
+          structure preserved is the carrier: a success value may be passed
+          to the next step, and a failure is already a complete answer.
+          Arrow denotes the same idea.
         </Text>
         <Table
           headers={["Habit", "Type of the step"]}
           rows={[
-            ["C convention", "A to B at the type level; failure may be encoded by a sentinel, status/errno convention, or out-parameter protocol."],
-            ["C++ exception", "A to B. Failure unwinds. The return type lies on the failure path."],
-            ["Result-morphism", "A to Result of B. Both ways are in the return."],
+            ["C function", "A to B. Failure is null, errno, or a write to an out-parameter."],
+            ["C++ exception", "A to B. Failure unwinds. The return type does not describe the failure path."],
+            ["Result-morphism", "A to Result of B. Success and failure are both in the return type."],
           ]}
         />
         <Table
@@ -839,11 +813,11 @@ nullary`}</CodeBlock>
           rows={[
             [
               "Admitted callable",
-              "NonthrowingOperation already held: visible, arity 0 or 1, noexcept.",
+              "NonthrowingOperation already holds: visible, arity 0 or 1, noexcept.",
             ],
             [
               "Returns a Result",
-              "Reflection sees a std::expected carrier, modeled in Lean as E + V, not a bare B.",
+              "Reflection observes V + E, not a bare B.",
             ],
             [
               "Admissible E",
@@ -851,89 +825,90 @@ nullary`}</CodeBlock>
             ],
             [
               "Domain A",
-              "The input, if any. Nullary means no input: a thunk that still returns a box.",
+              "The input, if any. Nullary denotes no input: a thunk that still returns a Result.",
             ],
           ]}
         />
         <Text>
-          Concretely: this is a function we can see, we can call without
-          throwing, and it returns a `std::expected` carrier whose E meets
-          ResultError. That is the admission decision. Lean starts after this point and treats the
-          callable as an arrow A → Result(B, E). C++ concepts decide who
-          gets in. The proofs assume they already did.
+          A ResultOperation is a visible callable that can be invoked
+          without throwing and that returns V + E for an admissible E.
+          That fact is the admission decision. Lean begins after admission
+          and treats the callable as an arrow A → Result(B, E). C++
+          concepts decide admission. The proofs assume admission already
+          holds.
         </Text>
         <Eq>{`A → Result(B, E)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::SameResultError&lt;Left, Right&gt;</H3>
         </Row>
         <Text>
-          Two fallible steps can only chain or pair if they agree on E.
-          Otherwise "the error" is ambiguous: whose failure is the answer?
-          You cannot put a ParseError and a ResourceError in the same box
-          without first mapping one onto the other.
+          A chain or pair of Result-morphisms is defined only when both
+          steps share one error type E. Distinct error types yield no
+          single result type. ParseError and ResourceError become
+          comparable only after one is mapped onto the other.
         </Text>
         <Table
           headers={["If this holds", "Then"]}
           rows={[
             [
               "Both are ResultOperations, same E",
-              "A chain or a pair has one failure type. The answer is that E.",
+              "The composite has a single failure type E.",
             ],
             [
               "The E types differ",
-              "Rejected. map_error one of them first, or they are not the same route.",
+              "The concept does not hold. Unify E with map_error, or treat the steps as incomparable.",
             ],
           ]}
         />
         <Text>
-          Formerly public. It is only one clause inside stronger names, so
-          ordinary callers never write it.
+          Formerly public. The predicate is now a clause of stronger
+          concepts and is not written at call sites.
         </Text>
         <CodeBlock>{`SameResultError<Left, Right>`}</CodeBlock>
         <Eq>{`E_left = E_right`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>10 public</Mark>
           <H3>KleisliComposable&lt;Left, Right&gt;</H3>
         </Row>
         <Text>
-          Ordinary composition is the C habit you already have. If f returns
-          exactly what g wants, then g(f(x)) is a function. The types line
-          up on the nose: B out of f, B into g. That is it.
+          Ordinary function composition is defined when the codomain of f
+          equals the domain of g. If f : A → B and g : B → C, then the
+          composite is the function x ↦ g(f(x)). The intermediate type
+          matches on the nose.
         </Text>
         <Text>
-          A Result-morphism does not return B. It returns a box that might
-          hold B. g cannot take the box. g wants the thing inside. So the
-          usual g(f(x)) is a type error, and should be. You need a different
-          composition: open the box, and only then call g.
+          A Result-morphism does not return B. It returns Result(B, E).
+          Ordinary composition g(f(x)) is therefore ill-typed. g expects
+          B, not the box. Kleisli composition is the composition of arrows
+          into a monad, named for Heinrich Kleisli. For Result it is
+          defined as follows.
         </Text>
         <Text>
-          That composition is called Kleisli composition, after Heinrich
-          Kleisli. You do not need the history. You need the rule. If f
-          succeeded, feed that B into g. If f failed, skip g and that
-          error is the answer. Same error type on both steps, or there is
-          no single answer type.
+          Given f : A → Result(B, E) and g : B → Result(C, E), the
+          Kleisli composite has type A → Result(C, E). On success of f
+          the value B is passed to g. On failure of f, g is not applied
+          and that error is the result. Both steps must share E, or the
+          composite has no single result type.
         </Text>
         <Table
           headers={["Habit", "What composition does"]}
           rows={[
             [
               "Ordinary compose",
-              "g(f(x)). f must return exactly g's input. No box.",
+              "g(f(x)). The codomain of f equals the domain of g. No Result box.",
             ],
             [
               "Kleisli compose",
-              "If f(x) is success b, run g(b). If f(x) is failure e, return e. g never sees e.",
+              "If f(x) is success b, evaluate g(b). If f(x) is failure e, return e. g is not applied to e.",
             ],
             [
               "Pair, later",
-              "Both read x. Not a chain. The second step does not need the first success.",
+              "Both arrows read the same input. Not sequential. The second step does not consume the first success.",
             ],
           ]}
         />
@@ -942,86 +917,79 @@ nullary`}</CodeBlock>
           rows={[
             [
               "Matching intermediate",
-              "f's success type is g's input type. You cannot cook a Texture into a function that wanted a Scene.",
+              "The success type of f equals the input type of g.",
             ],
             [
               "Same error",
-              "SameResultError. One E for the whole chain.",
+              "SameResultError. The chain has one E.",
             ],
             [
               "Nullary discipline",
-              "A no-argument step can follow only a void success. You cannot feed a Texture into a thunk.",
+              "A nullary step may follow only a void success.",
             ],
             [
               "Left unit",
-              "Lean proves that composing its semantic identity before g leaves the extensional arrow unchanged.",
+              "The success-wrapping identity, then g, equals g.",
             ],
             [
               "Right unit",
-              "Lean proves that composing the semantic identity after f leaves the extensional arrow unchanged.",
+              "f, then the success-wrapping identity, equals f.",
             ],
             [
               "Associativity",
-              "Lean proves extensional associativity of admitted Result arrows; it does not inspect arbitrary C++ construction side effects.",
+              "(f then g) then h equals f then (g then h).",
             ],
             [
               "Failure short-circuit",
-              "The first error is the result. Later steps do not run.",
+              "The first failure is the result. Subsequent steps are not applied.",
             ],
           ]}
         />
         <Text>
-          The C++ concept checks shape and type compatibility. The unit and
-          associativity rows above are theorems of the extensional Lean model,
-          not dynamic tests of arbitrary C++ callable objects.
-        </Text>
-        <Text>
-          Concretely, if this concept holds, `.and_then` is legal. The
-          compiler rejects a broken chain before anything executes. You
-          write parse.and_then(cook).and_then(realize) and the types have
-          to line up the way g(f(x)) would, except through the box.
+          When the concept holds, `.and_then` is well-typed. A broken
+          chain is rejected at compile time. A sequence such as
+          parse.and_then(cook).and_then(realize) is ordinary composition
+          through the Result box rather than through B.
         </Text>
         <Eq>{`f : A → Result(B, E)
 g : B → Result(C, E)
 g ★ f : A → Result(C, E)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>11 public</Mark>
           <H3>ResultTransformable&lt;Operation, Mapper&gt;</H3>
         </Row>
         <Text>
-          Map is the other everyday FP word, and it is older than Kleisli
-          in most programmers' hands. You have a container. You have a
-          function on the element. You want the same container, with the
-          function applied inside. Arrays: map double over [1, 2, 3] and
-          you still have an array, now [2, 4, 6]. Optional: map over a
-          present value, or do nothing if it is empty. The shape of the
-          box does not change.
+          Map is the functor action on a container. Given a container of
+          elements of type B and a function m : B → C, map produces a
+          container of the same shape whose elements are the images under
+          m. For an array, length is preserved and each slot is replaced.
+          For Optional, a present value is rewritten and an empty value
+          is left unchanged. The shape of the box is invariant.
         </Text>
         <Text>
-          Result is a box with two sides. Mapping the success side means:
-          if the box holds B, write C = m(B) and keep the same error type.
-          If the box holds E, leave it alone. m never sees a failure. m
-          itself returns an ordinary C, not a Result. That is the
-          difference from Kleisli. Kleisli's next step can fail. A map
-          step cannot introduce a new failure. It can only rewrite the
-          value that was already there.
+          Result is a two-sided box. Mapping the success side is defined
+          as follows. If the box holds B, replace it by C = m(B) and
+          retain E. If the box holds E, leave it unchanged. m is never
+          applied to a failure. m returns an ordinary C, not a Result.
+          That is the distinction from Kleisli composition. The next
+          Kleisli step may fail, while a map step cannot introduce a new
+          failure. It rewrites a success that is already present.
         </Text>
         <Text>
-          Mappable, here, means "this operation plus this mapper is a
-          legal map." ResultTransformable is that ticket for the success
-          side. The spelling stays because `.transform()` is the method,
-          and map would collide with map_error and with every other map
-          in C++.
+          ResultTransformable holds when an operation together with a
+          mapper forms a legal success-side map. The identifier
+          transform is used because the method is `.transform()`, and
+          map would collide with map_error and with other map names in
+          C++.
         </Text>
         <Table
           headers={["Habit", "What map does"]}
           rows={[
-            ["Array map", "Same length. Each slot replaced. Still an array."],
-            ["Result transform", "Same box. Success rewritten. Failure untouched. Still a Result of the same E."],
-            ["Kleisli and_then", "Next step returns a Result. It can fail. Not a map."],
+            ["Array map", "Length preserved. Each element replaced. The result is still an array."],
+            ["Result transform", "Box preserved. Success rewritten. Failure left unchanged. The result is still a Result of the same E."],
+            ["Kleisli and_then", "The next step returns a Result and may fail. Not a map."],
           ]}
         />
         <Table
@@ -1029,102 +997,103 @@ g ★ f : A → Result(C, E)`}</Eq>
           rows={[
             [
               "Mapper is direct",
-              "For non-void B, m : B to C; for void success it may be nullary. Its return is not a Result, and it may still mutate the world.",
+              "m : B to C, ordinary return. DirectOperation, not a Result. The mapper may still mutate the world.",
             ],
             [
               "Error preserved",
-              "E does not change. A failed parse is still that parse error.",
+              "E is unchanged. A failed parse remains that parse error.",
             ],
             [
               "Identity",
-              "Lean proves that mapping the identity function preserves the extensional Result arrow.",
+              "Mapping by the identity function leaves the Result unchanged.",
             ],
             [
               "Fusion",
-              "Lean proves extensional equivalence to map (g after f). The C++ API still builds two composition nodes unless optimization removes them.",
+              "map f, then map g, equals map (g after f).",
             ],
           ]}
         />
         <Text>
-          Concretely: you already have a Result of a Scene, and you want
-          to publish it or wrap it or pick a field. `.transform(publish)`
-          is legal when this concept holds. publish can write GPU state.
-          That is still a map. Direct, not pure.
+          When the concept holds, `.transform(publish)` is well-typed on a
+          Result of Scene. publish may write GPU state. The step remains a
+          map: direct, not pure.
         </Text>
         <Eq>{`f : A → Result(B, E)
 m : B → C
 map(m, f) : A → Result(C, E)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>12 public</Mark>
           <H3>ErrorMappable&lt;Operation, Mapper&gt;</H3>
         </Row>
         <Text>
-          Same map idea, other side of the box. The container is still a
-          Result. The function now runs on E, not on B. A successful B is
-          left alone. A failure is rewritten to a new failure type F.
+          Error-side map is the same functor action on the other summand.
+          The container remains a Result. The function is applied to E,
+          not to B. A successful B is left unchanged. A failure is
+          rewritten to a new failure type F.
         </Text>
         <Text>
-          This is how vocabularies meet. A parser speaks ParseError. The
-          resource manager speaks ResourceError. You do not want the
-          manager to import the parser's private enum. You map the error
-          at the boundary. The scene, if it parsed, is untouched.
+          This is the boundary map between error vocabularies. A parser
+          produces ParseError. A resource manager produces ResourceError.
+          Mapping E to F at the boundary leaves a successful scene
+          unchanged and does not require the manager to import the
+          parser's error type.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Mapper is direct",
-              "m : E to F. Ordinary return. The new F must itself be ResultError.",
+              "m : E to F. Ordinary return. F itself must be ResultError.",
             ],
             [
               "Success preserved",
-              "A good B is still that B. You did not rerun the parser.",
+              "A successful B is unchanged. The producer is not rerun.",
             ],
             [
               "Identity",
-              "Lean proves that mapping error identity preserves the extensional Result arrow.",
+              "Mapping errors by the identity function leaves the Result unchanged.",
             ],
             [
               "Fusion",
-              "Lean proves extensional equivalence to one composed error mapper; the C++ surface does not promise physical node fusion.",
+              "map_error f, then map_error g, equals map_error (g after f).",
             ],
           ]}
         />
         <Text>
-          Concretely: `.map_error(to_resource_error)` is legal when this
-          holds. You are changing the failure type of the whole arrow, not
-          patching a string onto errno.
+          When the concept holds, `.map_error(to_resource_error)` is
+          well-typed. The failure type of the whole arrow changes. The
+          operation is not a string patch onto errno.
         </Text>
         <Eq>{`f : A → Result(B, E)
 m : E → F
 mapError(m, f) : A → Result(B, F)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>13 public</Mark>
           <H3>KleisliPairable&lt;Left, Right&gt;</H3>
         </Row>
         <Text>
-          Kleisli composition is a chain: the second step needs the first
-          step's success. Pair is the other way two Result-morphisms meet.
-          Both read the same input. A file header. A shared witness. A
-          blob of bytes. They produce two answers, or one error.
+          Kleisli composition is sequential: the second step consumes the
+          success of the first. Pair is the other binary combination of
+          Result-morphisms. Both arrows read one shared input W, a file
+          header, a shared witness, or a byte span, and produce either a
+          product of values or a single error.
         </Text>
         <Text>
-          The "Kleisli" in the name is there because both sides are still
-          fallible arrows, same E, and failure is still data. It is not
-          there because pair is a chain. It is not. Right does not receive
-          left's Texture. Right receives the same W left received.
+          The qualifier Kleisli records that both sides remain fallible
+          arrows with a common E, and that failure remains data. It does
+          not record sequencing. Pair is not a chain. The right arrow
+          does not receive the left success. It receives the same W that
+          the left arrow received.
         </Text>
         <Table
           headers={["Machine", "Data flow"]}
           rows={[
-            ["and_then", "x to f, success of f to g. Sequential."],
-            ["pair", "x to f, and the same x to g. Independent reads, fail-fast."],
+            ["and_then", "x to f, then the success of f to g. Sequential."],
+            ["pair", "x to f and the same x to g. Independent reads. Fail-fast on the left error."],
             ["transform", "x to f, then a direct function on the success. No second Result."],
           ]}
         />
@@ -1133,7 +1102,7 @@ mapError(m, f) : A → Result(B, F)`}</Eq>
           rows={[
             [
               "Shared domain",
-              "Same input type W, or both nullary. That shared W is part of the constraint.",
+              "The input type is a shared W, or both arrows are nullary. That W is part of the constraint.",
             ],
             [
               "Same error",
@@ -1141,63 +1110,63 @@ mapError(m, f) : A → Result(B, F)`}</Eq>
             ],
             [
               "Left first",
-              "If left fails, right does not run. If both would fail, you see the left error.",
+              "If left fails, right is not applied. If both would fail, the result is the left error.",
             ],
             [
               "Product of values",
-              "Success is a pair (A, B), not a Boolean. Both answers are kept.",
+              "Success is a pair (A, B), not a Boolean. Both values are retained.",
             ],
             [
               "Object successes",
-              "A and B are real objects, not void. There has to be something to pair.",
+              "A and B are object types, not void. A pair requires two values.",
             ],
           ]}
         />
         <Text>
-          Concretely, if this holds, `pair` is legal. read_width and
-          read_height both look at the header. Width missing means height
-          is not read.
+          When the concept holds, `pair` is well-typed. read_width and
+          read_height both inspect the header. A missing width means
+          height is not read.
         </Text>
         <Eq>{`f : W → Result(A, E)
 g : W → Result(B, E)
 W → Result(A × B, E)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>14 public</Mark>
           <H3>FoldStep&lt;Step, State, Item&gt;</H3>
         </Row>
         <Text>
-          Fold is the loop you have written a hundred times. You have a
-          list. You have a running value, the accumulator. For each item
-          you write accumulator = step(accumulator, item). At the end you
-          have one value. Sum is a fold. Product is a fold. "Are any of
-          these true?" is a fold. C# Aggregate, Python functools.reduce,
-          Haskell foldl: same machine, different spelling.
+          A fold consumes a sequence and a binary step and produces one
+          value. The step takes the current accumulator and the next item
+          and returns the next accumulator. After the last item, that
+          accumulator is the result. Sum is a fold. Product is a fold. A
+          predicate that asks whether any element is true is a fold. C#
+          Aggregate, Python functools.reduce, and Haskell foldl are the
+          same operator under different names.
         </Text>
         <Text>
-          A scan is the same loop, except you keep every intermediate
-          accumulator, not just the last one. Inclusive left scan: start
-          from a seed, write the state after item 1, after item 2, after
-          item 3. The seed itself is not in the output. C++
-          std::inclusive_scan is the cousin. A running total of gold over
-          a list of loot drops is a scan. The final total is the fold of
-          the same step.
+          A scan applies the same step and retains every intermediate
+          accumulator, not only the last. An inclusive left scan starts
+          from a seed and writes the state after item 1, after item 2,
+          after item 3. The seed itself is not written. C++
+          std::inclusive_scan has the same shape. A running gold total
+          over loot drops is a scan. The final total is the fold of that
+          same step.
         </Text>
         <Text>
-          compose.h does not give you a general-purpose fold. It gives you
-          `.scan_into()`, later, and that scan needs a step function.
-          FoldStep is that step: state and item in, new state out. No
-          Result. No throw. The name stays because it describes the role.
-          It does not pretend the header already grew a reduce.
+          compose.h does not provide a general-purpose fold. It provides
+          `.scan_into()`, defined later. That scan requires a step
+          function. FoldStep is that step: state and item in, new state
+          out. No Result. No throw. The name records the role. The header
+          does not grow a reduce around it.
         </Text>
         <Table
-          headers={["Machine", "What you keep"]}
+          headers={["Machine", "What is retained"]}
           rows={[
-            ["Fold / reduce", "One final accumulator. The loop's last state."],
+            ["Fold / reduce", "One final accumulator. The last state of the walk."],
             ["Scan", "Every intermediate accumulator, in order."],
-            ["FoldStep", "Just the loop body. Not the loop."],
+            ["FoldStep", "The loop body only. Not the walk itself."],
           ]}
         />
         <Table
@@ -1217,44 +1186,43 @@ W → Result(A × B, E)`}</Eq>
             ],
             [
               "noexcept",
-              "The loop body is not allowed to throw. Failure, if you want it, is the next concept.",
+              "The loop body is not allowed to throw. A fallible step is the next concept.",
             ],
           ]}
         />
         <Text>
-          Concretely: a noexcept function that takes a Total and a Drop
-          and returns their gold sum is a FoldStep if the types line up.
-          You still need scan_into to run it over a range. This concept
-          only admits the body.
+          Concretely, a noexcept function that takes a Total and a Drop
+          and returns their gold sum is a FoldStep when the types line
+          up. scan_into is what walks a range with that body. This
+          concept admits the body only.
         </Text>
         <Eq>{`State × Item → State`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>15 public</Mark>
           <H3>KleisliFoldStep&lt;Step, State, Item, Error&gt;</H3>
         </Row>
         <Text>
-          Same loop body, now a Result-morphism on the pair (state, item).
-          The running state can fail to advance. First error stops the
-          scan. That is Kleisli in the small: the next iteration only runs
-          if this one succeeded.
+          The same loop body, now a Result-morphism on the pair (state,
+          item). The running state may fail to advance. The first error
+          stops the scan. That is Kleisli in the small: the next
+          iteration runs only when this one succeeded.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Fallible step",
-              "(state, item) to Result of state. Its Error is the concept's Error template argument; Scannable supplies the source operation's Error.",
+              "(state, item) to Result of state. Same E as the scan's source.",
             ],
             [
               "Short-circuit",
               "First error ends the walk. Later items are not visited.",
             ],
             [
-              "Caller-buffer state",
-              "States written before failure remain in the caller buffer, but the error result does not report the written count.",
+              "Prefix remains",
+              "States already written stay written. A failed scan remains observable.",
             ],
             [
               "Still not a fold",
@@ -1263,32 +1231,30 @@ W → Result(A × B, E)`}</Eq>
           ]}
         />
         <Text>
-          Concretely: a step that parses the next record into the running
+          Concretely, a step that parses the next record into the running
           builder, or returns truncated, is a KleisliFoldStep. The scan
-          stops at the bad record. Earlier writes remain in the caller-owned
-          buffer; identifying the exact prefix requires separate progress
-          tracking.
+          stops at the bad record. Records already written remain
+          visible.
         </Text>
         <Eq>{`State × Item → Result(State, Error)`}</Eq>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>16 public</Mark>
           <H3>ScanRange&lt;Range&gt;</H3>
         </Row>
         <Text>
-          A fold in the abstract can walk any sequence: a linked list, an
-          input iterator, a generator. This header does not. ScanRange is
-          the concrete contract `.scan_into()` needs, because the
-          implementation is a pointer and a count.
+          An abstract fold may walk any sequence: a linked list, an input
+          iterator, a generator. This header does not. ScanRange is the
+          contract `.scan_into()` requires. The implementation is a
+          pointer and a count.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
-              "Object type",
-              "Range must be an object type. This does not itself impose an lvalue lifetime; the source Result owns its successful Range object.",
+              "Real object",
+              "The range is stored. A temporary expression that cannot be named is rejected.",
             ],
             [
               "Contiguous",
@@ -1305,109 +1271,100 @@ W → Result(A × B, E)`}</Eq>
           ]}
         />
         <Text>
-          Concretely: a `std::span`, `std::vector`, or `std::array`.
-          Not a `std::list`. Not an input stream. If you need those, you are in a
-          different loop, and this concept will say so.
+          Concretely, a std::span, a std::vector, or a C array. Not a
+          std::list. Not an input stream. Those sequences require a
+          different walk. This concept rejects them.
         </Text>
       </Stack>
-
       <Divider />
-
       <H2>The function value</H2>
       <Text>
-        So far the names have been tickets and laws. Function is the thing
-        you actually hold. A statically typed callable object. You build it,
-        you compose it, you call it later. ResultMorphism is the same
-        object, named as the arrow we just defined.
+        The preceding names were tickets and laws. Function is the
+        statically typed callable object those laws admit. It is
+        constructed, composed, and invoked later. ResultMorphism is that
+        same object, named as the arrow defined above.
       </Text>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>17 public</Mark>
           <H3>Function&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          The concrete C++ object is a statically typed callable wrapper.
-          It stores Operation as a `[[no_unique_address]]` member. An empty
-          Operation may add no distinct member storage in a larger layout,
-          but every standalone C++ object, including Function, has nonzero
-          `sizeof`. Function itself adds no type-erasure or virtual-dispatch
-          layer. Whether Operation performs virtual dispatch is a property of
-          Operation itself; inlining remains an optimizer decision.
+          The concrete C++ object. The C analogue is a function pointer.
+          The wrapper may be empty. A reflected callable with no captures
+          is stored with `[[no_unique_address]]`. After inlining there is
+          no payload. The call is the underlying call.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Statically typed",
-              "The Operation is in the type. Function adds no type-erasure or virtual-dispatch layer.",
+              "The Operation is in the type. No void*, no type erasure, no vtable.",
             ],
             [
               "Empty-friendly",
-              "A lifted operation is empty; [[no_unique_address]] may remove member overhead. A standalone Function still has nonzero sizeof, and capturing lambdas retain capture state subject to ABI padding.",
+              "A lift of a named function can be zero bytes. A capturing lambda is as big as its captures.",
             ],
             [
               "Private storage",
-              "You do not brace-initialize one by hand. lift, function, pair, and the composition methods are the public doors.",
+              "Brace-initialization by hand is not part of the API. lift, function, and the composition methods construct it.",
             ],
             [
               "Nothrow store",
-              "Construction from the supplied operation and the stored operation's move construction must both be noexcept.",
+              "Moving the operation into the Function cannot throw. Same rule as ResultError, now for the callable.",
             ],
           ]}
         />
         <Text>
-          Concretely: `ano::Function&lt;ParseOperation&gt;` is a value you
-          can pass around and call, and it can be `constexpr` when Operation
-          and its construction permit constant evaluation. The constraints
-          were checked when it was built.
+          Concretely, `ano::Function&lt;ParseOperation&gt;` is a value
+          that may live in a constexpr variable, be passed, and be
+          called. The constraints were checked at construction.
         </Text>
         <CodeBlock>{`ano::Function<ParseOperation>`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>18 public</Mark>
           <H3>ResultMorphism&lt;Operation&gt;</H3>
         </Row>
         <Text>
-          Two names, one object. Function is the struct in memory, the way
-          FILE* is a pointer. ResultMorphism is the role: this value is an
-          admitted fallible arrow A → Result(B, E). Same distinction as
-          "this FILE*" versus "this is the handle I read with."
+          Two names, one object. Function is the struct in memory, as
+          FILE* is a pointer. ResultMorphism is the role: the value is an
+          admitted fallible arrow A → Result(B, E). The distinction is
+          the same as "this FILE*" versus "this is the handle used for
+          reads."
         </Text>
         <Text>
-          We introduced morphism at ResultOperation as a property of a
+          Morphism was introduced at ResultOperation as a property of a
           callable. Here it is a type alias, so prose and proofs can say
-          morphism without pretending the C++ value is something other than
+          morphism without treating the C++ value as anything other than
           Function. If Operation is a ResultOperation, the Function is a
-          ResultMorphism. If it is only a DirectOperation, you still have a
-          Function, but you should not call it a Result-morphism. There is
-          no box.
+          ResultMorphism. If it is only a DirectOperation, the value is
+          still a Function, and is not a Result-morphism. There is no
+          box.
         </Text>
         <Table
-          headers={["Name", "What it is pointing at"]}
+          headers={["Name", "What it names"]}
           rows={[
             ["Function", "The C++ object. Storage, call operator, methods."],
             ["ResultMorphism", "That object, viewed as an arrow into a Result."],
             ["ResultOperation", "The concept that admitted the underlying callable."],
           ]}
         />
-        <CodeBlock>{`template<ResultOperation Operation>
+        <CodeBlock>{`template<class Operation>
 using ResultMorphism = Function<Operation>;`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>19 public</Mark>
           <H3>Invocation</H3>
         </Row>
         <Text>
-          You call it. That is the whole point of holding a Function as a
-          value. Zero arguments, or one input. The return is the exact
-          reflected Return type; for a ResultMorphism, that Return is the
-          Result carrier. If the Function was a chain, this is when the chain
-          runs.
+          Invocation applies the held morphism. The form is zero
+          arguments, or one input. The return is the exact reflected
+          Result, not a decayed status code and not a thrown exception.
+          If the Function was a chain, this is when that chain runs.
         </Text>
         <Table
           headers={["Form", "When"]}
@@ -1417,15 +1374,13 @@ using ResultMorphism = Function<Operation>;`}</CodeBlock>
           ]}
         />
         <Text>
-          Concretely: `load_scene(bytes)` is ordinary C++ call syntax. The
-          C++ constraints were checked at compile time; the Lean laws were
-          proved separately. The wrapped work runs now.
+          Concretely, `load_scene(bytes)` is ordinary C++ call syntax. The
+          algebra ran at compile time. The work runs now.
         </Text>
-        <CodeBlock>{`auto result = load_scene(bytes);`}</CodeBlock>
+        <CodeBlock>{`auto result = parse_file(bytes);`}</CodeBlock>
         <CodeBlock>{`operation()
 operation(input)`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>20 public</Mark>
@@ -1433,19 +1388,17 @@ operation(input)`}</CodeBlock>
         </Row>
         <Text>
           This is Kleisli composition as a method. C++ already spells it
-          `and_then` on `std::expected`. You attach the next fallible
-          step. The wrapped operations are not invoked while the chain is
-          built, although storing, copying, or moving callable objects can
-          still run their constructors. The compiler checks
-          KleisliComposable. You get a new Function. Call
-          it later, and the route executes.
+          `and_then` on `std::expected`. The next fallible step is
+          attached. Nothing runs while the value is being declared. The
+          compiler checks KleisliComposable. The result is a new Function.
+          Invocation later is what executes the route.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Declaration is construction",
-              "The chain is a value. Wrapped operations are not invoked at assignment; callable construction itself is not required to be pure.",
+              "The chain is a value. No I/O happens at the assignment.",
             ],
             [
               "Short-circuit",
@@ -1453,18 +1406,19 @@ operation(input)`}</CodeBlock>
             ],
             [
               "Associativity",
-              "Lean proves extensional associativity. The C++ object type and construction/storage layout can differ with grouping.",
+              "Three and_then calls in a row are one route. Parentheses do not change the work.",
             ],
             [
               "New Function",
-              "The result is another morphism, not a Result. You still have to call it.",
+              "The result is another morphism, not a Result. Invocation is a separate step.",
             ],
           ]}
         />
         <Text>
-          Concretely: parse fails, cook never sees the bytes. cook fails,
-          realize never sees the scene. You do not write the
-          `if (!r) return r;` ladder. The method is that ladder, checked.
+          Concretely, if parse fails, cook never sees the bytes. If cook
+          fails, realize never sees the scene. The `if (!r) return r;`
+          ladder is not written by hand. The method is that checked
+          ladder.
         </Text>
         <CodeBlock>{`inline constexpr auto load_scene =
     ano::lift<^^parse_glb>
@@ -1473,7 +1427,6 @@ operation(input)`}</CodeBlock>
         .and_then(realize_scene);`}</CodeBlock>
         <CodeBlock>{`auto scene = load_scene(bytes);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>21 public</Mark>
@@ -1481,9 +1434,9 @@ operation(input)`}</CodeBlock>
         </Row>
         <Text>
           This is success-map as a method. The name matches
-          `std::expected::transform` on purpose. You already met the
-          concept as ResultTransformable. The method is what you write
-          when that concept holds.
+          `std::expected::transform` on purpose. The corresponding
+          concept is ResultTransformable. The method is the operation
+          that concept admits.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1502,7 +1455,7 @@ operation(input)`}</CodeBlock>
             ],
             [
               "New Function",
-              "Again a morphism. Call it to run.",
+              "Again a morphism. Invocation is what runs it.",
             ],
           ]}
         />
@@ -1510,15 +1463,15 @@ operation(input)`}</CodeBlock>
         <CodeBlock>{`auto published =
     prepare_scene.transform(publish_scene);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>22 public</Mark>
           <H3>.map_error(mapper)</H3>
         </Row>
         <Text>
-          This is error-map as a method. The concept was ErrorMappable.
-          The method is the boundary between two error vocabularies.
+          This is error-map as a method. The corresponding concept is
+          ErrorMappable. The method is the boundary between two error
+          vocabularies.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1533,7 +1486,7 @@ operation(input)`}</CodeBlock>
             ],
             [
               "Identity and fusion",
-              "Lean proves identity and fusion extensionally; the C++ API does not promise that two stored nodes become one.",
+              "Do-nothing mapper is a no-op. Two maps fuse into one.",
             ],
           ]}
         />
@@ -1541,18 +1494,15 @@ operation(input)`}</CodeBlock>
         <CodeBlock>{`auto resource_route =
     parse_route.map_error(to_resource_error);`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>23 public</Mark>
           <H3>.scan_into(initial, step, output)</H3>
         </Row>
         <Text>
-          This attaches the loop to a source Function. FoldStep and
-          KleisliFoldStep describe the body, and ScanRange constrains the
-          source value. `scan_into` stores the seed, step, and output span in
-          a new Function; no source traversal occurs until that Function is
-          invoked.
+          This is the loop. FoldStep and KleisliFoldStep were the body.
+          ScanRange was the source. scan_into is the walk: bounded, seeded,
+          inclusive, left to right, into a caller-owned buffer.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1570,12 +1520,8 @@ operation(input)`}</CodeBlock>
               "Stops at min(source length, output capacity). No unbounded walk.",
             ],
             [
-              "Fallible buffer state",
-              "A failing step stops the walk and prior writes remain in the caller buffer, but the error return does not report the written count or a prefix span.",
-            ],
-            [
-              "Stored span lifetime",
-              "The Function stores a std::span by value. Its backing buffer must outlive the later invocation.",
+              "Fallible prefix",
+              "A failing step stops the walk. Already written slots stay. The written prefix shows how far the walk reached.",
             ],
             [
               "Not fold",
@@ -1584,123 +1530,114 @@ operation(input)`}</CodeBlock>
           ]}
         />
         <Text>
-          At invocation, the source operation runs first. With either step
-          kind, the resulting Function returns
-          `Result&lt;std::span&lt;State&gt;, Error&gt;`: a direct FoldStep produces
-          a span that `transform` rewraps, while a KleisliFoldStep already
-          produces the Result consumed by `and_then`.
+          Concretely, the call takes a seed, a step, and a span, and fills
+          the span. If the step is a KleisliFoldStep, the return is a
+          Result of that span. If the step is a FoldStep, the return is
+          the span.
         </Text>
         <CodeBlock>{`input = [x₁, x₂, x₃]
 seed  = s₀`}</CodeBlock>
         <CodeBlock>{`s₁ = step(s₀, x₁)
 s₂ = step(s₁, x₂)
 s₃ = step(s₂, x₃)
-
 output = [s₁, s₂, s₃]`}</CodeBlock>
       </Stack>
-
       <Divider />
-
       <H2>Construction and products</H2>
       <Text>
-        Two ways in. lift wraps a named declaration you can reflect.
-        function wraps an object or a lambda you already have. pair is how
-        independent checks share one input. The deleted names are the ones
-        that lied about which of those they were.
+        A Function is constructed in one of two ways. lift wraps a named
+        declaration that reflection can recover. function wraps a callable
+        object or lambda that already exists. pair applies independent
+        fallible operations to one shared input. Two deleted names formerly
+        misidentified those roles.
       </Text>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
           <H3>detail::Lifted&lt;Declaration&gt;</H3>
         </Row>
         <Text>
-          Formerly public. It is the generated empty callable that splices a
-          reflected declaration back into ordinary compiled code. Its call
-          operator directly invokes `parse_glb(bytes)` without dynamic
-          dispatch; whether that call is inlined is an optimizer decision.
-          Users never need to name Lifted. They name `lift`.
+          Formerly public. Lifted is the generated empty callable that
+          splices a reflected declaration into ordinary compiled code.
+          After optimization the call is `parse_glb(bytes)`. Callers write
+          `lift`. They do not name Lifted.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Empty callable",
-              "No captures. The operation is empty; [[no_unique_address]] may remove member overhead, but a standalone Function still has nonzero sizeof.",
+              "No captures. no_unique_address. The Function wrapping it can be zero bytes.",
             ],
             [
               "Splice, not dispatch",
-              "The call becomes a direct call to the named function. Not a table lookup.",
+              "The call becomes a direct call to the named function, not a table lookup.",
             ],
             [
               "Private on purpose",
-              "The public story is lift. Naming Lifted invited tests of the wrapper.",
+              "The public constructor is lift. Lifted is an implementation detail.",
             ],
           ]}
         />
         <CodeBlock>{`Lifted<Declaration>`}</CodeBlock>
         <CodeBlock>{`ano::lift<^^parse_glb>`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>24 public</Mark>
           <H3>lift&lt;^^declaration&gt;</H3>
         </Row>
         <Text>
-          Take a named function the compiler can see and turn it into a
-          Function containing an empty lifted callable. It is a
-          ResultMorphism when the reflected return carrier's error satisfies
-          ResultError. The `^^` is reflection: "the declaration named
-          parse_glb," not a string and not a function pointer. The compiler
-          checks the reflected shape at compile time.
+          lift constructs a zero-storage ResultMorphism from a named
+          function whose declaration reflection can recover. The `^^`
+          operator denotes that declaration, not a string and not a
+          function pointer. The compiler checks admission of the
+          declaration at compile time.
         </Text>
         <Table
           headers={["Property", "In English"]}
           rows={[
             [
               "Named only",
-              "A declaration the compiler can reflect. Not a lambda. That is function(), next.",
+              "A declaration recoverable by reflection. A lambda is constructed with function().",
             ],
             [
               "Admitted",
-              "Reflected function, noexcept, arity 0 or 1, and a std::expected return. ResultError is checked only when ResultOperation/ResultMorphism is required.",
+              "Fallible, noexcept, arity 0 or 1. Same gates as ResultOperation.",
             ],
             [
-              "Empty operation",
-              "The lifted operation is empty. The standalone Function is still nonzero-sized; its direct call may inline to parse_glb.",
+              "Zero storage",
+              "The resulting Function can be empty. After inlining it is parse_glb.",
             ],
             [
               "Name stays",
-              "lift does not collide here. It means: pick this declaration up into the Function world.",
+              "The name denotes recovery of a declaration into a Function.",
             ],
           ]}
         />
         <Text>
-          Concretely: `ano::lift&lt;^^parse_glb&gt;` is a constexpr Function.
-          It can be chained as a ResultMorphism when `parse_glb`'s error type
-          meets ResultError. You never construct Lifted yourself.
+          `ano::lift&lt;^^parse_glb&gt;` is a constexpr morphism that may
+          be chained. Lifted is not constructed at the call site.
         </Text>
         <CodeBlock>{`inline constexpr auto parse =
     ano::lift<^^parse_glb>;`}</CodeBlock>
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>25 public</Mark>
           <H3>function(operation)</H3>
         </Row>
         <Text>
-          The other door. lift needs a name the compiler can reflect. A
-          lambda has no such name. An object that captures `target` has no
-          such name. function stores that object inside a Function, under
-          the same nothrow storage rules.
+          function constructs a Function from a callable that has no
+          reflectable name, including a lambda or an object that captures
+          `target`. The object is stored inside a Function under the same
+          nothrow storage rule.
         </Text>
         <Table
-          headers={["Door", "What you have"]}
+          headers={["Constructor", "Argument"]}
           rows={[
-            ["lift", "A named declaration. Empty lifted callable; direct spliced call."],
-            ["function", "A value: lambda, functor, or other admitted callable object. May capture."],
+            ["lift", "A named declaration. Zero storage. Spliced call."],
+            ["function", "A value: lambda, functor, already-built Function. May capture."],
           ]}
         />
         <Table
@@ -1708,15 +1645,15 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           rows={[
             [
               "Nothrow store",
-              "Construction from the supplied value and the stored operation's move construction must both be noexcept.",
+              "Moving the operation in cannot throw.",
             ],
             [
               "Admitted callable",
-              "NonthrowingOperation at least. ResultOperation if you want a ResultMorphism.",
+              "NonthrowingOperation is required. ResultOperation is required for a ResultMorphism.",
             ],
             [
               "Not composition",
-              "One operation in, one Function out. and_then is how you compose.",
+              "One operation in, one Function out. Composition is and_then.",
             ],
           ]}
         />
@@ -1725,29 +1662,27 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
         return publish_scene(scene, target);
     });`}</CodeBlock>
       </Stack>
-
-      <Callout tone="warning" title="Retired in this snapshot: unary compose(operation)">
-        Before removal, this unary wrapper only forwarded to
-        function(operation); it did not compose two functions. At 26cec0f5
-        the name is absent. Use function for one operation and and_then for a
-        Result chain.
+      <Callout tone="warning" title="Deleted: unary compose(operation)">
+        The unary form does not compose. It forwards to function(operation).
+        The name compose denotes composition of two functions. A unary
+        wrapper is not that operation. Construct a single callable with
+        function. Compose two fallible steps with and_then.
       </Callout>
-      <CodeBlock>{`/* removed */ ano::compose(operation)`}</CodeBlock>
+      <CodeBlock>{`ano::compose(operation)`}</CodeBlock>
       <CodeBlock>{`ano::function(operation)`}</CodeBlock>
       <CodeBlock>{`ano::function(operation).and_then(next)`}</CodeBlock>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>26 public</Mark>
           <H3>pair(left, right, ...)</H3>
         </Row>
         <Text>
-          This is KleisliPairable as a function. Two fallible checks, one
-          shared witness. read_width and read_height both look at the same
-          header. Left runs first. If width is missing, height is not
-          read, and you get the width error. If both succeed you get both
-          numbers. That is a product of answers, not a Boolean "did
-          everything pass?"
+          pair is the function form of KleisliPairable. Two fallible
+          operations share one input. read_width and read_height both
+          inspect the same header. The left operation runs first. If
+          width is absent, height is not read and the result is the width
+          error. If both succeed, the result is both values. The success
+          inhabitant is a product, not a Boolean conjunction.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1762,15 +1697,15 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
             ],
             [
               "Product, not predicate",
-              "Success is (A, B). You keep both answers.",
+              "Success is (A, B). Both values are retained.",
             ],
             [
-              "Variadic is a left fold",
-              "pair(a, b, c) is implemented as pair(pair(a, b), c), yielding std::pair<std::pair<A, B>, C>.",
+              "Variadic is repeated pair",
+              "pair(a, b, c) is pair(pair(a, b), c), reassociated. The pairing is the same.",
             ],
             [
-              "Evaluation order",
-              "When the returned Function is called, the left fold invokes a, then b, then c; the first failure stops the remainder.",
+              "Associativity",
+              "Parentheses on the tuples change the nesting, not which checks run.",
             ],
           ]}
         />
@@ -1781,42 +1716,38 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
               check_extent,
               check_schema);`}</CodeBlock>
       </Stack>
-
-      <Callout tone="warning" title="Retired in this snapshot: all(...)">
-        Haskell all, Python all, LINQ .All, Elixir Enum.all? Those mean
-        universal Boolean quantification: is every element true? Our
-        operation constructs a product of fallible computations. Same
-        spelling, different machine. The capability moves into variadic
-        pair, which already said what it does.
+      <Callout tone="warning" title="Deleted: all(...)">
+        In Haskell, Python, LINQ, and Elixir, all denotes universal
+        Boolean quantification over a collection. The deleted operation
+        constructed a product of fallible computations under that name.
+        Variadic pair now provides the product.
       </Callout>
       <Table
-        headers={["Surface", "What people hear", "What we actually did"]}
+        headers={["Surface", "Quantifier reading", "Implemented operation"]}
         rows={[
           [
             "all(check_a, check_b)",
-            "Are they all true?",
+            "Universal Boolean quantification.",
             "Run both on one input. First failure wins. Product of values.",
           ],
           [
             "pair(check_a, check_b)",
-            "A pair of answers",
-            "The same machine, named as a product.",
+            "A product of values",
+            "The same product, under the product name.",
           ],
         ]}
       />
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>private</Mark>
-          <H3>detail::pairable_pack&lt;...&gt;</H3>
+          <H3>pair-pack compatibility</H3>
         </Row>
         <Text>
-          The public AllPairable concept disappears with all. The
-          implementation still has to prove that a whole parameter pack can
-          be paired by the same left fold used by pair_impl. That predicate
-          stays
-          private. It is a requirement of pair, not an operation you name
-          in user code.
+          The public AllPairable concept is removed with all. The
+          implementation still requires that a parameter pack be pairable
+          by successive adjacent applications of KleisliPairable. That
+          predicate remains private. It is a constraint of pair, not a
+          name on the public surface.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1827,22 +1758,23 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
             ],
             [
               "Private",
-              "You write pair(...). You do not write AllPairable.",
+              "Callers write pair(...). AllPairable is not part of the public surface.",
             ],
           ]}
         />
       </Stack>
-
       <Stack gap={8}>
         <Row gap={8} align="center">
           <Mark>27 public</Mark>
-          <H3>ANO_LET(name, ...)</H3>
+          <H3>ANO_LET(name, operation)</H3>
         </Row>
         <Text>
-          A thin declaration macro. It expands to
-          `const auto name = ::ano::function(__VA_ARGS__)`; the surrounding
-          scope determines where the name lives. The macro does not perform
-          typechecking itself. Concepts, reflection, and Function do that.
+          ANO_LET binds a scope-local, namespace-respecting name to a
+          Function. The expansion is const auto name = ano::function(...).
+          The macro exists to accommodate declaration grammar around
+          reflection splices and long chains. Typechecking remains the
+          work of concepts, reflection, and the Function type. The macro
+          is grammar only.
         </Text>
         <Table
           headers={["Property", "In English"]}
@@ -1852,26 +1784,28 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
               "It expands to a const auto. No new type. No new law.",
             ],
             [
-              "Ordinary declaration",
-              "The name lives wherever the macro expands. It is not a registry or string key.",
+              "Local",
+              "The name is bound in the current scope. It is not a global registry or a string key.",
             ],
             [
               "Still checked",
-              "function(...) requires an underlying admitted callable. In this snapshot, an already-built Function or ResultMorphism is not accepted by the callable inspector.",
+              "function(...) still requires an admitted callable. The macro does not bypass that requirement.",
             ],
           ]}
         />
-        <CodeBlock>{`ANO_LET(parse_scene, &parse_glb);`}</CodeBlock>
-        <CodeBlock>{`const auto parse_scene = ::ano::function(&parse_glb);`}</CodeBlock>
+        <CodeBlock>{`ANO_LET(load_scene,
+    ano::lift<^^parse_glb>
+        .and_then(canonicalize_scene)
+        .and_then(cook_scene)
+        .and_then(realize_scene));`}</CodeBlock>
+        <CodeBlock>{`const auto load_scene = ano::function(...);`}</CodeBlock>
       </Stack>
-
       <Divider />
-
       <H2>Glossary</H2>
       <Text>
-        Blue is private. Green is public. compose and all are gone: one was
-        a unary wrapper, the other borrowed a Boolean word for a product.
-        They stay in the tour as deletions, not in this list.
+        Info tone marks private names. Success tone marks public names.
+        compose, all, and the three-argument result_if are omitted.
+        They appear above as deletions, not as glossary entries.
       </Text>
       <Table
         stickyHeader
@@ -1895,6 +1829,7 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           "success",
           "success",
           "success",
+          "success",
         ]}
         rows={[
           ["detail::ResultSignature", "reflection, unpack, carrier", "Private"],
@@ -1905,15 +1840,16 @@ output = [s₁, s₂, s₃]`}</CodeBlock>
           ["detail::SameResultError", "same-error, clause", "Private"],
           ["detail::Lifted", "splice, empty, generated", "Private"],
           ["pair-pack predicate", "variadic, recursive, folded", "Private"],
-          ["lift", "reflection, empty callable, direct call", "Public"],
+          ["result_if", "unit, guard, primitive", "Public"],
+          ["lift", "reflection, splice, zero-storage", "Public"],
           ["pair", "product, fail-fast, shared-witness", "Public"],
           ["and_then", "Kleisli, bind, short-circuit", "Public"],
           ["transform", "map, success, functor", "Public"],
           ["map_error", "map, failure, vocabulary", "Public"],
-          ["scan_into", "scan, bounded, deferred, caller-buffer", "Public"],
+          ["scan_into", "scan, bounded, prefix", "Public"],
           ["Function", "value, callable, storage", "Public"],
           ["ResultMorphism", "alias, arrow, role", "Public"],
-          ["ANO_LET", "macro, declaration, grammar", "Public"],
+          ["ANO_LET", "macro, local, grammar", "Public"],
         ]}
       />
     </Stack>
