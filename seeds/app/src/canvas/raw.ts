@@ -13,33 +13,30 @@ export function jumpCanvasScroller(
   scroller.scrollTop = to === "top" ? 0 : scroller.scrollHeight;
 }
 
-export const SCROLL_EDGE_PX = 2;
+const SCROLL_EDGE_PX = 2;
 
-type EdgeScroller = {
-  readonly scrollTop: number;
+type PaneScroller = {
+  scrollTop: number;
   readonly scrollHeight: number;
   readonly clientHeight: number;
 };
 
+function paneMaxScroll(scroller: Pick<PaneScroller, "scrollHeight" | "clientHeight">): number {
+  return Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+}
+
+/** Abstract Down is the bottom of the document; Up is the top. */
+export function scrollEdge(dir: "j" | "k"): "top" | "bottom" {
+  return dir === "j" ? "bottom" : "top";
+}
+
 export function scrollerAtEdge(
-  scroller: EdgeScroller,
+  scroller: Pick<PaneScroller, "scrollTop" | "scrollHeight" | "clientHeight">,
   edge: "top" | "bottom",
   epsilonPx = SCROLL_EDGE_PX,
 ): boolean {
   if (edge === "top") return scroller.scrollTop <= epsilonPx;
-  const max = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
-  return scroller.scrollTop >= max - epsilonPx;
-}
-
-export function caretAtBufferEdge(
-  selectionStart: number,
-  selectionEnd: number,
-  length: number,
-  dir: "j" | "k",
-): boolean {
-  if (selectionStart !== selectionEnd) return false;
-  if (dir === "j") return selectionStart === length;
-  return selectionStart === 0;
+  return scroller.scrollTop >= paneMaxScroll(scroller) - epsilonPx;
 }
 
 export type CanvasEdgeAction =
@@ -48,26 +45,15 @@ export type CanvasEdgeAction =
 
 /** Jump to the document edge, or page to the next/prev canvas if already there. */
 export function canvasEdgeAction(atEdge: boolean, dir: "j" | "k"): CanvasEdgeAction {
-  if (dir === "j") {
-    return atEdge
-      ? { _tag: "Switch", delta: 1, land: "top" }
-      : { _tag: "Jump", to: "bottom" };
-  }
-  return atEdge
-    ? { _tag: "Switch", delta: -1, land: "bottom" }
-    : { _tag: "Jump", to: "top" };
+  const to = scrollEdge(dir);
+  if (!atEdge) return { _tag: "Jump", to };
+  return { _tag: "Switch", delta: dir === "j" ? 1 : -1, land: scrollEdge(dir === "j" ? "k" : "j") };
 }
 
-type LineScroller = {
-  scrollTop: number;
-  readonly scrollHeight: number;
-  readonly clientHeight: number;
-};
-
 /** One CSS line-height step. Clamp to [0, max scroll]. No-op if lineHeight is not a positive px. */
-export function scrollByLineHeight(scroller: LineScroller, lineHeight: number, delta: -1 | 1): void {
+export function scrollByLineHeight(scroller: PaneScroller, lineHeight: number, delta: -1 | 1): void {
   if (!(lineHeight > 0)) return;
-  const max = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+  const max = paneMaxScroll(scroller);
   scroller.scrollTop = Math.min(max, Math.max(0, scroller.scrollTop + delta * lineHeight));
 }
 

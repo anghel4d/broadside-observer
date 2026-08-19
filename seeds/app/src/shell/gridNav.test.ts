@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { canvasEdgeBinding, edgeDirFromKey, gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
+import { canvasEdgeBinding, edgeDirFromKey, gridDirFromKey, moveGridIndex, verticalDelta, type GridDir } from "./gridNav.ts";
 
 const dirs: ReadonlyArray<GridDir> = ["h", "j", "k", "l"];
 
@@ -109,6 +109,11 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   assert.equal(gridDirFromKey("ArrowRight"), "l");
   assert.equal(gridDirFromKey("x"), null);
   assert.equal(gridDirFromKey("H"), null);
+  assert.equal(verticalDelta("j"), 1);
+  assert.equal(verticalDelta("k"), -1);
+  assert.equal(verticalDelta("h"), null);
+  assert.equal(verticalDelta("l"), null);
+  assert.equal(verticalDelta(null), null);
 }
 
 {
@@ -127,13 +132,15 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
 }
 
 {
+  const atEnd = { start: 10, end: 10, length: 10 };
+  const atStart = { start: 0, end: 0, length: 10 };
+  const mid = { start: 4, end: 4, length: 10 };
   const renderDown = {
     view: "canvas" as const,
     key: "J",
     shiftKey: true,
     typing: false,
-    rawFocused: false,
-    rawCaretAtEdge: false,
+    rawCaret: null,
   };
   assert.equal(canvasEdgeBinding(renderDown), "j");
   assert.equal(canvasEdgeBinding({ ...renderDown, key: "ArrowDown" }), "j");
@@ -143,10 +150,10 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
   assert.equal(canvasEdgeBinding({ ...renderDown, view: "cards" }), null);
   assert.equal(canvasEdgeBinding({ ...renderDown, shiftKey: false, key: "j" }), null);
 
-  const typingSearch = { ...renderDown, typing: true, rawFocused: false };
+  const typingSearch = { ...renderDown, typing: true, rawCaret: null };
   assert.equal(canvasEdgeBinding(typingSearch), null);
 
-  const rawLetters = { ...renderDown, typing: true, rawFocused: true, rawCaretAtEdge: true };
+  const rawLetters = { ...renderDown, typing: true, rawCaret: atEnd };
   assert.equal(canvasEdgeBinding(rawLetters), null, "Shift+J in RAW must type J");
   assert.equal(canvasEdgeBinding({ ...rawLetters, key: "K" }), null);
 
@@ -154,19 +161,19 @@ function step(index: number, cols: number, count: number, dir: GridDir): number 
     ...renderDown,
     key: "ArrowDown",
     typing: true,
-    rawFocused: true,
-    rawCaretAtEdge: false,
+    rawCaret: mid,
   };
   assert.equal(canvasEdgeBinding(rawArrowMid), null, "Shift+arrows in the middle of RAW stay selection");
   assert.equal(
-    canvasEdgeBinding({ ...rawArrowMid, rawCaretAtEdge: true }),
+    canvasEdgeBinding({ ...rawArrowMid, rawCaret: atEnd }),
     "j",
     "Shift+ArrowDown at RAW buffer end is the canvas-edge command",
   );
-  assert.equal(
-    canvasEdgeBinding({ ...rawArrowMid, key: "ArrowUp", rawCaretAtEdge: true }),
-    "k",
-  );
+  assert.equal(canvasEdgeBinding({ ...rawArrowMid, key: "ArrowUp", rawCaret: atStart }), "k");
+  assert.equal(canvasEdgeBinding({ ...rawArrowMid, rawCaret: { start: 0, end: 10, length: 10 } }), null);
+  const empty = { start: 0, end: 0, length: 0 };
+  assert.equal(canvasEdgeBinding({ ...rawArrowMid, rawCaret: empty }), "j");
+  assert.equal(canvasEdgeBinding({ ...rawArrowMid, key: "ArrowUp", rawCaret: empty }), "k");
 }
 
 {
