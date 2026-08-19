@@ -59,6 +59,7 @@ see:
   - "453-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
   - "211-holographic-radiance-cascades-for-2d-global-illumination"
   - "208-split-radiance-cascades-real-time-global-illumination-via-sp"
+  - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
 ---
 
 # Radiance Cascades: A Novel Approach to Calculating Global Illumination

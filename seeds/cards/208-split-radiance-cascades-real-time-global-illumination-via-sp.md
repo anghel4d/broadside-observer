@@ -42,6 +42,7 @@ see:
   - "318-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - "327-real-time-global-illumination-using-precomputed-light-field-"
   - "231-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
+  - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
 ---
 
 # Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes

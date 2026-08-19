@@ -1289,3 +1289,14 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1106 | 9 | 1998 | Rendering Synthetic Objects into Real Scenes: Bridging Traditional and Image-based Graphics with Global Illumination and High Dynamic Range Photography | graphics |
 
 _Recount after `archive-2026-08-20`: **1106** unique title cards on main._
+
+## Radiance Cascades 3D 2026-08-20
+
+Exhaustive paper sweep (not a daypart radar). arXiv `"radiance cascade(s)"` = 3 hits, all already cards (005 founding is GitHub-only; 453 / 211 / 208). Citation + DexRT follow-up recovered **one** miss. Keepers: **1**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1107 | 9 | 2025 | A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer | graphics |
+
+_Recount after `radiance-cascades-3d-2026-08-20`: **1107** unique title cards on main._
+
