@@ -1254,3 +1254,19 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1089 | 9 | 1977 | Life at low Reynolds number | biology |
 
 _Recount after `curiosity-2026-08-19`: **1089** unique title cards on main._
+
+## Craft 2026-08-19
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **48**. Keepers: **7** (keep rate **0.146**, hard cap **0.25**). No padding. No game-ai crème this cycle (AIIDE harvest was LLM-sludge + last-cycle BT rewrite).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1090 | 10 | 2026 | RCGP: Resource Contracts for Graphics Programming | engines |
+| 1091 | 9 | 2026 | Finding Fast Filters | graphics |
+| 1092 | 9 | 2025 | Exact Predicates, Exact Constructions and Combinatorics for Mesh CSG | graphics |
+| 1093 | 9 | 2026 | FliX: Flipped-Indexing for Scalable GPU Queries and Updates | engines |
+| 1094 | 10 | 2026 | Terascale Query Processing in the Browser: Rethinking GPU Acceleration | languages |
+| 1095 | 9 | 2026 | Revisiting Partial Tracing for Safe, Efficient, and Concurrent Garbage Collection in Unmanaged Languages | engines |
+| 1096 | 9 | 2026 | Optimal Predicate Pushdown Synthesis | languages |
+
+_Recount after `craft-2026-08-19`: **1096** unique title cards on main._
