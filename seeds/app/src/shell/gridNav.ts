@@ -3,6 +3,7 @@ import { clamp } from "./virtualize.ts";
 
 const GRID_DIRS = ["h", "j", "k", "l"] as const;
 export type GridDir = (typeof GRID_DIRS)[number];
+export type EdgeDir = "j" | "k";
 
 /** Map vim / arrow keys onto grid directions. Unknown keys are `null`. */
 export function gridDirFromKey(key: string): GridDir | null {
@@ -22,6 +23,50 @@ export function gridDirFromKey(key: string): GridDir | null {
     default:
       return null;
   }
+}
+
+/**
+ * Shifted abstract Down / Up (`J`/`K` and matching arrows). `H`/`L` stay on
+ * the pane splitter. Unshifted keys are `null` so callers keep using
+ * `gridDirFromKey`.
+ */
+export function edgeDirFromKey(key: string, shiftKey: boolean): EdgeDir | null {
+  if (!shiftKey) return null;
+  switch (key) {
+    case "j":
+    case "J":
+    case "ArrowDown":
+      return "j";
+    case "k":
+    case "K":
+    case "ArrowUp":
+      return "k";
+    default:
+      return null;
+  }
+}
+
+/**
+ * When the canvas-edge command should fire. List/Cards never bind it.
+ * RAW textarea: keep `Shift+J`/`K` as letters and Shift+arrows as selection
+ * unless the caret is already collapsed at that buffer edge.
+ */
+export function canvasEdgeBinding(args: {
+  readonly view: "canvas" | "list" | "cards";
+  readonly key: string;
+  readonly shiftKey: boolean;
+  readonly typing: boolean;
+  readonly rawFocused: boolean;
+  readonly rawCaretAtEdge: boolean;
+}): EdgeDir | null {
+  if (args.view !== "canvas") return null;
+  const dir = edgeDirFromKey(args.key, args.shiftKey);
+  if (dir === null) return null;
+  if (!args.typing) return dir;
+  if (!args.rawFocused) return null;
+  if (args.key !== "ArrowDown" && args.key !== "ArrowUp") return null;
+  if (!args.rawCaretAtEdge) return null;
+  return dir;
 }
 
 /**
