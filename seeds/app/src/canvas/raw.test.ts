@@ -1,13 +1,16 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
+  canvasEdgeAction,
   canvasJumpHtml,
+  caretAtBufferEdge,
   caretDocumentY,
   jumpCanvasScroller,
   lockEditorScroll,
   paintRawHighlight,
   rawEditorHtml,
   scrollByLineHeight,
+  scrollerAtEdge,
   scrollerTopForCaret,
 } from "./raw.ts";
 import { highlightCanvasSource } from "./highlight.ts";
@@ -41,6 +44,42 @@ import { highlightCanvasSource } from "./highlight.ts";
   assert.equal(scroller.scrollTop, 0);
   jumpCanvasScroller(scroller, "bottom");
   assert.equal(scroller.scrollTop, 900);
+}
+
+{
+  const scroller = { scrollTop: 0, scrollHeight: 900, clientHeight: 200 };
+  assert.equal(scrollerAtEdge(scroller, "top"), true);
+  assert.equal(scrollerAtEdge(scroller, "bottom"), false);
+  scroller.scrollTop = 1;
+  assert.equal(scrollerAtEdge(scroller, "top"), true);
+  scroller.scrollTop = 3;
+  assert.equal(scrollerAtEdge(scroller, "top"), false);
+  scroller.scrollTop = 698;
+  assert.equal(scrollerAtEdge(scroller, "bottom"), true);
+  scroller.scrollTop = 700;
+  assert.equal(scrollerAtEdge(scroller, "bottom"), true);
+  scroller.scrollTop = 696;
+  assert.equal(scrollerAtEdge(scroller, "bottom"), false);
+  const short = { scrollTop: 0, scrollHeight: 100, clientHeight: 200 };
+  assert.equal(scrollerAtEdge(short, "top"), true);
+  assert.equal(scrollerAtEdge(short, "bottom"), true);
+}
+
+{
+  assert.equal(caretAtBufferEdge(0, 0, 10, "k"), true);
+  assert.equal(caretAtBufferEdge(10, 10, 10, "j"), true);
+  assert.equal(caretAtBufferEdge(4, 4, 10, "j"), false);
+  assert.equal(caretAtBufferEdge(4, 4, 10, "k"), false);
+  assert.equal(caretAtBufferEdge(0, 10, 10, "j"), false);
+  assert.equal(caretAtBufferEdge(0, 0, 0, "j"), true);
+  assert.equal(caretAtBufferEdge(0, 0, 0, "k"), true);
+}
+
+{
+  assert.deepEqual(canvasEdgeAction(false, "j"), { _tag: "Jump", to: "bottom" });
+  assert.deepEqual(canvasEdgeAction(true, "j"), { _tag: "Switch", delta: 1, land: "top" });
+  assert.deepEqual(canvasEdgeAction(false, "k"), { _tag: "Jump", to: "top" });
+  assert.deepEqual(canvasEdgeAction(true, "k"), { _tag: "Switch", delta: -1, land: "bottom" });
 }
 
 {

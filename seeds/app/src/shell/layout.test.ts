@@ -274,6 +274,9 @@ assert.equal(
   );
   assert.ok(app.includes("dataset.menu"));
   assert.ok(app.includes("aria-controls"));
+  assert.ok(app.includes("canvasEdgeBinding"), "canvas Shift+jk must use the keymap, not a raw ArrowDown listener");
+  assert.ok(app.includes("edgeDirFromKey"));
+  assert.ok(app.includes("handleCanvasEdge"));
 }
 
 {

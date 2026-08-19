@@ -13,6 +13,51 @@ export function jumpCanvasScroller(
   scroller.scrollTop = to === "top" ? 0 : scroller.scrollHeight;
 }
 
+export const SCROLL_EDGE_PX = 2;
+
+type EdgeScroller = {
+  readonly scrollTop: number;
+  readonly scrollHeight: number;
+  readonly clientHeight: number;
+};
+
+export function scrollerAtEdge(
+  scroller: EdgeScroller,
+  edge: "top" | "bottom",
+  epsilonPx = SCROLL_EDGE_PX,
+): boolean {
+  if (edge === "top") return scroller.scrollTop <= epsilonPx;
+  const max = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+  return scroller.scrollTop >= max - epsilonPx;
+}
+
+export function caretAtBufferEdge(
+  selectionStart: number,
+  selectionEnd: number,
+  length: number,
+  dir: "j" | "k",
+): boolean {
+  if (selectionStart !== selectionEnd) return false;
+  if (dir === "j") return selectionStart === length;
+  return selectionStart === 0;
+}
+
+export type CanvasEdgeAction =
+  | { readonly _tag: "Jump"; readonly to: "top" | "bottom" }
+  | { readonly _tag: "Switch"; readonly delta: -1 | 1; readonly land: "top" | "bottom" };
+
+/** Jump to the document edge, or page to the next/prev canvas if already there. */
+export function canvasEdgeAction(atEdge: boolean, dir: "j" | "k"): CanvasEdgeAction {
+  if (dir === "j") {
+    return atEdge
+      ? { _tag: "Switch", delta: 1, land: "top" }
+      : { _tag: "Jump", to: "bottom" };
+  }
+  return atEdge
+    ? { _tag: "Switch", delta: -1, land: "bottom" }
+    : { _tag: "Jump", to: "top" };
+}
+
 type LineScroller = {
   scrollTop: number;
   readonly scrollHeight: number;

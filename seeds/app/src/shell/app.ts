@@ -1,6 +1,8 @@
 import { renderCanvas } from "../canvas/evaluate.ts";
 import {
+  canvasEdgeAction,
   canvasJumpHtml,
+  caretAtBufferEdge,
   followCaretInScroller,
   jumpCanvasScroller,
   lockEditorScroll,
@@ -8,6 +10,7 @@ import {
   paintRawHighlight,
   rawEditorHtml,
   scrollByLineHeight,
+  scrollerAtEdge,
 } from "../canvas/raw.ts";
 import {
   FILTER_KEYS,
@@ -54,7 +57,14 @@ import { inLibraryIds, type Corpus } from "../domain/corpus.ts";
 import { labelForLineage, labelForPool } from "../domain/lineageLabels.ts";
 import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
-import { gridDirFromKey, moveGridIndex, type GridDir } from "./gridNav.ts";
+import {
+  canvasEdgeBinding,
+  edgeDirFromKey,
+  gridDirFromKey,
+  moveGridIndex,
+  type EdgeDir,
+  type GridDir,
+} from "./gridNav.ts";
 import { attr, closestControl, escapeHtml, syncAriaChecked } from "./html.ts";
 import {
   BROWSE_MIN_REM,
@@ -424,7 +434,7 @@ function shellHtml(corpus: Corpus, view: ViewMode, theme: ThemeMode): string {
     <header class="topbar">
       <div class="brand">
         <h1>Observer</h1>
-        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> list · <kbd>hjkl</kbd> cards · <kbd>Esc</kbd> clear.</p>
+        <p class="lede">In-memory catalog. <kbd>/</kbd> search · <kbd>j</kbd>/<kbd>k</kbd> list · <kbd>hjkl</kbd> cards · <kbd>Shift+jk</kbd> canvas · <kbd>Esc</kbd> clear.</p>
       </div>
       <div class="topbar-tools">
         <div class="seg" id="view-toggle" role="radiogroup" aria-label="View mode">
@@ -929,6 +939,35 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     scrollByLineHeight(detail, Number.parseFloat(getComputedStyle(lineSource).lineHeight), delta);
   };
 
+  const applyCanvasJump = (to: "top" | "bottom", focusRaw: boolean): void => {
+    jumpCanvasScroller(detail, to);
+    const field = detail.querySelector("#canvas-source");
+    if (!(field instanceof HTMLTextAreaElement)) return;
+    const pos = to === "top" ? 0 : field.value.length;
+    field.setSelectionRange(pos, pos);
+    if (focusRaw) field.focus();
+    followCaretInScroller(detail, field);
+  };
+
+  const handleCanvasEdge = (dir: EdgeDir): void => {
+    const atEdge = scrollerAtEdge(detail, dir === "j" ? "bottom" : "top");
+    const action = canvasEdgeAction(atEdge, dir);
+    if (action._tag === "Jump") {
+      applyCanvasJump(action.to, false);
+      return;
+    }
+    const rawField = detail.querySelector("#canvas-source");
+    const rawWasFocused =
+      rawField instanceof HTMLTextAreaElement && document.activeElement === rawField;
+    const before = model.canvasId;
+    dispatch({ _tag: "Move", delta: action.delta });
+    if (model.canvasId === before) return;
+    applyCanvasJump(action.land, rawWasFocused);
+    if (action.land === "bottom") {
+      requestAnimationFrame(() => applyCanvasJump(action.land, rawWasFocused));
+    }
+  };
+
   const paintCanvasSurface = (): void => {
     if (model.view !== "canvas") return;
     if (model.canvasSurface === "render") {
@@ -1235,7 +1274,8 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       msg._tag === "SetView" ||
       msg._tag === "SelectCanvas" ||
       msg._tag === "SetCanvasSource" ||
-      msg._tag === "SetCanvasSurface"
+      msg._tag === "SetCanvasSurface" ||
+      (msg._tag === "Move" && model.view === "canvas")
     ) {
       writeStoredCanvasBuffer(storage, {
         source: model.canvasSource,
@@ -1559,6 +1599,27 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       }
       return;
     }
+    const edgeDir = edgeDirFromKey(event.key, event.shiftKey);
+    const rawField =
+      event.target instanceof HTMLTextAreaElement && event.target.id === "canvas-source"
+        ? event.target
+        : null;
+    const canvasEdge = canvasEdgeBinding({
+      view: model.view,
+      key: event.key,
+      shiftKey: event.shiftKey,
+      typing: isTypingTarget(event.target),
+      rawFocused: rawField !== null,
+      rawCaretAtEdge:
+        rawField !== null &&
+        edgeDir !== null &&
+        caretAtBufferEdge(rawField.selectionStart, rawField.selectionEnd, rawField.value.length, edgeDir),
+    });
+    if (canvasEdge !== null) {
+      event.preventDefault();
+      handleCanvasEdge(canvasEdge);
+      return;
+    }
     if (isTypingTarget(event.target)) return;
     if (event.key === "/") {
       event.preventDefault();
@@ -1616,7 +1677,7 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
         return;
       }
     }
-    if (model.view === "canvas" && model.canvasSurface === "render") {
+    if (model.view === "canvas" && model.canvasSurface === "render" && !event.shiftKey) {
       if (event.key === "ArrowDown" || event.key === "j") {
         event.preventDefault();
         scrollCanvasRenderByLine(1);
