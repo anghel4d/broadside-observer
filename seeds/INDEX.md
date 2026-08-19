@@ -1270,3 +1270,22 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1096 | 9 | 2026 | Optimal Predicate Pushdown Synthesis | languages |
 
 _Recount after `craft-2026-08-19`: **1096** unique title cards on main._
+
+## Archive 2026-08-20
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/ano/RTS/historical-gem filter: **55**. Keepers: **10** (keep rate **0.182**, hard cap 0.20). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1097 | 10 | 1997 | Fast, Minimum Storage Ray-Triangle Intersection | graphics |
+| 1098 | 9 | 1987 | A Fast Voxel Traversal Algorithm for Ray Tracing | engines |
+| 1099 | 10 | 1996 | OBBTree: A Hierarchical Structure for Rapid Interference Detection | engines |
+| 1100 | 9 | 1997 | ROAMing Terrain: Real-time Optimally Adapting Meshes | engines |
+| 1101 | 10 | 1997 | The Zipper | languages |
+| 1102 | 10 | 1970 | An Efficient Context-Free Parsing Algorithm | languages |
+| 1103 | 10 | 1999 | Linear Scan Register Allocation | languages |
+| 1104 | 10 | 2001 | Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data | languages |
+| 1105 | 10 | 2005 | Composable Memory Transactions | engines |
+| 1106 | 9 | 1998 | Rendering Synthetic Objects into Real Scenes: Bridging Traditional and Image-based Graphics with Global Illumination and High Dynamic Range Photography | graphics |
+
+_Recount after `archive-2026-08-20`: **1106** unique title cards on main._
