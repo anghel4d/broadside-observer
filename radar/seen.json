@@ -290,7 +290,9 @@
   "9607007",
   "0006044",
   "9808017",
-  "9904008"
+  "9904008",
+  "2511.08498",
+  "2408.14425"
  ],
  "titles": [
   "a fast procedure for computing the distance between complex objects (gjk)",
@@ -888,7 +890,11 @@
   "the derivative of a regular type is its type of one-hole contexts",
   "real-time continuous level of detail rendering of height fields",
   "winged edge polyhedron representation",
-  "reentrant polygon clipping"
+  "reentrant polygon clipping",
+  "a simple ray acceleration structure for non-lte radiative transfer",
+  "comparing radiance cascades to voxel cone tracing for interactive global illumination in dynamic scenes",
+  "complex-valued holographic radiance fields",
+  "complex-valued 2d gaussian representation for computer-generated holography"
  ],
  "updated": "2026-08-20",
  "pass2_batch": "systems-prefill-2026-08-13",
@@ -900,5 +906,7 @@
  "archive_batch": "archive-2026-08-20",
  "archive_count": 10,
  "frontier_batch": "frontier-2026-08-18",
- "frontier_count": 6
+ "frontier_count": 6,
+ "rc3d_batch": "radiance-cascades-3d-2026-08-20",
+ "rc3d_count": 1
 }

@@ -2,7 +2,7 @@
 
 **Slug:** `radiance-cascades`  
 **Batch:** `lineage-radiance-cascades-2026-08-13`  
-**Cards in thread:** 22 (minted this pass: 450–453)
+**Cards in thread:** 23 (1107 added 2026-08-20 RC3D sweep)
 
 ## Charter
 
@@ -22,7 +22,7 @@ Classics → foils → RC → living variants:
 6. **Industrial probe foil** — Light Field Probes → DDGI → production scaling / resampling / SDF-DDGI → GI-1.0 radiance cache.
 7. **Radiance Cascades** — Sannikov WIP (screenspace/2D-friendly, geometry-agnostic rebuild).
 8. **Cross-domain formalization** — Osborne & Sannikov RASTI/DexRT (bilinear/ringing discussion the graphics variants cite).
-9. **RC variants already seeded** — Holographic RC (2D hard shadows / volumetrics) → Split RC (sparse 3D world-space probes + ray splitting).
+9. **RC variants already seeded** — Holographic RC (2D hard shadows / volumetrics) → Osborne DexRT ray acceleration (sparse bricks / VLM / HDDA) → Split RC (sparse 3D world-space probes + ray splitting).
 
 Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-list items until they earn cards.
 
@@ -50,6 +50,7 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 | 2023 | `231-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme` | GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination | GI-1.0 radiance-cache foil |
 | 2023 | `005-radiance-cascades-a-novel-approach-to-calculating-global-ill` | Radiance Cascades: A Novel Approach to Calculating Global Illumination | Sannikov Radiance Cascades |
 | 2024 | `453-radiance-cascades-a-novel-high-resolution-formal-solution-fo` | Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer | Osborne & Sannikov RC formalization |
+| 2025 | `1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t` | A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer | DexRT sparse+mip+HDDA |
 | 2025 | `211-holographic-radiance-cascades-for-2d-global-illumination` | Holographic Radiance Cascades for 2D Global Illumination | Holographic RC |
 | 2026 | `208-split-radiance-cascades-real-time-global-illumination-via-sp` | Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes | Split RC (3D sparse) |
 
@@ -77,6 +78,7 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 | `005-radiance-cascades-a-novel-approach-to-calculating-global-ill` | 2023 | 10 | Radiance Cascades: A Novel Approach to Calculating Global Illumination |
 | `231-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme` | 2023 | 9 | GI-1.0: A Fast and Scalable Two-level Radiance Caching Scheme for Real-time Global Illumination |
 | `453-radiance-cascades-a-novel-high-resolution-formal-solution-fo` | 2024 | 9 | Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer |
+| `1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t` | 2025 | 9 | A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer |
 | `211-holographic-radiance-cascades-for-2d-global-illumination` | 2025 | 9 | Holographic Radiance Cascades for 2D Global Illumination |
 | `208-split-radiance-cascades-real-time-global-illumination-via-sp` | 2026 | 9 | Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes |
 
@@ -89,7 +91,7 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 
 ## Open frontiers / watch next
 
-- **Sparse 3D RC in engine** — validate Split RC hashmap + ray splitting on Anoptic’s Vulkan/meshlet path; measure vs DDGI leak/bias class bugs.
+- **Sparse 3D RC in engine** — validate Split RC hashmap + ray splitting on Anoptic’s Vulkan/meshlet path; measure vs DDGI leak/bias class bugs. Osborne 2025 (1107) is the DexRT sparsity/HDDA counterpart, not a game-probe paper.
 - **Holographic → 3D** — memory wall O(N×X²); watch Surfel RC / UV-space RC community writeups for publishable consolidations.
 - **Artifact taxonomy** — ringing, bilinear fix, non-linear accumulation; promote Osborne & Sannikov + HRC notes into a `summaries/` digest.
 - **Hybrid with HW RT** — RC-guided NEE / probes+cascades (GI-1.0 adjacency) without collapsing into a NeRF cache.

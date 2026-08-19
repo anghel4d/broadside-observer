@@ -24,6 +24,9 @@ cites:
     year: 2023
 see:
   - "005-radiance-cascades-a-novel-approach-to-calculating-global-ill"
+  - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
+  - "208-split-radiance-cascades-real-time-global-illumination-via-sp"
+  - "211-holographic-radiance-cascades-for-2d-global-illumination"
 ---
 
 # Radiance Cascades: A Novel High-Resolution Formal Solution for Multidimensional Non-LTE Radiative Transfer
