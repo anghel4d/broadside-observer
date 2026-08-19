@@ -43,6 +43,9 @@ see:
   - "327-real-time-global-illumination-using-precomputed-light-field-"
   - "231-gi-1-0-a-fast-and-scalable-two-level-radiance-caching-scheme"
   - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
+  - "1110-radiance-cascades-3d-uv-space-shadertoy"
+  - "1113-surfel-radiance-cascades-diffuse-global-illumination"
+  - "1114-radiance-cascades-guided-nee-pathtracer"
 ---
 
 # Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes

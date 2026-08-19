@@ -2,7 +2,7 @@
 
 **Slug:** `radiance-cascades`  
 **Batch:** `lineage-radiance-cascades-2026-08-13`  
-**Cards in thread:** 23 (1107 added 2026-08-20 RC3D sweep)
+**Cards in thread:** 31 (1115 = 1107 + 8 WIP community 2026-08-20)
 
 ## Charter
 
@@ -24,7 +24,7 @@ Classics → foils → RC → living variants:
 8. **Cross-domain formalization** — Osborne & Sannikov RASTI/DexRT (bilinear/ringing discussion the graphics variants cite).
 9. **RC variants already seeded** — Holographic RC (2D hard shadows / volumetrics) → Osborne DexRT ray acceleration (sparse bricks / VLM / HDDA) → Split RC (sparse 3D world-space probes + ray splitting).
 
-Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-list items until they earn cards.
+Community implementations now seeded as WIP cards 1108–1115 (ExileCon talk, Shadertoy 2D, UV-space 3D, GM Shaders, jason.today, Surfel RC, RC-guided NEE, Kung MSc). Still not venue papers.
 
 ### Spine table
 
@@ -53,6 +53,14 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 | 2025 | `1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t` | A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer | DexRT sparse+mip+HDDA |
 | 2025 | `211-holographic-radiance-cascades-for-2d-global-illumination` | Holographic Radiance Cascades for 2D Global Illumination | Holographic RC |
 | 2026 | `208-split-radiance-cascades-real-time-global-illumination-via-sp` | Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes | Split RC (3D sparse) |
+| 2023 | `1108-exilecon-2023-rendering-path-of-exile-2` | ExileCon 2023: Rendering Path of Exile 2 | PoE2 screenspace talk |
+| 2023 | `1109-radiance-cascades-shadertoy` | Radiance Cascades (Shadertoy) | fad 2D Shadertoy |
+| 2024 | `1110-radiance-cascades-3d-uv-space-shadertoy` | Radiance Cascades 3D (UV-Space Shadertoy) | UV-space 3D PoC |
+| 2024 | `1111-gm-shaders-guest-radiance-cascades` | GM Shaders Guest: Radiance Cascades | Yaazarai tutorial |
+| 2024 | `1112-radiance-cascades-building-real-time-global-illumination` | Radiance Cascades: Building Real-Time Global Illumination | jason.today |
+| 2025 | `1113-surfel-radiance-cascades-diffuse-global-illumination` | Surfel Radiance Cascades Diffuse Global Illumination | Surfel RC |
+| 2025 | `1114-radiance-cascades-guided-nee-pathtracer` | Radiance Cascades Guided NEE Pathtracer | RC-guided NEE |
+| 2025 | `1115-comparing-radiance-cascades-to-voxel-cone-tracing-for-inte` | Comparing Radiance Cascades to Voxel Cone Tracing… | Kung LiU MSc |
 
 ## Broadside cards in thread
 
@@ -81,6 +89,14 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 | `1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t` | 2025 | 9 | A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer |
 | `211-holographic-radiance-cascades-for-2d-global-illumination` | 2025 | 9 | Holographic Radiance Cascades for 2D Global Illumination |
 | `208-split-radiance-cascades-real-time-global-illumination-via-sp` | 2026 | 9 | Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes |
+| `1108-exilecon-2023-rendering-path-of-exile-2` | 2023 | 9 | ExileCon 2023: Rendering Path of Exile 2 |
+| `1109-radiance-cascades-shadertoy` | 2023 | 8 | Radiance Cascades (Shadertoy) |
+| `1110-radiance-cascades-3d-uv-space-shadertoy` | 2024 | 8 | Radiance Cascades 3D (UV-Space Shadertoy) |
+| `1111-gm-shaders-guest-radiance-cascades` | 2024 | 8 | GM Shaders Guest: Radiance Cascades |
+| `1112-radiance-cascades-building-real-time-global-illumination` | 2024 | 8 | Radiance Cascades: Building Real-Time Global Illumination |
+| `1113-surfel-radiance-cascades-diffuse-global-illumination` | 2025 | 8 | Surfel Radiance Cascades Diffuse Global Illumination |
+| `1114-radiance-cascades-guided-nee-pathtracer` | 2025 | 7 | Radiance Cascades Guided NEE Pathtracer |
+| `1115-comparing-radiance-cascades-to-voxel-cone-tracing-for-inte` | 2025 | 7 | Comparing Radiance Cascades to Voxel Cone Tracing for Interactive Global Illumination in Dynamic Scenes |
 
 ## Graph notes
 
@@ -92,8 +108,8 @@ Community-only 3D experiments (Surfel RC, UV-space RC, RC-guided NEE) are watch-
 ## Open frontiers / watch next
 
 - **Sparse 3D RC in engine** — validate Split RC hashmap + ray splitting on Anoptic’s Vulkan/meshlet path; measure vs DDGI leak/bias class bugs. Osborne 2025 (1107) is the DexRT sparsity/HDDA counterpart, not a game-probe paper.
-- **Holographic → 3D** — memory wall O(N×X²); watch Surfel RC / UV-space RC community writeups for publishable consolidations.
+- **Holographic → 3D** — memory wall O(N×X²); Surfel RC (1113) and UV-space RC (1110) now have WIP cards, still no venue paper.
 - **Artifact taxonomy** — ringing, bilinear fix, non-linear accumulation; promote Osborne & Sannikov + HRC notes into a `summaries/` digest.
-- **Hybrid with HW RT** — RC-guided NEE / probes+cascades (GI-1.0 adjacency) without collapsing into a NeRF cache.
+- **Hybrid with HW RT** — RC-guided NEE is now `1114` (`entropylost/vlam`); still 2D research-stage.
 - **RTS dynamics** — fully rebuildable, no temporal debt: does RC stay constant-cost with thousands of emissive gameplay FX?
 - **Do not expand** into general NeRF/3DGS neural radiance fields unless a paper is an explicit RC successor.

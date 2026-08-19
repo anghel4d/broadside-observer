@@ -60,6 +60,14 @@ see:
   - "211-holographic-radiance-cascades-for-2d-global-illumination"
   - "208-split-radiance-cascades-real-time-global-illumination-via-sp"
   - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
+  - "1108-exilecon-2023-rendering-path-of-exile-2"
+  - "1109-radiance-cascades-shadertoy"
+  - "1110-radiance-cascades-3d-uv-space-shadertoy"
+  - "1111-gm-shaders-guest-radiance-cascades"
+  - "1112-radiance-cascades-building-real-time-global-illumination"
+  - "1113-surfel-radiance-cascades-diffuse-global-illumination"
+  - "1114-radiance-cascades-guided-nee-pathtracer"
+  - "1115-comparing-radiance-cascades-to-voxel-cone-tracing-for-inte"
 ---
 
 # Radiance Cascades: A Novel Approach to Calculating Global Illumination
