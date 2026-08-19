@@ -3,13 +3,13 @@ import { readFileSync } from "node:fs";
 import {
   canvasEdgeAction,
   canvasJumpHtml,
-  caretAtBufferEdge,
   caretDocumentY,
   jumpCanvasScroller,
   lockEditorScroll,
   paintRawHighlight,
   rawEditorHtml,
   scrollByLineHeight,
+  scrollEdge,
   scrollerAtEdge,
   scrollerTopForCaret,
 } from "./raw.ts";
@@ -66,16 +66,8 @@ import { highlightCanvasSource } from "./highlight.ts";
 }
 
 {
-  assert.equal(caretAtBufferEdge(0, 0, 10, "k"), true);
-  assert.equal(caretAtBufferEdge(10, 10, 10, "j"), true);
-  assert.equal(caretAtBufferEdge(4, 4, 10, "j"), false);
-  assert.equal(caretAtBufferEdge(4, 4, 10, "k"), false);
-  assert.equal(caretAtBufferEdge(0, 10, 10, "j"), false);
-  assert.equal(caretAtBufferEdge(0, 0, 0, "j"), true);
-  assert.equal(caretAtBufferEdge(0, 0, 0, "k"), true);
-}
-
-{
+  assert.equal(scrollEdge("j"), "bottom");
+  assert.equal(scrollEdge("k"), "top");
   assert.deepEqual(canvasEdgeAction(false, "j"), { _tag: "Jump", to: "bottom" });
   assert.deepEqual(canvasEdgeAction(true, "j"), { _tag: "Switch", delta: 1, land: "top" });
   assert.deepEqual(canvasEdgeAction(false, "k"), { _tag: "Jump", to: "top" });

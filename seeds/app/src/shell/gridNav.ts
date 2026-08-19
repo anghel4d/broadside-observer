@@ -3,7 +3,7 @@ import { clamp } from "./virtualize.ts";
 
 const GRID_DIRS = ["h", "j", "k", "l"] as const;
 export type GridDir = (typeof GRID_DIRS)[number];
-export type EdgeDir = "j" | "k";
+export type EdgeDir = Extract<GridDir, "j" | "k">;
 
 /** Map vim / arrow keys onto grid directions. Unknown keys are `null`. */
 export function gridDirFromKey(key: string): GridDir | null {
@@ -25,25 +25,29 @@ export function gridDirFromKey(key: string): GridDir | null {
   }
 }
 
-/**
- * Shifted abstract Down / Up (`J`/`K` and matching arrows). `H`/`L` stay on
- * the pane splitter. Unshifted keys are `null` so callers keep using
- * `gridDirFromKey`.
- */
+/** Shifted abstract Down / Up. `H`/`L` stay on the pane splitter. */
 export function edgeDirFromKey(key: string, shiftKey: boolean): EdgeDir | null {
   if (!shiftKey) return null;
-  switch (key) {
-    case "j":
-    case "J":
-    case "ArrowDown":
-      return "j";
-    case "k":
-    case "K":
-    case "ArrowUp":
-      return "k";
-    default:
-      return null;
-  }
+  const dir = gridDirFromKey(key.length === 1 ? key.toLowerCase() : key);
+  return dir === "j" || dir === "k" ? dir : null;
+}
+
+export function verticalDelta(dir: GridDir | null): -1 | 1 | null {
+  if (dir === "j") return 1;
+  if (dir === "k") return -1;
+  return null;
+}
+
+type RawCaret = {
+  readonly start: number;
+  readonly end: number;
+  readonly length: number;
+};
+
+function caretAtBufferEdge(caret: RawCaret, dir: EdgeDir): boolean {
+  if (caret.start !== caret.end) return false;
+  if (dir === "j") return caret.start === caret.length;
+  return caret.start === 0;
 }
 
 /**
@@ -56,16 +60,15 @@ export function canvasEdgeBinding(args: {
   readonly key: string;
   readonly shiftKey: boolean;
   readonly typing: boolean;
-  readonly rawFocused: boolean;
-  readonly rawCaretAtEdge: boolean;
+  readonly rawCaret: RawCaret | null;
 }): EdgeDir | null {
   if (args.view !== "canvas") return null;
   const dir = edgeDirFromKey(args.key, args.shiftKey);
   if (dir === null) return null;
   if (!args.typing) return dir;
-  if (!args.rawFocused) return null;
+  if (args.rawCaret === null) return null;
   if (args.key !== "ArrowDown" && args.key !== "ArrowUp") return null;
-  if (!args.rawCaretAtEdge) return null;
+  if (!caretAtBufferEdge(args.rawCaret, dir)) return null;
   return dir;
 }
 

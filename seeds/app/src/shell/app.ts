@@ -2,7 +2,6 @@ import { renderCanvas } from "../canvas/evaluate.ts";
 import {
   canvasEdgeAction,
   canvasJumpHtml,
-  caretAtBufferEdge,
   followCaretInScroller,
   jumpCanvasScroller,
   lockEditorScroll,
@@ -10,6 +9,7 @@ import {
   paintRawHighlight,
   rawEditorHtml,
   scrollByLineHeight,
+  scrollEdge,
   scrollerAtEdge,
 } from "../canvas/raw.ts";
 import {
@@ -59,9 +59,9 @@ import { createBrowseVirtualizer, type BrowseRender } from "./browse.ts";
 import { debounce } from "./debounce.ts";
 import {
   canvasEdgeBinding,
-  edgeDirFromKey,
   gridDirFromKey,
   moveGridIndex,
+  verticalDelta,
   type EdgeDir,
   type GridDir,
 } from "./gridNav.ts";
@@ -303,14 +303,13 @@ function update(model: Model, msg: Msg): Model {
       if (hit === null) return model;
       return selectCard(model, hit.id);
     }
-    case "Move":
+    case "Move": {
+      const nextIndex = (index: number, count: number): number =>
+        Math.min(count - 1, Math.max(0, index + msg.delta));
       return model.view === "canvas"
-        ? moveAlongCanvas(
-            model,
-            (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)),
-            msg.delta > 0,
-          )
-        : moveAlong(model, (index, count) => Math.min(count - 1, Math.max(0, index + msg.delta)), msg.delta > 0);
+        ? moveAlongCanvas(model, nextIndex, msg.delta > 0)
+        : moveAlong(model, nextIndex, msg.delta > 0);
+    }
     case "MoveGrid":
       return moveAlong(
         model,
@@ -933,6 +932,11 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   const status = requireElement<HTMLParagraphElement>(root, "status");
   const virt = createBrowseVirtualizer(browse, renderBrowse);
 
+  const canvasSourceField = (): HTMLTextAreaElement | null => {
+    const field = detail.querySelector("#canvas-source");
+    return field instanceof HTMLTextAreaElement ? field : null;
+  };
+
   const scrollCanvasRenderByLine = (delta: -1 | 1): void => {
     const host = detail.querySelector("#canvas-host");
     const lineSource = host instanceof HTMLElement ? host : detail;
@@ -941,8 +945,8 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
 
   const applyCanvasJump = (to: "top" | "bottom", focusRaw: boolean): void => {
     jumpCanvasScroller(detail, to);
-    const field = detail.querySelector("#canvas-source");
-    if (!(field instanceof HTMLTextAreaElement)) return;
+    const field = canvasSourceField();
+    if (field === null) return;
     const pos = to === "top" ? 0 : field.value.length;
     field.setSelectionRange(pos, pos);
     if (focusRaw) field.focus();
@@ -950,15 +954,13 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   };
 
   const handleCanvasEdge = (dir: EdgeDir): void => {
-    const atEdge = scrollerAtEdge(detail, dir === "j" ? "bottom" : "top");
-    const action = canvasEdgeAction(atEdge, dir);
+    const action = canvasEdgeAction(scrollerAtEdge(detail, scrollEdge(dir)), dir);
     if (action._tag === "Jump") {
       applyCanvasJump(action.to, false);
       return;
     }
-    const rawField = detail.querySelector("#canvas-source");
-    const rawWasFocused =
-      rawField instanceof HTMLTextAreaElement && document.activeElement === rawField;
+    const rawField = canvasSourceField();
+    const rawWasFocused = rawField !== null && document.activeElement === rawField;
     const before = model.canvasId;
     dispatch({ _tag: "Move", delta: action.delta });
     if (model.canvasId === before) return;
@@ -1599,7 +1601,6 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       }
       return;
     }
-    const edgeDir = edgeDirFromKey(event.key, event.shiftKey);
     const rawField =
       event.target instanceof HTMLTextAreaElement && event.target.id === "canvas-source"
         ? event.target
@@ -1609,11 +1610,10 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       key: event.key,
       shiftKey: event.shiftKey,
       typing: isTypingTarget(event.target),
-      rawFocused: rawField !== null,
-      rawCaretAtEdge:
-        rawField !== null &&
-        edgeDir !== null &&
-        caretAtBufferEdge(rawField.selectionStart, rawField.selectionEnd, rawField.value.length, edgeDir),
+      rawCaret:
+        rawField === null
+          ? null
+          : { start: rawField.selectionStart, end: rawField.selectionEnd, length: rawField.value.length },
     });
     if (canvasEdge !== null) {
       event.preventDefault();
@@ -1669,33 +1669,21 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       dispatch({ _tag: "SetCardsSheet", value: true });
       return;
     }
+    const dir = gridDirFromKey(event.key);
+    if (dir === null) return;
     if (model.view === "cards") {
-      const dir = gridDirFromKey(event.key);
-      if (dir !== null) {
-        event.preventDefault();
-        dispatch({ _tag: "MoveGrid", dir, cols: virt.columns() });
-        return;
-      }
-    }
-    if (model.view === "canvas" && model.canvasSurface === "render" && !event.shiftKey) {
-      if (event.key === "ArrowDown" || event.key === "j") {
-        event.preventDefault();
-        scrollCanvasRenderByLine(1);
-        return;
-      }
-      if (event.key === "ArrowUp" || event.key === "k") {
-        event.preventDefault();
-        scrollCanvasRenderByLine(-1);
-        return;
-      }
-    }
-    if (event.key === "ArrowDown" || event.key === "j") {
       event.preventDefault();
-      dispatch({ _tag: "Move", delta: 1 });
-    } else if (event.key === "ArrowUp" || event.key === "k") {
-      event.preventDefault();
-      dispatch({ _tag: "Move", delta: -1 });
+      dispatch({ _tag: "MoveGrid", dir, cols: virt.columns() });
+      return;
     }
+    const delta = verticalDelta(dir);
+    if (delta === null) return;
+    event.preventDefault();
+    if (model.view === "canvas" && model.canvasSurface === "render") {
+      scrollCanvasRenderByLine(delta);
+      return;
+    }
+    dispatch({ _tag: "Move", delta });
   });
 
   window.addEventListener("hashchange", () => {
