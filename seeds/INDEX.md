@@ -1300,3 +1300,19 @@ Exhaustive paper sweep (not a daypart radar). arXiv `"radiance cascade(s)"` = 3 
 
 _Recount after `radiance-cascades-3d-2026-08-20`: **1107** unique title cards on main._
 
+## Radiance Cascades WIP 2026-08-20
+
+Community implementations / writeups that are not venue papers (user: add them anyway, tag WIP). Shadertoy / surfel / UV-space / RC-guided NEE / ExileCon talk / jason.today / GM Shaders / Kung LiU MSc. Keepers: **8**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1108 | 9 | 2023 | ExileCon 2023: Rendering Path of Exile 2 | graphics |
+| 1109 | 8 | 2023 | Radiance Cascades (Shadertoy) | graphics |
+| 1110 | 8 | 2024 | Radiance Cascades 3D (UV-Space Shadertoy) | graphics |
+| 1111 | 8 | 2024 | GM Shaders Guest: Radiance Cascades | graphics |
+| 1112 | 8 | 2024 | Radiance Cascades: Building Real-Time Global Illumination | graphics |
+| 1113 | 8 | 2025 | Surfel Radiance Cascades Diffuse Global Illumination | graphics |
+| 1114 | 7 | 2025 | Radiance Cascades Guided NEE Pathtracer | graphics |
+| 1115 | 7 | 2025 | Comparing Radiance Cascades to Voxel Cone Tracing for Interactive Global Illumination in Dynamic Scenes | graphics |
+
+_Recount after `radiance-cascades-wip-2026-08-20`: **1115** unique title cards on main._

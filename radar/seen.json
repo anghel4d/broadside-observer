@@ -894,7 +894,20 @@
   "a simple ray acceleration structure for non-lte radiative transfer",
   "comparing radiance cascades to voxel cone tracing for interactive global illumination in dynamic scenes",
   "complex-valued holographic radiance fields",
-  "complex-valued 2d gaussian representation for computer-generated holography"
+  "complex-valued 2d gaussian representation for computer-generated holography",
+  "exilecon 2023: rendering path of exile 2",
+  "radiance cascades (shadertoy)",
+  "radiance cascades 3d (uv-space shadertoy)",
+  "gm shaders guest: radiance cascades",
+  "radiance cascades: building real-time global illumination",
+  "surfel radiance cascades diffuse global illumination",
+  "radiance cascades guided nee pathtracer",
+  "exilecon 2023 - rendering path of exile 2",
+  "radiance cascades 3d",
+  "surfel radiance cascades",
+  "src-dgi",
+  "vlam",
+  "gm shaders guest: radiance cascades 2"
  ],
  "updated": "2026-08-20",
  "pass2_batch": "systems-prefill-2026-08-13",
@@ -908,5 +921,24 @@
  "frontier_batch": "frontier-2026-08-18",
  "frontier_count": 6,
  "rc3d_batch": "radiance-cascades-3d-2026-08-20",
- "rc3d_count": 1
+ "rc3d_count": 1,
+ "urls": [
+  "https://www.youtube.com/watch?v=TrHHTQqmAaM",
+  "https://www.shadertoy.com/view/mtlBzX",
+  "https://www.shadertoy.com/view/X3XfRM",
+  "https://mini.gmshaders.com/p/radiance-cascades",
+  "https://jason.today/rc",
+  "https://github.com/mxcop/src-dgi",
+  "https://github.com/entropylost/vlam",
+  "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1967544",
+  "https://www.shadertoy.com/view/4ctXD8",
+  "https://mini.gmshaders.com/p/radiance-cascades2",
+  "https://jason.today/gi",
+  "https://m4xc.dev/articles/surfel-maintenance/",
+  "https://radiance.wiki/variants/uv-space-3d",
+  "https://radiance.wiki/variants/surfel-rc",
+  "https://radiance.wiki/variants/rc-guided-nee"
+ ],
+ "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
+ "rc_wip_count": 8
 }

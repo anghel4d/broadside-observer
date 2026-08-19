@@ -51,6 +51,7 @@ see:
   - "1098-a-fast-voxel-traversal-algorithm-for-ray-tracing"
   - "352-gigavoxels-ray-guided-streaming-for-efficient-and-detailed-v"
   - "272-interactive-indirect-illumination-using-voxel-cone-tracing"
+  - "1115-comparing-radiance-cascades-to-voxel-cone-tracing-for-inte"
 ---
 
 # A Simple Ray Acceleration Structure for Non-LTE Radiative Transfer

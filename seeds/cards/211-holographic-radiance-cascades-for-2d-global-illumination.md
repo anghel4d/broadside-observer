@@ -36,6 +36,8 @@ see:
   - "453-radiance-cascades-a-novel-high-resolution-formal-solution-fo"
   - "318-dynamic-diffuse-global-illumination-with-ray-traced-irradian"
   - "1107-a-simple-ray-acceleration-structure-for-non-lte-radiative-t"
+  - "1109-radiance-cascades-shadertoy"
+  - "1111-gm-shaders-guest-radiance-cascades"
 ---
 
 # Holographic Radiance Cascades for 2D Global Illumination
