@@ -3,6 +3,7 @@ import {
   CANVAS_BUFFER_KEY,
   DEFAULT_VIEW,
   VIEW_STORAGE_KEY,
+  openCanvas,
   parseCanvasBuffer,
   parseCanvasSurface,
   parseViewFromSearch,
@@ -14,6 +15,8 @@ import {
   writeStoredCanvasBuffer,
   writeStoredView,
 } from "./view.ts";
+import { parseRoute, printRoute } from "../domain/route.ts";
+import { CanvasIdSchema } from "../domain/schema.ts";
 
 assert.equal(parseViewMode("list"), "list");
 assert.equal(parseViewMode("cards"), "cards");
@@ -113,5 +116,68 @@ assert.equal(resolveView("?view=cards", memoryStorage), "cards");
 assert.equal(memory.get(VIEW_STORAGE_KEY), "cards");
 assert.equal(resolveView("", memoryStorage), "cards");
 assert.equal(resolveView("", null), DEFAULT_VIEW);
+
+{
+  const gi = CanvasIdSchema.parse("gi-radiance-cascades-2026-08-20");
+  const algebra = CanvasIdSchema.parse("anoptic-api-algebra-2026-08-17");
+  const canvases = [
+    { id: gi, title: "GI Radiance Cascades", file: "gi-radiance-cascades-2026-08-20.tsx", source: "packed-gi" },
+    { id: algebra, title: "API algebra", file: "anoptic-api-algebra-2026-08-17.tsx", source: "packed-algebra" },
+  ];
+  const leftover = { source: "LEFTOVER", id: algebra, surface: "raw" as const };
+
+  const share = `${printViewSearch("", "canvas")}${printRoute({ _tag: "Canvas", id: gi })}`;
+  assert.equal(share, "?view=canvas#canvas/gi-radiance-cascades-2026-08-20");
+
+  const hash = share.slice(share.indexOf("#"));
+  const search = share.slice(0, share.indexOf("#"));
+  const opened = openCanvas({
+    hash,
+    view: parseViewFromSearch(search) ?? DEFAULT_VIEW,
+    canvases,
+    buffer: leftover,
+  });
+  assert.equal(opened.view, "canvas");
+  assert.deepEqual(opened.route, { _tag: "Canvas", id: gi });
+  assert.equal(opened.canvasId, gi);
+  assert.equal(opened.canvasSource, "packed-gi", "hash must win over a leftover canvas buffer");
+  assert.equal(opened.canvasSurface, "raw", "RAW|RENDER stays in localStorage");
+  assert.equal(`${printViewSearch(search, opened.view)}${printRoute(opened.route)}`, share);
+
+  const sameBuffer = openCanvas({
+    hash: `#canvas/${gi}`,
+    view: "list",
+    canvases,
+    buffer: { source: "edited-gi", id: gi, surface: "render" },
+  });
+  assert.equal(sameBuffer.canvasSource, "edited-gi", "same-canvas leftover source is the RAW buffer");
+  assert.equal(sameBuffer.view, "canvas");
+
+  const noHash = openCanvas({ hash: "", view: "canvas", canvases, buffer: leftover });
+  assert.equal(noHash.view, "canvas");
+  assert.deepEqual(noHash.route, { _tag: "Canvas", id: algebra });
+  assert.equal(noHash.canvasSource, "LEFTOVER");
+
+  const unknown = openCanvas({
+    hash: "#canvas/not-a-packed-canvas",
+    view: "list",
+    canvases,
+    buffer: leftover,
+  });
+  assert.equal(unknown.view, "canvas");
+  assert.deepEqual(unknown.route, { _tag: "Catalog" });
+  assert.equal(printRoute(unknown.route), "");
+  assert.equal(unknown.canvasSource, "LEFTOVER");
+
+  const cardHash = openCanvas({
+    hash: "#card/031-michael-scott-lock-free-queue",
+    view: "cards",
+    canvases,
+    buffer: leftover,
+  });
+  assert.equal(cardHash.view, "cards");
+  assert.equal(cardHash.route._tag, "Card");
+  assert.equal(parseRoute("#card/031-michael-scott-lock-free-queue")._tag, "Card");
+}
 
 console.log("view.test.ts ok");

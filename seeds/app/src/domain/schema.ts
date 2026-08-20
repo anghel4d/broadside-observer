@@ -201,7 +201,10 @@ export const defaultQuery: Query = {
   sortReversed: false,
 };
 
-export type Route = { readonly _tag: "Catalog" } | { readonly _tag: "Card"; readonly id: CardId };
+export type Route =
+  | { readonly _tag: "Catalog" }
+  | { readonly _tag: "Card"; readonly id: CardId }
+  | { readonly _tag: "Canvas"; readonly id: CanvasId };
 
 export type SchemaIssue = {
   readonly path: string;
