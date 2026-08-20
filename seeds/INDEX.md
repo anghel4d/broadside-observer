@@ -1316,3 +1316,18 @@ Community implementations / writeups that are not venue papers (user: add them a
 | 1115 | 7 | 2025 | Comparing Radiance Cascades to Voxel Cone Tracing for Interactive Global Illumination in Dynamic Scenes | graphics |
 
 _Recount after `radiance-cascades-wip-2026-08-20`: **1115** unique title cards on main._
+
+
+## Frontier 2026-08-20
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Broadside/Anoptic/ano POS filter: **31**. Keepers: **5** (keep rate **0.161**, hard cap **0.25**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1116 | 10 | 2026 | SkillEffect: Checked Lowering for Memory-Bounded Agent Tools | agents |
+| 1117 | 10 | 2026 | Six Ways to Draw Vangers with WebGPU: Real-Time Rendering of Editable Multi-Layer Height Fields | engines |
+| 1118 | 9 | 2026 | Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State | agents |
+| 1119 | 9 | 2026 | Harness Continual Learning: Continual Adaptation Beyond Model Parameters | agents |
+| 1120 | 8 | 2026 | Position: Multi-Agent Systems Should Prioritize Concurrency Control | agents |
+
+_Recount after `frontier-2026-08-20`: **1120** unique title cards on main._
