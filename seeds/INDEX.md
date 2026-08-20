@@ -1331,3 +1331,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1120 | 8 | 2026 | Position: Multi-Agent Systems Should Prioritize Concurrency Control | agents |
 
 _Recount after `frontier-2026-08-20`: **1120** unique title cards on main._
+
+## Curiosity 2026-08-21
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **52**. Keepers: **7** (keep rate **0.135**, hard cap **0.15**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1121 | 10 | 1998 | Random Domino Tilings and the Arctic Circle Theorem | maths-foundations |
+| 1122 | 10 | 1999 | The honeycomb model of GL(n) tensor products I: Proof of the saturation conjecture | maths-foundations |
+| 1123 | 9 | 2006 | Total positivity, Grassmannians, and networks | maths-foundations |
+| 1124 | 9 | 2000 | A categorification of the Jones polynomial | maths-foundations |
+| 1125 | 9 | 2017 | A type theory for synthetic ∞-categories | languages |
+| 1126 | 9 | 2013 | Polynomial functors and polynomial monads | maths-foundations |
+| 1127 | 9 | 2001 | Towards Abstract Categorial Grammars | languages |
+
+_Recount after `curiosity-2026-08-21`: **1127** unique title cards on main._
