@@ -22,7 +22,7 @@ import {
   selectionState,
   type FilterKey,
 } from "../domain/query.ts";
-import { parseRoute, printRoute, routeId } from "../domain/route.ts";
+import { isCanvasHash, parseRoute, printRoute, routeId } from "../domain/route.ts";
 import { formatDiscordCard } from "../domain/discordCard.ts";
 import { assertNever } from "../domain/never.ts";
 import {
@@ -89,6 +89,7 @@ import { bindThemeControls, readStoredTheme, resolveTheme, THEME_MEDIA, type The
 import type { Slice } from "./virtualize.ts";
 import {
   browserStorage,
+  openCanvas,
   parseCanvasSurface,
   parseViewMode,
   printViewSearch,
@@ -107,6 +108,7 @@ type Model = {
   readonly route: Route;
   readonly view: ViewMode;
   readonly cardsSheet: boolean;
+  readonly lastCardId: CardId | null;
   readonly canvasId: CanvasId | null;
   readonly canvasSource: string;
   readonly canvasSurface: CanvasSurface;
@@ -168,22 +170,6 @@ type Paint = {
   readonly canvasSource: string;
 };
 
-function restoreCanvas(
-  canvases: ReadonlyArray<SeedCanvas>,
-  buffer: { readonly source: string; readonly id: string | null; readonly surface: CanvasSurface } | null,
-): { readonly id: CanvasId | null; readonly source: string; readonly surface: CanvasSurface } {
-  if (buffer !== null) {
-    const parsed = buffer.id === null ? null : CanvasIdSchema.safeParse(buffer.id);
-    return {
-      id: parsed?.success === true ? parsed.data : null,
-      source: buffer.source,
-      surface: buffer.surface,
-    };
-  }
-  const first = canvases[0];
-  return { id: first?.id ?? null, source: first?.source ?? "", surface: "render" };
-}
-
 function init(
   corpus: Corpus,
   canvases: ReadonlyArray<SeedCanvas>,
@@ -191,32 +177,39 @@ function init(
   view: ViewMode,
   buffer: { readonly source: string; readonly id: string | null; readonly surface: CanvasSurface } | null,
 ): Model {
-  const route = parseRoute(hash);
-  const canvas = restoreCanvas(canvases, buffer);
+  const opened = openCanvas({ hash, view, canvases, buffer });
   return {
     corpus,
     canvases,
     query: defaultQuery,
-    route,
-    view,
-    cardsSheet: view === "cards" && route._tag === "Card",
-    canvasId: canvas.id,
-    canvasSource: canvas.source,
-    canvasSurface: canvas.surface,
+    route: opened.route,
+    view: opened.view,
+    cardsSheet: opened.view === "cards" && opened.route._tag === "Card",
+    lastCardId: opened.lastCardId,
+    canvasId: opened.canvasId,
+    canvasSource: opened.canvasSource,
+    canvasSurface: opened.canvasSurface,
   };
 }
 
 function selectCard(model: Model, id: CardId): Model {
   const sheet = model.view === "cards" ? true : model.cardsSheet;
-  if (routeId(model.route) === id && model.cardsSheet === sheet) return model;
-  return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet };
+  if (routeId(model.route) === id && model.cardsSheet === sheet && model.lastCardId === id) return model;
+  return { ...model, route: { _tag: "Card", id }, cardsSheet: sheet, lastCardId: id };
 }
 
 function selectCanvas(model: Model, id: CanvasId): Model {
   const hit = model.canvases.find((canvas) => canvas.id === id);
   if (hit === undefined) return model;
-  if (model.canvasId === id && model.canvasSource === hit.source) return model;
-  return { ...model, canvasId: id, canvasSource: hit.source };
+  if (
+    model.canvasId === id &&
+    model.canvasSource === hit.source &&
+    model.route._tag === "Canvas" &&
+    model.route.id === id
+  ) {
+    return model;
+  }
+  return { ...model, route: { _tag: "Canvas", id }, canvasId: id, canvasSource: hit.source };
 }
 
 function pickAlong<T extends { readonly id: string }>(
@@ -252,7 +245,7 @@ function moveAlong(
   forward: boolean,
 ): Model {
   const pick = pickAlong(applyQuery(model.corpus, model.query), routeId(model.route), nextIndex, forward);
-  return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id } };
+  return pick === undefined ? model : { ...model, route: { _tag: "Card", id: pick.id }, lastCardId: pick.id };
 }
 
 function update(model: Model, msg: Msg): Model {
@@ -275,8 +268,26 @@ function update(model: Model, msg: Msg): Model {
       return { ...model, query: { ...model.query, sort: msg.sort, sortReversed: false } };
     case "ToggleSortDir":
       return { ...model, query: { ...model.query, sortReversed: !model.query.sortReversed } };
-    case "SetView":
-      return model.view === msg.view ? model : { ...model, view: msg.view, cardsSheet: false };
+    case "SetView": {
+      if (model.view === msg.view) return model;
+      if (msg.view === "canvas") {
+        return {
+          ...model,
+          view: "canvas",
+          cardsSheet: false,
+          lastCardId: model.route._tag === "Card" ? model.route.id : model.lastCardId,
+          route:
+            model.canvasId === null ? { _tag: "Catalog" } : { _tag: "Canvas", id: model.canvasId },
+        };
+      }
+      const cardId = model.route._tag === "Card" ? model.route.id : model.lastCardId;
+      return {
+        ...model,
+        view: msg.view,
+        cardsSheet: false,
+        route: cardId === null ? { _tag: "Catalog" } : { _tag: "Card", id: cardId },
+      };
+    }
     case "SetCardsSheet":
       return model.cardsSheet === msg.value ? model : { ...model, cardsSheet: msg.value };
     case "SelectCanvas":
@@ -318,9 +329,31 @@ function update(model: Model, msg: Msg): Model {
       );
     case "Hash": {
       const route = parseRoute(msg.hash);
+      if (route._tag === "Canvas" || isCanvasHash(msg.hash)) {
+        const hit = route._tag === "Canvas" ? model.canvases.find((canvas) => canvas.id === route.id) : undefined;
+        if (hit !== undefined) {
+          return {
+            ...model,
+            view: "canvas",
+            route,
+            cardsSheet: false,
+            lastCardId: model.route._tag === "Card" ? model.route.id : model.lastCardId,
+            canvasId: hit.id,
+            canvasSource: model.canvasId === hit.id ? model.canvasSource : hit.source,
+          };
+        }
+        return {
+          ...model,
+          view: "canvas",
+          route: { _tag: "Catalog" },
+          cardsSheet: false,
+          lastCardId: model.route._tag === "Card" ? model.route.id : model.lastCardId,
+        };
+      }
       return {
         ...model,
         route,
+        lastCardId: route._tag === "Card" ? route.id : model.lastCardId,
         cardsSheet: route._tag === "Card" && model.view === "cards" ? true : model.cardsSheet,
       };
     }
@@ -705,6 +738,7 @@ function renderCanvasDetail(title: string, surface: CanvasSurface, source: strin
           <div class="detail-title-row">
             <h2 id="detail-title" title="${attr(title)}">${escapeHtml(title === "" ? "Canvas" : title)}</h2>
             <div class="detail-actions">
+              <button type="button" class="detail-action" data-copy="link" title="Copy link to this view" aria-label="Copy link">${LINK_ICON}</button>
               <div class="seg" id="canvas-surface" role="radiogroup" aria-label="Canvas surface">
                 <button type="button" role="radio" data-surface="raw" aria-checked="${rawOn ? "true" : "false"}">Raw</button>
                 <button type="button" role="radio" data-surface="render" aria-checked="${rawOn ? "false" : "true"}">Render</button>
@@ -904,9 +938,11 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     readStoredTheme(storage),
     window.matchMedia(THEME_MEDIA).matches,
   );
-  root.innerHTML = shellHtml(corpus, initialView, initialTheme);
+  let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
+  if (model.view !== initialView) writeStoredView(storage, model.view);
+  root.innerHTML = shellHtml(corpus, model.view, initialTheme);
   bindThemeControls(root, storage);
-  root.dataset.view = initialView;
+  root.dataset.view = model.view;
   root.dataset.menu = "closed";
 
   const chrome = requireElement<HTMLElement>(root, "chrome");
@@ -987,7 +1023,6 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
     paintCanvasSurface();
   });
 
-  let model = init(corpus, canvases, location.hash, initialView, readStoredCanvasBuffer(storage));
   let painted: Paint | null = null;
   let filtersOpen = false;
   let menuOpen = false;
@@ -1266,9 +1301,14 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
   const dispatch = (msg: Msg): void => {
     const next = update(model, msg);
     if (next === model) return;
+    const prevView = model.view;
     model = next;
     if (msg._tag !== "Hash") syncLocation(model.route, model.view);
+    else if (isCanvasHash(msg.hash) && model.route._tag === "Catalog") syncLocation(model.route, model.view);
     if (msg._tag === "SetView") writeStoredView(storage, model.view);
+    if (msg._tag === "Hash" && model.view === "canvas" && prevView !== "canvas") {
+      writeStoredView(storage, model.view);
+    }
     if (msg._tag === "SetView" && splitDrag === null) {
       liveDetailPx = null;
     }
@@ -1277,7 +1317,8 @@ export function startApp(root: HTMLElement, corpus: Corpus, canvases: ReadonlyAr
       msg._tag === "SelectCanvas" ||
       msg._tag === "SetCanvasSource" ||
       msg._tag === "SetCanvasSurface" ||
-      (msg._tag === "Move" && model.view === "canvas")
+      (msg._tag === "Move" && model.view === "canvas") ||
+      (msg._tag === "Hash" && model.view === "canvas")
     ) {
       writeStoredCanvasBuffer(storage, {
         source: model.canvasSource,

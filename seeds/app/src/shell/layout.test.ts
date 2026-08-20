@@ -276,6 +276,10 @@ assert.equal(
   assert.ok(app.includes("aria-controls"));
   assert.ok(app.includes("canvasEdgeBinding"), "canvas Shift+jk must use the keymap, not a raw ArrowDown listener");
   assert.ok(app.includes("gridDirFromKey"));
+  assert.ok(
+    /function renderCanvasDetail[\s\S]*data-copy="link"/.test(app),
+    "canvas detail must copy a share link, same as cards",
+  );
 }
 
 {

@@ -1,3 +1,6 @@
+import { CanvasIdSchema, type CanvasId, type CardId, type Route, type SeedCanvas } from "../domain/schema.ts";
+import { isCanvasHash, parseRoute } from "../domain/route.ts";
+
 const VIEW_MODES = ["canvas", "list", "cards"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];
 
@@ -106,6 +109,84 @@ export function resolveView(
     return fromUrl;
   }
   return readStoredView(storage);
+}
+
+export function restoreCanvas(
+  canvases: ReadonlyArray<SeedCanvas>,
+  buffer: CanvasBuffer | null,
+): { readonly id: CanvasId | null; readonly source: string; readonly surface: CanvasSurface } {
+  if (buffer !== null) {
+    const parsed = buffer.id === null ? null : CanvasIdSchema.safeParse(buffer.id);
+    return {
+      id: parsed?.success === true ? parsed.data : null,
+      source: buffer.source,
+      surface: buffer.surface,
+    };
+  }
+  const first = canvases[0];
+  return { id: first?.id ?? null, source: first?.source ?? "", surface: DEFAULT_CANVAS_SURFACE };
+}
+
+export type CanvasOpen = {
+  readonly route: Route;
+  readonly view: ViewMode;
+  readonly lastCardId: CardId | null;
+  readonly canvasId: CanvasId | null;
+  readonly canvasSource: string;
+  readonly canvasSurface: CanvasSurface;
+};
+
+/**
+ * Hash `#canvas/<stem>` selects that packed canvas and forces canvas view.
+ * Packed source wins when the leftover buffer is a different canvas.
+ * Invalid / unknown canvas slug → canvas catalog (no selection hash).
+ * `?view=canvas` with no hash still opens canvas (first / stored buffer).
+ */
+export function openCanvas(args: {
+  readonly hash: string;
+  readonly view: ViewMode;
+  readonly canvases: ReadonlyArray<SeedCanvas>;
+  readonly buffer: CanvasBuffer | null;
+}): CanvasOpen {
+  const route = parseRoute(args.hash);
+  const restored = restoreCanvas(args.canvases, args.buffer);
+  const lastCardId = route._tag === "Card" ? route.id : null;
+
+  if (route._tag === "Canvas" || isCanvasHash(args.hash)) {
+    const hit = route._tag === "Canvas" ? args.canvases.find((canvas) => canvas.id === route.id) : undefined;
+    if (hit !== undefined) {
+      return {
+        route,
+        view: "canvas",
+        lastCardId,
+        canvasId: hit.id,
+        canvasSource: restored.id === hit.id ? restored.source : hit.source,
+        canvasSurface: restored.surface,
+      };
+    }
+    return {
+      route: { _tag: "Catalog" },
+      view: "canvas",
+      lastCardId,
+      canvasId: restored.id,
+      canvasSource: restored.source,
+      canvasSurface: restored.surface,
+    };
+  }
+
+  const view = args.view;
+  const promoted: Route =
+    view === "canvas" && route._tag === "Catalog" && restored.id !== null
+      ? { _tag: "Canvas", id: restored.id }
+      : route;
+  return {
+    route: promoted,
+    view,
+    lastCardId,
+    canvasId: restored.id,
+    canvasSource: restored.source,
+    canvasSurface: restored.surface,
+  };
 }
 
 export function browserStorage(): Storage | null {
