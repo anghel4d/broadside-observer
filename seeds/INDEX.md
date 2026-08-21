@@ -1362,3 +1362,21 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1133 | 9 | 2026 | Redundant Array Computation Elimination | languages |
 
 _Recount after `craft-2026-08-21`: **1133** unique title cards on main._
+
+
+## Archive 2026-08-22
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/historical-gem filter: **48**. Keepers: **8** (keep rate **0.167**, hard cap **0.20**). No padding.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1134 | 10 | 1999 | Stable Fluids | engines |
+| 1135 | 10 | 1996 | A Cellular Texture Basis Function | graphics |
+| 1136 | 10 | 2003 | Optimized Spatial Hashing for Collision Detection of Deformable Objects | engines |
+| 1137 | 10 | 2002 | D* Lite | game-ai |
+| 1138 | 10 | 2001 | Language Support for Regions | languages |
+| 1139 | 10 | 2008 | Foundations of the C++ Concurrency Memory Model | systems |
+| 1140 | 10 | 1996 | Typed Closure Conversion | languages |
+| 1141 | 9 | 1998 | Large Steps in Cloth Simulation | engines |
+
+_Recount after `archive-2026-08-22`: **1141** unique title cards on main._
