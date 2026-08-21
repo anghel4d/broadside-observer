@@ -329,7 +329,9 @@
   "2509.03785",
   "2510.14760",
   "1909.10840",
-  "1212.6974"
+  "1212.6974",
+  "2403.06321",
+  "2506.21960"
  ],
  "titles": [
   "a fast procedure for computing the distance between complex objects (gjk)",
@@ -981,15 +983,21 @@
   "the combinatorial nullstellensatz",
   "gauge theory of the falling cat",
   "a polynomial invariant for knots via von neumann algebras",
-  "categories of containers"
+  "categories of containers",
+  "gpu-centered font rendering directly from glyph outlines",
+  "performance comparison of meshlet generation strategies",
+  "end-to-end compressed meshlet rendering",
+  "vertex block descent",
+  "a mechanized algebra of verified data structures for optimizing sparse tensor programs",
+  "redundant array computation elimination"
  ],
  "updated": "2026-08-21",
  "pass2_batch": "systems-prefill-2026-08-13",
  "pass2_count": 250,
  "curiosity_batch": "curiosity-2026-08-21",
  "curiosity_count": 7,
- "craft_batch": "craft-2026-08-19",
- "craft_count": 7,
+ "craft_batch": "craft-2026-08-21",
+ "craft_count": 6,
  "archive_batch": "archive-2026-08-20",
  "archive_count": 10,
  "frontier_batch": "frontier-2026-08-20",

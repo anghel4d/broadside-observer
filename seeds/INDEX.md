@@ -1347,3 +1347,18 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1127 | 9 | 2001 | Towards Abstract Categorial Grammars | languages |
 
 _Recount after `curiosity-2026-08-21`: **1127** unique title cards on main._
+
+## Craft 2026-08-21
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **28**. Keepers: **6** (keep rate **0.214**, hard cap **0.25**). No padding. No game-ai crème this cycle (AIIDE harvest remains LLM-sludge + last-cycle BT rewrite; honest empty).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1128 | 10 | 2017 | GPU-Centered Font Rendering Directly from Glyph Outlines | graphics |
+| 1129 | 9 | 2023 | Performance Comparison of Meshlet Generation Strategies | graphics |
+| 1130 | 9 | 2024 | End-to-End Compressed Meshlet Rendering | graphics |
+| 1131 | 10 | 2024 | Vertex Block Descent | engines |
+| 1132 | 9 | 2026 | A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs | languages |
+| 1133 | 9 | 2026 | Redundant Array Computation Elimination | languages |
+
+_Recount after `craft-2026-08-21`: **1133** unique title cards on main._
