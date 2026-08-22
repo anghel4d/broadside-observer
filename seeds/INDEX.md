@@ -1393,3 +1393,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1144 | 9 | 2026 | Outcome Monitors: Recovery Affordances for Silent Tool Failures | agents |
 
 _Recount after `frontier-2026-08-22`: **1144** unique title cards on main._
+
+
+## Curiosity 2026-08-23
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **45**. Keepers: **6** (keep rate **0.133**, hard cap **0.15**). No padding. Slice: pictorial QM + synthetic probability + random conformal geometry (not dimers) + topology-as-computer + geometry leftover (Willmore) + tropical leftover of cluster.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1145 | 10 | 2011 | Interacting Quantum Observables: Categorical Algebra and Diagrammatics | maths-foundations |
+| 1146 | 9 | 2020 | A synthetic approach to Markov kernels, conditional independence and theorems on sufficient statistics | maths-foundations |
+| 1147 | 10 | 2000 | Scaling limits of loop-erased random walks and uniform spanning trees | maths-foundations |
+| 1148 | 10 | 2003 | Fault-tolerant quantum computation by anyons | maths-foundations |
+| 1149 | 10 | 2014 | Min-Max theory and the Willmore conjecture | maths-foundations |
+| 1150 | 9 | 2005 | Enumerative tropical algebraic geometry in R² | maths-foundations |
+
+_Recount after `curiosity-2026-08-23`: **1150** unique title cards on main._
