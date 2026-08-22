@@ -1380,3 +1380,16 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1141 | 9 | 1998 | Large Steps in Cloth Simulation | engines |
 
 _Recount after `archive-2026-08-22`: **1141** unique title cards on main._
+
+
+## Frontier 2026-08-22
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Broadside/Anoptic/ano POS filter: **16**. Keepers: **3** (keep rate **0.188**, hard cap **0.25**). No padding. Friday 21 Aug listings only (Saturday is a listing dead zone). Honest empty engines / language / game-ai.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1142 | 10 | 2026 | ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents | agents |
+| 1143 | 10 | 2026 | CacheRoute: Planned Prefix-Affinity Routing for Large-Scale LLM Serving | agents |
+| 1144 | 9 | 2026 | Outcome Monitors: Recovery Affordances for Silent Tool Failures | agents |
+
+_Recount after `frontier-2026-08-22`: **1144** unique title cards on main._

@@ -332,7 +332,10 @@
   "1212.6974",
   "2403.06321",
   "2506.21960",
-  "1302.2805"
+  "1302.2805",
+  "2608.19662",
+  "2608.19677",
+  "2608.19303"
  ],
  "titles": [
   "a fast procedure for computing the distance between complex objects (gjk)",
@@ -1036,7 +1039,10 @@
   "nonconvex rigid bodies with stacking",
   "anisotropic reflection models",
   "visual simulation of clouds",
-  "r1: a rule-based configurer of computer systems"
+  "r1: a rule-based configurer of computer systems",
+  "recache: efficient kv cache reuse and compression for tool-augmented llm agents",
+  "cacheroute: planned prefix-affinity routing for large-scale llm serving",
+  "outcome monitors: recovery affordances for silent tool failures"
  ],
  "updated": "2026-08-22",
  "pass2_batch": "systems-prefill-2026-08-13",
@@ -1047,8 +1053,8 @@
  "craft_count": 6,
  "archive_batch": "archive-2026-08-22",
  "archive_count": 8,
- "frontier_batch": "frontier-2026-08-20",
- "frontier_count": 5,
+ "frontier_batch": "frontier-2026-08-22",
+ "frontier_count": 3,
  "rc3d_batch": "radiance-cascades-3d-2026-08-20",
  "rc3d_count": 1,
  "urls": [
