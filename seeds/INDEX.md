@@ -1423,3 +1423,22 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1154 | 10 | 2016 | Single-pass Parallel Prefix Scan with Decoupled Look-back | engines |
 
 _Recount after `craft-2026-08-23`: **1154** unique title cards on main._
+
+
+
+## Archive 2026-08-24
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Anoptic/historical-gem filter: **44**. Keepers: **8** (keep rate **0.182**, hard cap **0.20**). No padding. Slice: typestate + ML modules (translucent sums / manifest types) + constructor classes + delimited control + lambda lifting + leftover graphics/engine (sphere tracing, predictive LOD) — not last Archive's fluids/Worley/hashing/D* Lite/C-regions/C++ MM/closure-conversion/cloth, not ray/OBB/ROAM/zipper/Earley/CRF/STM/IBL, not PCF/G-buffer/radiosity/Levoy/clipmap/Pineda/APL/MeCab/SHRDLU, not A-buffer/Porter-Duff/Warnock/irradiance-cache/Lightcuts/Crow/SAC/Hui/APL?/PCC/ownership/Doorenbos.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1155 | 10 | 1986 | Typestate: A Programming Language Concept for Enhancing Software Reliability | languages |
+| 1156 | 10 | 1994 | A Type-Theoretic Approach to Higher-Order Modules with Sharing | languages |
+| 1157 | 10 | 1994 | Manifest Types, Modules, and Separate Compilation | languages |
+| 1158 | 10 | 1993 | A System of Constructor Classes: Overloading and Implicit Higher-Order Polymorphism | languages |
+| 1159 | 10 | 1990 | Abstracting Control | languages |
+| 1160 | 9 | 1985 | Lambda Lifting: Transforming Programs to Recursive Equations | languages |
+| 1161 | 10 | 1996 | Sphere Tracing: A Geometric Method for the Antialiased Ray Tracing of Implicit Surfaces | graphics |
+| 1162 | 10 | 1993 | Adaptive Display Algorithm for Interactive Frame Rates During Visualization of Complex Virtual Environments | engines |
+
+_Recount after `archive-2026-08-24`: **1162** unique title cards on main._
