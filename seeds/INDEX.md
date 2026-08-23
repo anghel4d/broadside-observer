@@ -1409,3 +1409,17 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1150 | 9 | 2005 | Enumerative tropical algebraic geometry in R² | maths-foundations |
 
 _Recount after `curiosity-2026-08-23`: **1150** unique title cards on main._
+
+
+## Craft 2026-08-23
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **28**. Keepers: **4** (keep rate **0.143**, hard cap **0.25**). No padding. No game-ai crème this cycle (AIIDE harvest remains LLM-sludge + last-cycle BT rewrite; honest empty). Unicode leftover skip Slug/Loop-Blinn/Green: honest empty (no crème paper). Slice: RT-alpha OMM DAG leftover after meshlet compression + GPU compact leftover after meshlets + egg founding leftover after array CSE + morsel execution leftover after WGLog/Pusharoo.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1151 | 10 | 2026 | Common Subtree Merging Compressed Opacity Micromaps | graphics |
+| 1152 | 10 | 2021 | egg: Fast and Extensible Equality Saturation | languages |
+| 1153 | 9 | 2014 | Morsel-Driven Parallelism: A NUMA-Aware Query Evaluation Framework for the Many-Core Age | languages |
+| 1154 | 10 | 2016 | Single-pass Parallel Prefix Scan with Decoupled Look-back | engines |
+
+_Recount after `craft-2026-08-23`: **1154** unique title cards on main._
