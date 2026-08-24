@@ -158,7 +158,7 @@ function isSectionHeading(value: string): value is keyof typeof HEADING_TO_SECTI
 function parseSections(file: string, body: string): Result<ParseError, Sections> {
   const headingRe = /^## (.+)$/gm;
   const matches = [...body.matchAll(headingRe)];
-  const found: Partial<Record<SectionKey, string>> = {};
+  const found: Partial<Record<SectionKey, string[]>> = {};
 
   for (let index = 0; index < matches.length; index += 1) {
     const match = matches[index];
@@ -169,7 +169,10 @@ function parseSections(file: string, body: string): Result<ParseError, Sections>
     const start = match.index + match[0].length;
     const next = matches[index + 1];
     const end = next?.index ?? body.length;
-    found[key] = body.slice(start, end).trim();
+    const text = body.slice(start, end).trim();
+    const parts = found[key];
+    if (parts === undefined) found[key] = [text];
+    else parts.push(text);
   }
 
   const missing = SECTION_KEYS.filter((key) => found[key] === undefined).map(
@@ -179,7 +182,20 @@ function parseSections(file: string, body: string): Result<ParseError, Sections>
     return err({ _tag: "MissingSections", file, headings: missing });
   }
 
-  const parsed = SectionsSchema.safeParse(found);
+  const joined: Record<SectionKey, string> = {
+    takeaway: "",
+    why: "",
+    ideas: "",
+    caveats: "",
+    links: "",
+  };
+  for (const key of SECTION_KEYS) {
+    const parts = found[key];
+    if (parts === undefined) continue;
+    joined[key] = parts.filter((part) => part.length > 0).join("\n\n");
+  }
+
+  const parsed = SectionsSchema.safeParse(joined);
   if (!parsed.success) {
     return err({ _tag: "SchemaError", file, issues: issuesFromZod(parsed.error) });
   }
