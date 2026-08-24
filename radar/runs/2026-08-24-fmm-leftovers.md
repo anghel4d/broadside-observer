@@ -1,0 +1,22 @@
+# radar run — FMM leftovers 2026-08-24
+
+- daypart: none (user ingest, not a daypart radar)
+- local: 2026-08-24 Europe/Bucharest
+- main at start: `9ed3ec1d4b13f91890095b9374bf1cdccf7fc6fd` (1188 cards, ranks 1–1188, FMM PR #69)
+- next rank: 1189
+- sources: gh Contents/Git Data (no clone); Crossref; DBLP; arXiv API; author PDFs (Columbia FMR, ETH BGH03, ARTIS Orzan, 3dvar Bang); MPI MIS preprint pages; INRIA HAL / GitLab ScalFMM (HAL HTML is Anubis-gated; RR-8277 cited from metadata + TBFMM JOSS)
+- already in catalog: FMM 1163–1188 (see); Lightcuts 1042 (see); TBFMM 1187 (do not remint)
+- keepers: 8 (ranks 1189–1196)
+- seed_batch: fmm-leftovers-2026-08-24
+- not reminted: 1–1188
+- ScalFMM source actually found: Agullo, Bramas, Coulaud, Darve, Messner, Takahashi. "Task-Based FMM for Multicore Architectures." *SIAM J. Sci. Comput.* 36(1):C66–C93, 2014. DOI 10.1137/130915662. Tech-report twin INRIA RR-8277, March 2013, HAL-00807368. Code: https://gitlab.inria.fr/solverstack/ScalFMM
+- rejects this cycle:
+  - Zhang–Bridson 2014 "A PPPM Fast Summation Method for Fluids and Beyond" — PPPM, authors contrast it with FMM; not FMM
+  - Ilbery et al. 2013 "Biharmonic diffusion curve images from boundary elements" — BEM, not FMM
+  - Finch / Sharp / Crane diffusion-curve extensions — not FMM
+  - Jeschke 2009 GPU Laplacian solver — FD/Jacobi, not FMM
+  - Hackbusch–Khoromskij 2000 Part II; Grasedyck–Hackbusch Computing 2003 construction; MPI LN 21/2003 — cited from the one review, not reminted
+  - "On H²-matrices" Hackbusch–Khoromskij–Sauter 2000 — naming paper, 2002 is the journal founding
+  - SIAM CSE 2015 talk "ScalFMM: A Generic Parallel Fast Multipole Library" — talk, not a paper
+  - No graphics-founding H-matrix paper found
+- unresolved: PBBFMM / PBBFMM3D still no sourced founding paper (carried from FMM ingest)

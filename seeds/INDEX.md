@@ -1477,3 +1477,20 @@ User ingest (not a daypart radar). Exhaustive Fast Multipole Method / tree-code 
 | 1188 | 8 | 2025 | kifmm-rs: A Kernel-Independent Fast Multipole Framework in Rust | engines |
 
 _Recount after `fmm-2026-08-24`: **1188** unique title cards on main._
+
+## FMM Leftovers 2026-08-24
+
+User ingest (not a daypart radar). Leftovers the FMM 2026-08-24 pass (PR #69, merge `9ed3ec1`) refused: Hackbusch H-matrices / H2, ScalFMM's actual venue paper, Orzan 2008 + Sun 2014 / Bang 2023 diffusion-curve FMM. Catalog at start: `main` `9ed3ec1` after FMM 2026-08-24, **1188** cards, ranks 1–1188 untouched. Already present: FMM 1163–1188 (see, not reminted); Lightcuts 1042; TBFMM 1187 (do not remint). Zhang–Bridson 2014 is PPPM, not FMM — skipped. Keepers: **8**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1189 | 9 | 1989 | On the Fast Matrix Multiplication in the Boundary Element Method by Panel Clustering | engines |
+| 1190 | 10 | 1999 | A Sparse Matrix Arithmetic Based on H-Matrices. Part I: Introduction to H-Matrices | engines |
+| 1191 | 10 | 2002 | Data-sparse Approximation by Adaptive H2-Matrices | engines |
+| 1192 | 9 | 2003 | Introduction to Hierarchical Matrices with Applications | engines |
+| 1193 | 9 | 2014 | Task-Based FMM for Multicore Architectures | engines |
+| 1194 | 10 | 2008 | Diffusion Curves: A Vector Representation for Smooth-Shaded Images | graphics |
+| 1195 | 10 | 2014 | Fast Multipole Representation of Diffusion Curves and Points | graphics |
+| 1196 | 10 | 2023 | An Adaptive Fast-Multipole-Accelerated Hybrid Boundary Integral Equation Method for Accurate Diffusion Curves | graphics |
+
+_Recount after `fmm-leftovers-2026-08-24`: **1196** unique title cards on main._

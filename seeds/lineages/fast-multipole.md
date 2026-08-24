@@ -1,14 +1,14 @@
 # Fast Multipole Method
 
 **Slug:** `fast-multipole`  
-**Batch:** `fmm-2026-08-24`  
-**Cards in thread:** 26 (1163–1188) + see Lightcuts 1042
+**Batch:** `fmm-2026-08-24` + `fmm-leftovers-2026-08-24`  
+**Cards in thread:** 26 (1163–1188) + leftovers 1193–1196 + see Lightcuts 1042 + H-matrix sibling 1189–1192
 
 ## Charter
 
 Hierarchical fast summation for Broadside / Anoptic: the **Fast Multipole Method** (Greengard–Rokhlin) and the tree-code siblings the Keyframe Codes gravity talks treat as prior art (Appel, Barnes–Hut). The thread asks how to evaluate N-body potentials — gravity, Coulomb, Helmholtz, Gaussians — in O(N) or O(N log N) with a bound, instead of O(N²) pairwise or a game-engine Barnes–Hut with a θ knob.
 
-Not a dump of computational-electromagnetics antenna papers. Helmholtz / MLFMA appear only as *founding algorithm* papers (Rokhlin, Coifman–Wandzura, Song–Chew, Darve). Kernel-independent and black-box FMM are the any-K(x,y) variants. Fast Gauss is the same family for heat/RBF. Software cards are real papers or JOSS (PVFMM, ExaFMM, TBFMM, kifmm-rs). Lightcuts (1042) is the graphics many-lights tree-cut cousin — see, not reminted.
+Not a dump of computational-electromagnetics antenna papers. Helmholtz / MLFMA appear only as *founding algorithm* papers (Rokhlin, Coifman–Wandzura, Song–Chew, Darve). Kernel-independent and black-box FMM are the any-K(x,y) variants. Fast Gauss is the same family for heat/RBF. Software cards are real papers or JOSS (PVFMM, ExaFMM, TBFMM, kifmm-rs, **ScalFMM 2014 SISC**). Lightcuts (1042) is the graphics many-lights tree-cut cousin — see, not reminted. Diffusion-curve FMM (Orzan source + Sun 2014 + Bang 2023) is the graphics evaluation spine. H-matrices live on the sibling slug `h-matrices`.
 
 ## Ordered spine
 
@@ -21,15 +21,17 @@ Not a dump of computational-electromagnetics antenna papers. Helmholtz / MLFMA a
 7. **Fast Gauss** — Greengard–Strain 1991, Yang–Duraiswami–Gumerov–Davis 2003 IFGT.
 8. **Reviews** — Beatson–Greengard 1997 short course, Greengard 1994 Science.
 9. **N-body / GPU** — Dehnen 2002 astrophysics FMM, Gumerov–Duraiswami 2008 GPU FMM.
-10. **Software** — PVFMM 2015, ExaFMM/Yokota 2013, TBFMM 2020, kifmm-rs 2025.
+10. **Software** — PVFMM 2015, ExaFMM/Yokota 2013, **ScalFMM / Agullo et al. 2014 SISC**, TBFMM 2020, kifmm-rs 2025.
+11. **Graphics FMM** — Orzan 2008 (source primitive) → Sun 2014 FMR → Bang 2023 adaptive hybrid BIEM.
 
 ## Graph notes
 
 - **Talk 1** (`FhMftauQZqU`, Keyframe Codes) names Barnes–Hut, Greengard–Rokhlin 1987, Carrier adaptive 1988, and the Dongarra/Sullivan top-10 list (not a paper).
 - **Talk 2** (`uOahsDhVZaE`, Keyframe Codes, implementation, start ~8:04) implements adaptive 2D FMM and points at a linked 3D spherical-harmonics paper = Cheng–Greengard–Rokhlin 1999.
 - Lightcuts (`1042`) stays on the many-lights lineage; FMM cards see it as the graphics tree-cut cousin.
-- ScalFMM (INRIA) and PBBFMM have no sourced venue paper this cycle — DIGEST only.
-- H-matrix (Hackbusch 1999) is a sibling family, not minted.
+- **ScalFMM leftover closed:** Agullo–Bramas–Coulaud–Darve–Messner–Takahashi, *Task-Based FMM for Multicore Architectures*, SISC 2014 (RR-8277 / HAL-00807368). TBFMM 1187 is the JOSS descendant — not reminted.
+- **H-matrices** moved to sibling lineage `h-matrices` (1189–1192).
+- Zhang–Bridson 2014 is PPPM, not FMM — skipped.
 
 ## Open frontiers / watch next
 
