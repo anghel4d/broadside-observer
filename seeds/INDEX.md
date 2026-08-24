@@ -1557,3 +1557,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candi
 | 1233 | 10 | 2026 | Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory | agents |
 
 _Recount after `frontier-2026-08-24`: **1233** unique title cards on main._
+
+## Curiosity 2026-08-25
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **42**. Keepers: **6** (keep rate **0.143**, hard cap **0.15**). No padding. Slice: Kontsevich graphs + h-principle cliff + factorization homology leftover of cobordism + simplicial univalence leftover of cubical + amplituhedron leftover of plabic/cluster + quasi-category dictionary leftover of synthetic-∞.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1234 | 10 | 2003 | Deformation quantization of Poisson manifolds, I | maths-foundations |
+| 1235 | 10 | 2012 | h-Principle and Rigidity for C^{1,α} Isometric Embeddings | maths-foundations |
+| 1236 | 10 | 2015 | Factorization homology of topological manifolds | maths-foundations |
+| 1237 | 10 | 2021 | The Simplicial Model of Univalent Foundations (after Voevodsky) | maths-foundations |
+| 1238 | 10 | 2014 | The Amplituhedron | maths-foundations |
+| 1239 | 9 | 2006 | Quasi-categories vs Segal spaces | maths-foundations |
+
+_Recount after `curiosity-2026-08-25`: **1239** unique title cards on main._
+
