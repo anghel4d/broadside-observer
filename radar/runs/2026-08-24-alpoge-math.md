@@ -1,0 +1,32 @@
+# radar run — Alpoge / AI math 2026-08-24
+
+- daypart: none (user ingest, not a daypart radar)
+- local: 2026-08-24 Europe/Bucharest
+- main at start: `5c8140810b11d10915b78531685128819b1e00ec` (1196 cards, ranks 1–1196, FMM leftovers PR #70 + packer dialect PR #71)
+- next rank: 1197
+- sources: gh Contents/Git Data (no clone); user PDF `/workspace/alpoge-math-2026-08-24/s6.pdf` + s6.txt; https://alpo.ge/ + cv.pdf; arXiv `au:Alpoge_L`; Anthropic zeta blog; Nature / OpenAI / DeepMind first-party pages; Epoch FrontierMath
+- already in catalog: DeepSeekMath 977 (2402.03300); DeepSeek-Prover 980 (2405.14333); Prover-V1.5 982 (2408.08152); Prover-V2 991 (2504.21801); DeepSeekMath-V2 994 (2511.22570) — see, not reminted. No prior Alpoge / Minerva / AlphaGeometry / AlphaProof / FunSearch / AlphaTensor / FrontierMath / o1 / IMO-gold cards.
+- keepers: 35 (ranks 1197–1231). 1198 dual-listed (Alpoge paper + AI-math event).
+- seed_batch: alpoge-math-2026-08-24
+- not reminted: 1–1196
+- s6.pdf: Alpoge constructs a compact complex 3-fold diffeomorphic to S^6 by completing the (3,4,infinity) modular family of 2-tori at three special points. No arXiv/DOI as of 2026-08-24 — not invented.
+- lineages created: `arithmetic-geometry` (1197, 1199–1219); `ai-mathematical-reasoning` (1198, 1220–1231)
+- rejects this cycle:
+  - Kane–Thorne note; “Nagell–Lutz, quickly” — CV only, no arXiv/DOI/PDF
+  - Analytic number theory and quadratic reciprocity — expository
+  - Course notes Math 122/123; talks; tweets; slides
+  - PhD thesis *Points on curves* and senior thesis — compiled into 1200 / 1211
+  - Koymans–Pagano Hilbert 10 (2412.01768) — independent; cited from 1199, not reminted
+  - Original GPT-f (2009.03393, 2020) — outside the 2021–2026 window; 1227 is the 2021 successor
+  - Hendrycks MATH, GSM8K, WizardMath / ToRA / MetaMath / MAmmoTH, Llemma — score bumps, not named solves
+  - Putnam-Bench, MiniF2F-as-bench (MiniF2F lives inside 1227)
+  - LeanDojo, Draft-Sketch-Prove, HyperTree Proof Search
+  - Seed-Prover / Kimina / Goedel-Prover — open prover jumps already covered by DeepSeek 980–991
+  - AlphaProof 2024 blog — announcement of 1223, not reminted
+  - Anthropic zeta blog — announcement of 1198, not reminted
+  - o3 standalone math paper — none found; 1229 is the o3-line IMO 2025 event
+- unresolved:
+  - Quartic monogenic Math. Ann. DOI not confirmed (2107.05514 journal year 2024 from CV) — not invented
+  - Latin-squares Combinatorica DOI not confirmed — not invented
+  - FunSearch / AlphaTensor / AlphaProof arXiv ids not used — Nature/DOI is the artifact
+  - Homepage people.math.harvard.edu/~alpoge/ intermittently 500; used alpo.ge + arXiv
