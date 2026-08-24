@@ -1546,3 +1546,14 @@ User ingest (not a daypart radar). Alpoge S^6 PDF first, then every sourced Alpo
 | 1231 | 10 | 2025 | AlphaEvolve: A coding agent for scientific and algorithmic discovery | agents |
 
 _Recount after `alpoge-math-2026-08-24`: **1231** unique title cards on main._
+
+## Frontier 2026-08-24
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`radar/seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap Broadside/Anoptic/ano POS filter: **16**. Keepers: **2** (keep rate **0.125**, hard cap **0.25**). No padding. Monday 24 Aug listings (weekend is a mailing dead zone; Friday 21 Aug through 2608.20338 already minted last Frontier). Mix: 2 agents / 0 engines / 0 language / 0 game-ai. Honest empty engines (cs.GR new = 3, none meshlet/WebGPU/Vulkan/radiance-cascade). Honest empty language (Fortran do concurrent / async-await DSE / FGLS semantics dropped, not ano crème). Honest empty game-ai.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1232 | 10 | 2026 | Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf | agents |
+| 1233 | 10 | 2026 | Nexus: Depth-Adaptive KV-Cache Splicing and Retrieval-Decoupled Tool Routing for Agentic LLMs on Unified Memory | agents |
+
+_Recount after `frontier-2026-08-24`: **1233** unique title cards on main._
