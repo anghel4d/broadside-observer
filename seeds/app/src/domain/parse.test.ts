@@ -80,6 +80,142 @@ assert.equal(missing._tag, "Err");
 if (missing._tag !== "Err") throw new Error("expected Err");
 assert.equal(missing.error._tag, "MissingSections");
 
+const digestFrontmatter = `---
+title: "Rapid Solution of Integral Equations of Classical Potential Theory"
+authors:
+  - "V. Rokhlin"
+year: 1985
+venue: "J. Comput. Phys."
+arxiv: null
+doi: "10.1016/0021-9991(85)90002-6"
+source: "https://doi.org/10.1016/0021-9991(85)90002-6"
+topics:
+  - fmm
+seed_rank: 1163
+seed_batch: "fmm-ingest-2026-08-24"
+reviewed: "2026-08-24"
+pool: "maths-foundations"
+relevance_score: 10
+---
+`;
+
+const digest = parseCard({
+  file: "1163-rapid-solution-of-integral-equations-of-classical-potential-the.md",
+  markdown: `${digestFrontmatter}
+# Rapid Solution of Integral Equations of Classical Potential Theory
+
+## One-sentence takeaway
+
+Far-field expansions make 2D potential BIE matvecs linear.
+
+## Problem
+
+Dense N×N systems.
+
+## Design
+
+Multipole plus local expansions with translations.
+
+## Evidence
+
+J. Comput. Phys. 60(2):187–207, 1985.
+
+## Limitations
+
+2D Laplace/Stokes, no adaptive tree.
+
+## Implications for Broadside
+
+Any kernel with a decaying far field is in scope.
+
+## Bottom line
+
+Mint the 1985 integral-equation origin.
+
+## Links
+
+- DOI
+`,
+});
+assert.equal(digest._tag, "Ok");
+if (digest._tag !== "Ok") throw new Error("expected Ok");
+assert.equal(digest.value.sections.takeaway, "Far-field expansions make 2D potential BIE matvecs linear.");
+assert.equal(digest.value.sections.why, "Any kernel with a decaying far field is in scope.");
+assert.equal(
+  digest.value.sections.ideas,
+  "Dense N×N systems.\n\nMultipole plus local expansions with translations.\n\nJ. Comput. Phys. 60(2):187–207, 1985.",
+);
+assert.equal(digest.value.sections.caveats, "2D Laplace/Stokes, no adaptive tree.");
+assert.equal(digest.value.sections.links, "- DOI");
+assert.equal(SeedCardSchema.safeParse(digest.value).success, true);
+
+const curiosity = parseCard({
+  file: "1145-interacting-quantum-observables-categorical-algebra-and-diagrammatics.md",
+  markdown: `---
+title: "Interacting Quantum Observables: Categorical Algebra and Diagrammatics"
+authors:
+  - "Bob Coecke"
+year: 2011
+venue: "New J. Phys."
+arxiv: "0906.4725"
+doi: "10.1088/1367-2630/13/4/043016"
+source: "https://arxiv.org/abs/0906.4725"
+topics:
+  - curiosity
+seed_rank: 1145
+seed_batch: "curiosity-2026-08-23"
+reviewed: "2026-08-23"
+pool: "maths-foundations"
+relevance_score: 10
+---
+
+## One-sentence takeaway
+
+Complementarity is a pair of spiders.
+
+## Why it's lovely
+
+Two complementary observables collapse to coloured dots.
+
+## Problem
+
+Amplitudes drown structural derivations.
+
+## Design
+
+Spiders plus a scaled bialgebra law.
+
+## Evidence
+
+New J. Phys. 13 (2011) 043016.
+
+## Limitations
+
+Qubit ZX; completeness came later.
+
+## Implications for Broadside
+
+ZX is the rewrite system that makes the Rosetta Stone compute.
+
+## Bottom line
+
+Mint the founding spiders.
+
+## Links
+
+- arXiv
+`,
+});
+assert.equal(curiosity._tag, "Ok");
+if (curiosity._tag !== "Ok") throw new Error("expected Ok");
+assert.equal(curiosity.value.sections.takeaway, "Complementarity is a pair of spiders.");
+assert.equal(
+  curiosity.value.sections.why,
+  "Two complementary observables collapse to coloured dots.\n\nZX is the rewrite system that makes the Rosetta Stone compute.",
+);
+assert.equal(curiosity.value.sections.caveats, "Qubit ZX; completeness came later.");
+assert.equal(SeedCardSchema.safeParse(curiosity.value).success, true);
+
 const emptyVenue = parseCard({
   file: "005-radiance.md",
   markdown: sample.replace('venue: "NeurIPS"', 'venue: ""').replace("013-attention-is-all-you-need.md", "005-radiance.md"),

@@ -50,13 +50,15 @@ see:                        # optional: filename stems currently in cards/ that 
 ---
 ```
 
-Body sections (exact headings):
+Body sections (canonical headings):
 
 1. `## One-sentence takeaway`
 2. `## Why it matters here` — concrete bridge to Anoptic / ano / GRID COMMAND / Broadside
 3. `## Key ideas` — 3–6 bullets, specific
 4. `## Caveats` — what not to overclaim
 5. `## Links` — PDF/HTML/DOI/arXiv
+
+Pack also accepts the digest-dialect H2s used from card 1145 (radar / FMM). It maps them onto the same five fields and does not remint the files: `Implications for Broadside` and `Why it's lovely` → why; `Problem`, `Design`, and `Evidence` → ideas; `Limitations` → caveats. Canonical headings still work.
 
 
 ## Lineage and cites

@@ -14,13 +14,31 @@ export const SECTION_HEADING = {
   links: "Links",
 } as const satisfies Record<SectionKey, string>;
 
-export const HEADING_TO_SECTION = {
+const CANONICAL_HEADING_TO_SECTION = {
   "One-sentence takeaway": "takeaway",
   "Why it matters here": "why",
   "Key ideas": "ideas",
   Caveats: "caveats",
   Links: "links",
 } as const satisfies Record<(typeof SECTION_HEADING)[SectionKey], SectionKey>;
+
+/**
+ * Radar / FMM digest H2s from card 1145 onward. Same five packed fields;
+ * several digest headings may land on one field (joined in document order).
+ */
+const DIGEST_HEADING_TO_SECTION = {
+  "Why it's lovely": "why",
+  "Implications for Broadside": "why",
+  Problem: "ideas",
+  Design: "ideas",
+  Evidence: "ideas",
+  Limitations: "caveats",
+} as const satisfies Record<string, SectionKey>;
+
+export const HEADING_TO_SECTION = {
+  ...CANONICAL_HEADING_TO_SECTION,
+  ...DIGEST_HEADING_TO_SECTION,
+} as const;
 
 export const CardIdSchema = z.string().min(1).brand<"CardId">();
 export type CardId = z.infer<typeof CardIdSchema>;
