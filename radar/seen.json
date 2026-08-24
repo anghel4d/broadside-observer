@@ -388,7 +388,8 @@
   "quant-ph/9707021",
   "astro-ph/0202512",
   "1209.3516",
-  "1106.2176"
+  "1106.2176",
+  "2311.14312"
  ],
  "titles": [
   "@skills: attention is all you have",
@@ -1198,7 +1199,21 @@
   "computer simulation using particles",
   "multilevel fast multipole algorithm for electromagnetic scattering by large complex objects",
   "a tuned and scalable fast multipole method as a preeminent algorithm for exascale systems",
-  "fast multipole methods for the helmholtz equation in three dimensions"
+  "fast multipole methods for the helmholtz equation in three dimensions",
+  "on the fast matrix multiplication in the boundary element method by panel clustering",
+  "a sparse matrix arithmetic based on h-matrices. part i: introduction to h-matrices",
+  "data-sparse approximation by adaptive h2-matrices",
+  "introduction to hierarchical matrices with applications",
+  "task-based fmm for multicore architectures",
+  "diffusion curves: a vector representation for smooth-shaded images",
+  "fast multipole representation of diffusion curves and points",
+  "an adaptive fast-multipole-accelerated hybrid boundary integral equation method for accurate diffusion curves",
+  "a pppm fast summation method for fluids and beyond",
+  "biharmonic diffusion curve images from boundary elements",
+  "construction and arithmetics of h-matrices",
+  "on h2-matrices",
+  "hierarchical matrices",
+  "a gpu laplacian solver for diffusion curves and poisson image editing"
  ],
  "updated": "2026-08-24",
  "pass2_batch": "systems-prefill-2026-08-13",
@@ -1232,10 +1247,19 @@
   "https://aclanthology.org/P01-1033/",
   "https://youtu.be/FhMftauQZqU",
   "https://www.youtube.com/watch?v=uOahsDhVZaE",
-  "https://math.nyu.edu/faculty/greengar/shortcourse_fmm.pdf"
+  "https://math.nyu.edu/faculty/greengar/shortcourse_fmm.pdf",
+  "https://gitlab.inria.fr/solverstack/ScalFMM",
+  "https://inria.hal.science/hal-00807368",
+  "https://solverstack.gitlabpages.inria.fr/scalfmm",
+  "http://www.cs.columbia.edu/cg/fmr/",
+  "https://www.dgp.toronto.edu/projects/adaptive-hybrid-biem-diffusion-curves/",
+  "https://artis.inrialpes.fr/Publications/2008/OBWBTS08/",
+  "https://arxiv.org/abs/2311.14312"
  ],
  "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
  "rc_wip_count": 8,
  "fmm_batch": "fmm-2026-08-24",
- "fmm_count": 26
+ "fmm_count": 26,
+ "fmm_leftovers_batch": "fmm-leftovers-2026-08-24",
+ "fmm_leftovers_count": 8
 }
