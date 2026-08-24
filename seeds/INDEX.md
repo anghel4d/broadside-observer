@@ -1442,3 +1442,38 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1162 | 10 | 1993 | Adaptive Display Algorithm for Interactive Frame Rates During Visualization of Complex Virtual Environments | engines |
 
 _Recount after `archive-2026-08-24`: **1162** unique title cards on main._
+
+## Fast Multipole Method 2026-08-24
+
+User ingest (not a daypart radar). Exhaustive Fast Multipole Method / tree-code / Fast Gauss / kernel-independent / Helmholtz-founding / canonical-software sweep after two Keyframe Codes talks (`FhMftauQZqU`, `uOahsDhVZaE`). Catalog at start: `main` `8d54bfa` after Archive 2026-08-24 (PR #68), **1162** cards, ranks 1–1162 untouched. Already present: Lightcuts (1042) — see, not reminted. Keepers: **26**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1163 | 10 | 1985 | Rapid Solution of Integral Equations of Classical Potential Theory | engines |
+| 1164 | 10 | 1985 | An Efficient Program for Many-Body Simulation | engines |
+| 1165 | 10 | 1986 | A Hierarchical O(N log N) Force-Calculation Algorithm | engines |
+| 1166 | 10 | 1987 | A Fast Algorithm for Particle Simulations | engines |
+| 1167 | 10 | 1988 | The Rapid Evaluation of Potential Fields in Particle Systems | engines |
+| 1168 | 10 | 1988 | A Fast Adaptive Multipole Algorithm for Particle Simulations | engines |
+| 1169 | 10 | 1997 | A New Version of the Fast Multipole Method for the Laplace Equation in Three Dimensions | engines |
+| 1170 | 10 | 1999 | A Fast Adaptive Multipole Algorithm in Three Dimensions | engines |
+| 1171 | 10 | 1990 | Rapid Solution of Integral Equations of Scattering Theory in Two Dimensions | engines |
+| 1172 | 10 | 1993 | Diagonal Forms of Translation Operators for the Helmholtz Equation in Three Dimensions | engines |
+| 1173 | 9 | 1993 | The Fast Multipole Method for the Wave Equation: A Pedestrian Prescription | engines |
+| 1174 | 10 | 1995 | Multilevel Fast-Multipole Algorithm for Solving Combined Field Integral Equations of Electromagnetic Scattering | engines |
+| 1175 | 9 | 2000 | The Fast Multipole Method: Numerical Implementation | engines |
+| 1176 | 10 | 2004 | A Kernel-Independent Adaptive Fast Multipole Algorithm in Two and Three Dimensions | engines |
+| 1177 | 10 | 2009 | The Black-Box Fast Multipole Method | engines |
+| 1178 | 9 | 2004 | Recursions for the Computation of Multipole Translation and Rotation Coefficients for the 3-D Helmholtz Equation | engines |
+| 1179 | 10 | 1991 | The Fast Gauss Transform | engines |
+| 1180 | 9 | 2003 | Improved Fast Gauss Transform and Efficient Kernel Density Estimation | engines |
+| 1181 | 10 | 1997 | A Short Course on Fast Multipole Methods | engines |
+| 1182 | 9 | 1994 | Fast Algorithms for Classical Physics | engines |
+| 1183 | 10 | 2002 | A Hierarchical O(N) Force Calculation Algorithm | engines |
+| 1184 | 9 | 2008 | Fast Multipole Methods on Graphics Processors | engines |
+| 1185 | 9 | 2015 | PVFMM: A Parallel Kernel Independent FMM for Particle and Volume Potentials | engines |
+| 1186 | 9 | 2013 | An FMM Based on Dual Tree Traversal for Many-Core Architectures | engines |
+| 1187 | 8 | 2020 | TBFMM: A C++ Generic and Parallel Fast Multipole Method Library | engines |
+| 1188 | 8 | 2025 | kifmm-rs: A Kernel-Independent Fast Multipole Framework in Rust | engines |
+
+_Recount after `fmm-2026-08-24`: **1188** unique title cards on main._
