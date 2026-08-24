@@ -1494,3 +1494,55 @@ User ingest (not a daypart radar). Leftovers the FMM 2026-08-24 pass (PR #69, me
 | 1196 | 10 | 2023 | An Adaptive Fast-Multipole-Accelerated Hybrid Boundary Integral Equation Method for Accurate Diffusion Curves | graphics |
 
 _Recount after `fmm-leftovers-2026-08-24`: **1196** unique title cards on main._
+
+## Alpoge / AI math 2026-08-24
+
+User ingest (not a daypart radar). Alpoge S^6 PDF first, then every sourced Alpoge research paper, then 2021–2026 named AI-solves-big-math events (not GSM8K/MATH increments). Catalog at start: `main` `5c81408` after FMM leftovers (PR #70) + packer dialect PR #71, **1196** cards, ranks 1–1196 untouched. Already present: DeepSeekMath / Prover 977, 980, 982, 991, 994 — see, not reminted. Keepers: **35** (22 Alpoge-authored + 13 AI-math; 1198 is dual-listed).
+
+### Alpoge (1197–1219)
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1197 | 10 | 2026 | The (3, 4, infinity) modular family of 2-tori, completed at its three special points, is a complex structure on S^6 | maths-foundations |
+| 1198 | 10 | 2026 | More than two thirds of the zeros of the Riemann zeta function are simple and on the critical line | maths-foundations |
+| 1199 | 10 | 2026 | Rank stability in quadratic extensions and Hilbert's tenth problem for the ring of integers of a number field | maths-foundations |
+| 1200 | 10 | 2024 | Conditional algorithmic Mordell | maths-foundations |
+| 1201 | 10 | 2022 | Integers expressible as the sum of two rational cubes | maths-foundations |
+| 1202 | 9 | 2023 | Local systems and Suzuki groups | maths-foundations |
+| 1203 | 9 | 2021 | Un peu d'effectivite pour les varietes modulaires de Hilbert-Blumenthal | maths-foundations |
+| 1204 | 9 | 2021 | Quadrics in arithmetic statistics | maths-foundations |
+| 1205 | 8 | 2021 | Note on a theorem of Professor X | maths-foundations |
+| 1206 | 9 | 2021 | Modularity and effective Mordell I | maths-foundations |
+| 1207 | 9 | 2024 | A positive proportion of quartic fields are not monogenic yet have no local obstruction to being so | maths-foundations |
+| 1208 | 9 | 2025 | A positive proportion of cubic fields are not monogenic yet have no local obstruction to being so | maths-foundations |
+| 1209 | 9 | 2018 | The second moment of the number of integral points on elliptic curves is bounded | maths-foundations |
+| 1210 | 9 | 2018 | The average number of rational points on genus two curves is bounded | maths-foundations |
+| 1211 | 10 | 2014 | The average number of integral points on elliptic curves is bounded | maths-foundations |
+| 1212 | 8 | 2014 | Square-root cancellation for the signs of Latin squares | maths-foundations |
+| 1213 | 8 | 2014 | Proof of a conjecture of Stanley-Zanello | maths-foundations |
+| 1214 | 8 | 2014 | Self-conjugate core partitions and modular forms | maths-foundations |
+| 1215 | 8 | 2015 | Low-lying zeroes of Maass form L-functions | maths-foundations |
+| 1216 | 8 | 2015 | Maass waveforms and low-lying zeros | maths-foundations |
+| 1217 | 8 | 2015 | van der Waerden and the primes | maths-foundations |
+| 1218 | 7 | 2011 | Decidability and shortest strings in formal languages | maths-foundations |
+| 1219 | 8 | 2010 | A VTK-based, CUDA-optimized non-parametric vessel detection method | maths-foundations |
+
+### AI-math events (1198 dual + 1220–1231)
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1198 | 10 | 2026 | More than two thirds of the zeros of the Riemann zeta function are simple and on the critical line | maths-foundations |
+| 1220 | 10 | 2022 | Solving Quantitative Reasoning Problems with Language Models | agents |
+| 1221 | 10 | 2024 | Solving olympiad geometry without human demonstrations | agents |
+| 1222 | 10 | 2025 | Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2 | agents |
+| 1223 | 10 | 2025 | Olympiad-level formal mathematical reasoning with reinforcement learning | agents |
+| 1224 | 10 | 2024 | Mathematical discoveries from program search with large language models | agents |
+| 1225 | 10 | 2022 | Discovering faster matrix multiplication algorithms with reinforcement learning | agents |
+| 1226 | 9 | 2024 | FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI | agents |
+| 1227 | 9 | 2022 | Formal Mathematics Statement Curriculum Learning | agents |
+| 1228 | 10 | 2024 | Learning to Reason with LLMs | agents |
+| 1229 | 10 | 2025 | OpenAI experimental reasoning model, IMO 2025 gold-cutoff proofs | agents |
+| 1230 | 10 | 2025 | Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad | agents |
+| 1231 | 10 | 2025 | AlphaEvolve: A coding agent for scientific and algorithmic discovery | agents |
+
+_Recount after `alpoge-math-2026-08-24`: **1231** unique title cards on main._

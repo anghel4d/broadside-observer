@@ -27,6 +27,8 @@ const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   "programming-language-foundations": "Programming language foundations",
   "algorithms-and-complexity": "Algorithms & complexity",
   deepseek: "DeepSeek",
+  "arithmetic-geometry": "Arithmetic geometry",
+  "ai-mathematical-reasoning": "AI mathematical reasoning",
 };
 
 const POOL_TITLES: Readonly<Record<string, string>> = {
