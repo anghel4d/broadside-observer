@@ -1693,4 +1693,20 @@ User ingest (not a daypart radar). Two shelves. Unique on-topic harvest ~1031 (5
 | 1342 | 7 | 2016 | Importance Resampling for BSSRDF | graphics |
 | 1343 | 8 | 2011 | Heterogeneous Subsurface Scattering Using the Finite Element Method | graphics |
 
-_Recount after `sss-translucent-2026-08-25`: **1343** unique title cards on main._
+| 1344 | 10 | 2013 | Photorealism Through the Eyes of a FOX: The Core of Metal Gear Solid Ground Zeroes | graphics |
+| 1345 | 9 | 2011 | Real-time Physically Based Rendering | graphics |
+| 1346 | 9 | 2004 | Deferred Shading | graphics |
+| 1347 | 9 | 1990 | Comprehensible rendering of 3-D shapes | graphics |
+| 1348 | 9 | 2007 | The Importance of Being Linear | graphics |
+| 1349 | 9 | 2012 | Scalable Ambient Obscurance | graphics |
+| 1350 | 9 | 2010 | Rendering techniques in Toy Story 3 | graphics |
+| 1351 | 8 | 2003 | Frame Buffer Postprocessing Effects in DOUBLE-S.T.E.A.L (Wreckless) | graphics |
+| 1352 | 8 | 2011 | FXAA | graphics |
+| 1353 | 9 | 2012 | A Reconstruction Filter for Plausible Motion Blur | graphics |
+| 1354 | 8 | 2013 | Tech Analysis: Metal Gear Solid 5's FOX Engine | graphics |
+| 1355 | 9 | 2017 | Metal Gear Solid V - Graphics Study | graphics |
+| 1356 | 8 | 2013 | FOX ENGINE GDC 2013 detailed report (4gamer, parts 1–2) | graphics |
+| 1357 | 8 | 2017 | Decima Engine: Advances in Lighting and AA | graphics |
+
+_Recount after `fox-engine-2013`: **1357** unique title cards on main._
+
