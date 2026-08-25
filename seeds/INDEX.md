@@ -1586,3 +1586,111 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 
 _Recount after `craft-2026-08-25`: **1243** unique title cards on main._
 
+## Subsurface scattering + translucent materials 2026-08-25
+
+User ingest (not a daypart radar). Two shelves. Unique on-topic harvest ~1031 (500 SSS transport + 531 translucent materials). Combined unique KEEP 129. Keep 100 (rate ~10%). Shared papers minted once. Did not remint Kajiya RE 152. Next mint 1344+.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1244 | 10 | 2014 | A comprehensive framework for rendering layered materials | graphics |
+| 1245 | 10 | 2001 | A Practical Model for Subsurface Light Transport | graphics |
+| 1246 | 10 | 2013 | Inverse volume rendering with material dictionaries | graphics |
+| 1247 | 10 | 1993 | Reflection from Layered Surfaces due to Subsurface Scattering | graphics |
+| 1248 | 10 | 2008 | A layered, heterogeneous reflectance model for acquiring and rendering human skin | graphics |
+| 1249 | 10 | 1992 | A Diffusion Theory Model of Spatially Resolved, Steady-State Diffuse Reflectance for the Noninvasive Determination of Tissue Optical Properties in Vivo | graphics |
+| 1250 | 10 | 2008 | Practical modeling and acquisition of layered facial reflectance | graphics |
+| 1251 | 10 | 1977 | Geometrical Considerations and Nomenclature for Reflectance | graphics |
+| 1252 | 10 | 1950 | Radiative Transfer | graphics |
+| 1253 | 10 | 2011 | A Quantized-Diffusion Model for Rendering Translucent Materials | graphics |
+| 1254 | 10 | 2006 | Analysis of human faces using a measurement-based skin reflectance model | graphics |
+| 1255 | 10 | 2005 | Light Diffusion in Multi-Layered Translucent Materials | graphics |
+| 1256 | 10 | 2002 | A Rapid Hierarchical Rendering Technique for Translucent Materials | graphics |
+| 1257 | 10 | 2013 | Photon Beam Diffusion: A Hybrid Monte Carlo Method for Subsurface Scattering | graphics |
+| 1258 | 10 | 2016 | Practical and Controllable Subsurface Scattering for Production Path Tracing | graphics |
+| 1259 | 9 | 2018 | Efficient rendering of layered materials using an atomic decomposition with statistical operators | graphics |
+| 1260 | 9 | 1931 | Ein Beitrag zur Optik der Farbanstriche | graphics |
+| 1261 | 9 | 2018 | Position-free monte carlo simulation for arbitrary layered BSDFs | graphics |
+| 1262 | 9 | 1978 | Wave Propagation and Scattering in Random Media | graphics |
+| 1263 | 9 | 1956 | A High Accuracy Approximation for Solving Multiple Scattering Problems in Infinite Homogeneous Media | graphics |
+| 1264 | 9 | 2013 | Understanding the role of phase function in translucent appearance | graphics |
+| 1265 | 9 | 1995 | Multiple Scattering as a Diffusion Process | graphics |
+| 1266 | 9 | 2009 | SubEdit: A Representation for Editing Measured Heterogeneous Subsurface Scattering | graphics |
+| 1267 | 9 | 2001 | An Illumination Model for a Skin Layer Bounded by Rough Surfaces | graphics |
+| 1268 | 9 | 1998 | Efficient Simulation of Light Transport in Scenes with Participating Media using Photon Maps | graphics |
+| 1269 | 9 | 2007 | Arbitrarily layered micro-facet surfaces | graphics |
+| 1270 | 9 | 2000 | Monte Carlo Evaluation of Non-Linear Scattering Equations for Subsurface Reflection | graphics |
+| 1271 | 9 | 2012 | A Better Dipole | graphics |
+| 1272 | 9 | 2007 | Efficient Rendering of Human Skin | graphics |
+| 1273 | 9 | 2014 | Directional Dipole Model for Subsurface Scattering | graphics |
+| 1274 | 9 | 2017 | A Forward Scattering Dipole Model from a Functional Integral Approximation | graphics |
+| 1275 | 9 | 2007 | Rendering Translucent Materials Using Photon Diffusion | graphics |
+| 1276 | 9 | 2005 | Modeling and rendering of quasi-homogeneous materials | graphics |
+| 1277 | 9 | 2015 | An Approximate Reflectance Profile for Efficient Subsurface Scattering | graphics |
+| 1278 | 9 | 2015 | Extending the Disney BRDF to a BSDF with Integrated Subsurface Scattering | graphics |
+| 1279 | 9 | 2000 | Acquiring the reflectance field of a human face | graphics |
+| 1280 | 9 | 2013 | BSSRDF Importance Sampling | graphics |
+| 1281 | 9 | 2003 | Realistic Human Face Rendering for "The Matrix Reloaded" | graphics |
+| 1282 | 9 | 2004 | Real-Time Approximations to Subsurface Scattering | graphics |
+| 1283 | 9 | 2009 | Screen-Space Perceptual Rendering of Human Skin | graphics |
+| 1284 | 9 | 2015 | Separable Subsurface Scattering | graphics |
+| 1285 | 8 | 2006 | A Compact Factored Representation of Heterogeneous Subsurface Scattering | graphics |
+| 1286 | 8 | 2008 | Modeling and Rendering of Heterogeneous Translucent Materials using the Diffusion Equation | graphics |
+| 1287 | 8 | 2006 | A Spectral BSSRDF for Shading Human Skin | graphics |
+| 1288 | 8 | 2017 | A practical extension to microfacet theory for the modeling of varying iridescence | graphics |
+| 1289 | 8 | 2015 | A Biophysically‐Based Model of the Optical Properties of Skin Aging | graphics |
+| 1290 | 8 | 1984 | Ray Tracing Volume Densities | graphics |
+| 1291 | 8 | 2014 | Looking against the light: How perception of translucency depends on lighting direction | graphics |
+| 1292 | 8 | 1982 | Light Reflection Functions for Simulation of Clouds and Dusty Surfaces | graphics |
+| 1293 | 8 | 2013 | Fabricating Translucent Materials Using Continuous Pigment Mixtures | graphics |
+| 1294 | 8 | 2013 | Optical Properties of Biological Tissues: A Review | graphics |
+| 1295 | 8 | 1941 | Diffuse Radiation in the Galaxy | graphics |
+| 1296 | 8 | 1997 | Improved Solutions of the Steady-State and the Time-Resolved Diffusion Equations for Reflectance from a Semi-Infinite Medium | graphics |
+| 1297 | 8 | 2011 | Building volumetric appearance models of fabric using micro CT imaging | graphics |
+| 1298 | 8 | 2009 | An Empirical BSSRDF Model | graphics |
+| 1299 | 8 | 2010 | A Radiative Transfer Framework for Rendering Materials with Anisotropic Structure | graphics |
+| 1300 | 8 | 2010 | Fabricating Spatially-Varying Subsurface Scattering | graphics |
+| 1301 | 8 | 2004 | Practical Rendering of Multiple Scattering Effects in Participating Media | graphics |
+| 1302 | 8 | 2010 | Physical Reproduction of Materials with Specified Subsurface Scattering | graphics |
+| 1303 | 8 | 1999 | Modeling and Rendering of Weathered Stone | graphics |
+| 1304 | 8 | 2013 | A Dual-Beam 3D Searchlight BSSRDF | graphics |
+| 1305 | 8 | 2012 | Importance Sampling Techniques for Path Tracing in Participating Media | graphics |
+| 1306 | 8 | 2010 | Real-time Rendering of Heterogeneous Translucent Objects with Arbitrary Shapes | graphics |
+| 1307 | 8 | 2016 | Subdivision Next-Event Estimation for Path-Traced Subsurface Scattering | graphics |
+| 1308 | 8 | 2014 | A Zero-Variance-Based Sampling Scheme for Monte Carlo Subsurface Scattering | graphics |
+| 1309 | 8 | 2017 | Path Traced Subsurface Scattering using Anisotropic Phase Functions and Non-Exponential Free Flights | graphics |
+| 1310 | 8 | 2009 | The Digital Emily Project: Photoreal Facial Modeling and Animation | graphics |
+| 1311 | 8 | 2003 | Implementing a Skin BSSRDF (or Several...) | graphics |
+| 1312 | 8 | 2007 | Microfacet Models for Refraction through Rough Surfaces | graphics |
+| 1313 | 8 | 2007 | Physically Based Real-Time Translucency for Leaves | graphics |
+| 1314 | 8 | 2003 | Translucent Shadow Maps | graphics |
+| 1315 | 8 | 2007 | Rapid Acquisition of Specular and Diffuse Normal Maps from Polarized Spherical Gradient Illumination | graphics |
+| 1316 | 8 | 2006 | Fast separation of direct and global components of a scene using high frequency illumination | graphics |
+| 1317 | 8 | 2004 | A Biophysically‐Based Spectral Model of Light Interaction with Human Skin | graphics |
+| 1318 | 8 | 2008 | The Beam Radiance Estimate for Volumetric Photon Mapping | graphics |
+| 1319 | 8 | 2003 | Image-based skin color and texture analysis/synthesis by extracting hemoglobin and melanin information in the skin | graphics |
+| 1320 | 8 | 2011 | Pre-Integrated Skin Shading | graphics |
+| 1321 | 8 | 1999 | Image-Based BRDF Measurement Including Human Skin | graphics |
+| 1322 | 8 | 1997 | An Algorithmic Reflectance and Transmittance Model for Plant Tissue | graphics |
+| 1323 | 8 | 1994 | Wavelength dependent reflectance functions | graphics |
+| 1324 | 8 | 1990 | PROSPECT: A model of leaf optical properties spectra | graphics |
+| 1325 | 8 | 1981 | The Optics of Human Skin | graphics |
+| 1326 | 7 | 2004 | DISCO: Acquisition of Translucent Objects | graphics |
+| 1327 | 7 | 2006 | Acquiring Scattering Properties of Participating Media by Dilution | graphics |
+| 1328 | 7 | 2014 | High-Order Similarity Relations in Radiative Transfer | graphics |
+| 1329 | 7 | 2007 | Computing the Scattering Properties of Participating Media Using Lorenz-Mie Theory | graphics |
+| 1330 | 7 | 2003 | Interactive Rendering of Translucent Objects | graphics |
+| 1331 | 7 | 2011 | Progressive Photon Beams | graphics |
+| 1332 | 7 | 1992 | Modeling Pigmented Materials for Realistic Image Synthesis | graphics |
+| 1333 | 7 | 2015 | Skin microstructure deformation with displacement map convolution | graphics |
+| 1334 | 7 | 2011 | Approximating Translucency for a Fast, Cheap and Convincing Subsurface Scattering Look | graphics |
+| 1335 | 7 | 2013 | Measurement‐Based Synthesis of Facial Microgeometry | graphics |
+| 1336 | 7 | 2018 | A Radiative Transfer Framework for Non-Exponential Media | graphics |
+| 1337 | 7 | 2019 | A Reciprocal Formulation of Nonexponential Radiative Transfer. 2: Monte Carlo Estimation and Diffusion Approximation | graphics |
+| 1338 | 8 | 2005 | All-Frequency Interactive Relighting of Translucent Objects with Single and Multiple Scattering | graphics |
+| 1339 | 8 | 2014 | Residual Ratio Tracking for Estimating Attenuation in Participating Media | graphics |
+| 1340 | 7 | 2009 | Fast Skin Shading | graphics |
+| 1341 | 7 | 2017 | Spectral and Decomposition Tracking for Rendering Heterogeneous Volumes | graphics |
+| 1342 | 7 | 2016 | Importance Resampling for BSSRDF | graphics |
+| 1343 | 8 | 2011 | Heterogeneous Subsurface Scattering Using the Finite Element Method | graphics |
+
+_Recount after `sss-translucent-2026-08-25`: **1343** unique title cards on main._
