@@ -1573,3 +1573,16 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 
 _Recount after `curiosity-2026-08-25`: **1239** unique title cards on main._
 
+## Craft 2026-08-25
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND filter: **28**. Keepers: **4** (keep rate **0.143**, hard cap **0.25**). No padding. Slice: GPU-tree / adaptive-octree / interaction-list leftover of FMM+RC (Karras radix-tree construction + SVO walker + Hu list builder) + hierarchical-radiosity clustering leftover of 1068. Different from last Craft (OMM DAG / egg / morsels / decoupled look-back) and Craft 2026-08-21 (Slug / meshlet packing / laced-wire / VBD / sparse-tensor / array CSE). Honest empty game-ai. Honest empty Unicode (skip Slug). Do not remint FMM 1163–1196, GPU FMM 1184, ScalFMM 1193, Lightcuts 1042, Split RC 208.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1240 | 10 | 2012 | Maximizing Parallelism in the Construction of BVHs, Octrees, and k-d Trees | engines |
+| 1241 | 10 | 2010 | Efficient Sparse Voxel Octrees | graphics |
+| 1242 | 10 | 1994 | A Clustering Algorithm for Radiosity in Complex Environments | graphics |
+| 1243 | 9 | 2013 | Parallel Algorithms for Constructing Data Structures for Fast Multipole Methods | engines |
+
+_Recount after `craft-2026-08-25`: **1243** unique title cards on main._
+
