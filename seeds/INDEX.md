@@ -1710,3 +1710,19 @@ User ingest (not a daypart radar). Two shelves. Unique on-topic harvest ~1031 (5
 
 _Recount after `fox-engine-2013`: **1357** unique title cards on main._
 
+## Archive 2026-08-26
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main at start: `6d1ff0d`, **1357** unique title cards, max rank **1357**. Wide harvest: **325** unique historical records after source-level normalization (arXiv historical queries + Crossref exact-title resolution + partial DBLP); OpenAlex was rate-limited and DBLP rate-limited after one successful query. Unique candidates after corpus dedupe (`radar/seen.json` + `seeds/INDEX.md`), dirt ban, and cheap foundational/Anoptic filter: **47**. Keepers: **8** (keep rate **0.170**, hard cap **0.20**). No padding. Slice: graphics-history leftovers (quad-edge topology + decode-at-consumer geometry compression) and compiler/runtime/region/array foundations (register-coloring, LLVM, PICs, Cheney-on-the-MTA, Immix, SISAL). Different from Archive 2026-08-24 typestate/modules/control leftovers; no Fox/Decima, SSS, FMM, RC, DeepSeek, or already-minted Reyes/A-buffer/Porter–Duff.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1358 | 10 | 1985 | Primitives for the Manipulation of General Subdivisions and the Computation of Voronoi Diagrams | graphics |
+| 1359 | 9 | 1995 | Geometry Compression | graphics |
+| 1360 | 10 | 1981 | Register Allocation via Coloring | languages |
+| 1361 | 10 | 2004 | LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation | systems |
+| 1362 | 10 | 1991 | Optimizing Dynamically-Typed Object-Oriented Languages with Polymorphic Inline Caches | systems |
+| 1363 | 9 | 1995 | CONS Should Not CONS Its Arguments, Part II: Cheney on the M.T.A. | systems |
+| 1364 | 10 | 2008 | Immix: A Mark-Region Garbage Collector with Space Efficiency, Fast Collection, and Mutator Performance | systems |
+| 1365 | 9 | 1990 | A Report on the SISAL Language Project | languages |
+
+_Recount after `archive-2026-08-26`: **1365** unique title cards on main._
