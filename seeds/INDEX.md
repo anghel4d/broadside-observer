@@ -1738,3 +1738,17 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main at
 | 1368 | 9 | 2026 | Feedback That Backfires: Why Small Language Model Agents Repeat the Call They Just Watched Fail | agents |
 
 _Recount after `frontier-2026-08-26`: **1368** unique title cards on main._
+
+## Curiosity 2026-08-27
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main at start: `2141866`, **1368** unique title cards, max rank **1368**. Intent: cross-domain delight (maths / geometry / type theory / unusual foundations); lower keep rate; every keeper carries a why-lovely line. Not Frontier/Craft/Archive. Unique candidates after corpus dedupe (`radar/seen.json` + `seeds/INDEX.md`), dirt ban, and a strict curiosity cheap filter: **34**. Keepers: **5** (keep rate **0.147**, hard cap **0.15**). No padding. Slice: DDG∩HoTT + aperiodic cocycles leftover of hat/Sturmian + TCD/cluster discrete geometry + synthetic AG differentials + Cat_∞ in STT leftover of synthetic-∞/simplicial univalence.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1369 | 10 | 2025 | Discrete differential geometry in homotopy type theory | maths-foundations |
+| 1370 | 10 | 2026 | Matching Rules as Cocycle Conditions: Discrete Potentials on Penrose and Canonical Projection Tilings | maths-foundations |
+| 1371 | 10 | 2026 | Multiple cluster algebra structures for TCD maps I: theoretical framework | maths-foundations |
+| 1372 | 10 | 2025 | Differential Geometry of Synthetic Schemes | maths-foundations |
+| 1373 | 10 | 2026 | The ∞-category of ∞-categories in simplicial type theory | maths-foundations |
+
+_Recount after `curiosity-2026-08-27`: **1373** unique title cards on main._
