@@ -454,7 +454,12 @@
     "2608.21747",
     "2608.23740",
     "2608.23805",
-    "2608.22288"
+    "2608.22288",
+    "2504.20363",
+    "2603.13553",
+    "2601.08944",
+    "2504.08495",
+    "2602.02218"
   ],
   "titles": [
     "(infinity,2)-categories and the goodwillie calculus i",
@@ -1490,13 +1495,18 @@
     "architecture as capability equalizer for coding agents",
     "agentroom: concurrent multi-agent coding in a crdt-backed shared workspace",
     "memory-sovereign inference: output-exact execution beyond full residency",
-    "non-leaking concurrent objects"
+    "non-leaking concurrent objects",
+    "Discrete differential geometry in homotopy type theory",
+    "Matching Rules as Cocycle Conditions: Discrete Potentials on Penrose and Canonical Projection Tilings",
+    "Multiple cluster algebra structures for TCD maps I: theoretical framework",
+    "Differential Geometry of Synthetic Schemes",
+    "The \u221e-category of \u221e-categories in simplicial type theory"
   ],
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
-  "curiosity_batch": "curiosity-2026-08-25",
-  "curiosity_count": 6,
+  "curiosity_batch": "curiosity-2026-08-27",
+  "curiosity_count": 5,
   "craft_batch": "craft-2026-08-25",
   "craft_count": 4,
   "archive_batch": "archive-2026-08-26",
@@ -1704,7 +1714,12 @@
     "https://doi.org/10.1007/BFb0057013",
     "https://doi.org/10.1145/214448.214454",
     "https://doi.org/10.1145/1375581.1375586",
-    "https://doi.org/10.1016/0743-7315(90)90035-N"
+    "https://doi.org/10.1016/0743-7315(90)90035-N",
+    "https://arxiv.org/abs/2504.20363",
+    "https://arxiv.org/abs/2603.13553",
+    "https://arxiv.org/abs/2601.08944",
+    "https://arxiv.org/abs/2504.08495",
+    "https://arxiv.org/abs/2602.02218"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
