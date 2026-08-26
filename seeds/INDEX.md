@@ -1726,3 +1726,15 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main at 
 | 1365 | 9 | 1990 | A Report on the SISAL Language Project | languages |
 
 _Recount after `archive-2026-08-26`: **1365** unique title cards on main._
+
+## Frontier 2026-08-26
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main at start: `4ef585c`, **1365** unique title cards, max rank **1365**. Recency: Tuesday 25 and Wednesday 26 August 2026 arXiv mailings (last Frontier was Monday 24 Aug, keepers 1232–1233, window through 2608.21359). Wide harvest: arXiv HTML pastweek+/new across 15 cats, RSS, API topic+lab queries, HF Daily Papers 24–26 Aug, DeepSeek/DeepMind/OpenAI/xAI lab feeds, JCGT/HPG. In-window unique after listing-date filter: **1527** (1050 new / 178 cross / 299 replaced). Unique after corpus dedupe vs `radar/seen.json` + `seeds/INDEX.md` and skipping replacements: **1216**. Dirt (survey / clinical / cattle-class): **49**. Loose standing-topic POS: **67**. Cheap Broadside/Anoptic/ano POS (strict standing-topic, this-week gate): **16**. Keepers: **3** (keep rate **0.188**, hard cap **0.25**). No padding. Mix: 3 agents / 0 engines / 0 language / 0 game-ai. Honest empty engines (cs.GR Tue+Wed new inspected; none meshlet/WebGPU/Vulkan/radiance-cascade). Honest empty language (MGQL / choreographic Lean / Tensor-layout / XPBD-Lie leftover — not ano crème). Honest empty game-ai. Labs: no in-window first-party paper.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1366 | 10 | 2026 | When Can Agents Safely Checkpoint, Fork, Restore, and Merge? Exact Checking for Execution Edits | agents |
+| 1367 | 10 | 2026 | When May an Agent Stop? Evidence-Carrying Termination for Tool-Using LLMs | agents |
+| 1368 | 9 | 2026 | Feedback That Backfires: Why Small Language Model Agents Repeat the Call They Just Watched Fail | agents |
+
+_Recount after `frontier-2026-08-26`: **1368** unique title cards on main._
