@@ -84,3 +84,8 @@ Anoptic rough glass, car paint flakes, and frosted visors should not ship single
 ## Bottom line
 
 Mint Heitz 2016. THE energy-conserving rough-glass BSDF, not another layered-coating remint and not more reflection rays.
+
+## Links
+
+- DOI: [10.1145/2897824.2925943](https://doi.org/10.1145/2897824.2925943)
+- URL: https://eheitzresearch.wordpress.com/240-2/

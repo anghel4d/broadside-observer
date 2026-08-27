@@ -75,3 +75,8 @@ Anoptic's wet floors and chrome should Hi-Z cone-trace, then fall back to parall
 ## Bottom line
 
 Mint Uludag. THE Hi-Z / cone-traced reflection chapter, not another SSR clone.
+
+## Links
+
+- DOI: [10.1201/b16721-13](https://doi.org/10.1201/b16721-13)
+- URL: https://doi.org/10.1201/b16721-13

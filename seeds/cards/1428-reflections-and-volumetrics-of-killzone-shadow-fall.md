@@ -77,3 +77,8 @@ Anoptic should ship this *stack*, not a single technique: Hi-Z cone SSR (1425) f
 ## Bottom line
 
 Mint Valient 2014. THE shipping mirror/glass talk, not another SSR clone and not a raytracing tech paper.
+
+## Links
+
+- URL: https://advances.realtimerendering.com/s2014/
+- GDC PDF: https://www.guerrilla-games.com/media/News/Files/GDC2014_Valient_Killzone_Graphics.pdf

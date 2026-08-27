@@ -88,3 +88,8 @@ Anoptic glass, visors, puddles, and sparkle should speak SMS (or MNEE as the che
 ## Bottom line
 
 Mint SMS. This is the specular-manifold SOTA, and it is about appearance of glass and sparkle, not faster mirrors-as-rays.
+
+## Links
+
+- DOI: [10.1145/3386569.3392408](https://doi.org/10.1145/3386569.3392408)
+- URL: https://rgl.epfl.ch/publications/Zeltner2020Specular
