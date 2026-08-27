@@ -1752,3 +1752,62 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main at
 | 1373 | 10 | 2026 | The ∞-category of ∞-categories in simplicial type theory | maths-foundations |
 
 _Recount after `curiosity-2026-08-27`: **1373** unique title cards on main._
+
+## GI Nature 2026-08-27
+
+User ingest (not a daypart radar). Locked 50 across realtime GI / nature shading / Chinese graphics after harvest `gi-harvest-2026-08-27` + `nature-harvest-2026-08-27` + `china-harvest-2026-08-27`. Live main at start: `4f9eda9`, **1373** unique title cards, max rank **1373**. INDEX collision check (title / arxiv / doi / famous alias): none of the locked 50 already present; no backups used. Not reminted: SSS/FMM/RC/Fox/Decima-1357/Kajiya/GGX/Lightcuts/McGuire SAO/irradiance caching. Uncharted water: GDC talk kept, SIGGRAPH companion skipped. ROTTR: deferred deform kept, tessellation sibling skipped. Lagarde: 3b wet surfaces kept, 3a theory and rain post skipped. seed_batch: `gi-nature-2026-08-27`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1374 | 10 | 2020 | Spatiotemporal Reservoir Resampling for Real-Time Ray Tracing with Dynamic Direct Lighting | graphics |
+| 1375 | 10 | 2021 | ReSTIR GI: Path Resampling for Real-Time Path Tracing | graphics |
+| 1376 | 10 | 2022 | Generalized Resampled Importance Sampling: Foundations of ReSTIR | graphics |
+| 1377 | 10 | 2022 | Lumen: Real-time Global Illumination in Unreal Engine 5 | graphics |
+| 1378 | 9 | 2021 | Real-time Neural Radiance Caching for Path Tracing | graphics |
+| 1379 | 9 | 2014 | On-line Learning of Parametric Mixture Models for Light Transport Simulation | graphics |
+| 1380 | 9 | 2017 | Practical Path Guiding for Efficient Light-Transport Simulation | graphics |
+| 1381 | 9 | 2012 | Light Transport Simulation with Vertex Connection and Merging | graphics |
+| 1382 | 9 | 2018 | Importance Sampling of Many Lights with Adaptive Tree Splitting | graphics |
+| 1383 | 9 | 2008 | Progressive Photon Mapping | graphics |
+| 1384 | 9 | 2017 | Real-time Global Illumination by Precomputed Local Reconstruction from Sparse Radiance Probes | graphics |
+| 1385 | 9 | 2005 | Importance Resampling for Global Illumination | graphics |
+| 1386 | 8 | 2015 | Stochastic Screen-Space Reflections | graphics |
+| 1387 | 8 | 2016 | Practical Realtime Strategies for Accurate Indirect Occlusion | graphics |
+| 1388 | 8 | 2021 | Global Illumination Based on Surfels | graphics |
+| 1389 | 8 | 2017 | Spatiotemporal Variance-Guided Filtering: Real-Time Reconstruction for Path-Traced Global Illumination | graphics |
+| 1390 | 8 | 2012 | A Certain Slant of Light: Past, Present and Future Challenges of Global Illumination in Games | graphics |
+| 1391 | 10 | 2021 | Procedural Grass in Ghost of Tsushima | graphics |
+| 1392 | 10 | 2018 | Between Tech and Art: The Vegetation of Horizon Zero Dawn | graphics |
+| 1393 | 10 | 2015 | The Real-Time Volumetric Cloudscapes of Horizon Zero Dawn | graphics |
+| 1394 | 10 | 2016 | Physically Based Sky, Atmosphere and Cloud Rendering in Frostbite | graphics |
+| 1395 | 10 | 2013 | A Material Point Method for Snow Simulation | graphics |
+| 1396 | 10 | 2012 | Water Technology of Uncharted | graphics |
+| 1397 | 10 | 2012 | Real-time Realistic Rendering and Lighting of Forests | graphics |
+| 1398 | 10 | 2010 | Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF | graphics |
+| 1399 | 10 | 2001 | Simulating Ocean Water | graphics |
+| 1400 | 9 | 2023 | Reinventing the Wheel for Snow Rendering | graphics |
+| 1401 | 9 | 2022 | Nubis, Evolved: Real-Time Volumetric Clouds for Skies, Environments and VFX | graphics |
+| 1402 | 9 | 2019 | Real-time Snow Deformation in Horizon Zero Dawn: The Frozen Wilds | graphics |
+| 1403 | 9 | 2019 | Interactive Wind and Vegetation in God of War | graphics |
+| 1404 | 9 | 2016 | Deferred Snow Deformation in Rise of the Tomb Raider | graphics |
+| 1405 | 9 | 2014 | Deformable Snow Rendering in Batman: Arkham Origins | graphics |
+| 1406 | 9 | 2007 | Wave Particles | graphics |
+| 1407 | 9 | 2013 | Physically Based Wet Surfaces | graphics |
+| 1408 | 8 | 2013 | Rendering Frozen Worlds: Snow and Ice in Disney Frozen | graphics |
+| 1409 | 9 | 2008 | Precomputed Atmospheric Scattering | graphics |
+| 1410 | 9 | 2018 | Water Surface Wavelets | graphics |
+| 1411 | 9 | 2004 | Effective Water Simulation from Physical Models | graphics |
+| 1412 | 8 | 2014 | Discrete Stochastic Microfacet Models | graphics |
+| 1413 | 10 | 2009 | All-Frequency Rendering of Dynamic, Spatially-Varying Reflectance | graphics |
+| 1414 | 10 | 2013 | Anisotropic Spherical Gaussians | graphics |
+| 1415 | 10 | 2006 | Real-time Soft Shadows in Dynamic Scenes using Spherical Harmonic Exponentiation | graphics |
+| 1416 | 10 | 2005 | Precomputed Shadow Fields for Dynamic Scenes | graphics |
+| 1417 | 9 | 2009 | An Efficient GPU-based Approach for Interactive Global Illumination | graphics |
+| 1418 | 9 | 2025 | Global Illumination in Once Human: A Hybrid Approach for 16km Open World | graphics |
+| 1419 | 9 | 2023 | BroadLeaf: Real-Time Cinematic Rendering of Large-Scale Forests | graphics |
+| 1420 | 8 | 2023 | Open-World Water Rendering and Real-Time Simulation (Photon Water System) | graphics |
+| 1421 | 9 | 2025 | WishGI: Lightweight Static Global Illumination Baking via Spherical Harmonics Fitting | graphics |
+| 1422 | 9 | 2020 | Path Cuts: Efficient Rendering of Pure Specular Light Transport | graphics |
+| 1423 | 8 | 2024 | SmartGI: Global Illumination with Space Voxelization on Mobile | graphics |
+
+_Recount after `gi-nature-2026-08-27`: **1423** unique title cards on main._
