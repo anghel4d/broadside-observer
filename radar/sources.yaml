@@ -62,7 +62,7 @@ sources:
   url: https://www.highperformancegraphics.org
   also:
   - https://jcgt.org
-  notes: Real-time and systems graphics; practical engine-relevant techniques.
+  notes: Real-time and systems graphics; practical engine-relevant techniques. JCGT also listed first-class as `jcgt`.
   priority: high
   enabled: true
 - id: acm-sigplan-dblp
@@ -137,6 +137,27 @@ sources:
   also:
   - https://arxiv.org/search/?query=xAI&searchtype=all
   notes: xAI lab papers and technical reports (Grok family, Colossus, first-party evals). Sparse compared with the other three; still poll.
+  priority: high
+  enabled: true
+- id: jcgt
+  name: Journal of Computer Graphics Techniques
+  kind: venue
+  url: https://jcgt.org
+  also:
+  - https://www.jcgt.org
+  - https://jcgt.org/published/
+  - https://jcgt.org/read.html
+  notes: Open-access practical CG techniques journal (ISSN 2331-7418). Poll new issues / published TOC. Distinct from the HPG half of hpg-jcgt.
+  priority: high
+  enabled: true
+- id: eg-diglib-vmv
+  name: Eurographics Digital Library / VMV
+  kind: venue
+  url: https://diglib.eg.org
+  also:
+  - https://diglib.eg.org/handle/10.2312
+  - Vision Modeling Visualization
+  notes: EG workshop/conference archive (VMV, EGSR siblings, workshops) beyond CGF. Poll diglib for new VMV + EG workshop items.
   priority: high
   enabled: true
 cross_index:

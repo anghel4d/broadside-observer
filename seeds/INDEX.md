@@ -1857,3 +1857,15 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candid
 | 1441 | 9 | 2006 | Finger Trees: A Simple General-purpose Data Structure | languages |
 
 _Recount after `archive-2026-08-28`: **1441** unique title cards on main._
+
+
+## JCGT + VMV adaptive sampling (user-add 2026-08-28)
+
+User mint after Archive 2026-08-28 (live main `749dde6`, PR #85, **1441** unique, max rank **1441**). Meister–Hachisuka JCGT 2022 GPU leftover of 2008 multidimensional adaptive sampling, plus Schwärzler et al. VMV 2012 adaptive area-light sampling for physically based soft shadows. Digests from the JCGT PDF and EG 039-046.pdf. New radar sources: `jcgt`, `eg-diglib-vmv`. Not reminted: ReSTIR 1374, PPM 1383, Lightcuts 1042, adaptive tree splitting 1382, HOM 1432, VSM 359, CSM 356, SHExp 1415, PCSS (seen, no card), Hachisuka 2008 MAS (cited under 1442). seed_batch: `user-jcgt-vmv-2026-08-28`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1442 | 10 | 2022 | Lightweight Multidimensional Adaptive Sampling for GPU Ray Tracing | graphics |
+| 1443 | 9 | 2012 | Fast Accurate Soft Shadows with Adaptive Light Source Sampling | graphics |
+
+_Recount after `user-jcgt-vmv-2026-08-28`: **1443** unique title cards on main._
