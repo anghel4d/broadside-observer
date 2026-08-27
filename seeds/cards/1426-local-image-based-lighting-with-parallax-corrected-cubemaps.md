@@ -77,3 +77,8 @@ Anoptic interiors should default to parallax-corrected probes, not infinite IBL,
 ## Bottom line
 
 Mint Lagarde 2012. THE parallax-cubemap / local-probe paper, not a remint of Frostbite PBR.
+
+## Links
+
+- DOI: [10.1145/2343045.2343094](https://doi.org/10.1145/2343045.2343094)
+- URL: https://seblagarde.wordpress.com/2012/09/29/image-based-lighting-approaches-and-parallax-corrected-cubemap/
