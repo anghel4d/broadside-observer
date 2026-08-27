@@ -1839,3 +1839,21 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidate
 | 1433 | 10 | 2013 | Crowd Pathfinding and Steering Using Flow Field Tiles | game-ai |
 
 _Recount after `craft-2026-08-27`: **1433** unique title cards on main._
+
+
+## Archive 2026-08-28
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, pre-2013 archive bias, and foundational on-mission gate: **77**. Keepers: **8** (keep rate **0.104**, hard cap **0.20**). Slice: PVS walkthrough visibility + mesh decimation LOD + wavelet band-limited noise + threaded interpreters/superoperators + Dynamo traces + Click combined analyses + finger-tree persistent sequences. Different from last Archive (Guibas–Stolfi / geometry compression / Chaitin / LLVM / PIC / Cheney-on-MTA / Immix / SISAL) and from this week's Craft GPU-driven leftovers. Do not remint HOM 1432, Hi-Z 144, ROAM 1100, Progressive Meshes 375, Quadrics 373, Perlin 1007/365, copy-and-patch 1429, LLVM 1361, PIC 1362.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1434 | 10 | 1991 | Visibility Preprocessing for Interactive Walkthroughs | graphics |
+| 1435 | 9 | 1992 | Decimation of Triangle Meshes | graphics |
+| 1436 | 9 | 2005 | Wavelet Noise | graphics |
+| 1437 | 10 | 1973 | Threaded Code | languages |
+| 1438 | 10 | 1995 | Optimizing an ANSI C Interpreter with Superoperators | languages |
+| 1439 | 9 | 2000 | Dynamo: A Transparent Dynamic Optimization System | languages |
+| 1440 | 10 | 1995 | Combining Analyses, Combining Optimizations | languages |
+| 1441 | 9 | 2006 | Finger Trees: A Simple General-purpose Data Structure | languages |
+
+_Recount after `archive-2026-08-28`: **1441** unique title cards on main._
