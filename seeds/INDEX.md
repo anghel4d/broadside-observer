@@ -1825,3 +1825,17 @@ User ingest (not a daypart radar). Locked 5 (specular-manifold SOTA, Hi-Z cone S
 | 1428 | 9 | 2014 | Reflections and Volumetrics of Killzone Shadow Fall | graphics |
 
 _Recount after `mirrors-2026-08-27`: **1428** unique title cards on main._
+
+## Craft 2026-08-27
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND filter: **28**. Keepers: **5** (keep rate **0.179**, hard cap **0.25**). No padding. Slice: GPU-driven *draw* leftover of last Craft's occupancy trees (Aokana shallow-SVDAG pipeline + DAIS visbuffer shading leftover of 271 + HOM coverage leftover of Greene 144) + copy-and-patch leftover of ano lowering (not egg/RACE) + Emerson flow-field *tiles* leftover of Durant 279 / Continuum Crowds 357. Different from last Craft (Karras / SVO / Smits clustering / Hu lists) and from this week's SSS/GI/mirrors ingest. Do not remint FMM 1163–1196, SVO 1241, visbuffer 271, Hi-Z 144, GPU-driven 015, SVDAG cite-from-1241, OMM 1151, ReSTIR/Lumen 1374–1423, mirrors 1424–1428.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1429 | 10 | 2021 | Copy-and-Patch Compilation | languages |
+| 1430 | 10 | 2025 | Aokana: A GPU-Driven Voxel Rendering Framework for Open World Games | graphics |
+| 1431 | 9 | 2015 | Deferred Attribute Interpolation for Memory-Efficient Deferred Shading | graphics |
+| 1432 | 9 | 1997 | Visibility Culling using Hierarchical Occlusion Maps | engines |
+| 1433 | 10 | 2013 | Crowd Pathfinding and Steering Using Flow Field Tiles | game-ai |
+
+_Recount after `craft-2026-08-27`: **1433** unique title cards on main._
