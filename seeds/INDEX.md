@@ -1811,3 +1811,17 @@ User ingest (not a daypart radar). Locked 50 across realtime GI / nature shading
 | 1423 | 8 | 2024 | SmartGI: Global Illumination with Space Voxelization on Mobile | graphics |
 
 _Recount after `gi-nature-2026-08-27`: **1423** unique title cards on main._
+
+## Mirrors / reflections / refraction 2026-08-27
+
+User ingest (not a daypart radar). Locked 5 (specular-manifold SOTA, Hi-Z cone SSR, parallax cubemaps, multi-scatter dielectric BSDF, Killzone production stack) after unique pool **118**. Live main at start: `c7c527b`, **1423** unique title cards, max rank **1423**. INDEX collision check (title / doi / famous alias): none of the locked 5 already present; no backups used. Not reminted: Stachowiak SSR #1386, Path Cuts #1422, Walter GGX #1312, Discrete Stochastic #1412, Lumen/ReSTIR/GIBS/Lightcuts, Belcour layered #1259, Jakob layered #1244, Weidlich #1269, Guo #1261, iridescence #1288, Karis #270, Frostbite PBR #267, ocean/wet/FFT, Fox/Decima/SSS/FMM/Kajiya. seed_batch: `mirrors-2026-08-27`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1424 | 10 | 2020 | Specular Manifold Sampling for Rendering High-Frequency Caustics and Glints | graphics |
+| 1425 | 9 | 2014 | Hi-Z Screen-Space Cone-Traced Reflections | graphics |
+| 1426 | 9 | 2012 | Local Image-based Lighting with Parallax-corrected Cubemaps | graphics |
+| 1427 | 9 | 2016 | Multiple-scattering Microfacet BSDFs with the Smith Model | graphics |
+| 1428 | 9 | 2014 | Reflections and Volumetrics of Killzone Shadow Fall | graphics |
+
+_Recount after `mirrors-2026-08-27`: **1428** unique title cards on main._

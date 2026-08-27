@@ -1552,7 +1552,12 @@
     "Open-World Water Rendering and Real-Time Simulation (Photon Water System)",
     "WishGI: Lightweight Static Global Illumination Baking via Spherical Harmonics Fitting",
     "Path Cuts: Efficient Rendering of Pure Specular Light Transport",
-    "SmartGI: Global Illumination with Space Voxelization on Mobile"
+    "SmartGI: Global Illumination with Space Voxelization on Mobile",
+    "Specular Manifold Sampling for Rendering High-Frequency Caustics and Glints",
+    "Hi-Z Screen-Space Cone-Traced Reflections",
+    "Local Image-based Lighting with Parallax-corrected Cubemaps",
+    "Multiple-scattering Microfacet BSDFs with the Smith Model",
+    "Reflections and Volumetrics of Killzone Shadow Fall"
   ],
   "updated": "2026-08-27",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -1819,7 +1824,16 @@
     "https://www.gdcvault.com/play/1028915/Advanced-Graphics-Summit-Open-World",
     "https://arxiv.org/abs/2506.01288",
     "https://wangningbei.github.io/",
-    "https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/siggraph_5F00_mmg_5F00_2024_5F00_SmartGI0722.pdf"
+    "https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/siggraph_5F00_mmg_5F00_2024_5F00_SmartGI0722.pdf",
+    "https://rgl.epfl.ch/publications/Zeltner2020Specular",
+    "https://doi.org/10.1201/b16721-13",
+    "https://seblagarde.wordpress.com/2012/09/29/image-based-lighting-approaches-and-parallax-corrected-cubemap/",
+    "https://eheitzresearch.wordpress.com/240-2/",
+    "https://advances.realtimerendering.com/s2014/",
+    "https://www.guerrilla-games.com/media/News/Files/GDC2014_Valient_Killzone_Graphics.pdf",
+    "https://doi.org/10.1145/3386569.3392408",
+    "https://doi.org/10.1145/2897824.2925943",
+    "https://doi.org/10.1145/2343045.2343094"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -1834,5 +1848,7 @@
   "fox_engine_batch": "fox-engine-2013",
   "fox_engine_count": 14,
   "gi_nature_batch": "gi-nature-2026-08-27",
-  "gi_nature_count": 50
+  "gi_nature_count": 50,
+  "mirrors_batch": "mirrors-2026-08-27",
+  "mirrors_count": 5
 }
