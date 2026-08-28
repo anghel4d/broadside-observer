@@ -1896,3 +1896,18 @@ Frontier daypart (even calendar date, 12:00 Europe/Bucharest). Live main before 
 | 1450 | 9 | 2026 | Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents | agents |
 
 _Recount after `frontier-2026-08-28`: **1450** unique title cards on main._
+
+## Curiosity radar 2026-08-29
+
+Curiosity daypart (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `d3013b1`, **1450** unique (Frontier 1446–1450). Next rank **1451+**. seed_batch: `curiosity-2026-08-29`. Unique after dedupe 379 → cheap-filter 40 → keep **6** (rate 0.150).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1451 | 10 | 2026 | Rzk: a Proof Assistant for Synthetic ∞-Categories | languages |
+| 1452 | 10 | 2026 | Directed univalence for simplicial objects in an ∞-topos | maths-foundations |
+| 1453 | 9 | 2026 | Bistable Quad-Nets Composed of Four-Bar Linkages | maths-foundations |
+| 1454 | 9 | 2026 | Cohomology for solutions of polygon equations | maths-foundations |
+| 1455 | 9 | 2026 | Cubical Type Theoretic Navya-Nyāya | maths-foundations |
+| 1456 | 8 | 2026 | A Zoology of Quantum Turing Patterns | maths-foundations |
+
+_Recount after `curiosity-2026-08-29`: **1456** unique title cards on main._
