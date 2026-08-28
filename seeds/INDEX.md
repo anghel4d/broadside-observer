@@ -1869,3 +1869,15 @@ User mint after Archive 2026-08-28 (live main `749dde6`, PR #85, **1441** unique
 | 1443 | 9 | 2012 | Fast Accurate Soft Shadows with Adaptive Light Source Sampling | graphics |
 
 _Recount after `user-jcgt-vmv-2026-08-28`: **1443** unique title cards on main._
+
+
+## PRT ancestors (user-add 2026-08-28)
+
+User mint after JCGT+VMV (live main `e498305`, PR #86, **1443** unique, max rank **1443**). Named papers only: Iwasaki et al. EGSR 2007 (objects as secondary lights / basis irradiance) and Pan et al. CGF/EG 2007 (radiance transfer fields, proxies, CPCA). Digests from EG 035-044.pdf and ZJU `eg07-prtf.pdf`. Sloan/Kautz/Snyder 2002 PRT already card **366** — not reminted. Pan listed on Wiley + ResearchGate — minted once. Woodbury/radiosity/BEM paragraph was search hints, not keepers. seed_batch: `user-prt-ancestors-2026-08-28`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1444 | 10 | 2007 | Precomputed Radiance Transfer for Dynamic Scenes Taking into Account Light Interreflection | graphics |
+| 1445 | 10 | 2007 | Precomputed Radiance Transfer Field for Rendering Interreflections in Dynamic Scenes | graphics |
+
+_Recount after `user-prt-ancestors-2026-08-28`: **1445** unique title cards on main._
