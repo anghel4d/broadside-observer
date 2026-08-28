@@ -1897,7 +1897,6 @@ Frontier daypart (even calendar date, 12:00 Europe/Bucharest). Live main before 
 
 _Recount after `frontier-2026-08-28`: **1450** unique title cards on main._
 
-
 ## Curiosity radar 2026-08-29
 
 Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **40**. Keepers: **6** (keep rate **0.150**, hard cap **0.15**). No padding. Slice: synthetic ∞-category tool+foundation leftover of 1373 (Rzk + directed univalence) + DDG bistable mechanisms leftover of 1369/1028 + polygon/Segal cohomology leftover of 1239 + cubical Navya-Nyāya + quantum Turing-pattern zoology. Different from last Curiosity (HoTT DDG / Penrose cocycles / TCD clusters / synthetic schemes / Cat_∞). Do not remint 1373, 1369–1372, 1054, 1028, 1239, 951/957/1027. Near-keepers left unseen-as-cards: Leibniz adjunction, TensorRocq, UC Categorically, Synthetic Sierpiński Cone, origami DDG robotics, Shape Theory of ∞-Topoi. seed_batch: `curiosity-2026-08-29`. Live main before this pass: `d3013b1`, **1450** unique, max rank **1450**.
