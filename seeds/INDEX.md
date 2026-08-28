@@ -1881,3 +1881,18 @@ User mint after JCGT+VMV (live main `e498305`, PR #86, **1443** unique, max rank
 | 1445 | 10 | 2007 | Precomputed Radiance Transfer Field for Rendering Interreflections in Dynamic Scenes | graphics |
 
 _Recount after `user-prt-ancestors-2026-08-28`: **1445** unique title cards on main._
+
+
+## Frontier radar 2026-08-28
+
+Frontier daypart (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `20b74c4`, **1445** unique (PRT ancestors 1444–1445). Next rank **1446+**. Window: Thu 27 + Fri 28 August 2026 arXiv listings (since Frontier 2026-08-26). Labs DeepSeek / DeepMind / OpenAI / xAI first-party empty this window. seed_batch: `frontier-2026-08-28`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1446 | 10 | 2026 | A Contract-Centered Architecture for Scalable and Manageable Agentic Runtimes | agents |
+| 1447 | 10 | 2026 | JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution | agents |
+| 1448 | 10 | 2026 | VPP: Virtual Pipeline Parallelism for Efficient Chunked Prefill in Long-Context LLM Inference | agents |
+| 1449 | 9 | 2026 | When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents | agents |
+| 1450 | 9 | 2026 | Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents | agents |
+
+_Recount after `frontier-2026-08-28`: **1450** unique title cards on main._

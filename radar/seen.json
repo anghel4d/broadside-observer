@@ -462,7 +462,12 @@
     "2504.08495",
     "2602.02218",
     "2106.12372",
-    "2506.01288"
+    "2506.01288",
+    "2608.27086",
+    "2608.25593",
+    "2608.26523",
+    "2608.27146",
+    "2608.27141"
   ],
   "titles": [
     "(infinity,2)-categories and the goodwillie calculus i",
@@ -1574,7 +1579,12 @@
     "Lightweight Multidimensional Adaptive Sampling for GPU Ray Tracing",
     "Fast Accurate Soft Shadows with Adaptive Light Source Sampling",
     "Precomputed Radiance Transfer for Dynamic Scenes Taking into Account Light Interreflection",
-    "Precomputed Radiance Transfer Field for Rendering Interreflections in Dynamic Scenes"
+    "Precomputed Radiance Transfer Field for Rendering Interreflections in Dynamic Scenes",
+    "a contract-centered architecture for scalable and manageable agentic runtimes",
+    "jit-agent: scaling harness intelligence via just-in-time harness evolution",
+    "vpp: virtual pipeline parallelism for efficient chunked prefill in long-context llm inference",
+    "when tool outputs become commands: separating action induction from runtime authorization in tool-augmented llm agents",
+    "safety does not compose: non-decaying loop state for autonomous llm agents"
   ],
   "updated": "2026-08-28",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -1585,8 +1595,8 @@
   "craft_count": 5,
   "archive_batch": "archive-2026-08-28",
   "archive_count": 8,
-  "frontier_batch": "frontier-2026-08-26",
-  "frontier_count": 3,
+  "frontier_batch": "frontier-2026-08-28",
+  "frontier_count": 5,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
