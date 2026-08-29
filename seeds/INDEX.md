@@ -1925,3 +1925,20 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 
 _Recount after `craft-2026-08-29`: **1460** unique title cards on main._
 
+## Archive radar 2026-08-30
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `2db675c`, **1460** unique, max rank **1460**. Next rank **1461+**. Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap historical on-mission gate (persistent maps/ropes leftover of Finger Trees 1441 + self-adjusting/incremental leftover of Pugh/Acar + packrat/PEG leftover of Earley 1102): **77**. Keepers: **8** (keep rate **0.104**, hard cap **0.20**). No padding. Slice different from last Archive (PVS/decimation/wavelet/threaded/Dynamo/Click/finger-trees) and from Archive 2026-08-26 (Guibas–Stolfi/geom-compress/Chaitin/LLVM/PIC/Cheney/Immix/SISAL). Do not remint 1–1460, Finger Trees 1441, Zipper 1101, Earley 1102, splay 766, ART 836, hopscotch 400, Futhark maps 1033, two-level morphology 1073. seed_batch: `archive-2026-08-30`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1461 | 10 | 1989 | Making Data Structures Persistent | languages |
+| 1462 | 9 | 1995 | Ropes: An Alternative to Strings | languages |
+| 1463 | 10 | 2001 | Ideal Hash Trees | languages |
+| 1464 | 9 | 1989 | Incremental Computation via Function Caching | languages |
+| 1465 | 10 | 2002 | Adaptive Functional Programming | languages |
+| 1466 | 9 | 2014 | Adapton: Composable, Demand-Driven Incremental Computation | languages |
+| 1467 | 10 | 2002 | Packrat Parsing: Simple, Powerful, Lazy, Linear Time | languages |
+| 1468 | 10 | 2004 | Parsing Expression Grammars: A Recognition-Based Syntactic Foundation | languages |
+
+_Recount after `archive-2026-08-30`: **1468** unique title cards on main._
+
