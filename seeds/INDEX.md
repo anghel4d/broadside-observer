@@ -1911,3 +1911,17 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1456 | 8 | 2026 | A Zoology of Quantum Turing Patterns | maths-foundations |
 
 _Recount after `curiosity-2026-08-29`: **1456** unique title cards on main._
+
+## Craft radar 2026-08-29
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `e9eceb3`, **1456** unique, max rank **1456**. Next rank **1457+**. Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **24**. Keepers: **4** (keep rate **0.167**, hard cap **0.25**). No padding. Slice: GPU *command* leftover of GPU-driven 015 after last Craft's occupancy *draw* (Kuth 2024 work graphs + Kuth 2025 mesh-node trees + Whippletree megakernel) + Unicode/vector leftover of Slug (Nehab–Hoppe 2008 cell streams; Pathfinder/Vello stay blogs). Different from last Craft (copy-and-patch / Aokana / DAIS / HOM / Emerson) and from GI/nature vegetation talks 1392/1403. Honest empty game-ai (JPS 196 / Emerson 1433 already). Honest empty array-language (copy-and-patch 1429 last cycle). Do not remint 015, 128, 286, 1082, 1117, 1128, 1429–1433, 1451–1456. seed_batch: `craft-2026-08-29`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1457 | 10 | 2024 | Real-Time Procedural Generation with GPU Work Graphs | graphics |
+| 1458 | 9 | 2025 | Real-Time GPU Tree Generation | graphics |
+| 1459 | 9 | 2014 | Whippletree: Task-based Scheduling of Dynamic Workloads on the GPU | engines |
+| 1460 | 9 | 2008 | Random-Access Rendering of General Vector Graphics | graphics |
+
+_Recount after `craft-2026-08-29`: **1460** unique title cards on main._
+
