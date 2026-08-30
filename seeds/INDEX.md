@@ -1942,3 +1942,8 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 
 _Recount after `archive-2026-08-30`: **1468** unique title cards on main._
 
+## Frontier radar 2026-08-30
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `16bb8b1`, **1468** unique, max rank **1468**. Next rank **1469+**. Weekend dead zone: arXiv `/new` still Friday 28 Aug (already harvested as Frontier 2026-08-28 keepers 1446–1450); Saturday/Sunday have no mailing; lab-author APIs 0/0/0/0; HF Daily 29–30 empty. Unique new on-mission candidates after recency + corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`) + dirt ban: **0**. Keepers: **0** (keep rate **0/0**, hard cap **0.25**). No padding. Do not remint 1–1468, Friday leftovers (WikiSkill 2608.27454, GameWAM, Agentic Game Development, UrbanGround, PILOT, Magpie), DeepSeek Harness 1050, Grok 4.6 1022, V4-Pro 1000. seed_batch: `frontier-2026-08-30`.
+
+_Recount after `frontier-2026-08-30`: **1468** unique title cards on main._

@@ -1630,8 +1630,8 @@
   "craft_count": 4,
   "archive_batch": "archive-2026-08-30",
   "archive_count": 8,
-  "frontier_batch": "frontier-2026-08-28",
-  "frontier_count": 5,
+  "frontier_batch": "frontier-2026-08-30",
+  "frontier_count": 0,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
