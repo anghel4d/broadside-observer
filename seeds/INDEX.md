@@ -1942,3 +1942,18 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 
 _Recount after `archive-2026-08-30`: **1468** unique title cards on main._
 
+## Curiosity radar 2026-08-31
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **40**. Keepers: **6** (keep rate **0.150**, hard cap **0.15**). No padding. Slice: string-diagram *checker* leftover of 951/957/1027 (Rocq, analogue of Rzk 1451 for pictures) + Hat-as-hinge leftover of 1023 and last cycle's origami-DDG-robotics near-keeper + Kœnigs inscribed quadrics leftover of 1028/1052 + quantales-as-FCA (fresh 26 Aug) + magnitude homology = associated graded leftover of 1084 + sheaf graphic statics that had slipped the net (Cooperband–Ghrist–Hansen 2023). Different from last Curiosity (Rzk / directed univalence / bistable quad-nets / polygon cohomology / Navya-Nyāya / quantum Turing patterns). Do not remint 1451–1468, 951/957/1027, 1023/1024, 1028/1051/1052, 1084, 1373, 1453. Near-keepers left unseen-as-cards: Heesch unboundedness for hyperbolic monotiles (2603.27827), frieze patterns and aperiodic tilings (2607.21348), QECC from Hat and Spectre (2607.15326), Localic Esakia duality (2608.26084), Categories with a Base of Computability (2608.20616), Mars origami snapping (2606.12228), layered monoidal theories (2602.19776). seed_batch: `curiosity-2026-08-31`. Live main before this pass: `16bb8b1`, **1468** unique, max rank **1468**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1469 | 10 | 2026 | String Diagrams for Monoidal Categories, in Rocq | languages |
+| 1470 | 10 | 2026 | Monotile kirigami | maths-foundations |
+| 1471 | 9 | 2025 | Discrete Kœnigs nets, inscribed quadrics and autoconjugate curves | maths-foundations |
+| 1472 | 9 | 2026 | Quantales as formal concept lattices | languages |
+| 1473 | 9 | 2026 | Magnitude Homology Is the Associated Graded of the Length Filtration | maths-foundations |
+| 1474 | 10 | 2023 | A Cosheaf Theory of Reciprocal Figures: Planar and Higher Genus Graphic Statics | engines |
+
+_Recount after `curiosity-2026-08-31`: **1474** unique title cards on main._
+

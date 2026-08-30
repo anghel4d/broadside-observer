@@ -484,7 +484,13 @@
     "2608.17263",
     "2608.17525",
     "2608.20151",
-    "1609.05337"
+    "1609.05337",
+    "2602.19806",
+    "2604.19586",
+    "2510.26618",
+    "2608.26631",
+    "2608.21479",
+    "2311.12946"
   ],
   "titles": [
     "(infinity,2)-categories and the goodwillie calculus i",
@@ -1619,12 +1625,18 @@
     "adaptive functional programming",
     "adapton: composable, demand-driven incremental computation",
     "packrat parsing: simple, powerful, lazy, linear time",
-    "parsing expression grammars: a recognition-based syntactic foundation"
+    "parsing expression grammars: a recognition-based syntactic foundation",
+    "string diagrams for monoidal categories, in rocq",
+    "monotile kirigami",
+    "discrete kœnigs nets, inscribed quadrics and autoconjugate curves",
+    "quantales as formal concept lattices",
+    "magnitude homology is the associated graded of the length filtration",
+    "a cosheaf theory of reciprocal figures: planar and higher genus graphic statics"
   ],
-  "updated": "2026-08-30",
+  "updated": "2026-08-31",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
-  "curiosity_batch": "curiosity-2026-08-29",
+  "curiosity_batch": "curiosity-2026-08-31",
   "curiosity_count": 6,
   "craft_batch": "craft-2026-08-29",
   "craft_count": 4,
@@ -1954,7 +1966,13 @@
     "https://bford.info/pub/lang/packrat-icfp02.pdf",
     "https://bford.info/pub/lang/peg.pdf",
     "http://matthewhammer.org/adapton/adapton-pldi2014.pdf",
-    "https://www.cs.tufts.edu/comp/150FP/archive/hans-boehm/ropes.pdf"
+    "https://www.cs.tufts.edu/comp/150FP/archive/hans-boehm/ropes.pdf",
+    "https://arxiv.org/abs/2602.19806",
+    "https://arxiv.org/abs/2604.19586",
+    "https://arxiv.org/abs/2510.26618",
+    "https://arxiv.org/abs/2608.26631",
+    "https://arxiv.org/abs/2608.21479",
+    "https://arxiv.org/abs/2311.12946"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
