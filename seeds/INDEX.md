@@ -1972,4 +1972,17 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 
 _Recount after `craft-2026-08-31`: **1480** unique title cards on main._
 
+## Curiosity radar 2026-09-01
 
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a strict curiosity cheap filter: **40**. Keepers: **6** (keep rate **0.150**, hard cap **0.15**). No padding. Slice: Arnold–Givental closed (1989 symplectic rigidity) + Berg–Purcell boundary-optimal sensing (electrostatics) + Presort Hierarchy answering Aggarwal–Guibas–Saxe–Shor 1989 for proximity structures + Defant–Williams HOMFLYPT *decategorification* leftover of Khovanov 1124 + Quillen model structure on Cartmell GATs (ano/type-theory bridge) + 2DOF critical-damping needs active negative dashpots. Different from last Curiosity (string-diagram Rocq / monotile kirigami / Kœnigs / quantales / magnitude graded / cosheaf statics) and from Craft 1475–1480. Do not remint 1469–1480, 1124, 1089, 1358, 1473/1084 magnitude sequels, 1054/1373 HoTT leftovers. Near-keepers left unseen-as-cards: biological-oscillator Q-factor screen (2608.10560), trueform topological-aggregation CSG (2607.15905; Craft-flavoured), magnitude homology of hyperplane arrangements (2604.03718), magnitude Euler DAGs for MLPs (2607.23357), categorical deep-research agents (2603.25342; Frontier), symbolic dynamics for non-uniformly hyperbolic flows (2608.14095). seed_batch: `curiosity-2026-09-01`. Live main before this pass: `6c9082d`, **1480** unique, max rank **1480**.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1481 | 10 | 2026 | A proof of the Arnold–Givental conjecture | maths-foundations |
+| 1482 | 10 | 2026 | Physical limits to concentration and gradient sensing by perfect monitors | maths-foundations |
+| 1483 | 10 | 2026 | The Presort Hierarchy for Geometric Problems | engines |
+| 1484 | 10 | 2026 | Noncrossing Combinatorics, the Full Twist, and Decategorification of Knot Invariants | maths-foundations |
+| 1485 | 9 | 2026 | A categorical model structure for generalized algebraic theories | languages |
+| 1486 | 9 | 2026 | Critical damping in linear system with two degrees of freedom: surprises and pitfalls | maths-foundations |
+
+_Recount after `curiosity-2026-09-01`: **1486** unique title cards on main._
