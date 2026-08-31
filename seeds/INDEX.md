@@ -1955,5 +1955,21 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1473 | 9 | 2026 | Magnitude Homology Is the Associated Graded of the Length Filtration | maths-foundations |
 | 1474 | 10 | 2023 | A Cosheaf Theory of Reciprocal Figures: Planar and Higher Genus Graphic Statics | engines |
 
-_Recount after `curiosity-2026-08-31`: **1474** unique title cards on main._
+_Recount after `curiosity-2026-08-31`: **1474** unique title cards on main.
+
+## Craft radar 2026-08-31
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `0812814`, **1474** unique, max rank **1474**. Next rank **1475+**. Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **32**. Keepers: **6** (keep rate **0.188**, hard cap **0.25**). No padding. Slice: lock-free SPSC leftover of Anoptic buses (FastForward, not MS/LCRQ/Disruptor) + ano interpreter leftover of threaded/superoperators/copy-and-patch (Lua 5.0 register VM + Terra multi-stage) + GPU-vector leftover of RAVG 1460 (MPVG shortcut trees) + Unicode intern leftover of Slug/RAVG (SIMD UTF-8) + standing-trigger leftover of Differential Dataflow 823 (Naiad timely dataflow). Different from last Craft (Kuth work graphs / mesh-node trees / Whippletree / RAVG) and from Archive 1461–1468 / Curiosity 1469–1474. Honest empty game-ai (JPS 196 / Emerson 1433 / GOAP 22 / BT already). Honest empty mesh/GI (HPG 2026 leftovers still rejects; no new actionable RC/meshlet technique). Do not remint 31, 128, 286, 823, 1128, 1429–1433, 1437–1438, 1457–1474. seed_batch: `craft-2026-08-31`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1475 | 9 | 2008 | FastForward for Efficient Pipeline Parallelism: a Cache-Optimized Concurrent Lock-Free Queue | engines |
+| 1476 | 9 | 2005 | The Implementation of Lua 5.0 | languages |
+| 1477 | 10 | 2013 | Terra: a Multi-Stage Language for High-Performance Computing | languages |
+| 1478 | 10 | 2014 | Massively-Parallel Vector Graphics | graphics |
+| 1479 | 9 | 2021 | Validating UTF-8 In Less Than One Instruction Per Byte | engines |
+| 1480 | 9 | 2013 | Naiad: A Timely Dataflow System | languages |
+
+_Recount after `craft-2026-08-31`: **1480** unique title cards on main._
+
 
