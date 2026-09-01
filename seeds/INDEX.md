@@ -2001,3 +2001,19 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 | 1492 | 9 | 2021 | Advanced Real-Time Hierarchical Task Network: Long-Term Behavior in Real-Time Games | game-ai |
 
 _Recount after `craft-2026-09-01`: **1492** unique title cards on main._
+
+## Archive radar 2026-09-02
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `0cc1839`, **1492** unique, max rank **1492**. Next rank **1493+**. Source-level records across three polls: **3938**. Unique titles sum reported: **2915**. After cheap historical on-mission gate per poll: PLT 36 + engines 31 + graphics 30 = **97** (sum; cross-poll merge not fully recomputed). Named keepers: **8**; **TLSF ECRTS 2004 skipped as remint of live card 361** (`361-an-efficient-memory-allocator-for-network-processors-and-mul.md`, title already *TLSF: A New Dynamic Memory Allocator for Real-Time Systems*). Keepers minted: **7** (keep rate **7/97 ≈ 0.072**, named-eight rate 8/97 ≈ **0.082**, hard cap **0.20**). No padding; ranks not shifted onto 1500. Slice: concurrent leftovers of the Michael–Scott/wait-free shelf (MCS locks, Cuckoo hashing; TLSF named then skipped) + immutable/array leftovers of Archive 2026-08-30 HAMT/persistence (Okasaki, RRB Vector, original Remora under Refined Remora 1062) + classic isosurface/portals leftovers (Marching Cubes; Portals and Mirrors — PDF recovered at luebke.us after prior 403). Different from last Archive (Driscoll/ropes/HAMT/AFP/Adapton/packrat/PEG) and from Craft 2026-09-01 (trueform/CuRast/DBSP/TED/NBLFQ/ART-HTN). Do not remint 1–1492, MS-queue 031, Herlihy 036, YMC 426, hopscotch 400, ART 836, Driscoll 1461, ropes 1462, HAMT 1463, Finger Trees 1441, Refined Remora 1062, rank-polymorphism semantics 926, Dual Contouring 408, Progressive Meshes 375, QEM 373, HOM 1432, Hi-Z 144, Teller 1434, TLSF 361, mimalloc 011, snmalloc 322. Near-keepers left unseen-as-cards: Unicode Bidi UAX #9, Appel “SSA is Functional Programming”, Poisson Surface Reconstruction, Transvoxel/Lengyel, Geometry Images, Tiled Shading, CCured, SHOP HTN 1999, CLH/Craig queue locks, Boehm–Weiser GC, TRIBES networking, Sea of Nodes / Click IR (ACM wall), Cytron SSA TOPLAS (ACM wall), Co-dfns (ACM 403). seed_batch: `archive-2026-09-02`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1493 | 10 | 1991 | Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors | engines |
+| 1494 | 10 | 2001 | Cuckoo Hashing | engines |
+| 1495 | 10 | 1996 | Purely Functional Data Structures | languages |
+| 1496 | 9 | 2015 | RRB Vector: A Practical General Purpose Immutable Sequence | languages |
+| 1497 | 10 | 2014 | An Array-Oriented Language with Static Rank Polymorphism | languages |
+| 1498 | 10 | 1987 | Marching Cubes: A High Resolution 3D Surface Construction Algorithm | graphics |
+| 1499 | 10 | 1995 | Portals and Mirrors: Simple, Fast Evaluation of Potentially Visible Sets | graphics |
+
+_Recount after `archive-2026-09-02`: **1499** unique title cards on main._
