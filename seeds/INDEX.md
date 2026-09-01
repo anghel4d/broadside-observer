@@ -1986,3 +1986,18 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Unique candi
 | 1486 | 9 | 2026 | Critical damping in linear system with two degrees of freedom: surprises and pitfalls | maths-foundations |
 
 _Recount after `curiosity-2026-09-01`: **1486** unique title cards on main._
+
+## Craft radar 2026-09-01
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `d012f76`, **1486** unique, max rank **1486**. Next rank **1487+**. Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **36**. Keepers: **6** (keep rate **0.167**, hard cap **0.25**). No padding. Hsu ARRAY 2014 Co-dfns was the seventh named keeper; ACM PDF 403 and no author/HAL copy, so it was skipped and later ranks shifted — never fabricated. Slice: CSG leftover of Lévy 1092 (trueform topological aggregation) + visbuffer/software-raster leftover of meshlets (CuRast) + DBSP IVM leftover of Naiad 1480 + TED standing-rules leftover of Rete/Naiad + NBLFQ MPMC leftover of FastForward 1475 + Square Enix RT-HTN leftover of GOAP (game-ai was honest-empty last Craft). Dropped vs the named seven: BQN-twin Co-dfns leftover of Lua/Terra 1476–1477 (unread as a card). Different from last Craft (FastForward/Lua/Terra/MPVG/UTF-8/Naiad) and from Curiosity 1481–1486. Mix: 2 graphics / 1 engines / 1 languages / 2 game-ai. Near-keepers left unseen: original Remora ESOP 2014 (1062 is refinement, 926 is 2019 semantics), Hsu ARRAY 2014 Co-dfns (ACM closed), Hsu Key ARRAY 2016, weval PLDI 2025 (2411.10559), Libfork 2402.18480, Simulog AIIDE 2025, Amulet 2608.10423, MaxEnt spherical moments 2608.20429, Titzer Wasm interpreter 2205.01183, Brunthaler Quickening, sparse-set vs archetype ECS CGVC 2025. Do not remint 11 mimalloc, 172 Essence of ECS, 253 Jiffy, 322 snmalloc, 428 SCQ, 1117 Vangers, 1092 Lévy CSG, 1151 OMM, 206 WS-bulk, 210 fair kernel lock-free, 216 No Cords, 1082 Uxn GPU VM, 197 GGPO, 926 rank-polymorphism semantics, 1062 Refined Remora, Periodic Anderson (last-Craft reject). seed_batch `craft-2026-09-01`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1487 | 10 | 2026 | trueform: Fast And Robust Mesh CSG Via Topological Aggregation | graphics |
+| 1488 | 9 | 2026 | CuRast: Cuda-Based Software Rasterization for Billions of Triangles | graphics |
+| 1489 | 10 | 2023 | DBSP: Automatic Incremental View Maintenance for Rich Query Languages | languages |
+| 1490 | 10 | 2024 | Fast, Declarative, Character Simulation Using Bottom-Up Logic Programming | game-ai |
+| 1491 | 9 | 2025 | NBLFQ: A Lock-Free MPMC Queue Optimized for Low Contention | engines |
+| 1492 | 9 | 2021 | Advanced Real-Time Hierarchical Task Network: Long-Term Behavior in Real-Time Games | game-ai |
+
+_Recount after `craft-2026-09-01`: **1492** unique title cards on main._
