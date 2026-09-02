@@ -2079,3 +2079,18 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 | 1543 | 9 | 2026 | Runtime-Independent Persistent Agents: Preserving Identity, Memory, and Code Across Models, Harnesses, and Servers | agents |
 
 _Recount after `frontier-2026-09-02`: **1543** unique title cards on main._
+
+## Curiosity radar 2026-09-03
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `3315cbe`, **1543** unique, max rank **1543**. Next rank **1544+**. Feeds: HTML recent for 31 cats (math.CT/CO/DS/AT/MG/GT/SG/QA/KT/LO/DG/AG/HO, physics.class-ph/bio-ph/comp-ph, q-bio.NC/QM/MN/TO/PE, cs.CG/LO/FL/DM/SC, nlin.AO/CG/PS/SI, math-ph) + abstract gate on 41 crème/near-keeper ids. Raw unique: **944**. Fresh after seen/cards dedupe: **941**. Keyword cream: **92**. Strict curiosity cheap filter (would Anghel enjoy *and* crème; drop kirigami remint of 1470, Khovanov/HOMFLYPT sequel of 1484, magnitude sequels, HoTT remints, Craft-shaped Proximity3D/Casimir-NEMS, Frontier categorical-agents): **40**. Keepers: **6** (keep rate **0.150**, hard cap **0.15**). No padding. Slice: Connes–Consani absolute twistor / Spec Z + localic Esakia (Aug-31 near-keeper) + once-extended 3D TQFT = RT + Lebesgue universal-covering hierarchy + Lenia collision logic + Y-frieze / Fuss–Catalan. Different from last Curiosity (Arnold–Givental / Berg–Purcell / Presort / HOMFLYPT / GAT Quillen / critical damping) and from Frontier 1536–1543. Do not remint 1481–1543, 1470 kirigami, 1472 quantales, 1473/1084 magnitude, 1023 Hat, 1124 Khovanov, 1236 factorization homology. Near-keepers left unseen-as-cards: Goodwillie product rule (2608.25682), layered monoidal theories (2602.19776), categories with a base of computability (2608.20616), biological-oscillator Q-factor screen (2608.10560), Heesch unboundedness hyperbolic monotiles (2603.27827), frieze patterns on aperiodic tilings (2607.21348), QECC from Hat and Spectre (2607.15326), Mars origami snapping (2606.12228), trisection invariants uncomputable (2608.27811), positive geometry of YM correlators (2608.27594), symbolic dynamics for non-uniformly hyperbolic flows (2608.14095), magnitude homology of hyperplane arrangements (2604.03718). seed_batch: `curiosity-2026-09-03`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1544 | 10 | 2026 | The Absolute Twistor Line and the Geometry of Spec Z bar | maths-foundations |
+| 1545 | 10 | 2026 | Localic Esakia Duality via Conic Frames | maths-foundations |
+| 1546 | 10 | 2026 | All once-extended 3D TQFTs are Reshetikhin–Turaev theories | maths-foundations |
+| 1547 | 10 | 2026 | An exact hierarchy for Lebesgue's universal covering constant and a certified 0.834 lower bound | maths-foundations |
+| 1548 | 9 | 2026 | Collision-based logic in Lenia and its composition boundary | engines |
+| 1549 | 9 | 2026 | Triangulated polygons and Y-frieze patterns | maths-foundations |
+
+_Recount after `curiosity-2026-09-03`: **1549** unique title cards on main._
