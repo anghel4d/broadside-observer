@@ -2062,3 +2062,20 @@ User mint after Archive 2026-09-02 (live main `7a15dae`, **1499** unique, max ra
 | 1535 | 8 | 2007 | High-Quality Adaptive Soft Shadow Mapping | graphics |
 
 _Recount after `di-penumbra-2026-09-02`: **1535** unique title cards on main._
+
+## Frontier radar 2026-09-02
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `3b8febf`, **1535** unique, max rank **1535** (di-penumbra). Next rank **1536+**. Recency window: Mon 31 Aug + Tue 1 Sep + Wed 2 Sep 2026 arXiv HTML listings (house recency = listing date). Last Frontier keepers 1446–1450 on 2026-08-28; empty Frontier 2026-08-30 noted. Raw unique in primary window across polled cats: **2197**. Fresh after seen/cards dedupe: **2197** (window IDs beyond prior seen ceiling). Keyword standing-topic POS: **375**. Strict crème shortlist (human gate on harness/KV/memory/skills/provenance systems): **32**. Keepers: **8** (keep rate **8/32 = 0.25**, hard cap **0.25**). No padding. Mix: 8 agents / 0 engines / 0 language / 0 game-ai. Honest empty engines (cs.GR inspected — Gaussian-splat / inverse-render / texture, no Vulkan/meshlet/radiance-cascade). Honest empty language (Cambria effects, Griotte capabilities, Relational-Core held as leftovers). Honest empty game-ai (PokaiTrainer VGC held). Labs DeepSeek/DeepMind/OpenAI/xAI author API: **0/0/0/0**. seed_batch: `frontier-2026-09-02`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1536 | 10 | 2026 | Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents -- A Source-Code Study of Eleven Systems | agents |
+| 1537 | 10 | 2026 | CordisBench: Can Language Models Reason About Component Lifecycles in Dynamic Agent Harnesses? | agents |
+| 1538 | 10 | 2026 | WHALE: A Simple Recipe for Joint Harness-Weight Optimization | agents |
+| 1539 | 10 | 2026 | Adaptive KV Retention for LLM Agents at Human-Approval Timescales | agents |
+| 1540 | 10 | 2026 | Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs | agents |
+| 1541 | 10 | 2026 | Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents | agents |
+| 1542 | 10 | 2026 | Towards a Systems Foundation for Agentic Skills: Architecture, Lifecycle, and Security | agents |
+| 1543 | 9 | 2026 | Runtime-Independent Persistent Agents: Preserving Identity, Memory, and Code Across Models, Harnesses, and Servers | agents |
+
+_Recount after `frontier-2026-09-02`: **1543** unique title cards on main._
