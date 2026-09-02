@@ -2017,3 +2017,48 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1499 | 10 | 1995 | Portals and Mirrors: Simple, Fast Evaluation of Potentially Visible Sets | graphics |
 
 _Recount after `archive-2026-09-02`: **1499** unique title cards on main._
+
+## Direct illumination + penumbra (user-add 2026-09-02)
+
+User mint after Archive 2026-09-02 (live main `7a15dae`, **1499** unique, max rank **1499**). Locked **36** keepers from `di-harvest-2026-09-02` + `penumbra-harvest-2026-09-02`. Next rank **1500+**. No locked title already live on INDEX/cards; backups unused (CRIS, ProjLTC, StarCraft II PCSS, PSM, LiSPSM, Overbeck 2007, ESSM, Agrawala 2000, Klehm bent cones). Distinct from ReSTIR 1374, Clustered 477, Forward+ 340, CSM 356, VSM 359, Williams 1005, Reeves 1066, Lightcuts 1042, SHEXP 1415, shadow fields 1416, Schwärzler 1443. seed_batch: `di-penumbra-2026-09-02`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1500 | 10 | 2016 | Real-Time Polygonal-Light Shading with Linearly Transformed Cosines | graphics |
+| 1501 | 10 | 2018 | Combining Analytic Direct Illumination and Stochastic Shadows | graphics |
+| 1502 | 10 | 2005 | Percentage-Closer Soft Shadows | graphics |
+| 1503 | 10 | 2023 | Virtual Shadow Maps in Fortnite Battle Royale Chapter 4 | graphics |
+| 1504 | 9 | 2011 | Tiled Shading | graphics |
+| 1505 | 9 | 2017 | Real-Time Line- and Disk-Light Shading with Linearly Transformed Cosines | graphics |
+| 1506 | 9 | 2015 | Moment Shadow Mapping | graphics |
+| 1507 | 9 | 2008 | Exponential Shadow Maps | graphics |
+| 1508 | 9 | 2014 | Efficient Virtual Shadow Maps for Many Lights | graphics |
+| 1509 | 9 | 2013 | An Area-Preserving Parametrization for Spherical Rectangles | graphics |
+| 1510 | 9 | 1995 | Applications of Irradiance Tensors to Direct Illumination and Radiosity | graphics |
+| 1511 | 9 | 2007 | Matrix Row-Column Sampling for the Many-Light Problem | graphics |
+| 1512 | 8 | 2007 | Deferred Rendering in Killzone 2 | graphics |
+| 1513 | 8 | 2011 | DirectX 11 Rendering in Battlefield 3 | graphics |
+| 1514 | 8 | 2002 | Production-Ready Global Illumination | graphics |
+| 1515 | 8 | 2021 | RTXDI: A Guide to Best Practices | graphics |
+| 1516 | 10 | 2002 | Approximate Soft Shadows on Arbitrary Surfaces using Penumbra Wedges | graphics |
+| 1517 | 10 | 2006 | Real-time Soft Shadow Mapping by Backprojection | graphics |
+| 1518 | 10 | 2007 | Convolution Shadow Maps | graphics |
+| 1519 | 9 | 2003 | A Geometry-based Soft Shadow Volume Algorithm using Graphics Hardware | graphics |
+| 1520 | 9 | 2005 | Soft shadow volumes for ray tracing | graphics |
+| 1521 | 9 | 1998 | Fast Calculation of Soft Shadow Textures Using Convolution | graphics |
+| 1522 | 9 | 1994 | A fast shadow algorithm for area light sources using backprojection | graphics |
+| 1523 | 8 | 2007 | Bitmask Soft Shadows | graphics |
+| 1524 | 8 | 2010 | Variance Soft Shadow Mapping | graphics |
+| 1525 | 9 | 2003 | A Survey of Real-time Soft Shadows Algorithms | graphics |
+| 1526 | 8 | 2008 | Layered variance shadow maps | graphics |
+| 1527 | 8 | 2004 | Alias-Free Shadow Maps | graphics |
+| 1528 | 8 | 2003 | All-frequency shadows using non-linear wavelet lighting approximation | graphics |
+| 1529 | 8 | 2003 | Rendering Fake Soft Shadows with Smoothies | graphics |
+| 1530 | 8 | 2003 | Penumbra Maps: Approximate Soft Shadows in Real-Time | graphics |
+| 1531 | 7 | 1984 | Beam tracing polygonal objects | graphics |
+| 1532 | 7 | 1984 | Ray Tracing with Cones | graphics |
+| 1533 | 7 | 2005 | Dynamic Ambient Occlusion and Indirect Lighting | graphics |
+| 1534 | 7 | 2015 | Frustum-traced raster shadows: revisiting irregular z-buffers | graphics |
+| 1535 | 8 | 2007 | High-Quality Adaptive Soft Shadow Mapping | graphics |
+
+_Recount after `di-penumbra-2026-09-02`: **1535** unique title cards on main._
