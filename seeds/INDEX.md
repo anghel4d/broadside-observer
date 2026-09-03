@@ -2094,3 +2094,18 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 | 1549 | 9 | 2026 | Triangulated polygons and Y-frieze patterns | maths-foundations |
 
 _Recount after `curiosity-2026-09-03`: **1549** unique title cards on main._
+
+## AGM / worst-case optimal joins (user-add 2026-09-03)
+
+User mint after Curiosity 2026-09-03 (live main `896a855`, **1549** unique, max rank **1549**). Seed: Atserias–Grohe–Marx size bounds (arXiv 1711.03860) plus five last-decade WCOJ cousins (FAQ/InsideOut, EmptyHeaded, Umbra WCOJ, Free Join, PANDA). Next rank **1550+**. No locked title already live on INDEX/cards/seen (AGM, FAQ, EmptyHeaded, Free Join, PANDA, Leapfrog Triejoin, NPRR/Skew-Strikes-Back all absent as cards). Yannakakis/acyclic joins not reminted. No SQL-optimizer-survey padding. Leapfrog Triejoin (ICDT 2014) and Ngo–Ré–Rudra CACM 2018 kept as bibliography, not cards. seed_batch: `user-agm-wcoj-2026-09-03`. Lineage: [`worst-case-optimal-joins`](lineages/worst-case-optimal-joins.md).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1550 | 10 | 2013 | Size Bounds and Query Plans for Relational Joins | languages |
+| 1551 | 10 | 2016 | FAQ: Questions Asked Frequently | languages |
+| 1552 | 10 | 2017 | EmptyHeaded: A Relational Engine for Graph Processing | engines |
+| 1553 | 10 | 2020 | Adopting Worst-Case Optimal Joins in Relational Database Systems | engines |
+| 1554 | 10 | 2023 | Free Join: Unifying Worst-Case Optimal and Traditional Joins | engines |
+| 1555 | 10 | 2017 | What Do Shannon-type Inequalities, Submodular Width, and Disjunctive Datalog Have to Do with One Another? | languages |
+
+_Recount after `user-agm-wcoj-2026-09-03`: **1555** unique title cards on main._
