@@ -2109,3 +2109,17 @@ User mint after Curiosity 2026-09-03 (live main `896a855`, **1549** unique, max 
 | 1555 | 10 | 2017 | What Do Shannon-type Inequalities, Submodular Width, and Disjunctive Datalog Have to Do with One Another? | languages |
 
 _Recount after `user-agm-wcoj-2026-09-03`: **1555** unique title cards on main._
+
+## Craft radar 2026-09-03
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `229f15b`, **1555** unique, max rank **1555**. Next rank **1556+**. Unique candidates after corpus dedupe (`seen.json` + `seeds/INDEX.md` + `seeds/cards/*.md`), dirt ban, and a cheap this-week Anoptic/ano/GRID COMMAND build filter: **20**. Keepers: **5** (keep rate **5/20 = 0.25**, hard cap **0.25** exactly). No padding. Slice: job-system continuation-stealing leftover of work-stealing/NBLFQ (libfork) + ano interpreter Futamura leftover of Lua/Terra 1476–1477 (weval) + exact OIT soft-raster leftover of CuRast/WBOIT/depth-peeling (LucidRaster) + sparse-set vs archetype ECS bakeoff (Sep-1 reject, PDF now open) + parametric adaptive LOD leftover of meshlets/CuRast lab. Different from last Craft (trueform/CuRast/DBSP/TED/NBLFQ/ART-HTN) and from Curiosity 1544–1549 / AGM 1550–1555. Mix: 2 engines / 1 languages / 2 graphics. Near-keepers left unseen: GTaP 2604.05982, SoftRaster 2B points 2204.01287, FlowLog 2607.23971, Beehive SPIR-V 2305.09493, DD-for-Datalog 2308.04214, Concurrent skiplist 2309.09359, SET CUDA graphs 2606.05495, Executable Ontologies 2601.07964, Co-dfns thesis (TLS fail), Simulog (cite from 1490), Neural Irradiance Volume (dirt). Do not remint 200/206/105/1491, 1476/1477/1429, 1488/338/410/1038, 172/260/314, 1032/097/1058. seed_batch `craft-2026-09-03`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1556 | 10 | 2025 | Libfork: Portable Continuation-Stealing With Stackless Coroutines | engines |
+| 1557 | 10 | 2025 | Partial Evaluation, Whole-Program Compilation | languages |
+| 1558 | 9 | 2024 | LucidRaster: GPU Software Rasterizer for Exact Order-Independent Transparency | graphics |
+| 1559 | 10 | 2025 | Run-time Performance Comparison of Sparse-set and Archetype Entity-Component Systems | engines |
+| 1560 | 9 | 2026 | Real-Time Rendering Methods With Adaptive Levels of Detail for Fast Rendering of Parametric Objects on Modern GPUs | graphics |
+
+_Recount after `craft-2026-09-03`: **1560** unique title cards on main._
