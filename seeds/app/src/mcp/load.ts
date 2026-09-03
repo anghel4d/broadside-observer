@@ -1,8 +1,8 @@
 import { readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { basename, join } from "node:path";
 import process from "node:process";
 import { textToCatalog } from "../domain/packedCatalog.ts";
-import type { Catalog } from "../domain/schema.ts";
+import type { CardId, Catalog } from "../domain/schema.ts";
 
 const PAGES_CARDS_JSON = "https://anghel4d.github.io/broadside-observer/cards.json";
 
@@ -47,6 +47,22 @@ export function localCatalogPaths(appRoot: string): ReadonlyArray<string> {
     join(appRoot, "src/generated/cards.json"),
     join(appRoot, "dist/cards.json"),
   ];
+}
+
+export function localCardPaths(appRoot: string, id: CardId): ReadonlyArray<string> {
+  const filename = `${id}.md`;
+  if (basename(filename) !== filename) {
+    throw new Error(`Invalid card id: ${id}`);
+  }
+  return [join(appRoot, "cards", filename), join(appRoot, "..", "cards", filename)];
+}
+
+export async function readCardMarkdown(appRoot: string, id: CardId): Promise<string> {
+  for (const path of localCardPaths(appRoot, id)) {
+    const markdown = await readFileIfExists(path);
+    if (markdown !== null) return markdown;
+  }
+  throw new Error(`Original Markdown unavailable for card ${id}`);
 }
 
 /** Local gzip+base64 catalog, then plain JSON, then `SEEDS_CARDS_JSON`, then GitHub Pages. */

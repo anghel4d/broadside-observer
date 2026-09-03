@@ -1,7 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import type { Corpus } from "../domain/corpus.ts";
-import { getSeed, querySeeds } from "./respond.ts";
+import { getSeed, querySeeds, type ReadCardMarkdown } from "./respond.ts";
 
 const SERVER_NAME = "broadside-seeds";
 const SERVER_VERSION = "0.1.0";
@@ -13,17 +13,17 @@ query is required unless id is set. limit defaults to 20, max 50.
 
 Response branching (do not guess):
 - 0 hits: text starting with "No matching seed cards" plus NEXT: and copy-pasteable calls query_seeds {"query":"..."} / get_seed {"id":"..."}.
-- 1 hit: full seed card. Also when file-stem id matches, or query is exact id "#123" / "123" that uniquely matches seed_rank.
+- 1 hit: original card Markdown, returned verbatim. Also when file-stem id matches, or query is exact id "#123" / "123" that uniquely matches seed_rank.
 - 2+ hits: first lines are NEXT: call get_seed {"id":"<card-id>"} then a compact list (title, year, authors, takeaway, id). Never dump full cards. If truncated: Showing N of M with a NEXT: get_seed {"id":"..."} line.
 
 Copy id from a list hit into get_seed {"id":"<card-id>"}. Empty query with no id/topic/lineage/year returns the 0-hit usage text.`;
 
-export const GET_SEED_DESCRIPTION = `Return the entire seed card. Required call: get_seed {"id":"<card-id>"}.
+export const GET_SEED_DESCRIPTION = `Return the original seed-card Markdown verbatim. Required call: get_seed {"id":"<card-id>"}.
 id is the cards.json file stem without .md (the id field from query_seeds list hits), e.g. get_seed {"id":"001-swe-agent-agent-computer-interfaces-enable-automated-softwar"}.
 
-If the id is unknown, returns a 0-hit message with NEXT: example calls. On success, returns the full card (YAML-ish frontmatter + five body sections). Do not call this with a title; use the id string.`;
+If the id is unknown, returns a 0-hit message with NEXT: example calls. On success, returns the exact stored Markdown without a preamble or normalized reconstruction. Do not call this with a title; use the id string.`;
 
-export function createSeedServer(corpus: Corpus): McpServer {
+export function createSeedServer(corpus: Corpus, readCard: ReadCardMarkdown): McpServer {
   const server = new McpServer(
     { name: SERVER_NAME, version: SERVER_VERSION },
     {
@@ -64,7 +64,7 @@ export function createSeedServer(corpus: Corpus): McpServer {
       },
     },
     async (args) => ({
-      content: [{ type: "text" as const, text: querySeeds(corpus, args) }],
+      content: [{ type: "text" as const, text: await querySeeds(corpus, args, readCard) }],
     }),
   );
 
@@ -88,7 +88,7 @@ export function createSeedServer(corpus: Corpus): McpServer {
       },
     },
     async ({ id }) => ({
-      content: [{ type: "text" as const, text: getSeed(corpus, id) }],
+      content: [{ type: "text" as const, text: await getSeed(corpus, id, readCard) }],
     }),
   );
 

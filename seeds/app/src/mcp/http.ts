@@ -6,10 +6,12 @@ import { fileURLToPath } from "node:url";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import type { Transport } from "@modelcontextprotocol/sdk/shared/transport.js";
 import { buildCorpus, type Corpus } from "../domain/corpus.ts";
-import { loadCatalog } from "./load.ts";
+import type { CardId } from "../domain/schema.ts";
+import { loadCatalog, readCardMarkdown } from "./load.ts";
 import { createSeedServer } from "./server.ts";
 
 const appRoot = join(dirname(fileURLToPath(import.meta.url)), "../..");
+const readCard = (id: CardId): Promise<string> => readCardMarkdown(appRoot, id);
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -42,7 +44,7 @@ function pathnameOf(req: IncomingMessage): string {
 }
 
 async function handleMcp(corpus: Corpus, req: IncomingMessage, res: ServerResponse): Promise<void> {
-  const server = createSeedServer(corpus);
+  const server = createSeedServer(corpus, readCard);
   const transport = new StreamableHTTPServerTransport({
     enableJsonResponse: true,
   });

@@ -3,8 +3,8 @@ import { mkdir, mkdtemp, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { gzipSync } from "node:zlib";
-import { SeedCardSchema, type Catalog } from "../domain/schema.ts";
-import { loadCatalog, localCatalogPaths } from "./load.ts";
+import { CardIdSchema, SeedCardSchema, type Catalog } from "../domain/schema.ts";
+import { loadCatalog, localCardPaths, localCatalogPaths, readCardMarkdown } from "./load.ts";
 
 const card = SeedCardSchema.parse({
   id: "013-attention-is-all-you-need",
@@ -59,6 +59,22 @@ assert.deepEqual(
 );
 
 const root = await mkdtemp(join(tmpdir(), "broadside-mcp-"));
+const rawMarkdown = "---\ntitle: Original\n---\n";
+await mkdir(join(root, "cards"), { recursive: true });
+await writeFile(join(root, "cards", card.file), rawMarkdown, "utf8");
+assert.deepEqual(localCardPaths(root, card.id), [
+  join(root, "cards", card.file),
+  join(root, "..", "cards", card.file),
+]);
+assert.equal(await readCardMarkdown(root, card.id), rawMarkdown);
+await assert.rejects(
+  () => readCardMarkdown(root, CardIdSchema.parse("missing-card")),
+  /Original Markdown unavailable for card missing-card/u,
+);
+await assert.rejects(
+  () => readCardMarkdown(root, CardIdSchema.parse("../escape")),
+  /Invalid card id: \.\.\/escape/u,
+);
 await mkdir(join(root, "src/generated"), { recursive: true });
 await mkdir(join(root, "public"), { recursive: true });
 await writeFile(join(root, "public/cards.json"), jsonPayload("plain public"), "utf8");

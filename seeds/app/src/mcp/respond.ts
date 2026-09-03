@@ -3,13 +3,11 @@ import type { Corpus } from "../domain/corpus.ts";
 import {
   CardIdSchema,
   LineageSchema,
-  SECTION_HEADING,
-  SECTION_KEYS,
   SeedRankSchema,
   TopicSchema,
   YearSchema,
   defaultQuery,
-  type Cite,
+  type CardId,
   type Query,
   type SeedCard,
   type Year,
@@ -31,6 +29,8 @@ export type QuerySeedsArgs = {
   readonly year_max?: number | undefined;
   readonly limit?: number | undefined;
 };
+
+export type ReadCardMarkdown = (id: CardId) => Promise<string>;
 
 function nonEmpty(value: string | undefined): string | undefined {
   if (value === undefined) return undefined;
@@ -68,20 +68,6 @@ function uniqueRankHit(corpus: Corpus, search: string): SeedCard | null {
   return hits.length === 1 ? (hits[0] ?? null) : null;
 }
 
-function yamlScalar(value: string | number | null): string {
-  if (value === null) return "null";
-  if (typeof value === "number") return String(value);
-  return JSON.stringify(value);
-}
-
-function formatCite(cite: Cite): string {
-  const bits = [`title: ${cite.title}`];
-  if (cite.year !== null) bits.push(`year: ${cite.year}`);
-  if (cite.url !== null) bits.push(`url: ${cite.url}`);
-  if (cite.arxiv !== null) bits.push(`arxiv: ${cite.arxiv}`);
-  if (cite.doi !== null) bits.push(`doi: ${cite.doi}`);
-  return `  - ${bits.join("; ")}`;
-}
 
 function oneLine(value: string): string {
   return value.replace(/\s+/gu, " ").trim();
@@ -127,36 +113,6 @@ Examples:
 - ${EXAMPLE_GET_SEED}`;
 }
 
-function formatFullCard(card: SeedCard): string {
-  const cites =
-    card.cites.length === 0 ? "cites: []" : `cites:\n${card.cites.map(formatCite).join("\n")}`;
-  const see = card.see.length === 0 ? "" : `see: ${JSON.stringify(card.see)}\n`;
-  const sections = SECTION_KEYS.map(
-    (key) => `## ${SECTION_HEADING[key]}\n\n${card.sections[key]}`,
-  ).join("\n\n");
-  return `Retrieved full seed card id=${JSON.stringify(card.id)}. To search again: ${EXAMPLE_QUERY_RADIANCE}.
-
----
-title: ${yamlScalar(card.title)}
-authors: ${JSON.stringify(card.authors)}
-year: ${card.year}
-venue: ${yamlScalar(card.venue)}
-arxiv: ${yamlScalar(card.arxiv)}
-doi: ${yamlScalar(card.doi)}
-source: ${yamlScalar(card.source)}
-topics: ${JSON.stringify(card.topics)}
-seed_rank: ${card.seed_rank}
-seed_batch: ${yamlScalar(card.seed_batch)}
-pool: ${yamlScalar(card.pool)}
-lineage: ${yamlScalar(card.lineage)}
-${see}${cites}
----
-
-# ${card.title}
-
-${sections}
-`;
-}
 
 function formatListItem(card: SeedCard): string {
   return `- ${card.title} (${card.year}) — ${card.authors.join(", ")}
@@ -213,17 +169,21 @@ function hasSearchConstraint(args: QuerySeedsArgs, search: string | undefined): 
   );
 }
 
-export function querySeeds(corpus: Corpus, args: QuerySeedsArgs): string {
+export async function querySeeds(
+  corpus: Corpus,
+  args: QuerySeedsArgs,
+  readCard: ReadCardMarkdown,
+): Promise<string> {
   const id = nonEmpty(args.id);
   if (id !== undefined) {
     const card = lookupCard(corpus, id);
-    return card === undefined ? formatZeroHits(failedDetail(args)) : formatFullCard(card);
+    return card === undefined ? formatZeroHits(failedDetail(args)) : readCard(card.id);
   }
 
   const search = nonEmpty(args.query);
   if (search !== undefined) {
     const ranked = uniqueRankHit(corpus, search);
-    if (ranked !== null) return formatFullCard(ranked);
+    if (ranked !== null) return readCard(ranked.id);
   }
 
   if (!hasSearchConstraint(args, search)) {
@@ -249,15 +209,19 @@ export function querySeeds(corpus: Corpus, args: QuerySeedsArgs): string {
   if (hits.length === 0) return formatZeroHits(failedDetail(args));
   if (hits.length === 1) {
     const only = hits[0];
-    return only === undefined ? formatZeroHits(failedDetail(args)) : formatFullCard(only);
+    return only === undefined ? formatZeroHits(failedDetail(args)) : readCard(only.id);
   }
   return formatManyHits(hits, clampLimit(args.limit));
 }
 
-export function getSeed(corpus: Corpus, id: string): string {
+export async function getSeed(
+  corpus: Corpus,
+  id: string,
+  readCard: ReadCardMarkdown,
+): Promise<string> {
   const card = lookupCard(corpus, id);
   if (card === undefined) {
     return formatZeroHits(failedDetail({ id, query: undefined }));
   }
-  return formatFullCard(card);
+  return readCard(card.id);
 }

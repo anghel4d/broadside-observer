@@ -8,6 +8,7 @@ import {
   formatZeroHits,
   getSeed,
   querySeeds,
+  type ReadCardMarkdown,
 } from "./respond.ts";
 import { GET_SEED_DESCRIPTION, QUERY_SEEDS_DESCRIPTION } from "./server.ts";
 
@@ -82,7 +83,34 @@ const cards: ReadonlyArray<SeedCard> = [
 
 const corpus = buildCorpus(cards);
 
-const zero = querySeeds(corpus, { query: "zzzz-no-such-token" });
+const alphaMarkdown = `---
+title: "Alpha Paper"
+reviewed: "2026-08-13"
+relevance_score: 8
+---
+
+# Alpha Paper
+
+## Problem
+
+Original problem structure.
+
+## Limitations
+
+Original limitation.
+`;
+const markdownById: Record<string, string> = {
+  "001-alpha": alphaMarkdown,
+  "002-beta": "# Beta Systems\n",
+  "003-gamma": "# Gamma\n",
+};
+const readCard: ReadCardMarkdown = async (id) => {
+  const markdown = markdownById[id];
+  if (markdown === undefined) throw new Error(`Missing test Markdown for ${id}`);
+  return markdown;
+};
+
+const zero = await querySeeds(corpus, { query: "zzzz-no-such-token" }, readCard);
 assert.match(zero, /^No matching seed cards for query="zzzz-no-such-token"\./u);
 assert.match(
   zero,
@@ -97,30 +125,27 @@ assert.ok(zero.includes("query (string, required unless id is set)"));
 assert.equal(zero.includes("UNIQUE_CAVEAT_DUMP"), false);
 assert.equal(zero.includes("## Caveats"), false);
 
-const empty = querySeeds(corpus, {});
+const empty = await querySeeds(corpus, {}, readCard);
 assert.match(empty, /^No matching seed cards for query=""\./u);
 assert.ok(empty.includes("NEXT: call query_seeds with"));
 assert.ok(empty.includes(EXAMPLE_QUERY_RADIANCE));
 
-const one = querySeeds(corpus, { query: "paging" });
-assert.match(one, /^Retrieved full seed card id="001-alpha"\./u);
-assert.ok(one.includes(`To search again: ${EXAMPLE_QUERY_RADIANCE}.`));
-assert.ok(one.includes("Alpha Paper"));
-assert.ok(one.includes("Alpha takeaway about paging."));
-assert.ok(one.includes("## One-sentence takeaway"));
-assert.ok(one.includes("## Caveats"));
-assert.ok(one.includes("UNIQUE_CAVEAT_DUMP"));
+const one = await querySeeds(corpus, { query: "paging" }, readCard);
+assert.equal(one, alphaMarkdown);
+assert.ok(one.includes('reviewed: "2026-08-13"'));
+assert.ok(one.includes("relevance_score: 8"));
+assert.ok(one.includes("## Problem"));
+assert.equal(one.includes("## Key ideas"), false);
 
-const byId = querySeeds(corpus, { query: "", id: "001-alpha" });
-assert.match(byId, /^Retrieved full seed card id="001-alpha"\./u);
-assert.ok(byId.includes("Alpha takeaway about paging."));
+const byId = await querySeeds(corpus, { query: "", id: "001-alpha" }, readCard);
+assert.equal(byId, alphaMarkdown);
 
-const byRank = querySeeds(corpus, { query: "#2" });
-assert.match(byRank, /^Retrieved full seed card id="001-alpha"\./u);
-const byRankBare = querySeeds(corpus, { query: "2" });
-assert.match(byRankBare, /^Retrieved full seed card id="001-alpha"\./u);
+const byRank = await querySeeds(corpus, { query: "#2" }, readCard);
+assert.equal(byRank, alphaMarkdown);
+const byRankBare = await querySeeds(corpus, { query: "2" }, readCard);
+assert.equal(byRankBare, alphaMarkdown);
 
-const many = querySeeds(corpus, { topic: "memory" });
+const many = await querySeeds(corpus, { topic: "memory" }, readCard);
 assert.match(
   many,
   /^NEXT: call get_seed with \{"id": "001-alpha"\} to retrieve the full seed card for any one hit\./u,
@@ -134,7 +159,11 @@ assert.equal(many.includes("UNIQUE_CAVEAT_DUMP"), false);
 assert.equal(many.includes("## Caveats"), false);
 assert.equal(many.includes("## Why it matters here"), false);
 
-const truncated = querySeeds(corpus, { year_min: 1999, year_max: 2024, limit: 2 });
+const truncated = await querySeeds(
+  corpus,
+  { year_min: 1999, year_max: 2024, limit: 2 },
+  readCard,
+);
 assert.ok(truncated.includes("Showing 2 of 3."));
 assert.match(
   truncated,
@@ -143,38 +172,13 @@ assert.match(
 assert.ok(truncated.includes("NEXT: call get_seed with {\"id\":"));
 assert.equal(truncated.includes("UNIQUE_CAVEAT_DUMP"), false);
 
-const got = getSeed(corpus, "001-alpha");
-assert.match(got, /^Retrieved full seed card id="001-alpha"\./u);
-assert.ok(got.includes("Alpha Paper"));
-assert.ok(got.includes("Alpha takeaway about paging."));
-assert.equal(got.includes("card:"), false);
-assert.equal(got.includes("see:"), false);
+const got = await getSeed(corpus, "001-alpha", readCard);
+assert.equal(got, alphaMarkdown);
 
-const withSee = getSeed(
-  buildCorpus([
-    card({
-      cites: [
-        {
-          title: "Attention Is All You Need",
-          url: "https://arxiv.org/abs/1706.03762",
-          year: 2017,
-          arxiv: "1706.03762",
-        },
-      ],
-      see: ["013-attention-is-all-you-need"],
-    }),
-  ]),
-  "001-alpha",
-);
-assert.ok(withSee.includes('see: ["013-attention-is-all-you-need"]'));
-assert.ok(withSee.includes("title: Attention Is All You Need"));
-assert.ok(withSee.includes("arxiv: 1706.03762"));
-assert.equal(withSee.includes("card:"), false);
+const gotMd = await getSeed(corpus, "001-alpha.md", readCard);
+assert.equal(gotMd, alphaMarkdown);
 
-const gotMd = getSeed(corpus, "001-alpha.md");
-assert.match(gotMd, /^Retrieved full seed card id="001-alpha"\./u);
-
-const missing = getSeed(corpus, "no-such-card");
+const missing = await getSeed(corpus, "no-such-card", readCard);
 assert.match(missing, /^No matching seed cards for id="no-such-card"\./u);
 assert.ok(missing.includes("NEXT: call query_seeds with"));
 assert.ok(missing.includes(EXAMPLE_GET_SEED));
@@ -185,8 +189,10 @@ assert.ok(formatZeroHits('query="xyz"').includes(`query_seeds {"query":"radiance
 assert.ok(QUERY_SEEDS_DESCRIPTION.includes("0 hits"));
 assert.ok(QUERY_SEEDS_DESCRIPTION.includes("1 hit"));
 assert.ok(QUERY_SEEDS_DESCRIPTION.includes("2+ hits"));
+assert.ok(QUERY_SEEDS_DESCRIPTION.includes("returned verbatim"));
 assert.ok(QUERY_SEEDS_DESCRIPTION.includes('get_seed {"id":'));
 assert.ok(QUERY_SEEDS_DESCRIPTION.includes('query_seeds {"query":'));
 assert.ok(GET_SEED_DESCRIPTION.includes('get_seed {"id":"<card-id>"}'));
+assert.ok(GET_SEED_DESCRIPTION.includes("exact stored Markdown"));
 
 console.log("respond.test.ts ok");
