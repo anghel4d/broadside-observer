@@ -44,10 +44,11 @@ Parallel / carrier / pedagogy nodes kept on the same lineage slug: Fabian DOD bo
 | 19 | successor | `385-legion-ecs-amethyst` | 2019 |
 | 20 | bridge | `391-using-relational-databases-for-entity-component-systems` | 2015 |
 | 21 | frontier | `172-the-essence-of-entity-component-system` | 2026 |
+| 22 | bakeoff | `1559-run-time-performance-comparison-of-sparse-set-and-archetype-ecs` | 2025 |
 
 ## Open frontiers / watch next
 
-- **Storage machines vs query languages** — archetype chunk iteration (Unity/Bevy) vs sparse-set random access (EnTT) vs relationship-first graphs (Flecs); Anoptic/ano should keep the *column/query* reading primary and treat scheduler ECS as a foil (`391-using-relational-databases-for-entity-component-systems`, `314-flecs-relationships-and-queries`, `172-the-essence-of-entity-component-system`).
+- **Storage machines vs query languages** — archetype chunk iteration (Unity/Bevy) vs sparse-set random access (EnTT) vs relationship-first graphs (Flecs); Anoptic/ano should keep the *column/query* reading primary and treat scheduler ECS as a foil (`391-using-relational-databases-for-entity-component-systems`, `314-flecs-relationships-and-queries`, `172-the-essence-of-entity-component-system`). CGVC 2025 bakeoff `1559-run-time-performance-comparison-of-sparse-set-and-archetype-ecs` is the apples-to-apples C++20 GoL number.
 - **Structural change costs** — add/remove component → archetype moves; watch designs that make hot structural churn cheap (or illegal) at scale.
 - **Determinism & netcode** — Overwatch-style component simulation under lockstep/rollback constraints; ECS layout must not fight replay.
 - **Relationships as data** — Flecs-style edges vs ad-hoc ID fields; important if GRID COMMAND / colony sims encode orbits, ownership, and command graphs relationally.
