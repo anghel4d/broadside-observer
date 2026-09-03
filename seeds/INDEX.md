@@ -2123,3 +2123,17 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 | 1560 | 9 | 2026 | Real-Time Rendering Methods With Adaptive Levels of Detail for Fast Rendering of Parametric Objects on Modern GPUs | graphics |
 
 _Recount after `craft-2026-09-03`: **1560** unique title cards on main._
+
+## AO / post (user-add 2026-09-03)
+
+User mint after Craft 2026-09-03 (live main `5c85ea00`, **1560** unique, max rank **1560**). Named-item request was HBAO+ / GTAO / SSDO / CACAO / XeGTAO / Tone-Mapping / Bent Normals / GT7 Tonemapping / Kawase Blur. Five remints already live, skipped: HBAO 2008 → `401-horizon-based-ambient-occlusion`; GTAO 2016 → `1387-practical-realtime-strategies-for-accurate-indirect-occlusion`; SSDO 2009 → `398-approximating-dynamic-global-illumination-in-image-space-ssd`; Reinhard 2002 → `409-photographic-tone-reproduction-for-digital-images`; Landis 2002 → `1514-production-ready-global-illumination`. **Sixth skip (KEEP grep miss):** Kawase GDC 2003 is already `1351-frame-buffer-postprocessing-effects-in-double-s` (INDEX title lacks the word Kawase). Dual Kawase (Bjørge SIGGRAPH 2015) and GT Sport 2018 TM and Intel ASSAO stay bibliography-only. No arXiv IDs. Next rank **1561+**. seed_batch: `user-ao-post-2026-09-03`. Lineages: [`ssao`](lineages/ssao.md), [`tone-mapping`](lineages/tone-mapping.md).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1561 | 9 | 2013 | Particle Shadows & Cache-Efficient Post-Processing | graphics |
+| 1562 | 9 | 2020 | AMD FidelityFX Combined Adaptive Compute Ambient Occlusion | graphics |
+| 1563 | 9 | 2021 | XeGTAO | graphics |
+| 1564 | 9 | 2011 | Bent Normals and Cones in Screen-space | graphics |
+| 1565 | 10 | 2025 | Driving Toward Reality: Physically Based Tone Mapping and Perceptual Fidelity in Gran Turismo 7 | graphics |
+
+_Recount after `user-ao-post-2026-09-03`: **1565** unique title cards on main._
