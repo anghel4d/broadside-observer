@@ -1,5 +1,5 @@
 ---
-title: "The Absolute Twistor Line and the Geometry of $\overline{\text{Spec}\, \mathbf Z}$"
+title: 'The Absolute Twistor Line and the Geometry of $\overline{\text{Spec}\, \mathbf Z}$'
 authors: ["Alain Connes", "Caterina Consani"]
 year: 2026
 venue: "arXiv:math.AG"
