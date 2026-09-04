@@ -2137,3 +2137,19 @@ User mint after Craft 2026-09-03 (live main `5c85ea00`, **1560** unique, max ran
 | 1565 | 10 | 2025 | Driving Toward Reality: Physically Based Tone Mapping and Perceptual Fidelity in Gran Turismo 7 | graphics |
 
 _Recount after `user-ao-post-2026-09-03`: **1565** unique title cards on main._
+
+## Archive radar 2026-09-04
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `e94ff43`, **1565** unique, max rank **1565**. Next rank **1566+**. Source-level records: **~833**. Unique arXiv after harvest: **694**. After cheap historical on-mission gate: **~49**. Keepers minted: **7** (keep rate **7/49 ≈ 0.143**, hard cap **0.20**). No padding. Slice: compiler-IR leftovers of Combining Analyses 1440 / LLVM 1361 (Cytron SSA+CDG, Click IR’95 sea-of-nodes ancestor, Appel φ ↔ lexical join) + isosurface leftovers of Marching Cubes 1498 / Dual Contouring 408 (Poisson reconstruction, Constrained Elastic Surface Nets) + scan leftover of Blelloch 307 / CUB 1154 (Prefix Sums chapter) + netcode leftover of 1500 Archers 027 / lockstep 016 / GGPO 197 (TRIBES ghosting). Different from last Archive (MCS/cuckoo/Okasaki/RRB/Remora/MC/portals) and from Craft 1556–1560 / AO 1561–1565 / AGM 1550–1555. Cytron SSA and Prefix Sums titles were already in `seen.json` from harvest but had no live cards — minted (same pattern as MCS 1493). Do not remint 1493–1499, TLSF 361, Dual Contouring 408, Combining Analyses 1440, 027/016/197, Craft 1556–1560, AO 1561–1565, AGM 1550–1555, Scans-as-primitive 307, LLVM 1361. Near-keepers left unseen-as-cards: Unicode Bidi UAX #9, Transvoxel/Lengyel, Geometry Images, CCured, SHOP HTN 1999, CLH/Craig queue locks, Boehm–Weiser GC, Co-dfns (ACM 403 / unread), Catmull–Clark (not this pass). seed_batch: `archive-2026-09-04`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1566 | 10 | 1991 | Efficiently Computing Static Single Assignment Form and the Control Dependence Graph | languages |
+| 1567 | 10 | 1995 | A Simple Graph-Based Intermediate Representation | languages |
+| 1568 | 9 | 1998 | SSA is Functional Programming | languages |
+| 1569 | 10 | 2006 | Poisson Surface Reconstruction | graphics |
+| 1570 | 9 | 1999 | Constrained Elastic Surface Nets: Generating Smooth Models from Binary Segmented Data | graphics |
+| 1571 | 9 | 1990 | Prefix Sums and Their Applications | systems |
+| 1572 | 9 | 2001 | The TRIBES Engine Networking Model | engines |
+
+_Recount after `archive-2026-09-04`: **1572** unique title cards on main. Next rank **1573+**._
