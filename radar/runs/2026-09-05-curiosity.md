@@ -1,0 +1,19 @@
+# Curiosity radar run 2026-09-05
+- Daypart: curiosity (odd date, 00:00 Europe/Bucharest; local fire ~00:09)
+- Live main start: b86b9c8 (1581 unique, next 1582+)
+- Feeds: HTML recent × 43 cats (math.CT/CO/DS/AT/MG/GT/SG/QA/KT/LO/DG/AG/HO/NT/RT/GN/GR/PR, physics.class-ph/bio-ph/comp-ph, q-bio.*, cs.CG/LO/FL/DM/SC/CL/GL/NE/PL/DS, nlin.*, math-ph) + id_list abstracts for 60 crème/near-keeper ids.
+- Unique after merge: **1391** raw unique ids; after seen/INDEX/dirt dedupe: **1333** fresh → keyword cream **256** → strict curiosity cheap filter: **48**
+- Keepers: **7** (rate 0.146 ≤ 0.15)
+- seed_batch: curiosity-2026-09-05
+- Cards: 1582–1588
+- Mix: 7 maths-foundations. No agents padding.
+- Keepers:
+  - 1582 tangent Lie correspondence — https://arxiv.org/abs/2609.03449
+  - 1583 symplectic tiling billiards — https://arxiv.org/abs/2608.28894
+  - 1584 generalized telescope conjecture — https://arxiv.org/abs/2609.03375
+  - 1585 quantum Hopf rigidity — https://arxiv.org/abs/2609.01541
+  - 1586 left adjoints / colimits in HoTT — https://arxiv.org/abs/2608.28473
+  - 1587 categorical Kähler (Kontsevich et al.) — https://arxiv.org/abs/2609.00978
+  - 1588 2-monoidal symmetric sequences (Dwyer–Hess) — https://arxiv.org/abs/2608.29075
+- Leftovers recorded in `seen.json` (strict 48 − 7 keepers = 41; 2608.28473 is a keeper, not double-counted): 2609.03896, 2608.29261, 2608.30031, 2609.01401, 2609.01454, 2608.27771, 2608.29989, 2609.00602, 2609.02202, 2609.02962, 2609.03700, 2608.28579, 2609.00254, 2609.00770, 2609.02180, 2609.02278, 2609.03932, 2608.27622, 2608.27834, 2608.28181, 2608.28220, 2608.28355, 2608.29013, 2608.29267, 2608.29495, 2608.29730, 2608.30350, 2608.30476, 2608.30538, 2608.30740, 2608.31124, 2609.00305, 2609.00422, 2609.00917, 2609.00976, 2609.01791, 2609.02706, 2609.03268, 2609.03472, 2609.03601, 2609.04073
+- Did not remint Curiosity 1544–1549, Frontier 1573–1581, Archive 1566–1572, or any card ≤1581.
