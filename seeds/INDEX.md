@@ -2171,3 +2171,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 | 1581 | 9 | 2026 | Speculative Macro Commit for Faster Tool-Using Agents | agents |
 
 _Recount after `frontier-2026-09-04`: **1581** unique title cards on main. Next rank **1582+**._
+
+## Curiosity radar 2026-09-05
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `b86b9c8`, **1581** unique, max rank **1581**. Next rank **1582+**. Feeds: HTML recent × 43 cats (math.CT/CO/DS/AT/MG/GT/SG/QA/KT/LO/DG/AG/HO/NT/RT/GN/GR/PR, physics.class-ph/bio-ph/comp-ph, q-bio.*, cs.CG/LO/FL/DM/SC/CL/GL/NE/PL/DS, nlin.*, math-ph) + id_list abstracts for 60 crème/near-keeper ids. Raw unique: **1391**. Fresh after seen/INDEX/dirt dedupe: **1333**. Keyword cream: **256**. Strict curiosity cheap filter: **48**. Keepers: **7** (keep rate **7/48 ≈ 0.146**, hard cap **0.15**). No padding. Mix: 7 maths-foundations / 0 agents. Slice: tangent-category Lie correspondence + symplectic tiling billiards on affine tori + generalized telescope/Balmer + quantum Hopf rigidity + wild left adjoints in HoTT + categorical Kähler (Kontsevich et al., programme) + Dwyer–Hess 2-monoidal symmetric sequences. Different from last Curiosity (absolute twistor / localic Esakia / RT TQFT / Lebesgue covering / Lenia / Y-frieze) and from Frontier 1573–1581 / Archive 1566–1572. Do not remint 1544–1549, 1573–1581, 1566–1572, or any card ≤1581. seed_batch: `curiosity-2026-09-05`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1582 | 10 | 2026 | The Lie group-Lie algebra correspondence in tangent categories | maths-foundations |
+| 1583 | 10 | 2026 | Symplectic Tiling Billiards on Complete Affine Tori | maths-foundations |
+| 1584 | 10 | 2026 | Generalized Telescope Conjecture | maths-foundations |
+| 1585 | 10 | 2026 | Quantum Hopf rigidity in symmetric monoidal categories | maths-foundations |
+| 1586 | 10 | 2026 | On Left Adjoints Preserving Colimits in Homotopy Type Theory | maths-foundations |
+| 1587 | 10 | 2026 | Towards Categorical Kähler Geometry | maths-foundations |
+| 1588 | 9 | 2026 | The 2-monoidal structure of symmetric sequences | maths-foundations |
+
+_Recount after `curiosity-2026-09-05`: **1588** unique title cards on main. Next rank **1589+**._
