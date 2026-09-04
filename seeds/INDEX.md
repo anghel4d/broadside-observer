@@ -2153,3 +2153,21 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1572 | 9 | 2001 | The TRIBES Engine Networking Model | engines |
 
 _Recount after `archive-2026-09-04`: **1572** unique title cards on main. Next rank **1573+**._
+
+## Frontier radar 2026-09-04
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `c08825a`, **1572** unique, max rank **1572**. Next rank **1573+**. In-window arXiv unique Wed–Fri: **1600** raw → **1585** fresh. Standing-topic POS: **211**. Strict crème shortlist: **37**. Keepers: **9** (keep rate **9/37 ≈ 0.243**, hard cap **0.25**). No padding. Mix: 9 agents / 0 engines / 0 language / 0 game-ai. seed_batch `frontier-2026-09-04`. Do not remint 1536–1543, 1566–1572, 1556–1560, 1561–1565, 1550–1555, 1050, 1233, 1079, 060, 1144, di-penumbra 1500–1535.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1573 | 10 | 2026 | Where Does Harness-Optimization Value Live? Localized Gains and the Budget-Splitting Trap in Self-Evolving LLM Agents | agents |
+| 1574 | 10 | 2026 | SafeEvolve: Harness-Policy Co-Evolution from Agent Experience for Safety Alignment | agents |
+| 1575 | 10 | 2026 | Where Reliability Lives: Experimental Localisation of Behavioural Properties in an Agent System | agents |
+| 1576 | 10 | 2026 | MASkills: Continual Skills Optimization for Multi-Agent LLM Systems | agents |
+| 1577 | 10 | 2026 | SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task Streams | agents |
+| 1578 | 10 | 2026 | VestigeKV: The NoPE-MLA KV Cache Carries Its Own Eviction Signal in a Vestigial Branch | agents |
+| 1579 | 10 | 2026 | Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory | agents |
+| 1580 | 9 | 2026 | Latency-Aware Orchestration for Multi-Agent LLM Workflows on Heterogeneous GPUs | agents |
+| 1581 | 9 | 2026 | Speculative Macro Commit for Faster Tool-Using Agents | agents |
+
+_Recount after `frontier-2026-09-04`: **1581** unique title cards on main. Next rank **1582+**._
