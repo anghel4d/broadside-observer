@@ -2187,3 +2187,20 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 | 1588 | 9 | 2026 | The 2-monoidal structure of symmetric sequences | maths-foundations |
 
 _Recount after `curiosity-2026-09-05`: **1588** unique title cards on main. Next rank **1589+**._
+
+## Craft radar 2026-09-05
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `2aeb304`, **1588** unique, max rank **1588**. Next rank **1589+**. arXiv harvest: **902** → **835** unique → **793** fresh. JCGT feed: **173**. HPG: **14**. Keyword cream: **131**. Strict this-week Anoptic/ano/GRID COMMAND build filter: **32**. Keepers: **8** (keep rate **8/32 = 0.25**, hard cap **0.25** exactly). No padding. Mix: 2 engines / 3 systems / 2 languages / 1 graphics. Theme: GPU runtime/tasking + lock-free + Datalog triggers + GPU curves. Slice: k-word atomics leftover of NBLFQ 1491 / MS 31 + concurrent-list bakeoff leftover of MS 31 + GPU-resident fork-join leftover of libfork 1556 + CUDA-graph event pipelines leftover of 1556/206 + incremental Datalog leftover of TED 1490 / Rete 42 + runtime SPIR-V builder leftover of Vcc 1031 + Bézier texture-eval leftover of Slug 1128 / Warnock 1030 + skiplist prefetch leftover of Pugh 768. GTaP / SET / FlowLog / Beehive were Craft 2026-09-03 near-keepers, minted now. Different from last Craft (libfork/weval/LucidRaster/ECS bakeoff/parametric LOD) and from Curiosity 1582–1588. Do not remint 1556–1560, 1566–1572, 1573–1581, 1582–1588. seed_batch: `craft-2026-09-05`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1589 | 10 | 2025 | Big Atomics | engines |
+| 1590 | 9 | 2026 | Five Ways to Build a Concurrent Linked From Coarse-Grain Locking to Lock-Free Algorithms | engines |
+| 1591 | 9 | 2026 | GTaP: A GPU-Resident Fork-Join Task-Parallel System with a Pragma-Based Interface | systems |
+| 1592 | 9 | 2026 | SET: Stream-Event-Triggered Scheduling for Efficient CUDA Graph Pipelines | systems |
+| 1593 | 9 | 2026 | FlowLog: Re-thinking Datalog for Fast and Extensible Static Analysis | languages |
+| 1594 | 9 | 2023 | Experiences in Building a Composable and Functional API for Runtime SPIR-V Code Generation | languages |
+| 1595 | 9 | 2026 | A Texture Lookup Approach to Bézier Curve Evaluation on the GPU | graphics |
+| 1596 | 8 | 2026 | Skiplists with Foresight: Skipping Cache Misses | systems |
+
+_Recount after `craft-2026-09-05`: **1596** unique title cards on main. Next rank **1597+**._
