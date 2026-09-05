@@ -2204,3 +2204,20 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 | 1596 | 8 | 2026 | Skiplists with Foresight: Skipping Cache Misses | systems |
 
 _Recount after `craft-2026-09-05`: **1596** unique title cards on main. Next rank **1597+**._
+
+## Archive radar 2026-09-06
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `9079794`, **1596** unique, max rank **1596**. Next rank **1597+**. Source-level records: **~2523** (Crossref unique items ~1828 + arXiv API entries 695; merged unique titles ~2316). After seen.json title/arxiv dedupe: large fresh pool. After cheap historical on-mission gate (strict foundation/near-keeper shortlist excluding already-live remints and Catmull follow-on noise): **45**. Keepers minted: **8** (keep rate **8/45 ≈ 0.178**, hard cap **0.20**). No padding. Mix: 3 languages / 1 engines / 1 systems / 3 graphics. Slice: prior Archive near-keepers recovered with open PDFs — Boehm–Weiser GC, CLH/LH queue locks, Unicode Bidi UAX #9, Transvoxel/Lengyel, Geometry Images, Harris CUDA scan, Alias Types, Kobbelt Extended Marching Cubes — leftovers of MCS 1493 / MC 1498 / Dual Contouring 408 / Scans 307+1571+1154 / regions 030. Geometry Images and Alias Types titles were already in `seen.json` from harvest but had no live cards — minted (same pattern as MCS 1493 / Cytron 1566). Do not remint ranks 1–1596 especially Archive 1493–1499, 1566–1572; Craft 1556–1560, 1589–1596; Frontier 1573–1581; Curiosity 1582–1588; AO 1561–1565; AGM 1550–1555; di-penumbra 1500–1535; TLSF 361; Dual Contouring 408; Hazard Pointers 024; Geometry Clipmaps 362; Instant Radiosity 450; HZB 144. seed_batch: `archive-2026-09-06`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1597 | 10 | 1988 | Garbage Collection in an Uncooperative Environment | languages |
+| 1598 | 10 | 1994 | Queue Locks on Cache Coherent Multiprocessors | engines |
+| 1599 | 9 | 2000 | Unicode Bidirectional Algorithm (UAX #9) | languages |
+| 1600 | 10 | 2010 | Voxel-Based Terrain for Real-Time Virtual Simulations | graphics |
+| 1601 | 10 | 2002 | Geometry Images | graphics |
+| 1602 | 9 | 2007 | Parallel Prefix Sum (Scan) with CUDA | systems |
+| 1603 | 9 | 2000 | Alias Types | languages |
+| 1604 | 9 | 2001 | Feature Sensitive Surface Extraction from Volume Data | graphics |
+
+_Recount after `archive-2026-09-06`: **1604** unique title cards on main. Next rank **1605+**._
