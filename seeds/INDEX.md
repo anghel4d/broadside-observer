@@ -2239,3 +2239,19 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 | 1613 | 9 | 2026 | TIGPO: Temporal Instance-Graph Policy Optimization for Long-Horizon LLM Agents | agents |
 
 _Recount after `frontier-2026-09-06`: **1613** unique title cards on main. Next rank **1614+**._
+
+## Curiosity radar 2026-09-07
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass had **1613** unique, next rank **1614+**. Feeds: arXiv API ×20 curiosity queries + HTML /new ×23 cats (HTML /recent 400). Unique merge **1494** → fresh **1482** → cream **309** → strict ≈**47** → keepers **7** (rate **7/47≈0.149** ≤0.15). Mix: 7 maths-foundations / 0 agents. Weekend quiet; pool Wed–Fri leftovers after Sep-5 Curiosity. Do not remint 1–1613 especially Curiosity 1582–1588 / 1544–1549; Frontier 1605–1613 / 1573–1581; Archive 1597–1604; Craft 1589–1596. seed_batch: `curiosity-2026-09-07`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1614 | 10 | 2026 | Another counterexample to the Nerves of Steel Conjecture | maths-foundations |
+| 1615 | 10 | 2026 | Stratification of Artin motives over local fields | maths-foundations |
+| 1616 | 10 | 2026 | Koszul duality and Morita categories | maths-foundations |
+| 1617 | 10 | 2026 | 3-dimensional TQFTs from derived categories of quantum group representations | maths-foundations |
+| 1618 | 9 | 2026 | Rewriting and presentations of quasicategories | maths-foundations |
+| 1619 | 10 | 2026 | Quantification in Double-Categorical Database Schemas | maths-foundations |
+| 1620 | 9 | 2026 | Analytic rigidity and symbolic dynamics for two-centre billiards | maths-foundations |
+
+_Recount after `curiosity-2026-09-07`: **1620** unique title cards on main. Next rank **1621+**._
