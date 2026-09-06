@@ -2221,3 +2221,21 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1604 | 9 | 2001 | Feature Sensitive Surface Extraction from Volume Data | graphics |
 
 _Recount after `archive-2026-09-06`: **1604** unique title cards on main. Next rank **1605+**._
+
+## Frontier radar 2026-09-06
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `01472ca`, **1604** unique, max rank **1604**. Next rank **1605+**. arXiv HTML pastweek × 15 cats: **4709** raw entries → **3359** unique. In-window Fri 4 Sep (Sat/Sun empty — arXiv weekend quiet): **516** Fri unique (+ HF Daily 2026-09-04 ids merged → **526** pool). Fresh after seen/INDEX/live-card dedupe: **507**. Keyword cream: **68**. Strict Broadside crème shortlist: **36**. Keepers: **9** (keep rate **9/36 = 0.25**, hard cap **0.25** exactly). No padding. Mix: 9 agents / 0 engines / 0 language / 0 game-ai. Slice: on-demand KV budgeting + memory lifecycle provenance + conversational memory bench + harness lifecycle-hook supply chain + tool-evidence path rewards + NLIP agent protocol + decision-graph digital twin + lifelong skill library (backbone-frozen) + temporal instance-graph PO for long-horizon agents. Honest empty engines/language/game-ai (Combat Arena 2609.03122 + NPC RL 2609.02931 already Sep-4 leftovers). Labs DeepSeek/DeepMind/OpenAI/xAI first-party in window: **0**. Do not remint 1–1604 especially Frontier 1573–1581 / 1536–1543; Craft 1589–1596 / 1556–1560; Archive 1597–1604 / 1566–1572 / 1493–1499; Curiosity 1582–1588; AO 1561–1565; AGM 1550–1555; di-penumbra 1500–1535; DeepSeek Harness 1050; Nexus 1233; HELIX 1079; LoopsBench 060. seed_batch: `frontier-2026-09-06`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1605 | 10 | 2026 | GrowPage: On-Demand KV Budgeting for Efficient LLM Reasoning Serving | agents |
+| 1606 | 10 | 2026 | MemoryLACE: Memory Lifecycle-Aware Consolidation and Evidence Retrieval | agents |
+| 1607 | 10 | 2026 | When Users Don't Ask: Benchmarking Context-Driven Memory Retrieval in Conversational Agents | agents |
+| 1608 | 10 | 2026 | A Blind Trust, the Bloody Thrust: When Attacker-Controlled Hook Updates Steer AI Agent Harnesses towards Malicious Behaviors | agents |
+| 1609 | 9 | 2026 | Making Every Tool Call Count: Necessary Tool-Evidence Path Rewards for Agentic Vision-Language Models | agents |
+| 1610 | 9 | 2026 | The Natural Language Interaction Protocol and Standard for AI Agents | agents |
+| 1611 | 9 | 2026 | DNative-Twin: Decision Graphs and Digital Twins for Reconstructable Agentic Decisions | agents |
+| 1612 | 9 | 2026 | SimSkill: A Lifelong Learning AI Agent for Autonomous Mastery of Traffic Simulation | agents |
+| 1613 | 9 | 2026 | TIGPO: Temporal Instance-Graph Policy Optimization for Long-Horizon LLM Agents | agents |
+
+_Recount after `frontier-2026-09-06`: **1613** unique title cards on main. Next rank **1614+**._
