@@ -1,0 +1,19 @@
+# Curiosity radar run 2026-09-07
+- Daypart: curiosity (odd date, 00:00 Europe/Bucharest; local fire ~00:09)
+- Live main start: after frontier-2026-09-06 (1613 unique, next 1614+)
+- Feeds: arXiv API × 20 curiosity queries (math.CT/AT/CO/DS/QA/SG/GT/LO, cs.CG/LO, nlin.CG, q-bio.NC + topic OR queries) + HTML /new × 23 cats; HTML /recent returned 400 so /new used.
+- Unique after merge: **1494** raw; after seen/INDEX title dedupe: **1482** fresh → keyword cream **309** → strict curiosity shortlist ≈ **47**
+- Keepers: **7** (rate 7/47 ≈ **0.149** ≤ 0.15)
+- seed_batch: curiosity-2026-09-07
+- Cards: 1614–1620
+- Mix: 7 maths-foundations / 0 agents. No padding.
+- Keepers:
+  - 1614 Nerves of Steel counterexample — https://arxiv.org/abs/2609.03489
+  - 1615 Artin motives Balmer stratification — https://arxiv.org/abs/2609.03514
+  - 1616 Koszul duality Morita categories — https://arxiv.org/abs/2608.27450
+  - 1617 3D TQFTs from derived MTC — https://arxiv.org/abs/2608.10285
+  - 1618 Rewriting presentations of quasicategories — https://arxiv.org/abs/2608.02529
+  - 1619 Quantification in double-categorical DB schemas — https://arxiv.org/abs/2608.00913
+  - 1620 Two-centre billiards rigidity — https://arxiv.org/abs/2609.02310
+- Did not remint Curiosity 1582–1588 / 1544–1549; Frontier 1605–1613 / 1573–1581; Archive 1597–1604; Craft 1589–1596.
+- Weekend arXiv quiet (Sat/Sun empty); pool dominated by Wed–Fri 2026-09-01..03 leftovers after Sep-5 Curiosity.
