@@ -2255,3 +2255,20 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 | 1620 | 9 | 2026 | Analytic rigidity and symbolic dynamics for two-centre billiards | maths-foundations |
 
 _Recount after `curiosity-2026-09-07`: **1620** unique title cards on main. Next rank **1621+**._
+
+## Craft radar 2026-09-07
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `8ec262c`, **1620** unique, max rank **1620**. Next rank **1621+**. arXiv API: **~850** unique → **~795** fresh. Keyword cream: **~188**. Strict this-week Anoptic/ano/GRID COMMAND build filter: **~32**. Keepers: **8** (keep rate **8/32 = 0.25**, hard cap **0.25** exactly). No padding. Also polled: arXiv HTML `/new` for cs.GR / cs.PL / cs.DC / cs.CG / cs.PF (Monday listings); JCGT published TOC still **404** this egress. Mix: 5 languages / 2 systems / 1 game-ai. Theme: region+effects, functional-array bakeoff+AD, irregular GPU TSDF, NL→DSL ECS, Datalog rollback, SIMD bit-slice predicates, Julia-native MLIR IR. Slice different from Craft 2026-09-05 (atomics/lists/GTaP/SET/FlowLog/Beehive/Bézier/skiplists). Do not remint 1–1620 especially Craft 1589–1596 / 1556–1560 / 1030–1037 / 1058–1065; Frontier 1605–1613; Curiosity 1614–1620 / 1582–1588; Archive 1597–1604; Futhark 1002; SAC 1044; Hui Rank 1045; Remora 1062; NESL 141; Rete 042; FlowLog 1593; TED 1490; regions 030/133/1008/1138; Flecs 260/314; Essence of ECS 172; Slug 1128; Naiad 1480; weval 1557; libfork 1556. seed_batch: `craft-2026-09-07`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1621 | 10 | 2026 | Yarrow: Reconciling Effect Handlers and Region-Based Memory Management | languages |
+| 1622 | 10 | 2025 | Comparing Parallel Functional Array Languages: Programming and Performance | languages |
+| 1623 | 9 | 2022 | AD for an Array Language with Nested Parallelism | languages |
+| 1624 | 9 | 2026 | What Irregularity Costs: CUDA C++, Rust, and Triton on a Hash-Blocked GPU Workload | systems |
+| 1625 | 10 | 2025 | Real-Time World Crafting: Generating Structured Game Behaviors from Natural Language with Large Language Models | game-ai |
+| 1626 | 9 | 2025 | Provenance Guided Rollback Suggestions | languages |
+| 1627 | 8 | 2026 | Direct-Operable SIMD Bit-Slicing: A Framework for Memory-Efficient Predicate Evaluation | systems |
+| 1628 | 8 | 2026 | JLIR: A Julia-Native MLIR-Inspired Intermediate Representation with Automatic JACC Kernel Extraction | languages |
+
+_Recount after `craft-2026-09-07`: **1628** unique title cards on main. Next rank **1629+**._
