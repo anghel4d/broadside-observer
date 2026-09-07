@@ -2272,3 +2272,19 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 | 1628 | 8 | 2026 | JLIR: A Julia-Native MLIR-Inspired Intermediate Representation with Automatic JACC Kernel Extraction | languages |
 
 _Recount after `craft-2026-09-07`: **1628** unique title cards on main. Next rank **1629+**._
+
+## Archive radar 2026-09-08
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `3877c06`, **1628** unique, max rank **1628**. Next rank **1629+**. Source-level records: **~4891** (Crossref 3000 + arXiv 1891; DBLP 0). Merged unique titles **~4460**. Fresh on-mission after seen.json title/arxiv/INDEX/card dedupe: **1115**. After cheap historical on-mission gate (strict foundation/near-keeper shortlist excluding already-live remints): **44**. Keepers minted: **7** (keep rate **7/44 ≈ 0.159**, hard cap **0.20**). No padding. Mix: 1 agents / 3 systems / 3 graphics. Slice: SHOP 1999, Fraser–Harris lock-free, Stam Catmull–Clark eval, TreadMarks, Jump Flooding, Whitted, DIGITAL Continuous Profiling. Do not remint ranks 1–1628 especially Archive 1493–1499, 1566–1572, 1597–1604; Craft 1556–1560, 1589–1596, 1621–1628; Crow 1043; Kajiya 152; SHOP2 296; Queue Locks 1598 / Craig CLH. seed_batch: `archive-2026-09-08`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1629 | 9 | 1999 | SHOP: Simple Hierarchical Ordered Planner | agents |
+| 1630 | 10 | 2007 | Concurrent Programming Without Locks | systems |
+| 1631 | 9 | 1998 | Exact Evaluation Of Catmull-Clark Subdivision Surfaces At Arbitrary Parameter Values | graphics |
+| 1632 | 9 | 1994 | TreadMarks: Distributed Shared Memory on Standard Workstations and Operating Systems | systems |
+| 1633 | 9 | 2006 | Jump Flooding in GPU with Applications to Voronoi Diagram and Distance Transform | graphics |
+| 1634 | 10 | 1980 | An Improved Illumination Model for Shaded Display | graphics |
+| 1635 | 9 | 1997 | Continuous Profiling: Where Have All the Cycles Gone? | systems |
+
+_Recount after `archive-2026-09-08`: **1635** unique title cards on main. Next rank **1636+**._
