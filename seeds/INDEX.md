@@ -2258,6 +2258,24 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 
 **1644** unique; next **1645+**.
 
+## Curiosity radar 2026-09-09
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `c81ab3f`, **1644** unique, max rank **1644**. Next rank **1645+**. Feeds: arXiv API ×20 cats (80 each) + ×30 topic queries + HTML `/new`+`/pastweek` ×23 cats (spaced-href scrape). Merged unique **2231** → fresh after seen/INDEX/card dedupe **2129** → keyword cream **998** → strict curiosity shortlist **47** → keepers **7** (keep rate **7/47 ≈ 0.149** ≤0.15). No padding. Mix: 7 maths-foundations / 0 agents. Slice: bicategorical shadows/traces + graded-fusion 2-cats→4-manifold invariants + (2-dep,Σ)≠gCwF + intuitionistic unitary linear logic (quantum switch) + dg-dual of Weinstein symplectic "category" + Goodwillie product rule (Sep-3 near-keeper) + free Heyting-on-2 not a topos truth lattice. Different from last Curiosity (Nerves of Steel / Artin motives / Koszul Morita / 3D TQFT / quasicat rewriting / double-cat DB / two-centre billiards) and from Frontier 1636–1644. Tue Sep 8 listing not yet out at harvest (~00:07 Bucharest); Mon Sep 7 primary + Aug leftovers. Do not remint 1–1644 especially Curiosity 1614–1620 / 1582–1588 / 1544–1549; Frontier 1636–1644 / 1605–1613; Craft 1621–1628 / 1589–1596; Archive 1629–1635 / 1597–1604. seed_batch: `curiosity-2026-09-09`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1645 | 10 | 2026 | Twisted Bicategorical Shadows and Traces | maths-foundations |
+| 1646 | 10 | 2026 | Graded-fusion 2-categories and quantum homotopy invariants of 4-manifolds | maths-foundations |
+| 1647 | 10 | 2026 | (2-dep,$Σ$)-categories are not generalised categories with families | maths-foundations |
+| 1648 | 10 | 2026 | Intuitionistic Unitary Linear Logic: A Proof-Theoretical Approach to Purely Quantum Higher-Order | maths-foundations |
+| 1649 | 10 | 2026 | The Dual DG Category to Weinstein's symplectic "category" and applications to Geometric Quantization | maths-foundations |
+| 1650 | 10 | 2026 | The product rule in Goodwillie calculus | maths-foundations |
+| 1651 | 9 | 2026 | Failure of Higher-Order Truth within Intuitionistic Propositional Logic | maths-foundations |
+
+_Recount after `curiosity-2026-09-09`: **1651** unique title cards on main. Next rank **1652+**._
+
+
+
 ## Curiosity radar 2026-09-07
 
 Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass had **1613** unique, next rank **1614+**. Feeds: arXiv API ×20 curiosity queries + HTML /new ×23 cats (HTML /recent 400). Unique merge **1494** → fresh **1482** → cream **309** → strict ≈**47** → keepers **7** (rate **7/47≈0.149** ≤0.15). Mix: 7 maths-foundations / 0 agents. Weekend quiet; pool Wed–Fri leftovers after Sep-5 Curiosity. Do not remint 1–1613 especially Curiosity 1582–1588 / 1544–1549; Frontier 1605–1613 / 1573–1581; Archive 1597–1604; Craft 1589–1596. seed_batch: `curiosity-2026-09-07`.
