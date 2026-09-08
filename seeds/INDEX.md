@@ -2240,6 +2240,24 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 
 _Recount after `frontier-2026-09-06`: **1613** unique title cards on main. Next rank **1614+**._
 
+## Frontier radar 2026-09-08
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `60bb050`, **1635** unique, max rank **1635**. Next rank **1636+**. arXiv HTML pastweek: **4406** raw cat-entries → Mon Sep 7 unique **497** (+ HF Daily extras → **515** window). Fresh after seen/live dedupe: **514**. Keyword cream: **89**. Strict Broadside crème shortlist: **36**. Keepers: **9** (keep rate **9/36 = 0.25**, hard cap **0.25**). No padding. Mix: 9 agents / 0 engines / 0 language / 0 game-ai. Slice: multi-harness RL credit/portability + evolving-harness bench + online skill evolution + TROVE skill orchestration + KVMem agent workspace virtualization + quantization×cache divergence + memory portability across model upgrades + execution-state unlearning + harness-agnostic reward-hack immunization. Recency: Mon Sep 7 primary; Sat/Sun weekend quiet; Tue Sep 8 listings not yet out at harvest. Labs API 429. Do not remint 1–1635 especially Frontier 1605–1613 / 1573–1581 / 1536–1543; Craft 1621–1628; Archive 1629–1635; Curiosity 1614–1620; AO 1561–1565; AGM 1550–1555; di-penumbra 1500–1535; DeepSeek Harness 1050; Nexus 1233; HELIX 1079; LoopsBench 060. seed_batch: `frontier-2026-09-08`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1636 | 10 | 2026 | What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents | agents |
+| 1637 | 10 | 2026 | EVOHARNESSBENCH: Can Your Agents Keep Pace with an Evolving Harness? | agents |
+| 1638 | 10 | 2026 | From Interaction Traces to Persistent Skills: Online Evolution for Computer-Use Agents | agents |
+| 1639 | 10 | 2026 | TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing | agents |
+| 1640 | 10 | 2026 | KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU | agents |
+| 1641 | 10 | 2026 | Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving | agents |
+| 1642 | 10 | 2026 | Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability | agents |
+| 1643 | 10 | 2026 | Forgetting Without Restarting: Execution-State Unlearning for Stateful LLM Agents | agents |
+| 1644 | 9 | 2026 | Harness-agnostic detection and immunization of reward hacking in self-evolving language models | agents |
+
+**1644** unique; next **1645+**.
+
 ## Curiosity radar 2026-09-07
 
 Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass had **1613** unique, next rank **1614+**. Feeds: arXiv API ×20 curiosity queries + HTML /new ×23 cats (HTML /recent 400). Unique merge **1494** → fresh **1482** → cream **309** → strict ≈**47** → keepers **7** (rate **7/47≈0.149** ≤0.15). Mix: 7 maths-foundations / 0 agents. Weekend quiet; pool Wed–Fri leftovers after Sep-5 Curiosity. Do not remint 1–1613 especially Curiosity 1582–1588 / 1544–1549; Frontier 1605–1613 / 1573–1581; Archive 1597–1604; Craft 1589–1596. seed_batch: `curiosity-2026-09-07`.
