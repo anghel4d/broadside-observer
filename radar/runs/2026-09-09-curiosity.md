@@ -1,0 +1,20 @@
+# Curiosity radar run 2026-09-09
+- Daypart: curiosity (odd date, 00:00 Europe/Bucharest; local fire ~00:07)
+- Live main start: `c81ab3f` (frontier-2026-09-08 merge, PR #114); **1644** unique, next **1645+**
+- Feeds: arXiv API ×20 curiosity cats (80 each → 1600 raw) + ×30 topic OR queries (790 raw) + HTML `/new`+`/pastweek` ×23 cats (942 raw / 636 unique; href-spaced scrape)
+- Unique after merge: **2231**; after seen/INDEX/card title+arxiv dedupe: **2129** fresh → keyword cream **998** → strict curiosity shortlist **47**
+- Keepers: **7** (rate 7/47 ≈ **0.149** ≤ 0.15)
+- seed_batch: curiosity-2026-09-09
+- Cards: 1645–1651
+- Mix: 7 maths-foundations / 0 agents. No padding.
+- Keepers:
+  - 1645 Twisted Bicategorical Shadows and Traces — https://arxiv.org/abs/2609.04660
+  - 1646 Graded-fusion 2-categories and quantum homotopy invariants of 4-manifolds — https://arxiv.org/abs/2608.20959
+  - 1647 (2-dep,Σ)-categories are not generalised categories with families — https://arxiv.org/abs/2609.01869
+  - 1648 Intuitionistic Unitary Linear Logic (quantum higher-order / switch) — https://arxiv.org/abs/2609.02661
+  - 1649 Dual DG Category to Weinstein's symplectic "category" — https://arxiv.org/abs/2608.09681
+  - 1650 Product rule in Goodwillie calculus (Sep-3 near-keeper) — https://arxiv.org/abs/2608.25682
+  - 1651 Failure of Higher-Order Truth within IPL (free Heyting on 2 gens) — https://arxiv.org/abs/2608.26874
+- Did not remint Curiosity 1614–1620 / 1582–1588 / 1544–1549; Frontier 1636–1644 / 1605–1613; Craft 1621–1628 / 1589–1596; Archive 1629–1635 / 1597–1604.
+- Tue Sep 8 arXiv announcement not yet out at harvest; pool = Mon Sep 7 primary + late-Aug leftovers after Sep-7 Curiosity.
+- Near-keepers left unseen-as-cards: Languages and Recognition in a Category with Factorisation (2609.04346), Bounded ratios for Lorentzian polynomials (2609.05341), Exact curve counting once-punctured torus / Chas (2609.01382), Exotic finite pretriangulated category (2608.15203), Hammock localization via Segal animae (2608.19870), Kanalas continuously-realising-types counterexample (2608.25688), Weak Lie 3-groups / 2-gerbes / T-Duality (2609.04934), Categories with a Base of Computability (2608.20616), Molecular Species C_α (2609.05010), Keller sequences of exact ∞-categories (2609.01473).
