@@ -2291,8 +2291,6 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 _Recount after `craft-2026-09-09`: **1658** unique title cards on main. Next rank **1659+**._
 
 
-
-
 ## Curiosity radar 2026-09-07
 
 Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass had **1613** unique, next rank **1614+**. Feeds: arXiv API ×20 curiosity queries + HTML /new ×23 cats (HTML /recent 400). Unique merge **1494** → fresh **1482** → cream **309** → strict ≈**47** → keepers **7** (rate **7/47≈0.149** ≤0.15). Mix: 7 maths-foundations / 0 agents. Weekend quiet; pool Wed–Fri leftovers after Sep-5 Curiosity. Do not remint 1–1613 especially Curiosity 1582–1588 / 1544–1549; Frontier 1605–1613 / 1573–1581; Archive 1597–1604; Craft 1589–1596. seed_batch: `curiosity-2026-09-07`.
@@ -2359,3 +2357,113 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1666 | 9 | 1990 | Vector Models for Data-Parallel Computing | languages |
 
 _Recount after `archive-2026-09-10`: **1666** unique title cards on main. Next rank **1667+**._
+
+## Audio harvest 2026-09-09
+
+Themed acoustics/HRTF/game-audio haul (not a daypart). Live main before this pass: **1666** unique, max rank **1666**. Next rank **1667+**. Source: `radar/harvests/audio-2026-09-09/top100.jsonl` (100 keepers, ranks 1–100 → seed_rank 1667–1766). Mix: 61 realtime / 15 engines / 12 graphics / 12 systems. Coverage: 27 game / 26 hrtf / 18 wave / 7 diffraction / 7 ambisonics / 6 geom / 6 reverb / 3 hybrid. Lineages: `interactive-sound-propagation`, `hrtf-spatial-audio`, `wave-based-acoustics`, `geometric-acoustics`, `ambisonics-binaural`, `artificial-reverberation`. Do not remint 1–1666 especially Archive 1659–1666, auditory 566, Finding Fast Filters 1091, FMM Helmholtz 1163/1171–1175/1178. seed_batch: `audio-harvest-2026-09-09`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1667 | 10 | 1998 | A Beam Tracing Approach to Acoustic Modeling for Interactive Virt... | realtime |
+| 1668 | 10 | 2001 | Modeling Acoustics in Virtual Environments Using the Uniform Theo... | realtime |
+| 1669 | 10 | 2010 | Precomputed Wave Simulation for Real-Time Sound Propagation of Dy... | realtime |
+| 1670 | 10 | 2014 | Parametric Wave Field Coding for Precomputed Sound Propagation | realtime |
+| 1671 | 10 | 2018 | Parametric Directional Coding for Precomputed Sound Propagation | engines |
+| 1672 | 10 | 2014 | High-Order Diffraction and Diffuse Reflections for Interactive So... | realtime |
+| 1673 | 10 | 1999 | An analytic secondary source model of edge diffraction impulse re... | graphics |
+| 1674 | 10 | 1979 | Image method for efficiently simulating small-room acoustics | graphics |
+| 1675 | 10 | 1995 | HRTF measurements of a KEMAR | realtime |
+| 1676 | 10 | 1989 | Simulation of the transient and steady-state sound propagation in... | graphics |
+| 1677 | 10 | 2007 | The Room Acoustic Rendering Equation | graphics |
+| 1678 | 10 | 2017 | Triton: Practical Pre-Computed Sound Propagation for Games and Vi... | engines |
+| 1679 | 10 | 2011 | GSound: Interactive Sound Propagation for Games | engines |
+| 1680 | 10 | 2018 | Binaural rendering of Ambisonic signals by head-related impulse r... | realtime |
+| 1681 | 10 | 1993 | Localization using nonindividualized head-related transfer functions | realtime |
+| 1682 | 10 | 1992 | Fundamentals of binaural technology | realtime |
+| 1683 | 10 | 2009 | Efficient and Accurate Sound Propagation Using Adaptive Rectangul... | systems |
+| 1684 | 10 | 2001 | The CIPIC HRTF database | realtime |
+| 1685 | 10 | 1968 | Calculating the acoustical room response by the use of a ray trac... | graphics |
+| 1686 | 9 | 2012 | Fifty Years of Artificial Reverberation | engines |
+| 1687 | 10 | 2013 | Wave-Ray Coupling for Interactive Sound Propagation in Large Comp... | realtime |
+| 1688 | 10 | 2021 | Fast Diffraction Pathfinding for Dynamic Sound Propagation | realtime |
+| 1689 | 8 | 2007 | Acoustic modeling using the digital waveguide mesh | systems |
+| 1690 | 10 | 2016 | Interactive Sound Propagation with Bidirectional Path Tracing | realtime |
+| 1691 | 9 | 2018 | A Perceptual Evaluation of Individual and Non-Individual HRTFs: A... | realtime |
+| 1692 | 10 | 2012 | Guided Multiview Ray Tracing for Fast Auralization | realtime |
+| 1693 | 10 | 2013 | Wave-Based Sound Propagation in Large Open Scenes Using an Equiva... | realtime |
+| 1694 | 10 | 2015 | Overview of geometrical room acoustic modeling techniques | graphics |
+| 1695 | 10 | 2016 | Finite Volume Time Domain Room Acoustics Simulation under General... | systems |
+| 1696 | 10 | 2018 | Diffraction Kernels for Interactive Sound Propagation in Dynamic... | realtime |
+| 1697 | 8 | 2020 | Measurement of Head-Related Transfer Functions: A Review | realtime |
+| 1698 | 10 | 1995 | Finite-difference time-domain simulation of low-frequency room ac... | systems |
+| 1699 | 10 | 1999 | Auditory localization of nearby sources. Head-related transfer fu... | realtime |
+| 1700 | 10 | 2001 | Boundary element method calculation of individual head-related tr... | realtime |
+| 1701 | 10 | 2001 | Computation of Edge Diffraction for More Accurate Room Acoustics... | graphics |
+| 1702 | 10 | 2004 | A Beam Tracing Method for Interactive Architectural Acoustics | realtime |
+| 1703 | 10 | 2007 | Interactive Sound Rendering in Complex and Dynamic Scenes Using F... | realtime |
+| 1704 | 10 | 2008 | AD-Frustum: Adaptive Frustum Tracing for Interactive Sound Propag... | realtime |
+| 1705 | 10 | 2009 | A psychophysical evaluation of near-field head-related transfer f... | realtime |
+| 1706 | 10 | 2009 | Accelerated Beam Tracing Algorithm | realtime |
+| 1707 | 10 | 2012 | Interactive Sound Propagation Using Compact Acoustic Transfer Ope... | realtime |
+| 1708 | 10 | 2012 | An Efficient GPU-Based Time Domain Solver for the Acoustic Wave E... | systems |
+| 1709 | 10 | 2012 | Approximately calculate individual near-field head-related transf... | realtime |
+| 1710 | 10 | 2014 | Source and Listener Directivity for Interactive Wave-Based Sound... | realtime |
+| 1711 | 10 | 2015 | WAVE: Interactive Wave-based Sound Propagation for Virtual Enviro... | realtime |
+| 1712 | 10 | 2017 | Interactive Sound Propagation and Rendering for Large Multi-Sourc... | realtime |
+| 1713 | 9 | 1999 | Real-Time Acoustic Modeling for Distributed Virtual Environments | realtime |
+| 1714 | 9 | 2004 | Perceptual Audio Rendering of Complex Virtual Environments | engines |
+| 1715 | 9 | 2016 | Adaptive impulse response modeling for interactive sound propagation | engines |
+| 1716 | 10 | 2025 | Ambisonics Binaural Rendering via Masked Magnitude Least Squares | realtime |
+| 1717 | 9 | 2019 | A round robin on room acoustical simulation and auralization | graphics |
+| 1718 | 8 | 2025 | Differentiable Geometric Acoustic Path Tracing using Time-Resolve... | graphics |
+| 1719 | 9 | 1998 | Analyzing head-related transfer function measurements using surfa... | realtime |
+| 1720 | 9 | 2001 | Elevation localization and head-related transfer function analysi... | realtime |
+| 1721 | 9 | 2002 | Approximating the head-related transfer function using simple geo... | realtime |
+| 1722 | 9 | 2005 | Localizing nearby sound sources in a classroom: Binaural room imp... | realtime |
+| 1723 | 9 | 2009 | Pre-Computing Geometry-Based Reverberation Effects for Games | engines |
+| 1724 | 9 | 2011 | Direct-to-Indirect Acoustic Radiance Transfer | realtime |
+| 1725 | 9 | 2011 | Room Acoustics Simulation Using 3-D Compact Explicit FDTD Schemes | systems |
+| 1726 | 9 | 2013 | Aural Proxies and Directionally-Varying Reverberation for Interac... | engines |
+| 1727 | 9 | 2013 | Modeling of Complex Geometries and Boundary Conditions in Finite... | systems |
+| 1728 | 9 | 2015 | Scattering Delay Networks for Artificial Reverberation | engines |
+| 1729 | 9 | 2017 | FDTD Methods for 3-D Room Acoustics Simulation With High-Order Ac... | systems |
+| 1730 | 9 | 2019 | Room acoustics modelling in the time-domain with the nodal discon... | systems |
+| 1731 | 9 | 2021 | End-to-End Magnitude Least Squares Binaural Rendering of Spherica... | realtime |
+| 1732 | 8 | 2015 | Parallel Wave-Based Sound Propagation for Distributed Memory Arch... | systems |
+| 1733 | 8 | 2020 | Directional sources and listeners in interactive sound propagatio... | realtime |
+| 1734 | 10 | 2007 | Progressive perceptual audio rendering of complex scenes | engines |
+| 1735 | 10 | 2021 | Dynamic Portal Occlusion for Precomputed Interactive Sound Propag... | engines |
+| 1736 | 9 | 2022 | HRTF Field: Unifying Measured HRTF Magnitude Representation with... | realtime |
+| 1737 | 10 | 2009 | RESound: Interactive Sound Rendering for Dynamic Virtual Environm... | realtime |
+| 1738 | 8 | 2021 | Learning Acoustic Scattering Fields for Dynamic Interactive Sound... | realtime |
+| 1739 | 9 | 2023 | Free-field perceptual evaluation of virtual acoustic rendering al... | realtime |
+| 1740 | 9 | 2026 | Reconstructing individualized near-field head-related transfer fu... | realtime |
+| 1741 | 8 | 2008 | Framework for Real-Time Auralization in Architectural Acoustics | realtime |
+| 1742 | 8 | 2008 | Real-time auralization system based on beam-tracing and mixed-ord... | realtime |
+| 1743 | 8 | 2009 | Frequency Domain Acoustic Radiance Transfer for Real-Time Auraliz... | realtime |
+| 1744 | 8 | 2012 | Reciprocal binaural room impulse response measurements | realtime |
+| 1745 | 8 | 2013 | Computer simulations in room acoustics: Concepts and uncertainties | graphics |
+| 1746 | 8 | 2015 | Equivalence of plane wave and spherical harmonics rendering of bi... | realtime |
+| 1747 | 10 | 2023 | iMagLS: Interaural Level Difference with Magnitude Least-Squares... | realtime |
+| 1748 | 10 | 2025 | A Survey on Machine Learning Techniques for Head-Related Transfer... | realtime |
+| 1749 | 9 | 2005 | Phonon Tracing for Auralization and Visualization of Sound | graphics |
+| 1750 | 9 | 1993 | Auralization—An Overview | engines |
+| 1751 | 8 | 2000 | Definition and measurement of random-incidence scattering coeffic... | graphics |
+| 1752 | 8 | 2007 | The KW-Boundary Hybrid Digital Waveguide Mesh for Room Acoustics... | systems |
+| 1753 | 8 | 2017 | Bidirectional sound transport | realtime |
+| 1754 | 8 | 2020 | Interactive sound propagation for dynamic scenes using 2D wave si... | engines |
+| 1755 | 9 | 1997 | Circulant and Elliptic Feedback Delay Networks for Artificial Rev... | engines |
+| 1756 | 9 | 1999 | Creating Interactive Virtual Acoustic Environments | realtime |
+| 1757 | 9 | 2017 | A High Resolution and Full-Spherical Head-Related Transfer Functi... | realtime |
+| 1758 | 9 | 2019 | A Cross-Evaluated Database of Measured and Simulated HRTFs Includ... | realtime |
+| 1759 | 9 | 2025 | Head-Related Transfer Function Upsampling Using an Autoencoder-Ba... | realtime |
+| 1760 | 8 | 2014 | A Computationally-Efficient and Perceptually-Plausible Algorithm... | realtime |
+| 1761 | 8 | 2000 | Reducing the dispersion error in the digital waveguide mesh using... | systems |
+| 1762 | 8 | 2019 | Directional Equalization of Sparse Head-Related Transfer Function... | realtime |
+| 1763 | 8 | 2019 | Efficient Representation and Sparse Sampling of Head-Related Tran... | realtime |
+| 1764 | 8 | 2023 | The SONICOM HRTF Dataset | realtime |
+| 1765 | 8 | 2024 | Recent Advances in the Spatially Oriented Format for Acoustics  (... | engines |
+| 1766 | 8 | 2024 | Listen2Scene: Interactive material-aware binaural sound propagati... | realtime |
+
+_Recount after `audio-harvest-2026-09-09`: **1766** unique title cards on main. Next rank **1767+**._
+

@@ -27,6 +27,12 @@ const LINEAGE_TITLES: Readonly<Record<string, string>> = {
   "programming-language-foundations": "Programming language foundations",
   "algorithms-and-complexity": "Algorithms & complexity",
   deepseek: "DeepSeek",
+  "interactive-sound-propagation": "Interactive sound propagation",
+  "hrtf-spatial-audio": "HRTF & spatial audio",
+  "wave-based-acoustics": "Wave-based acoustics",
+  "geometric-acoustics": "Geometric acoustics",
+  "ambisonics-binaural": "Ambisonics binaural",
+  "artificial-reverberation": "Artificial reverberation",
   "arithmetic-geometry": "Arithmetic geometry",
   "ai-mathematical-reasoning": "AI mathematical reasoning",
 };

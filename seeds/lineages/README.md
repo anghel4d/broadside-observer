@@ -49,3 +49,11 @@ Deep PL / algorithms threads (2026-08-13):
 ## to1000 deep shelves (2026-08-13)
 - `contemporary-databases` — Spanner/Cockroach/Snowflake/DuckDB/Iceberg/RocksDB/…
 - `type-safety` — Gradual typing, RustBelt, LiquidHaskell, session types, …
+
+## Audio harvest 2026-09-09
+- `interactive-sound-propagation` — Games/VR geometric & hybrid propagation (GSound/Triton/BDPT)
+- `hrtf-spatial-audio` — HRTF datasets, measurement, near-field, personalization
+- `wave-based-acoustics` — ARD/FDTD/FVTD/DWM wave bakes (not Helmholtz FMM)
+- `geometric-acoustics` — Image source, rays, ART, BTMS, surveys
+- `ambisonics-binaural` — MagLS/HOA headphone decode
+- `artificial-reverberation` — FDN/SDN, baked game reverb, auralization overview
