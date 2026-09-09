@@ -2448,3 +2448,21 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1635 | 9 | 1997 | Continuous Profiling: Where Have All the Cycles Gone? | systems |
 
 _Recount after `archive-2026-09-08`: **1635** unique title cards on main. Next rank **1636+**._
+
+
+## Archive radar 2026-09-10
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `4a46edc`, **1658** unique, max rank **1658**. Next rank **1659+**. Source-level records: **~3800** (Crossref named+kw **1050** + arXiv **2750**; DBLP **0**). Merged unique titles **~3475**. Fresh on-mission after seen.json title/arxiv/INDEX/card dedupe + historical gate: **~270** keyword-hit → named-classic collapse to strict shortlist **44**. Keepers minted: **8** (keep rate **8/44 ≈ 0.182**, hard cap **0.20**). No padding. Mix: 0 agents / 4 languages / 1 systems / 3 graphics. Slice: Cook Distributed Ray Tracing + Shade Trees, Goral radiosity birth, Peyton Jones STG, Featherweight Java, Pierce–Turner Local Type Inference, seL4, Blelloch Vector Models — leftover foundations not reminting Archive 1629–1635 / Whitted 1634 / Kajiya 152 / MLT 372 / NESL 141 / Scans 307 / Prefix Sums 1571 / Soar-in-seen / REYES 1010. seed_batch: `archive-2026-09-10`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1659 | 10 | 1984 | Distributed Ray Tracing | graphics |
+| 1660 | 10 | 1984 | Shade Trees | graphics |
+| 1661 | 10 | 1984 | Modeling the Interaction of Light Between Diffuse Surfaces | graphics |
+| 1662 | 10 | 1992 | Implementing Lazy Functional Languages on Stock Hardware: the Spineless Tagless G-machine | languages |
+| 1663 | 10 | 2001 | Featherweight Java: A Minimal Core Calculus for Java and GJ | languages |
+| 1664 | 10 | 2000 | Local Type Inference | languages |
+| 1665 | 10 | 2009 | seL4: Formal Verification of an OS Kernel | systems |
+| 1666 | 9 | 1990 | Vector Models for Data-Parallel Computing | languages |
+
+_Recount after `archive-2026-09-10`: **1666** unique title cards on main. Next rank **1667+**._
