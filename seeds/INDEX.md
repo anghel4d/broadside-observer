@@ -2274,6 +2274,23 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 
 _Recount after `curiosity-2026-09-09`: **1651** unique title cards on main. Next rank **1652+**._
 
+## Craft radar 2026-09-09
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `fcc4569`, **1651** unique, max rank **1651**. Next rank **1652+**. arXiv API: **~1523** unique → **~1460** fresh after seen/INDEX/card dedupe. Keyword cream: **~80** tagged leftover-slice → strict this-week Anoptic/ano/GRID COMMAND build filter: **28**. Keepers: **7** (keep rate **7/28 = 0.25**, hard cap **0.25** exactly). No padding. Also polled: arXiv HTML `/new` for cs.GR / cs.PL / cs.DC / cs.CG / cs.PF / cs.SE; JCGT published TOC still **404** this egress; DBLP API flaky. Mix: 1 engines / 1 graphics / 3 systems / 2 languages / 0 game-ai. Slice: allocators leftover of mimalloc/439 + wait-free helping + SCOT SMR + GPU concurrent queues + Dex pointful arrays + Verona reference capabilities + OpenType layout-reuse text. Different from Craft 2026-09-07 (Yarrow/array-bakeoff/AD/TSDF/NL→DSL/Datalog/SIMD/JLIR) and Craft 2026-09-05 (atomics/lists/GTaP/SET/FlowLog/Beehive/Bézier/skiplists). Do not remint 1–1651 especially Craft 1621–1628 / 1589–1596 / 1556–1560 / 1030–1037; Curiosity 1645–1651 / 1614–1620; Frontier 1636–1644; Archive 1629–1635; mimalloc 011; Reconsidering 439; Hazard Pointers 024; Slug 1128; Futhark 1002; regions 030/133/1008/1138; Flecs 260/314; Essence of ECS 172; TREAT 1004; GGPO 197; Deterministic Lockstep 016. seed_batch: `craft-2026-09-09`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1652 | 10 | 2026 | Reconsidering "Reconsidering Custom Memory Allocation" | engines |
+| 1653 | 10 | 2026 | Wait-Free Locks Should Not Fear Later Arrivals | systems |
+| 1654 | 9 | 2026 | Fixing Non-blocking Data Structures for Better Compatibility with Memory Reclamation Schemes | systems |
+| 1655 | 9 | 2026 | Scalable Concurrent Queues for GPU | systems |
+| 1656 | 10 | 2021 | Getting to the Point. Index Sets and Parallelism-Preserving Autodiff for Pointful Array Programming | languages |
+| 1657 | 10 | 2023 | Reference Capabilities for Flexible Memory Management | languages |
+| 1658 | 9 | 2026 | Srijika: OpenType-Layout-Reusing Font Restyling for Nine Indic Scripts | graphics |
+
+_Recount after `craft-2026-09-09`: **1658** unique title cards on main. Next rank **1659+**._
+
+
 
 
 ## Curiosity radar 2026-09-07
