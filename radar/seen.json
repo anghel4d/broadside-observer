@@ -2154,17 +2154,22 @@
     "srijika: opentype-layout-reusing font restyling for nine indic scripts",
     "getting to the point: index sets and parallelism-preserving autodiff for pointful array programming",
     "reference capabilities for flexible memory management: extended version",
-    "reconsidering \u201creconsidering custom memory allocation\u201d"
+    "reconsidering \u201creconsidering custom memory allocation\u201d",
+    "implementing lazy functional languages on stock hardware: the spineless tagless g-machine",
+    "featherweight java: a minimal core calculus for java and gj",
+    "local type inference",
+    "sel4: formal verification of an os kernel",
+    "vector models for data-parallel computing"
   ],
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-09-09",
   "curiosity_count": 7,
   "craft_batch": "craft-2026-09-09",
   "craft_count": 7,
-  "archive_batch": "archive-2026-09-08",
-  "archive_count": 7,
+  "archive_batch": "archive-2026-09-10",
+  "archive_count": 8,
   "frontier_batch": "frontier-2026-09-08",
   "frontier_count": 9,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
@@ -3122,5 +3127,16 @@
   "archive_2026_09_08_batch": "archive-2026-09-08",
   "archive_2026_09_08_count": 7,
   "frontier_2026_09_08_batch": "frontier-2026-09-08",
-  "frontier_2026_09_08_count": 9
+  "frontier_2026_09_08_count": 9,
+  "archive_2026_09_10_batch": [
+    "Distributed Ray Tracing",
+    "Shade Trees",
+    "Modeling the Interaction of Light Between Diffuse Surfaces",
+    "Implementing Lazy Functional Languages on Stock Hardware: the Spineless Tagless G-machine",
+    "Featherweight Java: A Minimal Core Calculus for Java and GJ",
+    "Local Type Inference",
+    "seL4: Formal Verification of an OS Kernel",
+    "Vector Models for Data-Parallel Computing"
+  ],
+  "archive_2026_09_10_count": 8
 }
