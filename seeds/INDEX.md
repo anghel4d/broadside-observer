@@ -2467,3 +2467,20 @@ Themed acoustics/HRTF/game-audio haul (not a daypart). Live main before this pas
 
 _Recount after `audio-harvest-2026-09-09`: **1766** unique title cards on main. Next rank **1767+**._
 
+### frontier-2026-09-10
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1767 | 10 | 2026 | Authority Is Not a String: A Capability-Scoped Harness for Pr... | agents |
+| 1768 | 10 | 2026 | Co-Evolving Harnesses and Models: On-Policy Correction Helps ... | agents |
+| 1769 | 9 | 2026 | RobustSGPO: Search-Space Control for Agent Harness Evolution | agents |
+| 1770 | 9 | 2026 | NeoHorse-1: Towards Recursive Self-Improvement via Agentic Po... | agents |
+| 1771 | 9 | 2026 | SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale | agents |
+| 1772 | 10 | 2026 | UNISON: A Co-Designed Near-Memory Scheduler of Session KV Res... | agents |
+| 1773 | 9 | 2026 | KVShareArena: KV-Cache Reuse Across Contexts and Model Checkp... | agents |
+| 1774 | 10 | 2026 | ExecCritic: Learn to Test, Test to Improve for Coding Agents | agents |
+| 1775 | 9 | 2026 | IBIB: A Protocol for Measuring Enterprise AI Systems by Servi... | agents |
+| 1776 | 9 | 2026 | SWE-Bench Pro Verified: A Reliable Benchmark for Software Eng... | agents |
+
+_Recount after `frontier-2026-09-10`: **1776** unique title cards on main. Next rank **1777+**._
+
