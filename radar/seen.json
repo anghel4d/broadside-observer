@@ -731,7 +731,14 @@
     "astro-ph/0202512",
     "cond-mat/0506438",
     "quant-ph/0402014",
-    "quant-ph/9707021"
+    "quant-ph/9707021",
+    "2609.06935",
+    "2609.07592",
+    "2609.10415",
+    "2609.07626",
+    "2609.08764",
+    "2609.06428",
+    "2609.05963"
   ],
   "titles": [
     "(infinity,2)-categories and the goodwillie calculus i",
@@ -2283,12 +2290,19 @@
     "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
     "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
     "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
-    "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents"
+    "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents",
+    "models for dagger $(\\infty,1)$-categories ii: dagger complete segal spaces and the joyal--tierney equivalence",
+    "chasing rotational symmetry in the spectre tiling",
+    "a categorical approach to nilspace theory",
+    "crossed-module crossed braided categories",
+    "on pushouts of strict symmetric monoidal categories",
+    "a two-categorical snake lemma",
+    "cartan calculus of cubical forms in tangent categories"
   ],
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
-  "curiosity_batch": "curiosity-2026-09-09",
+  "curiosity_batch": "curiosity-2026-09-11",
   "curiosity_count": 7,
   "craft_batch": "craft-2026-09-09",
   "craft_count": 7,
@@ -3339,7 +3353,14 @@
     "https://arxiv.org/abs/2609.10266",
     "https://arxiv.org/abs/2609.09133",
     "https://arxiv.org/abs/2609.10494",
-    "https://arxiv.org/abs/2609.08149"
+    "https://arxiv.org/abs/2609.08149",
+    "https://arxiv.org/abs/2609.06935",
+    "https://arxiv.org/abs/2609.07592",
+    "https://arxiv.org/abs/2609.10415",
+    "https://arxiv.org/abs/2609.07626",
+    "https://arxiv.org/abs/2609.08764",
+    "https://arxiv.org/abs/2609.06428",
+    "https://arxiv.org/abs/2609.05963"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -3413,5 +3434,25 @@
     "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
     "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
     "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents"
+  ],
+  "curiosity_2026_09_11_batch": "curiosity-2026-09-11",
+  "curiosity_2026_09_11_count": 7,
+  "curiosity_2026_09_11_arxiv": [
+    "2609.06935",
+    "2609.07592",
+    "2609.10415",
+    "2609.07626",
+    "2609.08764",
+    "2609.06428",
+    "2609.05963"
+  ],
+  "curiosity_2026_09_11_titles": [
+    "Models for dagger $(\\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence",
+    "Chasing rotational symmetry in the spectre tiling",
+    "A Categorical Approach to Nilspace Theory",
+    "Crossed-module crossed braided categories",
+    "On pushouts of strict symmetric monoidal categories",
+    "A two-categorical Snake Lemma",
+    "Cartan calculus of cubical forms in tangent categories"
   ]
 }

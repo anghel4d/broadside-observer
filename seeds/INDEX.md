@@ -2484,3 +2484,18 @@ _Recount after `audio-harvest-2026-09-09`: **1766** unique title cards on main. 
 
 _Recount after `frontier-2026-09-10`: **1776** unique title cards on main. Next rank **1777+**._
 
+
+### curiosity-2026-09-11
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1777 | 10 | 2026 | Models for dagger (\infty,1)-categories II: Dagger comple... | maths-foundations |
+| 1778 | 10 | 2026 | Chasing rotational symmetry in the spectre tiling | maths-foundations |
+| 1779 | 9 | 2026 | A Categorical Approach to Nilspace Theory | maths-foundations |
+| 1780 | 9 | 2026 | Crossed-module crossed braided categories | maths-foundations |
+| 1781 | 9 | 2026 | On pushouts of strict symmetric monoidal categories | maths-foundations |
+| 1782 | 9 | 2026 | A two-categorical Snake Lemma | maths-foundations |
+| 1783 | 10 | 2026 | Cartan calculus of cubical forms in tangent categories | maths-foundations |
+
+_Recount after `curiosity-2026-09-11`: **1783** unique title cards on main. Next rank **1784+**._
+

@@ -1,0 +1,20 @@
+# Curiosity radar run 2026-09-11
+- Daypart: curiosity (odd date, 00:00 Europe/Bucharest; local fire ~00:46)
+- Live main start: `3286fec` (frontier-2026-09-10 merge, PR #119); **1776** unique, next **1777+**
+- Feeds: arXiv API ×24 curiosity cats (80 each → 1840 raw; q-bio parent returned 0) + ×39 topic OR queries (1298 raw) + HTML `/new`+`/recent` ×24 cats (1418 raw / 945 unique; `/pastweek?show=` 400s this harvest)
+- Unique after merge: **3054**; after seen/INDEX/card title+arxiv dedupe: **2945** fresh → keyword cream **1271** → strict curiosity shortlist **50**
+- Keepers: **7** (rate 7/50 ≈ **0.140** ≤ 0.15)
+- seed_batch: curiosity-2026-09-11
+- Cards: 1777–1783
+- Mix: 7 maths-foundations / 0 agents. No padding. Prefer Wed/Thu (Sep 7–9) announcements over Sep-3 near-keepers.
+- Keepers:
+  - 1777 Models for dagger $(\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence — https://arxiv.org/abs/2609.06935
+  - 1778 Chasing rotational symmetry in the spectre tiling — https://arxiv.org/abs/2609.07592
+  - 1779 A Categorical Approach to Nilspace Theory — https://arxiv.org/abs/2609.10415
+  - 1780 Crossed-module crossed braided categories — https://arxiv.org/abs/2609.07626
+  - 1781 On pushouts of strict symmetric monoidal categories — https://arxiv.org/abs/2609.08764
+  - 1782 A two-categorical Snake Lemma — https://arxiv.org/abs/2609.06428
+  - 1783 Cartan calculus of cubical forms in tangent categories — https://arxiv.org/abs/2609.05963
+- Did not remint Curiosity 1645–1651 / 1614–1620 / 1582–1588 / 1544–1549; Frontier 1767–1776 / 1636–1644; Craft / Archive recent batches.
+- Near-keepers from 2026-09-09 left unseen-as-cards (still fresh; deferred in favour of newer Wed/Thu cream): Languages and Recognition in a Category with Factorisation (2609.04346), Bounded ratios for Lorentzian polynomials (2609.05341), Exact curve counting once-punctured torus / Chas (2609.01382), Exotic finite pretriangulated category (2608.15203), Hammock localization via Segal animae (2608.19870), Kanalas continuously-realising-types counterexample (2608.25688), Weak Lie 3-groups / 2-gerbes / T-Duality (2609.04934), Categories with a Base of Computability (2608.20616), Molecular Species C_α (2609.05010), Keller sequences of exact ∞-categories (2609.01473).
+- Additional near-misses this run: Quasi-algebraic quantization for the B-twist Langlands TQFT (2609.09098), Cluster Morita theorem for negative cluster categories (2609.10396), Noetherian forms of free non-symmetric operads (2609.10501), Magnitude and motivic zeta functions of matroids (2609.07977), Exactness of the 2-categories of abelian and triangulated categories (2609.06278), Bounded Ratios of Lorentzian Polynomials II (2609.07098).
