@@ -1,0 +1,72 @@
+[
+  {
+    "rank": 1767,
+    "arxiv": "2609.08371",
+    "title": "Authority Is Not a String: A Capability-Scoped Harness for Prompt-Injection-Resistant Coding Agents",
+    "file": "1767-authority-is-not-a-string-a-capability-scoped-harness-for-prompt.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1768,
+    "arxiv": "2609.09134",
+    "title": "Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails",
+    "file": "1768-co-evolving-harnesses-and-models-on-policy-correction-helps-weaker.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1769,
+    "arxiv": "2609.09646",
+    "title": "RobustSGPO: Search-Space Control for Agent Harness Evolution",
+    "file": "1769-robustsgpo-search-space-control-for-agent-harness-evolution.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1770,
+    "arxiv": "2609.08183",
+    "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+    "file": "1770-neohorse-1-towards-recursive-self-improvement-via-agentic-post.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1771,
+    "arxiv": "2609.08228",
+    "title": "SE-GoS: Self-Evolving Graph-of-Skills for Skill Library at Scale",
+    "file": "1771-se-gos-self-evolving-graph-of-skills-for-skill-library-at-scale.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1772,
+    "arxiv": "2609.09643",
+    "title": "UNISON: A Co-Designed Near-Memory Scheduler of Session KV Residency for LLM Agents",
+    "file": "1772-unison-a-co-designed-near-memory-scheduler-of-session-kv-residency.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1773,
+    "arxiv": "2609.10266",
+    "title": "KVShareArena: KV-Cache Reuse Across Contexts and Model Checkpoints",
+    "file": "1773-kvsharearena-kv-cache-reuse-across-contexts-and-model-checkpoints.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1774,
+    "arxiv": "2609.09133",
+    "title": "ExecCritic: Learn to Test, Test to Improve for Coding Agents",
+    "file": "1774-execcritic-learn-to-test-test-to-improve-for-coding-agents.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1775,
+    "arxiv": "2609.10494",
+    "title": "IBIB: A Protocol for Measuring Enterprise AI Systems by Serving Route, Not Model Identifier",
+    "file": "1775-ibib-a-protocol-for-measuring-enterprise-ai-systems-by-serving-route.md",
+    "pool": "agents"
+  },
+  {
+    "rank": 1776,
+    "arxiv": "2609.08149",
+    "title": "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents",
+    "file": "1776-swe-bench-pro-verified-a-reliable-benchmark-for-software-engineering.md",
+    "pool": "agents"
+  }
+]
