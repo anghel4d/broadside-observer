@@ -2513,3 +2513,19 @@ _Recount after `curiosity-2026-09-11`: **1783** unique title cards on main. Next
 
 _Recount after `craft-2026-09-11`: **1790** unique title cards on main. Next rank **1791+**._
 
+### archive-2026-09-12
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `a1e8de9`, **1790** unique, max rank **1790**. Next rank **1791+**. Source-level records: **~5491** (Crossref named **455** + kw **4500** + arXiv **536**; OpenAlex **0**/429; DBLP **0**). Merged unique titles **~4549**. Fresh keyword after seen.json title/arxiv/INDEX/card dedupe: **~1940**. Named-classic strict shortlist **40**. Keepers minted: **7** (keep rate **7/40 = 0.175**, hard cap **0.20**). No padding. Mix: 0 agents / 2 languages / 3 systems / 2 graphics. Slice: Phong local illumination, Levy capability monograph, Hughes Why FP Matters, Meijer bananas/lenses, Scheduler Activations, Exokernel, SMAA — leftover foundations not reminting Archive 1659–1666 / 1629–1635 / Cook–Torrance 1006 / Whitted 1634 / Crow 1043 / Williams 1005 / seL4 1665 / Backus 157 / STG 1662. seed_batch: `archive-2026-09-12`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1791 | 10 | 1975 | Illumination for Computer Generated Pictures | graphics |
+| 1792 | 10 | 1984 | Capability-Based Computer Systems | systems |
+| 1793 | 10 | 1989 | Why Functional Programming Matters | languages |
+| 1794 | 9 | 1991 | Functional Programming with Bananas, Lenses, Envelopes and Barbed Wire | languages |
+| 1795 | 9 | 1991 | Scheduler Activations: Effective Kernel Support for the User-Level Management of Parallelism | systems |
+| 1796 | 10 | 1995 | Exokernel: An Operating System Architecture for Application-Level Resource Management | systems |
+| 1797 | 9 | 2012 | SMAA: Enhanced Subpixel Morphological Antialiasing | graphics |
+
+_Recount after `archive-2026-09-12`: **1797** unique title cards on main. Next rank **1798+**._
+
