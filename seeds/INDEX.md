@@ -2499,3 +2499,17 @@ _Recount after `frontier-2026-09-10`: **1776** unique title cards on main. Next 
 
 _Recount after `curiosity-2026-09-11`: **1783** unique title cards on main. Next rank **1784+**._
 
+### craft-2026-09-11
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1784 | 10 | 2023 | Adaptive Dynamic Global Illumination | realtime |
+| 1785 | 9 | 2016 | Stochastic Light Culling | graphics |
+| 1786 | 9 | 2022 | Software Rasterization of 2 Billion Points in Real Time | graphics |
+| 1787 | 9 | 2013 | Higher Quality 2D Text Rendering | graphics |
+| 1788 | 10 | 2020 | Fully Read/Write Fence-Free Work-Stealing with Multiplicity | systems |
+| 1789 | 9 | 2013 | Data Structures for Task-based Priority Scheduling | systems |
+| 1790 | 9 | 2023 | Nemo: First Glimpse of a New Rule Engine | languages |
+
+_Recount after `craft-2026-09-11`: **1790** unique title cards on main. Next rank **1791+**._
+
