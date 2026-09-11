@@ -738,7 +738,12 @@
     "2609.07626",
     "2609.08764",
     "2609.06428",
-    "2609.05963"
+    "2609.05963",
+    "2301.05125",
+    "2204.01287",
+    "2008.04424",
+    "1312.2501",
+    "2308.15897"
   ],
   "titles": [
     "(infinity,2)-categories and the goodwillie calculus i",
@@ -2297,14 +2302,21 @@
     "crossed-module crossed braided categories",
     "on pushouts of strict symmetric monoidal categories",
     "a two-categorical snake lemma",
-    "cartan calculus of cubical forms in tangent categories"
+    "cartan calculus of cubical forms in tangent categories",
+    "adaptive dynamic global illumination",
+    "stochastic light culling",
+    "software rasterization of 2 billion points in real time",
+    "higher quality 2d text rendering",
+    "fully read/write fence-free work-stealing with multiplicity",
+    "data structures for task-based priority scheduling",
+    "nemo: first glimpse of a new rule engine"
   ],
   "updated": "2026-09-11",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-09-11",
   "curiosity_count": 7,
-  "craft_batch": "craft-2026-09-09",
+  "craft_batch": "craft-2026-09-11",
   "craft_count": 7,
   "archive_batch": "archive-2026-09-10",
   "archive_count": 8,
@@ -3360,7 +3372,14 @@
     "https://arxiv.org/abs/2609.07626",
     "https://arxiv.org/abs/2609.08764",
     "https://arxiv.org/abs/2609.06428",
-    "https://arxiv.org/abs/2609.05963"
+    "https://arxiv.org/abs/2609.05963",
+    "https://arxiv.org/abs/2301.05125",
+    "https://arxiv.org/abs/2204.01287",
+    "https://arxiv.org/abs/2008.04424",
+    "https://arxiv.org/abs/1312.2501",
+    "https://arxiv.org/abs/2308.15897",
+    "http://jcgt.org/published/0005/01/02/",
+    "http://jcgt.org/published/0002/01/04/"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -3454,5 +3473,23 @@
     "On pushouts of strict symmetric monoidal categories",
     "A two-categorical Snake Lemma",
     "Cartan calculus of cubical forms in tangent categories"
+  ],
+  "craft_2026_09_11_batch": "craft-2026-09-11",
+  "craft_2026_09_11_count": 7,
+  "craft_2026_09_11_arxiv": [
+    "2301.05125",
+    "2204.01287",
+    "2008.04424",
+    "1312.2501",
+    "2308.15897"
+  ],
+  "craft_2026_09_11_titles": [
+    "Adaptive Dynamic Global Illumination",
+    "Stochastic Light Culling",
+    "Software Rasterization of 2 Billion Points in Real Time",
+    "Higher Quality 2D Text Rendering",
+    "Fully Read/Write Fence-Free Work-Stealing with Multiplicity",
+    "Data Structures for Task-based Priority Scheduling",
+    "Nemo: First Glimpse of a New Rule Engine"
   ]
 }
