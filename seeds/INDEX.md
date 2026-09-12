@@ -2529,3 +2529,19 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 
 _Recount after `archive-2026-09-12`: **1797** unique title cards on main. Next rank **1798+**._
 
+
+### frontier-2026-09-12
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1798 | 10 | 2026 | Ecdysis: Efficient and Effective Training of Runtime Harn... | agents |
+| 1799 | 10 | 2026 | DriftNet: A Dual-Head Trajectory Transformer for Detectin... | agents |
+| 1800 | 10 | 2026 | When Synthetic Data Hurts: On Catastrophic Forgetting in ... | agents |
+| 1801 | 9 | 2026 | BenchShield: Formal Model-Backed Instrumentation for Rewa... | agents |
+| 1802 | 9 | 2026 | Grounding Agent Memory: Environment-Probing Curation for ... | agents |
+| 1803 | 9 | 2026 | Engineering Reliable Commit Gates for Agentic AI: Cost-Aw... | agents |
+| 1804 | 9 | 2026 | Building py-kvcache: A Performance Characterization of Ex... | agents |
+| 1805 | 9 | 2026 | ShellVis: Sandboxed Live Programming for Shell Scripts | language |
+| 1806 | 9 | 2026 | Gaussian Light Transport | engine |
+
+_Recount after `frontier-2026-09-12`: **1806** unique title cards on main. Next rank **1807+**._
