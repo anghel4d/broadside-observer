@@ -2559,3 +2559,21 @@ _Recount after `frontier-2026-09-12`: **1806** unique title cards on main. Next 
 | 1813 | 9 | 2016 | Real-Time Global Illumination Using Precomputed Illuminance Composition with Chrominance Compression | realtime |
 
 _Recount after `craft-2026-09-13`: **1813** unique title cards on main. Next rank **1814+**._
+
+
+### archive-2026-09-14
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `c4f5611`, **1813** unique, max rank **1813**. Next rank **1814+**. Source-level records: **~2826** (Crossref named **516** + kw **2310**; arXiv **0**/429; OpenAlex **0**/429; DBLP **0**). Merged unique titles **~2257**. Fresh after seen.json title/arxiv/INDEX/card dedupe: **~2188** → historical ≤2017 **~2088** → named-classic strict shortlist **40**. Keepers minted: **8** (keep rate **8/40 = 0.20**, hard cap **0.20**). No padding. Mix: 0 agents / 1 languages / 6 systems / 1 engines. Slice: UNIX Time-Sharing, End-to-End Arguments, Trusting Trust, Active Messages, Plan 9, Shavit–Touitou STM, Click Modular Router, Out of the Tar Pit — leftover foundations not reminting Archive 1791–1797 / 1659–1666 / 1629–1635 / 1597–1604 / CSP / Wait-Free Sync / Herlihy–Moss TM 377 / Scans-as-Primitive 307 / Vector Models 1666 / Raft / GFS / MapReduce. seed_batch: `archive-2026-09-14`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1814 | 10 | 1974 | The UNIX Time-Sharing System | systems |
+| 1815 | 10 | 1984 | End-to-End Arguments in System Design | systems |
+| 1816 | 10 | 1984 | Reflections on Trusting Trust | systems |
+| 1817 | 10 | 1992 | Active Messages: a Mechanism for Integrated Communication and Computation | systems |
+| 1818 | 10 | 1995 | Plan 9 from Bell Labs | systems |
+| 1819 | 10 | 1995 | Software Transactional Memory | systems |
+| 1820 | 9 | 2000 | The Click Modular Router | engines |
+| 1821 | 9 | 2006 | Out of the Tar Pit | languages |
+
+_Recount after `archive-2026-09-14`: **1821** unique title cards on main. Next rank **1822+**._
