@@ -752,7 +752,9 @@
     "q-alg/9503002",
     "q-alg/9709040",
     "quant-ph/0402014",
-    "quant-ph/9707021"
+    "quant-ph/9707021",
+    "2008.06341",
+    "2205.01183"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -2333,14 +2335,21 @@
     "xpbd: position-based simulation of compliant constrained dynamics",
     "yarrow: reconciling effect handlers and region-based memory management",
     "you can't escape your own activations : evaluation awareness and multi-agent monitoring",
-    "ziggurats, taut foliations, and contact structures"
+    "ziggurats, taut foliations, and contact structures",
+    "probabilistic cellular automata for granular media in video games",
+    "improved corners with multi-channel signed distance fields",
+    "differential datalog",
+    "experience with safe manual memory-management in cyclone",
+    "a fast in-place interpreter for webassembly",
+    "real-time radiance caching using chrominance compression",
+    "real-time global illumination using precomputed illuminance composition with chrominance compression"
   ],
-  "updated": "2026-09-12",
+  "updated": "2026-09-13",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-09-11",
   "curiosity_count": 7,
-  "craft_batch": "craft-2026-09-11",
+  "craft_batch": "craft-2026-09-13",
   "craft_count": 7,
   "archive_batch": "archive-2026-09-12",
   "archive_count": 7,
@@ -3438,7 +3447,17 @@
     "https://www.youtube.com/watch?v=WsmxBE9Gw6A",
     "https://www.youtube.com/watch?v=uOahsDhVZaE",
     "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1991/CSD-91-650.pdf",
-    "https://youtu.be/FhMftauQZqU"
+    "https://youtu.be/FhMftauQZqU",
+    "https://arxiv.org/abs/2008.06341",
+    "https://doi.org/10.1007/s40869-020-00122-4",
+    "https://doi.org/10.1111/cgf.13265",
+    "https://ceur-ws.org/Vol-2368/paper6.pdf",
+    "https://mihaibudiu.github.io/work/ddlog.pdf",
+    "https://doi.org/10.1145/1029873.1029883",
+    "https://homes.cs.washington.edu/~djg/papers/cyc_mm_experience.pdf",
+    "https://arxiv.org/abs/2205.01183",
+    "http://jcgt.org/published/0003/04/06/",
+    "http://jcgt.org/published/0005/04/02/"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -3576,5 +3595,7 @@
     "Building py-kvcache: A Performance Characterization of External KV Caching for vLLM with NVMe SSDs",
     "ShellVis: Sandboxed Live Programming for Shell Scripts",
     "Gaussian Light Transport"
-  ]
+  ],
+  "craft_2026_09_13_batch": "craft-2026-09-13",
+  "craft_2026_09_13_count": 7
 }

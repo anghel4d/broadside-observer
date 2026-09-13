@@ -2545,3 +2545,17 @@ _Recount after `archive-2026-09-12`: **1797** unique title cards on main. Next r
 | 1806 | 9 | 2026 | Gaussian Light Transport | engine |
 
 _Recount after `frontier-2026-09-12`: **1806** unique title cards on main. Next rank **1807+**._
+
+### craft-2026-09-13
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1807 | 10 | 2021 | Probabilistic Cellular Automata for Granular Media in Video Games | game-ai |
+| 1808 | 10 | 2018 | Improved Corners with Multi-Channel Signed Distance Fields | graphics |
+| 1809 | 10 | 2019 | Differential Datalog | languages |
+| 1810 | 10 | 2004 | Experience with Safe Manual Memory-Management in Cyclone | systems |
+| 1811 | 10 | 2022 | A Fast In-Place Interpreter for WebAssembly | languages |
+| 1812 | 10 | 2014 | Real-time Radiance Caching using Chrominance Compression | realtime |
+| 1813 | 9 | 2016 | Real-Time Global Illumination Using Precomputed Illuminance Composition with Chrominance Compression | realtime |
+
+_Recount after `craft-2026-09-13`: **1813** unique title cards on main. Next rank **1814+**._
