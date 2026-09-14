@@ -1,0 +1,20 @@
+# Curiosity radar run 2026-09-15
+- Daypart: curiosity (odd date, 00:00 Europe/Bucharest; local fire ~00:14)
+- Live main start: `f3115be` (frontier-2026-09-14 merge, PR #126); **1827** unique, next **1828+**
+- Feeds: arXiv www HTML `/new`+`/recent`+`/pastweek` ×29 curiosity cats (raw HTML reparse **2777** entries) + partial export.arxiv.org API topic OR queries (**160** entries before 429/503 wall) → merged raw **2937**
+- Unique after merge: **1526**; after seen/INDEX/card title+arxiv dedupe: **1505** fresh → keyword cream **655** → window (Fri–Mon / id≥2609.08) **481** → strict curiosity shortlist **55**
+- Keepers: **7** (rate 7/55 ≈ **0.127** ≤ 0.15)
+- seed_batch: curiosity-2026-09-15
+- Cards: 1828–1834
+- Mix: 7 maths-foundations / 0 agents. No padding. Prefer Fri–Mon (Sep 11–14) announcements over older near-keepers deferred on 2026-09-11.
+- Keepers:
+  - 1828 Frobenius functors and one-sided Hopf algebras in braided monoidal categories — https://arxiv.org/abs/2609.13028
+  - 1829 The Morita classes are nonzero — https://arxiv.org/abs/2609.12951
+  - 1830 The Integrability of a knife-edge Billiard in a Disk — https://arxiv.org/abs/2609.12963
+  - 1831 A model structure for cartesian 2-fibrations — https://arxiv.org/abs/2609.11759
+  - 1832 The homotopy types of directed path and trace spaces — https://arxiv.org/abs/2609.11454
+  - 1833 Joinings in Markov categories — https://arxiv.org/abs/2609.10912
+  - 1834 Moduli spaces of geometric functorial field theories — https://arxiv.org/abs/2609.11812
+- Did not remint Curiosity 1777–1783 / 1645–1651 / 1614–1620 / 1582–1588; Frontier 1822–1827 / 1798–1806 / 1767–1776; Craft 1807–1813 / 1784–1790; Archive 1814–1821 / 1791–1797; DeepSeek Harness 1050; Nexus 1233; HELIX 1079; LoopsBench 060.
+- Near-keepers deferred: Rotating-Memory Fibonacci Numbers and Periodic Tilings (2609.12569), From Nilspace Theory to Simplicial Homotopy Theory (2609.10437; companion to 1779), The three-vortex system Hopf fibration (2609.10847), The Archimedean place is a blurred interval at infinity (2609.09117), Amphichiral Knots odd braid index (2609.12295), Quantum Invariants indexed by Fibered Faces of the Thurston Polytope (2609.12311), Noetherian forms of free non-symmetric operads (2609.10501; prior near-miss), The formal spectrum of a tensor-triangulated category (2602.20835; Mon replacement not new), Diagrammatic Categorification of Verma Modules I (2609.10941), Chiral Spin(7) Sigma Models and TMF (2609.11856), Braided Multisections / Symplectic Surface Summing (2609.11727 / 2609.11803).
+- Source failures: export.arxiv.org API mostly **429/503** after HTML firehose (Q1/Q3–Q7+); HTML www.arxiv.org `/list/*/new|recent|pastweek` all **200**. No OpenReview/PWC deep skim this run (arXiv primary sufficient).

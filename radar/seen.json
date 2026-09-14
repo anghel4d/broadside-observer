@@ -760,7 +760,14 @@
     "2609.12436",
     "2609.13012",
     "2609.12582",
-    "2609.12306"
+    "2609.12306",
+    "2609.13028",
+    "2609.12951",
+    "2609.12963",
+    "2609.11759",
+    "2609.11454",
+    "2609.10912",
+    "2609.11812"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -2371,12 +2378,19 @@
     "LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory",
     "Pixel Decodability Is Not a Compression Signal: Causally Evaluating Importance Proxies for Visual KV-Cache Eviction",
     "NovaFabric: Tamper-Evident, Replayable Evidence for Autonomous AI Agent Runs",
-    "Grid-Free Monte Carlo for Time-Dependent Diffusion"
+    "Grid-Free Monte Carlo for Time-Dependent Diffusion",
+    "Frobenius functors and one-sided Hopf algebras in braided monoidal categories",
+    "The Morita classes are nonzero",
+    "The Integrability of a knife-edge Billiard in a Disk",
+    "A model structure for cartesian 2-fibrations",
+    "The homotopy types of directed path and trace spaces",
+    "Joinings in Markov categories",
+    "Moduli spaces of geometric functorial field theories"
   ],
-  "updated": "2026-09-14T12:00:00+03:00",
+  "updated": "2026-09-15T00:14:00+03:00",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
-  "curiosity_batch": "curiosity-2026-09-11",
+  "curiosity_batch": "curiosity-2026-09-15",
   "curiosity_count": 7,
   "craft_batch": "craft-2026-09-13",
   "craft_count": 7,
@@ -3648,5 +3662,25 @@
   "craft_2026_09_13_batch": "craft-2026-09-13",
   "craft_2026_09_13_count": 7,
   "archive_2026_09_14_batch": "archive-2026-09-14",
-  "archive_2026_09_14_count": 8
+  "archive_2026_09_14_count": 8,
+  "curiosity_2026_09_15_batch": "curiosity-2026-09-15",
+  "curiosity_2026_09_15_count": 7,
+  "curiosity_2026_09_15_arxiv": [
+    "2609.13028",
+    "2609.12951",
+    "2609.12963",
+    "2609.11759",
+    "2609.11454",
+    "2609.10912",
+    "2609.11812"
+  ],
+  "curiosity_2026_09_15_titles": [
+    "Frobenius functors and one-sided Hopf algebras in braided monoidal categories",
+    "The Morita classes are nonzero",
+    "The Integrability of a knife-edge Billiard in a Disk",
+    "A model structure for cartesian 2-fibrations",
+    "The homotopy types of directed path and trace spaces",
+    "Joinings in Markov categories",
+    "Moduli spaces of geometric functorial field theories"
+  ]
 }
