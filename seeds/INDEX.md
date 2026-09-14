@@ -2593,3 +2593,20 @@ Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main be
 | 1827 | 9 | 2026 | Grid-Free Monte Carlo for Time-Dependent Diffusion | engine |
 
 _Recount after `frontier-2026-09-14`: **1827** unique title cards on main. Next rank **1828+**._
+
+
+### curiosity-2026-09-15
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `f3115be`, **1827** unique, max rank **1827**. Next rank **1828+**. Feeds: arXiv www HTML `/list/*/new`+`/recent`+`/pastweek` ×29 curiosity cats (math.CT/AT/CO/DS/QA/SG/GT/LO/AG/KT/RT/MG/GN/HO, cs.CG/LO/DM/FL, physics.class-ph/bio-ph, math-ph, q-bio.NC/MN/QM/TO/PE, nlin.CG/AO/PS) + partial export.arxiv.org API topic OR queries (heavy 429/503; HTML primary). Harvest: raw **2937** → unique **1526** → fresh after seen/INDEX/card dedupe **1505** → keyword cream **655** → window cream **481** → strict curiosity shortlist **55** → keepers **7** (keep rate **7/55 ≈ 0.127** ≤0.15). No padding. Mix: 7 maths-foundations / 0 agents. Prefer Fri–Mon (Sep 11–14) announcements over Sep-11 near-keepers already deferred. seed_batch: `curiosity-2026-09-15`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1828 | 10 | 2026 | Frobenius functors and one-sided Hopf algebras in braided monoidal categories | maths-foundations |
+| 1829 | 10 | 2026 | The Morita classes are nonzero | maths-foundations |
+| 1830 | 9 | 2026 | The Integrability of a knife-edge Billiard in a Disk | maths-foundations |
+| 1831 | 10 | 2026 | A model structure for cartesian 2-fibrations | maths-foundations |
+| 1832 | 9 | 2026 | The homotopy types of directed path and trace spaces | maths-foundations |
+| 1833 | 9 | 2026 | Joinings in Markov categories | maths-foundations |
+| 1834 | 9 | 2026 | Moduli spaces of geometric functorial field theories | maths-foundations |
+
+_Recount after `curiosity-2026-09-15`: **1834** unique title cards on main. Next rank **1835+**._
