@@ -2577,3 +2577,19 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1821 | 9 | 2006 | Out of the Tar Pit | languages |
 
 _Recount after `archive-2026-09-14`: **1821** unique title cards on main. Next rank **1822+**._
+
+
+### frontier-2026-09-14
+
+Daypart: **Frontier** (even calendar date, 12:00 Europe/Bucharest). Live main before this pass: `07f2d27`, **1821** unique, max rank **1821**. Next rank **1822+**. Window: Mon Sep 14 new submissions (~48h since frontier-2026-09-12 covering Fri Sep 11). Sources: arXiv www HTML `/list/*/new` (cs.AI/LG/CL/GR/PL/DC/SE/CV/MA/GT + cs.CR for provenance), HF Daily Papers API 2026-09-14. Harvest: raw cat `/new` entries **900** → unique on `/new` pages **650** → true new (excl. cross/replaced) **333** → fresh **333** → cream **25** (24 + NovaFabric cs.CR) → strict crème **25** → keepers **6** (keep rate **6/25 = 0.24**, hard cap **0.25**). Mix: 5 agents / 1 engine / 0 language / 0 game-ai. seed_batch: `frontier-2026-09-14`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1822 | 10 | 2026 | Harness or Model? Isolating the Harness Effect in Age... | agents |
+| 1823 | 10 | 2026 | AIM: A Privacy-Aware Interoperable Memory Framework f... | agents |
+| 1824 | 10 | 2026 | LifeFuse-Mem: Lifecycle-Aware State Fusion Against Te... | agents |
+| 1825 | 9 | 2026 | Pixel Decodability Is Not a Compression Signal: Causa... | agents |
+| 1826 | 10 | 2026 | NovaFabric: Tamper-Evident, Replayable Evidence for A... | agents |
+| 1827 | 9 | 2026 | Grid-Free Monte Carlo for Time-Dependent Diffusion | engine |
+
+_Recount after `frontier-2026-09-14`: **1827** unique title cards on main. Next rank **1828+**._
