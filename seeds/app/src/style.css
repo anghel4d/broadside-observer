@@ -1015,14 +1015,21 @@ button:focus-visible {
 
 .canvas-source-highlight {
   pointer-events: none;
+  user-select: none;
   background: transparent;
+}
+
+/* Keep Shiki foreground colors; never paint token fill slabs over the editor. */
+.canvas-source-highlight :is(span, code, mark, ins, del) {
+  background: transparent !important;
 }
 
 .canvas-source-input {
   appearance: none;
   color: transparent;
   background: transparent;
-  caret-color: inherit;
+  caret-color: var(--ink);
+  z-index: 1;
 }
 
 .canvas-source-input::selection {
