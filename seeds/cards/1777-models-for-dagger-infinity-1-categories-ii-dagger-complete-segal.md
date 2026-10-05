@@ -1,5 +1,5 @@
 ---
-title: "Models for dagger $(\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence"
+title: "Models for dagger $(\\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence"
 authors:
   - "Keima Akasaka"
 year: 2026
@@ -17,7 +17,7 @@ pool: "maths-foundations"
 relevance_score: 10
 lineage: dagger-infinity-categories
 cites:
-  - title: "Models for dagger $(\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence"
+  - title: "Models for dagger $(\\infty,1)$-categories II: Dagger complete Segal spaces and the Joyal--Tierney equivalence"
     url: "https://arxiv.org/abs/2609.06935"
     year: 2026
     arxiv: "2609.06935"
