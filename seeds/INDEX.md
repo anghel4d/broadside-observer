@@ -2610,3 +2610,21 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 | 1834 | 9 | 2026 | Moduli spaces of geometric functorial field theories | maths-foundations |
 
 _Recount after `curiosity-2026-09-15`: **1834** unique title cards on main. Next rank **1835+**._
+
+
+### archive-2026-10-06
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `a615ba8`, **1834** unique, max rank **1834**. Next rank **1835+**. Sources: hand-built named-classic pool across archive/language/engine/craft clusters (**350**: PLT, region/arena memory, lock-free, array languages, production rules, category theory, rendering/BVH, ACL-anthology NLP, game AI) + OpenAlex citation chains (references + top pre-2018 cited-by) of live cards 042 / 045 / 030 / 036 / 152 / 1819 / 307 / 1159 and six shortlisted candidates (**620** records); Crossref / OpenAlex / Unpaywall for DOI and OA resolution. Harvest: raw **970** → unique by normalized title **853** → fresh after seen.json / card title / cites / INDEX / DOI dedupe **578** (≤2017: **574**) → on-mission named fresh **156** → strict archive shortlist **51** → keepers **8** (keep rate **8/51 ≈ 0.157** vs strict shortlist; **8/578 ≈ 0.014** vs fresh; hard cap **0.20**). No padding. Mix: 3 languages / 2 systems / 1 graphics / 1 game-ai / 1 maths-foundations. seed_batch: `archive-2026-10-06`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1835 | 8 | 1969 | Diagonal Arguments and Cartesian Closed Categories | maths-foundations |
+| 1836 | 10 | 1973 | Top Down Operator Precedence | languages |
+| 1837 | 10 | 1977 | Concurrent Reading and Writing | systems |
+| 1838 | 9 | 1978 | Compilation and Delayed Evaluation in APL | languages |
+| 1839 | 10 | 1990 | Fast Allocation and Deallocation of Memory Based on Object Lifetimes | systems |
+| 1840 | 9 | 1990 | Heuristics for Ray Tracing Using Space Subdivision | graphics |
+| 1841 | 9 | 1993 | Maintaining Views Incrementally | languages |
+| 1842 | 10 | 2012 | AI-driven Dynamic Dialog through Fuzzy Pattern Matching | game-ai |
+
+_Recount after `archive-2026-10-06`: **1842** unique title cards on main. Next rank **1843+**._
