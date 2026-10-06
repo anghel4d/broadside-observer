@@ -2628,3 +2628,22 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 1842 | 10 | 2012 | AI-driven Dynamic Dialog through Fuzzy Pattern Matching | game-ai |
 
 _Recount after `archive-2026-10-06`: **1842** unique title cards on main. Next rank **1843+**._
+
+
+### curiosity-2026-10-07
+
+Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main before this pass: `31f10cc`, **1842** unique, max rank **1842**. Next rank **1843+**. Feeds: arXiv www HTML `/list/*/recent?show=2000` + `/new` ×43 curiosity cats (math.CT/CO/DS/MG/GT/HO/LO/AT/QA/SG/NT/GM, cs.CG/DS/DM/FL/LO/GR/PL/GT/CC/SC, physics.class-ph/flu-dyn/optics/bio-ph/pop-ph/hist-ph, cond-mat.soft, math-ph, nlin.CG/AO/PS/CD/SI, q-bio.NC/MN/QM/TO/PE/CB/SC/BM; heavy 429 throttling, monthly/pastweek listings blocked) + OpenAlex arXiv index 2026-09-14..2026-10-06 over 27 curiosity subfields (maths, physics, theory CS, graphics, biology, neuroscience) with abstracts. Harvest: raw **10759** (HTML 3588 + OpenAlex 7171) → unique **8675** → fresh in window (id ≥ 2609.12500, after seen/INDEX/card/summaries dedupe) **8365** → keyword cream (broadened, non-CT delight lexicon) **785** → strict shortlist with abstracts read **79** → keepers **9** (keep rate **9/79 ≈ 0.114** vs strict; **9/8675 ≈ 0.001** vs unique; cap 0.15). Deliberately broadened mix after two all-maths-foundations runs: 2 cellular automata (aperiodic tilings, P-completeness) / 1 graphics+RTS / 1 classical physics+history / 1 biology / 2 combinatorics+algorithms (Hamiltonicity) / 1 dynamics+logic / 1 geometric probability; 0 category theory. seed_batch: `curiosity-2026-10-07`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1843 | 10 | 2026 | Gliders on Aperiodic Monotilings: Cellular Automata on the Hat and Spectre | maths-foundations |
+| 1844 | 10 | 2026 | Delayed-Light Rendering for Superluminal Objects | graphics |
+| 1845 | 9 | 2026 | Astronomia Ova: Kepler's Laws, Ptolemy's Equant, and Legendre's Polynomials | physics |
+| 1846 | 10 | 2026 | A proof of Lehmer's permutation conjecture for neighbor-swap graphs | maths-foundations |
+| 1847 | 10 | 2026 | Breaking the $2^n$ barrier for directed hamiltonicity | maths-foundations |
+| 1848 | 9 | 2026 | Lyapunov stability of polynomial vector fields is undecidable | maths-foundations |
+| 1849 | 9 | 2026 | Trefoil Probabilities and Polyhedra | maths-foundations |
+| 1850 | 10 | 2026 | The Two-Dimensional Majority Rule is P-Complete | maths-foundations |
+| 1851 | 8 | 2026 | Migrating cell clusters as active droplets with asymmetric shape and contact angles | biology |
+
+_Recount after `curiosity-2026-10-07`: **1851** unique title cards on main. Next rank **1852+**._
