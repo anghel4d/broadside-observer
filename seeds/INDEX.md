@@ -2647,3 +2647,21 @@ Daypart: **Curiosity** (odd calendar date, 00:00 Europe/Bucharest). Live main be
 | 1851 | 8 | 2026 | Migrating cell clusters as active droplets with asymmetric shape and contact angles | biology |
 
 _Recount after `curiosity-2026-10-07`: **1851** unique title cards on main. Next rank **1852+**._
+
+### craft-2026-10-07
+
+Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before this pass: `547576b`, **1851** unique, max rank **1851**. Next rank **1852+**. Feeds: arXiv www HTML `/list/*/recent` + `/new` ×25 craft cats (cs.GR/PL/DC/DS/DB/SE/PF/AR/MS/OS/CG/FL/LO/MA/AI/CL/HC/MM/NA/SC/CV/ET/NE/SD, physics.comp-ph) + OpenAlex (arXiv index 2026-09-12..2026-10-07 over graphics/CAD, software, hardware & architecture, computational theory, information systems: **2105**; venue pass 2026-05-01..2026-10-07 over ACM TOG / SIGGRAPH Conference Papers / PACMCGIT (HPG) / CGF / TVCG / PACMPL (PLDI, OOPSLA) / PVLDB / PACMMOD / SIGMOD / IEEE ToG: **1579**) + JCGT feed (**147**) + hand-built evergreen-practice pool (**113**: engine/ECS, lock-free, text/Unicode, array languages, memory management, RTS/game AI). Harvest: raw **10805** (HTML 6861 + OpenAlex 3684 + JCGT 147 + evergreen 113) → unique **8183** → fresh after seen.json / INDEX / card / summaries / DOI dedupe **7858** → craft cream (engine/language/game-ai/craft lexicon, 3DGS/NeRF/pure-LLM-agent dirt ban) **217** → strict shortlist with abstracts/papers read **44** → keepers **9** (keep rate **9/44 ≈ 0.205** vs strict; hard cap **0.25**). No padding. Mix: 1 realtime / 1 engines / 1 graphics / 4 languages / 1 systems / 1 game-ai. seed_batch: `craft-2026-10-07`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1852 | 10 | 2026 | RCPG: Real-Time Product Path Guiding Using Radiance Cascades | realtime |
+| 1853 | 10 | 2026 | Commit-Window Observation Contracts for Reactive Entity-Component Systems | engines |
+| 1854 | 10 | 2026 | Real-Time GPU Vector Graphics SDF Generation Based on Quadratic Stroke Rendering | graphics |
+| 1855 | 10 | 2019 | A Data Parallel Compiler Hosted on the GPU | languages |
+| 1856 | 10 | 2026 | Fixing the Fixpoint: A Formal Theory of Convergence Detection for Incremental Recursive Computation | languages |
+| 1857 | 10 | 2012 | Can Seqlocks Get Along with Programming Language Memory Models? | systems |
+| 1858 | 9 | 2026 | Unicode Text Segmentation (UAX #29) | languages |
+| 1859 | 9 | 2021 | Perceus: Garbage Free Reference Counting with Reuse | languages |
+| 1860 | 9 | 2026 | Meaningful Content Diversity Through Non-Uniform Tile WFC | game-ai |
+
+_Recount after `craft-2026-10-07`: **1860** unique title cards on main. Next rank **1861+**._
