@@ -2,6 +2,25 @@
 
 Broadside Observer is a declarative research radar for monitoring preregistered sources and building a provenance-rich database of work relevant to a defined organization or project.
 
+Observer is the agent-run research radar behind Broadside: it polls preregistered sources, filters and reads the papers, and files each keeper as a provenance-tracked card.
+It is live at [observer.anoptic.io](https://observer.anoptic.io), with an MCP endpoint at `https://observer.anoptic.io/mcp` that any MCP client can query.
+
+## Try it
+
+Point an MCP client at the hosted endpoint (Streamable HTTP, no key needed). In Cursor's `mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "broadside-observer": { "url": "https://observer.anoptic.io/mcp" }
+  }
+}
+```
+
+With Claude Code: `claude mcp add --transport http broadside-observer https://observer.anoptic.io/mcp`.
+
+Then ask it something, or call the two tools directly: `query_seeds {"query": "ecs"}` lists matching cards, and `get_seed {"id": "<card id from that list>"}` returns one card in full. To run the server locally instead, see [`seeds/app/README.md`](seeds/app/README.md#mcp-server).
+
 ## Research loop (v1)
 
 The research agent owns and operates this loop. Each run follows the versioned topic registry in [`radar/topics.yaml`](radar/topics.yaml) and records enough state to resume without reviewing the same item repeatedly.
