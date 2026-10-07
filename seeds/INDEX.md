@@ -2665,3 +2665,384 @@ Daypart: **Craft** (odd calendar date, 12:00 Europe/Bucharest). Live main before
 | 1860 | 9 | 2026 | Meaningful Content Diversity Through Non-Uniform Tile WFC | game-ai |
 
 _Recount after `craft-2026-10-07`: **1860** unique title cards on main. Next rank **1861+**._
+
+### openai-math-2026-10-07
+
+Themed batch (user request): one card per result family in [openai/math](https://github.com/openai/math) at commit `adc7f12` (2026-10-07 00:58 Europe/Bucharest). Families **372** (722 manuscripts). **235** families have a Lean scope note with Comparator statements, the rest are prose only. All results are AI-generated and unreviewed. No keep-rate cut, since the user asked for every result. seed_batch: `openai-math-2026-10-07`, lineage `ai-mathematical-reasoning`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 1861 | 7 | 2026 | Milne’s rationality conjecture and algebraic specialization | maths-foundations |
+| 1862 | 7 | 2026 | The full BSD formula from low Selmer corank | maths-foundations |
+| 1863 | 8 | 2026 | The quasi-Riemann hypothesis (Lean) | maths-foundations |
+| 1864 | 7 | 2026 | Hilbert’s tenth problem over ℚ | maths-foundations |
+| 1865 | 8 | 2026 | Irrationality of Catalan’s constant (Lean) | maths-foundations |
+| 1866 | 7 | 2026 | Goldfeld’s conjecture: densities and mean analytic rank | maths-foundations |
+| 1867 | 8 | 2026 | Ordinary two-point correlations and the corrected Elliott conjecture (Lean) | maths-foundations |
+| 1868 | 8 | 2026 | The Deligne–Drinfeld conjecture (Lean) | maths-foundations |
+| 1869 | 8 | 2026 | Function-field reconstruction from Milnor K-theory and Galois data (Lean) | maths-foundations |
+| 1870 | 7 | 2026 | Unrestricted pro-modularity at the prime two | maths-foundations |
+| 1871 | 7 | 2026 | Prime-factor statistics of $p-1$ | maths-foundations |
+| 1872 | 8 | 2026 | Independent largest prime factors of consecutive integers (Lean) | maths-foundations |
+| 1873 | 8 | 2026 | Ostmann’s inverse Goldbach conjecture (Lean) | maths-foundations |
+| 1874 | 7 | 2026 | Restricted geometric Langlands, global Arthur enhancements, and generic Ramanujan | maths-foundations |
+| 1875 | 8 | 2026 | Torus-packet equidistribution in prime, quartic, and sextic degrees (Lean) | maths-foundations |
+| 1876 | 7 | 2026 | Zilber–Pink in abelian varieties and the Siegel threefold | maths-foundations |
+| 1877 | 8 | 2026 | The irrationality exponent of π is 2 (Lean) | maths-foundations |
+| 1878 | 7 | 2026 | The Margulis–Platonov conjecture over global fields | maths-foundations |
+| 1879 | 7 | 2026 | The local p-adic section conjecture and global consequences | maths-foundations |
+| 1880 | 8 | 2026 | Squarefree quartics and power-free polynomial values (Lean) | maths-foundations |
+| 1881 | 8 | 2026 | A quadratic bound for Jacobsthal’s function (Lean) | maths-foundations |
+| 1882 | 7 | 2026 | The weak inhomogeneous Duffin–Schaeffer conjecture | maths-foundations |
+| 1883 | 8 | 2026 | Patterson's first moment for cubic Gauss sums (Lean) | maths-foundations |
+| 1884 | 8 | 2026 | An asymptotic formula for the number of totients (Lean) | maths-foundations |
+| 1885 | 8 | 2026 | Short Egyptian fractions (Lean) | maths-foundations |
+| 1886 | 8 | 2026 | Positive lower density of large prime gaps (Lean) | maths-foundations |
+| 1887 | 7 | 2026 | Potential integral density on curve character varieties | maths-foundations |
+| 1888 | 8 | 2026 | Uniformly bounded components of Gaussian-prime graphs (Lean) | maths-foundations |
+| 1889 | 7 | 2026 | Primitive roots for every admissible integer base | maths-foundations |
+| 1890 | 7 | 2026 | Modularity of elliptic curves over imaginary quadratic fields | maths-foundations |
+| 1891 | 7 | 2026 | Uchida’s conjecture for open homomorphisms of Galois groups | maths-foundations |
+| 1892 | 7 | 2026 | Hodge and Kuga–Satake results for all projective K3 surfaces | maths-foundations |
+| 1893 | 8 | 2026 | Iitaka subadditivity, variation, and logarithmic additivity (Lean) | maths-foundations |
+| 1894 | 7 | 2026 | Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity | maths-foundations |
+| 1895 | 7 | 2026 | Log-canonical threefold abundance in numerical dimension one | maths-foundations |
+| 1896 | 7 | 2026 | Numerical semiampleness and generalized minimal models | maths-foundations |
+| 1897 | 7 | 2026 | The ordinary-double-point volume gap | maths-foundations |
+| 1898 | 7 | 2026 | Fujita’s freeness conjecture | maths-foundations |
+| 1899 | 8 | 2026 | Nagata’s conjecture and maximal Seshadri constants (Lean) | maths-foundations |
+| 1900 | 7 | 2026 | Bloch’s conjecture for complex surfaces | maths-foundations |
+| 1901 | 7 | 2026 | Hyperkähler SYZ and projective-space bases | maths-foundations |
+| 1902 | 7 | 2026 | Oka classification for minimal compact complex surfaces: Kodaira dimension zero and class VII | maths-foundations |
+| 1903 | 7 | 2026 | P = W for fixed-determinant SLn moduli spaces | maths-foundations |
+| 1904 | 7 | 2026 | The equivariant cohomological Hikita conjecture | maths-foundations |
+| 1905 | 7 | 2026 | Shafarevich counterexamples in dimension two and with large fundamental group | maths-foundations |
+| 1906 | 8 | 2026 | Zariski cancellation and affine fibrations over the complex numbers (Lean) | maths-foundations |
+| 1907 | 7 | 2026 | A characteristic-zero counterexample to Lipman–Zariski | maths-foundations |
+| 1908 | 8 | 2026 | A stable-coordinate counterexample in four variables (Lean) | maths-foundations |
+| 1909 | 8 | 2026 | A counterexample to Griffiths’ positivity conjecture (Lean) | maths-foundations |
+| 1910 | 7 | 2026 | Kobayashi’s canonical-ampleness conjecture | maths-foundations |
+| 1911 | 8 | 2026 | Tangent splittings and product decompositions (Lean) | maths-foundations |
+| 1912 | 7 | 2026 | A counterexample to Pixton completeness in Chow | maths-foundations |
+| 1913 | 7 | 2026 | Irrational cubic fourfolds with Hodge-theoretic and categorical K3 associations | maths-foundations |
+| 1914 | 7 | 2026 | Gepner symmetry and large-volume stability on threefolds | maths-foundations |
+| 1915 | 7 | 2026 | Termination of projective and Kähler fourfold minimal model programs | maths-foundations |
+| 1916 | 7 | 2026 | Fundamental groups of special complex varieties and root orbifolds | maths-foundations |
+| 1917 | 8 | 2026 | Semialgebraic universal covers and bounded domains (Lean) | maths-foundations |
+| 1918 | 7 | 2026 | Counterexamples to Zariski’s multiplicity conjecture | maths-foundations |
+| 1919 | 7 | 2026 | The Global Spherical Shell conjecture | maths-foundations |
+| 1920 | 7 | 2026 | Projective contact classification and the LeBrun–Salamon conjecture | maths-foundations |
+| 1921 | 7 | 2026 | The generalized Mukai conjecture | maths-foundations |
+| 1922 | 7 | 2026 | Topological triviality of μ-constant surface singularities | maths-foundations |
+| 1923 | 7 | 2026 | Virasoro constraints for complete intersections and projective-bundle towers | maths-foundations |
+| 1924 | 7 | 2026 | Bounded klt complements for Fano contractions | maths-foundations |
+| 1925 | 7 | 2026 | The Campana–Peternell conjecture in dimension six | maths-foundations |
+| 1926 | 7 | 2026 | Anticanonical nonvanishing in every dimension | maths-foundations |
+| 1927 | 7 | 2026 | Global quantum geometric Langlands at irrational level | maths-foundations |
+| 1928 | 8 | 2026 | Koebe’s circle-domain conjecture (Lean) | maths-foundations |
+| 1929 | 8 | 2026 | Brennan's conjecture and the integral-means spectrum (Lean) | maths-foundations |
+| 1930 | 8 | 2026 | The Falconer distance conjecture (Lean) | maths-foundations |
+| 1931 | 7 | 2026 | Kakeya in three and four dimensions | maths-foundations |
+| 1932 | 7 | 2026 | The $L\log L$ Fourier-convergence conjecture | maths-foundations |
+| 1933 | 8 | 2026 | Real ultraflat Littlewood polynomials and unbounded binary merit factors (Lean) | maths-foundations |
+| 1934 | 7 | 2026 | Fourier restriction for positively curved surfaces | maths-foundations |
+| 1935 | 7 | 2026 | The three-dimensional Bochner–Riesz conjecture | maths-foundations |
+| 1936 | 7 | 2026 | Local smoothing in three dimensions | maths-foundations |
+| 1937 | 7 | 2026 | The exact Sobolev endpoint for Schrödinger convergence | maths-foundations |
+| 1938 | 8 | 2026 | Riesz transforms and rectifiability in higher codimension (Lean) | maths-foundations |
+| 1939 | 8 | 2026 | Annular variation and dyadic absolute bounds for the triangular Hilbert transform (Lean) | maths-foundations |
+| 1940 | 8 | 2026 | Hilbert transforms along Lipschitz directions (Lean) | maths-foundations |
+| 1941 | 8 | 2026 | The geometric case of the Erdős similarity conjecture (Lean) | maths-foundations |
+| 1942 | 8 | 2026 | Endpoint Sobolev regularity of centered disk averages (Lean) | maths-foundations |
+| 1943 | 7 | 2026 | An L3 bound for the trilinear Hilbert transform | maths-foundations |
+| 1944 | 8 | 2026 | The Mahler conjectures, functional inequalities and polar-product symplectic width (Lean) | maths-foundations |
+| 1945 | 8 | 2026 | Sharp projection-body inequalities and a counterexample to simplex maximization (Lean) | maths-foundations |
+| 1946 | 8 | 2026 | Bounded-distortion L1 embeddings of planar and bounded-treewidth graphs (Lean) | maths-foundations |
+| 1947 | 8 | 2026 | Triangular-lattice optimality, long-range Riesz and Coulomb energies, and spherical logarithmic energy (Lean) | maths-foundations |
+| 1948 | 8 | 2026 | Logarithmic and Lp Brunn–Minkowski inequalities and the B-conjecture (Lean) | maths-foundations |
+| 1949 | 8 | 2026 | The optimal order of convex-body covering density (Lean) | maths-foundations |
+| 1950 | 7 | 2026 | Dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures | maths-foundations |
+| 1951 | 8 | 2026 | Subpolynomial dimension reduction in Lp (Lean) | maths-foundations |
+| 1952 | 8 | 2026 | Hyperbolicity cones without semidefinite lifts (Lean) | maths-foundations |
+| 1953 | 8 | 2026 | The Gaussian propeller conjecture in every dimension (Lean) | maths-foundations |
+| 1954 | 8 | 2026 | The Euclidean Steinitz–Bergström bound (Lean) | maths-foundations |
+| 1955 | 8 | 2026 | Compact counterexamples to bi-Lipschitz dimension reduction (Lean) | maths-foundations |
+| 1956 | 8 | 2026 | The sharp exponential scale of edit-distance distortion (Lean) | maths-foundations |
+| 1957 | 8 | 2026 | Cylinder coverings below the half-area bound (Lean) | maths-foundations |
+| 1958 | 7 | 2026 | The sharp simplex conjecture for isotropic constants | maths-foundations |
+| 1959 | 9 | 2026 | The Unique Games Conjecture and optimal approximation thresholds (Lean) | maths-foundations |
+| 1960 | 8 | 2026 | Exact derandomization of logarithmic space: $\mathsf L=\mathsf{RL}=\mathsf{BPL}$ | maths-foundations |
+| 1961 | 9 | 2026 | Quasipolynomial algorithms for mean-payoff, stochastic and parity games (Lean) | maths-foundations |
+| 1962 | 9 | 2026 | Perfect completeness for 2-to-1 games (Lean) | maths-foundations |
+| 1963 | 9 | 2026 | Hardness of coloring three-colorable graphs (Lean) | maths-foundations |
+| 1964 | 9 | 2026 | Matrix multiplication with exponent at most 9/4 (Lean) | maths-foundations |
+| 1965 | 9 | 2026 | A cubic permanent–determinant lower bound (Lean) | maths-foundations |
+| 1966 | 8 | 2026 | Integer multiplication below $n\log n$ | maths-foundations |
+| 1967 | 9 | 2026 | Optimal-order randomized k-server on arbitrary metrics (Lean) | maths-foundations |
+| 1968 | 9 | 2026 | One-sample matroid prophet inequalities against an almighty adversary (Lean) | maths-foundations |
+| 1969 | 9 | 2026 | Beyond the square-root exponent for depth-three circuits (Lean) | maths-foundations |
+| 1970 | 9 | 2026 | Approximate counting and entropy of perfect matchings (Lean) | maths-foundations |
+| 1971 | 9 | 2026 | Approximate counting of common integer polymatroid bases (Lean) | maths-foundations |
+| 1972 | 9 | 2026 | Sampling and counting contingency tables with arbitrary margins (Lean) | maths-foundations |
+| 1973 | 9 | 2026 | Uniform black-box noncommutative identity testing across characteristics (Lean) | maths-foundations |
+| 1974 | 9 | 2026 | Uniform sparsest cut: hardness and semidefinite gaps (Lean) | maths-foundations |
+| 1975 | 9 | 2026 | Bin packing and unbounded configuration-LP gaps (Lean) | maths-foundations |
+| 1976 | 9 | 2026 | The Courtade–Kumar and Hellinger conjectures (Lean) | maths-foundations |
+| 1977 | 8 | 2026 | Almost-linear-time exact matching and prescribed-degree factors in general graphs | maths-foundations |
+| 1978 | 9 | 2026 | Almost-linear approximation of edit distance (Lean) | maths-foundations |
+| 1979 | 9 | 2026 | Quantitative trace-reconstruction bounds with a uniform decoder (Lean) | maths-foundations |
+| 1980 | 9 | 2026 | Polynomial-time scheduling on three identical machines (Lean) | maths-foundations |
+| 1981 | 9 | 2026 | The metric k-median approximation threshold and recovery (Lean) | maths-foundations |
+| 1982 | 9 | 2026 | Exponential semidefinite complexity of perfect matching (Lean) | maths-foundations |
+| 1983 | 9 | 2026 | Average sensitivity of polynomial threshold functions (Lean) | maths-foundations |
+| 1984 | 9 | 2026 | A factor-two approximation for shortest common superstring (Lean) | maths-foundations |
+| 1985 | 9 | 2026 | Exponential state costs for two-way automata (Lean) | maths-foundations |
+| 1986 | 9 | 2026 | Exact Fourier transforms below $n\log n$ (Lean) | maths-foundations |
+| 1987 | 9 | 2026 | Rapid mixing of graph switches for every degree sequence (Lean) | maths-foundations |
+| 1988 | 9 | 2026 | A superquadratic separation of sensitivity and block sensitivity (Lean) | maths-foundations |
+| 1989 | 9 | 2026 | The computational complexity of Weisfeiler–Leman refinement (Lean) | maths-foundations |
+| 1990 | 9 | 2026 | Generalized star height at most three (Lean) | maths-foundations |
+| 1991 | 9 | 2026 | Homogeneous depth-five lower bounds for iterated matrix multiplication (Lean) | maths-foundations |
+| 1992 | 8 | 2026 | A quasilinear PCP theorem for PPAD | maths-foundations |
+| 1993 | 8 | 2026 | One-tape time simulation in two-fifths-power space | maths-foundations |
+| 1994 | 8 | 2026 | Subset Sum in $O(2^{0.49n})$ time | maths-foundations |
+| 1995 | 9 | 2026 | Subpolynomial query complexity for log-concave sampling (Lean) | maths-foundations |
+| 1996 | 9 | 2026 | Memory–sample lower bounds for noiseless Gaussian regression (Lean) | maths-foundations |
+| 1997 | 8 | 2026 | Existential–universal real sentences in the counting hierarchy | maths-foundations |
+| 1998 | 8 | 2026 | Deterministic polynomial factorization over prime fields | maths-foundations |
+| 1999 | 8 | 2026 | Hilbert's sixteenth problem: uniform bounds for limit cycles (Lean) | maths-foundations |
+| 2000 | 8 | 2026 | Banach’s simple Lebesgue-spectrum problem (Lean) | maths-foundations |
+| 2001 | 8 | 2026 | Rokhlin’s multiple-mixing problem (Lean) | maths-foundations |
+| 2002 | 8 | 2026 | Positive metric entropy for the standard map (Lean) | maths-foundations |
+| 2003 | 7 | 2026 | The near-boundary Birkhoff conjecture | maths-foundations |
+| 2004 | 8 | 2026 | The entropy-rate dimension formula for self-similar measures (Lean) | maths-foundations |
+| 2005 | 8 | 2026 | Classwise permanence for weakly reversible mass-action systems (Lean) | maths-foundations |
+| 2006 | 8 | 2026 | Weak mixing of triangular billiards with an irrational angle (Lean) | maths-foundations |
+| 2007 | 8 | 2026 | A C1 counterexample to the entropy conjecture (Lean) | maths-foundations |
+| 2008 | 8 | 2026 | Zero entropy does not guarantee a smooth positive-volume model (Lean) | maths-foundations |
+| 2009 | 7 | 2026 | Arithmetic classification and non-Pisot singularity for Bernoulli convolutions | maths-foundations |
+| 2010 | 7 | 2026 | Pointwise multiple ergodic averages for mixing transformations | maths-foundations |
+| 2011 | 8 | 2026 | A counterexample to periodic tiling in dimension three (Lean) | maths-foundations |
+| 2012 | 8 | 2026 | Borsuk's conjecture fails in dimension nine (Lean) | maths-foundations |
+| 2013 | 8 | 2026 | Graph coloring, clique minors, and Colin de Verdière invariants (Lean) | maths-foundations |
+| 2014 | 8 | 2026 | The Euclidean plane cannot be colored with five colors (Lean) | maths-foundations |
+| 2015 | 8 | 2026 | Erdős’s reciprocal-sum conjecture and quasipolynomial Szemerédi bounds (Lean) | maths-foundations |
+| 2016 | 8 | 2026 | Superexponential van der Waerden numbers (Lean) | maths-foundations |
+| 2017 | 8 | 2026 | Counterexamples to Sidorenko’s conjecture and the forcing conjecture (Lean) | maths-foundations |
+| 2018 | 8 | 2026 | Counterexamples to Ryser’s covering conjecture (Lean) | maths-foundations |
+| 2019 | 7 | 2026 | Hindman’s finite sums and products conjecture | maths-foundations |
+| 2020 | 8 | 2026 | The Harary–Hill and Zarankiewicz crossing-number formulas (Lean) | maths-foundations |
+| 2021 | 7 | 2026 | The higher-dimensional Erdős distinct-distances conjecture | maths-foundations |
+| 2022 | 8 | 2026 | Planar distinct distances and unit-distance bounds (Lean) | maths-foundations |
+| 2023 | 8 | 2026 | Combinatorial invariance of Kazhdan–Lusztig polynomials (Lean) | maths-foundations |
+| 2024 | 8 | 2026 | Shareshian–Wachs elementary positivity (Lean) | maths-foundations |
+| 2025 | 8 | 2026 | Sharp logarithmic exponents for off-diagonal Ramsey numbers (Lean) | maths-foundations |
+| 2026 | 7 | 2026 | The hypercube Ramsey conjecture | maths-foundations |
+| 2027 | 8 | 2026 | Classification of finite Euclidean Ramsey configurations (Lean) | maths-foundations |
+| 2028 | 8 | 2026 | Seymour’s second-neighborhood conjecture (Lean) | maths-foundations |
+| 2029 | 8 | 2026 | Deterministic construction of strong thin spanning trees (Lean) | maths-foundations |
+| 2030 | 8 | 2026 | Talagrand’s expectation thresholds, discrete convexity, and graph decompositions (Lean) | maths-foundations |
+| 2031 | 8 | 2026 | The second Kahn–Kalai conjecture with an edge-count bound (Lean) | maths-foundations |
+| 2032 | 8 | 2026 | Bounded-degree coboundary expanders (Lean) | maths-foundations |
+| 2033 | 7 | 2026 | Deterministic nonbipartite Ramanujan graphs in every fixed degree | maths-foundations |
+| 2034 | 8 | 2026 | The circulant Hadamard and Barker-sequence conjectures (Lean) | maths-foundations |
+| 2035 | 8 | 2026 | Barnette’s Hamiltonian-cycle conjecture (Lean) | maths-foundations |
+| 2036 | 8 | 2026 | The Erdős–Gallai cycle-decomposition conjecture (Lean) | maths-foundations |
+| 2037 | 8 | 2026 | Power savings for intersective polynomial differences and prime arguments (Lean) | maths-foundations |
+| 2038 | 8 | 2026 | Power savings for planar halving lines and k-sets (Lean) | maths-foundations |
+| 2039 | 8 | 2026 | Correspondence coloring with a fixed forbidden subgraph (Lean) | maths-foundations |
+| 2040 | 8 | 2026 | Counterexamples to infinite matroid intersection and packing/covering (Lean) | maths-foundations |
+| 2041 | 8 | 2026 | Uniform influence and sharp thresholds for graph and hypergraph properties (Lean) | maths-foundations |
+| 2042 | 8 | 2026 | Snaky in 21 Maker moves (Lean) | maths-foundations |
+| 2043 | 8 | 2026 | The sharp terminal leave in random triangle removal (Lean) | maths-foundations |
+| 2044 | 8 | 2026 | Cycle–clique Ramsey numbers (Lean) | maths-foundations |
+| 2045 | 8 | 2026 | Polynomial removal fails for ordered binary matrices (Lean) | maths-foundations |
+| 2046 | 8 | 2026 | A power improvement in the Heilbronn triangle lower bound (Lean) | maths-foundations |
+| 2047 | 8 | 2026 | Boolean functions violate the square-root degree bound by arbitrary factors (Lean) | maths-foundations |
+| 2048 | 7 | 2026 | Serre’s intersection-multiplicity conjecture | maths-foundations |
+| 2049 | 8 | 2026 | Lech’s multiplicity conjecture (Lean) | maths-foundations |
+| 2050 | 7 | 2026 | A counterexample to the small Cohen–Macaulay module conjecture | maths-foundations |
+| 2051 | 8 | 2026 | A counterexample to Kaplansky’s zero-divisor conjecture (Lean) | maths-foundations |
+| 2052 | 8 | 2026 | A torsion-free group algebra that is not directly finite (Lean) | maths-foundations |
+| 2053 | 8 | 2026 | A counterexample to finitistic-dimension finiteness (Lean) | maths-foundations |
+| 2054 | 8 | 2026 | Counterexamples to Auslander–Reiten, Tachikawa and related homological conjectures (Lean) | maths-foundations |
+| 2055 | 7 | 2026 | Eisenbud–Green–Harris and lex-plus-powers | maths-foundations |
+| 2056 | 7 | 2026 | A counterexample to Kurosh’s division-ring problem | maths-foundations |
+| 2057 | 7 | 2026 | The blockwise Alperin weight conjecture | maths-foundations |
+| 2058 | 7 | 2026 | Donovan's conjecture over fields and complete mixed-characteristic DVRs | maths-foundations |
+| 2059 | 7 | 2026 | Tensor saturation for even spin groups | maths-foundations |
+| 2060 | 8 | 2026 | Saxl’s conjecture and universal tensor squares (Lean) | maths-foundations |
+| 2061 | 8 | 2026 | Finite lattice representation and undecidability (Lean) | maths-foundations |
+| 2062 | 8 | 2026 | The ℓ¹-Bass conjecture for all discrete groups (Lean) | maths-foundations |
+| 2063 | 7 | 2026 | Finite symmetric tensor categories and the Verlinde tower | maths-foundations |
+| 2064 | 7 | 2026 | Integral counterexamples to Gersten’s conjecture | maths-foundations |
+| 2065 | 8 | 2026 | Foulkes' conjecture for sixth powers and quadratic stabilization (Lean) | maths-foundations |
+| 2066 | 8 | 2026 | The geometric phase diagram, diffusion, and spectra of random planar maps (Lean) | maths-foundations |
+| 2067 | 8 | 2026 | Planar first-passage geometry and the absence of bigeodesics (Lean) | maths-foundations |
+| 2068 | 8 | 2026 | Critical percolation on every quasi-transitive graph (Lean) | maths-foundations |
+| 2069 | 8 | 2026 | The Benjamini–Schramm nonuniqueness conjecture (Lean) | maths-foundations |
+| 2070 | 8 | 2026 | Canonical $O(3)$ continuum limit and exact $O(4)$ mass asymptotics (Lean) | maths-foundations |
+| 2071 | 7 | 2026 | Critical and near-critical XY scaling and BKT universality | maths-foundations |
+| 2072 | 7 | 2026 | The low-temperature Sherrington–Kirkpatrick fluctuation law | maths-foundations |
+| 2073 | 8 | 2026 | Conformal universality for weakly interacting and random-bond Ising models (Lean) | maths-foundations |
+| 2074 | 7 | 2026 | GOE bulk universality for regular graphs with weak Anderson disorder | maths-foundations |
+| 2075 | 8 | 2026 | Directional zero–one laws beyond iid environments and iid ballisticity (Lean) | maths-foundations |
+| 2076 | 8 | 2026 | The Mézard–Parisi formula for diluted spin glasses (Lean) | maths-foundations |
+| 2077 | 8 | 2026 | Perceptron free energies and microscopic jamming exponents (Lean) | maths-foundations |
+| 2078 | 7 | 2026 | Random-cluster interfaces: critical, disordered, thermal, and natural-time scaling | maths-foundations |
+| 2079 | 7 | 2026 | Critical and quenched near-critical universality for Poisson–Voronoi percolation | maths-foundations |
+| 2080 | 7 | 2026 | Gaussian free field limits throughout the balanced six-vertex regime | maths-foundations |
+| 2081 | 7 | 2026 | The double-dimer loop ensemble converges to CLE4 | maths-foundations |
+| 2082 | 8 | 2026 | Critical SK autocorrelation processes and dynamics across the temperature transition (Lean) | maths-foundations |
+| 2083 | 8 | 2026 | Continuum phase transitions for radial pair potentials (Lean) | maths-foundations |
+| 2084 | 8 | 2026 | Exact three- and four-state reconstruction thresholds and four-state tree capacity (Lean) | maths-foundations |
+| 2085 | 8 | 2026 | Exact Hausdorff gauges for SLE (Lean) | maths-foundations |
+| 2086 | 8 | 2026 | The free uniform spanning forest is a factor of IID (Lean) | maths-foundations |
+| 2087 | 7 | 2026 | Gaussian fields and interfaces for triangular-lattice Lipschitz heights | maths-foundations |
+| 2088 | 7 | 2026 | The joint critical Ashkin–Teller current limit | maths-foundations |
+| 2089 | 8 | 2026 | All-temperature pressure of orthogonally invariant Ising spin glasses (Lean) | maths-foundations |
+| 2090 | 8 | 2026 | Limiting random SAT thresholds, sharp variance and computability (Lean) | maths-foundations |
+| 2091 | 8 | 2026 | The exact factor-of-IID threshold for free Ising spins on trees (Lean) | maths-foundations |
+| 2092 | 8 | 2026 | The three-quarter exponent for honeycomb self-avoiding walk (Lean) | maths-foundations |
+| 2093 | 8 | 2026 | Optimal logarithmic mixing of the Thorp shuffle (Lean) | maths-foundations |
+| 2094 | 7 | 2026 | Sharp singularity rates for symmetric random sign matrices | maths-foundations |
+| 2095 | 8 | 2026 | Shelah's eventual categoricity and the prescribed-threshold obstruction (Lean) | maths-foundations |
+| 2096 | 8 | 2026 | Rigidity of the Turing degrees (Lean) | maths-foundations |
+| 2097 | 8 | 2026 | Single-fold Diophantine representations and undecidability under an at-most-one-solution promise (Lean) | maths-foundations |
+| 2098 | 8 | 2026 | Separating choiceless counting from polynomial time and witnessed choice (Lean) | maths-foundations |
+| 2099 | 8 | 2026 | The Partition Principle does not imply Choice (Lean) | maths-foundations |
+| 2100 | 8 | 2026 | Weak normalization implies strong normalization in pure type systems (Lean) | maths-foundations |
+| 2101 | 8 | 2026 | Cannon's conjecture (Lean) | maths-foundations |
+| 2102 | 8 | 2026 | An infinite finitely presented residually finite 2-group and a finitely presented nil algebra (Lean) | maths-foundations |
+| 2103 | 8 | 2026 | Thompson's group F is nonamenable (Lean) | maths-foundations |
+| 2104 | 8 | 2026 | A finitely generated Eilenberg–Ganea counterexample (Lean) | maths-foundations |
+| 2105 | 8 | 2026 | Boone–Higman embeddings with higher finiteness (Lean) | maths-foundations |
+| 2106 | 8 | 2026 | Amenability, unitarizability, and strong Ulam stability (Lean) | maths-foundations |
+| 2107 | 8 | 2026 | A torsion-free hyperbolic group that is neither residually finite nor linear over any field (Lean) | maths-foundations |
+| 2108 | 8 | 2026 | An infinite finitely presented simple amenable group (Lean) | maths-foundations |
+| 2109 | 8 | 2026 | Classifying spaces and geometric obstructions for Artin groups (Lean) | maths-foundations |
+| 2110 | 8 | 2026 | Quasi-isometric recognition of virtually polycyclic groups (Lean) | maths-foundations |
+| 2111 | 8 | 2026 | Nonsingular systems of equations over arbitrary groups (Lean) | maths-foundations |
+| 2112 | 8 | 2026 | A hyperbolic group without a geometric CAT(0) action (Lean) | maths-foundations |
+| 2113 | 7 | 2026 | Gersten’s conjecture and virtual compact specialness of one-relator groups | maths-foundations |
+| 2114 | 7 | 2026 | A group without fixed price | maths-foundations |
+| 2115 | 8 | 2026 | Spacetime Penrose inequalities: enclosing area, charge, rotation, and anti-de Sitter extensions (Lean) | maths-foundations |
+| 2116 | 8 | 2026 | Localization and delocalization in the Anderson model (Lean) | maths-foundations |
+| 2117 | 8 | 2026 | Sharp finite-matrix Lieb–Thirring inequalities and all equality cases (Lean) | maths-foundations |
+| 2118 | 8 | 2026 | The ionization and generalized ionization conjectures (Lean) | maths-foundations |
+| 2119 | 7 | 2026 | Strong cosmic censorship near two-ended Kerr data | maths-foundations |
+| 2120 | 7 | 2026 | Area laws and tensor networks for two-dimensional gapped systems | maths-foundations |
+| 2121 | 8 | 2026 | Exactly three mutually unbiased bases in dimension six (Lean) | maths-foundations |
+| 2122 | 8 | 2026 | Positive-temperature Bose–Einstein condensation and exact quantum depletion (Lean) | maths-foundations |
+| 2123 | 7 | 2026 | The spin-one Haldane gap | maths-foundations |
+| 2124 | 8 | 2026 | Uniform Laughlin gap and stability under bounded scalar disorder (Lean) | maths-foundations |
+| 2125 | 7 | 2026 | Threshold and positive-energy bound states of the BFSS matrix model | maths-foundations |
+| 2126 | 8 | 2026 | Bloch's law, its lattice correction, and the spherical magnetization law (Lean) | maths-foundations |
+| 2127 | 8 | 2026 | Entanglement without distillable secret key (Lean) | maths-foundations |
+| 2128 | 8 | 2026 | The entropy photon-number inequality (Lean) | maths-foundations |
+| 2129 | 8 | 2026 | Parity is not in QAC0 (Lean) | maths-foundations |
+| 2130 | 8 | 2026 | QMA-hardness of continuum Coulomb energy (Lean) | maths-foundations |
+| 2131 | 8 | 2026 | Classical capacity of generalized amplitude damping (Lean) | maths-foundations |
+| 2132 | 8 | 2026 | Threshold repetition for entangled games (Lean) | maths-foundations |
+| 2133 | 7 | 2026 | Failure of Kohn–Sham ensemble representation | maths-foundations |
+| 2134 | 8 | 2026 | Exact quantum factoring over a fixed finite gate set (Lean) | maths-foundations |
+| 2135 | 8 | 2026 | Unitary vertex operator algebras and conformal nets (Lean) | maths-foundations |
+| 2136 | 8 | 2026 | QAOA attains the SK optimum in the thermodynamic-first limit (Lean) | maths-foundations |
+| 2137 | 7 | 2026 | From scale symmetry to local conformal symmetry in four-dimensional QFT | maths-foundations |
+| 2138 | 7 | 2026 | Polynomial-time unitary synthesis from a Boolean oracle | maths-foundations |
+| 2139 | 7 | 2026 | The optimal quartic separation between randomized and quantum queries | maths-foundations |
+| 2140 | 7 | 2026 | Counterexamples to Baum–Connes and Kadison–Kaplansky | maths-foundations |
+| 2141 | 7 | 2026 | Rigidity and arithmetic of lattice von Neumann algebras | maths-foundations |
+| 2142 | 8 | 2026 | Isomorphism of the free group factors (Lean) | maths-foundations |
+| 2143 | 8 | 2026 | Kadison's similarity conjecture (Lean) | maths-foundations |
+| 2144 | 8 | 2026 | Strong Kadison–Kastler stability and its spatial boundaries (Lean) | maths-foundations |
+| 2145 | 8 | 2026 | Relative bicentralizers and modular spectral recovery (Lean) | maths-foundations |
+| 2146 | 8 | 2026 | Cuntz comparison, nuclear dimension, and equivariant Jiang–Su stability (Lean) | maths-foundations |
+| 2147 | 8 | 2026 | Kirchberg's $\mathcal O_2$ norm-ultrapower embedding problem (Lean) | maths-foundations |
+| 2148 | 8 | 2026 | Invariant projections, hyperinvariant subspaces, and transitive algebras (Lean) | maths-foundations |
+| 2149 | 8 | 2026 | Kaplansky's quasitrace conjecture and failure of tensor-product stable finiteness (Lean) | maths-foundations |
+| 2150 | 8 | 2026 | The Kadison–Ringrose cohomology conjecture (Lean) | maths-foundations |
+| 2151 | 8 | 2026 | The generator problem for finite factors (Lean) | maths-foundations |
+| 2152 | 8 | 2026 | A ZFC counterexample to Naimark's problem (Lean) | maths-foundations |
+| 2153 | 8 | 2026 | Two notions of free entropy differ even when both are finite (Lean) | maths-foundations |
+| 2154 | 8 | 2026 | The Kirchberg–Rørdam character criterion and infinite tensor-power Jiang–Su stability (Lean) | maths-foundations |
+| 2155 | 7 | 2026 | Approximation and quadratic strong-operator paving | maths-foundations |
+| 2156 | 7 | 2026 | Trace cones and Razak–Jacelon stabilization | maths-foundations |
+| 2157 | 7 | 2026 | Radius of comparison equals half the mean dimension | maths-foundations |
+| 2158 | 8 | 2026 | Weak pure infiniteness and Cuntz-algebra absorption (Lean) | maths-foundations |
+| 2159 | 7 | 2026 | The Hilbert–Smith conjecture in every dimension | maths-foundations |
+| 2160 | 7 | 2026 | Four-dimensional disk embedding and Wall's conjecture | maths-foundations |
+| 2161 | 7 | 2026 | The purely cosmetic surgery conjecture | maths-foundations |
+| 2162 | 8 | 2026 | Failure of rational injectivity for maximal coarse assembly (Lean) | maths-foundations |
+| 2163 | 7 | 2026 | Finite Smith–Toda complexes at every height | maths-foundations |
+| 2164 | 7 | 2026 | The Kervaire invariant problem at the prime three | maths-foundations |
+| 2165 | 7 | 2026 | Quillen's conjecture in rational homology | maths-foundations |
+| 2166 | 7 | 2026 | The Hovey–Strickland and Chai conjectures | maths-foundations |
+| 2167 | 8 | 2026 | The Grothendieck homotopy hypothesis (Lean) | maths-foundations |
+| 2168 | 7 | 2026 | Finite generation for the $K(n)$-local sphere | maths-foundations |
+| 2169 | 7 | 2026 | Cyclic length and chromatic fixed-point loss | maths-foundations |
+| 2170 | 7 | 2026 | The four-dimensional Singer conjecture | maths-foundations |
+| 2171 | 7 | 2026 | Curtis’s conjecture | maths-foundations |
+| 2172 | 8 | 2026 | Thomason model structures in all strict higher dimensions (Lean) | maths-foundations |
+| 2173 | 7 | 2026 | Chromatic splitting: filtrations and counterexamples | maths-foundations |
+| 2174 | 7 | 2026 | Counterexamples to finite generation at chromatic height two | maths-foundations |
+| 2175 | 7 | 2026 | Nonhomeomorphic closed aspherical four-manifolds | maths-foundations |
+| 2176 | 7 | 2026 | A counterexample to Wall's finite D(2) problem | maths-foundations |
+| 2177 | 8 | 2026 | Tingley’s sphere-isometry problem (Lean) | maths-foundations |
+| 2178 | 8 | 2026 | Independence of the separable quotient problem (Lean) | maths-foundations |
+| 2179 | 8 | 2026 | Lipschitz equivalent Banach spaces need not be linearly isomorphic (Lean) | maths-foundations |
+| 2180 | 8 | 2026 | The complete Crouzeix conjecture (Lean) | maths-foundations |
+| 2181 | 8 | 2026 | The cotype–cotype conjecture under the approximation property (Lean) | maths-foundations |
+| 2182 | 8 | 2026 | Markov type characterizes superreflexivity (Lean) | maths-foundations |
+| 2183 | 8 | 2026 | Nonexpansive fixed points in reflexive Banach spaces (Lean) | maths-foundations |
+| 2184 | 8 | 2026 | A counterexample to metric-entropy duality (Lean) | maths-foundations |
+| 2185 | 8 | 2026 | A uniformly discrete counterexample to bounded approximation in Lipschitz-free spaces (Lean) | maths-foundations |
+| 2186 | 8 | 2026 | Reflexive midpoint convexity and diamond distortion (Lean) | maths-foundations |
+| 2187 | 7 | 2026 | Metric Markov cotype of ℓ1 and Hilbert-space Lipschitz extension | maths-foundations |
+| 2188 | 8 | 2026 | Smooth isometric immersions of surfaces into ℝ4 (Lean) | maths-foundations |
+| 2189 | 8 | 2026 | A smooth surface metric with no local isometric immersion in ℝ3 (Lean) | maths-foundations |
+| 2190 | 7 | 2026 | Gromov’s integral scalar-curvature bound for simplicial volume | maths-foundations |
+| 2191 | 7 | 2026 | Spectral scalar curvature, Urysohn width, and macroscopic dimension | maths-foundations |
+| 2192 | 8 | 2026 | Sharp Cartan–Hadamard isoperimetry and rigidity (Lean) | maths-foundations |
+| 2193 | 7 | 2026 | Yau's uniformization conjecture | maths-foundations |
+| 2194 | 7 | 2026 | Katok's entropy rigidity conjecture | maths-foundations |
+| 2195 | 7 | 2026 | A counterexample to the nearby Lagrangian conjecture | maths-foundations |
+| 2196 | 7 | 2026 | Donaldson's hypersymplectic deformation conjecture | maths-foundations |
+| 2197 | 8 | 2026 | Donaldson's tamed-to-compatible conjecture (Lean) | maths-foundations |
+| 2198 | 8 | 2026 | Symplectic ball packing in higher dimensions (Lean) | maths-foundations |
+| 2199 | 7 | 2026 | The metric Blaschke conjecture | maths-foundations |
+| 2200 | 7 | 2026 | Infinitely many closed geodesics on Riemannian spheres and closed three-manifolds | maths-foundations |
+| 2201 | 7 | 2026 | Sharp singular-set bounds for stationary integral varifolds | maths-foundations |
+| 2202 | 8 | 2026 | Counterexamples to stable-Morse and strong Arnold fixed-point bounds (Lean) | maths-foundations |
+| 2203 | 8 | 2026 | Nonnegative-curvature Einstein classification and an L2 topological gap (Lean) | maths-foundations |
+| 2204 | 7 | 2026 | The Solomon–Yau least-volume conjecture | maths-foundations |
+| 2205 | 8 | 2026 | Yau’s nodal bounds: surfaces and higher dimensions (Lean) | maths-foundations |
+| 2206 | 7 | 2026 | Scalar curvature and finite-time Ricci-flow singularities | maths-foundations |
+| 2207 | 7 | 2026 | A finite-time singularity of Calabi flow | maths-foundations |
+| 2208 | 8 | 2026 | Affine Bernstein rigidity through dimension nine and a smooth dimension-ten counterexample (Lean) | maths-foundations |
+| 2209 | 8 | 2026 | The isoperimetric profile of the cubic three-torus (Lean) | maths-foundations |
+| 2210 | 7 | 2026 | Unique tangent flows at the first surface singularity | maths-foundations |
+| 2211 | 8 | 2026 | Gigli’s characterization of Alexandrov curvature (Lean) | maths-foundations |
+| 2212 | 7 | 2026 | Bi-Lipschitz coordinates at every regular RCD point | maths-foundations |
+| 2213 | 8 | 2026 | A three-manifold without conjugate points or nonpositive curvature (Lean) | maths-foundations |
+| 2214 | 8 | 2026 | Negative Kähler curvature without bounded holomorphic coordinates (Lean) | maths-foundations |
+| 2215 | 8 | 2026 | Weak MTW curvature gives convexity and regular optimal transport (Lean) | maths-foundations |
+| 2216 | 8 | 2026 | Failure of integer-degree harmonic dimension comparison (Lean) | maths-foundations |
+| 2217 | 8 | 2026 | Global smoothness for relativistic Vlasov–Maxwell (Lean) | maths-foundations |
+| 2218 | 8 | 2026 | Nonuniqueness with local conservation for the hard-sphere Boltzmann equation (Lean) | maths-foundations |
+| 2219 | 7 | 2026 | Kinetic limits and fluctuations over the Boltzmann lifespan | maths-foundations |
+| 2220 | 8 | 2026 | Joint metric and connection recovery from one boundary patch (Lean) | maths-foundations |
+| 2221 | 7 | 2026 | The planar Mumford–Shah regularity conjecture and local weak-L4 gradient bounds | maths-foundations |
+| 2222 | 8 | 2026 | The critical dimension for the one-phase Bernoulli problem (Lean) | maths-foundations |
+| 2223 | 7 | 2026 | The three-dimensional Ball–Evans approximation problem | maths-foundations |
+| 2224 | 8 | 2026 | The hot spots conjecture for simply connected planar domains (Lean) | maths-foundations |
+| 2225 | 8 | 2026 | The Lane–Emden and Hénon–Lane–Emden conjectures (Lean) | maths-foundations |
+| 2226 | 8 | 2026 | Stable blowup for the defocusing Schrödinger equation (Lean) | maths-foundations |
+| 2227 | 8 | 2026 | Global uniqueness in smooth isotropic elasticity (Lean) | maths-foundations |
+| 2228 | 8 | 2026 | Nonattainment of the three-marginal Coulomb Monge problem (Lean) | maths-foundations |
+| 2229 | 8 | 2026 | Sharp one-third stability of Brenier maps (Lean) | maths-foundations |
+| 2230 | 7 | 2026 | De Giorgi's conjecture in dimension eight | maths-foundations |
+| 2231 | 8 | 2026 | Universal computation in forced Navier–Stokes flows (Lean) | maths-foundations |
+| 2232 | 7 | 2026 | Interior $C^{1,\alpha}$ regularity for infinity-harmonic functions | maths-foundations |
+
+_Recount after `openai-math-2026-10-07`: **2232** unique title cards on main. Next rank **2233+**._
