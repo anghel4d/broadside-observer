@@ -3046,3 +3046,20 @@ Themed batch (user request): one card per result family in [openai/math](https:/
 | 2232 | 7 | 2026 | Interior $C^{1,\alpha}$ regularity for infinity-harmonic functions | maths-foundations |
 
 _Recount after `openai-math-2026-10-07`: **2232** unique title cards on main. Next rank **2233+**._
+
+### archive-2026-10-08
+
+Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main before this pass: `e560a04`, **2232** unique, max rank **2232**. Next rank **2233+**. Sources: hand-built named-classic pool across the archive clusters (**341**: PLT/interpreters/continuations, array-language lineage, production rules and truth maintenance, reactive/state-machine formalisms, classic game AI and search, finite-state NLP, rendering/mesh craft, hashing and concurrency classics) + OpenAlex citation chains (references + top pre-2018 cited-by) of eight live/shortlisted seeds (**371** records); Crossref / OpenAlex for DOI and OA resolution. Harvest: raw **712** → unique by normalized title **683** → fresh after seen.json / card title / cites / INDEX / DOI dedupe **438** (named non-live **133** + chain **305**) → strict archive shortlist **48** → keepers **8** (keep rate **8/48 ≈ 0.167** vs strict shortlist; **8/438 ≈ 0.018** vs fresh; hard cap **0.20**). No padding. Mix: 4 languages / 2 game-ai / 1 agents / 1 graphics. seed_batch: `archive-2026-10-08`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2233 | 9 | 1970 | A New Hashing Method with Application for Game Playing | game-ai |
+| 2234 | 9 | 1977 | Debunking the 'Expensive Procedure Call' Myth, or, Procedure Call Implementations Considered Harmful, or, Lambda: The Ultimate GOTO | languages |
+| 2235 | 9 | 1979 | A Truth Maintenance System | agents |
+| 2236 | 9 | 1987 | Statecharts: A Visual Formalism for Complex Systems | game-ai |
+| 2237 | 10 | 1989 | Phrasal Forms | languages |
+| 2238 | 8 | 2000 | Incremental Construction of Minimal Acyclic Finite-State Automata | languages |
+| 2239 | 9 | 2005 | Virtual Machine Showdown: Stack Versus Registers | languages |
+| 2240 | 8 | 2006 | Linear-Speed Vertex Cache Optimisation | graphics |
+
+_Recount after `archive-2026-10-08`: **2240** unique title cards on main. Next rank **2241+**._
