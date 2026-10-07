@@ -160,6 +160,33 @@ sources:
   notes: EG workshop/conference archive (VMV, EGSR siblings, workshops) beyond CGF. Poll diglib for new VMV + EG workshop items.
   priority: high
   enabled: true
+- id: ieee-transactions-on-games
+  name: IEEE Transactions on Games
+  kind: venue
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7782673
+  also:
+  - OpenAlex venue query (IEEE Transactions on Games)
+  notes: Archival game AI, PCG and simulation journal; source of card 1860 (Non-Uniform Tile WFC). Poll via OpenAlex venue filter.
+  priority: high
+  enabled: true
+- id: pacmcgit
+  name: PACMCGIT (Proc. ACM Comput. Graph. Interact. Tech., HPG/I3D journal)
+  kind: venue
+  url: https://dl.acm.org/journal/pacmcgit
+  also:
+  - OpenAlex venue query (PACMCGIT)
+  notes: Journal track for HPG and I3D papers; real-time graphics and GPU systems. Poll via OpenAlex venue filter.
+  priority: high
+  enabled: true
+- id: oopsla
+  name: OOPSLA (PACMPL)
+  kind: venue
+  url: https://dl.acm.org/journal/pacmpl
+  also:
+  - OpenAlex venue query (PACMPL OOPSLA issues)
+  notes: PL, runtimes and reactive/ECS semantics; source of card 1853. Poll via OpenAlex venue filter.
+  priority: high
+  enabled: true
 cross_index:
 - id: semantic-scholar
   name: Semantic Scholar
