@@ -5,8 +5,8 @@ authors:
 year: 1979
 venue: "ACM TOPLAS"
 arxiv: null
-doi: "10.1145/357062.357064"
-source: "https://dl.acm.org/doi/10.1145/357062.357064"
+doi: "10.1145/357073.357074"
+source: "https://dl.acm.org/doi/10.1145/357073.357074"
 topics:
   - array-programming-apl-bqn-q
 seed_rank: 156
@@ -15,56 +15,31 @@ reviewed: "2026-08-13"
 pool: "languages"
 relevance_score: 9
 cites:
-  - title: "The Design and Analysis of Computer Algorithms"
-    url: "https://openalex.org/W1655990431"
-    year: 1974
+  - title: "A Programming Language"
+    url: "https://www.jsoftware.com/papers/APL.htm"
+    year: 1962
     arxiv: null
     doi: null
-  - title: "Automatic data structure selection in SETL"
-    url: "https://doi.org/10.1145/567752.567771"
+  - title: "The Design of APL"
+    url: "https://doi.org/10.1147/rd.174.0324"
+    year: 1973
+    arxiv: null
+    doi: "10.1147/rd.174.0324"
+  - title: "The evolution of APL"
+    url: "https://doi.org/10.1145/800025.1198423"
+    year: 1978
+    arxiv: null
+    doi: "10.1145/800025.1198423"
+  - title: "The role of operators in APL"
+    url: "https://doi.org/10.1145/390009.804450"
     year: 1979
     arxiv: null
-    doi: "10.1145/567752.567771"
-  - title: "Automatic data structure choice in a language of very high level"
-    url: "https://doi.org/10.1145/361227.361235"
-    year: 1975
+    doi: "10.1145/390009.804450"
+  - title: "The derivative operator"
+    url: "https://doi.org/10.1145/390009.804486"
+    year: 1979
     arxiv: null
-    doi: "10.1145/361227.361235"
-  - title: "Optimization of very high level languages—I"
-    url: "https://doi.org/10.1016/0096-0551(75)90015-6"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/0096-0551(75)90015-6"
-  - title: "Automatic Coding: Choice of Data Structures"
-    url: "https://doi.org/10.1007/978-3-0348-5504-4"
-    year: 1976
-    arxiv: null
-    doi: "10.1007/978-3-0348-5504-4"
-  - title: "Review of On programming"
-    url: "https://doi.org/10.1145/953220.953221"
-    year: 1974
-    arxiv: null
-    doi: "10.1145/953220.953221"
-  - title: "An introduction to the set theoretical language SETL"
-    url: "https://doi.org/10.1016/0898-1221(75)90011-5"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/0898-1221(75)90011-5"
-  - title: "Optimization of very high level languages—II. Deducing relationships of inclusion and membership"
-    url: "https://doi.org/10.1016/0096-0551(75)90031-4"
-    year: 1975
-    arxiv: null
-    doi: "10.1016/0096-0551(75)90031-4"
-  - title: "Interprocedural Data Flow Analysis."
-    url: "https://dblp.uni-trier.de/db/conf/ifip/ifip74.html#Allen74"
-    year: 1974
-    arxiv: null
-    doi: null
-  - title: "A Basis for Program Optimization."
-    url: "https://dblp.uni-trier.de/db/conf/ifip/ifip71-1.html#Allen71"
-    year: 1971
-    arxiv: null
-    doi: null
+    doi: "10.1145/390009.804486"
 ---
 
 # Operators
@@ -89,5 +64,5 @@ Ano's fold, scan, mask, and conjugation are this operator layer over columnar ar
 
 ## Links
 
-- DOI: [10.1145/357062.357064](https://doi.org/10.1145/357062.357064)
-- ACM: https://dl.acm.org/doi/10.1145/357062.357064
+- DOI: [10.1145/357073.357074](https://doi.org/10.1145/357073.357074)
+- ACM: https://dl.acm.org/doi/10.1145/357073.357074
