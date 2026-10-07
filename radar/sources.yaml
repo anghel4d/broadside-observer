@@ -187,6 +187,31 @@ sources:
   notes: PL, runtimes and reactive/ECS semantics; source of card 1853. Poll via OpenAlex venue filter.
   priority: high
   enabled: true
+- id: jsoftware-papers
+  name: jsoftware.com papers archive (J/APL)
+  kind: venue_archive
+  url: https://www.jsoftware.com/papers/
+  notes: HTML transcriptions of Iverson, Hui, McDonnell and other APL/J papers (source text for cards 2237 Phrasal Forms and 156 Operators). Array-language lineage for ano; daypart archive/craft.
+  priority: medium
+  enabled: true
+- id: acl-anthology-journals
+  name: ACL Anthology journal track (TACL + Computational Linguistics)
+  kind: venue_archive
+  url: https://aclanthology.org/venues/cl/
+  also:
+  - https://aclanthology.org/venues/tacl/
+  notes: Journal papers (Computational Linguistics J* ids, TACL Q* ids) — finite-state, parsing and lexicon classics such as card 2238 (Daciuk et al., CL 2000). Daypart archive/curiosity.
+  priority: medium
+  enabled: true
+- id: tom-forsyth-papers
+  name: Tom Forsyth papers page
+  kind: author_page
+  url: https://tomforsyth1000.github.io/papers/papers.html
+  also:
+  - https://tomforsyth1000.github.io/blog.wiki.html
+  notes: Engine-programmer papers and talks (vertex cache optimisation — card 2240, shadows, Larrabee, VR). Template for engine author pages as a craft/archive source.
+  priority: medium
+  enabled: true
 cross_index:
 - id: semantic-scholar
   name: Semantic Scholar
