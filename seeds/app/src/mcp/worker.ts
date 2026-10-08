@@ -20,6 +20,10 @@ const CORS = {
 
 const CARD_ID = /^[A-Za-z0-9][A-Za-z0-9._-]*$/u;
 
+// broadside.tech itself has nothing but the observer; the apex and www go there.
+const OBSERVER_HOST = "observer.broadside.tech";
+const SENT_TO_OBSERVER = new Set(["broadside.tech", "www.broadside.tech"]);
+
 function jsonRpcError(status: number, message: string): Response {
   return new Response(JSON.stringify({ jsonrpc: "2.0", error: { code: -32000, message }, id: null }), {
     status,
@@ -68,6 +72,10 @@ async function handleMcp(request: Request, env: Env, origin: string): Promise<Re
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    if (SENT_TO_OBSERVER.has(url.hostname)) {
+      url.hostname = OBSERVER_HOST;
+      return Response.redirect(url.toString(), 301);
+    }
     const path = url.pathname.replace(/\/$/u, "") || "/";
     if (path !== "/mcp") return env.ASSETS.fetch(request);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
