@@ -43,3 +43,6 @@
 /seeds/app/dist/
 /seeds/app/src/generated/cards.json
 /seeds/app/public/cards.json
+
+# Local state of wrangler dev
+.wrangler/
