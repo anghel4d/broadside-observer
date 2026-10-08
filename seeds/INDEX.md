@@ -3062,4 +3062,15 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 2239 | 9 | 2005 | Virtual Machine Showdown: Stack Versus Registers | languages |
 | 2240 | 8 | 2006 | Linear-Speed Vertex Cache Optimisation | graphics |
 
-_Recount after `archive-2026-10-08`: **2240** unique title cards on main. Next rank **2241+**._
+| 2241 | 9 | 2026 | Humanize: Judgement Engineering for Agentic Coding | agents |
+| 2242 | 9 | 2026 | The Winner's Curse in LLM Self-Improvement Loops: Selection Noise, Lock-in, and Acceptance Rules | agents |
+| 2243 | 9 | 2026 | When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks | agents |
+| 2244 | 8 | 2026 | Loud Failures, Quiet Failures: Fault Detection and Recovery in Tool-Using Language Model Agents | agents |
+| 2245 | 8 | 2026 | Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files | agents |
+| 2246 | 8 | 2026 | SPIN: Shadow Predictive Indexer for Sparse Attention | agents |
+| 2247 | 8 | 2026 | KVFetch: Temporal Prefetching for the Missing Half of KV Cache Compression | agents |
+| 2248 | 8 | 2026 | Modular Responsiveness Verification of Rust Async Runtimes | languages |
+| 2249 | 8 | 2026 | When Double Rounding is Correct | languages |
+| 2250 | 7 | 2026 | The Cost of Classical Multi-Agent Path Finding | game-ai |
+
+_Recount after `frontier-2026-10-08`: **2250** unique title cards on main. Next rank **2251+**._

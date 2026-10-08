@@ -852,7 +852,17 @@
     "2610.01246",
     "2610.07541",
     "2609.19410",
-    "2610.02385"
+    "2610.02385",
+    "2610.08900",
+    "2610.09239",
+    "2610.10263",
+    "2610.10062",
+    "2610.09264",
+    "2610.09025",
+    "2610.08811",
+    "2610.09198",
+    "2610.09005",
+    "2610.10100"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -3071,9 +3081,19 @@
     "Fast Triangle Reordering for Vertex Locality and Reduced Overdraw",
     "Epigrams on Programming",
     "Tcl: An Embeddable Command Language",
-    "Data Types à la Carte"
+    "Data Types à la Carte",
+    "Humanize: Judgement Engineering for Agentic Coding",
+    "The Winner's Curse in LLM Self-Improvement Loops: Selection Noise, Lock-in, and Acceptance Rules",
+    "When Sub-Agents Work in Parallel: The Promises and Pitfalls of Dynamic Concurrency in Long-Horizon Coding Tasks",
+    "Loud Failures, Quiet Failures: Fault Detection and Recovery in Tool-Using Language Model Agents",
+    "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
+    "SPIN: Shadow Predictive Indexer for Sparse Attention",
+    "KVFetch: Temporal Prefetching for the Missing Half of KV Cache Compression",
+    "Modular Responsiveness Verification of Rust Async Runtimes",
+    "When Double Rounding is Correct",
+    "The Cost of Classical Multi-Agent Path Finding"
   ],
-  "updated": "2026-10-08T00:55:00+03:00",
+  "updated": "2026-10-08T12:55:00+03:00",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -4990,7 +5010,17 @@
     "https://doi.org/10.1162/089120100561601",
     "https://www.usenix.org/legacy/events/vee05/full_papers/p153-yunhe.pdf",
     "https://doi.org/10.1145/1064979.1065001",
-    "https://tomforsyth1000.github.io/papers/fast_vert_cache_opt.html"
+    "https://tomforsyth1000.github.io/papers/fast_vert_cache_opt.html",
+    "https://arxiv.org/abs/2610.08900",
+    "https://arxiv.org/abs/2610.09239",
+    "https://arxiv.org/abs/2610.10263",
+    "https://arxiv.org/abs/2610.10062",
+    "https://arxiv.org/abs/2610.09264",
+    "https://arxiv.org/abs/2610.09025",
+    "https://arxiv.org/abs/2610.08811",
+    "https://arxiv.org/abs/2610.09198",
+    "https://arxiv.org/abs/2610.09005",
+    "https://arxiv.org/abs/2610.10100"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -5733,5 +5763,10 @@
     "Epigrams on Programming",
     "Tcl: An Embeddable Command Language",
     "Data Types à la Carte"
-  ]
+  ],
+  "frontier_2026_10_08_batch": 19,
+  "frontier_2026_10_08_count": 10,
+  "frontier_2026_10_08_arxiv": 10,
+  "frontier_2026_10_08_titles": 10,
+  "frontier_2026_10_08_near_keepers": 32
 }
