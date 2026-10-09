@@ -3077,3 +3077,7 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 2253 | 6 | 2026 | Neural Caching of Prefiltered Radiance for Specular Lighting | graphics |
 
 _Recount after `craft-2026-10-09`: **2253** unique title cards on main. Next rank **2254+**._
+| 2254 | 8 | 1994 | A New Data Structure for Cumulative Frequency Tables | engines |
+| 2255 | 9 | 1984 | Efficient Implementation of the Smalltalk-80 System | languages |
+
+_Recount after `archive-2026-10-10`: **2255** unique title cards on main. Next rank **2256+**._
