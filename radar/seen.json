@@ -862,7 +862,10 @@
     "2610.08811",
     "2610.09198",
     "2610.09005",
-    "2610.10100"
+    "2610.10100",
+    "2610.11653",
+    "2610.08854",
+    "2610.11702"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -3091,9 +3094,12 @@
     "KVFetch: Temporal Prefetching for the Missing Half of KV Cache Compression",
     "Modular Responsiveness Verification of Rust Async Runtimes",
     "When Double Rounding is Correct",
-    "The Cost of Classical Multi-Agent Path Finding"
+    "The Cost of Classical Multi-Agent Path Finding",
+    "Tabula Rasa: Monte Carlo estimation of unit-variance noise with controlled spatio-temporal correlation",
+    "Certified Splitting: Decidability and Anchor Supply for Maximal-Munch Tokenization",
+    "Neural Caching of Prefiltered Radiance for Specular Lighting"
   ],
-  "updated": "2026-10-08T12:55:00+03:00",
+  "updated": "2026-10-09T12:40:00+03:00",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",

@@ -3072,5 +3072,8 @@ Daypart: **Archive** (even calendar date, 00:00 Europe/Bucharest). Live main bef
 | 2248 | 8 | 2026 | Modular Responsiveness Verification of Rust Async Runtimes | languages |
 | 2249 | 8 | 2026 | When Double Rounding is Correct | languages |
 | 2250 | 7 | 2026 | The Cost of Classical Multi-Agent Path Finding | game-ai |
+| 2251 | 7 | 2026 | Tabula Rasa: Monte Carlo estimation of unit-variance noise with controlled spatio-temporal correlation | graphics |
+| 2252 | 7 | 2026 | Certified Splitting: Decidability and Anchor Supply for Maximal-Munch Tokenization | languages |
+| 2253 | 6 | 2026 | Neural Caching of Prefiltered Radiance for Specular Lighting | graphics |
 
-_Recount after `frontier-2026-10-08`: **2250** unique title cards on main. Next rank **2251+**._
+_Recount after `craft-2026-10-09`: **2253** unique title cards on main. Next rank **2254+**._
