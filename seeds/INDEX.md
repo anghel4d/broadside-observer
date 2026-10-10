@@ -3087,3 +3087,8 @@ _Recount after `archive-2026-10-10`: **2255** unique title cards on main. Next r
 | 2259 | 7 | 2026 | DLCB: Ahead-of-Time Compilation for Dynamic Deep Learning | languages |
 
 _Recount after `frontier-2026-10-10`: **2259** unique title cards on main. Next rank **2260+**._
+| 2260 | 8 | 2026 | Tiling 3D by Translates of a Single Polycube is Undecidable | maths |
+| 2261 | 7 | 2026 | A repeating sequence of simple rules creates a universal computer | maths |
+| 2262 | 7 | 2026 | Graphoid Automata, Frobenius PROPs, and Semiring Evaluation | languages |
+
+_Recount after `curiosity-2026-10-11`: **2262** unique title cards on main. Next rank **2263+**._
