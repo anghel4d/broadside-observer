@@ -865,7 +865,11 @@
     "2610.10100",
     "2610.11653",
     "2610.08854",
-    "2610.11702"
+    "2610.11702",
+    "2610.10612",
+    "2610.11030",
+    "2610.10847",
+    "2610.10547"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3104,7 +3108,11 @@
     "Multidimensional Binary Search Trees Used for Associative Searching",
     "Incremental Dynamic Code Generation with Trace Trees",
     "Transvoxel Algorithm",
-    "CCured: Type-Safe Retrofitting of Legacy Code"
+    "CCured: Type-Safe Retrofitting of Legacy Code",
+    "PyCache Trap: The Inspection-Execution Gap in Agent Skill Scanners",
+    "NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents",
+    "Stochastic Graph Compression for Constant-Memory Differentiable Light Tracing",
+    "DLCB: Ahead-of-Time Compilation for Dynamic Deep Learning"
   ],
   "updated": "2026-10-10",
   "pass2_batch": "systems-prefill-2026-08-13",
