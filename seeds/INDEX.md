@@ -3081,3 +3081,9 @@ _Recount after `craft-2026-10-09`: **2253** unique title cards on main. Next ran
 | 2255 | 9 | 1984 | Efficient Implementation of the Smalltalk-80 System | languages |
 
 _Recount after `archive-2026-10-10`: **2255** unique title cards on main. Next rank **2256+**._
+| 2256 | 7 | 2026 | PyCache Trap: The Inspection-Execution Gap in Agent Skill Scanners | agents |
+| 2257 | 7 | 2026 | NOMOS: Compiling Written Policies into Statically Verified Tool-Call Gates for LLM Agents | agents |
+| 2258 | 7 | 2026 | Stochastic Graph Compression for Constant-Memory Differentiable Light Tracing | engines |
+| 2259 | 7 | 2026 | DLCB: Ahead-of-Time Compilation for Dynamic Deep Learning | languages |
+
+_Recount after `frontier-2026-10-10`: **2259** unique title cards on main. Next rank **2260+**._
