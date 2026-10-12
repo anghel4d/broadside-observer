@@ -876,7 +876,12 @@
     "2609.34646",
     "2610.06762",
     "2610.10811",
-    "2609.35738"
+    "2609.35738",
+    "2610.13100",
+    "2610.09114",
+    "2610.08949",
+    "2610.13582",
+    "2610.13842"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3123,9 +3128,14 @@
     "Episodic Loops: Finitary Event Structures and Operational Semantics for C11 Programs with Retries",
     "Real-time Rendering of Pre-integrated Neural Emitters",
     "Masking Judder in Foveated Rendering with Phase-Shifted Noise",
-    "Harness Learning Enables Generalizable Test-Time Adaptation"
+    "Harness Learning Enables Generalizable Test-Time Adaptation",
+    "Finiteness of planar central configurations of five bodies for all positive masses",
+    "A Connectome Test of the Fly Hashing Algorithm",
+    "Primitive periods in greedy chip-firing games",
+    "Efficient Transport Networks through Edge Pruning by Relative Resistance",
+    "Robust Golden Ratio universality as a consequence of a circulant symmetry"
   ],
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5052,7 +5062,12 @@
     "https://arxiv.org/abs/2610.08811",
     "https://arxiv.org/abs/2610.09198",
     "https://arxiv.org/abs/2610.09005",
-    "https://arxiv.org/abs/2610.10100"
+    "https://arxiv.org/abs/2610.10100",
+    "https://arxiv.org/abs/2610.13100",
+    "https://arxiv.org/abs/2610.09114",
+    "https://arxiv.org/abs/2610.08949",
+    "https://arxiv.org/abs/2610.13582",
+    "https://arxiv.org/abs/2610.13842"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -5815,5 +5830,35 @@
   ],
   "user_add_2026_10_12_titles": [
     "Harness Learning Enables Generalizable Test-Time Adaptation"
+  ],
+  "curiosity_2026_10_13_batch": "curiosity-2026-10-13",
+  "curiosity_2026_10_13_count": 5,
+  "curiosity_2026_10_13_arxiv": [
+    "2610.13100",
+    "2610.09114",
+    "2610.08949",
+    "2610.13582",
+    "2610.13842"
+  ],
+  "curiosity_2026_10_13_titles": [
+    "Finiteness of planar central configurations of five bodies for all positive masses",
+    "A Connectome Test of the Fly Hashing Algorithm",
+    "Primitive periods in greedy chip-firing games",
+    "Efficient Transport Networks through Edge Pruning by Relative Resistance",
+    "Robust Golden Ratio universality as a consequence of a circulant symmetry"
+  ],
+  "curiosity_2026_10_13_near_keepers": [
+    "Presenting a proof of the Kannan-Lovasz-Simonovits conjecture (2610.05474)",
+    "A proof of the Erd\u0151s-Gallai cycle decomposition conjecture (2610.07840)",
+    "Quadratic-size Random Permutations are Universal (2610.13530)",
+    "The Multiple Unicast Conjecture is False (2610.10108)",
+    "Large Growth Happens: Gaussian Elimination with Partial Pivoting on Random Matrices (2610.08701)",
+    "Universal Construction and Exact Self-Reproduction in Ternary McCulloch-Pitts Networks (2610.12251)",
+    "A symmetric counterexample to Strang's conjecture for bivariate C1 cubic splines on triangulations (2610.08470)",
+    "Every Regular Language Has a Bipartite Cactus Automaton (2610.11717)",
+    "Counting with Hiccup Sequences (2610.13908)",
+    "An Infinite Family of Ap\u00e9ry-like Recurrences for Euler's Constant (2610.13919)",
+    "Unilateral and Equitransitive Tilings by Squares of Sizes 1, 2, 3, and 4 (2610.10566)",
+    "A Simplified Layout Algebra for GPU Kernels (2610.13679)"
   ]
 }
