@@ -3105,3 +3105,17 @@ Urgent user add of arXiv:2609.35738. Live main before this card: `e02f542`, **22
 | 2266 | 10 | 2026 | Harness Learning Enables Generalizable Test-Time Adaptation | agents |
 
 _Recount after `user-add-2026-10-12`: **2266** unique title cards on main. Next rank **2267+**._
+
+### curiosity-2026-10-13
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `5fee2b4`, **2266** unique, max rank **2266**. Next rank **2267**. seed_batch: `curiosity-2026-10-13`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2267 | 8 | 2026 | Finiteness of planar central configurations of five bodies for all positive masses | maths |
+| 2268 | 7 | 2026 | A Connectome Test of the Fly Hashing Algorithm | maths |
+| 2269 | 7 | 2026 | Primitive periods in greedy chip-firing games | maths |
+| 2270 | 7 | 2026 | Efficient Transport Networks through Edge Pruning by Relative Resistance | physics |
+| 2271 | 7 | 2026 | Robust Golden Ratio universality as a consequence of a circulant symmetry | physics |
+
+_Recount after `curiosity-2026-10-13`: **2271** unique title cards on main. Next rank **2272+**._
