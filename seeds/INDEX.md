@@ -3095,3 +3095,13 @@ _Recount after `frontier-2026-10-10`: **2259** unique title cards on main. Next 
 | 2265 | 6 | 2026 | Masking Judder in Foveated Rendering with Phase-Shifted Noise | graphics |
 
 _Recount after `craft-2026-10-11`: **2265** unique title cards on main. Next rank **2266+**._
+
+### user-add 2026-10-12
+
+Urgent user add of arXiv:2609.35738. Live main before this card: `e02f542`, **2265** unique, max rank **2265**. Next rank **2266**. seed_batch: `user-add-2026-10-12`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2266 | 10 | 2026 | Harness Learning Enables Generalizable Test-Time Adaptation | agents |
+
+_Recount after `user-add-2026-10-12`: **2266** unique title cards on main. Next rank **2267+**._

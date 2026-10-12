@@ -875,7 +875,8 @@
     "2610.03897",
     "2609.34646",
     "2610.06762",
-    "2610.10811"
+    "2610.10811",
+    "2609.35738"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3121,9 +3122,10 @@
     "DLCB: Ahead-of-Time Compilation for Dynamic Deep Learning",
     "Episodic Loops: Finitary Event Structures and Operational Semantics for C11 Programs with Retries",
     "Real-time Rendering of Pre-integrated Neural Emitters",
-    "Masking Judder in Foveated Rendering with Phase-Shifted Noise"
+    "Masking Judder in Foveated Rendering with Phase-Shifted Noise",
+    "Harness Learning Enables Generalizable Test-Time Adaptation"
   ],
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5805,5 +5807,13 @@
     "2610.12392",
     "2610.09879",
     "2610.03897"
+  ],
+  "user_add_2026_10_12_batch": "user-add-2026-10-12",
+  "user_add_2026_10_12_count": 1,
+  "user_add_2026_10_12_arxiv": [
+    "2609.35738"
+  ],
+  "user_add_2026_10_12_titles": [
+    "Harness Learning Enables Generalizable Test-Time Adaptation"
   ]
 }
