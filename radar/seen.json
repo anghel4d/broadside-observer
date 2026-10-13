@@ -881,7 +881,11 @@
     "2610.09114",
     "2610.08949",
     "2610.13582",
-    "2610.13842"
+    "2610.13842",
+    "2610.04211",
+    "2610.05576",
+    "2610.13809",
+    "2610.13704"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3133,7 +3137,11 @@
     "A Connectome Test of the Fly Hashing Algorithm",
     "Primitive periods in greedy chip-firing games",
     "Efficient Transport Networks through Edge Pruning by Relative Resistance",
-    "Robust Golden Ratio universality as a consequence of a circulant symmetry"
+    "Robust Golden Ratio universality as a consequence of a circulant symmetry",
+    "CurveCodec 2: Skeleton-agnostic animation compression with a learned entropy model",
+    "SteadySplats: Resampling of Low-Variance Gaussians for High-Fidelity Stochastic Rendering",
+    "GPU-resident Execution for Timing-predictable Sensor Processing Systems",
+    "Benchmarking Content-Defined Chunking Algorithms for Data Deduplication"
   ],
   "updated": "2026-10-13",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5067,7 +5075,11 @@
     "https://arxiv.org/abs/2610.09114",
     "https://arxiv.org/abs/2610.08949",
     "https://arxiv.org/abs/2610.13582",
-    "https://arxiv.org/abs/2610.13842"
+    "https://arxiv.org/abs/2610.13842",
+    "https://arxiv.org/abs/2610.04211",
+    "https://arxiv.org/abs/2610.05576",
+    "https://arxiv.org/abs/2610.13809",
+    "https://arxiv.org/abs/2610.13704"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -5860,5 +5872,33 @@
     "An Infinite Family of Ap\u00e9ry-like Recurrences for Euler's Constant (2610.13919)",
     "Unilateral and Equitransitive Tilings by Squares of Sizes 1, 2, 3, and 4 (2610.10566)",
     "A Simplified Layout Algebra for GPU Kernels (2610.13679)"
+  ],
+  "craft_2026_10_13_batch": "craft-2026-10-13",
+  "craft_2026_10_13_count": 4,
+  "craft_2026_10_13_arxiv": [
+    "2610.04211",
+    "2610.05576",
+    "2610.13809",
+    "2610.13704"
+  ],
+  "craft_2026_10_13_titles": [
+    "CurveCodec 2: Skeleton-agnostic animation compression with a learned entropy model",
+    "SteadySplats: Resampling of Low-Variance Gaussians for High-Fidelity Stochastic Rendering",
+    "GPU-resident Execution for Timing-predictable Sensor Processing Systems",
+    "Benchmarking Content-Defined Chunking Algorithms for Data Deduplication"
+  ],
+  "craft_2026_10_13_near_keepers": [
+    "A Hybrid and Hierarchical Ray Tracing Method for Efficient 3D Gaussian Rendering (2610.13498)",
+    "Session Type State Spaces Form Lattices (2609.34927)",
+    "Physics-based Sphere Packing for Lagrangian Mesh Morphing / JamTet (2610.08880)",
+    "Neuroll real-time neural strand hair simulation (2610.04689)",
+    "Designing a Producer-driven Stream Protocol by Formal Refinement (2609.33813)",
+    "WAMpy: Prolog WAM as NumPy arrays (2610.03234)",
+    "Formal Reasoning about Performance Models (2609.37728)",
+    "Escaping Degeneracy by Following Shadow Edges (2610.12130)",
+    "Attention via Black-Box Vector Search (2610.10135)",
+    "FeatureZ feature-preserving compression (2610.12371)",
+    "Ember: practical UVM for discrete GPUs (2610.13408)",
+    "Taking Tokenization off the Host for Agentic LLM Serving (2610.13325)"
   ]
 }
