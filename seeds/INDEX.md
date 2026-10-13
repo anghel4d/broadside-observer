@@ -3132,3 +3132,20 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `a5
 | 2275 | 6 | 2026 | Benchmarking Content-Defined Chunking Algorithms for Data Deduplication | systems |
 
 _Recount after `craft-2026-10-13`: **2275** unique title cards on main. Next rank **2276+**._
+
+### archive-2026-10-14
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `9952a12`, **2275** unique, max rank **2275**. Next rank **2276**. seed_batch: `archive-2026-10-14`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2276 | 8 | 1968 | Sorting Networks and Their Applications | systems |
+| 2277 | 8 | 1990 | Representing Control in the Presence of First-Class Continuations | languages |
+| 2278 | 8 | 1993 | The Void-and-Cluster Method for Dither Array Generation | graphics |
+| 2279 | 8 | 1997 | Triangle Scan Conversion using 2D Homogeneous Coordinates | graphics |
+| 2280 | 8 | 2008 | Lightweight Monadic Regions | languages |
+| 2281 | 8 | 2012 | Distance Transforms of Sampled Functions | graphics |
+| 2282 | 9 | 2013 | Simple and Efficient Construction of Static Single Assignment Form | languages |
+| 2283 | 9 | 2015 | Deny Capabilities for Safe, Fast Actors | languages |
+
+_Recount after `archive-2026-10-14`: **2283** unique title cards on main. Next rank **2284+**._
