@@ -3119,3 +3119,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2271 | 7 | 2026 | Robust Golden Ratio universality as a consequence of a circulant symmetry | physics |
 
 _Recount after `curiosity-2026-10-13`: **2271** unique title cards on main. Next rank **2272+**._
+
+### craft-2026-10-13
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `a590e0a`, **2271** unique, max rank **2271**. Next rank **2272**. seed_batch: `craft-2026-10-13`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2272 | 7 | 2026 | CurveCodec 2: Skeleton-agnostic animation compression with a learned entropy model | graphics |
+| 2273 | 7 | 2026 | SteadySplats: Resampling of Low-Variance Gaussians for High-Fidelity Stochastic Rendering | graphics |
+| 2274 | 6 | 2026 | GPU-resident Execution for Timing-predictable Sensor Processing Systems | systems |
+| 2275 | 6 | 2026 | Benchmarking Content-Defined Chunking Algorithms for Data Deduplication | systems |
+
+_Recount after `craft-2026-10-13`: **2275** unique title cards on main. Next rank **2276+**._
