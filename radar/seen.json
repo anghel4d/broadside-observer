@@ -895,7 +895,12 @@
     "2610.17406",
     "2610.15752",
     "2610.18186",
-    "2610.12596"
+    "2610.12596",
+    "2610.11823",
+    "2610.18713",
+    "2610.14380",
+    "2610.15145",
+    "2610.13986"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3184,9 +3189,14 @@
     "Fast Forgiving Base64 Decoding with SIMD Instructions",
     "Frozen History: When Temporal Losses Stop Accumulation in Learned Real-Time Supersampling",
     "Reinforcement Learning for Large-Scale Lifelong Multi-Agent Path Finding with Shared Spatial Fields",
-    "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire"
+    "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+    "The rank of 3\u00d73 matrix multiplication over F2 is 23",
+    "A proof of the rational exponents conjecture",
+    "Lattices with Large Kissing Number from Local Density",
+    "Nim heaps in the Game of Cycles: the parity conjecture fails on trees",
+    "Triangles and quadrilaterals suffice"
   ],
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5138,7 +5148,12 @@
     "10.1007/978-3-642-37051-9_6",
     "https://c9x.me/compile/bib/braun13cc.pdf",
     "10.1145/2824815.2824816",
-    "https://www.ponylang.io/media/papers/fast-cheap.pdf"
+    "https://www.ponylang.io/media/papers/fast-cheap.pdf",
+    "https://arxiv.org/abs/2610.11823",
+    "https://arxiv.org/abs/2610.18713",
+    "https://arxiv.org/abs/2610.14380",
+    "https://arxiv.org/abs/2610.15145",
+    "https://arxiv.org/abs/2610.13986"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6048,5 +6063,56 @@
     "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving (2610.18143)",
     "The Agent Clicks Approve: Injected Page Text Makes Browser Agents Authorize Access the Task Never Named (2610.15138)",
     "A dataset of formalised theorem statements from the Annals of Mathematics (2610.18301)"
+  ],
+  "curiosity_2026_10_15_batch": "curiosity-2026-10-15",
+  "curiosity_2026_10_15_count": 5,
+  "curiosity_2026_10_15_arxiv": [
+    "2610.11823",
+    "2610.18713",
+    "2610.14380",
+    "2610.15145",
+    "2610.13986"
+  ],
+  "curiosity_2026_10_15_titles": [
+    "The rank of 3\u00d73 matrix multiplication over F2 is 23",
+    "A proof of the rational exponents conjecture",
+    "Lattices with Large Kissing Number from Local Density",
+    "Nim heaps in the Game of Cycles: the parity conjecture fails on trees",
+    "Triangles and quadrilaterals suffice"
+  ],
+  "curiosity_2026_10_15_near_keepers": [
+    "Hypergeometric Bridges for Multidimensional Grid Visibility (2610.16795)",
+    "General Constructions of Permutation-Fair Dice (2610.15421)",
+    "Saving the Queen is hard: Hive is EXPTIME-complete (2610.15654)",
+    "Translational tilings by axis-parallel polygonal sets (2610.15785)",
+    "The logarithmic exponent of the Ramsey number r(4,t) (2610.17891)",
+    "A note on the logarithmic exponent of Ramsey number r(4,t) (2610.15293)",
+    "Szemer\u00e9di's theorem with random differences and arithmetic Kakeya (2610.18859)",
+    "The R\u00e9nyi area law conjecture is false below \u03b1=1 in high dimensions (2610.15199)",
+    "Necessary and Sufficient Criteria for the Realizability of Kaleidocycles Composed of Six Congruent Isosceles Tetrahedra (2610.13961)",
+    "How long is a game of Uno? A counting law for large hands and the Wild Draw Four hoard (2610.14076)",
+    "Clean handshake sequences (2610.17602)",
+    "The Rhythm of the Tiles: Narrow and Low Temperature Computation and Simulation in Synchronous Tile Self-Assembly (2610.17112)",
+    "An upper bound for the three-dimensional moving sofa problem in a snaky corridor (2610.14050)",
+    "A 0.41275 lower bound for the three-dimensional Blaschke-Lebesgue problem (2610.13964)",
+    "The rhombic dodecahedral conjecture (2610.13975)",
+    "A new family of constant width bodies obtained from Reuleaux polyhedra (2610.16997)",
+    "Period Piece: NEXPTIME-complete problems on digraphs via Boolean network dynamics (2610.16561)",
+    "When do lazy and invertible cellular automata generate all cellular automata? (2610.18480)",
+    "PSPACE-completeness of the Hunters and Rabbit game (2610.18537)",
+    "On Permutations Whose Adjacent-Sum Reciprocals Sum to One (2610.18431)",
+    "Emergence of Active Foams in a Minimal Cognitive Flocking Model (2610.15835)",
+    "Universal Boolean Computation in Negatively Coupled Circle Map Lattices (2610.16290)",
+    "Extreme Localization via a Singular Edge Mode in an Asymmetric Linkage System (2610.15041)",
+    "The Brownian bubble tea (2610.17990)",
+    "A series with a Cantorval set of subsums and ratio of consecutive terms tending to 1/2 (the second Jones problem) (2610.14251)",
+    "Towards a Sum-of-Squares Proof for the Nonexistence of Conway's 99-graph (2610.16266)",
+    "Towards New Parity Rules with Asynchronous Updating Inspired by Fat\u00e8s's Rule (2610.14026)",
+    "The Relation Before Lorenz: Kirchhoff, 1857, and the Symbols Lorenz Inherited (2610.14122)",
+    "A Lean formalisation of the disproof of Ramaekers's conjecture (2610.16323)",
+    "The symmetry group of Turk's head knots (2610.16600)",
+    "On infinite knot families with the same HOMFLYPT polynomial (2610.16017)",
+    "Eigenvalue fluctuations for the crushed ice problem (2610.18013)",
+    "Denominators in the Farey Sequence, the Stern Sequence, and the Frobenius Problem with Relatively Prime Multipliers (2610.17267)"
   ]
 }
