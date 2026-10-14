@@ -3149,3 +3149,22 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2283 | 9 | 2015 | Deny Capabilities for Safe, Fast Actors | languages |
 
 _Recount after `archive-2026-10-14`: **2283** unique title cards on main. Next rank **2284+**._
+
+### frontier-2026-10-14
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `d8ee9e8`, **2283** unique, max rank **2283**. Next rank **2284**. seed_batch: `frontier-2026-10-14`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2284 | 9 | 2026 | Names Are Not Objects: Object-Bound Confinement for Compromised AI Coding Agents | agents |
+| 2285 | 9 | 2026 | Cortex: Measurement-Gated Evolution and Pruning of Coding-Agent Skills and Rules | agents |
+| 2286 | 8 | 2026 | Lost in Implicit Routing: How LLM Agents Fail to Load Relevant Skills at Scale | agents |
+| 2287 | 8 | 2026 | TurnCost: Turns, Not Observations: Cache-Aware Loop Engineering for Coding Agents | agents |
+| 2288 | 8 | 2026 | Scaling Inference-Time Compute with Teams of Coding Agents | agents |
+| 2289 | 9 | 2026 | Hashrope: A Persistent Data Structure for Mechanisms of LLM Context Management | systems |
+| 2290 | 9 | 2026 | Fast Forgiving Base64 Decoding with SIMD Instructions | systems |
+| 2291 | 8 | 2026 | Frozen History: When Temporal Losses Stop Accumulation in Learned Real-Time Supersampling | graphics |
+| 2292 | 8 | 2026 | Reinforcement Learning for Large-Scale Lifelong Multi-Agent Path Finding with Shared Spatial Fields | game-ai |
+| 2293 | 8 | 2026 | SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire | game-ai |
+
+_Recount after `frontier-2026-10-14`: **2293** unique title cards on main. Next rank **2294+**._
