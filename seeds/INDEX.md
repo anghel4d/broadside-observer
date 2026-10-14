@@ -3168,3 +3168,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2293 | 8 | 2026 | SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire | game-ai |
 
 _Recount after `frontier-2026-10-14`: **2293** unique title cards on main. Next rank **2294+**._
+
+### curiosity-2026-10-15
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `dc446a8`, **2293** unique, max rank **2293**. Next rank **2294**. seed_batch: `curiosity-2026-10-15`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2294 | 9 | 2026 | The rank of 3×3 matrix multiplication over F2 is 23 | maths |
+| 2295 | 9 | 2026 | A proof of the rational exponents conjecture | maths |
+| 2296 | 8 | 2026 | Lattices with Large Kissing Number from Local Density | maths |
+| 2297 | 8 | 2026 | Nim heaps in the Game of Cycles: the parity conjecture fails on trees | maths |
+| 2298 | 8 | 2026 | Triangles and quadrilaterals suffice | maths |
+
+_Recount after `curiosity-2026-10-15`: **2298** unique title cards on main. Next rank **2299+**._
