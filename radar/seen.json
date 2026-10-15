@@ -900,7 +900,11 @@
     "2610.18713",
     "2610.14380",
     "2610.15145",
-    "2610.13986"
+    "2610.13986",
+    "2610.17833",
+    "2610.19308",
+    "2609.16064",
+    "2602.08334"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3194,7 +3198,11 @@
     "A proof of the rational exponents conjecture",
     "Lattices with Large Kissing Number from Local Density",
     "Nim heaps in the Game of Cycles: the parity conjecture fails on trees",
-    "Triangles and quadrilaterals suffice"
+    "Triangles and quadrilaterals suffice",
+    "PHastR: Faster Minimal Perfect Hashing with Rotated Layouts",
+    "Parallel Sparse Outputs for Tensor Compilers",
+    "Expressing NumPy Broadcasting via Verb Rank in J",
+    "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving"
   ],
   "updated": "2026-10-15",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5153,7 +5161,11 @@
     "https://arxiv.org/abs/2610.18713",
     "https://arxiv.org/abs/2610.14380",
     "https://arxiv.org/abs/2610.15145",
-    "https://arxiv.org/abs/2610.13986"
+    "https://arxiv.org/abs/2610.13986",
+    "https://arxiv.org/abs/2610.17833",
+    "https://arxiv.org/abs/2610.19308",
+    "https://arxiv.org/abs/2609.16064",
+    "https://arxiv.org/abs/2602.08334"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6114,5 +6126,37 @@
     "On infinite knot families with the same HOMFLYPT polynomial (2610.16017)",
     "Eigenvalue fluctuations for the crushed ice problem (2610.18013)",
     "Denominators in the Farey Sequence, the Stern Sequence, and the Frobenius Problem with Relatively Prime Multipliers (2610.17267)"
+  ],
+  "craft_2026_10_15_batch": "craft-2026-10-15",
+  "craft_2026_10_15_count": 4,
+  "craft_2026_10_15_arxiv": [
+    "2610.17833",
+    "2610.19308",
+    "2609.16064",
+    "2602.08334"
+  ],
+  "craft_2026_10_15_titles": [
+    "PHastR: Faster Minimal Perfect Hashing with Rotated Layouts",
+    "Parallel Sparse Outputs for Tensor Compilers",
+    "Expressing NumPy Broadcasting via Verb Rank in J",
+    "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving"
+  ],
+  "craft_2026_10_15_near_keepers": [
+    "VkSplat: High-Performance 3DGS Training in Vulkan Compute (2605.00219)",
+    "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference (2610.17321)",
+    "DiffGIPC: Differentiable Mixed-Coordinate Contact Dynamics on GPU (2610.19091)",
+    "A High-Throughput Compute-Efficient POMDP Hide-And-Seek-Engine (HASE) for Multi-Agent Operations (2604.27162)",
+    "Volcanite: Commodity-Hardware Segmentation Volume Visualization for Connectomics and Beyond (2609.36898)",
+    "A performance enhancement of the Payne-Hanek range reduction algorithm (2609.35015)",
+    "Implementation Note 2: Approximating a Smooth Three-Dimensional Function on a Coarse Lattice (2610.00203)",
+    "Online Tokenization with Optimal Delay in Linear Time (2610.19139)",
+    "Typechecking without Minimum Types: Finite Bases and Backward Checking for F<:top (2610.20356)",
+    "Byzantine-linearizable Single-Writer Multi-Reader Register in the GPU-Inspired Shared Memory Model (2610.14543)",
+    "Almost Optimal Relative Error Streaming Quantiles with Full Mergeability (2610.18347)",
+    "A Practical Combinatorial Interior Point Method for Minimum-Cost Flow (2610.18328)",
+    "Selecting the 7th Smallest of 16 Elements Takes Exactly 28 Comparisons (2610.18740)",
+    "CUDA-MPQS: A GPU-Resident Self-Initializing Quadratic Sieve, and the Factorization of RSA-155 (2610.07126)",
+    "Data-Oriented Modeling for Spacecraft Design (2603.24841)",
+    "Understanding NVIDIA Grace-Blackwell Unified Memory Through Placement-Controlled Microbenchmarks (2610.20354)"
   ]
 }
