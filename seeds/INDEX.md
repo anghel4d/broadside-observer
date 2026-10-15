@@ -3182,3 +3182,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2298 | 8 | 2026 | Triangles and quadrilaterals suffice | maths |
 
 _Recount after `curiosity-2026-10-15`: **2298** unique title cards on main. Next rank **2299+**._
+
+### craft-2026-10-15
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `d291ace`, **2298** unique, max rank **2298**. Next rank **2299**. seed_batch: `craft-2026-10-15`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2299 | 8 | 2026 | PHastR: Faster Minimal Perfect Hashing with Rotated Layouts | systems |
+| 2300 | 8 | 2026 | Parallel Sparse Outputs for Tensor Compilers | languages |
+| 2301 | 8 | 2026 | Expressing NumPy Broadcasting via Verb Rank in J | languages |
+| 2302 | 7 | 2026 | Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving | game-ai |
+
+_Recount after `craft-2026-10-15`: **2302** unique title cards on main. Next rank **2303+**._
