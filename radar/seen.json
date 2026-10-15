@@ -3202,9 +3202,16 @@
     "PHastR: Faster Minimal Perfect Hashing with Rotated Layouts",
     "Parallel Sparse Outputs for Tensor Compilers",
     "Expressing NumPy Broadcasting via Verb Rank in J",
-    "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving"
+    "Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving",
+    "Breaking Paragraphs into Lines",
+    "Superoptimizer: A Look at the Smallest Program",
+    "Pengi: An Implementation of a Theory of Activity",
+    "Efficient Software-Based Fault Isolation",
+    "Division by Invariant Integers using Multiplication",
+    "Anatomy of High-Performance Matrix Multiplication",
+    "Edge-Avoiding \u00c0-Trous Wavelet Transform for fast Global Illumination Filtering"
   ],
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5165,7 +5172,15 @@
     "https://arxiv.org/abs/2610.17833",
     "https://arxiv.org/abs/2610.19308",
     "https://arxiv.org/abs/2609.16064",
-    "https://arxiv.org/abs/2602.08334"
+    "https://arxiv.org/abs/2602.08334",
+    "10.1002/spe.4380111102",
+    "10.1145/36206.36194",
+    "10.1145/168619.168635",
+    "10.1145/178243.178249",
+    "10.1145/1356052.1356053",
+    "10.1145/1411304.1411311",
+    "10.2312/EGGH/HPG10/067-075",
+    "https://cdn.aaai.org/AAAI/1987/AAAI87-048.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6158,5 +6173,37 @@
     "CUDA-MPQS: A GPU-Resident Self-Initializing Quadratic Sieve, and the Factorization of RSA-155 (2610.07126)",
     "Data-Oriented Modeling for Spacecraft Design (2603.24841)",
     "Understanding NVIDIA Grace-Blackwell Unified Memory Through Placement-Controlled Microbenchmarks (2610.20354)"
+  ],
+  "archive_2026_10_16_batch": "archive-2026-10-16",
+  "archive_2026_10_16_count": 8,
+  "archive_2026_10_16_titles": [
+    "Breaking Paragraphs into Lines",
+    "Superoptimizer: A Look at the Smallest Program",
+    "Pengi: An Implementation of a Theory of Activity",
+    "Efficient Software-Based Fault Isolation",
+    "Division by Invariant Integers using Multiplication",
+    "Anatomy of High-Performance Matrix Multiplication",
+    "Compiling Pattern Matching to Good Decision Trees",
+    "Edge-Avoiding \u00c0-Trous Wavelet Transform for fast Global Illumination Filtering"
+  ],
+  "archive_2026_10_16_near_keepers": [
+    "Linear Hashing: A New Tool for File and Table Addressing",
+    "Data Structures for Text Sequences",
+    "Concurrency Control in Groupware Systems",
+    "Collection-Oriented Match",
+    "Lazy Code Motion",
+    "The Program Dependence Graph and Its Use in Optimization",
+    "Real-Time Edge-Aware Image Processing with the Bilateral Grid",
+    "Fast High-Dimensional Filtering Using the Permutohedral Lattice",
+    "As-Rigid-As-Possible Surface Modeling",
+    "Capability Myths Demolished",
+    "The Protection of Information in Computer Systems",
+    "Printing Floating-Point Numbers Quickly and Accurately",
+    "Word Hy-phen-a-tion by Com-put-er",
+    "Lottery Scheduling",
+    "Virtual Memory Primitives for User Programs",
+    "Elephants Don't Play Chess",
+    "Product Quantization for Nearest Neighbor Search",
+    "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs"
   ]
 }

@@ -3195,3 +3195,20 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `d2
 | 2302 | 7 | 2026 | Vec-QMDP: Vectorized POMDP Planning on CPUs for Real-Time Autonomous Driving | game-ai |
 
 _Recount after `craft-2026-10-15`: **2302** unique title cards on main. Next rank **2303+**._
+
+### archive-2026-10-16
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `51a2e9f`, **2302** unique, max rank **2302**. Next rank **2303**. seed_batch: `archive-2026-10-16`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2303 | 9 | 1981 | Breaking Paragraphs into Lines | graphics |
+| 2304 | 8 | 1987 | Superoptimizer: A Look at the Smallest Program | languages |
+| 2305 | 8 | 1987 | Pengi: An Implementation of a Theory of Activity | game-ai |
+| 2306 | 9 | 1993 | Efficient Software-Based Fault Isolation | systems |
+| 2307 | 8 | 1994 | Division by Invariant Integers using Multiplication | languages |
+| 2308 | 9 | 2008 | Anatomy of High-Performance Matrix Multiplication | systems |
+| 2309 | 8 | 2008 | Compiling Pattern Matching to Good Decision Trees | languages |
+| 2310 | 9 | 2010 | Edge-Avoiding À-Trous Wavelet Transform for fast Global Illumination Filtering | graphics |
+
+_Recount after `archive-2026-10-16`: **2310** unique title cards on main. Next rank **2311+**._
