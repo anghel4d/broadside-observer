@@ -79,6 +79,11 @@ export default {
     const path = url.pathname.replace(/\/$/u, "") || "/";
     if (path !== "/mcp") return env.ASSETS.fetch(request);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
+    // A browser or an assistant fetching /mcp to see what it is gets the docs;
+    // an MCP client asking for an event stream still gets the spec's 405.
+    if (request.method === "GET" && !(request.headers.get("accept") ?? "").includes("text/event-stream")) {
+      return env.ASSETS.fetch(new Request(new URL("/llms.txt", url.origin)));
+    }
     if (request.method !== "POST") return jsonRpcError(405, "Method not allowed. POST /mcp");
     try {
       return await handleMcp(request, env, url.origin);

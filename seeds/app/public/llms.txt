@@ -1,0 +1,21 @@
+# Broadside Observer
+
+> A curated, provenance-first catalog of seed cards: papers, posts, and projects worth building from, each with its sources. Readable by people at https://observer.broadside.tech and by agents over a public MCP endpoint.
+
+## MCP
+
+- Endpoint: https://observer.broadside.tech/mcp (also https://observer.anoptic.io/mcp)
+- Transport: Streamable HTTP (POST JSON-RPC). No key, no sign-in, CORS open.
+- Claude Code: `claude mcp add --transport http broadside-observer https://observer.broadside.tech/mcp`
+- Cursor `mcp.json`: `{"mcpServers": {"broadside-observer": {"url": "https://observer.broadside.tech/mcp"}}}`
+
+### Tools
+
+- `query_seeds {"query": "ecs"}`: lists matching cards with their ids.
+- `get_seed {"id": "<card id>"}`: returns one card in full, as its original Markdown.
+
+### Raw data
+
+- [cards.json](https://observer.broadside.tech/cards.json): the whole packed catalog.
+- Each card's Markdown: https://observer.broadside.tech/cards/<id>.md
+- Source: https://github.com/anghel4d/broadside-observer
