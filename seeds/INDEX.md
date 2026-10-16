@@ -3212,3 +3212,22 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2310 | 9 | 2010 | Edge-Avoiding À-Trous Wavelet Transform for fast Global Illumination Filtering | graphics |
 
 _Recount after `archive-2026-10-16`: **2310** unique title cards on main. Next rank **2311+**._
+
+### frontier-2026-10-16
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `9aff0ca`, **2310** unique, max rank **2310**. Next rank **2311**. seed_batch: `frontier-2026-10-16`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2311 | 9 | 2026 | A team of Gemini 4 Argon agents beats Minecraft | agents |
+| 2312 | 9 | 2026 | Prune the Summary, Not the History: Source-Judged Compaction for Long-Horizon Agents | agents |
+| 2313 | 8 | 2026 | What Coding Agents Leave Unsaid: Measuring Task-State Gaps Between Execution and Reports | agents |
+| 2314 | 9 | 2026 | Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization | agents |
+| 2315 | 8 | 2026 | The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock | game-ai |
+| 2316 | 9 | 2026 | Delta Tokenizer: Reference-Identical Tokenization of Session Deltas and Segment-Parallelism for Long Prompts on Multicore CPUs | systems |
+| 2317 | 8 | 2026 | Online Tokenization with Optimal Delay in Linear Time | systems |
+| 2318 | 8 | 2026 | When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill | systems |
+| 2319 | 8 | 2026 | Compression of Uniformly Distributed Unit Quaternions | graphics |
+| 2320 | 8 | 2026 | Geometric Queries on Tessellation-Free Displaced Surfaces | graphics |
+
+_Recount after `frontier-2026-10-16`: **2320** unique title cards on main. Next rank **2321+**._
