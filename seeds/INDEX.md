@@ -3231,3 +3231,18 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2320 | 8 | 2026 | Geometric Queries on Tessellation-Free Displaced Surfaces | graphics |
 
 _Recount after `frontier-2026-10-16`: **2320** unique title cards on main. Next rank **2321+**._
+
+### curiosity-2026-10-17
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `b85634b`, **2320** unique, max rank **2320**. Next rank **2321**. seed_batch: `curiosity-2026-10-17`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2321 | 9 | 2026 | Simple, Faster (min, +) Matrix Multiplication and APSP | maths |
+| 2322 | 9 | 2026 | Undirected Network Coding and Faster External-Memory Integer Sorting | systems |
+| 2323 | 9 | 2026 | Imaginary quadratic fields of class number at most 2000 | maths |
+| 2324 | 8 | 2026 | Droplets obstruct Onsager-type solutions of the Ising model in a magnetic field | physics |
+| 2325 | 8 | 2026 | A short open space curve of unit width | maths |
+| 2326 | 8 | 2026 | A Bounded-Defect Construction for the Mondrian Art Problem | maths |
+
+_Recount after `curiosity-2026-10-17`: **2326** unique title cards on main. Next rank **2327+**._
