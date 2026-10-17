@@ -920,7 +920,12 @@
     "2610.21511",
     "2610.20569",
     "2610.19585",
-    "2610.19193"
+    "2610.19193",
+    "2610.20981",
+    "2610.19489",
+    "2503.01662",
+    "2608.19167",
+    "2610.22071"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3241,7 +3246,12 @@
     "Imaginary quadratic fields of class number at most 2000",
     "Droplets obstruct Onsager-type solutions of the Ising model in a magnetic field",
     "A short open space curve of unit width",
-    "A Bounded-Defect Construction for the Mondrian Art Problem"
+    "A Bounded-Defect Construction for the Mondrian Art Problem",
+    "Cyclotron: A Recurrence Language for Expressing Interprocessor Communication",
+    "How the Dirty Set Moves: Characterizing Schedule Reuse in Incremental Sparse Matrix Multiplication",
+    "Scanning HTML at Tens of Gigabytes per Second on ARM Processors",
+    "Upper and Lower Bounds on the Space Complexity of Multi-word Single-Writer Registers",
+    "The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction"
   ],
   "updated": "2026-10-17",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6349,5 +6359,10 @@
     "Language Models Share a Readout Bottleneck in Working Memory (2610.21176)",
     "Mechanical Verification for Agentic Autoformalization (2610.20573)",
     "Understanding the Mpemba Effect through a Rule of Thumb (2610.19870)"
-  ]
+  ],
+  "craft_2026_10_17_batch": "craft-2026-10-17",
+  "craft_2026_10_17_count": 5,
+  "craft_2026_10_17_arxiv": 5,
+  "craft_2026_10_17_titles": 5,
+  "craft_2026_10_17_near_keepers": 14
 }
