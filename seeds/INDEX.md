@@ -3246,3 +3246,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2326 | 8 | 2026 | A Bounded-Defect Construction for the Mondrian Art Problem | maths |
 
 _Recount after `curiosity-2026-10-17`: **2326** unique title cards on main. Next rank **2327+**._
+
+### craft-2026-10-17
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `2a0afc5`, **2326** unique, max rank **2326**. Next rank **2327**. seed_batch: `craft-2026-10-17`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2327 | 8 | 2026 | Cyclotron: A Recurrence Language for Expressing Interprocessor Communication | languages |
+| 2328 | 8 | 2026 | How the Dirty Set Moves: Characterizing Schedule Reuse in Incremental Sparse Matrix Multiplication | systems |
+| 2329 | 8 | 2025 | Scanning HTML at Tens of Gigabytes per Second on ARM Processors | systems |
+| 2330 | 8 | 2026 | Upper and Lower Bounds on the Space Complexity of Multi-word Single-Writer Registers | systems |
+| 2331 | 7 | 2026 | The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction | languages |
+
+_Recount after `craft-2026-10-17`: **2331** unique title cards on main. Next rank **2332+**._
