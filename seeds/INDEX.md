@@ -3260,3 +3260,20 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `2a
 | 2331 | 7 | 2026 | The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction | languages |
 
 _Recount after `craft-2026-10-17`: **2331** unique title cards on main. Next rank **2332+**._
+
+### archive-2026-10-18
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `a3bf3ea`, **2331** unique, max rank **2331**. Next rank **2332**. seed_batch: `archive-2026-10-18`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2332 | 8 | 1990 | Elephants Don't Play Chess | game-ai |
+| 2333 | 9 | 1991 | Virtual Memory Primitives for User Programs | systems |
+| 2334 | 8 | 1991 | Warren's Abstract Machine: A Tutorial Reconstruction | languages |
+| 2335 | 8 | 1992 | Lazy Code Motion | languages |
+| 2336 | 9 | 2003 | Capability Myths Demolished | systems |
+| 2337 | 8 | 2007 | Real-time Edge-Aware Image Processing with the Bilateral Grid | graphics |
+| 2338 | 9 | 2013 | Geodesics in Heat | graphics |
+| 2339 | 9 | 2015 | Simple and Effective Type Check Removal through Lazy Basic Block Versioning | languages |
+
+_Recount after `archive-2026-10-18`: **2339** unique title cards on main. Next rank **2340+**._

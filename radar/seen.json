@@ -925,7 +925,9 @@
     "2610.19489",
     "2503.01662",
     "2608.19167",
-    "2610.22071"
+    "2610.22071",
+    "1204.6216",
+    "1411.0352"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3251,16 +3253,24 @@
     "How the Dirty Set Moves: Characterizing Schedule Reuse in Incremental Sparse Matrix Multiplication",
     "Scanning HTML at Tens of Gigabytes per Second on ARM Processors",
     "Upper and Lower Bounds on the Space Complexity of Multi-word Single-Writer Registers",
-    "The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction"
+    "The Right Byte First: How UTF-16 Helps Multilingual Boundary Prediction",
+    "Elephants Don't Play Chess",
+    "Virtual Memory Primitives for User Programs",
+    "Warren's Abstract Machine: A Tutorial Reconstruction",
+    "Lazy Code Motion",
+    "Capability Myths Demolished",
+    "Real-time Edge-Aware Image Processing with the Bilateral Grid",
+    "Geodesics in Heat",
+    "Simple and Effective Type Check Removal through Lazy Basic Block Versioning"
   ],
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
   "curiosity_count": 9,
   "craft_batch": "craft-2026-10-07",
   "craft_count": 9,
-  "archive_batch": "archive-2026-10-14",
+  "archive_batch": "archive-2026-10-18",
   "archive_count": 8,
   "frontier_batch": "frontier-2026-10-14",
   "frontier_count": 10,
@@ -5222,7 +5232,15 @@
     "10.1145/1356052.1356053",
     "10.1145/1411304.1411311",
     "10.2312/EGGH/HPG10/067-075",
-    "https://cdn.aaai.org/AAAI/1987/AAAI87-048.pdf"
+    "https://cdn.aaai.org/AAAI/1987/AAAI87-048.pdf",
+    "10.1016/S0921-8890(05)80025-9",
+    "10.1145/106972.106984",
+    "10.7551/mitpress/7160.001.0001",
+    "10.1145/143095.143136",
+    "https://papers.agoric.com/assets/pdf/papers/capability-myths-demolished.pdf",
+    "10.1145/1276377.1276506",
+    "10.1145/2516971.2516977",
+    "10.4230/LIPIcs.ECOOP.2015.101"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6364,5 +6382,35 @@
   "craft_2026_10_17_count": 5,
   "craft_2026_10_17_arxiv": 5,
   "craft_2026_10_17_titles": 5,
-  "craft_2026_10_17_near_keepers": 14
+  "craft_2026_10_17_near_keepers": 14,
+  "archive_2026_10_18_batch": "archive-2026-10-18",
+  "archive_2026_10_18_count": 8,
+  "archive_2026_10_18_titles": [
+    "Elephants Don't Play Chess",
+    "Virtual Memory Primitives for User Programs",
+    "Warren's Abstract Machine: A Tutorial Reconstruction",
+    "Lazy Code Motion",
+    "Capability Myths Demolished",
+    "Real-time Edge-Aware Image Processing with the Bilateral Grid",
+    "Geodesics in Heat",
+    "Simple and Effective Type Check Removal through Lazy Basic Block Versioning"
+  ],
+  "archive_2026_10_18_near_keepers": [
+    "The Program Dependence Graph and Its Use in Optimization",
+    "Fast High-Dimensional Filtering Using the Permutohedral Lattice",
+    "As-Rigid-As-Possible Surface Modeling",
+    "Laplacian Surface Editing",
+    "The Protection of Information in Computer Systems",
+    "Lottery Scheduling",
+    "Points-to Analysis in Almost Linear Time",
+    "Extensible Records with Scoped Labels",
+    "Lightweight Modular Staging",
+    "Lazy Task Creation",
+    "Asymmetric Numeral Systems",
+    "Opportunistic Data Structures with Applications",
+    "PatchMatch: A Randomized Correspondence Algorithm for Structural Image Editing",
+    "A Volumetric Method for Building Complex Models from Range Images",
+    "Mostly Lock-Free Malloc",
+    "Pose Space Deformation"
+  ]
 }
