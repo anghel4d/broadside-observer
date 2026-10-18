@@ -3277,3 +3277,16 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2339 | 9 | 2015 | Simple and Effective Type Check Removal through Lazy Basic Block Versioning | languages |
 
 _Recount after `archive-2026-10-18`: **2339** unique title cards on main. Next rank **2340+**._
+
+### frontier-2026-10-18
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `25c5419`, **2339** unique, max rank **2339**. Next rank **2340**. seed_batch: `frontier-2026-10-18`. Weekend window: no new arXiv announcements since Fri 16 Oct, so keepers come from first-party lab releases and the web.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2340 | 9 | 2026 | DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression | agents |
+| 2341 | 8 | 2026 | NVIDIA Nemotron Labs Dory 1.0 4B: a looped (latent-recurrent) LLM with elastic inference compute | agents |
+| 2342 | 9 | 2026 | Claude reveals ECDSA curve origins | agents |
+| 2343 | 9 | 2026 | StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour | game-ai |
+
+_Recount after `frontier-2026-10-18`: **2343** unique title cards on main. Next rank **2344+**._
