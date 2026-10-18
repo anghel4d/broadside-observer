@@ -3261,7 +3261,11 @@
     "Capability Myths Demolished",
     "Real-time Edge-Aware Image Processing with the Bilateral Grid",
     "Geodesics in Heat",
-    "Simple and Effective Type Check Removal through Lazy Basic Block Versioning"
+    "Simple and Effective Type Check Removal through Lazy Basic Block Versioning",
+    "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+    "NVIDIA Nemotron Labs Dory 1.0 4B: a looped (latent-recurrent) LLM with elastic inference compute",
+    "Claude reveals ECDSA curve origins",
+    "StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour"
   ],
   "updated": "2026-10-18",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -3272,8 +3276,8 @@
   "craft_count": 9,
   "archive_batch": "archive-2026-10-18",
   "archive_count": 8,
-  "frontier_batch": "frontier-2026-10-14",
-  "frontier_count": 10,
+  "frontier_batch": "frontier-2026-10-18",
+  "frontier_count": 4,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
@@ -5240,7 +5244,12 @@
     "https://papers.agoric.com/assets/pdf/papers/capability-myths-demolished.pdf",
     "10.1145/1276377.1276506",
     "10.1145/2516971.2516977",
-    "10.4230/LIPIcs.ECOOP.2015.101"
+    "10.4230/LIPIcs.ECOOP.2015.101",
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+    "https://www.anthropic.com/research/ecdsa-curve-origins",
+    "https://starskirmish.com/bench/v0-2/"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6412,5 +6421,34 @@
     "A Volumetric Method for Building Complex Models from Range Images",
     "Mostly Lock-Free Malloc",
     "Pose Space Deformation"
+  ],
+  "frontier_2026_10_18_batch": "frontier-2026-10-18",
+  "frontier_2026_10_18_count": 4,
+  "frontier_2026_10_18_titles": [
+    "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+    "NVIDIA Nemotron Labs Dory 1.0 4B: a looped (latent-recurrent) LLM with elastic inference compute",
+    "Claude reveals ECDSA curve origins",
+    "StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour"
+  ],
+  "frontier_2026_10_18_urls": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+    "https://www.anthropic.com/research/ecdsa-curve-origins",
+    "https://starskirmish.com/bench/v0-2/"
+  ],
+  "frontier_2026_10_18_near_keepers": [
+    "Mercor: A benchmark map of the US economy (90% of working hours undercovered) https://www.mercor.com/research/labor-index/benchmark-map/",
+    "Anthropic: Designing more efficient quantum circuits with Claude https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+    "Google Research: Grounding AI agents in biological reality (autonomous wet labs) https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/",
+    "Calif: Big Fish, exploiting a 37-year-old OpenBSD kernel bug https://calif.io/research/big-fish",
+    "Reflection AI Beam 501B open model + Mirror harness https://huggingface.co/blog/reflection-beam",
+    "vLLM + NVIDIA fused CuTe DSL decode kernels for Kimi K3 on GB300 (X news; primary source not fetched)",
+    "OpenAI disclosure of GPT-5.6 Sol testnet-wallet and other rogue-agent incidents (Fortune; primary source not fetched)",
+    "Postgres 19 delayed after AI reviewers find more bugs https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-fi",
+    "How the Claude Code team does code review (15 Oct, pre-window) https://claude.dev/blog/solving-code-review-at-anthropic/",
+    "Apple MLX + RDMA distributed inference of Muse Spark Open on Mac Studio (15 Oct, pre-window) https://machinelearning.apple.com/research/mlx-distributed-inference",
+    "You could have invented transformers from memory (essay) https://alexwang.ai/posts/associative-memory/",
+    "Perplexity pplx-decider v1.2 open decision models (X news)"
   ]
 }
