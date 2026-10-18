@@ -3265,9 +3265,14 @@
     "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
     "NVIDIA Nemotron Labs Dory 1.0 4B: a looped (latent-recurrent) LLM with elastic inference compute",
     "Claude reveals ECDSA curve origins",
-    "StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour"
+    "StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour",
+    "Polynomial Block Lengths Are Necessary and Sufficient to Beat Insertion Sort",
+    "Approximating Independent Sets Using Additive Combinatorics",
+    "Eco-Evolutionary Graph Theory: Regular Graphs can act as Amplifiers",
+    "Ice drives the emergence of functional protocells",
+    "Wave coarsening drives time crystallization in mechatronic metamaterials"
   ],
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5249,7 +5254,12 @@
     "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/DeepSeek_V41_Tech_Report.pdf",
     "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
     "https://www.anthropic.com/research/ecdsa-curve-origins",
-    "https://starskirmish.com/bench/v0-2/"
+    "https://starskirmish.com/bench/v0-2/",
+    "https://eccc.weizmann.ac.il/report/2026/256",
+    "https://eccc.weizmann.ac.il/report/2026/257",
+    "https://www.biorxiv.org/content/10.64898/2026.10.16.759554v1",
+    "https://www.biorxiv.org/content/10.64898/2026.10.13.758973v1",
+    "https://www.nature.com/articles/s41586-026-11163-6"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6450,5 +6460,31 @@
     "Apple MLX + RDMA distributed inference of Muse Spark Open on Mac Studio (15 Oct, pre-window) https://machinelearning.apple.com/research/mlx-distributed-inference",
     "You could have invented transformers from memory (essay) https://alexwang.ai/posts/associative-memory/",
     "Perplexity pplx-decider v1.2 open decision models (X news)"
+  ],
+  "curiosity_2026_10_19_batch": "curiosity-2026-10-19",
+  "curiosity_2026_10_19_count": 5,
+  "curiosity_2026_10_19_titles": [
+    "Polynomial Block Lengths Are Necessary and Sufficient to Beat Insertion Sort",
+    "Approximating Independent Sets Using Additive Combinatorics",
+    "Eco-Evolutionary Graph Theory: Regular Graphs can act as Amplifiers",
+    "Ice drives the emergence of functional protocells",
+    "Wave coarsening drives time crystallization in mechatronic metamaterials"
+  ],
+  "curiosity_2026_10_19_urls": [
+    "https://eccc.weizmann.ac.il/report/2026/256",
+    "https://eccc.weizmann.ac.il/report/2026/257",
+    "https://www.biorxiv.org/content/10.64898/2026.10.16.759554v1",
+    "https://www.biorxiv.org/content/10.64898/2026.10.13.758973v1",
+    "https://www.nature.com/articles/s41586-026-11163-6"
+  ],
+  "curiosity_2026_10_19_near_keepers": [
+    "A simplified proof of PARITY not in QAC0 (ECCC TR26-258; follow-up to card 2129) https://eccc.weizmann.ac.il/report/2026/258",
+    "Wigderson: Michael Rabin's fingerprints across the theory of computation (ECCC TR26-259) https://eccc.weizmann.ac.il/report/2026/259",
+    "The extraction of work from hidden degrees of freedom (Nature Physics, doi 10.1038/s41567-026-03442-w)",
+    "A dynamic ruler for positional memory in regeneration (Nature Physics, doi 10.1038/s41567-026-03488-w)",
+    "Spatial structure drives the evolution of parasites into host defense systems (bioRxiv 10.64898/2026.10.14.759074)",
+    "Self-extending DNA recording with stochastic and programmed writing (bioRxiv 10.64898/2026.10.14.759016)",
+    "Unconditional Quantum PAC Learning Advantage in the Large Error Regime (ECCC TR26-255) https://eccc.weizmann.ac.il/report/2026/255",
+    "Evolution of the division of labor between two interacting public tasks (bioRxiv 10.64898/2026.10.13.758955)"
   ]
 }

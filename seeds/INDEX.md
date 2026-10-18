@@ -3290,3 +3290,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2343 | 9 | 2026 | StarSkirmish Bench v0.2: LLMs write StarCraft: Brood War bots in one hour | game-ai |
 
 _Recount after `frontier-2026-10-18`: **2343** unique title cards on main. Next rank **2344+**._
+
+### curiosity-2026-10-19
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `5b64f6e`, **2343** unique, max rank **2343**. Next rank **2344**. seed_batch: `curiosity-2026-10-19`. Weekend window: arXiv has had no announcement since Fri 16 Oct (already covered by curiosity-2026-10-17), so keepers come from ECCC, bioRxiv and journals.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2344 | 8 | 2026 | Polynomial Block Lengths Are Necessary and Sufficient to Beat Insertion Sort | maths-foundations |
+| 2345 | 8 | 2026 | Approximating Independent Sets Using Additive Combinatorics | maths-foundations |
+| 2346 | 7 | 2026 | Eco-Evolutionary Graph Theory: Regular Graphs can act as Amplifiers | biology |
+| 2347 | 7 | 2026 | Ice drives the emergence of functional protocells | biology |
+| 2348 | 7 | 2026 | Wave coarsening drives time crystallization in mechatronic metamaterials | physics |
+
+_Recount after `curiosity-2026-10-19`: **2348** unique title cards on main. Next rank **2349+**._
