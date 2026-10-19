@@ -3317,3 +3317,20 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `06
 | 2352 | 7 | 2026 | The Case for TPU-Accelerated Analytical Query Processing | languages |
 
 _Recount after `craft-2026-10-19`: **2352** unique title cards on main. Next rank **2353+**._
+
+### archive-2026-10-20
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `f474e57`, **2352** unique, max rank **2352**. Next rank **2353**. seed_batch: `archive-2026-10-20`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2353 | 9 | 1978 | On-the-Fly Garbage Collection: An Exercise in Cooperation | systems |
+| 2354 | 8 | 1986 | An O(ND) Difference Algorithm and Its Variations | languages |
+| 2355 | 9 | 1992 | Debugging Optimized Code with Dynamic Deoptimization | languages |
+| 2356 | 8 | 1994 | Teleo-Reactive Programs for Agent Control | game-ai |
+| 2357 | 8 | 2000 | Dancing Links | languages |
+| 2358 | 9 | 2001 | The Design and Implementation of a Region-Based Parallel Programming Language | languages |
+| 2359 | 8 | 2005 | A Fast Sweeping Method for Eikonal Equations | graphics |
+| 2360 | 8 | 2007 | Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters | languages |
+
+_Recount after `archive-2026-10-20`: **2360** unique title cards on main. Next rank **2361+**._

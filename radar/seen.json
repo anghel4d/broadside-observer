@@ -930,7 +930,9 @@
     "1411.0352",
     "2610.23328",
     "2610.23044",
-    "2610.22673"
+    "2610.22673",
+    "cs/0011047",
+    "cs/9401101"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3277,9 +3279,17 @@
     "BVH Encoding for Neural-Assisted Ray Tracing",
     "Peak-Memory Schedules You Can Trust: Exact Realization, Certified Optimality, and the Limits of Recomputation for Inference",
     "Where Does the Performance Go? Understanding and Recovering Performance Regressions in C-to-Rust Translation",
-    "The Case for TPU-Accelerated Analytical Query Processing"
+    "The Case for TPU-Accelerated Analytical Query Processing",
+    "On-the-Fly Garbage Collection: An Exercise in Cooperation",
+    "An O(ND) Difference Algorithm and Its Variations",
+    "Debugging Optimized Code with Dynamic Deoptimization",
+    "Teleo-Reactive Programs for Agent Control",
+    "Dancing Links",
+    "The Design and Implementation of a Region-Based Parallel Programming Language",
+    "A Fast Sweeping Method for Eikonal Equations",
+    "Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters"
   ],
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5267,7 +5277,13 @@
     "https://www.biorxiv.org/content/10.64898/2026.10.16.759554v1",
     "https://www.biorxiv.org/content/10.64898/2026.10.13.758973v1",
     "https://www.nature.com/articles/s41586-026-11163-6",
-    "https://jcgt.org/published/0015/02/03/"
+    "https://jcgt.org/published/0015/02/03/",
+    "https://www.cs.utexas.edu/~EWD/transcriptions/EWD05xx/EWD520.html",
+    "https://homes.cs.washington.edu/~brad/cv/pubs/degree/thesis.pdf",
+    "https://bibliography.selflanguage.org/_static/dynamic-deoptimization.pdf",
+    "https://www.math.uci.edu/~zhao/homepage/research_files/FSM.pdf",
+    "https://www.scss.tcd.ie/David.Gregg/papers/toplas05.pdf",
+    "http://www.xmailserver.org/diff2.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6527,5 +6543,39 @@
     "Mobile-4DGS: Unified Static-Dynamic Real-time Mobile Gaussian Splatting (2610.05289)",
     "PrairieFire: Igniting High-Throughput Updates in Large-Scale Approximate Nearest Neighbor Search (2610.23232)",
     "Efficient Dialect-Agnostic SQL Equivalence Refutation (2610.22442)"
+  ],
+  "archive_2026_10_20_batch": "archive-2026-10-20",
+  "archive_2026_10_20_count": 8,
+  "archive_2026_10_20_arxiv": [
+    "cs/0011047",
+    "cs/9401101"
+  ],
+  "archive_2026_10_20_titles": [
+    "On-the-Fly Garbage Collection: An Exercise in Cooperation",
+    "An O(ND) Difference Algorithm and Its Variations",
+    "Debugging Optimized Code with Dynamic Deoptimization",
+    "Teleo-Reactive Programs for Agent Control",
+    "Dancing Links",
+    "The Design and Implementation of a Region-Based Parallel Programming Language",
+    "A Fast Sweeping Method for Eikonal Equations",
+    "Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters"
+  ],
+  "archive_2026_10_20_near_keepers": [
+    "Graph-Based Algorithms for Boolean Function Manipulation (Bryant 1986)",
+    "Mean Value Coordinates (Floater 2003)",
+    "Copperhead: Compiling an Embedded Data Parallel Language (2011)",
+    "Database Cracking (Idreos-Kersten-Manegold 2007)",
+    "Contraction Hierarchies: Faster and Simpler Hierarchical Routing in Road Networks (2008)",
+    "Dynamic Warp Formation and Scheduling for Efficient GPU Control Flow (2007)",
+    "Bounded Biharmonic Weights for Real-Time Deformation (2011)",
+    "Fast Mergeable Integer Maps (Okasaki-Gill 1998)",
+    "Uniqueness Typing for Functional Languages with Graph Rewriting Semantics (1993)",
+    "Down for the Count? Getting Reference Counting Back in the Ring (2012)",
+    "Learning Real-Time A* / Real-Time Heuristic Search (Korf 1990)",
+    "A Locally Adaptive Data Compression Scheme (Bentley-Sleator-Tarjan-Wei 1986)",
+    "Chaff: Engineering an Efficient SAT Solver (2001)",
+    "Build Systems \u00e0 la Carte (2018)",
+    "HotpathVM: An Effective JIT Compiler for Resource-constrained Devices (2006)",
+    "Context Threading (Berndl et al. 2005)"
   ]
 }
