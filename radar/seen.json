@@ -927,7 +927,10 @@
     "2608.19167",
     "2610.22071",
     "1204.6216",
-    "1411.0352"
+    "1411.0352",
+    "2610.23328",
+    "2610.23044",
+    "2610.22673"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3270,7 +3273,11 @@
     "Approximating Independent Sets Using Additive Combinatorics",
     "Eco-Evolutionary Graph Theory: Regular Graphs can act as Amplifiers",
     "Ice drives the emergence of functional protocells",
-    "Wave coarsening drives time crystallization in mechatronic metamaterials"
+    "Wave coarsening drives time crystallization in mechatronic metamaterials",
+    "BVH Encoding for Neural-Assisted Ray Tracing",
+    "Peak-Memory Schedules You Can Trust: Exact Realization, Certified Optimality, and the Limits of Recomputation for Inference",
+    "Where Does the Performance Go? Understanding and Recovering Performance Regressions in C-to-Rust Translation",
+    "The Case for TPU-Accelerated Analytical Query Processing"
   ],
   "updated": "2026-10-19",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5259,7 +5266,8 @@
     "https://eccc.weizmann.ac.il/report/2026/257",
     "https://www.biorxiv.org/content/10.64898/2026.10.16.759554v1",
     "https://www.biorxiv.org/content/10.64898/2026.10.13.758973v1",
-    "https://www.nature.com/articles/s41586-026-11163-6"
+    "https://www.nature.com/articles/s41586-026-11163-6",
+    "https://jcgt.org/published/0015/02/03/"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6486,5 +6494,38 @@
     "Self-extending DNA recording with stochastic and programmed writing (bioRxiv 10.64898/2026.10.14.759016)",
     "Unconditional Quantum PAC Learning Advantage in the Large Error Regime (ECCC TR26-255) https://eccc.weizmann.ac.il/report/2026/255",
     "Evolution of the division of labor between two interacting public tasks (bioRxiv 10.64898/2026.10.13.758955)"
+  ],
+  "craft_2026_10_19_batch": "craft-2026-10-19",
+  "craft_2026_10_19_count": 4,
+  "craft_2026_10_19_arxiv": [
+    "2610.23328",
+    "2610.23044",
+    "2610.22673"
+  ],
+  "craft_2026_10_19_titles": [
+    "BVH Encoding for Neural-Assisted Ray Tracing",
+    "Peak-Memory Schedules You Can Trust: Exact Realization, Certified Optimality, and the Limits of Recomputation for Inference",
+    "Where Does the Performance Go? Understanding and Recovering Performance Regressions in C-to-Rust Translation",
+    "The Case for TPU-Accelerated Analytical Query Processing"
+  ],
+  "craft_2026_10_19_urls": [
+    "https://jcgt.org/published/0015/02/03/"
+  ],
+  "craft_2026_10_19_near_keepers": [
+    "System Capybara: Tracking Capabilities for Separation and Freshness (2607.09383)",
+    "Forte: A sensitivity type system for imperative Rust (2609.30254)",
+    "Kani: A Model Checker for Rust (2607.01504)",
+    "Equal-Area and Quasi-Conformal Mappings between Squares, Discs and Fernandez-Guasti Squircles (JCGT 0015/02/02) https://jcgt.org/published/0015/02/02/",
+    "Joining Large String Collections with Jaro-Winkler Similarity (2610.23652)",
+    "Arbitrary Functors as Modalities in a Linear Calculus (2610.23023)",
+    "From Border-Agnosticism to Causal Rewrite Systems (2610.23351)",
+    "Structural Affinity: An Algorithm for Coherent Cage-Based Shape Design (2610.23173)",
+    "Type Safety via Hoare Logic with Separation and Pure Types (2607.25262)",
+    "Incremental Maintenance of DatalogMTL Materialisations (2511.12169)",
+    "Differentiable Polarized Path Tracing (2607.13265)",
+    "FDP: The Data Placement Promise of Modern NVMe SSDs (2610.02676)",
+    "Mobile-4DGS: Unified Static-Dynamic Real-time Mobile Gaussian Splatting (2610.05289)",
+    "PrairieFire: Igniting High-Throughput Updates in Large-Scale Approximate Nearest Neighbor Search (2610.23232)",
+    "Efficient Dialect-Agnostic SQL Equivalence Refutation (2610.22442)"
   ]
 }
