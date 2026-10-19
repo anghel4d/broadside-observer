@@ -3304,3 +3304,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2348 | 7 | 2026 | Wave coarsening drives time crystallization in mechatronic metamaterials | physics |
 
 _Recount after `curiosity-2026-10-19`: **2348** unique title cards on main. Next rank **2349+**._
+
+### craft-2026-10-19
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `06bf547`, **2348** unique, max rank **2348**. Next rank **2349**. seed_batch: `craft-2026-10-19`. Window: Monday's arXiv announcement (submissions through Fri 16 Oct) plus a new JCGT paper (15 Oct).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2349 | 8 | 2026 | BVH Encoding for Neural-Assisted Ray Tracing | graphics |
+| 2350 | 8 | 2026 | Peak-Memory Schedules You Can Trust: Exact Realization, Certified Optimality, and the Limits of Recomputation for Inference | systems |
+| 2351 | 8 | 2026 | Where Does the Performance Go? Understanding and Recovering Performance Regressions in C-to-Rust Translation | systems |
+| 2352 | 7 | 2026 | The Case for TPU-Accelerated Analytical Query Processing | languages |
+
+_Recount after `craft-2026-10-19`: **2352** unique title cards on main. Next rank **2353+**._
