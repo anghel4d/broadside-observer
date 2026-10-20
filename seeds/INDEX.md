@@ -3346,3 +3346,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2365 | 8 | 2026 | From Approval to Abuse: Privilege Escalation Attacks on Harness-Protected Coding Agents | agents |
 
 _Recount after `frontier-2026-10-20`: **2365** unique title cards on main. Next rank **2366+**._
+
+### curiosity-2026-10-21
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `6bbbafa`, **2365** unique, max rank **2365**. Next rank **2366**. seed_batch: `curiosity-2026-10-21`. Window: arXiv listings of Mon 19 and Tue 20 Oct 2026 across the Curiosity maths/physics/biology categories.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2366 | 9 | 2026 | Proof of the Erdős-Szemerédi sunflower conjecture | maths-foundations |
+| 2367 | 8 | 2026 | Near optimal gap in the Lonely Runner Conjecture | maths-foundations |
+| 2368 | 8 | 2026 | The Heesch number in E^3 is unbounded | maths-foundations |
+| 2369 | 8 | 2026 | At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier | agents |
+| 2370 | 7 | 2026 | The square achievement game on n × n boards | game-ai |
+
+_Recount after `curiosity-2026-10-21`: **2370** unique title cards on main. Next rank **2371+**._
