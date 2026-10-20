@@ -937,7 +937,12 @@
     "2610.24206",
     "2610.22466",
     "2610.26098",
-    "2610.22987"
+    "2610.22987",
+    "2610.26686",
+    "2610.23790",
+    "2610.24281",
+    "2610.22603",
+    "2610.22410"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3297,9 +3302,14 @@
     "swe-bench pro v2: a cleaner, harder-to-game coding benchmark",
     "harness-delta attribution: dissecting gains from harness evolution",
     "from code to playable systems: cegame-bench for long-horizon game creation agents",
-    "from approval to abuse: privilege escalation attacks on harness-protected coding agents"
+    "from approval to abuse: privilege escalation attacks on harness-protected coding agents",
+    "Proof of the Erd\u0151s-Szemer\u00e9di sunflower conjecture",
+    "Near optimal gap in the Lonely Runner Conjecture",
+    "The Heesch number in E^3 is unbounded",
+    "At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier",
+    "The square achievement game on n \u00d7 n boards"
   ],
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -6608,5 +6618,35 @@
     "MemT-1.0: Towards Memory-Native Evolution https://arxiv.org/abs/2610.26825",
     "MiniMax M3.1 Flash (API launch, no technical report) https://www.minimax.io/blog/minimax-m31f",
     "Mercury 3: Diffusion at scale (API launch) https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+  ],
+  "curiosity_2026_10_21_batch": "curiosity-2026-10-21",
+  "curiosity_2026_10_21_count": 5,
+  "curiosity_2026_10_21_titles": [
+    "Proof of the Erd\u0151s-Szemer\u00e9di sunflower conjecture",
+    "Near optimal gap in the Lonely Runner Conjecture",
+    "The Heesch number in E^3 is unbounded",
+    "At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier",
+    "The square achievement game on n \u00d7 n boards"
+  ],
+  "curiosity_2026_10_21_urls": [
+    "https://arxiv.org/abs/2610.26686",
+    "https://arxiv.org/abs/2610.23790",
+    "https://arxiv.org/abs/2610.24281",
+    "https://arxiv.org/abs/2610.22603",
+    "https://arxiv.org/abs/2610.22410"
+  ],
+  "curiosity_2026_10_21_near_keepers": [
+    "Optimal single-track Gray codes from Gray-ordered necklaces (arXiv 2610.24758)",
+    "More than 8/9 zeros of the Riemann zeta function are simple or on the critical line (arXiv 2610.23467)",
+    "Human Exposition of Claude's 2/3 Theorem on the zeros of zeta (arXiv 2610.24612; cites addition for card 1198)",
+    "The maximum number of Hamiltonian cycles in tournaments (arXiv 2610.23755; GPT-5.6-found proofs)",
+    "A proof of the strong Erd\u0151s\u2013Frankl\u2013F\u00fcredi cover-free conjecture (arXiv 2610.24442)",
+    "Crossing numbers of complete bipartite graphs (arXiv 2610.25204; pre-OpenAI flag-algebra bounds, relates to card 2020)",
+    "Four colours are needed for closed-neighbourhood conflict-free colouring of all planar graphs (arXiv 2610.22559)",
+    "Fuglede's conjecture holds in F_2^7 (arXiv 2610.24022)",
+    "Puzznic is PSPACE-Complete (arXiv 2610.23639)",
+    "A counterexample to the geometric triangulation conjecture of Costantino, Frigerio, Martelli and Petronio (arXiv 2610.25217)",
+    "LLM Evolution in a Simple Simulated Market (arXiv 2610.24033)",
+    "Fractal forcing of turbulence by settling particles (arXiv 2610.26050)"
   ]
 }
