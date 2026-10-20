@@ -3333,4 +3333,16 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2359 | 8 | 2005 | A Fast Sweeping Method for Eikonal Equations | graphics |
 | 2360 | 8 | 2007 | Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters | languages |
 
-_Recount after `archive-2026-10-20`: **2360** unique title cards on main. Next rank **2361+**._
+### frontier-2026-10-20
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `60f048d`, **2360** unique, max rank **2360**. Next rank **2361**. seed_batch: `frontier-2026-10-20`.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2361 | 9 | 2026 | Understanding KV Residency in Production-Scale Agentic LLM Workloads | agents |
+| 2362 | 8 | 2026 | SWE-Bench Pro V2: A Cleaner, Harder-to-Game Coding Benchmark | agents |
+| 2363 | 9 | 2026 | Harness-Delta Attribution: Dissecting Gains From Harness Evolution | agents |
+| 2364 | 8 | 2026 | From Code to Playable Systems: CEGame-Bench for Long-Horizon Game Creation Agents | game-ai |
+| 2365 | 8 | 2026 | From Approval to Abuse: Privilege Escalation Attacks on Harness-Protected Coding Agents | agents |
+
+_Recount after `frontier-2026-10-20`: **2365** unique title cards on main. Next rank **2366+**._

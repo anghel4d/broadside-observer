@@ -932,7 +932,12 @@
     "2610.23044",
     "2610.22673",
     "cs/0011047",
-    "cs/9401101"
+    "cs/9401101",
+    "2610.22863",
+    "2610.24206",
+    "2610.22466",
+    "2610.26098",
+    "2610.22987"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3287,7 +3292,12 @@
     "Dancing Links",
     "The Design and Implementation of a Region-Based Parallel Programming Language",
     "A Fast Sweeping Method for Eikonal Equations",
-    "Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters"
+    "Optimizing Indirect Branch Prediction Accuracy in Virtual Machine Interpreters",
+    "understanding kv residency in production-scale agentic llm workloads",
+    "swe-bench pro v2: a cleaner, harder-to-game coding benchmark",
+    "harness-delta attribution: dissecting gains from harness evolution",
+    "from code to playable systems: cegame-bench for long-horizon game creation agents",
+    "from approval to abuse: privilege escalation attacks on harness-protected coding agents"
   ],
   "updated": "2026-10-20",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6577,5 +6587,26 @@
     "Build Systems \u00e0 la Carte (2018)",
     "HotpathVM: An Effective JIT Compiler for Resource-constrained Devices (2006)",
     "Context Threading (Berndl et al. 2005)"
+  ],
+  "frontier_2026_10_20_batch": 19,
+  "frontier_2026_10_20_count": 5,
+  "frontier_2026_10_20_arxiv": 5,
+  "frontier_2026_10_20_titles": 5,
+  "frontier_2026_10_20_near_keepers": [
+    "DLite: History-free Speculative Decoding for Agentic AI https://arxiv.org/abs/2610.23787",
+    "Towards Looped Models Done Right, Part I https://arxiv.org/abs/2610.23036",
+    "Self-Evolving Coding Agents via Harness-Policy Optimization (Self-HPO) https://arxiv.org/abs/2610.22791",
+    "Maestro: Agentic Formal Proof Development by Coordination https://arxiv.org/abs/2610.25920",
+    "Proving LLM-Generated GPU Kernels Correct and Safe (Lean/VerCors) https://arxiv.org/abs/2610.24548",
+    "StopLoss: Teaching Agents to Predict Failure and Stop Early https://arxiv.org/abs/2610.25525",
+    "When the harness decides success: state that cannot be re-observed https://arxiv.org/abs/2610.26632",
+    "KVCompass: discovery plane for internet-scale prefix cache sharing https://arxiv.org/abs/2610.24179",
+    "Editing as Language: Native Context Editing grammar https://arxiv.org/abs/2610.25550",
+    "Policy Search in Code Space for Multi-Agent Pathfinding https://arxiv.org/abs/2610.25946",
+    "Bellman Language Models: Discretize, Then Decide https://arxiv.org/abs/2610.24871",
+    "SWE-Residual: Starting-State Robustness of Coding Agents https://arxiv.org/abs/2610.25899",
+    "MemT-1.0: Towards Memory-Native Evolution https://arxiv.org/abs/2610.26825",
+    "MiniMax M3.1 Flash (API launch, no technical report) https://www.minimax.io/blog/minimax-m31f",
+    "Mercury 3: Diffusion at scale (API launch) https://www.inceptionlabs.ai/blog/introducing-mercury-3"
   ]
 }
