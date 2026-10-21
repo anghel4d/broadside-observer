@@ -942,7 +942,8 @@
     "2610.23790",
     "2610.24281",
     "2610.22603",
-    "2610.22410"
+    "2610.22410",
+    "2610.27313"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3307,7 +3308,12 @@
     "Near optimal gap in the Lonely Runner Conjecture",
     "The Heesch number in E^3 is unbounded",
     "At the Limits of Computability: Steps Towards Autonomous AI Discovery on the Busy Beaver Frontier",
-    "The square achievement game on n \u00d7 n boards"
+    "The square achievement game on n \u00d7 n boards",
+    "Wide SOBB Hierarchies for Ray Tracing of Dynamic Scenes",
+    "Refit Always\u2014Precomputed Ensembles of Bounding Volume Hierarchies for Parametric Animations",
+    "Real-Time Collision Handling for Signed Distance Fields via Caching and Importance Sampling",
+    "Billions of triangles redux",
+    "Scrambled Multiply-with-Carry Pseudorandom Number Generators"
   ],
   "updated": "2026-10-21",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6648,5 +6654,36 @@
     "A counterexample to the geometric triangulation conjecture of Costantino, Frigerio, Martelli and Petronio (arXiv 2610.25217)",
     "LLM Evolution in a Simple Simulated Market (arXiv 2610.24033)",
     "Fractal forcing of turbulence by settling particles (arXiv 2610.26050)"
+  ],
+  "craft_2026_10_21_batch": "craft-2026-10-21",
+  "craft_2026_10_21_count": 5,
+  "craft_2026_10_21_arxiv": [
+    "2610.27313"
+  ],
+  "craft_2026_10_21_titles": [
+    "Wide SOBB Hierarchies for Ray Tracing of Dynamic Scenes",
+    "Refit Always\u2014Precomputed Ensembles of Bounding Volume Hierarchies for Parametric Animations",
+    "Real-Time Collision Handling for Signed Distance Fields via Caching and Importance Sampling",
+    "Billions of triangles redux",
+    "Scrambled Multiply-with-Carry Pseudorandom Number Generators"
+  ],
+  "craft_2026_10_21_urls": [
+    "https://doi.org/10.1111/cgf.70643",
+    "https://doi.org/10.1111/cgf.70645",
+    "https://doi.org/10.2312/pg.20261059",
+    "https://zeux.io/2026/09/30/billions-of-triangles-redux/",
+    "https://arxiv.org/abs/2610.27313"
+  ],
+  "craft_2026_10_21_near_keepers": [
+    "HEL: A Heterogeneous Extensible Layer for GPU-Resident Runtime Orchestration (arXiv 2610.24830)",
+    "Emulating DGEMM and ZGEMM with INT8 Matrix Engines on Intel Arc GPUs: Ozaki Scheme II on Xe2 (arXiv 2610.26945)",
+    "Merge Hulls Without Copying Vertices: GPU Isotonic Regression (arXiv 2610.24038)",
+    "Ride, Raise, or Wake: A Theory of Light-Thread Placement on Multi-Tier Processors (arXiv 2610.25546)",
+    "XRust: Detecting Logical Races in Rust Linux Drivers (arXiv 2610.27325)",
+    "Record Types Everywhere (arXiv 2610.27519)",
+    "A Spatio-Temporal Acceleration Framework for Order-Independent Transparency (PG 2026, doi 10.2312/pg.20261075)",
+    "The bgfx shader compiler, 14 years of not being a compiler (bkaradzic.github.io, 2026-09-27)",
+    "One Hash Bloom Filters (calabro.io, 2026-10-17)",
+    "Neural Controlled Directional Frame Generation for Sprite Animation (arXiv 2610.27253)"
   ]
 }
