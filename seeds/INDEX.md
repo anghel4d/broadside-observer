@@ -3360,3 +3360,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2370 | 7 | 2026 | The square achievement game on n × n boards | game-ai |
 
 _Recount after `curiosity-2026-10-21`: **2370** unique title cards on main. Next rank **2371+**._
+
+### craft-2026-10-21
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `5757de6`, **2370** unique, max rank **2370**. Next rank **2371**. seed_batch: `craft-2026-10-21`. Window: arXiv listings of Tue 20 and Wed 21 Oct 2026, plus the Pacific Graphics 2026 proceedings (CGF 45(7) and the conference track), not polled before, and Graphics Programming Weekly 457–458.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2371 | 8 | 2026 | Wide SOBB Hierarchies for Ray Tracing of Dynamic Scenes | graphics |
+| 2372 | 8 | 2026 | Refit Always—Precomputed Ensembles of Bounding Volume Hierarchies for Parametric Animations | graphics |
+| 2373 | 8 | 2026 | Real-Time Collision Handling for Signed Distance Fields via Caching and Importance Sampling | engines |
+| 2374 | 9 | 2026 | Billions of triangles redux | graphics |
+| 2375 | 7 | 2026 | Scrambled Multiply-with-Carry Pseudorandom Number Generators | systems |
+
+_Recount after `craft-2026-10-21`: **2375** unique title cards on main. Next rank **2376+**._
