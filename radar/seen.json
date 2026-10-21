@@ -3313,9 +3313,15 @@
     "Refit Always\u2014Precomputed Ensembles of Bounding Volume Hierarchies for Parametric Animations",
     "Real-Time Collision Handling for Signed Distance Fields via Caching and Importance Sampling",
     "Billions of triangles redux",
-    "Scrambled Multiply-with-Carry Pseudorandom Number Generators"
+    "Scrambled Multiply-with-Carry Pseudorandom Number Generators",
+    "The History Heuristic and Alpha-Beta Search Enhancements in Practice",
+    "Exploiting Superword Level Parallelism with Multimedia Instruction Sets",
+    "Concurrent Cycle Collection in Reference Counted Systems",
+    "Accurate Sum and Dot Product",
+    "Fast Poisson Disk Sampling in Arbitrary Dimensions",
+    "Robust Inside-Outside Segmentation using Generalized Winding Numbers"
   ],
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5309,7 +5315,13 @@
     "https://bibliography.selflanguage.org/_static/dynamic-deoptimization.pdf",
     "https://www.math.uci.edu/~zhao/homepage/research_files/FSM.pdf",
     "https://www.scss.tcd.ie/David.Gregg/papers/toplas05.pdf",
-    "http://www.xmailserver.org/diff2.pdf"
+    "http://www.xmailserver.org/diff2.pdf",
+    "https://webdocs.cs.ualberta.ca/~jonathan/publications/ai_publications/pami.pdf",
+    "https://groups.csail.mit.edu/cag/slp/SLP-PLDI-2000.pdf",
+    "https://pages.cs.wisc.edu/~cymen/misc/interests/Bacon01Concurrent.pdf",
+    "https://www.tuhh.de/ti3/paper/rump/OgRuOi05.pdf",
+    "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf",
+    "https://igl.ethz.ch/projects/winding-number/robust-inside-outside-segmentation-using-generalized-winding-numbers-siggraph-2013-jacobson-et-al.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6685,5 +6697,31 @@
     "The bgfx shader compiler, 14 years of not being a compiler (bkaradzic.github.io, 2026-09-27)",
     "One Hash Bloom Filters (calabro.io, 2026-10-17)",
     "Neural Controlled Directional Frame Generation for Sprite Animation (arXiv 2610.27253)"
+  ],
+  "archive_2026_10_22_batch": "archive-2026-10-22",
+  "archive_2026_10_22_count": 6,
+  "archive_2026_10_22_titles": [
+    "The History Heuristic and Alpha-Beta Search Enhancements in Practice",
+    "Exploiting Superword Level Parallelism with Multimedia Instruction Sets",
+    "Concurrent Cycle Collection in Reference Counted Systems",
+    "Accurate Sum and Dot Product",
+    "Fast Poisson Disk Sampling in Arbitrary Dimensions",
+    "Robust Inside-Outside Segmentation using Generalized Winding Numbers"
+  ],
+  "archive_2026_10_22_near_keepers": [
+    "Sparse Conditional Constant Propagation / Constant Propagation with Conditional Branches (Wegman-Zadeck 1991)",
+    "A Fast Marching Level Set Method for Monotonically Advancing Fronts (Sethian 1996)",
+    "A Prettier Printer (Wadler 1998)",
+    "Multi-Stage Programming with Explicit Annotations / MetaML (Taha-Sheard 1997)",
+    "Trace Scheduling: A Technique for Global Microcode Compaction (Fisher 1981)",
+    "Whole-Function Vectorization (Karrenberg-Hack 2011)",
+    "Efficient and Flexible Incremental Parsing (Wagner-Graham 1998)",
+    "Skinning with Dual Quaternions (Kavan et al. 2007)",
+    "The Tail at Scale (Dean-Barroso 2013)",
+    "Stable Constrained Dynamics (Tournier et al. 2015)",
+    "The Treadmill: Real-Time Garbage Collection Without Motion Sickness (Baker 1992)",
+    "Fortune's sweepline Voronoi algorithm (1987)",
+    "Stochastic Sampling in Computer Graphics (Cook 1986)",
+    "Fast Winding Numbers for Soups and Clouds (Barill et al. 2018)"
   ]
 }

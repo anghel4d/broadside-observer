@@ -3374,3 +3374,18 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `57
 | 2375 | 7 | 2026 | Scrambled Multiply-with-Carry Pseudorandom Number Generators | systems |
 
 _Recount after `craft-2026-10-21`: **2375** unique title cards on main. Next rank **2376+**._
+
+### archive-2026-10-22
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `ec0bc18`, **2375** unique, max rank **2375**. Next rank **2376**. seed_batch: `archive-2026-10-22`. Historical foundations, 1989–2013.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2376 | 7 | 1989 | The History Heuristic and Alpha-Beta Search Enhancements in Practice | game-ai |
+| 2377 | 8 | 2000 | Exploiting Superword Level Parallelism with Multimedia Instruction Sets | languages |
+| 2378 | 8 | 2001 | Concurrent Cycle Collection in Reference Counted Systems | systems |
+| 2379 | 8 | 2005 | Accurate Sum and Dot Product | languages |
+| 2380 | 8 | 2007 | Fast Poisson Disk Sampling in Arbitrary Dimensions | graphics |
+| 2381 | 8 | 2013 | Robust Inside-Outside Segmentation using Generalized Winding Numbers | graphics |
+
+_Recount after `archive-2026-10-22`: **2381** unique title cards on main. Next rank **2382+**._
