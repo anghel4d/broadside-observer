@@ -943,7 +943,14 @@
     "2610.24281",
     "2610.22603",
     "2610.22410",
-    "2610.27313"
+    "2610.27313",
+    "2610.28577",
+    "2610.29869",
+    "2610.27620",
+    "2610.28601",
+    "2610.27999",
+    "2610.29414",
+    "2610.28311"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3319,7 +3326,14 @@
     "Concurrent Cycle Collection in Reference Counted Systems",
     "Accurate Sum and Dot Product",
     "Fast Poisson Disk Sampling in Arbitrary Dimensions",
-    "Robust Inside-Outside Segmentation using Generalized Winding Numbers"
+    "Robust Inside-Outside Segmentation using Generalized Winding Numbers",
+    "cache engineering for agents",
+    "compaction laundering: provenance destruction in context-compacting coding agents",
+    "local allow, global deny: why per-action authorization does not compose in llm agents",
+    "evolving agent interfaces",
+    "matrix-game 4.0: harnessing video models for real-time playable game worlds",
+    "solving go under positional superko: sound proof transfer and new board values",
+    "from abstraction to action: dsls for natural language abstraction interpretation and execution"
   ],
   "updated": "2026-10-22",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6723,5 +6737,32 @@
     "Fortune's sweepline Voronoi algorithm (1987)",
     "Stochastic Sampling in Computer Graphics (Cook 1986)",
     "Fast Winding Numbers for Soups and Clouds (Barill et al. 2018)"
+  ],
+  "frontier_2026_10_22_batch": "frontier-2026-10-22",
+  "frontier_2026_10_22_count": 7,
+  "frontier_2026_10_22_arxiv": 7,
+  "frontier_2026_10_22_titles": 7,
+  "frontier_2026_10_22_near_keepers": [
+    "Who Approved This? Coding Agents, Human Accounts, and Merge-Gate Evidence at a Fintech Startup https://arxiv.org/abs/2610.28683",
+    "Correlated Failures of AI Approval Monitors https://arxiv.org/abs/2610.29178",
+    "Training the Whole Agent, Not Just the Model (HarnessAdapt-RL) https://arxiv.org/abs/2610.28069",
+    "State World Models: Execute the Rules, Generate the Pixels https://arxiv.org/abs/2610.26811",
+    "MemoryTax: The Bitter Lesson of Agent Memory https://arxiv.org/abs/2610.29823",
+    "REM: What to Store, When to Recall, What to Forget in Experience Memory for Coding Agents https://arxiv.org/abs/2610.27377",
+    "More Memory, Worse Agents: Error Reproduction and Anti-Persistence https://arxiv.org/abs/2610.27406",
+    "Auditing the Product, Not the Recursion: evaluation evidence behind RSI claims https://arxiv.org/abs/2610.27610",
+    "Recoverability and Verifier Strength: preconditions for unattended agent self-improvement https://arxiv.org/abs/2610.27465",
+    "Back Up Before You Regret: RegretBench and BackUpper https://arxiv.org/abs/2610.28934",
+    "Racer: Hunting GPU Kernel Bugs with Symbolic Equivalence Checking https://arxiv.org/abs/2610.28429",
+    "Deciding Scale Placement in MXFP4 Dot Products with Integer Arithmetic https://arxiv.org/abs/2610.29445",
+    "Validating Autoformalized Specifications via Contrapuntal Languages https://arxiv.org/abs/2610.30059",
+    "FrontierCS 2: A Benchmark for Computer Science R&D https://arxiv.org/abs/2610.29932",
+    "OverSeer: Multi-Agent World Models Beyond What Agents See https://arxiv.org/abs/2610.28554",
+    "WorldStream: Streaming Interactive 3D Worlds with Hierarchical Planning and Persistent State https://arxiv.org/abs/2610.28827",
+    "ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents https://arxiv.org/abs/2610.28093",
+    "Evaluating Context Compaction on the Questions That Come Later https://arxiv.org/abs/2610.27301",
+    "Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration https://arxiv.org/abs/2610.28286",
+    "Where Should a Stuck Agent Spend Its Next Tokens? (Banzhaf Resource Attribution) https://arxiv.org/abs/2610.28834",
+    "Elicitation or Expansion? Demystifying Gains from Agent Harness Optimization https://arxiv.org/abs/2610.27889"
   ]
 }

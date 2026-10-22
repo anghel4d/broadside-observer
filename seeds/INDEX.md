@@ -3389,3 +3389,19 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2381 | 8 | 2013 | Robust Inside-Outside Segmentation using Generalized Winding Numbers | graphics |
 
 _Recount after `archive-2026-10-22`: **2381** unique title cards on main. Next rank **2382+**._
+
+### frontier-2026-10-22
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `d50997c`, **2381** unique, max rank **2381**. Next rank **2382**. seed_batch: `frontier-2026-10-22`. Window: arXiv listings of Wed 21 and Thu 22 Oct 2026 plus HF Daily Papers 20–22 Oct.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2382 | 9 | 2026 | Cache Engineering for Agents | agents |
+| 2383 | 9 | 2026 | Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents | agents |
+| 2384 | 8 | 2026 | Local Allow, Global Deny: Why Per-Action Authorization Does Not Compose in LLM Agents | agents |
+| 2385 | 8 | 2026 | Evolving Agent Interfaces | agents |
+| 2386 | 8 | 2026 | Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds | game-ai |
+| 2387 | 7 | 2026 | Solving Go under Positional Superko: Sound Proof Transfer and New Board Values | game-ai |
+| 2388 | 8 | 2026 | From Abstraction to Action: DSLs for Natural Language Abstraction Interpretation and Execution | languages |
+
+_Recount after `frontier-2026-10-22`: **2388** unique title cards on main. Next rank **2389+**._
