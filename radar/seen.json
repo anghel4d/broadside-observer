@@ -950,7 +950,12 @@
     "2610.28601",
     "2610.27999",
     "2610.29414",
-    "2610.28311"
+    "2610.28311",
+    "2610.26940",
+    "2610.28874",
+    "2610.28247",
+    "2610.29874",
+    "2610.28241"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3333,9 +3338,14 @@
     "evolving agent interfaces",
     "matrix-game 4.0: harnessing video models for real-time playable game worlds",
     "solving go under positional superko: sound proof transfer and new board values",
-    "from abstraction to action: dsls for natural language abstraction interpretation and execution"
+    "from abstraction to action: dsls for natural language abstraction interpretation and execution",
+    "littlewood's mutually touching cylinders: the maximum is seven",
+    "a sporadic simplicial arrangement of 51 lines",
+    "strictly convex ergodic billiards",
+    "coherent differentiation with a monoid of degrees: derivatives, taylor expansion, finite differences",
+    "arrival in cube-root subexponential time"
   ],
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -6764,5 +6774,26 @@
     "Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration https://arxiv.org/abs/2610.28286",
     "Where Should a Stuck Agent Spend Its Next Tokens? (Banzhaf Resource Attribution) https://arxiv.org/abs/2610.28834",
     "Elicitation or Expansion? Demystifying Gains from Agent Harness Optimization https://arxiv.org/abs/2610.27889"
+  ],
+  "curiosity_2026_10_23_near_keepers": [
+    "2610.27640",
+    "2610.29131",
+    "2610.27083",
+    "2610.29631",
+    "2610.29296",
+    "2610.27342",
+    "2610.27927",
+    "2610.27750",
+    "2610.28168",
+    "2610.28504",
+    "2610.28828",
+    "2610.29493",
+    "2610.28455",
+    "2610.28764",
+    "2610.28370",
+    "2610.28124",
+    "2610.27478",
+    "2610.30123",
+    "2610.29043"
   ]
 }

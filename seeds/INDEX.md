@@ -3405,3 +3405,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2388 | 8 | 2026 | From Abstraction to Action: DSLs for Natural Language Abstraction Interpretation and Execution | languages |
 
 _Recount after `frontier-2026-10-22`: **2388** unique title cards on main. Next rank **2389+**._
+
+### curiosity-2026-10-23
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `a87d205`, **2388** unique, max rank **2388**. Next rank **2389**. seed_batch: `curiosity-2026-10-23`. Window: arXiv listings of Wed 21 and Thu 22 Oct 2026.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2389 | 8 | 2026 | Littlewood's mutually touching cylinders: the maximum is seven | maths-foundations |
+| 2390 | 8 | 2026 | A sporadic simplicial arrangement of 51 lines | maths-foundations |
+| 2391 | 7 | 2026 | Strictly convex ergodic billiards | maths-foundations |
+| 2392 | 8 | 2026 | Coherent differentiation with a monoid of degrees: derivatives, Taylor expansion, finite differences | languages |
+| 2393 | 7 | 2026 | ARRIVAL in cube-root subexponential time | maths-foundations |
+
+_Recount after `curiosity-2026-10-23`: **2393** unique title cards on main. Next rank **2394+**._
