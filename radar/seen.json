@@ -3343,7 +3343,12 @@
     "a sporadic simplicial arrangement of 51 lines",
     "strictly convex ergodic billiards",
     "coherent differentiation with a monoid of degrees: derivatives, taylor expansion, finite differences",
-    "arrival in cube-root subexponential time"
+    "arrival in cube-root subexponential time",
+    "faster than earcut: triangulating 3.7m map polygons in 489 ms",
+    "don't throw it all away: caching an immediate-mode ui",
+    "an spmc broadcast ring in shared memory",
+    "demystifying spherical harmonics: an optimization approach",
+    "fast blur with animated radius"
   ],
   "updated": "2026-10-23",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5345,7 +5350,12 @@
     "https://pages.cs.wisc.edu/~cymen/misc/interests/Bacon01Concurrent.pdf",
     "https://www.tuhh.de/ti3/paper/rump/OgRuOi05.pdf",
     "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf",
-    "https://igl.ethz.ch/projects/winding-number/robust-inside-outside-segmentation-using-generalized-winding-numbers-siggraph-2013-jacobson-et-al.pdf"
+    "https://igl.ethz.ch/projects/winding-number/robust-inside-outside-segmentation-using-generalized-winding-numbers-siggraph-2013-jacobson-et-al.pdf",
+    "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+    "https://blickeditor.com/blog/caching-an-immediate-mode-ui",
+    "https://jasper-aa64.github.io/posts/spmc-shared-memory-broadcast-ring/",
+    "https://andrew-helmer.github.io/demystifying-spherical-harmonics/",
+    "https://aras-p.info/blog/2026/10/01/Fast-blur-with-animated-radius/"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6795,5 +6805,38 @@
     "2610.27478",
     "2610.30123",
     "2610.29043"
+  ],
+  "craft_2026_10_23_batch": "craft-2026-10-23",
+  "craft_2026_10_23_count": 5,
+  "craft_2026_10_23_arxiv": [],
+  "craft_2026_10_23_titles": [
+    "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+    "Don't throw it all away: Caching an immediate-mode UI",
+    "An SPMC Broadcast Ring in Shared Memory",
+    "Demystifying Spherical Harmonics: An Optimization Approach",
+    "Fast blur with animated radius"
+  ],
+  "craft_2026_10_23_urls": [
+    "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+    "https://blickeditor.com/blog/caching-an-immediate-mode-ui",
+    "https://jasper-aa64.github.io/posts/spmc-shared-memory-broadcast-ring/",
+    "https://andrew-helmer.github.io/demystifying-spherical-harmonics/",
+    "https://aras-p.info/blog/2026/10/01/Fast-blur-with-animated-radius/"
+  ],
+  "craft_2026_10_23_near_keepers": [
+    "A Sharp Analysis of Fixed Offset Hash Tables (arXiv 2610.31363)",
+    "HarfBuzz 15.0.0 release: libharfbuzz-gpu/raster/vector out of experimental (github.com/harfbuzz/harfbuzz/releases)",
+    "Ray-by-Ray: Fine-Grained Resource Management for GPU Ray Tracing Units (arXiv 2610.31630)",
+    "SAT Sampling at Scale via GPU BCP / Gpap (arXiv 2610.28805)",
+    "A Tutte-Like Theorem for Injective Flows on Meshes (arXiv 2610.30149)",
+    "RLMuscle: XPBD geometric multigrid muscle simulation (arXiv 2610.30033)",
+    "Finitely Verifiable Segmentation / tokenizer decidability (arXiv 2610.30168)",
+    "PopTree weight-balanced BST (arXiv 2610.29574)",
+    "SQL equivalence proofs from rewrite rules / EquiTrace (arXiv 2610.30100)",
+    "GPU Gabriel graph construction (arXiv 2610.28759)",
+    "Traverse Research / Arm mobile real-time GI talk: ReSTIR GI + clipmap irradiance cache (community.arm.com 2026_2D00_mmg_2D00_jasper_2D00_rtgi.pdf)",
+    "Software Wrighter X_eTaL array-language voxel series (blog.softwarewrighter.com, Oct 2026)",
+    "Bevy 0.20 (bevy.org/news/bevy-0-20/)",
+    "DuckDB 2.0.0 LTS (duckdb.org/2026/10/21/announcing-duckdb-200)"
   ]
 }

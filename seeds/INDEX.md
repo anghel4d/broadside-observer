@@ -3418,3 +3418,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2393 | 7 | 2026 | ARRIVAL in cube-root subexponential time | maths-foundations |
 
 _Recount after `curiosity-2026-10-23`: **2393** unique title cards on main. Next rank **2394+**._
+
+### craft-2026-10-23
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `ffd0800`, **2393** unique, max rank **2393**. Next rank **2394**. seed_batch: `craft-2026-10-23`. Window: arXiv listings of Thu 22 and Fri 23 Oct 2026, Graphics Programming Weekly 459, Hacker News since 21 Oct 12:00, and targeted web polls (text shaping, array languages, lock-free, GI, arenas).
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2394 | 8 | 2026 | Faster than earcut: triangulating 3.7M map polygons in 489 ms | graphics |
+| 2395 | 9 | 2026 | Don't throw it all away: Caching an immediate-mode UI | graphics |
+| 2396 | 8 | 2026 | An SPMC Broadcast Ring in Shared Memory | systems |
+| 2397 | 8 | 2026 | Demystifying Spherical Harmonics: An Optimization Approach | graphics |
+| 2398 | 7 | 2026 | Fast blur with animated radius | graphics |
+
+_Recount after `craft-2026-10-23`: **2398** unique title cards on main. Next rank **2399+**._
