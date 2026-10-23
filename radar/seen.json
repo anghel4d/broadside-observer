@@ -955,7 +955,8 @@
     "2610.28874",
     "2610.28247",
     "2610.29874",
-    "2610.28241"
+    "2610.28241",
+    "1402.6407"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3348,9 +3349,16 @@
     "don't throw it all away: caching an immediate-mode ui",
     "an spmc broadcast ring in shared memory",
     "demystifying spherical harmonics: an optimization approach",
-    "fast blur with animated radius"
+    "fast blur with animated radius",
+    "The Synchronous Data Flow Programming Language LUSTRE",
+    "The Third Homomorphism Theorem",
+    "Weaving Relations for Cache Performance",
+    "Automatic Pool Allocation: Improving Performance by Controlling Data Structure Layout in the Heap",
+    "Parallel Random Numbers: As Easy as 1, 2, 3",
+    "Information Set Monte Carlo Tree Search",
+    "Better Bitmap Performance with Roaring Bitmaps"
   ],
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5355,7 +5363,14 @@
     "https://blickeditor.com/blog/caching-an-immediate-mode-ui",
     "https://jasper-aa64.github.io/posts/spmc-shared-memory-broadcast-ring/",
     "https://andrew-helmer.github.io/demystifying-spherical-harmonics/",
-    "https://aras-p.info/blog/2026/10/01/Fast-blur-with-animated-radius/"
+    "https://aras-p.info/blog/2026/10/01/Fast-blur-with-animated-radius/",
+    "https://homepage.cs.uiowa.edu/~tinelli/classes/181/Spring08/Papers/Halb91.pdf",
+    "https://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/thirdht.ps.gz",
+    "https://www.vldb.org/conf/2001/P169.pdf",
+    "https://llvm.org/pubs/2005-05-21-PLDI-PoolAlloc.pdf",
+    "https://www.thesalmons.org/john/random123/papers/random123sc11.pdf",
+    "https://eprints.whiterose.ac.uk/75048/",
+    "https://arxiv.org/abs/1402.6407"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6838,5 +6853,62 @@
     "Software Wrighter X_eTaL array-language voxel series (blog.softwarewrighter.com, Oct 2026)",
     "Bevy 0.20 (bevy.org/news/bevy-0-20/)",
     "DuckDB 2.0.0 LTS (duckdb.org/2026/10/21/announcing-duckdb-200)"
+  ],
+  "archive_2026_10_24_batch": "archive-2026-10-24",
+  "archive_2026_10_24_count": 7,
+  "archive_2026_10_24_arxiv": [
+    "1402.6407"
+  ],
+  "archive_2026_10_24_titles": [
+    "The Synchronous Data Flow Programming Language LUSTRE",
+    "The Third Homomorphism Theorem",
+    "Weaving Relations for Cache Performance",
+    "Automatic Pool Allocation: Improving Performance by Controlling Data Structure Layout in the Heap",
+    "Parallel Random Numbers: As Easy as 1, 2, 3",
+    "Information Set Monte Carlo Tree Search",
+    "Better Bitmap Performance with Roaring Bitmaps"
+  ],
+  "archive_2026_10_24_urls": [
+    "https://homepage.cs.uiowa.edu/~tinelli/classes/181/Spring08/Papers/Halb91.pdf",
+    "https://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/thirdht.ps.gz",
+    "https://www.vldb.org/conf/2001/P169.pdf",
+    "https://llvm.org/pubs/2005-05-21-PLDI-PoolAlloc.pdf",
+    "https://www.thesalmons.org/john/random123/papers/random123sc11.pdf",
+    "https://eprints.whiterose.ac.uk/75048/",
+    "https://arxiv.org/abs/1402.6407"
+  ],
+  "archive_2026_10_24_near_keepers": [
+    "Fast Heuristic Search for RTS Game Combat Scenarios (ABCD; Churchill-Saffidine-Buro, AIIDE 2012) - described in the body of card 113",
+    "DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views (VLDB 2012)",
+    "Conflict-Based Search for Optimal Multi-Agent Pathfinding (Sharon et al. 2015)",
+    "How to Print Floating-Point Numbers Accurately (Steele-White 1990)",
+    "LEAN Mapping (Olano-Baker, I3D 2010)",
+    "Multi-Layer Alpha Blending (Salvi-Vaidyanathan, I3D 2014)",
+    "Sample Distribution Shadow Maps (Lauritzen-Salvi-Lefohn 2011)",
+    "GRAMPS: A Programming Model for Graphics Pipelines (Sugerman et al. 2009)",
+    "Representing Type Information in Dynamically Typed Languages (Gudeman 1993)",
+    "Cache-Conscious Structure Definition (Chilimbi-Davidson-Larus 1999)",
+    "Gorilla: A Fast, Scalable, In-Memory Time Series Database (Pelkonen et al. 2015)",
+    "Conversion of Control Dependence to Data Dependence (if-conversion; Allen-Kennedy-Porterfield-Warren 1983)",
+    "Automatic Translation of FORTRAN Programs to Vector Form (Allen-Kennedy 1987)",
+    "FastTrack: Efficient and Precise Dynamic Race Detection (Flanagan-Freund 2009)",
+    "x86-TSO: A Rigorous and Usable Programmer's Model for x86 Multiprocessors (Sewell et al. 2010)",
+    "Edgebreaker: Connectivity Compression for Triangle Meshes (Rossignac 1999)",
+    "Post-Rendering 3D Warping (Mark-McMillan-Bishop 1997)",
+    "Unified Particle Physics for Real-Time Applications (Macklin et al. 2014)",
+    "The Pairing Heap: A New Form of Self-Adjusting Heap (Fredman-Sedgewick-Sleator-Tarjan 1986)",
+    "An Adaptive Algorithm for Spatial Greyscale (Floyd-Steinberg 1976)",
+    "Synchronous Data Flow (Lee-Messerschmitt 1987)",
+    "Best-First Fixed-Depth Minimax Algorithms (MTD(f); Plaat et al. 1996)",
+    "ARC: A Self-Tuning, Low Overhead Replacement Cache (Megiddo-Modha 2003)",
+    "Merge Path - Parallel Merging Made Simple (Odeh et al. 2012)",
+    "Procedural Modeling of Cities (Parish-Mueller 2001)",
+    "Super Scalar Sample Sort (Sanders-Winkel 2004)",
+    "Partitioned Elias-Fano Indexes (Ottaviano-Venturini 2014)",
+    "Whole-Function Vectorization (Karrenberg-Hack 2011) - carried from 10-22",
+    "A Prettier Printer (Wadler 1998) - carried from 10-22",
+    "MetaML: Multi-Stage Programming with Explicit Annotations (1997) - carried from 10-22",
+    "Skinning with Dual Quaternions (Kavan et al. 2007) - carried from 10-22",
+    "Database Cracking (Idreos-Kersten-Manegold 2007) - carried from 10-20"
   ]
 }

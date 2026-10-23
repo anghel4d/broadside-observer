@@ -3431,3 +3431,18 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `ff
 | 2398 | 7 | 2026 | Fast blur with animated radius | graphics |
 
 _Recount after `craft-2026-10-23`: **2398** unique title cards on main. Next rank **2399+**._
+
+### archive-2026-10-24
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `362cd7d`, **2398** unique, max rank **2398**. Next rank **2399**. seed_batch: `archive-2026-10-24`. Historical foundations, 1991–2016.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2399 | 8 | 1991 | The Synchronous Data Flow Programming Language LUSTRE | languages |
+| 2400 | 7 | 1996 | The Third Homomorphism Theorem | languages |
+| 2401 | 8 | 2001 | Weaving Relations for Cache Performance | systems |
+| 2402 | 8 | 2005 | Automatic Pool Allocation: Improving Performance by Controlling Data Structure Layout in the Heap | systems |
+| 2403 | 8 | 2011 | Parallel Random Numbers: As Easy as 1, 2, 3 | systems |
+| 2404 | 8 | 2012 | Information Set Monte Carlo Tree Search | game-ai |
+| 2405 | 8 | 2016 | Better Bitmap Performance with Roaring Bitmaps | systems |
+
+_Recount after `archive-2026-10-24`: **2405** unique title cards on main. Next rank **2406+**._
