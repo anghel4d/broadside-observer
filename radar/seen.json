@@ -963,7 +963,11 @@
     "2610.30791",
     "2610.30188",
     "2610.30499",
-    "2610.30149"
+    "2610.30149",
+    "2610.30655",
+    "2610.30369",
+    "2610.31528",
+    "2610.31589"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3370,9 +3374,13 @@
     "gandalf: flash shall not die! increasing flash storage lifetime for kv cache offloading in llm serving",
     "agentic verified optimization of real-world software",
     "can llms improve their own harness? a controlled study on arc-agi-3",
-    "a tutte-like theorem for injective flows on meshes"
+    "a tutte-like theorem for injective flows on meshes",
+    "non-uniqueness of weak solutions to the unforced two-dimensional euler equations with vorticity in l1 \u2229 lp, i: a compactness criterion and the linear analysis",
+    "permutation classes need not have proper growth rates",
+    "positive sectional curvature on exotic spheres in infinitely many dimensions",
+    "conway's thrackle conjecture: a new upper bound of 4/3 n"
   ],
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5391,7 +5399,11 @@
     "https://arxiv.org/abs/2610.30791",
     "https://arxiv.org/abs/2610.30188",
     "https://arxiv.org/abs/2610.30499",
-    "https://arxiv.org/abs/2610.30149"
+    "https://arxiv.org/abs/2610.30149",
+    "https://arxiv.org/abs/2610.30655",
+    "https://arxiv.org/abs/2610.30369",
+    "https://arxiv.org/abs/2610.31528",
+    "https://arxiv.org/abs/2610.31589"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6958,5 +6970,50 @@
     "DuoCook: Overcooked benchmark in Unreal https://arxiv.org/abs/2610.31511",
     "Lehmer's problem via a human-AI loop (Generalized Boyd) https://arxiv.org/abs/2610.30277",
     "Handshake overhead in MCP vs A2A https://arxiv.org/abs/2610.30151"
+  ],
+  "curiosity_2026_10_25_batch": "curiosity-2026-10-25",
+  "curiosity_2026_10_25_count": 4,
+  "curiosity_2026_10_25_arxiv": [
+    "2610.30655",
+    "2610.30369",
+    "2610.31528",
+    "2610.31589"
+  ],
+  "curiosity_2026_10_25_titles": [
+    "Non-Uniqueness of Weak Solutions to the Unforced Two-Dimensional Euler Equations with Vorticity in L1 \u2229 Lp, I: A Compactness Criterion and the Linear Analysis",
+    "Permutation classes need not have proper growth rates",
+    "Positive sectional curvature on exotic spheres in infinitely many dimensions",
+    "Conway's thrackle conjecture: a new upper bound of 4/3 n"
+  ],
+  "curiosity_2026_10_25_urls": [
+    "https://arxiv.org/abs/2610.30655",
+    "https://arxiv.org/abs/2610.30369",
+    "https://arxiv.org/abs/2610.31528",
+    "https://arxiv.org/abs/2610.31589"
+  ],
+  "curiosity_2026_10_25_near_keepers": [
+    "2610.30464",
+    "2610.31362",
+    "2610.31190",
+    "2610.30797",
+    "2610.31036",
+    "2610.30567",
+    "2610.31425",
+    "2610.30433",
+    "2610.31638",
+    "2610.30707",
+    "2610.31530",
+    "2610.31212",
+    "2610.30712",
+    "2610.30711",
+    "2610.30993",
+    "2610.29771",
+    "2610.31241",
+    "2610.30937",
+    "2610.30730",
+    "2610.31201",
+    "2610.31126",
+    "2610.30331",
+    "2610.30492"
   ]
 }
