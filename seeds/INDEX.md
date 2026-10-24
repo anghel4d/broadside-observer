@@ -3446,3 +3446,19 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2405 | 8 | 2016 | Better Bitmap Performance with Roaring Bitmaps | systems |
 
 _Recount after `archive-2026-10-24`: **2405** unique title cards on main. Next rank **2406+**._
+
+### frontier-2026-10-24
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `6778ae2`, **2405** unique, max rank **2405**. Next rank **2406**. seed_batch: `frontier-2026-10-24`. Window: arXiv listings of Fri 23 Oct 2026 plus HF Daily Papers 22–24 Oct.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2406 | 9 | 2026 | Stale Instruction Files Override the Code in Coding Agents: A One-Sentence Fix | agents |
+| 2407 | 8 | 2026 | Finitely Verifiable Segmentation: Decidability for Every Tokenizer with a Finite-State Verifier | languages |
+| 2408 | 8 | 2026 | AfterDeleteBench: Auditing Post-Deletion Information Persistence in LLM Agents | agents |
+| 2409 | 8 | 2026 | Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving | systems |
+| 2410 | 8 | 2026 | Agentic Verified Optimization of Real-World Software | languages |
+| 2411 | 8 | 2026 | Can LLMs Improve Their Own Harness? A Controlled Study on ARC-AGI-3 | agents |
+| 2412 | 7 | 2026 | A Tutte-Like Theorem for Injective Flows on Meshes | graphics |
+
+_Recount after `frontier-2026-10-24`: **2412** unique title cards on main. Next rank **2413+**._

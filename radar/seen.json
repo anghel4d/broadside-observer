@@ -956,7 +956,14 @@
     "2610.28247",
     "2610.29874",
     "2610.28241",
-    "1402.6407"
+    "1402.6407",
+    "2610.30571",
+    "2610.30168",
+    "2610.31366",
+    "2610.30791",
+    "2610.30188",
+    "2610.30499",
+    "2610.30149"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3356,7 +3363,14 @@
     "Automatic Pool Allocation: Improving Performance by Controlling Data Structure Layout in the Heap",
     "Parallel Random Numbers: As Easy as 1, 2, 3",
     "Information Set Monte Carlo Tree Search",
-    "Better Bitmap Performance with Roaring Bitmaps"
+    "Better Bitmap Performance with Roaring Bitmaps",
+    "stale instruction files override the code in coding agents: a one-sentence fix",
+    "finitely verifiable segmentation: decidability for every tokenizer with a finite-state verifier",
+    "afterdeletebench: auditing post-deletion information persistence in llm agents",
+    "gandalf: flash shall not die! increasing flash storage lifetime for kv cache offloading in llm serving",
+    "agentic verified optimization of real-world software",
+    "can llms improve their own harness? a controlled study on arc-agi-3",
+    "a tutte-like theorem for injective flows on meshes"
   ],
   "updated": "2026-10-24",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5370,7 +5384,14 @@
     "https://llvm.org/pubs/2005-05-21-PLDI-PoolAlloc.pdf",
     "https://www.thesalmons.org/john/random123/papers/random123sc11.pdf",
     "https://eprints.whiterose.ac.uk/75048/",
-    "https://arxiv.org/abs/1402.6407"
+    "https://arxiv.org/abs/1402.6407",
+    "https://arxiv.org/abs/2610.30571",
+    "https://arxiv.org/abs/2610.30168",
+    "https://arxiv.org/abs/2610.31366",
+    "https://arxiv.org/abs/2610.30791",
+    "https://arxiv.org/abs/2610.30188",
+    "https://arxiv.org/abs/2610.30499",
+    "https://arxiv.org/abs/2610.30149"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -6910,5 +6931,32 @@
     "MetaML: Multi-Stage Programming with Explicit Annotations (1997) - carried from 10-22",
     "Skinning with Dual Quaternions (Kavan et al. 2007) - carried from 10-22",
     "Database Cracking (Idreos-Kersten-Manegold 2007) - carried from 10-20"
+  ],
+  "frontier_2026_10_24_batch": "frontier-2026-10-24",
+  "frontier_2026_10_24_count": 7,
+  "frontier_2026_10_24_arxiv": 7,
+  "frontier_2026_10_24_titles": 7,
+  "frontier_2026_10_24_near_keepers": [
+    "BeNice! KV-sharing in looped models https://arxiv.org/abs/2610.31633",
+    "OpenAttention: count-aware mean tail proxy for sparse decode https://arxiv.org/abs/2610.30951",
+    "RIFT: draft-model KV compression https://arxiv.org/abs/2610.31098",
+    "MoEZip: routing-aware KV eviction https://arxiv.org/abs/2610.30206",
+    "Speculative acceptance does not decay with position https://arxiv.org/abs/2610.30644",
+    "AMV-Guard: action-conditioned memory verification https://arxiv.org/abs/2610.31446",
+    "Naive Raw-RAG beats complex agentic memory https://arxiv.org/abs/2610.30755",
+    "Governance-state corruption in long-term agent memory https://arxiv.org/abs/2610.30698",
+    "The Value of Memory in Language Agents https://arxiv.org/abs/2610.31303",
+    "HERD: harness-evolving recursive distillation https://arxiv.org/abs/2610.31401",
+    "Adaptive skill granularity with macro-to-micro recovery https://arxiv.org/abs/2610.31461",
+    "AgentTriage: replayable security diagnosis with provenance graphs https://arxiv.org/abs/2610.30738",
+    "Petri-net certified execution harness https://arxiv.org/abs/2610.31376",
+    "SCOPE: compiling NL policies into neural predicate programs https://arxiv.org/abs/2610.31062",
+    "Post-Audit Mirage https://arxiv.org/abs/2610.31130",
+    "Specification-oracle gaps in coding benchmarks https://arxiv.org/abs/2610.30635",
+    "DConstrain: constrained decoding for diffusion LMs https://arxiv.org/abs/2610.30920",
+    "Typed Template Fuzzing (Typos) https://arxiv.org/abs/2610.31342",
+    "DuoCook: Overcooked benchmark in Unreal https://arxiv.org/abs/2610.31511",
+    "Lehmer's problem via a human-AI loop (Generalized Boyd) https://arxiv.org/abs/2610.30277",
+    "Handshake overhead in MCP vs A2A https://arxiv.org/abs/2610.30151"
   ]
 }
