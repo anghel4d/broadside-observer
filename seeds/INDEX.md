@@ -3462,3 +3462,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2412 | 7 | 2026 | A Tutte-Like Theorem for Injective Flows on Meshes | graphics |
 
 _Recount after `frontier-2026-10-24`: **2412** unique title cards on main. Next rank **2413+**._
+
+### curiosity-2026-10-25
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `00a164f`, **2412** unique, max rank **2412**. Next rank **2413**. seed_batch: `curiosity-2026-10-25`. Window: arXiv listings of Fri 23 Oct 2026.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2413 | 8 | 2026 | Non-Uniqueness of Weak Solutions to the Unforced Two-Dimensional Euler Equations with Vorticity in L1 ∩ Lp, I | maths-foundations |
+| 2414 | 8 | 2026 | Permutation classes need not have proper growth rates | maths-foundations |
+| 2415 | 8 | 2026 | Positive sectional curvature on exotic spheres in infinitely many dimensions | maths-foundations |
+| 2416 | 7 | 2026 | Conway's thrackle conjecture: a new upper bound of 4/3 n | maths-foundations |
+
+_Recount after `curiosity-2026-10-25`: **2416** unique title cards on main. Next rank **2417+**._
