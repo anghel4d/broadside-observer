@@ -3473,5 +3473,9 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2414 | 8 | 2026 | Permutation classes need not have proper growth rates | maths-foundations |
 | 2415 | 8 | 2026 | Positive sectional curvature on exotic spheres in infinitely many dimensions | maths-foundations |
 | 2416 | 7 | 2026 | Conway's thrackle conjecture: a new upper bound of 4/3 n | maths-foundations |
+| 2417 | 9 | 2026 | The Goose Programming Language | languages |
+| 2418 | 9 | 2026 | bbtree: fastest ordered map | systems |
+| 2419 | 8 | 2026 | Virtual Shadow Maps (GPU Zen 3 chapter, Markdown edition) | graphics |
+| 2420 | 7 | 2026 | How close can pure FP get to C? | languages |
 
-_Recount after `curiosity-2026-10-25`: **2416** unique title cards on main. Next rank **2417+**._
+_Recount after `craft-2026-10-25`: **2420** unique title cards on main. Next rank **2421+**._
