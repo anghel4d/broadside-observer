@@ -3479,3 +3479,18 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2420 | 7 | 2026 | How close can pure FP get to C? | languages |
 
 _Recount after `craft-2026-10-25`: **2420** unique title cards on main. Next rank **2421+**._
+
+### archive-2026-10-26
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `dce99ee`, **2420** unique, max rank **2420**. Next rank **2421**. seed_batch: `archive-2026-10-26`. Historical foundations (1989–2012; pre_2018_preferred); keep cap 0.20.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2421 | 8 | 1989 | Eliminating Expensive Chunks by Restricting Expressiveness | languages |
+| 2422 | 8 | 1996 | The Starburst Active Database Rule System | languages |
+| 2423 | 8 | 1999 | Database Architecture Optimized for the New Bottleneck: Memory Access | systems |
+| 2424 | 8 | 2006 | Efficient Triangulation-Based Pathfinding | game-ai |
+| 2425 | 8 | 2010 | A Lock-Free, Cache-Efficient Multi-Core Synchronization Mechanism for Line-Rate Network Traffic Monitoring | engines |
+| 2426 | 7 | 2012 | Functorial Data Migration | maths-foundations |
+
+_Recount after `archive-2026-10-26`: **2426** unique title cards on main. Next rank **2427+**._
