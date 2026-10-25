@@ -3378,7 +3378,11 @@
     "non-uniqueness of weak solutions to the unforced two-dimensional euler equations with vorticity in l1 \u2229 lp, i: a compactness criterion and the linear analysis",
     "permutation classes need not have proper growth rates",
     "positive sectional curvature on exotic spheres in infinitely many dimensions",
-    "conway's thrackle conjecture: a new upper bound of 4/3 n"
+    "conway's thrackle conjecture: a new upper bound of 4/3 n",
+    "the goose programming language",
+    "bbtree: fastest ordered map",
+    "virtual shadow maps (gpu zen 3 chapter, markdown edition)",
+    "how close can pure fp get to c?"
   ],
   "updated": "2026-10-25",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5403,7 +5407,13 @@
     "https://arxiv.org/abs/2610.30655",
     "https://arxiv.org/abs/2610.30369",
     "https://arxiv.org/abs/2610.31528",
-    "https://arxiv.org/abs/2610.31589"
+    "https://arxiv.org/abs/2610.31589",
+    "https://aardappel.github.io/goose/",
+    "https://github.com/aardappel/goose",
+    "https://bbtree.xiangpeng.systems/post/",
+    "https://github.com/XiangpengHao/bbtree",
+    "https://graphics-programming.org/blog/virtual-shadow-maps",
+    "https://rtfeldman.com/fp-vs-c"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -7015,5 +7025,38 @@
     "2610.31126",
     "2610.30331",
     "2610.30492"
+  ],
+  "craft_2026_10_25_batch": "craft-2026-10-25",
+  "craft_2026_10_25_count": 4,
+  "craft_2026_10_25_arxiv": [],
+  "craft_2026_10_25_titles": [
+    "the goose programming language",
+    "bbtree: fastest ordered map",
+    "virtual shadow maps (gpu zen 3 chapter, markdown edition)",
+    "how close can pure fp get to c?"
+  ],
+  "craft_2026_10_25_urls": [
+    "https://aardappel.github.io/goose/",
+    "https://github.com/aardappel/goose",
+    "https://bbtree.xiangpeng.systems/post/",
+    "https://github.com/XiangpengHao/bbtree",
+    "https://graphics-programming.org/blog/virtual-shadow-maps",
+    "https://rtfeldman.com/fp-vs-c"
+  ],
+  "craft_2026_10_25_near_keepers": [
+    "Loom GPU ECS rules-to-Slang DSL (LinkedIn post by amedvedev, 2026-10-03; no repo or primary source found)",
+    "Penumbra Condition (Frank Yin, radiance cascades in flatland, 2026-10-11)",
+    "Uiua 0.19.1 / ArrayCast episode 130 / Kap subscript indexing",
+    "EasyEcs (.NET ECS)",
+    "2610.29988 GPU triangle counting",
+    "2610.01853 rank/select",
+    "2610.20527 JetStream",
+    "2610.25755 MapLibre vector tiles",
+    "2610.01587 MPI interplay",
+    "distributed SQLite",
+    "UUIDv7",
+    "pl-small",
+    "gpu-unlock",
+    "TechOverflow mesh shader how-to"
   ]
 }
