@@ -967,7 +967,8 @@
     "2610.30655",
     "2610.30369",
     "2610.31528",
-    "2610.31589"
+    "2610.31589",
+    "1009.1166"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3382,9 +3383,15 @@
     "the goose programming language",
     "bbtree: fastest ordered map",
     "virtual shadow maps (gpu zen 3 chapter, markdown edition)",
-    "how close can pure fp get to c?"
+    "how close can pure fp get to c?",
+    "eliminating expensive chunks by restricting expressiveness",
+    "the starburst active database rule system",
+    "database architecture optimized for the new bottleneck: memory access",
+    "efficient triangulation-based pathfinding",
+    "a lock-free, cache-efficient multi-core synchronization mechanism for line-rate network traffic monitoring",
+    "functorial data migration"
   ],
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -5413,7 +5420,13 @@
     "https://bbtree.xiangpeng.systems/post/",
     "https://github.com/XiangpengHao/bbtree",
     "https://graphics-programming.org/blog/virtual-shadow-maps",
-    "https://rtfeldman.com/fp-vs-c"
+    "https://rtfeldman.com/fp-vs-c",
+    "https://www.ijcai.org/Proceedings/89-1/Papers/117.pdf",
+    "https://doi.org/10.1109/69.536251",
+    "https://ir.cwi.nl/pub/11189/11189B.pdf",
+    "https://cdn.aaai.org/AAAI/2006/AAAI06-148.pdf",
+    "https://doi.org/10.1109/IPDPS.2010.5470368",
+    "https://arxiv.org/abs/1009.1166"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -7058,5 +7071,56 @@
     "pl-small",
     "gpu-unlock",
     "TechOverflow mesh shader how-to"
+  ],
+  "archive_2026_10_26_batch": "archive-2026-10-26",
+  "archive_2026_10_26_count": 6,
+  "archive_2026_10_26_arxiv": [
+    "1009.1166"
+  ],
+  "archive_2026_10_26_titles": [
+    "Eliminating Expensive Chunks by Restricting Expressiveness",
+    "The Starburst Active Database Rule System",
+    "Database Architecture Optimized for the New Bottleneck: Memory Access",
+    "Efficient Triangulation-Based Pathfinding",
+    "A Lock-Free, Cache-Efficient Multi-Core Synchronization Mechanism for Line-Rate Network Traffic Monitoring",
+    "Functorial Data Migration"
+  ],
+  "archive_2026_10_26_urls": [
+    "https://www.ijcai.org/Proceedings/89-1/Papers/117.pdf",
+    "https://doi.org/10.1109/69.536251",
+    "https://ir.cwi.nl/pub/11189/11189B.pdf",
+    "https://cdn.aaai.org/AAAI/2006/AAAI06-148.pdf",
+    "https://doi.org/10.1109/IPDPS.2010.5470368",
+    "https://arxiv.org/abs/1009.1166"
+  ],
+  "archive_2026_10_26_near_keepers": [
+    "Coordinated Unit Movement (Pottinger, Game Developer 1999)",
+    "Filtering Edges for Gray-Scale Displays (Gupta-Sproull, SIGGRAPH 1981) - no full text reachable (ACM Cloudflare)",
+    "Programming Real-Time Applications with SIGNAL (Le Guernic et al., Proc. IEEE 1991) - too close to Lustre card 2399",
+    "Xorshift RNGs (Marsaglia, JSS 2003) - RNG covered by 2403",
+    "Comprehending Queries (Grust, PhD thesis 1999)",
+    "On Rules, Procedures, Caching and Views in Data Base Systems (Stonebraker et al., SIGMOD 1990)",
+    "The HiPAC Project: Combining Active Databases and Timing Constraints (Dayal et al., SIGMOD Record 1988)",
+    "Super-Scalar RAM-CPU Cache Compression (Zukowski et al., ICDE 2006)",
+    "Integrating Compression and Execution in Column-Oriented Database Systems (Abadi et al., SIGMOD 2006)",
+    "Decoding Billions of Integers per Second through Vectorization (Lemire-Boytsov, 2012)",
+    "Rethinking SIMD Vectorization for In-Memory Databases (Polychroniou et al., SIGMOD 2015)",
+    "BitWeaving: Fast Scans for Main Memory Data Processing (Li-Patel, SIGMOD 2013) - close to card 1627",
+    "SIMD-Scan: Ultra Fast in-Memory Table Scan using on-Chip Vector Processing Units (Willhalm et al., VLDB 2009)",
+    "Little Languages (Bentley, CACM 1986)",
+    "Building Domain-Specific Embedded Languages (Hudak, ACM Computing Surveys 1996)",
+    "Growing a Language (Steele, OOPSLA 1998 keynote)",
+    "Unboxed Objects and Polymorphic Typing (Leroy, POPL 1992)",
+    "Binding as Sets of Scopes (Flatt, POPL 2016)",
+    "Vmalloc: A General and Efficient Memory Allocator (Vo, SP&E 1996)",
+    "Using Lifetime Predictors to Improve Memory Allocation Performance (Barrett-Zorn, PLDI 1993)",
+    "A Direct Approach to Control-Flow Sensitive Region-Based Memory Management (Henglein-Makholm-Niss, PPDP 2001)",
+    "Ownership Types for Safe Region-Based Memory Management in Real-Time Java (Boyapati et al., PLDI 2003)",
+    "APEX: The APL Parallel Executor (Bernecky, 1997)",
+    "Operators and Enclosed Arrays (Iverson, APL Users Meeting 1980)",
+    "Rectangular Convolution for Fast Filtering of Characters (Naiman-Fournier, SIGGRAPH 1987)",
+    "RealityEngine Graphics (Akeley, SIGGRAPH 1993)",
+    "How Qualitative Spatial Reasoning Can Improve Strategy Game AIs (Forbus-Mahoney-Dill, IEEE Intelligent Systems 2002)",
+    "Case-Based Planning and Execution for Real-Time Strategy Games / Darmok (Ontanon et al., ICCBR 2007)"
   ]
 }
