@@ -3509,3 +3509,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2432 | 8 | 2026 | Beyond Gain: Measuring Skill Internalization for Agent Skill Retirement | agents |
 
 _Recount after `frontier-2026-10-26`: **2432** unique title cards on main. Next rank **2433+**._
+
+### curiosity-2026-10-27
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `3aed4c9`, **2432** unique, max rank **2432**. Next rank **2433**. seed_batch: `curiosity-2026-10-27`. Window: arXiv listings of Mon 26 Oct 2026 (new + cross-lists, 42 categories).
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2433 | 8 | 2026 | The elastic figure-eight knot is not planar | maths-foundations |
+| 2434 | 8 | 2026 | The space of equators has infinite Hofer's diameter | maths-foundations |
+| 2435 | 8 | 2026 | A frame-indifferent rank-one convex function in three dimensions which is not quasiconvex | maths-foundations |
+| 2436 | 7 | 2026 | Off-diagonal Ramsey numbers of 3-graphs | maths-foundations |
+| 2437 | 7 | 2026 | Combinatorial Minimum Cost Flow in Almost-Linear Time on Dense Graphs | systems |
+
+_Recount after `curiosity-2026-10-27`: **2437** unique title cards on main. Next rank **2438+**._
