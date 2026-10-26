@@ -3494,3 +3494,18 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2426 | 7 | 2012 | Functorial Data Migration | maths-foundations |
 
 _Recount after `archive-2026-10-26`: **2426** unique title cards on main. Next rank **2427+**._
+
+### frontier-2026-10-26
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `72b5f16`, **2426** unique, max rank **2426**. Next rank **2427**. seed_batch: `frontier-2026-10-26`. Window: arXiv listings of Mon 26 Oct 2026 plus HF Daily Papers 25–26 Oct.
+
+| # | Score | Year | Title | Pool |
+|---|------:|-----:|-------|------|
+| 2427 | 9 | 2026 | Benchmarks Are Surprisingly Compaction-Friendly | agents |
+| 2428 | 9 | 2026 | Who Verifies the Tools? How Warped Formatters Mislead Agents and Their Verifiers | agents |
+| 2429 | 9 | 2026 | Lessons Outlive Their Failures: A Case Study of Rules for AI Coding Agents | agents |
+| 2430 | 8 | 2026 | Knowing When to Stop: The Evidence-Action Gap in Coding Agents | agents |
+| 2431 | 8 | 2026 | KVStream: Adaptive Parallel Storage Management for KV Caching in Large-Scale LLM Serving | systems |
+| 2432 | 8 | 2026 | Beyond Gain: Measuring Skill Internalization for Agent Skill Retirement | agents |
+
+_Recount after `frontier-2026-10-26`: **2432** unique title cards on main. Next rank **2433+**._
