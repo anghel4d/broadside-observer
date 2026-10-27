@@ -3523,3 +3523,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2437 | 7 | 2026 | Combinatorial Minimum Cost Flow in Almost-Linear Time on Dense Graphs | systems |
 
 _Recount after `curiosity-2026-10-27`: **2437** unique title cards on main. Next rank **2438+**._
+
+### craft-2026-10-27
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `20ac8dc`, **2437** unique, max rank **2437**. Next rank **2438**. seed_batch: `craft-2026-10-27`. Window: arXiv listings of Mon 26 and Tue 27 Oct 2026 (cs.AR, DB, DC, DS, GR, MS, OS, PF, PL, SE, new + cross-lists + replacements), Hacker News since the last craft run, and project pages.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2438 | 9 | 2026 | Optimal Worst-Case Open Addressing: Braided Cuckoo Hashing | systems |
+| 2439 | 9 | 2026 | Prefix Sharing Is a Sorting Problem | systems |
+| 2440 | 8 | 2025 | Hapax Locks: Value-Based Mutual Exclusion | systems |
+| 2441 | 7 | 2026 | Computation-Friendly Compression of Matrices: Speeding up Linear and Boolean Algebra | systems |
+| 2442 | 9 | 2026 | F-Zero X on 3DS: G-Diffuser 3DS Port Postmortem | engines |
+
+_Recount after `craft-2026-10-27`: **2442** unique title cards on main. Next rank **2443+**._
