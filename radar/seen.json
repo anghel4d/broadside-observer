@@ -7613,5 +7613,54 @@
     "manifold3d Switzerland 1:1 block world (swisstopo)",
     "ESP32-S3 SIMD FAST corner detector",
     "Pharo 14"
+  ],
+  "archive_2026_10_28_batch": "archive-2026-10-28",
+  "archive_2026_10_28_count": 5,
+  "archive_2026_10_28_arxiv": [
+    "1209.2137"
+  ],
+  "archive_2026_10_28_titles": [
+    "Hashed and Hierarchical Timing Wheels: Data Structures for the Efficient Implementation of a Timer Facility",
+    "Decoding Billions of Integers per Second through Vectorization",
+    "Database Cracking",
+    "Coordinated Unit Movement",
+    "On fast Construction of SAH-based Bounding Volume Hierarchies"
+  ],
+  "archive_2026_10_28_urls": [
+    "https://doi.org/10.1145/41457.37504",
+    "https://www.cs.columbia.edu/~nahum/w6998/papers/sosp87-timing-wheels.pdf",
+    "https://arxiv.org/abs/1209.2137",
+    "https://doi.org/10.1002/spe.2203",
+    "https://www.cidrdb.org/cidr2007/papers/cidr07p07.pdf",
+    "https://www.gamedeveloper.com/programming/coordinated-unit-movement",
+    "https://doi.org/10.1109/RT.2007.4342588",
+    "https://www.sci.utah.edu/~wald/Publications/2007/ParallelBVHBuild/fastbuild.pdf"
+  ],
+  "archive_2026_10_28_near_keepers": [
+    "Esterel: design, semantics, implementation (Berry\u2013Gonthier 1992; no reachable full text)",
+    "Cache-Conscious Structure Layout (Chilimbi\u2013Hill\u2013Larus 1999; PDF text unextractable)",
+    "Calendar Queues (Brown 1988)",
+    "Latency Compensating Methods in Client/Server In-game Protocol Design (Bernier 2001; close to card 300)",
+    "Wang Tiles for Image and Texture Generation (Cohen et al. 2003)",
+    "A Practical Analytic Model for Daylight (Preetham et al. 1999)",
+    "The Ubiquitous B-Tree (Comer 1979)",
+    "Access Path Selection in a Relational DBMS (Selinger et al. 1979)",
+    "Space-efficient Static Trees and Graphs (Jacobson 1989)",
+    "Purely Functional Random-Access Lists (Okasaki 1995)",
+    "Data Types a la Carte (Swierstra 2008)",
+    "QuickCheck (Claessen\u2013Hughes 2000)",
+    "The String-to-String Correction Problem (Wagner\u2013Fischer 1974)",
+    "Optimal Code Generation for Expression Trees (Aho\u2013Johnson 1976)",
+    "Operational Transformation in Real-Time Group Editors (Sun\u2013Ellis 1998)",
+    "The Triangle Processor and Normal Vector Shader (Deering et al. 1988)",
+    "ABCD: Eliminating Array Bounds Checks on Demand (2000)",
+    "Transvoxel (Lengyel 2010)",
+    "A Sweepline Algorithm for Voronoi Diagrams (Fortune 1987)",
+    "Skinning with Dual Quaternions (Kavan et al. 2007)",
+    "Context Threading (Berndl et al. 2005)",
+    "Growing a Language (Steele 1998)",
+    "Program Slicing (Weiser 1984)",
+    "A Nanopass Framework for Compiler Education (2004)",
+    "Survey of Texture Mapping (Heckbert 1986)"
   ]
 }
