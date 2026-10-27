@@ -3537,3 +3537,17 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `20
 | 2442 | 9 | 2026 | F-Zero X on 3DS: G-Diffuser 3DS Port Postmortem | engines |
 
 _Recount after `craft-2026-10-27`: **2442** unique title cards on main. Next rank **2443+**._
+
+### archive-2026-10-28
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `192c140`, **2442** unique, max rank **2442**. Next rank **2443**. seed_batch: `archive-2026-10-28`. Window: historical foundations (1987–2015; pre_2018_preferred) across the archive, language, engine and craft clusters.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2443 | 8 | 1987 | Hashed and Hierarchical Timing Wheels: Data Structures for the Efficient Implementation of a Timer Facility | systems |
+| 2444 | 8 | 2015 | Decoding Billions of Integers per Second through Vectorization | systems |
+| 2445 | 8 | 2007 | Database Cracking | systems |
+| 2446 | 9 | 1999 | Coordinated Unit Movement | game-ai |
+| 2447 | 8 | 2007 | On fast Construction of SAH-based Bounding Volume Hierarchies | engines |
+
+_Recount after `archive-2026-10-28`: **2447** unique title cards on main. Next rank **2448+**._
