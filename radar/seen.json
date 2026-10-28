@@ -1335,7 +1335,13 @@
     "2610.32830",
     "2610.32844",
     "2610.32940",
-    "2610.32954"
+    "2610.32954",
+    "2610.36114",
+    "2610.37255",
+    "2610.36355",
+    "2610.37461",
+    "2610.33024",
+    "2610.36308"
   ],
   "titles": [
     "(2-dep,$\u03c3$)-categories are not generalised categories with families",
@@ -3772,9 +3778,15 @@
     "Prefix Sharing Is a Sorting Problem",
     "Hapax Locks: Value-Based Mutual Exclusion",
     "Computation-Friendly Compression of Matrices: Speeding up Linear and Boolean Algebra",
-    "F-Zero X on 3DS: G-Diffuser 3DS Port Postmortem"
+    "F-Zero X on 3DS: G-Diffuser 3DS Port Postmortem",
+    "Context Is a Pipeline, Not a Window: Information Attrition in LLM Agent Harnesses",
+    "Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces",
+    "WAKMan: Workload Aware KVCache Manager",
+    "Concordat: Typed Sessions for LLM Agents",
+    "Evolving to Match Capabilities: Improving Harness Self-Evolution via Skill Adaptation",
+    "When Retrieval Is Not Enough: Obsolete Facts in Agent Memory"
   ],
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -7662,5 +7674,35 @@
     "Program Slicing (Weiser 1984)",
     "A Nanopass Framework for Compiler Education (2004)",
     "Survey of Texture Mapping (Heckbert 1986)"
+  ],
+  "frontier_2026_10_28_batch": "frontier-2026-10-28",
+  "frontier_2026_10_28_count": 6,
+  "frontier_2026_10_28_arxiv": [
+    "2610.36114",
+    "2610.37255",
+    "2610.36355",
+    "2610.37461",
+    "2610.33024",
+    "2610.36308"
+  ],
+  "frontier_2026_10_28_titles": [
+    "Context Is a Pipeline, Not a Window: Information Attrition in LLM Agent Harnesses",
+    "Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces",
+    "WAKMan: Workload Aware KVCache Manager",
+    "Concordat: Typed Sessions for LLM Agents",
+    "Evolving to Match Capabilities: Improving Harness Self-Evolution via Skill Adaptation",
+    "When Retrieval Is Not Enough: Obsolete Facts in Agent Memory"
+  ],
+  "frontier_2026_10_28_near_keepers": [
+    "Instruction stacks of 1,886 coding-agent releases https://arxiv.org/abs/2610.37332",
+    "Inbox as a coordination primitive for agents (pull vs push) https://arxiv.org/abs/2610.36264",
+    "EffectWorld: effect-typed tools for agents https://arxiv.org/abs/2610.35981",
+    "PipeLink GPU kernel linker https://arxiv.org/abs/2610.37200",
+    "Folding attention biases into keys https://arxiv.org/abs/2610.36520",
+    "Rethinking verification in agent harnesses https://arxiv.org/abs/2610.34577",
+    "Memory Tax https://arxiv.org/abs/2610.34073",
+    "Spine: subtask-tree context for agents https://arxiv.org/abs/2610.37224",
+    "Skip the Compressor https://arxiv.org/abs/2610.21073",
+    "Executable archaeology of the Heuristic Compiler and KBEmacs (Archive/Curiosity candidate) https://arxiv.org/abs/2610.36341"
   ]
 }

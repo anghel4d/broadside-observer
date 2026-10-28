@@ -3551,3 +3551,18 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2447 | 8 | 2007 | On fast Construction of SAH-based Bounding Volume Hierarchies | engines |
 
 _Recount after `archive-2026-10-28`: **2447** unique title cards on main. Next rank **2448+**._
+
+### frontier-2026-10-28
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `d657ebc`, **2447** unique, max rank **2447**. Next rank **2448**. seed_batch: `frontier-2026-10-28`. Window: arXiv listings of Tue 27 and Wed 28 Oct 2026 (cs.AI, LG, CL, MA, SE, DC, GR, PL, CR, new + cross-lists + replacements) and Hugging Face daily papers 27–28 Oct.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2448 | 9 | 2026 | Context Is a Pipeline, Not a Window: Information Attrition in LLM Agent Harnesses | agents |
+| 2449 | 9 | 2026 | Your Policy Is Secretly a Harness: The Decision Geometry of Agent Interfaces | agents |
+| 2450 | 8 | 2026 | WAKMan: Workload Aware KVCache Manager | systems |
+| 2451 | 9 | 2026 | Concordat: Typed Sessions for LLM Agents | agents |
+| 2452 | 8 | 2026 | Evolving to Match Capabilities: Improving Harness Self-Evolution via Skill Adaptation | agents |
+| 2453 | 8 | 2026 | When Retrieval Is Not Enough: Obsolete Facts in Agent Memory | agents |
+
+_Recount after `frontier-2026-10-28`: **2453** unique title cards on main. Next rank **2454+**._
