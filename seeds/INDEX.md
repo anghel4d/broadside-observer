@@ -3580,3 +3580,17 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `97
 | 2458 | 7 | 2026 | Polymorphic First-Class Environments | languages |
 
 _Recount after `craft-2026-10-29`: **2458** unique title cards on main. Next rank **2459+**._
+
+### archive-2026-10-30
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `9d5e825`, **2458** unique, max rank **2458**. Next rank **2459**. seed_batch: `archive-2026-10-30`. Window: historical foundations (1983–2010; pre_2018_preferred) across the archive, language, engine and craft clusters.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2459 | 9 | 2010 | Flat Combining and the Synchronization-Parallelism Tradeoff | systems |
+| 2460 | 8 | 1983 | Word Hy-phen-a-tion by Com-put-er | languages |
+| 2461 | 9 | 2005 | A Frequency Analysis of Light Transport | graphics |
+| 2462 | 8 | 1989 | Space-efficient Static Trees and Graphs | systems |
+| 2463 | 8 | 2003 | Wang Tiles for Image and Texture Generation | graphics |
+
+_Recount after `archive-2026-10-30`: **2463** unique title cards on main. Next rank **2464+**._
