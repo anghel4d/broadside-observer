@@ -7880,5 +7880,44 @@
     "2610.37668 Hexels",
     "HN Gforth 1.0 (recognizers, Cilk, message queues)",
     "HN Qwenputer (RISC-V CPU compiled into Qwen3.5 weights)"
+  ],
+  "archive_2026_10_30_batch": "archive-2026-10-30",
+  "archive_2026_10_30_count": 5,
+  "archive_2026_10_30_arxiv": [],
+  "archive_2026_10_30_titles": [
+    "Flat Combining and the Synchronization-Parallelism Tradeoff",
+    "Word Hy-phen-a-tion by Com-put-er",
+    "A Frequency Analysis of Light Transport",
+    "Space-efficient Static Trees and Graphs",
+    "Wang Tiles for Image and Texture Generation"
+  ],
+  "archive_2026_10_30_urls": [
+    "https://doi.org/10.1145/1810479.1810540",
+    "https://tug.org/docs/liang/liang-thesis.pdf",
+    "https://doi.org/10.1145/1073204.1073320",
+    "https://doi.org/10.1109/SFCS.1989.63533",
+    "https://doi.org/10.1145/882262.882265"
+  ],
+  "archive_2026_10_30_near_keepers": [
+    "Calendar Queues (Brown 1988; no free full text reachable)",
+    "Purely Functional Random-Access Lists (Okasaki 1995; no free full text reachable)",
+    "Preetham–Shirley–Smits daylight model (1999; deferred)",
+    "The Ubiquitous B-Tree (Comer 1979; deferred)",
+    "Access Path Selection in a Relational DBMS (Selinger et al. 1979; deferred)",
+    "Data Types à la Carte (Swierstra 2008; deferred)",
+    "QuickCheck (Claessen–Hughes 2000; deferred)",
+    "The String-to-String Correction Problem (Wagner–Fischer 1974; deferred)",
+    "Operational Transformation in Real-Time Group Editors (Sun–Ellis 1998; deferred)",
+    "A Sweepline Algorithm for Voronoi Diagrams (Fortune 1987; deferred)",
+    "Skinning with Dual Quaternions (Kavan et al. 2007; deferred)",
+    "Context Threading (Berndl et al. 2005; deferred)",
+    "Program Slicing (Weiser 1984; deferred)",
+    "A Nanopass Infrastructure for Compiler Education (Sarkar–Waddell–Dybvig 2004; deferred)",
+    "Lazy Functional State Threads (Launchbury–Peyton Jones 1994; deferred)",
+    "Fractional Cascading (Chazelle–Guibas 1986; deferred)",
+    "On the Criteria To Be Used in Decomposing Systems into Modules (Parnas 1972; deferred)",
+    "Rendering Complex Scenes with Memory-Coherent Ray Tracing (Pharr et al. 1997; deferred)",
+    "Uniprocessor Garbage Collection Techniques (Wilson 1992; deferred)",
+    "Transvoxel (Lengyel 2010; deferred)"
   ]
 }
