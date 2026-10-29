@@ -3566,3 +3566,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2453 | 8 | 2026 | When Retrieval Is Not Enough: Obsolete Facts in Agent Memory | agents |
 
 _Recount after `frontier-2026-10-28`: **2453** unique title cards on main. Next rank **2454+**._
+
+### craft-2026-10-29
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `97470e9`, **2453** unique, max rank **2453**. Next rank **2454**. seed_batch: `craft-2026-10-29`. Window: arXiv new listings of Wed 28 Oct 2026 (cs.AR, DB, DC, DS, GR, MS, OS, PF, PL, SE) plus HN stories over 40 points since 2026-10-27 12:14.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2454 | 8 | 2026 | PipeLink: Contract-Guided Linking of GPU Kernel Components | systems |
+| 2455 | 8 | 2026 | From Walks to Skeletons: A Reusable Transport Architecture for Interactive Monte Carlo PDE Solvers | graphics |
+| 2456 | 8 | 2026 | When the Application Layer Is Disposable: Putting Integrity Constraints Back in the Database | systems |
+| 2457 | 7 | 2026 | Native Rectangular Linear Assignment with Implicit Rejection: A Jonker-Volgenant Solver without Square Expansion | game-ai |
+| 2458 | 7 | 2026 | Polymorphic First-Class Environments | languages |
+
+_Recount after `craft-2026-10-29`: **2458** unique title cards on main. Next rank **2459+**._
