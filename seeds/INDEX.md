@@ -3607,5 +3607,11 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2467 | 8 | 2026 | Skeleton Coding: Program Structure as a Specification for Agents | agents |
 | 2468 | 8 | 2026 | TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding | systems |
 | 2469 | 8 | 2026 | Beyond fabrication: Misattributed numbers in papers written by AI research agents | agents |
+| 2470 | 8 | 2026 | A simple construction of smooth counterexamples to the Loewner and Carathéodory conjectures | maths-foundations |
+| 2471 | 8 | 2026 | Four-Coloring Planar Graphs in Linear Time | systems |
+| 2472 | 7 | 2026 | An upper bound of 61 for the Ramsey number $R(3,3,3,3)$ | maths-foundations |
+| 2473 | 7 | 2026 | Optimality of the BCC lattice among 3D lattice quantizers | maths-foundations |
+| 2474 | 7 | 2026 | Every route counts, but some count more: a max-plus view of the C. elegans brain | maths |
+| 2475 | 7 | 2026 | No friction required: Self-locking in entangled assemblies of curved filaments | maths |
 
-_Recount after `frontier-2026-10-30`: **2469** unique title cards on main. Next rank **2470+**._
+_Recount after `curiosity-2026-10-31`: **2475** unique title cards on main. Next rank **2476+**._
