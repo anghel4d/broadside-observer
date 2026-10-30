@@ -3594,3 +3594,18 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2463 | 8 | 2003 | Wang Tiles for Image and Texture Generation | graphics |
 
 _Recount after `archive-2026-10-30`: **2463** unique title cards on main. Next rank **2464+**._
+
+### frontier-2026-10-30
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `3e35366`, **2463** unique, max rank **2463**. Next rank **2464**. seed_batch: `frontier-2026-10-30`. Window: arXiv listing of Fri 30 Oct 2026 (cs.AI, LG, CL, MA, SE, DC, GR, PL, CR) plus HF Daily Papers 29–30 Oct.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2464 | 9 | 2026 | When Skills Tell Agents Not to Ask: A Large-Scale Study of Oversight Directives in Agent Skills | agents |
+| 2465 | 9 | 2026 | Masked Erosion: How Acceptance Gates Lose Redundant Safeguards in Self-Improving Agents | agents |
+| 2466 | 8 | 2026 | Precedent or Intent? What Coding Agents Follow When Evolving Existing Code | agents |
+| 2467 | 8 | 2026 | Skeleton Coding: Program Structure as a Specification for Agents | agents |
+| 2468 | 8 | 2026 | TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding | systems |
+| 2469 | 8 | 2026 | Beyond fabrication: Misattributed numbers in papers written by AI research agents | agents |
+
+_Recount after `frontier-2026-10-30`: **2469** unique title cards on main. Next rank **2470+**._
