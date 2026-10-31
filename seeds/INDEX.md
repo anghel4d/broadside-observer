@@ -3628,4 +3628,13 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `7c
 | 2479 | 7 | 2026 | Order Maintenance in Worst-Case Constant Time, Verified | systems |
 | 2480 | 7 | 2026 | New hierarchical matrices for fast kernel matrix-vector products (hybrid weak admissibility) | engines |
 
-_Recount after `craft-2026-10-31`: **2480** unique title cards on main. Next rank **2481+**._
+
+### curiosity-2026-11-01
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `7cf3440`, **2480** unique, max rank **2480**. Next rank **2481**. seed_batch: `curiosity-2026-11-01`. Window: no new arXiv listing since Fri 30 Oct (weekend), so Quanta Magazine RSS (24 items, 14 Sep–30 Oct) and the papers they cite, plus openai/math commits.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2481 | 7 | 2026 | The Non-Orientable Topology of Condorcet's Paradox | maths |
+
+_Recount after `curiosity-2026-11-01`: **2481** unique title cards on main. Next rank **2482+**._

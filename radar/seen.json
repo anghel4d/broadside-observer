@@ -9866,5 +9866,30 @@
     "2610.39262",
     "2610.34651",
     "2610.35217"
+  ],
+  "curiosity_2026_11_01_batch": "curiosity-2026-11-01",
+  "curiosity_2026_11_01_count": 1,
+  "curiosity_2026_11_01_arxiv": [
+    "2601.07283"
+  ],
+  "curiosity_2026_11_01_titles": [
+    "The Non-Orientable Topology of Condorcet's Paradox"
+  ],
+  "curiosity_2026_11_01_urls": [
+    "https://arxiv.org/abs/2601.07283"
+  ],
+  "curiosity_2026_11_01_near_keepers": [
+    "2602.15797 On Graham's rearrangement conjecture (Pham, Sauermann)",
+    "2508.18254 On Graham's rearrangement conjecture over F_2^n (Bedert et al.)",
+    "2602.17567 Canonical labelling of random regular graphs (Isaev et al.)",
+    "2607.15352 The first three-dimensional map of thermal phases in the local interstellar medium (Shelest et al.)",
+    "10.1073/pnas.2523198122 spider silk dope condensates (Holland lab)",
+    "10.1126/sciadv.adv0956 brine shrimp swarms and turbulence",
+    "2604.23991 Universal Complex Quantum-Like Bits from Hermitian Weighted Graphs (Dickey, Kais)",
+    "10.1038/s41467-026-71386-z complex cortical waves",
+    "10.1371/journal.pbio.3003953 Waddington landscape",
+    "10.1126/sciadv.aea8399 ctenophores",
+    "2305.02512 From Grassmannian to Simplicial High-Dimensional Expanders (Golowich)",
+    "10.1038/s41586-024-07522-w attention (Quanta 2026-10-12)"
   ]
 }
