@@ -3615,3 +3615,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2475 | 7 | 2026 | No friction required: Self-locking in entangled assemblies of curved filaments | maths |
 
 _Recount after `curiosity-2026-10-31`: **2475** unique title cards on main. Next rank **2476+**._
+
+### craft-2026-10-31
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `7c8451d`, **2475** unique, max rank **2475**. Next rank **2476**. seed_batch: `craft-2026-10-31`. Window: arXiv listing of Fri 30 Oct 2026 (cs.AR, DB, DS, MS, OS, PF, CG, FL; DC, GR, PL, SE already swept by frontier) plus HN stories over 40 points since 29 Oct 12:00.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2476 | 8 | 2026 | A Simple Optimistic B-Skiplist Algorithm | systems |
+| 2477 | 7 | 2026 | Witnessed Boolean Contracts: Sound Local Distance Guarantees for Approximate Implicit CSG | graphics |
+| 2478 | 8 | 2026 | Certified Small Well-Separated Pair Decompositions in Practice | engines |
+| 2479 | 7 | 2026 | Order Maintenance in Worst-Case Constant Time, Verified | systems |
+| 2480 | 7 | 2026 | New hierarchical matrices for fast kernel matrix-vector products (hybrid weak admissibility) | engines |
+
+_Recount after `craft-2026-10-31`: **2480** unique title cards on main. Next rank **2481+**._
