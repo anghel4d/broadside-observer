@@ -3651,3 +3651,17 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3b
 | 2485 | 8 | 2026 | Volcanite: Commodity-Hardware Segmentation Volume Visualization for Connectomics and Beyond | graphics |
 
 _Recount after `craft-2026-11-01`: **2485** unique title cards on main. Next rank **2486+**._
+
+### archive-2026-11-02
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `5d6feef`, **2485** unique, max rank **2485**. Next rank **2486**. seed_batch: `archive-2026-11-02`. Pool: about 145 named classics across lock-free structures, graphics, PLT and compilers, array languages, regions and allocators, production systems, text, and databases, deduped against card titles, filenames, author mentions and seen.json.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2486 | 9 | 2006 | Split-Ordered Lists: Lock-Free Extensible Hash Tables | systems |
+| 2487 | 9 | 2006 | Perfect Spatial Hashing | engines |
+| 2488 | 9 | 1987 | Structural Regular Expressions | languages |
+| 2489 | 9 | 1997 | APEX: The APL Parallel Executor | languages |
+| 2490 | 8 | 2004 | A Unified Theory of Garbage Collection | systems |
+
+_Recount after `archive-2026-11-02`: **2490** unique title cards on main. Next rank **2491+**._
