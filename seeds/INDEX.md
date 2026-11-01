@@ -3638,3 +3638,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2481 | 7 | 2026 | The Non-Orientable Topology of Condorcet's Paradox | maths |
 
 _Recount after `curiosity-2026-11-01`: **2481** unique title cards on main. Next rank **2482+**._
+
+### craft-2026-11-01
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3b1bb76`, **2481** unique, max rank **2481**. Next rank **2482**. seed_batch: `craft-2026-11-01`. Window: no new arXiv listing since Fri 30 Oct (weekend, already swept), so 51 topical arXiv API queries over the craft clusters (submissions since 1 Sep 2026) plus HN stories over 40 points since 31 Oct 12:00.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2482 | 8 | 2026 | TRUCO: A Scalable Lock-Free Algorithm for Parallel Contour Extraction | systems |
+| 2483 | 9 | 2026 | Synthesizing Reactive Character Behaviors for Continuous Games via Programmatic Policy Search | game-ai |
+| 2484 | 7 | 2026 | Causal graph rewriting | languages |
+| 2485 | 8 | 2026 | Volcanite: Commodity-Hardware Segmentation Volume Visualization for Connectomics and Beyond | graphics |
+
+_Recount after `craft-2026-11-01`: **2485** unique title cards on main. Next rank **2486+**._
