@@ -3680,3 +3680,15 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2496 | 8 | 2026 | Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System | agents |
 
 _Recount after `frontier-2026-11-02`: **2496** unique title cards on main. Next rank **2497+**._
+
+### curiosity-2026-11-03
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `8824527`, **2496** unique, max rank **2496**. Next rank **2497**. seed_batch: `curiosity-2026-11-03`. Window: arXiv listing of Mon 2 Nov 2026 in 15 curiosity categories plus Quanta Magazine RSS since 30 Oct.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2497 | 7 | 2026 | Microswimmers lose by swimming selfishly | maths |
+| 2498 | 7 | 2026 | Four runners that are barely lonely | maths |
+| 2499 | 7 | 2026 | The lattice of antichains of intervals: Dyck paths, level sets, and sweep dimension | maths |
+
+_Recount after `curiosity-2026-11-03`: **2499** unique title cards on main. Next rank **2500+**._
