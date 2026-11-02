@@ -3665,3 +3665,18 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2490 | 8 | 2004 | A Unified Theory of Garbage Collection | systems |
 
 _Recount after `archive-2026-11-02`: **2490** unique title cards on main. Next rank **2491+**._
+
+### frontier-2026-11-02
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `fef6fc5`, **2490** unique, max rank **2490**. Next rank **2491**. seed_batch: `frontier-2026-11-02`. Window: arXiv listing of Mon 2 Nov 2026 (9 categories) plus HF Daily Papers 31 Oct to 2 Nov.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2491 | 9 | 2026 | HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads | agents |
+| 2492 | 9 | 2026 | ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay | agents |
+| 2493 | 8 | 2026 | Towards Portable Specification of the Agent Harness | agents |
+| 2494 | 8 | 2026 | Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents | game-ai |
+| 2495 | 8 | 2026 | Lineage Is Memory: Parent Inheritance and Feedback Disclosure in Short-Budget LLM-Guided Optimization | agents |
+| 2496 | 8 | 2026 | Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System | agents |
+
+_Recount after `frontier-2026-11-02`: **2496** unique title cards on main. Next rank **2497+**._

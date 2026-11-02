@@ -2493,7 +2493,13 @@
     "2609.37916",
     "2610.38863",
     "2609.03908",
-    "2610.31342"
+    "2610.31342",
+    "2610.41508",
+    "2610.41025",
+    "2610.40917",
+    "2610.41264",
+    "2610.41157",
+    "2610.41604"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -5851,7 +5857,13 @@
     "Hello World or Καλημέρα κόσμε or こんにちは 世界",
     "The AED Free Storage Package",
     "Access Path Selection in a Relational Database Management System",
-    "A Pixel Is Not A Little Square, A Pixel Is Not A Little Square, A Pixel Is Not A Little Square! (And a Voxel is Not a Little Cube)"
+    "A Pixel Is Not A Little Square, A Pixel Is Not A Little Square, A Pixel Is Not A Little Square! (And a Voxel is Not a Little Cube)",
+    "HiState: Hierarchical Prefix Cache Management for Hybrid LLM Serving in Agentic Workloads",
+    "ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay",
+    "Towards Portable Specification of the Agent Harness",
+    "Rome Wasn't Built in One Turn: Replay-Grounded Reward Signals for Long-Horizon Freeciv Agents",
+    "Lineage Is Memory: Parent Inheritance and Feedback Disclosure in Short-Budget LLM-Guided Optimization",
+    "Real Computation or Merely Naming? A Pre-Registered Mechanism Audit of 25 Cognitive-Architecture Modules in an LLM-Based Agent System"
   ],
   "updated": "2026-11-02",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -5862,8 +5874,8 @@
   "craft_count": 9,
   "archive_batch": "archive-2026-10-18",
   "archive_count": 8,
-  "frontier_batch": "frontier-2026-10-18",
-  "frontier_count": 4,
+  "frontier_batch": "frontier-2026-11-02",
+  "frontier_count": 6,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
