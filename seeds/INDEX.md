@@ -3706,3 +3706,17 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3b
 | 2504 | 7 | 2026 | How we halved DNS build delay and cut memory use by 85% | systems |
 
 _Recount after `craft-2026-11-03`: **2504** unique title cards on main. Next rank **2505**._
+
+### archive-2026-11-04
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `64ec7ff`, **2504** unique, max rank **2504**. Next rank **2505**. seed_batch: `archive-2026-11-04`. Window: citation-and-canon dig (concurrency, text rendering, relational/recursive query evaluation, ray tracing, array languages, regions, production systems).
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2505 | 9 | 1983 | Specifying Concurrent Program Modules | systems |
+| 2506 | 9 | 1980 | The Display of Characters Using Gray Level Sample Arrays | graphics |
+| 2507 | 9 | 1981 | Algorithms for Acyclic Database Schemes | languages |
+| 2508 | 8 | 1986 | An Amateur's Introduction to Recursive Query Processing Strategies | languages |
+| 2509 | 8 | 1987 | Fast Ray Tracing by Ray Classification | graphics |
+
+_Recount after `archive-2026-11-04`: **2509** unique title cards on main. Next rank **2510**._
