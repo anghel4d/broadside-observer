@@ -3692,3 +3692,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2499 | 7 | 2026 | The lattice of antichains of intervals: Dyck paths, level sets, and sweep dimension | maths |
 
 _Recount after `curiosity-2026-11-03`: **2499** unique title cards on main. Next rank **2500+**._
+
+### craft-2026-11-03
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3b68294`, **2499** unique, max rank **2499**. Next rank **2500**. seed_batch: `craft-2026-11-03`. Window: arXiv /new listing of Tue 3 Nov 2026 plus Hacker News since 2026-11-01 12:00.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2500 | 9 | 2026 | Vectorizing Recurrences over Semirings | languages |
+| 2501 | 8 | 2026 | AbacusGS: Gaussian Splatting without Per-Splat Sorting | graphics |
+| 2502 | 8 | 2026 | Infinite Worlds from One Example: What Local Generators Must Share | game-ai |
+| 2503 | 7 | 2026 | A GPU Engine for Sparse Matrix-Vector Products on k²-Tree-Compressed Graphs | systems |
+| 2504 | 7 | 2026 | How we halved DNS build delay and cut memory use by 85% | systems |
+
+_Recount after `craft-2026-11-03`: **2504** unique title cards on main. Next rank **2505**._
