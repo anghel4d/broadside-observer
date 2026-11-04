@@ -2545,7 +2545,10 @@
     "2611.02912",
     "2611.03219",
     "2611.02082",
-    "2611.05139"
+    "2611.05139",
+    "2611.04577",
+    "2611.04346",
+    "2611.05301"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6005,9 +6008,12 @@
     "A State Change Is Local, Its Consequences Are Not: Dependency-Aware State Revision for Long-Term Agent Memory",
     "Can Coding Agents Sustain Continual Evolution without Forgetting?",
     "Fairway: Load-Aware KV Cache Reuse for LLM Prefill Scheduling",
-    "Meta^2: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents"
+    "Meta^2: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents",
+    "The Lovász Local Lemma Is Sharp for the Hat Guessing Number",
+    "Trail systems self-organize through individual route optimization",
+    "How symmetry and complexity shape three-dimensional programmable self-assembly"
   ],
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -10213,5 +10219,33 @@
     "2611.03219",
     "2611.02082",
     "2611.05139"
+  ],
+  "curiosity_2026_11_05_batch": "curiosity-2026-11-05",
+  "curiosity_2026_11_05_count": 3,
+  "curiosity_2026_11_05_arxiv": [
+    "2611.04577",
+    "2611.04346",
+    "2611.05301"
+  ],
+  "curiosity_2026_11_05_titles": [
+    "The Lovász Local Lemma Is Sharp for the Hat Guessing Number",
+    "Trail systems self-organize through individual route optimization",
+    "How symmetry and complexity shape three-dimensional programmable self-assembly"
+  ],
+  "curiosity_2026_11_05_urls": [
+    "https://arxiv.org/abs/2611.04577",
+    "https://arxiv.org/abs/2611.04346",
+    "https://arxiv.org/abs/2611.05301"
+  ],
+  "curiosity_2026_11_05_near_keepers": [
+    "2611.04020 Automatic partition identities",
+    "2611.04190 Quadratic Hubbard trees, automata, and ray connections",
+    "2611.01350 Lehmer's number is not an orientable stretch factor in genus six",
+    "2611.03682 New lower bounds for kissing numbers in dimensions 32-35 and 37-39",
+    "2611.05323 Associahedra are 12-colourable",
+    "2611.04339 Optimal no-feedback card guessing after riffle shuffles",
+    "2611.04565 Curriculum unlearning in humans and neural networks",
+    "2611.04658 Co-Decompositions and FO Model Checking",
+    "2611.04791 Hidden Symmetries of the Kepler Problem and Jacobi's Theorem"
   ]
 }

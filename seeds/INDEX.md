@@ -3736,3 +3736,15 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2516 | 8 | 2026 | Correctness Firewalls for Synthesized Database Components | systems |
 
 _Recount after `frontier-2026-11-04`: **2516** unique title cards on main. Next rank **2517**._
+
+### curiosity-2026-11-05
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `618de0f`, **2516** unique, max rank **2516**. Next rank **2517**. seed_batch: `curiosity-2026-11-05`. Window: arXiv listing of Wed 4 Nov 2026 in 14 curiosity categories (cs.CG rate-limited) plus Quanta Magazine RSS since 2 Nov.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2517 | 7 | 2026 | The Lovász Local Lemma Is Sharp for the Hat Guessing Number | maths |
+| 2518 | 8 | 2026 | Trail systems self-organize through individual route optimization | game-ai |
+| 2519 | 7 | 2026 | How symmetry and complexity shape three-dimensional programmable self-assembly | maths |
+
+_Recount after `curiosity-2026-11-05`: **2519** unique title cards on main. Next rank **2520+**._
