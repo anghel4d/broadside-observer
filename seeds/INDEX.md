@@ -3720,3 +3720,19 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2509 | 8 | 1987 | Fast Ray Tracing by Ray Classification | graphics |
 
 _Recount after `archive-2026-11-04`: **2509** unique title cards on main. Next rank **2510**._
+
+### frontier-2026-11-04
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `f1a3f9e`, **2509** unique, max rank **2509**. Next rank **2510**. seed_batch: `frontier-2026-11-04`. Window: arXiv listings of Tue 3 Nov and Wed 4 Nov 2026 (cs.AI, cs.CL, cs.LG, cs.DC, cs.PL, cs.SE, cs.DB, cs.MA, cs.GR, cs.CR, with cross-lists).
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2510 | 9 | 2026 | When Cache Pressure Becomes a Trap: Metastability in Agent Serving | systems |
+| 2511 | 9 | 2026 | Silent Instrument Errors Reorder Agent Leaderboards | agents |
+| 2512 | 9 | 2026 | Agent Memory as Rate-Limited Filtering: Explicit State Outlasts Long Context Beyond a Reader-Dependent Horizon | agents |
+| 2513 | 8 | 2026 | Top-$k$ Retrieval Leaves Memory Value Undetermined | agents |
+| 2514 | 8 | 2026 | The Agent Board: Kanban for Machines; Durable Coordination for Agents That Outlive the Conversation | agents |
+| 2515 | 8 | 2026 | Do Agents Still Follow the Rules? Benchmarking Rule Compliance under Agent Context Compaction | agents |
+| 2516 | 8 | 2026 | Correctness Firewalls for Synthesized Database Components | systems |
+
+_Recount after `frontier-2026-11-04`: **2516** unique title cards on main. Next rank **2517**._
