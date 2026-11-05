@@ -3762,3 +3762,17 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `0d
 | 2524 | 8 | 2025 | Neural Visibility Cache for Real-Time Light Sampling | graphics |
 
 _Recount after `craft-2026-11-05`: **2524** unique title cards on main. Next rank **2525+**._
+
+### archive-2026-11-06
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `fa90a53`, **2524** unique, max rank **2524**. Next rank **2525**. seed_batch: `archive-2026-11-06`. Window: citation-and-canon dig (GC/regions foundations, WCOJ/Datalog joins, text hyphenation, array-language gaps, radiosity/visibility, lock-free leftovers).
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2525 | 9 | 1970 | A Nonrecursive List Compacting Algorithm | systems |
+| 2526 | 9 | 1992 | The Treadmill: Real-Time Garbage Collection Without Motion Sickness | systems |
+| 2527 | 9 | 1989 | Simple Generational Garbage Collection and Fast Allocation | systems |
+| 2528 | 9 | 2014 | Leapfrog Triejoin: a Worst-Case Optimal Join Algorithm | languages |
+| 2529 | 9 | 1983 | Word Hyphenation by Computer | languages |
+
+_Recount after `archive-2026-11-06`: **2529** unique title cards on main. Next rank **2530+**._
