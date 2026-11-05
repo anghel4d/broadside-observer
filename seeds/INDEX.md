@@ -3748,3 +3748,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2519 | 7 | 2026 | How symmetry and complexity shape three-dimensional programmable self-assembly | maths |
 
 _Recount after `curiosity-2026-11-05`: **2519** unique title cards on main. Next rank **2520+**._
+
+### craft-2026-11-05
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `0dbe73d`, **2519** unique, max rank **2519**. Next rank **2520**. seed_batch: `craft-2026-11-05`. Window: arXiv API recent (cs.GR/PL/DC/DS/DB/SE/CG/PF/MS/AR/OS/FL/LO/CL/HC/AI) + topic queries (mesh/GI, lock-free/ECS, array/Datalog, typed PL, Vulkan/text) + JCGT RSS feed + HN >40 pts since 2026-11-02.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2520 | 9 | 2026 | Incremental Open Addressing Has No Time-Space Tradeoff | systems |
+| 2521 | 9 | 2026 | Distributed Datalog at Scale with Worst-Case Optimal Joins | languages |
+| 2522 | 8 | 2026 | Compiling Linear Datalog to SQL for Program Analysis | languages |
+| 2523 | 8 | 2026 | Ultrafast Screen-Space Refractions and Caustics via Newton's Method | graphics |
+| 2524 | 8 | 2025 | Neural Visibility Cache for Real-Time Light Sampling | graphics |
+
+_Recount after `craft-2026-11-05`: **2524** unique title cards on main. Next rank **2525+**._
