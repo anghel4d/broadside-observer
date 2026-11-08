@@ -2551,7 +2551,10 @@
     "2611.05301",
     "2611.04186",
     "2610.12692",
-    "2609.06301"
+    "2609.06301",
+    "2611.06492",
+    "2611.08198",
+    "2611.06917"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6132,9 +6135,12 @@
     "An Implementation of J (seen)",
     "Dictionary of APL (seen)",
     "Rationalized APL (seen)",
-    "Falkoff Evolution of APL (near last run)"
+    "Falkoff Evolution of APL (near last run)",
+    "Largest-Angle Bisection and Statistical Regularization of Triangle Shapes",
+    "A diameter-one set in $\\mathbb{R}^5$ that cannot be covered by six diameter-one balls",
+    "Using topology to reveal all mutually unbiased bases in dimension six"
   ],
-  "updated": "2026-11-06",
+  "updated": "2026-11-09",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -10450,5 +10456,36 @@
     "Hudson & Moss, Incremental Collection of Mature Objects",
     "Fuchs, Kedem & Naylor, On Visible Surface Generation by A Priori Tree Structures (BSP)",
     "McDonnell 1973, Complex Floor"
+  ],
+  "curiosity_2026_11_09_batch": "curiosity-2026-11-09",
+  "curiosity_2026_11_09_count": 3,
+  "curiosity_2026_11_09_arxiv": [
+    "2611.06492",
+    "2611.08198",
+    "2611.06917"
+  ],
+  "curiosity_2026_11_09_titles": [
+    "Largest-Angle Bisection and Statistical Regularization of Triangle Shapes",
+    "A diameter-one set in $\\mathbb{R}^5$ that cannot be covered by six diameter-one balls",
+    "Using topology to reveal all mutually unbiased bases in dimension six"
+  ],
+  "curiosity_2026_11_09_urls": [
+    "https://arxiv.org/abs/2611.06492",
+    "https://arxiv.org/abs/2611.08198",
+    "https://arxiv.org/abs/2611.06917"
+  ],
+  "curiosity_2026_11_09_near_keepers": [
+    "2611.06878 The full Kolakoski shift is topologically transitive",
+    "2611.05688 Medial Model of Elastic Curve Contacts, from Clasps to Knits",
+    "2611.06998 Resolving Tusnády's Problem",
+    "2611.06705 3-manifold decision problems and Riemann hypotheses",
+    "2611.06278 Uniqueness of the hexagonal lattice's universal optimality",
+    "2611.07771 Emergent Symmetry in Constant-Density Flocks",
+    "2611.06882 Odd Capillarity",
+    "2611.07112 Embodied physical learning: a trained bacterial cell wall can guide organism behavior",
+    "2611.08050 Closed-form solution for semi-symmetric folding of waterbomb tessellations",
+    "2611.06269 Small 5-chromatic unit-distance graphs in disks of radius 3/2, 5/4 and 23/20",
+    "2611.07514 Using Transformers to Generate 3-Manifold Triangulations",
+    "2611.05300 Counterexamples to the Happy Edge Conjecture in Plane Spanning Trees"
   ]
 }
