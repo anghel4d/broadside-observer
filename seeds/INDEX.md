@@ -3776,3 +3776,15 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2529 | 9 | 1983 | Word Hyphenation by Computer | languages |
 
 _Recount after `archive-2026-11-06`: **2529** unique title cards on main. Next rank **2530+**._
+
+### curiosity-2026-11-09
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `58c5d29`, **2529** unique, max rank **2529**. Next rank **2530**. seed_batch: `curiosity-2026-11-09`. Window: arXiv API submissions 3 Nov 18:00 to 6 Nov 20:00 UTC (the Thu 5 and Fri 6 Nov listings plus the late tail of Wed 4 Nov) in 24 curiosity categories, plus Quanta Magazine RSS since 5 Nov.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2530 | 7 | 2026 | Largest-Angle Bisection and Statistical Regularization of Triangle Shapes | maths-foundations |
+| 2531 | 7 | 2026 | A diameter-one set in R^5 that cannot be covered by six diameter-one balls | maths-foundations |
+| 2532 | 8 | 2026 | Using topology to reveal all mutually unbiased bases in dimension six | maths-foundations |
+
+_Recount after `curiosity-2026-11-09`: **2532** unique title cards on main. Next rank **2533+**._
