@@ -2554,7 +2554,11 @@
     "2609.06301",
     "2611.06492",
     "2611.08198",
-    "2611.06917"
+    "2611.06917",
+    "2611.09172",
+    "2611.08665",
+    "2611.09410",
+    "2611.08763"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6138,14 +6142,19 @@
     "Falkoff Evolution of APL (near last run)",
     "Largest-Angle Bisection and Statistical Regularization of Triangle Shapes",
     "A diameter-one set in $\\mathbb{R}^5$ that cannot be covered by six diameter-one balls",
-    "Using topology to reveal all mutually unbiased bases in dimension six"
+    "Using topology to reveal all mutually unbiased bases in dimension six",
+    "PaB-tree: Parallel B+-tree with Batch Updates",
+    "Dynamic GPU Voxel Grids and Voxel-sequential Processing in NanoVDB",
+    "Nothing Is Shared Until You Synchronise: Reinterpreting Java for Data-Race Freedom",
+    "CrowdDirector: Runtime Orchestration of Crowd Simulation through Natural-Language Directives",
+    "JIT bitmap text rendering for microcontrollers"
   ],
   "updated": "2026-11-09",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
   "curiosity_count": 9,
-  "craft_batch": "craft-2026-11-05",
+  "craft_batch": "craft-2026-11-09",
   "craft_count": 5,
   "archive_batch": "archive-2026-11-06",
   "archive_count": 5,
@@ -10487,5 +10496,45 @@
     "2611.06269 Small 5-chromatic unit-distance graphs in disks of radius 3/2, 5/4 and 23/20",
     "2611.07514 Using Transformers to Generate 3-Manifold Triangulations",
     "2611.05300 Counterexamples to the Happy Edge Conjecture in Plane Spanning Trees"
+  ],
+  "craft_2026_11_09_batch": "craft-2026-11-09",
+  "craft_2026_11_09_count": 5,
+  "craft_2026_11_09_arxiv": [
+    "2611.09172",
+    "2611.08665",
+    "2611.09410",
+    "2611.08763"
+  ],
+  "craft_2026_11_09_titles": [
+    "PaB-tree: Parallel B+-tree with Batch Updates",
+    "Dynamic GPU Voxel Grids and Voxel-sequential Processing in NanoVDB",
+    "Nothing Is Shared Until You Synchronise: Reinterpreting Java for Data-Race Freedom",
+    "CrowdDirector: Runtime Orchestration of Crowd Simulation through Natural-Language Directives",
+    "JIT bitmap text rendering for microcontrollers"
+  ],
+  "craft_2026_11_09_urls": [
+    "https://arxiv.org/abs/2611.09172",
+    "https://arxiv.org/abs/2611.08665",
+    "https://arxiv.org/abs/2611.09410",
+    "https://arxiv.org/abs/2611.08763",
+    "https://linebender.org/blog/jit-bitmap-text/"
+  ],
+  "craft_2026_11_09_near_keepers": [
+    "2611.07477 KOSMOS: Self-scheduling Persistent Kernels for Communication-Compute Overlap",
+    "2611.08720 The GPU Needs an Operating System",
+    "2611.06319 Verified Implementation of the Next-gen Borrow Checking Algorithm for Rust via Abstract Interpretation",
+    "2611.08685 Fibered Separation Logic",
+    "2611.08371 Double-Word Arithmetic for Complex Numbers",
+    "2611.07328 DC-SQEM: Medial Mesh Extraction by Dual Contouring",
+    "2611.06786 Go-Go-Go: the game of Go without turns",
+    "2611.07996 SEER: Event-Driven Runtime for Parallel MARL Environments",
+    "2611.06977 BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
+    "2611.08902 Inside the Trap: Prefix-Cache Collapse in LLM Agent Serving",
+    "2611.08638 MORTIS: Compiler-Guided KV-Cache Management for LLM Agent Programs",
+    "2611.07535 Characterizing CUDA Locality Domains on Blackwell GPUs",
+    "2611.06208 Executable Specifications in Transition Algebra",
+    "2611.06745 Generalized Sorting via Four-Cycles",
+    "HN A Critique of GPUI",
+    "HN Blender's UI and Runtime: Much Faster Than GPUI"
   ]
 }
