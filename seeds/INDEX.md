@@ -3802,3 +3802,16 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3c
 | 2537 | 8 | 2026 | JIT bitmap text rendering for microcontrollers | graphics |
 
 _Recount after `craft-2026-11-09`: **2537** unique title cards on main. Next rank **2538+**._
+
+### archive-2026-11-10
+
+Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: `0c65293`, **2537** unique, max rank **2537**. Next rank **2538**. seed_batch: `archive-2026-11-10`. Method: citation-and-canon dig over about 275 named classics (allocators, lock-free, GC, array languages, production rules and active databases, graphics GI and visibility, text, PLT, game networking) checked against the library and seen.json.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2538 | 9 | 2008 | Point-Based Approximate Color Bleeding | graphics |
+| 2539 | 9 | 1981 | Efficient Locking for Concurrent Operations on B-Trees | systems |
+| 2540 | 8 | 1979 | Storing a Sparse Table | systems |
+| 2541 | 9 | 1990 | Set-Oriented Production Rules in Relational Database Systems | languages |
+
+_Recount after `archive-2026-11-10`: **2541** unique title cards on main. Next rank **2542+**._
