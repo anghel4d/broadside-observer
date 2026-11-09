@@ -3788,3 +3788,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2532 | 8 | 2026 | Using topology to reveal all mutually unbiased bases in dimension six | maths-foundations |
 
 _Recount after `curiosity-2026-11-09`: **2532** unique title cards on main. Next rank **2533+**._
+
+### craft-2026-11-09
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `3c87080`, **2532** unique, max rank **2532**. Next rank **2533**. seed_batch: `craft-2026-11-09`. Window: arXiv API submissions since 4 Nov in 16 craft categories plus 22 topic queries, JCGT RSS (no new items since card 2524's batch), Hacker News stories over 40 points from the last 4 days.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2533 | 8 | 2026 | PaB-tree: Parallel B+-tree with Batch Updates | systems |
+| 2534 | 8 | 2026 | Dynamic GPU Voxel Grids and Voxel-sequential Processing in NanoVDB | graphics |
+| 2535 | 8 | 2026 | Nothing Is Shared Until You Synchronise: Reinterpreting Java for Data-Race Freedom | languages |
+| 2536 | 8 | 2026 | CrowdDirector: Runtime Orchestration of Crowd Simulation through Natural-Language Directives | game-ai |
+| 2537 | 8 | 2026 | JIT bitmap text rendering for microcontrollers | graphics |
+
+_Recount after `craft-2026-11-09`: **2537** unique title cards on main. Next rank **2538+**._
