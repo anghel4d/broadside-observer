@@ -6147,9 +6147,13 @@
     "Dynamic GPU Voxel Grids and Voxel-sequential Processing in NanoVDB",
     "Nothing Is Shared Until You Synchronise: Reinterpreting Java for Data-Race Freedom",
     "CrowdDirector: Runtime Orchestration of Crowd Simulation through Natural-Language Directives",
-    "JIT bitmap text rendering for microcontrollers"
+    "JIT bitmap text rendering for microcontrollers",
+    "Point-Based Approximate Color Bleeding",
+    "Efficient Locking for Concurrent Operations on B-Trees",
+    "Storing a Sparse Table",
+    "Set-Oriented Production Rules in Relational Database Systems"
   ],
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -8214,7 +8218,11 @@
     "https://dl.acm.org/doi/10.1145/362790.362798",
     "https://www.plover.com/misc/hbaker-archive/NoMotionGC.html",
     "https://www.cs.princeton.edu/~appel/papers/143.pdf",
-    "https://tug.org/docs/liang/liang-thesis.pdf"
+    "https://tug.org/docs/liang/liang-thesis.pdf",
+    "https://research.pixar.com/docs/2008.TechnicalReport.C.pdf",
+    "https://doi.org/10.1145/319628.319663",
+    "https://doi.org/10.1145/359168.359175",
+    "https://doi.org/10.1145/93597.98735"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -10536,5 +10544,30 @@
     "2611.06745 Generalized Sorting via Four-Cycles",
     "HN A Critique of GPUI",
     "HN Blender's UI and Runtime: Much Faster Than GPUI"
+  ],
+  "archive_2026_11_10_batch": "archive-2026-11-10",
+  "archive_2026_11_10_count": 4,
+  "archive_2026_11_10_titles": [
+    "Point-Based Approximate Color Bleeding",
+    "Efficient Locking for Concurrent Operations on B-Trees",
+    "Storing a Sparse Table",
+    "Set-Oriented Production Rules in Relational Database Systems"
+  ],
+  "archive_2026_11_10_urls": [
+    "https://research.pixar.com/docs/2008.TechnicalReport.C.pdf",
+    "https://doi.org/10.1145/319628.319663",
+    "https://doi.org/10.1145/359168.359175",
+    "https://doi.org/10.1145/93597.98735"
+  ],
+  "archive_2026_11_10_arxiv": [],
+  "archive_2026_11_10_near_keepers": [
+    "Pike, Locanthi & Reiser 1985, Hardware/Software Trade-offs for Bitmap Graphics on the Blit",
+    "Iverson 1979, Operators",
+    "Tabellion & Lamorlette 2004, An Approximate Global Illumination System for Computer Generated Films",
+    "Lee & Schor 1992, Match Algorithms for Generalized Rete Networks",
+    "Christensen 1996, Global Illumination of Glossy Environments Using Wavelets and Importance",
+    "Perlis & Rugaber 1979, Programming with Idioms in APL",
+    "Ishida 1988, Optimizing Rules in Production System Programs",
+    "Gill, Launchbury & Peyton Jones 1993, A Short Cut to Deforestation"
   ]
 }
