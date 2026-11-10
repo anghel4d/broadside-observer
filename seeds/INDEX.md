@@ -3815,3 +3815,20 @@ Archive radar (even date, 00:00 Europe/Bucharest). Live main before this batch: 
 | 2541 | 9 | 1990 | Set-Oriented Production Rules in Relational Database Systems | languages |
 
 _Recount after `archive-2026-11-10`: **2541** unique title cards on main. Next rank **2542+**._
+
+### frontier-2026-11-10
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `d708ad5`, **2541** unique, max rank **2541**. Next rank **2542**. seed_batch: `frontier-2026-11-10`. Window: arXiv listings of Thu 5 Nov through Tue 10 Nov 2026 (new since the 2026-11-04 frontier; the 11-06 and 11-08 frontier slots were not published).
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2542 | 9 | 2026 | Inside the Trap: A Renewal Law for Prefix-Cache Collapse in LLM Agent Serving | systems |
+| 2543 | 9 | 2026 | Replay Is a Family of Assertions: Fork-Safety in Event-Sourced Agent Runtimes | agents |
+| 2544 | 9 | 2026 | Keeping LLM Agents on Procedure: Executable Finite-State Control for Long-Horizon Instruction Fidelity | agents |
+| 2545 | 8 | 2026 | PACE: Keeping the Right Tokens in the KV Cache Is Not Enough for Long-Horizon LLM Agents | systems |
+| 2546 | 8 | 2026 | How Much Skill Orchestration Can LLM Agents Compile Away? Execution-Grounded Specialization for Token-Efficient Skill Use | agents |
+| 2547 | 8 | 2026 | Attributing Agent Failures to Their History Needs an Executed Counterfactual: Toward a Reporting Standard | agents |
+| 2548 | 8 | 2026 | Can LLM Agents Organize Their Own Memory? | agents |
+| 2549 | 8 | 2026 | Implementing Set-Theoretic Types | languages |
+
+_Recount after `frontier-2026-11-10`: **2549** unique title cards on main. Next rank **2550+**._
