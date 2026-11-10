@@ -2578,7 +2578,35 @@
     "2611.09088",
     "2611.10453",
     "2611.11216",
-    "2611.12169"
+    "2611.12169",
+    "2611.10535",
+    "2611.11577",
+    "2611.12239",
+    "2611.10735",
+    "2611.10311",
+    "2611.11080",
+    "2611.10969",
+    "2611.10437",
+    "2611.10546",
+    "2611.12091",
+    "2611.10466",
+    "2611.12468",
+    "2611.10139",
+    "2611.11677",
+    "2611.11309",
+    "2611.10624",
+    "2611.11623",
+    "2611.11804",
+    "2611.11138",
+    "2611.11645",
+    "2611.11406",
+    "2611.10702",
+    "2611.12329",
+    "2611.11591",
+    "2611.12065",
+    "2611.11144",
+    "2611.10346",
+    "2611.12315"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6191,9 +6219,13 @@
     "When Routine Operations Break Architectural Pattern Relationships in LLM Agent Harnesses",
     "BunshinRL: Splitting Live Agent Workspaces for Memory-Efficient Agentic RL",
     "Replay Fidelity in LLM Agent Evaluation: Randomness, Hidden State, and Test Oracles in AppWorld",
-    "Transactional Data Change for Real-Time Analytics in Lakehouses"
+    "Transactional Data Change for Real-Time Analytics in Lakehouses",
+    "Pinching an elastic potato chip",
+    "Two barriers for minimal time firing squads, with applications to four and five states",
+    "Cube tilings, partition counters, and the Calkin–Wilf and Kepler trees",
+    "No regular icosahedron has a rational point on every face: a proof checked in Lean"
   ],
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -10653,5 +10685,22 @@
     "2611.10453",
     "2611.11216",
     "2611.12169"
+  ],
+  "curiosity_2026_11_11_urls": [
+    "https://arxiv.org/abs/2611.10546",
+    "https://arxiv.org/abs/2611.11080",
+    "https://arxiv.org/abs/2611.12239",
+    "https://arxiv.org/abs/2611.11577"
+  ],
+  "curiosity_2026_11_11_near_keepers": [
+    "2611.10535 Positive sectional curvature on all smooth 13-spheres",
+    "2611.10735 A 43-vertex 4-chromatic unit-distance graph in the plane with girth 5",
+    "2611.10311 Up or down by half: a family of Collatz-type maps",
+    "2611.10969 Rule-table structure of life-like cellular automata: activity, asymmetry, sensitivity, and the propagation storage factorisation",
+    "2611.12091 Topology, geometry and fabrication of volumetric plain weaves",
+    "2611.12468 Sets of reach $R$ are $\\operatorname{CAT}\\left( 1/R^2\\right)$",
+    "2611.11309 Fractal solutions to the two-dimensional floating body problem",
+    "2611.10624 A Simple Computer-Assisted Proof of the 5/6-Bound for Real-Period Pinwheel Scheduling",
+    "2611.10437 Bulgarian solitaire with distinguishable cells"
   ]
 }

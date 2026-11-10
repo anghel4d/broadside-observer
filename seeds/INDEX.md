@@ -3832,3 +3832,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2549 | 8 | 2026 | Implementing Set-Theoretic Types | languages |
 
 _Recount after `frontier-2026-11-10`: **2549** unique title cards on main. Next rank **2550+**._
+
+### curiosity-2026-11-11
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `17cedfd`, **2549** unique, max rank **2549**. Next rank **2550**. seed_batch: `curiosity-2026-11-11`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2550 | 7 | 2026 | Pinching an elastic potato chip | physics |
+| 2551 | 8 | 2026 | Two barriers for minimal-time firing squads, with applications to four and five states | maths-foundations |
+| 2552 | 7 | 2026 | Cube tilings, partition counters, and the Calkin–Wilf and Kepler trees | maths-foundations |
+| 2553 | 7 | 2026 | No regular icosahedron has a rational point on every face: a proof checked in Lean | maths-foundations |
+
+_Recount after `curiosity-2026-11-11`: **2553** unique title cards on main. Next rank **2554+**._
