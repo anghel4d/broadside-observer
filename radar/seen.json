@@ -6249,7 +6249,7 @@
     "real-time string indexing in optimal time",
     "retargetable compilation for tensor kernels via a unified layout abstraction"
   ],
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -10766,5 +10766,32 @@
     "2611.13296 Real-Time 3D Cellular Automata in XR",
     "HN What is malloc doing, anyway? https://benmandrew.com/articles/what-is-malloc-doing-anyway",
     "HN A Critique of GPUI https://blog.zortax.de/posts/a-critique-of-gpui"
+  ],
+  "archive_2026_11_12_batch": [
+    "2558-the-tensor-algebra-compiler",
+    "2559-souffle-on-synthesis-of-program-analyzers",
+    "2560-adaptively-sampled-distance-fields",
+    "2561-efficient-incoherent-ray-traversal-on-gpus-through-compressed-wide-bvhs"
+  ],
+  "archive_2026_11_12_count": 4,
+  "archive_2026_11_12_titles": [
+    "The Tensor Algebra Compiler",
+    "Soufflé: On Synthesis of Program Analyzers",
+    "Adaptively Sampled Distance Fields: A General Representation of Shape for Computer Graphics",
+    "Efficient Incoherent Ray Traversal on GPUs Through Compressed Wide BVHs"
+  ],
+  "archive_2026_11_12_urls": [
+    "https://fredrikbk.com/publications/taco.pdf",
+    "https://www.souffle-lang.com/pdf/cav16.pdf",
+    "https://ronaldperry.org/sig2000_ADFs_Paper.pdf",
+    "https://research.nvidia.com/sites/default/files/publications/ylitie2017hpg-paper.pdf"
+  ],
+  "archive_2026_11_12_near_keepers": [
+    "Remora: A Higher-Order Rank-Polymorphic Programming Language (Slepak, Shivers, Manolios 2014)",
+    "General Arrays, Operators and Functions (Iverson 1973)",
+    "Global Code Motion / Global Value Numbering (Click 1995)",
+    "Adaptive Precision Floating-Point Arithmetic and Fast Robust Geometric Predicates (Shewchuk 1997)",
+    "Skew Strikes Back: New Developments in the Theory of Join Algorithms (Ngo, Ré, Rudra 2013)",
+    "Silhouette maps for improved texture magnification (Sen 2004)"
   ]
 }

@@ -3856,5 +3856,9 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `2b
 | 2555 | 8 | 2026 | Deterministic, Reproducible Inference in Exact Integer Arithmetic, and Verifiable Distributed Inference as Its Consequence | systems |
 | 2556 | 7 | 2026 | Real-Time String Indexing in Optimal Time | maths-foundations |
 | 2557 | 7 | 2026 | Retargetable Compilation for Tensor Kernels via a Unified Layout Abstraction | languages |
+| 2558 | 9 | 2017 | The Tensor Algebra Compiler | languages |
+| 2559 | 8 | 2016 | Soufflé: On Synthesis of Program Analyzers | languages |
+| 2560 | 8 | 2000 | Adaptively Sampled Distance Fields: A General Representation of Shape for Computer Graphics | graphics |
+| 2561 | 8 | 2017 | Efficient Incoherent Ray Traversal on GPUs Through Compressed Wide BVHs | graphics |
 
-_Recount after `craft-2026-11-11`: **2557** unique title cards on main. Next rank **2558+**._
+_Recount after `archive-2026-11-12`: **2561** unique title cards on main. Next rank **2562+**._
