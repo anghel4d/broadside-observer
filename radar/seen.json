@@ -2606,7 +2606,27 @@
     "2611.12065",
     "2611.11144",
     "2611.10346",
-    "2611.12315"
+    "2611.12315",
+    "2611.12319",
+    "2611.13730",
+    "2611.13950",
+    "2611.13741",
+    "2611.12103",
+    "2611.13860",
+    "2611.13762",
+    "2611.13879",
+    "2611.10736",
+    "2611.11756",
+    "2611.13471",
+    "2611.11117",
+    "2611.12944",
+    "2611.11899",
+    "2611.10713",
+    "2611.12716",
+    "2611.13677",
+    "2611.12650",
+    "2611.09693",
+    "2611.13296"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6223,7 +6243,11 @@
     "Pinching an elastic potato chip",
     "Two barriers for minimal time firing squads, with applications to four and five states",
     "Cube tilings, partition counters, and the Calkin–Wilf and Kepler trees",
-    "No regular icosahedron has a rational point on every face: a proof checked in Lean"
+    "No regular icosahedron has a rational point on every face: a proof checked in Lean",
+    "mitigating sm-level load imbalance in 3d gaussian splatting on gpus",
+    "deterministic, reproducible inference in exact integer arithmetic, and verifiable distributed inference as its consequence",
+    "real-time string indexing in optimal time",
+    "retargetable compilation for tensor kernels via a unified layout abstraction"
   ],
   "updated": "2026-11-11",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -10702,5 +10726,45 @@
     "2611.11309 Fractal solutions to the two-dimensional floating body problem",
     "2611.10624 A Simple Computer-Assisted Proof of the 5/6-Bound for Real-Period Pinwheel Scheduling",
     "2611.10437 Bulgarian solitaire with distinguishable cells"
+  ],
+  "craft_2026_11_11_batch": "craft-2026-11-11",
+  "craft_2026_11_11_count": 4,
+  "craft_2026_11_11_arxiv": [
+    "2611.12319",
+    "2611.13730",
+    "2611.13950",
+    "2611.13741"
+  ],
+  "craft_2026_11_11_titles": [
+    "Mitigating SM-Level Load Imbalance in 3D Gaussian Splatting on GPUs",
+    "Deterministic, Reproducible Inference in Exact Integer Arithmetic, and Verifiable Distributed Inference as Its Consequence",
+    "Real-Time String Indexing in Optimal Time",
+    "Retargetable Compilation for Tensor Kernels via a Unified Layout Abstraction"
+  ],
+  "craft_2026_11_11_urls": [
+    "https://arxiv.org/abs/2611.12319",
+    "https://arxiv.org/abs/2611.13730",
+    "https://arxiv.org/abs/2611.13950",
+    "https://arxiv.org/abs/2611.13741"
+  ],
+  "craft_2026_11_11_near_keepers": [
+    "2611.12103 Real-Time Volumetric Light Transport Inference without a Path",
+    "2611.13860 GemAtlas: Uncovering the Memory Hierarchy of Modern NVIDIA GPUs",
+    "2611.13762 Exploiting What NVIDIA Profilers Hide: Analytical GPU Performance Modeling",
+    "2611.13879 SFU-Sim: Bit-Exact Reverse Engineering of NVIDIA MUFU",
+    "2611.10736 Tunnels: Compressing the Solution Subgraph of Regular Path Queries",
+    "2611.11756 Causal Resolution of Undefined Answers in Datalog with Negation",
+    "2611.13471 Context Types: Bunched Modalities for Safety and Reachability",
+    "2611.11117 Keel: Verified In-Kernel Proof Checker for Proof-Carrying BPF",
+    "2611.12944 SPMW: Grid-Based Programming Model for Accelerator Design",
+    "2611.11899 Certifying Composable Read-Write Interfaces from Random Edits",
+    "2611.10713 Quadratic Bezier Splatting for Painting Rendering",
+    "2611.12716 Spaghetti Splatting",
+    "2611.13677 Deformable Texture Maps",
+    "2611.12650 LOD-Conditioned Anisotropic Filtering for Neural Texture Compression",
+    "2611.09693 Real-Time Self-Penetration Repair for Skinned Characters",
+    "2611.13296 Real-Time 3D Cellular Automata in XR",
+    "HN What is malloc doing, anyway? https://benmandrew.com/articles/what-is-malloc-doing-anyway",
+    "HN A Critique of GPUI https://blog.zortax.de/posts/a-critique-of-gpui"
   ]
 }

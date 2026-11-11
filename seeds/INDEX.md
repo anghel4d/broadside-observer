@@ -3845,3 +3845,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2553 | 7 | 2026 | No regular icosahedron has a rational point on every face: a proof checked in Lean | maths-foundations |
 
 _Recount after `curiosity-2026-11-11`: **2553** unique title cards on main. Next rank **2554+**._
+
+### craft-2026-11-11
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `2b206d9`, **2553** unique, max rank **2553**. Next rank **2554**. seed_batch: `craft-2026-11-11`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2554 | 8 | 2026 | Mitigating SM-Level Load Imbalance in 3D Gaussian Splatting on GPUs | graphics |
+| 2555 | 8 | 2026 | Deterministic, Reproducible Inference in Exact Integer Arithmetic, and Verifiable Distributed Inference as Its Consequence | systems |
+| 2556 | 7 | 2026 | Real-Time String Indexing in Optimal Time | maths-foundations |
+| 2557 | 7 | 2026 | Retargetable Compilation for Tensor Kernels via a Unified Layout Abstraction | languages |
+
+_Recount after `craft-2026-11-11`: **2557** unique title cards on main. Next rank **2558+**._
