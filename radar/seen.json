@@ -2647,7 +2647,33 @@
     "2611.13541",
     "2611.14083",
     "2611.13241",
-    "2611.13144"
+    "2611.13144",
+    "2611.13226",
+    "2611.14517",
+    "2611.14234",
+    "2611.14367",
+    "2611.14277",
+    "2611.13604",
+    "2611.13702",
+    "2611.13591",
+    "2611.14500",
+    "2611.13664",
+    "2611.13887",
+    "2611.14056",
+    "2611.13068",
+    "2611.13018",
+    "2611.13314",
+    "2611.14039",
+    "2611.13146",
+    "2611.14089",
+    "2611.13149",
+    "2611.13996",
+    "2611.14167",
+    "2611.13725",
+    "2611.14145",
+    "2611.14159",
+    "2611.12923",
+    "2611.13789"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6289,9 +6315,13 @@
     "agent benchmarks stop ranking before they run out of tasks",
     "sable: a small-field sumcheck argument for bit-exact inference of large language models",
     "flowplan: reducing the token cost of coding agents with abstraction-guided planning and verification",
-    "teaching the harness: student-aware skill transfer for llm agents"
+    "teaching the harness: student-aware skill transfer for llm agents",
+    "Unilluminable rooms: minimal examples, classifications and exceptions",
+    "The closure of the nonreal roots of bounded-height polynomials is connected exactly at pronic heights",
+    "Real-Space Imaging of Thomson Charge Configurations in Superfluid Helium Nanodroplets",
+    "OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028)"
   ],
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -10909,5 +10939,33 @@
       "2611.13144",
       "Teaching the Harness: Student-Aware Skill Transfer for LLM Agents"
     ]
+  ],
+  "curiosity_2026_11_13_batch": "curiosity-2026-11-13",
+  "curiosity_2026_11_13_count": 4,
+  "curiosity_2026_11_13_arxiv": [
+    "2611.13226",
+    "2611.14517"
+  ],
+  "curiosity_2026_11_13_titles": [
+    "Unilluminable rooms: minimal examples, classifications and exceptions",
+    "The closure of the nonreal roots of bounded-height polynomials is connected exactly at pronic heights",
+    "Real-Space Imaging of Thomson Charge Configurations in Superfluid Helium Nanodroplets",
+    "OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028)"
+  ],
+  "curiosity_2026_11_13_urls": [
+    "https://arxiv.org/abs/2611.13226",
+    "https://arxiv.org/abs/2611.14517",
+    "https://doi.org/10.1103/qby4-bm6q",
+    "https://github.com/yang-mills-group/OpenAI-YM-20261028"
+  ],
+  "curiosity_2026_11_13_near_keepers": [
+    "2611.14234 LLM-Assisted Advances in the Ropelength Problem",
+    "2611.13146 Everything in its right place: attention is a radio head",
+    "2611.13149 Energy Dissipation Modulates Sensitivity to Corner Advantage in Weighted Dice",
+    "2611.13996 Frege's election method: discrepancy, invariant polygons and Farey geometry",
+    "2611.14367 No 13-vertex triangulation of the three-torus",
+    "2611.13702 Berry phase and Hannay angle as Taylor coefficients of the minimal action",
+    "2611.14277 Thales's theorem in higher dimensions",
+    "doi:10.1126/science.aen0894 Nature's cellular nuke (ruptoblasts / ruptosis in planarians)"
   ]
 }
