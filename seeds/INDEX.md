@@ -3862,3 +3862,21 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `2b
 | 2561 | 8 | 2017 | Efficient Incoherent Ray Traversal on GPUs Through Compressed Wide BVHs | graphics |
 
 _Recount after `archive-2026-11-12`: **2561** unique title cards on main. Next rank **2562+**._
+
+### frontier-2026-11-12
+
+Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch: `19779dd`, **2561** unique, max rank **2561**. Next rank **2562**. seed_batch: `frontier-2026-11-12`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2562 | 9 | 2026 | SHADOWPREFILL: Keeping Your Next Model Warm for Per-Step Model Routing in Agentic LLM Serving | systems |
+| 2563 | 8 | 2026 | Can KV Cache Be Reused Across Model Updates? A DeepSeek-V4-Flash Case Study | systems |
+| 2564 | 8 | 2026 | Placing LLM Lookup Tables by Per-Layer Prefetch Deadlines | systems |
+| 2565 | 8 | 2026 | Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents | agents |
+| 2566 | 8 | 2026 | When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents | agents |
+| 2567 | 8 | 2026 | The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost | agents |
+| 2568 | 8 | 2026 | Dependable Long-Horizon LLM Agents: A Trajectory-Centered Empirical Study of Where Errors Enter and Which Controls Reach Them | agents |
+| 2569 | 8 | 2026 | The Left Ripple of Byte-Pair Encoding: Certified Lookbehind for Every Dictionary | languages |
+| 2570 | 7 | 2026 | CFGKAT: A Complete Calculus for Non-Local Control Flow | languages |
+
+_Recount after `frontier-2026-11-12`: **2570** unique title cards on main. Next rank **2571+**._

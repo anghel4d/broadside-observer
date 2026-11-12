@@ -2626,7 +2626,28 @@
     "2611.13677",
     "2611.12650",
     "2611.09693",
-    "2611.13296"
+    "2611.13296",
+    "2611.13176",
+    "2611.14051",
+    "2611.13413",
+    "2611.14320",
+    "2611.14326",
+    "2611.13524",
+    "2611.13254",
+    "2611.13061",
+    "2611.14201",
+    "2611.13412",
+    "2611.14019",
+    "2611.14492",
+    "2611.13709",
+    "2611.13960",
+    "2611.13336",
+    "2611.12903",
+    "2611.14505",
+    "2611.13541",
+    "2611.14083",
+    "2611.13241",
+    "2611.13144"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6247,7 +6268,28 @@
     "mitigating sm-level load imbalance in 3d gaussian splatting on gpus",
     "deterministic, reproducible inference in exact integer arithmetic, and verifiable distributed inference as its consequence",
     "real-time string indexing in optimal time",
-    "retargetable compilation for tensor kernels via a unified layout abstraction"
+    "retargetable compilation for tensor kernels via a unified layout abstraction",
+    "shadowprefill: keeping your next model warm for per-step model routing in agentic llm serving",
+    "can kv cache be reused across model updates? a deepseek-v4-flash case study",
+    "placing llm lookup tables by per-layer prefetch deadlines",
+    "don't just trust your memory: evidence-linked memory reduces memory-induced degradation in llm agents",
+    "when should agents remember? falsification-gated self-evolution for llm agents",
+    "the rsi tax: when recursive self-improvement is not worth the cost",
+    "dependable long-horizon llm agents: a trajectory-centered empirical study of where errors enter and which controls reach them",
+    "the left ripple of byte-pair encoding: certified lookbehind for every dictionary",
+    "cfgkat: a complete calculus for non-local control flow",
+    "bursts that outlast themselves: persistent degradation in prefix-cached agent serving",
+    "program-aided patchable skill evolution",
+    "retrace: distilling tool-using agents into planner-free workflows",
+    "do they do as they are told? investigating coding agents' adherence to explicit instructions in context files",
+    "from attack surface to defense architecture: compositional security for agentic coding harnesses",
+    "veritas: a verifier generation harness for agent tasks",
+    "seld: detecting silent evidence loss in context compression beyond the answer",
+    "continual-arc: measuring skill acquisition over a working lifetime",
+    "agent benchmarks stop ranking before they run out of tasks",
+    "sable: a small-field sumcheck argument for bit-exact inference of large language models",
+    "flowplan: reducing the token cost of coding agents with abstraction-guided planning and verification",
+    "teaching the harness: student-aware skill transfer for llm agents"
   ],
   "updated": "2026-11-12",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6258,8 +6300,8 @@
   "craft_count": 5,
   "archive_batch": "archive-2026-11-06",
   "archive_count": 5,
-  "frontier_batch": "frontier-2026-11-10",
-  "frontier_count": 8,
+  "frontier_batch": "frontier-2026-11-12",
+  "frontier_count": 9,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
@@ -10793,5 +10835,79 @@
     "Adaptive Precision Floating-Point Arithmetic and Fast Robust Geometric Predicates (Shewchuk 1997)",
     "Skew Strikes Back: New Developments in the Theory of Join Algorithms (Ngo, Ré, Rudra 2013)",
     "Silhouette maps for improved texture magnification (Sen 2004)"
+  ],
+  "frontier_2026_11_12_batch": "frontier-2026-11-12",
+  "frontier_2026_11_12_count": 9,
+  "frontier_2026_11_12_arxiv": [
+    "2611.13176",
+    "2611.14051",
+    "2611.13413",
+    "2611.14320",
+    "2611.14326",
+    "2611.13524",
+    "2611.13254",
+    "2611.13061",
+    "2611.14201"
+  ],
+  "frontier_2026_11_12_titles": [
+    "SHADOWPREFILL: Keeping Your Next Model Warm for Per-Step Model Routing in Agentic LLM Serving",
+    "Can KV Cache Be Reused Across Model Updates? A DeepSeek-V4-Flash Case Study",
+    "Placing LLM Lookup Tables by Per-Layer Prefetch Deadlines",
+    "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+    "When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents",
+    "The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost",
+    "Dependable Long-Horizon LLM Agents: A Trajectory-Centered Empirical Study of Where Errors Enter and Which Controls Reach Them",
+    "The Left Ripple of Byte-Pair Encoding: Certified Lookbehind for Every Dictionary",
+    "CFGKAT: A Complete Calculus for Non-Local Control Flow"
+  ],
+  "frontier_2026_11_12_near_keepers": [
+    [
+      "2611.13412",
+      "Bursts That Outlast Themselves: Persistent Degradation in Prefix-Cached Agent Serving"
+    ],
+    [
+      "2611.14019",
+      "Program-Aided Patchable Skill Evolution"
+    ],
+    [
+      "2611.14492",
+      "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows"
+    ],
+    [
+      "2611.13709",
+      "Do They Do as They Are Told? Investigating Coding Agents' Adherence to Explicit Instructions in Context Files"
+    ],
+    [
+      "2611.13960",
+      "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses"
+    ],
+    [
+      "2611.13336",
+      "Veritas: A Verifier Generation Harness for Agent Tasks"
+    ],
+    [
+      "2611.12903",
+      "SELD: Detecting Silent Evidence Loss in Context Compression beyond the Answer"
+    ],
+    [
+      "2611.14505",
+      "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime"
+    ],
+    [
+      "2611.13541",
+      "Agent Benchmarks Stop Ranking Before They Run Out of Tasks"
+    ],
+    [
+      "2611.14083",
+      "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models"
+    ],
+    [
+      "2611.13241",
+      "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification"
+    ],
+    [
+      "2611.13144",
+      "Teaching the Harness: Student-Aware Skill Transfer for LLM Agents"
+    ]
   ]
 }
