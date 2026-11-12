@@ -3880,3 +3880,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest). Live main before this batch:
 | 2570 | 7 | 2026 | CFGKAT: A Complete Calculus for Non-Local Control Flow | languages |
 
 _Recount after `frontier-2026-11-12`: **2570** unique title cards on main. Next rank **2571+**._
+
+### curiosity-2026-11-13
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `7234f8d`, **2570** unique, max rank **2570**. Next rank **2571**. seed_batch: `curiosity-2026-11-13`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2571 | 8 | 2026 | Unilluminable rooms: minimal examples, classifications and exceptions | maths-foundations |
+| 2572 | 7 | 2026 | The closure of the nonreal roots of bounded-height polynomials is connected exactly at pronic heights | maths-foundations |
+| 2573 | 7 | 2026 | Real-Space Imaging of Thomson Charge Configurations in Superfluid Helium Nanodroplets | physics |
+| 2574 | 8 | 2026 | OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028) | physics |
+
+_Recount after `curiosity-2026-11-13`: **2574** unique title cards on main. Next rank **2575+**._
