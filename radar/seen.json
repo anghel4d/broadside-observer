@@ -6327,9 +6327,13 @@
     "Delaunay-Based Nearest Neighbor Search with Grid-Accelerated Queries and Parallel Construction",
     "Reconstructing Fine-grained Memory Reuse Structure in GPU Kernels",
     "Optimal-Time Independent Subset Sampling over Acyclic Joins",
-    "Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs"
+    "Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs",
+    "Conjunctive Selection Conditions in Main Memory",
+    "MIL Primitives for Querying a Fragmented World",
+    "A Meshless Hierarchical Representation for Light Transport",
+    "Deriving Production Rules for Incremental View Maintenance"
   ],
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -8410,7 +8414,11 @@
     "https://arxiv.org/abs/2611.15320",
     "https://arxiv.org/abs/2611.14741",
     "https://arxiv.org/abs/2611.15675",
-    "https://arxiv.org/abs/2611.17229"
+    "https://arxiv.org/abs/2611.17229",
+    "https://www.cs.columbia.edu/~kar/pubsk/selections.pdf",
+    "https://ir.cwi.nl/pub/11183/11183B.pdf",
+    "https://people.csail.mit.edu/jaakko/meshless/",
+    "https://www.vldb.org/conf/1991/P577.PDF"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -11013,5 +11021,46 @@
     "2611.13250 Using Proof Dependencies to Manage Verification Projects",
     "2611.14999 Towards Runtime-Aware Observability for Java Virtual Threads",
     "2611.15263 Probe-Based Routing for Join Optimizer Selection"
+  ],
+  "archive_2026_11_14_batch": [
+    "2579-conjunctive-selection-conditions-in-main-memory",
+    "2580-mil-primitives-for-querying-a-fragmented-world",
+    "2581-a-meshless-hierarchical-representation-for-light-transport",
+    "2582-deriving-production-rules-for-incremental-view-maintenance"
+  ],
+  "archive_2026_11_14_count": 4,
+  "archive_2026_11_14_titles": [
+    "Conjunctive Selection Conditions in Main Memory",
+    "MIL Primitives for Querying a Fragmented World",
+    "A Meshless Hierarchical Representation for Light Transport",
+    "Deriving Production Rules for Incremental View Maintenance"
+  ],
+  "archive_2026_11_14_urls": [
+    "https://www.cs.columbia.edu/~kar/pubsk/selections.pdf",
+    "https://ir.cwi.nl/pub/11183/11183B.pdf",
+    "https://people.csail.mit.edu/jaakko/meshless/",
+    "https://www.vldb.org/conf/1991/P577.PDF"
+  ],
+  "archive_2026_11_14_near_keepers": [
+    "Four-Slot Fully Asynchronous Communication Mechanism (Simpson 1990)",
+    "Improved Query Performance with Variant Indexes (O'Neil & Quass 1997)",
+    "Optimal Filtering for Patterned Displays (Platt 2000)",
+    "Sequential Operations in Digital Picture Processing (Rosenfeld & Pfaltz 1966)",
+    "Automatic Transformation of Series Expressions into Loops (Waters 1991)",
+    "A Unified Hierarchical Algorithm for Global Illumination with Scattering Volumes and Object Clusters (Sillion 1995)",
+    "shortlisted-not-kept: An Overview of Production Rules in Database Systems (Hanson & Widom 1993)",
+    "shortlisted-not-kept: Composite Events for Active Databases / Snoop (Chakravarthy & Mishra 1994)",
+    "shortlisted-not-kept: Semantics of Context-Free Languages (Knuth 1968)",
+    "shortlisted-not-kept: Maximizing Loop Parallelism and Improving Data Locality via Loop Fusion and Distribution (Kennedy & McKinley 1993)",
+    "shortlisted-not-kept: Block Oriented Processing of Relational Database Operations in Modern Computer Architectures (Padmanabhan et al. 2001)",
+    "shortlisted-not-kept: Buffering Database Operations for Enhanced Instruction Cache Performance (Zhou & Ross 2004)",
+    "shortlisted-not-kept: High Performance Dynamic Lock-Free Hash Tables and List-Based Sets (Michael 2002)",
+    "shortlisted-not-kept: Concurrent Reading While Writing (Peterson 1983)",
+    "shortlisted-not-kept: Fast and Space Efficient Trie Searches (Bagwell 2000)",
+    "shortlisted-not-kept: Ambient Occlusion Fields (Kontkanen & Laine 2005)",
+    "shortlisted-not-kept: Terrain Analysis in Real-Time Strategy Games / BWTA (Perkins 2010)",
+    "shortlisted-not-kept: Reactive Planning Idioms for Multi-Scale Game AI (Weber et al. 2010)",
+    "shortlisted-not-kept: An ALGOL-Based Associative Language / LEAP (Feldman & Rovner 1969)",
+    "shortlisted-not-kept: A Formal Description of SYSTEM/360 (Falkoff, Iverson & Sussenguth 1964)"
   ]
 }
