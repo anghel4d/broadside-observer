@@ -2673,7 +2673,11 @@
     "2611.14145",
     "2611.14159",
     "2611.12923",
-    "2611.13789"
+    "2611.13789",
+    "2611.15320",
+    "2611.14741",
+    "2611.15675",
+    "2611.17229"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6319,7 +6323,11 @@
     "Unilluminable rooms: minimal examples, classifications and exceptions",
     "The closure of the nonreal roots of bounded-height polynomials is connected exactly at pronic heights",
     "Real-Space Imaging of Thomson Charge Configurations in Superfluid Helium Nanodroplets",
-    "OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028)"
+    "OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028)",
+    "Delaunay-Based Nearest Neighbor Search with Grid-Accelerated Queries and Parallel Construction",
+    "Reconstructing Fine-grained Memory Reuse Structure in GPU Kernels",
+    "Optimal-Time Independent Subset Sampling over Acyclic Joins",
+    "Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs"
   ],
   "updated": "2026-11-13",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -8398,7 +8406,11 @@
     "https://arxiv.org/abs/2611.10022",
     "https://arxiv.org/abs/2611.05650",
     "https://arxiv.org/abs/2611.11929",
-    "https://arxiv.org/abs/2611.09927"
+    "https://arxiv.org/abs/2611.09927",
+    "https://arxiv.org/abs/2611.15320",
+    "https://arxiv.org/abs/2611.14741",
+    "https://arxiv.org/abs/2611.15675",
+    "https://arxiv.org/abs/2611.17229"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -10967,5 +10979,39 @@
     "2611.13702 Berry phase and Hannay angle as Taylor coefficients of the minimal action",
     "2611.14277 Thales's theorem in higher dimensions",
     "doi:10.1126/science.aen0894 Nature's cellular nuke (ruptoblasts / ruptosis in planarians)"
+  ],
+  "craft_2026_11_13_batch": "craft-2026-11-13",
+  "craft_2026_11_13_count": 4,
+  "craft_2026_11_13_arxiv": [
+    "2611.15320",
+    "2611.14741",
+    "2611.15675",
+    "2611.17229"
+  ],
+  "craft_2026_11_13_titles": [
+    "Delaunay-Based Nearest Neighbor Search with Grid-Accelerated Queries and Parallel Construction",
+    "Reconstructing Fine-grained Memory Reuse Structure in GPU Kernels",
+    "Optimal-Time Independent Subset Sampling over Acyclic Joins",
+    "Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs"
+  ],
+  "craft_2026_11_13_urls": [
+    "https://arxiv.org/abs/2611.15320",
+    "https://arxiv.org/abs/2611.14741",
+    "https://arxiv.org/abs/2611.15675",
+    "https://arxiv.org/abs/2611.17229"
+  ],
+  "craft_2026_11_13_near_keepers": [
+    "2611.16272 A Binary Search Tree with the Unified Bound",
+    "2611.15153 MatrixSplat: Matrix-Parallel and Feature-Scalable 3D Gaussian Splatting Rendering on GPUs",
+    "2611.17185 Neural Render Proxies for Interactive and Differentiable Lighting",
+    "2611.16509 Sound Automatic Lock Placement for Concurrent Programs with Pointers",
+    "2611.12162 Same Physics, Different Gradients: A State-of-the-Art Report on Differentiable Physics Simulation",
+    "2611.13138 Answering Conjunctive Queries over Linear Existential Rules with Transitivity",
+    "2611.14459 When does text encoding matter for language modeling?",
+    "2611.16248 MegaOps: A Kernel Overlapping Framework with PyTorch-like Modularity and Megakernel Performance",
+    "2611.13060 Aster: A Flexible and Robust Collection of Numerical Tools for N-Body Problems",
+    "2611.13250 Using Proof Dependencies to Manage Verification Projects",
+    "2611.14999 Towards Runtime-Aware Observability for Java Virtual Threads",
+    "2611.15263 Probe-Based Routing for Join Optimizer Selection"
   ]
 }

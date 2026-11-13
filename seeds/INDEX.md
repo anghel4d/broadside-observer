@@ -3893,3 +3893,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2574 | 8 | 2026 | OpenAI's Lean construction of four-dimensional quantum Yang–Mills theory (OpenAI-YM-20261028) | physics |
 
 _Recount after `curiosity-2026-11-13`: **2574** unique title cards on main. Next rank **2575+**._
+
+### craft-2026-11-13
+
+Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `11b8567`, **2574** unique, max rank **2574**. Next rank **2575**. seed_batch: `craft-2026-11-13`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2575 | 8 | 2026 | Delaunay-Based Nearest Neighbor Search with Grid-Accelerated Queries and Parallel Construction | graphics |
+| 2576 | 8 | 2026 | Reconstructing Fine-grained Memory Reuse Structure in GPU Kernels | systems |
+| 2577 | 7 | 2026 | Optimal-Time Independent Subset Sampling over Acyclic Joins | languages |
+| 2578 | 7 | 2026 | Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs | systems |
+
+_Recount after `craft-2026-11-13`: **2578** unique title cards on main. Next rank **2579+**._
