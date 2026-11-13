@@ -3906,3 +3906,16 @@ Craft radar (odd date, 12:00 Europe/Bucharest). Live main before this batch: `11
 | 2578 | 7 | 2026 | Peak Performance in Matched Filtering: Fused Correlation and Statistically Controlled Screening on CPUs and GPUs | systems |
 
 _Recount after `craft-2026-11-13`: **2578** unique title cards on main. Next rank **2579+**._
+
+### archive-2026-11-14
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 00:16 EET). Live main before this batch: `b30f956`, **2578** unique, max rank **2578**. Next rank **2579**. seed_batch: `archive-2026-11-14`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2579 | 9 | 2002 | Conjunctive Selection Conditions in Main Memory | systems |
+| 2580 | 9 | 1999 | MIL Primitives for Querying a Fragmented World | languages |
+| 2581 | 9 | 2008 | A Meshless Hierarchical Representation for Light Transport | graphics |
+| 2582 | 9 | 1991 | Deriving Production Rules for Incremental View Maintenance | languages |
+
+_Recount after `archive-2026-11-14`: **2582** unique title cards on main. Next rank **2583+**._
