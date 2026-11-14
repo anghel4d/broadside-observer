@@ -3937,3 +3937,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 12:17 EET). Live main b
 | 2591 | 7 | 2026 | Mathematical foundations for symmetric programming and reasoning | languages |
 
 _Recount after `frontier-2026-11-14`: **2591** unique title cards on main. Next rank **2592+**._
+
+### curiosity-2026-11-15
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch: `068bafa`, **2591** unique, max rank **2591**. Next rank **2592**. seed_batch: `curiosity-2026-11-15`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2592 | 8 | 2026 | A Diophantine definition of ℤ in ℚ | maths-foundations |
+| 2593 | 7 | 2026 | The minimum size of the 3-dimensional torus | maths-foundations |
+| 2594 | 8 | 2026 | An O(L³) Spherical Harmonic Transform on L² Samples | engines |
+| 2595 | 7 | 2026 | Slicing a Doughnut at Random | maths-foundations |
+
+_Recount after `curiosity-2026-11-15`: **2595** unique title cards on main. Next rank **2596+**._

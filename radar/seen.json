@@ -2719,7 +2719,23 @@
     "2611.16128",
     "2611.17162",
     "2611.14681",
-    "2611.16565"
+    "2611.16565",
+    "2611.16130",
+    "2611.15358",
+    "2611.16441",
+    "2611.15546",
+    "2611.14605",
+    "2611.17124",
+    "2611.16853",
+    "2611.16963",
+    "2611.16156",
+    "2611.15243",
+    "2611.16157",
+    "2611.16690",
+    "2611.17252",
+    "2611.16943",
+    "2611.16883",
+    "2611.15244"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6382,9 +6398,13 @@
     "When Evaluators of AI Agents Disagree: An Empirical Study of Native Scoring, LLM Judges, and Commit-Boundary Checks on tau2-bench",
     "Knowledge in the Harness, Reliability in the Weights: Teacher-Free Co-Evolution of an LLM Agent",
     "Can a search hold its own bar? In-loop deflation and its exploits in autonomous strategy discovery",
-    "Mathematical foundations for symmetric programming and reasoning"
+    "Mathematical foundations for symmetric programming and reasoning",
+    "A Diophantine definition of ℤ in ℚ",
+    "The minimum size of the 3-dimensional torus",
+    "An O(L³) Spherical Harmonic Transform on L² Samples",
+    "Slicing a Doughnut at Random"
   ],
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -11118,5 +11138,39 @@
   "frontier_2026_11_14_count": 9,
   "frontier_2026_11_14_arxiv": 9,
   "frontier_2026_11_14_titles": 9,
-  "frontier_2026_11_14_near_keepers": 12
+  "frontier_2026_11_14_near_keepers": 12,
+  "curiosity_2026_11_15_batch": "curiosity-2026-11-15",
+  "curiosity_2026_11_15_count": 4,
+  "curiosity_2026_11_15_arxiv": [
+    "2611.16130",
+    "2611.15358",
+    "2611.16441",
+    "2611.15546"
+  ],
+  "curiosity_2026_11_15_titles": [
+    "A Diophantine definition of ℤ in ℚ",
+    "The minimum size of the 3-dimensional torus",
+    "An O(L³) Spherical Harmonic Transform on L² Samples",
+    "Slicing a Doughnut at Random"
+  ],
+  "curiosity_2026_11_15_urls": [
+    "https://arxiv.org/abs/2611.16130",
+    "https://arxiv.org/abs/2611.15358",
+    "https://arxiv.org/abs/2611.16441",
+    "https://arxiv.org/abs/2611.15546"
+  ],
+  "curiosity_2026_11_15_near_keepers": [
+    "2611.14605 Z is Diophantine over Q with 28 unknowns",
+    "2611.17124 Why should Z be Diophantine in Q?",
+    "2611.16853 The uniqueness of smooth stationary black holes",
+    "2611.16963 A completely decomposable modular Jacobian of dimension 1777",
+    "2611.16156 Many more odd zeta values are irrational",
+    "2611.15243 The Pólya–Szegő buckling conjecture in dimensions two through forty-seven",
+    "2611.16157 The limit point set of real roots of random polynomials: Erdős Problem 521",
+    "2611.16690 Hilbert's 17th problem for symmetric functions: undecidability and a counterexample",
+    "2611.17252 Sowing the Seeds of Intractability: Kalah is PSPACE-complete",
+    "2611.16943 GFF for 3D Ising interfaces in three moves of Tetris",
+    "2611.16883 Optimal Polyomino Fences",
+    "2611.15244 Small cells in great-circle arrangements"
+  ]
 }
