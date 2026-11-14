@@ -3919,3 +3919,21 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 00:16 EET). Live main be
 | 2582 | 9 | 1991 | Deriving Production Rules for Incremental View Maintenance | languages |
 
 _Recount after `archive-2026-11-14`: **2582** unique title cards on main. Next rank **2583+**._
+
+### frontier-2026-11-14
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 12:17 EET). Live main before this batch: `9e4c09f`, **2582** unique, max rank **2582**. Next rank **2583**. seed_batch: `frontier-2026-11-14`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2583 | 9 | 2026 | Folio: Recoverable Multi-Resolution Context Folding for Long-Horizon Language Agents | agents |
+| 2584 | 9 | 2026 | Cleaning an Agent's History Hurts When the World Still Holds the Error | agents |
+| 2585 | 8 | 2026 | DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory | agents |
+| 2586 | 8 | 2026 | Read Once, Answer Many: Parallel Prompting for Shared-Context LLM Inference | systems |
+| 2587 | 8 | 2026 | Recompute or Restore? Host-Tier KV for Multi-Model Agent Workflows on a Static-Graph NPU Serving Stack | systems |
+| 2588 | 8 | 2026 | When Evaluators of AI Agents Disagree: An Empirical Study of Native Scoring, LLM Judges, and Commit-Boundary Checks on tau2-bench | agents |
+| 2589 | 8 | 2026 | Knowledge in the Harness, Reliability in the Weights: Teacher-Free Co-Evolution of an LLM Agent | agents |
+| 2590 | 8 | 2026 | Can a search hold its own bar? In-loop deflation and its exploits in autonomous strategy discovery | agents |
+| 2591 | 7 | 2026 | Mathematical foundations for symmetric programming and reasoning | languages |
+
+_Recount after `frontier-2026-11-14`: **2591** unique title cards on main. Next rank **2592+**._
