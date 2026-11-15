@@ -3965,3 +3965,15 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:49 EET). Live main befor
 | 2601 | 7 | 2026 | Locality in Open Addressing Hash Tables | systems |
 
 _Recount after `craft-2026-11-15`: **2601** unique title cards on main. Next rank **2602+**._
+
+### archive-2026-11-16
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 23:54 EET on 2026-11-15). Live main before this batch: `5731bc8`, **2601** unique, max rank **2601**. Next rank **2602**. seed_batch: `archive-2026-11-16`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2602 | 8 | 1998 | Small Materialized Aggregates: A Light Weight Index Structure for Data Warehousing | systems |
+| 2603 | 9 | 2013 | Column Imprints: A Secondary Index Structure | systems |
+| 2604 | 8 | 2009 | Regular-expression derivatives re-examined | languages |
+
+_Recount after `archive-2026-11-16`: **2604** unique title cards on main. Next rank **2605+**._
