@@ -2735,7 +2735,16 @@
     "2611.17252",
     "2611.16943",
     "2611.16883",
-    "2611.15244"
+    "2611.15244",
+    "1601.04017",
+    "2109.10433",
+    "1811.06069",
+    "2012.02710",
+    "2606.07795",
+    "2607.16390",
+    "2111.08692",
+    "2608.08013",
+    "2404.17679"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6402,7 +6411,13 @@
     "A Diophantine definition of ℤ in ℚ",
     "The minimum size of the 3-dimensional torus",
     "An O(L³) Spherical Harmonic Transform on L² Samples",
-    "Slicing a Doughnut at Random"
+    "Slicing a Doughnut at Random",
+    "Concurrent Hash Tables: Fast and General?(!)",
+    "Transcoding Billions of Unicode Characters per Second with SIMD Instructions",
+    "Fixing Incremental Computation: Derivatives of Fixpoints, and the Recursive Semantics of Datalog",
+    "Hiperfact: In-Memory High Performance Fact Processing — Rethinking the Rete Inference Algorithm",
+    "The Role of Semirings in Incremental View Maintenance",
+    "Locality in Open Addressing Hash Tables"
   ],
   "updated": "2026-11-15",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -11172,5 +11187,48 @@
     "2611.16943 GFF for 3D Ising interfaces in three moves of Tetris",
     "2611.16883 Optimal Polyomino Fences",
     "2611.15244 Small cells in great-circle arrangements"
+  ],
+  "craft_2026_11_15_count": 6,
+  "craft_2026_11_15_arxiv": [
+    "1601.04017",
+    "2109.10433",
+    "1811.06069",
+    "2012.02710",
+    "2606.07795",
+    "2607.16390"
+  ],
+  "craft_2026_11_15_titles": [
+    "Concurrent Hash Tables: Fast and General?(!)",
+    "Transcoding Billions of Unicode Characters per Second with SIMD Instructions",
+    "Fixing Incremental Computation: Derivatives of Fixpoints, and the Recursive Semantics of Datalog",
+    "Hiperfact: In-Memory High Performance Fact Processing — Rethinking the Rete Inference Algorithm",
+    "The Role of Semirings in Incremental View Maintenance",
+    "Locality in Open Addressing Hash Tables"
+  ],
+  "craft_2026_11_15_urls": [
+    "https://arxiv.org/abs/1601.04017",
+    "https://arxiv.org/abs/2109.10433",
+    "https://arxiv.org/abs/1811.06069",
+    "https://arxiv.org/abs/2012.02710",
+    "https://arxiv.org/abs/2606.07795",
+    "https://arxiv.org/abs/2607.16390"
+  ],
+  "craft_2026_11_15_near_keepers": [
+    "2405.01145 Localized RETE for Incremental Graph Queries",
+    "2511.00865 FlowLog: Efficient and Extensible Datalog via Incrementality (already referenced in seen)",
+    "2509.25285 ActorDB: single-writer actors + IVM",
+    "1912.05234 Array Languages Make Neural Networks Fast",
+    "1503.05698 The Lock-free k-LSM Relaxed Priority Queue",
+    "2411.14165 Formalizing Stateful Behavior Trees",
+    "2211.00166 Decorrelating ReSTIR Samplers via MCMC Mutations",
+    "1709.02613 Hyperuniform point sets on the sphere: deterministic constructions",
+    "2611.15783 Linear-Time Construction on S^2 for Smale's Seventh Problem (TerracedZonal)",
+    "2611.13568 Pair-Merge Tokenisation Is Hard to Approximate",
+    "2611.16219 GC-MoE on SM120 warp-level FP8xFP4 MMA",
+    "2611.13978 WINIC cross-platform instruction microbenchmarking",
+    "2611.14495 SkipLane write-once conflict-free accumulation",
+    "web: Let's Write a PostScript Interpreter (beyondloom.com)",
+    "web: Terminal borders that don't cost a cell (joshka.net)",
+    "web: Memory Safety Bugs in Rust Standard Library (forge-blog)"
   ]
 }
