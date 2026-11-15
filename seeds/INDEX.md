@@ -3950,3 +3950,18 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest). Live main before this batch:
 | 2595 | 7 | 2026 | Slicing a Doughnut at Random | maths-foundations |
 
 _Recount after `curiosity-2026-11-15`: **2595** unique title cards on main. Next rank **2596+**._
+
+### craft-2026-11-15
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:49 EET). Live main before this batch: `8591fa6`, **2595** unique, max rank **2595**. Next rank **2596**. seed_batch: `craft-2026-11-15`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2596 | 9 | 2016 | Concurrent Hash Tables: Fast and General?(!) | systems |
+| 2597 | 8 | 2022 | Transcoding Billions of Unicode Characters per Second with SIMD Instructions | engines |
+| 2598 | 8 | 2018 | Fixing Incremental Computation: Derivatives of Fixpoints, and the Recursive Semantics of Datalog | languages |
+| 2599 | 7 | 2020 | Hiperfact: In-Memory High Performance Fact Processing — Rethinking the Rete Inference Algorithm | languages |
+| 2600 | 7 | 2026 | The Role of Semirings in Incremental View Maintenance | languages |
+| 2601 | 7 | 2026 | Locality in Open Addressing Hash Tables | systems |
+
+_Recount after `craft-2026-11-15`: **2601** unique title cards on main. Next rank **2602+**._
