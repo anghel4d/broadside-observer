@@ -6417,9 +6417,11 @@
     "Fixing Incremental Computation: Derivatives of Fixpoints, and the Recursive Semantics of Datalog",
     "Hiperfact: In-Memory High Performance Fact Processing — Rethinking the Rete Inference Algorithm",
     "The Role of Semirings in Incremental View Maintenance",
-    "Locality in Open Addressing Hash Tables"
+    "Locality in Open Addressing Hash Tables",
+    "Small Materialized Aggregates: A Light Weight Index Structure for Data Warehousing",
+    "Column Imprints: A Secondary Index Structure"
   ],
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -8504,7 +8506,10 @@
     "https://www.cs.columbia.edu/~kar/pubsk/selections.pdf",
     "https://ir.cwi.nl/pub/11183/11183B.pdf",
     "https://people.csail.mit.edu/jaakko/meshless/",
-    "https://www.vldb.org/conf/1991/P577.PDF"
+    "https://www.vldb.org/conf/1991/P577.PDF",
+    "https://www.vldb.org/conf/1998/p476.pdf",
+    "https://homepages.cwi.nl/~manegold/COMMIT/imprints.pdf",
+    "https://www.ccs.neu.edu/home/turon/re-deriv.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -11230,5 +11235,36 @@
     "web: Let's Write a PostScript Interpreter (beyondloom.com)",
     "web: Terminal borders that don't cost a cell (joshka.net)",
     "web: Memory Safety Bugs in Rust Standard Library (forge-blog)"
+  ],
+  "archive_2026_11_16_batch": [
+    "2602-small-materialized-aggregates-a-light-weight-index-structure",
+    "2603-column-imprints-a-secondary-index-structure",
+    "2604-regular-expression-derivatives-re-examined"
+  ],
+  "archive_2026_11_16_count": 3,
+  "archive_2026_11_16_titles": [
+    "Small Materialized Aggregates: A Light Weight Index Structure for Data Warehousing",
+    "Column Imprints: A Secondary Index Structure",
+    "Regular-expression derivatives re-examined"
+  ],
+  "archive_2026_11_16_urls": [
+    "https://www.vldb.org/conf/1998/p476.pdf",
+    "https://homepages.cwi.nl/~manegold/COMMIT/imprints.pdf",
+    "https://www.ccs.neu.edu/home/turon/re-deriv.pdf"
+  ],
+  "archive_2026_11_16_arxiv": [],
+  "archive_2026_11_16_near_keepers": [
+    "Faster Approximate String Matching / bit-vector algorithm (Myers 1999)",
+    "A New Approach to Text Searching / Shift-Or (Baeza-Yates & Gonnet 1992)",
+    "Analysis of Two Existing and One New Dynamic Programming Algorithm for Join Order / DPccp (Moerkotte & Neumann 2006)",
+    "Tabled Evaluation with Delaying for General Logic Programs / SLG (Chen & Warren 1996)",
+    "shortlisted-not-kept: Fast Text Searching Allowing Errors / agrep (Wu & Manber 1992)",
+    "shortlisted-not-kept: Applicative Programming with Effects (McBride & Paterson 2008)",
+    "shortlisted-not-kept: Don't Thrash: How to Cache Your Hash on Flash / quotient filter (Bender et al. 2012)",
+    "shortlisted-not-kept: Cuckoo Filter: Practically Better Than Bloom (Fan et al. 2014)",
+    "shortlisted-not-kept: Iterative Modulo Scheduling (Rau 1994)",
+    "shortlisted-not-kept: Smooth Subdivision Surfaces Based on Triangles (Loop 1987)",
+    "shortlisted-not-kept: On Building Fast kd-Trees for Ray Tracing (Wald & Havran 2006)",
+    "shortlisted-not-kept: Gradient-Domain Path Tracing (Kettunen et al. 2015)"
   ]
 }
