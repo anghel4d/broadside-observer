@@ -3977,3 +3977,20 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 23:54 EET on 2026-11-15)
 | 2604 | 8 | 2009 | Regular-expression derivatives re-examined | languages |
 
 _Recount after `archive-2026-11-16`: **2604** unique title cards on main. Next rank **2605+**._
+
+### frontier-2026-11-16
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:46 EET). Live main before this batch: `231029b`, **2604** unique, max rank **2604**. Next rank **2605**. seed_batch: `frontier-2026-11-16`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2605 | 8 | 2026 | Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation | agents |
+| 2606 | 8 | 2026 | ModHarness-RL: Recasting Harnesses as Learnable and Evolving Programs for Agentic RL | agents |
+| 2607 | 8 | 2026 | Do Verifier Judgments Survive Abstraction? Measuring Verification Transport for LLM Agent Evaluation | agents |
+| 2608 | 8 | 2026 | Forget the Lineage: Forward-Secure, Lineage-Complete Cryptographic Erasure for LLM-Agent Memory | agents |
+| 2609 | 8 | 2026 | Meta Build Systems as Logic Programs | languages |
+| 2610 | 7 | 2026 | User-Schedulable Approximations for Quantized Tensor Programs | languages |
+| 2611 | 8 | 2026 | Only as Safe as the Weakest Agent: A Break That Appears Only When the System Is Multi-Agent | agents |
+| 2612 | 7 | 2026 | More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs | agents |
+
+_Recount after `frontier-2026-11-16`: **2612** unique title cards on main. Next rank **2613+**._
