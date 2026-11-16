@@ -2777,7 +2777,22 @@
     "2611.18422",
     "2611.17662",
     "2611.17520",
-    "2611.17388"
+    "2611.17388",
+    "2611.17373",
+    "2611.17584",
+    "2611.17569",
+    "2611.17375",
+    "2611.17926",
+    "2611.17567",
+    "2611.17606",
+    "2611.17697",
+    "2611.18368",
+    "2611.18151",
+    "2611.17386",
+    "2611.17742",
+    "2611.18381",
+    "2610.40863",
+    "2611.17884"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6472,7 +6487,11 @@
     "Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent",
     "Super-Analysis for Aggressive yet Scalable Compiler Optimization",
     "Quantifying the Advantage of Coarser DPOR",
-    "An Algebraic Perspective on Operational Semantics"
+    "An Algebraic Perspective on Operational Semantics",
+    "Smale's mean value constant (1981) equals 4",
+    "The Ulam sequence grows subexponentially",
+    "Certificates of Immortality for Gliders on the Hat and Spectre Tilings",
+    "The four-dimensional Borsuk number is five or six"
   ],
   "updated": "2026-11-16",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -11364,5 +11383,32 @@
     "Super-Analysis for Aggressive yet Scalable Compiler Optimization (arXiv 2611.17737)",
     "Quantifying the Advantage of Coarser DPOR (arXiv 2611.18069)",
     "An Algebraic Perspective on Operational Semantics (arXiv 2611.17587)"
+  ],
+  "curiosity_2026_11_17_batch": "curiosity-2026-11-17",
+  "curiosity_2026_11_17_count": 4,
+  "curiosity_2026_11_17_arxiv": [
+    "2611.17373",
+    "2611.17584",
+    "2611.17569",
+    "2611.17375"
+  ],
+  "curiosity_2026_11_17_titles": [
+    "Smale's mean value constant (1981) equals 4",
+    "The Ulam sequence grows subexponentially",
+    "Certificates of Immortality for Gliders on the Hat and Spectre Tilings",
+    "The four-dimensional Borsuk number is five or six"
+  ],
+  "curiosity_2026_11_17_near_keepers": [
+    "2611.17926",
+    "2611.17567",
+    "2611.17606",
+    "2611.17697",
+    "2611.18368",
+    "2611.18151",
+    "2611.17386",
+    "2611.17742",
+    "2611.18381",
+    "2610.40863",
+    "2611.17884"
   ]
 }

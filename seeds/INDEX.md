@@ -3994,3 +3994,16 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:46 EET). Live main b
 | 2612 | 7 | 2026 | More Agents, More Samples, or More Thinking? Untangling Coordination, Ensembling, and Test-Time Compute in Multi-Agent LLMs | agents |
 
 _Recount after `frontier-2026-11-16`: **2612** unique title cards on main. Next rank **2613+**._
+
+### curiosity-2026-11-17
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:47 EET on 16 Nov). Live main before this batch: `d947381`, **2612** unique, max rank **2612**. Next rank **2613**. seed_batch: `curiosity-2026-11-17`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2613 | 8 | 2026 | Smale's mean value constant (1981) equals 4 | maths-foundations |
+| 2614 | 8 | 2026 | The Ulam sequence grows subexponentially | maths-foundations |
+| 2615 | 8 | 2026 | Certificates of Immortality for Gliders on the Hat and Spectre Tilings | maths-foundations |
+| 2616 | 7 | 2026 | The four-dimensional Borsuk number is five or six | maths-foundations |
+
+_Recount after `curiosity-2026-11-17`: **2616** unique title cards on main. Next rank **2617+**._
