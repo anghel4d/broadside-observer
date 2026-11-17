@@ -6500,9 +6500,12 @@
     "Decoupling Data Layouts from Algebraic Data Types",
     "Formalizing einsum with Named Tensor Notation",
     "Partial Borrows in Rust",
-    "Building the AAA Lighting Pipeline in Three.js"
+    "Building the AAA Lighting Pipeline in Three.js",
+    "Two Algorithms for Maintaining Order in a List",
+    "The BSD Packet Filter: A New Architecture for User-level Packet Capture",
+    "Compositing 3-D Rendered Images"
   ],
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -8590,7 +8593,10 @@
     "https://www.vldb.org/conf/1991/P577.PDF",
     "https://www.vldb.org/conf/1998/p476.pdf",
     "https://homepages.cwi.nl/~manegold/COMMIT/imprints.pdf",
-    "https://www.ccs.neu.edu/home/turon/re-deriv.pdf"
+    "https://www.ccs.neu.edu/home/turon/re-deriv.pdf",
+    "https://www.cs.cmu.edu/~sleator/papers/maintaining-order.pdf",
+    "https://www.tcpdump.org/papers/bpf-usenix93.pdf",
+    "https://people.csail.mit.edu/ericchan/bib/pdf/p41-duff.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -11455,5 +11461,36 @@
     "2611.20088 Optimal Pattern-Avoidance Bounds for BSTs",
     "https://nimony.org/ Nimony: a new compiler for Nim (HN)",
     "https://ductus.sorenblank.com Ductus: handwriting as a font (HN)"
+  ],
+  "archive_2026_11_18_batch": [
+    "2622-two-algorithms-for-maintaining-order-in-a-list",
+    "2623-the-bsd-packet-filter-a-new-architecture-for-user-level-packet-capture",
+    "2624-compositing-3-d-rendered-images"
+  ],
+  "archive_2026_11_18_count": 3,
+  "archive_2026_11_18_titles": [
+    "Two Algorithms for Maintaining Order in a List",
+    "The BSD Packet Filter: A New Architecture for User-level Packet Capture",
+    "Compositing 3-D Rendered Images"
+  ],
+  "archive_2026_11_18_urls": [
+    "https://www.cs.cmu.edu/~sleator/papers/maintaining-order.pdf",
+    "https://www.tcpdump.org/papers/bpf-usenix93.pdf",
+    "https://people.csail.mit.edu/ericchan/bib/pdf/p41-duff.pdf"
+  ],
+  "archive_2026_11_18_arxiv": [],
+  "archive_2026_11_18_near_keepers": [
+    "Disjoint-Access-Parallel Implementations of Strong Shared Memory Primitives (Israeli & Rappoport 1994)",
+    "The Light Buffer: A Shadow-Testing Accelerator (Haines & Greenberg 1986)",
+    "Software Transactional Memory for Dynamic-Sized Data Structures / DSTM (Herlihy et al. 2003)",
+    "shortlisted-not-kept: A 3-Dimensional Representation for Fast Rendering of Complex Scenes (Rubin & Whitted 1980)",
+    "shortlisted-not-kept: Efficient Applicative Data Types (Myers 1984)",
+    "shortlisted-not-kept: Detecting Equality of Variables in Programs (Alpern, Wegman & Zadeck 1988)",
+    "shortlisted-not-kept: The Performance of Spin Lock Alternatives for Shared-Memory Multiprocessors (Anderson 1990)",
+    "shortlisted-not-kept: NET-FLi: On-the-fly Compression, Archiving and Indexing of Streaming Network Traffic (Fusco et al. 2010)",
+    "shortlisted-not-kept: Shallow Bounding Volume Hierarchies for Fast SIMD Ray Tracing of Incoherent Rays (Dammertz et al. 2008)",
+    "shortlisted-not-kept: An Efficient Parallel Garbage Collection System and Its Correctness Proof (Kung & Song 1977)",
+    "shortlisted-not-kept: Managing Reentrant Structures Using Reference Counts (Bobrow 1980)",
+    "shortlisted-not-kept: Improved Computational Methods for Ray Tracing (Weghorst, Hooper & Greenberg 1984)"
   ]
 }
