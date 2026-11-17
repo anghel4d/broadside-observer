@@ -2792,7 +2792,11 @@
     "2611.17742",
     "2611.18381",
     "2610.40863",
-    "2611.17884"
+    "2611.17884",
+    "2611.21406",
+    "2611.19113",
+    "2611.19505",
+    "2611.20576"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6491,9 +6495,14 @@
     "Smale's mean value constant (1981) equals 4",
     "The Ulam sequence grows subexponentially",
     "Certificates of Immortality for Gliders on the Hat and Spectre Tilings",
-    "The four-dimensional Borsuk number is five or six"
+    "The four-dimensional Borsuk number is five or six",
+    "Do Apple M-Series Processors Enforce the Compound Memory Model? Sequential and Parallel Composition of Arm and TSO",
+    "Decoupling Data Layouts from Algebraic Data Types",
+    "Formalizing einsum with Named Tensor Notation",
+    "Partial Borrows in Rust",
+    "Building the AAA Lighting Pipeline in Three.js"
   ],
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -11410,5 +11419,41 @@
     "2611.18381",
     "2610.40863",
     "2611.17884"
+  ],
+  "craft_2026_11_17_batch": "craft-2026-11-17",
+  "craft_2026_11_17_count": 5,
+  "craft_2026_11_17_arxiv": [
+    "2611.21406",
+    "2611.19113",
+    "2611.19505",
+    "2611.20576"
+  ],
+  "craft_2026_11_17_titles": [
+    "Do Apple M-Series Processors Enforce the Compound Memory Model? Sequential and Parallel Composition of Arm and TSO",
+    "Decoupling Data Layouts from Algebraic Data Types",
+    "Formalizing einsum with Named Tensor Notation",
+    "Partial Borrows in Rust",
+    "Building the AAA Lighting Pipeline in Three.js"
+  ],
+  "craft_2026_11_17_urls": [
+    "https://arxiv.org/abs/2611.21406",
+    "https://arxiv.org/abs/2611.19113",
+    "https://arxiv.org/abs/2611.19505",
+    "https://arxiv.org/abs/2611.20576",
+    "https://ben3d.ca/blog/building-the-aaa-lighting-pipeline-in-threejs"
+  ],
+  "craft_2026_11_17_near_keepers": [
+    "2611.17827 SIMTurn: forward progress for intra-warp synchronization under stack reconvergence",
+    "2611.20564 Strict Capabilities with a PNVI Escape Hatch",
+    "2611.20546 GDM-GS: spatial data management (holed-frustum range queries, occluder index) for 3DGS trajectory rendering",
+    "2611.17688 Exact Failure Probabilities for d-Choice Cuckoo Hashing",
+    "2611.20473 Online and Fully-Dynamic Sorting",
+    "2611.20401 Interlocking Tiling of 3D Finite Domains",
+    "2611.18145 Obaleth: Compiling Specialized GPU-Initiated Networking",
+    "2611.19008 Accuracy Guarantees for Fixed-Point Emulation of GEMM",
+    "2611.21058 Underpinning Property-Based Testing (Lean)",
+    "2611.20088 Optimal Pattern-Avoidance Bounds for BSTs",
+    "https://nimony.org/ Nimony: a new compiler for Nim (HN)",
+    "https://ductus.sorenblank.com Ductus: handwriting as a font (HN)"
   ]
 }
