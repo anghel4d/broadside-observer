@@ -4007,3 +4007,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:47 EET on 16 Nov). L
 | 2616 | 7 | 2026 | The four-dimensional Borsuk number is five or six | maths-foundations |
 
 _Recount after `curiosity-2026-11-17`: **2616** unique title cards on main. Next rank **2617+**._
+
+### craft-2026-11-17
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main before this batch: `91dc507`, **2616** unique, max rank **2616**. Next rank **2617**. seed_batch: `craft-2026-11-17`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2617 | 9 | 2026 | Do Apple M-Series Processors Enforce the Compound Memory Model? Sequential and Parallel Composition of Arm and TSO | systems |
+| 2618 | 9 | 2026 | Decoupling Data Layouts from Algebraic Data Types | languages |
+| 2619 | 8 | 2026 | Formalizing einsum with Named Tensor Notation | languages |
+| 2620 | 7 | 2026 | Partial Borrows in Rust | languages |
+| 2621 | 7 | 2026 | Building the AAA Lighting Pipeline in Three.js | engines |
+
+_Recount after `craft-2026-11-17`: **2621** unique title cards on main. Next rank **2622+**._
