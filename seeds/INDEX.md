@@ -4021,3 +4021,15 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main befor
 | 2621 | 7 | 2026 | Building the AAA Lighting Pipeline in Three.js | engines |
 
 _Recount after `craft-2026-11-17`: **2621** unique title cards on main. Next rank **2622+**._
+
+### archive-2026-11-18
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 23:52 EET on 17 Nov). Live main before this batch: `f9796a7`, **2621** unique, max rank **2621**. Next rank **2622**. seed_batch: `archive-2026-11-18`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2622 | 8 | 1987 | Two Algorithms for Maintaining Order in a List | systems |
+| 2623 | 8 | 1993 | The BSD Packet Filter: A New Architecture for User-level Packet Capture | languages |
+| 2624 | 7 | 1985 | Compositing 3-D Rendered Images | graphics |
+
+_Recount after `archive-2026-11-18`: **2624** unique title cards on main. Next rank **2625+**._
