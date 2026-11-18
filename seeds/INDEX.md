@@ -4033,3 +4033,23 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 23:52 EET on 17 Nov). Li
 | 2624 | 7 | 1985 | Compositing 3-D Rendered Images | graphics |
 
 _Recount after `archive-2026-11-18`: **2624** unique title cards on main. Next rank **2625+**._
+
+### frontier-2026-11-18
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main before this batch: `4fa0d8d`, **2624** unique, max rank **2624**. Next rank **2625**. seed_batch: `frontier-2026-11-18`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2625 | 8 | 2026 | Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching | agents |
+| 2626 | 7 | 2026 | KV-LTM: Persistent Per-Session KV Caches as Long-Term Memory for Personal Assistants | agents |
+| 2627 | 8 | 2026 | Harness Leverage Across Model Size: A Ladder of Five Local Agent Harnesses from 0.75B to 4.7B | agents |
+| 2628 | 9 | 2026 | The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements | agents |
+| 2629 | 7 | 2026 | What to Practice Next? Latent Profile-Guided Task Selection for Skill-Evolving LLM Agents | agents |
+| 2630 | 8 | 2026 | When Agent Skills Go Stale: Runtime Behavior and Selective Maintenance in Evolving Environments | agents |
+| 2631 | 8 | 2026 | LEDGER: Auditable Agent Memory Under Change | agents |
+| 2632 | 8 | 2026 | StaleBench: Isolating Stale Retrieval in Agent Memory, and Pricing the Fix | agents |
+| 2633 | 8 | 2026 | Continuation-Guided LLM Evolution of Program Policies and Goal Compilers in Craftax | game-ai |
+| 2634 | 8 | 2026 | A Unifying Metatheorem on Weak-Memory Robustness | languages |
+| 2635 | 8 | 2026 | CompCert4Lean: Porting a Verified C Compiler to Lean in Six Weeks with Parallel Coding Agents | languages |
+
+_Recount after `frontier-2026-11-18`: **2635** unique title cards on main. Next rank **2636+**._
