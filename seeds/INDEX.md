@@ -4053,3 +4053,18 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main b
 | 2635 | 8 | 2026 | CompCert4Lean: Porting a Verified C Compiler to Lean in Six Weeks with Parallel Coding Agents | languages |
 
 _Recount after `frontier-2026-11-18`: **2635** unique title cards on main. Next rank **2636+**._
+
+### curiosity-2026-11-19
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:54 EET on 18 Nov). Live main before this batch: `4944c43`, **2635** unique, max rank **2635**. Next rank **2636**. seed_batch: `curiosity-2026-11-19`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2636 | 9 | 2026 | A proof of the Reinhardt conjecture | maths-foundations |
+| 2637 | 8 | 2026 | A Proof of Stein's Equidissection Conjecture | maths-foundations |
+| 2638 | 8 | 2026 | A Universal 8-Vertex Origami Torus Triangulation | maths-foundations |
+| 2639 | 8 | 2026 | Why do continual physical learners need sleep? | agents |
+| 2640 | 8 | 2026 | Thouless's bandwidth conjecture: a proof by elliptic periods | maths-foundations |
+| 2641 | 7 | 2026 | Up or down at every integer: Collatz-type maps of arbitrary sets and the up-down graph | maths-foundations |
+
+_Recount after `curiosity-2026-11-19`: **2641** unique title cards on main. Next rank **2642+**._
