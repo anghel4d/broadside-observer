@@ -4083,3 +4083,16 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:51 EET). Live main befor
 | 2647 | 7 | 2026 | Dissecting the GPU Load/Store Unit and Exposing Its Security Risks | systems |
 
 _Recount after `craft-2026-11-19`: **2647** unique title cards on main. Next rank **2648+**._
+
+### archive-2026-11-20
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 23:47 EET on 19 Nov). Live main before this batch: `f8dc7cc`, **2647** unique, max rank **2647**. Next rank **2648**. seed_batch: `archive-2026-11-20`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2648 | 9 | 1992 | An Implementation of the Fast Multipole Method without Multipoles | maths-foundations |
+| 2649 | 8 | 1998 | A Region Inference Algorithm | languages |
+| 2650 | 8 | 2006 | Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation | systems |
+| 2651 | 8 | 2007 | Accelerating Real-Time Shading with Reverse Reprojection Caching | graphics |
+
+_Recount after `archive-2026-11-20`: **2651** unique title cards on main. Next rank **2652+**._
