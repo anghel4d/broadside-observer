@@ -6640,9 +6640,13 @@
     "SotSort: a stable quicksort with a tunable buffer",
     "Think Offline, Act in Real Time: Self-Improving Visual Game Agents through Code",
     "Detecting Empty Abstractions and Pruning Dead Paths in the Linux eBPF Verifier with Abstract Step Functions",
-    "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks"
+    "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks",
+    "An Implementation of the Fast Multipole Method without Multipoles",
+    "A Region Inference Algorithm",
+    "Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation",
+    "Accelerating Real-Time Shading with Reverse Reprojection Caching"
   ],
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -8733,7 +8737,11 @@
     "https://www.ccs.neu.edu/home/turon/re-deriv.pdf",
     "https://www.cs.cmu.edu/~sleator/papers/maintaining-order.pdf",
     "https://www.tcpdump.org/papers/bpf-usenix93.pdf",
-    "https://people.csail.mit.edu/ericchan/bib/pdf/p41-duff.pdf"
+    "https://people.csail.mit.edu/ericchan/bib/pdf/p41-duff.pdf",
+    "https://ww3.math.ucla.edu/camreport/cam90-14.pdf",
+    "https://elsman.com/mlkit/pdf/toplas98.pdf",
+    "https://www.cs.toronto.edu/~tomhart/papers/hart_ipdps06.pdf",
+    "https://gfx.cs.princeton.edu/pubs/Nehab_2007_ARS/NehEtAl07.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -11774,5 +11782,44 @@
     "2611.22019 CPTC 64-byte-table trellis quantization",
     "web: The Magic of Partial Evaluation (Jimmy Miller)",
     "web: 15 million web servers on one VM (smoltcp, DPDK, AF_XDP)"
+  ],
+  "archive_2026_11_20_batch": [
+    "2648-an-implementation-of-the-fast-multipole-method-without-multipol",
+    "2649-a-region-inference-algorithm",
+    "2650-making-lockless-synchronization-fast-performance-implications-o",
+    "2651-accelerating-real-time-shading-with-reverse-reprojection-cachin"
+  ],
+  "archive_2026_11_20_count": 4,
+  "archive_2026_11_20_titles": [
+    "An Implementation of the Fast Multipole Method without Multipoles",
+    "A Region Inference Algorithm",
+    "Making Lockless Synchronization Fast: Performance Implications of Memory Reclamation",
+    "Accelerating Real-Time Shading with Reverse Reprojection Caching"
+  ],
+  "archive_2026_11_20_urls": [
+    "https://ww3.math.ucla.edu/camreport/cam90-14.pdf",
+    "https://elsman.com/mlkit/pdf/toplas98.pdf",
+    "https://www.cs.toronto.edu/~tomhart/papers/hart_ipdps06.pdf",
+    "https://gfx.cs.princeton.edu/pubs/Nehab_2007_ARS/NehEtAl07.pdf"
+  ],
+  "archive_2026_11_20_arxiv": [],
+  "archive_2026_11_20_near_keepers": [
+    "Design of a Separable Transition-Diagram Compiler (Conway 1963)",
+    "Fast Shadows and Lighting Effects Using Texture Mapping (Segal et al. 1992)",
+    "Radiance Caching for Efficient Global Illumination Computation (Krivanek et al. 2005)",
+    "shortlisted-not-kept: Locking without Blocking (Turek, Shasha & Prakash 1992)",
+    "shortlisted-not-kept: Lock-Free Reference Counting (Detlefs et al. 2001)",
+    "shortlisted-not-kept: Efficient and Reliable Lock-Free Memory Reclamation Based on Reference Counting (Gidenstam et al. 2008)",
+    "shortlisted-not-kept: Efficient Memory Management for Lock-Free Data Structures with Optimistic Access (Cohen & Petrank 2015)",
+    "shortlisted-not-kept: Fast Fourier Transform Accelerated Fast Multipole Algorithm (Elliott & Board 1996)",
+    "shortlisted-not-kept: Galerkin Radiosity (Zatz 1993)",
+    "shortlisted-not-kept: Basic Techniques for the Efficient Coordination of Very Large Numbers of Cooperating Sequential Processors (Gottlieb et al. 1983)",
+    "shortlisted-not-kept: The Linear Abstract Machine (Lafont 1988)",
+    "shortlisted-not-kept: The Quadratic Hash Method When the Table Size Is a Power of 2 (Hopgood & Davenport 1972)",
+    "shortlisted-not-kept: A Data Structure for Dynamic Trees (Sleator & Tarjan 1983)",
+    "shortlisted-not-kept: An Algorithm for Planning Collision-Free Paths among Polyhedral Obstacles (Lozano-Perez & Wesley 1979)",
+    "shortlisted-not-kept: Main-Memory Hash Joins on Multi-Core CPUs (Balkesen et al. 2013)",
+    "shortlisted-not-kept: MULTILISP (Halstead 1985)",
+    "shortlisted-not-kept: Laws of Order (Attiya et al. 2011)"
   ]
 }
