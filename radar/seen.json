@@ -2888,7 +2888,14 @@
     "2611.21652",
     "2611.23099",
     "2611.22209",
-    "2611.20799"
+    "2611.20799",
+    "2611.24437",
+    "2611.24295",
+    "2611.22049",
+    "2611.24786",
+    "2611.24590",
+    "2611.23584",
+    "2611.23022"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6626,9 +6633,16 @@
     "A Universal 8-Vertex Origami Torus Triangulation",
     "Why do continual physical learners need sleep?",
     "Thouless's bandwidth conjecture: a proof by elliptic periods",
-    "Up or down at every integer: Collatz-type maps of arbitrary sets and the up-down graph"
+    "Up or down at every integer: Collatz-type maps of arbitrary sets and the up-down graph",
+    "Dissecting an Unexplored SASS Control-Code Field: Barrier Exemption and Programmable Warp Priority",
+    "A Well-Separated Pair Decomposition of Linear Size for Unit-Disk Graphs",
+    "A Linear-Size Well-Separated Pair Decomposition for Unit Disk Graphs",
+    "SotSort: a stable quicksort with a tunable buffer",
+    "Think Offline, Act in Real Time: Self-Improving Visual Game Agents through Code",
+    "Detecting Empty Abstractions and Pruning Dead Paths in the Linux eBPF Verifier with Abstract Step Functions",
+    "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks"
   ],
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -11729,5 +11743,36 @@
     "2611.23099",
     "2611.22209",
     "2611.20799"
+  ],
+  "craft_2026_11_19_batch": "craft-2026-11-19",
+  "craft_2026_11_19_count": 6,
+  "craft_2026_11_19_arxiv": [
+    "2611.24437",
+    "2611.24295",
+    "2611.22049",
+    "2611.24786",
+    "2611.24590",
+    "2611.23584",
+    "2611.23022"
+  ],
+  "craft_2026_11_19_titles": [
+    "Dissecting an Unexplored SASS Control-Code Field: Barrier Exemption and Programmable Warp Priority",
+    "A Well-Separated Pair Decomposition of Linear Size for Unit-Disk Graphs",
+    "A Linear-Size Well-Separated Pair Decomposition for Unit Disk Graphs",
+    "SotSort: a stable quicksort with a tunable buffer",
+    "Think Offline, Act in Real Time: Self-Improving Visual Game Agents through Code",
+    "Detecting Empty Abstractions and Pruning Dead Paths in the Linux eBPF Verifier with Abstract Step Functions",
+    "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks"
+  ],
+  "craft_2026_11_19_near_keepers": [
+    "2611.22900 blaris windowless random-access LZSS",
+    "2611.22403 BehaVerify behavior-tree verification",
+    "2611.24804 MLIR-MRacle memory-model-aware fuzzing",
+    "2611.24549 TTL approximations for CLOCK(K)",
+    "2611.23632 workload-aware E/R-to-relational mapping",
+    "2611.23848 KIWI GPU-to-CPU reverse offload",
+    "2611.22019 CPTC 64-byte-table trellis quantization",
+    "web: The Magic of Partial Evaluation (Jimmy Miller)",
+    "web: 15 million web servers on one VM (smoltcp, DPDK, AF_XDP)"
   ]
 }

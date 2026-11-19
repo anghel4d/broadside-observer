@@ -4068,3 +4068,18 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:54 EET on 18 Nov). L
 | 2641 | 7 | 2026 | Up or down at every integer: Collatz-type maps of arbitrary sets and the up-down graph | maths-foundations |
 
 _Recount after `curiosity-2026-11-19`: **2641** unique title cards on main. Next rank **2642+**._
+
+### craft-2026-11-19
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:51 EET). Live main before this batch: `5101495`, **2641** unique, max rank **2641**. Next rank **2642**. seed_batch: `craft-2026-11-19`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2642 | 8 | 2026 | Dissecting an Unexplored SASS Control-Code Field: Barrier Exemption and Programmable Warp Priority | systems |
+| 2643 | 8 | 2026 | A Well-Separated Pair Decomposition of Linear Size for Unit-Disk Graphs | maths-foundations |
+| 2644 | 7 | 2026 | SotSort: a stable quicksort with a tunable buffer | systems |
+| 2645 | 7 | 2026 | Think Offline, Act in Real Time: Self-Improving Visual Game Agents through Code | game-ai |
+| 2646 | 7 | 2026 | Detecting Empty Abstractions and Pruning Dead Paths in the Linux eBPF Verifier with Abstract Step Functions | languages |
+| 2647 | 7 | 2026 | Dissecting the GPU Load/Store Unit and Exposing Its Security Risks | systems |
+
+_Recount after `craft-2026-11-19`: **2647** unique title cards on main. Next rank **2648+**._
