@@ -4096,3 +4096,24 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 23:47 EET on 19 Nov). Li
 | 2651 | 8 | 2007 | Accelerating Real-Time Shading with Reverse Reprojection Caching | graphics |
 
 _Recount after `archive-2026-11-20`: **2651** unique title cards on main. Next rank **2652+**._
+
+### frontier-2026-11-20
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:45 EET). Live main before this batch: `4072719`, **2651** unique, max rank **2651**. Next rank **2652**. seed_batch: `frontier-2026-11-20`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2652 | 9 | 2026 | How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents | agents |
+| 2653 | 9 | 2026 | Forget Freely, Grep Later: Lossless, Index-Free Memory for Long-Horizon LLM Agents | agents |
+| 2654 | 8 | 2026 | Aggron: Aggressive Compression of Agentic KV Caches during Head-of-Line Stalls in the Request Queue | agents |
+| 2655 | 8 | 2026 | TripleKV: Predict, Prefetch, Protect -- KV Cache Management for AI Agents | agents |
+| 2656 | 8 | 2026 | FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models | agents |
+| 2657 | 8 | 2026 | Agentic Harness Engineering Beta: Requirement-Centered Evolution of Agent Harnesses | agents |
+| 2658 | 8 | 2026 | Securing and Auditing Long-Horizon LLM Agents: State-Transfer Auditing and Controls in the Agent Harness | agents |
+| 2659 | 9 | 2026 | How Feedback-Free Self-Evolution Reshapes Agent Skills: A Systematic Study | agents |
+| 2660 | 8 | 2026 | Evolve Where It Matters: Coverage-Guided Self-Evolution of Agent Skills | agents |
+| 2661 | 8 | 2026 | System-One RSI: Building Muscle Memory for Interactive Agents through Guided Practice | game-ai |
+| 2662 | 8 | 2026 | Evaluating Governed LLM-Driven ML Experimentation: Lifecycle, Provenance, and Failure Metrics | agents |
+| 2663 | 7 | 2026 | Safe Subgame Resolving in Multiplayer Games | game-ai |
+
+_Recount after `frontier-2026-11-20`: **2663** unique title cards on main. Next rank **2664+**._
