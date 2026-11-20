@@ -4117,3 +4117,19 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:45 EET). Live main b
 | 2663 | 7 | 2026 | Safe Subgame Resolving in Multiplayer Games | game-ai |
 
 _Recount after `frontier-2026-11-20`: **2663** unique title cards on main. Next rank **2664+**._
+
+### curiosity-2026-11-21
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:58 EET on 20 Nov). Live main before this batch: `87bc041`, **2663** unique, max rank **2663**. Next rank **2664**. seed_batch: `curiosity-2026-11-21`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2664 | 9 | 2026 | An additive-square-free word over an alphabet of size 6 | maths-foundations |
+| 2665 | 8 | 2026 | Proof of the polygonal Saint-Venant inequality conjectured by Pólya–Szegö | maths-foundations |
+| 2666 | 8 | 2026 | A disproof of the van Emde Boas–Kruyswijk conjecture on the Davenport constant | maths-foundations |
+| 2667 | 8 | 2026 | Sharp topological overlap in every dimension | maths-foundations |
+| 2668 | 8 | 2026 | Convexity is overrated: Shortest paths on 4-polytopes are hard to compute | maths-foundations |
+| 2669 | 7 | 2026 | An improved Moore bound for girths seven and eleven | maths-foundations |
+| 2670 | 7 | 2026 | Relative periodic orbits of a free spinning loop | physics |
+
+_Recount after `curiosity-2026-11-21`: **2670** unique title cards on main. Next rank **2671+**._
