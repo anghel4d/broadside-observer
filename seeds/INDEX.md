@@ -4133,3 +4133,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:58 EET on 20 Nov). L
 | 2670 | 7 | 2026 | Relative periodic orbits of a free spinning loop | physics |
 
 _Recount after `curiosity-2026-11-21`: **2670** unique title cards on main. Next rank **2671+**._
+
+### craft-2026-11-21
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:49 EET). Live main before this batch: `8f548db`, **2670** unique, max rank **2670**. Next rank **2671**. seed_batch: `craft-2026-11-21`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2671 | 8 | 2026 | Tenon: A Unified Programming Framework for Retargetable PIM Compilation | languages |
+| 2672 | 7 | 2026 | Guided Cuckoo Filter: Full-Pipeline Insertion Optimization | systems |
+| 2673 | 7 | 2026 | A Tutorial on Complementarity-Based Contact Models for Robotics | engines |
+| 2674 | 7 | 2026 | PostgreSQL 19 Released | systems |
+
+_Recount after `craft-2026-11-21`: **2674** unique title cards on main. Next rank **2675+**._
