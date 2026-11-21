@@ -6818,17 +6818,21 @@
     "Tenon: A Unified Programming Framework for Retargetable PIM Compilation",
     "Guided Cuckoo Filter: Full-Pipeline Insertion Optimization",
     "A Tutorial on Complementarity-Based Contact Models for Robotics",
-    "PostgreSQL 19 Released"
+    "PostgreSQL 19 Released",
+    "Design of a Separable Transition-Diagram Compiler",
+    "Radiance Caching for Efficient Global Illumination Computation",
+    "A Retrospective on Region-Based Memory Management",
+    "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors"
   ],
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
   "curiosity_count": 9,
   "craft_batch": "craft-2026-11-09",
   "craft_count": 5,
-  "archive_batch": "archive-2026-11-06",
-  "archive_count": 5,
+  "archive_batch": "archive-2026-11-22",
+  "archive_count": 4,
   "frontier_batch": "frontier-2026-11-20",
   "frontier_count": 12,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
@@ -8919,7 +8923,11 @@
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
     "https://www.anthropic.com/research/claude-black-hole-physics",
     "https://openai.com/index/advancing-chip-design-with-our-models/",
-    "https://www.postgresql.org/about/news/postgresql-19-released-3449/"
+    "https://www.postgresql.org/about/news/postgresql-19-released-3449/",
+    "https://www.melconway.com/Home/pdf/compiler.pdf",
+    "https://cgg.mff.cuni.cz/~jaroslav/papers/tvcg2005/krivanek05radiance_caching.pdf",
+    "https://elsman.com/pdf/retro.pdf",
+    "https://pdos.csail.mit.edu/papers/commutativity:sosp13.pdf"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -12544,5 +12552,43 @@
     "2611.26517 BLOOM/MiracleGro agent-grown BOOM core",
     "web: Postgres 19 REPACK (Snowflake engineering blog)",
     "web: Frostbite AI-designed CPU architecture (architectlabs.com)"
+  ],
+  "archive_2026_11_22_batch": [
+    "2675-design-of-a-separable-transition-diagram-compiler",
+    "2676-radiance-caching-for-efficient-global-illumination-computation",
+    "2677-a-retrospective-on-region-based-memory-management",
+    "2678-the-scalable-commutativity-rule-designing-scalable-software-for"
+  ],
+  "archive_2026_11_22_count": 4,
+  "archive_2026_11_22_titles": [
+    "Design of a Separable Transition-Diagram Compiler",
+    "Radiance Caching for Efficient Global Illumination Computation",
+    "A Retrospective on Region-Based Memory Management",
+    "The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors"
+  ],
+  "archive_2026_11_22_urls": [
+    "https://www.melconway.com/Home/pdf/compiler.pdf",
+    "https://cgg.mff.cuni.cz/~jaroslav/papers/tvcg2005/krivanek05radiance_caching.pdf",
+    "https://elsman.com/pdf/retro.pdf",
+    "https://pdos.csail.mit.edu/papers/commutativity:sosp13.pdf"
+  ],
+  "archive_2026_11_22_arxiv": [],
+  "archive_2026_11_22_near_keepers": [
+    "Fast Shadows and Lighting Effects Using Texture Mapping (Segal et al. 1992) — second deferral: INRIA mirror timed out from box and fetcher, ACM PDF bot-walled",
+    "Horizon Mapping: Shadows for Bump-Mapped Surfaces (Max 1988) — no open full text found",
+    "Pattern Matching in Trees (Hoffmann & O'Donnell 1982)",
+    "shortlisted-not-kept: Combining Region Inference and Garbage Collection (Hallenberg, Elsman & Tofte 2002)",
+    "shortlisted-not-kept: Lock-Free Linked Lists Using Compare-and-Swap (Valois 1995)",
+    "shortlisted-not-kept: Lock-Free Linked Lists and Skip Lists (Fomitchev & Ruppert 2004)",
+    "shortlisted-not-kept: A Highly-Efficient Wait-Free Universal Construction (Fatourou & Kallimanis 2011)",
+    "shortlisted-not-kept: Continuation-Based Multiprocessing (Wand 1980)",
+    "shortlisted-not-kept: Meta-Rules: Reasoning about Control (Davis 1980)",
+    "shortlisted-not-kept: Implementing the Fast Multipole Method in Three Dimensions (Schmidt & Lee 1991)",
+    "shortlisted-not-kept: Derivation and Efficient Implementation of the Fast Multipole Method (White & Head-Gordon 1994)",
+    "shortlisted-not-kept: A Parallel Version of the Fast Multipole Method (Greengard & Gropp 1990)",
+    "shortlisted-not-kept: Adaptive Shadow Maps (Fernando et al. 2001)",
+    "shortlisted-not-kept: A Survey of Shadow Algorithms (Woo, Poulin & Fournier 1990)",
+    "shortlisted-not-kept: Accelerated Occlusion Culling Using Shadow Frusta (Hudson et al. 1997)",
+    "shortlisted-not-kept: Eliminating Array Bound Checking through Dependent Types (Xi & Pfenning 1998)"
   ]
 }

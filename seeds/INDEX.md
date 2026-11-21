@@ -4146,3 +4146,16 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:49 EET). Live main befor
 | 2674 | 7 | 2026 | PostgreSQL 19 Released | systems |
 
 _Recount after `craft-2026-11-21`: **2674** unique title cards on main. Next rank **2675+**._
+
+### archive-2026-11-22
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 23:50 EET on 2026-11-21). Live main before this batch: `e6c7acb`, **2674** unique, max rank **2674**. Next rank **2675**. seed_batch: `archive-2026-11-22`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2675 | 8 | 1963 | Design of a Separable Transition-Diagram Compiler | languages |
+| 2676 | 8 | 2005 | Radiance Caching for Efficient Global Illumination Computation | graphics |
+| 2677 | 7 | 2004 | A Retrospective on Region-Based Memory Management | languages |
+| 2678 | 8 | 2013 | The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors | systems |
+
+_Recount after `archive-2026-11-22`: **2678** unique title cards on main. Next rank **2679+**._
