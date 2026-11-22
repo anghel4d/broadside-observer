@@ -4176,3 +4176,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:54 EET). Live main b
 | 2686 | 9 | 2026 | Finite-time blow-up for the Navier–Stokes equations | maths-foundations |
 
 _Recount after `frontier-2026-11-22`: **2686** unique title cards on main. Next rank **2687+**._
+
+### curiosity-2026-11-23
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:52 EET on 22 Nov). Live main before this batch: `e128d1d`, **2686** unique, max rank **2686**. Next rank **2687**. seed_batch: `curiosity-2026-11-23`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2687 | 8 | 2026 | Additive cubes are avoidable over {0,1,2,3}, {0,1,4} and {0,2,5} | maths-foundations |
+| 2688 | 7 | 2026 | Chaos without Local Spectral Instability in a Kicked Oscillator | physics |
+| 2689 | 7 | 2026 | Directed Wada cascade in systems with discrete scale invariance | physics |
+| 2690 | 7 | 2026 | Longest Unbordered Factors in Linear Time | maths-foundations |
+| 2691 | 7 | 2026 | Tangent lengths and invariants of Poncelet polygons between two circles | maths-foundations |
+
+_Recount after `curiosity-2026-11-23`: **2691** unique title cards on main. Next rank **2692+**._

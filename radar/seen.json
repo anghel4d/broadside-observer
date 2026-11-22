@@ -3055,7 +3055,12 @@
     "2611.23949",
     "2611.25649",
     "2611.24267",
-    "2611.25134"
+    "2611.25134",
+    "2611.17999",
+    "2611.15525",
+    "2611.15848",
+    "2611.12146",
+    "2611.20477"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6882,7 +6887,7 @@
     "Data Processing Incidents on Inference Providers (OpenRouter, 22 Nov 2026)",
     "Zero C# - C# without a runtime or GC (Show HN, arenas)"
   ],
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -12752,5 +12757,47 @@
     "2611.25649",
     "2611.24267",
     "2611.25134"
+  ],
+  "curiosity_2026_11_23_batch": "curiosity-2026-11-23",
+  "curiosity_2026_11_23_count": 5,
+  "curiosity_2026_11_23_arxiv": [
+    "2611.17999",
+    "2611.15525",
+    "2611.15848",
+    "2611.12146",
+    "2611.20477"
+  ],
+  "curiosity_2026_11_23_titles": [
+    "Additive cubes are avoidable over {0,1,2,3}, {0,1,4} and {0,2,5}",
+    "Chaos without Local Spectral Instability in a Kicked Oscillator",
+    "Directed Wada cascade in systems with discrete scale invariance",
+    "Longest Unbordered Factors in Linear Time",
+    "Tangent lengths and invariants of Poncelet polygons between two circles"
+  ],
+  "curiosity_2026_11_23_near_keepers": [
+    "2611.19809",
+    "2611.20136",
+    "2611.16204",
+    "2611.13535",
+    "2611.19473",
+    "2611.17543",
+    "2611.12680",
+    "2611.14181",
+    "2611.21983",
+    "2611.22054",
+    "2611.19829",
+    "2611.11369",
+    "2611.16214",
+    "2611.16083",
+    "2611.11538",
+    "2611.21772",
+    "2611.18783",
+    "2611.17244",
+    "2611.15626",
+    "2611.11879",
+    "2611.24750",
+    "2611.13676",
+    "2611.11409",
+    "2611.15635"
   ]
 }
