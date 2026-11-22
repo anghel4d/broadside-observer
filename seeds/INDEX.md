@@ -4159,3 +4159,20 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 23:50 EET on 2026-11-21)
 | 2678 | 8 | 2013 | The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors | systems |
 
 _Recount after `archive-2026-11-22`: **2678** unique title cards on main. Next rank **2679+**._
+
+### frontier-2026-11-22
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:54 EET). Live main before this batch: `fa54b4b`, **2678** unique, max rank **2678**. Next rank **2679**. seed_batch: `frontier-2026-11-22`. No new arXiv announcement since the 11-20 frontier (next listing Sun 22 Nov 20:00 ET), so this batch is lab/web posts from 19–22 Nov plus gap-fill from Thu/Fri listings in categories the 11-20 run did not poll.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2679 | 9 | 2026 | Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost | agents |
+| 2680 | 8 | 2026 | Introducing Inkling 2 Mini | agents |
+| 2681 | 8 | 2026 | How OpenAI's Performance Factory keeps ChatGPT fast | agents |
+| 2682 | 8 | 2026 | Keep the Reasoning, Read the Image: On-Demand Visual KV for Multi-Turn Reasoning VLMs | agents |
+| 2683 | 7 | 2026 | Keep the Image in Mind: A Visual Board for Multimodal Agents | agents |
+| 2684 | 7 | 2026 | Scalable Iterative Multi-Agent Path Finding under Turn Constraints | game-ai |
+| 2685 | 9 | 2026 | Alpöge's Lean proof of the Riemann Hypothesis and GRH for Dirichlet L-functions (announcement remark, 20 Nov 2026) | maths-foundations |
+| 2686 | 9 | 2026 | Finite-time blow-up for the Navier–Stokes equations | maths-foundations |
+
+_Recount after `frontier-2026-11-22`: **2686** unique title cards on main. Next rank **2687+**._
