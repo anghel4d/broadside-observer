@@ -6891,7 +6891,11 @@
     "[PREVIEW] Raytracing: Clustered Geometry, Partitioned TLAS, Indirect Acceleration Structure Builds",
     "KDB-X GPU Acceleration v3.0: Same Q Code, Run On Different Hardware",
     "DevLog #10 - A replay is just orders and a seed. Then a soldier takes a step",
-    "Shellsort with O(n log n) Average-Case Complexity"
+    "Shellsort with O(n log n) Average-Case Complexity",
+    "Programming with Invariants",
+    "Pattern Matching in Trees",
+    "A Real-Time Procedural Shading System for Programmable Graphics Hardware",
+    "Finite Differencing of Computable Expressions"
   ],
   "updated": "2026-11-23",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -6900,8 +6904,8 @@
   "curiosity_count": 9,
   "craft_batch": "craft-2026-11-09",
   "craft_count": 5,
-  "archive_batch": "archive-2026-11-22",
-  "archive_count": 4,
+  "archive_batch": "archive-2026-11-24",
+  "archive_count": 3,
   "frontier_batch": "frontier-2026-11-22",
   "frontier_count": 8,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
@@ -13318,5 +13322,51 @@
     "https://ponko.dev/blog/a-million-entities/ Ponko engine: own archetype ECS, flow fields, lockstep, 1M units",
     "https://gamedev.net/tutorials/programming/general-and-gameplay-programming/shadow-caster-volumes-for-the-culling-of-potential-shadow-casters-r2330 Shadow caster volumes (classic gamedev.net article, via GPW 461)",
     "https://chen.cat/j/futhark/ Futhark-J bridge"
+  ],
+  "archive_2026_11_24_batch": [
+    "2697-programming-with-invariants",
+    "2698-pattern-matching-in-trees",
+    "2699-a-real-time-procedural-shading-system-for-programmable-graphics-hardware"
+  ],
+  "archive_2026_11_24_count": 3,
+  "archive_2026_11_24_titles": [
+    "Programming with Invariants",
+    "Pattern Matching in Trees",
+    "A Real-Time Procedural Shading System for Programmable Graphics Hardware"
+  ],
+  "archive_2026_11_24_urls": [
+    "https://www.cs.tufts.edu/~nr/cs257/archive/robert-paige/invariants.pdf",
+    "https://www.cs.purdue.edu/cgvlab/www/resources/papers/Hoffmann-Journal_of_ACM-1982-Pattern_matching_in_tree.pdf",
+    "https://graphics.stanford.edu/projects/shading/pubs/sig2001/rtsl.pdf"
+  ],
+  "archive_2026_11_24_arxiv": [],
+  "archive_2026_11_24_near_keepers": [
+    "Practical and Robust Stenciled Shadow Volumes for Hardware-Accelerated Rendering (Everitt & Kilgard 2002, arXiv cs/0301002) — z-fail + infinite far plane + depth clamp; PDF fetched and abstract read, deferred for keep rate",
+    "Finite Differencing of Computable Expressions (Paige & Koenig, TOPLAS 1982) — ACM PDF bot-walled (403); covered via 2697, card the TOPLAS paper if an open copy appears",
+    "Fundamentals of Texture Mapping and Image Warping (Heckbert, MS thesis 1989) — open PDF at cs.cmu.edu/~ph, but pdftotext extracted no text from it on the box; needs OCR or another copy",
+    "A Blackboard Architecture for Control (Hayes-Roth, Artificial Intelligence 1985)",
+    "A Categorical Programming Language (Hagino, PhD thesis Edinburgh 1987)"
+  ],
+  "archive_2026_11_24_screened": [
+    "Interactive Multi-Pass Programmable Shading (Peercy et al. 2000)",
+    "Ray Tracing on Programmable Graphics Hardware (Purcell et al. 2002)",
+    "Data Structures and Program Transformation (Malcolm 1990)",
+    "A New Implementation Technique for Applicative Languages (Turner 1979)",
+    "Executing a Program on the MIT Tagged-Token Dataflow Architecture (Arvind & Nikhil 1990)",
+    "Functional Reactive Programming, Continued (Nilsson, Courtney & Peterson 2002)",
+    "Declarative Networking / Implementing Declarative Overlays (Loo et al. 2005)",
+    "Customization: Optimizing Compiler Technology for SELF (Chambers & Ungar 1989)",
+    "Parallel-Split Shadow Maps (Zhang et al. 2006)",
+    "Opacity Shadow Maps (Kim & Neumann 2001)",
+    "Trapezoidal Shadow Maps (Martin & Tan 2004); Light Space Perspective Shadow Maps (Wimmer et al. 2004)",
+    "An Implicit Surface Polygonizer (Bloomenthal 1994)",
+    "Syntactic Abstraction in Scheme (Dybvig, Hieb & Bruggeman 1992)",
+    "Institutions: Abstract Model Theory for Specification and Programming (Goguen & Burstall 1992)",
+    "A History of Haskell: Being Lazy with Class (Hudak et al. 2007)",
+    "Real Shadows Real Time (Heidmann 1991, IRIS Universe) — no open text",
+    "Monsoon: An Explicit Token-Store Architecture (Papadopoulos & Culler 1990)",
+    "Spherical Harmonic Lighting: The Gritty Details (Green 2003)",
+    "Pencil Tracing (Shinya et al. 1987)",
+    "Some Uses of { and } (Hui 1987)"
   ]
 }
