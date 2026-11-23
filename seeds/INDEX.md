@@ -4204,3 +4204,15 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:53 EET). Live main befor
 | 2696 | 7 | 2026 | Shellsort with O(n log n) Average-Case Complexity | maths-foundations |
 
 _Recount after `craft-2026-11-23`: **2696** unique title cards on main. Next rank **2697+**._
+
+### archive-2026-11-24
+
+Archive radar (even date, 00:00 Europe/Bucharest; fired 23:45 EET on 2026-11-23). Live main before this batch: `566a2b5`, **2696** unique, max rank **2696**. Next rank **2697**. seed_batch: `archive-2026-11-24`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2697 | 8 | 1986 | Programming with Invariants | languages |
+| 2698 | 7 | 1982 | Pattern Matching in Trees | languages |
+| 2699 | 7 | 2001 | A Real-Time Procedural Shading System for Programmable Graphics Hardware | graphics |
+
+_Recount after `archive-2026-11-24`: **2699** unique title cards on main. Next rank **2700+**._
