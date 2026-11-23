@@ -4190,3 +4190,17 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:52 EET on 22 Nov). L
 | 2691 | 7 | 2026 | Tangent lengths and invariants of Poncelet polygons between two circles | maths-foundations |
 
 _Recount after `curiosity-2026-11-23`: **2691** unique title cards on main. Next rank **2692+**._
+
+### craft-2026-11-23
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:53 EET). Live main before this batch: `9917330`, **2691** unique, max rank **2691**. Next rank **2692**. seed_batch: `craft-2026-11-23`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2692 | 8 | 2026 | Real-Time Path Tracing in Games: Best Practices for Performance and Scalability | graphics |
+| 2693 | 7 | 2026 | [PREVIEW] Raytracing: Clustered Geometry, Partitioned TLAS, Indirect Acceleration Structure Builds | graphics |
+| 2694 | 8 | 2026 | KDB-X GPU Acceleration v3.0: Same Q Code, Run On Different Hardware | languages |
+| 2695 | 8 | 2026 | DevLog #10 - A replay is just orders and a seed. Then a soldier takes a step | game-ai |
+| 2696 | 7 | 2026 | Shellsort with O(n log n) Average-Case Complexity | maths-foundations |
+
+_Recount after `craft-2026-11-23`: **2696** unique title cards on main. Next rank **2697+**._
