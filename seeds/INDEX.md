@@ -4216,3 +4216,21 @@ Archive radar (even date, 00:00 Europe/Bucharest; fired 23:45 EET on 2026-11-23)
 | 2699 | 7 | 2001 | A Real-Time Procedural Shading System for Programmable Graphics Hardware | graphics |
 
 _Recount after `archive-2026-11-24`: **2699** unique title cards on main. Next rank **2700+**._
+
+### frontier-2026-11-24
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main before this batch: `37e936d`, **2699** unique, max rank **2699**. Next rank **2700**. seed_batch: `frontier-2026-11-24`. Window: the Mon 23 Nov and Tue 24 Nov arXiv announcements (the first since the 11-20 frontier) plus lab/web posts from 22–24 Nov.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2700 | 9 | 2026 | LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents | agents |
+| 2701 | 9 | 2026 | Cache the Knowledge, Not Just the Prompt: Dynamic Datalog as the Action Language for LLM Agents | agents |
+| 2702 | 9 | 2026 | Skip the DRAM Tier: MoRI UMBP Runs the Agentic KV Cache on NVMe | agents |
+| 2703 | 8 | 2026 | GLM-5.4: Toward Generalized Coding with Our First Loop Transformer | agents |
+| 2704 | 7 | 2026 | Exact on Paper: Which LLM Serving Shortcuts Flip Graded Answers, Measured Against the Noise of Reordering the Same Requests | agents |
+| 2705 | 8 | 2026 | Which Failure Does an Intervention Repair? When Agent Interventions Help, and Where Self-Evolving Skills Stall | agents |
+| 2706 | 8 | 2026 | Language Model Harnesses can be Compositional Generalizers | agents |
+| 2707 | 8 | 2026 | AutoPILOT: A Visual Agent Harness for Real-Time Gameplay | game-ai |
+| 2708 | 9 | 2026 | VP ≠ VNP over every field | maths-foundations |
+
+_Recount after `frontier-2026-11-24`: **2708** unique title cards on main. Next rank **2709+**._
