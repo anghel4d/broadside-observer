@@ -4234,3 +4234,17 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:52 EET). Live main b
 | 2708 | 9 | 2026 | VP ≠ VNP over every field | maths-foundations |
 
 _Recount after `frontier-2026-11-24`: **2708** unique title cards on main. Next rank **2709+**._
+
+### curiosity-2026-11-25
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:50 EET on 24 Nov). Live main before this batch: `88018af`, **2708** unique, max rank **2708**. Next rank **2709**. seed_batch: `curiosity-2026-11-25`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2709 | 9 | 2026 | A Deterministic Linear Time Algorithm for Minimum Spanning Tree | maths-foundations |
+| 2710 | 7 | 2026 | The Z[τ]-foam: Goodman-Strauss's Dodecafoam as arithmetic in the icosahedral module | maths-foundations |
+| 2711 | 7 | 2026 | Three almost symmetric metatiles generate the Spectre tiling | maths-foundations |
+| 2712 | 7 | 2026 | Is every knot a three-way deadlock? Counterexamples and a universality conjecture for the segment number | maths-foundations |
+| 2713 | 7 | 2026 | From two heptagrams to a 449-vertex 5-chromatic unit-distance graph | maths-foundations |
+
+_Recount after `curiosity-2026-11-25`: **2713** unique title cards on main. Next rank **2714+**._
