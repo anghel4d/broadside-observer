@@ -3114,7 +3114,12 @@
     "2611.30849",
     "2611.30412",
     "2611.31105",
-    "2611.31018"
+    "2611.31018",
+    "2611.31187",
+    "2611.28955",
+    "2611.28888",
+    "2611.29175",
+    "2611.28518"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6978,9 +6983,14 @@
     "One Structure Is Enough: Record-Native Tiles for Evolving Sparse Matrices on GPUs (arXiv 2611.30159) - hand-off to Craft",
     "Temporal Persistence for Stylized Rendering: Historical Image Storage and Reconstruction (arXiv 2611.28114) - hand-off to Craft",
     "Perplexity and Intelligence (Jakub Pachocki, OpenAI, 22 Nov 2026)",
-    "Finding faster quantum algorithms with agents and formal verification (Google DeepMind, 23 Nov 2026)"
+    "Finding faster quantum algorithms with agents and formal verification (Google DeepMind, 23 Nov 2026)",
+    "A Deterministic Linear Time Algorithm for Minimum Spanning Tree",
+    "The Z[tau]-foam: Goodman-Strauss's Dodecafoam as arithmetic in the icosahedral module",
+    "Three almost symmetric metatiles generate the Spectre tiling",
+    "Is every knot a three-way deadlock? Counterexamples and a universality conjecture for the segment number",
+    "From two heptagrams to a 449-vertex 5-chromatic unit-distance graph"
   ],
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
@@ -13545,5 +13555,52 @@
     "2611.30849",
     "2611.30412",
     "2611.31018"
+  ],
+  "curiosity_2026_11_25_batch": "curiosity-2026-11-25",
+  "curiosity_2026_11_25_count": 5,
+  "curiosity_2026_11_25_arxiv": [
+    "2611.31187",
+    "2611.28955",
+    "2611.28888",
+    "2611.29175",
+    "2611.28518"
+  ],
+  "curiosity_2026_11_25_titles": [
+    "A Deterministic Linear Time Algorithm for Minimum Spanning Tree",
+    "The Z[tau]-foam: Goodman-Strauss's Dodecafoam as arithmetic in the icosahedral module",
+    "Three almost symmetric metatiles generate the Spectre tiling",
+    "Is every knot a three-way deadlock? Counterexamples and a universality conjecture for the segment number",
+    "From two heptagrams to a 449-vertex 5-chromatic unit-distance graph"
+  ],
+  "curiosity_2026_11_25_near_keepers": [
+    "2611.27472",
+    "2611.29420",
+    "2611.26905",
+    "2611.29233",
+    "2611.30871",
+    "2611.28580",
+    "2611.29344",
+    "2611.29844",
+    "2611.30144",
+    "2611.30110",
+    "2611.29524",
+    "2611.29608",
+    "2611.27563",
+    "2611.29287",
+    "2611.29088",
+    "2611.29065",
+    "2611.28242",
+    "2611.28562",
+    "2611.29561",
+    "2611.29737",
+    "2611.24780",
+    "2611.29559",
+    "2611.27577",
+    "2611.27478",
+    "2611.26814",
+    "2611.24705",
+    "2611.26028",
+    "2611.29872",
+    "2611.30543"
   ]
 }
