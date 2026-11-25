@@ -4248,3 +4248,16 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest; fired 23:50 EET on 24 Nov). L
 | 2713 | 7 | 2026 | From two heptagrams to a 449-vertex 5-chromatic unit-distance graph | maths-foundations |
 
 _Recount after `curiosity-2026-11-25`: **2713** unique title cards on main. Next rank **2714+**._
+
+### craft-2026-11-25
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:50 EET). Live main before this batch: `9081208`, **2713** unique, max rank **2713**. Next rank **2714**. seed_batch: `craft-2026-11-25`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2714 | 8 | 2026 | Gint: A Device-Side Bytecode Interpreter for Portable GPU Kernel Programming | languages |
+| 2715 | 8 | 2026 | Practical, efficient render graphs | graphics |
+| 2716 | 8 | 2026 | Blocks with ownership: a novel approach to CPU and GPU memory in C++ | engines |
+| 2717 | 7 | 2026 | From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient | systems |
+
+_Recount after `craft-2026-11-25`: **2717** unique title cards on main. Next rank **2718+**._
