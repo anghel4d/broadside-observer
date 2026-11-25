@@ -4261,3 +4261,14 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:50 EET). Live main befor
 | 2717 | 7 | 2026 | From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient | systems |
 
 _Recount after `craft-2026-11-25`: **2717** unique title cards on main. Next rank **2718+**._
+
+### archive-2026-11-26
+
+Archive radar (even date, 00:00 Europe/Bucharest on 2026-11-26; fired 23:55 EET on 2026-11-25). Live main before this batch: `0118f50`, **2717** unique, max rank **2717**. Next rank **2718**. seed_batch: `archive-2026-11-26`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2718 | 7 | 2002 | Practical and Robust Stenciled Shadow Volumes for Hardware-Accelerated Rendering | graphics |
+| 2719 | 8 | 1979 | Synchronization with Eventcounts and Sequencers | systems |
+
+_Recount after `archive-2026-11-26`: **2719** unique title cards on main. Next rank **2720+**._
