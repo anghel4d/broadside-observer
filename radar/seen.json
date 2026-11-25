@@ -3119,7 +3119,8 @@
     "2611.28955",
     "2611.28888",
     "2611.29175",
-    "2611.28518"
+    "2611.28518",
+    "cs/0301002"
   ],
   "titles": [
     "(2-dep,$σ$)-categories are not generalised categories with families",
@@ -6992,17 +6993,19 @@
     "Gint: A Device-Side Bytecode Interpreter for Portable GPU Kernel Programming",
     "Practical, efficient render graphs",
     "Blocks with ownership: a novel approach to CPU and GPU memory in C++",
-    "From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient"
+    "From Skiplists to B+ Trees: Making Valkey Sorted Sets More Memory Efficient",
+    "Practical and Robust Stenciled Shadow Volumes for Hardware-Accelerated Rendering",
+    "Synchronization with Eventcounts and Sequencers"
   ],
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "pass2_batch": "systems-prefill-2026-08-13",
   "pass2_count": 250,
   "curiosity_batch": "curiosity-2026-10-07",
   "curiosity_count": 9,
   "craft_batch": "craft-2026-11-25",
   "craft_count": 4,
-  "archive_batch": "archive-2026-11-24",
-  "archive_count": 3,
+  "archive_batch": "archive-2026-11-26",
+  "archive_count": 2,
   "frontier_batch": "frontier-2026-11-24",
   "frontier_count": 9,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
@@ -9126,7 +9129,9 @@
     "https://ipotrick.github.io/site/blogs/practical-efficient-rendergraphs/",
     "https://bkaradzic.github.io/posts/memory-management/",
     "https://valkey.io/blog/from-skiplist-to-b%2Btree/",
-    "https://github.com/eliphatfs/gint"
+    "https://github.com/eliphatfs/gint",
+    "https://arxiv.org/abs/cs/0301002",
+    "https://doi.org/10.1145/359060.359076"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -14727,5 +14732,64 @@
     "Timberborn Frame Analysis (RenderDoc/RGP; GPU idle from 8k shadow + 11k non-instanced draws)",
     "Ratio tracking, intuitively (lisyarus; library has residual ratio tracking 1339)",
     "Show HN: Old Nvidia and ATI tech demos running in the browser (curiosity material)"
+  ],
+  "archive_2026_11_26_batch": [
+    "2718-practical-and-robust-stenciled-shadow-volumes-for-hardware-accelerated-rendering",
+    "2719-synchronization-with-eventcounts-and-sequencers"
+  ],
+  "archive_2026_11_26_count": 2,
+  "archive_2026_11_26_titles": [
+    "Practical and Robust Stenciled Shadow Volumes for Hardware-Accelerated Rendering",
+    "Synchronization with Eventcounts and Sequencers"
+  ],
+  "archive_2026_11_26_urls": [
+    "https://arxiv.org/abs/cs/0301002",
+    "https://doi.org/10.1145/359060.359076"
+  ],
+  "archive_2026_11_26_arxiv": [
+    "cs/0301002"
+  ],
+  "archive_2026_11_26_near_keepers": [
+    "The Functional Data Model and the Data Language DAPLEX (Shipman, TODS 1981) — best ano fit left (entities + set-valued functions, derived functions treated as primitive, FOR EACH ... SUCH THAT selection); ACM PDF bot-walled from the box and no archive copy, so only the abstract and intro excerpt were read; card when an open copy is reachable",
+    "Vmalloc: A General and Efficient Memory Allocator (Vo, SP&E 1996) — regions with pluggable disciplines and methods; craft 2026-11-25 hand-off and 2026-10-26 deferral; Wiley full text unavailable, abstract only",
+    "Counting Networks (Aspnes, Herlihy & Shavit, JACM 1994) — low-contention distributed counters from balancer networks; deferred for keep rate",
+    "Atomic Snapshots of Shared Memory (Afek, Attiya, Dolev, Gafni, Merritt & Shavit, JACM 1993) — wait-free consistent multi-register read; deferred for keep rate",
+    "FQL: A Functional Query Language (Buneman & Frankel, SIGMOD 1979) — combinator query language over functions; sibling of DAPLEX; deferred",
+    "A Fast Algorithm for General Raster Rotation (Paeth, Graphics Interface 1986) — rotation as three shears; deferred",
+    "Efficient Alias-free Rendering using Bit-masks and Look-up Tables (Abram, Westover & Whitted, SIGGRAPH 1985) — coverage-mask antialiasing, relevant to scanline text; deferred"
+  ],
+  "archive_2026_11_26_screened": [
+    "ThingLab (Borning, TOPLAS 1981)",
+    "Conservative Rasterization (Hasselgren, Akenine-Möller & Ohlsson, GPU Gems 2, 2005)",
+    "A Bridging Model for Parallel Computation (Valiant, CACM 1990)",
+    "Concurrent Manipulation of Binary Search Trees (Kung & Lehman, TODS 1980)",
+    "3-D Transformations of Images in Scanline Order (Catmull & Smith, SIGGRAPH 1980)",
+    "Reconstruction Filters in Computer Graphics (Mitchell & Netravali, SIGGRAPH 1988)",
+    "Query-By-Example (Zloof, 1975)",
+    "The Programmer as Navigator (Bachman, 1973)",
+    "Principles of Programming with Complex Objects and Collection Types (Buneman, Naqvi, Tannen & Wong, TCS 1995)",
+    "Sketchpad (Sutherland, 1963)",
+    "SkyBlue (Sannella, 1994)",
+    "The Art of the Propagator (Radul & Sussman, 2009)",
+    "Hap (Loyall & Bates, 1991)",
+    "Transparency and Antialiasing Algorithms Implemented with the Virtual Pixel Maps Technique (Mammen, 1989)",
+    "Advanced Character Physics (Jakobsen, GDC 2001)",
+    "A Language for Shading and Lighting Calculations (Hanrahan & Lawson, SIGGRAPH 1990)",
+    "One VM to Rule Them All (Würthinger et al., Onward! 2013)",
+    "Comonadic Notions of Computation (Uustalu & Vene, 2008)",
+    "Production System Conflict Resolution Strategies (McDermott & Forgy, 1978)",
+    "Implementing Large Production Systems in a DBMS Environment (Sellis, Lin & Raschid, SIGMOD 1988)",
+    "Human-level AI's Killer Application (Laird & van Lent, AI Magazine 2001)",
+    "Texture Mapping as a Fundamental Drawing Primitive (Haeberli & Segal, 1993)",
+    "Compiling Nested Data-Parallel Programs for Shared-Memory Multiprocessors (Chatterjee, TOPLAS 1993)",
+    "Garbage Collection in a Large Lisp System (Moon, LFP 1984)",
+    "The Aliasing Problem in Computer-Generated Shaded Images (Crow, CACM 1977)",
+    "Footprint Evaluation for Volume Rendering (Westover, SIGGRAPH 1990)",
+    "Detailed Shape Representation with Parallax Mapping (Kaneko et al., 2001)",
+    "Least Squares Conformal Maps (Lévy et al., SIGGRAPH 2002)",
+    "Free-Form Deformation of Solid Geometric Models (Sederberg & Parry, SIGGRAPH 1986)",
+    "Engineering Radix Sort (McIlroy, Bostic & McIlroy, 1993)",
+    "Concurrent Maintenance of Skip Lists (Pugh, 1990)",
+    "Programming Expert Systems in OPS5 (Brownston et al., 1985)"
   ]
 }
