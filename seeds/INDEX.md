@@ -4272,3 +4272,21 @@ Archive radar (even date, 00:00 Europe/Bucharest on 2026-11-26; fired 23:55 EET 
 | 2719 | 8 | 1979 | Synchronization with Eventcounts and Sequencers | systems |
 
 _Recount after `archive-2026-11-26`: **2719** unique title cards on main. Next rank **2720+**._
+
+### frontier-2026-11-26
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:51 EET). Live main before this batch: `58a0d50`, **2719** unique, max rank **2719**. Next rank **2720**. seed_batch: `frontier-2026-11-26`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2720 | 9 | 2026 | MGMem: An Efficient, Deterministic, and Provenance-Preserving Framework for Long-Horizon Agent Memory | agents |
+| 2721 | 9 | 2026 | Letting Models Manage Their Own Context: Where We Stand | agents |
+| 2722 | 8 | 2026 | Migrating our Messages API to Rust | agents |
+| 2723 | 8 | 2026 | What Does Skill Lift Actually Measure? A Source-Code-Level Audit and Noise-Aware Reanalysis of SkillsBench | agents |
+| 2724 | 8 | 2026 | When Skills Fail to Compose: Compatibility and Retention in Language Models | agents |
+| 2725 | 8 | 2026 | DFly2: Turbocharging Long-Context Speculative Decoding by Sharing the Target's Sparsity | agents |
+| 2726 | 7 | 2026 | How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches | agents |
+| 2727 | 7 | 2026 | Practice Makes Fluent: Learning to Use Earlier Predictions in Looped Models | agents |
+| 2728 | 9 | 2026 | The matrix multiplication exponent is nine fourths | maths-foundations |
+
+_Recount after `frontier-2026-11-26`: **2728** unique title cards on main. Next rank **2729+**._
