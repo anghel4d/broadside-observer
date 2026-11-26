@@ -4290,3 +4290,20 @@ Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:51 EET). Live main b
 | 2728 | 9 | 2026 | The matrix multiplication exponent is nine fourths | maths-foundations |
 
 _Recount after `frontier-2026-11-26`: **2728** unique title cards on main. Next rank **2729+**._
+
+### curiosity-2026-11-27
+
+Curiosity radar (odd date, 00:00 Europe/Bucharest on 2026-11-27; fired 23:48 EET on 2026-11-26). Live main before this batch: `aaa7808`, **2728** unique, max rank **2728**. Next rank **2729**. seed_batch: `curiosity-2026-11-27`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2729 | 9 | 2026 | Strongly polynomial linear programming | maths-foundations |
+| 2730 | 9 | 2026 | Superpolynomial graph diameter of simple polytopes | maths-foundations |
+| 2731 | 8 | 2026 | An exponential bound for sunflowers | maths-foundations |
+| 2732 | 9 | 2026 | A linear bound in Waring's problem | maths-foundations |
+| 2733 | 7 | 2026 | 99.99% of cubic surfaces have a rational point | maths-foundations |
+| 2734 | 7 | 2026 | Dominoes tiling a common figure | maths-foundations |
+| 2735 | 7 | 2026 | Dancing dervishes, spinning skirts and whirling waves | physics |
+| 2736 | 8 | 2026 | An exact and fast solution for the common overlap of three disks in mutual transits and eclipses | graphics |
+
+_Recount after `curiosity-2026-11-27`: **2736** unique title cards on main. Next rank **2737+**._
