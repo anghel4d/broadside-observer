@@ -4307,3 +4307,14 @@ Curiosity radar (odd date, 00:00 Europe/Bucharest on 2026-11-27; fired 23:48 EET
 | 2736 | 8 | 2026 | An exact and fast solution for the common overlap of three disks in mutual transits and eclipses | graphics |
 
 _Recount after `curiosity-2026-11-27`: **2736** unique title cards on main. Next rank **2737+**._
+
+### craft-2026-11-27
+
+Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:50 EET). Live main before this batch: `50f380c`, **2736** unique, max rank **2736**. Next rank **2737**. seed_batch: `craft-2026-11-27`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2737 | 8 | 2026 | Toggle Tree: A New Data Structure for Efficient Parallel Graph Processing | systems |
+| 2738 | 7 | 2026 | A direct -O0 code generator for LLVM | languages |
+
+_Recount after `craft-2026-11-27`: **2738** unique title cards on main. Next rank **2739+**._
