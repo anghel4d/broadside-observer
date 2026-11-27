@@ -4318,3 +4318,15 @@ Craft radar (odd date, 12:00 Europe/Bucharest; fired 11:50 EET). Live main befor
 | 2738 | 7 | 2026 | A direct -O0 code generator for LLVM | languages |
 
 _Recount after `craft-2026-11-27`: **2738** unique title cards on main. Next rank **2739+**._
+
+### archive-2026-11-28
+
+Archive radar (even date, 00:00 Europe/Bucharest on 2026-11-28; fired 23:53 EET on 2026-11-27). Live main before this batch: `094b16c`, **2738** unique, max rank **2738**. Next rank **2739**. seed_batch: `archive-2026-11-28`.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2739 | 8 | 1979 | On Searching Transposed Files | languages |
+| 2740 | 9 | 1979 | Efficiently Monitoring Relational Databases | languages |
+| 2741 | 7 | 1986 | A Fast Algorithm for General Raster Rotation | graphics |
+
+_Recount after `archive-2026-11-28`: **2741** unique title cards on main. Next rank **2742+**._
