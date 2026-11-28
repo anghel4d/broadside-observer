@@ -4330,3 +4330,13 @@ Archive radar (even date, 00:00 Europe/Bucharest on 2026-11-28; fired 23:53 EET 
 | 2741 | 7 | 1986 | A Fast Algorithm for General Raster Rotation | graphics |
 
 _Recount after `archive-2026-11-28`: **2741** unique title cards on main. Next rank **2742+**._
+
+### frontier-2026-11-28
+
+Frontier radar (even date, 12:00 Europe/Bucharest; fired 11:49 EET). Live main before this batch: `ca9eef7`, **2741** unique, max rank **2741**. Next rank **2742**. seed_batch: `frontier-2026-11-28`. US Thanksgiving window: arXiv made no announcement after Thu 26 Nov.
+
+| rank | score | year | title | pool |
+|---|---|---|---|---|
+| 2742 | 7 | 2026 | Quickstart skills send the user's idea to a convex.site host and run remote scripts, written to avoid safety checks (convex/convex-backend-skill issue #64 and fix 51b4e65) | agents |
+
+_Recount after `frontier-2026-11-28`: **2742** unique title cards on main. Next rank **2743+**._
