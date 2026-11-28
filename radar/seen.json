@@ -7030,7 +7030,8 @@
     "A direct -O0 code generator for LLVM",
     "On Searching Transposed Files",
     "Efficiently Monitoring Relational Databases",
-    "A Fast Algorithm for General Raster Rotation"
+    "A Fast Algorithm for General Raster Rotation",
+    "Quickstart skills send the user's idea to a convex.site host and run remote scripts, written to avoid safety checks (convex/convex-backend-skill issue #64 and fix 51b4e65)"
   ],
   "updated": "2026-11-28",
   "pass2_batch": "systems-prefill-2026-08-13",
@@ -7041,8 +7042,8 @@
   "craft_count": 2,
   "archive_batch": "archive-2026-11-28",
   "archive_count": 3,
-  "frontier_batch": "frontier-2026-11-26",
-  "frontier_count": 9,
+  "frontier_batch": "frontier-2026-11-28",
+  "frontier_count": 1,
   "rc3d_batch": "radiance-cascades-3d-2026-08-20",
   "rc3d_count": 1,
   "urls": [
@@ -9181,7 +9182,8 @@
     "https://maskray.me/blog/llvm-direct-o0-code-generator",
     "https://doi.org/10.1145/320107.320125",
     "https://doi.org/10.1145/320083.320099",
-    "https://doi.org/10.20380/GI1986.15"
+    "https://doi.org/10.20380/GI1986.15",
+    "https://github.com/convex/convex-backend-skill/issues/64"
   ],
   "rc_wip_batch": "radiance-cascades-wip-2026-08-20",
   "rc_wip_count": 8,
@@ -18855,5 +18857,65 @@
     "Implementing Relational Views of Programs (Linton, 1984)",
     "Opportunistic Garbage Collection (Wilson & Moher, SIGPLAN Notices 1988)",
     "Incremental Incrementally Compacting Garbage Collection (Lang & Dupont, 1987)"
+  ],
+  "frontier_2026_11_28_batch": [
+    "2742-quickstart-skills-send-the-users-idea-to-a-convex-site-host-and-run-remote"
+  ],
+  "frontier_2026_11_28_count": 1,
+  "frontier_2026_11_28_arxiv": [],
+  "frontier_2026_11_28_titles": [
+    "Quickstart skills send the user's idea to a convex.site host and run remote scripts, written to avoid safety checks (convex/convex-backend-skill issue #64 and fix 51b4e65)"
+  ],
+  "frontier_2026_11_28_urls": [
+    "https://github.com/convex/convex-backend-skill/issues/64",
+    "https://github.com/convex/convex-backend-skill/commit/51b4e65"
+  ],
+  "frontier_2026_11_28_near_keepers": [
+    "Evaluation-Free Recursive Self-Improvement for Coding Agents (Elite; arXiv 2611.21056 v1, 16 Nov 2026; surfaced on HF Daily 26 Nov) - explore-then-integrate with only deterministic validity gates, SWE-bench Pro 60.0%->85.6% with zero candidate task evaluations vs DGM 86.7%/HGM 88.3%; strong continual-skills fit but announced ~17 Nov (before window, no new version), so held; human call whether to card",
+    "DetourBench (arXiv 2611.20844 v1, 16 Nov 2026; surfaced on HF 26 Nov) - exact minimum-action bounds L0 and residual work R_T for agent trajectories; failure-localization fit; out of window",
+    "Making open models work for long-horizon agentic workloads (Together AI + Ollama blog, datePublished 2026-11-16) - protecting the prefix cache from harness to GPU; strong agent-tokenization-and-caching fit; out of window, Craft hand-off",
+    "False computer-checked proofs (D. J. Bernstein, cr.yp.to/proofs/falseccp.html; page live since at least 12 Nov 2026, updated 27 Nov) - counts of reported soundness bugs per proof checker (Lean 23, HOL4 24, Coq/Rocq 111, Isabelle 20...); bridge to Lean-verified AI-maths claims (2728); living list not new in window; Curiosity hand-off",
+    "Introducing Hurdle (Together AI, 25 Nov 2026) - open-source npm agent-eval runner for Claude Code/Codex on your API, skills and docs (code checks, guards, LLM judge, with/without-MCP conditions); product launch, thin evidence",
+    "Evaluating Memanto on DolphinBench (arXiv 2611.28231, HF 26 Nov) - 503/600 vs Mem0 424/600 but different agent model and iteration cap; vendor self-eval",
+    "AutoPILOT (card 2707, arXiv 2611.28202) has a v2 dated 25 Nov 2026; card reviewed v1 - suggest a human re-read; card not edited"
+  ],
+  "frontier_2026_11_28_screened": [
+    "2502.05631",
+    "2602.10483",
+    "2609.04825",
+    "2610.22899",
+    "2610.22913",
+    "2611.20844",
+    "2611.21056",
+    "2611.21155",
+    "2611.24659",
+    "2611.28231",
+    "2611.28732",
+    "2611.28849",
+    "2611.29259",
+    "2611.29829",
+    "2611.30025",
+    "2611.30334",
+    "2611.30723",
+    "2611.31155",
+    "2611.31491",
+    "web: https://cr.yp.to/proofs/falseccp.html",
+    "web: https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs",
+    "web: https://www.together.ai/blog/making-open-models-work-for-long-horizon-agentic-workloads",
+    "web: https://lmsys.org/blog/2026-11-27-sglang-intel/",
+    "web: https://www.kimi.ai/news/kimi-for-science-program",
+    "web: https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+    "web: https://huggingface.co/blog/video-trainium3",
+    "web: https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+    "web: https://www.reddit.com/r/ClaudeCode/comments/1y4qm5o (Notion MCP upsell; HTTP 500, unread)",
+    "web: https://twitter.com/RealAstropulse/status/2126119408997466389 (Claude sabotaging ML research tasks?; unread)",
+    "web: https://eprint.iacr.org/2026/3020.pdf",
+    "web: https://github.com/samueleverett01/bss-permanent-separations",
+    "web: https://unkernel.dev",
+    "web: https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+    "web: https://sessiongraph.ai/",
+    "web: https://github.com/skeeto/prospero",
+    "web: https://simonwillison.net/2026/Nov/27/datasette-mcp/",
+    "web: https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical"
   ]
 }
